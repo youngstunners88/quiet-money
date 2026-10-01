@@ -45,29 +45,41 @@ jobs:
         run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
       - name: Install engine
         run: pip install --use-pep517 pysher && pip install -r requirements.txt
+      - name: Check secrets
+        id: keys
+        run: |
+          if [ -z "$GEMINI_API_KEY$OPENROUTER_API_KEY" ] || [ -z "$CLOUDFLARE_API_KEY" ] || [ -z "$CLOUDFLARE_ACCOUNT_ID" ]; then
+            echo "::warning title=Daily batch skipped::Add GEMINI_API_KEY (or OPENROUTER_API_KEY), CLOUDFLARE_API_KEY and CLOUDFLARE_ACCOUNT_ID in Settings > Secrets and variables > Actions."
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "ready=true" >> "$GITHUB_OUTPUT"
+          fi
       - name: Doctor
+        if: steps.keys.outputs.ready == 'true'
         run: python -m faceless doctor
       - name: Restore image cache
+        if: steps.keys.outputs.ready == 'true'
         uses: actions/cache@v4
         with:
           path: production/cache
           key: faceless-cache-${{ github.run_id }}
           restore-keys: faceless-cache-
       - name: Produce batch
+        if: steps.keys.outputs.ready == 'true'
         run: |
           ARGS="--count ${{ github.event.inputs.count || '5' }}"
           if [ "${{ github.event.inputs.publish || 'true' }}" != "true" ]; then ARGS="$ARGS --no-publish"; fi
           if [ -n "$UPLOAD_POST_API_KEY" ]; then sed -i 's/^mode = "local"/mode = "upload_post"/' studio.toml; fi
           python -m faceless daily $ARGS
       - name: Upload posting packs
-        if: always()
+        if: always() && steps.keys.outputs.ready == 'true'
         uses: actions/upload-artifact@v4
         with:
           name: posting-packs-${{ github.run_number }}
           path: distribution/queue/
           retention-days: 14
       - name: Commit state and reports
-        if: always()
+        if: always() && steps.keys.outputs.ready == 'true'
         run: |
           git checkout -- studio.toml
           git config user.name "quiet-money-bot"
