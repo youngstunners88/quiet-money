@@ -1,0 +1,84 @@
+{
+  "title": "Why Renting Isn't Throwing Money Away",
+  "hook_text": "YOUR RENT IS NOT THROWING MONEY AWAY",
+  "beats": [
+    {
+      "say": "Your rent isn't throwing money away. It's the maximum you'll pay for housing.",
+      "callout": "",
+      "visual": "A cinematic shot of a modern city apartment building window at dusk, warm interior light glowing."
+    },
+    {
+      "say": "A mortgage is the minimum you'll pay every month. But here's the part nobody mentions.",
+      "callout": "MAX VS MIN",
+      "visual": "Close-up of a hand placing a single brass key onto a dark wooden table."
+    },
+    {
+      "say": "Homeownership comes with hidden costs that vanish into thin air.",
+      "callout": "HIDDEN COSTS",
+      "visual": "A person sweeping dust off a worn hardwood floor in an empty room, moody side lighting."
+    },
+    {
+      "say": "Property taxes, roof repairs, and interest don't build equity. They're dead expenses.",
+      "callout": "DEAD EXPENSES",
+      "visual": "A close-up of a calculator resting beside a stack of old architectural blueprints, soft focus."
+    },
+    {
+      "say": "When you rent, your fixed payment buys you absolute freedom and flexibility.",
+      "callout": "TOTAL FREEDOM",
+      "visual": "An open leather suitcase resting on a rumpled bed near a sunlit window."
+    },
+    {
+      "say": "Meanwhile, imagine putting just $200 a month into a standard market index.",
+      "callout": "$200 / MONTH",
+      "visual": "A hand turning the pages of a blank notebook on a minimal oak desk."
+    },
+    {
+      "say": "At 8% a year, that small habit grows into a massive financial cushion.",
+      "callout": "8% RETURN",
+      "visual": "A cinematic shot of green forest trees swaying gently in a quiet morning breeze."
+    },
+    {
+      "say": "Over 40 years, that routine turns into $698,202 sitting in your account.",
+      "callout": "$698,202 TOTAL",
+      "visual": "A slow pan across a minimalist concrete wall with soft shadows moving lazily."
+    },
+    {
+      "say": "Out of that total, you only put in $96,000 of your own hard-earned cash.",
+      "callout": "$96,000 PRINCIPAL",
+      "visual": "A single ceramic coffee cup resting on a dark slate countertop."
+    },
+    {
+      "say": "Renting frees up cash flow so you can invest the difference elsewhere.",
+      "callout": "INVEST DIFFERENCE",
+      "visual": "A close-up of a fountain pen resting beside a blank sheet of heavy paper."
+    },
+    {
+      "say": "Stop letting landlords of old thinking trick you into bad math.",
+      "callout": "BAD MATH",
+      "visual": "A foggy city street seen through the rain-streaked glass of a coffee shop window."
+    },
+    {
+      "say": "Follow for the money rules school never taught you because your rent is",
+      "callout": "",
+      "visual": "A person walking down a quiet concrete hallway away from the camera, cinematic lighting."
+    }
+  ],
+  "caption": "Stop letting outdated advice dictate your financial life. Renting isn't burning cash—it's buying flexibility while your actual money compounds quietly in the background. #personalfinance #moneytips #rentingvsbuying #wealthbuilding #financialfreedom",
+  "description": "Deconstructing the myth that renting is always throwing money away by comparing ownership costs with market compounding.",
+  "hashtags": [
+    "#personalfinance",
+    "#moneytips",
+    "#rentingvsbuying",
+    "#wealthbuilding",
+    "#financialfreedom"
+  ],
+  "first_comment": "Do you prefer the flexibility of renting or the stability of owning?",
+  "facts": [
+    {
+      "claim": "$200/month invested for 40 years at 8%/yr (monthly compounding) = $698,202 (you put in $96,000)",
+      "basis": "Code fact sheet calculation for $200/month over 40 years at 8%."
+    }
+  ],
+  "source": "llm",
+  "pillar": "myth"
+}

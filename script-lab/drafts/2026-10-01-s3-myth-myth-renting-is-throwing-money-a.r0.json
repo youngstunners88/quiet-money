@@ -1,0 +1,78 @@
+{
+  "title": "Why Renting Isn't Throwing Money Away",
+  "hook_text": "RENTING IS NOT THROWING MONEY AWAY",
+  "beats": [
+    {
+      "say": "Renting isn't throwing money away. You're paying for flexibility.",
+      "callout": "",
+      "visual": "A sleek modern apartment interior, soft morning light filtering through blinds, no people."
+    },
+    {
+      "say": "Let's look at the true cost of owning a home instead.",
+      "callout": "True Cost",
+      "visual": "A close-up of a silver house key resting on a dark wooden table, top-down shot."
+    },
+    {
+      "say": "Interest, taxes, and maintenance add up to thousands you never get back.",
+      "callout": "Zero Return",
+      "visual": "A maintenance tool like a wrench on a concrete floor, dramatic side lighting."
+    },
+    {
+      "say": "Meanwhile, the down payment money could be working for you elsewhere.",
+      "callout": "",
+      "visual": "A calculator on a clean desk next to a ceramic cup, warm indoor lighting."
+    },
+    {
+      "say": "Take $200 a month invested for 30 years at 8% a year.",
+      "callout": "$298,072",
+      "visual": "A blank graph drawn on a frosted glass window with a marker, side profile silhouette."
+    },
+    {
+      "say": "That turns into $298,072 with monthly compounding.",
+      "callout": "",
+      "visual": "An abstract close-up of compounding gear wheels moving slowly, dark moody tones."
+    },
+    {
+      "say": "But here's the part nobody mentions about buying.",
+      "callout": "The Catch",
+      "visual": "A hand sliding a thick manila folder across a smooth marble counter, low angle."
+    },
+    {
+      "say": "If you buy too soon, fixing a roof or a broken pipe wipes out your savings.",
+      "callout": "Repairs",
+      "visual": "A dripping copper pipe in a dark basement, shallow depth of field."
+    },
+    {
+      "say": "Renting caps your housing cost at your monthly lease.",
+      "callout": "Fixed Cost",
+      "visual": "A minimalist calendar page hanging on a stark white wall, natural light."
+    },
+    {
+      "say": "Owning caps your lowest cost at your mortgage, but your highest cost is unlimited.",
+      "callout": "Unlimited Risk",
+      "visual": "A silhouette of a person looking out a large glass window at a stormy city skyline."
+    },
+    {
+      "say": "Stop letting landlords of old myths make you feel bad about renting, because that's exactly how",
+      "callout": "",
+      "visual": "A metal front door closing slowly in a quiet hallway, dark shadows."
+    }
+  ],
+  "caption": "Stop letting people shame you for renting. It's often the smarter financial move.\n\n#renting #moneyhacks #personalfinance #wealth #smartmoney",
+  "description": "Renting is often labeled as throwing money away, but when you factor in maintenance, interest, and the opportunity cost of a down payment, renting paired with investing can leave you ahead.",
+  "hashtags": [
+    "#renting",
+    "#moneyhacks",
+    "#personalfinance",
+    "#wealth",
+    "#smartmoney"
+  ],
+  "first_comment": "Do you prefer the freedom of renting or the stability of owning?",
+  "facts": [
+    {
+      "claim": "$200/month invested for 30 years at 8%/yr (monthly compounding) = $298,072",
+      "basis": "Fact sheet provided values for $200/month at 8% for 30 years."
+    }
+  ],
+  "source": "llm"
+}

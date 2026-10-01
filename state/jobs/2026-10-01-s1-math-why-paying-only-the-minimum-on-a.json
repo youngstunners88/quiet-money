@@ -1,0 +1,70 @@
+{
+  "id": "2026-10-01-s1-math-why-paying-only-the-minimum-on-a",
+  "pillar": "math",
+  "topic": "Why paying only the minimum on a $6,000 credit card takes about 21 years",
+  "day": "2026-10-01",
+  "slot": 1,
+  "status": "published",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-01T14:15:46Z",
+      "words": 169
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-01T14:16:18Z",
+      "seconds": 66.095,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-01T14:17:37Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-01T14:19:26Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-01T14:19:26Z",
+      "score": 99
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-01T14:19:26Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-10-01T14:19:26Z",
+      "local": "2026-10-01T11:30:00-04:00"
+    }
+  ],
+  "artifacts": {
+    "title": "The $6,000 credit card mistake that takes 21 years",
+    "video": "/home/user/agent-universe/faceless-studio/production/output/2026-10-01/2026-10-01-s1-math-why-paying-only-the-minimum-on-a/final.mp4",
+    "cover": "/home/user/agent-universe/faceless-studio/production/output/2026-10-01/2026-10-01-s1-math-why-paying-only-the-minimum-on-a/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/agent-universe/faceless-studio/distribution/queue/2026-10-01/slot2-math",
+        "post_at": "2026-10-01T11:30:00-04:00"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 99,
+    "passed": true
+  },
+  "cost": {
+    "tts:edge:chars": 1037
+  },
+  "notes": []
+}

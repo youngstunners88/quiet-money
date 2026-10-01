@@ -1,0 +1,32 @@
+---
+name: faceless-daily
+description: Produce, gate, and package the Quiet Money channel's daily batch of 5 faceless videos, then report what shipped. Use when asked to "run today's videos", "make the daily batch", "produce videos", or when a scheduled run needs checking or repair.
+---
+
+# Faceless daily run
+
+Produces the day's videos end to end with the repo root and leaves posting packs in
+`distribution/queue/<day>/`.
+
+## Steps
+1. `python -m faceless doctor`. Fix any `ERR` line before continuing
+   (`pip install -r requirements.txt`; ffmpeg via apt). Missing optional keys are fine.
+2. Run the batch: `python -m faceless daily` (5 videos; `--count N` to change, `--no-publish` to only package).
+   Expect ~3 minutes per video. Run it in the background for full batches.
+3. Read `gauntlet/reports/daily-<day>.md`. For every row that is not `published`:
+   - `held`: open `gauntlet/reports/<job_id>.md`, read the failing gates, then use the `faceless-gauntlet` skill.
+   - `failed`: `grep JOB_FAILED state/journal.jsonl | tail -3` shows the trace; fix the root cause, then
+     re-run that pillar: `python -m faceless make --pillar <pillar> --slot <slot>`.
+4. Spot-check at least one video visually: extract frames at 0.5 s, 3 s, mid, and end
+   (`ffmpeg -ss <t> -i final.mp4 -frames:v 1 frame.jpg`) and look at them: hook box readable, captions not
+   clipped, images match the narration, no text artifacts in images.
+5. Report: titles, scores, durations, spend (`python -m faceless status`), and anything held.
+
+## Delivering videos
+- Posting packs: `distribution/queue/<day>/slot<N>-<pillar>/` (video.mp4, POST.md, cover.jpg).
+- Chat upload limit is 30 MB: re-encode a copy with
+  `ffmpeg -i video.mp4 -c:v libx264 -crf 22 -maxrate 6M -bufsize 12M -c:a copy out.mp4` if needed.
+
+## Never
+- Never publish a `held` video without fixing its hard gates.
+- Never commit media (mp4/wav/jpg); state, scripts, and reports are what get committed.

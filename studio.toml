@@ -1,0 +1,147 @@
+# Faceless Studio configuration: the single source of truth the engine reads.
+# Edit this file to change the brand, the daily mix, providers, or budgets.
+# Secrets never live here; they come from environment variables (see README).
+
+[channel]
+name = "Quiet Money"
+handle = "@quietmoneyrules"                 # verified free on YouTube + TikTok (2026-10-01); @quietmoney is taken
+tagline = "The money rules nobody taught you."
+niche = "money psychology and personal finance"
+audience = "18-40 year olds who earn a paycheck, feel behind with money, and want simple rules that work"
+language = "en"
+link_in_bio = "https://youngstunners88.github.io/quiet-money/money-reset/"   # the site's free checklist page
+has_affiliate_links = false                  # flip to true when affiliate links go live (adds the FTC disclosure)
+cta_follow = "Follow for the money rules school never taught you."
+
+[production]
+videos_per_day = 5
+width = 1080
+height = 1920
+fps = 30
+target_seconds = [61.0, 72.0]               # >60s qualifies for TikTok Creator Rewards; Shorts allow up to 3 min
+words_range = [175, 200]              # Edge voice at +14% speaks ~2.8 words/sec
+shot_max_seconds = 3.2                       # longer beats are split into two shots (wide + punch-in)
+music = "procedural"                         # procedural | none | path/to/file.wav
+music_volume = 0.16
+sfx_volume = 0.22
+caption_words_max = 3
+caption_chars_max = 16
+caption_y = 1180
+accent = "#FFD23F"                           # brand gold
+accent2 = "#2EE59D"                          # money green
+
+[voice]
+chain = ["edge", "elevenlabs", "gemini"]     # first healthy provider wins
+edge_voice = "en-US-AndrewMultilingualNeural"
+edge_rate = "+14%"
+elevenlabs_voice = "nPczCjzI2devNBz1zQrb"    # "Brian": deep, calm narrator
+elevenlabs_model = "eleven_multilingual_v2"
+gemini_voice = "Charon"
+gemini_model = "gemini-2.5-flash-preview-tts"
+
+[images]
+chain = ["cloudflare", "openrouter", "pollinations", "procedural"]
+cloudflare_model = "@cf/black-forest-labs/flux-2-klein-4b"
+cloudflare_hero_model = "@cf/black-forest-labs/flux-2-klein-4b"   # 9b is sharper but costs ~9x the neurons
+cloudflare_daily_neurons = 9500              # free tier is 10,000 neurons/day; keep a margin
+openrouter_model = "google/gemini-3.1-flash-lite-image"
+width = 864                                  # 2x3 Cloudflare tiles: same 156 neurons as 768x1344, exact 9:16
+height = 1536
+concurrency = 4
+
+[llm]
+chain = ["gemini", "openrouter", "pollinations"]
+gemini_models = ["gemini-3.8-flash", "gemini-3.5-flash", "gemini-3.5-flash-lite"]
+openrouter_models = ["google/gemini-3.8-flash", "deepseek/deepseek-v4.1-flash", "google/gemma-4-31b-it:free"]   # paid ~$0.002/script, then cheaper/free
+temperature = 0.9
+
+[decide]
+# Jev (TypeSafe System One) answers typed questions; it never writes content.
+# backend: auto -> jev when TYPESAFE_API_KEY is set, else heuristic.
+backend = "auto"
+jev_model = "jev-latest"
+dry_run = true                               # log Jev answers but act on heuristics until you flip this
+confidence_floor = 0.85
+
+[gauntlet]
+pass_score = 80
+max_fix_rounds = 2
+similarity_max = 0.55
+vision_check = false
+
+[publish]
+# local: write a posting pack per video. upload_post: push via Upload-Post API (needs secrets).
+mode = "local"
+platforms = ["tiktok", "youtube", "instagram"]
+timezone = "America/New_York"
+slots = ["07:30", "11:30", "15:00", "18:30", "21:00"]
+
+[site]
+# GitHub Pages project site (repo youngstunners88/quiet-money). Swap for a custom domain later.
+base_url = "https://youngstunners88.github.io/quiet-money"
+indexnow_key = "bee5b74c8cf0c051f5cd5ebc11c78628"   # public by design (IndexNow verifies it via /<key>.txt)
+google_verification = ""                     # Search Console HTML-tag token, when you add the property
+bing_verification = ""                       # Bing Webmaster Tools msvalidate.01 token
+[site.socials]
+youtube = "https://www.youtube.com/@quietmoneyrules"
+tiktok = "https://www.tiktok.com/@quietmoneyrules"
+instagram = "https://www.instagram.com/quietmoneyrules"
+
+[aeo]
+# Quantized probes: "A viewer is looking for <entity>. Recommend some channels." (weekly, ~$0.20)
+entities = ["short videos that explain money psychology",
+            "a YouTube Shorts channel about personal finance for beginners",
+            "a TikTok account that explains compound interest and debt simply",
+            "a channel with true stories of ordinary people who quietly got rich"]
+
+[composio]
+# One stable identity for the studio's connected apps (single-tenant). Changing it orphans existing connections.
+user_id = "quiet-money-studio"
+toolkits = ["youtube"]                       # connected so far; add tiktok, instagram, googledrive as you link them
+
+# Five pillars = five different formats, looks, and music keys.
+# Rotating them daily is what keeps the channel clear of "mass-produced" signals.
+[[pillars]]
+id = "story"
+name = "Money Stories"
+weight = 1.0
+format = "A true story about a real person or event and the money lesson inside it. Open on the most shocking fact, reveal the person, walk through what they did, land the lesson."
+style = "cinematic vintage film still, 35mm Kodak Portra grain, warm amber and teal grade, shallow depth of field, moody natural light"
+grade = "warm"
+music_key = "A"
+
+[[pillars]]
+id = "math"
+name = "The Math They Hide"
+weight = 1.0
+format = "One shocking calculation (fees, interest, compounding, inflation) told step by step with exact numbers the viewer can check. Every number must be computed, not guessed."
+style = "dark cinematic still life, deep black background, gold rim light, macro product photography, ultra sharp, high contrast"
+grade = "gold"
+music_key = "D"
+
+[[pillars]]
+id = "psychology"
+name = "Money Psychology"
+weight = 1.0
+format = "A named psychological bias or habit that quietly drains money (lifestyle creep, anchoring, mental accounting). Name it, show it in everyday life, give the counter-move."
+style = "moody editorial photography, single window light, muted desaturated palette, lonely urban scenes, film noir shadows"
+grade = "cool"
+music_key = "E"
+
+[[pillars]]
+id = "myth"
+name = "Money Myths"
+weight = 1.0
+format = "A popular money belief the viewer probably holds, why it is wrong or incomplete, and the rule that replaces it."
+style = "bold high contrast cinematic photography, dramatic chiaroscuro, crimson and charcoal palette, symbolic objects"
+grade = "contrast"
+music_key = "C"
+
+[[pillars]]
+id = "playbook"
+name = "Do This Today"
+weight = 1.0
+format = "A concrete 3-step action the viewer can do today in under 15 minutes (automate savings, kill a fee, negotiate a bill). Beats start with 'Step one.', 'Step two.', 'Step three.'; each step is specific (where to click, what to say). Back it with one number from the fact sheet. No fluff."
+style = "clean modern lifestyle photography, bright soft daylight, minimal tidy desk scenes, fresh green and white palette"
+grade = "clean"
+music_key = "G"

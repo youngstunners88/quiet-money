@@ -1,0 +1,73 @@
+{
+  "title": "Why a raise never makes you feel richer",
+  "hook_text": "YOUR RAISE JUST DISAPPEARED",
+  "beats": [
+    {
+      "say": "You got a ten percent raise. But your bank account still looks empty.",
+      "callout": "",
+      "visual": "A sleek metal smartphone resting on a dark marble kitchen counter, dim moody lighting."
+    },
+    {
+      "say": "It is not bad luck. It is a quiet trap called lifestyle creep.",
+      "callout": "Lifestyle Creep",
+      "visual": "A steaming cup of black coffee next to a leather notebook on a mahogany table."
+    },
+    {
+      "say": "Here is how it works. Every time you earn more, you automatically spend more.",
+      "callout": "Invisible spending",
+      "visual": "A gloved hand sliding a heavy ceramic plate across a polished restaurant table."
+    },
+    {
+      "say": "A better apartment. Premium groceries. Daily deliveries instead of cooking.",
+      "callout": "Upgraded habits",
+      "visual": "A minimalist white apartment interior viewed through a doorway, soft morning shadows."
+    },
+    {
+      "say": "Before you even notice, your new salary matches your new standard.",
+      "callout": "The exact match",
+      "visual": "A silver fountain pen resting on top of a blank cream paper envelope."
+    },
+    {
+      "say": "And you feel just as broke as you did on your old wage.",
+      "callout": "Zero progress",
+      "visual": "A close-up of a brass key turning slowly inside a heavy wooden deadbolt."
+    },
+    {
+      "say": "But here is the part nobody mentions. Your income grew, but your future did not.",
+      "callout": "The hidden cost",
+      "visual": "An antique brass pocket watch lying open on a dark slate surface, macro shot."
+    },
+    {
+      "say": "Take a simple five dollar daily habit. Over thirty years at eight percent, that small leak costs you two hundred twenty six thousand dollars.",
+      "callout": "$226,659",
+      "visual": "A single drop of water falling onto a calm, dark pool of water, top-down view."
+    },
+    {
+      "say": "The antidote is simple. When a raise hits, lock half of it away before you touch it.",
+      "callout": "The 50% rule",
+      "visual": "A heavy iron security deposit box clicking shut in a dim vault."
+    },
+    {
+      "say": "Fund your investments, not your landlords. That is how you break the loop and",
+      "callout": "Keep the gap",
+      "visual": "A single silhouette of a person walking down a long, dimly lit concrete hallway."
+    }
+  ],
+  "caption": "More money doesn't fix a spending system. Follow for the money rules school never taught you.",
+  "description": "Why getting a raise often leaves you feeling just as broke. Understanding lifestyle creep and how to keep the gap between what you earn and what you spend.",
+  "hashtags": [
+    "#moneypsychology",
+    "#personalfinance",
+    "#wealthbuilding",
+    "#smartmoney",
+    "#financialfreedom"
+  ],
+  "first_comment": "What is one upgrade you bought after getting a raise that you now regret?",
+  "facts": [
+    {
+      "claim": "A $5/day habit invested monthly at 8% for 30 years equals $226,659.",
+      "basis": "Fact sheet: $5/day habit = $1,825/year; invested monthly at 8% for 30 years = $226,659"
+    }
+  ],
+  "source": "llm"
+}

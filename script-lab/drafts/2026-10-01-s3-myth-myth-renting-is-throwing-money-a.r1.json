@@ -1,0 +1,73 @@
+{
+  "title": "Why Renting Isn't Throwing Money Away",
+  "hook_text": "RENTING ISN'T THROWING MONEY AWAY",
+  "beats": [
+    {
+      "say": "You’ve been told renting is throwing money away. That’s a lie that costs people thousands.",
+      "callout": "",
+      "visual": "Cinematic shot of a single set of keys resting on a bare wooden table, moody evening window light."
+    },
+    {
+      "say": "Here’s the part nobody mentions about buying a home. It’s not just a mortgage payment.",
+      "callout": "THE HIDDEN COSTS",
+      "visual": "A person’s hand flipping through a thick stack of home repair receipts on a dark desk."
+    },
+    {
+      "say": "Property taxes, insurance, and interest eat your cash every single month.",
+      "callout": "NO RETURN",
+      "visual": "Close up of a fountain pen signing a document, cinematic shadows, shallow depth of field."
+    },
+    {
+      "say": "None of that money ever comes back to you. It’s gone for good.",
+      "callout": "IT VANISHES",
+      "visual": "A glowing desk lamp casting long shadows across an empty minimalist living room floor."
+    },
+    {
+      "say": "Meanwhile, the down payment you saved could be working for you instead.",
+      "callout": "PUT IT TO WORK",
+      "visual": "A minimalist hourglass sitting on a concrete surface, dramatic side lighting, slow motion."
+    },
+    {
+      "say": "Put $200 a month into an index fund at 8% a year for 30 years.",
+      "callout": "$298,072",
+      "visual": "A lone coffee cup sitting on a balcony railing at sunrise, blurred city skyline background."
+    },
+    {
+      "say": "That turns into $298,072. And you only put in $72,000.",
+      "callout": "COMPOUND GROWTH",
+      "visual": "A sleek modern kitchen with no furniture, clean lines, morning sun cutting through dust motes."
+    },
+    {
+      "say": "Try doing that with property taxes and roof repairs. They don’t pay you back.",
+      "callout": "PURE EXPENSE",
+      "visual": "A hand closing a heavy oak front door from the inside, dark hallway, single light source."
+    },
+    {
+      "say": "Rent is the maximum you’ll pay for housing this month.",
+      "callout": "FIXED COST",
+      "visual": "A close up of a brass door handle being turned slowly in a quiet hallway."
+    },
+    {
+      "say": "A mortgage is the minimum you’ll pay. That’s why",
+      "callout": "THE REAL MINIMUM",
+      "visual": "A dark urban street viewed from a high window, soft amber streetlights glowing in the rain."
+    }
+  ],
+  "caption": "The math changes when you look at the total cost of ownership. \n\n#money #personalfinance #rentingvsbuying #wealthbuilding #smartmoney",
+  "description": "Renting is often labeled as wasting money, but homeownership comes with hidden costs that rarely get factored in. Understanding the math helps build real long-term wealth.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#rentingvsbuying",
+    "#wealthbuilding",
+    "#smartmoney"
+  ],
+  "first_comment": "Are you renting or buying right now? Let's talk about the real numbers below.",
+  "facts": [
+    {
+      "claim": "$200/month invested for 30 years at 8%/yr (monthly compounding) = $298,072 (you put in $72,000)",
+      "basis": "Provided money fact sheet"
+    }
+  ],
+  "source": "llm"
+}

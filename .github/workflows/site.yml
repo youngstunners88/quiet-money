@@ -1,0 +1,44 @@
+name: Website
+
+# Builds the Money Rules Library and publishes it to the gh-pages branch (GitHub Pages),
+# then pings IndexNow so Bing (and with it ChatGPT search) hears about new pages the same day.
+on:
+  push:
+    branches: [main]
+  workflow_run:
+    workflows: ["Daily batch"]   # bot pushes don't trigger workflows, so chain on the batch finishing
+    types: [completed]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: site
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r <(grep -vE "composio|edge-tts|opencv" requirements.txt)
+      - name: Build site
+        run: python -m faceless site build
+      - name: Publish to gh-pages
+        run: |
+          cd site
+          git init -q -b gh-pages
+          git config user.name "quiet-money-bot"
+          git config user.email "quiet-money-bot@users.noreply.github.com"
+          git add -A && git commit -q -m "site: $(date -u +%F) from ${GITHUB_SHA::7}"
+          git push -f "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git" gh-pages
+      - name: Ping IndexNow
+        continue-on-error: true
+        run: sleep 90 && python -m faceless site indexnow

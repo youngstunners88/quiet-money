@@ -1,0 +1,77 @@
+name: Daily batch
+
+# Produces the day's videos, runs the gauntlet, schedules posts (when publishing secrets exist),
+# uploads the posting packs as a downloadable artifact, and commits state + reports back.
+on:
+  schedule:
+    - cron: "17 9 * * *"        # 09:17 UTC = 05:17 New York, before the first 07:30 slot
+  workflow_dispatch:
+    inputs:
+      count:
+        description: "Videos to produce"
+        default: "5"
+      publish:
+        description: "Schedule posts (true) or only build packs (false)"
+        default: "true"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily
+  cancel-in-progress: false
+
+jobs:
+  produce:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    env:
+      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+      CLOUDFLARE_API_KEY: ${{ secrets.CLOUDFLARE_API_KEY }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+      UPLOAD_POST_API_KEY: ${{ secrets.UPLOAD_POST_API_KEY }}
+      UPLOAD_POST_USER: ${{ secrets.UPLOAD_POST_USER }}
+      TYPESAFE_API_KEY: ${{ secrets.TYPESAFE_API_KEY }}
+      COMPOSIO_API_KEY: ${{ secrets.COMPOSIO_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Install ffmpeg
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+      - name: Install engine
+        run: pip install --use-pep517 pysher && pip install -r requirements.txt
+      - name: Doctor
+        run: python -m faceless doctor
+      - name: Restore image cache
+        uses: actions/cache@v4
+        with:
+          path: production/cache
+          key: faceless-cache-${{ github.run_id }}
+          restore-keys: faceless-cache-
+      - name: Produce batch
+        run: |
+          ARGS="--count ${{ github.event.inputs.count || '5' }}"
+          if [ "${{ github.event.inputs.publish || 'true' }}" != "true" ]; then ARGS="$ARGS --no-publish"; fi
+          if [ -n "$UPLOAD_POST_API_KEY" ]; then sed -i 's/^mode = "local"/mode = "upload_post"/' studio.toml; fi
+          python -m faceless daily $ARGS
+      - name: Upload posting packs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: posting-packs-${{ github.run_number }}
+          path: distribution/queue/
+          retention-days: 14
+      - name: Commit state and reports
+        if: always()
+        run: |
+          git checkout -- studio.toml
+          git config user.name "quiet-money-bot"
+          git config user.email "quiet-money-bot@users.noreply.github.com"
+          git add state script-lab gauntlet analytics distribution/queue || true
+          git diff --cached --quiet || git commit -m "studio: daily batch $(date -u +%F)"
+          git pull --rebase --autostash origin "${GITHUB_REF_NAME}" && git push origin "HEAD:${GITHUB_REF_NAME}"

@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+.env
+.env.local
+# media is rebuilt or shipped as CI artifacts; state, scripts, reports, and the brand kit are committed
+production/output/
+production/cache/
+distribution/queue/**/*.mp4
+distribution/queue/**/*.jpg
+distribution/queue/**/*.wav
+# built website (deployed to the gh-pages branch by CI)
+site/

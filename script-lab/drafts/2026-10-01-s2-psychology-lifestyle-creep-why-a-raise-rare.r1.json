@@ -1,0 +1,82 @@
+{
+  "title": "Why A Raise Never Makes You Richer",
+  "hook_text": "WHY A RAISE MAKES YOU BROKER",
+  "beats": [
+    {
+      "say": "You got a ten percent raise last year. But your bank account looks exactly the same.",
+      "callout": "",
+      "visual": "A sleek modern desk with a steaming coffee cup, soft window light filtering through blinds, cinematic overhead shot."
+    },
+    {
+      "say": "This invisible trap ruins your finances. Stay with me to see how to break it.",
+      "callout": "",
+      "visual": "A close-up of a silver watch resting on dark wood, slow panning camera motion, moody shadow play."
+    },
+    {
+      "say": "It is called lifestyle creep. Every single time your income climbs, your spending quietly climbs right beside it.",
+      "callout": "Lifestyle Creep",
+      "visual": "A silhouette of a person walking past a luxury store window at dusk, reflections on wet pavement."
+    },
+    {
+      "say": "You upgrade your apartment. You buy a better car. You trade the cheap coffee for a daily five dollar habit.",
+      "callout": "$5 a day",
+      "visual": "Hands holding a ceramic pour-over kettle, pouring hot water over fresh coffee grounds in a quiet kitchen."
+    },
+    {
+      "say": "That five dollar daily habit becomes eighteen hundred twenty-five dollars every single year.",
+      "callout": "$1,825 a year",
+      "visual": "A stack of crisp paper notes sitting neatly on a minimalist wooden table, shallow depth of field."
+    },
+    {
+      "say": "And if you invested that same amount monthly at eight percent a year for thirty years, it grows into two hundred twenty-six thousand dollars.",
+      "callout": "$226,659",
+      "visual": "A vintage brass desk lamp casting a warm glow across an empty leather-bound notebook."
+    },
+    {
+      "say": "But here is the part nobody mentions. Most people never actually keep the raise.",
+      "callout": "The Hidden Trap",
+      "visual": "An open window with sheer curtains blowing gently in a cool evening breeze, cinematic wide angle."
+    },
+    {
+      "say": "They trade their future freedom for immediate comfort today. The extra money vanishes into invisible upgrades.",
+      "callout": "",
+      "visual": "A leather keyholder sitting on a dark hallway console table under soft amber overhead lighting."
+    },
+    {
+      "say": "The rule is simple. When your income goes up, your lifestyle stays completely frozen.",
+      "callout": "Keep It Frozen",
+      "visual": "A sleek minimalist pen resting beside a blank white journal on a dark oak desk."
+    },
+    {
+      "say": "Save the difference before you ever see it hit your checking account.",
+      "callout": "",
+      "visual": "Hands closing a dark wooden storage box softly, clean shadows, cinematic macro shot."
+    },
+    {
+      "say": "Follow for the money rules school never taught you, because that is exactly how",
+      "callout": "",
+      "visual": "A person walking down a quiet hallway away from the camera, warm cinematic rim lighting."
+    }
+  ],
+  "caption": "More money doesn't fix a spending leak. Follow for the money rules school never taught you. #moneppsychology #personalfinance #wealthbuilding #financialfreedom #smartmoney",
+  "description": "Lifestyle creep quietly swallows every raise you get. Learn how to spot this psychological trap and keep your savings rate intact.",
+  "hashtags": [
+    "#moneppsychology",
+    "#personalfinance",
+    "#wealthbuilding",
+    "#financialfreedom",
+    "#smartmoney"
+  ],
+  "first_comment": "What is one upgrade you bought after a raise that you now regret?",
+  "facts": [
+    {
+      "claim": "A $5/day habit equals $1,825/year",
+      "basis": "5 * 365 = 1,825"
+    },
+    {
+      "claim": "$5/day invested monthly at 8% for 30 years = $226,659",
+      "basis": "Fact sheet: $5/day habit = $1,825/year; invested monthly at 8% for 30 years = $226,659"
+    }
+  ],
+  "source": "llm"
+}

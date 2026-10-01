@@ -1,0 +1,78 @@
+{
+  "title": "Automate Your Savings In 10 Minutes",
+  "hook_text": "AUTOMATE YOUR SAVINGS IN 10 MINUTES",
+  "beats": [
+    {
+      "say": "Willpower doesn't build wealth. Automation does.",
+      "callout": "",
+      "visual": "A sleek silver mechanical gear turning slowly in dim moody lighting, macro lens."
+    },
+    {
+      "say": "Most people save what's left after spending. That's why they're broke.",
+      "callout": "Save first",
+      "visual": "A ceramic coffee cup sitting on a dark wooden desk beside a closed laptop, morning light."
+    },
+    {
+      "say": "Flip the script today in 10 minutes with 3 simple rules.",
+      "callout": "10 minutes",
+      "visual": "A close-up of hands typing on a dark mechanical keyboard, blue-tinted ambient light."
+    },
+    {
+      "say": "Step 1. Open your banking app and create a second checking account named savings.",
+      "callout": "Step 1",
+      "visual": "A minimalist smartphone resting face down on a concrete surface, dramatic shadows."
+    },
+    {
+      "say": "Step 2. Set up an automatic transfer for payday morning. Not the end of the month.",
+      "callout": "Step 2",
+      "visual": "A calendar page showing a fresh month, shot from above in soft natural light."
+    },
+    {
+      "say": "Start small. Even $100 a month changes your trajectory.",
+      "callout": "$100/month",
+      "visual": "A stack of plain white business cards resting on a dark walnut table, clean lines."
+    },
+    {
+      "say": "At 8% a year, that small habit compounds quietly.",
+      "callout": "8% a year",
+      "visual": "A vintage hourglass resting on a thick leather-bound book, dust motes in a sunbeam."
+    },
+    {
+      "say": "After 30 years, it grows into $149,000.",
+      "callout": "$149,036",
+      "visual": "A heavy steel vault door half open, dark interior with a single beam of light."
+    },
+    {
+      "say": "Step 3. Hide the debit card for that account in a drawer.",
+      "callout": "Step 3",
+      "visual": "A dark wooden drawer sliding shut, minimalist interior, cinematic warm shadows."
+    },
+    {
+      "say": "Make it invisible. If you can't see the money, you won't spend it.",
+      "callout": "Out of sight",
+      "visual": "A matte black coffee mug casting a long shadow across a minimalist desk."
+    },
+    {
+      "say": "Willpower fails by Tuesday afternoon, but code runs every single day...",
+      "callout": "Code runs daily",
+      "visual": "A server rack blinking with soft blue LED lights in a quiet dark room."
+    }
+  ],
+  "caption": "Willpower fails. Systems don't. Set up your automatic transfer today.\n\n#personalfinance #savingmoney #wealthbuilding #moneytips #payyourselffirst",
+  "description": "Stop relying on willpower to save money. Use this 10-minute pay-yourself-first setup to automate your savings and let compounding do the heavy lifting.",
+  "hashtags": [
+    "#personalfinance",
+    "#savingmoney",
+    "#wealthbuilding",
+    "#moneytips",
+    "#payyourselffirst"
+  ],
+  "first_comment": "What day of the month do you get paid?",
+  "facts": [
+    {
+      "claim": "$100/month invested for 30 years at 8%/yr (monthly compounding) = $149,036",
+      "basis": "$100/month invested for 30 years at 8%/yr (monthly compounding) = $149,036 (you put in $36,000)"
+    }
+  ],
+  "source": "llm"
+}

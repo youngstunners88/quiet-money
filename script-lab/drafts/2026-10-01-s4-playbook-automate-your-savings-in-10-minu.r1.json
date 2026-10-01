@@ -1,0 +1,96 @@
+{
+  "title": "The 10-Minute Money Setup You Need Today",
+  "hook_text": "YOUR BANK ACCOUNT IS LEAKING MONEY",
+  "beats": [
+    {
+      "say": "Most people save whatever's left at the end of the month. That's why they have nothing left.",
+      "callout": "",
+      "visual": "Close-up of a hand dropping metal coins onto a dark wooden table, dim lighting, high contrast."
+    },
+    {
+      "say": "Here's the 10-minute fix that flips the script and forces your wealth to grow on autopilot.",
+      "callout": "$500 / MONTH",
+      "visual": "A smartphone resting face-down on a minimalist concrete desk next to a ceramic cup of black coffee."
+    },
+    {
+      "say": "Step one. Log into your main checking account right now.",
+      "callout": "STEP 1",
+      "visual": "A person's hands typing on a sleek silver laptop keyboard in a quiet, moody room."
+    },
+    {
+      "say": "Set up a recurring automatic transfer for the day after payday.",
+      "callout": "DAY AFTER PAY",
+      "visual": "A calendar page pinned to a corkboard, soft morning light filtering through blinds."
+    },
+    {
+      "say": "Send that cash straight to a separate high-yield savings account you can't easily touch.",
+      "callout": "AUTOMATE IT",
+      "visual": "A heavy metal vault door slightly ajar with a warm amber glow leaking from inside."
+    },
+    {
+      "say": "Start small if you need to. Even $100 a month adds up fast.",
+      "callout": "$100 / MONTH",
+      "visual": "A single green plant sprout emerging from dark soil in a concrete pot, macro lens shot."
+    },
+    {
+      "say": "At 8% a year with monthly compounding, that $100 turns into $58,902 in 20 years.",
+      "callout": "$58,902 TOTAL",
+      "visual": "A vintage glass hourglass with white sand trickling down against a dark, textured wall."
+    },
+    {
+      "say": "Bump it to $500 a month, and that same 20 years yields $294,510.",
+      "callout": "$294,510 TOTAL",
+      "visual": "A neat stack of unlabelled white envelopes resting on a dark marble countertop."
+    },
+    {
+      "say": "But here's the part nobody mentions. If you wait just 10 years, the math gets brutal.",
+      "callout": "THE 10-YEAR TRAP",
+      "visual": "A shadow of a person walking down an empty hallway, late afternoon long shadows."
+    },
+    {
+      "say": "Starting at 25 versus 35 with $200 a month at 8% until 65 changes everything.",
+      "callout": "$698,000 VS $298,000",
+      "visual": "An old analog wall clock ticking in an out-of-focus, minimalist modern room."
+    },
+    {
+      "say": "That 10-year delay costs you $400,130 in missed growth.",
+      "callout": "$400,130 LOST",
+      "visual": "A dark coffee stain spreading slowly across a clean white sheet of thick paper."
+    },
+    {
+      "say": "You don't need more willpower. You just need a system that runs without you.",
+      "callout": "NO WILLPOWER",
+      "visual": "A set of brass keys resting on a dark oak wooden table, moody cinematic lighting."
+    },
+    {
+      "say": "Stop relying on discipline and build the machine. Follow for the money rules school never taught you...",
+      "callout": "FOLLOW US",
+      "visual": "A closed wooden door with a single streak of bright sunlight cutting across the floor."
+    }
+  ],
+  "caption": "Most people save what's left. Save first, then spend what's left. #personalfinance #moneymindset #wealthbuilding #savingmoney #financialfreedom",
+  "description": "Learn the pay-yourself-first method and how automating your savings today builds massive long-term wealth without extra willpower.",
+  "hashtags": [
+    "#personalfinance",
+    "#moneymindset",
+    "#wealthbuilding",
+    "#savingmoney",
+    "#financialfreedom"
+  ],
+  "first_comment": "What's stopping you from automating your savings today?",
+  "facts": [
+    {
+      "claim": "$100/month invested for 20 years at 8%/yr (monthly compounding) = $58,902",
+      "basis": "$100/month invested for 20 years at 8%/yr (monthly compounding) = $58,902 (you put in $24,000)"
+    },
+    {
+      "claim": "$500/month invested for 20 years at 8%/yr (monthly compounding) = $294,510",
+      "basis": "$500/month invested for 20 years at 8%/yr (monthly compounding) = $294,510 (you put in $120,000)"
+    },
+    {
+      "claim": "Starting at 25 vs 35 with $200/month at 8% until 65: $698,202 vs $298,072 (10 years late costs $400,130)",
+      "basis": "Starting at 25 vs 35 with $200/month at 8% until 65: $698,202 vs $298,072 (10 years late costs $400,130)"
+    }
+  ],
+  "source": "llm"
+}

@@ -1,0 +1,11 @@
+requests>=2.31
+pillow>=10.0
+numpy>=1.26
+opencv-python-headless>=4.9
+edge-tts>=7.0
+pytest>=8.0
+# connected apps (YouTube/TikTok/Drive...). On Debian Python, if pysher fails to build:
+#   pip install --use-pep517 pysher && pip install composio
+composio>=0.25
+# optional: Jev decision layer (set TYPESAFE_API_KEY)
+# typesafe-sdk>=0.7

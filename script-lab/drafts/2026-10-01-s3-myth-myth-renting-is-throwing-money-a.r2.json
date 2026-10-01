@@ -1,0 +1,79 @@
+{
+  "title": "Why Renting Isn't Throwing Money Away",
+  "hook_text": "THE RENT IS THROWING MONEY AWAY MYTH",
+  "beats": [
+    {
+      "say": "You've been told that renting is just throwing money straight into a landlord's pocket.",
+      "callout": "",
+      "visual": "Cinematic wide shot of a modern city apartment building exterior at dusk, soft warm interior window lights, moody blue hour tones."
+    },
+    {
+      "say": "That belief costs people hundreds of thousands of dollars over their lifetime.",
+      "callout": "",
+      "visual": "Close-up of a hand sliding a metal key across a dark wooden table, macro lens, shallow depth of field."
+    },
+    {
+      "say": "Because a mortgage payment is actually the minimum you'll pay for a home.",
+      "callout": "",
+      "visual": "Overhead shot of architectural blueprints and a silver pen resting on a raw oak desk, natural side light."
+    },
+    {
+      "say": "While a rent payment is the maximum you'll pay every single month.",
+      "callout": "",
+      "visual": "A sleek minimalist ceramic coffee mug sitting on a concrete kitchen counter, morning sunlight casting long shadows."
+    },
+    {
+      "say": "Think about all the hidden costs of owning property.",
+      "callout": "$500,000",
+      "visual": "Close-up of an old brass plumbing pipe with a single water droplet hanging, dark basement setting."
+    },
+    {
+      "say": "Property taxes, roof repairs, and interest eat your cash silently.",
+      "callout": "",
+      "visual": "A hand flipping through official paper documents with a red pen, side profile silhouette, soft indoor lighting."
+    },
+    {
+      "say": "But here's the part nobody mentions about investing the difference instead.",
+      "callout": "",
+      "visual": "A person's back facing a floor-to-ceiling window overlooking a quiet rainy street, muted color palette."
+    },
+    {
+      "say": "If you put $200 a month into the market at 8% for 40 years.",
+      "callout": "$698,202",
+      "visual": "Macro shot of a mechanical clock gear turning slowly, brass texture, warm cinematic rim light."
+    },
+    {
+      "say": "That small gap grows into $698,202 by the time you're ready to retire.",
+      "callout": "",
+      "visual": "A minimalist white wall with a soft abstract shadow moving slowly across it from a window."
+    },
+    {
+      "say": "Renting isn't losing. It's buying flexibility while your money builds quiet wealth elsewhere.",
+      "callout": "",
+      "visual": "A sleek leather notebook resting on a clean white desk, fountain pen placed neatly beside it."
+    },
+    {
+      "say": "Follow for the money rules school never taught you, because renting isn't throwing money",
+      "callout": "",
+      "visual": "A closed heavy wooden front door viewed from the inside hallway, golden afternoon light seeping through the bottom gap."
+    }
+  ],
+  "caption": "The math behind renting vs buying changes when you factor in maintenance and compounding. Follow for the money rules school never taught you. #rentingvsbuying #personalfinance #moneytips #wealthbuilding #financialfreedom",
+  "description": "Stop believing that renting is always a waste of money. When you factor in all the hidden costs of homeownership and invest the difference, the math tells a completely different story.",
+  "hashtags": [
+    "#rentingvsbuying",
+    "#personalfinance",
+    "#moneytips",
+    "#wealthbuilding",
+    "#financialfreedom"
+  ],
+  "first_comment": "Are you currently renting or owning? Drop your thoughts below.",
+  "facts": [
+    {
+      "claim": "$200/month invested for 40 years at 8%/yr (monthly compounding) = $698,202",
+      "basis": "$200/month invested for 40 years at 8%/yr (monthly compounding) = $698,202 (you put in $96,000)"
+    }
+  ],
+  "source": "llm",
+  "pillar": "myth"
+}

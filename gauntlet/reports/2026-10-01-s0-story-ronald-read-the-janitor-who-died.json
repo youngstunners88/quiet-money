@@ -1,0 +1,330 @@
+{
+  "job": "2026-10-01-s0-story-ronald-read-the-janitor-who-died",
+  "score": 100,
+  "passed": true,
+  "hard_failures": [],
+  "gates": [
+    {
+      "name": "word_count",
+      "passed": true,
+      "weight": 8,
+      "hard": false,
+      "detail": "188 words; need 160-195. Add about 11 words.",
+      "fix": "script"
+    },
+    {
+      "name": "beat_count",
+      "passed": true,
+      "weight": 6,
+      "hard": true,
+      "detail": "13 beats; need 10-14.",
+      "fix": "script"
+    },
+    {
+      "name": "hook_length",
+      "passed": true,
+      "weight": 6,
+      "hard": false,
+      "detail": "hook is 14 words; keep under 18.",
+      "fix": "script"
+    },
+    {
+      "name": "hook_trigger",
+      "passed": true,
+      "weight": 6,
+      "hard": false,
+      "detail": "hook needs a number, a 'you', or a contradiction in the first line.",
+      "fix": "script"
+    },
+    {
+      "name": "hook_text",
+      "passed": true,
+      "weight": 4,
+      "hard": false,
+      "detail": "on-screen hook 'A JANITOR DIED WITH $8 MILLION' should be 2-7 words.",
+      "fix": "script"
+    },
+    {
+      "name": "beat_length",
+      "passed": true,
+      "weight": 4,
+      "hard": false,
+      "detail": "beats too long for the ear: []",
+      "fix": "script"
+    },
+    {
+      "name": "visual_prompts",
+      "passed": true,
+      "weight": 8,
+      "hard": true,
+      "detail": "beats missing a concrete visual prompt: []",
+      "fix": "script"
+    },
+    {
+      "name": "callouts",
+      "passed": true,
+      "weight": 3,
+      "hard": false,
+      "detail": "8 callouts; use 4-7 on-screen numbers/phrases.",
+      "fix": "script"
+    },
+    {
+      "name": "banned_phrases",
+      "passed": true,
+      "weight": 5,
+      "hard": false,
+      "detail": "remove filler phrases: []",
+      "fix": "script"
+    },
+    {
+      "name": "compliance_phrases",
+      "passed": true,
+      "weight": 10,
+      "hard": true,
+      "detail": "remove advice/promise language: []",
+      "fix": "script"
+    },
+    {
+      "name": "no_ticker_picks",
+      "passed": true,
+      "weight": 8,
+      "hard": true,
+      "detail": "no ticker callouts: []",
+      "fix": "script"
+    },
+    {
+      "name": "loop_ending",
+      "passed": true,
+      "weight": 4,
+      "hard": false,
+      "detail": "end the last line mid-thought so it loops back into the hook.",
+      "fix": "script"
+    },
+    {
+      "name": "title",
+      "passed": true,
+      "weight": 3,
+      "hard": false,
+      "detail": "title is 45 chars; 25-60 works best.",
+      "fix": "script"
+    },
+    {
+      "name": "hashtags",
+      "passed": true,
+      "weight": 2,
+      "hard": false,
+      "detail": "5 hashtags; use 4-5.",
+      "fix": "script"
+    },
+    {
+      "name": "originality",
+      "passed": true,
+      "weight": 8,
+      "hard": true,
+      "detail": "too close to an earlier video (similarity 0.00); change the angle and hook.",
+      "fix": "script"
+    },
+    {
+      "name": "readability",
+      "passed": true,
+      "weight": 3,
+      "hard": false,
+      "detail": "average sentence is 5.5 words; aim for 8-14.",
+      "fix": "script"
+    },
+    {
+      "name": "judge_hook",
+      "passed": true,
+      "weight": 8,
+      "hard": false,
+      "detail": "hook scored 8/10. Change line 10 to clearly state past market performance does not guarantee future results to lower compliance risk.; Strengthen the loop ending by seamlessly connecting line 13 back to the hook ('A janitor died with $8 million... because...') instead of trailing off.; Trim line 13 to be punchier for a short-form video pacing requirement.",
+      "fix": "script"
+    },
+    {
+      "name": "judge_retention",
+      "passed": true,
+      "weight": 6,
+      "hard": false,
+      "detail": "retention scored 9/10. Change line 10 to clearly state past market performance does not guarantee future results to lower compliance risk.; Strengthen the loop ending by seamlessly connecting line 13 back to the hook ('A janitor died with $8 million... because...') instead of trailing off.; Trim line 13 to be punchier for a short-form video pacing requirement.",
+      "fix": "script"
+    },
+    {
+      "name": "judge_value",
+      "passed": true,
+      "weight": 5,
+      "hard": false,
+      "detail": "value scored 8/10. Change line 10 to clearly state past market performance does not guarantee future results to lower compliance risk.; Strengthen the loop ending by seamlessly connecting line 13 back to the hook ('A janitor died with $8 million... because...') instead of trailing off.; Trim line 13 to be punchier for a short-form video pacing requirement.",
+      "fix": "script"
+    },
+    {
+      "name": "judge_facts",
+      "passed": true,
+      "weight": 10,
+      "hard": true,
+      "detail": "factual risk 2/10: stack five inches tall (verifiable via estate records, but slightly anecdotal); $200 a month at 8% a year for 40 years is about $698,000 (mathematically sound, but historical market returns aren't guaranteed)",
+      "fix": "script"
+    },
+    {
+      "name": "judge_compliance",
+      "passed": true,
+      "weight": 10,
+      "hard": true,
+      "detail": "compliance risk 2/10",
+      "fix": "script"
+    },
+    {
+      "name": "duration",
+      "passed": true,
+      "weight": 10,
+      "hard": true,
+      "detail": "66.8s; need 61-72s (TikTok rewards need >60s).",
+      "fix": "script"
+    },
+    {
+      "name": "word_timings",
+      "passed": true,
+      "weight": 8,
+      "hard": true,
+      "detail": "missing word timings for captions",
+      "fix": "voice"
+    },
+    {
+      "name": "voice_provider",
+      "passed": true,
+      "weight": 2,
+      "hard": false,
+      "detail": "voice came from fallback edge (estimated caption timing)",
+      "fix": "voice"
+    },
+    {
+      "name": "image_count",
+      "passed": true,
+      "weight": 10,
+      "hard": true,
+      "detail": "13 images for 13 beats",
+      "fix": "visuals"
+    },
+    {
+      "name": "no_placeholder_art",
+      "passed": true,
+      "weight": 6,
+      "hard": false,
+      "detail": "beats using abstract fallback art: []",
+      "fix": "visuals"
+    },
+    {
+      "name": "image_quality",
+      "passed": true,
+      "weight": 3,
+      "hard": false,
+      "detail": "beats using low-res fallback images: []",
+      "fix": "visuals"
+    },
+    {
+      "name": "resolution",
+      "passed": true,
+      "weight": 10,
+      "hard": true,
+      "detail": "1080x1920",
+      "fix": "render"
+    },
+    {
+      "name": "fps",
+      "passed": true,
+      "weight": 4,
+      "hard": true,
+      "detail": "30.0 fps",
+      "fix": "render"
+    },
+    {
+      "name": "av_sync_length",
+      "passed": true,
+      "weight": 8,
+      "hard": true,
+      "detail": "video 66.80s vs voice 66.79s",
+      "fix": "render"
+    },
+    {
+      "name": "audio_present",
+      "passed": true,
+      "weight": 10,
+      "hard": true,
+      "detail": "no audio stream",
+      "fix": "render"
+    },
+    {
+      "name": "file_size",
+      "passed": true,
+      "weight": 4,
+      "hard": true,
+      "detail": "32.4 MB",
+      "fix": "render"
+    },
+    {
+      "name": "first_frame_visible",
+      "passed": true,
+      "weight": 6,
+      "hard": true,
+      "detail": "first frame is nearly black (kills the hook)",
+      "fix": "visuals"
+    },
+    {
+      "name": "cut_cadence",
+      "passed": true,
+      "weight": 5,
+      "hard": false,
+      "detail": "avg shot 2.57s; target <= 3.2s",
+      "fix": "render"
+    },
+    {
+      "name": "caption_coverage",
+      "passed": true,
+      "weight": 8,
+      "hard": true,
+      "detail": "181/181 words captioned",
+      "fix": "render"
+    },
+    {
+      "name": "disclosure",
+      "passed": true,
+      "weight": 10,
+      "hard": true,
+      "detail": "missing disclaimers",
+      "fix": "package"
+    },
+    {
+      "name": "affiliate_disclosure",
+      "passed": true,
+      "weight": 8,
+      "hard": true,
+      "detail": "links without affiliate disclosure",
+      "fix": "package"
+    },
+    {
+      "name": "caption_tags",
+      "passed": true,
+      "weight": 2,
+      "hard": false,
+      "detail": "caption has no hashtags",
+      "fix": "package"
+    }
+  ],
+  "judge": {
+    "hook": 8,
+    "retention": 9,
+    "value": 8,
+    "clarity": 9,
+    "loop_ending": 6,
+    "factual_risk": 2,
+    "compliance_risk": 2,
+    "suspect_claims": [
+      "stack five inches tall (verifiable via estate records, but slightly anecdotal)",
+      "$200 a month at 8% a year for 40 years is about $698,000 (mathematically sound, but historical market returns aren't guaranteed)"
+    ],
+    "fixes": [
+      "Change line 10 to clearly state past market performance does not guarantee future results to lower compliance risk.",
+      "Strengthen the loop ending by seamlessly connecting line 13 back to the hook ('A janitor died with $8 million... because...') instead of trailing off.",
+      "Trim line 13 to be punchier for a short-form video pacing requirement."
+    ]
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "title": "The $6,000 credit card mistake that takes 21 years",
+  "hook_text": "YOUR $6,000 BALANCE TAKES 21 YEARS.",
+  "beats": [
+    {
+      "say": "Your six thousand dollar credit card balance takes two hundred fifty-two months to clear.",
+      "callout": "",
+      "visual": "A sleek dark credit card resting on a clean wooden table under a single warm spotlight, macro shot."
+    },
+    {
+      "say": "That is twenty-one years of minimum payments at twenty-four percent annual percentage rate.",
+      "callout": "21 YEARS",
+      "visual": "An old brass desk calendar slowly flipping pages in dim lighting, shallow depth of field."
+    },
+    {
+      "say": "Stay until the end to see the exact cost of this quiet trap.",
+      "callout": "",
+      "visual": "A pair of hands sliding a leather wallet into the dark pocket of a wool coat."
+    },
+    {
+      "say": "Most people look at the minimum due and assume the bank is just helping them out.",
+      "callout": "THE MINIMUM",
+      "visual": "A close-up of a pen signing a paper statement on a dark mahogany desk."
+    },
+    {
+      "say": "That minimum is calculated as one percent of the balance plus the monthly interest.",
+      "callout": "",
+      "visual": "A vintage mechanical calculator sitting on a textured concrete surface, side view."
+    },
+    {
+      "say": "But here is the part nobody mentions about how debt actually compounds.",
+      "callout": "THE MATH",
+      "visual": "A hand sliding a silver chess piece across a dark polished board, cinematic side light."
+    },
+    {
+      "say": "At twenty-four percent interest, debt doubles every three years.",
+      "callout": "EVERY 3 YEARS",
+      "visual": "A dark analog clock ticking in a quiet room, blurred background, moody ambiance."
+    },
+    {
+      "say": "By the time you finish paying off that six thousand dollars, you hand over ten thousand eight hundred eighty-seven dollars in interest alone.",
+      "callout": "$10,887 INTEREST",
+      "visual": "Counting a stack of crisp hundred-dollar bills under low amber light, overhead view."
+    },
+    {
+      "say": "That is nearly double the original purchase just for borrowing time.",
+      "callout": "",
+      "visual": "A shadow cast against a bare concrete wall by a single hanging bulb."
+    },
+    {
+      "say": "Now compare that to paying three hundred dollars a month instead.",
+      "callout": "$300 A MONTH",
+      "visual": "A banking app open on a dark smartphone screen resting on a dark slate counter."
+    },
+    {
+      "say": "The timeline drops from twenty-one years down to just twenty-six months.",
+      "callout": "26 MONTHS",
+      "visual": "A hand closing a heavy laptop lid in a dimly lit minimalist workspace."
+    },
+    {
+      "say": "Total interest plummets to one thousand seven hundred thirty-nine dollars.",
+      "callout": "$1,739 TOTAL",
+      "visual": "A modern coffee mug sitting next to a closed notebook on a dark wood table."
+    },
+    {
+      "say": "The bank relies on your patience expiring, and that is exactly how",
+      "callout": "FOLLOW FOR MORE",
+      "visual": "A person walking away down a long dimly lit hallway, shot from behind."
+    }
+  ],
+  "caption": "The math behind credit card minimum payments is designed to keep you paying for decades. Follow for the money rules school never taught you.\n\n#money #personalfinance #debtfree #financialliteracy #creditcards",
+  "description": "Discover the hidden math behind paying only the minimum on a $6,000 credit card balance at 24% APR and how changing your monthly payment alters the timeline.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#debtfree",
+    "#financialliteracy",
+    "#creditcards"
+  ],
+  "first_comment": "What surprised you the most about this calculation?",
+  "facts": [
+    {
+      "claim": "$6,000 credit card at 24% APR paying only the minimum takes 252 months (~21 years) and costs $10,887 in interest.",
+      "basis": "Money fact sheet calculated at 1% + interest, min $25."
+    },
+    {
+      "claim": "Same $6,000 at 24% paying $300/month takes 26 months and $1,739 interest.",
+      "basis": "Money fact sheet."
+    },
+    {
+      "claim": "At 24% debt doubles every 3 years according to the Rule of 72.",
+      "basis": "Money fact sheet Rule of 72 calculation."
+    }
+  ],
+  "source": "llm"
+}

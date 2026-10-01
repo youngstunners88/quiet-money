@@ -1,0 +1,70 @@
+{
+  "id": "2026-10-01-s4-playbook-automate-your-savings-in-10-minu",
+  "pillar": "playbook",
+  "topic": "Automate your savings in 10 minutes: the pay-yourself-first setup",
+  "day": "2026-10-01",
+  "slot": 4,
+  "status": "published",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-01T14:32:04Z",
+      "words": 119
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-01T14:34:20Z",
+      "seconds": 64.944,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-01T14:34:35Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-01T14:35:49Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-01T14:35:49Z",
+      "score": 91
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-01T14:35:49Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-10-01T14:35:49Z",
+      "local": "2026-10-01T21:00:00-04:00"
+    }
+  ],
+  "artifacts": {
+    "title": "Automate Your Savings In 10 Minutes",
+    "video": "/home/user/agent-universe/faceless-studio/production/output/2026-10-01/2026-10-01-s4-playbook-automate-your-savings-in-10-minu/final.mp4",
+    "cover": "/home/user/agent-universe/faceless-studio/production/output/2026-10-01/2026-10-01-s4-playbook-automate-your-savings-in-10-minu/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/agent-universe/faceless-studio/distribution/queue/2026-10-01/slot5-playbook",
+        "post_at": "2026-10-01T21:00:00-04:00"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 91,
+    "passed": true
+  },
+  "cost": {
+    "tts:edge:chars": 1685
+  },
+  "notes": []
+}

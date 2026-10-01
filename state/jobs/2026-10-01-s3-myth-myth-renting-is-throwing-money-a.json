@@ -1,0 +1,77 @@
+{
+  "id": "2026-10-01-s3-myth-myth-renting-is-throwing-money-a",
+  "pillar": "myth",
+  "topic": "Myth: renting is throwing money away",
+  "day": "2026-10-01",
+  "slot": 3,
+  "status": "published",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-01T15:37:02Z",
+      "words": 149
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-01T15:38:25Z",
+      "seconds": 62.799,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-01T15:38:38Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-01T15:39:57Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-01T15:39:57Z",
+      "score": 96
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-01T15:39:57Z"
+    },
+    {
+      "from": "packaged",
+      "to": "held",
+      "ts": "2026-10-01T15:39:57Z"
+    },
+    {
+      "from": "held",
+      "to": "published",
+      "ts": "2026-10-01T15:41:48Z",
+      "manual": true
+    }
+  ],
+  "artifacts": {
+    "title": "Why Renting Isn't Throwing Money Away",
+    "video": "/home/user/agent-universe/faceless-studio/production/output/2026-10-01/2026-10-01-s3-myth-myth-renting-is-throwing-money-a/final.mp4",
+    "cover": "/home/user/agent-universe/faceless-studio/production/output/2026-10-01/2026-10-01-s3-myth-myth-renting-is-throwing-money-a/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/agent-universe/faceless-studio/distribution/queue/2026-10-01/slot4-myth",
+        "post_at": "2026-10-01T18:30:00-04:00"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 96,
+    "passed": false
+  },
+  "cost": {
+    "tts:edge:chars": 891
+  },
+  "notes": [
+    "held for review: word_count"
+  ]
+}

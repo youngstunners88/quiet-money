@@ -1,0 +1,78 @@
+{
+  "title": "Why a raise never makes you feel richer",
+  "hook_text": "YOUR SALARY WENT UP. WHY IS YOUR ACCOUNT EMPTY?",
+  "beats": [
+    {
+      "say": "Your salary went up ten percent this year, but your checking account still hits zero.",
+      "callout": "",
+      "visual": "A sleek silver smartphone glowing on a dark walnut desk, cinematic overhead shot, moody dramatic lighting."
+    },
+    {
+      "say": "This invisible trap steals every raise you ever get, and you do not even notice it happening.",
+      "callout": "The invisible trap",
+      "visual": "A close-up of a human hand sliding a platinum credit card out of a leather wallet, soft focus background."
+    },
+    {
+      "say": "It is called lifestyle creep. As income climbs, spending quietly rises right beside it.",
+      "callout": "Lifestyle creep",
+      "visual": "A designer coffee cup sitting on a polished marble table next to minimalist car keys, overcast morning light."
+    },
+    {
+      "say": "You upgrade your apartment. You lease a nicer car. Suddenly, that raise is completely gone.",
+      "callout": "Zero net change",
+      "visual": "A silhouette of a person walking past floor-to-ceiling glass windows in a high-rise building at dusk."
+    },
+    {
+      "say": "You feel just as broke making six figures as you did making forty thousand dollars.",
+      "callout": "Still broke",
+      "visual": "A stack of crisp hundred-dollar bills resting on a dark wooden surface, shallow depth of field, moody shadows."
+    },
+    {
+      "say": "Meanwhile, small daily habits quietly compound into a massive fortune if you let them.",
+      "callout": "Compound math",
+      "visual": "A single brass coin dropping into a clear glass jar on a rustic wooden table, cinematic side lighting."
+    },
+    {
+      "say": "Take a five dollar daily habit. Invested monthly at eight percent for thirty years, it becomes two hundred twenty six thousand dollars.",
+      "callout": "$226,659 total",
+      "visual": "A vintage mechanical desk clock ticking beside a minimalist glass of water, dramatic side light."
+    },
+    {
+      "say": "But here is the part nobody mentions. Your brain anchors your spending to whatever you currently earn.",
+      "callout": "Mental anchoring",
+      "visual": "A pair of hands typing on a sleek silver laptop in a dimly lit room, cool blue screen glow."
+    },
+    {
+      "say": "If you do not intercept the extra cash before it hits your checking account, lifestyle creep wins.",
+      "callout": "Automate savings",
+      "visual": "A banking app interface on a blurred phone screen, dark mode, minimalist aesthetic."
+    },
+    {
+      "say": "Treat every future raise as if it never happened. Send the difference straight to investments.",
+      "callout": "Keep old lifestyle",
+      "visual": "A minimalist leather notebook and a fountain pen resting on a clean white desk, sharp focus."
+    },
+    {
+      "say": "Follow for the money rules school never taught you, because your salary went up ten percent...",
+      "callout": "Follow for more",
+      "visual": "A hand closing a dark leather journal, cinematic slow motion, warm directional lighting."
+    }
+  ],
+  "caption": "Your salary went up, so why are you still broke? Blame lifestyle creep. #MoneyPsychology #PersonalFinance #WealthBuilding #SmartMoney #FinancialFreedom",
+  "description": "Lifestyle creep is the silent wealth killer that swallows every raise you get. Learn how to break the cycle and keep your hard-earned money working for you.",
+  "hashtags": [
+    "#MoneyPsychology",
+    "#PersonalFinance",
+    "#WealthBuilding",
+    "#SmartMoney",
+    "#FinancialFreedom"
+  ],
+  "first_comment": "What is one upgrade you made after getting a raise that you later regretted?",
+  "facts": [
+    {
+      "claim": "A $5/day habit invested monthly at 8% for 30 years equals $226,659",
+      "basis": "$5/day habit = $1,825/year; invested monthly at 8% for 30 years = $226,659 from fact sheet"
+    }
+  ],
+  "source": "llm"
+}

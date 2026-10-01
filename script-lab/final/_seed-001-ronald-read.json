@@ -1,0 +1,120 @@
+{
+  "source": "human",
+  "title": "The Janitor Who Secretly Died With $8 Million",
+  "hook_text": "A JANITOR DIED WITH $8 MILLION",
+  "beats": [
+    {
+      "say": "A janitor in Vermont died in 2014 with almost $8 million. And nobody knew.",
+      "callout": "",
+      "visual": "a lone janitor's mop and metal bucket standing in an empty department store aisle at night, a single overhead light cutting through the dark"
+    },
+    {
+      "say": "Not his friends. Not his neighbors. A diner stranger once paid for his meal because he looked broke.",
+      "callout": "NOBODY KNEW",
+      "visual": "a chipped cup of diner coffee and an empty plate on a worn formica counter, morning light through venetian blinds"
+    },
+    {
+      "say": "His name was Ronald Read. He pumped gas for 25 years, then cleaned floors at J.C. Penney.",
+      "callout": "25 YEARS AT A GAS PUMP",
+      "visual": "a vintage 1950s small-town gas station at dusk in snowy Vermont, glowing old fuel pumps, no people"
+    },
+    {
+      "say": "He held his jacket together with a safety pin. Drove a used Toyota.",
+      "callout": "",
+      "visual": "extreme close-up of weathered elderly hands fastening a safety pin on a frayed khaki work jacket"
+    },
+    {
+      "say": "So how did a man with no big salary build $8 million? Three boring rules.",
+      "callout": "3 BORING RULES",
+      "visual": "an old leather wallet on a wooden kitchen table beside a folded newspaper and reading glasses, warm lamp light"
+    },
+    {
+      "say": "One. He only bought boring companies he understood. Soap, medicine, electricity.",
+      "callout": "BUY BORING",
+      "visual": "a vintage bathroom shelf with plain soap bars, a brown glass medicine bottle and an old lightbulb, soft window light"
+    },
+    {
+      "say": "Two. Every dividend they paid him bought more shares.",
+      "callout": "REINVEST IT ALL",
+      "visual": "a small stack of old silver coins growing taller on a wooden desk next to an open vintage ledger book"
+    },
+    {
+      "say": "Bigger dividends bought even more. A snowball that never stopped rolling.",
+      "callout": "",
+      "visual": "a large snowball rolling down a snowy Vermont hillside at golden hour, pine trees in the background"
+    },
+    {
+      "say": "Three. He almost never sold. His stock certificates made a stack five inches tall.",
+      "callout": "NEVER SELL",
+      "visual": "a thick stack of vintage engraved paper stock certificates inside an open bank safe deposit box, dramatic side light"
+    },
+    {
+      "say": "You don't need his 50-plus years. $200 a month at 8% a year for 40 years is about $698,000. Not a promise. Just math.",
+      "callout": "$698,000",
+      "visual": "a tall glass jar filled with gold coins on a frosty windowsill, sunrise light glowing through the coins"
+    },
+    {
+      "say": "He left $4.8 million to the local hospital and $1.2 million to the library.",
+      "callout": "$6 MILLION GIVEN",
+      "visual": "a small-town red brick library at dusk in falling snow, warm light glowing from tall windows"
+    },
+    {
+      "say": "No big salary. No genius trades. Just time, patience, and a safety pin.",
+      "callout": "",
+      "visual": "silhouette of an old man in a flat cap walking away down a snowy small-town street at dusk, seen from behind"
+    },
+    {
+      "say": "Follow for money rules school never taught you. Because this is the story of how",
+      "callout": "",
+      "visual": "a single warmly lit window in a small wooden New England house on a quiet snowy night"
+    }
+  ],
+  "caption": "He pumped gas for 25 years and died with $8 million. His 3 boring rules 👇 #money #investing #personalfinance #wealth #moneytok",
+  "description": "Ronald Read worked as a gas station attendant and a janitor, lived frugally, and quietly built an almost $8 million fortune with boring dividend stocks he held for decades. The lesson: time beats salary.",
+  "hashtags": [
+    "#money",
+    "#investing",
+    "#personalfinance",
+    "#wealth",
+    "#moneytok"
+  ],
+  "first_comment": "Which rule is hardest for you: buy boring, reinvest everything, or never sell?",
+  "facts": [
+    {
+      "claim": "Died June 2, 2014 at 92 with an estate of nearly $8 million",
+      "basis": "AP 2015-02-04; Reuters 2015-02-04; Wikipedia"
+    },
+    {
+      "claim": "Gas station attendant ~25 years, J.C. Penney janitor 17 years",
+      "basis": "AP; Wikipedia"
+    },
+    {
+      "claim": "A restaurant patron paid for his meal thinking he could not afford it",
+      "basis": "Wikipedia (Friendly's anecdote)"
+    },
+    {
+      "claim": "Safety pin on a frayed jacket; drove a used Toyota Yaris",
+      "basis": "AP; Wikipedia"
+    },
+    {
+      "claim": "Bought dividend stocks he understood, reinvested dividends, rarely sold",
+      "basis": "Wikipedia; WSJ via Wikipedia"
+    },
+    {
+      "claim": "Investing for 50+ years (first documented purchase 1959)",
+      "basis": "WSJ via Wikipedia (PG&E shares, Jan 13 1959)"
+    },
+    {
+      "claim": "Stock certificates five inches high in a safe deposit box",
+      "basis": "Wikipedia"
+    },
+    {
+      "claim": "$4.8M to Brattleboro Memorial Hospital, $1.2M to Brooks Memorial Library",
+      "basis": "AP; Reuters; CNBC"
+    },
+    {
+      "claim": "$200/month at 8%/yr for 40 years = $698,202",
+      "basis": "faceless.moneymath.future_value_monthly"
+    }
+  ]
+}

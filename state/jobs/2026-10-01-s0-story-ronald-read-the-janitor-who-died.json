@@ -1,0 +1,70 @@
+{
+  "id": "2026-10-01-s0-story-ronald-read-the-janitor-who-died",
+  "pillar": "story",
+  "topic": "Ronald Read: the janitor who died with $8 million",
+  "day": "2026-10-01",
+  "slot": 0,
+  "status": "published",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-01T14:08:51Z",
+      "words": 188
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-01T14:09:55Z",
+      "seconds": 66.792,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-01T14:09:55Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-01T14:11:47Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-01T14:11:47Z",
+      "score": 100
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-01T14:11:47Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-10-01T14:11:47Z",
+      "local": "2026-10-02T07:30:00-04:00"
+    }
+  ],
+  "artifacts": {
+    "title": "The Janitor Who Secretly Died With $8 Million",
+    "video": "/home/user/agent-universe/faceless-studio/production/output/2026-10-01/2026-10-01-s0-story-ronald-read-the-janitor-who-died/final.mp4",
+    "cover": "/home/user/agent-universe/faceless-studio/production/output/2026-10-01/2026-10-01-s0-story-ronald-read-the-janitor-who-died/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/agent-universe/faceless-studio/distribution/queue/2026-10-01/slot1-story",
+        "post_at": "2026-10-02T07:30:00-04:00"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 100,
+    "passed": true
+  },
+  "cost": {
+    "tts:edge:chars": 1046
+  },
+  "notes": []
+}
