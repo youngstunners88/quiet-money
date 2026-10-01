@@ -15,7 +15,7 @@ permissions:
 
 concurrency:
   group: site
-  cancel-in-progress: true
+  cancel-in-progress: false   # queue: a running deploy always finishes (incl. the IndexNow ping)
 
 jobs:
   deploy:
