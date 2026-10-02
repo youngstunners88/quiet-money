@@ -1,0 +1,83 @@
+{
+  "title": "The 15-Minute Subscription Audit",
+  "hook_text": "KILL YOUR USELESS SUBSCRIPTIONS TODAY",
+  "beats": [
+    {
+      "say": "A $15 monthly subscription for 10 years quietly drains $1,800 from your bank account.",
+      "callout": "",
+      "visual": "A close-up of a brass key resting on a dark walnut desk under warm single-source lighting."
+    },
+    {
+      "say": "Here's the exact 15-minute audit to fix it right now.",
+      "callout": "15-MINUTE FIX",
+      "visual": "A smartphone resting flat on a concrete table, screen facing down."
+    },
+    {
+      "say": "Step one. Open your mobile banking app and tap your profile icon.",
+      "callout": "STEP 1",
+      "visual": "A hand in a dark wool sleeve tapping the polished corner of a wooden desk."
+    },
+    {
+      "say": "Step two. Scroll down and tap on recurring charges or subscriptions.",
+      "callout": "STEP 2",
+      "visual": "A blurred shot of a minimalist room with natural morning light streaming through blinds."
+    },
+    {
+      "say": "Step three. Cancel every single service you haven't used in the last 30 days.",
+      "callout": "STEP 3",
+      "visual": "A stainless steel pen resting across a blank cream notepad."
+    },
+    {
+      "say": "You'll find streaming apps, gym trials, and forgotten software fees hiding in plain sight.",
+      "callout": "",
+      "visual": "A ceramic coffee mug casting a long sharp shadow on a white quartz countertop."
+    },
+    {
+      "say": "But here's the part nobody mentions.",
+      "callout": "THE TRAP",
+      "visual": "An overhead shot of a single leather wallet on a dark gray slate surface."
+    },
+    {
+      "say": "Companies rely on your silence to keep billing your card every single month.",
+      "callout": "",
+      "visual": "A pair of heavy brass scissors resting beside a folded linen napkin."
+    },
+    {
+      "say": "If you take that exact $100 a month and invest it at 8% a year...",
+      "callout": "$58,902",
+      "visual": "A glass of water reflecting soft amber light on a heavy oak table."
+    },
+    {
+      "say": "...over 20 years it turns into $58,902 while you only put in $24,000.",
+      "callout": "20 YEARS",
+      "visual": "A silver wristwatch lying on a dark leather notebook, hands blurred."
+    },
+    {
+      "say": "That's why small cuts sink big ships, and that's exactly how",
+      "callout": "",
+      "visual": "A closed wooden door with warm light spilling from underneath."
+    }
+  ],
+  "caption": "Stop letting tiny recurring fees rob your future. Follow for the money rules school never taught you. #subscriptionaudit #personalfinance #moneytips #savemoney #budgeting",
+  "description": "Run this 15-minute subscription audit today to find hidden recurring charges and redirect that cash toward your future.",
+  "hashtags": [
+    "#subscriptionaudit",
+    "#personalfinance",
+    "#moneytips",
+    "#savemoney",
+    "#budgeting"
+  ],
+  "first_comment": "How many forgotten subscriptions did you find in your account today?",
+  "facts": [
+    {
+      "claim": "A $15/month subscription for 10 years = $1,800",
+      "basis": "Fact sheet: A $15/month subscription for 10 years = $1,800"
+    },
+    {
+      "claim": "$100/month invested for 20 years at 8%/yr = $58,902 (put in $24,000)",
+      "basis": "Fact sheet: $100/month invested for 20 years at 8%/yr (monthly compounding) = $58,902 (you put in $24,000)"
+    }
+  ],
+  "source": "llm",
+  "pillar": "playbook"
+}

@@ -1,0 +1,70 @@
+{
+  "id": "2026-10-02-s0-math-starting-to-invest-at-25-vs-35-t",
+  "pillar": "math",
+  "topic": "Starting to invest at 25 vs 35: the 10-year delay that costs $400,000",
+  "day": "2026-10-02",
+  "slot": 0,
+  "status": "published",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-02T00:25:51Z",
+      "words": 180
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-02T00:26:26Z",
+      "seconds": 69.696,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-02T00:27:45Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-02T00:29:27Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-02T00:29:27Z",
+      "score": 95
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-02T00:29:27Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-10-02T00:29:27Z",
+      "local": "2026-10-02T07:30:00-04:00"
+    }
+  ],
+  "artifacts": {
+    "title": "The 10-Year Delay That Costs $400,130",
+    "video": "/home/user/quiet-money/production/output/2026-10-02/2026-10-02-s0-math-starting-to-invest-at-25-vs-35-t/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-02/2026-10-02-s0-math-starting-to-invest-at-25-vs-35-t/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-10-02/slot1-math",
+        "post_at": "2026-10-02T07:30:00-04:00"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 95,
+    "passed": true
+  },
+  "cost": {
+    "tts:edge:chars": 1054
+  },
+  "notes": []
+}

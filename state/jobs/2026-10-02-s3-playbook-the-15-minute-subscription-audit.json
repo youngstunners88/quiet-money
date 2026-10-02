@@ -1,0 +1,64 @@
+{
+  "id": "2026-10-02-s3-playbook-the-15-minute-subscription-audit",
+  "pillar": "playbook",
+  "topic": "The 15-minute subscription audit",
+  "day": "2026-10-02",
+  "slot": 3,
+  "status": "held",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-02T00:35:03Z",
+      "words": 132
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-02T00:36:04Z",
+      "seconds": 62.765,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-02T00:36:18Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-02T00:37:24Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-02T00:37:24Z",
+      "score": 95
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-02T00:37:24Z"
+    },
+    {
+      "from": "packaged",
+      "to": "held",
+      "ts": "2026-10-02T00:37:24Z"
+    }
+  ],
+  "artifacts": {
+    "title": "The 15-Minute Subscription Audit",
+    "video": "/home/user/quiet-money/production/output/2026-10-02/2026-10-02-s3-playbook-the-15-minute-subscription-audit/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-02/2026-10-02-s3-playbook-the-15-minute-subscription-audit/cover.jpg"
+  },
+  "scores": {
+    "gauntlet": 95,
+    "passed": false
+  },
+  "cost": {
+    "tts:edge:chars": 778
+  },
+  "notes": [
+    "held for review: word_count"
+  ]
+}

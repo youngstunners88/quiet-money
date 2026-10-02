@@ -1,0 +1,70 @@
+{
+  "id": "2026-10-02-s1-psychology-mental-accounting-why-tax-refund",
+  "pillar": "psychology",
+  "topic": "Mental accounting: why tax refunds and bonuses get wasted",
+  "day": "2026-10-02",
+  "slot": 1,
+  "status": "published",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-02T00:29:40Z",
+      "words": 170
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-02T00:30:09Z",
+      "seconds": 62.232,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-02T00:31:13Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-02T00:32:42Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-02T00:32:42Z",
+      "score": 100
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-02T00:32:42Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-10-02T00:32:42Z",
+      "local": "2026-10-02T11:30:00-04:00"
+    }
+  ],
+  "artifacts": {
+    "title": "Why your brain treats tax refunds like free money",
+    "video": "/home/user/quiet-money/production/output/2026-10-02/2026-10-02-s1-psychology-mental-accounting-why-tax-refund/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-02/2026-10-02-s1-psychology-mental-accounting-why-tax-refund/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-10-02/slot2-psychology",
+        "post_at": "2026-10-02T11:30:00-04:00"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 100,
+    "passed": true
+  },
+  "cost": {
+    "tts:edge:chars": 999
+  },
+  "notes": []
+}

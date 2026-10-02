@@ -1,0 +1,97 @@
+{
+  "title": "The 10-Year Delay That Costs $400,130",
+  "hook_text": "THE $400,000 TEN YEAR MISTAKE",
+  "beats": [
+    {
+      "say": "Waiting ten years to start investing will cost you exactly $400,130.",
+      "callout": "",
+      "visual": "A cinematic, moody silhouette of a person looking out of a high-rise window at dusk, rainy streetlights reflected on the glass."
+    },
+    {
+      "say": "It's not because you missed a hot tech stock, but because of a quiet math rule they never teach you.",
+      "callout": "",
+      "visual": "A close-up of hands typing on a vintage, dark mechanical typewriter in a dimly lit study."
+    },
+    {
+      "say": "Let's compare two different people, both saving exactly $200 every single month at an 8% annual return.",
+      "callout": "",
+      "visual": "A retro desk calendar with pages turning slowly under warm, focused golden hour sunlight."
+    },
+    {
+      "say": "The first person starts early at age 25. They invest their $200 every single month without fail.",
+      "callout": "",
+      "visual": "A close-up of hands holding a worn leather wallet, placing a clean bill inside with focus."
+    },
+    {
+      "say": "By age 65, their total out-of-pocket contributions over 40 years add up to $96,000.",
+      "callout": "$96,000 saved",
+      "visual": "A dark vintage wooden piggy bank resting on a bookshelf, soft-focus background."
+    },
+    {
+      "say": "But monthly compounding quietly turns that modest sum into a massive $698,202.",
+      "callout": "$698,202 total",
+      "visual": "A towering modern skyscraper reaching into the dark twilight clouds, windows glowing with warm interior light."
+    },
+    {
+      "say": "But here's the part nobody mentions about waiting.",
+      "callout": "",
+      "visual": "An elegant glass hourglass on a dark marble table, sand fully run to the bottom."
+    },
+    {
+      "say": "The second person waits until age 35 to start doing the exact same thing.",
+      "callout": "",
+      "visual": "A person's back as they stand on a train platform, watching a train speed away in the dark."
+    },
+    {
+      "say": "By age 65, they've put in $72,000, which is only $24,000 less than the first person.",
+      "callout": "$72,000 saved",
+      "visual": "A vintage silver pocket watch resting on a stack of old leather-bound financial journals."
+    },
+    {
+      "say": "Yet, because they had less time to let compounding work, their final balance stops at only $298,072.",
+      "callout": "$298,072 total",
+      "visual": "A single green plant sprout growing out of dark, dry cracked soil in a cinematic macro shot."
+    },
+    {
+      "say": "That 10-year delay cost them $400,130 in pure, effortless wealth.",
+      "callout": "$400,130 lost",
+      "visual": "A heavy vintage metal safe door, slightly ajar, with dramatic shadows falling across the room."
+    },
+    {
+      "say": "Follow for the money rules school never taught you, so you don't end up silently...",
+      "callout": "",
+      "visual": "A solitary glowing light bulb hanging in a dark, empty minimalist room."
+    },
+    {
+      "say": "...losing a massive fortune over your lifetime by simply...",
+      "callout": "",
+      "visual": "A wide cinematic shot of a long, empty highway stretching into the misty horizon at dawn."
+    }
+  ],
+  "caption": "The math doesn't lie. A 10-year delay can cost you a fortune. Here is the exact calculation.\n#personalfinance #moneytok #investingforbeginners #wealthbuilding #quietmoney",
+  "description": "This video breaks down the exact cost of waiting ten years to start investing. By comparing a 25-year-old and a 35-year-old both saving $200 a month at an 8% return, we show how a simple delay costs over $400,000 in compound interest.",
+  "hashtags": [
+    "#personalfinance",
+    "#moneytok",
+    "#investingforbeginners",
+    "#wealthbuilding",
+    "#quietmoney"
+  ],
+  "first_comment": "Did you realize compound interest made this much of a difference over ten years? Let me know below.",
+  "facts": [
+    {
+      "claim": "$200/month at 8% starting at age 25 grows to $698,202 by age 65.",
+      "basis": "Fact sheet: $200/month invested for 40 years at 8%/yr (monthly compounding) = $698,202 (you put in $96,000)"
+    },
+    {
+      "claim": "$200/month at 8% starting at age 35 grows to $298,072 by age 65.",
+      "basis": "Fact sheet: $200/month invested for 30 years at 8%/yr (monthly compounding) = $298,072 (you put in $72,000)"
+    },
+    {
+      "claim": "The 10-year delay costs exactly $400,130.",
+      "basis": "Fact sheet: Starting at 25 vs 35 with $200/month at 8% until 65: $698,202 vs $298,072 (10 years late costs $400,130)"
+    }
+  ],
+  "source": "llm",
+  "pillar": "math"
+}

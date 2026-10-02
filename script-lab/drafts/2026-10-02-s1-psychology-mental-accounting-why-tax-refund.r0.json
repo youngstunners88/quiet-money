@@ -1,0 +1,84 @@
+{
+  "title": "Why Your Tax Refund Disappears So Fast",
+  "hook_text": "YOUR REFUND VANISHES IN THREE DAYS",
+  "beats": [
+    {
+      "say": "Your tax refund vanishes in three days. Here's why.",
+      "callout": "",
+      "visual": "A cinematic shot of a dark wooden desk with a single porcelain coffee cup, soft window light, moody tones."
+    },
+    {
+      "say": "It's called mental accounting. Your brain separates money into invisible mental buckets.",
+      "callout": "$3,000 REFUND",
+      "visual": "A person's hands sliding two distinct leather wallets apart on a concrete surface, overhead view."
+    },
+    {
+      "say": "Hard-earned paycheck cash feels sacred. You guard every single dollar of it.",
+      "callout": "HARD EARNED",
+      "visual": "Close-up of fingers gently stacking crisp paper notes on a minimalist oak table."
+    },
+    {
+      "say": "But a bonus or a tax refund feels like found money. House money doesn't trigger caution.",
+      "callout": "FREE MONEY?",
+      "visual": "A blurred shot of a mail envelope resting on a kitchen counter near a warm morning window."
+    },
+    {
+      "say": "So you spend a $3,000 refund on a weekend trip or clothes you don't need.",
+      "callout": "$3,000 GONE",
+      "visual": "An empty clothing rack in a dimly lit boutique, shot from a low angle."
+    },
+    {
+      "say": "If that exact same amount came from your regular salary, you'd never touch it.",
+      "callout": "THE SALARY TRAP",
+      "visual": "A person's silhouette walking past a frosted glass window in a quiet hallway."
+    },
+    {
+      "say": "That mental trick is the exact reason most people stay stuck.",
+      "callout": "STUCK",
+      "visual": "A vintage mechanical clock ticking on a dark shelf, cinematic shallow depth of field."
+    },
+    {
+      "say": "Here's the part nobody mentions. The fix is boring.",
+      "callout": "THE FIX",
+      "visual": "A single fountain pen resting on a blank dark paper notebook."
+    },
+    {
+      "say": "Before any extra money hits your hands, automate its destination instantly.",
+      "callout": "",
+      "visual": "A hand typing on a laptop keyboard in a dimly lit room, screen turned away."
+    },
+    {
+      "say": "Treat every bonus like regular wages. Route it straight to savings.",
+      "callout": "",
+      "visual": "A metal safety deposit box opening slightly in soft shadow."
+    },
+    {
+      "say": "Break the mental game before it breaks your bank account.",
+      "callout": "",
+      "visual": "A glass of still water reflecting a single overhead pendant light."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "A dark hallway with a warm light at the far end, minimalist style."
+    }
+  ],
+  "caption": "Your brain treats tax refunds and bonuses like free money. Stop falling for mental accounting. #mentalaccounting #personalfinance #moneypsychology #wealthbuilding",
+  "description": "Mental accounting makes you treat bonuses and tax refunds differently than paycheck cash. Learn how this invisible bias drains your wealth and how to fix it.",
+  "hashtags": [
+    "#moneypsychology",
+    "#personalfinance",
+    "#mentalaccounting",
+    "#wealthbuilding",
+    "#smartmoney"
+  ],
+  "first_comment": "What's the hardest mental money trap you've had to break?",
+  "facts": [
+    {
+      "claim": "Mental accounting causes people to spend windfalls differently than regular income.",
+      "basis": "Behavioral economics principle defined by Richard Thaler."
+    }
+  ],
+  "source": "llm",
+  "pillar": "psychology"
+}

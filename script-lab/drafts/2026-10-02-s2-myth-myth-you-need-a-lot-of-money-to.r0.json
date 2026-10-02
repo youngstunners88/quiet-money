@@ -1,0 +1,93 @@
+{
+  "title": "You Don't Need Thousands to Start Investing",
+  "hook_text": "WAIT UNTIL YOU HEAR THIS NUMBER",
+  "beats": [
+    {
+      "say": "You think investing takes thousands of dollars. It doesn't.",
+      "callout": "",
+      "visual": "Close-up of a hand dropping a single coin onto a dark wooden table, cinematic side lighting, shallow depth of field."
+    },
+    {
+      "say": "In fact, starting with just $100 a month changes everything.",
+      "callout": "$100 a month",
+      "visual": "A minimalist white desk with a brass lamp, single coffee cup, out of focus background, moody morning light."
+    },
+    {
+      "say": "Stay with me, because the math gets wild after year 10.",
+      "callout": "",
+      "visual": "An open window showing a quiet rainy street at dusk, cinematic blue hour tones, empty interior."
+    },
+    {
+      "say": "If you put $100 a month into the market at 8% a year...",
+      "callout": "8% a year",
+      "visual": "A simple black leather notebook lying closed on a concrete surface, sharp shadows, high contrast."
+    },
+    {
+      "say": "...for 40 years, you'll end up with $349,101.",
+      "callout": "$349,101 total",
+      "visual": "A vintage mechanical desk clock ticking on a dark shelf, soft warm tungsten glow, cinematic grain."
+    },
+    {
+      "say": "Out of that total, you only put in $48,000 of your own cash.",
+      "callout": "$48,000 you put in",
+      "visual": "A neat stack of plain white envelopes on a rustic wood table, viewed from above, moody cinematic lighting."
+    },
+    {
+      "say": "But here's the part nobody mentions about starting early.",
+      "callout": "",
+      "visual": "A single train track stretching out into a foggy horizon, symmetrical framing, moody grey daylight."
+    },
+    {
+      "say": "If you wait just 10 years to start, the gap is massive.",
+      "callout": "10-year delay",
+      "visual": "An empty subway platform with warm overhead lights reflecting off polished concrete floors."
+    },
+    {
+      "say": "At 8% until age 65, starting at 25 gives you $698,202.",
+      "callout": "$698,202 total",
+      "visual": "A calendar page flipping in slow motion, backlit by soft afternoon sun, deep shadows."
+    },
+    {
+      "say": "Starting at 35 drops that final number to $298,072.",
+      "callout": "$298,072 total",
+      "visual": "A closed minimalist door with a single stream of bright sunlight cutting across the floor."
+    },
+    {
+      "say": "That 10-year delay costs you $400,130 in missed growth.",
+      "callout": "",
+      "visual": "A pair of keys resting on an empty entryway table, dramatic overhead shadows, cinematic noir style."
+    },
+    {
+      "say": "So stop waiting for a big paycheck because that's exactly how",
+      "callout": "",
+      "visual": "A hand sliding a blank white card across a dark marble surface, sharp focus, moody atmosphere."
+    },
+    {
+      "say": "you think investing takes thousands of dollars.",
+      "callout": "",
+      "visual": "A dark coffee mug sitting next to an unread book, soft morning light filtering through blinds, loop ending."
+    }
+  ],
+  "caption": "Small amounts compound quietly in the background while you live your life. #investing #moneytips #personalfinance #wealthbuilding #quietmoney",
+  "description": "The math behind starting small with investing. Why waiting for a large lump sum costs you hundreds of thousands of dollars over time.",
+  "hashtags": [
+    "#investing",
+    "#moneytips",
+    "#personalfinance",
+    "#wealthbuilding",
+    "#quietmoney"
+  ],
+  "first_comment": "What's stopping you from investing your first $100 this month?",
+  "facts": [
+    {
+      "claim": "$100/month invested for 40 years at 8%/yr = $349,101 (you put in $48,000)",
+      "basis": "MONEY FACT SHEET: $100/month invested for 40 years at 8%/yr (monthly compounding) = $349,101 (you put in $48,000)"
+    },
+    {
+      "claim": "Starting at 25 vs 35 with $200/month at 8% until 65: $698,202 vs $298,072 (10 years late costs $400,130)",
+      "basis": "MONEY FACT SHEET: Starting at 25 vs 35 with $200/month at 8% until 65: $698,202 vs $298,072 (10 years late costs $400,130)"
+    }
+  ],
+  "source": "llm",
+  "pillar": "myth"
+}

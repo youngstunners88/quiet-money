@@ -1,0 +1,64 @@
+{
+  "id": "2026-10-02-s2-myth-myth-you-need-a-lot-of-money-to",
+  "pillar": "myth",
+  "topic": "Myth: you need a lot of money to start investing",
+  "day": "2026-10-02",
+  "slot": 2,
+  "status": "held",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-02T00:32:49Z",
+      "words": 132
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-02T00:33:23Z",
+      "seconds": 63.036,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-02T00:33:39Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-02T00:34:45Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-02T00:34:45Z",
+      "score": 88
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-02T00:34:45Z"
+    },
+    {
+      "from": "packaged",
+      "to": "held",
+      "ts": "2026-10-02T00:34:45Z"
+    }
+  ],
+  "artifacts": {
+    "title": "You Don't Need Thousands to Start Investing",
+    "video": "/home/user/quiet-money/production/output/2026-10-02/2026-10-02-s2-myth-myth-you-need-a-lot-of-money-to/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-02/2026-10-02-s2-myth-myth-you-need-a-lot-of-money-to/cover.jpg"
+  },
+  "scores": {
+    "gauntlet": 88,
+    "passed": false
+  },
+  "cost": {
+    "tts:edge:chars": 726
+  },
+  "notes": [
+    "held for review: first_frame_visible"
+  ]
+}

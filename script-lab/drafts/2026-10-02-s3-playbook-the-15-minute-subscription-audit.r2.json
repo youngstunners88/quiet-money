@@ -1,0 +1,83 @@
+{
+  "title": "The 15-Minute Subscription Audit",
+  "hook_text": "YOUR PHONE IS HIDING MONTHLY LEAKS",
+  "beats": [
+    {
+      "say": "Your bank account is bleeding small amounts you forgot about.",
+      "callout": "",
+      "visual": "A dark wooden desk with a single minimalist coffee cup, moody cinematic lighting from a side window."
+    },
+    {
+      "say": "Stay with me and you'll clear every ghost charge in 15 minutes flat.",
+      "callout": "15 MINUTES",
+      "visual": "Hands holding a dark smartphone face down on a clean concrete surface, sharp focus."
+    },
+    {
+      "say": "Step one. Open your banking app and tap on the transactions tab right now.",
+      "callout": "STEP ONE",
+      "visual": "A person's thumb scrolling past a blurred banking screen at a steep, unreadable angle."
+    },
+    {
+      "say": "Filter your history by recurring payments and look for anything billed every 30 days.",
+      "callout": "RECURRING",
+      "visual": "Close-up of a vintage brass desk lamp casting a warm glow on empty paper."
+    },
+    {
+      "say": "Step two. Cancel every app you haven't used in the last 60 days.",
+      "callout": "STEP TWO",
+      "visual": "A finger tapping a sleek metallic pen against a clean minimalist notepad."
+    },
+    {
+      "say": "That single $15 monthly subscription for 10 years wastes $1,800 total.",
+      "callout": "$1,800 WASTED",
+      "visual": "A stack of old silver coins sitting on a dark oak table, soft cinematic grain."
+    },
+    {
+      "say": "But here's the part nobody mentions about where that money actually goes.",
+      "callout": "HIDDEN TRUTH",
+      "visual": "A shadow cast across a blank white wall by a window frame during late afternoon."
+    },
+    {
+      "say": "Step three. Redirect that exact monthly total straight into your investment account.",
+      "callout": "",
+      "visual": "A hand sliding a sleek leather wallet into the pocket of a dark coat."
+    },
+    {
+      "say": "Remember, $100 a month invested for 30 years at 8% turns into $149,036.",
+      "callout": "$149,036 TOTAL",
+      "visual": "A classic analog clock ticking against a stark concrete wall, shallow depth of field."
+    },
+    {
+      "say": "That's how small leaks sink big ships.",
+      "callout": "",
+      "visual": "A single drop of water falling onto a calm, dark surface, captured in high shutter speed."
+    },
+    {
+      "say": "Follow for the money rules school never taught you, because your bank account...",
+      "callout": "",
+      "visual": "A silhouette of a person walking down a dimly lit urban hallway away from the camera."
+    }
+  ],
+  "caption": "Stop letting ghost subscriptions drain your future. 15 minutes is all it takes. #moneysavingtips #personalfinance #budgeting #wealthbuilding #smartmoney",
+  "description": "A quick 3-step guide to finding and eliminating forgotten subscriptions, turning small monthly leaks into long-term investments.",
+  "hashtags": [
+    "#moneysavingtips",
+    "#personalfinance",
+    "#budgeting",
+    "#wealthbuilding",
+    "#smartmoney"
+  ],
+  "first_comment": "What's the oldest subscription you finally canceled this month?",
+  "facts": [
+    {
+      "claim": "A $15/month subscription for 10 years equals $1,800.",
+      "basis": "Fact sheet: A $15/month subscription for 10 years = $1,800"
+    },
+    {
+      "claim": "$100/month invested for 30 years at 8%/yr equals $149,036.",
+      "basis": "Fact sheet: $100/month invested for 30 years at 8%/yr (monthly compounding) = $149,036"
+    }
+  ],
+  "source": "llm",
+  "pillar": "playbook"
+}

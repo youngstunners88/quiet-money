@@ -1,0 +1,79 @@
+{
+  "title": "Why your brain treats tax refunds like free money",
+  "hook_text": "YOUR TAX REFUND IS NOT A BONUS",
+  "beats": [
+    {
+      "say": "Your brain categorizes money into invisible buckets. That's why a tax refund vanishes into thin air.",
+      "callout": "",
+      "visual": "A person's hands holding a government envelope near a kitchen window, harsh morning light, cinematic side profile."
+    },
+    {
+      "say": "It's called mental accounting. You treat earned pay and bonus cash differently, even though spends are identical.",
+      "callout": "Mental Accounting",
+      "visual": "Close up of two identical coffee mugs sitting side by side on a dark wooden table, dim moody lighting."
+    },
+    {
+      "say": "A paycheck feels hard-fought. A tax refund or a work bonus feels like free lottery winnings.",
+      "callout": "Free Money Trap",
+      "visual": "A blurry hand sliding a stack of crisp paper envelopes across a minimalist concrete desk, top-down view."
+    },
+    {
+      "say": "So you spend it on dinners, gadgets, or weekend trips you'd never buy with regular salary cash.",
+      "callout": "",
+      "visual": "A sleek modern restaurant table with empty wine glasses, warm amber glow, soft bokeh background."
+    },
+    {
+      "say": "Here's the part nobody mentions. That random cash leak stops you from building real wealth.",
+      "callout": "The Hidden Leak",
+      "visual": "A dark silhouette of a person standing by a large glass window looking out at a rainy city skyline at night."
+    },
+    {
+      "say": "If you took that $500 extra a month and invested it at 8% a year for 30 years...",
+      "callout": "$500 a month",
+      "visual": "A blank metal savings tin resting on a cold stone countertop, macro shot, shallow depth of field."
+    },
+    {
+      "say": "You wouldn't have a temporary gadget. You'd build up to $745,180 over time.",
+      "callout": "$745,180 total",
+      "visual": "An old brass desk lamp casting a sharp circle of light onto an empty leather notebook."
+    },
+    {
+      "say": "That's the power of treating every single dollar the exact same way in your budget.",
+      "callout": "",
+      "visual": "A minimalist mechanical clock ticking on a stark white wall, side angle, dramatic shadows."
+    },
+    {
+      "say": "Stop letting your brain separate your income into fun money and survival money.",
+      "callout": "Fix The Bias",
+      "visual": "A closed laptop resting on a dark oak desk, moody rim lighting, sharp focus on the hinge."
+    },
+    {
+      "say": "Automate your transfers the second extra cash hits your account before you can spend it.",
+      "callout": "Automate Now",
+      "visual": "A pair of hands typing on a dark mechanical keyboard, neon glow reflecting off matte keycaps."
+    },
+    {
+      "say": "Follow for the money rules school never taught you. Because your brain categorizes money into",
+      "callout": "",
+      "visual": "A narrow hallway with a single warm overhead bulb, cinematic perspective drawing the eye forward."
+    }
+  ],
+  "caption": "Your brain is playing tricks on your wallet. Here's how to fix mental accounting for good. #moneypsychology #personalfinance #wealthbuilding #smartmoney",
+  "description": "Mental accounting makes us waste tax refunds and bonuses on things we'd never buy with regular salary. Learn how to treat every dollar the same and build long-term wealth.",
+  "hashtags": [
+    "#moneypsychology",
+    "#personalfinance",
+    "#wealthbuilding",
+    "#smartmoney",
+    "#financialliteracy"
+  ],
+  "first_comment": "What's the first thing you usually buy when you get a bonus?",
+  "facts": [
+    {
+      "claim": "$500/month invested for 30 years at 8%/yr (monthly compounding) = $745,180",
+      "basis": "MONEY FACT SHEET: $500/month invested for 30 years at 8%/yr (monthly compounding) = $745,180"
+    }
+  ],
+  "source": "llm",
+  "pillar": "psychology"
+}

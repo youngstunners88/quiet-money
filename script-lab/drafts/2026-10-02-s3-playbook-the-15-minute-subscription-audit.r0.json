@@ -1,0 +1,78 @@
+{
+  "title": "The 15-Minute Subscription Audit",
+  "hook_text": "YOUR PHONE IS HIDING A $1,800 MISTAKE",
+  "beats": [
+    {
+      "say": "A $15 a month subscription for 10 years bleeds $1,800 from your checking account.",
+      "callout": "",
+      "visual": "Macro shot of a smartphone lying face down on a dark wooden table in dim light."
+    },
+    {
+      "say": "Most people pay for at least three services they haven't opened in six months.",
+      "callout": "3 dead apps",
+      "visual": "A pair of hands holding a dark phone, scrolling past a blurred app menu."
+    },
+    {
+      "say": "Here's the 15 minute fix to stop the leak right now.",
+      "callout": "Do this today",
+      "visual": "Close-up of a silver pen resting on a blank white notepad under a warm desk lamp."
+    },
+    {
+      "say": "Step one. Open your banking app and tap on your recurring monthly payments list.",
+      "callout": "Step one",
+      "visual": "Overhead view of a coffee cup next to a closed minimalist laptop."
+    },
+    {
+      "say": "Step two. Highlight every charge you haven't used in the last 30 days.",
+      "callout": "Step two",
+      "visual": "A hand sliding a sleek metal card across a dark marble countertop."
+    },
+    {
+      "say": "Step three. Cancel them immediately through the provider settings, not your browser.",
+      "callout": "Step three",
+      "visual": "A finger pressing the power button on the side of a smartphone."
+    },
+    {
+      "say": "But here's the part nobody mentions about these tiny monthly bills.",
+      "callout": "",
+      "visual": "Low angle shot of a concrete ceiling in a modern apartment with soft window shadows."
+    },
+    {
+      "say": "Companies rely on your silence to raise prices by 10% every single year.",
+      "callout": "10% price hikes",
+      "visual": "A single house key resting on a wooden entryway table."
+    },
+    {
+      "say": "Redirect that recovered cash straight into an index fund at 8% a year.",
+      "callout": "8% return",
+      "visual": "A ceramic mug being lifted off a glass surface, leaving a faint condensation ring."
+    },
+    {
+      "say": "Small automated habits build real wealth over time without you noticing the sacrifice.",
+      "callout": "",
+      "visual": "Sunlight casting long window blinds shadows across an empty hardwood floor."
+    },
+    {
+      "say": "And that's exactly how...",
+      "callout": "",
+      "visual": "A closed front door with a brass handle in evening shadows."
+    }
+  ],
+  "caption": "Stop letting forgotten apps drain your paycheck. Follow for the money rules school never taught you. #money #personalfinance #budgeting #wealthbuilding",
+  "description": "A quick 15-minute subscription audit stops hidden monthly leaks and frees up cash for investing. Learn the simple 3-step fix to take back control.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#budgeting",
+    "#wealthbuilding"
+  ],
+  "first_comment": "What's the most expensive subscription you forgot you had?",
+  "facts": [
+    {
+      "claim": "A $15/month subscription for 10 years = $1,800",
+      "basis": "Fact sheet calculation: 15 * 12 * 10 = 1800"
+    }
+  ],
+  "source": "llm",
+  "pillar": "playbook"
+}
