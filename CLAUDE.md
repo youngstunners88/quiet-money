@@ -34,6 +34,7 @@ humans set strategy, connect accounts, and review held videos.
 | Create/rebrand channels, brand kit, profiles | `/channel` | `channel/profiles.md` | `faceless-channel-setup` |
 | Website, SEO, indexing, backlinks | `/faceless/site.py` | `channel/seo-playbook.md` | `faceless-seo` |
 | AI-assistant visibility (ChatGPT/Claude/Gemini) | `/analytics` | `channel/seo-playbook.md` | `faceless-aeo` |
+| What to do next, find profitable operations, weekly planning | `/analytics` | `analytics/opportunities.md` | `faceless-scout` |
 | Decision engine (Laya/Jev): routing, triage, gating | `/faceless/decide.py` | `.claude/skills/faceless-decide` | `faceless-decide` |
 | Research a person, book, or framework for videos | `/channel/research` | the brief format in the skill | `faceless-research` |
 | Escape the Rat Race series (Hormozi, Kiyosaki, Peña, passive income) | `/channel/research` | `channel/brand.md` | `faceless-rat-race` |

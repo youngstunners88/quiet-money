@@ -92,7 +92,8 @@ def script_prompt(pillar, topic: str, angle: str = "", feedback: list[str] | Non
     return "\n".join(p for p in parts if p is not None)
 
 
-def ideas_prompt(pillar, n: int, avoid: list[str], briefs: list[str] | None = None) -> str:
+def ideas_prompt(pillar, n: int, avoid: list[str], briefs: list[str] | None = None,
+                 signals: list[str] | None = None) -> str:
     people = ([f"- Topics about a real person are allowed ONLY for people with a research brief: {', '.join(briefs)}. "
                "Set 'brief' to that id (e.g. \"hormozi\"); for topics about no specific person set 'brief' to \"\"."]
               if briefs else [])
@@ -107,6 +108,7 @@ def ideas_prompt(pillar, n: int, avoid: list[str], briefs: list[str] | None = No
         "- Evergreen, globally understandable, factually checkable. No specific stock/crypto picks.",
         "- Each must support a 61-72 second script with a strong number or story.",
         *people,
+        *([f"- People are searching for (use as inspiration, do not copy): {'; '.join(signals)}."] if signals else []),
         "- Avoid anything too close to these existing topics:",
         *[f"  - {a}" for a in avoid[-60:]],
         "# OUTPUT FORMAT",

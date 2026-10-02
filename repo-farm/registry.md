@@ -40,6 +40,8 @@
 | anthropics/skills frontend-design, nextlevelbuilder/ui-ux-pro-max-skill, pbakaus/impeccable | Phase 2: dashboard | For a studio dashboard / link-in-bio landing page |
 | volcengine/OpenViking | Scale | Context database for agents; overkill at current size |
 | kapso.ai | Ops | WhatsApp notifications/approvals for held videos |
+| D4Vinci/Scrapling | Research | BSD-3, very active (85k stars). Useful for ToS-permitted public pages only; its headline features are anti-bot/Cloudflare bypass, which we won't use. Our scanner needs only free APIs (autocomplete). Revisit if a needed source has no API. |
+| Panniantong/Agent-Reach | Research | Multi-platform read access for agents *(unverified; from a social post)*. Evaluate licence and platform terms before any use. |
 
 ## REJECTED
 | Repo / tool | Reason |
@@ -56,3 +58,6 @@
 | lekt9/unbrowse-openclaw | Browser API discovery; not needed with official APIs *(unverified)* |
 | freebuff.com | Coding assistant; not part of the runtime |
 | keel as an app | macOS/Apple Silicon only; we use its pattern, not the app |
+| Yoinks (video downloader, repo unverified) | Downloads other creators' videos from 1,800+ sites: copyright and platform-ToS risk, and we make our own footage. *(unverified; from a social post)* |
+| whaleyxbt/patchright-enhanced | Scrapes sites without APIs by mimicking real browsers; anti-detection use risks our accounts. *(unverified)* |
+| Stanley (AI brand assistant) | Paid product promoted in an article; our weekly review loop and `faceless-scout` cover the same ground. |

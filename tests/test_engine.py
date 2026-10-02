@@ -621,3 +621,59 @@ def test_laya_backend_answers_are_validated_and_dry_run_by_default(tmp_path, mon
     q = {"next_step": decide.Q("choice", "ship?", fallback="hold", options={"publish": "ok", "hold": "no"})}
     d = decide.ask(q, {"score": 90})["next_step"]
     assert decide._backend() == "laya" and d.jev_value == "publish" and d.value == "hold"   # dry-run: logged, not acted on
+
+
+# ---- opportunity scanner ----------------------------------------------------------------------
+
+def _health(**kw):
+    h = {"days": 7, "videos": 10, "held": 0, "hold_rate": 0.0, "top_failing_gates": [], "images": {"cloudflare": 50},
+         "provider_blocked_days": [], "paid_usd": 0.0, "backlog_unused": {p: 20 for p in ("story", "math")},
+         "metrics_rows": 50, "publish_mode": "upload_post", "pillars": ["story", "math"]}
+    h.update(kw)
+    return h
+
+
+def test_scout_quiet_operation_has_no_proposals():
+    from faceless import scout
+    assert scout.proposals(_health()) == []
+
+
+def test_scout_flags_quota_golive_metrics_backlog_and_holds():
+    from faceless import scout
+    h = _health(images={"pollinations": 60, "cloudflare": 20}, provider_blocked_days=["2026-10-02"], publish_mode="local",
+                metrics_rows=2, backlog_unused={"story": 3, "math": 20}, videos=10, held=4, hold_rate=0.4,
+                top_failing_gates=[("word_count", 3)])
+    ids = {p["id"]: p for p in scout.proposals(h)}
+    assert set(ids) == {"images-quota", "go-live", "metrics", "topup-story", "hold-rate"}
+    assert ids["images-quota"]["autonomy"] == ids["go-live"]["autonomy"] == "owner" and ids["topup-story"]["autonomy"] == "auto"
+    assert "word_count" in ids["hold-rate"]["why"]
+
+
+def test_scout_act_only_tops_up_backlogs(tmp_path, monkeypatch):
+    from faceless import scout
+    monkeypatch.setattr(scout, "REPORT", tmp_path / "o.md")
+    monkeypatch.setattr(scout, "OPPS", tmp_path / "o.jsonl")
+    monkeypatch.setattr(scout, "health", lambda days=7: _health(publish_mode="local", backlog_unused={"story": 2, "math": 20}))
+    called = []
+    monkeypatch.setattr(scout, "topup", lambda pillar, n=6: called.append(pillar) or [{"topic": "t"}])
+    res = scout.run(act=True, extra=[{"id": "x", "title": "Find a sponsor", "category": "money", "impact": 5, "effort": 5,
+                                      "autonomy": "owner", "why": "w"}])
+    assert called == ["story"] and res["done"] == ["topup-story: +1 topics"]
+    assert "Find a sponsor" in (tmp_path / "o.md").read_text() and (tmp_path / "o.jsonl").exists()
+    assert [p["id"] for p in res["proposals"]][0] == "topup-story"    # impact 3 / effort 1 outranks 5 / 5
+
+
+def test_scout_topup_skips_stale_and_unsearched_topics(monkeypatch):
+    from faceless import scout
+    from faceless.pipeline import ideate
+    monkeypatch.setattr(scout, "_signals", lambda p: ["save money fast"])
+    monkeypatch.setattr(ideate, "history_texts", lambda: [])
+    monkeypatch.setattr(ideate, "load_backlog", lambda: [])
+    saved = []
+    monkeypatch.setattr(ideate, "append_backlog", lambda items: saved.extend(items))
+    monkeypatch.setattr("faceless.providers.llm.complete", lambda *a, **k: {"ideas": [
+        {"topic": "Cancel one subscription tonight", "angle": "a", "hook": "h"},
+        {"topic": "Zxqv blorp frobnicate", "angle": "a", "hook": "h"}]})
+    monkeypatch.setattr(scout.keywords, "demand", lambda t: {"score": 0 if "Zxqv" in t else 5, "phrases": []})
+    got = scout.topup("playbook", n=5)
+    assert [g["topic"] for g in got] == ["Cancel one subscription tonight"] and saved == got and got[0]["source"] == "scout"

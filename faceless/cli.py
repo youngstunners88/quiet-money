@@ -6,6 +6,7 @@ import argparse
 import json
 import shutil
 import sys
+from pathlib import Path
 
 from faceless import config, ledger
 from faceless.config import Paths
@@ -138,6 +139,14 @@ def cmd_publish(args) -> int:
     return 0
 
 
+def cmd_scout(args) -> int:
+    from faceless import scout
+    extra = json.loads(Path(args.import_file).read_text(encoding="utf-8")) if args.import_file else None
+    res = scout.run(act=args.act, extra=extra)
+    print((scout.REPORT).read_text(encoding="utf-8"))
+    return 0
+
+
 def cmd_keywords(args) -> int:
     from faceless import keywords
     if args.backlog:
@@ -224,6 +233,10 @@ def main(argv: list[str] | None = None) -> int:
     d.add_argument("--no-publish", action="store_true")
     d.set_defaults(fn=cmd_daily)
     sub.add_parser("status", help="today's jobs and spend").set_defaults(fn=cmd_status)
+    sc = sub.add_parser("scout", help="rank the next best opportunities; --act tops up topic backlogs")
+    sc.add_argument("--act", action="store_true", help="do the safe auto actions (backlog top-up) too")
+    sc.add_argument("--import", dest="import_file", help="JSON list of external findings from web research")
+    sc.set_defaults(fn=cmd_scout)
     kw = sub.add_parser("keywords", help="YouTube search demand for a topic or title (free autocomplete)")
     kw.add_argument("text", nargs="*", help="topic or title to check")
     kw.add_argument("--backlog", type=int, default=0, help="score the next N unused backlog topics instead")
