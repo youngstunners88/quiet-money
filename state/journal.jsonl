@@ -978,3 +978,11 @@
 {"ts": "2026-10-02T09:48:24Z", "t": 1790934504.24, "actor": "engine", "type": "JOB_TRANSITION", "job": "2026-10-02-s12-escape-side-income-plus-compounding-1-0", "to": "gated", "score": 98}
 {"ts": "2026-10-02T09:48:24Z", "t": 1790934504.241, "actor": "engine", "type": "JOB_TRANSITION", "job": "2026-10-02-s12-escape-side-income-plus-compounding-1-0", "to": "packaged"}
 {"ts": "2026-10-02T09:48:24Z", "t": 1790934504.247, "actor": "engine", "type": "JOB_TRANSITION", "job": "2026-10-02-s12-escape-side-income-plus-compounding-1-0", "to": "published", "local": "2026-10-04T15:00:00-04:00"}
+{"ts": "2026-10-02T03:26:14Z", "t": 1790911574.938, "actor": "engine", "type": "PROVIDER_OK", "capability": "llm", "provider": "gemini", "job": null, "ms": 13054}
+{"ts": "2026-10-02T03:26:20Z", "t": 1790911580.035, "actor": "engine", "type": "SCOUT_TOPUP", "pillar": "playbook", "added": 3}
+{"ts": "2026-10-02T03:26:32Z", "t": 1790911592.324, "actor": "engine", "type": "SCOUT_TOPUP", "pillar": "playbook", "added": 1}
+{"ts": "2026-10-02T03:26:54Z", "t": 1790911614.32, "actor": "engine", "type": "SCOUT_TOPUP", "pillar": "playbook", "added": 1}
+{"ts": "2026-10-02T03:27:23Z", "t": 1790911643.731, "actor": "engine", "type": "SCOUT_TOPUP", "pillar": "playbook", "added": 1}
+{"ts": "2026-10-02T04:54:40Z", "t": 1790916880.198, "actor": "engine", "type": "COMPOSIO_SESSION", "user": "quiet-money-studio", "session_hash": "08348a52"}
+{"ts": "2026-10-02T10:01:10Z", "t": 1790935270.529, "actor": "engine", "type": "COMPOSIO_SESSION", "user": "quiet-money-studio", "session_hash": "cf755f66"}
+{"ts": "2026-10-02T10:01:52Z", "t": 1790935312.123, "actor": "engine", "type": "SCOUT_TOPUP", "pillar": "playbook", "added": 1}
