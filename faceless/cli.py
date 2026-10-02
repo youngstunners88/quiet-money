@@ -138,6 +138,23 @@ def cmd_publish(args) -> int:
     return 0
 
 
+def cmd_keywords(args) -> int:
+    from faceless import keywords
+    if args.backlog:
+        from faceless.pipeline import ideate
+        used = {h.lower() for h in ideate.history_texts()}
+        items = [i for i in ideate.load_backlog() if i["topic"].lower() not in used][: args.backlog]
+        for i in items:
+            d = keywords.demand(i["topic"])
+            print(f"{d['score']:>2}  {i['pillar']:10} {i['topic']}" + (f"  <- {d['phrases'][0]}" if d["phrases"] else ""))
+        return 0
+    d = keywords.demand(" ".join(args.text))
+    print(f"demand score {d['score']} (autocomplete phrases sharing 2+ words; 0 = no search signal)")
+    for p in d["phrases"]:
+        print("  -", p)
+    return 0
+
+
 def cmd_composio(args) -> int:
     from faceless.providers import composio_tools as ct
     if args.action == "status":
@@ -207,6 +224,10 @@ def main(argv: list[str] | None = None) -> int:
     d.add_argument("--no-publish", action="store_true")
     d.set_defaults(fn=cmd_daily)
     sub.add_parser("status", help="today's jobs and spend").set_defaults(fn=cmd_status)
+    kw = sub.add_parser("keywords", help="YouTube search demand for a topic or title (free autocomplete)")
+    kw.add_argument("text", nargs="*", help="topic or title to check")
+    kw.add_argument("--backlog", type=int, default=0, help="score the next N unused backlog topics instead")
+    kw.set_defaults(fn=cmd_keywords)
     i = sub.add_parser("ideas", help="pull/generate the next topic for a pillar")
     i.add_argument("--pillar", required=True)
     i.add_argument("--n", type=int, default=1)

@@ -589,3 +589,12 @@ def test_topic_error_does_not_fail_previous_slot(monkeypatch):
     monkeypatch.setattr("faceless.events.JOURNAL", Path("/dev/null"))
     jobs = orchestrator.daily(2)
     assert [j.status for j in jobs] == ["packaged"]
+
+
+def test_keyword_demand_counts_related_phrases_and_survives_outages(monkeypatch):
+    from faceless import keywords
+    monkeypatch.setattr(keywords, "suggest", lambda seed: ("quit job calculator", "quit job funny", "unrelated thing"))
+    d = keywords.demand("Quit Your Job Forever")
+    assert d["score"] == 2 and "unrelated thing" not in d["phrases"]
+    monkeypatch.setattr(keywords, "suggest", lambda seed: ())
+    assert keywords.demand("Quit Your Job Forever")["score"] == 0
