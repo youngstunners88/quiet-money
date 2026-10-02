@@ -16,7 +16,7 @@ import json
 import re
 import shutil
 from datetime import datetime, timezone
-from pathlib import Path
+from email.utils import format_datetime
 
 from faceless import config
 from faceless.config import Paths
@@ -45,6 +45,37 @@ def e(text) -> str:
     return html.escape(str(text or ""), quote=True)
 
 
+def ld_json(data) -> str:
+    """JSON for a <script> block. Scripts and titles are LLM-written: a literal "</script>" in one would end
+    the block and run as HTML on the public site, so the characters that can break out are escaped."""
+    return (json.dumps(data, ensure_ascii=False).replace("<", "\\u003c").replace(">", "\\u003e")
+            .replace("&", "\\u0026").replace("\u2028", "\\u2028").replace("\u2029", "\\u2029"))
+
+
+def _items(value, keys: tuple[str, str]) -> list[dict]:
+    """facts/faq entries as dicts; LLM output sometimes gives bare strings or other shapes."""
+    out = []
+    for x in value if isinstance(value, list) else []:
+        if isinstance(x, dict):
+            out.append(x)
+        elif str(x or "").strip():
+            out.append({keys[0]: str(x).strip(), keys[1]: ""})
+    return out
+
+
+def sentence_case(text: str) -> str:
+    """ALL-CAPS hooks read as a sentence; mixed-case ones keep their acronyms (IRA, 401(k), FIRE)."""
+    text = text.lower() if text.isupper() else text
+    return text[:1].upper() + text[1:]
+
+
+def rfc822(day: str) -> str:
+    try:
+        return format_datetime(datetime.fromisoformat(day).replace(tzinfo=timezone.utc))
+    except ValueError:
+        return ""
+
+
 # ------------------------------------------------------------------ data
 
 def published_rules() -> list[dict]:
@@ -64,10 +95,18 @@ def published_rules() -> list[dict]:
             "job": job.id, "day": job.day, "pillar": job.pillar,
             "title": s.get("title", job.topic), "hook": s.get("hook_text", ""),
             "description": s.get("description", "") or meta.get("description", "").split("\n")[0],
-            "beats": s.get("beats", []), "facts": s.get("facts", []), "faq": s.get("faq", []),
+            "beats": [b for b in s.get("beats", []) if isinstance(b, dict) and b.get("say")],
+            "facts": _items(s.get("facts"), ("claim", "basis")), "faq": _items(s.get("faq"), ("q", "a")),
             "hashtags": s.get("hashtags", []), "youtube_id": yt,
         })
-    rules.sort(key=lambda r: (r["day"], r["job"]), reverse=True)
+    rules.sort(key=lambda r: (r["day"], r["job"]))
+    seen: set[str] = set()
+    for r in rules:   # two videos with the same title must not overwrite each other's page; oldest keeps the URL
+        base, n = r["slug"], 2
+        while r["slug"] in seen:
+            r["slug"], n = f"{base}-{n}", n + 1
+        seen.add(r["slug"])
+    rules.reverse()
     return rules
 
 
@@ -117,12 +156,6 @@ footer{border-top:1px solid var(--line);margin-top:60px;padding:26px 0 40px;colo
 .pref{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:999px;padding:8px 14px;color:var(--cream);font-size:14px}
 @media print{header.top,footer,.btn{display:none}body{background:#fff;color:#000}}
 """
-
-
-def ld_json(x) -> str:
-    """JSON for a <script> block: escape <, >, & so LLM-written text like '</script>' can't end the block."""
-    return (json.dumps(x, ensure_ascii=False)
-            .replace("<", "\\u003c").replace(">", "\\u003e").replace("&", "\\u0026"))
 
 
 def page(path: str, title: str, description: str, body: str, *, jsonld: list | None = None,
@@ -225,7 +258,7 @@ def rule_page(r: dict, related: list[dict]) -> str:
     body = f"""<p class="crumbs"><a href="../../rules/">Rules</a> › {e(pillar.name if pillar else '')}</p>
 <article><span class="tag">{e(pillar.name if pillar else r['pillar'])}</span>
 <h1>{e(r['title'])}</h1><p class="summary">{e(r['description'])}</p>
-<div class="rule"><strong>The rule:</strong> {e(r['hook'].capitalize() if r['hook'] else r['title'])}.</div>
+<div class="rule"><strong>The rule:</strong> {e(sentence_case(r['hook']) or r['title'])}.</div>
 {video}
 {'<h2>Key numbers</h2><ul class="nums">' + ''.join(f'<li>{e(n)}</li>' for n in nums) + '</ul>' if nums else ''}
 <h2>The full story</h2>{''.join(f'<p>{e(p)}</p>' for p in paras)}
@@ -383,7 +416,7 @@ def build() -> dict:
     llms += [f"- [{r['title']}]({c['base']}/rules/{r['slug']}/): {r['description']}" for r in rules]
     (SITE / "llms.txt").write_text("\n".join(llms) + "\n", encoding="utf-8")
     items = "".join(f"<item><title>{e(r['title'])}</title><link>{c['base']}/rules/{r['slug']}/</link>"
-                    f"<guid>{c['base']}/rules/{r['slug']}/</guid><pubDate>{r['day']}</pubDate>"
+                    f"<guid>{c['base']}/rules/{r['slug']}/</guid><pubDate>{rfc822(r['day'])}</pubDate>"
                     f"<description>{e(r['description'])}</description></item>" for r in rules[:30])
     (SITE / "feed.xml").write_text(f'<?xml version="1.0"?><rss version="2.0"><channel><title>{e(ch["name"])}</title>'
                                    f'<link>{c["base"]}/</link><description>{e(ch["tagline"])}</description>{items}</channel></rss>',

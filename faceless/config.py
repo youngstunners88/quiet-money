@@ -89,7 +89,7 @@ def load_dotenv(path: Path | None = None) -> int:
 
 
 _SECRET_NAME = re.compile(r"KEY|TOKEN|SECRET|PASSWORD|COMPOSIO_API")
-_SECRET_QUERY = re.compile(r"(?i)([?&](?:key|api_key|apikey|token|access_token|auth)=)[^&\s\"'#)]+")
+_SECRET_QUERY = re.compile(r"(?i)([?&](?:key|api_key|apikey|token|access_token|auth)=)[^&\s\"'\\#)]+")   # stops at \ so JSON stays valid
 
 
 def redact(text: str) -> str:

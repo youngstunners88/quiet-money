@@ -49,6 +49,7 @@ def gemini(prompt: str, *, system: str | None, want_json: bool, temperature: flo
     s = http()
     for model in cfg["gemini_models"]:
         try:
+            # key in a header, never the URL: urllib3 errors quote the URL, and errors land in the committed journal
             r = s.post(GEMINI_URL.format(model=model), headers={"x-goog-api-key": key}, json=body, timeout=75)
         except requests.RequestException as e:   # a hung model shouldn't cost the whole chain 3 minutes
             errs.append(f"{model}:{type(e).__name__}")
@@ -81,8 +82,12 @@ def openrouter(prompt: str, *, system: str | None, want_json: bool, temperature:
         body = {"model": model, "messages": msgs, "temperature": temperature}
         if want_json:
             body["response_format"] = {"type": "json_object"}
-        r = s.post("https://openrouter.ai/api/v1/chat/completions", json=body, timeout=180,
-                   headers={"Authorization": f"Bearer {key}"})
+        try:
+            r = s.post("https://openrouter.ai/api/v1/chat/completions", json=body, timeout=180,
+                       headers={"Authorization": f"Bearer {key}"})
+        except requests.RequestException as e:   # one hung model shouldn't skip the rest of the list
+            errs.append(f"{model}:{type(e).__name__}")
+            continue
         if r.status_code != 200:
             errs.append(f"{model}:{r.status_code}")
             continue

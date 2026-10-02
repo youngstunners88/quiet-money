@@ -38,9 +38,23 @@ def history_texts() -> list[str]:
 
 
 def load_backlog() -> list[dict]:
+    """Backlog items with a pillar and topic. The file is hand-edited, so a bad line is reported and skipped
+    instead of stopping every daily run."""
     if not BACKLOG.exists():
         return []
-    return [json.loads(l) for l in BACKLOG.read_text(encoding="utf-8").splitlines() if l.strip()]
+    items = []
+    for n, line in enumerate(BACKLOG.read_text(encoding="utf-8").splitlines(), 1):
+        if not line.strip():
+            continue
+        try:
+            item = json.loads(line)
+        except json.JSONDecodeError:
+            item = None
+        if isinstance(item, dict) and isinstance(item.get("pillar"), str) and isinstance(item.get("topic"), str):
+            items.append(item)
+        else:
+            events.emit("BACKLOG_BAD_LINE", line=n)
+    return items
 
 
 def append_backlog(items: list[dict]) -> None:
@@ -72,8 +86,10 @@ def next_topic(pillar_id: str, reserved: list[str] | None = None) -> dict:
     from faceless import research
     briefs = research.available() if pillar_id == "escape" else None
     res = llm.complete(ideas_prompt(pillar, 8, history, briefs), want_json=True, temperature=1.0)
-    ideas = [dict(pillar=pillar_id, **{k: i.get(k, "") for k in ("topic", "angle", "hook", "brief")})
-             for i in res.get("ideas", []) if i.get("topic") and (not i.get("brief") or i["brief"] in (briefs or []))]
+    raw = res.get("ideas", []) if isinstance(res, dict) else res
+    ideas = [dict(pillar=pillar_id, **{k: str(i.get(k) or "") for k in ("topic", "angle", "hook", "brief")})
+             for i in (raw if isinstance(raw, list) else []) if isinstance(i, dict) and i.get("topic")
+             and (not i.get("brief") or i["brief"] in (briefs or []))]
     fresh = [i for i in ideas if is_fresh(i["topic"], history, threshold)]
     append_backlog(fresh)
     events.emit("IDEAS_GENERATED", pillar=pillar_id, total=len(ideas), fresh=len(fresh))

@@ -12,7 +12,7 @@ import time
 from datetime import datetime, timezone
 from pathlib import Path
 
-from faceless.config import Paths
+from faceless.config import Paths, redact
 
 JOURNAL = Paths.state / "journal.jsonl"
 
@@ -23,12 +23,11 @@ def now_iso() -> str:
 
 def emit(kind: str, actor: str = "engine", **payload) -> dict:
     event = {"ts": now_iso(), "t": round(time.time(), 3), "actor": actor, "type": kind, **payload}
-    from faceless.config import redact
     line = redact(json.dumps(event, ensure_ascii=False, default=str))   # the journal is committed publicly
     if len(line) > 3800:  # keep appends atomic
         event = {k: v for k, v in event.items() if k in ("ts", "t", "actor", "type", "job")}
         event["truncated"] = True
-        line = json.dumps(event, ensure_ascii=False)
+        line = redact(json.dumps(event, ensure_ascii=False))
     JOURNAL.parent.mkdir(parents=True, exist_ok=True)
     with open(JOURNAL, "a", encoding="utf-8") as f:
         f.write(line + "\n")

@@ -66,15 +66,15 @@ jobs:
           restore-keys: faceless-cache-
       - name: Produce batch
         if: steps.keys.outputs.ready == 'true'
-        env:   # inputs via env, never pasted into the script
+        env:   # inputs go through env, never ${{ }} inside the script, so they can't inject shell
           COUNT: ${{ github.event.inputs.count || '5' }}
           PUBLISH: ${{ github.event.inputs.publish || 'true' }}
         run: |
           case "$COUNT" in ''|*[!0-9]*) echo "::error::count must be a number"; exit 1;; esac
-          ARGS="--count $COUNT"
-          if [ "$PUBLISH" != "true" ]; then ARGS="$ARGS --no-publish"; fi
+          ARGS=(--count "$COUNT")
+          if [ "$PUBLISH" != "true" ]; then ARGS+=(--no-publish); fi
           if [ -n "$UPLOAD_POST_API_KEY" ]; then sed -i 's/^mode = "local"/mode = "upload_post"/' studio.toml; fi
-          python -m faceless daily $ARGS
+          python -m faceless daily "${ARGS[@]}"
       - name: Upload posting packs
         if: always() && steps.keys.outputs.ready == 'true'
         uses: actions/upload-artifact@v4

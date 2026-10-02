@@ -62,12 +62,14 @@ def spoken_word_count(script: dict) -> int:
 
 def normalize(script: dict) -> dict:
     beats = []
-    for b in script.get("beats", []):
+    for b in script.get("beats") or []:
+        if not isinstance(b, dict):
+            continue
         say = re.sub(r"\s+", " ", str(b.get("say", ""))).strip()
         if not say:
             continue
-        beats.append({"say": say, "callout": str(b.get("callout") or "").strip()[:28],
-                      "visual": str(b.get("visual", "")).strip()})
+        beats.append({"say": say, "callout": re.sub(r"\s+", " ", str(b.get("callout") or "")).strip()[:28],
+                      "visual": re.sub(r"\s+", " ", str(b.get("visual") or "")).strip()})
     if beats:
         beats[0]["callout"] = ""  # the hook headline owns the top of the frame in beat 1
     # keep at most 7 callouts, numbers first: too many on-screen phrases dilutes every one of them
@@ -77,17 +79,21 @@ def normalize(script: dict) -> dict:
         for i in with_callout:
             if i not in keep:
                 beats[i]["callout"] = ""
-    tags = script.get("hashtags") or re.findall(r"#\w+", script.get("caption", ""))
-    tags = [t if t.startswith("#") else f"#{t}" for t in tags][:6]
+    tags = script.get("hashtags") or re.findall(r"#\w+", str(script.get("caption", "")))
+    if isinstance(tags, str):           # "#money #debt" instead of a list
+        tags = re.findall(r"#?\w+", tags)
+    tags = [t if t.startswith("#") else f"#{t}" for t in (str(x).strip() for x in tags if x) if t][:6]
+    facts = [f if isinstance(f, dict) else {"claim": str(f).strip(), "basis": ""}
+             for f in (script.get("facts") if isinstance(script.get("facts"), list) else []) if f]
     return {
         "title": str(script.get("title", "")).strip()[:90],
-        "hook_text": str(script.get("hook_text", "")).strip().rstrip(".!,;:"),
+        "hook_text": re.sub(r"\s+", " ", str(script.get("hook_text", ""))).strip().rstrip(".!,;:"),
         "beats": beats,
         "caption": str(script.get("caption", "")).strip(),
         "description": str(script.get("description", "")).strip(),
         "hashtags": tags,
         "first_comment": str(script.get("first_comment", "")).strip(),
-        "facts": script.get("facts", []),
+        "facts": facts,
         "source": script.get("source", "llm"),
         "pillar": script.get("pillar", ""),
     }

@@ -18,9 +18,27 @@ METRICS = Paths.analytics / "metrics.jsonl"
 
 
 def load() -> list[dict]:
+    """Metric rows; hand-pasted or connector-written lines that aren't JSON objects are skipped, not fatal
+    (the daily batch reads these weights before it makes anything)."""
     if not METRICS.exists():
         return []
-    return [json.loads(l) for l in METRICS.read_text(encoding="utf-8").splitlines() if l.strip()]
+    rows = []
+    for line in METRICS.read_text(encoding="utf-8").splitlines():
+        try:
+            r = json.loads(line) if line.strip() else None
+        except json.JSONDecodeError:
+            continue
+        if isinstance(r, dict):
+            rows.append(r)
+    return rows
+
+
+def _num(value, default: float = 0.0) -> float:
+    try:
+        v = float(value)
+    except (TypeError, ValueError):
+        return default
+    return v if math.isfinite(v) and v >= 0 else default
 
 
 def pillar_weights(window: int = 60) -> dict[str, float]:
@@ -31,13 +49,15 @@ def pillar_weights(window: int = 60) -> dict[str, float]:
         return base
     scores: dict[str, list[float]] = {}
     for r in rows:
-        v = math.log10(1 + float(r.get("views", 0))) * (0.5 + float(r.get("avg_view_pct", 50)) / 100)
-        v += 0.5 * math.log10(1 + float(r.get("follows", 0)))
+        v = math.log10(1 + _num(r.get("views"))) * (0.5 + _num(r.get("avg_view_pct"), 50) / 100)
+        v += 0.5 * math.log10(1 + _num(r.get("follows")))
         scores.setdefault(r.get("pillar", ""), []).append(v)
     means = {k: sum(v) / len(v) for k, v in scores.items() if k in base}
     if not means:
         return base
     top = max(means.values())
+    if top <= 0:                # every post at zero views: no signal to shift on
+        return base
     # exploration floor: an untested or weak pillar keeps at least 35% of the leader's weight
     return {k: base[k] * max(0.35, means.get(k, top * 0.6) / top) for k in base}
 
