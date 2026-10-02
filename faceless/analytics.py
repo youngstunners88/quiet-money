@@ -43,16 +43,27 @@ def pillar_weights(window: int = 60) -> dict[str, float]:
 
 
 def allocate(slots: int, weights: dict[str, float], day_index: int) -> list[str]:
-    """Spread slots across pillars proportional to weight, max 2 per pillar, rotated daily."""
+    """Spread a day's slots across pillars by weight, max 2 per pillar.
+
+    With more pillars than slots, one pillar that isn't guaranteed a daily slot (weight share x slots < 1)
+    rests each day in rotation, so every series keeps appearing even when metrics make weights unequal.
+    Repeats go last, so the first slots of the day always cover different pillars."""
     order = sorted(weights, key=lambda k: -weights[k])
-    total = sum(weights.values())
-    counts = {k: 0 for k in weights}
-    # ties go to a different pillar each day, so with more pillars than slots no series is starved
-    shift = day_index % len(order) if order else 0
-    tie_order = order[shift:] + order[:shift]
-    for _ in range(slots):
-        best = max(tie_order, key=lambda k: (weights[k] / total) * slots - counts[k] if counts[k] < 2 else -9)
+    if not order or slots <= 0:
+        return []
+    total = sum(weights.values()) or 1.0
+    pool = list(order)
+    if len(pool) > slots:
+        resting = [k for k in order if weights[k] / total * slots < 1]
+        if resting:
+            pool.remove(resting[day_index % len(resting)])
+    sub = sum(weights[k] for k in pool) or 1.0
+    counts = {k: 0 for k in pool}
+    shift = day_index % len(pool)
+    tie_order = pool[shift:] + pool[:shift]          # ties go to a different pillar each day
+    for _ in range(min(slots, 2 * len(pool))):
+        best = max(tie_order, key=lambda k: (weights[k] / sub) * slots - counts[k] if counts[k] < 2 else -9)
         counts[best] += 1
-    plan = [k for k in order for _ in range(counts[k])]
-    shift = day_index % len(plan) if plan else 0
-    return plan[shift:] + plan[:shift]
+    firsts = [k for k in pool if counts[k] >= 1]
+    shift = day_index % len(firsts)
+    return firsts[shift:] + firsts[:shift] + [k for k in pool if counts[k] >= 2]

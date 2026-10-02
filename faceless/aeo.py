@@ -81,7 +81,7 @@ def track(entities: list[str] | None = None, engines: list[str] | None = None) -
             try:
                 text, urls = _ask(ENGINES[eng], prompt)
             except Exception as e:  # noqa: BLE001 - one engine down shouldn't stop the probe
-                rows.append({"engine": eng, "entity": ent, "error": str(e)[:200]})
+                rows.append({"engine": eng, "entity": ent, "error": config.redact(str(e))[:200]})
                 continue
             names = _names(text)
             pos = next((i + 1 for i, n in enumerate(names) if _is_us(n)), None)

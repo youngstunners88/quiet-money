@@ -15,6 +15,8 @@ import subprocess
 import wave
 from pathlib import Path
 
+import requests
+
 from faceless import config, ledger
 from faceless.providers import ProviderError, ProviderUnavailable, http, run_chain
 
@@ -140,8 +142,11 @@ def gemini(text: str, out: Path, *, rate: str | None = None) -> list[dict]:
     body = {"contents": [{"parts": [{"text": f"Read this {pace}, like a calm, confident documentary narrator:\n\n{text}"}]}],
             "generationConfig": {"responseModalities": ["AUDIO"], "speechConfig": {
                 "voiceConfig": {"prebuiltVoiceConfig": {"voiceName": cfg["gemini_voice"]}}}}}
-    r = http().post(f"https://generativelanguage.googleapis.com/v1beta/models/{cfg['gemini_model']}:generateContent",
-                    params={"key": key}, json=body, timeout=300)
+    try:   # key in a header: urllib3 error messages echo the URL, and errors land in the committed journal
+        r = http().post(f"https://generativelanguage.googleapis.com/v1beta/models/{cfg['gemini_model']}:generateContent",
+                        headers={"x-goog-api-key": key}, json=body, timeout=300)
+    except requests.RequestException as e:
+        raise ProviderError(f"gemini-tts {type(e).__name__}") from e
     if r.status_code != 200:
         raise ProviderError(f"gemini-tts {r.status_code}: {r.text[:200]}")
     part = r.json()["candidates"][0]["content"]["parts"][0]["inlineData"]

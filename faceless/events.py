@@ -23,7 +23,8 @@ def now_iso() -> str:
 
 def emit(kind: str, actor: str = "engine", **payload) -> dict:
     event = {"ts": now_iso(), "t": round(time.time(), 3), "actor": actor, "type": kind, **payload}
-    line = json.dumps(event, ensure_ascii=False, default=str)
+    from faceless.config import redact
+    line = redact(json.dumps(event, ensure_ascii=False, default=str))   # the journal is committed publicly
     if len(line) > 3800:  # keep appends atomic
         event = {k: v for k, v in event.items() if k in ("ts", "t", "actor", "type", "job")}
         event["truncated"] = True

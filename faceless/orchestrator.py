@@ -145,13 +145,19 @@ def run_one(pillar: str, topic: str | None = None, slot: int = 0, **kw) -> Job:
 SHIPPABLE = ("packaged", "published")   # held and failed jobs leave their slot open for a retry
 
 
-def open_slots(count: int, extra: int = 0) -> list[tuple[str, int]]:
+def open_slots(count: int, extra: int = 0, now: datetime | None = None) -> list[tuple[str, int]]:
     """(post date, slot of day) pairs to fill. Default: today's slots that have no shippable video yet
-    (so a re-run resumes instead of duplicating). extra=N: the next N free slots from today on."""
+    (so a re-run resumes instead of duplicating). extra=N: the next N free slots from now on.
+    Slots whose posting time has passed are skipped: a video for them would post a day late and
+    collide with tomorrow's video in the same slot."""
+    now = now or datetime.now(timezone.utc)
     taken = {publisher.nominal_slot(j.day, j.slot) for j in all_jobs() if j.status in SHIPPABLE}
-    day, out = datetime.now(timezone.utc).date(), []
+    day, out = now.date(), []
     for _ in range(366 if extra else 1):
-        out += [(day.isoformat(), k) for k in range(count) if (day.isoformat(), k) not in taken]
+        for k in range(count):
+            key = (day.isoformat(), k)
+            if key not in taken and publisher.nominal_time(*key) > now + publisher.LEAD:
+                out.append(key)
         if extra and len(out) >= extra:
             return out[:extra]
         day += timedelta(days=1)
@@ -162,7 +168,9 @@ def daily(count: int | None = None, extra: int = 0, pillar: str | None = None, *
     Paths.ensure()
     cfg = config.load()
     per_day = len(cfg["publish"]["slots"])
-    count = min(count or cfg["production"]["videos_per_day"], per_day)
+    count = count or cfg["production"]["videos_per_day"]
+    if count > per_day:   # more than a day of slots: make them all now, banking the rest into the next free slots
+        extra, count = max(extra, count), per_day
     today = datetime.now(timezone.utc).date()
     weights = analytics.pillar_weights()
     plans: dict[str, list[str]] = {}
@@ -175,6 +183,7 @@ def daily(count: int | None = None, extra: int = 0, pillar: str | None = None, *
         plan = plans.setdefault(post_day, analytics.allocate(per_day, weights, date.fromisoformat(post_day).toordinal()))
         pillar = forced or plan[k]
         slot = (date.fromisoformat(post_day) - today).days * per_day + k
+        job = None
         try:
             item = ideate.next_topic(pillar, reserved)
             reserved.append(item["topic"])
@@ -183,9 +192,11 @@ def daily(count: int | None = None, extra: int = 0, pillar: str | None = None, *
             produce(job, **kw)
         except Exception as e:  # noqa: BLE001 - one bad job must not sink the day
             events.emit("JOB_FAILED", pillar=pillar, slot=slot, error=str(e)[:300], trace=traceback.format_exc()[-1500:])
-            if jobs and jobs[-1].status not in ("failed", "published", "held"):
-                jobs[-1].notes.append(str(e)[:300])
-                jobs[-1].advance("failed", error=str(e)[:200])
+            # only this slot's job, and never one that already finished (a packaged video whose upload
+            # failed still has its pack; failing it would reopen the slot and make a duplicate)
+            if job is not None and job.status not in ("failed", "published", "held", "packaged"):
+                job.notes.append(str(e)[:300])
+                job.advance("failed", error=str(e)[:200])
     write_daily_report([j for j in all_jobs() if j.day == today.isoformat()])
     return jobs
 

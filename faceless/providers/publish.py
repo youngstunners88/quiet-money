@@ -26,14 +26,20 @@ def nominal_slot(day: str, slot: int) -> tuple[str, int]:
     return (date.fromisoformat(day) + timedelta(days=slot // per_day)).isoformat(), slot % per_day
 
 
-def slot_time(day: str, slot: int) -> datetime:
+LEAD = timedelta(minutes=20)   # a post needs at least this long to upload and schedule
+
+
+def nominal_time(post_day: str, k: int) -> datetime:
+    """The planned posting time of slot k on post_day, in the audience's time zone."""
     cfg = config.load()["publish"]
-    tz = ZoneInfo(cfg["timezone"])
-    post_day, k = nominal_slot(day, slot)
     hh, mm = map(int, cfg["slots"][k].split(":"))
-    when = datetime.fromisoformat(post_day).replace(hour=hh, minute=mm, tzinfo=tz)
-    now = datetime.now(tz)
-    while when <= now + timedelta(minutes=20):  # never schedule into the past
+    return datetime.fromisoformat(post_day).replace(hour=hh, minute=mm, tzinfo=ZoneInfo(cfg["timezone"]))
+
+
+def slot_time(day: str, slot: int) -> datetime:
+    when = nominal_time(*nominal_slot(day, slot))
+    now = datetime.now(when.tzinfo)
+    while when <= now + LEAD:  # never schedule into the past (only hand-made `make --slot` jobs land here)
         when += timedelta(days=1)
     return when
 

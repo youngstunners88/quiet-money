@@ -118,7 +118,7 @@ def ideas_prompt(pillar, n: int, avoid: list[str], briefs: list[str] | None = No
 def judge_prompt(script: dict, brief: str = "") -> str:
     beats = "\n".join(f"{i + 1}. {b['say']}" for i, b in enumerate(script["beats"]))
     notes = ["", "VERIFIED RESEARCH NOTES (claims that match these, attributed as written, are documented: "
-             "factual_risk 0-3; claims about these people that are NOT in the notes are unsourced: 4+):", brief] if brief else []
+             "factual_risk 0-3; a specific claim about these people that is NOT in the notes is unsourced: 6+):", brief] if brief else []
     return "\n".join([
         "You are a ruthless short-form video editor and fact-checker for a personal finance EDUCATION channel.",
         "Score this script. Be strict on craft: most scripts are average.",

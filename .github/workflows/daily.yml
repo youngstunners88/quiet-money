@@ -66,9 +66,13 @@ jobs:
           restore-keys: faceless-cache-
       - name: Produce batch
         if: steps.keys.outputs.ready == 'true'
+        env:   # inputs via env, never pasted into the script
+          COUNT: ${{ github.event.inputs.count || '5' }}
+          PUBLISH: ${{ github.event.inputs.publish || 'true' }}
         run: |
-          ARGS="--count ${{ github.event.inputs.count || '5' }}"
-          if [ "${{ github.event.inputs.publish || 'true' }}" != "true" ]; then ARGS="$ARGS --no-publish"; fi
+          case "$COUNT" in ''|*[!0-9]*) echo "::error::count must be a number"; exit 1;; esac
+          ARGS="--count $COUNT"
+          if [ "$PUBLISH" != "true" ]; then ARGS="$ARGS --no-publish"; fi
           if [ -n "$UPLOAD_POST_API_KEY" ]; then sed -i 's/^mode = "local"/mode = "upload_post"/' studio.toml; fi
           python -m faceless daily $ARGS
       - name: Upload posting packs

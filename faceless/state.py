@@ -73,7 +73,8 @@ class Job:
 
     def save(self) -> None:
         Paths.jobs.mkdir(parents=True, exist_ok=True)
-        self.path.write_text(json.dumps(asdict(self), indent=2, ensure_ascii=False), encoding="utf-8")
+        from faceless.config import redact   # job files are committed publicly; error notes can echo request URLs
+        self.path.write_text(redact(json.dumps(asdict(self), indent=2, ensure_ascii=False)), encoding="utf-8")
 
 
 def new_job(pillar: str, topic: str, slot: int = 0, day: str | None = None) -> Job:

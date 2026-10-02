@@ -303,8 +303,12 @@ def test_open_slots_resume_and_bank_ahead(monkeypatch):
             for s, st in [(0, "published"), (1, "packaged"), (2, "held"), (5, "published")]]
     monkeypatch.setattr(orchestrator, "all_jobs", lambda: done)
     d0, d1 = today.isoformat(), (today + timedelta(days=1)).isoformat()
-    assert orchestrator.open_slots(5) == [(d0, 2), (d0, 3), (d0, 4)]        # held slot is retried
-    assert orchestrator.open_slots(5, extra=5) == [(d0, 2), (d0, 3), (d0, 4), (d1, 1), (d1, 2)]
+    dawn = datetime(today.year, today.month, today.day, 1, 0, tzinfo=timezone.utc)   # before every slot
+    assert orchestrator.open_slots(5, now=dawn) == [(d0, 2), (d0, 3), (d0, 4)]        # held slot is retried
+    assert orchestrator.open_slots(5, extra=5, now=dawn) == [(d0, 2), (d0, 3), (d0, 4), (d1, 1), (d1, 2)]
+    # 23:00 UTC is 19:00 in New York: only the 21:00 slot is still ahead; passed slots are never refilled
+    late = datetime(today.year, today.month, today.day, 23, 0, tzinfo=timezone.utc)
+    assert orchestrator.open_slots(5, now=late) == [(d0, 4)]
 
 
 def test_dotenv_loads_without_overriding(tmp_path, monkeypatch):
@@ -316,6 +320,13 @@ def test_dotenv_loads_without_overriding(tmp_path, monkeypatch):
     import os
     assert os.environ["QM_TEST_A"] == "from-file" and os.environ["QM_TEST_B"] == "from-env"
     monkeypatch.delenv("QM_TEST_A")
+    f.write_text("QM_TEST_C=abc123  # personal account\nQM_TEST_D='a # b'\n")
+    monkeypatch.delenv("QM_TEST_C", raising=False)
+    monkeypatch.delenv("QM_TEST_D", raising=False)
+    config.load_dotenv(f)
+    assert os.environ["QM_TEST_C"] == "abc123" and os.environ["QM_TEST_D"] == "a # b"
+    monkeypatch.delenv("QM_TEST_C")
+    monkeypatch.delenv("QM_TEST_D")
 
 
 def test_paid_image_fallback_is_capped(tmp_path, monkeypatch):
@@ -370,3 +381,88 @@ def test_blocked_provider_is_skipped_for_the_day(tmp_path, monkeypatch):
     monkeypatch.setattr(ledger, "used", lambda provider, unit, day=None: 1 if unit == "blocked" else 0)
     with pytest.raises(ProviderUnavailable):
         images.cloudflare("a desk", 864, 1536, 1, tmp_path / "x.jpg")
+
+
+
+# ---- audit fixes ------------------------------------------------------------------------------
+
+def test_redact_scrubs_query_keys_and_secret_env_values(monkeypatch):
+    monkeypatch.setenv("QM_FAKE_API_KEY", "AIzaFAKEFAKEFAKEFAKE12345")
+    msg = "Max retries exceeded with url: /v1beta/x:generateContent?key=AIzaFAKEFAKEFAKEFAKE12345 (Caused by...)"
+    out = config.redact(msg + " again AIzaFAKEFAKEFAKEFAKE12345")
+    assert "AIzaFAKE" not in out and "[redacted]" in out
+
+
+def test_journal_never_stores_a_key(tmp_path, monkeypatch):
+    from faceless import events
+    monkeypatch.setattr(events, "JOURNAL", tmp_path / "j.jsonl")
+    monkeypatch.setenv("QM_FAKE_TOKEN", "tok_FAKEFAKEFAKEFAKE")
+    events.emit("PROVIDER_FAIL", error="401 for https://x.test/v1?token=tok_FAKEFAKEFAKEFAKE")
+    assert "tok_FAKE" not in (tmp_path / "j.jsonl").read_text()
+
+
+def test_gemini_tts_sends_key_in_header(tmp_path, monkeypatch):
+    from faceless.providers import tts
+    seen = {}
+
+    class Boom:
+        def post(self, url, **kw):
+            seen.update(kw, url=url)
+            raise tts.requests.ConnectionError(f"Max retries exceeded with url: {url}")
+    monkeypatch.setenv("GEMINI_API_KEY", "AIzaFAKEFAKEFAKEFAKE12345")
+    monkeypatch.setattr(tts, "http", lambda: Boom())
+    with pytest.raises(tts.ProviderError) as err:
+        tts.gemini("hello", tmp_path / "v.wav")
+    assert seen["headers"]["x-goog-api-key"].startswith("AIza") and "params" not in seen
+    assert "AIza" not in str(err.value) and "AIza" not in seen["url"]
+
+
+def test_json_ld_cannot_break_out_of_its_script_block():
+    from faceless.site import ld_json
+    out = ld_json({"headline": "x</script><script>alert(1)</script> & more"})
+    assert "</script>" not in out and "<" not in out and "&" not in out
+    assert json.loads(out)["headline"].startswith("x</script>")
+
+
+def test_escape_gate_needs_whole_words():
+    from faceless.gauntlet import check_structure
+    beats = {"pillar": "escape", "beats": [{"say": s} for s in (
+        "A realistic number.", "Listen closely.", "Honestly, it's brisk work.", "A specialist knows.", "That's it.")]}
+    assert not check_structure(beats, "")[0].passed
+
+
+def test_paid_image_cap_counts_requests_in_flight(tmp_path, monkeypatch):
+    from faceless import ledger
+    from faceless.providers import ProviderUnavailable, images
+    monkeypatch.setenv("OPENROUTER_API_KEY", "test")
+    monkeypatch.setattr(ledger, "used", lambda provider, unit, day=None: 59 if unit == "images" else 0)
+    monkeypatch.setattr(images, "_or_inflight", 1)   # another worker already holds the 60th
+    with pytest.raises(ProviderUnavailable):
+        images.openrouter("a desk", 864, 1536, 1, tmp_path / "x.jpg")
+
+
+def test_failed_slot_never_fails_the_previous_finished_job(tmp_path, monkeypatch):
+    from faceless import events, orchestrator
+    from faceless.state import Job
+    monkeypatch.setattr("faceless.config.Paths.jobs", tmp_path)
+    monkeypatch.setattr(events, "JOURNAL", tmp_path / "j.jsonl")
+    monkeypatch.setattr(orchestrator, "open_slots", lambda count, extra=0: [("2026-10-02", 0), ("2026-10-02", 1)])
+    monkeypatch.setattr(orchestrator, "all_jobs", lambda: [])
+    monkeypatch.setattr(orchestrator, "write_daily_report", lambda jobs: None)
+    monkeypatch.setattr(orchestrator.Paths, "ensure", lambda: None)
+    calls = iter([{"topic": "first"}, RuntimeError("no fresh topics")])
+
+    def next_topic(pillar, reserved):
+        item = next(calls)
+        if isinstance(item, Exception):
+            raise item
+        return item
+    monkeypatch.setattr(orchestrator.ideate, "next_topic", next_topic)
+    monkeypatch.setattr(orchestrator, "start_job",
+                        lambda pillar, item, slot: Job(id=f"j{slot}", pillar=pillar, topic=item["topic"], day="2026-10-02", slot=slot))
+
+    def produce(job, **kw):
+        job.status = "packaged"
+    monkeypatch.setattr(orchestrator, "produce", produce)
+    jobs = orchestrator.daily(5)
+    assert [j.status for j in jobs] == ["packaged"]

@@ -119,6 +119,12 @@ footer{border-top:1px solid var(--line);margin-top:60px;padding:26px 0 40px;colo
 """
 
 
+def ld_json(x) -> str:
+    """JSON for a <script> block: escape <, >, & so LLM-written text like '</script>' can't end the block."""
+    return (json.dumps(x, ensure_ascii=False)
+            .replace("<", "\\u003c").replace(">", "\\u003e").replace("&", "\\u0026"))
+
+
 def page(path: str, title: str, description: str, body: str, *, jsonld: list | None = None,
          og_type: str = "website", image: str | None = None) -> str:
     c = cfg()
@@ -132,7 +138,7 @@ def page(path: str, title: str, description: str, body: str, *, jsonld: list | N
         verify += f'<meta name="google-site-verification" content="{e(c["google_verification"])}">'
     if c["bing_verification"]:
         verify += f'<meta name="msvalidate.01" content="{e(c["bing_verification"])}">'
-    ld = "".join(f'<script type="application/ld+json">{json.dumps(x, ensure_ascii=False)}</script>' for x in (jsonld or []))
+    ld = "".join(f'<script type="application/ld+json">{ld_json(x)}</script>' for x in (jsonld or []))
     domain = c["base"].split("//", 1)[-1].split("/", 1)[0]
     return f"""<!doctype html>
 <html lang="en"><head>

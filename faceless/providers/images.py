@@ -84,24 +84,36 @@ def cloudflare(prompt: str, w: int, h: int, seed: int, out, hero: bool = False) 
     ledger.spend("cloudflare", "neurons", cost, usd=0.0)
 
 
+_OR_LOCK = threading.Lock()
+_or_inflight = 0   # paid requests in flight: visuals runs 4 workers, so the cap check must count them too
+
+
 def openrouter(prompt: str, w: int, h: int, seed: int, out, hero: bool = False) -> None:
+    global _or_inflight
     key = config.env("OPENROUTER_API_KEY")
     if not key:
         raise ProviderUnavailable("OPENROUTER_API_KEY not set")
     cfg = config.load()["images"]
-    if ledger.used("openrouter", "blocked") or not ledger.allow("openrouter", "images", 1, cfg.get("openrouter_daily_images", 60)):
-        raise ProviderUnavailable("daily paid image cap reached")
-    model = cfg["openrouter_model"]
-    body = {"model": model, "modalities": ["image", "text"],
-            "messages": [{"role": "user", "content": f"Generate one vertical 9:16 image. {prompt}"}],
-            "image_config": {"aspect_ratio": "9:16"}}
-    r = http().post("https://openrouter.ai/api/v1/chat/completions", json=body, timeout=240,
-                    headers={"Authorization": f"Bearer {key}"})
-    if r.status_code == 402:   # out of credit: skip this provider for the rest of the day
-        ledger.spend("openrouter", "blocked", 1)
-        raise ProviderUnavailable("openrouter credit exhausted")
-    if r.status_code != 200:
-        raise ProviderError(f"openrouter-image {r.status_code}: {r.text[:200]}")
+    with _OR_LOCK:   # check and reserve atomically so concurrent workers can't overshoot the paid cap
+        if ledger.used("openrouter", "blocked") or \
+                ledger.used("openrouter", "images") + _or_inflight + 1 > cfg.get("openrouter_daily_images", 60):
+            raise ProviderUnavailable("daily paid image cap reached")
+        _or_inflight += 1
+    try:
+        body = {"model": cfg["openrouter_model"], "modalities": ["image", "text"],
+                "messages": [{"role": "user", "content": f"Generate one vertical 9:16 image. {prompt}"}],
+                "image_config": {"aspect_ratio": "9:16"}}
+        r = http().post("https://openrouter.ai/api/v1/chat/completions", json=body, timeout=240,
+                        headers={"Authorization": f"Bearer {key}"})
+        if r.status_code == 402:   # out of credit: skip this provider for the rest of the day
+            ledger.spend("openrouter", "blocked", 1)
+            raise ProviderUnavailable("openrouter credit exhausted")
+        if r.status_code != 200:
+            raise ProviderError(f"openrouter-image {r.status_code}: {r.text[:200]}")
+        ledger.spend("openrouter", "images", 1, usd=0.04)   # billed once the model answered, even if unusable
+    finally:
+        with _OR_LOCK:
+            _or_inflight -= 1
     msg = r.json()["choices"][0]["message"]
     imgs = msg.get("images") or []
     if not imgs:
@@ -109,7 +121,6 @@ def openrouter(prompt: str, w: int, h: int, seed: int, out, hero: bool = False) 
     url = imgs[0]["image_url"]["url"]
     data = base64.b64decode(url.split(",", 1)[1]) if url.startswith("data:") else http().get(url, timeout=120).content
     _save(data, out)
-    ledger.spend("openrouter", "images", 1, usd=0.04)
 
 
 _POLL_LOCK = threading.Lock()   # the anonymous tier allows one request at a time per IP

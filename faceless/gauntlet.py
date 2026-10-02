@@ -118,8 +118,10 @@ def check_structure(script: dict, low: str) -> list[Gate]:
     return []
 
 
-CATCH = r"catch|risk|downside|no guarantee|not guaranteed|honest|warning|isn't easy|is not easy|the hard part|bankrupt|debt"
-MOVE = r"this week|today|tonight|tomorrow|right now|start with|step one|your first|write down|list"
+CATCH = (r"\b(catch|risks?|risky|downside|no guarantees?|not guaranteed|warning|isn't easy|is not easy|"
+         r"the hard part|bankrupt\w*|debt)\b")
+MOVE = (r"\b(this week|today|tonight|tomorrow|right now|start with|step one|your first|write down|"
+        r"make a list|list (?:every|all|your))\b")
 
 
 def judge_script(script: dict, job_id: str | None = None, brief: str = "") -> tuple[list[Gate], dict]:

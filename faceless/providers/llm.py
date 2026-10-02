@@ -49,7 +49,7 @@ def gemini(prompt: str, *, system: str | None, want_json: bool, temperature: flo
     s = http()
     for model in cfg["gemini_models"]:
         try:
-            r = s.post(GEMINI_URL.format(model=model), params={"key": key}, json=body, timeout=75)
+            r = s.post(GEMINI_URL.format(model=model), headers={"x-goog-api-key": key}, json=body, timeout=75)
         except requests.RequestException as e:   # a hung model shouldn't cost the whole chain 3 minutes
             errs.append(f"{model}:{type(e).__name__}")
             continue

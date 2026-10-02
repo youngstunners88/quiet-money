@@ -7,6 +7,7 @@ so the same code runs locally, in CI, and from a scheduled agent session.
 from __future__ import annotations
 
 import os
+import re
 import tomllib
 from dataclasses import dataclass
 from functools import lru_cache
@@ -76,11 +77,29 @@ def load_dotenv(path: Path | None = None) -> int:
         if not line or line.startswith("#") or "=" not in line:
             continue
         k, v = line.removeprefix("export ").split("=", 1)
-        k, v = k.strip(), v.strip().strip('"').strip("'")
+        k, v = k.strip(), v.strip()
+        if len(v) >= 2 and v[0] in "'\"" and v[0] in v[1:]:
+            v = v[1:v.index(v[0], 1)]            # quoted: keep exactly what's inside the quotes
+        else:
+            v = v.split(" #", 1)[0].strip()      # unquoted: drop an inline comment
         if k and v and not os.environ.get(k):
             os.environ[k] = v
             n += 1
     return n
+
+
+_SECRET_NAME = re.compile(r"KEY|TOKEN|SECRET|PASSWORD|COMPOSIO_API")
+_SECRET_QUERY = re.compile(r"(?i)([?&](?:key|api_key|apikey|token|access_token|auth)=)[^&\s\"'#)]+")
+
+
+def redact(text: str) -> str:
+    """Scrub credentials from text bound for committed files (journal, job notes, reports): query-string
+    keys that HTTP libraries echo in error messages, and the value of every secret-looking env var."""
+    text = _SECRET_QUERY.sub(r"\1[redacted]", text)
+    for name, val in os.environ.items():
+        if val and len(val) >= 12 and _SECRET_NAME.search(name) and val in text:
+            text = text.replace(val, "[redacted]")
+    return text
 
 
 def env(*names: str) -> str | None:

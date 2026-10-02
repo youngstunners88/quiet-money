@@ -69,6 +69,9 @@ def cmd_daily(args) -> int:
     for j in jobs:
         print(f"{j.slot + 1}. [{j.status:9}] {j.scores.get('gauntlet', '-'):>3}  {j.pillar:10} {j.artifacts.get('title', j.topic)}")
     print(json.dumps(ledger.summary(), indent=1))
+    if not jobs:
+        print("Nothing to do: every requested slot already has a finished video.")
+        return 0
     produced = sum(1 for j in jobs if j.status in ("published", "packaged", "held"))
     return 0 if produced else 1
 
