@@ -277,7 +277,7 @@ def about_page(rules: list[dict]) -> str:
 <p class="summary">Quiet Money is a short-video channel that explains money psychology and personal finance in about 60 seconds per video, with real numbers.</p>
 <h2>What it is</h2><p>Quiet Money publishes new short videos every day on YouTube Shorts, TikTok, and Instagram Reels, and keeps a written version of every video here in the Money Rules Library. Each video teaches one money rule that most people were never taught: how compound interest works, why minimum credit card payments take decades, how raises disappear into lifestyle creep, and what ordinary people did to build wealth quietly.</p>
 <h2>Who it is for</h2><p>{e(ch['audience'].capitalize())}.</p>
-<h2>The five series</h2><ul>{series}</ul>
+<h2>The series</h2><ul>{series}</ul>
 <h2>How we make videos</h2><p>Every calculation is computed by code with the assumption stated on screen (for example "at 8% a year"). Every true story is checked against at least two reputable sources, listed on its page. Narration and visuals are AI-assisted and labeled as such on every platform. Real people are never shown by face.</p>
 <h2>What we do not do</h2><p>We do not give personalized financial advice, recommend specific stocks or coins, or promise returns. This is education.</p>
 <h2>Library</h2><p>{len(rules)} money rules published so far. Start with the <a href="../rules/">full library</a> or the <a href="../tools/">calculators</a>.</p>
@@ -319,7 +319,7 @@ def build() -> dict:
 <p class="lead">{e(ch['name'])} turns money psychology and personal finance into 60-second lessons with real numbers. Every video has a written page here with the full story, the math, and the sources.</p>
 <a class="btn" href="money-reset/">Free 7-day Money Reset</a><a class="btn ghost" href="rules/">Browse the library</a></section>
 <h2>Latest money rules</h2><div class="grid">{''.join(card(r, './') for r in rules[:9])}</div>
-<h2>Five series</h2><div class="grid">{''.join(f'<div class="card"><div class="body"><span class="tag">Series</span><h3><a href="series/{p.id}/">{e(p.name)}</a></h3><div style="color:var(--muted);font-size:15px">{e(p.format[:120])}</div></div></div>' for p in c['pillars'].values())}</div>"""
+<h2>The series</h2><div class="grid">{''.join(f'<div class="card"><div class="body"><span class="tag">Series</span><h3><a href="series/{p.id}/">{e(p.name)}</a></h3><div style="color:var(--muted);font-size:15px">{e(p.format[:120])}</div></div></div>' for p in c['pillars'].values())}</div>"""
     site_ld = {"@context": "https://schema.org", "@type": "WebSite", "name": ch["name"], "url": c["base"] + "/",
                "description": ch["tagline"]}
     (SITE / "index.html").write_text(page("", f"{ch['name']}: {ch['tagline']}", f"{ch['tagline']} Money psychology and personal finance in 60 seconds, with real numbers and sources.",

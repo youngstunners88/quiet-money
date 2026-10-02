@@ -54,6 +54,11 @@ def is_fresh(topic: str, history: list[str], threshold: float) -> bool:
     return all(similarity(topic, h) < threshold for h in history)
 
 
+def find_topic(topic: str) -> dict | None:
+    """The backlog item for a topic, so a hand-picked topic still gets its angle and research brief."""
+    return next((i for i in load_backlog() if i["topic"].lower() == topic.lower()), None)
+
+
 def next_topic(pillar_id: str, reserved: list[str] | None = None) -> dict:
     cfg = config.load()
     threshold = cfg["gauntlet"]["similarity_max"]
@@ -64,9 +69,11 @@ def next_topic(pillar_id: str, reserved: list[str] | None = None) -> dict:
             return item
     # backlog dry for this pillar: ask the LLM for fresh ideas and keep the extras for later
     pillar = config.pillar(pillar_id)
-    res = llm.complete(ideas_prompt(pillar, 8, history), want_json=True, temperature=1.0)
-    ideas = [dict(pillar=pillar_id, **{k: i.get(k, "") for k in ("topic", "angle", "hook")})
-             for i in res.get("ideas", []) if i.get("topic")]
+    from faceless import research
+    briefs = research.available() if pillar_id == "escape" else None
+    res = llm.complete(ideas_prompt(pillar, 8, history, briefs), want_json=True, temperature=1.0)
+    ideas = [dict(pillar=pillar_id, **{k: i.get(k, "") for k in ("topic", "angle", "hook", "brief")})
+             for i in res.get("ideas", []) if i.get("topic") and (not i.get("brief") or i["brief"] in (briefs or []))]
     fresh = [i for i in ideas if is_fresh(i["topic"], history, threshold)]
     append_backlog(fresh)
     events.emit("IDEAS_GENERATED", pillar=pillar_id, total=len(ideas), fresh=len(fresh))

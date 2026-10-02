@@ -8,6 +8,21 @@ def future_value_monthly(monthly: float, annual_rate: float, years: int) -> floa
     return monthly * n if r == 0 else monthly * ((1 + r) ** n - 1) / r
 
 
+def capital_for_income(monthly: float, withdrawal_rate: float = 0.04) -> float:
+    """Portfolio needed to withdraw `monthly` at a fixed yearly withdrawal rate (the '4% rule')."""
+    return monthly * 12 / withdrawal_rate
+
+
+def months_to_target(monthly: float, annual_rate: float, target: float, max_months: int = 1200) -> int:
+    """Months of investing `monthly` (end of month, monthly compounding) until the balance reaches target."""
+    r, bal = annual_rate / 12, 0.0
+    for m in range(1, max_months + 1):
+        bal = bal * (1 + r) + monthly
+        if bal >= target:
+            return m
+    return max_months
+
+
 def lump_sum_growth(principal: float, annual_rate: float, years: int) -> float:
     return principal * (1 + annual_rate) ** years
 
@@ -74,4 +89,15 @@ def fact_sheet() -> str:
     lines.append(f"- $5/day habit = {money(5 * 365)}/year; invested monthly at 8% for 30 years = "
                  f"{money(future_value_monthly(5 * 365 / 12, 0.08, 30))}")
     lines.append(f"- A $15/month subscription for 10 years = {money(15 * 120)}")
+    lines.append("- PASSIVE INCOME ('4% rule': withdraw 4% a year, a guideline from the 1998 Trinity study, not a guarantee):")
+    for need in (2000, 3000, 5000):
+        cap = capital_for_income(need)
+        lines.append(f"  - {money(need)}/month of passive income needs about {money(cap)} invested")
+        for m in (500, 1000, 2000):
+            mo = months_to_target(m, 0.08, cap)
+            lines.append(f"    - investing {money(m)}/month at 8%/yr reaches {money(cap)} in {mo / 12:.1f} years")
+    lines.append(f"- Rule of 100 volume math: 100 reach-outs a day for 100 days = 10,000 contacts; "
+                 f"at a 1% yes-rate that's 100 customers (hypothetical rate)")
+    lines.append(f"- An extra $1,000/month from a side income, invested at 8% for 10 years = "
+                 f"{money(future_value_monthly(1000, 0.08, 10))} (you put in {money(120000)})")
     return "\n".join(lines)

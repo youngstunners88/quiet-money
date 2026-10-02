@@ -114,8 +114,10 @@ def write(job, angle: str = "", feedback: list[str] | None = None) -> dict:
         script = normalize({"pillar": job.pillar, **json.loads(fp.read_text(encoding="utf-8"))})
         events.emit("SCRIPT_LOADED", job=job.id, source=script["source"])
         return script
+    from faceless import research
     pillar = config.pillar(job.pillar)
-    prompt = script_prompt(pillar, job.topic, angle, feedback, recent_titles())
+    prompt = script_prompt(pillar, job.topic, angle or job.artifacts.get("angle", ""), feedback, recent_titles(),
+                           brief=research.brief(job.artifacts.get("brief")))
     from faceless.prompts import identity
     raw = llm.complete(prompt, system=identity(), want_json=True, job=job.id)
     raw["pillar"] = job.pillar

@@ -34,6 +34,8 @@ humans set strategy, connect accounts, and review held videos.
 | Create/rebrand channels, brand kit, profiles | `/channel` | `channel/profiles.md` | `faceless-channel-setup` |
 | Website, SEO, indexing, backlinks | `/faceless/site.py` | `channel/seo-playbook.md` | `faceless-seo` |
 | AI-assistant visibility (ChatGPT/Claude/Gemini) | `/analytics` | `channel/seo-playbook.md` | `faceless-aeo` |
+| Research a person, book, or framework for videos | `/channel/research` | the brief format in the skill | `faceless-research` |
+| Escape the Rat Race series (Hormozi, Kiyosaki, Peña, passive income) | `/channel/research` | `channel/brand.md` | `faceless-rat-race` |
 | Grow reach, "go viral", weekly growth review | `/analytics` | `analytics/CONTEXT.md` | `faceless-growth` |
 | Connect an app (YouTube, TikTok, Drive...), pull channel stats | `/faceless/providers` | `composio_tools.py` | `faceless-composio` (+ `composio`) |
 
@@ -68,6 +70,7 @@ python -m pytest -q tests                      # engine tests
 2. Education, never advice: no "buy this stock/coin", no promised returns. Disclaimers go in every description.
 3. Real people are never shown by face: hands, silhouettes, objects, places.
 4. AI disclosure label ON for every post (TikTok AI-generated toggle, YouTube "altered or synthetic").
-5. Five pillars rotate daily with different looks, keys, and formats. Never ship near-duplicates.
+5. Six pillars rotate (five slots a day) with different looks, keys, and formats. Never ship near-duplicates.
 6. Nothing ships below gauntlet score 80 or with a hard-gate failure; those are held for review.
 7. Free providers first; paid fallbacks are capped in the ledger.
+8. Facts about real people come only from a research brief in `channel/research/` (the writer and judge both see it).

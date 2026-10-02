@@ -24,7 +24,7 @@ def identity() -> str:
 
 
 def script_prompt(pillar, topic: str, angle: str = "", feedback: list[str] | None = None,
-                  recent_titles: list[str] | None = None) -> str:
+                  recent_titles: list[str] | None = None, brief: str = "") -> str:
     cfg = config.load()
     lo, hi = cfg["production"]["words_range"]
     ch = cfg["channel"]
@@ -47,7 +47,10 @@ def script_prompt(pillar, topic: str, angle: str = "", feedback: list[str] | Non
         "replays (e.g. last line '...and that's exactly how' -> first line 'A janitor died with $8 million').",
         f"6. One follow CTA woven into the last 2 beats, in this spirit: \"{ch['cta_follow']}\"",
         "",
-        moneymath.fact_sheet() if pillar.id in ("math", "playbook", "myth", "psychology") else "",
+        moneymath.fact_sheet() if pillar.id in ("math", "playbook", "myth", "psychology", "escape") else "",
+        *(["", "# RESEARCH BRIEF (verified; the ONLY facts you may state about the people in it. Credit ideas to "
+            "their author by name, keep 'he says' on self-reported numbers, and use one item from 'The honest catch')",
+            brief] if brief else []),
         "",
         "# CONSTRAINTS",
         f"- LENGTH IS CRITICAL: {lo}-{hi} words in total across all 'say' fields (aim for {(lo + hi) // 2}); the "
@@ -88,7 +91,10 @@ def script_prompt(pillar, topic: str, angle: str = "", feedback: list[str] | Non
     return "\n".join(p for p in parts if p is not None)
 
 
-def ideas_prompt(pillar, n: int, avoid: list[str]) -> str:
+def ideas_prompt(pillar, n: int, avoid: list[str], briefs: list[str] | None = None) -> str:
+    people = ([f"- Topics about a real person are allowed ONLY for people with a research brief: {', '.join(briefs)}. "
+               "Set 'brief' to that id (e.g. \"hormozi\"); for topics about no specific person set 'brief' to \"\"."]
+              if briefs else [])
     return "\n".join([
         "# TASK",
         f"Propose {n} video topics for the pillar \"{pillar.name}\".",
@@ -99,15 +105,19 @@ def ideas_prompt(pillar, n: int, avoid: list[str]) -> str:
         "# CONSTRAINTS",
         "- Evergreen, globally understandable, factually checkable. No specific stock/crypto picks.",
         "- Each must support a 61-72 second script with a strong number or story.",
+        *people,
         "- Avoid anything too close to these existing topics:",
         *[f"  - {a}" for a in avoid[-60:]],
         "# OUTPUT FORMAT",
-        'Return ONLY JSON: {"ideas": [{"topic": str, "angle": str, "hook": str}]}',
+        'Return ONLY JSON: {"ideas": [{"topic": str, "angle": str, "hook": str'
+        + (', "brief": str' if briefs else "") + '}]}',
     ])
 
 
-def judge_prompt(script: dict) -> str:
+def judge_prompt(script: dict, brief: str = "") -> str:
     beats = "\n".join(f"{i + 1}. {b['say']}" for i, b in enumerate(script["beats"]))
+    notes = ["", "VERIFIED RESEARCH NOTES (claims that match these, attributed as written, are documented: "
+             "factual_risk 0-3; claims about these people that are NOT in the notes are unsourced: 4+):", brief] if brief else []
     return "\n".join([
         "You are a ruthless short-form video editor and fact-checker for a personal finance EDUCATION channel.",
         "Score this script. Be strict on craft: most scripts are average.",
@@ -115,6 +125,7 @@ def judge_prompt(script: dict) -> str:
         f"HOOK TEXT: {script.get('hook_text')}",
         "SCRIPT:",
         beats,
+        *notes,
         "",
         "Calibration for the two risk scores:",
         "factual_risk: 0-3 = documented facts, or math with its assumption stated (e.g. 'at 8% a year'); "

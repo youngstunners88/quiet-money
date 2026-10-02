@@ -38,7 +38,7 @@ Swapping a vendor is a config change; adding one is a single function plus one d
 - **Caches**: images keyed by prompt+seed hash (`production/cache/images`). Re-running a job is cheap.
 
 ## Routing
-- **Slot routing**: `analytics.pillar_weights()` → `allocate()` → 5 pillars for the day, rotated.
+- **Slot routing**: `analytics.pillar_weights()` → `allocate()` → 5 of the 6 pillars for the day (weights decide, the skipped one rotates).
 - **Topic routing**: `ideate.next_topic()` (backlog first, LLM top-up, dedupe).
 - **Provider routing**: fallback chains + ledger quotas.
 - **Decision routing**: `decide.ask()`: "LLM creates the work, Jev decides what happens next, code executes."

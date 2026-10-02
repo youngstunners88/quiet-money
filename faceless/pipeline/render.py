@@ -28,6 +28,7 @@ GRADES = {
     "cool": "colorbalance=rs=-0.04:bs=0.05:rm=-0.02:bm=0.04,eq=contrast=1.08:saturation=0.86",
     "contrast": "eq=contrast=1.16:saturation=1.08:brightness=-0.02",
     "clean": "eq=contrast=1.03:saturation=1.07:brightness=0.015",
+    "night": "colorbalance=rs=-0.03:bs=0.06:rh=0.06:gh=0.01:bh=-0.05,eq=contrast=1.12:saturation=1.06:brightness=-0.01",
 }
 
 # (z0, z1, (cx0, cy0), (cx1, cy1)); centers are fractions of the free pan range

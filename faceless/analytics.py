@@ -47,8 +47,11 @@ def allocate(slots: int, weights: dict[str, float], day_index: int) -> list[str]
     order = sorted(weights, key=lambda k: -weights[k])
     total = sum(weights.values())
     counts = {k: 0 for k in weights}
+    # ties go to a different pillar each day, so with more pillars than slots no series is starved
+    shift = day_index % len(order) if order else 0
+    tie_order = order[shift:] + order[:shift]
     for _ in range(slots):
-        best = max(order, key=lambda k: (weights[k] / total) * slots - counts[k] if counts[k] < 2 else -9)
+        best = max(tie_order, key=lambda k: (weights[k] / total) * slots - counts[k] if counts[k] < 2 else -9)
         counts[best] += 1
     plan = [k for k in order for _ in range(counts[k])]
     shift = day_index % len(plan) if plan else 0

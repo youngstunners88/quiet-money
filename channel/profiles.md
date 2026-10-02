@@ -13,8 +13,8 @@ Assets: `brand-kit/avatar.png`, `brand-kit/banner-youtube.png`, `brand-kit/water
 >
 > Quiet Money explains the psychology and math of money in short videos: true stories of ordinary people who quietly got rich (like the janitor who left $8 million), the math banks hope you never do, the mental traps that drain paychecks, the myths everyone repeats, and 15-minute actions you can take today.
 >
-> Every calculation is computed and every story is sourced. New Shorts every day across five series:
-> • Money Stories • The Math They Hide • Money Psychology • Money Myths • Do This Today
+> Every calculation is computed and every story is sourced. New Shorts every day across six series:
+> • Money Stories • The Math They Hide • Money Psychology • Money Myths • Do This Today • Escape the Rat Race
 >
 > Educational content, not financial advice. Narration and visuals are AI-assisted.
 > Free 7-day Money Reset checklist: link below.

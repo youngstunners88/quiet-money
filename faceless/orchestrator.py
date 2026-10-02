@@ -15,7 +15,7 @@ import json
 import traceback
 from datetime import date, datetime, timedelta, timezone
 
-from faceless import analytics, config, decide, events, gauntlet
+from faceless import analytics, config, decide, events, gauntlet, research
 from faceless.config import Paths
 from faceless.pipeline import ideate, package, render, script as script_stage, visuals, voice as voice_stage
 from faceless.providers import publish as publisher
@@ -36,7 +36,7 @@ def script_loop(job: Job, history: list[str], judge: bool, feedback: list[str] |
         scr = script_stage.write(job, feedback=feedback)
         gates = gauntlet.check_script(scr, history)
         if judge:
-            jg, judged = gauntlet.judge_script(scr, job.id)
+            jg, judged = gauntlet.judge_script(scr, job.id, brief=research.brief(job.artifacts.get("brief")))
             gates += jg
         s, hard = gauntlet.score(gates)
         bad = gauntlet.failing(gates)
@@ -120,10 +120,18 @@ def produce(job: Job, *, judge: bool = True, prefer_voice: str | None = None, do
     return rep
 
 
+def start_job(pillar: str, item: dict, slot: int) -> Job:
+    """New job from a backlog item; its angle and research brief travel with it to the writer and judge."""
+    job = new_job(pillar, item["topic"], slot=slot)
+    job.artifacts.update({k: item[k] for k in ("angle", "brief") if item.get(k)})
+    job.save()
+    return job
+
+
 def run_one(pillar: str, topic: str | None = None, slot: int = 0, **kw) -> Job:
     Paths.ensure()
-    item = {"topic": topic} if topic else ideate.next_topic(pillar)
-    job = new_job(pillar, item["topic"], slot=slot)
+    item = (ideate.find_topic(topic) or {"topic": topic}) if topic else ideate.next_topic(pillar)
+    job = start_job(pillar, item, slot)
     try:
         produce(job, **kw)
     except Exception as e:  # noqa: BLE001
@@ -150,7 +158,7 @@ def open_slots(count: int, extra: int = 0) -> list[tuple[str, int]]:
     return out
 
 
-def daily(count: int | None = None, extra: int = 0, **kw) -> list[Job]:
+def daily(count: int | None = None, extra: int = 0, pillar: str | None = None, **kw) -> list[Job]:
     Paths.ensure()
     cfg = config.load()
     per_day = len(cfg["publish"]["slots"])
@@ -162,14 +170,15 @@ def daily(count: int | None = None, extra: int = 0, **kw) -> list[Job]:
     events.emit("DAILY_PLAN", slots=[f"{d}#{k + 1}" for d, k in slots], extra=extra,
                 weights={k: round(v, 3) for k, v in weights.items()})
     jobs, reserved = [], [j.topic for j in all_jobs() if j.day == today.isoformat()]
+    forced = pillar
     for post_day, k in slots:
         plan = plans.setdefault(post_day, analytics.allocate(per_day, weights, date.fromisoformat(post_day).toordinal()))
-        pillar = plan[k]
+        pillar = forced or plan[k]
         slot = (date.fromisoformat(post_day) - today).days * per_day + k
         try:
             item = ideate.next_topic(pillar, reserved)
             reserved.append(item["topic"])
-            job = new_job(pillar, item["topic"], slot=slot)
+            job = start_job(pillar, item, slot)
             jobs.append(job)
             produce(job, **kw)
         except Exception as e:  # noqa: BLE001 - one bad job must not sink the day

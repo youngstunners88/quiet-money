@@ -29,6 +29,7 @@ class Paths:
     reports = STUDIO / "gauntlet" / "reports"
     state = STUDIO / "state"
     jobs = STUDIO / "state" / "jobs"
+    research = STUDIO / "channel" / "research"
 
     @classmethod
     def ensure(cls) -> None:

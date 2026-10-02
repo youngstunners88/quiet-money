@@ -185,7 +185,7 @@ def test_similarity_is_symmetric_and_bounded():
 
 def test_allocate_balanced_by_default():
     weights = {p.id: 1.0 for p in config.load()["pillars"]}
-    plan = analytics.allocate(5, weights, day_index=3)
+    plan = analytics.allocate(len(weights), weights, day_index=3)
     assert sorted(plan) == sorted(weights)
 
 
@@ -325,3 +325,38 @@ def test_paid_image_fallback_is_capped(tmp_path, monkeypatch):
     monkeypatch.setattr(ledger, "used", lambda provider, unit, day=None: 60 if provider == "openrouter" else 0)
     with pytest.raises(ProviderUnavailable):
         images.openrouter("a quiet kitchen table", 864, 1536, 1, tmp_path / "x.jpg")
+
+
+def test_allocate_rotates_the_skipped_pillar():
+    w = {"story": 1.0, "math": 1.0, "psychology": 1.0, "myth": 1.0, "playbook": 1.0, "escape": 1.5}
+    plans = [analytics.allocate(5, w, d) for d in range(6)]
+    assert all("escape" in p and len(set(p)) == 5 for p in plans)
+    skipped = {next(k for k in w if k not in p) for p in plans}
+    assert skipped == {"story", "math", "psychology", "myth", "playbook"}
+
+
+def test_passive_income_math():
+    assert moneymath.capital_for_income(3000) == 900000
+    assert moneymath.months_to_target(1000, 0.0, 12000) == 12
+
+
+def test_escape_series_must_credit_and_name_the_catch():
+    from faceless.gauntlet import check_structure
+    beats = lambda *says: {"pillar": "escape", "beats": [{"say": s} for s in says]}  # noqa: E731
+    ok = beats("Two people sell the same skill.", "Alex Hormozi calls this the Value Equation.", "Here's how.",
+               "The catch: it takes years of reps.")
+    assert check_structure(ok, "")[0].passed
+    assert not check_structure(beats("Two people.", "Same skill.", "Different price.", "Do it."), "")[0].passed
+
+
+def test_research_brief_drops_sources_and_unknown_ids():
+    from faceless import research
+    assert "## Sources" not in research.brief("kiyosaki") and "Rich Dad Poor Dad" in research.brief("kiyosaki")
+    assert research.brief("nobody") == "" and research.brief(None) == ""
+
+
+def test_measured_duration_overrides_hard_word_count():
+    from faceless.gauntlet import Gate, reconcile
+    gates = [Gate("word_count", False, 8, True), Gate("duration", True, 10, True)]
+    assert not reconcile(gates)[0].hard
+    assert reconcile([Gate("word_count", False, 8, True), Gate("duration", False, 10, True)])[0].hard

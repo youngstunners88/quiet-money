@@ -64,7 +64,8 @@ def cmd_make(args) -> int:
 
 def cmd_daily(args) -> int:
     from faceless import orchestrator
-    jobs = orchestrator.daily(args.count, extra=args.extra, judge=not args.no_judge, do_publish=not args.no_publish)
+    jobs = orchestrator.daily(args.count, extra=args.extra, pillar=args.pillar, judge=not args.no_judge,
+                              do_publish=not args.no_publish)
     for j in jobs:
         print(f"{j.slot + 1}. [{j.status:9}] {j.scores.get('gauntlet', '-'):>3}  {j.pillar:10} {j.artifacts.get('title', j.topic)}")
     print(json.dumps(ledger.summary(), indent=1))
@@ -104,7 +105,8 @@ def cmd_gauntlet(args) -> int:
     history = [h for h in ideate.history_texts() if h not in (job.topic, scr.get("title"))]
     gates = gauntlet.check_script(scr, history)
     if not args.no_judge:
-        gates += gauntlet.judge_script(scr, job.id)[0]
+        from faceless import research
+        gates += gauntlet.judge_script(scr, job.id, brief=research.brief(job.artifacts.get("brief")))[0]
     gates += gauntlet.check_voice(vo) + gauntlet.check_visuals(imgs, len(scr["beats"]))
     gates += gauntlet.check_render(info, vo) + gauntlet.check_package(package.run(job, scr))
     rep = gauntlet.report(job, gates)
@@ -189,6 +191,7 @@ def main(argv: list[str] | None = None) -> int:
     d = sub.add_parser("daily", help="produce the day's batch (resumes: only fills slots without a finished video)")
     d.add_argument("--count", type=int)
     d.add_argument("--extra", type=int, default=0, help="make N more now; they bank into the next free posting slots")
+    d.add_argument("--pillar", choices=[x.id for x in config.load()["pillars"]], help="series for every new slot (with --extra)")
     d.add_argument("--no-judge", action="store_true")
     d.add_argument("--no-publish", action="store_true")
     d.set_defaults(fn=cmd_daily)

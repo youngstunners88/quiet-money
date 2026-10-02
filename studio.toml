@@ -100,7 +100,7 @@ entities = ["short videos that explain money psychology",
 user_id = "quiet-money-studio"
 toolkits = ["youtube"]                       # connected so far; add tiktok, instagram, googledrive as you link them
 
-# Five pillars = five different formats, looks, and music keys.
+# Six pillars = six different formats, looks, and music keys (five slots a day).
 # Rotating them daily is what keeps the channel clear of "mass-produced" signals.
 [[pillars]]
 id = "story"
@@ -146,3 +146,12 @@ format = "A concrete 3-step action the viewer can do today in under 15 minutes (
 style = "clean modern lifestyle photography, bright soft daylight, minimal tidy desk scenes, fresh green and white palette"
 grade = "clean"
 music_key = "G"
+
+[[pillars]]
+id = "escape"
+name = "Escape the Rat Race"
+weight = 1.5                                 # a slot every day: the series the owner asked to lead with
+format = "One income-building framework from a famous builder (Alex Hormozi, Robert Kiyosaki, or Dan Peña), or the math of replacing a paycheck with passive income. Credit the idea to its author by name within the first 3 beats, explain it in plain words, run one real number from the fact sheet, give one concrete move the viewer can make this week, and state the honest catch (effort, risk, debt, or what critics say). Bold and direct, never hype: no promised income."
+style = "ambitious cinematic night photography, city skyline seen from a high window, hands sketching plans on paper, keys and a signed contract on a desk, deep navy and electric orange palette, strong rim light, sense of momentum"
+grade = "night"
+music_key = "F"

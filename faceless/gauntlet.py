@@ -11,7 +11,7 @@ from __future__ import annotations
 import json
 import re
 import subprocess
-from dataclasses import asdict, dataclass
+from dataclasses import asdict, dataclass, replace
 
 from faceless import config, decide, events
 from faceless.config import Paths
@@ -108,12 +108,23 @@ def check_structure(script: dict, low: str) -> list[Gate]:
         ok = bool(re.search(r"myth|wrong|isn't|is not|lie|actually|truth", opening))
         return [Gate("pillar_structure", ok, 4, False,
                      "a 'Money Myths' video must name the belief and flip it within the first 3 beats.")]
+    if pillar == "escape":
+        says = [b["say"].lower() for b in script["beats"]]
+        credited = any(re.search(CREDIT, x) for x in says[:3])
+        catch = any(re.search(CATCH, x) for x in says)
+        return [Gate("pillar_structure", credited and catch, 6, False,
+                     "an 'Escape the Rat Race' video must credit the framework to its author by name (or name the "
+                     "4% rule) within the first 3 beats and state the honest catch: effort, risk, debt, or what critics say.")]
     return []
 
 
-def judge_script(script: dict, job_id: str | None = None) -> tuple[list[Gate], dict]:
+CREDIT = r"hormozi|kiyosaki|pe[ñn]a|rich dad|4% rule"
+CATCH = r"catch|risk|critic|downside|no guarantee|not guaranteed|honest|warning|isn't easy|is not easy|the hard part|bankrupt|debt"
+
+
+def judge_script(script: dict, job_id: str | None = None, brief: str = "") -> tuple[list[Gate], dict]:
     try:
-        j = llm.complete(judge_prompt(script), want_json=True, temperature=0.2, job=job_id)
+        j = llm.complete(judge_prompt(script, brief), want_json=True, temperature=0.2, job=job_id)
     except Exception as e:  # noqa: BLE001 - judging is advisory when every LLM is down
         events.emit("JUDGE_UNAVAILABLE", job=job_id, error=str(e)[:200])
         return [], {}
@@ -219,7 +230,16 @@ def failing(gates: list[Gate]) -> list[Gate]:
     return [g for g in gates if not g.passed]
 
 
+def reconcile(gates: list[Gate]) -> list[Gate]:
+    """Once the voice is measured, duration is the truth: a word-count miss on a script whose audio runs
+    61-72 s is a style note, not a reason to hold the video (a slow, well-paced playbook can run 150 words)."""
+    if any(g.name == "duration" and g.passed for g in gates):
+        return [replace(g, hard=False) if g.name == "word_count" else g for g in gates]
+    return gates
+
+
 def report(job, gates: list[Gate], extra: dict | None = None) -> dict:
+    gates = reconcile(gates)
     s, hard = score(gates)
     passed = s >= config.load()["gauntlet"]["pass_score"] and not hard
     data = {"job": job.id, "score": s, "passed": passed, "hard_failures": [g.name for g in hard],

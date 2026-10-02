@@ -4,7 +4,7 @@
 Mass-produced, templated, near-identical uploads lose monetization. Strikes: warning, 90-day suspension, removal.
 What keeps us eligible:
 - **Original value in every video:** a real story, an exact calculation, a named bias with a counter-move.
-- **Real variation:** five pillars with different structures, visual styles, color grades, and music keys.
+- **Real variation:** six pillars with different structures, visual styles, color grades, and music keys.
 - **Originality gate:** the gauntlet blocks any script too similar to an earlier one (`similarity_max`).
 - **No reading Wikipedia aloud:** scripts are written for the ear with an angle, not copied text.
 
