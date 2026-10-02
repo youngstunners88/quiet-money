@@ -1,0 +1,72 @@
+{
+  "id": "2026-10-02-s8-escape-the-four-ways-to-earn-money-and",
+  "pillar": "escape",
+  "topic": "The four ways to earn money, and why only two set you free",
+  "day": "2026-10-02",
+  "slot": 8,
+  "status": "published",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-02T09:19:23Z",
+      "words": 194
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-02T09:19:42Z",
+      "seconds": 62.616,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-02T09:20:41Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-02T09:22:42Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-02T09:22:42Z",
+      "score": 99
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-02T09:22:42Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-10-02T09:22:42Z",
+      "local": "2026-10-03T18:30:00-04:00"
+    }
+  ],
+  "artifacts": {
+    "angle": "employee, self-employed, business owner, investor; trading time vs owning systems",
+    "brief": "kiyosaki",
+    "title": "The 4 Paths to Wealth (And Why Only 2 Set You Free)",
+    "video": "/home/user/quiet-money/production/output/2026-10-02/2026-10-02-s8-escape-the-four-ways-to-earn-money-and/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-02/2026-10-02-s8-escape-the-four-ways-to-earn-money-and/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-10-03/slot4-escape",
+        "post_at": "2026-10-03T18:30:00-04:00"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 99,
+    "passed": true
+  },
+  "cost": {
+    "tts:edge:chars": 1121
+  },
+  "notes": []
+}

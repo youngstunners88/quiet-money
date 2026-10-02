@@ -1,0 +1,88 @@
+{
+  "title": "The Brutal Catch of Other People's Money",
+  "hook_text": "HOW DEALS ACTUALLY GET FUNDED",
+  "beats": [
+    {
+      "say": "Big deals don't get built on personal savings.",
+      "callout": "",
+      "visual": "Cinematic shot of a dark oak desk with a sleek fountain pen, side profile, moody lighting"
+    },
+    {
+      "say": "They run on other people's money and other people's resources.",
+      "callout": "OPM",
+      "visual": "Low-angle shot of a towering glass skyscraper against a gray dusk sky"
+    },
+    {
+      "say": "Instead of using only your own cash, you bring in investors, lenders, and partners.",
+      "callout": "Partners",
+      "visual": "Close-up of two pairs of hands sliding a heavy mahogany table blueprint, top-down view"
+    },
+    {
+      "say": "That's how companies scale from zero to millions without emptying personal accounts.",
+      "callout": "Scale",
+      "visual": "Wide static shot of an empty modern boardroom table reflecting soft amber window light"
+    },
+    {
+      "say": "Take a 5x leverage on a $100,000 property with a $20,000 down payment.",
+      "callout": "5x Leverage",
+      "visual": "Close-up of a brass door key resting on a dark slate countertop"
+    },
+    {
+      "say": "A 20% price drop wipes out that entire down payment instantly.",
+      "callout": "Wiped Out",
+      "visual": "Macro shot of fine grey sand slipping slowly through an open hand"
+    },
+    {
+      "say": "But here's the part nobody mentions.",
+      "callout": "",
+      "visual": "Backlit silhouette of a lone figure standing by a tall glass window at night"
+    },
+    {
+      "say": "By his account, even the biggest operators rely entirely on external funding.",
+      "callout": "",
+      "visual": "Cinematic shot of heavy iron vault doors closing in a dim corridor"
+    },
+    {
+      "say": "The honest catch is brutal.",
+      "callout": "The Catch",
+      "visual": "Close-up of a heavy steel chain resting on a cold concrete floor"
+    },
+    {
+      "say": "You either owe the cash right back with interest, or you give away your ownership.",
+      "callout": "Equity Lost",
+      "visual": "Macro shot of a red wax seal being pressed onto a folded heavy paper document"
+    },
+    {
+      "say": "Deals fail, loans get called, and partnerships fracture under pressure.",
+      "callout": "",
+      "visual": "Dark silhouette of a person walking away down a long empty concrete hallway"
+    },
+    {
+      "say": "Follow for the money rules school never taught you, and that's exactly how",
+      "callout": "",
+      "visual": "Cinematic shot of a vintage brass desk clock ticking in a quiet room"
+    }
+  ],
+  "caption": "Using other people's money accelerates growth, but the catch is real. You either owe it back or give up control.\n\n#moneypsycology #personalfinance #wealth #investing #business",
+  "description": "Learn how big deals get funded using other people's money and why the hidden catch of debt or lost equity changes the game entirely.",
+  "hashtags": [
+    "#moneypsychology",
+    "#personalfinance",
+    "#wealth",
+    "#investing",
+    "#business"
+  ],
+  "first_comment": "Would you rather take on debt or give up equity to fund a deal?",
+  "facts": [
+    {
+      "claim": "A $100,000 property bought with $20,000 down is 5x leverage; a 20% price drop wipes out the whole down payment.",
+      "basis": "Fact sheet: Leverage section"
+    },
+    {
+      "claim": "OPM involves debt or equity where you owe it back or give up ownership.",
+      "basis": "Research brief: The honest catch"
+    }
+  ],
+  "source": "llm",
+  "pillar": "escape"
+}

@@ -1,0 +1,83 @@
+{
+  "title": "The 48-Hour Rule That Kills Impulse Buys",
+  "hook_text": "STOP BUYING RANDOM STUFF RIGHT NOW",
+  "beats": [
+    {
+      "say": "Your brain gets a dopamine hit the second you click buy.",
+      "callout": "",
+      "visual": "A sleek smartphone resting on a dark wooden desk under moody amber lighting, screen facing down."
+    },
+    {
+      "say": "That cheap thrill fades fast, leaving you with clutter and less cash.",
+      "callout": "Less cash",
+      "visual": "An open leather wallet showing empty card slots against a minimalist concrete background."
+    },
+    {
+      "say": "Here's the exact three-step fix to stop it today.",
+      "callout": "3-step fix",
+      "visual": "A person's hands wearing a dark wool sweater, holding a plain black notebook on a table."
+    },
+    {
+      "say": "Step one. Open your browser right now and close every single shopping tab.",
+      "callout": "Step one",
+      "visual": "A blurred laptop screen glowing softly in a dim room, viewed from behind the desk."
+    },
+    {
+      "say": "Step two. Move that item to a private wishlist instead of your cart.",
+      "callout": "Step two",
+      "visual": "A blank white ceramic coffee mug sitting next to a dark grey desk mat, top-down angle."
+    },
+    {
+      "say": "Step three. Set a timer on your phone for exactly forty-eight hours.",
+      "callout": "",
+      "visual": "A minimalist metal wristwatch resting on a folded dark linen shirt, close-up macro shot."
+    },
+    {
+      "say": "But here's the part nobody mentions about waiting.",
+      "callout": "Wait 48 hours",
+      "visual": "Shadows of window blinds stretching across a bare concrete wall in late afternoon light."
+    },
+    {
+      "say": "Most urges disappear completely once the emotional spike wears off.",
+      "callout": "",
+      "visual": "A brass desk lamp casting a warm pool of light on an empty wooden surface."
+    },
+    {
+      "say": "Think about it. A $5 a day habit wastes $1,825 every single year.",
+      "callout": "$1,825 a year",
+      "visual": "A stack of plain white shipping boxes piled neatly in the corner of a quiet room."
+    },
+    {
+      "say": "Invest that same monthly amount at 8% and watch it compound into serious money.",
+      "callout": "Compound at 8%",
+      "visual": "A close-up of a silver pen resting on a blank sheet of heavy textured paper."
+    },
+    {
+      "say": "Give your future self a chance to win, and that's exactly how",
+      "callout": "",
+      "visual": "A dark hallway with a single warm light at the end, cinematic wide shot."
+    }
+  ],
+  "caption": "Your cart isn't an investment. Pause before you pay.\n\nFollow for the money rules school never taught you.\n\n#personalfinance #moneypsychology #wealthbuilding #smartmoney #budgeting",
+  "description": "Stop impulse buying with a simple 48-hour rule that protects your cash and builds long-term wealth.",
+  "hashtags": [
+    "#personalfinance",
+    "#moneypsychology",
+    "#wealthbuilding",
+    "#smartmoney",
+    "#budgeting"
+  ],
+  "first_comment": "What's the last impulse buy you regret the most?",
+  "facts": [
+    {
+      "claim": "$5 a day habit equals $1,825 a year",
+      "basis": "$5/day habit = $1,825/year from fact sheet"
+    },
+    {
+      "claim": "Invested monthly at 8% for growth",
+      "basis": "monthly compounding at 8%/yr from fact sheet"
+    }
+  ],
+  "source": "llm",
+  "pillar": "playbook"
+}

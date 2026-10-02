@@ -1,0 +1,84 @@
+{
+  "title": "Why 'Was $200, Now $99' Makes You Spend More",
+  "hook_text": "THE FIRST NUMBER YOU SEE CONTROLS YOU",
+  "beats": [
+    {
+      "say": "The first number you see controls your decision, even if it's completely fake.",
+      "callout": "",
+      "visual": "A large red price tag hanging on an empty clothing rack in a dimly lit retail store, cinematic shadow play."
+    },
+    {
+      "say": "Stores use this trick on every single tag, and it's called anchoring.",
+      "callout": "Anchoring Trap",
+      "visual": "Close-up of a wooden retail counter with a blurred price tag resting on it, warm overhead spotlight."
+    },
+    {
+      "say": "When you see a jacket marked down from $200 to $99, your brain grabs that first high figure.",
+      "callout": "$200 to $99",
+      "visual": "Hands flipping through clothing hangers on a steel rack, shallow depth of field, moody atmosphere."
+    },
+    {
+      "say": "That $200 becomes your anchor, making $99 feel like an absolute steal.",
+      "callout": "The Anchor",
+      "visual": "A vintage metal anchor resting on a dark concrete floor, minimalist studio lighting from the side."
+    },
+    {
+      "say": "Even if the item's true value is only $40, you still think you're saving money.",
+      "callout": "False Savings",
+      "visual": "A credit card sliding across a smooth wooden checkout counter, motion blur, moody lighting."
+    },
+    {
+      "say": "Your brain is literally wired to compare, not to calculate actual worth.",
+      "callout": "Wired to Compare",
+      "visual": "An abstract close-up of a silver scale balancing in a dark room, cinematic shadows."
+    },
+    {
+      "say": "Retailers know this, and that's why crossed-out prices are everywhere you look.",
+      "callout": "Everywhere",
+      "visual": "A blurred storefront window reflecting city streetlights at night, cinematic rainy aesthetic."
+    },
+    {
+      "say": "But here's the part nobody mentions about how this quietly drains your bank account.",
+      "callout": "The Real Cost",
+      "visual": "A person's silhouette standing in front of a glowing glass storefront at dusk."
+    },
+    {
+      "say": "You end up buying things you don't need just because the discount looks massive.",
+      "callout": "",
+      "visual": "A shopping bag sitting alone on a dark leather chair, moody interior lighting."
+    },
+    {
+      "say": "The counter-move is simple: ignore the first number and ask yourself one question.",
+      "callout": "",
+      "visual": "A close-up of a blank white notebook page under a single desk lamp, minimalist shot."
+    },
+    {
+      "say": "Would you buy it today if it never had a high price tag attached?",
+      "callout": "",
+      "visual": "A hand holding a black pen over a blank journal, cinematic top-down view."
+    },
+    {
+      "say": "Master your anchors before they spend your cash, and that's exactly how",
+      "callout": "",
+      "visual": "A person walking down a quiet, dimly lit city sidewalk away from camera, cinematic shadows."
+    }
+  ],
+  "caption": "The psychological trap behind every sale tag. Stop letting the first number decide your budget. #moneypsychology #personalfinance #smartspending #wealthbuilding #moneytips",
+  "description": "Discover how the anchoring bias manipulates your spending habits through fake discounts and high initial price tags. Learn the simple counter-move to protect your wallet.",
+  "hashtags": [
+    "#moneypsychology",
+    "#personalfinance",
+    "#smartspending",
+    "#wealthbuilding",
+    "#moneytips"
+  ],
+  "first_comment": "What's the worst 'sale' purchase you regret buying just because it looked like a deal?",
+  "facts": [
+    {
+      "claim": "Anchoring bias causes consumers to rely heavily on the first piece of information offered.",
+      "basis": "Standard behavioral economics principle established by Tversky and Kahneman."
+    }
+  ],
+  "source": "llm",
+  "pillar": "psychology"
+}

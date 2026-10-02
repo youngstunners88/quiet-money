@@ -1,0 +1,71 @@
+{
+  "id": "2026-10-02-s12-escape-side-income-plus-compounding-1-0",
+  "pillar": "escape",
+  "topic": "Side income plus compounding: $1,000 a month extra for 10 years",
+  "day": "2026-10-02",
+  "slot": 12,
+  "status": "published",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-02T09:45:04Z",
+      "words": 167
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-02T09:45:55Z",
+      "seconds": 63.375,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-02T09:46:41Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-02T09:48:24Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-02T09:48:24Z",
+      "score": 98
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-02T09:48:24Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-10-02T09:48:24Z",
+      "local": "2026-10-04T15:00:00-04:00"
+    }
+  ],
+  "artifacts": {
+    "angle": "a side business funds the investing that later replaces the paycheck",
+    "title": "The Side Income Math That Replaces Your Paycheck",
+    "video": "/home/user/quiet-money/production/output/2026-10-02/2026-10-02-s12-escape-side-income-plus-compounding-1-0/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-02/2026-10-02-s12-escape-side-income-plus-compounding-1-0/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-10-04/slot3-escape",
+        "post_at": "2026-10-04T15:00:00-04:00"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 98,
+    "passed": true
+  },
+  "cost": {
+    "tts:edge:chars": 938
+  },
+  "notes": []
+}

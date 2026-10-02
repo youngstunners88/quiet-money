@@ -1,0 +1,65 @@
+{
+  "id": "2026-10-02-s11-playbook-how-to-ask-your-bank-to-waive-a",
+  "pillar": "playbook",
+  "topic": "How to ask your bank to waive a fee (and the exact words to use)",
+  "day": "2026-10-02",
+  "slot": 11,
+  "status": "held",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-02T09:32:02Z",
+      "words": 189
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-02T09:32:26Z",
+      "seconds": 62.955,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-02T09:33:43Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-02T09:35:08Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-02T09:35:08Z",
+      "score": 93
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-02T09:35:08Z"
+    },
+    {
+      "from": "packaged",
+      "to": "held",
+      "ts": "2026-10-02T09:35:08Z"
+    }
+  ],
+  "artifacts": {
+    "angle": "script for calling; most banks waive the first one",
+    "title": "How to Make Your Bank Refund Any Fee Today",
+    "video": "/home/user/quiet-money/production/output/2026-10-02/2026-10-02-s11-playbook-how-to-ask-your-bank-to-waive-a/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-02/2026-10-02-s11-playbook-how-to-ask-your-bank-to-waive-a/cover.jpg"
+  },
+  "scores": {
+    "gauntlet": 93,
+    "passed": false
+  },
+  "cost": {
+    "tts:edge:chars": 994
+  },
+  "notes": [
+    "held for review: judge_facts"
+  ]
+}

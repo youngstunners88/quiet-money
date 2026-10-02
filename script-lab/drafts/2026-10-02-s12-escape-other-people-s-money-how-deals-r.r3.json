@@ -1,0 +1,84 @@
+{
+  "title": "The Brutal Catch of Using Other People's Money",
+  "hook_text": "YOUR SALARY IS A CEILING",
+  "beats": [
+    {
+      "say": "Your salary is a ceiling built by someone else's math.",
+      "callout": "",
+      "visual": "A cinematic shot of a lone person walking past a towering glass skyscraper at dusk, low angle, dark tones."
+    },
+    {
+      "say": "If you want to scale past that limit, you'll need other people's money.",
+      "callout": "OPM",
+      "visual": "Close up of a hand sliding a metal pen across a heavy wooden desk, moody lighting, shallow depth of field."
+    },
+    {
+      "say": "Big deals don't get built on your personal savings account alone.",
+      "callout": "",
+      "visual": "A dimly lit boardroom table with an empty leather chair, cinematic side light, dusty air."
+    },
+    {
+      "say": "Investors, lenders, and partners supply the capital while you supply the execution.",
+      "callout": "",
+      "visual": "A silhouette of two figures shaking hands against a bright factory window, high contrast."
+    },
+    {
+      "say": "Take leverage. A $100,000 property bought with $20,000 down is a 5x bet.",
+      "callout": "$20,000 down",
+      "visual": "An old architectural blueprint unrolled on a dark workbench, overhead shot, warm amber light."
+    },
+    {
+      "say": "That sounds brilliant until the market drops by 20% and wipes out your entire down payment.",
+      "callout": "20% drop",
+      "visual": "Raindrops hitting a glass windowpane at night, blurred city lights in the background, cool tones."
+    },
+    {
+      "say": "But here's the part nobody mentions.",
+      "callout": "The Catch",
+      "visual": "A heavy iron vault door partially open, casting a sharp beam of light across a dark concrete floor."
+    },
+    {
+      "say": "Using other people's money carries a brutal catch.",
+      "callout": "",
+      "visual": "A person sitting alone at a kitchen table reviewing paperwork by the light of a single desk lamp."
+    },
+    {
+      "say": "You either owe that money back with interest, or you give away pieces of your own company.",
+      "callout": "Debt or Equity",
+      "visual": "A hand crossing out lines of text on a white paper document with a black marker, macro shot."
+    },
+    {
+      "say": "Deals fail, partners argue, and debt demands payment every single month.",
+      "callout": "",
+      "visual": "A vintage mechanical clock ticking in a dark room, brass gears moving, moody cinematic lighting."
+    },
+    {
+      "say": "This week, audit your current circle and write down one deal you want to build.",
+      "callout": "This week",
+      "visual": "A fountain pen resting on a blank cream-colored notebook page, clean minimal composition, soft light."
+    },
+    {
+      "say": "Follow for the money rules school never taught you, because your salary is...",
+      "callout": "Follow us",
+      "visual": "A person walking up a concrete staircase into a bright corridor, shot from behind, cinematic shadows."
+    }
+  ],
+  "caption": "The biggest financial leverage tool also carries the highest risk. Know the trade-off before you play the game.\n\n#moneypsychology #personalfinance #wealthbuilding #financialfreedom #smartmoney",
+  "description": "Learn how other people's money actually works in major deals, the math behind leverage, and the honest catch of debt and equity.",
+  "hashtags": [
+    "#moneypsychology",
+    "#personalfinance",
+    "#wealthbuilding",
+    "#financialfreedom",
+    "#smartmoney"
+  ],
+  "first_comment": "Would you rather give up equity or take on debt to fund your next big move?",
+  "facts": [
+    {
+      "claim": "A $100,000 property bought with $20,000 down is 5x leverage; a 20% price drop wipes out the whole down payment",
+      "basis": "Fact sheet leverage metrics"
+    }
+  ],
+  "source": "llm",
+  "pillar": "escape"
+}

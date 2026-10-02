@@ -1,0 +1,83 @@
+{
+  "title": "The Catch Behind Using Other People's Money",
+  "hook_text": "USING OPM TO GET RICH HAS A CATCH",
+  "beats": [
+    {
+      "say": "Using other people's money sounds like the ultimate cheat code to build wealth.",
+      "callout": "",
+      "visual": "A cinematic shot of a heavy steel vault door half-open in low-key lighting, casting long shadows across a concrete floor."
+    },
+    {
+      "say": "Instead of relying on your own savings, you use investors or lenders to fund deals.",
+      "callout": "OPM",
+      "visual": "A close-up of hands sliding a thick stack of loan paperwork across a polished dark oak table."
+    },
+    {
+      "say": "It's how big businesses scale and how massive property portfolios get built fast.",
+      "callout": "",
+      "visual": "A wide angle looking up at a towering glass skyscraper under a cold, overcast twilight sky."
+    },
+    {
+      "say": "Take a property bought with an 80% loan. A 20% down payment controls the whole asset.",
+      "callout": "5x leverage",
+      "visual": "A low-angle shot of a sleek modern apartment building viewed from behind a concrete pillar."
+    },
+    {
+      "say": "That is the power of leverage. But here's the part nobody mentions.",
+      "callout": "THE CATCH",
+      "visual": "A close-up of a fountain pen resting motionless beside a blank signature line on a document."
+    },
+    {
+      "say": "Other people's money is never free.",
+      "callout": "",
+      "visual": "A cinematic macro shot of a single metal key lying flat on a cold slate surface."
+    },
+    {
+      "say": "You either owe it all back with interest, or you give away chunks of ownership.",
+      "callout": "",
+      "visual": "A blurred shot of a glowing calculator screen reflecting off a dark wooden desk."
+    },
+    {
+      "say": "If the deal goes wrong, the debt doesn't care about your excuses.",
+      "callout": "",
+      "visual": "A dark, moody shot of an empty corridor with rhythmic overhead lights casting stark shadows."
+    },
+    {
+      "say": "A 20% market drop can wipe out your entire down payment instantly.",
+      "callout": "-20% drop",
+      "visual": "A solitary desk lamp illuminating a stack of red-flagged financial charts from directly above."
+    },
+    {
+      "say": "Growth requires risk, but understanding the terms keeps you from losing control, and that's exactly how",
+      "callout": "",
+      "visual": "A silhouette of a person standing by a large floor-to-ceiling window overlooking a foggy city at dawn."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "FOLLOW US",
+      "visual": "A clean, dark graphic background with a subtle pulsing cursor line waiting for input."
+    }
+  ],
+  "caption": "Using other people's money accelerates growth, but it comes with a steep price if things go wrong. Know the terms before you sign. #PersonalFinance #WealthBuilding #MoneyRules #FinancialLiteracy #SmartInvesting",
+  "description": "Explaining how using other people's money and leverage works in finance, alongside the hidden risks and equity costs most beginners ignore.",
+  "hashtags": [
+    "#PersonalFinance",
+    "#WealthBuilding",
+    "#MoneyRules",
+    "#FinancialLiteracy",
+    "#SmartInvesting"
+  ],
+  "first_comment": "Would you take on debt to fund a deal, or do you prefer growing strictly with your own savings?",
+  "facts": [
+    {
+      "claim": "A $100,000 property bought with $20,000 down is 5x leverage",
+      "basis": "Money Fact Sheet: Leverage section"
+    },
+    {
+      "claim": "A 20% price drop wipes out the whole down payment",
+      "basis": "Money Fact Sheet: Leverage section"
+    }
+  ],
+  "source": "llm",
+  "pillar": "escape"
+}

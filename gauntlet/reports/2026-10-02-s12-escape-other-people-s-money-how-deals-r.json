@@ -1,0 +1,347 @@
+{
+  "job": "2026-10-02-s12-escape-other-people-s-money-how-deals-r",
+  "score": 87,
+  "passed": false,
+  "hard_failures": [
+    "word_count",
+    "duration"
+  ],
+  "gates": [
+    {
+      "name": "word_count",
+      "passed": false,
+      "weight": 8,
+      "hard": true,
+      "detail": "104 spoken words; need 180-225. Add about 98 words.",
+      "fix": "script"
+    },
+    {
+      "name": "beat_count",
+      "passed": true,
+      "weight": 6,
+      "hard": true,
+      "detail": "11 beats; need 10-14.",
+      "fix": "script"
+    },
+    {
+      "name": "hook_length",
+      "passed": true,
+      "weight": 6,
+      "hard": false,
+      "detail": "hook is 6 words; keep under 18.",
+      "fix": "script"
+    },
+    {
+      "name": "hook_trigger",
+      "passed": true,
+      "weight": 6,
+      "hard": false,
+      "detail": "hook needs a number, a 'you', or a contradiction in the first line.",
+      "fix": "script"
+    },
+    {
+      "name": "hook_text",
+      "passed": true,
+      "weight": 4,
+      "hard": false,
+      "detail": "on-screen hook 'DEALS ARE NEVER BUILT ON SAVINGS' should be 2-7 words.",
+      "fix": "script"
+    },
+    {
+      "name": "beat_length",
+      "passed": true,
+      "weight": 4,
+      "hard": false,
+      "detail": "beats too long for the ear: []",
+      "fix": "script"
+    },
+    {
+      "name": "visual_prompts",
+      "passed": true,
+      "weight": 8,
+      "hard": true,
+      "detail": "beats missing a concrete visual prompt: []",
+      "fix": "script"
+    },
+    {
+      "name": "callouts",
+      "passed": true,
+      "weight": 3,
+      "hard": false,
+      "detail": "7 callouts; use 4-7 on-screen numbers/phrases.",
+      "fix": "script"
+    },
+    {
+      "name": "banned_phrases",
+      "passed": true,
+      "weight": 5,
+      "hard": false,
+      "detail": "remove filler phrases: []",
+      "fix": "script"
+    },
+    {
+      "name": "compliance_phrases",
+      "passed": true,
+      "weight": 10,
+      "hard": true,
+      "detail": "remove advice/promise language: []",
+      "fix": "script"
+    },
+    {
+      "name": "no_ticker_picks",
+      "passed": true,
+      "weight": 8,
+      "hard": true,
+      "detail": "no ticker callouts: []",
+      "fix": "script"
+    },
+    {
+      "name": "loop_ending",
+      "passed": true,
+      "weight": 4,
+      "hard": false,
+      "detail": "end the last line mid-thought so it loops back into the hook.",
+      "fix": "script"
+    },
+    {
+      "name": "title",
+      "passed": true,
+      "weight": 3,
+      "hard": false,
+      "detail": "title is 35 chars; 25-60 works best.",
+      "fix": "script"
+    },
+    {
+      "name": "hashtags",
+      "passed": true,
+      "weight": 2,
+      "hard": false,
+      "detail": "5 hashtags; use 4-5.",
+      "fix": "script"
+    },
+    {
+      "name": "originality",
+      "passed": true,
+      "weight": 8,
+      "hard": true,
+      "detail": "too close to an earlier video (similarity 0.33); change the angle and hook.",
+      "fix": "script"
+    },
+    {
+      "name": "pillar_structure",
+      "passed": false,
+      "weight": 6,
+      "hard": false,
+      "detail": "an 'Escape the Rat Race' video must state the honest catch (effort, risk, or debt) and end with one concrete move for this week ('This week, ...').",
+      "fix": "script"
+    },
+    {
+      "name": "voice_quality",
+      "passed": true,
+      "weight": 5,
+      "hard": false,
+      "detail": "reads like generic AI copy (compression classifier): swap filler for concrete numbers, names, and short spoken sentences; cut phrases like 'financial journey' and 'unlock'",
+      "fix": "script"
+    },
+    {
+      "name": "readability",
+      "passed": true,
+      "weight": 3,
+      "hard": false,
+      "detail": "average sentence is 9.5 words; aim for 8-14.",
+      "fix": "script"
+    },
+    {
+      "name": "judge_hook",
+      "passed": true,
+      "weight": 8,
+      "hard": false,
+      "detail": "hook scored 7/10. Change the ending from an incomplete thought to a complete loop, such as: 'Understand the true cost of funding, because deals are never built on savings.'; Tighten line 3 to directly attribute the OPM concept to Dan Peña's framework to stay strictly aligned with research notes.",
+      "fix": "script"
+    },
+    {
+      "name": "judge_retention",
+      "passed": true,
+      "weight": 6,
+      "hard": false,
+      "detail": "retention scored 8/10. Change the ending from an incomplete thought to a complete loop, such as: 'Understand the true cost of funding, because deals are never built on savings.'; Tighten line 3 to directly attribute the OPM concept to Dan Peña's framework to stay strictly aligned with research notes.",
+      "fix": "script"
+    },
+    {
+      "name": "judge_value",
+      "passed": true,
+      "weight": 5,
+      "hard": false,
+      "detail": "value scored 8/10. Change the ending from an incomplete thought to a complete loop, such as: 'Understand the true cost of funding, because deals are never built on savings.'; Tighten line 3 to directly attribute the OPM concept to Dan Peña's framework to stay strictly aligned with research notes.",
+      "fix": "script"
+    },
+    {
+      "name": "judge_facts",
+      "passed": true,
+      "weight": 10,
+      "hard": true,
+      "detail": "factual risk 1/10: The ending cuts off abruptly (\"you're always paying for\") which breaks the loop and leaves an incomplete sentence.",
+      "fix": "script"
+    },
+    {
+      "name": "judge_compliance",
+      "passed": true,
+      "weight": 10,
+      "hard": true,
+      "detail": "compliance risk 2/10",
+      "fix": "script"
+    },
+    {
+      "name": "duration",
+      "passed": false,
+      "weight": 10,
+      "hard": true,
+      "detail": "47.5s; need 61-72s (TikTok rewards need >60s).",
+      "fix": "script"
+    },
+    {
+      "name": "word_timings",
+      "passed": true,
+      "weight": 8,
+      "hard": true,
+      "detail": "missing word timings for captions",
+      "fix": "voice"
+    },
+    {
+      "name": "voice_provider",
+      "passed": true,
+      "weight": 2,
+      "hard": false,
+      "detail": "voice came from fallback edge (estimated caption timing)",
+      "fix": "voice"
+    },
+    {
+      "name": "image_count",
+      "passed": true,
+      "weight": 10,
+      "hard": true,
+      "detail": "11 images for 11 beats",
+      "fix": "visuals"
+    },
+    {
+      "name": "no_placeholder_art",
+      "passed": false,
+      "weight": 6,
+      "hard": false,
+      "detail": "beats using abstract fallback art: [6, 10]",
+      "fix": "visuals"
+    },
+    {
+      "name": "image_quality",
+      "passed": false,
+      "weight": 3,
+      "hard": false,
+      "detail": "beats using low-res fallback images: [1, 2, 3, 4, 5, 7, 8, 9, 11]",
+      "fix": "visuals"
+    },
+    {
+      "name": "resolution",
+      "passed": true,
+      "weight": 10,
+      "hard": true,
+      "detail": "1080x1920",
+      "fix": "render"
+    },
+    {
+      "name": "fps",
+      "passed": true,
+      "weight": 4,
+      "hard": true,
+      "detail": "30.0 fps",
+      "fix": "render"
+    },
+    {
+      "name": "av_sync_length",
+      "passed": true,
+      "weight": 8,
+      "hard": true,
+      "detail": "video 47.50s vs voice 47.49s",
+      "fix": "render"
+    },
+    {
+      "name": "audio_present",
+      "passed": true,
+      "weight": 10,
+      "hard": true,
+      "detail": "no audio stream",
+      "fix": "render"
+    },
+    {
+      "name": "file_size",
+      "passed": true,
+      "weight": 4,
+      "hard": true,
+      "detail": "8.4 MB",
+      "fix": "render"
+    },
+    {
+      "name": "first_frame_visible",
+      "passed": true,
+      "weight": 6,
+      "hard": true,
+      "detail": "first frame is nearly black (kills the hook)",
+      "fix": "visuals"
+    },
+    {
+      "name": "cut_cadence",
+      "passed": true,
+      "weight": 5,
+      "hard": false,
+      "detail": "avg shot 2.37s; target <= 3.2s",
+      "fix": "render"
+    },
+    {
+      "name": "caption_coverage",
+      "passed": true,
+      "weight": 8,
+      "hard": true,
+      "detail": "104/104 words captioned",
+      "fix": "render"
+    },
+    {
+      "name": "disclosure",
+      "passed": true,
+      "weight": 10,
+      "hard": true,
+      "detail": "missing disclaimers",
+      "fix": "package"
+    },
+    {
+      "name": "affiliate_disclosure",
+      "passed": true,
+      "weight": 8,
+      "hard": true,
+      "detail": "affiliate links are on but the description has no affiliate disclosure",
+      "fix": "package"
+    },
+    {
+      "name": "caption_tags",
+      "passed": true,
+      "weight": 2,
+      "hard": false,
+      "detail": "caption has no hashtags",
+      "fix": "package"
+    }
+  ],
+  "judge": {
+    "hook": 7,
+    "retention": 8,
+    "value": 8,
+    "clarity": 9,
+    "loop_ending": 4,
+    "factual_risk": 1,
+    "compliance_risk": 2,
+    "suspect_claims": [
+      "The ending cuts off abruptly (\"you're always paying for\") which breaks the loop and leaves an incomplete sentence."
+    ],
+    "fixes": [
+      "Change the ending from an incomplete thought to a complete loop, such as: 'Understand the true cost of funding, because deals are never built on savings.'",
+      "Tighten line 3 to directly attribute the OPM concept to Dan Peña's framework to stay strictly aligned with research notes."
+    ]
+  }
+}

@@ -1,0 +1,346 @@
+{
+  "job": "2026-10-02-s8-escape-the-four-ways-to-earn-money-and",
+  "score": 99,
+  "passed": true,
+  "hard_failures": [],
+  "gates": [
+    {
+      "name": "word_count",
+      "passed": true,
+      "weight": 8,
+      "hard": false,
+      "detail": "200 spoken words; need 180-225. Add about 2 words.",
+      "fix": "script"
+    },
+    {
+      "name": "beat_count",
+      "passed": true,
+      "weight": 6,
+      "hard": true,
+      "detail": "12 beats; need 10-14.",
+      "fix": "script"
+    },
+    {
+      "name": "hook_length",
+      "passed": true,
+      "weight": 6,
+      "hard": false,
+      "detail": "hook is 15 words; keep under 18.",
+      "fix": "script"
+    },
+    {
+      "name": "hook_trigger",
+      "passed": true,
+      "weight": 6,
+      "hard": false,
+      "detail": "hook needs a number, a 'you', or a contradiction in the first line.",
+      "fix": "script"
+    },
+    {
+      "name": "hook_text",
+      "passed": true,
+      "weight": 4,
+      "hard": false,
+      "detail": "on-screen hook 'THE TIME FOR MONEY TRAP' should be 2-7 words.",
+      "fix": "script"
+    },
+    {
+      "name": "beat_length",
+      "passed": true,
+      "weight": 4,
+      "hard": false,
+      "detail": "beats too long for the ear: []",
+      "fix": "script"
+    },
+    {
+      "name": "visual_prompts",
+      "passed": true,
+      "weight": 8,
+      "hard": true,
+      "detail": "beats missing a concrete visual prompt: []",
+      "fix": "script"
+    },
+    {
+      "name": "callouts",
+      "passed": true,
+      "weight": 3,
+      "hard": false,
+      "detail": "6 callouts; use 4-7 on-screen numbers/phrases.",
+      "fix": "script"
+    },
+    {
+      "name": "banned_phrases",
+      "passed": true,
+      "weight": 5,
+      "hard": false,
+      "detail": "remove filler phrases: []",
+      "fix": "script"
+    },
+    {
+      "name": "compliance_phrases",
+      "passed": true,
+      "weight": 10,
+      "hard": true,
+      "detail": "remove advice/promise language: []",
+      "fix": "script"
+    },
+    {
+      "name": "no_ticker_picks",
+      "passed": true,
+      "weight": 8,
+      "hard": true,
+      "detail": "no ticker callouts: []",
+      "fix": "script"
+    },
+    {
+      "name": "loop_ending",
+      "passed": true,
+      "weight": 4,
+      "hard": false,
+      "detail": "end the last line mid-thought so it loops back into the hook.",
+      "fix": "script"
+    },
+    {
+      "name": "title",
+      "passed": true,
+      "weight": 3,
+      "hard": false,
+      "detail": "title is 51 chars; 25-60 works best.",
+      "fix": "script"
+    },
+    {
+      "name": "hashtags",
+      "passed": true,
+      "weight": 2,
+      "hard": false,
+      "detail": "5 hashtags; use 4-5.",
+      "fix": "script"
+    },
+    {
+      "name": "originality",
+      "passed": true,
+      "weight": 8,
+      "hard": true,
+      "detail": "too close to an earlier video (similarity 0.29); change the angle and hook.",
+      "fix": "script"
+    },
+    {
+      "name": "pillar_structure",
+      "passed": true,
+      "weight": 6,
+      "hard": false,
+      "detail": "an 'Escape the Rat Race' video must state the honest catch (effort, risk, or debt) and end with one concrete move for this week ('This week, ...').",
+      "fix": "script"
+    },
+    {
+      "name": "voice_quality",
+      "passed": true,
+      "weight": 5,
+      "hard": false,
+      "detail": "reads like generic AI copy (compression classifier): swap filler for concrete numbers, names, and short spoken sentences; cut phrases like 'financial journey' and 'unlock'",
+      "fix": "script"
+    },
+    {
+      "name": "readability",
+      "passed": true,
+      "weight": 3,
+      "hard": false,
+      "detail": "average sentence is 10.8 words; aim for 8-14.",
+      "fix": "script"
+    },
+    {
+      "name": "judge_hook",
+      "passed": true,
+      "weight": 8,
+      "hard": false,
+      "detail": "hook scored 7/10. Rewrite Line 1: 'Trading your time for money is a mathematical trap that makes building true wealth incredibly difficult.'; Rewrite Line 2: 'A wealth framework popularized by author Robert Kiyosaki in 2000 maps this trap into four quadrants, showing you the exit.'; Rewrite Line 9: 'Assuming a standard four percent rule, to secure two thousand dollars a month of passive income, you need about six hundred thousand dollars invested.'",
+      "fix": "script"
+    },
+    {
+      "name": "judge_retention",
+      "passed": true,
+      "weight": 6,
+      "hard": false,
+      "detail": "retention scored 8/10. Rewrite Line 1: 'Trading your time for money is a mathematical trap that makes building true wealth incredibly difficult.'; Rewrite Line 2: 'A wealth framework popularized by author Robert Kiyosaki in 2000 maps this trap into four quadrants, showing you the exit.'; Rewrite Line 9: 'Assuming a standard four percent rule, to secure two thousand dollars a month of passive income, you need about six hundred thousand dollars invested.'",
+      "fix": "script"
+    },
+    {
+      "name": "judge_value",
+      "passed": true,
+      "weight": 5,
+      "hard": false,
+      "detail": "value scored 7/10. Rewrite Line 1: 'Trading your time for money is a mathematical trap that makes building true wealth incredibly difficult.'; Rewrite Line 2: 'A wealth framework popularized by author Robert Kiyosaki in 2000 maps this trap into four quadrants, showing you the exit.'; Rewrite Line 9: 'Assuming a standard four percent rule, to secure two thousand dollars a month of passive income, you need about six hundred thousand dollars invested.'",
+      "fix": "script"
+    },
+    {
+      "name": "judge_facts",
+      "passed": true,
+      "weight": 10,
+      "hard": true,
+      "detail": "factual risk 3/10: Line 1 claims the trap is 'designed to keep you permanently broke,' which is conspiratorial rather than factual.; Line 9 states you need $600,000 to secure $2,000/month without stating the underlying mathematical assumption (a 4% annual withdrawal or yield rate).",
+      "fix": "script"
+    },
+    {
+      "name": "judge_compliance",
+      "passed": true,
+      "weight": 10,
+      "hard": true,
+      "detail": "compliance risk 2/10",
+      "fix": "script"
+    },
+    {
+      "name": "duration",
+      "passed": true,
+      "weight": 10,
+      "hard": true,
+      "detail": "62.6s; need 61-72s (TikTok rewards need >60s).",
+      "fix": "script"
+    },
+    {
+      "name": "word_timings",
+      "passed": true,
+      "weight": 8,
+      "hard": true,
+      "detail": "missing word timings for captions",
+      "fix": "voice"
+    },
+    {
+      "name": "voice_provider",
+      "passed": true,
+      "weight": 2,
+      "hard": false,
+      "detail": "voice came from fallback edge (estimated caption timing)",
+      "fix": "voice"
+    },
+    {
+      "name": "image_count",
+      "passed": true,
+      "weight": 10,
+      "hard": true,
+      "detail": "12 images for 12 beats",
+      "fix": "visuals"
+    },
+    {
+      "name": "no_placeholder_art",
+      "passed": true,
+      "weight": 6,
+      "hard": false,
+      "detail": "beats using abstract fallback art: []",
+      "fix": "visuals"
+    },
+    {
+      "name": "image_quality",
+      "passed": false,
+      "weight": 3,
+      "hard": false,
+      "detail": "beats using low-res fallback images: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]",
+      "fix": "visuals"
+    },
+    {
+      "name": "resolution",
+      "passed": true,
+      "weight": 10,
+      "hard": true,
+      "detail": "1080x1920",
+      "fix": "render"
+    },
+    {
+      "name": "fps",
+      "passed": true,
+      "weight": 4,
+      "hard": true,
+      "detail": "30.0 fps",
+      "fix": "render"
+    },
+    {
+      "name": "av_sync_length",
+      "passed": true,
+      "weight": 8,
+      "hard": true,
+      "detail": "video 62.62s vs voice 62.62s",
+      "fix": "render"
+    },
+    {
+      "name": "audio_present",
+      "passed": true,
+      "weight": 10,
+      "hard": true,
+      "detail": "no audio stream",
+      "fix": "render"
+    },
+    {
+      "name": "file_size",
+      "passed": true,
+      "weight": 4,
+      "hard": true,
+      "detail": "10.9 MB",
+      "fix": "render"
+    },
+    {
+      "name": "first_frame_visible",
+      "passed": true,
+      "weight": 6,
+      "hard": true,
+      "detail": "first frame is nearly black (kills the hook)",
+      "fix": "visuals"
+    },
+    {
+      "name": "cut_cadence",
+      "passed": true,
+      "weight": 5,
+      "hard": false,
+      "detail": "avg shot 2.61s; target <= 3.2s",
+      "fix": "render"
+    },
+    {
+      "name": "caption_coverage",
+      "passed": true,
+      "weight": 8,
+      "hard": true,
+      "detail": "193/193 words captioned",
+      "fix": "render"
+    },
+    {
+      "name": "disclosure",
+      "passed": true,
+      "weight": 10,
+      "hard": true,
+      "detail": "missing disclaimers",
+      "fix": "package"
+    },
+    {
+      "name": "affiliate_disclosure",
+      "passed": true,
+      "weight": 8,
+      "hard": true,
+      "detail": "affiliate links are on but the description has no affiliate disclosure",
+      "fix": "package"
+    },
+    {
+      "name": "caption_tags",
+      "passed": true,
+      "weight": 2,
+      "hard": false,
+      "detail": "caption has no hashtags",
+      "fix": "package"
+    }
+  ],
+  "judge": {
+    "hook": 7,
+    "retention": 8,
+    "value": 7,
+    "clarity": 9,
+    "loop_ending": 9,
+    "factual_risk": 3,
+    "compliance_risk": 2,
+    "suspect_claims": [
+      "Line 1 claims the trap is 'designed to keep you permanently broke,' which is conspiratorial rather than factual.",
+      "Line 9 states you need $600,000 to secure $2,000/month without stating the underlying mathematical assumption (a 4% annual withdrawal or yield rate)."
+    ],
+    "fixes": [
+      "Rewrite Line 1: 'Trading your time for money is a mathematical trap that makes building true wealth incredibly difficult.'",
+      "Rewrite Line 2: 'A wealth framework popularized by author Robert Kiyosaki in 2000 maps this trap into four quadrants, showing you the exit.'",
+      "Rewrite Line 9: 'Assuming a standard four percent rule, to secure two thousand dollars a month of passive income, you need about six hundred thousand dollars invested.'"
+    ]
+  }
+}

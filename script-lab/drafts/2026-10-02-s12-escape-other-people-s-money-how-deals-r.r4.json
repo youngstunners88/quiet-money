@@ -1,0 +1,83 @@
+{
+  "title": "The Reality of Other People’s Money",
+  "hook_text": "DEALS ARE NEVER BUILT ON SAVINGS",
+  "beats": [
+    {
+      "say": "Deals are never built on savings.",
+      "callout": "",
+      "visual": "Cinematic shot of a heavy steel vault door half-open in a dark, dimly lit concrete room."
+    },
+    {
+      "say": "Big moves require using other people's money to scale fast.",
+      "callout": "OPM",
+      "visual": "A silhouette of a person in a sharp coat walking past a towering glass skyscraper at dusk."
+    },
+    {
+      "say": "Entrepreneurs lean on lenders, investors, and partners to fund major acquisitions.",
+      "callout": "",
+      "visual": "Close-up of a sleek brass fountain pen resting on a heavy oak desk next to a blank paper."
+    },
+    {
+      "say": "It’s how businesses grow from local shops into massive enterprises.",
+      "callout": "Scale Fast",
+      "visual": "An aerial drone shot of busy city traffic moving through a concrete interchange at twilight."
+    },
+    {
+      "say": "But here's the catch nobody mentions in the pitch decks.",
+      "callout": "The Catch",
+      "visual": "A dim vintage desk lamp casting long shadows over a stack of unread financial documents."
+    },
+    {
+      "say": "You either owe that money right back with interest.",
+      "callout": "Debt",
+      "visual": "A close-up of a mechanical calculator printing a long tape of numbers on white paper."
+    },
+    {
+      "say": "Or you hand over a massive chunk of your company's equity.",
+      "callout": "Equity",
+      "visual": "A hand sliding a blank white puzzle piece away from a completed puzzle on a table."
+    },
+    {
+      "say": "Outside capital always wants a return, and it demands control.",
+      "callout": "",
+      "visual": "A person standing with their back to the camera, looking out a large rainy office window."
+    },
+    {
+      "say": "Leverage speeds up your growth.",
+      "callout": "Leverage",
+      "visual": "A close-up of heavy brass scales tipping unevenly under a small weight."
+    },
+    {
+      "say": "It also magnifies every single mistake you make along the way.",
+      "callout": "High Risk",
+      "visual": "A stack of dark wooden blocks wobbling precariously on a polished dark wood table."
+    },
+    {
+      "say": "Understand the true cost of funding because you're always paying for",
+      "callout": "",
+      "visual": "A dark cinematic view of a quiet urban street lit by a single orange amber streetlight."
+    }
+  ],
+  "caption": "Other people's money builds empires, but it always demands a price. Know the trade-offs before you sign. \n\n#moneypsychology #personalfinance #wealthbuilding #businesstips #financialeducation",
+  "description": "An honest look at how major deals are funded using other people's money, and the hidden cost of taking on debt or giving up equity.",
+  "hashtags": [
+    "#moneypsychology",
+    "#personalfinance",
+    "#wealthbuilding",
+    "#businesstips",
+    "#financialeducation"
+  ],
+  "first_comment": "Would you rather give up equity or take on debt to grow?",
+  "facts": [
+    {
+      "claim": "OPM and OPR involve using lenders, investors, and partners to fund deals.",
+      "basis": "Dan Peña framework on OPM and OPR."
+    },
+    {
+      "claim": "The catch of OPM is debt repayment or loss of equity ownership.",
+      "basis": "The honest catch regarding outside capital."
+    }
+  ],
+  "source": "llm",
+  "pillar": "escape"
+}

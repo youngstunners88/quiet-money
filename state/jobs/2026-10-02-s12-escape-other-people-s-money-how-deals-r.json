@@ -1,0 +1,66 @@
+{
+  "id": "2026-10-02-s12-escape-other-people-s-money-how-deals-r",
+  "pillar": "escape",
+  "topic": "Other people's money: how deals really get funded, and the catch",
+  "day": "2026-10-02",
+  "slot": 12,
+  "status": "held",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-02T09:36:52Z",
+      "words": 190
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-02T09:37:57Z",
+      "seconds": 47.495,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-02T09:39:06Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-02T09:40:30Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-02T09:40:30Z",
+      "score": 87
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-02T09:40:30Z"
+    },
+    {
+      "from": "packaged",
+      "to": "held",
+      "ts": "2026-10-02T09:40:30Z"
+    }
+  ],
+  "artifacts": {
+    "angle": "investors, lenders, partners; you owe it back or give up ownership",
+    "brief": "pena",
+    "title": "The Reality of Other People’s Money",
+    "video": "/home/user/quiet-money/production/output/2026-10-02/2026-10-02-s12-escape-other-people-s-money-how-deals-r/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-02/2026-10-02-s12-escape-other-people-s-money-how-deals-r/cover.jpg"
+  },
+  "scores": {
+    "gauntlet": 87,
+    "passed": false
+  },
+  "cost": {
+    "tts:edge:chars": 1744
+  },
+  "notes": [
+    "held for review: word_count, duration"
+  ]
+}

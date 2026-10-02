@@ -1,0 +1,84 @@
+{
+  "title": "The 48-Hour Rule That Stops Impulse Buys",
+  "hook_text": "THE 48-HOUR RULE THAT KILLS IMPULSE BUYS",
+  "beats": [
+    {
+      "say": "Your shopping cart is leaking money, and it's because you're clicking buy too fast.",
+      "callout": "",
+      "visual": "Close-up of a hand resting on a sleek wooden desk next to a glowing smartphone face down, moody interior lighting."
+    },
+    {
+      "say": "Step one. Open your notes app and create a list called the forty-eight hour wishlist today.",
+      "callout": "STEP ONE",
+      "visual": "A minimalist smartphone screen showing a blank list app, shot from a high angle with soft cinematic shadows."
+    },
+    {
+      "say": "Step two. When you want something non-essential, paste the link there and close the tab.",
+      "callout": "STEP TWO",
+      "visual": "A person's hands closing a laptop lid slowly in a dimly lit, modern room."
+    },
+    {
+      "say": "Step three. Set a calendar alarm for exactly forty-eight hours from right now before deciding.",
+      "callout": "STEP THREE",
+      "visual": "Close-up of a mechanical desk clock ticking, shallow depth of field, warm vintage lighting."
+    },
+    {
+      "say": "That forced pause gives your dopamine receptors time to cool off completely.",
+      "callout": "PAUSE",
+      "visual": "A steaming cup of black coffee on a dark concrete table, gentle morning light filtering through blinds."
+    },
+    {
+      "say": "Retailers design checkout flows to bypass your logic and trigger instant emotional spending.",
+      "callout": "",
+      "visual": "Blurred reflection of city lights moving across a glass window at dusk."
+    },
+    {
+      "say": "But here's the part nobody mentions about waiting out your urges.",
+      "callout": "",
+      "visual": "A person's silhouette standing by a tall window, looking out at a quiet city street at night."
+    },
+    {
+      "say": "Most of the time, you'll completely forget about the item within two days.",
+      "callout": "48 HOURS",
+      "visual": "An empty wooden desk with a single pen lying beside a blank notepad."
+    },
+    {
+      "say": "That's money staying in your account instead of turning into clutter.",
+      "callout": "",
+      "visual": "A leather wallet resting on a dark granite surface, minimalist and clean framing."
+    },
+    {
+      "say": "Redirect those saved dollars toward investments, where a five dollar daily habit turns into...",
+      "callout": "$226,659",
+      "visual": "A hand placing a single silver coin onto a dark wooden table."
+    },
+    {
+      "say": "$226,659 over thirty years at eight percent, and that's exactly how...",
+      "callout": "30 YEARS",
+      "visual": "A vintage glass jar sitting on a windowsill, catching the last rays of afternoon sun."
+    },
+    {
+      "say": "Follow for the money rules school never taught you, because your shopping cart is...",
+      "callout": "",
+      "visual": "A dark hallway with a single warm light at the far end, cinematic and quiet."
+    }
+  ],
+  "caption": "The 48-hour rule that kills impulse buys instantly. Stop letting algorithms control your wallet. #personalfinance #moneysaving #budgetingtips #financialfreedom #smartmoney",
+  "description": "Learn the simple 3-step wishlist trick that pauses emotional spending and keeps your hard-earned cash in your account.",
+  "hashtags": [
+    "#personalfinance",
+    "#moneysaving",
+    "#budgetingtips",
+    "#financialfreedom",
+    "#smartmoney"
+  ],
+  "first_comment": "What's the last impulse buy you regret? Drop it below.",
+  "facts": [
+    {
+      "claim": "5 dollar daily habit invested monthly at 8 percent for 30 years = 226,659 dollars",
+      "basis": "5/day habit = $1,825/year; invested monthly at 8% for 30 years = $226,659"
+    }
+  ],
+  "source": "llm",
+  "pillar": "playbook"
+}

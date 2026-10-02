@@ -1,0 +1,84 @@
+{
+  "title": "The 48-Hour Rule That Kills Impulse Buys",
+  "hook_text": "THAT $5 HABIT COSTS YOU $226,000",
+  "beats": [
+    {
+      "say": "That $5 habit costs you $226,000 over 30 years at 8% a year.",
+      "callout": "",
+      "visual": "A cinematic shot of a dark wooden desk with a single steaming ceramic mug, moody backlighting."
+    },
+    {
+      "say": "Impulse shopping drains your paycheck before you even notice it happening.",
+      "callout": "$226,659",
+      "visual": "Close-up of a hand placing a blank leather wallet on a dark marble countertop."
+    },
+    {
+      "say": "Here is the exact rule to stop buying things you do not need.",
+      "callout": "Stop Buying",
+      "visual": "A sleek silver pen resting next to a closed minimalist notebook on a grey desk."
+    },
+    {
+      "say": "Step one. Open your shopping app and move the item to your wishlist.",
+      "callout": "Step One",
+      "visual": "A blurry silhouette of a person looking out a large window at a rainy city street."
+    },
+    {
+      "say": "Never buy anything on the exact same day you see it.",
+      "callout": "Wait 48 Hours",
+      "visual": "Macro shot of a mechanical clock hand ticking slowly against a dark metallic face."
+    },
+    {
+      "say": "Step two. Set a strict timer on your phone for 48 hours.",
+      "callout": "Step Two",
+      "visual": "A pair of hands typing on a dark mechanical keyboard with soft ambient light."
+    },
+    {
+      "say": "Give your logical brain time to catch up with your emotions.",
+      "callout": "Let It Cool",
+      "visual": "An overhead shot of an empty ceramic coffee cup sitting on a dark oak table."
+    },
+    {
+      "say": "Step three. Ask yourself if you would pay cash for it right now.",
+      "callout": "Step Three",
+      "visual": "A closed minimalist laptop resting on a clean wooden desk in soft shadows."
+    },
+    {
+      "say": "Most urges completely vanish by the time the timer goes off.",
+      "callout": "",
+      "visual": "A close-up of a brass key lying on a dark textured concrete surface."
+    },
+    {
+      "say": "But here is the part nobody mentions about your daily spending.",
+      "callout": "",
+      "visual": "A moody side profile of a hand sliding a blank white card across a dark table."
+    },
+    {
+      "say": "Saving small amounts compounds into massive freedom over time.",
+      "callout": "",
+      "visual": "A cinematic view of empty stairs in a modern concrete building with soft shadows."
+    },
+    {
+      "say": "Follow for the money rules school never taught you, because...",
+      "callout": "",
+      "visual": "A glowing desk lamp casting a warm circle of light on an empty wooden table."
+    }
+  ],
+  "caption": "The 48-hour rule stops impulse buying instantly. Protect your paycheck today. #personalfinance #moneytips #wealthbuilding #savingmoney #budgeting",
+  "description": "Learn the simple 48-hour wishlist rule that stops emotional spending and keeps your hard-earned money in your account where it belongs.",
+  "hashtags": [
+    "#personalfinance",
+    "#moneytips",
+    "#wealthbuilding",
+    "#savingmoney",
+    "#budgeting"
+  ],
+  "first_comment": "What is the hardest thing for you to stop impulse buying? Let us know below.",
+  "facts": [
+    {
+      "claim": "$5/day habit invested monthly at 8% for 30 years equals $226,659",
+      "basis": "$5/day habit = $1,825/year; invested monthly at 8% for 30 years = $226,659"
+    }
+  ],
+  "source": "llm",
+  "pillar": "playbook"
+}

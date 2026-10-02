@@ -1,0 +1,71 @@
+{
+  "id": "2026-10-02-s10-psychology-anchoring-why-was-200-now-99-mak",
+  "pillar": "psychology",
+  "topic": "Anchoring: why 'was $200, now $99' makes you spend more",
+  "day": "2026-10-02",
+  "slot": 10,
+  "status": "published",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-02T09:27:11Z",
+      "words": 161
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-02T09:27:43Z",
+      "seconds": 62.863,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-02T09:29:02Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-02T09:30:50Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-02T09:30:50Z",
+      "score": 93
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-02T09:30:50Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-10-02T09:30:50Z",
+      "local": "2026-10-04T07:30:00-04:00"
+    }
+  ],
+  "artifacts": {
+    "angle": "the first number you see controls your decision",
+    "title": "Why 'Was $200, Now $99' Makes You Spend More",
+    "video": "/home/user/quiet-money/production/output/2026-10-02/2026-10-02-s10-psychology-anchoring-why-was-200-now-99-mak/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-02/2026-10-02-s10-psychology-anchoring-why-was-200-now-99-mak/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-10-04/slot1-psychology",
+        "post_at": "2026-10-04T07:30:00-04:00"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 93,
+    "passed": true
+  },
+  "cost": {
+    "tts:edge:chars": 932
+  },
+  "notes": []
+}
