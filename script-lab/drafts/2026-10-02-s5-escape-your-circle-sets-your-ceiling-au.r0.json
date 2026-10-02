@@ -1,0 +1,83 @@
+{
+  "title": "Your Circle Sets Your Ceiling",
+  "hook_text": "YOUR FIVE CLOSEST FRIENDS SET YOUR CEILING",
+  "beats": [
+    {
+      "say": "Your circle sets your ceiling, and most people don't even realize it.",
+      "callout": "",
+      "visual": "Cinematic shot of five empty chairs around a modern wooden boardroom table, dramatic window light, grainy film texture."
+    },
+    {
+      "say": "Look at the five people you talk to most right now.",
+      "callout": "THE FIVE",
+      "visual": "Close-up of a hand sliding a blank notepad across a dark desk, shallow depth of field."
+    },
+    {
+      "say": "Their average income is remarkably close to your own future.",
+      "callout": "THE AVERAGE",
+      "visual": "Silhouette of a person standing by a large city window at dusk, looking out at distant lights."
+    },
+    {
+      "say": "It is not about luck. It is about what your brain accepts as normal.",
+      "callout": "NORMAL",
+      "visual": "A vintage calculator sitting on a concrete surface, dramatic side lighting, sharp shadows."
+    },
+    {
+      "say": "If your circle thinks a $1,000 side income is extreme, you will too.",
+      "callout": "$1,000 / MONTH",
+      "visual": "Hands counting crisp paper bills on a wooden table, dark moody grading."
+    },
+    {
+      "say": "That is why an extra $1,000 a month invested at 8% for 10 years turns into $182,946.",
+      "callout": "$182,946",
+      "visual": "A glowing desk lamp illuminating a stack of financial ledgers from behind, out of focus."
+    },
+    {
+      "say": "You do not need a raise. You need a room where bigger numbers are standard.",
+      "callout": "THE ROOM",
+      "visual": "Wide shot of a minimalist office hallway with polished concrete floors, no people visible."
+    },
+    {
+      "say": "But here is the honest catch. Upgrading your circle causes friction.",
+      "callout": "THE FRICTION",
+      "visual": "Close-up of a closed wooden door with a brass handle, dramatic shadows."
+    },
+    {
+      "say": "People will call you changed because you stopped talking about limits.",
+      "callout": "",
+      "visual": "A person walking away down a long industrial corridor, back to camera, cinematic framing."
+    },
+    {
+      "say": "Protect your focus and build a network that demands actual growth.",
+      "callout": "",
+      "visual": "A modern fountain pen resting on top of a blank black leather journal."
+    },
+    {
+      "say": "Follow for the money rules school never taught you, because your circle sets",
+      "callout": "",
+      "visual": "Low-angle shot of a concrete staircase leading up into bright natural light."
+    }
+  ],
+  "caption": "Your circle shapes your financial ceiling more than any budget ever will. #personalfinance #moneytips #wealthbuilding #mindset",
+  "description": "Your income and habits mirror the five people you spend the most time with. Upgrade your circle to upgrade your financial ceiling.",
+  "hashtags": [
+    "#personalfinance",
+    "#moneytips",
+    "#wealthbuilding",
+    "#mindset",
+    "#investing"
+  ],
+  "first_comment": "Who is one person in your life who challenges your financial limits?",
+  "facts": [
+    {
+      "claim": "An extra $1,000/month invested at 8% for 10 years = $182,946 (you put in $120,000)",
+      "basis": "Fact sheet calculation"
+    },
+    {
+      "claim": "Your circle sets your ceiling",
+      "basis": "Plain words explanation of Dan Peña teaching"
+    }
+  ],
+  "source": "llm",
+  "pillar": "escape"
+}

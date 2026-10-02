@@ -1,0 +1,74 @@
+{
+  "title": "Why Your House Isn't Actually an Asset",
+  "hook_text": "YOUR HOME ISN'T AN ASSET",
+  "beats": [
+    {
+      "say": "Your home isn't an asset. Robert Kiyosaki wrote in Rich Dad Poor Dad that it's actually a liability.",
+      "callout": "",
+      "visual": "A cinematic shot of a suburban house exterior at dusk, viewed from behind a dark iron fence."
+    },
+    {
+      "say": "Here's why. An asset puts money in your pocket. A liability takes money out.",
+      "callout": "LIABILITY",
+      "visual": "A hand sliding a monthly mortgage statement across a dark wooden kitchen table."
+    },
+    {
+      "say": "Your house takes cash every single month for mortgage, taxes, and repairs. It doesn't pay you.",
+      "callout": "COSTS YOU",
+      "visual": "Close-up of a fountain pen signing a check on a blurred kitchen counter."
+    },
+    {
+      "say": "Most people stay stuck in the rat race because they buy a bigger house as soon as they get a raise.",
+      "callout": "RAT RACE",
+      "visual": "A lone silhouette walking down a long, narrow concrete office hallway under dim lights."
+    },
+    {
+      "say": "Expenses rise right along with income. You're forced to keep working just to pay the bills.",
+      "callout": "MORE BILLS",
+      "visual": "A calculator sitting next to a stack of unopened mail on a dimly lit desk."
+    },
+    {
+      "say": "Kiyosaki says true wealth comes from buying things that generate cash flow without your labor.",
+      "callout": "CASH FLOW",
+      "visual": "An overhead shot of brass keys resting on a clean, dark marble surface."
+    },
+    {
+      "say": "But here's the honest catch. Real estate takes heavy capital, and Kiyosaki's own company once filed for bankruptcy.",
+      "callout": "THE CATCH",
+      "visual": "A person's hands holding a set of blueprints, blurred and viewed from a high angle."
+    },
+    {
+      "say": "Leverage cuts both ways. Debt can break you just as fast as it builds you.",
+      "callout": "DEBT RISKS",
+      "visual": "A close-up of a vintage brass scale tipping unevenly on a wooden table."
+    },
+    {
+      "say": "This week, audit your monthly spending and separate things that pay you from things that drain you.",
+      "callout": "",
+      "visual": "A hand crossing out lines on a paper ledger with a black marker."
+    },
+    {
+      "say": "Follow for the money rules school never taught you, because...",
+      "callout": "",
+      "visual": "A dark hallway with a single bright lightbulb hanging from the ceiling."
+    }
+  ],
+  "caption": "Your home might be costing you more than you think. Learn the rules of real wealth. #MoneyPsychology #PersonalFinance #RealEstateInvesting #WealthBuilding #QuietMoney",
+  "description": "Robert Kiyosaki's rule flips conventional wisdom on your home. Learn why your house is a liability and how to focus on actual cash-flowing assets.",
+  "hashtags": [
+    "#moneypsychology",
+    "#personalfinance",
+    "#realestate",
+    "#wealthbuilding",
+    "#quietmoney"
+  ],
+  "first_comment": "Do you view your primary home as an investment or just a place to live? Let's talk about it below.",
+  "facts": [
+    {
+      "claim": "In 2012 his company Rich Global LLC filed for bankruptcy after a court ordered it to pay $23.7 million.",
+      "basis": "Verified research brief fact on Robert Kiyosaki."
+    }
+  ],
+  "source": "llm",
+  "pillar": "escape"
+}

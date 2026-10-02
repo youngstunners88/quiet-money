@@ -1,0 +1,46 @@
+{
+  "id": "2026-10-02-s3-escape-hormozi-s-value-equation-why-som",
+  "pillar": "escape",
+  "topic": "Hormozi's Value Equation: why some people charge 10x for the same skill",
+  "day": "2026-10-02",
+  "slot": 3,
+  "status": "failed",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-02T00:52:25Z",
+      "words": 193
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-02T00:52:48Z",
+      "seconds": 64.944,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-02T00:53:35Z"
+    },
+    {
+      "from": "visualized",
+      "to": "failed",
+      "ts": "2026-10-02T00:55:10Z",
+      "error": "stopped for format change"
+    }
+  ],
+  "artifacts": {
+    "angle": "the four levers: dream outcome, likelihood, time, effort",
+    "brief": "hormozi",
+    "title": "Why Some Skills Earn 10x More"
+  },
+  "scores": {},
+  "cost": {
+    "tts:edge:chars": 1139
+  },
+  "notes": [
+    "stopped: series switched to framework-only before this finished"
+  ]
+}

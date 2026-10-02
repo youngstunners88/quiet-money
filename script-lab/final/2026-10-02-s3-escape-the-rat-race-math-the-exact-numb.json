@@ -1,0 +1,87 @@
+{
+  "title": "The exact number that buys your freedom",
+  "hook_text": "EXACTLY $600,000 BUYS YOUR FREEDOM",
+  "beats": [
+    {
+      "say": "You're trapped in the rat race because your paycheck stops the second you stop working.",
+      "callout": "",
+      "visual": "Cinematic shot of a busy downtown sidewalk at dusk, motion blurred feet, low angle."
+    },
+    {
+      "say": "Here's the math that sets you free, using the 4% rule from the 1998 Trinity study.",
+      "callout": "4% RULE",
+      "visual": "A vintage calculator on a dark wooden desk, soft window light, shallow depth of field."
+    },
+    {
+      "say": "To replace $2,000 of monthly expenses with passive income, you need about $600,000 invested.",
+      "callout": "$600,000 INVESTED",
+      "visual": "Close up of a stack of old leather bound books on a minimalist table."
+    },
+    {
+      "say": "That sounds impossible until you look at how time and compounding work for you.",
+      "callout": "",
+      "visual": "A single brass pendulum swinging steadily in front of a dark concrete wall."
+    },
+    {
+      "say": "Investing $500 a month at 8% a year reaches that $600,000 target in 27.6 years.",
+      "callout": "27.6 YEARS",
+      "visual": "A ceramic cup of black coffee casting a long shadow on a concrete countertop."
+    },
+    {
+      "say": "Up that to $1,000 a month, and you hit it in 20.2 years.",
+      "callout": "20.2 YEARS",
+      "visual": "An empty wooden chair by a large window with morning fog outside."
+    },
+    {
+      "say": "But here's the catch nobody mentions. Passive income takes serious capital or years of discipline.",
+      "callout": "THE CATCH",
+      "visual": "A sleek modern desk with a blank notepad and a fountain pen, side view."
+    },
+    {
+      "say": "Real estate has vacancies, and stocks drop when you least expect them.",
+      "callout": "",
+      "visual": "Raindrops sliding down a tall glass window overlooking a quiet city street."
+    },
+    {
+      "say": "That's why you build assets that pay you every month instead of buying liabilities.",
+      "callout": "BUILD ASSETS",
+      "visual": "A person's hands locking a heavy wooden door from the inside."
+    },
+    {
+      "say": "Calculate your exact monthly survival number today, and start funding the gap.",
+      "callout": "",
+      "visual": "A minimalist metal lamp illuminating a clean desk at night."
+    },
+    {
+      "say": "Follow for the money rules school never taught you, because that's exactly how...",
+      "callout": "FOLLOW",
+      "visual": "A dark hallway with a single warm light at the far end, centered symmetry."
+    }
+  ],
+  "caption": "The rat race ends when your passive income covers your life. Here is the exact math.\n\n#ratrace #passiveincome #personalfinance #investing #moneytok",
+  "description": "Learn the exact math behind the 4% rule and passive income. See how much capital you need to replace your paycheck and escape the rat race.",
+  "hashtags": [
+    "#ratrace",
+    "#passiveincome",
+    "#personalfinance",
+    "#investing",
+    "#moneytok"
+  ],
+  "first_comment": "What is your current monthly number to cover all your expenses?",
+  "facts": [
+    {
+      "claim": "$2,000/month of passive income needs about $600,000 invested based on the 4% rule from the 1998 Trinity study",
+      "basis": "Money fact sheet: PASSIVE INCOME ('4% rule': withdraw 4% a year, a guideline from the 1998 Trinity study... $2,000/month of passive income needs about $600,000 invested)"
+    },
+    {
+      "claim": "Investing $500/month at 8%/yr reaches $600,000 in 27.6 years",
+      "basis": "Money fact sheet: investing $500/month at 8%/yr reaches $600,000 in 27.6 years"
+    },
+    {
+      "claim": "Investing $1,000/month at 8%/yr reaches $600,000 in 20.2 years",
+      "basis": "Money fact sheet: investing $1,000/month at 8%/yr reaches $600,000 in 20.2 years"
+    }
+  ],
+  "source": "llm",
+  "pillar": "escape"
+}

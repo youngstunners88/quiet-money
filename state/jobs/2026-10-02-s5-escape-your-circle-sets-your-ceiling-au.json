@@ -1,0 +1,72 @@
+{
+  "id": "2026-10-02-s5-escape-your-circle-sets-your-ceiling-au",
+  "pillar": "escape",
+  "topic": "Your circle sets your ceiling: audit the five people you talk to most",
+  "day": "2026-10-02",
+  "slot": 5,
+  "status": "published",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-02T01:00:05Z",
+      "words": 151
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-02T01:00:57Z",
+      "seconds": 65.719,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-02T01:02:07Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-02T01:03:54Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-02T01:03:54Z",
+      "score": 96
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-02T01:03:54Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-10-02T01:03:54Z",
+      "local": "2026-10-03T07:30:00-04:00"
+    }
+  ],
+  "artifacts": {
+    "angle": "who you spend time with shapes what you think is normal to earn",
+    "brief": "pena",
+    "title": "The Circle That Controls Your Net Worth",
+    "video": "/home/user/quiet-money/production/output/2026-10-02/2026-10-02-s5-escape-your-circle-sets-your-ceiling-au/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-02/2026-10-02-s5-escape-your-circle-sets-your-ceiling-au/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-10-03/slot1-escape",
+        "post_at": "2026-10-03T07:30:00-04:00"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 96,
+    "passed": true
+  },
+  "cost": {
+    "tts:edge:chars": 875
+  },
+  "notes": []
+}

@@ -1,0 +1,72 @@
+{
+  "id": "2026-10-02-s7-escape-the-rule-of-100-a-100-day-plan-f",
+  "pillar": "escape",
+  "topic": "The Rule of 100: a 100-day plan for your first customers",
+  "day": "2026-10-02",
+  "slot": 7,
+  "status": "published",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-02T01:07:56Z",
+      "words": 156
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-02T01:08:31Z",
+      "seconds": 62.438,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-02T01:09:40Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-02T01:11:19Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-02T01:11:19Z",
+      "score": 93
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-02T01:11:19Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-10-02T01:11:19Z",
+      "local": "2026-10-03T15:00:00-04:00"
+    }
+  ],
+  "artifacts": {
+    "angle": "100 actions a day for 100 days is 10,000 shots; volume beats talent",
+    "brief": "hormozi",
+    "title": "The 10,000 Shot Rule For Your First Customers",
+    "video": "/home/user/quiet-money/production/output/2026-10-02/2026-10-02-s7-escape-the-rule-of-100-a-100-day-plan-f/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-02/2026-10-02-s7-escape-the-rule-of-100-a-100-day-plan-f/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-10-03/slot3-escape",
+        "post_at": "2026-10-03T15:00:00-04:00"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 93,
+    "passed": true
+  },
+  "cost": {
+    "tts:edge:chars": 932
+  },
+  "notes": []
+}

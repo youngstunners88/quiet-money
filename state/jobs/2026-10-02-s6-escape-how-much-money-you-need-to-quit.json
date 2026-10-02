@@ -1,0 +1,71 @@
+{
+  "id": "2026-10-02-s6-escape-how-much-money-you-need-to-quit",
+  "pillar": "escape",
+  "topic": "How much money you need to quit your job: the 4% rule math",
+  "day": "2026-10-02",
+  "slot": 6,
+  "status": "published",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-02T01:04:01Z",
+      "words": 159
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-02T01:04:43Z",
+      "seconds": 63.33,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-02T01:05:56Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-02T01:07:33Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-02T01:07:33Z",
+      "score": 95
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-02T01:07:33Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-10-02T01:07:33Z",
+      "local": "2026-10-03T11:30:00-04:00"
+    }
+  ],
+  "artifacts": {
+    "angle": "$3,000/month needs about $900,000 invested; how long it takes at $500, $1,000, $2,000 a month",
+    "title": "The Exact Math To Quit Your Job Forever",
+    "video": "/home/user/quiet-money/production/output/2026-10-02/2026-10-02-s6-escape-how-much-money-you-need-to-quit/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-02/2026-10-02-s6-escape-how-much-money-you-need-to-quit/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-10-03/slot2-escape",
+        "post_at": "2026-10-03T11:30:00-04:00"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 95,
+    "passed": true
+  },
+  "cost": {
+    "tts:edge:chars": 890
+  },
+  "notes": []
+}

@@ -1,0 +1,88 @@
+{
+  "title": "The Rule of 100: Volume Beats Talent",
+  "hook_text": "VOLUME BEATS TALENT EVERY SINGLE TIME",
+  "beats": [
+    {
+      "say": "Most people fail to get customers because they quit way too early.",
+      "callout": "",
+      "visual": "A silhouette of a person standing at a crossroads in a foggy city at dusk, wide cinematic shot."
+    },
+    {
+      "say": "They rely on raw talent instead of raw numbers. Here's the exact math.",
+      "callout": "10,000 CONTACTS",
+      "visual": "Close-up of a hand writing notes on a blank desk with a black pen, moody desk lighting."
+    },
+    {
+      "say": "It's called the Rule of 100, popularized by business builder Alex Hormozi.",
+      "callout": "RULE OF 100",
+      "visual": "An open notebook on a dark wooden table with a black coffee cup beside it."
+    },
+    {
+      "say": "You do 100 primary actions every single day for 100 days straight.",
+      "callout": "100 A DAY",
+      "visual": "A person's hands typing rapidly on a vintage mechanical keyboard, dark aesthetic."
+    },
+    {
+      "say": "That adds up to 10,000 total shots at your target.",
+      "callout": "10,000 SHOTS",
+      "visual": "A cinematic shot of a phone screen glowing in a dark room, viewed from behind the shoulder."
+    },
+    {
+      "say": "At a hypothetical 1% success rate, that's 100 customers locked in.",
+      "callout": "100 CUSTOMERS",
+      "visual": "A calendar resting on a minimalist wooden desk, marked with dark ink."
+    },
+    {
+      "say": "Most beginners don't even reach 50 total attempts before giving up.",
+      "callout": "",
+      "visual": "A closed laptop sitting alone on a dimly lit coffee shop table."
+    },
+    {
+      "say": "They think the market rejected them when they barely even knocked.",
+      "callout": "",
+      "visual": "An old wooden door viewed from the inside, sunlight creeping through the cracks."
+    },
+    {
+      "say": "But here's the honest catch that nobody wants to talk about.",
+      "callout": "THE HONEST CATCH",
+      "visual": "A heavy industrial staircase viewed from below, dramatic shadows, black and white."
+    },
+    {
+      "say": "This framework builds active business income, not instant passive wealth.",
+      "callout": "",
+      "visual": "A person walking down a long concrete hallway alone, cinematic perspective."
+    },
+    {
+      "say": "About 1 in 5 US businesses close in their first year.",
+      "callout": "1 IN 5",
+      "visual": "A storefront with closed metal security shutters at night, urban gritty mood."
+    },
+    {
+      "say": "It takes brutal daily effort, and that's exactly why",
+      "callout": "",
+      "visual": "A hand sliding a minimalist black pen across a blank piece of paper."
+    }
+  ],
+  "caption": "Volume beats talent every single time. 100 actions a day for 100 days changes everything.\n\n#money #personalfinance #business #sidehustle #wealth",
+  "description": "Learn the Rule of 100 framework for building your customer base through sheer volume and daily execution.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#business",
+    "#sidehustle",
+    "#wealth"
+  ],
+  "first_comment": "What's one project you've been working on that needs more daily volume?",
+  "facts": [
+    {
+      "claim": "100 reach-outs a day for 100 days = 10,000 contacts; at a 1% yes-rate that's 100 customers",
+      "basis": "Rule of 100 volume math from fact sheet"
+    },
+    {
+      "claim": "About 1 in 5 US businesses close in their first year",
+      "basis": "US Bureau of Labor Statistics, Business Employment Dynamics"
+    }
+  ],
+  "source": "llm",
+  "pillar": "escape"
+}

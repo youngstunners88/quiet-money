@@ -1,0 +1,72 @@
+{
+  "id": "2026-10-02-s2-escape-kiyosaki-s-rule-is-your-house-an",
+  "pillar": "escape",
+  "topic": "Kiyosaki's rule: is your house an asset or a liability?",
+  "day": "2026-10-02",
+  "slot": 2,
+  "status": "published",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-02T00:48:53Z",
+      "words": 160
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-02T00:49:25Z",
+      "seconds": 64.372,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-02T00:50:36Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-02T00:52:14Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-02T00:52:14Z",
+      "score": 94
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-02T00:52:14Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-10-02T00:52:14Z",
+      "local": "2026-10-02T15:00:00-04:00"
+    }
+  ],
+  "artifacts": {
+    "angle": "an asset puts money in your pocket; most homes take it out monthly",
+    "brief": "kiyosaki",
+    "title": "Why Your House Isn't Actually an Asset",
+    "video": "/home/user/quiet-money/production/output/2026-10-02/2026-10-02-s2-escape-kiyosaki-s-rule-is-your-house-an/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-02/2026-10-02-s2-escape-kiyosaki-s-rule-is-your-house-an/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-10-02/slot3-escape",
+        "post_at": "2026-10-02T15:00:00-04:00"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 94,
+    "passed": true
+  },
+  "cost": {
+    "tts:edge:chars": 913
+  },
+  "notes": []
+}

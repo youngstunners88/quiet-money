@@ -1,0 +1,96 @@
+{
+  "title": "The Exact Math To Quit Your Job Forever",
+  "hook_text": "$3,000 A MONTH NEEDS $900,000 INVESTED",
+  "beats": [
+    {
+      "say": "$3,000 a month of passive income needs about $900,000 invested.",
+      "callout": "",
+      "visual": "A cinematic shot of a heavy steel office door slightly ajar with warm light spilling across a dark hallway, shot from a low angle."
+    },
+    {
+      "say": "That number comes from the 4% rule, a classic guideline from the 1998 Trinity study.",
+      "callout": "THE 4% RULE",
+      "visual": "An old brass desk lamp casting a sharp circle of light onto a clean wooden surface with a closed leather notebook."
+    },
+    {
+      "say": "It is not a guarantee, but it is the exact math people use to replace a paycheck.",
+      "callout": "NOT A GUARANTEE",
+      "visual": "A close-up of a silver pocket watch resting on a stack of dark, blank paper."
+    },
+    {
+      "say": "If you invest $500 a month at 8% a year, it takes 32.2 years to hit that target.",
+      "callout": "32.2 YEARS",
+      "visual": "An empty subway car moving past dark concrete tunnel walls at night, motion blurred."
+    },
+    {
+      "say": "Double your monthly deposit to $1,000, and that timeline drops to 24.4 years.",
+      "callout": "24.4 YEARS",
+      "visual": "Raindrops sliding down a tall glass window overlooking a muted, rain-slicked city street at dusk."
+    },
+    {
+      "say": "Push it to $2,000 a month, and you cut the wait down to 17.4 years.",
+      "callout": "17.4 YEARS",
+      "visual": "A porcelain coffee cup sitting on a minimalist concrete counter with steam rising slowly into morning light."
+    },
+    {
+      "say": "But here is the part nobody mentions about escaping the rat race.",
+      "callout": "THE HONEST CATCH",
+      "visual": "A silhouetted person walking down a long, dimly lit corridor away from the camera."
+    },
+    {
+      "say": "You are trading current comfort for future freedom.",
+      "callout": "",
+      "visual": "A heavy iron key resting on a dark wooden table next to an unlit candle."
+    },
+    {
+      "say": "It takes immense discipline to invest thousands every single month without fail.",
+      "callout": "",
+      "visual": "A pair of hands typing on a mechanical keyboard with the screen turned entirely away from view."
+    },
+    {
+      "say": "Your move this week is to check your savings rate and find one hundred dollars to automate.",
+      "callout": "AUTOMATE $100",
+      "visual": "A blank smartphone lying face down on a clean white desk, casting a soft shadow."
+    },
+    {
+      "say": "Small adjustments compound into massive life changes over time.",
+      "callout": "",
+      "visual": "A single drop of water hitting a calm, dark pool, creating concentric ripples outward."
+    },
+    {
+      "say": "Follow for the money rules school never taught you, because $3,000 a month...",
+      "callout": "",
+      "visual": "A dark cinematic frame fading slowly to black with a single beam of light crossing the center."
+    }
+  ],
+  "caption": "The math to quit your job isn't magic, it's just consistency and time. Here is what it actually takes to replace your paycheck. #personalfinance #passiveincome #moneytips #financialfreedom #wealthbuilding",
+  "description": "Breaking down the exact math behind the 4% rule and how long it takes to build passive income that replaces a paycheck.",
+  "hashtags": [
+    "#personalfinance",
+    "#passiveincome",
+    "#moneytips",
+    "#financialfreedom",
+    "#wealthbuilding"
+  ],
+  "first_comment": "What monthly passive income number are you aiming for?",
+  "facts": [
+    {
+      "claim": "$3,000/month of passive income needs about $900,000 invested",
+      "basis": "Fact sheet passive income section"
+    },
+    {
+      "claim": "Investing $500/month at 8%/yr reaches $900,000 in 32.2 years",
+      "basis": "Fact sheet passive income section"
+    },
+    {
+      "claim": "Investing $1,000/month at 8%/yr reaches $900,000 in 24.4 years",
+      "basis": "Fact sheet passive income section"
+    },
+    {
+      "claim": "Investing $2,000/month at 8%/yr reaches $900,000 in 17.4 years",
+      "basis": "Fact sheet passive income section"
+    }
+  ],
+  "source": "llm",
+  "pillar": "escape"
+}

@@ -1,0 +1,72 @@
+{
+  "id": "2026-10-02-s3-escape-the-rat-race-math-the-exact-numb",
+  "pillar": "escape",
+  "topic": "The rat race math: the exact number that sets you free",
+  "day": "2026-10-02",
+  "slot": 3,
+  "status": "published",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-02T00:56:41Z",
+      "words": 153
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-02T00:57:27Z",
+      "seconds": 62.03,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-02T00:58:24Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-02T00:59:52Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-02T00:59:52Z",
+      "score": 96
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-02T00:59:52Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-10-02T00:59:52Z",
+      "local": "2026-10-02T18:30:00-04:00"
+    }
+  ],
+  "artifacts": {
+    "angle": "passive income at least equal to monthly expenses; capital at the 4% rule",
+    "brief": "kiyosaki",
+    "title": "The exact number that buys your freedom",
+    "video": "/home/user/quiet-money/production/output/2026-10-02/2026-10-02-s3-escape-the-rat-race-math-the-exact-numb/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-02/2026-10-02-s3-escape-the-rat-race-math-the-exact-numb/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-10-02/slot4-escape",
+        "post_at": "2026-10-02T18:30:00-04:00"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 96,
+    "passed": true
+  },
+  "cost": {
+    "tts:edge:chars": 895
+  },
+  "notes": []
+}
