@@ -1,5 +1,6 @@
 # Alex Hormozi
 Researched 2026-10-02. Use only what is below; anything else about him needs a new source first.
+How to use: teach the FRAMEWORKS in our own words. No quotes. The video is about the method, not the person; naming them is optional and never the hook. The facts below exist so anything we do say is true.
 
 ## Verified facts (attribute them: "Hormozi says", "according to")
 - Built Gym Launch, which taught struggling gym owners how to sell memberships, then added Prestige Labs
@@ -15,8 +16,8 @@ Researched 2026-10-02. Use only what is below; anything else about him needs a n
 ## Frameworks (explain in plain words, credit him)
 - Value Equation: value = (dream outcome × perceived likelihood it works) ÷ (time it takes × effort and sacrifice).
   To charge more, raise the top or shrink the bottom.
-- Grand Slam Offer: an offer "so good people feel stupid saying no": a hungry market, a clear outcome, bonuses,
-  a strong guarantee, and a name that sells the result.
+- Grand Slam Offer: an offer too good to refuse: a hungry market, a clear outcome, bonuses, a strong
+  guarantee, and a name that sells the result.
 - Core Four (from $100M Leads): every customer comes from warm outreach, free content, cold outreach, or paid ads.
 - Rule of 100: 100 "primary actions" a day for 100 days: 100 reach-outs, 100 minutes making content, or $100 of ads.
 - More, Better, New: do more of what already works, then make it better, and only then try something new.
@@ -28,7 +29,7 @@ Researched 2026-10-02. Use only what is below; anything else about him needs a n
 - His results came after years of 80-hour weeks and failures; nobody can promise yours.
 
 ## Never
-- Imply he endorses, sponsors, or knows this channel. No long quotes; short attributed phrases only.
+- Imply he endorses, sponsors, or knows this channel. Quote him.
 - Show his face or likeness. Promise income, or say "you'll make $X with this".
 
 ## Sources

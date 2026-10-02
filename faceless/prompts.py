@@ -48,8 +48,9 @@ def script_prompt(pillar, topic: str, angle: str = "", feedback: list[str] | Non
         f"6. One follow CTA woven into the last 2 beats, in this spirit: \"{ch['cta_follow']}\"",
         "",
         moneymath.fact_sheet() if pillar.id in ("math", "playbook", "myth", "psychology", "escape") else "",
-        *(["", "# RESEARCH BRIEF (verified; the ONLY facts you may state about the people in it. Credit ideas to "
-            "their author by name, keep 'he says' on self-reported numbers, and use one item from 'The honest catch')",
+        *(["", "# RESEARCH BRIEF (verified background. Teach the frameworks in your own words and use one item from "
+            "'The honest catch'. Do NOT quote anyone and do not make the video about a person; if you name someone at "
+            "all, state only facts from this brief, with 'he says' on self-reported numbers)",
             brief] if brief else []),
         "",
         "# CONSTRAINTS",

@@ -39,7 +39,7 @@ python -m faceless brand                   # regenerate the brand kit
 | Money Psychology | A named bias and its counter-move (lifestyle creep) |
 | Money Myths | A belief you hold, flipped with math (renting isn't throwing money away) |
 | Do This Today | Three steps in 15 minutes (automate savings) |
-| Escape the Rat Race | Income-building frameworks from Hormozi, Kiyosaki, and Peña, with the math and the catch |
+| Escape the Rat Race | Income-building frameworks (value equation, rule of 100, cash-flow assets, leverage) with the math and the catch |
 
 ## How quality is enforced
 Every video runs the **gauntlet** (`faceless/gauntlet.py`): duration, hook, structure, originality, compliance

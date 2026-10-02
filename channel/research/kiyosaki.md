@@ -1,5 +1,6 @@
 # Robert Kiyosaki
 Researched 2026-10-02. Use only what is below; anything else about him needs a new source first.
+How to use: teach the FRAMEWORKS in our own words. No quotes. The video is about the method, not the person; naming them is optional and never the hook. The facts below exist so anything we do say is true.
 
 ## Verified facts (attribute them)
 - Born 1947 in Hilo, Hawaii. His father, the "poor dad" of the book, was Hawaii's superintendent of schools.
@@ -29,7 +30,7 @@ Researched 2026-10-02. Use only what is below; anything else about him needs a n
 
 ## Never
 - Present his market predictions as facts or tell viewers to buy gold, silver, or bitcoin because he does.
-- Show his face. Promise that following him makes anyone rich.
+- Quote him. Show his face. Promise that following him makes anyone rich.
 
 ## Sources
 - https://en.wikipedia.org/wiki/Robert_Kiyosaki (birth, sales, Rich Global bankruptcy, $23.7M, $1B debt statement)

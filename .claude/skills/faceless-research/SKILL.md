@@ -17,14 +17,15 @@ Use WebSearch / WebFetch. For every fact you keep:
 - Self-reported numbers (net worth, "turned $820 into $450M") go under "His own claims" and are always
   voiced with "he says". Disputed facts: leave out, or state both sides.
 - Collect criticism too (lawsuits, bankruptcies, disputed stories, debt). Every video needs an honest catch.
-- Keep what supports a 60-second video: dated facts, exact numbers, named frameworks, one or two short quotes
-  that are verifiably theirs.
+- Keep what supports a 60-second video: the frameworks (the main payload, explained in plain words), plus dated
+  facts and exact numbers so anything a script says about the person is true. No quotes: videos teach methods.
 
 ## 2. Write the brief (`channel/research/<id>.md`, id = lowercase surname, ascii)
 Sections, in this order (the engine strips everything from `## Sources` down before prompting):
 ```
 # Full Name
 Researched YYYY-MM-DD. Use only what is below; anything else needs a new source first.
+How to use: teach the FRAMEWORKS in our own words. No quotes. ...
 ## Verified facts (attribute them)
 ## His/Her own claims (only with "he says")      <- if any
 ## Frameworks (explain in plain words, credit them)
@@ -50,6 +51,6 @@ Read the gauntlet report: `judge_facts` must pass and `suspect_claims` should be
 claim that is true, add its source to the brief instead of weakening the gate.
 
 ## Never
-- Put a claim in a brief you could not source. Copy long passages from books (short quotes only, attributed).
+- Put a claim in a brief you could not source. Copy passages or quotes from books or talks.
 - Imply the person endorses or knows the channel. Show their face in visuals.
 - Write a key or token into a brief (briefs are public in the repo).

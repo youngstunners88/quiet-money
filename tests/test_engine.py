@@ -340,11 +340,11 @@ def test_passive_income_math():
     assert moneymath.months_to_target(1000, 0.0, 12000) == 12
 
 
-def test_escape_series_must_credit_and_name_the_catch():
+def test_escape_series_needs_the_catch_and_a_move():
     from faceless.gauntlet import check_structure
     beats = lambda *says: {"pillar": "escape", "beats": [{"say": s} for s in says]}  # noqa: E731
-    ok = beats("Two people sell the same skill.", "Alex Hormozi calls this the Value Equation.", "Here's how.",
-               "The catch: it takes years of reps.")
+    ok = beats("Two people sell the same skill.", "One charges ten times more.", "Here's the value equation.",
+               "The catch: it takes years of reps.", "This week, rewrite your offer around the outcome.")
     assert check_structure(ok, "")[0].passed
     assert not check_structure(beats("Two people.", "Same skill.", "Different price.", "Do it."), "")[0].passed
 

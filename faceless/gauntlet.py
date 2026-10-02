@@ -110,16 +110,16 @@ def check_structure(script: dict, low: str) -> list[Gate]:
                      "a 'Money Myths' video must name the belief and flip it within the first 3 beats.")]
     if pillar == "escape":
         says = [b["say"].lower() for b in script["beats"]]
-        credited = any(re.search(CREDIT, x) for x in says[:3])
         catch = any(re.search(CATCH, x) for x in says)
-        return [Gate("pillar_structure", credited and catch, 6, False,
-                     "an 'Escape the Rat Race' video must credit the framework to its author by name (or name the "
-                     "4% rule) within the first 3 beats and state the honest catch: effort, risk, debt, or what critics say.")]
+        move = any(re.search(MOVE, x) for x in says[-5:])
+        return [Gate("pillar_structure", catch and move, 6, False,
+                     "an 'Escape the Rat Race' video must state the honest catch (effort, risk, or debt) and end with one "
+                     "concrete move for this week ('This week, ...').")]
     return []
 
 
-CREDIT = r"hormozi|kiyosaki|pe[ñn]a|rich dad|4% rule"
-CATCH = r"catch|risk|critic|downside|no guarantee|not guaranteed|honest|warning|isn't easy|is not easy|the hard part|bankrupt|debt"
+CATCH = r"catch|risk|downside|no guarantee|not guaranteed|honest|warning|isn't easy|is not easy|the hard part|bankrupt|debt"
+MOVE = r"this week|today|tonight|tomorrow|right now|start with|step one|your first|write down|list"
 
 
 def judge_script(script: dict, job_id: str | None = None, brief: str = "") -> tuple[list[Gate], dict]:

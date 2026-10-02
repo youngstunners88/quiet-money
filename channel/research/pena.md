@@ -1,5 +1,6 @@
 # Dan Peña
 Researched 2026-10-02. Most of his business numbers are his own claims: always say "he says" or "by his account".
+How to use: teach the FRAMEWORKS in our own words. No quotes. The video is about the method, not the person; naming them is optional and never the hook. The facts below exist so anything we do say is true.
 
 ## Verified facts
 - Born 1945; grew up in Los Angeles; business degree from San Fernando Valley State College (now CSUN), 1971.
@@ -14,7 +15,7 @@ Researched 2026-10-02. Most of his business numbers are his own claims: always s
 - His QLA (Quantum Leap Advantage) mentees have created over $1 trillion in value.
 
 ## Ideas he teaches (explain in plain words, credit him)
-- "Show me your friends and I'll show you your future." Your circle sets your ceiling.
+- Your circle sets your ceiling: the people you spend time with set what feels normal to earn and attempt.
 - OPM and OPR: grow with other people's money and other people's resources (investors, lenders, partners)
   instead of only your savings.
 - Deal flow: big outcomes come from seeing many deals and buying or building companies, not from a salary.
@@ -26,7 +27,7 @@ Researched 2026-10-02. Most of his business numbers are his own claims: always s
 - His style is extreme (very long hours, brutal honesty); his figures are self-reported and unverified.
 
 ## Never
-- State his self-reported numbers as facts. Show his face. Promise outcomes.
+- State his self-reported numbers as facts. Quote him. Show his face. Promise outcomes.
 
 ## Sources
 - https://en.wikipedia.org/wiki/Dan_Pe%C3%B1a (birth, degree, ouster, $3.3M award, Guthrie Castle 1984)

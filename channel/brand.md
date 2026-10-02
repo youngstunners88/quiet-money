@@ -21,7 +21,7 @@
 | **Money Psychology** (`psychology`) | A named bias that drains money + the counter-move | Moody noir, cool tones | Lifestyle creep |
 | **Money Myths** (`myth`) | A belief you hold, why it's wrong, the replacement rule | Crimson/charcoal contrast | "Renting is throwing money away" |
 | **Do This Today** (`playbook`) | A 3-step, 15-minute action | Clean daylight, green/white | Automate savings in 10 minutes |
-| **Escape the Rat Race** (`escape`) | One income-building framework (Hormozi, Kiyosaki, Peña) credited by name, the real math, one move this week, the honest catch | Night city, navy/orange | The Rule of 100 |
+| **Escape the Rat Race** (`escape`) | One income-building framework in our own words (value equation, rule of 100, asset vs liability, OPM), the real math, one move this week, the honest catch | Night city, navy/orange | The Rule of 100 |
 
 Different looks, music keys, and structures per pillar are deliberate: YouTube's "inauthentic content"
 policy targets templated, near-identical uploads. Our variety is real, not cosmetic.
@@ -39,4 +39,3 @@ policy targets templated, near-identical uploads. Our variety is real, not cosme
 - **Contradiction:** "Your last raise made you poorer."
 - **Direct challenge:** "Renting isn't throwing money away. Here's the math."
 - **Specific promise:** "Do this once and save money forever."
-- **Builder's rule:** "Show me your friends and I'll show you your future." (credit the author on screen)
