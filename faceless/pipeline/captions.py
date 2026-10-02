@@ -26,7 +26,9 @@ def ts(t: float) -> str:
 
 
 def esc(text: str) -> str:
-    return text.replace("\\", "").replace("{", "(").replace("}", ")")
+    """Plain text for an ASS Dialogue line: no override tags, no backslash codes, no line breaks (a raw
+    newline would end the event and turn the rest into a malformed line)."""
+    return " ".join(text.replace("\\", "").replace("{", "(").replace("}", ")").split())
 
 
 WEAK_ENDS = {"a", "an", "the", "of", "to", "in", "on", "at", "for", "and", "but", "or", "his", "her", "my",

@@ -370,3 +370,127 @@ def test_blocked_provider_is_skipped_for_the_day(tmp_path, monkeypatch):
     monkeypatch.setattr(ledger, "used", lambda provider, unit, day=None: 1 if unit == "blocked" else 0)
     with pytest.raises(ProviderUnavailable):
         images.cloudflare("a desk", 864, 1536, 1, tmp_path / "x.jpg")
+
+
+# ---- audit regressions (2026-10-02) -----------------------------------------------------------
+
+def test_journal_scrubs_secrets(tmp_path, monkeypatch):
+    from faceless import events
+    monkeypatch.setattr(events, "JOURNAL", tmp_path / "journal.jsonl")
+    monkeypatch.setenv("QM_TEST_API_KEY", "AIzaSyTESTSECRETVALUE123")
+    events.emit("PROVIDER_FAIL", error="Max retries exceeded with url: /v1/m:generateContent?key=AIzaOTHER123&alt=json "
+                                       "token AIzaSyTESTSECRETVALUE123")
+    line = (tmp_path / "journal.jsonl").read_text()
+    assert "AIzaSyTESTSECRETVALUE123" not in line and "AIzaOTHER123" not in line and "alt=json" in line
+
+
+def test_gemini_key_never_in_url(monkeypatch):
+    from faceless.providers import llm
+    seen = {}
+
+    class FakeSession:
+        def post(self, url, **kw):
+            seen.update(url=url, **kw)
+            raise llm.requests.ConnectionError("down")
+
+    monkeypatch.setenv("GEMINI_API_KEY", "secret-gemini-key")
+    monkeypatch.setattr(llm, "http", lambda: FakeSession())
+    with pytest.raises(llm.ProviderError):
+        llm.gemini("hi", system=None, want_json=False, temperature=0.5)
+    assert "params" not in seen and "secret-gemini-key" not in seen["url"]
+    assert seen["headers"]["x-goog-api-key"] == "secret-gemini-key"
+
+
+def test_site_jsonld_cannot_close_its_script_tag():
+    from faceless import site
+    out = site.ld_json({"headline": "</script><script>alert(1)</script> & more"})
+    assert "</script>" not in out and "<" not in out and json.loads(out)["headline"].startswith("</script>")
+
+
+def test_site_tolerates_string_facts_and_keeps_acronyms():
+    from faceless import site
+    assert site._items(["a claim", {"claim": "b"}, None, 3], ("claim", "basis")) == [
+        {"claim": "a claim", "basis": ""}, {"claim": "b"}, {"claim": "3", "basis": ""}]
+    assert site.sentence_case("HE STARTED WITH $820") == "He started with $820"
+    assert site.sentence_case("the IRA trick") == "The IRA trick"
+    assert site.rfc822("2026-10-02").startswith("Fri, 02 Oct 2026") and site.rfc822("bad") == ""
+
+
+def test_judge_zero_risk_is_not_read_as_five(monkeypatch):
+    from faceless import gauntlet
+    monkeypatch.setattr(gauntlet.llm, "complete", lambda *a, **k: {
+        "hook": 8, "retention": 7, "value": 7, "factual_risk": 0, "compliance_risk": 0,
+        "fixes": "tighten beat 3", "suspect_claims": None})
+    monkeypatch.setattr("faceless.decide.RECORDS", Path("/dev/null"))
+    monkeypatch.setattr("faceless.events.JOURNAL", Path("/dev/null"))
+    gates, _ = gauntlet.judge_script(json.loads(SEED.read_text(encoding="utf-8")))
+    by = {g.name: g for g in gates}
+    assert by["judge_facts"].passed and by["judge_compliance"].passed
+    assert gauntlet.judge_number("7/10") == 7 and gauntlet.judge_number(None) == 5
+
+
+def test_judge_non_object_answer_is_advisory(monkeypatch):
+    from faceless import gauntlet
+    monkeypatch.setattr(gauntlet.llm, "complete", lambda *a, **k: ["not", "an", "object"])
+    monkeypatch.setattr("faceless.events.JOURNAL", Path("/dev/null"))
+    assert gauntlet.judge_script({"title": "t", "beats": [{"say": "x"}]}) == ([], {})
+
+
+def test_bad_metrics_and_backlog_lines_are_skipped(tmp_path, monkeypatch):
+    from faceless.pipeline import ideate
+    m = tmp_path / "metrics.jsonl"
+    m.write_text('{"pillar": "story", "views": 10}\nnot json\n[1]\n{"pillar": "math", "views": null}\n')
+    monkeypatch.setattr(analytics, "METRICS", m)
+    assert len(analytics.load()) == 2
+    b = tmp_path / "backlog.jsonl"
+    b.write_text('{"pillar": "story", "topic": "a"}\n{"pillar": "story"\n{"topic": "no pillar"}\n')
+    monkeypatch.setattr(ideate, "BACKLOG", b)
+    monkeypatch.setattr("faceless.events.JOURNAL", tmp_path / "journal.jsonl")
+    assert [i["topic"] for i in ideate.load_backlog()] == ["a"]
+
+
+def test_normalize_coerces_llm_shapes():
+    s = normalize({"title": "t", "hashtags": "#money #debt", "facts": ["x", {"claim": "c"}],
+                   "beats": ["junk", {"say": "one"}, {"say": "two", "callout": "$5\nNOW"}]})
+    assert s["hashtags"] == ["#money", "#debt"]
+    assert s["facts"] == [{"claim": "x", "basis": ""}, {"claim": "c"}]
+    assert [b["say"] for b in s["beats"]] == ["one", "two"] and s["beats"][1]["callout"] == "$5 NOW"
+
+
+def test_caption_escape_strips_line_breaks_and_tags():
+    from faceless.pipeline.captions import esc
+    assert esc("a\n{\\b1}Dialogue") == "a (b1)Dialogue"
+
+
+def test_topic_error_does_not_fail_previous_slot(monkeypatch):
+    from faceless import orchestrator
+
+    class FakeJob:
+        def __init__(self, topic, slot):
+            self.id, self.topic, self.slot, self.status, self.notes = f"j{slot}", topic, slot, "planned", []
+            self.day = "2026-10-02"
+
+        def advance(self, to, **_):
+            self.status = to
+
+        def save(self):
+            pass
+
+    topics = iter([{"topic": "first"}])
+
+    def next_topic(pillar, reserved):
+        item = next(topics, None)
+        if item is None:
+            raise RuntimeError("no fresh topics")
+        return item
+
+    monkeypatch.setattr(orchestrator, "open_slots", lambda count, extra=0: [("2026-10-02", 0), ("2026-10-02", 1)])
+    monkeypatch.setattr(orchestrator.ideate, "next_topic", next_topic)
+    monkeypatch.setattr(orchestrator, "start_job", lambda pillar, item, slot: FakeJob(item["topic"], slot))
+    monkeypatch.setattr(orchestrator, "produce", lambda job, **kw: setattr(job, "status", "packaged"))
+    monkeypatch.setattr(orchestrator, "all_jobs", lambda: [])
+    monkeypatch.setattr(orchestrator, "write_daily_report", lambda jobs: None)
+    monkeypatch.setattr(orchestrator.Paths, "ensure", classmethod(lambda cls: None))
+    monkeypatch.setattr("faceless.events.JOURNAL", Path("/dev/null"))
+    jobs = orchestrator.daily(2)
+    assert [j.status for j in jobs] == ["packaged"]

@@ -16,6 +16,8 @@ description: Publish or schedule Quiet Money posting packs to TikTok, YouTube Sh
 ## Publish a job
 - Automatic: `python -m faceless daily` schedules each gated video in its slot.
 - Manual re-publish: `python -m faceless publish <job_id>` (uses an Idempotency-Key = job id, so retries don't duplicate).
+  It refuses a job that has not passed the gauntlet: fix it, re-run `python -m faceless gauntlet <job_id>`, then publish.
+  `--force` overrides only after a human has reviewed the video.
 
 ## Every post must have
 - AI label ON (`tiktok_is_ai_generated`, `containsSyntheticMedia`; set automatically by the engine).

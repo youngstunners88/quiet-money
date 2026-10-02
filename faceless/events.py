@@ -8,6 +8,8 @@ Single-line appends under 4 KB are atomic on Linux, so concurrent workers are sa
 from __future__ import annotations
 
 import json
+import os
+import re
 import time
 from datetime import datetime, timezone
 from pathlib import Path
@@ -21,13 +23,26 @@ def now_iso() -> str:
     return datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
 
+SECRET_NAME = re.compile(r"(KEY|TOKEN|SECRET|PASSWORD|_API)\d*$", re.I)
+SECRET_PARAM = re.compile(r"([?&](?:key|api_key|apikey|token|access_token)=)[^&\s\"'\\]+", re.I)
+
+
+def scrub(text: str) -> str:
+    """Blank out secrets before they reach the journal, which is committed (possibly publicly): values of
+    key-like environment variables, and key=... query parameters echoed back in HTTP error messages."""
+    for name, value in os.environ.items():
+        if len(value) >= 12 and SECRET_NAME.search(name) and value in text:
+            text = text.replace(value, "[redacted]")
+    return SECRET_PARAM.sub(r"\1[redacted]", text)
+
+
 def emit(kind: str, actor: str = "engine", **payload) -> dict:
     event = {"ts": now_iso(), "t": round(time.time(), 3), "actor": actor, "type": kind, **payload}
-    line = json.dumps(event, ensure_ascii=False, default=str)
+    line = scrub(json.dumps(event, ensure_ascii=False, default=str))
     if len(line) > 3800:  # keep appends atomic
         event = {k: v for k, v in event.items() if k in ("ts", "t", "actor", "type", "job")}
         event["truncated"] = True
-        line = json.dumps(event, ensure_ascii=False)
+        line = scrub(json.dumps(event, ensure_ascii=False))
     JOURNAL.parent.mkdir(parents=True, exist_ok=True)
     with open(JOURNAL, "a", encoding="utf-8") as f:
         f.write(line + "\n")

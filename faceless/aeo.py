@@ -51,7 +51,7 @@ def _ask(model: str, prompt: str) -> tuple[str, list[str]]:
     urls = [a.get("url_citation", {}).get("url") for a in msg.get("annotations") or [] if a.get("type") == "url_citation"]
     urls += d.get("citations") or []
     ledger.spend("openrouter-aeo", "calls", 1, usd=float((d.get("usage") or {}).get("cost") or 0))
-    return msg.get("content") or "", [u for u in urls if u]
+    return msg.get("content") or "", [u for u in urls if isinstance(u, str) and u]
 
 
 def _names(text: str) -> list[str]:

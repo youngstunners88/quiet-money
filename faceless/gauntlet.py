@@ -122,15 +122,32 @@ CREDIT = r"hormozi|kiyosaki|pe[ñn]a|rich dad|4% rule"
 CATCH = r"catch|risk|critic|downside|no guarantee|not guaranteed|honest|warning|isn't easy|is not easy|the hard part|bankrupt|debt"
 
 
+def judge_number(value, default: float = 5.0) -> float:
+    """A 0-10 judge score. 0 is a real answer (no risk), not a missing one; "7/10" or "7" parse as 7."""
+    if isinstance(value, bool):
+        return default
+    if isinstance(value, (int, float)):
+        return float(value)
+    m = re.match(r"\s*(\d+(?:\.\d+)?)", str(value or ""))
+    return float(m.group(1)) if m else default
+
+
+def _strings(value) -> list[str]:
+    return [str(x) for x in value] if isinstance(value, list) else ([str(value)] if value else [])
+
+
 def judge_script(script: dict, job_id: str | None = None, brief: str = "") -> tuple[list[Gate], dict]:
     try:
         j = llm.complete(judge_prompt(script, brief), want_json=True, temperature=0.2, job=job_id)
     except Exception as e:  # noqa: BLE001 - judging is advisory when every LLM is down
         events.emit("JUDGE_UNAVAILABLE", job=job_id, error=str(e)[:200])
         return [], {}
-    num = lambda k, d=5: float(j.get(k, d) or d)  # noqa: E731
-    fixes = "; ".join(j.get("fixes", [])[:3])
-    suspects = "; ".join(j.get("suspect_claims", [])[:3])
+    if not isinstance(j, dict):
+        events.emit("JUDGE_UNAVAILABLE", job=job_id, error=f"judge returned {type(j).__name__}, not an object")
+        return [], {}
+    num = lambda k: judge_number(j.get(k))  # noqa: E731
+    fixes = "; ".join(_strings(j.get("fixes"))[:3])
+    suspects = "; ".join(_strings(j.get("suspect_claims"))[:3])
     # Jev (when enabled) gets the final say on the publish-safety question, code keeps the fallback.
     safe = decide.ask({"safe_to_publish": decide.Q(
         "noul", "Is this short video script safe to publish as general money education: no personalized "

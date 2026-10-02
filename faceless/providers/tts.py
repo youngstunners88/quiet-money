@@ -141,7 +141,7 @@ def gemini(text: str, out: Path, *, rate: str | None = None) -> list[dict]:
             "generationConfig": {"responseModalities": ["AUDIO"], "speechConfig": {
                 "voiceConfig": {"prebuiltVoiceConfig": {"voiceName": cfg["gemini_voice"]}}}}}
     r = http().post(f"https://generativelanguage.googleapis.com/v1beta/models/{cfg['gemini_model']}:generateContent",
-                    params={"key": key}, json=body, timeout=300)
+                    headers={"x-goog-api-key": key}, json=body, timeout=300)
     if r.status_code != 200:
         raise ProviderError(f"gemini-tts {r.status_code}: {r.text[:200]}")
     part = r.json()["candidates"][0]["content"]["parts"][0]["inlineData"]

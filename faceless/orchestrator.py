@@ -105,15 +105,17 @@ def produce(job: Job, *, judge: bool = True, prefer_voice: str | None = None, do
         options={"publish": "All quality gates passed; safe, on-brand, ready to post.",
                  "hold": "A hard gate failed, the score is low, or a claim needs a human check."})},
         state={"score": rep["score"], "hard_failures": rep["hard_failures"], "title": meta["title"]}, job=job.id)
+    # the decider may hold a passing video, never ship a failing one (Rule 6: score >= pass_score, no hard fails)
+    next_step = verdict["next_step"].value if rep["passed"] else "hold"
     job.advance("packaged")
     if rep["score"] >= 95:   # teach the voice classifier what our best writing looks like
         from faceless import quality
         quality.remember("quality", job.id, script_stage.narration(scr))
-    if do_publish and verdict["next_step"].value == "publish":
+    if do_publish and next_step == "publish":
         res = publisher.publish(job, meta)
         job.artifacts["publish"] = res
         job.advance("published", **{k: v.get("post_at") for k, v in res.items() if isinstance(v, dict)})
-    elif verdict["next_step"].value == "hold":
+    elif next_step != "publish":
         job.notes.append("held for review: " + ", ".join(rep["hard_failures"] or ["low score"]))
         job.advance("held")
     job.save()
@@ -175,6 +177,7 @@ def daily(count: int | None = None, extra: int = 0, pillar: str | None = None, *
         plan = plans.setdefault(post_day, analytics.allocate(per_day, weights, date.fromisoformat(post_day).toordinal()))
         pillar = forced or plan[k]
         slot = (date.fromisoformat(post_day) - today).days * per_day + k
+        job = None
         try:
             item = ideate.next_topic(pillar, reserved)
             reserved.append(item["topic"])
@@ -182,10 +185,16 @@ def daily(count: int | None = None, extra: int = 0, pillar: str | None = None, *
             jobs.append(job)
             produce(job, **kw)
         except Exception as e:  # noqa: BLE001 - one bad job must not sink the day
-            events.emit("JOB_FAILED", pillar=pillar, slot=slot, error=str(e)[:300], trace=traceback.format_exc()[-1500:])
-            if jobs and jobs[-1].status not in ("failed", "published", "held"):
-                jobs[-1].notes.append(str(e)[:300])
-                jobs[-1].advance("failed", error=str(e)[:200])
+            events.emit("JOB_FAILED", job=job.id if job else None, pillar=pillar, slot=slot, error=str(e)[:300],
+                        trace=traceback.format_exc()[-1500:])
+            # only this slot's job fails; a topic error before it exists must not touch the previous slot's video.
+            # A packaged video whose upload failed stays packaged (its local pack is ready; `publish` retries it).
+            if job:
+                job.notes.append(str(e)[:300])
+                if job.status not in (*SHIPPABLE, "failed", "held"):
+                    job.advance("failed", error=str(e)[:200])
+                else:
+                    job.save()
     write_daily_report([j for j in all_jobs() if j.day == today.isoformat()])
     return jobs
 

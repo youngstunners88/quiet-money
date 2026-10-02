@@ -93,6 +93,8 @@ def ask(questions: dict[str, Q], state: dict, job: str | None = None) -> dict[st
             answers = {}
         ms = int((time.time() - t0) * 1000)
         for n, (val, conf) in answers.items():
+            if n not in decisions:      # the host validates: an answer to a question we never asked is ignored
+                continue
             d, q = decisions[n], questions[n]
             d.jev_value, d.jev_confidence = val, conf
             valid = q.kind != "choice" or val in (q.options or {})

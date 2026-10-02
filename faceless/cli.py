@@ -110,6 +110,8 @@ def cmd_gauntlet(args) -> int:
     gates += gauntlet.check_voice(vo) + gauntlet.check_visuals(imgs, len(scr["beats"]))
     gates += gauntlet.check_render(info, vo) + gauntlet.check_package(package.run(job, scr))
     rep = gauntlet.report(job, gates)
+    job.scores = {**job.scores, "gauntlet": rep["score"], "passed": rep["passed"]}   # the latest verdict wins
+    job.save()
     print((Paths.reports / f"{job.id}.md").read_text(encoding="utf-8"))
     return 0 if rep["passed"] else 2
 
@@ -118,11 +120,17 @@ def cmd_publish(args) -> int:
     from faceless.providers import publish
     from faceless.state import load_job
     job = load_job(args.job)
+    if not job.scores.get("passed") and not args.force:
+        # Rule 6: held or failing videos ship only after their gates pass (`faceless gauntlet <job>` re-checks)
+        print(f"{job.id} has not passed the gauntlet (status {job.status}, score {job.scores.get('gauntlet', '-')}). "
+              f"Fix it and re-run `python -m faceless gauntlet {job.id}`, or pass --force after a human review.",
+              file=sys.stderr)
+        return 2
     meta = json.loads((job.dir / "meta.json").read_text(encoding="utf-8"))
     res = publish.publish(job, meta)
     job.artifacts["publish"] = res
     if job.status != "published":
-        job.advance("published", manual=True)
+        job.advance("published", manual=True, forced=bool(args.force and not job.scores.get("passed")))
     print(json.dumps(res, indent=2, default=str))
     return 0
 
@@ -206,6 +214,7 @@ def main(argv: list[str] | None = None) -> int:
     g.set_defaults(fn=cmd_gauntlet)
     pb = sub.add_parser("publish", help="(re)publish a packaged job")
     pb.add_argument("job")
+    pb.add_argument("--force", action="store_true", help="publish even though the gauntlet did not pass (human-reviewed)")
     pb.set_defaults(fn=cmd_publish)
     cp = sub.add_parser("composio", help="connected apps via Composio: status | connect <toolkit> | call <TOOL_SLUG>")
     cp.add_argument("action", choices=["status", "connect", "call"])
