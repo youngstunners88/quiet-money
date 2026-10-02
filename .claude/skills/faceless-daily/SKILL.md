@@ -12,11 +12,14 @@ Produces the day's videos end to end with the repo root and leaves posting packs
 1. `python -m faceless doctor`. Fix any `ERR` line before continuing
    (`pip install -r requirements.txt`; ffmpeg via apt). Missing optional keys are fine.
 2. Run the batch: `python -m faceless daily` (5 videos; `--count N` to change, `--no-publish` to only package).
-   Expect ~3 minutes per video. Run it in the background for full batches.
+   Expect ~3-5 minutes per video. Run it in the background for full batches. It resumes: re-running only
+   fills today's slots that have no finished video (held/failed slots get a fresh topic).
+   `--extra N` makes N more now; they bank into the next free posting slots (tomorrow's first), and the
+   next daily run skips slots that are already banked.
 3. Read `gauntlet/reports/daily-<day>.md`. For every row that is not `published`:
    - `held`: open `gauntlet/reports/<job_id>.md`, read the failing gates, then use the `faceless-gauntlet` skill.
    - `failed`: `grep JOB_FAILED state/journal.jsonl | tail -3` shows the trace; fix the root cause, then
-     re-run that pillar: `python -m faceless make --pillar <pillar> --slot <slot>`.
+     re-run `python -m faceless daily` (it refills only the open slots).
 4. Spot-check at least one video visually: extract frames at 0.5 s, 3 s, mid, and end
    (`ffmpeg -ss <t> -i final.mp4 -frames:v 1 frame.jpg`) and look at them: hook box readable, captions not
    clipped, images match the narration, no text artifacts in images.
@@ -26,6 +29,15 @@ Produces the day's videos end to end with the repo root and leaves posting packs
 - Posting packs: `distribution/queue/<day>/slot<N>-<pillar>/` (video.mp4, POST.md, cover.jpg).
 - Chat upload limit is 30 MB: re-encode a copy with
   `ffmpeg -i video.mp4 -c:v libx264 -crf 22 -maxrate 6M -bufsize 12M -c:a copy out.mp4` if needed.
+
+## Scheduled routine run (the default runner)
+The batch runs daily as a Claude Code routine in the owner's cloud environment, which already holds the API
+keys as environment variables, so no key is stored on GitHub. `.claude/hooks/session-start.sh` installs the
+Python dependencies when the session starts. In a routine session:
+1. Steps 1-4 above.
+2. Commit `state/`, `script-lab/`, `gauntlet/reports/` and `analytics/` (never media) and push to `main`;
+   the push rebuilds the website.
+3. Send the finished `video.mp4` files to the owner (re-encode any copy over 30 MB), then report as in step 5.
 
 ## Never
 - Never publish a `held` video without fixing its hard gates.

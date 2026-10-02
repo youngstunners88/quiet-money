@@ -41,7 +41,7 @@ humans set strategy, connect accounts, and review held videos.
 
 ```bash
 python -m faceless doctor                      # tools, fonts, keys
-python -m faceless daily                       # the day's 5 videos, gated + packaged
+python -m faceless daily                       # the day's 5 videos, gated + packaged (resumes; --extra N banks more)
 python -m faceless make --pillar story         # one video, topic from the backlog
 python -m faceless make --pillar math --script path.json   # one video from a hand-written script
 python -m faceless gauntlet <job_id>           # re-run every gate on a finished job

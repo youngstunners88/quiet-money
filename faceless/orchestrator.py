@@ -13,13 +13,13 @@ from __future__ import annotations
 
 import json
 import traceback
-from datetime import datetime, timezone
+from datetime import date, datetime, timedelta, timezone
 
 from faceless import analytics, config, decide, events, gauntlet
 from faceless.config import Paths
 from faceless.pipeline import ideate, package, render, script as script_stage, visuals, voice as voice_stage
 from faceless.providers import publish as publisher
-from faceless.state import Job, new_job
+from faceless.state import Job, all_jobs, new_job
 
 
 def _load(job: Job, name: str):
@@ -134,16 +134,38 @@ def run_one(pillar: str, topic: str | None = None, slot: int = 0, **kw) -> Job:
     return job
 
 
-def daily(count: int | None = None, **kw) -> list[Job]:
+SHIPPABLE = ("packaged", "published")   # held and failed jobs leave their slot open for a retry
+
+
+def open_slots(count: int, extra: int = 0) -> list[tuple[str, int]]:
+    """(post date, slot of day) pairs to fill. Default: today's slots that have no shippable video yet
+    (so a re-run resumes instead of duplicating). extra=N: the next N free slots from today on."""
+    taken = {publisher.nominal_slot(j.day, j.slot) for j in all_jobs() if j.status in SHIPPABLE}
+    day, out = datetime.now(timezone.utc).date(), []
+    for _ in range(366 if extra else 1):
+        out += [(day.isoformat(), k) for k in range(count) if (day.isoformat(), k) not in taken]
+        if extra and len(out) >= extra:
+            return out[:extra]
+        day += timedelta(days=1)
+    return out
+
+
+def daily(count: int | None = None, extra: int = 0, **kw) -> list[Job]:
     Paths.ensure()
     cfg = config.load()
-    count = count or cfg["production"]["videos_per_day"]
-    day_index = datetime.now(timezone.utc).toordinal()
+    per_day = len(cfg["publish"]["slots"])
+    count = min(count or cfg["production"]["videos_per_day"], per_day)
+    today = datetime.now(timezone.utc).date()
     weights = analytics.pillar_weights()
-    plan = analytics.allocate(count, weights, day_index)
-    events.emit("DAILY_PLAN", plan=plan, weights={k: round(v, 3) for k, v in weights.items()})
-    jobs, reserved = [], []
-    for slot, pillar in enumerate(plan):
+    plans: dict[str, list[str]] = {}
+    slots = open_slots(count, extra)
+    events.emit("DAILY_PLAN", slots=[f"{d}#{k + 1}" for d, k in slots], extra=extra,
+                weights={k: round(v, 3) for k, v in weights.items()})
+    jobs, reserved = [], [j.topic for j in all_jobs() if j.day == today.isoformat()]
+    for post_day, k in slots:
+        plan = plans.setdefault(post_day, analytics.allocate(per_day, weights, date.fromisoformat(post_day).toordinal()))
+        pillar = plan[k]
+        slot = (date.fromisoformat(post_day) - today).days * per_day + k
         try:
             item = ideate.next_topic(pillar, reserved)
             reserved.append(item["topic"])
@@ -155,7 +177,7 @@ def daily(count: int | None = None, **kw) -> list[Job]:
             if jobs and jobs[-1].status not in ("failed", "published", "held"):
                 jobs[-1].notes.append(str(e)[:300])
                 jobs[-1].advance("failed", error=str(e)[:200])
-    write_daily_report(jobs)
+    write_daily_report([j for j in all_jobs() if j.day == today.isoformat()])
     return jobs
 
 

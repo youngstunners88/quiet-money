@@ -64,7 +64,7 @@ def cmd_make(args) -> int:
 
 def cmd_daily(args) -> int:
     from faceless import orchestrator
-    jobs = orchestrator.daily(args.count, judge=not args.no_judge, do_publish=not args.no_publish)
+    jobs = orchestrator.daily(args.count, extra=args.extra, judge=not args.no_judge, do_publish=not args.no_publish)
     for j in jobs:
         print(f"{j.slot + 1}. [{j.status:9}] {j.scores.get('gauntlet', '-'):>3}  {j.pillar:10} {j.artifacts.get('title', j.topic)}")
     print(json.dumps(ledger.summary(), indent=1))
@@ -173,6 +173,7 @@ def cmd_brand(_args) -> int:
 
 
 def main(argv: list[str] | None = None) -> int:
+    config.load_dotenv()
     p = argparse.ArgumentParser(prog="faceless", description="Faceless Studio engine")
     sub = p.add_subparsers(dest="cmd", required=True)
     sub.add_parser("doctor", help="check tools, fonts, keys").set_defaults(fn=cmd_doctor)
@@ -185,8 +186,9 @@ def main(argv: list[str] | None = None) -> int:
     m.add_argument("--no-judge", action="store_true")
     m.add_argument("--no-publish", action="store_true")
     m.set_defaults(fn=cmd_make)
-    d = sub.add_parser("daily", help="produce the day's batch")
+    d = sub.add_parser("daily", help="produce the day's batch (resumes: only fills slots without a finished video)")
     d.add_argument("--count", type=int)
+    d.add_argument("--extra", type=int, default=0, help="make N more now; they bank into the next free posting slots")
     d.add_argument("--no-judge", action="store_true")
     d.add_argument("--no-publish", action="store_true")
     d.set_defaults(fn=cmd_daily)

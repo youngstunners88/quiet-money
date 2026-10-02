@@ -1,10 +1,10 @@
 name: Daily batch
 
-# Produces the day's videos, runs the gauntlet, schedules posts (when publishing secrets exist),
-# uploads the posting packs as a downloadable artifact, and commits state + reports back.
+# OPTIONAL runner. The daily batch normally runs as a scheduled Claude Code routine that uses the keys
+# already stored in the Claude Code environment, so no API keys live on GitHub (see README "Where the
+# keys live"). This workflow is manual-only; it needs the keys as Actions secrets if you ever use it.
+# To make it the scheduler instead, add back:  schedule: [{cron: "17 9 * * *"}]
 on:
-  schedule:
-    - cron: "17 9 * * *"        # 09:17 UTC = 05:17 New York, before the first 07:30 slot
   workflow_dispatch:
     inputs:
       count:

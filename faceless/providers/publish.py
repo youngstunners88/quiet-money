@@ -10,7 +10,7 @@ from __future__ import annotations
 
 import json
 import shutil
-from datetime import datetime, timedelta
+from datetime import date, datetime, timedelta
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
@@ -19,11 +19,19 @@ from faceless.config import Paths
 from faceless.providers import ProviderError, ProviderUnavailable, http
 
 
+def nominal_slot(day: str, slot: int) -> tuple[str, int]:
+    """(post date, slot of that day) a job was planned for. Slots past the day's count roll into later
+    days, so videos made ahead (`daily --extra`) bank into tomorrow's schedule instead of colliding."""
+    per_day = len(config.load()["publish"]["slots"])
+    return (date.fromisoformat(day) + timedelta(days=slot // per_day)).isoformat(), slot % per_day
+
+
 def slot_time(day: str, slot: int) -> datetime:
     cfg = config.load()["publish"]
     tz = ZoneInfo(cfg["timezone"])
-    hh, mm = map(int, cfg["slots"][slot % len(cfg["slots"])].split(":"))
-    when = datetime.fromisoformat(day).replace(hour=hh, minute=mm, tzinfo=tz)
+    post_day, k = nominal_slot(day, slot)
+    hh, mm = map(int, cfg["slots"][k].split(":"))
+    when = datetime.fromisoformat(post_day).replace(hour=hh, minute=mm, tzinfo=tz)
     now = datetime.now(tz)
     while when <= now + timedelta(minutes=20):  # never schedule into the past
         when += timedelta(days=1)
@@ -32,14 +40,15 @@ def slot_time(day: str, slot: int) -> datetime:
 
 def local_pack(job, meta: dict) -> dict:
     when = slot_time(job.day, job.slot)
-    folder = Paths.queue / job.day / f"slot{job.slot + 1}-{job.pillar}"
+    post_day, k = nominal_slot(job.day, job.slot)
+    folder = Paths.queue / post_day / f"slot{k + 1}-{job.pillar}"
     folder.mkdir(parents=True, exist_ok=True)
     video = Path(job.artifacts["video"])
     shutil.copy2(video, folder / "video.mp4")
     if job.artifacts.get("cover"):
         shutil.copy2(job.artifacts["cover"], folder / "cover.jpg")
     post = [
-        f"# Slot {job.slot + 1}: {meta['title']}",
+        f"# Slot {k + 1}: {meta['title']}",
         f"Post at: {when.strftime('%Y-%m-%d %H:%M %Z')}",
         "",
         "## YouTube Shorts",

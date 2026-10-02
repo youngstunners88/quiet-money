@@ -283,3 +283,45 @@ def test_aeo_name_parsing_and_self_match():
     assert aeo._names('["Graham Stephan", "Quiet Money", "The Financial Diet"]')[1] == "Quiet Money"
     assert aeo._names("1. Ali Abdaal\n2. QuietMoneyRules") == ["Ali Abdaal", "QuietMoneyRules"]
     assert aeo._is_us("QuietMoneyRules") and not aeo._is_us("Money Guy Show")
+
+
+# ---- scheduling: resume + bank-ahead ----------------------------------------------------------
+
+def test_extra_slots_roll_into_later_days():
+    from faceless.providers.publish import nominal_slot
+    assert nominal_slot("2026-10-02", 0) == ("2026-10-02", 0)
+    assert nominal_slot("2026-10-02", 6) == ("2026-10-03", 1)
+    assert nominal_slot("2026-10-02", 12) == ("2026-10-04", 2)
+
+
+def test_open_slots_resume_and_bank_ahead(monkeypatch):
+    from datetime import datetime, timedelta, timezone
+
+    from faceless import orchestrator
+    today = datetime.now(timezone.utc).date()
+    done = [Job(id=f"j{s}", pillar="math", topic="t", day=today.isoformat(), slot=s, status=st)
+            for s, st in [(0, "published"), (1, "packaged"), (2, "held"), (5, "published")]]
+    monkeypatch.setattr(orchestrator, "all_jobs", lambda: done)
+    d0, d1 = today.isoformat(), (today + timedelta(days=1)).isoformat()
+    assert orchestrator.open_slots(5) == [(d0, 2), (d0, 3), (d0, 4)]        # held slot is retried
+    assert orchestrator.open_slots(5, extra=5) == [(d0, 2), (d0, 3), (d0, 4), (d1, 1), (d1, 2)]
+
+
+def test_dotenv_loads_without_overriding(tmp_path, monkeypatch):
+    f = tmp_path / ".env"
+    f.write_text('# comment\nQM_TEST_A="from-file"\nexport QM_TEST_B=b\nQM_TEST_EMPTY=\n')
+    monkeypatch.setenv("QM_TEST_B", "from-env")
+    monkeypatch.delenv("QM_TEST_A", raising=False)
+    assert config.load_dotenv(f) == 1
+    import os
+    assert os.environ["QM_TEST_A"] == "from-file" and os.environ["QM_TEST_B"] == "from-env"
+    monkeypatch.delenv("QM_TEST_A")
+
+
+def test_paid_image_fallback_is_capped(tmp_path, monkeypatch):
+    from faceless import ledger
+    from faceless.providers import ProviderUnavailable, images
+    monkeypatch.setenv("OPENROUTER_API_KEY", "test")
+    monkeypatch.setattr(ledger, "used", lambda provider, unit, day=None: 60 if provider == "openrouter" else 0)
+    with pytest.raises(ProviderUnavailable):
+        images.openrouter("a quiet kitchen table", 864, 1536, 1, tmp_path / "x.jpg")

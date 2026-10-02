@@ -45,6 +45,7 @@ cloudflare_model = "@cf/black-forest-labs/flux-2-klein-4b"
 cloudflare_hero_model = "@cf/black-forest-labs/flux-2-klein-4b"   # 9b is sharper but costs ~9x the neurons
 cloudflare_daily_neurons = 9500              # free tier is 10,000 neurons/day; keep a margin
 openrouter_model = "google/gemini-3.1-flash-lite-image"
+openrouter_daily_images = 60                 # paid fallback cap: ~$0.04 each, so at most ~$2.40/day
 width = 864                                  # 2x3 Cloudflare tiles: same 156 neurons as 768x1344, exact 9:16
 height = 1536
 concurrency = 4

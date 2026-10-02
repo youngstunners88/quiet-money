@@ -80,7 +80,10 @@ def openrouter(prompt: str, w: int, h: int, seed: int, out, hero: bool = False) 
     key = config.env("OPENROUTER_API_KEY")
     if not key:
         raise ProviderUnavailable("OPENROUTER_API_KEY not set")
-    model = config.load()["images"]["openrouter_model"]
+    cfg = config.load()["images"]
+    if not ledger.allow("openrouter", "images", 1, cfg.get("openrouter_daily_images", 60)):
+        raise ProviderUnavailable("daily paid image cap reached")
+    model = cfg["openrouter_model"]
     body = {"model": model, "modalities": ["image", "text"],
             "messages": [{"role": "user", "content": f"Generate one vertical 9:16 image. {prompt}"}],
             "image_config": {"aspect_ratio": "9:16"}}

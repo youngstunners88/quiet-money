@@ -63,6 +63,25 @@ def pillar(pillar_id: str) -> Pillar:
     raise KeyError(f"unknown pillar {pillar_id!r}")
 
 
+def load_dotenv(path: Path | None = None) -> int:
+    """Read KEY=VALUE lines from the studio's .env (gitignored) for runs on your own machine, so keys stay
+    on that machine. Real environment variables win. Returns how many keys were loaded."""
+    path = path or STUDIO / ".env"
+    if not path.exists():
+        return 0
+    n = 0
+    for line in path.read_text(encoding="utf-8").splitlines():
+        line = line.strip()
+        if not line or line.startswith("#") or "=" not in line:
+            continue
+        k, v = line.removeprefix("export ").split("=", 1)
+        k, v = k.strip(), v.strip().strip('"').strip("'")
+        if k and v and not os.environ.get(k):
+            os.environ[k] = v
+            n += 1
+    return n
+
+
 def env(*names: str) -> str | None:
     """First non-empty environment variable among names (keys are named inconsistently across tools)."""
     for n in names:
