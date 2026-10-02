@@ -4,6 +4,8 @@ Every routing / scoring / approval question goes through `ask()` with a code-com
 fallback. Backends:
   heuristic  - the fallback itself (always available, free, deterministic)
   jev        - TypeSafe's System One model (needs TYPESAFE_API_KEY + `pip install typesafe-sdk`)
+  laya       - open-source (Apache 2.0) Jev-compatible engine you host yourself (needs LAYA_URL, optional
+               LAYA_API_KEY); same choice/score/noul questions over POST /v1/systemone
 
 Rules borrowed from keel: the host validates every choice; an invalid, low-confidence,
 or failed answer falls back to the ordinary (heuristic) route. In dry_run the Jev answer
@@ -47,8 +49,43 @@ def _backend() -> str:
     cfg = config.load()["decide"]
     b = cfg.get("backend", "auto")
     if b == "auto":
+        if config.env("LAYA_URL"):
+            return "laya"
         return "jev" if config.env("TYPESAFE_API_KEY") else "heuristic"
     return b
+
+
+def _ask_laya(questions: dict[str, Q], state: dict) -> dict:
+    """Same questions over HTTP to a self-hosted Laya server. Returns {name: (value, confidence)}."""
+    import random
+
+    from faceless.providers import http
+    url = config.env("LAYA_URL").rstrip("/") + "/v1/systemone"
+    qs, shuffled = {}, {}
+    for name, q in questions.items():
+        if q.kind == "choice":
+            keys = list(q.options)
+            random.Random(name).shuffle(keys)    # Laya shows position bias: don't always put our favourite first
+            qs[name] = {"type": "choice", "instructions": q.instructions, "criteria": {k: q.options[k] for k in keys}}
+        elif q.kind == "score":
+            qs[name] = {"type": "score", "instructions": q.instructions, "criteria": q.levels}
+        else:
+            qs[name] = {"type": "noul", "instructions": q.instructions}
+    headers = {"Authorization": f"Bearer {config.env('LAYA_API_KEY')}"} if config.env("LAYA_API_KEY") else {}
+    r = http().post(url, json={"state": state, "questions": qs}, headers=headers, timeout=30)
+    if r.status_code != 200:
+        raise RuntimeError(f"laya {r.status_code}")
+    body = r.json()
+    out = {}
+    for name, a in body.get("answers", {}).items():
+        if "choice" in a:
+            out[name] = (a["choice"], a.get("answer_confidence", a.get("confidence", 0.0)))
+        elif "score" in a:
+            out[name] = (a["score"], a.get("answer_confidence", a.get("confidence", 0.0)))
+        elif "noul" in a:
+            out[name] = (a["noul"], abs(a["noul"] - 0.5) * 2)
+    events.emit("LAYA_CALL", questions=list(questions), input_tokens=(body.get("usage") or {}).get("input_tokens"))
+    return out
 
 
 def _ask_jev(questions: dict[str, Q], state: dict) -> dict:
@@ -84,12 +121,12 @@ def ask(questions: dict[str, Q], state: dict, job: str | None = None) -> dict[st
     backend = _backend()
     floor = cfg.get("confidence_floor", 0.85)
     decisions = {n: Decision(n, q.fallback, 1.0, "heuristic") for n, q in questions.items()}
-    if backend == "jev":
+    if backend in ("jev", "laya"):
         t0 = time.time()
         try:
-            answers = _ask_jev(questions, state)
+            answers = (_ask_laya if backend == "laya" else _ask_jev)(questions, state)
         except Exception as e:  # noqa: BLE001 - on any Jev error keep the ordinary route
-            events.emit("JEV_ERROR", job=job, error=str(e)[:300])
+            events.emit("JEV_ERROR", job=job, backend=backend, error=str(e)[:300])
             answers = {}
         ms = int((time.time() - t0) * 1000)
         for n, (val, conf) in answers.items():

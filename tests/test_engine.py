@@ -598,3 +598,26 @@ def test_keyword_demand_counts_related_phrases_and_survives_outages(monkeypatch)
     assert d["score"] == 2 and "unrelated thing" not in d["phrases"]
     monkeypatch.setattr(keywords, "suggest", lambda seed: ())
     assert keywords.demand("Quit Your Job Forever")["score"] == 0
+
+
+def test_laya_backend_answers_are_validated_and_dry_run_by_default(tmp_path, monkeypatch):
+    from faceless import decide, events
+    monkeypatch.setattr(decide, "RECORDS", tmp_path / "d.jsonl")
+    monkeypatch.setattr(events, "JOURNAL", tmp_path / "j.jsonl")
+    monkeypatch.setenv("LAYA_URL", "http://laya.test:8000/")
+    monkeypatch.delenv("TYPESAFE_API_KEY", raising=False)
+
+    class Resp:
+        status_code = 200
+        def json(self):
+            return {"answers": {"next_step": {"choice": "publish", "answer_confidence": 0.97},
+                                "rogue": {"choice": "x", "answer_confidence": 0.99}}, "usage": {"input_tokens": 12}}
+
+    class Http:
+        def post(self, url, **kw):
+            assert url == "http://laya.test:8000/v1/systemone" and kw["json"]["questions"]["next_step"]["type"] == "choice"
+            return Resp()
+    monkeypatch.setattr("faceless.providers.http", lambda: Http())
+    q = {"next_step": decide.Q("choice", "ship?", fallback="hold", options={"publish": "ok", "hold": "no"})}
+    d = decide.ask(q, {"score": 90})["next_step"]
+    assert decide._backend() == "laya" and d.jev_value == "publish" and d.value == "hold"   # dry-run: logged, not acted on
