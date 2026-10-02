@@ -52,7 +52,7 @@ def cloudflare(prompt: str, w: int, h: int, seed: int, out, hero: bool = False) 
     cfg = config.load()["images"]
     model = cfg["cloudflare_hero_model"] if hero else cfg["cloudflare_model"]
     cost = neurons(model, w, h)
-    if not ledger.allow("cloudflare", "neurons", cost, cfg["cloudflare_daily_neurons"]):
+    if ledger.used("cloudflare", "blocked") or not ledger.allow("cloudflare", "neurons", cost, cfg["cloudflare_daily_neurons"]):
         if hero:  # fall back to the cheap model before leaving Cloudflare
             return cloudflare(prompt, w, h, seed, out, hero=False)
         raise ProviderUnavailable("daily free neuron budget used")
@@ -67,8 +67,8 @@ def cloudflare(prompt: str, w: int, h: int, seed: int, out, hero: bool = False) 
             ledger.spend("cloudflare", "neurons", cost)
             continue
         if r.status_code == 429 and "daily free allocation" in r.text:
-            # Cloudflare's meter is the truth: mark today's budget spent so later images skip straight on
-            ledger.spend("cloudflare", "neurons", max(0.0, cfg["cloudflare_daily_neurons"] - ledger.used("cloudflare", "neurons")))
+            # Cloudflare's meter is the truth: block it for the rest of the day so later images skip straight on
+            ledger.spend("cloudflare", "blocked", 1)
             raise ProviderUnavailable("cloudflare daily free allocation used")
         raise ProviderError(f"cloudflare {r.status_code}: {r.text[:200]}")
     ctype = r.headers.get("content-type", "")
@@ -89,7 +89,7 @@ def openrouter(prompt: str, w: int, h: int, seed: int, out, hero: bool = False) 
     if not key:
         raise ProviderUnavailable("OPENROUTER_API_KEY not set")
     cfg = config.load()["images"]
-    if not ledger.allow("openrouter", "images", 1, cfg.get("openrouter_daily_images", 60)):
+    if ledger.used("openrouter", "blocked") or not ledger.allow("openrouter", "images", 1, cfg.get("openrouter_daily_images", 60)):
         raise ProviderUnavailable("daily paid image cap reached")
     model = cfg["openrouter_model"]
     body = {"model": model, "modalities": ["image", "text"],
@@ -97,6 +97,9 @@ def openrouter(prompt: str, w: int, h: int, seed: int, out, hero: bool = False) 
             "image_config": {"aspect_ratio": "9:16"}}
     r = http().post("https://openrouter.ai/api/v1/chat/completions", json=body, timeout=240,
                     headers={"Authorization": f"Bearer {key}"})
+    if r.status_code == 402:   # out of credit: skip this provider for the rest of the day
+        ledger.spend("openrouter", "blocked", 1)
+        raise ProviderUnavailable("openrouter credit exhausted")
     if r.status_code != 200:
         raise ProviderError(f"openrouter-image {r.status_code}: {r.text[:200]}")
     msg = r.json()["choices"][0]["message"]

@@ -360,3 +360,13 @@ def test_measured_duration_overrides_hard_word_count():
     gates = [Gate("word_count", False, 8, True), Gate("duration", True, 10, True)]
     assert not reconcile(gates)[0].hard
     assert reconcile([Gate("word_count", False, 8, True), Gate("duration", False, 10, True)])[0].hard
+
+
+def test_blocked_provider_is_skipped_for_the_day(tmp_path, monkeypatch):
+    from faceless import ledger
+    from faceless.providers import ProviderUnavailable, images
+    monkeypatch.setenv("CLOUDFLARE_API_KEY", "t")
+    monkeypatch.setenv("CLOUDFLARE_ACCOUNT_ID", "a")
+    monkeypatch.setattr(ledger, "used", lambda provider, unit, day=None: 1 if unit == "blocked" else 0)
+    with pytest.raises(ProviderUnavailable):
+        images.cloudflare("a desk", 864, 1536, 1, tmp_path / "x.jpg")
