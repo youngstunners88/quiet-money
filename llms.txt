@@ -1,0 +1,32 @@
+# Quiet Money
+
+> The money rules nobody taught you. Short videos on money psychology and personal finance, each written out with its math and sources.
+
+Educational content, not financial advice. Every number is computed; every story is sourced.
+
+## Pages
+- [Money Rules Library](https://youngstunners88.github.io/quiet-money/rules/): every video as a written page
+- [Calculators](https://youngstunners88.github.io/quiet-money/tools/): compound growth, credit card payoff, inflation
+- [Free 7-day Money Reset](https://youngstunners88.github.io/quiet-money/money-reset/): printable checklist
+- [About](https://youngstunners88.github.io/quiet-money/about/): what Quiet Money is and how videos are made
+
+## Money rules
+- [Why Earning $300M Wasn't Enough to Save Him](https://youngstunners88.github.io/quiet-money/rules/why-earning-300m-wasn-t-enough-to-save-him/): Mike Tyson's 2003 bankruptcy filing is a classic case study of how a massive income cannot survive without a financial defense system. Wealth isn't what you earn—it is what you keep.
+- [The $180 Stock That Made $7 Million](https://youngstunners88.github.io/quiet-money/rules/the-180-stock-that-made-7-million/): The true story of Grace Groner, a secretary who turned a $180 investment into $7 million through seventy-five years of pure patience.
+- [The 4 Paths to Wealth (And Why Only 2 Set You Free)](https://youngstunners88.github.io/quiet-money/rules/the-4-paths-to-wealth-and-why-only-2-set-you-free/): Learn the four quadrants of money generation and why employees and self-employed professionals remain trapped. This breakdown explains the shift to business systems and investing to secure your exit from the rat race.
+- [The 10,000 Shot Rule For Your First Customers](https://youngstunners88.github.io/quiet-money/rules/the-10-000-shot-rule-for-your-first-customers/): Learn the Rule of 100 framework to get your first customers through sheer volume and execution, plus the honest catch about startup failure rates.
+- [The Exact Math To Quit Your Job Forever](https://youngstunners88.github.io/quiet-money/rules/the-exact-math-to-quit-your-job-forever/): Breaking down the exact math behind the 4% rule and how long it takes to build passive income that replaces a paycheck.
+- [The Circle That Controls Your Net Worth](https://youngstunners88.github.io/quiet-money/rules/the-circle-that-controls-your-net-worth/): Your income and habits mirror the five people you talk to most. Audit your circle this week to break your financial ceiling.
+- [The Secretary Who Quietly Built an $8.2M Fortune](https://youngstunners88.github.io/quiet-money/rules/the-secretary-who-quietly-built-an-8-2m-fortune/): Sylvia Bloom worked as a legal secretary for nearly seven decades and quietly amassed $8.2 million through steady, long-term investing in blue-chip stocks.
+- [The exact number that buys your freedom](https://youngstunners88.github.io/quiet-money/rules/the-exact-number-that-buys-your-freedom/): Learn the exact math behind the 4% rule and passive income. See how much capital you need to replace your paycheck and escape the rat race.
+- [Why Your House Isn't Actually an Asset](https://youngstunners88.github.io/quiet-money/rules/why-your-house-isn-t-actually-an-asset/): Robert Kiyosaki's rule flips conventional wisdom on your home. Learn why your house is a liability and how to focus on actual cash-flowing assets.
+- [The Side Income Math That Replaces Your Paycheck](https://youngstunners88.github.io/quiet-money/rules/the-side-income-math-that-replaces-your-paycheck/): Learn how an extra $1,000 a month from a side business, when invested consistently for 10 years, builds the foundation to eventually replace your primary paycheck.
+- [The 48-Hour Rule That Stops Impulse Buys](https://youngstunners88.github.io/quiet-money/rules/the-48-hour-rule-that-stops-impulse-buys/): Learn the simple 3-step wishlist trick that pauses emotional spending and keeps your hard-earned cash in your account.
+- [Why 'Was $200, Now $99' Makes You Spend More](https://youngstunners88.github.io/quiet-money/rules/why-was-200-now-99-makes-you-spend-more/): Discover how the anchoring bias manipulates your spending habits through fake discounts and high initial price tags. Learn the simple counter-move to protect your wallet.
+- [Why your brain treats tax refunds like free money](https://youngstunners88.github.io/quiet-money/rules/why-your-brain-treats-tax-refunds-like-free-money/): Mental accounting makes us waste tax refunds and bonuses on things we'd never buy with regular salary. Learn how to treat every dollar the same and build long-term wealth.
+- [The 10-Year Delay That Costs $400,130](https://youngstunners88.github.io/quiet-money/rules/the-10-year-delay-that-costs-400-130/): This video breaks down the exact cost of waiting ten years to start investing. By comparing a 25-year-old and a 35-year-old both saving $200 a month at an 8% return, we show how a simple delay costs over $400,000 in compound interest.
+- [The 10-Minute Money Setup You Need Today](https://youngstunners88.github.io/quiet-money/rules/the-10-minute-money-setup-you-need-today/): Learn the pay-yourself-first method and how automating your savings today builds massive long-term wealth without extra willpower.
+- [Why Renting Isn't Throwing Money Away](https://youngstunners88.github.io/quiet-money/rules/why-renting-isn-t-throwing-money-away/): Deconstructing the myth that renting is always throwing money away by comparing ownership costs with market compounding.
+- [Why a raise never makes you feel richer](https://youngstunners88.github.io/quiet-money/rules/why-a-raise-never-makes-you-feel-richer/): Lifestyle creep is the silent wealth killer that swallows every raise you get. Learn how to break the cycle and keep your hard-earned money working for you.
+- [The $6,000 credit card mistake that takes 21 years](https://youngstunners88.github.io/quiet-money/rules/the-6-000-credit-card-mistake-that-takes-21-years/): Discover the hidden math behind paying only the minimum on a $6,000 credit card balance at 24% APR and how changing your monthly payment alters the timeline.
+- [The Janitor Who Secretly Died With $8 Million](https://youngstunners88.github.io/quiet-money/rules/the-janitor-who-secretly-died-with-8-million/): Ronald Read worked as a gas station attendant and a janitor, lived frugally, and quietly built an almost $8 million fortune with boring dividend stocks he held for decades. The lesson: time beats salary.
