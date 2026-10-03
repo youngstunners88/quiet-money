@@ -39,7 +39,7 @@ def gemini(prompt: str, *, system: str | None, want_json: bool, temperature: flo
     cfg = config.load()["llm"]
     body: dict = {
         "contents": [{"role": "user", "parts": [{"text": prompt}]}],
-        "generationConfig": {"temperature": temperature},
+        "generationConfig": {"temperature": temperature, "maxOutputTokens": 8192},
     }
     if system:
         body["systemInstruction"] = {"parts": [{"text": system}]}
@@ -66,6 +66,13 @@ def gemini(prompt: str, *, system: str | None, want_json: bool, temperature: flo
             continue
         usage = d.get("usageMetadata", {})
         ledger.spend("gemini", "tokens", usage.get("totalTokenCount", 0))
+        finish = d["candidates"][0].get("finishReason", "")
+        if want_json:   # a cut-off or malformed answer from one model must not end the chain: try the next model
+            try:
+                _extract_json(text)
+            except ProviderError:
+                errs.append(f"{model}:bad-json({finish or '?'})")
+                continue
         return text
     raise ProviderError("gemini: " + ",".join(errs))
 

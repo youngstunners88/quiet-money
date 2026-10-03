@@ -677,3 +677,26 @@ def test_scout_topup_skips_stale_and_unsearched_topics(monkeypatch):
     monkeypatch.setattr(scout.keywords, "demand", lambda t: {"score": 0 if "Zxqv" in t else 5, "phrases": []})
     got = scout.topup("playbook", n=5)
     assert [g["topic"] for g in got] == ["Cancel one subscription tonight"] and saved == got and got[0]["source"] == "scout"
+
+
+def test_gemini_tries_next_model_when_json_is_cut_off(monkeypatch):
+    from faceless.providers import llm
+    replies = iter(['{"title": "cut off", "beats": [', '{"title": "ok"}'])
+
+    class R:
+        status_code = 200
+
+        def __init__(self, text):
+            self.text = text
+
+        def json(self):
+            return {"candidates": [{"content": {"parts": [{"text": self.text}]}, "finishReason": "MAX_TOKENS"}]}
+
+    class FakeSession:
+        def post(self, url, **kw):
+            return R(next(replies))
+
+    monkeypatch.setenv("GEMINI_API_KEY", "k")
+    monkeypatch.setattr(llm, "http", lambda: FakeSession())
+    monkeypatch.setattr(llm.ledger, "spend", lambda *a, **k: None)
+    assert llm.gemini("p", system=None, want_json=True, temperature=0.5) == '{"title": "ok"}'
