@@ -1,0 +1,80 @@
+{
+  "id": "2026-10-03-s11-escape-pay-yourself-first-run-through-r",
+  "pillar": "escape",
+  "topic": "Pay yourself first, run through real math",
+  "day": "2026-10-03",
+  "slot": 11,
+  "status": "held",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-03T09:44:23Z",
+      "words": 150
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-03T09:45:02Z",
+      "seconds": 62.568,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-03T09:48:06Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-03T09:49:56Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-03T09:49:56Z",
+      "score": 96
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-03T09:49:56Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-10-03T09:49:56Z",
+      "local": "2026-10-05T11:30:00-04:00"
+    },
+    {
+      "from": "published",
+      "to": "held",
+      "ts": "2026-10-03T09:58:01Z",
+      "reason": "no_placeholder_art"
+    }
+  ],
+  "artifacts": {
+    "angle": "investing before bills, $500/month at 8%",
+    "brief": "kiyosaki",
+    "title": "The Pay Yourself First Math",
+    "video": "/home/user/quiet-money/production/output/2026-10-03/2026-10-03-s11-escape-pay-yourself-first-run-through-r/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-03/2026-10-03-s11-escape-pay-yourself-first-run-through-r/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-10-05/slot2-escape",
+        "post_at": "2026-10-05T11:30:00-04:00"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 96,
+    "passed": false
+  },
+  "cost": {
+    "tts:edge:chars": 877
+  },
+  "notes": [
+    "held for review: no_placeholder_art (image providers exhausted; re-render visuals)"
+  ]
+}

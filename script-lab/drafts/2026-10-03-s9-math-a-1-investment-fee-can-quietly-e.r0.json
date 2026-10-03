@@ -1,0 +1,88 @@
+{
+  "title": "The 1% Fee That Steals $176,000",
+  "hook_text": "YOUR INVESTMENT FEE IS HIDING A FORTUNE",
+  "beats": [
+    {
+      "say": "You think a 1% investment fee is small. It's actually a silent leak.",
+      "callout": "",
+      "visual": "A sleek modern desk with a single brass coin resting on polished dark wood, moody side lighting, macro shot."
+    },
+    {
+      "say": "Let's look at what happens to $100,000 invested over 30 years at 7% a year.",
+      "callout": "$100,000 portfolio",
+      "visual": "A vintage glass hourglass sitting on a minimalist concrete table, soft cinematic daylight from a side window."
+    },
+    {
+      "say": "If your annual fee is 1% your ending balance drops to $574,349.",
+      "callout": "1% fee: $574,349",
+      "visual": "A dark empty conference room with rows of empty leather chairs, dramatic shadows, wide angle lens."
+    },
+    {
+      "say": "Drop that fee to 0.05% and the math changes completely.",
+      "callout": "0.05% fee",
+      "visual": "A close-up of a high-end mechanical watch gear turning slowly, dark moody tones, sharp focus."
+    },
+    {
+      "say": "Your final balance jumps to $750,626.",
+      "callout": "$750,626 ending total",
+      "visual": "A glowing amber desk lamp illuminating an empty notebook on a dark desk, cozy atmospheric lighting."
+    },
+    {
+      "say": "That small 1% difference costs you $176,277 in lost cash.",
+      "callout": "$176,277 lost",
+      "visual": "A spilled cup of dark coffee on a wooden table, macro shot, cinematic depth of field."
+    },
+    {
+      "say": "That's not a service charge. That's a massive wealth tax on your future.",
+      "callout": "A massive wealth tax",
+      "visual": "A lone silhouette of a person walking away down a long concrete hallway, soft backlighting."
+    },
+    {
+      "say": "Most mutual funds hide these exact costs inside your quarterly statements.",
+      "callout": "Hidden costs",
+      "visual": "A thick leather-bound ledger book closed tight on a dark marble surface, dramatic shadows."
+    },
+    {
+      "say": "They collect their cut whether your portfolio gains or loses money.",
+      "callout": "",
+      "visual": "A heavy metal key resting on a dark slate tile, sharp contrast, moody overhead lighting."
+    },
+    {
+      "say": "Check your brokerage account today and look for the expense ratio.",
+      "callout": "",
+      "visual": "A pair of reading glasses resting on top of a blank piece of heavy white paper, soft natural light."
+    },
+    {
+      "say": "Because if you don't watch your fees, someone else is spending your",
+      "callout": "",
+      "visual": "A dark staircase winding upward into soft fog, mysterious cinematic atmosphere, low angle shot."
+    },
+    {
+      "say": "future. Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "A hand placing a single metal token onto a dark wooden table, macro shot, warm glow."
+    }
+  ],
+  "caption": "That 1% fee isn't a service charge. It's a massive wealth tax on your future. Check your expense ratios today. #money #investing #personalfinance #wealth #math",
+  "description": "A 1% investment fee might sound small, but over 30 years it quietly drains hundreds of thousands of dollars from your portfolio. Here is the exact math behind expense ratios.",
+  "hashtags": [
+    "#money",
+    "#investing",
+    "#personalfinance",
+    "#wealth",
+    "#math"
+  ],
+  "first_comment": "What is the expense ratio on your main retirement account right now?",
+  "facts": [
+    {
+      "claim": "$100,000 for 30 years at 7% minus a 1.00% annual fee = $574,349",
+      "basis": "Provided fact sheet"
+    },
+    {
+      "claim": "$100,000 for 30 years at 7% minus a 0.05% annual fee = $750,626",
+      "basis": "Provided fact sheet"
+    }
+  ],
+  "source": "llm",
+  "pillar": "math"
+}

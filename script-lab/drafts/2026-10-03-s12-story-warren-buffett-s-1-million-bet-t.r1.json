@@ -1,0 +1,78 @@
+{
+  "title": "Warren Buffett's $1 Million Wall Street Bet",
+  "hook_text": "HE BET $1 MILLION HEDGE FUNDS WOULD LOSE",
+  "beats": [
+    {
+      "say": "In 2008, Warren Buffett made a $1 million bet against Wall Street's finest minds.",
+      "callout": "",
+      "visual": "Cinematic wide shot of a towering skyscraper district at dusk, slate gray tones, dramatic shadows."
+    },
+    {
+      "say": "He claimed a boring index fund would beat any handpicked portfolio over ten years.",
+      "callout": "$1,000,000 Bet",
+      "visual": "Close-up of a polished mahogany desk with a sealed white envelope resting in dim lighting."
+    },
+    {
+      "say": "Protégé Partners took the challenge, picking five complex hedge funds loaded with genius managers.",
+      "callout": "5 Hedge Funds",
+      "visual": "A sleek silver pen resting on top of a dark leather notebook, moody overhead lighting."
+    },
+    {
+      "say": "They charged massive fees every single year, promising market-beating returns through pure skill.",
+      "callout": "Massive Fees",
+      "visual": "A glass of amber liquid sitting on a dark wooden bar, blurred city lights in the deep background."
+    },
+    {
+      "say": "But here's the part nobody mentions about active investing.",
+      "callout": "The Hidden Trap",
+      "visual": "A pair of hands sliding a dark metal calculator across a textured concrete table."
+    },
+    {
+      "say": "Those high fees quietly drained the funds from the inside out, no matter how well they traded.",
+      "callout": "Draining Wealth",
+      "visual": "Macro shot of dark sand slowly slipping through a tight fist in sharp focus."
+    },
+    {
+      "say": "By 2017, the results were in, and the gap was massive.",
+      "callout": "",
+      "visual": "A vintage brass desk lamp casting a warm circle of light on an empty wooden surface."
+    },
+    {
+      "say": "The index fund returned an astonishing 125 percent over the decade.",
+      "callout": "125% Return",
+      "visual": "A minimalist black coffee mug sitting beside a closed leather journal on a dark desk."
+    },
+    {
+      "say": "The five hedge funds barely scraped together 36 percent after all their fees were paid.",
+      "callout": "Only 36%",
+      "visual": "A stack of plain white index cards under a cool overhead spotlight, casting long shadows."
+    },
+    {
+      "say": "Complexity lost to simplicity, proving that paying for genius usually leaves you poorer, and that's exactly why",
+      "callout": "",
+      "visual": "A sleek modern office hallway fading into deep shadow, shot from a low angle."
+    }
+  ],
+  "caption": "Fees destroy wealth faster than bad luck. Follow for the money rules school never taught you. #money #investing #personalfinance #wealth #warrenbuffett",
+  "description": "Warren Buffett's legendary 10-year bet proved that low-cost index funds consistently beat expensive hedge funds. Simplicity and low fees always win.",
+  "hashtags": [
+    "#money",
+    "#investing",
+    "#personalfinance",
+    "#wealth",
+    "#warrenbuffett"
+  ],
+  "first_comment": "Would you ever trust a hedge fund manager with your life savings?",
+  "facts": [
+    {
+      "claim": "Buffett made a $1 million bet in 2008 that an S&P 500 index fund would beat a basket of hedge funds over 10 years.",
+      "basis": "Documented historical bet between Warren Buffett and Protégé Partners."
+    },
+    {
+      "claim": "The index fund returned roughly 125% while the hedge funds returned about 36% over the 10-year period ending in 2017.",
+      "basis": "Final publicly reported results of the Buffett bet."
+    }
+  ],
+  "source": "llm",
+  "pillar": "story"
+}

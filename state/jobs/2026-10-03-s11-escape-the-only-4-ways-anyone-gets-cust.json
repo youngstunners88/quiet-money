@@ -1,0 +1,25 @@
+{
+  "id": "2026-10-03-s11-escape-the-only-4-ways-anyone-gets-cust",
+  "pillar": "escape",
+  "topic": "The only 4 ways anyone gets customers",
+  "day": "2026-10-03",
+  "slot": 11,
+  "status": "failed",
+  "history": [
+    {
+      "from": "planned",
+      "to": "failed",
+      "ts": "2026-10-03T09:28:45Z",
+      "error": "all llm providers failed: gemini: ProviderError: no JSON in response: '{\\n  \"title\": \"The Only 4 Ways Anyone Gets Customers\",\\n  \"hook_text\": \"THE 4 CUSTOMER PATHS\",\\n  \"word_count\": 182,\\n  \"beats\": "
+    }
+  ],
+  "artifacts": {
+    "angle": "warm outreach, content, cold outreach, ads, in that order",
+    "brief": "hormozi"
+  },
+  "scores": {},
+  "cost": {},
+  "notes": [
+    "all llm providers failed: gemini: ProviderError: no JSON in response: '{\\n  \"title\": \"The Only 4 Ways Anyone Gets Customers\",\\n  \"hook_text\": \"THE 4 CUSTOMER PATHS\",\\n  \"word_count\": 182,\\n  \"beats\": [\\n    {\\n      \"say\": \"dollar you wi' | openrouter: ProviderError: openrouter: google/gemini-3.8-fl"
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "title": "The Rule of 72: How Wealth And Debt Double",
+  "hook_text": "YOUR DEBT IS GROWING FASTER THAN YOUR WEALTH",
+  "beats": [
+    {
+      "say": "Your debt is growing much faster than your wealth, and the math explains why.",
+      "callout": "",
+      "visual": "A dark wooden desk with a single unlit desk lamp casting a sharp shadow."
+    },
+    {
+      "say": "It's called the Rule of 72. It reveals the hidden speed of your money.",
+      "callout": "Rule of 72",
+      "visual": "A close-up of a vintage metallic gear turning slowly in dim moody lighting."
+    },
+    {
+      "say": "Take an 8% investment return. Divide 72 by 8, and you get 9.",
+      "callout": "8% Return",
+      "visual": "Macro shot of silver coins stacked neatly on a dark concrete surface."
+    },
+    {
+      "say": "That means at 8%, your invested money doubles every 9 years.",
+      "callout": "Doubles Every 9 Years",
+      "visual": "A single pendulum swinging smoothly against a dark, out-of-focus background."
+    },
+    {
+      "say": "It sounds steady. But then you look at what happens on the other side.",
+      "callout": "",
+      "visual": "An empty city street at dusk, viewed from a high window with soft blue tones."
+    },
+    {
+      "say": "Look at a 24% credit card APR. Divide 72 by 24, and you get 3.",
+      "callout": "24% APR",
+      "visual": "A dark leather wallet resting on a polished wooden tabletop."
+    },
+    {
+      "say": "At 24%, your debt doubles every 3 years without extra payments.",
+      "callout": "Doubles Every 3 Years",
+      "visual": "A close-up of water droplets falling onto a dark, still pool of water."
+    },
+    {
+      "say": "While your investments take 9 years to double, your balance triples that speed.",
+      "callout": "3x Faster",
+      "visual": "A heavy iron key lying on a dark, weathered timber board."
+    },
+    {
+      "say": "That's why a $6,000 credit card balance can trap you for 21 years.",
+      "callout": "21 Years",
+      "visual": "An old brass hourglass with dark sand running through the center."
+    },
+    {
+      "say": "The system is built so debt moves at sprint speed while wealth walks.",
+      "callout": "",
+      "visual": "A silhouette of a person walking away down a long, dimly lit corridor."
+    },
+    {
+      "say": "Once you see the calculation, you stop playing a losing game.",
+      "callout": "",
+      "visual": "A blank notebook page under a sharp overhead spotlight with deep shadows."
+    },
+    {
+      "say": "That's why you need to follow for the money rules school never taught you",
+      "callout": "",
+      "visual": "A closed heavy wooden door with a soft warm light glowing underneath."
+    }
+  ],
+  "caption": "The math they never taught you about how fast debt outpaces your investments. #RuleOf72 #PersonalFinance #DebtFree #MoneyTips #FinancialLiteracy",
+  "description": "Discover the Rule of 72 and how your investments double every 9 years while high-interest debt doubles every 3 years.",
+  "hashtags": [
+    "#RuleOf72",
+    "#PersonalFinance",
+    "#DebtFree",
+    "#MoneyTips",
+    "#FinancialLiteracy"
+  ],
+  "first_comment": "Did you know your debt was moving this fast?",
+  "facts": [
+    {
+      "claim": "At 8% money doubles every 9 years",
+      "basis": "Rule of 72: 72 divided by 8 equals 9"
+    },
+    {
+      "claim": "At 24% debt doubles every 3 years",
+      "basis": "Rule of 72: 72 divided by 24 equals 3"
+    },
+    {
+      "claim": "$6,000 credit card at 24% APR paying only the minimum takes 252 months (~21 years)",
+      "basis": "Provided money fact sheet"
+    }
+  ],
+  "source": "llm",
+  "pillar": "math"
+}

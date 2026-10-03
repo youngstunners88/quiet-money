@@ -1,0 +1,92 @@
+{
+  "title": "The Pay Yourself First Math",
+  "hook_text": "INVEST BEFORE YOU PAY BILLS",
+  "beats": [
+    {
+      "say": "Most people pay their bills first and invest what's left. That's a trap.",
+      "callout": "",
+      "visual": "A person sliding a stack of bills across a dark wooden desk under moody desk lamp light, shot from a low angle."
+    },
+    {
+      "say": "There's a better way that changes everything, and it starts with a simple rule.",
+      "callout": "PAY YOURSELF FIRST",
+      "visual": "Close-up of hands sliding a single coin into a heavy ceramic jar, soft morning window light, shallow depth of field."
+    },
+    {
+      "say": "You move money to investments the day you get paid, before touching a single bill.",
+      "callout": "",
+      "visual": "A banking app screen shown from a sharp side angle, blurred numbers, finger tapping a transfer button."
+    },
+    {
+      "say": "Let's run the real math on what happens when you commit $500 a month.",
+      "callout": "$500 A MONTH",
+      "visual": "A vintage mechanical calculator resting on a concrete tabletop, harsh natural side light, cinematic atmosphere."
+    },
+    {
+      "say": "At an 8% annual return with monthly compounding, that choice builds serious momentum.",
+      "callout": "8% RETURN",
+      "visual": "A sleek digital graph line trending upward on a dark slate surface, shot macro style with bokeh."
+    },
+    {
+      "say": "In 20 years, your $120,000 of deposits turns into $294,510.",
+      "callout": "$294,510",
+      "visual": "A silhouette of a person standing by a floor-to-ceiling city window at dusk, deep blue tones."
+    },
+    {
+      "say": "Give it 30 years, and that same habit reaches $745,180.",
+      "callout": "$745,180",
+      "visual": "An hourglass resting on a dark marble counter, sand falling slowly, cinematic macro shot."
+    },
+    {
+      "say": "Push to 40 years, and your $240,000 total grows to $1,745,504.",
+      "callout": "$1,745,504",
+      "visual": "An old brass pocket watch lying open on a leather-bound journal, warm amber lighting."
+    },
+    {
+      "say": "But here's the honest catch nobody mentions about this framework.",
+      "callout": "THE HONEST CATCH",
+      "visual": "A heavy metal door slowly closing in a dimly lit hallway, cinematic shadows, high contrast."
+    },
+    {
+      "say": "Living on what's left after investing takes brutal discipline and tight budgeting.",
+      "callout": "",
+      "visual": "A cup of black coffee and a small notepad with written numbers on a minimalist wooden table, overhead shot."
+    },
+    {
+      "say": "It forces your lifestyle to adapt to your savings, not the other way around.",
+      "callout": "",
+      "visual": "A minimalist apartment interior during sunset, clean lines, calm moody lighting, no people."
+    },
+    {
+      "say": "Master this habit today, and follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "A hand turning off a desk lamp, leaving a warm glowing amber ambiance in a quiet room."
+    }
+  ],
+  "caption": "Pay yourself first or stay stuck in the rat race. $500 a month changes everything over time. #personalfinance #investing #moneytips #wealthbuilding #financialfreedom",
+  "description": "Learn the math behind paying yourself first. Invest $500 a month at 8% and watch how compounding transforms your financial future over decades.",
+  "hashtags": [
+    "#personalfinance",
+    "#investing",
+    "#moneytips",
+    "#wealthbuilding",
+    "#financialfreedom"
+  ],
+  "first_comment": "What's the hardest bill for you to pay each month?",
+  "facts": [
+    {
+      "claim": "$500/month invested for 20 years at 8%/yr (monthly compounding) = $294,510 (you put in $120,000)",
+      "basis": "$500/month invested for 20 years at 8%/yr (monthly compounding) = $294,510 (you put in $120,000)"
+    },
+    {
+      "claim": "$500/month invested for 30 years at 8%/yr (monthly compounding) = $745,180 (you put in $180,000)",
+      "basis": "$500/month invested for 30 years at 8%/yr (monthly compounding) = $745,180 (you put in $180,000)"
+    },
+    {
+      "claim": "$500/month invested for 40 years at 8%/yr (monthly compounding) = $1,745,504 (you put in $240,000)",
+      "basis": "$500/month invested for 40 years at 8%/yr (monthly compounding) = $1,745,504 (you put in $240,000)"
+    }
+  ],
+  "source": "llm",
+  "pillar": "escape"
+}

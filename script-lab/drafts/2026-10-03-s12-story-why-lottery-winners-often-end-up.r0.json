@@ -1,0 +1,79 @@
+{
+  "title": "Why Lottery Winners Go Broke",
+  "hook_text": "WINNING THE LOTTERY DOESN'T MAKE YOU RICH",
+  "beats": [
+    {
+      "say": "Winning the lottery doesn't make you rich, it just makes you poor with better stuff.",
+      "callout": "",
+      "visual": "A silhouette of a person holding a blank white ticket in a dim room with dramatic window light, cinematic"
+    },
+    {
+      "say": "In 2011, researchers studied Florida lottery winners who scored between $50,000 and $2,000,000.",
+      "callout": "2011 Study",
+      "visual": "A close-up of a stack of old academic papers on a dark wooden table, dusty lighting"
+    },
+    {
+      "say": "They tracked their bank accounts for years to see what happened after the confetti cleared.",
+      "callout": "Years Tracked",
+      "visual": "A vintage desk calendar flipped halfway, shot from a high angle, moody shadows"
+    },
+    {
+      "say": "The data revealed a harsh truth that surprises almost everyone who dreams of a jackpot.",
+      "callout": "Harsh Truth",
+      "visual": "A close-up of a fountain pen resting on a blank ledger, cinematic shallow depth of field"
+    },
+    {
+      "say": "Bankruptcy rates among winners didn't fall long-term. In fact, they spiked after just 3 years.",
+      "callout": "Spiked After 3 Years",
+      "visual": "A glowing desk lamp in an otherwise dark home office, empty chair, moody atmosphere"
+    },
+    {
+      "say": "But here's the part nobody mentions about sudden money.",
+      "callout": "The Hidden Truth",
+      "visual": "A blurred shot of a city street at night through rain-streaked glass, cinematic purple and gold tones"
+    },
+    {
+      "say": "More cash doesn't fix broken habits. It just puts a megaphone to them.",
+      "callout": "No Habit Fix",
+      "visual": "A hand closing a leather wallet on a dark counter, sharp focus, moody lighting"
+    },
+    {
+      "say": "Without a system, a windfall acts like water poured into a bucket with holes.",
+      "callout": "Needs Systems",
+      "visual": "An old metal bucket sitting on cracked concrete in warm afternoon sunlight, realistic textures"
+    },
+    {
+      "say": "Wealth isn't about the size of the check you deposit.",
+      "callout": "",
+      "visual": "A minimalist wooden desk with a single blank notepad and a modern pen, side lighting"
+    },
+    {
+      "say": "It's about the boring systems you build to keep it.",
+      "callout": "",
+      "visual": "A person's hands locking a small steel safety box on a dark wooden table, macro lens"
+    },
+    {
+      "say": "Follow for the money rules school never taught you, because...",
+      "callout": "",
+      "visual": "A closed heavy wooden door with light shining underneath from a hallway, cinematic framing"
+    }
+  ],
+  "caption": "Sudden money without systems always leaks out. Here's what the data actually says about windfalls. #moneypolicy #personalfinance #wealthmindset #financialfreedom #smartmoney",
+  "description": "A 2011 study of Florida lottery winners revealed that bankruptcy rates didn't fall long-term. Windfalls require systems, not just cash.",
+  "hashtags": [
+    "#moneypolicy",
+    "#personalfinance",
+    "#wealthmindset",
+    "#financialfreedom",
+    "#smartmoney"
+  ],
+  "first_comment": "Would you take the lump sum or annual payments if you won?",
+  "facts": [
+    {
+      "claim": "A 2011 study of Florida lottery winners found bankruptcy rates did not fall long-term",
+      "basis": "Published economic research on Florida lottery winners and bankruptcy filings."
+    }
+  ],
+  "source": "llm",
+  "pillar": "story"
+}

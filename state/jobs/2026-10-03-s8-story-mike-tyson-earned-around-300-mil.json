@@ -1,0 +1,71 @@
+{
+  "id": "2026-10-03-s8-story-mike-tyson-earned-around-300-mil",
+  "pillar": "story",
+  "topic": "Mike Tyson earned around $300 million and filed for bankruptcy in 2003",
+  "day": "2026-10-03",
+  "slot": 8,
+  "status": "published",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-03T09:18:41Z",
+      "words": 183
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-03T09:19:10Z",
+      "seconds": 64.104,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-03T09:19:59Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-03T09:22:01Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-03T09:22:01Z",
+      "score": 98
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-03T09:22:01Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-10-03T09:22:01Z",
+      "local": "2026-10-04T18:30:00-04:00"
+    }
+  ],
+  "artifacts": {
+    "angle": "income is not wealth: what spending without a system does",
+    "title": "Why Earning $300M Wasn't Enough to Save Him",
+    "video": "/home/user/quiet-money/production/output/2026-10-03/2026-10-03-s8-story-mike-tyson-earned-around-300-mil/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-03/2026-10-03-s8-story-mike-tyson-earned-around-300-mil/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-10-04/slot4-story",
+        "post_at": "2026-10-04T18:30:00-04:00"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 98,
+    "passed": true
+  },
+  "cost": {
+    "tts:edge:chars": 1072
+  },
+  "notes": []
+}

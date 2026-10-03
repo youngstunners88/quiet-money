@@ -1,0 +1,24 @@
+{
+  "id": "2026-10-03-s10-myth-myth-a-high-salary-means-you-re",
+  "pillar": "myth",
+  "topic": "Myth: a high salary means you're rich",
+  "day": "2026-10-03",
+  "slot": 10,
+  "status": "failed",
+  "history": [
+    {
+      "from": "planned",
+      "to": "failed",
+      "ts": "2026-10-03T09:26:21Z",
+      "error": "all llm providers failed: gemini: ProviderError: no JSON in response: '{\\n  \"title\": \"Why a High Salary Doesn\\'t Make You Rich\",\\n  \"hook_text\": \"YOU\\'RE MAKING SIX FIGURES AND STILL BROKE.\",\\n  \"word"
+    }
+  ],
+  "artifacts": {
+    "angle": "income vs net worth; high earners living paycheck to paycheck"
+  },
+  "scores": {},
+  "cost": {},
+  "notes": [
+    "all llm providers failed: gemini: ProviderError: no JSON in response: '{\\n  \"title\": \"Why a High Salary Doesn\\'t Make You Rich\",\\n  \"hook_text\": \"YOU\\'RE MAKING SIX FIGURES AND STILL BROKE.\",\\n  \"word_count\": 187,\\n  \"beats\": [\\n    {\\n   ' | openrouter: ProviderError: openrouter: google/gemini-3.8-"
+  ]
+}

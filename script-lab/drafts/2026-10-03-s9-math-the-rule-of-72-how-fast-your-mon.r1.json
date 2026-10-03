@@ -1,0 +1,83 @@
+{
+  "title": "The Rule of 72: Wealth vs Debt Math",
+  "hook_text": "YOUR DEBT DOUBLES FASTER THAN YOUR SAVINGS",
+  "beats": [
+    {
+      "say": "Your debt doubles way faster than your savings, and it's all thanks to one hidden rule.",
+      "callout": "",
+      "visual": "A dark room lit by a single desk lamp, a calendar page torn off."
+    },
+    {
+      "say": "It's called the Rule of 72, and it explains why wealth feels so slow to build.",
+      "callout": "Rule of 72",
+      "visual": "A close-up of a silver calculator on a dark wooden table."
+    },
+    {
+      "say": "At an 8% investment return, your money doubles every 9 years.",
+      "callout": "Doubles in 9 yrs",
+      "visual": "A hand placing a single gold coin onto a stack."
+    },
+    {
+      "say": "That's steady. That's how compounding builds a quiet fortune over decades.",
+      "callout": "",
+      "visual": "Time-lapse of shadows moving across a minimalist concrete wall."
+    },
+    {
+      "say": "But here's the part nobody mentions. The exact same math applies to what you owe.",
+      "callout": "",
+      "visual": "A fountain pen signing a dark paper document, slightly out of focus."
+    },
+    {
+      "say": "At a 24% interest rate, your credit card debt doubles every 3 years.",
+      "callout": "Doubles in 3 yrs",
+      "visual": "A red LED digital clock glowing in a dark hallway."
+    },
+    {
+      "say": "Think about that. Your money takes 9 years to grow, but debt grows in 3.",
+      "callout": "",
+      "visual": "A pair of brass balance scales tilting heavily to one side."
+    },
+    {
+      "say": "That's why minimum payments trap you in a cycle that lasts for decades.",
+      "callout": "",
+      "visual": "A hand sliding a dark credit card back into a leather wallet."
+    },
+    {
+      "say": "You're fighting a math equation where the opponent has a three times speed advantage.",
+      "callout": "",
+      "visual": "Raindrops sliding down a cold windowpane at night."
+    },
+    {
+      "say": "To beat it, you've got to stop the bleeding before you start investing.",
+      "callout": "",
+      "visual": "A white ceramic coffee cup sitting on a dark slate counter."
+    },
+    {
+      "say": "Kill the high interest debt first, and that's exactly how",
+      "callout": "",
+      "visual": "A match being struck, casting a bright orange glow in the dark."
+    }
+  ],
+  "caption": "The math doesn't care about your intentions. Know the rules of the game. #RuleOf72 #PersonalFinance #DebtFree #MoneyMindset #WealthBuilding",
+  "description": "Understanding the Rule of 72 reveals why high-interest debt outpaces investments so quickly. Here is the exact math behind the speed of money.",
+  "hashtags": [
+    "#RuleOf72",
+    "#PersonalFinance",
+    "#DebtFree",
+    "#MoneyMindset",
+    "#WealthBuilding"
+  ],
+  "first_comment": "What's the highest interest rate on any debt you've ever paid off?",
+  "facts": [
+    {
+      "claim": "At 8% money doubles every 9 years",
+      "basis": "Rule of 72 calculation: 72 divided by 8 equals 9 years."
+    },
+    {
+      "claim": "At 24% debt doubles every 3 years",
+      "basis": "Rule of 72 calculation: 72 divided by 24 equals 3 years."
+    }
+  ],
+  "source": "llm",
+  "pillar": "math"
+}

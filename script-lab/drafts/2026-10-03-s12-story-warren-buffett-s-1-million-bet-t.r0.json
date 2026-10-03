@@ -1,0 +1,78 @@
+{
+  "title": "Warren Buffett’s $1 Million Bet Against Wall Street",
+  "hook_text": "HE BET $1 MILLION AGAINST WALL STREET",
+  "beats": [
+    {
+      "say": "In 2008, Warren Buffett made a public $1 million bet against the smartest minds on Wall Street.",
+      "callout": "",
+      "visual": "A dark, moody boardroom with a single leather chair and a glowing desk lamp, cinematic, 35mm"
+    },
+    {
+      "say": "He claimed a boring index fund would easily beat the elite hedge funds over ten years.",
+      "callout": "$1,000,000 BET",
+      "visual": "Close-up of a vintage brass desk clock ticking against a dark wooden background"
+    },
+    {
+      "say": "The hedge fund managers laughed. They charged massive fees for their complex trading strategies.",
+      "callout": "MASSIVE FEES",
+      "visual": "A stack of expensive leather-bound ledgers under a harsh overhead spotlight, moody shadows"
+    },
+    {
+      "say": "They thought genius always wins. But here's the part nobody mentions about their high costs.",
+      "callout": "THE HIDDEN COST",
+      "visual": "A fountain pen resting on a blank dark paper, overhead macro shot"
+    },
+    {
+      "say": "Every year, those fees quietly shaved off a huge slice of their clients' returns.",
+      "callout": "FEE DRAIN",
+      "visual": "A glass hourglass with dark sand slowly running out on a dark slate table"
+    },
+    {
+      "say": "Meanwhile, the boring index fund sat there, charging almost nothing, and tracking the entire market.",
+      "callout": "ALMOST ZERO",
+      "visual": "A minimalist metal paperweight shaped like a pyramid on a polished dark desk"
+    },
+    {
+      "say": "By 2017, the results were in. The index fund returned 125.8% over the decade.",
+      "callout": "125.8% RETURN",
+      "visual": "A digital display showing glowing green numbers blurred in the dark background"
+    },
+    {
+      "say": "The best hedge funds they picked barely scraped together a measly 36% in comparison.",
+      "callout": "ONLY 36%",
+      "visual": "A solitary chess king piece tipped over on a dark wooden board"
+    },
+    {
+      "say": "Fees killed their genius. The simple choice won by a landslide.",
+      "callout": "",
+      "visual": "A minimalist white ceramic cup of black coffee steaming in a dim room"
+    },
+    {
+      "say": "Simplicity beats complexity every single time you invest. Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "An open front door letting in a sharp beam of bright morning light into a dark hallway"
+    }
+  ],
+  "caption": "Warren Buffett proved that paying high fees for financial genius is a losing game. Keep it simple and keep your costs low. #MoneyPsychology #PersonalFinance #Investing101 #WarrenBuffett #WealthBuilding",
+  "description": "In 2008, Warren Buffett bet $1 million that a low-cost index fund would beat elite hedge funds over ten years. The index fund crushed them, proving that high fees destroy returns.",
+  "hashtags": [
+    "#MoneyPsychology",
+    "#PersonalFinance",
+    "#Investing101",
+    "#WarrenBuffett",
+    "#WealthBuilding"
+  ],
+  "first_comment": "Would you bet against Warren Buffett? Drop your thoughts below.",
+  "facts": [
+    {
+      "claim": "Buffett made a $1 million bet in 2008 that an index fund would beat hedge funds over 10 years",
+      "basis": "Documented 10-year wager between Warren Buffett and Protege Partners starting January 1, 2008."
+    },
+    {
+      "claim": "The S&P 500 index fund returned 125.8% over the decade while the hedge funds returned roughly 36%",
+      "basis": "Final results published by Warren Buffett in his 2017 Berkshire Hathaway shareholder letter."
+    }
+  ],
+  "source": "llm",
+  "pillar": "story"
+}

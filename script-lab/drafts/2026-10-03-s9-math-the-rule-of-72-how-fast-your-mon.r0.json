@@ -1,0 +1,89 @@
+{
+  "title": "The Rule of 72: How Fast Your Money Doubles",
+  "hook_text": "THE MATH THEY HIDE FROM YOU",
+  "beats": [
+    {
+      "say": "An 8% investment takes 9 years to double, but your 24% credit card debt only takes 3.",
+      "callout": "",
+      "visual": "A split-screen style cinematic shot. On the left, a green bank ledger book lies closed on a dark oak desk. On the right, a stack of red bills with a heavy iron padlock resting on top. Moody, high-contrast lighting."
+    },
+    {
+      "say": "Here's the hidden math keeping you trapped, and the simple, compounding formula you can use to escape.",
+      "callout": "",
+      "visual": "Close-up of a person's hands holding an old brass compass over an open, blank leather journal on a wooden table. Warm, low-key lighting."
+    },
+    {
+      "say": "It's called the Rule of 72, a powerful mental shortcut quietly used by wealthy wall street bankers.",
+      "callout": "",
+      "visual": "A glass-walled conference room overlooking a dim city skyline at dusk. A polished dark mahogany table reflects the soft overhead lights."
+    },
+    {
+      "say": "You simply divide 72 by your interest rate to find the exact years it takes.",
+      "callout": "RULE OF 72",
+      "visual": "Extreme close-up of a vintage analog stopwatch ticking. The silver metal casing gleams under a soft key light. Shallow depth of field."
+    },
+    {
+      "say": "If you earn 8% a year, your money doubles every 9 years like clockwork.",
+      "callout": "9 YEARS TO DOUBLE",
+      "visual": "A small, vibrant green seedling sprouting from rich dark soil inside a rustic clay pot on a sunlit window sill. Soft morning light."
+    },
+    {
+      "say": "Your initial $10,000 investment becomes $20,000, then $40,000, and quietly grows completely on autopilot.",
+      "callout": "$40,000",
+      "visual": "An overhead shot of neat stacks of crisp hundred-dollar bills sitting inside a dark velvet-lined drawer, lit by a single dramatic shaft of light."
+    },
+    {
+      "say": "But here's the part nobody mentions: this exact same math works against you twice as fast.",
+      "callout": "",
+      "visual": "A dark, moody shot of a massive iron gear mechanism turning slowly inside an old clock tower, cast in deep shadows."
+    },
+    {
+      "say": "The average credit card now charges a brutal 24% annual interest rate.",
+      "callout": "24% APR",
+      "visual": "A close-up from behind of a hand holding a sleek, unbranded black credit card over a dark slate countertop. Cool blue tones."
+    },
+    {
+      "say": "Divide 72 by 24, and your unpaid debt doubles every 3 years.",
+      "callout": "3 YEARS TO DOUBLE",
+      "visual": "A close-up of dark storm clouds gathering rapidly over an empty asphalt highway at sunset. Moody, dramatic contrast."
+    },
+    {
+      "say": "That small $3,000 emergency balance quickly becomes $6,000, then $12,000, trapping you in an endless cycle.",
+      "callout": "$12,000 DEBT",
+      "visual": "A vintage metal scale balancing, with one side heavily weighed down by a dark, rough iron block. Deep shadows, industrial look."
+    },
+    {
+      "say": "While your retirement savings creep forward, your high-interest debt compounds at three times the speed.",
+      "callout": "3X FASTER",
+      "visual": "A time-lapse style shot of dry autumn leaves swirling in a cold wind across a cracked concrete ground under a gray sky."
+    },
+    {
+      "say": "If you're ready to master these numbers, follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "A person's silhouette standing in front of a massive, glowing window looking out over a sprawling, modern city at night."
+    },
+    {
+      "say": "It all starts by understanding why",
+      "callout": "",
+      "visual": "A hand in shadow slowly turning a heavy brass key in an ancient, ornate keyhole. Close-up, cinematic atmosphere."
+    }
+  ],
+  "caption": "The Rule of 72 is the most important math formula you will ever learn. Here is how it can build your wealth—or quietly destroy it.",
+  "description": "This video breaks down the Rule of 72 using real numbers. It explains how an 8% investment takes 9 years to double, while 24% credit card debt doubles in just 3 years.",
+  "hashtags": [
+    "#personalfinance",
+    "#moneyrules",
+    "#ruleof72",
+    "#debtfree",
+    "#investing"
+  ],
+  "first_comment": "What is the interest rate on your highest-interest account right now?",
+  "facts": [
+    {
+      "claim": "Rule of 72: at 8% money doubles every 9 years; at 24% debt doubles every 3 years",
+      "basis": "Mathematical formula: 72 / 8 = 9 years; 72 / 24 = 3 years."
+    }
+  ],
+  "source": "llm",
+  "pillar": "math"
+}

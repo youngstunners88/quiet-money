@@ -1,0 +1,93 @@
+{
+  "title": "The $1 Million Wall Street Bet",
+  "hook_text": "HE BET $1 MILLION ON A COIN FLIP",
+  "beats": [
+    {
+      "say": "In 2007, Warren Buffett made a public bet against Wall Street's finest minds.",
+      "callout": "",
+      "visual": "A sleek, dark leather desk with a single brass desk lamp in a quiet Manhattan boardroom."
+    },
+    {
+      "say": "He wagered $1 million that a simple index fund would beat any handpicked portfolio of hedge funds.",
+      "callout": "$1,000,000 WAGER",
+      "visual": "A crisp white envelope sitting on a polished mahogany surface, dramatic side lighting."
+    },
+    {
+      "say": "The hedge fund managers laughed all the way to their high-rise offices.",
+      "callout": "",
+      "visual": "A silhouette of a man looking out floor-to-ceiling glass windows at a hazy city skyline at dusk."
+    },
+    {
+      "say": "They charged massive fees to deploy complex trading strategies and elite mathematical models.",
+      "callout": "MASSIVE FEES",
+      "visual": "A vintage fountain pen resting on top of thick, leather-bound accounting ledgers."
+    },
+    {
+      "say": "Buffett picked a boring fund that just tracked the S&P 500 index.",
+      "callout": "",
+      "visual": "A minimal, clean modern computer keyboard resting on a dark wooden workspace."
+    },
+    {
+      "say": "For ten full years, the clock ticked down on their high-stakes financial duel.",
+      "callout": "10 YEARS",
+      "visual": "Close-up of a heavy mechanical pocket watch lying open on a dark slate table."
+    },
+    {
+      "say": "But here's the part nobody mentions about how Wall Street quietly bleeds your returns dry.",
+      "callout": "",
+      "visual": "A single drop of water falling onto a calm, dark surface, creating ripples."
+    },
+    {
+      "say": "While the experts took their 2% management fees win or lose, the index fund charged almost nothing.",
+      "callout": "2% FEES",
+      "visual": "A pair of gold-rimmed reading glasses resting beside an empty leather notebook."
+    },
+    {
+      "say": "When the decade ended in 2017, the results shocked the entire financial establishment.",
+      "callout": "2017 RESULTS",
+      "visual": "A digital countdown clock showing zeroes on a dark, out-of-focus monitor."
+    },
+    {
+      "say": "The hedge funds returned a meager 22% total over the ten-year span.",
+      "callout": "22% RETURN",
+      "visual": "A single metal coin resting on a cold concrete block under moody overhead lighting."
+    },
+    {
+      "say": "Buffett's boring index fund crushed them with an 85% return.",
+      "callout": "85% RETURN",
+      "visual": "A minimalist white ceramic coffee mug sitting on a dark oak kitchen counter in the morning."
+    },
+    {
+      "say": "Simplicity and low fees beat genius every single time, and that's exactly how",
+      "callout": "",
+      "visual": "A closed front door of a minimalist apartment with a warm streak of light underneath."
+    },
+    {
+      "say": "you should follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "A blank smartphone screen lying face down on a clean wooden desk, soft shadows."
+    }
+  ],
+  "caption": "Wall Street hates this one simple rule. Fees eat your future while you sleep. #personalfinance #investing #moneytips #wealth",
+  "description": "Warren Buffett proved that a low-cost index fund beats expensive hedge fund managers over the long run. Simplicity and low fees win.",
+  "hashtags": [
+    "#personalfinance",
+    "#investing",
+    "#moneytips",
+    "#wealth",
+    "#warrenbuffett"
+  ],
+  "first_comment": "Would you trust a boring index fund over a Wall Street manager?",
+  "facts": [
+    {
+      "claim": "Warren Buffett made a $1 million bet in 2007 that an S&P 500 index fund would beat hedge funds over 10 years.",
+      "basis": "Well-documented public wager between Warren Buffett and Protege Partners."
+    },
+    {
+      "claim": "The index fund returned roughly 85% while the hedge funds returned about 22% over the 10-year period.",
+      "basis": "Final results published by Warren Buffett in his annual shareholder letters ending in 2017."
+    }
+  ],
+  "source": "llm",
+  "pillar": "story"
+}

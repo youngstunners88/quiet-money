@@ -700,3 +700,12 @@ def test_gemini_tries_next_model_when_json_is_cut_off(monkeypatch):
     monkeypatch.setattr(llm, "http", lambda: FakeSession())
     monkeypatch.setattr(llm.ledger, "spend", lambda *a, **k: None)
     assert llm.gemini("p", system=None, want_json=True, temperature=0.5) == '{"title": "ok"}'
+
+
+def test_mostly_placeholder_art_is_a_hard_failure():
+    from faceless.gauntlet import check_visuals
+    imgs = lambda prov: [{"beat": i, "provider": p} for i, p in enumerate(prov)]  # noqa: E731
+    few = {g.name: g for g in check_visuals(imgs(["cloudflare"] * 10 + ["procedural"] * 2), 12)}
+    most = {g.name: g for g in check_visuals(imgs(["procedural"] * 12), 12)}
+    assert not few["no_placeholder_art"].passed and not few["no_placeholder_art"].hard
+    assert most["no_placeholder_art"].hard

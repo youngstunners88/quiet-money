@@ -1,0 +1,79 @@
+{
+  "id": "2026-10-03-s12-story-warren-buffett-s-1-million-bet-t",
+  "pillar": "story",
+  "topic": "Warren Buffett's $1 million bet that an index fund would beat hedge funds over 10 years",
+  "day": "2026-10-03",
+  "slot": 12,
+  "status": "held",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-03T09:51:55Z",
+      "words": 171
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-03T09:52:09Z",
+      "seconds": 62.52,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-03T09:55:30Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-03T09:57:17Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-03T09:57:17Z",
+      "score": 96
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-03T09:57:17Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-10-03T09:57:17Z",
+      "local": "2026-10-05T15:00:00-04:00"
+    },
+    {
+      "from": "published",
+      "to": "held",
+      "ts": "2026-10-03T09:58:04Z",
+      "reason": "no_placeholder_art"
+    }
+  ],
+  "artifacts": {
+    "angle": "fees and simplicity beat genius",
+    "title": "The $1 Million Wall Street Bet",
+    "video": "/home/user/quiet-money/production/output/2026-10-03/2026-10-03-s12-story-warren-buffett-s-1-million-bet-t/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-03/2026-10-03-s12-story-warren-buffett-s-1-million-bet-t/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-10-05/slot3-story",
+        "post_at": "2026-10-05T15:00:00-04:00"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 96,
+    "passed": false
+  },
+  "cost": {
+    "tts:edge:chars": 1035
+  },
+  "notes": [
+    "held for review: no_placeholder_art (image providers exhausted; re-render visuals)"
+  ]
+}

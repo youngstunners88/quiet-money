@@ -1,0 +1,24 @@
+{
+  "id": "2026-10-03-s12-story-why-lottery-winners-often-end-up",
+  "pillar": "story",
+  "topic": "Why lottery winners often end up worse off: what the research on sudden wealth found",
+  "day": "2026-10-03",
+  "slot": 12,
+  "status": "failed",
+  "history": [
+    {
+      "from": "planned",
+      "to": "failed",
+      "ts": "2026-10-03T09:30:00Z",
+      "error": "all llm providers failed: gemini: ProviderError: no JSON in response: '{\\n  \"title\": \"Why Lottery Winners Go Broke (The 2011 Florida Study)\",\\n  \"hook_text\": \"WHY WINNING THE LOTTERY RUINS YOU\",\\n  \"w"
+    }
+  ],
+  "artifacts": {
+    "angle": "a 2011 study of Florida lottery winners found bankruptcy rates did not fall long-term; windfalls need systems"
+  },
+  "scores": {},
+  "cost": {},
+  "notes": [
+    "all llm providers failed: gemini: ProviderError: no JSON in response: '{\\n  \"title\": \"Why Lottery Winners Go Broke (The 2011 Florida Study)\",\\n  \"hook_text\": \"WHY WINNING THE LOTTERY RUINS YOU\",\\n  \"word_count\": 183,\\n  \"beats\": [\\n    ' | openrouter: ProviderError: openrouter: google/gemini-3.8-fla"
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "id": "2026-10-03-s10-myth-myth-carrying-a-credit-card-bala",
+  "pillar": "myth",
+  "topic": "Myth: carrying a credit card balance builds your credit score",
+  "day": "2026-10-03",
+  "slot": 10,
+  "status": "held",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-03T09:39:01Z",
+      "words": 158
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-03T09:39:33Z",
+      "seconds": 62.447,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-03T09:42:38Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-03T09:43:59Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-03T09:43:59Z",
+      "score": 94
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-03T09:43:59Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-10-03T09:43:59Z",
+      "local": "2026-10-05T07:30:00-04:00"
+    },
+    {
+      "from": "published",
+      "to": "held",
+      "ts": "2026-10-03T09:57:59Z",
+      "reason": "no_placeholder_art"
+    }
+  ],
+  "artifacts": {
+    "angle": "pay in full; utilization is what matters",
+    "title": "The Credit Score Myth That Costs You Thousands",
+    "video": "/home/user/quiet-money/production/output/2026-10-03/2026-10-03-s10-myth-myth-carrying-a-credit-card-bala/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-03/2026-10-03-s10-myth-myth-carrying-a-credit-card-bala/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-10-05/slot1-myth",
+        "post_at": "2026-10-05T07:30:00-04:00"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 94,
+    "passed": false
+  },
+  "cost": {
+    "tts:edge:chars": 886
+  },
+  "notes": [
+    "held for review: no_placeholder_art (image providers exhausted; re-render visuals)"
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "title": "The Pay Yourself First Math Nobody Teaches",
+  "hook_text": "YOUR BILLS ARE ROBBING YOUR FUTURE",
+  "beats": [
+    {
+      "say": "Your bills are robbing your future because you pay them first.",
+      "callout": "",
+      "visual": "A stack of unopened paper bills sitting on a dark wooden table under a single harsh spotlight."
+    },
+    {
+      "say": "Here is the exact math to escape that trap.",
+      "callout": "THE MATH",
+      "visual": "A calculator resting on a sleek concrete desk next to a steaming ceramic mug of black coffee."
+    },
+    {
+      "say": "Most people spend their paycheck and invest whatever is left over.",
+      "callout": "",
+      "visual": "A close-up of hands sliding a debit card across a worn wooden countertop at a cafe."
+    },
+    {
+      "say": "That leaves you with nothing at the end of the month.",
+      "callout": "ZERO LEFT",
+      "visual": "An empty leather wallet lying open on a minimalist glass surface."
+    },
+    {
+      "say": "Flip the script and pay yourself first before the landlords get a dime.",
+      "callout": "PAY YOURSELF",
+      "visual": "A person sliding a crisp physical notebook across a sunlit desk."
+    },
+    {
+      "say": "If you invest $500 a month at an 8% return, look what happens.",
+      "callout": "$500 A MONTH",
+      "visual": "A close-up of fingers typing numbers into a modern laptop keyboard in a quiet room."
+    },
+    {
+      "say": "Over 30 years, that routine turns into $745,180 total.",
+      "callout": "$745,180",
+      "visual": "A wide cinematic shot of a high-rise office window overlooking a foggy city skyline at dawn."
+    },
+    {
+      "say": "But here is the honest catch: building that capital takes years of strict discipline.",
+      "callout": "THE CATCH",
+      "visual": "A lone chair pulled up to a heavy oak desk with a small brass lamp turned on."
+    },
+    {
+      "say": "You have to cut lifestyle creep and let monthly compounding do the heavy lifting.",
+      "callout": "",
+      "visual": "A vintage pocket watch ticking on a textured stone surface with dramatic side lighting."
+    },
+    {
+      "say": "This week, set up an automatic transfer on payday straight into your investment account so",
+      "callout": "THIS WEEK",
+      "visual": "A finger pressing a sleek silver power button on a minimalist desk gadget."
+    }
+  ],
+  "caption": "Pay yourself first or stay trapped in the rat race forever. #money #personalfinance #investing #wealth #ratrace",
+  "description": "Learn the exact math of paying yourself first. Invest $500 a month at 8% and watch how compounding builds real freedom over time.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#investing",
+    "#wealth",
+    "#ratrace"
+  ],
+  "first_comment": "What is the hardest bill for you to cut each month?",
+  "facts": [
+    {
+      "claim": "$500 a month invested for 30 years at 8% equals $745,180",
+      "basis": "From fact sheet: $500/month invested for 30 years at 8%/yr (monthly compounding) = $745,180 (you put in $180,000)"
+    }
+  ],
+  "source": "llm",
+  "pillar": "escape"
+}

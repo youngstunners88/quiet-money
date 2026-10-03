@@ -1,0 +1,79 @@
+{
+  "id": "2026-10-03-s9-math-the-rule-of-72-how-fast-your-mon",
+  "pillar": "math",
+  "topic": "The Rule of 72: how fast your money doubles and how fast debt doubles",
+  "day": "2026-10-03",
+  "slot": 9,
+  "status": "held",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-03T09:33:18Z",
+      "words": 156
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-03T09:33:46Z",
+      "seconds": 62.96,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-03T09:36:50Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-03T09:38:40Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-03T09:38:40Z",
+      "score": 94
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-03T09:38:40Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-10-03T09:38:40Z",
+      "local": "2026-10-04T21:00:00-04:00"
+    },
+    {
+      "from": "published",
+      "to": "held",
+      "ts": "2026-10-03T09:58:06Z",
+      "reason": "no_placeholder_art"
+    }
+  ],
+  "artifacts": {
+    "angle": "8% doubles every 9 years, 24% debt doubles every 3",
+    "title": "The Rule of 72: How Wealth And Debt Double",
+    "video": "/home/user/quiet-money/production/output/2026-10-03/2026-10-03-s9-math-the-rule-of-72-how-fast-your-mon/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-03/2026-10-03-s9-math-the-rule-of-72-how-fast-your-mon/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-10-04/slot5-math",
+        "post_at": "2026-10-04T21:00:00-04:00"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 94,
+    "passed": false
+  },
+  "cost": {
+    "tts:edge:chars": 821
+  },
+  "notes": [
+    "held for review: no_placeholder_art (image providers exhausted; re-render visuals)"
+  ]
+}

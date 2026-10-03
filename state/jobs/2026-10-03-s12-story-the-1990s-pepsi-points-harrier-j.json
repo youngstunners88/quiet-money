@@ -1,0 +1,24 @@
+{
+  "id": "2026-10-03-s12-story-the-1990s-pepsi-points-harrier-j",
+  "pillar": "story",
+  "topic": "The 1990s Pepsi Points Harrier jet lawsuit and what it teaches about fine print",
+  "day": "2026-10-03",
+  "slot": 12,
+  "status": "failed",
+  "history": [
+    {
+      "from": "planned",
+      "to": "failed",
+      "ts": "2026-10-03T09:51:03Z",
+      "error": "all llm providers failed: gemini: ProviderError: gemini: gemini-3.8-flash:503,gemini-3.5-flash:bad-json(STOP),gemini-3.5-flash-lite:bad-json(STOP) | openrouter: ProviderError: openrouter: google/gemin"
+    }
+  ],
+  "artifacts": {
+    "angle": "read the terms; a $700,000 lesson in contracts"
+  },
+  "scores": {},
+  "cost": {},
+  "notes": [
+    "all llm providers failed: gemini: ProviderError: gemini: gemini-3.8-flash:503,gemini-3.5-flash:bad-json(STOP),gemini-3.5-flash-lite:bad-json(STOP) | openrouter: ProviderError: openrouter: google/gemini-3.8-flash:402,deepseek/deepseek-v4.1-flash:402,google/gemma-4-31b-it:free:429 | pollinations: Prov"
+  ]
+}

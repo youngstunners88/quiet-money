@@ -1,0 +1,84 @@
+{
+  "title": "The Credit Score Myth That Costs You Thousands",
+  "hook_text": "CARRYING A BALANCE KILLS YOUR SCORE",
+  "beats": [
+    {
+      "say": "Carrying a credit card balance doesn't build your credit score at all.",
+      "callout": "",
+      "visual": "Macro shot of a dark metallic credit card resting on a cold slate surface under dim overhead light."
+    },
+    {
+      "say": "That's one of the most expensive myths you've been told. Stay to learn the exact math.",
+      "callout": "",
+      "visual": "A steaming ceramic coffee cup beside an open ledger on a dark wooden desk, moody lighting."
+    },
+    {
+      "say": "Banks want you to believe that paying interest proves you're a good borrower.",
+      "callout": "THE BANK MYTH",
+      "visual": "Heavy glass skyscraper facade reflecting gray afternoon clouds, shot from a low upward angle."
+    },
+    {
+      "say": "It doesn't. It just makes them rich while you lose hundreds of dollars.",
+      "callout": "",
+      "visual": "A solitary brass key resting on a heavy oak table, cinematic side lighting casting long shadows."
+    },
+    {
+      "say": "Look at what happens with a $3,000 balance at 24% APR.",
+      "callout": "$3,000 AT 24%",
+      "visual": "A glowing desk lamp casting a warm amber pool of light over a blank leather notepad."
+    },
+    {
+      "say": "If you only pay the minimum each month, it takes 183 months to pay off.",
+      "callout": "183 MONTHS",
+      "visual": "A minimalist mechanical clock on a concrete wall, hands blurred in a long exposure shot."
+    },
+    {
+      "say": "You'll end up handing over $4,887 just in interest charges.",
+      "callout": "$4,887 INTEREST",
+      "visual": "Close up of heavy silver coins stacked neatly on a dark slate surface, moody shadows."
+    },
+    {
+      "say": "But here's the part nobody mentions about how scoring actually works.",
+      "callout": "THE REAL RULE",
+      "visual": "A pair of hands sliding a dark leather wallet across a smooth marble tabletop."
+    },
+    {
+      "say": "Your credit score only cares about two things: payment history and credit utilization.",
+      "callout": "",
+      "visual": "An old brass fountain pen resting beside a blank sheet of heavy cream paper."
+    },
+    {
+      "say": "Utilization is just how much of your limit you use compared to your total limit.",
+      "callout": "",
+      "visual": "A tall glass of water catching morning light on a rustic wooden windowsill."
+    },
+    {
+      "say": "You don't need to carry a balance or pay a dime of interest to prove anything.",
+      "callout": "PAY IN FULL",
+      "visual": "A sleek silver pen resting on a dark walnut clipboard under soft overhead lighting."
+    },
+    {
+      "say": "Just pay your statement in full every single month, and that's exactly how",
+      "callout": "FOLLOW US",
+      "visual": "A hand closing a dark leather notebook on a quiet desk as the room fades to shadow."
+    }
+  ],
+  "caption": "Carrying a balance does zero for your credit score. Pay in full every month and keep your money. #moneytips #personalfinance #creditscore #financialliteracy #debtfree",
+  "description": "Stop paying interest to build credit. Learn how credit utilization actually works and why carrying a balance is a costly myth.",
+  "hashtags": [
+    "#moneytips",
+    "#personalfinance",
+    "#creditscore",
+    "#financialliteracy",
+    "#debtfree"
+  ],
+  "first_comment": "Did you used to believe carrying a balance helped your score?",
+  "facts": [
+    {
+      "claim": "$3,000 credit card at 24% APR paying only the minimum (1% + interest, min $25): 183 months (~15 years), $4,887 interest",
+      "basis": "MONEY FACT SHEET: $3,000 credit card at 24% APR paying only the minimum (1% + interest, min $25): 183 months (~15 years), $4,887 interest"
+    }
+  ],
+  "source": "llm",
+  "pillar": "myth"
+}

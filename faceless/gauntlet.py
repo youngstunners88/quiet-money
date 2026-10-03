@@ -183,7 +183,9 @@ def check_visuals(imgs: list[dict], beats: int) -> list[Gate]:
     lowres = [i["beat"] + 1 for i in imgs if i["provider"] == "pollinations"]
     return [
         Gate("image_count", len(imgs) == beats, 10, True, f"{len(imgs)} images for {beats} beats", "visuals"),
-        Gate("no_placeholder_art", not fallback, 6, False, f"beats using abstract fallback art: {fallback}", "visuals"),
+        # a few abstract fallbacks are a style note; a video that is mostly gradients is not a video (hold it)
+        Gate("no_placeholder_art", not fallback, 6, len(fallback) * 2 > max(1, beats),
+             f"beats using abstract fallback art: {fallback}", "visuals"),
         Gate("image_quality", not lowres, 3, False, f"beats using low-res fallback images: {lowres}", "visuals"),
     ]
 

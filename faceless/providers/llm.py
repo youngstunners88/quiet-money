@@ -19,14 +19,14 @@ def _extract_json(text: str):
     if fence:
         text = fence.group(1).strip()
     try:
-        return json.loads(text)
+        return json.loads(text, strict=False)   # tolerate raw newlines inside strings
     except json.JSONDecodeError:
         pass
     for open_c, close_c in (("{", "}"), ("[", "]")):
         a, b = text.find(open_c), text.rfind(close_c)
         if a != -1 and b > a:
             try:
-                return json.loads(text[a:b + 1])
+                return json.loads(text[a:b + 1], strict=False)
             except json.JSONDecodeError:
                 continue
     raise ProviderError(f"no JSON in response: {text[:160]!r}")

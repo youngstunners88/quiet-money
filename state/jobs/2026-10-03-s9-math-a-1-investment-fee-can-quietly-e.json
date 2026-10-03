@@ -1,0 +1,65 @@
+{
+  "id": "2026-10-03-s9-math-a-1-investment-fee-can-quietly-e",
+  "pillar": "math",
+  "topic": "A 1% investment fee can quietly eat $176,000 of a $100,000 portfolio over 30 years",
+  "day": "2026-10-03",
+  "slot": 9,
+  "status": "held",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-03T09:22:38Z",
+      "words": 134
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-03T09:23:05Z",
+      "seconds": 63.675,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-03T09:23:56Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-03T09:25:46Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-03T09:25:46Z",
+      "score": 89
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-03T09:25:46Z"
+    },
+    {
+      "from": "packaged",
+      "to": "held",
+      "ts": "2026-10-03T09:25:46Z"
+    }
+  ],
+  "artifacts": {
+    "angle": "fees compound against you; 1% vs 0.05%",
+    "title": "The 1% Fee That Steals $176,000",
+    "video": "/home/user/quiet-money/production/output/2026-10-03/2026-10-03-s9-math-a-1-investment-fee-can-quietly-e/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-03/2026-10-03-s9-math-a-1-investment-fee-can-quietly-e/cover.jpg"
+  },
+  "scores": {
+    "gauntlet": 89,
+    "passed": false
+  },
+  "cost": {
+    "tts:edge:chars": 771
+  },
+  "notes": [
+    "held for review: first_frame_visible"
+  ]
+}
