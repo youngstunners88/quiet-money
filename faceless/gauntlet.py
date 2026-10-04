@@ -197,11 +197,24 @@ def probe(path: str) -> dict:
     return json.loads(out)
 
 
-def mean_brightness(path: str, at: float) -> float:
+def frame_luma(path: str, at: float) -> bytes:
     p = subprocess.run(["ffmpeg", "-hide_banner", "-ss", f"{at:.2f}", "-i", path, "-frames:v", "1", "-vf",
                         "scale=64:114,format=gray", "-f", "rawvideo", "-"], capture_output=True)
-    data = p.stdout
+    return p.stdout
+
+
+def mean_brightness(path: str, at: float) -> float:
+    data = frame_luma(path, at)
     return sum(data) / max(1, len(data))
+
+
+def frame_visible(data: bytes) -> bool:
+    """A frame reads as black only when it is dark everywhere. Low-key cinematic shots (the myth and math
+    looks) average under 18 but keep lit detail: their 90th-percentile pixel is well above 40."""
+    if not data:
+        return False
+    s = sorted(data)
+    return sum(s) / len(s) > 18 or s[int(len(s) * 0.9)] > 40
 
 
 def check_render(info: dict, voice: dict) -> list[Gate]:
@@ -222,7 +235,7 @@ def check_render(info: dict, voice: dict) -> list[Gate]:
              f"video {dur:.2f}s vs voice {voice['duration']:.2f}s", "render"),
         Gate("audio_present", a is not None, 10, True, "no audio stream", "render"),
         Gate("file_size", size_mb < 250, 4, True, f"{size_mb:.1f} MB", "render"),
-        Gate("first_frame_visible", mean_brightness(info["video"], 0.05) > 18, 6, True,
+        Gate("first_frame_visible", frame_visible(frame_luma(info["video"], 0.05)), 6, True,
              "first frame is nearly black (kills the hook)", "visuals"),
         Gate("cut_cadence", info["avg_shot"] <= 3.6, 5, False, f"avg shot {info['avg_shot']}s; target <= 3.2s", "render"),
         Gate("caption_coverage", info["captioned_words"] >= words * 0.98, 8, True,

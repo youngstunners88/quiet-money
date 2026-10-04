@@ -1,0 +1,88 @@
+{
+  "title": "The Guilt-Free Spending Rule",
+  "hook_text": "BUDGET YOUR FUN FIRST",
+  "beats": [
+    {
+      "say": "Most self-made millionaires actually budget their fun money first.",
+      "callout": "",
+      "visual": "A close-up of a hand placing a crisp bill inside a sleek, dark leather wallet on a wooden surface."
+    },
+    {
+      "say": "It's completely backward, but this one simple shift stops you from destroying your long-term progress.",
+      "callout": "",
+      "visual": "A silhouette of a person looking out at a sprawling, moody city skyline at twilight."
+    },
+    {
+      "say": "Traditional budgets fail because they treat emotional human beings like cold, lifeless spreadsheets.",
+      "callout": "",
+      "visual": "Close-up of vintage metal typewriter keys hitting a blank sheet of textured paper."
+    },
+    {
+      "say": "You restrict every single penny, feel miserable for weeks, and inevitably blow your entire savings on a whim.",
+      "callout": "The restriction trap",
+      "visual": "A hand crumpling a paper financial ledger on a dark wooden desk under a single desk lamp."
+    },
+    {
+      "say": "But here's the part the financial gurus never mention.",
+      "callout": "",
+      "visual": "A single candle flame flickering quietly in a dark, concrete room."
+    },
+    {
+      "say": "If you consistently invest just $100 a month for 30 years at 8% compounding...",
+      "callout": "$100 every month",
+      "visual": "A close-up of a small green sprout growing out of rich, dark wet soil."
+    },
+    {
+      "say": "...that small automated habit grows into a secure nest egg of $149,036.",
+      "callout": "$149,036 nest egg",
+      "visual": "An elegant hourglass with dark sand slowly running down on a stone ledge."
+    },
+    {
+      "say": "Once that investment is automated, the rest of your paycheck is yours to spend entirely guilt-free.",
+      "callout": "Spend guilt-free",
+      "visual": "Cinematic out-of-focus city lights glowing warm and gold in the background of a quiet street."
+    },
+    {
+      "say": "You can buy the premium coffee, book the weekend flight, or enjoy that expensive dinner.",
+      "callout": "",
+      "visual": "A hand holding a dark ceramic cup of coffee with steam rising in a dimly lit, minimalist cafe."
+    },
+    {
+      "say": "When your financial future is already mathematically secured, saving ceases to feel like a prison sentence.",
+      "callout": "Mathematically secured",
+      "visual": "A heavy vintage brass key resting quietly on a cold, textured concrete surface."
+    },
+    {
+      "say": "You're no longer hoarding cash out of fear; you're buying peace of mind.",
+      "callout": "",
+      "visual": "A silhouette of a lone traveler walking along a quiet, misty coastline at dusk."
+    },
+    {
+      "say": "Follow for the money rules school never taught you...",
+      "callout": "",
+      "visual": "A closed, old leather-bound notebook lying flat on a dark oak desk."
+    },
+    {
+      "say": "...and discover why...",
+      "callout": "",
+      "visual": "A sharp, geometric corner of a modern concrete building cutting into a deep blue evening sky."
+    }
+  ],
+  "caption": "Traditional budgeting is designed to make you quit. Flip the script and pay yourself first. #money #personalfinance #budgeting #wealthbuilding",
+  "description": "Traditional deprivation budgets always fail because they ignore human psychology. By automating your savings first, you can spend the rest of your paycheck entirely guilt-free.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#budgeting",
+    "#wealthbuilding"
+  ],
+  "first_comment": "What is the one luxury you refuse to cut from your budget?",
+  "facts": [
+    {
+      "claim": "investing $100 a month for 30 years at 8% compounding grows to $149,036",
+      "basis": "$100/month invested for 30 years at 8%/yr (monthly compounding) = $149,036 (you put in $36,000)"
+    }
+  ],
+  "source": "llm",
+  "pillar": "myth"
+}

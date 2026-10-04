@@ -1,0 +1,88 @@
+{
+  "title": "The Debt Myth That Keeps You Poor",
+  "hook_text": "DEBT IS NOT ALWAYS BAD",
+  "beats": [
+    {
+      "say": "At 24% interest, a neglected $3,000 credit card balance takes 183 months to pay off.",
+      "callout": "",
+      "visual": "A sleek dark room with a single desk lamp illuminating a red billing statement."
+    },
+    {
+      "say": "That's $4,887 in interest alone. It's why everyone says all debt is pure poison.",
+      "callout": "183 months",
+      "visual": "Close up of a calculator punching in high interest numbers on a matte black desk."
+    },
+    {
+      "say": "But here's the part nobody mentions. The ultra wealthy borrow billions every single day.",
+      "callout": "$4,887 interest",
+      "visual": "A towering glass skyscraper shot from below against a moody twilight sky."
+    },
+    {
+      "say": "They don't use it for consumer junk. They use low interest debt to buy assets.",
+      "callout": "Buy assets",
+      "visual": "A hand sliding a polished brass key across a dark wooden conference table."
+    },
+    {
+      "say": "That is productive debt. It makes you richer while consumer debt drains you dry.",
+      "callout": "Productive debt",
+      "visual": "A dark coffee shop corner with a glowing laptop screen reflecting off a window."
+    },
+    {
+      "say": "If a $100,000 property is bought with $20,000 down, that is 5x leverage.",
+      "callout": "5x leverage",
+      "visual": "An architectural blueprint unrolling on a slate grey table under warm lights."
+    },
+    {
+      "say": "A 20% price rise doubles your down payment before costs and interest.",
+      "callout": "Doubles down payment",
+      "visual": "A silver pen drawing a sharp upward trend line on a dark grid."
+    },
+    {
+      "say": "If your asset yields more than the debt costs, you profit. But if returns drop, leverage magnifies your losses.",
+      "callout": "Magnifies losses",
+      "visual": "A heavy steel scale tilting slowly downward under a single shadow."
+    },
+    {
+      "say": "The rule is simple. Never borrow for things that drop in value.",
+      "callout": "",
+      "visual": "A pair of hands closing a sleek leather notebook on a minimal desk."
+    },
+    {
+      "say": "Only borrow when the asset generates cash flow higher than the interest rate.",
+      "callout": "",
+      "visual": "A blurry city street at night with streaks of amber and red taillights."
+    },
+    {
+      "say": "Master this boundary, and debt becomes a tool. Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "A dark hallway with a single bright doorway at the far end."
+    },
+    {
+      "say": "Because if you don't control leverage, you will always be trapped when...",
+      "callout": "",
+      "visual": "A close up of a heavy brass door lock clicking shut in slow motion."
+    }
+  ],
+  "caption": "Not all debt is the same. Consumer debt keeps you broke, but productive debt builds empires. Know the difference.\n\n#debtfree #personalfinance #wealthbuilding #moneymindset #financialliteracy",
+  "description": "The difference between high-interest consumer debt that ruins your finances and low-interest productive debt that builds long-term wealth.",
+  "hashtags": [
+    "#debtfree",
+    "#personalfinance",
+    "#wealthbuilding",
+    "#moneymindset",
+    "#financialliteracy"
+  ],
+  "first_comment": "What's the best financial lesson you learned the hard way?",
+  "facts": [
+    {
+      "claim": "$3,000 credit card at 24% APR paying only the minimum (1% + interest, min $25): 183 months (~15 years), $4,887 interest",
+      "basis": "MONEY FACT SHEET"
+    },
+    {
+      "claim": "A $100,000 property bought with $20,000 down is 5x leverage; a 20% price drop ($20,000) wipes out the whole down payment, a 20% rise doubles it (before costs and interest)",
+      "basis": "MONEY FACT SHEET"
+    }
+  ],
+  "source": "llm",
+  "pillar": "myth"
+}

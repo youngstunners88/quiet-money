@@ -1,0 +1,65 @@
+{
+  "id": "2026-10-04-s5-myth-myth-all-debt-is-bad",
+  "pillar": "myth",
+  "topic": "Myth: all debt is bad",
+  "day": "2026-10-04",
+  "slot": 5,
+  "status": "held",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-04T09:26:08Z",
+      "words": 170
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-04T09:26:43Z",
+      "seconds": 62.688,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-04T09:27:34Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-04T09:29:22Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-04T09:29:22Z",
+      "score": 88
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-04T09:29:22Z"
+    },
+    {
+      "from": "packaged",
+      "to": "held",
+      "ts": "2026-10-04T09:29:22Z"
+    }
+  ],
+  "artifacts": {
+    "angle": "the difference between high-interest consumer debt and low-interest productive debt",
+    "title": "The Debt Myth That Keeps You Poor",
+    "video": "/home/user/quiet-money/production/output/2026-10-04/2026-10-04-s5-myth-myth-all-debt-is-bad/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-04/2026-10-04-s5-myth-myth-all-debt-is-bad/cover.jpg"
+  },
+  "scores": {
+    "gauntlet": 88,
+    "passed": false
+  },
+  "cost": {
+    "tts:edge:chars": 984
+  },
+  "notes": [
+    "held for review: originality, first_frame_visible"
+  ]
+}

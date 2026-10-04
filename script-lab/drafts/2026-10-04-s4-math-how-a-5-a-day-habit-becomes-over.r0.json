@@ -1,0 +1,88 @@
+{
+  "title": "The $5 Habit That Becomes $226,000",
+  "hook_text": "YOUR $5 HABIT IS COSTING YOU A FORTUNE",
+  "beats": [
+    {
+      "say": "That daily $5 habit isn't just taking small bills out of your wallet today.",
+      "callout": "",
+      "visual": "Macro shot of a dark coffee cup on a raw wooden table, warm low-key side lighting"
+    },
+    {
+      "say": "It's secretly robbing your future self of a massive pile of cash.",
+      "callout": "THE MATH",
+      "visual": "A single stack of copper coins sitting in deep shadow, top-down cinematic angle"
+    },
+    {
+      "say": "Here's the exact math behind that small daily choice.",
+      "callout": "$1,825 A YEAR",
+      "visual": "A sleek silver mechanical clock ticking against a dark, minimalist concrete wall"
+    },
+    {
+      "say": "Spending $5 a day adds up to $1,825 every single year.",
+      "callout": "COMPOUND INTEREST",
+      "visual": "A classic hourglass with dark sand pouring slowly, moody dramatic side lighting"
+    },
+    {
+      "say": "Most people leave that cash sitting in a checking account doing nothing.",
+      "callout": "ZERO GROWTH",
+      "visual": "An empty ceramic bowl resting on a stark gray slate surface, overhead view"
+    },
+    {
+      "say": "But what happens if you invest that exact amount monthly at 8%?",
+      "callout": "8% RETURN",
+      "visual": "A closed brass mechanical vault door handle in soft focus, dim cinematic glow"
+    },
+    {
+      "say": "After 10 years, that small habit turns into a respectable sum.",
+      "callout": "",
+      "visual": "A leather-bound notebook lying flat on a dark mahogany desk, low-angle shot"
+    },
+    {
+      "say": "Push it to 20 years, and the compound interest really starts working.",
+      "callout": "",
+      "visual": "A single green plant stem pushing through cracked dark pavement, cinematic close-up"
+    },
+    {
+      "say": "Hold that course for 30 years, and the final number is staggering.",
+      "callout": "$226,659",
+      "visual": "A vintage brass balance scale tipping slightly on a dark stone slab"
+    },
+    {
+      "say": "That's over $226,000 from just skipping one tiny daily expense.",
+      "callout": "TOTAL WEALTH",
+      "visual": "A heavy metal key resting on a blank white sheet of paper, top-down view"
+    },
+    {
+      "say": "It's not about never buying coffee again. It's about knowing where your money goes.",
+      "callout": "",
+      "visual": "A person's hands holding a dark ceramic mug, silhouette view against a bright window"
+    },
+    {
+      "say": "Follow for the money rules school never taught you, because that's exactly how",
+      "callout": "",
+      "visual": "A dark hallway with a single warm light at the far end, minimalist symmetry"
+    }
+  ],
+  "caption": "Small daily choices compound into massive wealth over time. It's time to let math work for you. #money #personalfinance #wealthbuilding #investing #financialfreedom",
+  "description": "Discover how a simple $5 daily habit transforms into over $226,000 through the power of consistent monthly investing at 8% over 30 years.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#wealthbuilding",
+    "#investing",
+    "#financialfreedom"
+  ],
+  "first_comment": "What's one small daily expense you'd trade for $226,000?",
+  "facts": [
+    {
+      "claim": "$5/day habit equals $1,825/year",
+      "basis": "5 * 365 = 1,825"
+    },
+    {
+      "claim": "Invested monthly at 8% for 30 years becomes $226,659",
+      "basis": "$5/day habit = $1,825/year ($152.08/month); Fact sheet notes $5/day habit invested monthly at 8% for 30 years = $226,659"
+    }
+  ],
+  "source": "llm",
+  "pillar": "math"
+}

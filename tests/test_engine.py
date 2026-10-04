@@ -709,3 +709,12 @@ def test_mostly_placeholder_art_is_a_hard_failure():
     most = {g.name: g for g in check_visuals(imgs(["procedural"] * 12), 12)}
     assert not few["no_placeholder_art"].passed and not few["no_placeholder_art"].hard
     assert most["no_placeholder_art"].hard
+
+
+def test_dark_cinematic_first_frame_is_visible_but_black_is_not():
+    from faceless.gauntlet import frame_visible
+    black = bytes([4] * 7296)
+    low_key = bytes([8] * 6000 + [70] * 1296)       # mean ~19 at worst, lit detail in the top 18%
+    darker = bytes([5] * 6200 + [60] * 1096)        # mean ~13, still a visible subject
+    assert not frame_visible(black) and frame_visible(low_key) and frame_visible(darker)
+    assert not frame_visible(b"")

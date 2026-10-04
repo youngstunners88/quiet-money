@@ -1,0 +1,83 @@
+{
+  "title": "The IRS Auditor Who Died With $22 Million",
+  "hook_text": "SHE DIED WITH $22 MILLION ON AN AUDITOR'S SALARY",
+  "beats": [
+    {
+      "say": "She spent her whole career as a low-level IRS auditor making a modest salary.",
+      "callout": "",
+      "visual": "A cinematic shot of a heavy steel desk with an old desk lamp casting a warm glow, blurred office background."
+    },
+    {
+      "say": "When she passed away at age 80, she left behind $22 million in blue-chip stocks.",
+      "callout": "$22 Million",
+      "visual": "Close-up of old stock certificates resting on dark wood, shot from above with moody lighting."
+    },
+    {
+      "say": "Her name was Anne Scheiber, and she retired in 1944 with just $5,000 saved.",
+      "callout": "$5,000 Starting Cash",
+      "visual": "An old brass desk clock ticking beside a leather notebook, soft morning light from a window."
+    },
+    {
+      "say": "She didn't inherit a fortune or buy lottery tickets. She bought shares in solid companies.",
+      "callout": "",
+      "visual": "A silhouette of a person standing by a tall office window, looking out over a city skyline at dusk."
+    },
+    {
+      "say": "Then she did one thing that turned her small savings into an absolute monster portfolio.",
+      "callout": "",
+      "visual": "Close-up of a fountain pen resting on blank cream paper, cinematic depth of field."
+    },
+    {
+      "say": "She never sold a single share for decades. Every dividend check went straight back into buying more stock.",
+      "callout": "100% Reinvested",
+      "visual": "A hand dropping a small metal token into a heavy glass jar, dark dramatic lighting."
+    },
+    {
+      "say": "But here's the part nobody mentions. She lived in a tiny studio apartment and wore the same clothes for years.",
+      "callout": "Zero Lifestyle Inflation",
+      "visual": "A sparse, minimalist room with a single coat hanging on a wooden hook, muted tones."
+    },
+    {
+      "say": "She didn't care about impressing neighbors. She cared about owning businesses that paid her to exist.",
+      "callout": "",
+      "visual": "An old brass key sitting on a heavy oak table, shot with soft natural side light."
+    },
+    {
+      "say": "Decades of compounding did the heavy lifting while she sat back and ignored market noise.",
+      "callout": "Time In The Market",
+      "visual": "A time-lapse style blur of city traffic at night viewed from a high angle, lights streaking softly."
+    },
+    {
+      "say": "Most people trade time for stuff they don't need, missing the exact power she used.",
+      "callout": "",
+      "visual": "A heavy leather-bound ledger book closed tight on a dark desk, moody cinematic shadows."
+    },
+    {
+      "say": "Patience and compound interest beat a high paycheck every single time you apply them, and that's exactly how",
+      "callout": "Follow for money rules",
+      "visual": "A single wooden chess piece standing upright on a dark board, dramatic side lighting."
+    }
+  ],
+  "caption": "Anne Scheiber turned $5,000 into $22 million by doing two things: living below her means and never selling. #money #investing #wealth #personalfinance",
+  "description": "Discover the incredible story of IRS auditor Anne Scheiber, who turned a modest $5,000 nest egg into a $22 million fortune through patience, dividend reinvesting, and extreme frugality. Learn the money rules school never taught you.",
+  "hashtags": [
+    "#money",
+    "#investing",
+    "#wealth",
+    "#personalfinance",
+    "#stocks"
+  ],
+  "first_comment": "What's the longest you've ever held a single investment without selling?",
+  "facts": [
+    {
+      "claim": "Anne Scheiber retired in 1944 with $5,000 and died with $22 million.",
+      "basis": "Well-documented estate records and biography following her death in the late 1990s."
+    },
+    {
+      "claim": "She was an IRS auditor who heavily invested in blue-chip stocks and reinvested all dividends.",
+      "basis": "Financial media profiles documenting her portfolio holdings and strategy."
+    }
+  ],
+  "source": "llm",
+  "pillar": "story"
+}

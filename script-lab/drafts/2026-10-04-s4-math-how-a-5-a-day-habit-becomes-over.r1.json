@@ -1,0 +1,89 @@
+{
+  "title": "The Hidden Cost of Your $5 Habit",
+  "hook_text": "$5 TODAY IS ACTUALLY $226,000",
+  "beats": [
+    {
+      "say": "Spending $5 on coffee today doesn't cost $5. It costs you $226,000.",
+      "callout": "",
+      "visual": "A close-up of a dark ceramic coffee mug sitting on a raw concrete countertop, steam rising slowly in moody morning light."
+    },
+    {
+      "say": "That sounds like a complete lie, but it's simple math your bank hopes you never calculate.",
+      "callout": "",
+      "visual": "A low-angle cinematic shot of a towering glass bank skyscraper reflecting a gloomy overcast sky."
+    },
+    {
+      "say": "Let's look at what actually happens to those five single dollars if you put them to work.",
+      "callout": "",
+      "visual": "A hand in a dark wool sweater holding five folded one-dollar bills, macro shot, shallow depth of field."
+    },
+    {
+      "say": "A $5 daily habit adds up to exactly $1,825 over the course of a single year.",
+      "callout": "$1,825 a year",
+      "visual": "A clear glass jar resting on a wooden desk, partially filled with folded cash, warm afternoon sunlight casting long shadows."
+    },
+    {
+      "say": "If you invest that amount monthly at an 8% average annual return, compounding begins to take over.",
+      "callout": "8% annual return",
+      "visual": "A dark metallic coin spinning on a polished black marble surface, catching sharp studio lighting."
+    },
+    {
+      "say": "In the beginning, the progress feels slow, and you might feel tempted to just quit.",
+      "callout": "",
+      "visual": "An empty asphalt road stretching into a foggy horizon at dawn, clean minimalist composition."
+    },
+    {
+      "say": "But your money builds quietly, hitting $27,000 at year 10, and $89,000 by year 20.",
+      "callout": "$89,000 at year 20",
+      "visual": "A vintage mechanical counting machine with blurred spinning gears, focused on a sleek metal casing."
+    },
+    {
+      "say": "By year 30, your small daily habit has grown into over $226,000 in cold cash.",
+      "callout": "Over $226,000",
+      "visual": "A neat stack of hundred-dollar bills bound with a plain paper band, sitting on a dark oak desk."
+    },
+    {
+      "say": "But here's the part nobody mentions when they talk about this math.",
+      "callout": "",
+      "visual": "The dark silhouette of a person looking out of a high-rise window at a sprawling city at sunset."
+    },
+    {
+      "say": "This isn't an argument to never buy coffee or live a miserable, restricted life.",
+      "callout": "",
+      "visual": "A professional espresso machine dripper pouring rich, dark espresso into a small glass cup, extreme close-up."
+    },
+    {
+      "say": "It's simply proof of the massive leverage your smallest daily financial decisions actually hold.",
+      "callout": "",
+      "visual": "A heavy metal lever mechanism in a dark industrial setting, dramatic side-lighting."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "A dark leather-bound journal closed on a rustic wooden desk next to a classic fountain pen."
+    },
+    {
+      "say": "Because every single time you ignore this reality...",
+      "callout": "",
+      "visual": "A ticking minimalist wall clock with black metal hands moving slowly on a concrete face."
+    }
+  ],
+  "caption": "Your small daily choices are worth way more than you think. Here is the math. ☕️📈\n\n#personalfinance #investing101 #moneytok #wealthbuilding #quietmoney",
+  "description": "This video breaks down the compounding power of a $5 daily habit invested monthly over 30 years at an 8% return, proving that small amounts build serious wealth.",
+  "hashtags": [
+    "#personalfinance",
+    "#investing101",
+    "#moneytok",
+    "#wealthbuilding",
+    "#quietmoney"
+  ],
+  "first_comment": "What is one small daily purchase you could easily swap to start investing today?",
+  "facts": [
+    {
+      "claim": "A $5 daily habit invested monthly at 8% for 30 years grows to over $226,000.",
+      "basis": "Based on the calculation: $5/day habit = $1,825/year ($152.08/month) invested monthly at 8% for 30 years = $226,659."
+    }
+  ],
+  "source": "llm",
+  "pillar": "math"
+}

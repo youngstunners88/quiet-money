@@ -1,0 +1,72 @@
+{
+  "id": "2026-10-04-s6-escape-deal-flow-why-owners-see-opportu",
+  "pillar": "escape",
+  "topic": "Deal flow: why owners see opportunities employees never do",
+  "day": "2026-10-04",
+  "slot": 6,
+  "status": "published",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-04T09:30:40Z",
+      "words": 161
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-04T09:31:06Z",
+      "seconds": 61.396,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-04T09:31:19Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-04T09:33:50Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-04T09:33:50Z",
+      "score": 97
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-04T09:33:50Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-10-04T09:33:50Z",
+      "local": "2026-10-05T11:30:00-04:00"
+    }
+  ],
+  "artifacts": {
+    "angle": "big outcomes come from seeing many deals, not one bigger salary",
+    "brief": "pena",
+    "title": "Why Deal Flow Beats Any Salary",
+    "video": "/home/user/quiet-money/production/output/2026-10-04/2026-10-04-s6-escape-deal-flow-why-owners-see-opportu/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-04/2026-10-04-s6-escape-deal-flow-why-owners-see-opportu/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-10-05/slot2-escape",
+        "post_at": "2026-10-05T11:30:00-04:00"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 97,
+    "passed": true
+  },
+  "cost": {
+    "tts:edge:chars": 945
+  },
+  "notes": []
+}

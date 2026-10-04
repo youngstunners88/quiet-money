@@ -1,0 +1,71 @@
+{
+  "id": "2026-10-04-s7-story-anne-scheiber-the-irs-auditor-wh",
+  "pillar": "story",
+  "topic": "Anne Scheiber, the IRS auditor who turned $5,000 into $22 million",
+  "day": "2026-10-04",
+  "slot": 7,
+  "status": "published",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-04T09:34:25Z",
+      "words": 175
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-04T09:34:55Z",
+      "seconds": 62.352,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-04T09:35:07Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-04T09:37:44Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-04T09:37:44Z",
+      "score": 96
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-04T09:37:44Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-10-04T09:37:44Z",
+      "local": "2026-10-05T15:00:00-04:00"
+    }
+  ],
+  "artifacts": {
+    "angle": "patience, dividend reinvesting, and spending almost nothing",
+    "title": "The IRS Auditor Who Died With $22 Million",
+    "video": "/home/user/quiet-money/production/output/2026-10-04/2026-10-04-s7-story-anne-scheiber-the-irs-auditor-wh/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-04/2026-10-04-s7-story-anne-scheiber-the-irs-auditor-wh/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-10-05/slot3-story",
+        "post_at": "2026-10-05T15:00:00-04:00"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 96,
+    "passed": true
+  },
+  "cost": {
+    "tts:edge:chars": 1017
+  },
+  "notes": []
+}

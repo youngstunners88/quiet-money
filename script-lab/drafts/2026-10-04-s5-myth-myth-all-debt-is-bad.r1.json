@@ -1,0 +1,83 @@
+{
+  "title": "The Hidden Difference Between Good and Bad Debt",
+  "hook_text": "THE DEBT TRAP",
+  "beats": [
+    {
+      "say": "A $3,000 credit card balance will quietly double to $6,000 in just three years.",
+      "callout": "",
+      "visual": "A close-up of a person's hands cutting a dark credit card in half with heavy metal shears under moody, dark lighting."
+    },
+    {
+      "say": "That's high interest consumer debt. But the wealthy use a completely different type of debt to build empires.",
+      "callout": "TWO TYPES",
+      "visual": "A low-angle shot of a tall modern office building at night with warm office lights glowing inside."
+    },
+    {
+      "say": "We're always told that all debt is bad. That basic rule keeps you safe, but it keeps you broke.",
+      "callout": "THE MYTH",
+      "visual": "A closed dusty leather-bound ledger on a dark mahogany desk, illuminated by a single spotlight."
+    },
+    {
+      "say": "High interest consumer debt is financial cancer. At 24% interest, your balance grows faster than you can earn.",
+      "callout": "24% INTEREST",
+      "visual": "A close-up of a rusty water valve slowly dripping water onto a dark concrete floor."
+    },
+    {
+      "say": "Paying a typical 2% minimum on that card keeps you trapped in debt for over 15 years.",
+      "callout": "15 YEARS",
+      "visual": "An extreme close-up of an hourglass with black sand slowly running down in a dimly lit room."
+    },
+    {
+      "say": "But here's the part nobody mentions. Debt is not inherently evil; it's just a tool, like a scalpel.",
+      "callout": "A TOOL",
+      "visual": "Hands in the shadow carefully placing a clean, silver surgical scalpel onto a sterile steel tray."
+    },
+    {
+      "say": "In the hands of a trained surgeon, it saves lives. In the hands of a child, it's deadly.",
+      "callout": "",
+      "visual": "A clean, empty wooden table in a minimalist modern room with soft cinematic side-lighting."
+    },
+    {
+      "say": "If you can secure low-interest debt to buy an asset yielding a higher return, you pocket the difference.",
+      "callout": "THE SPREAD",
+      "visual": "A wide cinematic shot of a modern residential apartment building at dusk, warm interior lights."
+    },
+    {
+      "say": "This is productive leverage. It's how smart investors buy cash flowing assets with almost none of their own money.",
+      "callout": "LEVERAGE",
+      "visual": "A close-up of hands turning a heavy brass key inside an old rustic wooden door."
+    },
+    {
+      "say": "Learning to spot the difference is how you scale. Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "A silhouette of a person walking down a quiet library aisle lined with tall bookshelves."
+    },
+    {
+      "say": "Because without understanding this crucial line, you'll always look at a balance sheet and wonder why...",
+      "callout": "",
+      "visual": "A rainy window pane at night with city streetlights blurred into soft bokeh in the background."
+    }
+  ],
+  "caption": "All debt is not created equal. Here is how the wealthy use leverage to build empires while consumer debt keeps others trapped. 📉",
+  "description": "An explanation of the difference between high-interest consumer debt and low-interest productive debt. Learn how to identify when debt is a destructive trap versus a powerful wealth-building tool.",
+  "hashtags": [
+    "#personalfinance",
+    "#debtfree",
+    "#financialfreedom",
+    "#moneyrules",
+    "#quietmoney"
+  ],
+  "first_comment": "What is the worst piece of debt advice you have ever been given?",
+  "facts": [
+    {
+      "claim": "At 24% interest, debt doubles every 3 years.",
+      "basis": "Rule of 72: at 24% debt doubles every 3 years."
+    },
+    {
+      "claim": "Paying a 2% minimum on a $3,000 credit card at 24% keeps you trapped in debt for over 15 years.",
+      "basis": "$3,000 credit card at 24% APR paying only the minimum (1% + interest, min $25): 183 months (~15 years)."
+    }
+  ],
+  "source": "llm",
+  "pillar": "myth"
+}

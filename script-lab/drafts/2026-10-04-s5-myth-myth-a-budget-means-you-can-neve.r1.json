@@ -1,0 +1,79 @@
+{
+  "title": "The Budgeting Rule That Lets You Spend Guilt-Free",
+  "hook_text": "BUDGETING DOES NOT MEAN NEVER HAVING FUN",
+  "beats": [
+    {
+      "say": "The wealthiest people don't actually restrict their spending. They use a system that flips the script.",
+      "callout": "",
+      "visual": "Cinematic shot of a fountain pen resting on a dark leather notebook in dim warm light"
+    },
+    {
+      "say": "Most people try to save what's left after spending. That's why it always fails.",
+      "callout": "FAILS",
+      "visual": "Close up of a hand closing a worn leather wallet, soft shadows"
+    },
+    {
+      "say": "You end up exhausted, feeling like a budget means a life of total deprivation.",
+      "callout": "",
+      "visual": "A person's silhouette standing by a tall glass window looking out at a rainy city street"
+    },
+    {
+      "say": "But here's the part nobody mentions. The secret is to budget your fun money first.",
+      "callout": "FUN FIRST",
+      "visual": "Overhead view of two glasses of dark espresso on a dark wooden cafe table"
+    },
+    {
+      "say": "Set aside your guilt-free spending right when your paycheck hits the bank account.",
+      "callout": "",
+      "visual": "A smartphone resting flat on a minimalist concrete desk with soft natural light"
+    },
+    {
+      "say": "For instance, take a $5/day habit. Left alone, it drains your cash.",
+      "callout": "$5 A DAY",
+      "visual": "Close up of coins dropping into a clear glass jar on a dark surface"
+    },
+    {
+      "say": "Redirect that exact same amount into investments. Over 30 years at 8% a year, it turns into $226,659.",
+      "callout": "$226,659",
+      "visual": "A slow cinematic pan across a modern empty apartment at dusk"
+    },
+    {
+      "say": "Once your investments are automated, every remaining dollar is yours to spend without guilt.",
+      "callout": "GUILT-FREE",
+      "visual": "Hands typing on a sleek laptop keyboard in a dimly lit room"
+    },
+    {
+      "say": "You stop fighting your own habits. You design a system that works while you sleep.",
+      "callout": "",
+      "visual": "A dark hallway with a single warm strip of light along the floor"
+    },
+    {
+      "say": "That's how you build real financial freedom without hating your daily life.",
+      "callout": "FREEDOM",
+      "visual": "A calm ocean horizon at sunrise with deep blue and gold tones"
+    },
+    {
+      "say": "Follow for the money rules school never taught you, starting with why...",
+      "callout": "FOLLOW",
+      "visual": "A hand turning off a brass desk lamp, leaving the room in soft shadow"
+    }
+  ],
+  "caption": "The secret to a real budget isn't cutting out everything you love. It's paying your future self first and spending the rest without guilt. \n\n#personalfinance #moneytips #budgeting #wealthbuilding #smartmoney",
+  "description": "Learn the reverse budgeting strategy that lets you enjoy your money today while building wealth for tomorrow. No deprivation required.",
+  "hashtags": [
+    "#personalfinance",
+    "#moneytips",
+    "#budgeting",
+    "#wealthbuilding",
+    "#smartmoney"
+  ],
+  "first_comment": "What's one thing you refuse to cut from your monthly spending?",
+  "facts": [
+    {
+      "claim": "$5/day habit invested at 8% for 30 years equals $226,659",
+      "basis": "$5/day habit = $1,825/year; invested monthly at 8% for 30 years = $226,659"
+    }
+  ],
+  "source": "llm",
+  "pillar": "myth"
+}

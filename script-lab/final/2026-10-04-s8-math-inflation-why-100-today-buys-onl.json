@@ -1,0 +1,84 @@
+{
+  "title": "The Slow Leak of Cash Under the Mattress",
+  "hook_text": "YOUR HUNDRED DOLLARS IS SHRINKING",
+  "beats": [
+    {
+      "say": "That crisp $100 bill sitting in your wallet is slowly but surely shrinking.",
+      "callout": "",
+      "visual": "A close-up of a person's hands holding a crisp hundred-dollar bill in a dimly lit, minimalist room with moody shadows."
+    },
+    {
+      "say": "Today, you'll discover the invisible, silent tax that drains your hard-earned savings while you sleep.",
+      "callout": "THE SILENT TAX",
+      "visual": "An empty bedroom at dusk, soft moonlight spilling across an unmade bed, creating a quiet, slightly eerie atmosphere."
+    },
+    {
+      "say": "Imagine hiding $100 in cash under your mattress, thinking it's completely safe for the future.",
+      "callout": "",
+      "visual": "A person's hands lifting the corner of a heavy mattress, revealing a dark wooden bed frame underneath."
+    },
+    {
+      "say": "In 20 years, you pull out that exact same paper bill, expecting its full value.",
+      "callout": "20 YEARS LATER",
+      "visual": "Hands pulling an aged, slightly creased hundred-dollar bill from a dark wooden drawer, cinematic overhead shot."
+    },
+    {
+      "say": "But at a steady 3% inflation, that $100 today buys only about $55 of stuff in 20 years.",
+      "callout": "WORTH ONLY $55",
+      "visual": "A half-empty shopping cart sitting alone in a modern, quietly lit supermarket aisle, shallow depth of field."
+    },
+    {
+      "say": "You didn't spend a single dollar, yet almost half of your real purchasing power vanished into thin air.",
+      "callout": "LOST 45%",
+      "visual": "A close-up of dust motes floating in a single beam of light in a dark room, capturing a sense of emptiness."
+    },
+    {
+      "say": "But here's the critical part nobody mentions about saving.",
+      "callout": "",
+      "visual": "A silhouette of a person looking out a large window at a rainy city skyline at night, cold cinematic blue tones."
+    },
+    {
+      "say": "Keeping your cash in a basic bank account is actually a guaranteed way to lose wealth over time.",
+      "callout": "GUARANTEED LOSS",
+      "visual": "An empty glass jar sitting on a dark marble countertop, reflecting the faint glow of morning light."
+    },
+    {
+      "say": "The wealthy don't hoard cash; they move it into assets that grow faster than the inflation rate.",
+      "callout": "",
+      "visual": "A sleek, minimalist building exterior with clean lines, glass windows reflecting a bright blue sky."
+    },
+    {
+      "say": "To protect your future, you must learn how to make your money work harder than the economy.",
+      "callout": "OUTRUN INFLATION",
+      "visual": "A person’s hand adjusting a high-end metal watch dial, sharp focus, elegant dark background."
+    },
+    {
+      "say": "Follow for the money rules school never taught you, and take control of your financial path.",
+      "callout": "",
+      "visual": "A dark, clean hallway with a single warm light at the very end, guiding the viewer's eye forward."
+    },
+    {
+      "say": "It starts by understanding exactly why...",
+      "callout": "",
+      "visual": "A macro close-up of a turning metal gear mechanism inside a high-end clock, intricate and steady."
+    }
+  ],
+  "caption": "Your savings are slowly leaking away. Here is the exact math behind why holding raw cash is a losing game. #money #personalfinance #inflation #wealth #quietmoney",
+  "description": "Discover how a steady 3% inflation rate strips away almost half of your buying power over 20 years. Learn why holding physical cash or keeping it in basic bank accounts is a guaranteed way to lose wealth, and why moving into assets is the only way to outrun the system.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#inflation",
+    "#wealth",
+    "#quietmoney"
+  ],
+  "first_comment": "What assets are you currently using to beat inflation? Let's discuss in the comments.",
+  "facts": [
+    {
+      "claim": "$100 today is worth $55 in buying power after 20 years of 3% inflation",
+      "basis": "Given in the Money Fact Sheet"
+    }
+  ],
+  "source": "llm",
+  "pillar": "math"
+}

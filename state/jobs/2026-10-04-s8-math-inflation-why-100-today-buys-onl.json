@@ -1,0 +1,71 @@
+{
+  "id": "2026-10-04-s8-math-inflation-why-100-today-buys-onl",
+  "pillar": "math",
+  "topic": "Inflation: why $100 today buys only about $55 of stuff in 20 years at 3% inflation",
+  "day": "2026-10-04",
+  "slot": 8,
+  "status": "published",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-04T09:38:31Z",
+      "words": 177
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-04T09:39:03Z",
+      "seconds": 63.672,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-04T09:39:17Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-04T09:41:51Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-04T09:41:51Z",
+      "score": 92
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-04T09:41:51Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-10-04T09:41:51Z",
+      "local": "2026-10-05T18:30:00-04:00"
+    }
+  ],
+  "artifacts": {
+    "angle": "cash under the mattress is a slow leak",
+    "title": "The Slow Leak of Cash Under the Mattress",
+    "video": "/home/user/quiet-money/production/output/2026-10-04/2026-10-04-s8-math-inflation-why-100-today-buys-onl/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-04/2026-10-04-s8-math-inflation-why-100-today-buys-onl/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-10-05/slot4-math",
+        "post_at": "2026-10-05T18:30:00-04:00"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 92,
+    "passed": true
+  },
+  "cost": {
+    "tts:edge:chars": 1025
+  },
+  "notes": []
+}

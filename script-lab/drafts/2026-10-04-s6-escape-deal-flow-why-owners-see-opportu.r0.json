@@ -1,0 +1,87 @@
+{
+  "title": "Why Owners See Deals Employees Never Do",
+  "hook_text": "SALARIES KEEP YOU BLIND TO REAL WEALTH",
+  "beats": [
+    {
+      "say": "Salaries keep you blind to real wealth.",
+      "callout": "",
+      "visual": "A lone silhouette of a worker standing inside a brightly lit office cubicle at night, dark moody atmosphere, cinematic side lighting, low angle shot."
+    },
+    {
+      "say": "Here's why business owners see opportunities you'll never spot.",
+      "callout": "DEAL FLOW",
+      "visual": "Close-up of a hand sliding a blank black leather contract folder across a dark polished mahogany desk, dramatic overhead view, shallow depth of field."
+    },
+    {
+      "say": "It's called deal flow. While employees see one monthly paycheck, owners look at ten proposals a week.",
+      "callout": "10 PROPOSALS",
+      "visual": "A stack of thick white paper documents sitting untouched on a rustic wooden table, dim ambient light, moody cinematic shadows, 35mm lens."
+    },
+    {
+      "say": "Big outcomes don't come from a bigger salary. They come from seeing volume.",
+      "callout": "VOLUME WINS",
+      "visual": "An empty conference room with rows of dark leather chairs facing a large blank whiteboard, sharp focus, cool corporate color grading."
+    },
+    {
+      "say": "Think about the rule of 100. Doing 100 reach-outs a day for 100 days creates 10,000 contacts.",
+      "callout": "10,000 CONTACTS",
+      "visual": "A minimalist white wall with a clean black grid pattern drawn lightly in charcoal, dramatic side lighting casting sharp shadows."
+    },
+    {
+      "say": "At a 1% yes-rate, that's 100 customers from pure volume.",
+      "callout": "100 CUSTOMERS",
+      "visual": "A metal desk calendar resting on a dark slate surface, one blurred page visible, moody morning window light streaming across the scene."
+    },
+    {
+      "say": "But here's the honest catch. OPM means using other people's money, and deals can fail.",
+      "callout": "THE CATCH",
+      "visual": "A close-up of a silver metal pen resting beside a blank ledger book, desaturated colors, gritty cinematic texture, soft natural backlight."
+    },
+    {
+      "say": "You owe debt back or give away equity, risking your own capital in the process.",
+      "callout": "RISK OF LOSS",
+      "visual": "An old brass desk lamp casting a warm circle of light onto a clean, empty wooden workspace, moody vignette around the edges."
+    },
+    {
+      "say": "Most people stay stuck because their circle sets their ceiling on what feels normal.",
+      "callout": "",
+      "visual": "An empty wooden round table surrounded by four matching chairs, viewed from above, minimalist interior design, moody neutral tones."
+    },
+    {
+      "say": "Stop collecting courses. Start tracking deals and build the execution habits that change your financial future, and that's exactly how",
+      "callout": "",
+      "visual": "A pair of heavy iron office doors slightly ajar, warm golden light spilling out onto a dark hallway floor, cinematic wide angle."
+    },
+    {
+      "say": "salaries keep you blind to real wealth.",
+      "callout": "",
+      "visual": "A close-up of a hand closing a heavy dark leather notebook on a wooden table, deep shadows, moody framing."
+    }
+  ],
+  "caption": "Salaries put blinders on. Owners look at volume, not paychecks. #dealflow #wealthmindset #personalfinance #businessowners #moneyrules",
+  "description": "Why relying on a single salary limits your vision. Learn the power of deal flow, volume, and how owners spot opportunities employees miss.",
+  "hashtags": [
+    "#dealflow",
+    "#wealthmindset",
+    "#personalfinance",
+    "#businessowners",
+    "#moneyrules"
+  ],
+  "first_comment": "What's the best deal you've ever seen someone make?",
+  "facts": [
+    {
+      "claim": "100 reach-outs a day for 100 days = 10,000 contacts; at a 1% yes-rate that's 100 customers (hypothetical rate)",
+      "basis": "Rule of 100 volume math from fact sheet"
+    },
+    {
+      "claim": "Your circle sets your ceiling",
+      "basis": "Dan Peña framework from research brief"
+    },
+    {
+      "claim": "OPM means using other people's money, and deals can fail",
+      "basis": "Dan Peña framework and honest catch from research brief"
+    }
+  ],
+  "source": "llm",
+  "pillar": "escape"
+}

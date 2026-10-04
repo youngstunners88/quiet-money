@@ -1,0 +1,71 @@
+{
+  "id": "2026-10-04-s4-math-how-a-5-a-day-habit-becomes-over",
+  "pillar": "math",
+  "topic": "How a $5-a-day habit becomes over $226,000 in 30 years if invested",
+  "day": "2026-10-04",
+  "slot": 4,
+  "status": "published",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-04T09:19:30Z",
+      "words": 180
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-04T09:19:50Z",
+      "seconds": 63.936,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-04T09:20:49Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-04T09:23:35Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-04T09:23:35Z",
+      "score": 96
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-04T09:23:35Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-10-04T09:23:35Z",
+      "local": "2026-10-04T21:00:00-04:00"
+    }
+  ],
+  "artifacts": {
+    "angle": "not 'never buy coffee', but what small daily money can become",
+    "title": "The Hidden Cost of Your $5 Habit",
+    "video": "/home/user/quiet-money/production/output/2026-10-04/2026-10-04-s4-math-how-a-5-a-day-habit-becomes-over/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-04/2026-10-04-s4-math-how-a-5-a-day-habit-becomes-over/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-10-04/slot5-math",
+        "post_at": "2026-10-04T21:00:00-04:00"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 96,
+    "passed": true
+  },
+  "cost": {
+    "tts:edge:chars": 1020
+  },
+  "notes": []
+}
