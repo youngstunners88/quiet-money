@@ -1668,3 +1668,19 @@
 {"ts": "2026-10-05T09:37:18Z", "t": 1791193038.636, "actor": "engine", "type": "PROVIDER_OK", "capability": "llm", "provider": "gemini", "job": "2026-10-05-s6-math-500-a-month-invested-for-40-year", "ms": 20915}
 {"ts": "2026-10-05T09:37:18Z", "t": 1791193038.827, "actor": "engine", "type": "GAUNTLET", "job": "2026-10-05-s6-math-500-a-month-invested-for-40-year", "score": 93, "passed": true, "hard": []}
 {"ts": "2026-10-05T09:37:18Z", "t": 1791193038.992, "actor": "engine", "type": "JOB_TRANSITION", "job": "2026-10-05-s6-math-500-a-month-invested-for-40-year", "to": "published", "manual": true, "forced": false}
+{"ts": "2026-10-05T11:08:55Z", "t": 1791198535.265, "actor": "engine", "type": "PROVIDER_OK", "capability": "llm", "provider": "gemini", "job": null, "ms": 13829}
+{"ts": "2026-10-05T11:09:05Z", "t": 1791198545.57, "actor": "engine", "type": "SCOUT_TOPUP", "pillar": "story", "added": 6}
+{"ts": "2026-10-05T11:09:40Z", "t": 1791198580.485, "actor": "engine", "type": "PROVIDER_OK", "capability": "llm", "provider": "gemini", "job": null, "ms": 33389}
+{"ts": "2026-10-05T11:09:50Z", "t": 1791198590.306, "actor": "engine", "type": "SCOUT_TOPUP", "pillar": "math", "added": 6}
+{"ts": "2026-10-05T11:09:56Z", "t": 1791198596.325, "actor": "engine", "type": "PROVIDER_OK", "capability": "llm", "provider": "gemini", "job": null, "ms": 4379}
+{"ts": "2026-10-05T11:10:02Z", "t": 1791198602.186, "actor": "engine", "type": "PROVIDER_OK", "capability": "llm", "provider": "gemini", "job": null, "ms": 4525}
+{"ts": "2026-10-05T11:10:07Z", "t": 1791198607.29, "actor": "engine", "type": "PROVIDER_OK", "capability": "llm", "provider": "gemini", "job": null, "ms": 3350}
+{"ts": "2026-10-05T11:10:21Z", "t": 1791198621.849, "actor": "engine", "type": "PROVIDER_OK", "capability": "llm", "provider": "gemini", "job": null, "ms": 2925}
+{"ts": "2026-10-05T11:10:23Z", "t": 1791198623.715, "actor": "engine", "type": "SCOUT_TOPUP", "pillar": "myth", "added": 1}
+{"ts": "2026-10-05T11:10:39Z", "t": 1791198639.369, "actor": "engine", "type": "SCOUT_TOPUP", "pillar": "playbook", "added": 1}
+{"ts": "2026-10-05T11:10:45Z", "t": 1791198645.578, "actor": "engine", "type": "PROVIDER_OK", "capability": "llm", "provider": "gemini", "job": null, "ms": 4232}
+{"ts": "2026-10-05T11:10:49Z", "t": 1791198649.73, "actor": "engine", "type": "SCOUT_TOPUP", "pillar": "psychology", "added": 6}
+{"ts": "2026-10-05T11:10:55Z", "t": 1791198655.377, "actor": "engine", "type": "PROVIDER_OK", "capability": "llm", "provider": "gemini", "job": null, "ms": 4323}
+{"ts": "2026-10-05T11:11:05Z", "t": 1791198665.425, "actor": "engine", "type": "SCOUT_TOPUP", "pillar": "myth", "added": 6}
+{"ts": "2026-10-05T11:11:12Z", "t": 1791198672.089, "actor": "engine", "type": "PROVIDER_OK", "capability": "llm", "provider": "gemini", "job": null, "ms": 4196}
+{"ts": "2026-10-05T11:11:14Z", "t": 1791198674.576, "actor": "engine", "type": "SCOUT_TOPUP", "pillar": "escape", "added": 2}

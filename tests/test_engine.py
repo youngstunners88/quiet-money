@@ -725,3 +725,15 @@ def test_small_lit_subject_on_black_is_visible():
     # 2026-10-05 math video: a lit hand and coin on black, mean 14, 90th percentile 35
     assert frame_visible(bytes([6] * 6400 + [35] * 500 + [165] * 396))
     assert not frame_visible(bytes([3] * 6900 + [200] * 396))   # black frame with only the hook box lit
+
+
+def test_scout_topup_accepts_a_bare_idea_list(monkeypatch, tmp_path):
+    from faceless import scout
+    from faceless.pipeline import ideate
+    monkeypatch.setattr("faceless.providers.llm.complete", lambda *a, **k: [{"topic": "Why rent feels cheaper"}, "junk"])
+    monkeypatch.setattr(scout.keywords, "demand", lambda t: {"score": 3})
+    monkeypatch.setattr(scout, "_signals", lambda p: [])
+    monkeypatch.setattr(ideate, "BACKLOG", tmp_path / "backlog.jsonl")
+    monkeypatch.setattr(ideate, "history_texts", lambda: [])
+    monkeypatch.setattr("faceless.events.JOURNAL", tmp_path / "j.jsonl")
+    assert [a["topic"] for a in scout.topup("myth", 2)] == ["Why rent feels cheaper"]

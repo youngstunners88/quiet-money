@@ -133,7 +133,10 @@ def topup(pillar: str, n: int = TOPUP_BATCH) -> list[dict]:
     res = llm.complete(prompt, want_json=True, temperature=0.9)
     threshold = config.load()["gauntlet"]["similarity_max"]
     added = []
-    for i in res.get("ideas", []):
+    raw = res.get("ideas", []) if isinstance(res, dict) else res   # models sometimes return the bare list
+    for i in raw if isinstance(raw, list) else []:
+        if not isinstance(i, dict):
+            continue
         topic = str(i.get("topic", "")).strip()
         if not topic or not ideate.is_fresh(topic, history + [a["topic"] for a in added], threshold):
             continue
