@@ -1684,3 +1684,4 @@
 {"ts": "2026-10-05T11:11:05Z", "t": 1791198665.425, "actor": "engine", "type": "SCOUT_TOPUP", "pillar": "myth", "added": 6}
 {"ts": "2026-10-05T11:11:12Z", "t": 1791198672.089, "actor": "engine", "type": "PROVIDER_OK", "capability": "llm", "provider": "gemini", "job": null, "ms": 4196}
 {"ts": "2026-10-05T11:11:14Z", "t": 1791198674.576, "actor": "engine", "type": "SCOUT_TOPUP", "pillar": "escape", "added": 2}
+{"ts": "2026-10-05T21:18:54Z", "t": 1791235134.816, "actor": "engine", "type": "AEO_TRACK", "probes": 16, "ok": 0, "mentioned": 0}
