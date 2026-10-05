@@ -1,0 +1,89 @@
+{
+  "title": "Why the new car feeling fades in weeks",
+  "hook_text": "THE 18-DAY JOY LIMIT",
+  "beats": [
+    {
+      "say": "It takes exactly eighteen days for a brand-new car to lose its joy.",
+      "callout": "",
+      "visual": "A brand-new car key resting on a minimalist marble kitchen island, dramatic morning light, shallow depth of field."
+    },
+    {
+      "say": "Psychologists call this hedonic adaptation, and it's the quiet tax keeping you middle class.",
+      "callout": "",
+      "visual": "Close-up of a person's hands holding a leather steering wheel of a parked car at night, dashboard lights glowing faintly."
+    },
+    {
+      "say": "You work hard for a promotion, buy the shiny new upgrade, and feel incredibly happy.",
+      "callout": "",
+      "visual": "A modern, high-end apartment interior with empty designer furniture, large windows showing a blurry cityscape."
+    },
+    {
+      "say": "But within a few short weeks, that expensive new baseline just feels completely normal.",
+      "callout": "THE NEW NORMAL",
+      "visual": "A luxury watch sitting on a dark wooden nightstand next to a glass of water, soft cinematic lighting."
+    },
+    {
+      "say": "To get that same rush again, you must upgrade to an even more expensive lifestyle.",
+      "callout": "",
+      "visual": "An empty espresso cup on a concrete counter, light steam rising, shot from an overhead angle."
+    },
+    {
+      "say": "It's an endless treadmill of consumption, but here's the part nobody ever mentions to you.",
+      "callout": "",
+      "visual": "An empty, dimly lit concrete hallway with a single door slightly open, light spilling onto the floor."
+    },
+    {
+      "say": "Upgrading your car or apartment by just $200 a month feels good temporarily.",
+      "callout": "$200 A MONTH",
+      "visual": "A close-up of hands typing on a laptop in a cozy cafe, shot from behind the screen so the display is hidden."
+    },
+    {
+      "say": "But that same $200 invested for 30 years at 8% compounding grows into $298,072.",
+      "callout": "$298,072",
+      "visual": "A classic brass hourglass on a dark wooden table, sand pouring down, dramatic side lighting."
+    },
+    {
+      "say": "That's almost $300,000 you traded away for a feeling that faded in weeks.",
+      "callout": "",
+      "visual": "A close-up of someone's hand sliding a bank card into a pocket, blurred background, moody lighting."
+    },
+    {
+      "say": "If you want real wealth, stop buying depreciating status symbols and start buying your freedom.",
+      "callout": "BUY FREEDOM",
+      "visual": "A wide, cinematic shot of a lone person's silhouette standing on a rugged cliff looking at the ocean at dawn."
+    },
+    {
+      "say": "Use your money to purchase experiences, control over your schedule, and true peace.",
+      "callout": "TRUE PEACE",
+      "visual": "Two steaming ceramic mugs sitting on a rustic wooden porch overlooking a misty green forest."
+    },
+    {
+      "say": "Click follow for the practical money rules that school never bothered to teach you.",
+      "callout": "",
+      "visual": "A vintage fountain pen resting on a blank textured leather journal, warm studio light."
+    },
+    {
+      "say": "Stop wasting your compounding potential on temporary upgrades, especially since",
+      "callout": "",
+      "visual": "A single fallen autumn leaf floating on a dark, still puddle, reflection of trees, cinematic slow-motion look."
+    }
+  ],
+  "caption": "Why does the excitement of a new purchase fade so fast? Here is the psychology of hedonic adaptation and how to beat it. #money #personalfinance #financialfreedom #wealth #psychology",
+  "description": "Learn why lifestyle upgrades fail to bring lasting happiness and how redirecting that cash can buy you true financial freedom.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#financialfreedom",
+    "#wealth",
+    "#psychology"
+  ],
+  "first_comment": "What was the last purchase you made that lost its excitement faster than you expected?",
+  "facts": [
+    {
+      "claim": "investing $200 a month for 30 years at 8% compounding grows into $298,072",
+      "basis": "Money Fact Sheet: $200/month invested for 30 years at 8%/yr (monthly compounding) = $298,072"
+    }
+  ],
+  "source": "llm",
+  "pillar": "psychology"
+}

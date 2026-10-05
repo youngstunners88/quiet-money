@@ -1,0 +1,92 @@
+{
+  "title": "Sell The System, Not Your Hours",
+  "hook_text": "YOUR TIME HAS A HARD CEILING",
+  "beats": [
+    {
+      "say": "Your time has a hard ceiling, but a packaged system doesn't.",
+      "callout": "",
+      "visual": "Cinematic shot of a blank desk with an hourglass, moody side lighting, blurred office background."
+    },
+    {
+      "say": "If you trade every hour for a paycheck, you'll always hit a wall.",
+      "callout": "HARD CEILING",
+      "visual": "A silhouette of a person staring up at a tall concrete wall, overcast sky, cinematic angle."
+    },
+    {
+      "say": "Let's look at the math of building an actual asset instead.",
+      "callout": "",
+      "visual": "Close-up of hands sketching a flowchart on thick paper, warm desk lamp, shallow depth of field."
+    },
+    {
+      "say": "An extra $1,000 a month from a side income, invested at 8% for 10 years, turns into $182,946.",
+      "callout": "$182,946",
+      "visual": "A clean spreadsheet on a tilted laptop screen, numbers glowing faintly in a dark room."
+    },
+    {
+      "say": "That's $120,000 you put in, and the rest is pure leverage.",
+      "callout": "PURE LEVERAGE",
+      "visual": "A mechanical gear turning inside a dark, polished metal enclosure, macro lens."
+    },
+    {
+      "say": "How do you build that base without burning out?",
+      "callout": "",
+      "visual": "A steaming cup of black coffee on a wooden table at dawn, cool blue light from a window."
+    },
+    {
+      "say": "You use the rule of 100 volume math.",
+      "callout": "RULE OF 100",
+      "visual": "A hand writing checkmarks on a minimalist checklist pad, natural window light."
+    },
+    {
+      "say": "Do 100 reach-outs a day for 100 days to find your first customers.",
+      "callout": "10,000 CONTACTS",
+      "visual": "A modern phone resting on a concrete surface, screen dark, cinematic high-angle shot."
+    },
+    {
+      "say": "But here's the catch nobody mentions.",
+      "callout": "THE CATCH",
+      "visual": "A dramatic shadow cast across a brick wall by a passing cloud, street level."
+    },
+    {
+      "say": "About 1 in 5 US businesses close in their first year.",
+      "callout": "1 IN 5",
+      "visual": "A heavy wooden door closed shut, brass handle, moody interior hallway lighting."
+    },
+    {
+      "say": "It takes grueling effort and high risk before anything runs on its own.",
+      "callout": "",
+      "visual": "A lone figure walking down a long, dimly lit industrial corridor, wide angle."
+    },
+    {
+      "say": "Package what works into a product, and follow for the money rules school never taught",
+      "callout": "",
+      "visual": "A neat stack of bound product blueprints on a dark wooden table, cinematic overhead shot."
+    }
+  ],
+  "caption": "Stop trading hours for dollars. Build a system that scales without you. \n\n#moneypsychology #personalfinance #financialfreedom #sidehustle #wealthbuilding",
+  "description": "Learn how to escape the trade-off between time and money by packaging your skills into repeatable systems. Based on real business frameworks.",
+  "hashtags": [
+    "#moneypsychology",
+    "#personalfinance",
+    "#financialfreedom",
+    "#sidehustle",
+    "#wealthbuilding"
+  ],
+  "first_comment": "What's the biggest roadblock you face when trying to scale past trading hours?",
+  "facts": [
+    {
+      "claim": "An extra $1,000/month from a side income, invested at 8% for 10 years = $182,946 (you put in $120,000)",
+      "basis": "Money Fact Sheet"
+    },
+    {
+      "claim": "100 reach-outs a day for 100 days = 10,000 contacts; at a 1% yes-rate that's 100 customers",
+      "basis": "Money Fact Sheet"
+    },
+    {
+      "claim": "about 1 in 5 US businesses close in their first year",
+      "basis": "US Bureau of Labor Statistics, Business Employment Dynamics"
+    }
+  ],
+  "source": "llm",
+  "pillar": "escape"
+}

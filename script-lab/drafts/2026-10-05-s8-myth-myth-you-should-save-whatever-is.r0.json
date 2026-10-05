@@ -1,0 +1,93 @@
+{
+  "title": "The Pay Yourself First Math That Changes Everything",
+  "hook_text": "SAVING WHAT'S LEFT KEEPS YOU BROKE",
+  "beats": [
+    {
+      "say": "Saving whatever is left at the end of the month is why your bank account never grows.",
+      "callout": "",
+      "visual": "Cinematic shot of a blank checkbook resting on a dark wood desk under moody lamplight."
+    },
+    {
+      "say": "Most people pay their bills first, buy their groceries, and then save whatever scraps remain.",
+      "callout": "THE OLD WAY",
+      "visual": "A pair of hands moving scattered bills across a minimalist grey concrete tabletop."
+    },
+    {
+      "say": "There's almost never anything left. The money just disappears into lifestyle inflation.",
+      "callout": "ZERO LEFT",
+      "visual": "Close-up of a coin rolling on edge across a dark surface before falling flat."
+    },
+    {
+      "say": "Wealthy people do the exact opposite. They pay themselves the second the paycheck lands.",
+      "callout": "PAY YOURSELF FIRST",
+      "visual": "A sleek silver metal card resting on a dark slate surface, dramatic side lighting."
+    },
+    {
+      "say": "That single habit shifts your entire financial trajectory.",
+      "callout": "",
+      "visual": "An open window with sheer white curtains blowing softly in a quiet, moody room."
+    },
+    {
+      "say": "Let's look at the math behind a simple $500 monthly transfer.",
+      "callout": "$500 A MONTH",
+      "visual": "A hand sliding a clean white envelope across a dark mahogany table."
+    },
+    {
+      "say": "Invested at 8% a year, that habit builds up fast.",
+      "callout": "8% RETURN",
+      "visual": "Abstract macro shot of golden light filtering through a glass of water."
+    },
+    {
+      "say": "In 30 years, it turns into $745,180. You only put in $180,000.",
+      "callout": "$745,180",
+      "visual": "A solitary vintage brass hourglass sitting on a rustic wooden shelf."
+    },
+    {
+      "say": "Push that timeline to 40 years, and that number jumps to $1,745,504.",
+      "callout": "$1,745,504",
+      "visual": "Cinematic shot of a lone coffee cup casting a long shadow at sunrise."
+    },
+    {
+      "say": "That's over $1.5 million in pure compound growth.",
+      "callout": "",
+      "visual": "A lush green fern leaf under a single shaft of light in a dark room."
+    },
+    {
+      "say": "If you wait until month end to save, you're betting against your own future.",
+      "callout": "",
+      "visual": "A leather-bound journal resting shut on a dark minimalist desk."
+    },
+    {
+      "say": "Automate the transfer on payday and let the math work for you.",
+      "callout": "",
+      "visual": "A sleek metallic laptop closed tight on a slate desk, warm ambient glow."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "A glowing doorway at the end of a dark, quiet hallway."
+    }
+  ],
+  "caption": "Stop waiting for scraps at the end of the month. Pay yourself first and let time do the heavy lifting. #payyourselffirst #moneytips #personalfinance #wealthbuilding #investing101",
+  "description": "Saving what is left at the end of the month guarantees you will save nothing. Learn the pay yourself first rule and see how $500 a month turns into serious wealth.",
+  "hashtags": [
+    "#payyourselffirst",
+    "#moneytips",
+    "#personalfinance",
+    "#wealthbuilding",
+    "#investing101"
+  ],
+  "first_comment": "Do you automate your savings on payday or do it manually?",
+  "facts": [
+    {
+      "claim": "$500/month invested for 30 years at 8%/yr reaches $745,180 with $180,000 principal",
+      "basis": "$500/month invested for 30 years at 8% (monthly compounding) = $745,180 (you put in $180,000)"
+    },
+    {
+      "claim": "$500/month invested for 40 years at 8%/yr reaches $1,745,504 with $240,000 principal",
+      "basis": "$500/month invested for 40 years at 8% (monthly compounding) = $1,745,504 (you put in $240,000)"
+    }
+  ],
+  "source": "llm",
+  "pillar": "myth"
+}

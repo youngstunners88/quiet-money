@@ -718,3 +718,10 @@ def test_dark_cinematic_first_frame_is_visible_but_black_is_not():
     darker = bytes([5] * 6200 + [60] * 1096)        # mean ~13, still a visible subject
     assert not frame_visible(black) and frame_visible(low_key) and frame_visible(darker)
     assert not frame_visible(b"")
+
+
+def test_small_lit_subject_on_black_is_visible():
+    from faceless.gauntlet import frame_visible
+    # 2026-10-05 math video: a lit hand and coin on black, mean 14, 90th percentile 35
+    assert frame_visible(bytes([6] * 6400 + [35] * 500 + [165] * 396))
+    assert not frame_visible(bytes([3] * 6900 + [200] * 396))   # black frame with only the hook box lit

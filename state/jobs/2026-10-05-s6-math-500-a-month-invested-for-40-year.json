@@ -1,0 +1,79 @@
+{
+  "id": "2026-10-05-s6-math-500-a-month-invested-for-40-year",
+  "pillar": "math",
+  "topic": "$500 a month invested for 40 years at 8% becomes about $1.7 million",
+  "day": "2026-10-05",
+  "slot": 6,
+  "status": "published",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-05T09:27:33Z",
+      "words": 142
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-05T09:28:00Z",
+      "seconds": 62.275,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-05T09:28:11Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-05T09:29:52Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-05T09:29:52Z",
+      "score": 96
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-05T09:29:52Z"
+    },
+    {
+      "from": "packaged",
+      "to": "held",
+      "ts": "2026-10-05T09:29:52Z"
+    },
+    {
+      "from": "held",
+      "to": "published",
+      "ts": "2026-10-05T09:37:18Z",
+      "manual": true,
+      "forced": false
+    }
+  ],
+  "artifacts": {
+    "angle": "the millionaire math for regular earners",
+    "title": "The $500 Millionaire Math",
+    "video": "/home/user/quiet-money/production/output/2026-10-05/2026-10-05-s6-math-500-a-month-invested-for-40-year/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-05/2026-10-05-s6-math-500-a-month-invested-for-40-year/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-10-06/slot2-math",
+        "post_at": "2026-10-06T11:30:00-04:00"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 93,
+    "passed": true
+  },
+  "cost": {
+    "tts:edge:chars": 793
+  },
+  "notes": [
+    "held for review: first_frame_visible"
+  ]
+}

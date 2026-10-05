@@ -1,0 +1,78 @@
+{
+  "title": "Stop Selling Your Hours",
+  "hook_text": "YOUR TIME HAS A HARD CEILING",
+  "beats": [
+    {
+      "say": "You're trading your limited hours for depreciating dollars. Here's the math on why you will hit a wall.",
+      "callout": "",
+      "visual": "A lone mechanical clock ticking in a dim, minimalist room, dramatic side lighting, 35mm film still."
+    },
+    {
+      "say": "Your paycheck stops the second you stop working. But what if you packaged your knowledge into a product?",
+      "callout": "TIME IS CAPPED",
+      "visual": "A vintage typewriter keys pressing down on blank heavy paper, close-up macro shot, soft warm light."
+    },
+    {
+      "say": "That's how you separate your income from your time. You sell the system, not your labor.",
+      "callout": "",
+      "visual": "An organized stack of blueprints resting on a dark oak desk, moody lighting, shallow depth of field."
+    },
+    {
+      "say": "To build that base, use investor Alex Hormozi's Rule of 100. Do one primary action every single day.",
+      "callout": "RULE OF 100",
+      "visual": "A hand crossing off boxes on a clean leather notebook with a black fountain pen, top-down view."
+    },
+    {
+      "say": "Do 100 reach-outs, or publish 100 minutes of content. Volume builds the asset before the cash flows.",
+      "callout": "100 ACTIONS",
+      "visual": "Rows of identical minimalist ceramic mugs on a dark shelf, cinematic framing, moody ambient light."
+    },
+    {
+      "say": "Then you apply the value equation. Maximize the dream outcome and drop the effort required from the client.",
+      "callout": "",
+      "visual": "A sleek brass scale balancing on a slate table, dramatic sidelight, high contrast."
+    },
+    {
+      "say": "That's how a single guide or template sells a thousand times while you sleep.",
+      "callout": "INFINITE LEVERAGE",
+      "visual": "A glowing digital screen reflecting on a dark window pane at night, cinematic street view outside."
+    },
+    {
+      "say": "But here's the honest catch. About 1 in 5 businesses close in their first year.",
+      "callout": "1 IN 5 FAIL",
+      "visual": "A heavy wooden door closing slowly in an empty hallway, dark shadows, dramatic focal point."
+    },
+    {
+      "say": "Building a system takes relentless execution and years of unpaid groundwork before it prints.",
+      "callout": "",
+      "visual": "A welder's bright spark illuminating a dark industrial workshop, high contrast, cinematic atmosphere."
+    },
+    {
+      "say": "Follow for the money rules school never taught. Like why...",
+      "callout": "FOLLOW US",
+      "visual": "A person walking down a long concrete tunnel toward a distant light, wide angle, cinematic framing."
+    }
+  ],
+  "caption": "Package what works so your income isn't capped by your time. #moneypsychology #wealthbuilding #personalfinance #businesstips #financialfreedom",
+  "description": "Stop trading hours for dollars. Learn how to package your knowledge into a repeatable product and build true leverage.",
+  "hashtags": [
+    "#moneypsychology",
+    "#wealthbuilding",
+    "#personalfinance",
+    "#businesstips",
+    "#financialfreedom"
+  ],
+  "first_comment": "What knowledge do you have that could become a repeatable product?",
+  "facts": [
+    {
+      "claim": "About 1 in 5 US businesses close in their first year.",
+      "basis": "US Bureau of Labor Statistics, Business Employment Dynamics"
+    },
+    {
+      "claim": "Rule of 100 means 100 primary actions a day for 100 days.",
+      "basis": "Alex Hormozi, $100M Leads"
+    }
+  ],
+  "source": "llm",
+  "pillar": "escape"
+}

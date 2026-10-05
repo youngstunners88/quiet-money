@@ -1,0 +1,87 @@
+{
+  "title": "The $500 Millionaire Math",
+  "hook_text": "$500 A MONTH BECOMES $1.7 MILLION",
+  "beats": [
+    {
+      "say": "Put $500 a month into an index fund at 8% a year, and the math gets wild.",
+      "callout": "",
+      "visual": "A silhouette of hands sliding a single silver coin across a dark wooden desk, moody side lighting."
+    },
+    {
+      "say": "Most people think it takes a massive salary to build a fortune. But they're missing one hidden rule.",
+      "callout": "$500 / month",
+      "visual": "A close up of a brass mechanical gear turning slowly inside an old clock, cinematic macro shot."
+    },
+    {
+      "say": "Let's run the exact numbers for a regular earner starting from scratch.",
+      "callout": "",
+      "visual": "A vintage metal desk lamp casting a warm glow on a clean stack of blank white paper."
+    },
+    {
+      "say": "After 20 years of investing $500 a month at 8%, you've put in $120,000.",
+      "callout": "$294,510 total",
+      "visual": "A person's hands wearing a wool sweater counting crisp green bank notes under dim light."
+    },
+    {
+      "say": "That grows into $294,510 through the quiet power of monthly compounding.",
+      "callout": "20 years",
+      "visual": "A time-lapse shot of shadows moving across a minimalist concrete wall in late afternoon."
+    },
+    {
+      "say": "Wait 10 more years, and it jumps to $745,180 with $180,000 of your own cash.",
+      "callout": "$745,180 total",
+      "visual": "An overhead shot of a dark coffee cup steaming on a rustic oak table, moody shadows."
+    },
+    {
+      "say": "But here's the part nobody mentions about the final decade.",
+      "callout": "",
+      "visual": "A close up of a brass pocket watch ticking against a dark textured background."
+    },
+    {
+      "say": "Push that same plan to 40 years, and your total investment hits $240,000.",
+      "callout": "$240,000 invested",
+      "visual": "A silhouette of a person walking away down a long empty industrial hallway."
+    },
+    {
+      "say": "That final sum swells to $1,745,504 without you working a single extra hour.",
+      "callout": "$1,745,504 total",
+      "visual": "A macro shot of water droplets falling onto a calm reflective black surface."
+    },
+    {
+      "say": "Time does the heavy lifting while you just stay consistent.",
+      "callout": "40 years",
+      "visual": "An open window showing a city skyline at dusk with lights flickering on slowly."
+    },
+    {
+      "say": "Follow for the money rules school never taught you...",
+      "callout": "",
+      "visual": "A dark minimalist room with a single pencil resting on a blank wooden notebook."
+    }
+  ],
+  "caption": "The math doesn't care about your job title. Time and consistency do the heavy lifting.\n\n#money #investing #wealth #personalfinance #compounding",
+  "description": "Discover the exact compound interest math behind turning $500 a month into $1.7 million over 40 years at an 8% return.",
+  "hashtags": [
+    "#money",
+    "#investing",
+    "#wealth",
+    "#personalfinance",
+    "#compounding"
+  ],
+  "first_comment": "At what age did you start investing your first dollar?",
+  "facts": [
+    {
+      "claim": "$500/month invested for 20 years at 8%/yr is $294,510",
+      "basis": "Monthly compounding formula with $120,000 principal"
+    },
+    {
+      "claim": "$500/month invested for 30 years at 8%/yr is $745,180",
+      "basis": "Monthly compounding formula with $180,000 principal"
+    },
+    {
+      "claim": "$500/month invested for 40 years at 8%/yr is $1,745,504",
+      "basis": "Monthly compounding formula with $240,000 principal"
+    }
+  ],
+  "source": "llm",
+  "pillar": "math"
+}

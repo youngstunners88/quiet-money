@@ -1,0 +1,93 @@
+{
+  "title": "Why Saving What's Left Keeps You Broke",
+  "hook_text": "STOP SAVING WHAT'S LEFT AT THE END",
+  "beats": [
+    {
+      "say": "Saving whatever money is left at the end of the month is a trap.",
+      "callout": "",
+      "visual": "Cinematic shot of a single empty coffee mug on a dark wooden table, morning light casting long shadows, moody atmosphere."
+    },
+    {
+      "say": "It assumes there will actually be something left over. But expenses always expand to fill your paycheck.",
+      "callout": "ALWAYS ZERO",
+      "visual": "A person's hands sliding a blank white sheet of paper across a sleek concrete desk."
+    },
+    {
+      "say": "That is why most people reach age 65 with nothing saved. They treat saving as an afterthought.",
+      "callout": "AGE 65 TRAP",
+      "visual": "A close-up of an hourglass on a dark textured surface, sand slowly falling through the middle."
+    },
+    {
+      "say": "Here is the exact rule that flips the script entirely. It is called paying yourself first.",
+      "callout": "THE FIX",
+      "visual": "A sleek stainless steel watch resting on a minimalist dark marble slab, dramatic side lighting."
+    },
+    {
+      "say": "The second your paycheck hits your account, a set amount moves straight into investments. Before bills.",
+      "callout": "",
+      "visual": "A finger pressing a matte black keyboard button in a dimly lit home office."
+    },
+    {
+      "say": "You force yourself to live on what is left, rather than saving what is left.",
+      "callout": "",
+      "visual": "A closed leather-bound notebook sitting next to a dark metal pen on a wooden counter."
+    },
+    {
+      "say": "Look at the raw math when you make this simple shift early on in life.",
+      "callout": "",
+      "visual": "A blurry shot of city lights through a rainy window at night, cinematic depth of field."
+    },
+    {
+      "say": "Investing $200 a month at 8% a year for 40 years grows into $698,202.",
+      "callout": "$698,202",
+      "visual": "A minimalist ceramic cup on a dark slate coaster, steam rising softly in slow motion."
+    },
+    {
+      "say": "While your total out-of-pocket deposits are only $96,000 over that entire span.",
+      "callout": "$96,000 DEPOSITED",
+      "visual": "A pair of hands folding a dark grey linen cloth on a polished wooden surface."
+    },
+    {
+      "say": "Wait until you see what happens if you delay that exact same habit by ten years.",
+      "callout": "",
+      "visual": "A vintage brass desk lamp casting a warm glow on a dark green blotter pad."
+    },
+    {
+      "say": "Starting at 35 instead of 25 drops that final balance down to $298,072.",
+      "callout": "$298,072",
+      "visual": "A dark ceramic plate with a single silver fork resting beside it, overhead angle."
+    },
+    {
+      "say": "That one decade of delay costs you over $400,000 in missed compounding.",
+      "callout": "$400,130 LOST",
+      "visual": "A close-up of rain droplets sliding down a dark windowpane, blurred streetlights behind."
+    },
+    {
+      "say": "Automate your transfers today, and that is exactly how",
+      "callout": "",
+      "visual": "A minimalist black room with a single beam of light cutting across a concrete floor."
+    }
+  ],
+  "caption": "Stop waiting until the end of the month to save. Pay yourself first. #money #personalfinance #wealth #investing #finance",
+  "description": "Why waiting until the end of the month to save guarantees you will stay broke, and the pay-yourself-first rule that changes everything.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#wealth",
+    "#investing",
+    "#finance"
+  ],
+  "first_comment": "What day of the month do you automate your investments?",
+  "facts": [
+    {
+      "claim": "$200/month invested for 40 years at 8%/yr (monthly compounding) = $698,202 (you put in $96,000)",
+      "basis": "Fact sheet calculation for $200/mo over 40 years at 8%"
+    },
+    {
+      "claim": "Starting at 25 vs 35 with $200/month at 8% until 65: $698,202 vs $298,072 (10 years late costs $400,130)",
+      "basis": "Fact sheet comparison for starting at age 25 vs 35"
+    }
+  ],
+  "source": "llm",
+  "pillar": "myth"
+}

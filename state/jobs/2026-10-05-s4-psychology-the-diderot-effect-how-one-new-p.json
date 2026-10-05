@@ -1,0 +1,71 @@
+{
+  "id": "2026-10-05-s4-psychology-the-diderot-effect-how-one-new-p",
+  "pillar": "psychology",
+  "topic": "The Diderot Effect: how one new purchase triggers ten more",
+  "day": "2026-10-05",
+  "slot": 4,
+  "status": "published",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-05T09:19:24Z",
+      "words": 187
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-05T09:19:47Z",
+      "seconds": 69.696,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-05T09:21:07Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-05T09:23:05Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-05T09:23:05Z",
+      "score": 98
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-05T09:23:05Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-10-05T09:23:05Z",
+      "local": "2026-10-05T21:00:00-04:00"
+    }
+  ],
+  "artifacts": {
+    "angle": "Denis Diderot's scarlet robe and the spiral of upgrades",
+    "title": "How One Free Gift Bankrupted a Famous Philosopher",
+    "video": "/home/user/quiet-money/production/output/2026-10-05/2026-10-05-s4-psychology-the-diderot-effect-how-one-new-p/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-05/2026-10-05-s4-psychology-the-diderot-effect-how-one-new-p/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-10-05/slot5-psychology",
+        "post_at": "2026-10-05T21:00:00-04:00"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 98,
+    "passed": true
+  },
+  "cost": {
+    "tts:edge:chars": 1122
+  },
+  "notes": []
+}

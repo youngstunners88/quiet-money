@@ -1,0 +1,79 @@
+{
+  "title": "The Savings Trap That Leaves You Broke",
+  "hook_text": "SAVING WHAT'S LEFT KEEPS YOU BROKE",
+  "beats": [
+    {
+      "say": "Saving whatever's left at the end of the month is the exact reason you're broke.",
+      "callout": "",
+      "visual": "Cinematic close-up of a coin rolling on a dark wooden table, dim moody lighting, shallow depth of field."
+    },
+    {
+      "say": "Most people pay their bills first, buy their coffee, and save the scraps.",
+      "callout": "THE MISTAKE",
+      "visual": "A hand sliding a leather wallet across a minimalist concrete desk, side view, muted tones."
+    },
+    {
+      "say": "There's never anything left. That's not budgeting. That's just hoping.",
+      "callout": "ZERO SCRAPS",
+      "visual": "An empty ceramic bowl resting on a sunlit marble countertop, top-down view, soft shadows."
+    },
+    {
+      "say": "Let's flip the script. Pay yourself first the second your paycheck hits your account.",
+      "callout": "PAY YOURSELF",
+      "visual": "A closed laptop on a dark desk with a steaming ceramic mug beside it, cinematic side lighting."
+    },
+    {
+      "say": "Treat your savings like a non-negotiable tax you owe your future self.",
+      "callout": "FIRST PRIORITY",
+      "visual": "A brass key resting on top of a folded linen napkin, macro shot, warm morning light."
+    },
+    {
+      "say": "Put away $500 a month starting at age 25, and watch what happens.",
+      "callout": "$500 A MONTH",
+      "visual": "A fountain pen resting on a blank cream-colored paper, overhead view, moody cinematic contrast."
+    },
+    {
+      "say": "At 8% a year with monthly compounding, that turns into $1,745,504 over 40 years.",
+      "callout": "$1,745,504 TOTAL",
+      "visual": "A vintage glass hourglass with white sand trickling down, dark moody background, macro focus."
+    },
+    {
+      "say": "That's how modest habits quietly stack into millions while you sleep.",
+      "callout": "",
+      "visual": "Silhouetted window blinds casting striped shadows across an empty hardwood floor at dusk."
+    },
+    {
+      "say": "But here's the part nobody mentions. If you wait until age 35 to start?",
+      "callout": "THE 10-YEAR GAP",
+      "visual": "A wall clock ticking in a dimly lit room, motion blur on the second hand, dark aesthetic."
+    },
+    {
+      "say": "You miss out on hundreds of thousands of dollars in compound growth.",
+      "callout": "",
+      "visual": "A single drop of water falling onto a dark still surface, creating ripples, macro lens."
+    },
+    {
+      "say": "You don't need a massive salary to get ahead. You just need to change the order",
+      "callout": "",
+      "visual": "A hand turning a brass door knob in a dark hallway, cinematic side lighting, moody atmosphere."
+    }
+  ],
+  "caption": "Most people save backwards. Fix the order and let time do the heavy lifting. #moneyrules #personalfinance #wealthmindset #smartmoney #financialfreedom",
+  "description": "Stop saving whatever is left at the end of the month. Learn the pay yourself first rule that turns small monthly deposits into millions.",
+  "hashtags": [
+    "#moneyrules",
+    "#personalfinance",
+    "#wealthmindset",
+    "#smartmoney",
+    "#financialfreedom"
+  ],
+  "first_comment": "Do you pay your savings first, or wait until the end of the month?",
+  "facts": [
+    {
+      "claim": "$500/month invested for 40 years at 8%/yr (monthly compounding) = $1,745,504",
+      "basis": "Provided fact sheet"
+    }
+  ],
+  "source": "llm",
+  "pillar": "myth"
+}

@@ -1,0 +1,79 @@
+{
+  "title": "The Saving Habit That Keeps You Broke",
+  "hook_text": "SAVING WHAT'S LEFT KEEPS YOU BROKE",
+  "beats": [
+    {
+      "say": "Saving whatever is left at the end of the month is a lie that keeps you broke.",
+      "callout": "",
+      "visual": "A cinematic shot of a dark empty bank vault, lit by a single overhead fluorescent bulb, wide angle."
+    },
+    {
+      "say": "Because there's never anything left.",
+      "callout": "ZERO LEFT",
+      "visual": "A close-up of a hand sliding an empty leather wallet across a dark wooden table."
+    },
+    {
+      "say": "Life expands to fill every single dollar you earn unless you change the order.",
+      "callout": "THE WRONG ORDER",
+      "visual": "A macro shot of coins spilling off the edge of a glass plate, dramatic side lighting."
+    },
+    {
+      "say": "Wealthy people don't save what's left after spending.",
+      "callout": "FLIP THE SCRIPT",
+      "visual": "A silhouette of a person walking down a concrete stairwell in a minimalist grey building."
+    },
+    {
+      "say": "They spend what's left after saving.",
+      "callout": "PAY YOURSELF FIRST",
+      "visual": "A close-up of a fountain pen signing a blank white paper on a dark desk."
+    },
+    {
+      "say": "That single habit shift changes your entire financial trajectory.",
+      "callout": "TOTAL SHIFT",
+      "visual": "An overhead shot of a single metal key resting on a blank concrete slab."
+    },
+    {
+      "say": "Look at the math.",
+      "callout": "THE MATH",
+      "visual": "A vintage mechanical calculator resting on a dark mahogany table, shallow depth of field."
+    },
+    {
+      "say": "Investing just $500 a month at 8% a year reaches $745,180 in 30 years.",
+      "callout": "$745,180",
+      "visual": "A stack of plain unlabelled cardboard boxes in a dimly lit minimalist storage room."
+    },
+    {
+      "say": "If you wait until month end to fund that, it simply won't happen.",
+      "callout": "",
+      "visual": "A close-up of a digital clock changing numbers in a dark bedroom, red glow."
+    },
+    {
+      "say": "Automate your transfers the exact day your paycheck hits your account.",
+      "callout": "",
+      "visual": "A blurred shot of a modern city street at dusk, motion blur, long exposure."
+    },
+    {
+      "say": "Treat your future self as your most important bill, because",
+      "callout": "",
+      "visual": "A heavy iron door slightly ajar in a grey concrete wall, dim warm light inside."
+    }
+  ],
+  "caption": "Stop waiting for leftovers. Pay yourself first or pay the price later. \n\n#money #personalfinance #wealth #investing #moneymyth",
+  "description": "Saving what's left at month-end guarantees you'll save nothing. Learn why flipping the order and paying yourself first is the foundation of real wealth.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#wealth",
+    "#investing",
+    "#moneymyth"
+  ],
+  "first_comment": "What's the hardest part about paying yourself first?",
+  "facts": [
+    {
+      "claim": "Investing $500/month at 8%/yr for 30 years reaches $745,180",
+      "basis": "Fact sheet: $500/month invested for 30 years at 8%/yr (monthly compounding) = $745,180"
+    }
+  ],
+  "source": "llm",
+  "pillar": "myth"
+}

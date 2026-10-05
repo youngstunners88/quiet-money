@@ -210,11 +210,11 @@ def mean_brightness(path: str, at: float) -> float:
 
 def frame_visible(data: bytes) -> bool:
     """A frame reads as black only when it is dark everywhere. Low-key cinematic shots (the myth and math
-    looks) average under 18 but keep lit detail: their 90th-percentile pixel is well above 40."""
+    looks) average under 18 but keep lit detail: their 90th-percentile pixel stays above 24 (a black frame sits near 0-10)."""
     if not data:
         return False
     s = sorted(data)
-    return sum(s) / len(s) > 18 or s[int(len(s) * 0.9)] > 40
+    return sum(s) / len(s) > 18 or s[int(len(s) * 0.9)] > 24
 
 
 def check_render(info: dict, voice: dict) -> list[Gate]:

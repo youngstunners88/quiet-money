@@ -1,0 +1,72 @@
+{
+  "id": "2026-10-05-s5-escape-sell-the-system-not-your-hours",
+  "pillar": "escape",
+  "topic": "Sell the system, not your hours",
+  "day": "2026-10-05",
+  "slot": 5,
+  "status": "published",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-05T09:23:52Z",
+      "words": 158
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-05T09:24:21Z",
+      "seconds": 62.398,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-05T09:25:49Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-05T09:27:23Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-05T09:27:23Z",
+      "score": 94
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-05T09:27:23Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-10-05T09:27:23Z",
+      "local": "2026-10-06T07:30:00-04:00"
+    }
+  ],
+  "artifacts": {
+    "angle": "package what works into a repeatable product so income isn't capped by your time",
+    "brief": "hormozi",
+    "title": "Stop Selling Your Hours",
+    "video": "/home/user/quiet-money/production/output/2026-10-05/2026-10-05-s5-escape-sell-the-system-not-your-hours/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-05/2026-10-05-s5-escape-sell-the-system-not-your-hours/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-10-06/slot1-escape",
+        "post_at": "2026-10-06T07:30:00-04:00"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 94,
+    "passed": true
+  },
+  "cost": {
+    "tts:edge:chars": 919
+  },
+  "notes": []
+}
