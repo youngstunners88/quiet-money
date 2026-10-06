@@ -1,0 +1,71 @@
+{
+  "id": "2026-10-06-s8-playbook-how-to-negotiate-your-phone-or-i",
+  "pillar": "playbook",
+  "topic": "How to negotiate your phone or internet bill in one call",
+  "day": "2026-10-06",
+  "slot": 8,
+  "status": "published",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-06T09:20:06Z",
+      "words": 181
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-06T09:20:23Z",
+      "seconds": 62.856,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-06T09:20:36Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-06T09:22:13Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-06T09:22:13Z",
+      "score": 100
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-06T09:22:13Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-10-06T09:22:13Z",
+      "local": "2026-10-07T18:30:00-04:00"
+    }
+  ],
+  "artifacts": {
+    "angle": "retention department script",
+    "title": "How to Negotiate Your Bills in One 10-Minute Call",
+    "video": "/home/user/quiet-money/production/output/2026-10-06/2026-10-06-s8-playbook-how-to-negotiate-your-phone-or-i/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-06/2026-10-06-s8-playbook-how-to-negotiate-your-phone-or-i/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-10-07/slot4-playbook",
+        "post_at": "2026-10-07T18:30:00-04:00"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 100,
+    "passed": true
+  },
+  "cost": {
+    "tts:edge:chars": 1090
+  },
+  "notes": []
+}

@@ -1,0 +1,84 @@
+{
+  "title": "How to Negotiate Your Bills in One 10-Minute Call",
+  "hook_text": "THEY ARE OVERCHARGING YOU ON PURPOSE",
+  "beats": [
+    {
+      "say": "Your internet provider is overcharging you by $15 every single month on purpose.",
+      "callout": "",
+      "visual": "A close-up of a finger tapping a smartphone screen showing a generic bill payment app, dimly lit with moody shadows."
+    },
+    {
+      "say": "Most people silently accept this lazy tax, but one short call forces them to drop the price.",
+      "callout": "ONE SHORT CALL",
+      "visual": "A warm-toned, overhead shot of a person's hands holding a modern smartphone against a dark wooden desk."
+    },
+    {
+      "say": "Step one. Call their main support number and immediately ask to speak with the retention department.",
+      "callout": "",
+      "visual": "A vintage desk phone receiver sitting on a polished glass table under dramatic office spotlighting."
+    },
+    {
+      "say": "Regular customer service agents cannot offer deep discounts, but retention agents are paid to keep you.",
+      "callout": "RETENTION DEPARTMENT",
+      "visual": "A silhouette of a customer service agent sitting at a desk, looking out a blurred window overlooking a city at night."
+    },
+    {
+      "say": "Step two. Use this exact script: I want to cancel because local competitors are offering cheaper rates.",
+      "callout": "",
+      "visual": "A close-up of fingers typing on a clean, backlit mechanical keyboard in a dimly lit room."
+    },
+    {
+      "say": "But here's the part nobody mentions. You must name a real competitor in your local area.",
+      "callout": "THE TRICK",
+      "visual": "An abstract shot of a city map with blurred streetlights reflecting beautifully on wet pavement."
+    },
+    {
+      "say": "If you try to make up a fake price, they'll call your bluff instantly and you lose.",
+      "callout": "THEY KNOW",
+      "visual": "A hand slowly turning over a single playing card face down on a green felt table, shallow depth of field."
+    },
+    {
+      "say": "Step three. Ask them politely to match that specific rate or process your cancellation today.",
+      "callout": "",
+      "visual": "A close-up of a thumb hovering near a phone screen showing a red end-call icon, dramatic cinematic lighting."
+    },
+    {
+      "say": "They'll almost always magically find a hidden promotion to keep your business on the spot.",
+      "callout": "HIDDEN PROMOTION",
+      "visual": "A subtle golden light illuminating a high-quality leather wallet resting on a dark marble countertop."
+    },
+    {
+      "say": "Remember, a $15/month subscription for 10 years equals $1,800 of your hard-earned cash.",
+      "callout": "$1,800 SAVED",
+      "visual": "A stack of crisp dollar bills bound with a paper band, sitting on a dark desk with dramatic side lighting."
+    },
+    {
+      "say": "Keep that money. Follow for the money rules school never taught you, and remember",
+      "callout": "",
+      "visual": "A silhouette of a person standing by a large floor-to-ceiling window looking out at a peaceful sunrise."
+    },
+    {
+      "say": "It's time to stop letting these giant service corporations quietly win, because",
+      "callout": "",
+      "visual": "A macro shot of a single drop of water falling into a dark pool, creating perfect concentric ripples."
+    }
+  ],
+  "caption": "Stop paying the lazy tax. A 10-minute phone call to the retention department can easily save you hundreds of dollars a year.\n\n#personalfinance #savingmoney #negotiation #moneytok #financialfreedom",
+  "description": "Learn the exact 3-step script to negotiate your phone or internet bill in under 15 minutes. By bypassing regular customer service and reaching the retention department with real competitor prices, you can claw back your cash.",
+  "hashtags": [
+    "#personalfinance",
+    "#savingmoney",
+    "#negotiation",
+    "#moneytok",
+    "#financialfreedom"
+  ],
+  "first_comment": "How much do you currently pay for internet? Let us know below and see if you are being overcharged.",
+  "facts": [
+    {
+      "claim": "a $15/month subscription for 10 years equals $1,800",
+      "basis": "A $15/month subscription for 10 years = $1,800"
+    }
+  ],
+  "source": "llm",
+  "pillar": "playbook"
+}
