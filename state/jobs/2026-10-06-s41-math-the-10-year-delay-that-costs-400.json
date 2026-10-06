@@ -1,0 +1,71 @@
+{
+  "id": "2026-10-06-s41-math-the-10-year-delay-that-costs-400",
+  "pillar": "math",
+  "topic": "The 10-Year Delay That Costs $400,130",
+  "day": "2026-10-06",
+  "slot": 41,
+  "status": "failed",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-06T03:04:30Z",
+      "words": 131
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-06T03:05:17Z",
+      "seconds": 62.863,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-06T03:06:05Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-06T03:07:45Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-06T03:07:45Z",
+      "score": 89
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-06T03:07:45Z"
+    },
+    {
+      "from": "packaged",
+      "to": "held",
+      "ts": "2026-10-06T03:07:45Z"
+    },
+    {
+      "from": "held",
+      "to": "failed",
+      "ts": "2026-10-06T03:07:47Z",
+      "error": "test render"
+    }
+  ],
+  "artifacts": {
+    "title": "Starting at 25 vs 35: The $400,000 Gap",
+    "video": "/home/user/quiet-money/production/output/2026-10-06/2026-10-06-s41-math-the-10-year-delay-that-costs-400/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-06/2026-10-06-s41-math-the-10-year-delay-that-costs-400/cover.jpg"
+  },
+  "scores": {
+    "gauntlet": 89,
+    "passed": false
+  },
+  "cost": {
+    "tts:edge:chars": 711
+  },
+  "notes": [
+    "held for review: originality",
+    "render test of HyperFrames cards; not for publishing"
+  ]
+}

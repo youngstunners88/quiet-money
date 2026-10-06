@@ -20,7 +20,7 @@ from PIL import Image, ImageDraw, ImageFilter, ImageFont
 
 from faceless import config, events
 from faceless.config import Paths
-from faceless.pipeline import captions, music
+from faceless.pipeline import captions, cards, music
 
 GRADES = {
     "warm": "colorbalance=rs=0.05:gs=0.01:bs=-0.06:rm=0.03:bm=-0.04,eq=contrast=1.06:saturation=1.04",
@@ -68,7 +68,8 @@ def plan_shots(beats: list[tuple[float, float]], images: list[dict], fps: int, m
                 mi += 1
             f0, f1 = round(a * fps), round(b * fps)
             if f1 > f0:
-                shots.append({"image": img["path"], "frames": f1 - f0, "start": a, "motion": motion})
+                shots.append({"image": img["path"], "frames": f1 - f0, "start": a, "motion": motion, "beat": i,
+                              "card": img.get("card")})
     return shots
 
 
@@ -118,6 +119,15 @@ def render_shot(args) -> str:
     return str(out_path)
 
 
+def card_shot(args) -> str:
+    """Cut one shot out of the HyperFrames card reel, encoded like every other shot so the concat can copy."""
+    reel, out_path, offset, frames, fps = args
+    _run(["ffmpeg", "-hide_banner", "-loglevel", "error", "-y", "-ss", f"{offset:.3f}", "-i", str(reel),
+          "-frames:v", str(frames), "-vf", "format=yuv420p", "-c:v", "libx264", "-preset", "ultrafast", "-crf", "13",
+          "-pix_fmt", "yuv420p", "-r", str(fps), str(out_path)])
+    return str(out_path)
+
+
 def _run(cmd: list[str]) -> None:
     p = subprocess.run(cmd, capture_output=True, text=True)
     if p.returncode != 0:
@@ -162,10 +172,26 @@ def run(job, script: dict, voice: dict, imgs: list[dict]) -> dict:
     grade = GRADES.get(pillar.grade, GRADES["warm"])
     vig = "PI/7" if pillar.grade == "clean" else "PI/4.6"
     look = f"{grade},vignette={vig},noise=alls=3:allf=t+u,format=yuv420p"
-    tasks = [(s["image"], work / f"shot{i:03d}.mp4", s["frames"], s["motion"], W, H, fps, look)
-             for i, s in enumerate(shots)]
+    card_specs = {r["beat"]: r["card"] for r in imgs if r.get("card")}
+    reel = cards.render_reel(job, card_specs, {i: tuple(b) for i, b in enumerate(voice["beats"])}, job.pillar,
+                             cfg["accent"], fps) if card_specs else None
+    tasks, card_tasks = [], []
+    for i, s in enumerate(shots):
+        out_i = work / f"shot{i:03d}.mp4"
+        if s.get("card") and reel:       # card beat: offset inside its card's slot in the reel
+            beat_start = voice["beats"][s["beat"]][0]
+            card_tasks.append((reel[0], out_i, reel[1][s["beat"]] + max(0.0, s["start"] - beat_start), s["frames"], fps))
+        else:
+            if s["image"] is None:       # card beat whose reel failed: fall back to generated placeholder art
+                from faceless.providers import images as image_providers
+                s["image"] = str(Paths.cache / f"{job.id}-fallback{s['beat']}.jpg")
+                image_providers.procedural("abstract", 864, 1536, s["beat"], s["image"])
+            tasks.append((s["image"], out_i, s["frames"], s["motion"], W, H, fps, look))
     with ProcessPoolExecutor(max_workers=4) as ex:
         list(ex.map(render_shot, tasks))
+        list(ex.map(card_shot, card_tasks))
+    tasks += [(None, t[1]) for t in card_tasks]
+    tasks.sort(key=lambda t: t[1].name)
     concat = work / "concat.txt"
     concat.write_text("".join(f"file '{t[1].name}'\n" for t in tasks), encoding="utf-8")
     raw = job.dir / "raw.mp4"
@@ -186,7 +212,7 @@ def run(job, script: dict, voice: dict, imgs: list[dict]) -> dict:
     music.write_wav(sfx_wav, music.sfx_track(total + 0.5, cut_times, seed))
 
     ass = job.dir / "captions.ass"
-    covered = captions.build(script, voice, ass)
+    covered = captions.build(script, voice, ass, skip_callouts={i for i in card_specs if reel})
 
     accent = cfg["accent"].lstrip("#")
     fonts = str(Paths.fonts)
@@ -211,8 +237,13 @@ def run(job, script: dict, voice: dict, imgs: list[dict]) -> dict:
     for t in tasks:  # shots are reproducible from cache; keep the job folder light
         Path(t[1]).unlink(missing_ok=True)
     raw.unlink(missing_ok=True)
+    if reel:      # the reel is large and reproducible; keep the small index.html as the record of what was drawn
+        Path(reel[0]).unlink(missing_ok=True)
+        for f in (job.dir / "cards" / "assets").glob("*.ttf"):
+            f.unlink(missing_ok=True)
     info = {"video": str(out), "cover": str(cover), "shots": len(shots), "captioned_words": covered,
-            "avg_shot": round(total / max(1, len(shots)), 2)}
+            "avg_shot": round(total / max(1, len(shots)), 2),
+            "cards": len(card_specs) if reel else 0}
     (job.dir / "render.json").write_text(json.dumps(info, indent=1), encoding="utf-8")
     events.emit("RENDERED", job=job.id, **info)
     return info

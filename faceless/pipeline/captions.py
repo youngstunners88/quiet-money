@@ -90,7 +90,7 @@ def callout_text(text: str) -> tuple[str, int]:
     return r"\N".join(esc(l) for l in lines), 118
 
 
-def build(script: dict, voice: dict, out_path) -> int:
+def build(script: dict, voice: dict, out_path, skip_callouts: frozenset | set = frozenset()) -> int:
     cfg = config.load()["production"]
     W, H = cfg["width"], cfg["height"]
     accent = ass_color(cfg["accent"])
@@ -125,8 +125,8 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
                      r"{\fscx70\fscy70\t(0,120,\fscx104\fscy104)\t(120,200,\fscx100\fscy100)\fad(0,150)}"
                      + r"\N".join(esc(l) for l in wrap_hook(script["hook_text"])))
     # Callouts: big number/phrase for beats that have one
-    for (start, end), beat in zip(voice["beats"], script["beats"]):
-        if not beat.get("callout"):
+    for bi, ((start, end), beat) in enumerate(zip(voice["beats"], script["beats"])):
+        if not beat.get("callout") or bi in skip_callouts:    # a motion card already draws its own number
             continue
         s, e = start + 0.12, min(end - 0.05, start + 2.8)
         if e - s < 0.6:

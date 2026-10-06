@@ -737,3 +737,59 @@ def test_scout_topup_accepts_a_bare_idea_list(monkeypatch, tmp_path):
     monkeypatch.setattr(ideate, "history_texts", lambda: [])
     monkeypatch.setattr("faceless.events.JOURNAL", tmp_path / "j.jsonl")
     assert [a["topic"] for a in scout.topup("myth", 2)] == ["Why rent feels cheaper"]
+
+
+# ---- HyperFrames motion cards -------------------------------------------------------------------
+
+def test_card_number_parsing_and_years_are_static():
+    from faceless.pipeline import cards
+    n = cards.parse_number("$698,202 total")
+    assert n["value"] == 698202 and n["prefix"] == "$" and n["label"] == "TOTAL" and not n["static"]
+    assert cards.parse_number("8%")["suffix"] == "%" and cards.parse_number("$1.5M")["decimals"] == 1
+    assert cards.parse_number("2014")["static"] and cards.parse_number("FREE") is None
+
+
+def test_card_pick_respects_mode_and_never_touches_the_hook(monkeypatch):
+    from faceless.pipeline import cards
+    monkeypatch.setattr(cards, "available", lambda: True)
+    script = {"beats": [{"say": "Hook line here", "callout": "$5"}, {"say": "Then 8 percent a year", "callout": "8%"},
+                        {"say": "No number here at all", "callout": ""}]}
+    imgs = [{"provider": "cloudflare"}, {"provider": "cloudflare"}, {"provider": "procedural"}]
+    base = config.load()["production"]
+    for mode, pillar, expect in [("off", "math", set()), ("auto", "math", {2}), ("numbers", "math", {1, 2}),
+                                 ("numbers", "story", {2})]:
+        monkeypatch.setitem(base, "cards", {"mode": mode, "pillars": ["math", "escape"]})
+        assert set(cards.pick(script, imgs, pillar)) == expect, (mode, pillar)
+    monkeypatch.setitem(base, "cards", {"mode": "numbers", "pillars": ["math"]})
+    assert set(cards.pick(script, None, "math")) == {1}               # before images exist: numeric beats only
+    monkeypatch.setattr(cards, "available", lambda: False)
+    assert cards.pick(script, imgs, "math") == {}                      # no Node/Chrome: cards quietly off
+
+
+def test_card_project_escapes_llm_text_and_times_scenes(tmp_path):
+    from faceless.pipeline import cards
+    specs = [(1, {"kind": "stat", "value": 1500.0, "prefix": "$", "suffix": "", "decimals": 0, "label": "<SCRIPT>X</SCRIPT>"}, 3.0),
+             (2, {"kind": "phrase", "text": "<IMG SRC=X> HELLO & BYE"}, 2.0)]
+    total = cards.build_project(tmp_path / "p", specs, "math", "#FFD23F", 30, kicker="<B>K</B>")
+    page = (tmp_path / "p" / "index.html").read_text()
+    assert total == 5.0 and "<SCRIPT>X" not in page and "<IMG SRC" not in page and "<B>K" not in page
+    assert 'data-start="3.000"' in page and 'data-duration="2.000"' in page and "$1,500" in page
+    assert page.count('class="num"') + page.count('class="num" style') >= 8      # stacked count-up values, not callbacks
+
+
+def test_plan_shots_carries_beat_and_card_spec():
+    from faceless.pipeline import render
+    imgs = [{"path": "a.jpg"}, {"path": None, "card": {"kind": "phrase", "text": "X"}}]
+    shots = render.plan_shots([(0.0, 3.0), (3.0, 6.0)], imgs, 30, 3.2, "seed")
+    assert [s["beat"] for s in shots] == [0, 1] and shots[1]["card"] and shots[1]["image"] is None
+
+
+def test_card_beats_skip_the_caption_callout(tmp_path):
+    from faceless.pipeline import captions
+    script = {"hook_text": "HOOK HERE NOW", "beats": [{"say": "one", "callout": ""}, {"say": "two", "callout": "$200"}]}
+    voice = {"duration": 8.0, "beats": [[0.0, 3.0], [3.0, 8.0]], "words": [
+        {"w": "one", "start": 0.1, "end": 0.5, "display": "one"}, {"w": "two", "start": 3.1, "end": 3.5, "display": "two"}]}
+    a, b = tmp_path / "a.ass", tmp_path / "b.ass"
+    captions.build(script, voice, a)
+    captions.build(script, voice, b, skip_callouts={1})
+    assert "Callout," in a.read_text().split("[Events]")[1] and "Callout," not in b.read_text().split("[Events]")[1]

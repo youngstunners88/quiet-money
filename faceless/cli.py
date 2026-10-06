@@ -12,6 +12,10 @@ from faceless import config, ledger
 from faceless.config import Paths
 
 
+def cfg_cards_mode() -> str:
+    return config.load()["production"].get("cards", {}).get("mode", "auto")
+
+
 def cmd_doctor(_args) -> int:
     ok = True
     print("Faceless Studio doctor")
@@ -28,6 +32,9 @@ def cmd_doctor(_args) -> int:
             ok = False
     fonts = sorted(p.name for p in Paths.fonts.glob("*.ttf"))
     print(f"  {'OK ' if fonts else 'ERR'} fonts: {', '.join(fonts) or 'none'}")
+    from faceless.pipeline import cards
+    print(f"  {'OK ' if cards.available() else '..  '}motion cards: HyperFrames {cards.CLI} needs Node 22+ and npx "
+          f"({'ready' if cards.available() else 'unavailable: videos use stills only'}); mode {cfg_cards_mode()}")
     keys = {
         "llm": ["GEMINI_API_KEY", "OPENROUTER_API_KEY"],
         "images": ["CLOUDFLARE_API_KEY", "CLOUDFLARE_ACCOUNT_ID", "OPENROUTER_API_KEY"],

@@ -30,6 +30,10 @@ caption_y = 1180
 accent = "#FFD23F"                           # brand gold
 accent2 = "#2EE59D"                          # money green
 
+[production.cards]                           # HyperFrames motion cards (free, local, no key): see pipeline/cards.py
+mode = "numbers"                             # off | auto (only replaces placeholder-art beats) | numbers (+ count-up cards for numeric callouts)
+pillars = ["math", "escape"]                 # numbers mode applies to these pillars
+
 [voice]
 chain = ["edge", "elevenlabs", "gemini"]     # first healthy provider wins
 edge_voice = "en-US-AndrewMultilingualNeural"
