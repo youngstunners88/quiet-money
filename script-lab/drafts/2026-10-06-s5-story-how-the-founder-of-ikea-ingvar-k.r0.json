@@ -1,0 +1,74 @@
+{
+  "title": "The Billionaire Who Drove a 1993 Volvo",
+  "hook_text": "HE WAS WORTH $50 BILLION",
+  "beats": [
+    {
+      "say": "He was worth $50 billion yet flew economy and bought clothes at flea markets.",
+      "callout": "",
+      "visual": "Cinematic shot of a silhouette of a person sitting in a cramped airplane seat, dim cabin lighting, moody atmosphere."
+    },
+    {
+      "say": "This was Ingvar Kamprad, the founder of IKEA. And his frugality wasn't about suffering.",
+      "callout": "$50 BILLION",
+      "visual": "A dark, sleek 1990s Volvo station wagon parked on a wet cobblestone street at dusk, cinematic shadows."
+    },
+    {
+      "say": "It was a system. He drove a 1993 Volvo for two decades because he hated waste.",
+      "callout": "A SYSTEM",
+      "visual": "Close-up of weathered hands holding a well-worn leather wallet, warm side lighting, shallow depth of field."
+    },
+    {
+      "say": "He stayed in cheap hotels and always booked economy seats to keep his costs low.",
+      "callout": "1993 VOLVO",
+      "visual": "A minimalist hotel room with a single bed, stark shadows, muted Scandinavian color palette."
+    },
+    {
+      "say": "Most people think wealth means upgrading everything. Kamprad proved the opposite.",
+      "callout": "CHEAP HOTELS",
+      "visual": "A stack of simple plain white paper notebooks and a cheap black ballpoint pen on a bare wooden desk."
+    },
+    {
+      "say": "He treated personal spending like a business budget. Every single dollar had a job.",
+      "callout": "ZERO WASTE",
+      "visual": "A close-up shot of a person tearing a used piece of paper in half to reuse the blank side."
+    },
+    {
+      "say": "When you stop trying to impress strangers, your money finally starts working for you.",
+      "callout": "BUSINESS BUDGET",
+      "visual": "A minimalist wooden kitchen table with a single ceramic mug and soft morning light streaming through a window."
+    },
+    {
+      "say": "He didn't pinch pennies out of fear. He did it to fund what actually mattered.",
+      "callout": "NO STRANGERS",
+      "visual": "A wide shot of a vast empty warehouse with polished concrete floors reflecting soft overhead lights."
+    },
+    {
+      "say": "He built a global empire by keeping his own overhead near zero.",
+      "callout": "",
+      "visual": "An abstract close-up of dark wooden furniture joints fitting together perfectly, dramatic lighting."
+    },
+    {
+      "say": "That's why true wealth isn't about what you spend, it's about what you keep, and that's exactly how",
+      "callout": "",
+      "visual": "A silhouette of a person walking down a quiet city sidewalk away from the camera at twilight."
+    }
+  ],
+  "caption": "Frugality isn't about suffering. It's about protecting your freedom. #money #personalfinance #wealth #frugalliving #ikea",
+  "description": "Ingvar Kamprad built IKEA into a global giant while living below his means. True wealth is built by keeping your overhead low.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#wealth",
+    "#frugalliving",
+    "#ikea"
+  ],
+  "first_comment": "What's one luxury you refuse to spend money on?",
+  "facts": [
+    {
+      "claim": "Ingvar Kamprad drove a 1993 Volvo and flew economy",
+      "basis": "Well-documented biographical facts about IKEA founder Ingvar Kamprad's frugal lifestyle."
+    }
+  ],
+  "source": "llm",
+  "pillar": "story"
+}

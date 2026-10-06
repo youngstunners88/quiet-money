@@ -1,0 +1,84 @@
+{
+  "title": "Why Your Brain Hates Your Future Self",
+  "hook_text": "YOUR FUTURE SELF IS A STRANGER",
+  "beats": [
+    {
+      "say": "Your brain treats your future self like a total stranger. That's why you prefer $100 today over $150 next year.",
+      "callout": "",
+      "visual": "A dark empty room with a single sliver of bright sunlight cutting across a wooden floor, cinematic shadows, still camera"
+    },
+    {
+      "say": "It's called present bias. It quietly sabotages your wealth every single day.",
+      "callout": "PRESENT BIAS",
+      "visual": "A single coin sitting on a dark concrete table under a harsh overhead spotlight, macro shot, shallow depth of field"
+    },
+    {
+      "say": "When you picture yourself at 65, brain scans show it lights up the exact same way it does when you think about a stranger.",
+      "callout": "",
+      "visual": "An old analog clock ticking on a weathered wall, blurred background, moody lighting, slow cinematic pan"
+    },
+    {
+      "say": "You're literally robbing a stranger you haven't met yet. But here's the part nobody mentions.",
+      "callout": "THE COST",
+      "visual": "A closed wooden door with warm light spilling from underneath, cinematic framing, zero movement"
+    },
+    {
+      "say": "Waiting 10 years to start costs you a fortune. Starting at 25 versus 35 with $200 a month at 8% until 65 creates a massive gap.",
+      "callout": "$400,130 GAP",
+      "visual": "A stack of old paper documents resting on a rustic wooden desk, dark moody tones, side lighting"
+    },
+    {
+      "say": "That 10-year delay costs you $400,130. The math doesn't care about your feelings.",
+      "callout": "$698,202 VS $298,072",
+      "visual": "A vintage glass hourglass running out of sand on a dark slate surface, macro shot, dramatic shadows"
+    },
+    {
+      "say": "So how do you trick a brain wired for immediate survival?",
+      "callout": "",
+      "visual": "A pair of human hands folding a crisp white paper on a dark table, overhead shot, minimal aesthetic"
+    },
+    {
+      "say": "You stop relying on willpower entirely. Willpower fails every time.",
+      "callout": "WILLPOWER FAILS",
+      "visual": "A rusted iron lock hanging on an old chain, dark cinematic grading, still frame"
+    },
+    {
+      "say": "Instead, you make your future self visible. And you automate the entire process.",
+      "callout": "AUTOMATE IT",
+      "visual": "A sleek modern metal lever in a dimly lit industrial space, macro shot, cold blue and warm orange tones"
+    },
+    {
+      "say": "Set a transfer for payday. Send the money away before you even see it in your checking account.",
+      "callout": "PAYDAY TRANSFER",
+      "visual": "A modern smartphone resting face down on a dark marble countertop, minimalist composition, soft window light"
+    },
+    {
+      "say": "Out of sight means out of reach for your present bias. Fix your system once, and let time do the heavy lifting.",
+      "callout": "",
+      "visual": "A quiet empty train track vanishing into a foggy morning horizon, cinematic wide angle, muted colors"
+    },
+    {
+      "say": "Because your future self is counting on you to outsmart your own biology, and that's exactly how",
+      "callout": "",
+      "visual": "A dark empty room with a single sliver of bright sunlight cutting across a wooden floor, cinematic shadows, loop ready"
+    }
+  ],
+  "caption": "Your brain is wired to rob your future self. Stop relying on willpower and build a system that runs without you. #moneypsychology #personalfinance #wealthbuilding #investing #financialfreedom",
+  "description": "Present bias makes us favor instant gratification over long-term wealth. Learn how to trick your brain and protect your future self using automation.",
+  "hashtags": [
+    "#moneypsychology",
+    "#personalfinance",
+    "#wealthbuilding",
+    "#investing",
+    "#financialfreedom"
+  ],
+  "first_comment": "What is one expense you cut this month without missing it?",
+  "facts": [
+    {
+      "claim": "Starting at 25 vs 35 with $200/month at 8% until 65 results in $698,202 vs $298,072, costing $400,130 for a 10-year delay.",
+      "basis": "Fact sheet: Starting at 25 vs 35 with $200/month at 8% until 65: $698,202 vs $298,072 (10 years late costs $400,130)"
+    }
+  ],
+  "source": "llm",
+  "pillar": "psychology"
+}

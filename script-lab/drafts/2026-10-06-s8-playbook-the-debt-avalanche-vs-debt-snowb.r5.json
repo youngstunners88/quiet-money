@@ -1,0 +1,84 @@
+{
+  "title": "At 24% APR, Debt Doubles Every 3 Years",
+  "hook_text": "AT 24% APR DEBT DOUBLES EVERY 3 YEARS",
+  "beats": [
+    {
+      "say": "At 24% APR, debt doubles every 3 years. That's the Rule of 72 working against you.",
+      "callout": "",
+      "visual": "A close-up of a calendar flipping pages in a dimly lit room, cinematic shadows, slow motion."
+    },
+    {
+      "say": "You're bleeding cash in interest. Let's fix that right now.",
+      "callout": "STOP BLEEDING",
+      "visual": "A sharp kitchen knife resting on a wooden cutting board, warm overhead lighting, shallow depth of field."
+    },
+    {
+      "say": "Step one. Open your banking app and list every debt balance and interest rate.",
+      "callout": "STEP ONE",
+      "visual": "A sleek modern laptop closed on a dark oak desk, soft morning window light from the side."
+    },
+    {
+      "say": "Don't guess. Write down the exact numbers. You can't fight an enemy you don't see.",
+      "callout": "BE EXACT",
+      "visual": "An empty black leather notebook lying open under a single desk lamp, macro shot."
+    },
+    {
+      "say": "Step two. Pick your weapon. The debt avalanche targets your highest interest rate first.",
+      "callout": "STEP TWO",
+      "visual": "A chess piece, a rook, standing on a dark wooden board, cinematic rim light."
+    },
+    {
+      "say": "Mathematically, it's the fastest way out. You'll pay less total interest overall.",
+      "callout": "SAVE INTEREST",
+      "visual": "A fountain pen resting on blank heavy-grain paper, moody studio lighting."
+    },
+    {
+      "say": "But here's the part nobody mentions. Sometimes math isn't what keeps you going.",
+      "callout": "THE TWIST",
+      "visual": "A vintage metal hourglass with dark sand falling slowly, macro focus on the neck."
+    },
+    {
+      "say": "Step three. If you need quick wins to stay motivated, choose the debt snowball instead.",
+      "callout": "STEP THREE",
+      "visual": "A small pile of smooth river stones stacked neatly on a slate tile, natural light."
+    },
+    {
+      "say": "Knock out your smallest balance first, regardless of the rate.",
+      "callout": "",
+      "visual": "A single heavy iron key resting on a rustic wooden table, overhead shot."
+    },
+    {
+      "say": "Psychology beats math when quitting is your biggest risk.",
+      "callout": "",
+      "visual": "A dark hallway with a single bright doorway at the far end, cinematic perspective."
+    },
+    {
+      "say": "Pick one strategy today. Lock it in, automate the payments, and never look back.",
+      "callout": "",
+      "visual": "A heavy metal vault door closing shut, dramatic low-angle lighting, sparks flying."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "A dark silhouette of a person walking away down a long corridor, minimalist framing."
+    }
+  ],
+  "caption": "Math or momentum? Pick your debt strategy today and stop the bleed. #debtfree #personalfinance #moneytips #financialfreedom #smartmoney",
+  "description": "Compare the debt avalanche and debt snowball methods. Learn how to pick the right strategy based on math or psychology to eliminate your debt faster.",
+  "hashtags": [
+    "#debtfree",
+    "#personalfinance",
+    "#moneytips",
+    "#financialfreedom",
+    "#smartmoney"
+  ],
+  "first_comment": "Are you Team Avalanche (math) or Team Snowball (momentum)? Drop your pick below.",
+  "facts": [
+    {
+      "claim": "At 24% APR debt doubles every 3 years by the Rule of 72",
+      "basis": "Rule of 72: at 8% money doubles every 9 years; at 24% debt doubles every 3 years"
+    }
+  ],
+  "source": "llm",
+  "pillar": "playbook"
+}

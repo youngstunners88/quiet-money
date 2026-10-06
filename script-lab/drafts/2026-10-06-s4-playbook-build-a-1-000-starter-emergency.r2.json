@@ -1,0 +1,84 @@
+{
+  "title": "Build a $1,000 Emergency Fund in 30 Days",
+  "hook_text": "$1,000 SAVED IN 30 DAYS",
+  "beats": [
+    {
+      "say": "Most people stay broke because they wait until the end of the month to save what's left.",
+      "callout": "",
+      "visual": "Cinematic shot of a blank desk under harsh amber desk lamp light, no people."
+    },
+    {
+      "say": "Here's the 3-step blueprint to build a $1,000 starter emergency fund in 30 days flat.",
+      "callout": "$1,000 GOAL",
+      "visual": "Macro shot of a plain metal paperclip resting on a clean wooden tabletop."
+    },
+    {
+      "say": "Step one. Sell three unused items sitting in your closet right now.",
+      "callout": "STEP 1",
+      "visual": "Close-up of a closed wooden closet door handle in shadow, moody lighting."
+    },
+    {
+      "say": "List them on local marketplace apps today and pocket the cash.",
+      "callout": "QUICK CASH",
+      "visual": "Overhead view of hands packing a simple cardboard box with tape, blurred."
+    },
+    {
+      "say": "Step two. Cut two recurring subscriptions from your bank statement immediately.",
+      "callout": "STEP 2",
+      "visual": "A sleek dark ceramic coffee mug sitting on a concrete kitchen counter."
+    },
+    {
+      "say": "That's cash back in your pocket instead of funding corporate accounts.",
+      "callout": "KEEP IT",
+      "visual": "A silver key resting beside a closed leather notebook on a dark desk."
+    },
+    {
+      "say": "Step three. Pick up one weekend side shift to close the gap.",
+      "callout": "STEP 3",
+      "visual": "A black leather wallet resting flat on an empty subway platform bench."
+    },
+    {
+      "say": "But here's the part nobody mentions about hitting that target.",
+      "callout": "THE TRUTH",
+      "visual": "A single drop of water hitting a dark glass surface, high contrast macro shot."
+    },
+    {
+      "say": "You have to move that money into a separate savings account today.",
+      "callout": "",
+      "visual": "A heavy steel door hinge in soft focus, dramatic side lighting."
+    },
+    {
+      "say": "Out of sight means out of temptation when surprise bills hit.",
+      "callout": "",
+      "visual": "A clean white ceramic plate resting on an empty oak dining table."
+    },
+    {
+      "say": "Build the habit now before life forces you to learn it when",
+      "callout": "",
+      "visual": "A glowing amber streetlamp illuminating an empty city sidewalk at night."
+    },
+    {
+      "say": "Most people stay broke because they wait until the end of the month to",
+      "callout": "",
+      "visual": "A slow pan across an empty leather office chair under dim overhead lights."
+    }
+  ],
+  "caption": "The simple 3-step rule to stack your first $1,000 in 30 days. Follow for the money rules school never taught you. #emergencyfund #personalfinance #savingmoney #moneytips #financialfreedom",
+  "description": "Learn how to build a $1,000 starter emergency fund in 30 days using a simple 3-step plan involving selling unused items, cutting subscriptions, and quick side cash.",
+  "hashtags": [
+    "#emergencyfund",
+    "#personalfinance",
+    "#savingmoney",
+    "#moneytips",
+    "#financialfreedom"
+  ],
+  "first_comment": "What is the hardest bill for you to cut this month?",
+  "facts": [
+    {
+      "claim": "Build a $1,000 starter emergency fund in 30 days using sell, cut, and side cash steps",
+      "basis": "Actionable 3-step personal finance strategy for short-term emergency savings."
+    }
+  ],
+  "source": "llm",
+  "pillar": "playbook"
+}

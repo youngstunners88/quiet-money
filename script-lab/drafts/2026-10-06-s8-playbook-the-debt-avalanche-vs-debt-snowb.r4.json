@@ -1,0 +1,92 @@
+{
+  "title": "At 24% APR, Debt Doubles Fast: Pick Your Method",
+  "hook_text": "AT 24% APR DEBT DOUBLES EVERY 3 YEARS",
+  "beats": [
+    {
+      "say": "At 24% APR, debt doubles every 3 years using the rule of 72, trapping millions.",
+      "callout": "",
+      "visual": "A dark room lit by a single desk lamp, casting sharp shadows on a plain wooden table."
+    },
+    {
+      "say": "You can't outsave high interest unless you pick a proven payoff method right now.",
+      "callout": "Pick a method",
+      "visual": "Close-up of a silver pen resting on a blank white sheet of paper, soft focus background."
+    },
+    {
+      "say": "Step one. List every debt you owe by interest rate and balance on a fresh sheet.",
+      "callout": "Step one",
+      "visual": "A hand writing numbers on paper with a black ink pen, shot from directly above."
+    },
+    {
+      "say": "Step two. Choose the avalanche method to attack your highest APR balance first.",
+      "callout": "Step two",
+      "visual": "A hand sliding a calculator across a clean wooden desk, cinematic lighting."
+    },
+    {
+      "say": "Or choose the snowball method to kill your smallest balance first for quick momentum.",
+      "callout": "Step two alternate",
+      "visual": "A stack of plain white index cards being sorted on a dark surface, shallow depth of field."
+    },
+    {
+      "say": "Step three. Route every extra dollar to that single target while paying minimums elsewhere.",
+      "callout": "",
+      "visual": "A single dark coffee mug sitting next to a closed notebook on a minimalist desk."
+    },
+    {
+      "say": "Look at what happens on a $3,000 balance at 24% APR when you change your payment.",
+      "callout": "$3,000 balance",
+      "visual": "A blurred computer keyboard with soft blue ambient light reflecting off the keys."
+    },
+    {
+      "say": "Paying only the minimum drags it out for 183 months and costs $4,887 in interest.",
+      "callout": "$4,887 interest",
+      "visual": "A close-up of a brass desk clock ticking in a quiet room, cinematic moody lighting."
+    },
+    {
+      "say": "But paying $300 a month wipes it clean in just 12 months with only $381 in interest.",
+      "callout": "12 months",
+      "visual": "A hand closing a plain leather notebook with a crisp snap, warm backlighting."
+    },
+    {
+      "say": "That's the power of intentional math over minimum payments that drain your paycheck.",
+      "callout": "",
+      "visual": "A silhouette of a person standing by a tall glass window looking out at a city skyline at dusk."
+    },
+    {
+      "say": "Pick your strategy today and follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "A dark hallway with a single warm light at the far end, minimalist perspective shot."
+    },
+    {
+      "say": "At 24% APR, debt doubles every 3 years",
+      "callout": "",
+      "visual": "A sleek dark room with a minimalist chair by a blank wall, quiet documentary atmosphere."
+    }
+  ],
+  "caption": "Stop letting minimum payments drain your paycheck. Pick your method today. #debtfree #personalfinance #moneymindset #debtpayoff #wealthbuilding",
+  "description": "Learn how to choose between the debt avalanche and debt snowball methods to eliminate high-interest debt fast using exact math.",
+  "hashtags": [
+    "#debtfree",
+    "#personalfinance",
+    "#moneymindset",
+    "#debtpayoff",
+    "#wealthbuilding"
+  ],
+  "first_comment": "Are you picking the avalanche or snowball method today?",
+  "facts": [
+    {
+      "claim": "At 24% debt doubles every 3 years",
+      "basis": "Rule of 72: at 24% debt doubles every 3 years"
+    },
+    {
+      "claim": "$3,000 credit card at 24% APR paying only the minimum takes 183 months and costs $4,887 interest",
+      "basis": "$3,000 credit card at 24% APR paying only the minimum (1% + interest, min $25): 183 months (~15 years), $4,887 interest"
+    },
+    {
+      "claim": "Same $3,000 at 24% paying $300/month takes 12 months and costs $381 interest",
+      "basis": "Same $3,000 at 24% paying $300/month: 12 months, $381 interest"
+    }
+  ],
+  "source": "llm",
+  "pillar": "playbook"
+}

@@ -1,0 +1,71 @@
+{
+  "id": "2026-10-06-s7-myth-myth-your-house-is-your-best-inv",
+  "pillar": "myth",
+  "topic": "Myth: your house is your best investment",
+  "day": "2026-10-06",
+  "slot": 7,
+  "status": "published",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-06T05:17:26Z",
+      "words": 158
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-06T05:18:05Z",
+      "seconds": 65.403,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-06T05:18:17Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-06T05:19:26Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-06T05:19:26Z",
+      "score": 95
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-06T05:19:26Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-10-06T05:19:26Z",
+      "local": "2026-10-07T15:00:00-04:00"
+    }
+  ],
+  "artifacts": {
+    "angle": "a home is shelter first; maintenance, taxes, and opportunity cost",
+    "title": "The House Myth That Costs You Fortunes",
+    "video": "/home/user/quiet-money/production/output/2026-10-06/2026-10-06-s7-myth-myth-your-house-is-your-best-inv/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-06/2026-10-06-s7-myth-myth-your-house-is-your-best-inv/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-10-07/slot3-myth",
+        "post_at": "2026-10-07T15:00:00-04:00"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 95,
+    "passed": true
+  },
+  "cost": {
+    "tts:edge:chars": 903
+  },
+  "notes": []
+}

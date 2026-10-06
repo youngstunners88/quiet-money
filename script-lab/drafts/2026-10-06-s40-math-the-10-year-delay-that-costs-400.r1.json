@@ -1,0 +1,79 @@
+{
+  "title": "The 10-Year Delay That Costs $400,130",
+  "hook_text": "STARTING 10 YEARS LATER COSTS $400,130",
+  "beats": [
+    {
+      "say": "Starting at 25 versus 35 changes your net worth by $400,130 at 65.",
+      "callout": "",
+      "visual": "Close-up of a vintage analog clock ticking in dim warm light, shallow depth of field, dark wood desk."
+    },
+    {
+      "say": "That single 10-year delay alters your entire financial future.",
+      "callout": "$400,130",
+      "visual": "A hand sliding a blank white ledger across a dark surface, side angle, cinematic moody lighting."
+    },
+    {
+      "say": "Here is the exact math behind the penalty.",
+      "callout": "THE MATH",
+      "visual": "A sleek dark fountain pen resting on blank heavy paper, overhead macro shot, soft shadows."
+    },
+    {
+      "say": "Invest $200 a month at 8% a year until you turn 65.",
+      "callout": "$200 / MONTH",
+      "visual": "Silhouette of a coffee cup next to a foggy window at dawn, moody blue and orange tones."
+    },
+    {
+      "say": "If you begin at 25, you accumulate $698,202.",
+      "callout": "$698,202",
+      "visual": "A closed minimalist laptop sitting on a dark concrete table, dramatic side window light."
+    },
+    {
+      "say": "Wait until 35, and that final balance drops to $298,072.",
+      "callout": "$298,072",
+      "visual": "A hand turning over a blank hourglass on a dark wooden shelf, cinematic rim lighting."
+    },
+    {
+      "say": "That is a massive loss for just waiting a decade.",
+      "callout": "MASSIVE LOSS",
+      "visual": "A stack of plain unbranded silver coins catching a single ray of light in a dark room."
+    },
+    {
+      "say": "Time in the market beats timing the market every single time.",
+      "callout": "TIME WINS",
+      "visual": "A dark hallway with a single distant light at the end, low angle, cinematic perspective."
+    },
+    {
+      "say": "Compound interest rewards early action more than brute effort.",
+      "callout": "",
+      "visual": "A close-up of dark tree rings showing years passing, matte finish, moody natural light."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "A minimalist leather notebook closed tight on a dark desk, dramatic overhead spotlight."
+    },
+    {
+      "say": "And the absolute worst thing you can do is wait, because...",
+      "callout": "",
+      "visual": "A person walking away down a dim concrete corridor, back to camera, cinematic shadows."
+    }
+  ],
+  "caption": "Waiting ten years to invest doesn't just cost you the deposits. It costs you the compounding.\n\n#money #personalfinance #wealth #investing #finance",
+  "description": "Discover the shocking cost of waiting 10 years to start investing and how compounding changes your future net worth.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#wealth",
+    "#investing",
+    "#finance"
+  ],
+  "first_comment": "At what age did you start investing your first paycheck?",
+  "facts": [
+    {
+      "claim": "Starting at 25 vs 35 with $200/month at 8% until 65 yields $698,202 vs $298,072, costing $400,130.",
+      "basis": "Money Fact Sheet: Starting at 25 vs 35 with $200/month at 8% until 65: $698,202 vs $298,072 (10 years late costs $400,130)"
+    }
+  ],
+  "source": "llm",
+  "pillar": "math"
+}

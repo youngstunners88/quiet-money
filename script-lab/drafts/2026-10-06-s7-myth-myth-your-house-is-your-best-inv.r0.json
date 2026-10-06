@@ -1,0 +1,79 @@
+{
+  "title": "Why Your House Isn't Your Best Investment",
+  "hook_text": "YOUR HOUSE IS NOT AN INVESTMENT",
+  "beats": [
+    {
+      "say": "Your house isn't your best investment. It's just an expensive place to sleep.",
+      "callout": "",
+      "visual": "A cinematic wide shot of a single suburban house at dusk, lit by a single warm porch light, shadows stretching across a quiet street, moody moody atmosphere."
+    },
+    {
+      "say": "Most people think buying property is a guaranteed path to wealth.",
+      "callout": "SHELTER FIRST",
+      "visual": "A close-up shot of a brass front door handle with a metal key resting on a wooden console table, dimly lit with moody ambient side lighting."
+    },
+    {
+      "say": "They forget about maintenance costs, property taxes, and home insurance.",
+      "callout": "HIDDEN COSTS",
+      "visual": "A close-up shot of a hand using a wrench on a copper plumbing pipe under a dark sink, cinematic moody lighting, shallow depth of field."
+    },
+    {
+      "say": "Then there's the hidden loss of opportunity cost.",
+      "callout": "OPPORTUNITY COST",
+      "visual": "An overhead shot of a wooden desk with a stack of old paper bills, a pen, and a closed black leather notebook, moody shadows."
+    },
+    {
+      "say": "If you put $500 a month into the market at 8% a year for 30 years...",
+      "callout": "$745,180",
+      "visual": "A close-up shot of a vintage metal desk lamp casting a warm circle of light on a blank wooden tabletop, dark background."
+    },
+    {
+      "say": "That cash turns into $745,180.",
+      "callout": "$745,180",
+      "visual": "A close-up shot of a dark graph line printed on aged parchment paper, softly blurred in the background, cinematic low-key lighting."
+    },
+    {
+      "say": "But here's the part nobody mentions.",
+      "callout": "THE TRUTH",
+      "visual": "A cinematic shot of a single house key resting on a dark concrete windowsill, morning fog outside the glass, moody and quiet."
+    },
+    {
+      "say": "Your primary home doesn't pay you monthly dividends.",
+      "callout": "NO DIVIDENDS",
+      "visual": "A close-up shot of a closed wooden front door viewed from the inside hallway, thin lines of bright sunlight cutting through the darkness."
+    },
+    {
+      "say": "You only see that money when you sell and buy something else just as expensive.",
+      "callout": "",
+      "visual": "A close-up shot of a hand locking a heavy deadbolt on a dark wooden door, moody cinematic side lighting."
+    },
+    {
+      "say": "Treat your home as shelter first.",
+      "callout": "",
+      "visual": "A wide cinematic shot of a cozy living room corner with a reading chair, dark walls, lit by a single floor lamp casting warm shadows."
+    },
+    {
+      "say": "Follow for the money rules school never taught you...",
+      "callout": "",
+      "visual": "A close-up shot of a dark wooden staircase leading upwards into shadows, minimal design, moody and atmospheric."
+    }
+  ],
+  "caption": "A house is shelter first. Stop calling it an investment and look at the real math. #money #personalfinance #wealth #realestate #investing",
+  "description": "Your house is not your best investment. Between maintenance, taxes, and opportunity cost, the math tells a different story.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#wealth",
+    "#realestate",
+    "#investing"
+  ],
+  "first_comment": "Do you view your home as an investment or just a place to live? Let's talk about it below.",
+  "facts": [
+    {
+      "claim": "$500/month invested for 30 years at 8%/yr (monthly compounding) = $745,180",
+      "basis": "MONEY FACT SHEET: $500/month for 30 years at 8%/yr equals $745,180."
+    }
+  ],
+  "source": "llm",
+  "pillar": "myth"
+}

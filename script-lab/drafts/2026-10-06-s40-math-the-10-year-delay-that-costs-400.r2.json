@@ -1,0 +1,92 @@
+{
+  "title": "The 10-Year Delay That Costs $400,130",
+  "hook_text": "STARTING AT 35 COSTS $400,130",
+  "beats": [
+    {
+      "say": "Starting to invest at 35 instead of 25 doesn't just lose you 10 years.",
+      "callout": "",
+      "visual": "A vintage calendar on a dark wooden desk, shot from above, dimly lit by a single desk lamp."
+    },
+    {
+      "say": "It costs you a staggering $400,130.",
+      "callout": "$400,130",
+      "visual": "A close-up of a hand sliding a metal calculator across a dark slate surface, blurred background."
+    },
+    {
+      "say": "Here's the exact math behind the 10-year delay.",
+      "callout": "THE MATH",
+      "visual": "An empty coffee shop window at dawn, rain streaks on the glass reflecting amber streetlights."
+    },
+    {
+      "say": "If you invest $200 a month starting at 25 and earn 8% a year until 65...",
+      "callout": "$200 / MONTH",
+      "visual": "A stack of old silver coins sitting on a worn leather notebook, cinematic side lighting."
+    },
+    {
+      "say": "Your account grows to $698,202.",
+      "callout": "$698,202",
+      "visual": "A sleek modern fountain pen resting on blank white paper, sharp focus, shallow depth of field."
+    },
+    {
+      "say": "You only put in $96,000 of your own money.",
+      "callout": "$96,000",
+      "visual": "A person counting plain paper currency with thumbs, shot from chest level, faceless."
+    },
+    {
+      "say": "But if you wait until 35 to start the exact same plan...",
+      "callout": "WAITING 10 YEARS",
+      "visual": "A dark hallway with a single patch of bright sunlight cutting across hardwood floors."
+    },
+    {
+      "say": "You'll end up with just $298,072.",
+      "callout": "$298,072",
+      "visual": "A pocket watch lying face down on a rustic wooden table, dust motes floating in the air."
+    },
+    {
+      "say": "That's $400,130 gone, just for waiting a single decade.",
+      "callout": "",
+      "visual": "A solitary chair in an empty room, dramatic shadows stretching across the wall."
+    },
+    {
+      "say": "Compound interest doesn't care about your excuses. It rewards time above all else.",
+      "callout": "",
+      "visual": "Close-up of a mechanical clock's brass gears turning slowly in smooth, quiet motion."
+    },
+    {
+      "say": "Stop waiting for the right moment to begin.",
+      "callout": "",
+      "visual": "A person walking away down a long urban sidewalk at dusk, backlit by warm streetlamps."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "A minimalist dark background with a subtle pulsing light, clean and modern cinematic finish."
+    }
+  ],
+  "caption": "Waiting 10 years to invest is the most expensive mistake you can make. The math doesn't lie. Follow for the money rules school never taught you. #money #personalfinance #investing #wealth #compounding",
+  "description": "Discover the shocking cost of waiting 10 years to start investing. Using exact figures at an 8% return, we break down how starting at 25 versus 35 changes your final net worth by over $400,000.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#investing",
+    "#wealth",
+    "#compounding"
+  ],
+  "first_comment": "What age did you start investing, or what's holding you back right now?",
+  "facts": [
+    {
+      "claim": "$200/month invested for 40 years at 8%/yr reaches $698,202",
+      "basis": "Fact sheet: $200/month invested for 40 years at 8%/yr (monthly compounding) = $698,202"
+    },
+    {
+      "claim": "$200/month invested for 30 years at 8%/yr reaches $298,072",
+      "basis": "Fact sheet: $200/month invested for 30 years at 8%/yr (monthly compounding) = $298,072"
+    },
+    {
+      "claim": "Starting at 25 vs 35 with $200/month at 8% until 65 costs $400,130",
+      "basis": "Fact sheet: Starting at 25 vs 35 with $200/month at 8% until 65: $698,202 vs $298,072 (10 years late costs $400,130)"
+    }
+  ],
+  "source": "llm",
+  "pillar": "math"
+}

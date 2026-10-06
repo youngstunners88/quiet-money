@@ -1,0 +1,93 @@
+{
+  "title": "Snowball vs Avalanche: Pick Your Debt Killer Today",
+  "hook_text": "YOUR DEBT DOUBLES EVERY 3 YEARS",
+  "beats": [
+    {
+      "say": "Your debt doubles every 3 years at 24% APR.",
+      "callout": "",
+      "visual": "A stack of dark red overdue bills on a wooden desk under a single harsh lamp, cinematic shadows."
+    },
+    {
+      "say": "That is the Rule of 72 working against you.",
+      "callout": "Rule of 72",
+      "visual": "A vintage metal desk clock ticking in soft focus, low key moody lighting."
+    },
+    {
+      "say": "If you do not pick a strategy today, you will lose years.",
+      "callout": "Pick Today",
+      "visual": "A hand holding a black pen over a blank white ledger page, overhead angle, cinematic grain."
+    },
+    {
+      "say": "Step one. List every debt from highest rate to lowest rate.",
+      "callout": "Step One",
+      "visual": "Close-up of a hand writing numbers on paper, out of focus background, moody morning light."
+    },
+    {
+      "say": "That is the avalanche method. It saves you the absolute most cash.",
+      "callout": "Save Cash",
+      "visual": "A minimalist ceramic coffee cup next to a closed black notebook on a dark table, soft side light."
+    },
+    {
+      "say": "Step two. List every debt from smallest balance to largest balance.",
+      "callout": "Step Two",
+      "visual": "Fingers flipping through pages of a minimalist notebook, dramatic side lighting, rich textures."
+    },
+    {
+      "say": "That is the snowball method. It gives you fast psychological wins.",
+      "callout": "",
+      "visual": "A single wooden chess piece standing alone on a dark walnut board, moody overhead shot."
+    },
+    {
+      "say": "Step three. Automate minimums on everything, then send every extra dollar to your target.",
+      "callout": "",
+      "visual": "A dark smartphone resting on a slate desk, screen blurred, cinematic ambient glow."
+    },
+    {
+      "say": "But here is the part nobody mentions. The math favors avalanche.",
+      "callout": "",
+      "visual": "An old brass desk lamp casting a warm circle of light on an empty wooden desk, moody atmosphere."
+    },
+    {
+      "say": "Paying only the minimum on a $6,000 balance at 24% takes 252 months.",
+      "callout": "252 Months",
+      "visual": "Rain streaks sliding down a large office window at night, city lights blurred in the background."
+    },
+    {
+      "say": "That is 21 years of your life gone to interest payments.",
+      "callout": "21 Years Lost",
+      "visual": "A pendulum swinging slowly in soft shadow, minimalist aesthetic, cinematic contrast."
+    },
+    {
+      "say": "Pick your method right now and stop bleeding your future away.",
+      "callout": "",
+      "visual": "A closed black leather journal sitting on a dark concrete surface, dramatic edge lighting."
+    },
+    {
+      "say": "At 24% interest, your debt doubles so fast that",
+      "callout": "",
+      "visual": "A dark hallway with a single distant light source, cinematic depth, moody tones."
+    }
+  ],
+  "caption": "Pick your debt strategy today before interest eats your paycheck alive. #debtfree #personalfinance #moneytips #debtfreejourney",
+  "description": "Stop letting credit card interest drain your future. Compare the debt avalanche and debt snowball methods and pick your strategy today.",
+  "hashtags": [
+    "#debtfree",
+    "#personalfinance",
+    "#moneytips",
+    "#debtfreejourney",
+    "#quietmoney"
+  ],
+  "first_comment": "Are you picking the avalanche method for math, or the snowball method for wins?",
+  "facts": [
+    {
+      "claim": "At 24% debt doubles every 3 years",
+      "basis": "Rule of 72: 72 divided by 24 equals 3 years"
+    },
+    {
+      "claim": "$6,000 credit card at 24% APR paying only the minimum takes 252 months (~21 years)",
+      "basis": "Provided money fact sheet data point"
+    }
+  ],
+  "source": "llm",
+  "pillar": "playbook"
+}

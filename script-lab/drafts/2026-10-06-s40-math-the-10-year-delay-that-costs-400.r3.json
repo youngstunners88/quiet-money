@@ -1,0 +1,82 @@
+{
+  "title": "The 10-Year Delay That Costs $400,130",
+  "hook_text": "WAITING 10 YEARS COSTS $400,130",
+  "beats": [
+    {
+      "say": "Starting to invest at 25 instead of 35 changes your final net worth more than you think.",
+      "callout": "",
+      "visual": "A cinematic shot of a vintage desk clock ticking in a dimly lit room, moody shadows, shallow depth of field."
+    },
+    {
+      "say": "Here's the exact math behind the 10-year delay that quietly drains your future account.",
+      "callout": "THE MATH",
+      "visual": "Close-up of a hand moving a wooden chess piece across a dark board, moody ambient side lighting."
+    },
+    {
+      "say": "If you invest $200 a month at 8% a year starting at age 25, you reach age 65 with a massive total.",
+      "callout": "$200 / MONTH",
+      "visual": "A sleek modern metal lamp casting a warm circle of light onto a clean, empty wooden tabletop."
+    },
+    {
+      "say": "That monthly habit compounds over 40 years into a balance of $698,202 sitting in your portfolio.",
+      "callout": "$698,202",
+      "visual": "A close-up of dark espresso coffee being poured into a matte black ceramic mug, slow motion, moody lighting."
+    },
+    {
+      "say": "Now let's look at what happens if you wait just 10 years until age 35 to start.",
+      "callout": "WAIT 10 YEARS",
+      "visual": "An open leather-bound notebook lying flat on a dark mahogany desk, pages blank, soft window light."
+    },
+    {
+      "say": "You still put away that same $200 a month at 8% a year, but you only have 30 years left.",
+      "callout": "30 YEARS",
+      "visual": "A silhouette of a person standing by a large factory window, looking out at a hazy morning skyline."
+    },
+    {
+      "say": "That shorter timeline drops your final balance down to $298,072 by the time you reach age 65.",
+      "callout": "$298,072",
+      "visual": "A brass hourglass resting on a dark slate surface, fine white sand slowly falling through the center."
+    },
+    {
+      "say": "But here's the part nobody mentions when they tell you to wait until your career is fully settled.",
+      "callout": "",
+      "visual": "A close-up of a heavy iron key lying on a distressed wooden workbench, moody overhead spotlight."
+    },
+    {
+      "say": "Subtract those two final amounts and you'll find a difference of exactly $400,130 lost to time.",
+      "callout": "$400,130 LOST",
+      "visual": "Raindrops sliding down a tall glass window pane at night, blurred city lights glowing softly in the background."
+    },
+    {
+      "say": "Waiting a decade doesn't just cost you 10 years of deposits, it destroys your greatest compounding multiplier and that's exactly how",
+      "callout": "",
+      "visual": "A dark silhouette of a person walking down a quiet hallway toward a warm sliver of light under a closed door."
+    }
+  ],
+  "caption": "Time is your only real asset in the market. Start early, even with small amounts.\n\n#personalfinance #investing #moneytips #wealthbuilding #compoundinterest",
+  "description": "Discover the hidden math behind starting your investments at age 25 versus age 35, and why waiting a single decade costs you hundreds of thousands.",
+  "hashtags": [
+    "#personalfinance",
+    "#investing",
+    "#moneytips",
+    "#wealthbuilding",
+    "#compoundinterest"
+  ],
+  "first_comment": "What age did you start investing, or what's holding you back right now?",
+  "facts": [
+    {
+      "claim": "$200/month invested for 40 years at 8%/yr equals $698,202",
+      "basis": "$200/month invested for 40 years at 8%/yr (monthly compounding) = $698,202 (you put in $96,000)"
+    },
+    {
+      "claim": "$200/month invested for 30 years at 8%/yr equals $298,072",
+      "basis": "$200/month invested for 30 years at 8%/yr (monthly compounding) = $298,072 (you put in $72,000)"
+    },
+    {
+      "claim": "Starting at 25 vs 35 with $200/month at 8% until 65 costs $400,130",
+      "basis": "Starting at 25 vs 35 with $200/month at 8% until 65: $698,202 vs $298,072 (10 years late costs $400,130)"
+    }
+  ],
+  "source": "llm",
+  "pillar": "math"
+}

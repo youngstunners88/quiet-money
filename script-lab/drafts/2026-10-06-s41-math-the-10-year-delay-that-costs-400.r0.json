@@ -1,0 +1,79 @@
+{
+  "title": "The 10-Year Wait That Costs $400,000",
+  "hook_text": "WAITING 10 YEARS COSTS $400,130",
+  "beats": [
+    {
+      "say": "Starting your investments at 25 instead of 35 can cost you over $400,000.",
+      "callout": "",
+      "visual": "A vintage clock ticking on a dark wooden desk, dramatic side lighting, macro shot."
+    },
+    {
+      "say": "It all comes down to the brutal math of compounding at 8% a year.",
+      "callout": "8% a year",
+      "visual": "A heavy steel gear mechanism turning slowly in a dimly lit industrial space."
+    },
+    {
+      "say": "Let's look at what happens when you put away $200 a month.",
+      "callout": "$200 / month",
+      "visual": "A person sliding a blank paper notebook across a concrete table, top-down view."
+    },
+    {
+      "say": "If you start at 25 and invest until 65, your balance grows massive.",
+      "callout": "Age 25 to 65",
+      "visual": "A lush green forest shot from above through early morning fog, cinematic."
+    },
+    {
+      "say": "That monthly habit builds up to a staggering $698,202 by the time you reach retirement.",
+      "callout": "$698,202",
+      "visual": "A sleek modern skyscraper viewed from the ground looking straight up at a grey sky."
+    },
+    {
+      "say": "But here's the part nobody mentions about waiting just a decade.",
+      "callout": "",
+      "visual": "An hourglass with dark sand falling rapidly against a stark black background."
+    },
+    {
+      "say": "If you delay and start at 35 instead, the final number drops hard.",
+      "callout": "Start at 35",
+      "visual": "A lonely iron bench on a foggy empty pier overlooking dark water."
+    },
+    {
+      "say": "That same monthly amount only reaches $298,072 when you turn 65.",
+      "callout": "$298,072",
+      "visual": "A minimalist white room with a single shadow stretching across the floor."
+    },
+    {
+      "say": "You saved for thirty years, yet you missed out on the heaviest growth phase.",
+      "callout": "30 years",
+      "visual": "Close-up of weathered hands turning the pages of an old ledger book."
+    },
+    {
+      "say": "Subtract the two totals and that decade of delay creates a massive gap.",
+      "callout": "",
+      "visual": "A deep canyon between two rocky cliffs under a heavy overcast sky."
+    },
+    {
+      "say": "Time in the market beats timing it, and that's exactly why starting early is...",
+      "callout": "",
+      "visual": "A close-up of a brass pocket watch case snapping shut in slow motion."
+    }
+  ],
+  "caption": "The math behind starting at 25 versus 35 changes everything about your future. #moneypsychology #wealthbuilding #personalfinance #investing #financialfreedom",
+  "description": "Discover how waiting 10 years to start investing quietly strips over $400,000 from your final retirement balance due to the math of compound growth.",
+  "hashtags": [
+    "#moneypsychology",
+    "#wealthbuilding",
+    "#personalfinance",
+    "#investing",
+    "#financialfreedom"
+  ],
+  "first_comment": "At what age did you actually start investing your first dollar?",
+  "facts": [
+    {
+      "claim": "Starting at 25 vs 35 with $200/month at 8% until 65 gives $698,202 vs $298,072",
+      "basis": "Fact sheet: Starting at 25 vs 35 with $200/month at 8% until 65: $698,202 vs $298,072 (10 years late costs $400,130)"
+    }
+  ],
+  "source": "llm",
+  "pillar": "math"
+}

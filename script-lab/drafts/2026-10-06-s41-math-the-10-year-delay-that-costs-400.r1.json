@@ -1,0 +1,97 @@
+{
+  "title": "Starting at 25 vs 35: The $400,000 Gap",
+  "hook_text": "WAITING TEN YEARS COSTS YOU $400,130",
+  "beats": [
+    {
+      "say": "Waiting just ten years to invest $200 a month destroys massive wealth.",
+      "callout": "",
+      "visual": "Cinematic shot of a single hourglass on a dark wooden table, dramatic side lighting, shallow depth of field."
+    },
+    {
+      "say": "Here is the exact math behind that delay.",
+      "callout": "",
+      "visual": "A vintage metal desk lamp casting a warm glow over a blank leather notebook and a fountain pen."
+    },
+    {
+      "say": "If you start at 25 and invest $200 a month at 8% a year until 65...",
+      "callout": "$200 / MONTH",
+      "visual": "Close-up of a hand placing a single silver coin onto a dark slate surface, moody shadows."
+    },
+    {
+      "say": "...your account grows to $698,202.",
+      "callout": "$698,202",
+      "visual": "A steaming ceramic mug of dark coffee on a rustic wooden table, early morning window light filtering through blinds."
+    },
+    {
+      "say": "That is built on monthly compounding over forty years.",
+      "callout": "40 YEARS",
+      "visual": "A wall clock ticking in a dimly lit room, motion blur on the sweeping second hand."
+    },
+    {
+      "say": "But what happens if you wait until 35 to start?",
+      "callout": "STARTING AT 35",
+      "visual": "A person's silhouette walking down a long, quiet hallway with receding overhead lights."
+    },
+    {
+      "say": "You only have thirty years left until age 65.",
+      "callout": "30 YEARS",
+      "visual": "Close-up of a calendar page turning in soft focus, muted neutral tones."
+    },
+    {
+      "say": "That same $200 a month at 8% a year drops to $298,072.",
+      "callout": "$298,072",
+      "visual": "A calculator resting on a dark mahogany desk, keys softly illuminated by a desk lamp."
+    },
+    {
+      "say": "You put in $72,000 instead of $96,000.",
+      "callout": "$72,000 INVESTED",
+      "visual": "A hand sliding a blank ledger notebook across a textured concrete surface."
+    },
+    {
+      "say": "Saving a little cash upfront costs you a fortune later.",
+      "callout": "",
+      "visual": "A heavy iron key sitting on a dark oak tabletop, moody cinematic contrast."
+    },
+    {
+      "say": "The difference between those two outcomes is a staggering $400,130 lost.",
+      "callout": "",
+      "visual": "A close-up of a dark fountain pen resting beside a blank sheet of heavy paper."
+    },
+    {
+      "say": "Time is your greatest asset, and that is exactly how",
+      "callout": "",
+      "visual": "A hand closing a dark leather journal, soft rim lighting from the side."
+    },
+    {
+      "say": "waiting just ten years to invest $200 a month destroys massive wealth.",
+      "callout": "",
+      "visual": "A dark, empty corridor with a single warm light at the far end, cinematic minimalism."
+    }
+  ],
+  "caption": "Waiting a decade to start investing is the most expensive mistake you can make. Time beats timing every single day. \n\n#personalfinance #investing #moneyhacks #wealthbuilding #financialfreedom",
+  "description": "See the exact math behind starting your investments at 25 versus 35. A ten-year delay costs $400,130 in missed compounding.",
+  "hashtags": [
+    "#personalfinance",
+    "#investing",
+    "#moneyhacks",
+    "#wealthbuilding",
+    "#financialfreedom"
+  ],
+  "first_comment": "What age did you start investing, or what's holding you back right now?",
+  "facts": [
+    {
+      "claim": "$200/month invested for 40 years at 8%/yr equals $698,202",
+      "basis": "Money fact sheet: $200/month invested for 40 years at 8%/yr (monthly compounding) = $698,202"
+    },
+    {
+      "claim": "$200/month invested for 30 years at 8%/yr equals $298,072",
+      "basis": "Money fact sheet: $200/month invested for 30 years at 8%/yr (monthly compounding) = $298,072"
+    },
+    {
+      "claim": "Starting at 25 vs 35 with $200/month at 8% until 65 costs $400,130",
+      "basis": "Money fact sheet: Starting at 25 vs 35 with $200/month at 8% until 65: $698,202 vs $298,072 (10 years late costs $400,130)"
+    }
+  ],
+  "source": "llm",
+  "pillar": "math"
+}

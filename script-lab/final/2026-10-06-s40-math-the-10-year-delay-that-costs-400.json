@@ -1,0 +1,97 @@
+{
+  "title": "The 10-Year Delay That Costs $400,130",
+  "hook_text": "STARTING AT 35 INSTEAD OF 25 COSTS YOU THIS",
+  "beats": [
+    {
+      "say": "Starting to invest at 35 instead of 25 looks like a harmless pause in life.",
+      "callout": "",
+      "visual": "A vintage pocket watch resting on a dark wooden desk, soft cinematic side light, shallow depth of field."
+    },
+    {
+      "say": "You think you've got plenty of time to catch up later on.",
+      "callout": "$200 / MONTH",
+      "visual": "Hands typing on a vintage mechanical calculator, dimly lit room, moody atmosphere."
+    },
+    {
+      "say": "Let's run the exact math on investing $200 a month at 8% until age 65.",
+      "callout": "8% RETURN",
+      "visual": "A sleek modern desk with a blank leather notebook and an analog desk lamp casting a warm glow."
+    },
+    {
+      "say": "If you start at 25, monthly compounding works its quiet magic for forty years.",
+      "callout": "40 YEARS",
+      "visual": "A silhouetted figure walking down a long urban hallway with large geometric concrete pillars, dramatic shadows."
+    },
+    {
+      "say": "Your account swells to a massive final balance of $698,202.",
+      "callout": "$698,202",
+      "visual": "A glass cup slowly filling with dark roasted coffee beans, macro lens, warm contrast lighting."
+    },
+    {
+      "say": "You put in $96,000 of your own hard-earned pay over those decades.",
+      "callout": "$96,000 DEPOSITED",
+      "visual": "A stack of crisp hundred-dollar bills viewed from a low angle, slightly blurred edges, moody tones."
+    },
+    {
+      "say": "Now let's see what happens if you wait just ten years and start at 35.",
+      "callout": "WAIT 10 YEARS",
+      "visual": "A calendar page slowly turning in slow motion, minimalist aesthetic, overcast daylight from a side window."
+    },
+    {
+      "say": "You're only investing for thirty years instead of forty.",
+      "callout": "30 YEARS",
+      "visual": "A close-up of an hourglass with fine black sand slipping through the glass, high contrast."
+    },
+    {
+      "say": "That shorter timeline drops your ending balance down to $298,072.",
+      "callout": "",
+      "visual": "A dark empty boardroom with sleek mid-century chairs, dramatic morning light cutting across the floor."
+    },
+    {
+      "say": "You only put in $72,000 of your own money this time around.",
+      "callout": "",
+      "visual": "A simple black fountain pen resting on blank white paper, sharp focus, moody overhead shot."
+    },
+    {
+      "say": "But here's the brutal part nobody mentions about waiting a decade.",
+      "callout": "",
+      "visual": "A dark city street at night lit by a single distant amber streetlight, cinematic fog, macro details."
+    },
+    {
+      "say": "That ten-year delay costs you exactly $400,130 in missing wealth.",
+      "callout": "",
+      "visual": "A heavy metal vault door slowly swinging shut in a dark concrete bank, dramatic rim lighting."
+    },
+    {
+      "say": "Time pays you more than your actual paycheck does. Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "A close-up of a vintage brass key resting on a dark slate table, moody shadows, clean composition."
+    }
+  ],
+  "caption": "Waiting ten years to invest doesn't just cost you ten years of savings. It steals over $400,000 in compound growth. Start early, let time do the heavy lifting. #money #personalfinance #wealth #investing #finance",
+  "description": "A stark breakdown of how a ten-year delay in investing cuts your final retirement balance by more than half, costing over $400,000 in compound growth.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#wealth",
+    "#investing",
+    "#finance"
+  ],
+  "first_comment": "At what age did you finally start taking investing seriously?",
+  "facts": [
+    {
+      "claim": "$200/month invested for 40 years at 8%/yr equals $698,202",
+      "basis": "$200/month invested for 40 years at 8%/yr (monthly compounding) = $698,202 (you put in $96,000)"
+    },
+    {
+      "claim": "$200/month invested for 30 years at 8%/yr equals $298,072",
+      "basis": "$200/month invested for 30 years at 8%/yr (monthly compounding) = $298,072 (you put in $72,000)"
+    },
+    {
+      "claim": "Starting at 25 vs 35 with $200/month at 8% until 65 costs $400,130",
+      "basis": "Starting at 25 vs 35 with $200/month at 8% until 65: $698,202 vs $298,072 (10 years late costs $400,130)"
+    }
+  ],
+  "source": "llm",
+  "pillar": "math"
+}

@@ -1,0 +1,84 @@
+{
+  "title": "Why Your Brain Hates the Future You",
+  "hook_text": "YOUR BRAIN TREATS YOUR FUTURE SELF LIKE A STRANGER",
+  "beats": [
+    {
+      "say": "Your brain treats your future self like a total stranger.",
+      "callout": "",
+      "visual": "A dark, empty hallway filmed from a low angle with dim cinematic lighting."
+    },
+    {
+      "say": "Scans prove it. When you think about tomorrow you, the neural regions for strangers light up.",
+      "callout": "BRAIN SCANS",
+      "visual": "A silhouette of a person standing alone against a foggy concrete wall at dusk."
+    },
+    {
+      "say": "That's why you pick $100 today over $150 next year without blinking.",
+      "callout": "$100 TODAY",
+      "visual": "A close-up of hands placing a single metallic coin on a dark wooden table."
+    },
+    {
+      "say": "It's a glitch called present bias, and it quietly steals your wealth.",
+      "callout": "PRESENT BIAS",
+      "visual": "An hourglass on a concrete floor with sand slowly trickling through the center."
+    },
+    {
+      "say": "Look at the math.",
+      "callout": "THE MATH",
+      "visual": "A vintage brass lamp casting a warm shadow over a blank leather notebook."
+    },
+    {
+      "say": "A $5 a day habit equals $1,825 a year.",
+      "callout": "$1,825 A YEAR",
+      "visual": "A matte ceramic coffee cup resting on a rustic wooden desk by a window."
+    },
+    {
+      "say": "Invested monthly at 8% for 30 years, that small habit grows into $226,659.",
+      "callout": "$226,659",
+      "visual": "A stack of smooth river stones balanced precariously on a weathered stone ledge."
+    },
+    {
+      "say": "But here's the part nobody mentions.",
+      "callout": "",
+      "visual": "A camera pan across a silent, empty city street under overcast morning skies."
+    },
+    {
+      "say": "You can't rely on willpower to fix it.",
+      "callout": "NO WILLPOWER",
+      "visual": "A heavy iron door viewed from behind a dark corridor."
+    },
+    {
+      "say": "Willpower fades by lunchtime. Systems don't.",
+      "callout": "",
+      "visual": "A modern metal gear spinning smoothly in soft studio lighting."
+    },
+    {
+      "say": "You have to automate the transfer the exact day your paycheck lands.",
+      "callout": "",
+      "visual": "A hand typing on a mechanical keyboard with the screen blurred out."
+    },
+    {
+      "say": "Hide the money before your present self even knows it exists, and that's exactly how",
+      "callout": "",
+      "visual": "A leather wallet resting on a dark countertop with no visible text or logos."
+    }
+  ],
+  "caption": "Your brain is wired to sabotage your retirement. Here is the counter-move. #moneypsychology #personalfinance #wealthbuilding #investing #moneytips",
+  "description": "Present bias makes us value today over tomorrow. Learn why your brain treats your future self like a stranger and how automation fixes the glitch.",
+  "hashtags": [
+    "#moneypsychology",
+    "#personalfinance",
+    "#wealthbuilding",
+    "#investing",
+    "#moneytips"
+  ],
+  "first_comment": "What is one expense you recently automated to protect your savings?",
+  "facts": [
+    {
+      "claim": "$5/day habit equals $1,825/year; invested monthly at 8% for 30 years = $226,659",
+      "basis": "$5/day habit = $1,825/year; invested monthly at 8% for 30 years = $226,659 from fact sheet"
+    }
+  ],
+  "source": "llm",
+  "pillar": "psychology"
+}

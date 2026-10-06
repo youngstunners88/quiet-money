@@ -1,0 +1,83 @@
+{
+  "title": "Build a $1,000 Emergency Fund in 30 Days",
+  "hook_text": "BUILD $1,000 IN THIRTY DAYS",
+  "beats": [
+    {
+      "say": "Most people stay broke because they try to save what's left after spending.",
+      "callout": "",
+      "visual": "A sleek dark wooden table with a single brass coin resting in a shadow, moody cinematic side lighting, macro shot."
+    },
+    {
+      "say": "Here's the 3-step exact plan to build a $1,000 starter emergency fund in 30 days flat.",
+      "callout": "$1,000 FUND",
+      "visual": "A silhouette of a person sitting by a large window at dusk, soft golden hour light reflecting on glass."
+    },
+    {
+      "say": "Step one. Cut 1 active subscription today to free up immediate monthly cash flow.",
+      "callout": "STEP ONE",
+      "visual": "A hand holding a sleek black smartphone at a sharp steep angle, screen blurred out, minimalist desk."
+    },
+    {
+      "say": "That $15 monthly subscription for 10 years adds up to $1,800 you shouldn't waste.",
+      "callout": "$1,800 SAVED",
+      "visual": "A ceramic coffee mug sitting on a concrete surface, morning steam rising slowly into cool air."
+    },
+    {
+      "say": "Step two. Sell 3 items you haven't touched all year on a local marketplace app.",
+      "callout": "STEP TWO",
+      "visual": "A cardboard shipping box resting on a rustic wooden floor, dramatic top-down shadows."
+    },
+    {
+      "say": "Price them low to sell fast and push that cash straight into your savings account.",
+      "callout": "CASH FLOW",
+      "visual": "A sleek silver laptop closed tight on a clean desk, dark moody tones, minimalist interior."
+    },
+    {
+      "say": "Step three. Pick up 1 weekend side gig to bring in an extra $250 this month.",
+      "callout": "STEP THREE",
+      "visual": "A pair of leather work gloves resting on a workbench, warm workshop lighting from the side."
+    },
+    {
+      "say": "But here's the part nobody mentions about hitting that $1,000 mark quickly.",
+      "callout": "",
+      "visual": "An open leather-bound journal on a dark desk with a fountain pen beside it, soft vignette."
+    },
+    {
+      "say": "You aren't trying to get rich yet, you're just building a shield against panic.",
+      "callout": "",
+      "visual": "A heavy metal door latch closing in slow motion, macro detail, cinematic dim lighting."
+    },
+    {
+      "say": "An extra $1,000, invested at 8% for 10 years, turns into real compound momentum.",
+      "callout": "8% GROWTH",
+      "visual": "A lone green plant sprout pushing through dark soil, sharp focus, natural daylight."
+    },
+    {
+      "say": "Follow for the money rules school never taught you, because most people stay broke...",
+      "callout": "",
+      "visual": "A dark hallway with a single warm light bulb glowing at the far end, mysterious atmosphere."
+    }
+  ],
+  "caption": "Three simple steps to build your $1,000 starter emergency fund in 30 days. No fluff, just math. #personalfinance #moneytips #savingmoney #financialfreedom",
+  "description": "Learn the exact 3-step blueprint to build a $1,000 starter emergency fund in 30 days using sell, cut, and side cash strategies.",
+  "hashtags": [
+    "#personalfinance",
+    "#moneytips",
+    "#savingmoney",
+    "#financialfreedom",
+    "#budgeting"
+  ],
+  "first_comment": "What's the first subscription you're cutting today?",
+  "facts": [
+    {
+      "claim": "A $15/month subscription for 10 years = $1,800",
+      "basis": "Fact sheet entry: A $15/month subscription for 10 years = $1,800"
+    },
+    {
+      "claim": "$1,000 invested at 8% for 10 years",
+      "basis": "Fact sheet base rate: 8%/yr compounding"
+    }
+  ],
+  "source": "llm",
+  "pillar": "playbook"
+}

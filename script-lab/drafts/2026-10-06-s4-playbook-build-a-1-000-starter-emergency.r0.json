@@ -1,0 +1,79 @@
+{
+  "title": "Build a $1,000 Starter Emergency Fund in 30 Days",
+  "hook_text": "BUILD A $1,000 EMERGENCY FUND TODAY",
+  "beats": [
+    {
+      "say": "Most people stay broke because they try to save what's left after spending.",
+      "callout": "",
+      "visual": "Cinematic close-up of a lone coffee cup on a dark wooden table, dramatic window light, moody atmosphere."
+    },
+    {
+      "say": "Here's the exact three step plan to build your first thousand dollar buffer in thirty days.",
+      "callout": "$1,000 GOAL",
+      "visual": "A sleek modern desk with a closed minimalist laptop and a blank leather notebook, soft morning shadows."
+    },
+    {
+      "say": "Step one. Sell three unused items sitting in your closet right now.",
+      "callout": "STEP 1",
+      "visual": "Hands folding a dark woolen coat inside a dimly lit closet, cinematic depth of field."
+    },
+    {
+      "say": "Take clear photos on your phone and list them on local marketplace apps today.",
+      "callout": "",
+      "visual": "A smartphone resting flat on a concrete table, screen facing down, moody industrial interior."
+    },
+    {
+      "say": "Step two. Cut one monthly subscription that you haven't used in sixty days.",
+      "callout": "STEP 2",
+      "visual": "A pair of sharp silver scissors resting beside a blank white card on a dark oak desk."
+    },
+    {
+      "say": "Log into your bank app right now and hit cancel on that forgotten auto pay.",
+      "callout": "",
+      "visual": "Close-up of hands typing on a dark mechanical keyboard in a dimly lit room, side profile."
+    },
+    {
+      "say": "Step three. Pick up one weekend gig for cash to bridge the gap fast.",
+      "callout": "STEP 3",
+      "visual": "Car keys resting on a rustic wooden entryway table, warm amber key light from a hallway."
+    },
+    {
+      "say": "Even an extra $1,000 a month from a side income changes your entire financial baseline.",
+      "callout": "$1,000 / MO",
+      "visual": "A stack of plain white envelopes tied with simple twine on a dark slate countertop."
+    },
+    {
+      "say": "Put every single dollar straight into a separate high yield savings account.",
+      "callout": "",
+      "visual": "A heavy metal door closing slowly, cinematic lock mechanism, dark minimalist hallway."
+    },
+    {
+      "say": "Don't touch it unless it's a true emergency that threatens your survival.",
+      "callout": "",
+      "visual": "A single brass key resting on a heavy stone block, dramatic overhead spotlight."
+    },
+    {
+      "say": "Follow for the money rules school never taught you, because most people stay broke",
+      "callout": "FOLLOW",
+      "visual": "A slow pan across an empty city street at dusk, warm streetlights reflecting on wet pavement."
+    }
+  ],
+  "caption": "Build your first $1,000 starter emergency fund in 30 days using sell, cut, and side cash. Stop waiting for extra income to appear out of nowhere. \n\n#personalfinance #moneymindset #savingmoney #financialfreedom #budgetingtips",
+  "description": "A step-by-step guide to building a $1,000 starter emergency fund in 30 days by selling unused items, cutting dead subscriptions, and generating quick side cash.",
+  "hashtags": [
+    "#personalfinance",
+    "#moneymindset",
+    "#savingmoney",
+    "#financialfreedom",
+    "#budgetingtips"
+  ],
+  "first_comment": "What is the very first subscription you're going to cancel today?",
+  "facts": [
+    {
+      "claim": "An extra $1,000 a month from a side income changes your entire financial baseline",
+      "basis": "An extra $1,000/month from a side income, invested at 8% for 10 years = $182,946 (you put in $120,000)"
+    }
+  ],
+  "source": "llm",
+  "pillar": "playbook"
+}

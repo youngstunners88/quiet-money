@@ -1,0 +1,78 @@
+{
+  "title": "Pick This Debt Strategy Today",
+  "hook_text": "YOUR DEBT DOUBLES EVERY 3 YEARS",
+  "beats": [
+    {
+      "say": "At 24% APR, debt doubles every 3 years because of the Rule of 72.",
+      "callout": "",
+      "visual": "A single heavy metal padlock resting on a dark wood table, cinematic lighting from the side, shallow depth of field."
+    },
+    {
+      "say": "If you're drowning in payments, today you pick one method to kill it.",
+      "callout": "Pick one",
+      "visual": "Two identical blank envelopes sitting side by side on a concrete desk, moody shadows, overhead macro shot."
+    },
+    {
+      "say": "Step one. List every single debt you owe right now on a paper list.",
+      "callout": "Step one",
+      "visual": "A hand holding a black pen writing on clean white paper, out of focus background, soft lamp light."
+    },
+    {
+      "say": "Step two. Choose your battlefield. You want the debt avalanche or the debt snowball.",
+      "callout": "Step two",
+      "visual": "A silver chess knight standing upright on a dark slate board, dramatic side lighting, narrow aperture."
+    },
+    {
+      "say": "The avalanche targets your highest interest rate first to save maximum cash.",
+      "callout": "Save cash",
+      "visual": "A close-up of a vintage brass desk calculator resting on a dark leather notebook, moody atmosphere."
+    },
+    {
+      "say": "The snowball targets your smallest balance first to build quick psychological wins.",
+      "callout": "Quick wins",
+      "visual": "A neat stack of small metallic coins casting long shadows across a wooden surface, macro lens."
+    },
+    {
+      "say": "But here's the part nobody mentions about staying motivated.",
+      "callout": "The catch",
+      "visual": "A dark hallway with a single warm bulb glowing at the far end, symmetrical framing, cinematic grain."
+    },
+    {
+      "say": "Math says avalanche always wins. Human psychology says snowball works better.",
+      "callout": "Human nature",
+      "visual": "A mechanical pocket watch ticking on a weathered oak surface, warm tungsten light, soft focus."
+    },
+    {
+      "say": "Step three. Automate the minimums on everything else today.",
+      "callout": "",
+      "visual": "A dark smartphone resting face down on a minimal concrete stand, clean aesthetic, edge lighting."
+    },
+    {
+      "say": "Then funnel every extra dollar toward your chosen target account immediately.",
+      "callout": "",
+      "visual": "A single copper coin sliding slowly across a dark glass tabletop, cinematic motion blur, low key."
+    },
+    {
+      "say": "Follow for the money rules school never taught you about beating",
+      "callout": "",
+      "visual": "An old leatherbound journal closed tight on a dark desk, moody backlighting, dust motes in the air."
+    }
+  ],
+  "caption": "Pick your strategy today and kill the interest before it kills your future. #debtfree #personalfinance #moneytips #debtfreejourney",
+  "description": "Stop guessing how to pay off what you owe. Pick between the debt avalanche and the debt snowball today using this simple three-step action plan.",
+  "hashtags": [
+    "#debtfree",
+    "#personalfinance",
+    "#moneytips",
+    "#debtfreejourney"
+  ],
+  "first_comment": "Are you team avalanche (highest rate) or team snowball (smallest balance)?",
+  "facts": [
+    {
+      "claim": "At 24% debt doubles every 3 years",
+      "basis": "Rule of 72: at 24% debt doubles every 3 years"
+    }
+  ],
+  "source": "llm",
+  "pillar": "playbook"
+}

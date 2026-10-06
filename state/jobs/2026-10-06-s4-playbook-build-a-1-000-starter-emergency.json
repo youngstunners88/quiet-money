@@ -1,0 +1,71 @@
+{
+  "id": "2026-10-06-s4-playbook-build-a-1-000-starter-emergency",
+  "pillar": "playbook",
+  "topic": "Build a $1,000 starter emergency fund in 30 days",
+  "day": "2026-10-06",
+  "slot": 4,
+  "status": "published",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-06T05:06:40Z",
+      "words": 148
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-06T05:08:04Z",
+      "seconds": 63.312,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-06T05:09:08Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-06T05:10:20Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-06T05:10:20Z",
+      "score": 95
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-06T05:10:20Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-10-06T05:10:20Z",
+      "local": "2026-10-06T21:00:00-04:00"
+    }
+  ],
+  "artifacts": {
+    "angle": "sell, cut, side cash; a 3-step plan",
+    "title": "Build a $1,000 Emergency Fund in 30 Days",
+    "video": "/home/user/quiet-money/production/output/2026-10-06/2026-10-06-s4-playbook-build-a-1-000-starter-emergency/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-06/2026-10-06-s4-playbook-build-a-1-000-starter-emergency/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-10-06/slot5-playbook",
+        "post_at": "2026-10-06T21:00:00-04:00"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 95,
+    "passed": true
+  },
+  "cost": {
+    "tts:edge:chars": 1729
+  },
+  "notes": []
+}

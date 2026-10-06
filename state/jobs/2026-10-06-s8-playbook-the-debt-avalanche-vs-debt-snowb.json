@@ -1,0 +1,65 @@
+{
+  "id": "2026-10-06-s8-playbook-the-debt-avalanche-vs-debt-snowb",
+  "pillar": "playbook",
+  "topic": "The debt avalanche vs debt snowball: pick one today",
+  "day": "2026-10-06",
+  "slot": 8,
+  "status": "held",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-06T05:19:45Z",
+      "words": 130
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-06T05:21:19Z",
+      "seconds": 63.63,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-06T05:21:41Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-06T05:22:48Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-06T05:22:48Z",
+      "score": 92
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-06T05:22:48Z"
+    },
+    {
+      "from": "packaged",
+      "to": "held",
+      "ts": "2026-10-06T05:22:48Z"
+    }
+  ],
+  "artifacts": {
+    "angle": "highest rate first vs smallest balance first",
+    "title": "At 24% APR, Debt Doubles Every 3 Years",
+    "video": "/home/user/quiet-money/production/output/2026-10-06/2026-10-06-s8-playbook-the-debt-avalanche-vs-debt-snowb/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-06/2026-10-06-s8-playbook-the-debt-avalanche-vs-debt-snowb/cover.jpg"
+  },
+  "scores": {
+    "gauntlet": 92,
+    "passed": false
+  },
+  "cost": {
+    "tts:edge:chars": 1688
+  },
+  "notes": [
+    "held for review: originality"
+  ]
+}

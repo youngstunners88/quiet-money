@@ -1,0 +1,74 @@
+{
+  "title": "The House Myth That Costs You Fortunes",
+  "hook_text": "YOUR HOUSE IS NOT AN INVESTMENT",
+  "beats": [
+    {
+      "say": "Your house isn't your best investment. It's just an expensive place to live.",
+      "callout": "",
+      "visual": "Cinematic wide shot of a suburban house exterior at dusk, dim warm light in windows, overcast sky, muted colors."
+    },
+    {
+      "say": "Most people forget the hidden costs that quietly drain your bank account every single year.",
+      "callout": "$0 profit",
+      "visual": "Close-up of human hands holding a heavy metal front door key, dark background, sharp focus."
+    },
+    {
+      "say": "Property taxes, roof repairs, and interest payments add up to hundreds of thousands of dollars.",
+      "callout": "Taxes & upkeep",
+      "visual": "Overhead shot of a wooden desk with a black calculator and a pile of crumpled paper receipts, harsh desk lamp light."
+    },
+    {
+      "say": "That's money you'll never see again. It doesn't generate a single dollar of cash flow.",
+      "callout": "Zero cash flow",
+      "visual": "Low-angle shot of a brick chimney against a grey sky, cinematic shadows, slow camera drift."
+    },
+    {
+      "say": "Meanwhile, the S and P 500 historically crushes real estate after you subtract all those maintenance fees.",
+      "callout": "Beats real estate",
+      "visual": "Macro close-up of a brass house key resting on a dark glass table, reflection of a window, shallow depth of field."
+    },
+    {
+      "say": "Let's look at the actual math. If you take that extra cash and invest it instead...",
+      "callout": "The real math",
+      "visual": "Side silhouette of a person sitting at a kitchen table by a window, blurred background, moody lighting."
+    },
+    {
+      "say": "Investing $500 a month at 8% a year for 30 years grows to a staggering $745,180.",
+      "callout": "$745,180 total",
+      "visual": "Close-up of a finger tracing a line on a blank white ledger page, grainy film look, soft backlight."
+    },
+    {
+      "say": "Try pulling cash out of your living room wall to pay the grocery bill. You can't.",
+      "callout": "Locked in walls",
+      "visual": "Cinematic shot of a white painted interior drywall corner, soft shadow, minimalist aesthetic."
+    },
+    {
+      "say": "A house is shelter first. Treat it like a piggy bank and you'll miss out on massive gains.",
+      "callout": "",
+      "visual": "Wide shot of an empty hardwood room, single dust mote in a beam of afternoon light, still camera."
+    },
+    {
+      "say": "Stop confusing consumption with wealth creation. Buy the home for your family, but build your future in...",
+      "callout": "",
+      "visual": "Close-up of a person's hands locking a heavy deadbolt from the inside, dark hallway, tight framing."
+    }
+  ],
+  "caption": "Your home is shelter first. Stop calling it an investment when the maintenance eats the returns. #realestate #moneyhacks #wealthbuilding #personalfinance #investing",
+  "description": "Everyone says your home is your best investment. They're missing the maintenance, taxes, and opportunity cost that destroy your returns.",
+  "hashtags": [
+    "#realestate",
+    "#moneyhacks",
+    "#wealthbuilding",
+    "#personalfinance",
+    "#investing"
+  ],
+  "first_comment": "Would you rather rent and invest the difference, or buy a house? Let's talk numbers.",
+  "facts": [
+    {
+      "claim": "$500/month invested for 30 years at 8% reaches $745,180",
+      "basis": "$500/month invested for 30 years at 8%/yr (monthly compounding) = $745,180"
+    }
+  ],
+  "source": "llm",
+  "pillar": "myth"
+}

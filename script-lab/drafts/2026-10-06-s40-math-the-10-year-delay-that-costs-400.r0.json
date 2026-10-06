@@ -1,0 +1,82 @@
+{
+  "title": "The 10-Year Delay That Costs $400,130",
+  "hook_text": "STARTING 10 YEARS LATER COSTS $400,130",
+  "beats": [
+    {
+      "say": "Starting to invest $200 a month at age 25 versus age 35 changes everything.",
+      "callout": "",
+      "visual": "A vintage alarm clock ticking on a dark wooden desk, moody lighting, shallow depth of field"
+    },
+    {
+      "say": "At 8% a year with monthly compounding, the early start reaches $698,202 by age 65.",
+      "callout": "$698,202",
+      "visual": "A hand sliding a silver pen across a blank notebook, cinematic side lighting"
+    },
+    {
+      "say": "Wait until age 35 to start, and that same monthly effort hits just $298,072.",
+      "callout": "$298,072",
+      "visual": "An hourglass with sand slowly falling, macro shot, dark background"
+    },
+    {
+      "say": "That exact ten-year delay costs you precisely $400,130 in missing wealth.",
+      "callout": "$400,130",
+      "visual": "A silhouette of a person looking out a large skyscraper window at dusk"
+    },
+    {
+      "say": "You put in an extra $24,000 of your own cash by starting at 25.",
+      "callout": "$24,000",
+      "visual": "Stacks of coins neatly piled on a clean concrete surface, overhead shot"
+    },
+    {
+      "say": "Yet you miss out on over $400,000 in compounding gains because of the wait.",
+      "callout": "Time wins",
+      "visual": "A closed leather journal resting on a minimalist coffee table, moody ambient light"
+    },
+    {
+      "say": "Time does the heavy lifting while you're busy living your life.",
+      "callout": "",
+      "visual": "Rays of morning sun shining through window blinds onto an empty wooden floor"
+    },
+    {
+      "say": "Waiting a decade doesn't just save you money now, it destroys your future returns.",
+      "callout": "",
+      "visual": "A metal key lying on a dark textured surface, close up"
+    },
+    {
+      "say": "The math punishes procrastination harder than almost any other financial mistake you'll make.",
+      "callout": "",
+      "visual": "A hand closing a dark wooden door, narrow beam of light fading out"
+    },
+    {
+      "say": "Follow for the money rules school never taught you about",
+      "callout": "Follow us",
+      "visual": "A vintage pocket watch resting open on a dark slate table"
+    }
+  ],
+  "caption": "Waiting ten years to invest doesn't just cost you a little. It costs you $400,130. \n\n#money #personalfinance #wealth #investing #math",
+  "description": "Discover the hidden math behind starting early. Delaying your investments by just ten years drains $400,130 from your future net worth.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#wealth",
+    "#investing",
+    "#math"
+  ],
+  "first_comment": "At what age did you make your first investment?",
+  "facts": [
+    {
+      "claim": "$200/month for 40 years at 8% reaches $698,202",
+      "basis": "Fact sheet: $200/month invested for 40 years at 8%/yr (monthly compounding) = $698,202"
+    },
+    {
+      "claim": "$200/month for 30 years at 8% reaches $298,072",
+      "basis": "Fact sheet: $200/month invested for 30 years at 8%/yr (monthly compounding) = $298,072"
+    },
+    {
+      "claim": "10 years late costs $400,130",
+      "basis": "Fact sheet: Starting at 25 vs 35 with $200/month at 8% until 65: $698,202 vs $298,072 (10 years late costs $400,130)"
+    }
+  ],
+  "source": "llm",
+  "pillar": "math"
+}

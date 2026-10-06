@@ -1,0 +1,74 @@
+{
+  "title": "Fix Your Paycheck With the 3-Step 50/30/20 Rule",
+  "hook_text": "STOP GUESSING WHERE YOUR MONEY GOES",
+  "beats": [
+    {
+      "say": "Stop guessing where your money goes. Here's how to fix a $3,000 paycheck in three steps.",
+      "callout": "",
+      "visual": "A sleek minimalist desk with a blank notebook and a single pen under warm lamp light, top-down view"
+    },
+    {
+      "say": "Step one. Dedicate fifty percent for needs. On a $3,000 paycheck, that's $1,500 for rent, groceries, and bills.",
+      "callout": "$1,500 FOR NEEDS",
+      "visual": "A stack of plain white envelopes resting on a dark wooden table, cinematic shadows"
+    },
+    {
+      "say": "Lock these down first so your basic survival is covered without stress.",
+      "callout": "",
+      "visual": "A shiny silver key resting beside a closed leather notebook, macro shot"
+    },
+    {
+      "say": "Step two. Allocate thirty percent for wants. That's $900 for dining out, hobbies, and streaming apps.",
+      "callout": "$900 FOR WANTS",
+      "visual": "A ceramic coffee cup sitting on a rustic wooden counter next to a warm window blur"
+    },
+    {
+      "say": "You don't need to live like a monk. This money is yours to spend guilt-free.",
+      "callout": "GUILT-FREE",
+      "visual": "A blurred city street at dusk seen through a cafe window with rain droplets"
+    },
+    {
+      "say": "Step three. Put twenty percent toward your future. That's $600 straight into savings and investments.",
+      "callout": "$600 FOR FUTURE",
+      "visual": "A clear glass jar sitting on a marble countertop with soft morning light filtering through"
+    },
+    {
+      "say": "But here's the part nobody mentions. Most people save what's left after spending.",
+      "callout": "THE TRAP",
+      "visual": "An empty metallic bowl reflecting soft ambient light in a quiet room"
+    },
+    {
+      "say": "That's why they stay broke. You must pay your future self first before touching the rest.",
+      "callout": "PAY YOURSELF FIRST",
+      "visual": "A heavy steel vault door partially open, throwing long dramatic shadows across the floor"
+    },
+    {
+      "say": "Automate these exact transfers the day you get paid.",
+      "callout": "",
+      "visual": "A finger pressing a sleek silver button on a minimalist desk gadget"
+    },
+    {
+      "say": "Do this today, because saving $500/month at 8% per year builds real wealth over time...",
+      "callout": "8% PER YEAR",
+      "visual": "A vintage metal pocket watch ticking quietly on a stack of aged leather books"
+    }
+  ],
+  "caption": "The simple math to fix your paycheck starting today. Save this reel for payday. Follow for the money rules school never taught you. #personalfinance #budgeting #moneyhacks #wealthbuilding",
+  "description": "Learn how to split a $3,000 paycheck using the 50/30/20 rule for needs, wants, and your future.",
+  "hashtags": [
+    "#personalfinance",
+    "#budgeting",
+    "#moneyhacks",
+    "#wealthbuilding",
+    "#investing"
+  ],
+  "first_comment": "What percentage of your paycheck usually goes toward your needs?",
+  "facts": [
+    {
+      "claim": "Investing $500/month at 8%/yr builds wealth over time",
+      "basis": "$500/month invested for 30 years at 8%/yr (monthly compounding) = $745,180"
+    }
+  ],
+  "source": "llm",
+  "pillar": "playbook"
+}

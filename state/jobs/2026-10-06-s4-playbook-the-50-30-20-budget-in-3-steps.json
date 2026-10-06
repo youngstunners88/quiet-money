@@ -1,0 +1,31 @@
+{
+  "id": "2026-10-06-s4-playbook-the-50-30-20-budget-in-3-steps",
+  "pillar": "playbook",
+  "topic": "The 50/30/20 budget in 3 steps",
+  "day": "2026-10-06",
+  "slot": 4,
+  "status": "failed",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-06T05:02:59Z",
+      "words": 145
+    },
+    {
+      "from": "scripted",
+      "to": "failed",
+      "ts": "2026-10-06T05:03:41Z",
+      "error": "restarted"
+    }
+  ],
+  "artifacts": {
+    "angle": "needs, wants, future; with a $3,000 paycheck example",
+    "title": "Fix Your Paycheck With the 3-Step 50/30/20 Rule"
+  },
+  "scores": {},
+  "cost": {},
+  "notes": [
+    "stopped and restarted as --extra 5"
+  ]
+}

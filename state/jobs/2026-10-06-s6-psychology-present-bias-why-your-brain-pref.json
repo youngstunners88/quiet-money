@@ -1,0 +1,71 @@
+{
+  "id": "2026-10-06-s6-psychology-present-bias-why-your-brain-pref",
+  "pillar": "psychology",
+  "topic": "Present bias: why your brain prefers $100 today over $150 next year",
+  "day": "2026-10-06",
+  "slot": 6,
+  "status": "published",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-06T05:14:23Z",
+      "words": 201
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-06T05:14:48Z",
+      "seconds": 69.096,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-06T05:15:08Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-06T05:16:47Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-06T05:16:47Z",
+      "score": 100
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-06T05:16:47Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-10-06T05:16:47Z",
+      "local": "2026-10-07T11:30:00-04:00"
+    }
+  ],
+  "artifacts": {
+    "angle": "make the future you visible; automate",
+    "title": "Why Your Brain Hates Your Future Self",
+    "video": "/home/user/quiet-money/production/output/2026-10-06/2026-10-06-s6-psychology-present-bias-why-your-brain-pref/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-06/2026-10-06-s6-psychology-present-bias-why-your-brain-pref/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-10-07/slot2-psychology",
+        "post_at": "2026-10-07T11:30:00-04:00"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 100,
+    "passed": true
+  },
+  "cost": {
+    "tts:edge:chars": 1127
+  },
+  "notes": []
+}

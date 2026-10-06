@@ -1,0 +1,88 @@
+{
+  "title": "Debt Avalanche vs Snowball: Pick One Today",
+  "hook_text": "AT 24% APR YOUR DEBT DOUBLES EVERY 3 YEARS",
+  "beats": [
+    {
+      "say": "At 24% interest, the Rule of 72 means your debt doubles in just 3 years.",
+      "callout": "",
+      "visual": "A single calculator resting on a dark wooden desk under harsh overhead light, shot from above."
+    },
+    {
+      "say": "You're bleeding cash every single month and standing still.",
+      "callout": "3 YEARS",
+      "visual": "A close-up of a hand tightly gripping a pen over a blank white notepad, dark moody shadows."
+    },
+    {
+      "say": "Step one. List every single credit card balance and its exact interest rate.",
+      "callout": "STEP ONE",
+      "visual": "A stack of plain white envelopes sitting on a minimalist concrete surface, sharp focus."
+    },
+    {
+      "say": "Step two. Pick your strategy today or you'll stay trapped.",
+      "callout": "STEP TWO",
+      "visual": "A dark coffee mug sitting next to a closed laptop lid on a textured gray table."
+    },
+    {
+      "say": "Choose the avalanche method to attack the highest rate first.",
+      "callout": "AVALANCHE",
+      "visual": "A steep concrete staircase viewed from the bottom looking up, dramatic lighting."
+    },
+    {
+      "say": "Or pick the snowball method to clear the smallest balance first.",
+      "callout": "SNOWBALL",
+      "visual": "Small smooth river stones piled neatly on a slate tile, soft natural side light."
+    },
+    {
+      "say": "Remember, a $3,000 credit card at 24% APR paying only the minimum takes 183 months.",
+      "callout": "183 MONTHS",
+      "visual": "A vintage mechanical clock face ticking in low light, blurred background."
+    },
+    {
+      "say": "That minimum payment trap costs you $4,887 in pure interest alone.",
+      "callout": "$4,887 INTEREST",
+      "visual": "A dark metallic vault door partially open, throwing a sliver of light across the floor."
+    },
+    {
+      "say": "Step three. Route every extra dollar to that single target account.",
+      "callout": "",
+      "visual": "A hand sliding a blank white card across a dark wooden tabletop."
+    },
+    {
+      "say": "But here's the part nobody mentions about paying off debt.",
+      "callout": "",
+      "visual": "An empty highway stretching into a foggy horizon at dusk, moody teal tones."
+    },
+    {
+      "say": "The math says avalanche wins, but psychology says snowball keeps you alive.",
+      "callout": "",
+      "visual": "Two identical brass keys resting on a dark slate surface side by side."
+    },
+    {
+      "say": "Pick the one you will actually stick to, because at 24% APR...",
+      "callout": "",
+      "visual": "A finger poised right above the Enter key of a mechanical keyboard in dim light."
+    }
+  ],
+  "caption": "Stop letting interest eat your paycheck. Pick a method today.\n\n#debtfree #moneyhacks #personalfinance #financialfreedom #smartmoney",
+  "description": "Compare the debt avalanche and debt snowball methods. Learn how to pick the right strategy, stop the minimum payment trap, and take control of your interest today.",
+  "hashtags": [
+    "#debtfree",
+    "#moneyhacks",
+    "#personalfinance",
+    "#financialfreedom",
+    "#smartmoney"
+  ],
+  "first_comment": "Are you team avalanche (highest rate) or team snowball (smallest balance)?",
+  "facts": [
+    {
+      "claim": "At 24% interest, debt doubles every 3 years via the Rule of 72.",
+      "basis": "Rule of 72: at 24% debt doubles every 3 years."
+    },
+    {
+      "claim": "$3,000 credit card at 24% APR paying only the minimum takes 183 months and costs $4,887 in interest.",
+      "basis": "$3,000 credit card at 24% APR paying only the minimum (1% + interest, min $25): 183 months (~15 years), $4,887 interest"
+    }
+  ],
+  "source": "llm",
+  "pillar": "playbook"
+}

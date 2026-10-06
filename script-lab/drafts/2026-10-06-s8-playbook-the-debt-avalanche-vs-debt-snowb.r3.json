@@ -1,0 +1,96 @@
+{
+  "title": "The Debt Strategy That Actually Works",
+  "hook_text": "STOP PAYING YOUR DEBT WRONG",
+  "beats": [
+    {
+      "say": "At 24% APR, debt doubles every 3 years due to the rule of 72.",
+      "callout": "",
+      "visual": "A dark wooden desk with a single unlit desk lamp casting long shadows over a stack of unopened white envelopes."
+    },
+    {
+      "say": "That $6,000 credit card balance can turn into 21 years of hell if you only pay the minimum.",
+      "callout": "$6,000 balance",
+      "visual": "A close-up shot of a human hand holding a heavy metal credit card by the edge, obscuring any numbers or text."
+    },
+    {
+      "say": "You're bleeding cash on interest while feeling like you're getting nowhere fast.",
+      "callout": "bleeding cash",
+      "visual": "A cinematic shot of a single drop of water falling into a dark pool, creating slow ripples under dim overhead light."
+    },
+    {
+      "say": "Step one. Open your banking app right now and list every single balance you owe.",
+      "callout": "Step one.",
+      "visual": "A blurred smartphone screen resting face down on a concrete countertop next to a metal pen."
+    },
+    {
+      "say": "Step two. Pick your weapon. The debt avalanche targets your highest interest rate first.",
+      "callout": "Step two.",
+      "visual": "A dimly lit room viewed from behind a person sitting at a wooden table looking out a window at dusk."
+    },
+    {
+      "say": "The debt snowball targets your smallest balance first for quick psychological wins.",
+      "callout": "Step three.",
+      "visual": "A stack of smooth river stones balanced precariously on top of each other on a dark slate surface."
+    },
+    {
+      "say": "If you owe $3,000 at 24% APR, paying $300 a month wipes it out in just 12 months.",
+      "callout": "$300 a month",
+      "visual": "A close-up of hands typing rapidly on a mechanical keyboard with no letters visible on the dark gray keycaps."
+    },
+    {
+      "say": "That same balance on minimum payments drags on for 15 years and costs $4,887 in interest.",
+      "callout": "$4,887 interest",
+      "visual": "An empty subway car moving fast through a dark tunnel, captured in motion blur from a low angle."
+    },
+    {
+      "say": "But here's the part nobody mentions. Math says avalanche. Psychology says snowball.",
+      "callout": "",
+      "visual": "A vintage brass balance scale resting on a wooden table, with one side slightly lower than the other."
+    },
+    {
+      "say": "If you need early wins to stay motivated, pick the snowball method today.",
+      "callout": "",
+      "visual": "A person's silhouette walking down a narrow concrete corridor away from the camera into soft morning light."
+    },
+    {
+      "say": "If you want to pay the absolute least amount of total money, pick the avalanche.",
+      "callout": "",
+      "visual": "A heavy steel vault door half-open in a dark concrete room with cold blue atmospheric lighting."
+    },
+    {
+      "say": "Stop guessing and commit to one today, because ignoring it only makes",
+      "callout": "",
+      "visual": "A vintage mechanical clock ticking against a dark wall, shot with a very shallow depth of field."
+    },
+    {
+      "say": "At 24% APR, debt doubles every 3 years due to the rule of 72, and that's exactly how",
+      "callout": "",
+      "visual": "A hand turning off a brass desk lamp, leaving the room in deep shadow as the video loops."
+    }
+  ],
+  "caption": "Stop guessing how to pay off what you owe. Pick your method today and stick to it. Follow for the money rules school never taught you. #debtfree #personalfinance #moneytips #debtfreejourney",
+  "description": "Compare the debt avalanche and debt snowball methods to find out which one fits your psychology and math goals to get out of debt faster.",
+  "hashtags": [
+    "#debtfree",
+    "#personalfinance",
+    "#moneytips",
+    "#debtfreejourney"
+  ],
+  "first_comment": "Are you picking the avalanche or the snowball method first?",
+  "facts": [
+    {
+      "claim": "At 24% debt doubles every 3 years",
+      "basis": "Rule of 72: 72 divided by 24 equals 3 years."
+    },
+    {
+      "claim": "$3,000 at 24% paying $300/month takes 12 months and costs $381 interest",
+      "basis": "Fact sheet calculation for $3,000 credit card at 24% APR paying $300/month."
+    },
+    {
+      "claim": "$3,000 credit card at 24% paying minimum takes 183 months and $4,887 interest",
+      "basis": "Fact sheet calculation for $3,000 credit card at 24% APR paying minimum."
+    }
+  ],
+  "source": "llm",
+  "pillar": "playbook"
+}

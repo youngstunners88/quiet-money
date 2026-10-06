@@ -1,0 +1,71 @@
+{
+  "id": "2026-10-06-s5-story-how-the-founder-of-ikea-ingvar-k",
+  "pillar": "story",
+  "topic": "How the founder of IKEA, Ingvar Kamprad, famously flew economy and drove an old Volvo",
+  "day": "2026-10-06",
+  "slot": 5,
+  "status": "published",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-06T05:11:54Z",
+      "words": 165
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-06T05:12:30Z",
+      "seconds": 62.688,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-06T05:12:42Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-06T05:14:10Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-06T05:14:10Z",
+      "score": 92
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-06T05:14:10Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-10-06T05:14:10Z",
+      "local": "2026-10-07T07:30:00-04:00"
+    }
+  ],
+  "artifacts": {
+    "angle": "frugality as a system, not suffering",
+    "title": "The Billionaire Who Drove a 1993 Volvo",
+    "video": "/home/user/quiet-money/production/output/2026-10-06/2026-10-06-s5-story-how-the-founder-of-ikea-ingvar-k/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-06/2026-10-06-s5-story-how-the-founder-of-ikea-ingvar-k/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-10-07/slot1-story",
+        "post_at": "2026-10-07T07:30:00-04:00"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 92,
+    "passed": true
+  },
+  "cost": {
+    "tts:edge:chars": 990
+  },
+  "notes": []
+}

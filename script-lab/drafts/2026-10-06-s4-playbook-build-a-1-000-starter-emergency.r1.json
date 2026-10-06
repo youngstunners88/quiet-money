@@ -1,0 +1,78 @@
+{
+  "title": "Build a $1,000 Emergency Fund in 30 Days",
+  "hook_text": "MOST PEOPLE STAY BROKE",
+  "beats": [
+    {
+      "say": "Most people stay broke because they save what's left after spending. Here's the exact 30-day plan to build your first $1,000 buffer.",
+      "callout": "",
+      "visual": "Cinematic overhead shot of a person counting paper bills on a dark wooden desk under a single warm desk lamp."
+    },
+    {
+      "say": "Without this cash cushion, a single flat tire or medical bill forces you straight into high-interest debt.",
+      "callout": "24% APR",
+      "visual": "A car dashboard glowing at night with a red warning light reflecting on the windshield, blurred background."
+    },
+    {
+      "say": "Stay with me and you'll get the exact three steps to fund your account in four weeks flat.",
+      "callout": "3 Steps",
+      "visual": "Close up of a hourglass sitting on a concrete surface, sand slowly falling through the narrow glass neck."
+    },
+    {
+      "say": "Step one. Sell three unused items sitting around your apartment today. Clear out the clutter and bank the cash.",
+      "callout": "Step One",
+      "visual": "A silhouette of hands packing cardboard moving boxes in a dimly lit, minimalist room."
+    },
+    {
+      "say": "Step two. Cut your monthly subscriptions. That $15 subscription for 10 years wastes $1,800 you could keep.",
+      "callout": "$1,800 wasted",
+      "visual": "A sleek smartphone lying face down on a neutral gray tabletop, glowing with a soft ambient blue light."
+    },
+    {
+      "say": "But here's the part nobody mentions. Cutting bills alone isn't enough to cross the finish line fast.",
+      "callout": "The Missing Piece",
+      "visual": "A person standing by a large rainy window, looking out at a quiet city street at dusk."
+    },
+    {
+      "say": "Step three. Pick up one weekend gig to bridge the gap. Even an extra $50 a week gets you to your goal fast.",
+      "callout": "Step Three",
+      "visual": "A pair of keys resting on a clean wooden entryway table beside a closed front door."
+    },
+    {
+      "say": "An extra $1,000 a month invested at 8% for 10 years turns into $182,946 total.",
+      "callout": "$182,946 total",
+      "visual": "A minimalist metal calculator resting on a clean glass desk reflecting soft window light."
+    },
+    {
+      "say": "That is the power of stacking small amounts of surplus cash into serious long-term wealth.",
+      "callout": "",
+      "visual": "A row of heavy iron vault doors in a dark, secure basement corridor with subtle rim lighting."
+    },
+    {
+      "say": "Follow for the money rules school never taught you, because...",
+      "callout": "",
+      "visual": "A hand closing a thick leather-bound journal on a dark desk with a brass pen beside it."
+    }
+  ],
+  "caption": "Most people stay broke because they save what's left. Here is how to fix it in 30 days. #personalfinance #moneytips #savingmoney #budgeting #wealth",
+  "description": "Learn the exact 3-step action plan to build a $1,000 starter emergency fund in 30 days using sales, cuts, and a side gig.",
+  "hashtags": [
+    "#personalfinance",
+    "#moneytips",
+    "#savingmoney",
+    "#budgeting",
+    "#wealth"
+  ],
+  "first_comment": "What is the hardest expense for you to cut out of your monthly budget?",
+  "facts": [
+    {
+      "claim": "A $15/month subscription for 10 years equals $1,800",
+      "basis": "Arithmetic: 15 * 12 months = 180 per year; 180 * 10 years = $1,800."
+    },
+    {
+      "claim": "An extra $1,000/month from a side income, invested at 8% for 10 years = $182,946",
+      "basis": "Fact sheet: An extra $1,000/month from a side income, invested at 8% for 10 years = $182,946 (you put in $120,000)"
+    }
+  ],
+  "source": "llm",
+  "pillar": "playbook"
+}
