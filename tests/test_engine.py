@@ -793,3 +793,25 @@ def test_card_beats_skip_the_caption_callout(tmp_path):
     captions.build(script, voice, a)
     captions.build(script, voice, b, skip_callouts={1})
     assert "Callout," in a.read_text().split("[Events]")[1] and "Callout," not in b.read_text().split("[Events]")[1]
+
+
+def test_memory_indexes_scripts_and_filters_by_pillar_status(tmp_path, monkeypatch):
+    from faceless import memory
+    from faceless.config import Paths
+    final, jobs, reports = tmp_path / "final", tmp_path / "jobs", tmp_path / "reports"
+    for d in (final, jobs, reports):
+        d.mkdir()
+    monkeypatch.setattr(Paths, "final", final)
+    monkeypatch.setattr(Paths, "jobs", jobs)
+    monkeypatch.setattr(Paths, "reports", reports)
+    mk = lambda job, pillar, title, say, status: (  # noqa: E731
+        (final / f"{job}.json").write_text(json.dumps({"pillar": pillar, "title": title, "beats": [{"say": say}]})),
+        (jobs / f"{job}.json").write_text(json.dumps({"status": status, "scores": {"gauntlet": 90}, "day": "2026-10-06", "notes": []})))
+    mk("a", "math", "The minimum payment trap", "Paying only the minimum on a credit card takes 21 years", "published")
+    mk("b", "myth", "Renting myth", "Renting is not throwing money away", "held")
+    (reports / "b.json").write_text(json.dumps({"gates": [{"name": "word_count", "passed": False}, {"name": "hook", "passed": True}]}))
+    db = tmp_path / "m.db"
+    assert memory.build(db) == 2
+    assert [r["job"] for r in memory.search("credit card minimum payments", db=db)] == ["a"]
+    assert [r["job"] for r in memory.search("word_count", status="held", db=db)] == ["b"]
+    assert memory.search("renting", pillar="math", db=db) == [] and memory.search('"; drop table docs; --', db=db) == []

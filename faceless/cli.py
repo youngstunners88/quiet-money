@@ -154,6 +154,15 @@ def cmd_scout(args) -> int:
     return 0
 
 
+def cmd_memory(args) -> int:
+    from faceless import memory
+    if args.rebuild or not memory.DB.exists():
+        print(f"indexed {memory.build()} scripts")
+    for r in memory.search(" ".join(args.query), pillar=args.pillar, status=args.status, n=args.n):
+        print(f"{r['day']} {r['pillar']:10} {r['status']:9} {r['score'] or '-':>4}  {r['title']}\n    {r['match']}")
+    return 0
+
+
 def cmd_keywords(args) -> int:
     from faceless import keywords
     if args.backlog:
@@ -244,6 +253,13 @@ def main(argv: list[str] | None = None) -> int:
     sc.add_argument("--act", action="store_true", help="do the safe auto actions (backlog top-up) too")
     sc.add_argument("--import", dest="import_file", help="JSON list of external findings from web research")
     sc.set_defaults(fn=cmd_scout)
+    me = sub.add_parser("memory", help="search everything we've made (scripts, outcomes, failed gates)")
+    me.add_argument("query", nargs="*")
+    me.add_argument("--pillar")
+    me.add_argument("--status", help="published | held | failed | packaged")
+    me.add_argument("-n", type=int, default=5)
+    me.add_argument("--rebuild", action="store_true", help="re-index first (automatic if no index yet)")
+    me.set_defaults(fn=cmd_memory)
     kw = sub.add_parser("keywords", help="YouTube search demand for a topic or title (free autocomplete)")
     kw.add_argument("text", nargs="*", help="topic or title to check")
     kw.add_argument("--backlog", type=int, default=0, help="score the next N unused backlog topics instead")

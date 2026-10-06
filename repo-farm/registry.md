@@ -22,6 +22,7 @@
 ## PARKED (named future phase)
 | Repo / tool | Phase | Why parked |
 |---|---|---|
+| elstongun/leviathan (`leviathan-index` crate) | Agent memory | Pattern adopted, binary not installed: it is a thin Rust CLI over SQLite FTS5 + BM25, and Python ships both. Crate was 1 day old (v0.1.0, 8 downloads) when evaluated 2026-10-06. Our version: `faceless/memory.py`, `python -m faceless memory`. Revisit if the corpus passes ~100k records. |
 | **remotion-dev/remotion** (`npx create-video@latest`) | Phase 2: motion | React video for animated number counters/charts in the math pillar; adds Node render stack to CI |
 | **HeyGen API** (video catalog, edit scenes) | Phase 3: avatar/presenter | Paid per minute; not needed for a faceless format yet |
 | heygen-com/liveavatar-gpt-live-demos | Phase 3 | Live avatars: not part of the short-form pipeline |

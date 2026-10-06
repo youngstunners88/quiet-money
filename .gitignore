@@ -12,3 +12,4 @@ distribution/queue/**/*.jpg
 distribution/queue/**/*.wav
 # built website (deployed to the gh-pages branch by CI)
 site/
+state/memory.db
