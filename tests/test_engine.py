@@ -1148,3 +1148,21 @@ def test_brandkit_builds_every_file_at_exact_sizes_with_text_inside_the_safe_are
         assert "preview.png" not in zipfile.ZipFile(r["zip"]).namelist()
     with pytest.raises(ValueError):
         brandkit.build("Ok Name", palette="neon", out=tmp_path / "x")
+
+
+def test_printables_have_six_pages_nothing_in_the_unsafe_margins_and_a_complete_bundle(tmp_path):
+    import zipfile
+    from faceless import product_print as pp
+    for name, size in pp.SIZES.items():
+        ims = pp.pages(size)
+        assert len(ims) == 6 and all(im.size == size for im in ims), name
+        assert [pp.unsafe(im) for im in ims] == [0] * 6, name
+    pdfs = pp.build_printables(tmp_path)
+    assert set(pdfs) == {"Letter", "A4"} and all(p.read_bytes()[:4] == b"%PDF" for p in pdfs.values())
+    a, b = tmp_path / "a.xlsx", tmp_path / "b.xlsx"
+    a.write_bytes(b"x"), b.write_bytes(b"y")
+    z = pp.bundle({"escape": a, "debt": b}, pdfs, tmp_path / "kit")
+    names = zipfile.ZipFile(z).namelist()
+    assert "Money-Reset-Kit/READ-ME-FIRST.txt" in names and len(names) == 5
+    assert "not financial advice" in zipfile.ZipFile(z).read("Money-Reset-Kit/READ-ME-FIRST.txt").decode()
+    assert "$" in pp.listing_bundle({"escape": 19.0, "debt": 19.0, "print": 9.0}) and "assumed" in pp.listing_bundle({"escape": 19.0, "debt": 19.0, "print": 9.0})

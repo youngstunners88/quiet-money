@@ -51,12 +51,13 @@ live) is the first unlock and the list the second.
 **Phase 0, now (no owner needed): done or in the repo.** Daily factory, website, repurposing kit, Flow lane, motion-card
 variety, two spreadsheet products (Rat Race Escape Planner and Debt Payoff & Compound Interest Planner, each recalculated in a
 real spreadsheet engine and matched to independent math), the 7-day Money Reset autoresponder (every number computed), the
-newsletter compiler, the Fiverr brand-kit engine with gallery samples, the empire gauntlet and the forecast.
+printable pack (six pages, Letter and A4) and the Money Reset Kit bundle, the newsletter compiler, the Fiverr brand-kit engine with gallery samples,
+the empire gauntlet and the forecast.
 **Phase 1, week 1 (owner, about 30 minutes):** create the channels and connect posting; pay $5 for Cloudflare Workers.
 Result: 5 videos a day actually post, with enough image supply for every one.
 **Phase 2, weeks 2-4:** open a Gumroad shop, list the planner (price test $12 / $19 / $29); pick an email service, a
 domain and a postal address, start the 7-day autoresponder and the weekly issue. The agent builds the next unblocked item
-each week (next: printable pack, audio edition, weekly long-form, studio mode).
+each week (next: audio edition, weekly long-form, Fiverr studio mode).
 **Phase 3, month 2+:** Fiverr gig for the brand kit, weekly long-form compilation, podcast edition, Etsy for printables.
 **Phase 4, by evidence:** every item moves up only when its metric beats its kill rule for 4 weeks; otherwise it is killed
 and the reason is written in `RANKING.md`.
@@ -80,7 +81,7 @@ Scores in the ranking are judgment until these numbers exist; the weekly run re-
 - **Legal.** Education only, no advice; newsletter needs a postal address and unsubscribe before the first send; no income claims.
 
 ## What the owner unlocks, in order of value
-1. Open the shop (Gumroad first): unlocks the planner and everything that follows it.
+1. Open the shop (Gumroad first): unlocks two planners, the printables and the bundle, all built and checked.
 2. Channels live with auto-posting: unlocks distribution, the metrics loop, long-form and rewards.
 3. Cloudflare Workers Paid ($5/month): unlocks full 5-a-day image supply.
 4. Email service + domain + postal address: unlocks the list, autoresponder and weekly issue.

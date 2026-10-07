@@ -11,6 +11,7 @@ distribution/queue/**/*.mp4
 distribution/queue/**/*.jpg
 distribution/queue/**/*.wav
 channel/services/**/*.zip
+channel/products/**/*.zip
 channel/services/brand-kit/samples/*/*.png
 !channel/services/brand-kit/samples/*/preview.png
 channel/flow/inbox/

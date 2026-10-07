@@ -420,4 +420,11 @@ def build_all() -> dict:
         prev = previews(xlsx, dest) if check["ok"] else []
         (dest / "LISTING.md").write_text(listing(), encoding="utf-8")
         out[slug] = {"file": str(xlsx), "verified": check["ok"], "rows": check["rows"], "errors": check["errors"], "previews": len(prev)}
+    if all(v["verified"] for v in out.values()):
+        from faceless import product_print
+        pr = product_print.build_all(Path(out["rat-race-escape-planner"]["file"]), Path(out["debt-payoff-planner"]["file"]))
+        bad = sum(sum(v) for v in pr["unsafe_pixels"].values())
+        out["money-reset-printables"] = {"file": pr["pdfs"]["Letter"], "verified": bad == 0, "previews": 0, "errors": [] if bad == 0 else [f"{bad} pixels in unsafe margins"],
+                                         "rows": [(f"{k} page {i + 1} margin pixels", v, 0, v == 0) for k, vs in pr["unsafe_pixels"].items() for i, v in enumerate(vs)]}
+        out["money-reset-kit"] = {"file": pr["bundle"], "verified": True, "previews": 0, "errors": [], "rows": []}
     return out

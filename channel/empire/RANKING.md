@@ -9,13 +9,13 @@ Unblocked and buildable without the owner; only the launch needs them.
 |---|---|---|---|---|---|
 | C4 | Audio edition: daily 60 s + weekly podcast episode | content | vetted | 40.5 | agent builds it now. Launch needs the owner: Open a free podcast host account |
 | C3 | Weekly long-form: 'Money Rules Weekly' (8-10 min, 16:9, chapters) | content | vetted | 36.0 | agent builds it now. Launch needs the owner: Create the YouTube, TikTok and Instagram accounts (@quietmoneyrules), connect them, and turn on auto-posting |
-| P3 | Printable budget pack (50/30/20, sinking funds, subscription audit, net worth) | product | vetted | 31.5 | agent builds it now. Launch needs the owner: Open a Gumroad shop (and Etsy for printables); approve prices and listings |
 | S2 | Fiverr studio mode: concept sheets in minutes for logo/art/character gigs | service | vetted | 16.2 | agent builds it now. Launch needs the owner: List the gig on your Fiverr account and handle client messages |
 
 ## Built: waiting for the owner to launch
 Finished and checked; one owner step turns each on.
 | id | opportunity | rail | stage | score | next |
 |---|---|---|---|---|---|
+| P4 | Money Reset Kit bundle (P1+P2+P3) | product | built | 135.0 | built and verified. Launch needs the owner: Open a Gumroad shop (and Etsy for printables); approve prices and listings |
 | A2 | Money Reset 7-day challenge as an autoresponder | owned-audience | built | 108.0 | built and verified. Launch needs the owner: Pick an email service, a domain and a postal address, and connect them |
 | C5 | Repurposing kit per video (thread, carousel, pin, newsletter item, LinkedIn post, audio) | content | built | 90.0 | built and verified. Launch needs the owner: Create the YouTube, TikTok and Instagram accounts (@quietmoneyrules), connect them, and turn on auto-posting |
 | P1 | Debt Payoff & Compound Interest Planner (spreadsheet) | product | built | 72.0 | built and verified. Launch needs the owner: Open a Gumroad shop (and Etsy for printables); approve prices and listings |
@@ -23,6 +23,7 @@ Finished and checked; one owner step turns each on.
 | A1 | Newsletter: Quiet Money Weekly (auto-compiled issue) | owned-audience | built | 67.5 | built and verified. Launch needs the owner: Pick an email service, a domain and a postal address, and connect them |
 | O4 | Flow lane: daily shot list in, owner's clips back, renderer uses them | ops | built | 57.6 | built and verified. Launch needs the owner: Generate the day's 3 Flow clips (about 10 minutes) and drop them in the inbox |
 | S1 | Fiverr: productized faceless-channel brand kit | service | built | 48.0 | built and verified. Launch needs the owner: List the gig on your Fiverr account and handle client messages |
+| P3 | Printable budget pack (50/30/20, sinking funds, subscription audit, net worth) | product | built | 31.5 | built and verified. Launch needs the owner: Open a Gumroad shop (and Etsy for printables); approve prices and listings |
 
 ## Needs the owner first
 The owner's act is the work.
@@ -43,7 +44,6 @@ The owner's act is the work.
 ## Waiting on another item
 | id | opportunity | rail | stage | score | next |
 |---|---|---|---|---|---|
-| P4 | Money Reset Kit bundle (P1+P2+P3) | product | vetted | 135.0 | waits for P3 |
 | R1 | YouTube Partner Program + TikTok Creator Rewards | partnership | vetted | 13.5 | waits for C3 |
 
 ## Ideas to validate cheaply

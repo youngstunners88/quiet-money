@@ -2208,3 +2208,6 @@
 {"ts": "2026-10-07T12:57:06Z", "t": 1791377826.739, "actor": "engine", "type": "SCOUT_TOPUP", "pillar": "playbook", "added": 1}
 {"ts": "2026-10-07T12:59:28Z", "t": 1791377968.589, "actor": "engine", "type": "SCOUT_TOPUP", "pillar": "playbook", "added": 1}
 {"ts": "2026-10-07T13:00:31Z", "t": 1791378031.851, "actor": "engine", "type": "SCOUT_TOPUP", "pillar": "playbook", "added": 1}
+{"ts": "2026-10-07T13:02:51Z", "t": 1791378171.986, "actor": "engine", "type": "SCOUT_TOPUP", "pillar": "playbook", "added": 1}
+{"ts": "2026-10-07T13:03:20Z", "t": 1791378200.155, "actor": "engine", "type": "SCOUT_TOPUP", "pillar": "playbook", "added": 1}
+{"ts": "2026-10-07T13:03:47Z", "t": 1791378227.676, "actor": "engine", "type": "SCOUT_TOPUP", "pillar": "playbook", "added": 1}

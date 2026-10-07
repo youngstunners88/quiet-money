@@ -44,7 +44,7 @@ humans set strategy, connect accounts, and review held videos.
 | Whole-business plan: products, services, newsletter, repurposing, what to build next | `/channel/empire` | `channel/empire/PLAN.md`, `RANKING.md` | `faceless-empire` |
 | Repurpose a video (thread, carousel, pin, newsletter item, audio) | `/faceless/repurpose.py` | `python -m faceless kit` | `faceless-empire` |
 | Flow clips (owner's daily Google Flow session) and hook motion | `/faceless/flow.py` | `python -m faceless flow` | `faceless-empire` |
-| Spreadsheet products and shop listings | `/faceless/products.py`, `product_debt.py` | `channel/products/*/LISTING.md` | `faceless-empire` |
+| Spreadsheet products and shop listings | `/faceless/products.py`, `product_debt.py`, `product_print.py` | `channel/products/*/LISTING.md` | `faceless-empire` |
 | Email sequence (autoresponder) and the weekly issue | `/faceless/autoresponder.py`, `repurpose.py` | `channel/offers/autoresponder/README.md` | `faceless-empire` |
 | Fiverr brand-kit service | `/faceless/brandkit.py` | `channel/services/brand-kit/GIG.md` | `faceless-empire` |
 | Connect an app (YouTube, TikTok, Drive...), pull channel stats | `/faceless/providers` | `composio_tools.py` | `faceless-composio` (+ `composio`) |
