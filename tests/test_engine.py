@@ -653,6 +653,9 @@ def test_scout_act_only_tops_up_backlogs(tmp_path, monkeypatch):
     from faceless import scout
     monkeypatch.setattr(scout, "REPORT", tmp_path / "o.md")
     monkeypatch.setattr(scout, "OPPS", tmp_path / "o.jsonl")
+    from faceless import empire
+    monkeypatch.setattr(empire, "DIR", tmp_path)
+    monkeypatch.setattr(empire, "RANKING", tmp_path / "RANKING.md")
     monkeypatch.setattr(scout, "health", lambda days=7: _health(publish_mode="local", backlog_unused={"story": 2, "math": 20}))
     called = []
     monkeypatch.setattr(scout, "topup", lambda pillar, n=6: called.append(pillar) or [{"topic": "t"}])
@@ -660,6 +663,8 @@ def test_scout_act_only_tops_up_backlogs(tmp_path, monkeypatch):
                                       "autonomy": "owner", "why": "w"}])
     assert called == ["story"] and res["done"] == ["topup-story: +1 topics"]
     assert "Find a sponsor" in (tmp_path / "o.md").read_text() and (tmp_path / "o.jsonl").exists()
+    report = (tmp_path / "o.md").read_text()
+    assert "## Portfolio" in report and "Owner unlocks the most" in report and (tmp_path / "RANKING.md").exists()
     assert [p["id"] for p in res["proposals"]][0] == "topup-story"    # impact 3 / effort 1 outranks 5 / 5
 
 
@@ -815,3 +820,235 @@ def test_memory_indexes_scripts_and_filters_by_pillar_status(tmp_path, monkeypat
     assert [r["job"] for r in memory.search("credit card minimum payments", db=db)] == ["a"]
     assert [r["job"] for r in memory.search("word_count", status="held", db=db)] == ["b"]
     assert memory.search("renting", pillar="math", db=db) == [] and memory.search('"; drop table docs; --', db=db) == []
+
+
+# ---- empire gauntlet + forecast ----------------------------------------------------------------
+
+def _opp(id_, stage="vetted", feeds=(), gates=(), build_gates=(), attack=None, **kw):
+    base = {"id": id_, "name": id_, "rail": "test", "stage": stage, "feeds": list(feeds), "gates": list(gates),
+            "build_gates": list(build_gates), "upside": 4, "leverage": 4, "automation": 4, "speed": 4, "effort": 2, "risk": 1,
+            "kill": "no sales in 30 days", "note": "n", "attack": attack or {}}
+    return {**base, **kw}
+
+
+def test_empire_attack_kills_on_blocked_terms_or_ip_only():
+    from faceless import empire
+    assert empire.attack(_opp("a", attack={"tos": "block"}))["killed"]
+    assert empire.attack(_opp("a", attack={"ip": "block"}))["killed"]
+    soft = empire.attack(_opp("a", attack={"tos": "watch", "saturation": "high", "agent": "partly"}))
+    assert not soft["killed"] and soft["mult"] == pytest.approx(0.7 * 0.8 * 0.8)
+    assert empire.score(_opp("a", attack={"saturation": "high"})) < empire.score(_opp("a"))
+
+
+def test_empire_lane_follows_dependencies_and_owner_gates():
+    from faceless import empire
+    items = [_opp("base", stage="scaled"), _opp("pilot", stage="pilot"), _opp("idea", stage="idea", feeds=["base"]),
+             _opp("child", feeds=["base"], gates=["shop"]), _opp("late", feeds=["idea"]), _opp("acct", build_gates=["channels"]),
+             _opp("bad", attack={"ip": "block"})]
+    by = {o["id"]: o for o in items}
+    by["shipped"] = _opp("shipped", stage="built", feeds=["base"], gates=["shop"])
+    by["kid"] = _opp("kid", feeds=["shipped"])              # a built parent unblocks its children
+    lanes = {i: empire.lane(o, by) for i, o in by.items()}
+    assert lanes == {"base": "running", "pilot": "running", "idea": "validate", "child": "agent", "late": "waiting",
+                     "acct": "owner", "bad": "dead", "shipped": "launch", "kid": "agent"}
+    assert "Launch needs the owner" in empire.next_action(by["shipped"], by) and empire.next_action(by["shipped"], by).startswith("built")
+    assert "Launch needs the owner" in empire.next_action(by["child"], by) and "waits for idea" == empire.next_action(by["late"], by)
+
+
+def test_empire_asks_count_each_item_once_per_gate_and_skip_dead_or_scaled(tmp_path, monkeypatch):
+    from faceless import empire
+    p = tmp_path / "portfolio.jsonl"
+    rows = [_opp("a", gates=["shop"]), _opp("b", gates=["shop", "email"]), _opp("both", gates=["channels"], build_gates=["channels"]),
+            _opp("done", stage="scaled", gates=["shop"]), _opp("bad", gates=["shop"], attack={"tos": "block"})]
+    p.write_text("\n".join(json.dumps(r) for r in rows) + "\nnot json\n", encoding="utf-8")
+    monkeypatch.setattr(empire, "PORTFOLIO", p)
+    monkeypatch.setattr(empire, "DIR", tmp_path)
+    monkeypatch.setattr(empire, "RANKING", tmp_path / "RANKING.md")
+    one = empire.score(rows[0])
+    got = {text: (total, ids) for text, total, ids in empire.asks(empire.rank())}
+    assert got[empire.GATES["shop"]] == (pytest.approx(round(2 * one, 1)), ["a", "b"])
+    assert got[empire.GATES["channels"]] == (pytest.approx(round(one, 1)), ["both"])
+    empire.write()
+    text = (tmp_path / "RANKING.md").read_text(encoding="utf-8")
+    assert "## Killed by the attack round" in text and "**bad" in text and "## What the owner unlocks" in text
+
+
+def test_shipped_portfolio_is_consistent():
+    from faceless import empire
+    items = empire.load()
+    ids = {o["id"] for o in items}
+    assert len(ids) == len(items) >= 20
+    for o in items:
+        assert o["stage"] in empire.STAGES and set(o["feeds"]) <= ids and o["kill"]
+        assert set(o["gates"]) | set(o["build_gates"]) <= set(empire.GATES), o["id"]
+        assert all(1 <= o[k] <= 5 for k in ("upside", "leverage", "automation", "speed", "effort", "risk")), o["id"]
+    assert any(empire.attack(o)["killed"] for o in items)   # the StarNet-style ideas stay dead
+
+
+def test_forecast_ladder_is_ordered_and_uses_assumptions(monkeypatch):
+    from faceless import forecast
+    monkeypatch.setattr(forecast, "measured", lambda: {"images_per_video": 12.0, "videos_measured": 3, "card_beats": {}})
+    monkeypatch.setattr(forecast, "neurons_per_image", lambda: 417.0)
+    low, base, high = forecast.ladder()
+    assert low["views"] < base["views"] < high["views"] and low["total"] < base["total"] < high["total"]
+    assert base["net"] == pytest.approx(base["total"] - base["cost"], abs=0.01)
+    mc = forecast.monthly_cost(5)
+    assert mc["images_per_month"] == 1800 and mc["cloudflare_paid"] > forecast.CF_PAID_BASE_MONTH
+    assert forecast.monthly_cost(1)["openrouter"] < mc["openrouter"]
+
+
+# ---- repurposing kit ---------------------------------------------------------------------------
+
+KIT_SCRIPT = {
+    "title": "The House Myth", "hook_text": "YOUR HOUSE IS NOT AN INVESTMENT", "pillar": "myth", "hashtags": ["#a", "#b", "#c", "#d"],
+    "first_comment": "Rent or buy?", "description": "Why a home is not an asset by default.",
+    "beats": [{"say": "Your house is not an investment.", "callout": ""},
+              {"say": "Taxes and repairs eat returns. Look at the math...", "callout": "TAXES"},
+              {"say": "Investing $500 a month for 30 years grows to $745,180.", "callout": "$745,180"},
+              {"say": "Buy a home for shelter. This week, list every cost of owning yours.", "callout": ""},
+              {"say": "Follow for the money rules school never taught you, because your house is...", "callout": ""}]}
+
+
+def test_kit_text_drops_fragments_and_keeps_disclosure():
+    from faceless import repurpose
+    assert repurpose.sentences("One. Two... Three") == ["One.", "Three"]
+    assert all(not s.endswith("...") for b in KIT_SCRIPT["beats"] for s in repurpose.sentences(b["say"]))
+    th, li = repurpose.thread(KIT_SCRIPT), repurpose.linkedin(KIT_SCRIPT)
+    assert th.startswith("1/") and repurpose.DISCLOSE in th and repurpose.DISCLOSE in li and "Follow for" not in th + li
+    assert all(len(t.split(" ", 1)[1].split("\n\n")[0]) <= 280 for t in th.split("\n\n---\n\n"))
+    assert li.count("#") <= 3 and "Look at the math" not in li
+
+
+def test_kit_picks_the_biggest_number_and_the_action_sentence():
+    from faceless import repurpose
+    assert repurpose.the_number(KIT_SCRIPT).startswith("$745,180")
+    assert repurpose.action_beat(KIT_SCRIPT) == "This week, list every cost of owning yours."
+    item = repurpose.newsletter_item(KIT_SCRIPT, {"pillar": "myth"})
+    assert "**The number**" in item and "**Try this:**" in item
+
+
+def test_kit_builds_carousel_and_pin_without_a_cover(tmp_path):
+    from faceless import repurpose
+    n = repurpose.carousel(KIT_SCRIPT, None, tmp_path / "c")
+    repurpose.pin(KIT_SCRIPT, {"description": "Why.\n\nMore"}, None, tmp_path)
+    assert n == 5 == len(list((tmp_path / "c").glob("*.png")))   # hook + 3 body beats + CTA
+    from PIL import Image
+    assert Image.open(tmp_path / "c" / "01.png").size == repurpose.CAROUSEL and Image.open(tmp_path / "pin.png").size == repurpose.PIN
+    assert "Educational" in (tmp_path / "pin.txt").read_text()
+
+
+def test_weekly_issue_marks_unsendable_without_a_postal_address(tmp_path, monkeypatch):
+    from faceless import repurpose
+    from faceless.config import Paths
+    kit = tmp_path / "queue" / "2026-10-07" / "slot1-myth" / "kit"
+    kit.mkdir(parents=True)
+    (kit / "newsletter.md").write_text("### item\n", encoding="utf-8")
+    monkeypatch.setattr(Paths, "queue", tmp_path / "queue")
+    monkeypatch.setattr(Paths, "root", tmp_path)
+    issue = repurpose.weekly_issue(end="2026-10-08")
+    assert issue and "### item" in issue.read_text() and "NOT SENDABLE" in issue.read_text()
+    assert repurpose.weekly_issue(end="2026-11-30") is None
+
+
+# ---- Flow lane ---------------------------------------------------------------------------------
+
+def _flow_dirs(tmp_path, monkeypatch):
+    from faceless import flow
+    for name, sub in (("DIR", ""), ("INBOX", "inbox"), ("USED", "used"), ("LISTS", "lists")):
+        monkeypatch.setattr(flow, name, tmp_path / sub if sub else tmp_path)
+    (tmp_path / "inbox").mkdir()
+    return flow
+
+
+def test_flow_shotlist_is_three_distinct_safe_prompts_and_rotates_by_day(tmp_path, monkeypatch):
+    flow = _flow_dirs(tmp_path, monkeypatch)
+    a = flow.shotlist("2026-10-07").read_text()
+    b = flow.shotlist("2026-10-08").read_text()
+    assert a.count("## ") == 3 and a != b
+    assert a.count("no people's faces") == 3 and a.count("no text or numbers") == 3 and "nothing here logs in" in a
+    assert a == flow.shotlist("2026-10-07").read_text()      # deterministic
+
+
+def test_flow_claim_needs_enabled_and_a_clip_long_enough(tmp_path, monkeypatch):
+    import shutil as sh
+    import subprocess as sp
+    if not sh.which("ffmpeg") or not sh.which("ffprobe"):
+        pytest.skip("ffmpeg not installed")
+    flow = _flow_dirs(tmp_path, monkeypatch)
+    monkeypatch.setattr(flow, "enabled", lambda: True)
+    mk = lambda name, secs: sp.run(["ffmpeg", "-y", "-loglevel", "error", "-f", "lavfi", "-i",   # noqa: E731
+                                    "testsrc2=size=640x1136:rate=12", "-t", str(secs), "-pix_fmt", "yuv420p",
+                                    str(tmp_path / "inbox" / name)], check=True)
+    mk("any-short.mp4", 2)
+    mk("math-long.mp4", 5)
+    (tmp_path / "inbox" / "broken.mp4").write_bytes(b"not a video")
+    job = Job(id="j1", pillar="story", topic="t", day="2026-10-07")
+    monkeypatch.setattr(Job, "dir", property(lambda self: tmp_path / "job"))
+    got = flow.claim(job, 3.0)
+    assert got and got["source"] == "math-long.mp4" and Path(got["clip"]).exists() and Path(got["frame"]).exists()
+    assert not (tmp_path / "inbox" / "math-long.mp4").exists() and (tmp_path / "used" / "j1-math-long.mp4").exists()
+    assert flow.claim(job, 3.0) is None                       # the short clip and the broken file are both refused
+    monkeypatch.setattr(flow, "enabled", lambda: False)
+    mk("story-x.mp4", 5)
+    assert flow.claim(job, 3.0) is None
+
+
+def test_card_compare_and_steps_parse_and_apply_to_every_series(monkeypatch):
+    from faceless.pipeline import cards
+    assert cards.parse_compare("$698,202 VS $298,072")["numeric"] and not cards.parse_compare("ASSET VS LIABILITY")["numeric"]
+    assert cards.parse_compare("2017 vs 2018") is None and cards.parse_compare("$5 VS FREE") is None       # years / mixed sides
+    assert cards.parse_compare("A VS B VS C") is None and cards.parse_compare("") is None
+    st = cards.parse_step("STEP TWO", "Step two, set up an automatic transfer on payday. Then relax.")
+    assert st["n"] == 2 and st["gist"] == "set up an automatic transfer on payday" and cards.parse_step("5 STEPS") is None
+    monkeypatch.setattr(cards, "available", lambda: True)
+    script = {"beats": [{"say": "hook", "callout": "A VS B"}, {"say": "x", "callout": "MAX VS MIN"},
+                        {"say": "Step one, open the app.", "callout": "STEP ONE"}, {"say": "plain", "callout": ""}]}
+    base = config.load()["production"]
+    monkeypatch.setitem(base, "cards", {"mode": "numbers", "pillars": ["math"]})
+    got = cards.pick(script, None, "story")                  # a series outside the numbers list still gets variety cards
+    assert {i: v["kind"] for i, v in got.items()} == {1: "compare", 2: "steps"}     # never the hook beat
+    monkeypatch.setitem(base, "cards", {"mode": "numbers", "pillars": ["math"], "variety": False})
+    assert cards.pick(script, None, "story") == {}
+
+
+def test_card_project_draws_compare_and_steps_with_seekable_tweens(tmp_path):
+    from faceless.pipeline import cards
+    specs = [(1, cards.parse_compare("$10 VS $5"), 3.0), (2, cards.parse_compare("<b>X</b> VS Y"), 2.0),
+             (3, cards.parse_step("STEP THREE", "Step three, <script>alert(1)</script> go."), 2.5)]
+    total = cards.build_project(tmp_path, specs, "playbook", "#FFD23F", 30, kicker="PLAYBOOK")
+    page = (tmp_path / "index.html").read_text(encoding="utf-8")
+    assert total == pytest.approx(7.5) and "<script>alert" not in page and "&lt;B&gt;X&lt;/B&gt;" in page
+    import re
+    assert all(re.match(r'tl\.to\("#s\d+",\{opacity:0,duration:0\.001\}', m) for m in re.findall(r'tl\.to\(.{0,40}', page))   # only the fade-out
+
+
+# ---- product factory ---------------------------------------------------------------------------
+
+def test_escape_planner_expected_math_behaves():
+    from faceless import products
+    base = products.expected_escape()
+    assert base["freedom"] == 900_000 and 35 < base["years"] < 37 and base["saved"] > 1
+    assert products.expected_escape({"monthly": 1500})["years"] < base["years"]
+    assert products.expected_escape({"invested": 2_000_000})["months"] == 0.0
+    d = products.DEFAULTS     # the contribution leg of the year-20 balance matches the engine used by the videos
+    lump = d["invested"] * (1 + base["real"] / 12) ** 240
+    assert base["balance_year20"] - lump == pytest.approx(moneymath.future_value_monthly(d["monthly"], base["real"], 20))
+
+
+def test_escape_planner_recalculates_to_the_same_numbers_in_a_real_spreadsheet_engine(tmp_path):
+    from faceless import products
+    xlsx = products.build_escape_planner(tmp_path)
+    if products.recalc(xlsx) is None:
+        pytest.skip("LibreOffice Calc not available")
+    res = products.verify_escape(xlsx)
+    assert res["errors"] == [] and res["ok"], res["rows"]
+
+
+def test_escape_planner_has_no_hardcoded_results_and_the_disclaimer(tmp_path):
+    from faceless import products
+    from openpyxl import load_workbook
+    wb = load_workbook(products.build_escape_planner(tmp_path))
+    n = wb["1 Your numbers"]
+    assert all(str(n[f"B{r}"].value).startswith("=") for r in range(16, 26))       # every result is a formula
+    assert "not financial advice" in wb["Start here"]["A19"].value
+    assert wb.sheetnames == products.SHEETS

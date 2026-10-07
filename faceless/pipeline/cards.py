@@ -60,6 +60,37 @@ def parse_number(callout: str) -> dict | None:
             "decimals": dec, "label": tail[:24].upper()}
 
 
+WORDS = {"ONE": 1, "TWO": 2, "THREE": 3, "FOUR": 4, "FIVE": 5, "SIX": 6}
+STEP = re.compile(r"^\s*STEP\s+(ONE|TWO|THREE|FOUR|FIVE|SIX|[1-6])\b", re.I)
+VS = re.compile(r"\s+(?:VS\.?|VERSUS)\s+", re.I)
+
+
+def parse_compare(callout: str) -> dict | None:
+    """'$698,202 VS $298,072' -> two bars sized by value; 'ASSET VS LIABILITY' -> a two-word face-off. None otherwise."""
+    parts = VS.split((callout or "").strip())
+    if len(parts) != 2 or not all(0 < len(x) <= 16 for x in parts):
+        return None
+    nums = [parse_number(x) for x in parts]
+    if all(nums) and all(n["value"] > 0 for n in nums) and not any(n["static"] for n in nums):
+        return {"kind": "compare", "numeric": True, "a": parts[0].strip(), "b": parts[1].strip(),
+                "va": nums[0]["value"], "vb": nums[1]["value"]}
+    if any(nums):      # one side a number, the other a word: not a clean comparison
+        return None
+    return {"kind": "compare", "numeric": False, "a": parts[0].strip().upper(), "b": parts[1].strip().upper()}
+
+
+def parse_step(callout: str, say: str = "") -> dict | None:
+    """'STEP TWO' -> numeral 2 with the beat's own gist underneath."""
+    m = STEP.match(callout or "")
+    if not m:
+        return None
+    tok = m.group(1).upper()
+    n = int(tok) if tok.isdigit() else WORDS[tok]
+    body = re.sub(r"^\s*(?:first|second|third|next|then|step\s+\w+)\b[,:]?\s*", "", say or "", flags=re.I)
+    first = re.split(r"(?<=[.!?])\s", body.strip())[0] if body.strip() else ""
+    return {"kind": "steps", "n": n, "word": tok if not tok.isdigit() else list(WORDS)[n - 1], "gist": " ".join(first.split()[:10]).rstrip(".,;:")}
+
+
 def key_phrase(beat: dict) -> str:
     """Callout if the beat has one, else its first few spoken words: what the card says in big type."""
     c = (beat.get("callout") or "").strip()
@@ -81,6 +112,11 @@ def pick(script: dict, imgs: list[dict] | None, pillar_id: str) -> dict[int, dic
             continue
         num = parse_number(beat.get("callout", ""))
         placeholder = imgs is not None and i < len(imgs) and imgs[i]["provider"] == "procedural"
+        if mode == "numbers" and cfg.get("variety", True):    # comparisons and numbered steps suit every series
+            spec = parse_compare(beat.get("callout", "")) or parse_step(beat.get("callout", ""), beat.get("say", ""))
+            if spec:
+                out[i] = spec
+                continue
         wants = (mode == "numbers" and num and pillar_id in cfg.get("pillars", [])) or placeholder
         if wants:
             out[i] = {"kind": "stat", **num} if num else {"kind": "phrase", "text": key_phrase(beat)}
@@ -141,6 +177,12 @@ def _scene(n: int, t0: float, dur: float, spec: dict, pal: tuple, accent: str, f
         js.append(f'tl.fromTo("#{sid}b",{{scale:0.86,opacity:0.35}},{{scale:1,opacity:1,duration:0.45,ease:"back.out(1.6)"}},{t0:.3f});')
         js.append(f'tl.fromTo("#{sid}r",{{scaleX:0}},{{scaleX:1,duration:{dur * 0.6:.3f},ease:"power2.out"}},{t0 + 0.2:.3f});')
         js.append(f'tl.fromTo("#{sid}t",{{opacity:0,y:20}},{{opacity:1,y:0,duration:0.4}},{t0 + 0.5:.3f});')
+    elif spec["kind"] == "compare":
+        body, extra = _compare(sid, t0, dur, spec, accent, kicker)
+        js += extra
+    elif spec["kind"] == "steps":
+        body, extra = _steps(sid, t0, dur, spec, accent, kicker)
+        js += extra
     else:
         words = spec["text"].split()
         spans = "".join(f'<span class="w" id="{sid}w{k}">{html.escape(w)}</span> ' for k, w in enumerate(words))
@@ -153,6 +195,52 @@ def _scene(n: int, t0: float, dur: float, spec: dict, pal: tuple, accent: str, f
         js.append(f'tl.fromTo("#{sid}r",{{scaleX:0}},{{scaleX:1,duration:{dur * 0.5:.3f},ease:"power2.out"}},{t0 + 0.3:.3f});')
     js.append(f'tl.to("#{sid}",{{opacity:0,duration:0.001}},{t0 + dur - 0.002:.3f});')
     return pre + bg + grid + dots + body + "</div>", "\n".join(js)
+
+
+def _compare(sid: str, t0: float, dur: float, spec: dict, accent: str, kicker: str) -> tuple[str, list[str]]:
+    """Two amounts as bars grown from one baseline, or two words facing off around a VS. Only fromTo/set tweens (seek-safe)."""
+    js: list[str] = []
+    if spec["numeric"]:
+        hi = max(spec["va"], spec["vb"])
+        base, top = 1500, 820
+        parts = []
+        for k, (label, v, col, cx) in enumerate(((spec["a"], spec["va"], accent, 340), (spec["b"], spec["vb"], "rgba(255,255,255,.38)", 740))):
+            h = max(70, round(top * v / hi))
+            fs = min(104, int(400 / (max(4, len(label)) * 0.47)))
+            parts.append(f'<div class="cb" id="{sid}b{k}" style="left:{cx - 160}px;top:{base - h}px;width:320px;height:{h}px;background:{col}"></div>'
+                         f'<div class="cv" id="{sid}v{k}" style="left:{cx - 200}px;top:{base - h - fs - 36}px;width:400px;font-size:{fs}px">{html.escape(label)}</div>')
+            js.append(f'tl.fromTo("#{sid}b{k}",{{scaleY:0}},{{scaleY:1,duration:{dur * 0.5:.3f},ease:"power3.out"}},{t0 + 0.25 + 0.15 * k:.3f});')
+            js.append(f'tl.fromTo("#{sid}v{k}",{{opacity:0,y:24}},{{opacity:1,y:0,duration:0.4,ease:"power2.out"}},{t0 + 0.25 + dur * 0.4 + 0.15 * k:.3f});')
+        parts.append(f'<div class="vs" id="{sid}x" style="left:490px;top:{base + 40}px">VS</div>')
+        js.append(f'tl.fromTo("#{sid}x",{{opacity:0,scale:0.5}},{{opacity:1,scale:1,duration:0.4,ease:"back.out(2)"}},{t0 + 0.2:.3f});')
+        return f'<div class="kick">{html.escape(kicker)}</div>' + "".join(parts), js
+    fs = min(170, int(900 / (max(5, len(spec["a"]), len(spec["b"])) * 0.5)))
+    body = (f'<div class="kick">{html.escape(kicker)}</div>'
+            f'<div class="fo" style="top:540px;font-size:{fs}px" id="{sid}a">{html.escape(spec["a"])}</div>'
+            f'<div class="vs" id="{sid}x" style="left:490px;top:{540 + fs + 50}px">VS</div>'
+            f'<div class="fo" style="top:{540 + fs + 190}px;font-size:{fs}px;color:{accent}" id="{sid}c">{html.escape(spec["b"])}</div>')
+    js += [f'tl.fromTo("#{sid}a",{{opacity:0,x:-320}},{{opacity:1,x:0,duration:0.5,ease:"power3.out"}},{t0 + 0.15:.3f});',
+           f'tl.fromTo("#{sid}x",{{opacity:0,scale:0.4}},{{opacity:1,scale:1,duration:0.4,ease:"back.out(2)"}},{t0 + 0.55:.3f});',
+           f'tl.fromTo("#{sid}c",{{opacity:0,x:320}},{{opacity:1,x:0,duration:0.5,ease:"power3.out"}},{t0 + 0.75:.3f});']
+    return body, js
+
+
+def _steps(sid: str, t0: float, dur: float, spec: dict, accent: str, kicker: str) -> tuple[str, list[str]]:
+    """A numbered step: a ring that draws itself around the numeral, the step word, and the beat's own gist."""
+    circ = round(2 * 3.14159265 * 190)
+    gist = html.escape(spec.get("gist", "")).upper()
+    body = (f'<div class="kick">{html.escape(kicker)}</div>'
+            f'<div class="ring" id="{sid}n"><svg width="440" height="440" viewBox="0 0 440 440"><circle cx="220" cy="220" r="190" fill="none" '
+            f'stroke="rgba(255,255,255,.14)" stroke-width="14"/><circle id="{sid}o" cx="220" cy="220" r="190" fill="none" stroke="{accent}" '
+            f'stroke-width="14" stroke-linecap="round" stroke-dasharray="{circ}" stroke-dashoffset="{circ}" transform="rotate(-90 220 220)"/></svg>'
+            f'<div class="rn">{spec["n"]}</div></div>'
+            f'<div class="sw" id="{sid}w">STEP {html.escape(spec["word"])}</div>'
+            f'<div class="sg" id="{sid}g">{gist}</div>')
+    js = [f'tl.fromTo("#{sid}n",{{scale:0.7,opacity:0}},{{scale:1,opacity:1,duration:0.45,ease:"back.out(1.7)"}},{t0:.3f});',
+          f'tl.fromTo("#{sid}o",{{strokeDashoffset:{circ}}},{{strokeDashoffset:0,duration:{dur * 0.55:.3f},ease:"power2.inOut"}},{t0 + 0.15:.3f});',
+          f'tl.fromTo("#{sid}w",{{opacity:0,y:24}},{{opacity:1,y:0,duration:0.4}},{t0 + 0.4:.3f});',
+          f'tl.fromTo("#{sid}g",{{opacity:0,y:30}},{{opacity:1,y:0,duration:0.5,ease:"power2.out"}},{t0 + 0.65:.3f});']
+    return body, js
 
 
 def build_project(root: Path, specs: list[tuple[int, dict, float]], pillar_id: str, accent: str, fps: int,
@@ -196,6 +284,16 @@ html,body{{width:1080px;height:1920px;overflow:hidden;background:#000}}
   color:#fff;text-transform:uppercase;text-shadow:0 6px 40px rgba(0,0,0,.6)}}
 .pwrap .bar{{margin-top:44px}}
 .w{{display:inline-block;opacity:0}}
+.cb{{position:absolute;transform-origin:center bottom;border-radius:14px 14px 0 0;opacity:.95}}
+.cv{{position:absolute;text-align:center;font:400 96px/1 "Anton";color:#fff;opacity:0;letter-spacing:-1px}}
+.vs{{position:absolute;width:100px;text-align:center;font:400 54px/1 "Anton";color:#fff;opacity:0;letter-spacing:4px}}
+.fo{{position:absolute;left:60px;width:960px;text-align:center;font:400 150px/1 "Anton";color:#fff;opacity:0;letter-spacing:2px;
+  text-shadow:0 6px 40px rgba(0,0,0,.6)}}
+.ring{{position:absolute;left:320px;top:420px;width:440px;height:440px;opacity:0}}
+.rn{{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font:400 270px/1 "Anton";color:#fff}}
+.sw{{position:absolute;left:0;top:930px;width:1080px;text-align:center;font:400 84px/1 "Anton";letter-spacing:12px;color:#fff;opacity:0}}
+.sg{{position:absolute;left:100px;top:1090px;width:880px;text-align:center;font:400 60px/1.2 "MontserratBlack";color:#fff;opacity:0;
+  text-shadow:0 4px 30px rgba(0,0,0,.6)}}
 </style></head>
 <body>
 <div id="root" data-composition-id="cards" data-start="0" data-duration="{t:.3f}" data-width="1080" data-height="1920" data-fps="{fps}">

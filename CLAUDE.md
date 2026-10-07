@@ -41,6 +41,10 @@ humans set strategy, connect accounts, and review held videos.
 | Research a person, book, or framework for videos | `/channel/research` | the brief format in the skill | `faceless-research` |
 | Escape the Rat Race series (Hormozi, Kiyosaki, Peña, passive income) | `/channel/research` | `channel/brand.md` | `faceless-rat-race` |
 | Grow reach, "go viral", weekly growth review | `/analytics` | `analytics/CONTEXT.md` | `faceless-growth` |
+| Whole-business plan: products, services, newsletter, repurposing, what to build next | `/channel/empire` | `channel/empire/PLAN.md`, `RANKING.md` | `faceless-empire` |
+| Repurpose a video (thread, carousel, pin, newsletter item, audio) | `/faceless/repurpose.py` | `python -m faceless kit` | `faceless-empire` |
+| Flow clips (owner's daily Google Flow session) and hook motion | `/faceless/flow.py` | `python -m faceless flow` | `faceless-empire` |
+| Spreadsheet products and shop listings | `/faceless/products.py` | `channel/products/*/LISTING.md` | `faceless-empire` |
 | Connect an app (YouTube, TikTok, Drive...), pull channel stats | `/faceless/providers` | `composio_tools.py` | `faceless-composio` (+ `composio`) |
 
 ## Commands (run from this folder)
@@ -56,6 +60,11 @@ python -m faceless composio status             # connected apps (Composio)
 python -m faceless site build                  # Money Rules Library website -> site/
 python -m faceless aeo                         # AI answer-engine visibility probe
 python -m faceless brand                       # regenerate the brand kit
+python -m faceless empire                      # rank the income portfolio; what the agent builds, what the owner unlocks
+python -m faceless forecast                    # the math: next batch, monthly cost, assumption-labeled revenue
+python -m faceless kit [day]                   # repurposing kit per video; `kit --issue` compiles the weekly newsletter
+python -m faceless flow                        # today's Flow shot list for the owner's session
+python -m faceless products                    # build + verify spreadsheet products, write listings
 python -m pytest -q tests                      # engine tests
 ```
 

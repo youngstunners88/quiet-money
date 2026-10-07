@@ -10,6 +10,10 @@ production/cache/
 distribution/queue/**/*.mp4
 distribution/queue/**/*.jpg
 distribution/queue/**/*.wav
+channel/flow/inbox/
+channel/flow/used/
+distribution/queue/**/kit/**/*.png
+distribution/queue/**/kit/*.mp3
 # built website (deployed to the gh-pages branch by CI)
 site/
 state/memory.db

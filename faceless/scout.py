@@ -18,7 +18,7 @@ import json
 from collections import Counter
 from datetime import datetime, timedelta, timezone
 
-from faceless import config, events, keywords, ledger
+from faceless import config, empire, events, keywords, ledger
 from faceless.config import Paths
 from faceless.pipeline import ideate
 from faceless.state import all_jobs
@@ -165,11 +165,30 @@ def run(act: bool = False, extra: list[dict] | None = None) -> dict:
             except Exception as e:  # noqa: BLE001 - a flaky LLM must not break the scan
                 done.append(f"{p['id']}: failed ({type(e).__name__})")
     props.sort(key=lambda p: (-p["score"], -p["impact"]))
-    write_report(h, props, done)
-    return {"health": h, "proposals": props, "done": done}
+    port = portfolio()
+    write_report(h, props, done, port)
+    return {"health": h, "proposals": props, "done": done, "portfolio": port}
 
 
-def write_report(h: dict, props: list[dict], done: list[str]) -> None:
+def portfolio() -> list[str]:
+    """The empire gauntlet's view for the weekly report: what the agent builds next, what is built and waiting, what the owner unlocks.
+    Rewrites channel/empire/RANKING.md. Never blocks the scan."""
+    try:
+        rows = empire.write()
+    except Exception as e:  # noqa: BLE001 - a bad portfolio line must not break the scan
+        return [f"portfolio unavailable ({type(e).__name__})"]
+    pick = lambda lane: [f"{r['id']} {r['name']} ({r['score']})" for r in rows if r["lane"] == lane][:3]  # noqa: E731
+    out = []
+    for title, lane in (("Agent builds next", "agent"), ("Built, waiting for the owner", "launch")):
+        if got := pick(lane):
+            out.append(f"{title}: " + "; ".join(got))
+    asks = empire.asks(rows)[:3]
+    if asks:
+        out.append("Owner unlocks the most: " + "; ".join(f"{g} ({t} pts)" for g, t, _ in asks))
+    return out
+
+
+def write_report(h: dict, props: list[dict], done: list[str], port: list[str] | None = None) -> None:
     day = _now().strftime("%Y-%m-%d")
     lines = [f"# Opportunities, {day}", "",
              f"Last {h['days']} days: {h['videos']} videos, {h['held']} held ({round(h['hold_rate'] * 100)}%), "
@@ -180,6 +199,8 @@ def write_report(h: dict, props: list[dict], done: list[str]) -> None:
         lines.append(f"| {i} | {p['title']} | {p['category']} | {p['impact']} | {p['effort']} | {p['autonomy']} | {p['why']} |")
     if done:
         lines += ["", "## Done by the scanner this run", *[f"- {d}" for d in done]]
+    if port:
+        lines += ["", "## Portfolio (full ranking in channel/empire/RANKING.md)", *[f"- {p}" for p in port]]
     lines += ["", "## Who can act", *[f"- **{k}**: {v}" for k, v in AUTONOMY.items()]]
     REPORT.parent.mkdir(parents=True, exist_ok=True)
     REPORT.write_text("\n".join(lines) + "\n", encoding="utf-8")

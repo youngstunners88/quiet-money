@@ -34,6 +34,9 @@ accent2 = "#2EE59D"                          # money green
 mode = "numbers"                             # off | auto (only replaces placeholder-art beats) | numbers (+ count-up cards for numeric callouts)
 pillars = ["math", "escape"]                 # numbers mode applies to these pillars
 
+[production.flow]                            # owner-made Google Flow clips replace the hook still (see faceless/flow.py); empty inbox = no change
+enabled = true
+
 [voice]
 chain = ["edge", "elevenlabs", "gemini"]     # first healthy provider wins
 edge_voice = "en-US-AndrewMultilingualNeural"
@@ -80,6 +83,14 @@ mode = "local"
 platforms = ["tiktok", "youtube", "instagram"]
 timezone = "America/New_York"
 slots = ["07:30", "11:30", "15:00", "18:30", "21:00"]
+
+[repurpose]
+# one finished video also becomes a thread, LinkedIn post, carousel, pin, newsletter item and audio clip (no model calls)
+enabled = true
+
+[newsletter]
+# CAN-SPAM needs a real postal address on every issue; the weekly issue is marked NOT SENDABLE until this is set
+postal_address = ""
 
 [site]
 # GitHub Pages project site (repo youngstunners88/quiet-money). Swap for a custom domain later.
@@ -159,3 +170,12 @@ format = "One proven income-building framework (the value equation, the rule of 
 style = "ambitious cinematic night photography, city skyline seen from a high window, hands sketching plans on paper, keys and a signed contract on a desk, deep navy and electric orange palette, strong rim light, sense of momentum"
 grade = "night"
 music_key = "F"
+
+[forecast]                                   # ASSUMPTIONS for `faceless forecast`; replace with real numbers once posts are live
+views_per_video = [300, 2000, 15000]         # low / base / high average views per Short
+rpm_per_1000_views = [0.02, 0.05, 0.10]      # Shorts ad revenue per 1,000 views (USD)
+link_visit_rate = 0.01                       # share of views that reach the link in bio
+email_capture_rate = 0.25                    # share of link visitors who join the list
+list_buys_per_month = 0.03                   # share of the list buying one product a month
+product_price = 19.0
+videos_per_day = 5

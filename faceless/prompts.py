@@ -66,7 +66,8 @@ def script_prompt(pillar, topic: str, angle: str = "", feedback: list[str] | Non
         "- Educational only: never tell the viewer to buy a specific stock, coin, or product. No promises of returns.",
         f"- Never use these phrases: {', '.join(BANNED + COMPLIANCE_BANNED)}.",
         "- 'callout' is optional on-screen text (max 4 words, often a number like '$698,000'); use it on 4-7 beats, "
-        "never on beat 1.",
+        "never on beat 1. When a beat contrasts two amounts or two ideas, write its callout as 'A VS B' (e.g. '$698,000 VS "
+        "$298,000', 'ASSET VS LIABILITY'); when a beat is one step of a how-to, write 'STEP ONE', 'STEP TWO' (max 3 steps).",
         "- 'visual' is an image-generation prompt for that beat: a concrete cinematic scene (subject, setting, "
         "lighting, camera angle). Real people must NOT be depicted by face: use hands, silhouettes, backs, objects, "
         "places. No text, numbers, logos, or screens with writing in the image: prefer objects without writing; if a "

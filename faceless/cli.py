@@ -154,6 +154,57 @@ def cmd_scout(args) -> int:
     return 0
 
 
+def cmd_empire(_args) -> int:
+    from faceless import empire
+    empire.write()
+    print(empire.RANKING.read_text(encoding="utf-8"))
+    return 0
+
+
+def cmd_kit(args) -> int:
+    from faceless import repurpose
+    if args.issue:
+        out = repurpose.weekly_issue(end=args.target)
+        print(out or "no kit items in the last 7 days; run `kit` first")
+        return 0 if out else 1
+    res = repurpose.build(args.target)
+    for r in res:
+        print(r["job"], "->", r.get("error") or f"{r['carousel']} slides, audio={'yes' if r['audio'] else 'no'}, {len(r['files'])} files")
+    if not res:
+        print("no packaged videos matched; pass a post day (YYYY-MM-DD) or a job id")
+    return 0 if res and not any("error" in r for r in res) else 1
+
+
+def cmd_flow(args) -> int:
+    from faceless import flow
+    if args.action == "status":
+        print(json.dumps(flow.status(), indent=2))
+        return 0
+    path = flow.shotlist(args.day)
+    print(path.read_text(encoding="utf-8"))
+    return 0
+
+
+def cmd_products(_args) -> int:
+    from faceless import products
+    res = products.build_all()
+    bad = 0
+    for slug, r in res.items():
+        print(f"{slug}: {'VERIFIED' if r['verified'] else 'NOT VERIFIED'}, {r['previews']} previews -> {r['file']}")
+        for name, got, want, good in r["rows"]:
+            print(f"  {'ok ' if good else 'BAD'} {name}: sheet={got} python={want}")
+        for e in r["errors"]:
+            print("  error:", e)
+        bad += 0 if r["verified"] else 1
+    return 1 if bad else 0
+
+
+def cmd_forecast(_args) -> int:
+    from faceless import forecast
+    print(forecast.report())
+    return 0
+
+
 def cmd_memory(args) -> int:
     from faceless import memory
     if args.rebuild or not memory.DB.exists():
@@ -253,6 +304,17 @@ def main(argv: list[str] | None = None) -> int:
     sc.add_argument("--act", action="store_true", help="do the safe auto actions (backlog top-up) too")
     sc.add_argument("--import", dest="import_file", help="JSON list of external findings from web research")
     sc.set_defaults(fn=cmd_scout)
+    sub.add_parser("empire", help="run the empire gauntlet: rank the income portfolio, kill the bad ideas, list what the owner unlocks").set_defaults(fn=cmd_empire)
+    kt = sub.add_parser("kit", help="repurposing kit per packaged video (thread, LinkedIn, carousel, pin, newsletter item, audio)")
+    kt.add_argument("target", nargs="?", help="post day YYYY-MM-DD or job id (default: today); with --issue, the last day of the week")
+    kt.add_argument("--issue", action="store_true", help="compile the week's newsletter items into one issue")
+    kt.set_defaults(fn=cmd_kit)
+    fl = sub.add_parser("flow", help="Flow lane: today's 3-prompt shot list for the owner's Google Flow session, or inbox status")
+    fl.add_argument("action", nargs="?", choices=["shotlist", "status"], default="shotlist")
+    fl.add_argument("--day", help="YYYY-MM-DD (default today)")
+    fl.set_defaults(fn=cmd_flow)
+    sub.add_parser("products", help="build the spreadsheet products, recalculate them in LibreOffice, check against Python math, write listings").set_defaults(fn=cmd_products)
+    sub.add_parser("forecast", help="the math: next batch cost, monthly cost, and assumption-labeled revenue ladder").set_defaults(fn=cmd_forecast)
     me = sub.add_parser("memory", help="search everything we've made (scripts, outcomes, failed gates)")
     me.add_argument("query", nargs="*")
     me.add_argument("--pillar")

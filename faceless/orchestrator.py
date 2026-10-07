@@ -14,6 +14,7 @@ from __future__ import annotations
 import json
 import traceback
 from datetime import date, datetime, timedelta, timezone
+from pathlib import Path
 
 from faceless import analytics, config, decide, events, gauntlet, research
 from faceless.config import Paths
@@ -115,11 +116,27 @@ def produce(job: Job, *, judge: bool = True, prefer_voice: str | None = None, do
         res = publisher.publish(job, meta)
         job.artifacts["publish"] = res
         job.advance("published", **{k: v.get("post_at") for k, v in res.items() if isinstance(v, dict)})
+        _kit(job)
     elif next_step != "publish":
         job.notes.append("held for review: " + ", ".join(rep["hard_failures"] or ["low score"]))
         job.advance("held")
     job.save()
     return rep
+
+
+def _kit(job: Job) -> None:
+    """Repurposing kit next to the posting pack. A failure here never costs a video its slot."""
+    if not config.load().get("repurpose", {}).get("enabled", False):
+        return
+    local = (job.artifacts.get("publish") or {}).get("local") or {}
+    if not local.get("folder"):
+        return
+    try:
+        from faceless import repurpose
+        made = repurpose.build_pack(job, Path(local["folder"]))
+        events.emit("KIT_BUILT", job=job.id, files=len(made["files"]), audio=made["audio"])
+    except Exception as e:   # noqa: BLE001 - best-effort side product
+        job.notes.append(f"kit skipped: {type(e).__name__}")
 
 
 def start_job(pillar: str, item: dict, slot: int) -> Job:

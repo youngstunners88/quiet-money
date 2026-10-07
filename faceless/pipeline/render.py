@@ -69,7 +69,7 @@ def plan_shots(beats: list[tuple[float, float]], images: list[dict], fps: int, m
             f0, f1 = round(a * fps), round(b * fps)
             if f1 > f0:
                 shots.append({"image": img["path"], "frames": f1 - f0, "start": a, "motion": motion, "beat": i,
-                              "card": img.get("card")})
+                              "card": img.get("card"), "clip": img.get("clip")})
     return shots
 
 
@@ -128,6 +128,20 @@ def card_shot(args) -> str:
     return str(out_path)
 
 
+def clip_shot(args) -> str:
+    """Cut a shot from an owner-made Flow clip: cover-fit to the frame, graded like the stills, audio dropped.
+    Falls back to the clip's own first frame with the usual motion if the cut fails."""
+    clip, out_path, offset, frames, fps, W, H, look, fallback = args
+    vf = f"scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},fps={fps},{look}"
+    try:
+        _run(["ffmpeg", "-hide_banner", "-loglevel", "error", "-y", "-ss", f"{offset:.3f}", "-i", str(clip), "-frames:v", str(frames),
+              "-an", "-vf", vf, "-c:v", "libx264", "-preset", "ultrafast", "-crf", "13", "-pix_fmt", "yuv420p", "-r", str(fps),
+              str(out_path)])
+    except RuntimeError:
+        render_shot(fallback)
+    return str(out_path)
+
+
 def _run(cmd: list[str]) -> None:
     p = subprocess.run(cmd, capture_output=True, text=True)
     if p.returncode != 0:
@@ -175,10 +189,14 @@ def run(job, script: dict, voice: dict, imgs: list[dict]) -> dict:
     card_specs = {r["beat"]: r["card"] for r in imgs if r.get("card")}
     reel = cards.render_reel(job, card_specs, {i: tuple(b) for i, b in enumerate(voice["beats"])}, job.pillar,
                              cfg["accent"], fps) if card_specs else None
-    tasks, card_tasks = [], []
+    tasks, card_tasks, clip_tasks = [], [], []
     for i, s in enumerate(shots):
         out_i = work / f"shot{i:03d}.mp4"
-        if s.get("card") and reel:       # card beat: offset inside its card's slot in the reel
+        if s.get("clip") and Path(s["clip"]).exists() and s["image"]:   # owner's Flow clip as the hook; the still is its fallback
+            offset = max(0.0, s["start"] - voice["beats"][s["beat"]][0])
+            clip_tasks.append((s["clip"], out_i, offset, s["frames"], fps, W, H, look,
+                               (s["image"], out_i, s["frames"], s["motion"], W, H, fps, look)))
+        elif s.get("card") and reel:       # card beat: offset inside its card's slot in the reel
             beat_start = voice["beats"][s["beat"]][0]
             card_tasks.append((reel[0], out_i, reel[1][s["beat"]] + max(0.0, s["start"] - beat_start), s["frames"], fps))
         else:
@@ -190,7 +208,8 @@ def run(job, script: dict, voice: dict, imgs: list[dict]) -> dict:
     with ProcessPoolExecutor(max_workers=4) as ex:
         list(ex.map(render_shot, tasks))
         list(ex.map(card_shot, card_tasks))
-    tasks += [(None, t[1]) for t in card_tasks]
+        list(ex.map(clip_shot, clip_tasks))
+    tasks += [(None, t[1]) for t in card_tasks + clip_tasks]
     tasks.sort(key=lambda t: t[1].name)
     concat = work / "concat.txt"
     concat.write_text("".join(f"file '{t[1].name}'\n" for t in tasks), encoding="utf-8")
@@ -243,7 +262,7 @@ def run(job, script: dict, voice: dict, imgs: list[dict]) -> dict:
             f.unlink(missing_ok=True)
     info = {"video": str(out), "cover": str(cover), "shots": len(shots), "captioned_words": covered,
             "avg_shot": round(total / max(1, len(shots)), 2),
-            "cards": len(card_specs) if reel else 0}
+            "cards": len(card_specs) if reel else 0, "clips": len(clip_tasks)}
     (job.dir / "render.json").write_text(json.dumps(info, indent=1), encoding="utf-8")
     events.emit("RENDERED", job=job.id, **info)
     return info

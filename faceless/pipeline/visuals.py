@@ -6,7 +6,7 @@ import hashlib
 import json
 from concurrent.futures import ThreadPoolExecutor
 
-from faceless import config, events
+from faceless import config, events, flow
 from faceless.pipeline import cards
 from faceless.providers import images
 
@@ -18,16 +18,32 @@ def build_prompt(visual: str, style: str) -> str:
     return f"{visual.rstrip('. ')}. {style}, {SUFFIX}"
 
 
+def _claim_hook_clip(job) -> dict | None:
+    """The hook beat's length is known (voice runs first); a Flow clip must cover it. None leaves the still pipeline unchanged."""
+    try:
+        beats = json.loads((job.dir / "voice.json").read_text(encoding="utf-8"))["beats"]
+        need = beats[0][1] - beats[0][0]
+    except (OSError, ValueError, KeyError, IndexError):
+        return None
+    got = flow.claim(job, need + 0.2)
+    if got:
+        events.emit("FLOW_CLIP_USED", job=job.id, source=got["source"], seconds=round(got["duration"], 1))
+    return got
+
+
 def run(job, script: dict) -> list[dict]:
     pillar = config.pillar(job.pillar)
     cfg = config.load()["images"]
 
     planned = cards.pick(script, None, job.pillar)     # numeric beats of card pillars: no image needed at all
+    hook_clip = _claim_hook_clip(job)                   # an owner-made Flow clip replaces the hook still
 
     def one(i_beat):
         i, beat = i_beat
         if i in planned:
             return {"beat": i, "provider": "card", "path": None, "prompt": "", "card": planned[i]}
+        if i == 0 and hook_clip:
+            return {"beat": 0, "provider": "clip", "path": hook_clip["frame"], "prompt": "", "clip": hook_clip["clip"]}
         seed = int(hashlib.sha1(f"{job.id}:{i}".encode()).hexdigest()[:8], 16) % 2_000_000_000
         prompt = build_prompt(beat["visual"] or beat["say"], pillar.style)
         provider, path = images.generate(prompt, seed=seed, hero=(i == 0), job=job.id)

@@ -2189,3 +2189,17 @@
 {"ts": "2026-10-07T09:43:15Z", "t": 1791366195.944, "actor": "engine", "type": "JOB_TRANSITION", "job": "2026-10-07-s8-escape-execution-over-education-why-ano", "to": "gated", "score": 95}
 {"ts": "2026-10-07T09:43:15Z", "t": 1791366195.945, "actor": "engine", "type": "JOB_TRANSITION", "job": "2026-10-07-s8-escape-execution-over-education-why-ano", "to": "packaged"}
 {"ts": "2026-10-07T09:43:15Z", "t": 1791366195.954, "actor": "engine", "type": "JOB_TRANSITION", "job": "2026-10-07-s8-escape-execution-over-education-why-ano", "to": "published", "local": "2026-10-08T18:30:00-04:00"}
+{"ts": "2026-10-07T12:35:33Z", "t": 1791376533.434, "actor": "engine", "type": "SCOUT_TOPUP", "pillar": "playbook", "added": 1}
+{"ts": "2026-10-07T12:40:05Z", "t": 1791376805.127, "actor": "engine", "type": "SCOUT_TOPUP", "pillar": "playbook", "added": 1}
+{"ts": "2026-10-07T12:40:11Z", "t": 1791376811.264, "actor": "engine", "type": "SCOUT_TOPUP", "pillar": "playbook", "added": 1}
+{"ts": "2026-10-07T12:42:17Z", "t": 1791376937.112, "actor": "engine", "type": "RENDERED", "job": "e2e-story", "video": "/tmp/claude-0/-home-user-agent-universe/f5601aee-9ad2-56f0-b555-f8765d1cb68d/scratchpad/e2e/out/2026-10-07/e2e-story/final.mp4", "cover": "/tmp/claude-0/-home-user-agent-universe/f5601aee-9ad2-56f0-b555-f8765d1cb68d/scratchpad/e2e/out/2026-10-07/e2e-story/cover.jpg", "shots": 3, "captioned_words": 1, "avg_shot": 3.0, "cards": 0, "clips": 1}
+{"ts": "2026-10-07T12:42:33Z", "t": 1791376953.424, "actor": "engine", "type": "SCOUT_TOPUP", "pillar": "playbook", "added": 1}
+{"ts": "2026-10-07T12:44:24Z", "t": 1791377064.794, "actor": "engine", "type": "CARDS_RENDERED", "job": "smoke", "cards": 4, "seconds": 12.0}
+{"ts": "2026-10-07T12:44:40Z", "t": 1791377080.783, "actor": "engine", "type": "SCOUT_TOPUP", "pillar": "playbook", "added": 1}
+{"ts": "2026-10-07T12:44:58Z", "t": 1791377098.292, "actor": "engine", "type": "SCOUT_TOPUP", "pillar": "playbook", "added": 1}
+{"ts": "2026-10-07T12:45:07Z", "t": 1791377107.308, "actor": "engine", "type": "SCOUT_TOPUP", "pillar": "playbook", "added": 1}
+{"ts": "2026-10-07T12:49:10Z", "t": 1791377350.726, "actor": "engine", "type": "SCOUT_TOPUP", "pillar": "playbook", "added": 1}
+{"ts": "2026-10-07T12:49:23Z", "t": 1791377363.803, "actor": "engine", "type": "SCOUT_TOPUP", "pillar": "playbook", "added": 1}
+{"ts": "2026-10-07T12:49:39Z", "t": 1791377379.486, "actor": "engine", "type": "SCOUT_TOPUP", "pillar": "playbook", "added": 1}
+{"ts": "2026-10-07T12:50:10Z", "t": 1791377410.427, "actor": "engine", "type": "SCOUT_TOPUP", "pillar": "playbook", "added": 1}
+{"ts": "2026-10-07T12:51:36Z", "t": 1791377496.023, "actor": "engine", "type": "SCOUT_TOPUP", "pillar": "playbook", "added": 1}
