@@ -18,6 +18,8 @@ python -m faceless forecast    # the math: next-batch cost, monthly cost, assump
 python -m faceless kit [day]   # repurposing kit per video (thread, LinkedIn, carousel, pin, newsletter item, audio); `kit --issue` compiles the week
 python -m faceless flow        # today's 3 Flow prompts for the owner; `flow status` shows the clip inbox
 python -m faceless products    # build + recalculate + verify the spreadsheet products, write shop listings
+python -m faceless autoresponder  # the 7-day Money Reset email sequence (numbers computed, rule-checked, import-ready)
+python -m faceless brandkit "<Name>" --tagline "..." --palette mint   # Fiverr brand-kit order; `--samples` rebuilds the gig gallery
 ```
 
 ## The gauntlet (portfolio.jsonl -> RANKING.md)

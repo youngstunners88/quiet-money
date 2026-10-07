@@ -199,6 +199,32 @@ def cmd_products(_args) -> int:
     return 1 if bad else 0
 
 
+def cmd_autoresponder(_args) -> int:
+    from faceless import autoresponder
+    for path in autoresponder.write():
+        print(path.relative_to(config.STUDIO) if hasattr(config, "STUDIO") else path)
+    return 0
+
+
+def cmd_brandkit(args) -> int:
+    from faceless import brandkit
+    if args.samples:
+        for r in brandkit.samples():
+            print(r["dir"])
+        print(brandkit.write_gig())
+        return 0
+    if not args.name:
+        print("give a channel name, or --samples")
+        return 2
+    try:
+        r = brandkit.build(args.name, args.tagline, args.palette, args.niche, [x.strip() for x in args.pills.split(",") if x.strip()], args.out)
+    except ValueError as e:
+        print(e)
+        return 2
+    print(r["dir"], "->", r["zip"])
+    return 0
+
+
 def cmd_forecast(_args) -> int:
     from faceless import forecast
     print(forecast.report())
@@ -314,6 +340,16 @@ def main(argv: list[str] | None = None) -> int:
     fl.add_argument("--day", help="YYYY-MM-DD (default today)")
     fl.set_defaults(fn=cmd_flow)
     sub.add_parser("products", help="build the spreadsheet products, recalculate them in LibreOffice, check against Python math, write listings").set_defaults(fn=cmd_products)
+    sub.add_parser("autoresponder", help="write the 7-day Money Reset email sequence (numbers computed, ready to import)").set_defaults(fn=cmd_autoresponder)
+    bk = sub.add_parser("brandkit", help="build a client brand kit (avatar, banner, watermark, share image, favicons, logo, BRAND.md) for the Fiverr service")
+    bk.add_argument("name", nargs="?", help="channel name (1-24 characters)")
+    bk.add_argument("--tagline", default="")
+    bk.add_argument("--palette", default="gold", help="gold | mint | coral | sky | violet | lime")
+    bk.add_argument("--niche", default="")
+    bk.add_argument("--pills", default="", help="comma list of up to 4 topic words for the banner")
+    bk.add_argument("--out", help="output folder")
+    bk.add_argument("--samples", action="store_true", help="(re)build the four gallery samples and GIG.md")
+    bk.set_defaults(fn=cmd_brandkit)
     sub.add_parser("forecast", help="the math: next batch cost, monthly cost, and assumption-labeled revenue ladder").set_defaults(fn=cmd_forecast)
     me = sub.add_parser("memory", help="search everything we've made (scripts, outcomes, failed gates)")
     me.add_argument("query", nargs="*")

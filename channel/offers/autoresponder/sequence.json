@@ -1,0 +1,74 @@
+[
+  {
+    "key": "welcome",
+    "day": 0,
+    "subject": "Your 7-day Money Reset starts now",
+    "preview": "One small box a day. Day 1 arrives tomorrow.",
+    "body": "Welcome.\n\nThis is the Money Reset: seven boxes, one a day, about 10 minutes each. In a week your money runs on rules instead of willpower.\n\nThe whole checklist is here if you like to see it all at once: https://youngstunners88.github.io/quiet-money/money-reset/\n\nTomorrow's box: find the leaks. Hit reply if you get stuck.",
+    "footer": "Educational content, not financial advice. Examples use assumed returns that are never guaranteed.\n\n{{postal_address}}\nYou joined the free Money Reset. Unsubscribe any time: {{unsubscribe_url}}",
+    "sign": "Quiet Money"
+  },
+  {
+    "key": "day1",
+    "day": 1,
+    "subject": "Day 1: find the leaks",
+    "preview": "A $15 subscription is $1,800 over 10 years.",
+    "body": "Open last month's bank and card statements. Highlight every subscription and recurring charge. Cancel at least one you forgot about.\n\nWhy it matters: a $15 a month subscription costs $1,800 over 10 years. Invested instead at an assumed 8% a year, that same $15 a month would be about $2,744. Small leaks are not small.\n\nToday's box: one cancellation. That is the whole job.",
+    "footer": "Educational content, not financial advice. Examples use assumed returns that are never guaranteed.\n\n{{postal_address}}\nYou joined the free Money Reset. Unsubscribe any time: {{unsubscribe_url}}",
+    "sign": "Quiet Money"
+  },
+  {
+    "key": "day2",
+    "day": 2,
+    "subject": "Day 2: pay yourself first",
+    "preview": "Saving what's left is why nothing is left.",
+    "body": "Open a separate savings account and set an automatic transfer for payday. Even $25.\n\nWhy it matters: $25 a month for 30 years at an assumed 8% a year grows to about $37,259, and you only put in $9,000. The amount matters less than the habit and the time.\n\nToday's box: the automatic transfer, set once.",
+    "footer": "Educational content, not financial advice. Examples use assumed returns that are never guaranteed.\n\n{{postal_address}}\nYou joined the free Money Reset. Unsubscribe any time: {{unsubscribe_url}}",
+    "sign": "Quiet Money"
+  },
+  {
+    "key": "day3",
+    "day": 3,
+    "subject": "Day 3: split every paycheck",
+    "preview": "50 / 30 / 20 in five minutes.",
+    "body": "Write your take-home pay. Then split it: 50% needs, 30% wants, 20% future.\n\nOn $4,000 a month that is $2,000 for needs, $1,200 for wants and $800 for your future. If your needs are over 50%, circle the biggest one. That is next month's project, not today's.\n\nToday's box: the three numbers on one piece of paper.",
+    "footer": "Educational content, not financial advice. Examples use assumed returns that are never guaranteed.\n\n{{postal_address}}\nYou joined the free Money Reset. Unsubscribe any time: {{unsubscribe_url}}",
+    "sign": "Quiet Money"
+  },
+  {
+    "key": "day4",
+    "day": 4,
+    "subject": "Day 4: attack the expensive debt first",
+    "preview": "Minimums are designed to last.",
+    "body": "List every debt with its interest rate. Put every extra dollar on the highest rate (avalanche) or the smallest balance (snowball). Pick one and stick to it.\n\nWhy it matters: $6,000 at 24% paid at a typical minimum takes about 21 years and costs $10,887 in interest. The minimum is not a plan.\n\nToday's box: the list, and one choice of method.",
+    "footer": "Educational content, not financial advice. Examples use assumed returns that are never guaranteed.\n\n{{postal_address}}\nYou joined the free Money Reset. Unsubscribe any time: {{unsubscribe_url}}",
+    "sign": "Quiet Money"
+  },
+  {
+    "key": "day5",
+    "day": 5,
+    "subject": "Day 5: build the $1,000 buffer",
+    "preview": "A surprise bill should not become a debt.",
+    "body": "Sell one thing you do not use, do a no-spend weekend, and park the cash in savings labeled emergencies only.\n\nWhy it matters: a $600 surprise put on a 24% card costs about $144 a year in interest while you carry it. A buffer turns a crisis into an inconvenience.\n\nToday's box: the first $100 of the $1,000. Start there.",
+    "footer": "Educational content, not financial advice. Examples use assumed returns that are never guaranteed.\n\n{{postal_address}}\nYou joined the free Money Reset. Unsubscribe any time: {{unsubscribe_url}}",
+    "sign": "Quiet Money"
+  },
+  {
+    "key": "day6",
+    "day": 6,
+    "subject": "Day 6: stop fee bleeding",
+    "preview": "Banks waive fees when you ask.",
+    "body": "Turn on low-balance and large-purchase alerts in your banking app. Then look at the last 90 days of fees and ask your bank: \"Can you waive this as a courtesy?\"\n\nWhy it matters: one $35 fee a quarter is $140 a year. Alerts stop most of them before they happen.\n\nToday's box: alerts on, and one phone call.",
+    "footer": "Educational content, not financial advice. Examples use assumed returns that are never guaranteed.\n\n{{postal_address}}\nYou joined the free Money Reset. Unsubscribe any time: {{unsubscribe_url}}",
+    "sign": "Quiet Money"
+  },
+  {
+    "key": "day7",
+    "day": 7,
+    "subject": "Day 7: lock in your raises",
+    "preview": "Decide now, while it is easy.",
+    "body": "Write this rule down: when income goes up, half the raise goes to savings before I see it. Put your money rules on one index card and keep it in your wallet.\n\nWhy it matters: on a $3,000 a year raise, half is $125 a month. Invested at an assumed 8% a year for 20 years it grows to about $73,628, and you never felt it leave.\n\nYou finished the Money Reset. Reply and tell me which box changed the most for you.",
+    "footer": "Educational content, not financial advice. Examples use assumed returns that are never guaranteed.\n\n{{postal_address}}\nYou joined the free Money Reset. Unsubscribe any time: {{unsubscribe_url}}",
+    "sign": "Quiet Money"
+  }
+]

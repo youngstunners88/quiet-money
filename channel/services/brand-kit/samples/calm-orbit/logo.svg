@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Calm Orbit">
+  <circle cx="256" cy="256" r="256" fill="#35E0A1"/>
+  <circle cx="256" cy="256" r="228" fill="none" stroke="#0B1613" stroke-opacity="0.35" stroke-width="9"/>
+  <text x="256" y="262" text-anchor="middle" dominant-baseline="central"
+        font-family="Montserrat, Arial Black, sans-serif" font-weight="900" font-size="250" fill="#0B1613">CO</text>
+</svg>

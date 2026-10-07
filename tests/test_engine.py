@@ -1052,3 +1052,99 @@ def test_escape_planner_has_no_hardcoded_results_and_the_disclaimer(tmp_path):
     assert all(str(n[f"B{r}"].value).startswith("=") for r in range(16, 26))       # every result is a formula
     assert "not financial advice" in wb["Start here"]["A19"].value
     assert wb.sheetnames == products.SHEETS
+
+
+# ---- autoresponder ----------------------------------------------------------------------------
+
+def test_autoresponder_numbers_come_from_moneymath_and_pass_its_own_rules():
+    from faceless import autoresponder, moneymath
+    es = autoresponder.emails()
+    assert [e["day"] for e in es] == list(range(8)) and autoresponder.problems(es) == []
+    text = " ".join(e["body"] for e in es)
+    n = autoresponder.numbers()
+    assert n["sub10"] == "$1,800" and n["needs"] == "$2,000" and n["half_raise"] == "$125"
+    assert moneymath.money(moneymath.future_value_monthly(25, 0.08, 30)) in text            # day 2, computed not typed
+    assert n["min_interest"] in text and n["min_years"] in text
+    assert all("{{unsubscribe_url}}" in e["footer"] and "{{postal_address}}" in e["footer"] for e in es)
+
+
+def test_autoresponder_rules_catch_hype_length_and_missing_footer():
+    from faceless import autoresponder
+    bad = {"key": "x", "day": 1, "subject": "S" * 61, "preview": "p", "body": "Guaranteed returns! " + "word " * 200, "footer": "none", "sign": "q"}
+    found = " | ".join(autoresponder.problems([bad]))
+    assert "subject over 60" in found and "words (limit 190)" in found and "banned phrase" in found and "footer lacks" in found
+
+
+def test_autoresponder_day7_mentions_the_planner_only_when_it_is_live(monkeypatch):
+    from faceless import autoresponder
+    assert "Escape Planner" not in autoresponder.emails()[-1]["body"]
+    cfg = config.load()
+    monkeypatch.setitem(cfg, "newsletter", {"planner_url": "https://example.com/p"})
+    assert "https://example.com/p" in autoresponder.emails()[-1]["body"]
+
+
+def test_debt_simulation_basics():
+    from faceless import product_debt as pd
+    debts = [("a", 1000, 0.24, 50), ("b", 500, 0.10, 25)]
+    av, sn = pd.simulate(debts, 100, "Avalanche"), pd.simulate(debts, 100, "Snowball")
+    assert av["plan_interest"] <= sn["plan_interest"] + 1e-9            # highest rate first never costs more interest
+    assert av["plan_months"] < av["base_months"] and av["plan_interest"] < av["base_interest"]
+    assert pd.simulate(debts, 0)["plan_months"] <= pd.simulate(debts, 0)["base_months"]
+    assert pd.simulate([("z", 0, 0.2, 10)], 50)["plan_months"] == 0     # nothing to pay
+    assert pd.expected_growth(0, 100, 0.08, 30)["value"] == pytest.approx(moneymath.future_value_monthly(100, 0.08, 30))
+
+
+def test_debt_planner_recalculates_to_the_python_simulation_for_both_methods(tmp_path):
+    from faceless import product_debt as pd
+    from faceless import products
+    first = pd.build_debt_planner(tmp_path / "a")
+    if products.recalc(first) is None:
+        pytest.skip("LibreOffice Calc not available")
+    res = pd.verify_debt(first)
+    assert res["errors"] == [] and res["ok"], res["rows"]
+    over = {"method": "Snowball", "extra": 75, "debts": [("Card", 2500, 0.2199, 80), ("", None, None, None), ("Zero", 0, 0.1, 0),
+                                                         ("Loan", 9000, 0.06, 180), ("Small", 400, 0.29, 25)]}
+    second = pd.build_debt_planner(tmp_path / "b", **over)
+    res2 = pd.verify_debt(second, **over)
+    assert res2["errors"] == [] and res2["ok"], res2["rows"]
+
+
+def test_debt_planner_flags_a_minimum_below_the_interest(tmp_path):
+    from faceless import product_debt as pd
+    from openpyxl import load_workbook
+    wb = load_workbook(pd.build_debt_planner(tmp_path, debts=[("Bad", 10000, 0.30, 100)]))
+    f = wb["1 Your debts"]["F4"].value
+    assert "below the monthly interest" in f and "N(D4)<N(B4)*N(C4)/12" in f
+
+
+# ---- brand kit service -------------------------------------------------------------------------
+
+def test_brandkit_names_are_validated_and_svg_is_escaped():
+    from faceless import brandkit
+    assert brandkit.clean("  Calm   Orbit ") == "Calm Orbit" and brandkit.monogram("Calm Orbit") == "CO" and brandkit.monogram("Zed") == "Z"
+    for bad in ("", "x" * 25, "<script>", "Quote\"Name", "Émile"):
+        with pytest.raises(ValueError):
+            brandkit.clean(bad)
+    svg = brandkit.logo_svg("R&D 'Labs'", brandkit.PALETTES["gold"])
+    assert "R&amp;D" in svg and "&#x27;Labs&#x27;" in svg and "<script" not in svg
+
+
+def test_brandkit_builds_every_file_at_exact_sizes_with_text_inside_the_safe_area(tmp_path):
+    from PIL import Image
+    from faceless import brandkit
+    for name, tag, pal in (("Calm Orbit", "Slow living for fast minds", "mint"), ("Iron Fork", "Cook it right, once and for all, every time", "coral"),
+                           ("A", "", "gold"), ("The Very Long Channel Nam", "x" * 60, "sky")):
+        if len(name) > 24:
+            name = name[:24]
+        r = brandkit.build(name, tag, pal, "niche", ["a", "b", "c", "d", "e"], out=tmp_path / name.replace(" ", "-"))
+        d = Path(r["dir"])
+        assert Image.open(d / "avatar.png").size == (800, 800) and Image.open(d / "banner-youtube.png").size == (2560, 1440)
+        assert Image.open(d / "og-image.png").size == (1200, 630) and Image.open(d / "watermark.png").size == (150, 150)
+        assert {"BRAND.md", "logo.svg", "favicon-512.png", "favicon-180.png", "favicon-32.png", "palette.png", "preview.png"} <= set(r["files"])
+        x0, y0, x1, y1 = r["text_box"]
+        left, top = (2560 - brandkit.SAFE_W) // 2, (1440 - brandkit.SAFE_H) // 2
+        assert x0 >= left and x1 <= left + brandkit.SAFE_W and y0 >= top and y1 <= top + brandkit.SAFE_H, (name, r["text_box"])
+        import zipfile
+        assert "preview.png" not in zipfile.ZipFile(r["zip"]).namelist()
+    with pytest.raises(ValueError):
+        brandkit.build("Ok Name", palette="neon", out=tmp_path / "x")

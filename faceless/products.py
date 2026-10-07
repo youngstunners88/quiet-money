@@ -336,7 +336,7 @@ def verify_escape(xlsx: Path) -> dict:
         rows.append((k, v, round(e[k], 4), good))
     errors = [f"{ws.title}!{c.coordinate}={c.value}" for ws in wb for row in ws.iter_rows() for c in row
               if isinstance(c.value, str) and c.value.startswith("#")]
-    return {"ok": bool(ok and not errors), "rows": rows, "errors": errors}
+    return {"ok": bool(ok and not errors), "rows": rows, "errors": errors, "calc": str(calc)}
 
 
 def previews(xlsx: Path, out: Path) -> list[Path]:
@@ -407,10 +407,17 @@ No income claims, no "get rich" promises, no testimonials we did not receive, no
 
 def build_all() -> dict:
     """Build every product, verify it, write previews and the listing. Returns a summary per product."""
-    dest = OUT / "rat-race-escape-planner"
-    xlsx = build_escape_planner(dest)
-    check = verify_escape(xlsx)
-    prev = previews(xlsx, dest) if check["ok"] else []
-    (dest / "LISTING.md").write_text(listing_escape(), encoding="utf-8")
-    return {"rat-race-escape-planner": {"file": str(xlsx), "verified": check["ok"], "rows": check["rows"], "errors": check["errors"],
-                                        "previews": len(prev)}}
+    from faceless import product_debt
+    registry = [("rat-race-escape-planner", build_escape_planner, verify_escape, listing_escape),
+                ("debt-payoff-planner", product_debt.build_debt_planner, product_debt.verify_debt, product_debt.listing)]
+    out = {}
+    for slug, build, verify, listing in registry:
+        dest = OUT / slug
+        xlsx = build(dest)
+        check = verify(xlsx)
+        if check["ok"]:      # ship the recalculated file: same sheets, validation and charts, plus cached values so previewers show numbers
+            shutil.copy2(check["calc"], xlsx)
+        prev = previews(xlsx, dest) if check["ok"] else []
+        (dest / "LISTING.md").write_text(listing(), encoding="utf-8")
+        out[slug] = {"file": str(xlsx), "verified": check["ok"], "rows": check["rows"], "errors": check["errors"], "previews": len(prev)}
+    return out

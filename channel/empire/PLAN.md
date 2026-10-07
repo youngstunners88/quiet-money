@@ -49,13 +49,14 @@ live) is the first unlock and the list the second.
 
 ## Sequence
 **Phase 0, now (no owner needed): done or in the repo.** Daily factory, website, repurposing kit, Flow lane, motion-card
-variety, the Rat Race Escape Planner (recalculated in a real spreadsheet engine and matched to independent math),
-newsletter compiler, empire gauntlet, forecast.
+variety, two spreadsheet products (Rat Race Escape Planner and Debt Payoff & Compound Interest Planner, each recalculated in a
+real spreadsheet engine and matched to independent math), the 7-day Money Reset autoresponder (every number computed), the
+newsletter compiler, the Fiverr brand-kit engine with gallery samples, the empire gauntlet and the forecast.
 **Phase 1, week 1 (owner, about 30 minutes):** create the channels and connect posting; pay $5 for Cloudflare Workers.
 Result: 5 videos a day actually post, with enough image supply for every one.
 **Phase 2, weeks 2-4:** open a Gumroad shop, list the planner (price test $12 / $19 / $29); pick an email service, a
 domain and a postal address, start the 7-day autoresponder and the weekly issue. The agent builds the next unblocked item
-each week (autoresponder, debt-payoff planner, brand-kit generator, printable pack).
+each week (next: printable pack, audio edition, weekly long-form, studio mode).
 **Phase 3, month 2+:** Fiverr gig for the brand kit, weekly long-form compilation, podcast edition, Etsy for printables.
 **Phase 4, by evidence:** every item moves up only when its metric beats its kill rule for 4 weeks; otherwise it is killed
 and the reason is written in `RANKING.md`.
