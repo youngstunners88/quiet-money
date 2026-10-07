@@ -1,0 +1,71 @@
+{
+  "id": "2026-10-07-s6-myth-myth-you-can-time-the-stock-mark",
+  "pillar": "myth",
+  "topic": "Myth: you can time the stock market",
+  "day": "2026-10-07",
+  "slot": 6,
+  "status": "published",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-07T09:31:54Z",
+      "words": 167
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-07T09:32:22Z",
+      "seconds": 63.768,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-07T09:33:01Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-07T09:34:32Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-07T09:34:32Z",
+      "score": 98
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-07T09:34:32Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-10-07T09:34:32Z",
+      "local": "2026-10-08T11:30:00-04:00"
+    }
+  ],
+  "artifacts": {
+    "angle": "missing the best days; time in the market",
+    "title": "The Timing Myth That Destroys Wealth",
+    "video": "/home/user/quiet-money/production/output/2026-10-07/2026-10-07-s6-myth-myth-you-can-time-the-stock-mark/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-07/2026-10-07-s6-myth-myth-you-can-time-the-stock-mark/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-10-08/slot2-myth",
+        "post_at": "2026-10-08T11:30:00-04:00"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 98,
+    "passed": true
+  },
+  "cost": {
+    "tts:edge:chars": 970
+  },
+  "notes": []
+}

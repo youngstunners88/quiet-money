@@ -1,0 +1,72 @@
+{
+  "id": "2026-10-07-s8-escape-execution-over-education-why-ano",
+  "pillar": "escape",
+  "topic": "Execution over education: why another course won't free you",
+  "day": "2026-10-07",
+  "slot": 8,
+  "status": "published",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-07T09:40:20Z",
+      "words": 166
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-07T09:40:51Z",
+      "seconds": 63.144,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-07T09:41:07Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-07T09:43:15Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-07T09:43:15Z",
+      "score": 95
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-07T09:43:15Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-10-07T09:43:15Z",
+      "local": "2026-10-08T18:30:00-04:00"
+    }
+  ],
+  "artifacts": {
+    "angle": "learning can become a hiding place; act, measure, repeat",
+    "brief": "pena",
+    "title": "Why Another Course Won't Free You",
+    "video": "/home/user/quiet-money/production/output/2026-10-07/2026-10-07-s8-escape-execution-over-education-why-ano/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-07/2026-10-07-s8-escape-execution-over-education-why-ano/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-10-08/slot4-escape",
+        "post_at": "2026-10-08T18:30:00-04:00"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 95,
+    "passed": true
+  },
+  "cost": {
+    "tts:edge:chars": 985
+  },
+  "notes": []
+}

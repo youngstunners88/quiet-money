@@ -1,0 +1,96 @@
+{
+  "title": "The Billion-Dollar Debt Trap",
+  "hook_text": "THE $1 BILLION DEBT TRAP",
+  "beats": [
+    {
+      "say": "One famous author holds $1 billion in debt and calls it a winning strategy.",
+      "callout": "",
+      "visual": "Cinematic shot of a man's hands in a dark suit holding a pen over a massive stack of loan documents, dramatic side lighting."
+    },
+    {
+      "say": "But the system he used to escape the rat race has a hidden trap.",
+      "callout": "THE TRAP",
+      "visual": "A close-up of a vintage rat running on a metal wheel, dark moody background, shallow depth of field."
+    },
+    {
+      "say": "He divides debt into two categories: things that pay you, and things that cost you.",
+      "callout": "ASSET VS LIABILITY",
+      "visual": "A heavy iron scale balancing a green ledger on one side and a stack of luxury shopping bags on the other."
+    },
+    {
+      "say": "Bad debt buys cars and clothes that lose value the second you swipe your card.",
+      "callout": "BAD DEBT",
+      "visual": "The back of a luxury sports car driving down a wet city street at night, neon lights reflecting on the pavement."
+    },
+    {
+      "say": "Good debt buys assets like real estate, using other people's money to build your wealth.",
+      "callout": "GOOD DEBT",
+      "visual": "A low-angle shot of a classic brick apartment building under a gloomy sky, warm light coming from a few windows."
+    },
+    {
+      "say": "This is called financial leverage, and the math looks incredibly simple on paper.",
+      "callout": "",
+      "visual": "Hands spinning a high-end architectural model of a skyscraper, moody architectural studio setting."
+    },
+    {
+      "say": "But here's the part the gurus leave out: leverage works both ways.",
+      "callout": "",
+      "visual": "A dramatic shot of a close-up of a sharp metal blade reflecting light, dark background."
+    },
+    {
+      "say": "Imagine buying a $100,000 property with $20,000 down. That's 5x leverage.",
+      "callout": "$100,000",
+      "visual": "A hand putting a single stack of $100 bills on a clean wooden table next to a tiny house model."
+    },
+    {
+      "say": "If the market goes up 20%, you double your money before fees.",
+      "callout": "",
+      "visual": "A close-up of a green graph line rising on a dark glass surface, out of focus city lights in the background."
+    },
+    {
+      "say": "But if the property price drops just 20%, your entire down payment is wiped out.",
+      "callout": "-100% WIPEOUT",
+      "visual": "A hand knocking over a small house model on a dark table, pieces scattering, high contrast lighting."
+    },
+    {
+      "say": "In 2012, even his own company filed for bankruptcy after a $23.7 million court ruling.",
+      "callout": "$23.7 MILLION",
+      "visual": "A vintage metal bankruptcy court sign mounted on a dark marble wall, moody lighting."
+    },
+    {
+      "say": "Debt is a power tool, not a safety net. Follow us to learn the rules...",
+      "callout": "",
+      "visual": "A close-up of a hand holding a heavy steel wrench on a dark industrial workbench."
+    },
+    {
+      "say": "...of the money game school never taught you, especially when you realize that...",
+      "callout": "",
+      "visual": "A silhouette of a person looking out of a high-rise office window at a sprawling city at dusk."
+    }
+  ],
+  "caption": "Debt can build empires or crush them. Here is the math of leverage they never taught you in school. #personalfinance #debtfree #investing #moneyrules #financialliteracy",
+  "description": "An analysis of good debt versus bad debt, using the math of financial leverage. While borrowing to buy assets can accelerate wealth, a small market drop can wipe out your entire investment.",
+  "hashtags": [
+    "#personalfinance",
+    "#debtfree",
+    "#investing",
+    "#moneyrules"
+  ],
+  "first_comment": "Would you ever use 5x leverage to buy an asset, or is the risk too high?",
+  "facts": [
+    {
+      "claim": "One famous author holds $1 billion in debt and calls it a winning strategy.",
+      "basis": "Robert Kiyosaki self-reported having over $1 billion in debt in January 2024."
+    },
+    {
+      "claim": "A $100,000 property bought with $20,000 down is 5x leverage.",
+      "basis": "Fact sheet leverage math: $100,000 property with $20,000 down is 5x leverage."
+    },
+    {
+      "claim": "In 2012, even his own company filed for bankruptcy after a $23.7 million court ruling.",
+      "basis": "Robert Kiyosaki's company Rich Global LLC filed for bankruptcy in 2012 after a $23.7 million court order to The Learning Annex."
+    }
+  ],
+  "source": "llm",
+  "pillar": "escape"
+}

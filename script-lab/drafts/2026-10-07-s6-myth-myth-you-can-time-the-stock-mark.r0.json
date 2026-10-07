@@ -1,0 +1,93 @@
+{
+  "title": "Why Timing the Stock Market Destroys Your Wealth",
+  "hook_text": "TRYING TO TIME THE MARKET DESTROYS WEALTH",
+  "beats": [
+    {
+      "say": "Trying to time the stock market is a game you're designed to lose.",
+      "callout": "",
+      "visual": "A lone silhouette of a person standing on a glass skyscraper rooftop looking down at a foggy city at dusk, moody cinematic lighting, back view"
+    },
+    {
+      "say": "Most people think they can buy low and sell high.",
+      "callout": "BUY LOW, SELL HIGH?",
+      "visual": "Close-up of human hands shuffling a deck of weathered playing cards on a dark wooden table, dim overhead lamp"
+    },
+    {
+      "say": "If you miss just a few best days, your returns plummet.",
+      "callout": "MISSING THE BEST DAYS",
+      "visual": "An old brass desk clock ticking away time on a minimalist concrete shelf, sharp focus, blurry background"
+    },
+    {
+      "say": "Time in the market beats timing the market every single time.",
+      "callout": "TIME IN THE MARKET",
+      "visual": "A rusted pocket watch resting on a stack of dusty hardcover books, dramatic side lighting"
+    },
+    {
+      "say": "Let's look at the actual math behind steady, long-term compounding.",
+      "callout": "THE ACTUAL MATH",
+      "visual": "A person's hands turning the heavy yellowed pages of a large ledger on a dark mahogany desk"
+    },
+    {
+      "say": "Investing $200 a month at 8% a year for 30 years yields $298,072.",
+      "callout": "$298,072 AFTER 30 YEARS",
+      "visual": "A ceramic coffee mug sitting on a dark oak desk next to a blank leather notebook, morning light"
+    },
+    {
+      "say": "Wait, let's look at what happens if you delay that plan.",
+      "callout": "BUT WAIT",
+      "visual": "A close-up of a hand sliding a dark wooden chess piece on a board, cinematic shadows"
+    },
+    {
+      "say": "Starting 10 years late costs you $400,130 in final wealth.",
+      "callout": "COSTS YOU $400,130",
+      "visual": "A vintage hourglass sitting on a reflective glass table, sand pouring slowly into the bottom bulb"
+    },
+    {
+      "say": "That's the brutal penalty of waiting for the right moment.",
+      "callout": "",
+      "visual": "Silhouette of a person walking away down a long empty industrial hallway with soft overhead lights"
+    },
+    {
+      "say": "The right moment is simply whenever you start putting cash to work.",
+      "callout": "",
+      "visual": "A hand dropping a single metal coin into a heavy glass jar on a rustic wooden shelf"
+    },
+    {
+      "say": "Automate your investments, ignore the daily panic, and let math do the heavy lifting.",
+      "callout": "",
+      "visual": "A close-up of fingers typing on a mechanical keyboard with a warm amber glow from a desk lamp"
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "A person's hand closing a dark leather-bound journal on a quiet wooden table, soft shadows"
+    },
+    {
+      "say": "Trying to time the stock market is a game",
+      "callout": "",
+      "visual": "An overhead shot of a single empty wooden chair in the center of a minimalist room with warm light"
+    }
+  ],
+  "caption": "Trying to time the market feels smart, but missing the best days ruins your returns. Time in the market always wins. #personalfinance #investing #moneytips #wealthbuilding #finance",
+  "description": "Market timing is a trap. Here is why staying invested consistently beats trying to pick the perfect entry and exit points.",
+  "hashtags": [
+    "#personalfinance",
+    "#investing",
+    "#moneytips",
+    "#wealthbuilding",
+    "#finance"
+  ],
+  "first_comment": "What is the hardest part about staying invested during a market drop?",
+  "facts": [
+    {
+      "claim": "$200/month invested for 30 years at 8%/yr equals $298,072",
+      "basis": "Fact sheet: $200/month invested for 30 years at 8%/yr (monthly compounding) = $298,072"
+    },
+    {
+      "claim": "Starting at 25 vs 35 with $200/month at 8% until 65 costs $400,130",
+      "basis": "Fact sheet: Starting at 25 vs 35 with $200/month at 8% until 65: $698,202 vs $298,072 (10 years late costs $400,130)"
+    }
+  ],
+  "source": "llm",
+  "pillar": "myth"
+}

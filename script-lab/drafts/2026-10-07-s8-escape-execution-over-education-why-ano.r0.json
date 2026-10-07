@@ -1,0 +1,84 @@
+{
+  "title": "Why Another Course Won't Free You",
+  "hook_text": "STOP BUYING ANOTHER COURSE",
+  "beats": [
+    {
+      "say": "Stop buying another course.",
+      "callout": "",
+      "visual": "A silhouette of a person sitting in front of a dark glowing laptop screen in a quiet room, cinematic lighting, wide shot."
+    },
+    {
+      "say": "Learning has become a hiding place.",
+      "callout": "THE HIDING PLACE",
+      "visual": "A towering stack of thick textbooks and notebooks on a heavy oak desk, moody side lighting, macro lens, shallow depth of field."
+    },
+    {
+      "say": "You think studying equals progress.",
+      "callout": "",
+      "visual": "A hand holding a red highlighter, hovering over a printed page of notes, dimly lit home office, overhead shot."
+    },
+    {
+      "say": "It doesn't.",
+      "callout": "ZERO ACTION",
+      "visual": "A blank white notebook lying open on a dark wood table with a single black pen beside it, minimalist composition."
+    },
+    {
+      "say": "Real wealth comes from execution over education.",
+      "callout": "EXECUTION WINS",
+      "visual": "A person walking down a long concrete hallway toward a bright exit door, back to camera, cinematic framing."
+    },
+    {
+      "say": "An extra $1,000 a month invested at 8% for 10 years reaches $182,946.",
+      "callout": "$182,946",
+      "visual": "A close-up shot of a mechanical calculator on a dark slate surface, dramatic shadows, shallow focus."
+    },
+    {
+      "say": "That math takes action, not a diploma.",
+      "callout": "",
+      "visual": "A hand typing numbers on a vintage mechanical adding machine, black and white tones, high contrast."
+    },
+    {
+      "say": "Here's the rule: act, measure, repeat.",
+      "callout": "ACT. MEASURE. REPEAT.",
+      "visual": "A wall clock ticking in a quiet room, motion blur on the second hand, dark moody interior, side profile."
+    },
+    {
+      "say": "Stop planning and test your offer in the real world.",
+      "callout": "",
+      "visual": "A closed wooden door with morning sunlight streaming through the gap underneath, cinematic low angle."
+    },
+    {
+      "say": "The honest catch? Deals fail and execution is exhausting.",
+      "callout": "THE HONEST CATCH",
+      "visual": "A worn leather briefcase resting on a concrete floor next to a brick wall, natural side light."
+    },
+    {
+      "say": "You'll face rejection before you see a single dollar.",
+      "callout": "",
+      "visual": "A hand sliding a blank white card across a dark wooden table, slow motion, macro shot."
+    },
+    {
+      "say": "Follow for the money rules school never taught you, and that's exactly how",
+      "callout": "FOLLOW FOR MORE",
+      "visual": "A winding asphalt road disappearing into a foggy horizon at dawn, epic drone shot looking straight down."
+    }
+  ],
+  "caption": "Stop hiding behind tutorials. Execution builds wealth. #moneypsychology #personalfinance #wealthbuilding #sidehustle #financialfreedom",
+  "description": "Learning can become a safe hiding place from actual execution. Stop buying courses and start building your financial future.",
+  "hashtags": [
+    "#moneypsychology",
+    "#personalfinance",
+    "#wealthbuilding",
+    "#sidehustle",
+    "#financialfreedom"
+  ],
+  "first_comment": "What course are you currently stuck in right now?",
+  "facts": [
+    {
+      "claim": "$1,000/month invested at 8% for 10 years equals $182,946",
+      "basis": "Fact sheet: An extra $1,000/month from a side income, invested at 8% for 10 years = $182,946 (you put in $120,000)"
+    }
+  ],
+  "source": "llm",
+  "pillar": "escape"
+}

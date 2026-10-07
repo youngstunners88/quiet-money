@@ -1,0 +1,93 @@
+{
+  "title": "Stop Overdraft Fees With 3 Bank Alerts",
+  "hook_text": "STOP PAYING YOUR BANK $35 OVERDRAFT FEES",
+  "beats": [
+    {
+      "say": "Stop paying your bank 35 dollar fees for mistakes you can fix today.",
+      "callout": "",
+      "visual": "Cinematic shot of a dark ATM keypad under harsh fluorescent light, side angle."
+    },
+    {
+      "say": "Banks love low balances because it prints cash for them. You are going to shut that down.",
+      "callout": "FREE SETUP",
+      "visual": "Close-up of a closed leather wallet resting on a dark mahogany table, moody shadows."
+    },
+    {
+      "say": "Step one. Open your mobile app and find the alert settings right now.",
+      "callout": "STEP 1",
+      "visual": "Hands holding a smartphone viewed from behind over the shoulder, screen blurred out."
+    },
+    {
+      "say": "Turn on low balance alerts and set the trigger to 100 dollars.",
+      "callout": "SET $100",
+      "visual": "A ceramic coffee mug sitting on a wooden desk next to a closed notebook, soft morning light."
+    },
+    {
+      "say": "That gives you a buffer before your card gets declined at the register.",
+      "callout": "THE BUFFER",
+      "visual": "A metal grocery basket resting on a polished concrete floor in an empty aisle."
+    },
+    {
+      "say": "Step two. Set a large purchase alert for anything over 50 dollars.",
+      "callout": "STEP 2",
+      "visual": "A brass key resting on a heavy oak countertop, dramatic top-down lighting."
+    },
+    {
+      "say": "This catches impulse buys the exact second you tap your plastic.",
+      "callout": "INSTANT STOP",
+      "visual": "A dark silhouette of a person walking down an empty hallway, long shadows."
+    },
+    {
+      "say": "Step three. Turn on deposit alerts so you know when your paycheck actually clears.",
+      "callout": "STEP 3",
+      "visual": "A fountain pen resting on top of a blank piece of thick paper, macro shot."
+    },
+    {
+      "say": "That stops you from guessing your cash flow during tight weeks.",
+      "callout": "",
+      "visual": "A classic analog wall clock ticking in a quiet room, blurred background."
+    },
+    {
+      "say": "But here is the part most people miss.",
+      "callout": "",
+      "visual": "A single drop of water hitting a dark glass surface, high speed macro shot."
+    },
+    {
+      "say": "Alerts do not just warn you. They rewire your brain to pay attention to numbers.",
+      "callout": "",
+      "visual": "A vintage metal desk lamp casting a warm glow on an empty wooden table."
+    },
+    {
+      "say": "Take five minutes to set these up today and keep your hard earned cash where it belongs",
+      "callout": "",
+      "visual": "A closed front door viewed from the inside of a quiet apartment, warm light."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "A sleek modern staircase curving upward into shadows, architectural minimalism."
+    }
+  ],
+  "caption": "Three quick alert settings keep your bank from robbing you blind. Follow for the money rules school never taught you. #personalfinance #moneytips #savingmoney #budgeting #finance",
+  "description": "Stop losing money to overdraft fees. Turn on these three free bank alerts today to take back control of your cash flow.",
+  "hashtags": [
+    "#personalfinance",
+    "#moneytips",
+    "#savingmoney",
+    "#budgeting",
+    "#finance"
+  ],
+  "first_comment": "Which bank alert saved you the most money this month?",
+  "facts": [
+    {
+      "claim": "Overdraft fees cost around $35 per occurrence",
+      "basis": "Standard banking industry average fee structure"
+    },
+    {
+      "claim": "Setting alerts takes under 5 minutes",
+      "basis": "Typical mobile banking app navigation time"
+    }
+  ],
+  "source": "llm",
+  "pillar": "playbook"
+}

@@ -1,0 +1,88 @@
+{
+  "title": "The Subscription Creep Costing You Thousands",
+  "hook_text": "YOUR $15 SUBSCRIPTION IS COSTING YOU MORE",
+  "beats": [
+    {
+      "say": "That $15 monthly subscription isn't just $15. It's a slow leak draining your net worth.",
+      "callout": "",
+      "visual": "A single credit card resting on a dark wooden table, cinematic side lighting."
+    },
+    {
+      "say": "Most people ignore it because it's cheap. But let's look at the actual math over time.",
+      "callout": "$15 / month",
+      "visual": "A minimalist workspace with a coffee cup and a closed laptop, moody shadows."
+    },
+    {
+      "say": "A $15 per month subscription for 10 years adds up to $1,800 out of your pocket.",
+      "callout": "$1,800 cash",
+      "visual": "A stack of plain receipts neatly clipped together, shot from a high angle."
+    },
+    {
+      "say": "That's just the cash you hand over. What if you didn't spend it at all?",
+      "callout": "",
+      "visual": "A hand sliding a silver pen across a clean planner page, soft blur."
+    },
+    {
+      "say": "Let's test a different number from the math books. A $5 a day habit equals $1,825 a year.",
+      "callout": "$1,825 yearly",
+      "visual": "A lone metal key resting on a heavy concrete surface, dramatic contrast."
+    },
+    {
+      "say": "If you invest that same amount monthly at 8% for 30 years, it turns into $226,659.",
+      "callout": "$226,659 total",
+      "visual": "An open window with morning sunlight casting long bars across a wooden floor."
+    },
+    {
+      "say": "Subscriptions creep into your life quietly. You sign up and forget they exist.",
+      "callout": "",
+      "visual": "A dark smartphone screen reflecting faint blue light in a quiet room."
+    },
+    {
+      "say": "Before you know it, you're paying for five apps you haven't opened in months.",
+      "callout": "5 hidden apps",
+      "visual": "A person's hands scrolling through a blank screen on a modern device, dark tone."
+    },
+    {
+      "say": "That's hundreds of dollars vanishing every single year for digital air.",
+      "callout": "",
+      "visual": "A glass of water sitting near the edge of a desk, shallow depth of field."
+    },
+    {
+      "say": "Open your bank app right now and cancel every service you haven't used this week.",
+      "callout": "Audit today",
+      "visual": "A close-up of fingers typing on a dark mechanical keyboard."
+    },
+    {
+      "say": "Keep your cash working for you instead of paying for someone else's passive income.",
+      "callout": "",
+      "visual": "A small potted plant sitting on a windowsill against a grey sky."
+    },
+    {
+      "say": "Follow for the money rules school never taught you, because that's exactly how",
+      "callout": "Follow us",
+      "visual": "A hand turning off a brass desk lamp, plunging the room into soft shadows."
+    }
+  ],
+  "caption": "Subscription creep is stealing your future wealth one tiny charge at a time. Time to audit your bank statement. #SubscriptionCreep #PersonalFinance #MoneyTips #WealthBuilding",
+  "description": "Small recurring charges drain thousands over a decade. Learn the real math behind subscription creep and why you need to audit your monthly expenses today.",
+  "hashtags": [
+    "#SubscriptionCreep",
+    "#PersonalFinance",
+    "#MoneyTips",
+    "#WealthBuilding",
+    "#QuietMoney"
+  ],
+  "first_comment": "How many active subscriptions are on your bank statement right now?",
+  "facts": [
+    {
+      "claim": "A $15/month subscription for 10 years = $1,800",
+      "basis": "15 * 12 * 10 = 1,800"
+    },
+    {
+      "claim": "$5/day habit = $1,825/year; invested monthly at 8% for 30 years = $226,659",
+      "basis": "Provided in MONEY FACT SHEET"
+    }
+  ],
+  "source": "llm",
+  "pillar": "math"
+}

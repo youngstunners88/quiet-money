@@ -1,0 +1,87 @@
+{
+  "title": "The Timing Myth That Destroys Wealth",
+  "hook_text": "BUYING THE DIP RUINS YOU",
+  "beats": [
+    {
+      "say": "You're waiting for the stock market to crash so you can finally buy the dip.",
+      "callout": "",
+      "visual": "Cinematic side profile of a silhouette standing before a massive dark window overlooking rainy city skyscrapers at dusk."
+    },
+    {
+      "say": "That single belief feels disciplined, but it's mathematically proven to destroy your wealth.",
+      "callout": "WEALTH KILLER",
+      "visual": "A vintage brass balance scale tipping sharply to one side on a polished mahogany desk in warm directional light."
+    },
+    {
+      "say": "According to JP Morgan, missing just the 10 best days over 20 years cuts your returns in half.",
+      "callout": "CUTS IN HALF",
+      "visual": "A calendar resting on a dark walnut table, dramatic shaft of sunlight illuminating pages slowly peeling forward."
+    },
+    {
+      "say": "Here's the trap: the market's best days almost always happen right in the middle of severe panics.",
+      "callout": "",
+      "visual": "An antique bronze compass spinning rapidly on a dark weathered nautical chart, moody cinematic side lighting."
+    },
+    {
+      "say": "If you panic-sell or sit on cash waiting for clarity, you miss those violent rebound surges entirely.",
+      "callout": "MISSED SURGES",
+      "visual": "A silhouette of hands nervously counting paper money beneath the glow of a single dim desk lamp."
+    },
+    {
+      "say": "But here's the part nobody mentions.",
+      "callout": "",
+      "visual": "Cinematic close-up of an old brass key resting on dark weathered stone, dramatic contrast and deep shadows."
+    },
+    {
+      "say": "While you're sitting on the sidelines for the perfect moment, inflation eats your cash every single month.",
+      "callout": "INFLATION EATS CASH",
+      "visual": "A glass hourglass half-filled with dark sand on a black reflective surface, sand steadily trickling down."
+    },
+    {
+      "say": "Remember, $100 today has the buying power of just $55 after 20 years of 3% inflation.",
+      "callout": "$100 BECOMES $55",
+      "visual": "A leather wallet lying slightly open on an empty table under cold blue directional light."
+    },
+    {
+      "say": "Meanwhile, investing $200 a month for 30 years at 8% grows into $298,072 quietly in the background.",
+      "callout": "$298,072",
+      "visual": "A heavy steel bank vault door securely shut, bathed in moody golden accent light from above."
+    },
+    {
+      "say": "You didn't need to predict a single headline to build that pile; you just stayed in the room.",
+      "callout": "TIME IN MARKET",
+      "visual": "A lone silhouette walking down a long, dimly lit marble corridor with towering stone columns."
+    },
+    {
+      "say": "Follow for the money rules school never taught you, especially when you think...",
+      "callout": "",
+      "visual": "A solitary silver pocket watch ticking steadily against a dark slate backdrop, shallow depth of field."
+    }
+  ],
+  "caption": "Trying to time the market destroys your returns. Time in the market beats timing every single time.\n\n#money #investing #personalfinance #wealthmindset #stocks",
+  "description": "Waiting to buy the dip feels smart, but missing the market's best days cuts long-term returns in half. Consistent investing and time in the market beat market timing every time.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#investing",
+    "#stockmarket",
+    "#wealthbuilding"
+  ],
+  "first_comment": "Have you ever held cash waiting for a crash, or do you invest automatically every month?",
+  "facts": [
+    {
+      "claim": "Missing the 10 best days over 20 years cuts returns in half.",
+      "basis": "JP Morgan Asset Management Guide to the Markets (20-year annualized return analysis: S&P 500 missing top 10 days cut total returns by approximately 50%)."
+    },
+    {
+      "claim": "$100 today is worth $55 in buying power after 20 years of 3% inflation.",
+      "basis": "Fact sheet: '$100 today is worth $55 in buying power after 20 years of 3% inflation'."
+    },
+    {
+      "claim": "Investing $200 a month for 30 years at 8% compounds to $298,072.",
+      "basis": "Fact sheet: '$200/month invested for 30 years at 8%/yr (monthly compounding) = $298,072 (you put in $72,000)'."
+    }
+  ],
+  "source": "llm",
+  "pillar": "myth"
+}

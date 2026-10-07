@@ -1,0 +1,71 @@
+{
+  "id": "2026-10-07-s7-playbook-turn-on-these-3-free-bank-alerts",
+  "pillar": "playbook",
+  "topic": "Turn on these 3 free bank alerts to stop overdraft fees",
+  "day": "2026-10-07",
+  "slot": 7,
+  "status": "published",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-07T09:34:53Z",
+      "words": 165
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-07T09:35:16Z",
+      "seconds": 63.603,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-07T09:35:30Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-07T09:37:03Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-07T09:37:03Z",
+      "score": 90
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-07T09:37:03Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-10-07T09:37:03Z",
+      "local": "2026-10-08T15:00:00-04:00"
+    }
+  ],
+  "artifacts": {
+    "angle": "low balance, large purchase, deposit alerts",
+    "title": "Stop Overdraft Fees With 3 Bank Alerts",
+    "video": "/home/user/quiet-money/production/output/2026-10-07/2026-10-07-s7-playbook-turn-on-these-3-free-bank-alerts/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-07/2026-10-07-s7-playbook-turn-on-these-3-free-bank-alerts/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-10-08/slot3-playbook",
+        "post_at": "2026-10-08T15:00:00-04:00"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 90,
+    "passed": true
+  },
+  "cost": {
+    "tts:edge:chars": 902
+  },
+  "notes": []
+}

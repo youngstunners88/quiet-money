@@ -1,0 +1,72 @@
+{
+  "id": "2026-10-07-s4-escape-good-debt-vs-bad-debt-and-the-ca",
+  "pillar": "escape",
+  "topic": "Good debt vs bad debt, and the catch",
+  "day": "2026-10-07",
+  "slot": 4,
+  "status": "published",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-07T09:19:51Z",
+      "words": 179
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-07T09:20:26Z",
+      "seconds": 63.84,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-07T09:21:40Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-07T09:24:14Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-07T09:24:14Z",
+      "score": 96
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-07T09:24:14Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-10-07T09:24:14Z",
+      "local": "2026-10-07T21:00:00-04:00"
+    }
+  ],
+  "artifacts": {
+    "angle": "debt that buys income vs debt that buys stuff; leverage magnifies losses too",
+    "brief": "kiyosaki",
+    "title": "The Billion-Dollar Debt Trap",
+    "video": "/home/user/quiet-money/production/output/2026-10-07/2026-10-07-s4-escape-good-debt-vs-bad-debt-and-the-ca/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-07/2026-10-07-s4-escape-good-debt-vs-bad-debt-and-the-ca/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-10-07/slot5-escape",
+        "post_at": "2026-10-07T21:00:00-04:00"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 96,
+    "passed": true
+  },
+  "cost": {
+    "tts:edge:chars": 999
+  },
+  "notes": []
+}

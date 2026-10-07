@@ -1,0 +1,84 @@
+{
+  "title": "Why Timing the Stock Market Destroys Your Wealth",
+  "hook_text": "YOU CANNOT TIME THE MARKET",
+  "beats": [
+    {
+      "say": "You think you can time the stock market.",
+      "callout": "",
+      "visual": "A cinematic shot of a dark room illuminated only by the faint, blue glow of a blank computer monitor on a wooden desk."
+    },
+    {
+      "say": "You wait for the dip, but you are playing a losing game.",
+      "callout": "LOSING GAME",
+      "visual": "A close-up of a hand resting on a closed laptop, shot from a high angle with moody, low-key lighting."
+    },
+    {
+      "say": "The data proves that missing just a few top days ruins your returns.",
+      "callout": "TOP DAYS",
+      "visual": "A stack of old financial papers on a dark marble table, slightly out of focus in the background."
+    },
+    {
+      "say": "Try to jump in and out, and you will miss the biggest gains entirely.",
+      "callout": "",
+      "visual": "A black coffee mug sitting next to a dark window on a rainy afternoon, cinematic shadows."
+    },
+    {
+      "say": "Look at what happens over long stretches of patience.",
+      "callout": "LONG HORIZON",
+      "visual": "An empty wooden hallway with harsh light slicing across the floorboards from a side door."
+    },
+    {
+      "say": "If you invest $200 a month at 8% for 40 years, you reach $698,202.",
+      "callout": "$698,202",
+      "visual": "A minimalist metal lamp casting a warm circle of light on a bare oak table."
+    },
+    {
+      "say": "That is built on monthly compounding without touching a single dollar.",
+      "callout": "",
+      "visual": "A brass pocket watch resting open on a dark leather notebook, macro shot."
+    },
+    {
+      "say": "But here is the part nobody mentions.",
+      "callout": "THE TWIST",
+      "visual": "A shot facing a heavy metal door slightly ajar, with a beam of dusty light cutting through the dark room."
+    },
+    {
+      "say": "The market rewards time spent inside, not your clever predictions.",
+      "callout": "TIME IN",
+      "visual": "An hourglass on a dark surface, sand slowly falling into the bottom glass bulb."
+    },
+    {
+      "say": "Trying to guess the bottom means you miss the sudden rebound.",
+      "callout": "",
+      "visual": "A close-up of dark rain droplets sliding down a window pane at night."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "FOLLOW US",
+      "visual": "A minimalist dark staircase viewed from the bottom looking straight up into shadows."
+    },
+    {
+      "say": "You think you can time the stock market.",
+      "callout": "",
+      "visual": "A dark, empty room with a single chair facing a blank wall, dramatic cinematic contrast."
+    }
+  ],
+  "caption": "Time in the market beats timing the market every single time. Stop guessing and start staying. #MoneyMyths #PersonalFinance #Investing101 #WealthBuilding #QuietMoney",
+  "description": "Trying to time the stock market is a fool's errand. Discover why staying invested consistently beats trying to predict the next market dip.",
+  "hashtags": [
+    "#MoneyMyths",
+    "#PersonalFinance",
+    "#Investing101",
+    "#WealthBuilding",
+    "#QuietMoney"
+  ],
+  "first_comment": "Have you ever tried to time a trade and lost? Tell us below.",
+  "facts": [
+    {
+      "claim": "Investing $200 a month at 8% for 40 years reaches $698,202",
+      "basis": "$200/month invested for 40 years at 8%/yr (monthly compounding) = $698,202 from the fact sheet"
+    }
+  ],
+  "source": "llm",
+  "pillar": "myth"
+}
