@@ -26,6 +26,13 @@ recorded, so say so in every report.
 4. Commit `analytics/opportunities.*` and any new backlog lines; push to main.
 5. Report to the owner: the top 3 with who must act, what the scanner did itself, and what it needs from them.
 
+## Then the empire loop (every weekly run)
+After the scan, follow `.claude/skills/faceless-empire/SKILL.md`: read `channel/empire/RANKING.md` (the scan rewrites it),
+re-score only with evidence, build the top "agent builds these now" item that needs no account (verify it independently, add
+tests, mark it `built`), compile `python -m faceless kit --issue` when a week of kits exists, run `pytest -q tests`, commit
+`channel/empire`, `channel/products`, `channel/newsletter`, `channel/flow/shotlists`, and report the top 3 plus the single biggest
+owner unlock with exact steps and cost. New ideas go into `portfolio.jsonl` after the attack round (a `block` on terms or IP is dead).
+
 ## Autonomy rules (hard)
 - **auto** (scanner does it): top up topic backlogs only. Those topics still face the full gauntlet before anything ships.
 - **operator** (a session may do it): code, config, tests, review fixes that cost nothing and touch no account.

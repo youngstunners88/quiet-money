@@ -39,6 +39,13 @@ Python dependencies when the session starts. In a routine session:
    the push rebuilds the website.
 3. Send the finished `video.mp4` files to the owner (re-encode any copy over 30 MB), then report as in step 5.
 
+### Also in every routine run (the printing press)
+- **Repurposing kit**: each published pack gets `<pack>/kit/` automatically (thread, LinkedIn post, newsletter item, pin, carousel, audio).
+  If a pack lacks one, run `python -m faceless kit <post day>`. Commit the kit's text files (images and audio are gitignored).
+- **Flow lane**: owner-made clips in `channel/flow/inbox/` are claimed as hook shots by the next video of their series. Run
+  `python -m faceless flow` (writes `channel/flow/shotlists/<today>.md`, commit it) and `python -m faceless flow status`, and put
+  the 3 prompts and the clip count in the report so the owner can run their own Google Flow session. Never log in to Flow for them.
+
 ## Never
 - Never publish a `held` video without fixing its hard gates.
 - Never commit media (mp4/wav/jpg); state, scripts, and reports are what get committed.
