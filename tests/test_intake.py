@@ -235,3 +235,20 @@ def test_the_verdict_table_lists_every_decision_and_the_owner_asks(tmp_path):
     md = intake.verdict_table(data)
     assert md.count("\n| ") >= 5 and "| acme/tool | **park** | sell |" in md and "| A page | **use** |" in md
     assert "Decisions only the owner can make" in md and "- **acme/tool:** Create the app." in md
+
+
+def test_the_registers_are_refreshed_in_place_and_idempotently(tmp_path):
+    data = _folder_with_verdicts(tmp_path)
+    resources, registry = tmp_path / "RESOURCES.md", tmp_path / "registry.md"
+    resources.write_text("# Resources\n\nolder text\n", encoding="utf-8")
+    registry.write_text("# Registry\n\n## ACTIVE\n| a | b |\n", encoding="utf-8")
+    intake.refresh_registers(tmp_path, resources, registry)
+    first = (resources.read_text(encoding="utf-8"), registry.read_text(encoding="utf-8"))
+    intake.refresh_registers(tmp_path, resources, registry)
+    assert (resources.read_text(encoding="utf-8"), registry.read_text(encoding="utf-8")) == first          # second run changes nothing
+    assert first[0].startswith("# Resources\n\nolder text") and first[0].count("## Quiet Money 3 and setup lists") == 1
+    assert "## ACTIVE" in first[1] and "### Rejected" in first[1] and "| acme-cli (npm and repo) | voice | Runs a postinstall. |" in first[1]
+    data["items"][1]["why"] = "Changed my mind. Really."
+    (tmp_path / "verdicts.json").write_text(json.dumps(data), encoding="utf-8")
+    intake.refresh_registers(tmp_path, resources, registry)
+    assert "Changed my mind." in registry.read_text(encoding="utf-8") and registry.read_text(encoding="utf-8").count("## Intake 2026-10-08") == 1

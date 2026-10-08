@@ -60,9 +60,9 @@ The owner's act is the work.
 ## Ideas to validate cheaply
 | id | opportunity | rail | stage | score | next |
 |---|---|---|---|---|---|
-| C8 | Sound-effect layer: a one-time library of short hits mixed under hooks and transitions | content | idea | 27.0 | validate cheaply (research, one test asset), then vet |
 | O17 | Timely macro facts for scripts: US Treasury (keyless) and FRED | content | idea | 21.6 | validate cheaply (research, one test asset), then vet |
 | C7 | Second-language editions: the same videos in Spanish and Portuguese | content | idea | 15.36 | validate cheaply (research, one test asset), then vet |
+| C8 | Better sound effects: swap the synthesized cut hits for a one-time library of generated whooshes and pops | content | idea | 9.0 | validate cheaply (research, one test asset), then vet |
 | P5 | Original 'money rules' typography posters (print on demand) | product | idea | 3.73 | validate cheaply (research, one test asset), then vet |
 | M1 | Adobe Stock AI: abstract backgrounds, textures, objects (no people, brands, artist names) | marketplace | idea | 2.8 | validate cheaply (research, one test asset), then vet |
 | R2 | Finance affiliates + sponsors (with disclosure) | partnership | idea | 1.73 | validate cheaply (research, one test asset), then vet |

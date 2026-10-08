@@ -2,86 +2,309 @@
   "date": "2026-10-08",
   "source": "Quiet Money 3 and setup documents, read from the owner's Drive on 2026-10-08. Dossiers were produced by `python -m faceless intake`; the GitHub API was closed for these repositories from this machine, so stars and dates are unknown and every judgment below rests on READMEs, manifests, licence files and registry data.",
   "items": [
-    {"id": "antiwork-gumroad-cli", "name": "antiwork/gumroad-cli", "verdict": "USE", "stage": "sell",
-     "why": "Official Gumroad CLI (MIT), built for people and agents. faceless/shop.py already drives it to create DRAFT products only, with the owner's token. Its curl installer is a pipe-to-shell line: install by `brew` or `go install ...@<tag>` (pinned), never the script.",
-     "steal": "Command shapes for products, comps and sales are mirrored in shop.py.", "owner": "Put GUMROAD_ACCESS_TOKEN in the Claude Code environment (never in a file) when ready for drafts."},
-    {"id": "sov2000-etspi-cli", "name": "sov2000/etspi-cli", "verdict": "PARK", "stage": "sell",
-     "why": "GPL-3.0 command-line client for the Etsy API v3 (OAuth, listing and variant management). Needs the owner's Etsy developer app. Etsy is the one rail with no agent path today, and creating listings by API on a brand-new shop looks like automated activity; the first listings should be made by hand from the ready packs.",
-     "steal": "Its mapping of listing fields to API calls is the reference if we later write a thin draft-only client (state=draft, never publish).", "owner": "Create an Etsy developer app only after the first four listings are live and the shop has history."},
-    {"id": "administrativetrick-etsy-mcp-server", "name": "administrativetrick/etsy-mcp-server", "verdict": "PARK", "stage": "ideate",
-     "why": "MIT, read-only Etsy API v3 server (search listings, shop info, trending, reviews) using an API key only; no OAuth, so it cannot write. Its `prepare` script builds TypeScript at install. Useful for competitor and price research once the owner has an Etsy API key; Muapi search-volume data and TokConnect cover demand until then.",
-     "steal": "none needed", "owner": "An Etsy API keystring (free developer account) if Etsy research is wanted."},
-    {"id": "cartesiancs-map3d", "name": "cartesiancs/map3d", "verdict": "KILL", "stage": "visuals",
-     "why": "MIT. Builds 3D building maps from OpenStreetMap data and exports GLB. Nothing in money education needs it, and the data accuracy is disclaimed by its authors.", "steal": "none", "owner": ""},
-    {"id": "diffusionstudio-lottie", "name": "diffusionstudio/lottie", "verdict": "PARK", "stage": "visuals",
-     "why": "MIT text-to-Lottie agent skill (`npx skills add`). Lottie JSON could drive animated icons, but our headless pipeline already renders motion with HyperFrames; rendering Lottie to video would add a second motion stack for no gain today.",
-     "steal": "Revisit for the website (animated icons) in the site redesign phase.", "owner": ""},
-    {"id": "diffusionstudio-editor", "name": "diffusionstudio/editor", "verdict": "KILL", "stage": "render",
-     "why": "AGPL-3.0 desktop video editor for macOS and Windows that an agent drives. Our render path is headless Python and ffmpeg on Linux; a desktop app cannot run in the routine, and AGPL adds obligations for no gain.", "steal": "none", "owner": ""},
-    {"id": "next-state-open-dreamer", "name": "next-state/open-dreamer", "verdict": "KILL", "stage": "none",
-     "why": "Research code and blog post on training a world model (Dreamer 4 reproduction, CoinRun, JAX). Interesting science, no role in a faceless finance channel.", "steal": "none", "owner": "The team@orbismedia.ca line in the document is a contact address; nothing is sent on the owner's behalf."},
-    {"id": "agricidaniel-claude-ads", "name": "AgriciDaniel/claude-ads", "verdict": "PARK", "stage": "sell",
-     "why": "MIT paid-media operations kit (audits, plans, creative briefs across twelve ad platforms), read-only by default with approval gates before any live change. We run no paid ads: the business is organic video plus digital products, and ads need conversion data first.",
-     "steal": "Its audit checklists and benchmark tables are the starting point if the owner ever runs Etsy Ads or Meta ads for a product that already converts.", "owner": ""},
-    {"id": "heygen-com-hyperframes", "name": "heygen-com/hyperframes", "verdict": "USE", "stage": "render",
-     "why": "Already ACTIVE: Apache-2.0, pinned to 0.8.136, local render only. The flagged `prepare` hook belongs to its own development tooling; we never run its `init`.", "steal": "n/a", "owner": ""},
-    {"id": "firecrawl-cli", "name": "firecrawl-cli (npm) and firecrawl/cli", "verdict": "PARK", "stage": "ideate",
-     "why": "ISC, 28,677 weekly downloads, mature. Firecrawl is already a connected research tool with a key in the environment, so the CLI adds nothing a routine needs. `init -y --browser` installs skills into every detected agent and signs in through a browser, and its docs include a curl installer: not run.",
-     "steal": "Its `alexandria` data-terms commands suggest paid dataset access; not needed.", "owner": ""},
-    {"id": "gooseworks", "name": "gooseworks (npm) and GooseWorks", "verdict": "KILL", "stage": "sell",
-     "why": "MIT package from a SaaS: skills for ads and growth that run through its own MCP server, Google sign-in, a credentials file and a cloud 'Company Brain'. Its install flow tells the agent to read a web page and follow it, which is the pattern we refuse (web pages are data). Our business runs no paid ads.",
-     "steal": "Ideas only: ad-angle-miner (mine reviews and forum threads for the angles that convert) maps to product-listing research; brand-research context pack is what CLAUDE.md and channel/brand.md already are.", "owner": ""},
-    {"id": "mauriceboe-nomad", "name": "mauriceboe/NOMAD (now TREK)", "verdict": "KILL", "stage": "none",
-     "why": "AGPL-3.0 self-hosted collaborative travel planner. Unrelated.", "steal": "none", "owner": ""},
-    {"id": "lekt9-unbrowse-openclaw", "name": "lekt9/unbrowse-openclaw", "verdict": "KILL", "stage": "none",
-     "why": "OpenClaw plugin that reverse-engineers site APIs. No licence file, an agent platform we do not use, and the official APIs we need exist.", "steal": "none", "owner": ""},
-    {"id": "volcengine-openviking", "name": "volcengine/OpenViking", "verdict": "PARK", "stage": "ideate",
-     "why": "AGPL-3.0 context database for agents (a filesystem-style memory). faceless/memory.py already gives full-text search over every script and outcome; revisit past about 100,000 records.",
-     "steal": "The idea of memory, resources and skills under one path scheme.", "owner": ""},
-    {"id": "nextlevelbuilder-ui-ux-pro-max-skill", "name": "nextlevelbuilder/ui-ux-pro-max-skill", "verdict": "PARK", "stage": "package",
-     "why": "MIT. A searchable data set of 79 UI styles, palettes, type pairings and UX rules behind a plain Python search script, plus a skill wrapper. Useful when the website and link-in-bio page are redesigned; the studio's own brand kit already fixes colours and fonts for video and listings.",
-     "steal": "Review the data files and, if good, vendor the UX-rule and chart tables (with the licence) for the site build; do not install its npm CLI.", "owner": ""},
-    {"id": "calesthio-crucix", "name": "calesthio/Crucix", "verdict": "KILL", "stage": "ideate",
-     "why": "AGPL-3.0 intelligence terminal over 27 sources, mostly geopolitics and trading: off-brand for a money-education channel. One thing is worth taking.",
-     "steal": "Its list of keyless economic APIs. Checked from our network today: US Treasury FiscalData works and needs no key (total public debt outstanding $40.27 trillion on 2026-10-06; average T-bill rate 3.87% on 2026-09-30). FRED timed out and the BLS public API reported its shared daily quota used, so live inflation and mortgage-rate facts need an owner-provided free FRED key or a different egress.", "owner": "Optional: a free FRED API key if timely macro numbers are wanted."},
-    {"id": "x1xhlol-system-prompts-and-models-of-ai-tools", "name": "x1xhlol/system-prompts-and-models-of-ai-tools", "verdict": "KILL", "stage": "none",
-     "why": "GPL-3.0 collection of extracted system prompts from commercial AI products. Provenance and rights are doubtful, nothing in our pipeline needs them, and a large pile of prompts is itself an injection surface.", "steal": "none", "owner": ""},
-    {"id": "ruvnet-wifi-densepose", "name": "ruvnet/wifi-densepose", "verdict": "KILL", "stage": "none",
-     "why": "MIT. WiFi-signal human pose estimation, with a pipe-to-shell installer. Unrelated.", "steal": "none", "owner": ""},
-    {"id": "microsoft-agent-lightning", "name": "microsoft/agent-lightning", "verdict": "PARK", "stage": "measure",
-     "why": "MIT reinforcement-learning framework for training agents. Needs a benchmark and hundreds of scored runs; our metrics file has none yet. Same phase as dspy.",
-     "steal": "Its 'agent improves another agent against a benchmark' skill is a model for tuning the script prompt once real retention data exists.", "owner": ""},
-    {"id": "snarktank-antfarm", "name": "snarktank/antfarm", "verdict": "KILL", "stage": "none",
-     "why": "MIT team of coding agents (planner, developer, verifier, tester, reviewer) for the OpenClaw platform, installed by a curl script. We run on Claude Code routines with a deterministic orchestrator and a gauntlet that already plays the verifier role.", "steal": "none", "owner": ""},
-    {"id": "anthropics-skills", "name": "anthropics/skills", "verdict": "USE", "stage": "dev workflow",
-     "why": "Anthropic's skills reference repository. skill-creator is already in use, and the Complete Guide to Building Skills is encoded in faceless/skilllint.py (20 of 21 skills pass the same checks; the check runs in CI). Licences differ per skill (the document skills are source-available), so read and learn from them, do not vendor.",
-     "steal": "Conventions from the xlsx and pdf skills for document generation; our products already verify against independent math.", "owner": ""},
-    {"id": "muapi-cli", "name": "muapi-cli (npm and PyPI)", "verdict": "KILL", "stage": "visuals",
-     "why": "MIT, 386 downloads a week. The npm package runs a postinstall script that downloads a binary: unreviewed code at install time. The Muapi desk (faceless/muapi.py) calls the API directly with price-first limits, so nothing is lost.", "steal": "Done: the Muapi skill and desk.", "owner": ""},
-    {"id": "elevenlabs-cli", "name": "elevenlabs/cli and @elevenlabs/cli", "verdict": "KILL", "stage": "voice",
-     "why": "MIT. 'Agents as code' for ElevenLabs conversational agents plus every API endpoint as a subcommand; the installer pipes a script into a shell. We do not build voice agents, and ElevenLabs is already an opt-in voice in the chain (and reachable through Muapi at $0.05 per 1,000 characters).", "steal": "none", "owner": ""},
-    {"id": "elevenlabs-skills", "name": "elevenlabs/skills", "verdict": "PARK", "stage": "voice",
-     "why": "MIT agent skills for text-to-speech, speech-to-text, sound effects, music, voice changing, noise isolation and dubbing. Two ideas are worth a build later; installing the skills is not.",
-     "steal": "(1) Sound effects: a one-time library of short whooshes and hits mixed quietly under hooks and transitions. (2) Dubbing: the same finished video in Spanish or Portuguese, using free Edge neural voices and an LLM translation, which multiplies output without new visuals. Both are proposals in channel/empire/PLAN.md.", "owner": "Whether to open a second-language channel (a separate account per language)."},
-    {"id": "mistralai-mistral-vibe", "name": "mistralai/mistral-vibe", "verdict": "KILL", "stage": "none",
-     "why": "Apache-2.0 coding-agent CLI from Mistral, installed by a script, asking for a key. We are on Claude Code. The Mistral API itself could be one more script-writing provider in the chain (resilience); that needs the owner to authorize the MINSTRAL_API_KEY already in the environment.", "steal": "n/a", "owner": "Authorize or decline Mistral as a fallback LLM provider."}
+    {
+      "id": "antiwork-gumroad-cli",
+      "name": "antiwork/gumroad-cli",
+      "verdict": "USE",
+      "stage": "sell",
+      "why": "Official Gumroad CLI (MIT), built for people and agents. faceless/shop.py already drives it to create DRAFT products only, with the owner's token. Its curl installer is a pipe-to-shell line: install by `brew` or `go install ...@<tag>` (pinned), never the script.",
+      "steal": "Command shapes for products, comps and sales are mirrored in shop.py.",
+      "owner": "Put GUMROAD_ACCESS_TOKEN in the Claude Code environment (never in a file) when ready for drafts."
+    },
+    {
+      "id": "sov2000-etspi-cli",
+      "name": "sov2000/etspi-cli",
+      "verdict": "PARK",
+      "stage": "sell",
+      "why": "GPL-3.0 command-line client for the Etsy API v3 (OAuth, listing and variant management). Needs the owner's Etsy developer app. Etsy is the one rail with no agent path today, and creating listings by API on a brand-new shop looks like automated activity; the first listings should be made by hand from the ready packs.",
+      "steal": "Its mapping of listing fields to API calls is the reference if we later write a thin draft-only client (state=draft, never publish).",
+      "owner": "Create an Etsy developer app only after the first four listings are live and the shop has history."
+    },
+    {
+      "id": "administrativetrick-etsy-mcp-server",
+      "name": "administrativetrick/etsy-mcp-server",
+      "verdict": "PARK",
+      "stage": "ideate",
+      "why": "MIT, read-only Etsy API v3 server (search listings, shop info, trending, reviews) using an API key only; no OAuth, so it cannot write. Its `prepare` script builds TypeScript at install. Useful for competitor and price research once the owner has an Etsy API key; Muapi search-volume data and TokConnect cover demand until then.",
+      "steal": "none needed",
+      "owner": "An Etsy API keystring (free developer account) if Etsy research is wanted."
+    },
+    {
+      "id": "cartesiancs-map3d",
+      "name": "cartesiancs/map3d",
+      "verdict": "KILL",
+      "stage": "visuals",
+      "why": "MIT. Builds 3D building maps from OpenStreetMap data and exports GLB. Nothing in money education needs it, and the data accuracy is disclaimed by its authors.",
+      "steal": "none",
+      "owner": ""
+    },
+    {
+      "id": "diffusionstudio-lottie",
+      "name": "diffusionstudio/lottie",
+      "verdict": "PARK",
+      "stage": "visuals",
+      "why": "MIT text-to-Lottie agent skill (`npx skills add`). Lottie JSON could drive animated icons, but our headless pipeline already renders motion with HyperFrames; rendering Lottie to video would add a second motion stack for no gain today.",
+      "steal": "Revisit for the website (animated icons) in the site redesign phase.",
+      "owner": ""
+    },
+    {
+      "id": "diffusionstudio-editor",
+      "name": "diffusionstudio/editor",
+      "verdict": "KILL",
+      "stage": "render",
+      "why": "AGPL-3.0 desktop video editor for macOS and Windows that an agent drives. Our render path is headless Python and ffmpeg on Linux; a desktop app cannot run in the routine, and AGPL adds obligations for no gain.",
+      "steal": "none",
+      "owner": ""
+    },
+    {
+      "id": "next-state-open-dreamer",
+      "name": "next-state/open-dreamer",
+      "verdict": "KILL",
+      "stage": "none",
+      "why": "Research code and blog post on training a world model (Dreamer 4 reproduction, CoinRun, JAX). Interesting science, no role in a faceless finance channel.",
+      "steal": "none",
+      "owner": "The team@orbismedia.ca line in the document is a contact address; nothing is sent on the owner's behalf."
+    },
+    {
+      "id": "agricidaniel-claude-ads",
+      "name": "AgriciDaniel/claude-ads",
+      "verdict": "PARK",
+      "stage": "sell",
+      "why": "MIT paid-media operations kit (audits, plans, creative briefs across twelve ad platforms), read-only by default with approval gates before any live change. We run no paid ads: the business is organic video plus digital products, and ads need conversion data first.",
+      "steal": "Its audit checklists and benchmark tables are the starting point if the owner ever runs Etsy Ads or Meta ads for a product that already converts.",
+      "owner": ""
+    },
+    {
+      "id": "heygen-com-hyperframes",
+      "name": "heygen-com/hyperframes",
+      "verdict": "USE",
+      "stage": "render",
+      "why": "Already ACTIVE: Apache-2.0, pinned to 0.8.136, local render only. The flagged `prepare` hook belongs to its own development tooling; we never run its `init`.",
+      "steal": "n/a",
+      "owner": ""
+    },
+    {
+      "id": "firecrawl-cli",
+      "name": "firecrawl-cli (npm) and firecrawl/cli",
+      "verdict": "PARK",
+      "stage": "ideate",
+      "why": "ISC, 28,677 weekly downloads, mature. Firecrawl is already a connected research tool with a key in the environment, so the CLI adds nothing a routine needs. `init -y --browser` installs skills into every detected agent and signs in through a browser, and its docs include a curl installer: not run.",
+      "steal": "Its `alexandria` data-terms commands suggest paid dataset access; not needed.",
+      "owner": ""
+    },
+    {
+      "id": "gooseworks",
+      "name": "gooseworks (npm) and GooseWorks",
+      "verdict": "KILL",
+      "stage": "sell",
+      "why": "MIT package from a SaaS: skills for ads and growth that run through its own MCP server, Google sign-in, a credentials file and a cloud 'Company Brain'. Its install flow tells the agent to read a web page and follow it, which is the pattern we refuse (web pages are data). Our business runs no paid ads.",
+      "steal": "Ideas only: ad-angle-miner (mine reviews and forum threads for the angles that convert) maps to product-listing research; brand-research context pack is what CLAUDE.md and channel/brand.md already are.",
+      "owner": ""
+    },
+    {
+      "id": "mauriceboe-nomad",
+      "name": "mauriceboe/NOMAD (now TREK)",
+      "verdict": "KILL",
+      "stage": "none",
+      "why": "AGPL-3.0 self-hosted collaborative travel planner. Unrelated.",
+      "steal": "none",
+      "owner": ""
+    },
+    {
+      "id": "lekt9-unbrowse-openclaw",
+      "name": "lekt9/unbrowse-openclaw",
+      "verdict": "KILL",
+      "stage": "none",
+      "why": "OpenClaw plugin that reverse-engineers site APIs. No licence file, an agent platform we do not use, and the official APIs we need exist.",
+      "steal": "none",
+      "owner": ""
+    },
+    {
+      "id": "volcengine-openviking",
+      "name": "volcengine/OpenViking",
+      "verdict": "PARK",
+      "stage": "ideate",
+      "why": "AGPL-3.0 context database for agents (a filesystem-style memory). faceless/memory.py already gives full-text search over every script and outcome; revisit past about 100,000 records.",
+      "steal": "The idea of memory, resources and skills under one path scheme.",
+      "owner": ""
+    },
+    {
+      "id": "nextlevelbuilder-ui-ux-pro-max-skill",
+      "name": "nextlevelbuilder/ui-ux-pro-max-skill",
+      "verdict": "PARK",
+      "stage": "package",
+      "why": "MIT. A searchable data set of 79 UI styles, palettes, type pairings and UX rules behind a plain Python search script, plus a skill wrapper. Useful when the website and link-in-bio page are redesigned; the studio's own brand kit already fixes colours and fonts for video and listings.",
+      "steal": "Review the data files and, if good, vendor the UX-rule and chart tables (with the licence) for the site build; do not install its npm CLI.",
+      "owner": ""
+    },
+    {
+      "id": "calesthio-crucix",
+      "name": "calesthio/Crucix",
+      "verdict": "KILL",
+      "stage": "ideate",
+      "why": "AGPL-3.0 intelligence terminal over 27 sources, mostly geopolitics and trading: off-brand for a money-education channel. One thing is worth taking.",
+      "steal": "Its list of keyless economic APIs. Checked from our network today: US Treasury FiscalData works and needs no key (total public debt outstanding $40.27 trillion on 2026-10-06; average T-bill rate 3.87% on 2026-09-30). FRED timed out and the BLS public API reported its shared daily quota used, so live inflation and mortgage-rate facts need an owner-provided free FRED key or a different egress.",
+      "owner": "Optional: a free FRED API key if timely macro numbers are wanted."
+    },
+    {
+      "id": "x1xhlol-system-prompts-and-models-of-ai-tools",
+      "name": "x1xhlol/system-prompts-and-models-of-ai-tools",
+      "verdict": "KILL",
+      "stage": "none",
+      "why": "GPL-3.0 collection of extracted system prompts from commercial AI products. Provenance and rights are doubtful, nothing in our pipeline needs them, and a large pile of prompts is itself an injection surface.",
+      "steal": "none",
+      "owner": ""
+    },
+    {
+      "id": "ruvnet-wifi-densepose",
+      "name": "ruvnet/wifi-densepose",
+      "verdict": "KILL",
+      "stage": "none",
+      "why": "MIT. WiFi-signal human pose estimation, with a pipe-to-shell installer. Unrelated.",
+      "steal": "none",
+      "owner": ""
+    },
+    {
+      "id": "microsoft-agent-lightning",
+      "name": "microsoft/agent-lightning",
+      "verdict": "PARK",
+      "stage": "measure",
+      "why": "MIT reinforcement-learning framework for training agents. Needs a benchmark and hundreds of scored runs; our metrics file has none yet. Same phase as dspy.",
+      "steal": "Its 'agent improves another agent against a benchmark' skill is a model for tuning the script prompt once real retention data exists.",
+      "owner": ""
+    },
+    {
+      "id": "snarktank-antfarm",
+      "name": "snarktank/antfarm",
+      "verdict": "KILL",
+      "stage": "none",
+      "why": "MIT team of coding agents (planner, developer, verifier, tester, reviewer) for the OpenClaw platform, installed by a curl script. We run on Claude Code routines with a deterministic orchestrator and a gauntlet that already plays the verifier role.",
+      "steal": "none",
+      "owner": ""
+    },
+    {
+      "id": "anthropics-skills",
+      "name": "anthropics/skills",
+      "verdict": "USE",
+      "stage": "dev workflow",
+      "why": "Anthropic's skills reference repository. skill-creator is already in use, and the Complete Guide to Building Skills is encoded in faceless/skilllint.py (20 of 21 skills pass the same checks; the check runs in CI). Licences differ per skill (the document skills are source-available), so read and learn from them, do not vendor.",
+      "steal": "Conventions from the xlsx and pdf skills for document generation; our products already verify against independent math.",
+      "owner": ""
+    },
+    {
+      "id": "muapi-cli",
+      "name": "muapi-cli (npm and PyPI)",
+      "verdict": "KILL",
+      "stage": "visuals",
+      "why": "MIT, 386 downloads a week. The npm package runs a postinstall script that downloads a binary: unreviewed code at install time. The Muapi desk (faceless/muapi.py) calls the API directly with price-first limits, so nothing is lost.",
+      "steal": "Done: the Muapi skill and desk.",
+      "owner": ""
+    },
+    {
+      "id": "elevenlabs-cli",
+      "name": "elevenlabs/cli and @elevenlabs/cli",
+      "verdict": "KILL",
+      "stage": "voice",
+      "why": "MIT. 'Agents as code' for ElevenLabs conversational agents plus every API endpoint as a subcommand; the installer pipes a script into a shell. We do not build voice agents, and ElevenLabs is already an opt-in voice in the chain (and reachable through Muapi at $0.05 per 1,000 characters).",
+      "steal": "none",
+      "owner": ""
+    },
+    {
+      "id": "elevenlabs-skills",
+      "name": "elevenlabs/skills",
+      "verdict": "PARK",
+      "stage": "voice",
+      "why": "MIT agent skills for text-to-speech, speech-to-text, sound effects, music, voice changing, noise isolation and dubbing. One idea is worth a build later, one is a polish option; installing the skills is not.",
+      "steal": "(1) Dubbing: the same finished video in Spanish or Portuguese, using free Edge neural voices (es-MX, es-US, pt-BR exist) and an LLM translation, which multiplies output without new visuals. (2) Sound effects: the renderer already mixes a synthesized hit at every cut; a library of generated hits would replace those if they ever sound cheap. Both are in channel/empire/PLAN.md and the ranking.",
+      "owner": "Whether to open a second-language channel (a separate account per language)."
+    },
+    {
+      "id": "mistralai-mistral-vibe",
+      "name": "mistralai/mistral-vibe",
+      "verdict": "KILL",
+      "stage": "none",
+      "why": "Apache-2.0 coding-agent CLI from Mistral, installed by a script, asking for a key. We are on Claude Code. The Mistral API itself could be one more script-writing provider in the chain (resilience); that needs the owner to authorize the MINSTRAL_API_KEY already in the environment.",
+      "steal": "n/a",
+      "owner": "Authorize or decline Mistral as a fallback LLM provider."
+    }
   ],
   "web": [
-    {"name": "TokConnect (mcp.tokconnect.com)", "verdict": "USE", "stage": "ideate",
-     "why": "Read-only research MCP over public TikTok data. Tested for real: topic search volumes with video counts (a content-gap finder) and what earned views and saves. 50 free one-time credits, 1 per lookup, 48 left; paid from $49 a month. Wired into the faceless-trends skill with a 10-a-week budget, and the engine now picks higher-scored topics first.", "owner": "Keep the free credits for research; do not subscribe yet."},
-    {"name": "imageflow.dev", "verdict": "KILL", "stage": "visuals",
-     "why": "A free browser image editor with no API, CLI or MCP. A server for it would mean automating a web UI, which is brittle. The goal behind the request (consumer-facing pictures of the highest standard) is met another way: listing pictures are drawn in code from the real product pages, then pass a 28-gate listing gauntlet on every build, including on a clean GitHub runner.", "owner": "Use it by hand for one-off touch-ups if you like; nothing depends on it."},
-    {"name": "Kapso (kapso.ai)", "verdict": "PARK", "stage": "post",
-     "why": "WhatsApp Business API platform (CLI, MCP, webhooks). Customer-facing messaging is a public action and needs the owner's WhatsApp Business account; its docs install by a curl script. Only worth it if the owner wants WhatsApp order notices or a community.", "owner": ""},
-    {"name": "Freebuff (freebuff.com)", "verdict": "KILL", "stage": "none", "why": "An ad-funded coding agent. Not part of the runtime.", "owner": ""},
-    {"name": "opensourceprojects.dev post (MiroFish-Offline)", "verdict": "KILL", "stage": "none", "why": "A blog post about a local-first agent playground that needs a local language model. Our runs happen on cloud routines and CI runners.", "owner": ""},
-    {"name": "Agent-Reach (osp.fyi/agent-reach)", "verdict": "USE", "stage": "ideate", "why": "Already referenced by the trends skill for platform research; the post describes a Python page-to-text fetcher. No change.", "owner": ""},
-    {"name": "Monid (monid.ai, SKILL.md and docs)", "verdict": "PARK", "stage": "ideate",
-     "why": "A pay-per-use marketplace of data endpoints (mostly Apify actors and data vendors) behind a Bearer-key HTTP API. A Monid key is in the environment, but it belongs to an account registered to a different project (the Teacher Chris account, wallet $9.71 on 2026-10-08), so nothing was spent and no endpoint was run. Its SKILL.md tells the agent to save itself into the skills folder and to run `monid discover` before telling a user something is inaccessible: a vendor skill that steers its reader and re-downloads itself, so it is not installed.",
-     "owner": "Say whether Quiet Money may use that account's wallet, or create a separate key. Until then Muapi's data tools and TokConnect cover research."},
-    {"name": "LiquidAI system-one-arcade (Hugging Face Space)", "verdict": "KILL", "stage": "none", "why": "A Docker Space whose page gave no readable description from here. No known pipeline role; ask the owner what it was meant for if it matters.", "owner": ""},
-    {"name": "Etsy developer MCP (mcp.api.etsycloud.com)", "verdict": "PARK", "stage": "sell", "why": "Documentation-oriented, no shop actions (checked earlier this session). Attach it only if the owner wants Etsy API docs searchable in chat.", "owner": ""},
-    {"name": "Composio Gumroad toolkit", "verdict": "USE", "stage": "sell", "why": "Seven read tools (user, products, sales, license verification, webhooks), wired through the existing Composio setup. The owner connects with `python -m faceless composio connect gumroad`.", "owner": "Open the connect link once."},
-    {"name": "youngstunners.etsy.com", "verdict": "PARK", "stage": "sell", "why": "The shop page returns 403 to every fetcher here, so its state could not be audited. The ready packs and checklist cover listing it.", "owner": "Tell me what the shop already holds (listings, policies, banner) if you want a review."}
+    {
+      "name": "TokConnect (mcp.tokconnect.com)",
+      "verdict": "USE",
+      "stage": "ideate",
+      "why": "Read-only research MCP over public TikTok data. Tested for real: topic search volumes with video counts (a content-gap finder) and what earned views and saves. 50 free one-time credits, 1 per lookup, 48 left; paid from $49 a month. Wired into the faceless-trends skill with a 10-a-week budget, and the engine now picks higher-scored topics first.",
+      "owner": "Keep the free credits for research; do not subscribe yet."
+    },
+    {
+      "name": "imageflow.dev",
+      "verdict": "KILL",
+      "stage": "visuals",
+      "why": "A free browser image editor with no API, CLI or MCP. A server for it would mean automating a web UI, which is brittle. The goal behind the request (consumer-facing pictures of the highest standard) is met another way: listing pictures are drawn in code from the real product pages, then pass a 28-gate listing gauntlet on every build, including on a clean GitHub runner.",
+      "owner": "Use it by hand for one-off touch-ups if you like; nothing depends on it."
+    },
+    {
+      "name": "Kapso (kapso.ai)",
+      "verdict": "PARK",
+      "stage": "post",
+      "why": "WhatsApp Business API platform (CLI, MCP, webhooks). Customer-facing messaging is a public action and needs the owner's WhatsApp Business account; its docs install by a curl script. Only worth it if the owner wants WhatsApp order notices or a community.",
+      "owner": ""
+    },
+    {
+      "name": "Freebuff (freebuff.com)",
+      "verdict": "KILL",
+      "stage": "none",
+      "why": "An ad-funded coding agent. Not part of the runtime.",
+      "owner": ""
+    },
+    {
+      "name": "opensourceprojects.dev post (MiroFish-Offline)",
+      "verdict": "KILL",
+      "stage": "none",
+      "why": "A blog post about a local-first agent playground that needs a local language model. Our runs happen on cloud routines and CI runners.",
+      "owner": ""
+    },
+    {
+      "name": "Agent-Reach (osp.fyi/agent-reach)",
+      "verdict": "USE",
+      "stage": "ideate",
+      "why": "Already referenced by the trends skill for platform research; the post describes a Python page-to-text fetcher. No change.",
+      "owner": ""
+    },
+    {
+      "name": "Monid (monid.ai, SKILL.md and docs)",
+      "verdict": "PARK",
+      "stage": "ideate",
+      "why": "A pay-per-use marketplace of data endpoints (mostly Apify actors and data vendors) behind a Bearer-key HTTP API. A Monid key is in the environment, but it belongs to an account registered to a different project (the Teacher Chris account, wallet $9.71 on 2026-10-08), so nothing was spent and no endpoint was run. Its SKILL.md tells the agent to save itself into the skills folder and to run `monid discover` before telling a user something is inaccessible: a vendor skill that steers its reader and re-downloads itself, so it is not installed.",
+      "owner": "Say whether Quiet Money may use that account's wallet, or create a separate key. Until then Muapi's data tools and TokConnect cover research."
+    },
+    {
+      "name": "LiquidAI system-one-arcade (Hugging Face Space)",
+      "verdict": "KILL",
+      "stage": "none",
+      "why": "A Docker Space whose page gave no readable description from here. No known pipeline role; ask the owner what it was meant for if it matters.",
+      "owner": ""
+    },
+    {
+      "name": "Etsy developer MCP (mcp.api.etsycloud.com)",
+      "verdict": "PARK",
+      "stage": "sell",
+      "why": "Documentation-oriented, no shop actions (checked earlier this session). Attach it only if the owner wants Etsy API docs searchable in chat.",
+      "owner": ""
+    },
+    {
+      "name": "Composio Gumroad toolkit",
+      "verdict": "USE",
+      "stage": "sell",
+      "why": "Seven read tools (user, products, sales, license verification, webhooks), wired through the existing Composio setup. The owner connects with `python -m faceless composio connect gumroad`.",
+      "owner": "Open the connect link once."
+    },
+    {
+      "name": "youngstunners.etsy.com",
+      "verdict": "PARK",
+      "stage": "sell",
+      "why": "The shop page returns 403 to every fetcher here, so its state could not be audited. The ready packs and checklist cover listing it.",
+      "owner": "Tell me what the shop already holds (listings, policies, banner) if you want a review."
+    }
   ]
 }

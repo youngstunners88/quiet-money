@@ -415,3 +415,41 @@ def verdict_table(data: dict, heading_level: str = "##") -> str:
     if asks:
         out += ["", f"{heading_level}# Decisions only the owner can make", ""] + [f"- **{n}:** {o}" for n, o in asks]
     return "\n".join(out) + "\n"
+
+
+# ---------------------------------------------------------------- the registers
+
+RESOURCES = STUDIO / "channel" / "empire" / "RESOURCES.md"
+REGISTRY = STUDIO / "repo-farm" / "registry.md"
+
+
+def _first_sentence(text: str, cap: int = 230) -> str:
+    m = re.match(r"(.+?[.!?])(\s|$)", text)
+    return (m.group(1) if m else text)[:cap]
+
+
+def registry_section(data: dict, folder_name: str | None = None) -> str:
+    """The compact verified rows for repo-farm/registry.md: adopted, parked and rejected, one line of reason each."""
+    where = folder_name or data["date"]
+    out = [f"## Intake {data['date']} (verified from dossiers in `repo-farm/intake/{where}/`)", "",
+           "Each row was read from the project's own README, manifest, licence file or registry entry; nothing was installed or run. "
+           "Stars and dates were unavailable where the GitHub API is closed to this machine.", ""]
+    for verdict, title in (("USE", "Active or adopted"), ("TRIAL", "On trial"), ("PARK", "Parked (named condition)"), ("KILL", "Rejected (recorded so nobody re-evaluates)")):
+        rows = [it for it in data["items"] + data["web"] if it["verdict"] == verdict]
+        if rows:
+            out += [f"### {title}", "", "| Tool | Stage | Why |", "|---|---|---|"] + [f"| {it['name']} | {it.get('stage') or ''} | {_first_sentence(it['why'])} |" for it in rows] + [""]
+    return "\n".join(out)
+
+
+def _replace_section(path: Path, marker: str, new: str) -> None:
+    """Put `new` (which starts with `marker`) at the end of the file, dropping an earlier copy of the same section. Idempotent."""
+    text = path.read_text(encoding="utf-8") if path.exists() else ""
+    text = text.split(marker)[0].rstrip("\n")
+    path.write_text((text + "\n\n" if text else "") + new.rstrip("\n") + "\n", encoding="utf-8")
+
+
+def refresh_registers(folder: Path, resources: Path = RESOURCES, registry: Path = REGISTRY) -> None:
+    """Write the decisions into channel/empire/RESOURCES.md (full table) and repo-farm/registry.md (compact rows)."""
+    data = load_verdicts(folder)
+    _replace_section(resources, f"## Quiet Money 3 and setup lists ({data['date']})", verdict_table(data))
+    _replace_section(registry, f"## Intake {data['date']} (verified", registry_section(data, Path(folder).name))

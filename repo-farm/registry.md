@@ -60,7 +60,7 @@
 
 ## Intake 2026-10-08 (verified from dossiers in `repo-farm/intake/2026-10-08/`)
 
-Each row was read from the project's own README, manifest, licence file or registry entry; nothing was installed or run. Stars and dates were unavailable (GitHub's API is closed to this machine for these repositories).
+Each row was read from the project's own README, manifest, licence file or registry entry; nothing was installed or run. Stars and dates were unavailable where the GitHub API is closed to this machine.
 
 ### Active or adopted
 

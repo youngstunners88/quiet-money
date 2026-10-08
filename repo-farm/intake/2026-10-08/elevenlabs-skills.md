@@ -74,8 +74,8 @@ Questions to answer before the box is ticked: which pipeline stage does it serve
 
 **PARK**, pipeline stage: voice.
 
-MIT agent skills for text-to-speech, speech-to-text, sound effects, music, voice changing, noise isolation and dubbing. Two ideas are worth a build later; installing the skills is not.
+MIT agent skills for text-to-speech, speech-to-text, sound effects, music, voice changing, noise isolation and dubbing. One idea is worth a build later, one is a polish option; installing the skills is not.
 
-**Worth taking:** (1) Sound effects: a one-time library of short whooshes and hits mixed quietly under hooks and transitions. (2) Dubbing: the same finished video in Spanish or Portuguese, using free Edge neural voices and an LLM translation, which multiplies output without new visuals. Both are proposals in channel/empire/PLAN.md.
+**Worth taking:** (1) Dubbing: the same finished video in Spanish or Portuguese, using free Edge neural voices (es-MX, es-US, pt-BR exist) and an LLM translation, which multiplies output without new visuals. (2) Sound effects: the renderer already mixes a synthesized hit at every cut; a library of generated hits would replace those if they ever sound cheap. Both are in channel/empire/PLAN.md and the ranking.
 
 **Only the owner can:** Whether to open a second-language channel (a separate account per language).

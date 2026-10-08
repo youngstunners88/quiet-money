@@ -505,7 +505,9 @@ def cmd_intake(args) -> int:
         folder = Path(args.apply)
         counts = intake.apply_verdicts(folder)
         (folder / "decisions.md").write_text(intake.verdict_table(intake.load_verdicts(folder)), encoding="utf-8")
-        print(f"ticked and explained {counts['dossiers']} dossiers ({counts['ids_without_dossier']} ids without one); wrote {folder / 'decisions.md'}")
+        intake.refresh_registers(folder)
+        print(f"ticked and explained {counts['dossiers']} dossiers ({counts['ids_without_dossier']} ids without one); wrote {folder / 'decisions.md'} and refreshed "
+              f"channel/empire/RESOURCES.md and repo-farm/registry.md")
         return 0
     if not args.items:
         print("give at least one link or install line, or --apply FOLDER to record verdicts.json into the dossiers")

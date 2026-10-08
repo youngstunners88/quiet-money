@@ -97,7 +97,7 @@ Scores in the ranking are judgment until these numbers exist; the weekly run re-
 ## Pass 5 (2026-10-08): the Quiet Money 3 and setup lists, and the operating system
 - **Looked at 36 resources** with `python -m faceless intake` (dossiers in `repo-farm/intake/2026-10-08/`): 6 used or adopted, 13 parked with a named condition, 17 rejected. Almost none were worth installing; several were worth stealing from (a table of free economic APIs, ad-angle mining for listings, sound effects, dubbing).
 - **Built from them:** TokConnect research wired into the trends skill and the engine (topics with researched demand are picked first); the Muapi desk and skill; an intake protocol so the next list is handled the same way, safely.
-- **New opportunities, scored in the ranking:** second-language editions (C7, free Edge voices exist for Spanish and Portuguese), a sound-effect layer (C8), macro facts (O17), a Mistral fallback (O14), PostHog analytics (O15), an Etsy draft rail kept parked on purpose (O16).
+- **New opportunities, scored in the ranking:** second-language editions (C7, free Edge voices exist for Spanish and Portuguese), better sound effects (C8, a polish idea: the renderer already mixes synthesized hits at cuts), macro facts (O17), a Mistral fallback (O14), PostHog analytics (O15), an Etsy draft rail kept parked on purpose (O16).
 - **Bulletproofing:** preflight, a watchdog that opens an "Ops alert" issue by itself, a kill switch and a $3 ceiling, union-merged logs, failure drills, a clean-checkout CI check (`python -m faceless ci`), and an operations runbook (`OPERATIONS.md`).
 
 ## Not doing (killed by the attack round)
