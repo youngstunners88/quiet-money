@@ -42,7 +42,7 @@ def cmd_doctor(_args) -> int:
     from faceless.providers import images as _img
     bal = _img.muapi_balance()
     print(f"  {'OK ' if bal else '..  '}Muapi image fallback: " + (f"wallet ${bal:.2f}" if bal is not None else "no key or unreachable (falls back to OpenRouter)"))
-    print(f"  {'OK ' if qa.enabled() else '..  '}semantic QA (Cloudflare Clef): {'on' if qa.enabled() else 'off (needs the Cloudflare keys and [qa] enabled)'}")
+    print(f"  {'OK ' if qa.enabled() else '..  '}semantic QA (Clef, else the Muapi judge): {'on' if qa.enabled() else 'off (needs the Cloudflare keys or a Muapi key, and [qa] enabled)'}")
     keys = {
         "llm": ["GEMINI_API_KEY", "LONGCAT_API_KEY", "OPENROUTER_API_KEY"],
         "images": ["CLOUDFLARE_API_KEY", "CLOUDFLARE_ACCOUNT_ID", "OPENROUTER_API_KEY"],

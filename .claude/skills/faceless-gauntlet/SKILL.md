@@ -36,7 +36,7 @@ The gauntlet has two levels:
 
 ## Semantic gates (decision model + embeddings)
 Added 2026-10-08. A decision model (Cloudflare Clef, see `faceless/qa.py`) answers typed yes/no questions with probabilities; thresholds live in `studio.toml [qa]`.
-They have no opinion (no gate, no failure) when the Cloudflare key or the free neuron budget is missing.
+When Clef cannot answer (free neuron budget spent, an outage, no Cloudflare key), a second judge answers the same questions: Gemini through the Muapi desk, about $0.0002 a call (`faceless/providers/judge.py`, `QA_FALLBACK` in the journal, once per video). Only when neither can answer is there no opinion (no gate, no failure), recorded as `QA_UNAVAILABLE`: report a run of those days to the owner, because the stills went out unchecked.
 | gate | meaning | what to do |
 |---|---|---|
 | `no_faces` (hard) | a still the model says shows a clear human face (our rule: never by face) | regenerate that beat with "objects only, no people"; the hook is retried automatically once |

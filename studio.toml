@@ -100,6 +100,7 @@ confidence_floor = 0.85
 # Semantic gates answered by Cloudflare Clef (a decision model on Workers AI; about 28 neurons per still, about 6 per script).
 # A still over a threshold becomes a designed motion card (the hook beat is regenerated once); a script that promises returns is held.
 enabled = true
+fallback_judge = true                        # when Clef cannot answer (free pool spent, outage), Gemini through the Muapi desk answers the same questions (about $0.0002 a call)
 text_max = 0.7
 face_max = 0.6
 logo_max = 0.6

@@ -4,13 +4,15 @@ Images: does the still show readable text or a watermark, a clearly visible huma
 three, but image models still print calculator keys and faces, and no pixel-statistics gate can see that. A flagged beat becomes a
 designed motion card (free, never has text artifacts), except the hook beat, which is regenerated once. Scripts: does the text
 promise returns, push a specific product, or read as hype? Every threshold lives in [qa] and is tuned from data (`faceless qa`).
-Unavailable (no key, no free budget) means "no opinion", never a failure.
+Clef answers first. When it cannot (its free pool is spent, an outage, no key), a second judge (Gemini through the Muapi desk, about
+$0.0002 a call) answers the same questions, so the gates do not silently disappear on a bad day. Only when neither can answer is
+there "no opinion", which is never a failure and is recorded as QA_UNAVAILABLE so a run of unchecked days is visible.
 """
 
 from __future__ import annotations
 
 from faceless import config, events
-from faceless.providers import ProviderError, ProviderUnavailable, clef
+from faceless.providers import ProviderError, ProviderUnavailable, clef, judge
 
 IMAGE_Q = {
     "text": {"type": "noul", "instructions": "Does the image contain a sign, caption, label, watermark or any readable words or letters? "
@@ -31,7 +33,33 @@ def cfg() -> dict:
 
 
 def enabled() -> bool:
-    return bool(cfg()["enabled"]) and clef.available()
+    return bool(cfg()["enabled"]) and (clef.available() or judge.available())
+
+
+_announced: set[tuple[str, str]] = set()
+
+
+def _once(event: str, job: str | None, **fields) -> None:
+    """One journal line per job and reason, not one per still."""
+    key = (event, job or "")
+    if key not in _announced:
+        _announced.add(key)
+        events.emit(event, job=job, **fields)
+
+
+def ask(state, questions: dict, images: list | None = None, model: str = "clef", job: str | None = None) -> dict:
+    """Clef first (free and calibrated), the Muapi judge when Clef cannot answer. Raises ProviderUnavailable when neither can."""
+    why = None
+    if clef.available():
+        try:
+            return clef.run(state, questions, images=images, model=model, job=job)
+        except (ProviderUnavailable, ProviderError) as e:
+            why = f"{type(e).__name__}: {str(e)[:80]}"
+    if judge.available():
+        _once("QA_FALLBACK", job, why=why or "no Cloudflare key")
+        return judge.run(state, questions, images=images, job=job)
+    _once("QA_UNAVAILABLE", job, why=why or "no Cloudflare key and no Muapi key")
+    raise ProviderUnavailable(why or "no decision model available")
 
 
 def check_image(path: str, narration: str = "", job: str | None = None) -> dict | None:
@@ -39,7 +67,7 @@ def check_image(path: str, narration: str = "", job: str | None = None) -> dict 
     if not enabled():
         return None
     try:
-        ans = clef.run(f"A generated still for a personal-finance video. Narration: {narration[:300]}", IMAGE_Q, images=[path], job=job)
+        ans = ask(f"A generated still for a personal-finance video. Narration: {narration[:300]}", IMAGE_Q, images=[path], job=job)
     except (ProviderUnavailable, ProviderError):
         return None
     except Exception as e:  # noqa: BLE001 - a broken file or odd response must never cost a video its slot
@@ -59,7 +87,7 @@ def check_frames(paths: list[str], job: str | None = None) -> bool | None:
     if not enabled():
         return None
     try:
-        ans = clef.run("Frames sampled from an AI-generated video clip for a personal-finance video.", FRAME_Q, images=paths[:4], job=job)
+        ans = ask("Frames sampled from an AI-generated video clip for a personal-finance video.", FRAME_Q, images=paths[:4], job=job)
     except (ProviderUnavailable, ProviderError):
         return None
     except Exception as e:  # noqa: BLE001
@@ -72,7 +100,7 @@ def check_script(text: str, job: str | None = None) -> dict | None:
     if not enabled():
         return None
     try:
-        ans = clef.run(text[:2000], SCRIPT_Q, model="clef", job=job)
+        ans = ask(text[:2000], SCRIPT_Q, model="clef", job=job)
     except (ProviderUnavailable, ProviderError):
         return None
     except Exception as e:  # noqa: BLE001

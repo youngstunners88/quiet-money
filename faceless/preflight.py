@@ -70,7 +70,9 @@ def checks_keys() -> list[Check]:
     return [Check("keys:llm", OK if llm else FAIL, f"{', '.join(llm)}" if llm else "no script-writing provider has a key (only the anonymous fallback is left)", "" if llm else "add GEMINI_API_KEY to the environment"),
             Check("keys:images", OK if len(img) >= 2 else WARN, f"{', '.join(img) or 'none'}; procedural art is the last resort",
                   "" if len(img) >= 2 else "a second image provider makes a day survive one outage"),
-            Check("keys:qa", OK if _present("CLOUDFLARE_API_KEY") and _present("CLOUDFLARE_ACCOUNT_ID") else WARN, "semantic QA can run" if _present("CLOUDFLARE_API_KEY") else "semantic QA is off", "")]
+            Check("keys:qa", OK if (_present("CLOUDFLARE_API_KEY") and _present("CLOUDFLARE_ACCOUNT_ID")) or _present("MUAPI_API_KEY") else WARN,
+                  "semantic QA can run (" + " and ".join(x for x, ok in (("Cloudflare Clef", _present("CLOUDFLARE_API_KEY") and _present("CLOUDFLARE_ACCOUNT_ID")), ("the Muapi judge", _present("MUAPI_API_KEY"))) if ok) + ")"
+                  if (_present("CLOUDFLARE_API_KEY") and _present("CLOUDFLARE_ACCOUNT_ID")) or _present("MUAPI_API_KEY") else "semantic QA is off: stills and scripts ship unchecked", "")]
 
 
 def checks_safety() -> list[Check]:
