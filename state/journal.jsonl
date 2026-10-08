@@ -2615,3 +2615,4 @@
 {"ts": "2026-10-08T13:57:17Z", "t": 1791467837.525, "actor": "engine", "type": "MUAPI_RUN", "job": null, "model": "nano-banana-2-1-edit", "usd": 0.06, "request": "f4eae937-79f", "balance": "20.4423"}
 {"ts": "2026-10-08T14:00:28Z", "t": 1791468028.922, "actor": "engine", "type": "MUAPI_RUN", "job": null, "model": "ocr-recognize-text", "usd": 0.02, "request": "7ef1ac5c-65f", "balance": "20.4223"}
 {"ts": "2026-10-08T14:00:57Z", "t": 1791468057.085, "actor": "engine", "type": "MUAPI_RUN", "job": null, "model": "social-search-posts", "usd": 0.1, "request": "018f9a0e-827", "balance": "20.3223"}
+{"ts": "2026-10-08T15:17:30Z", "t": 1791472650.202, "actor": "engine", "type": "COMPOSIO_SESSION", "user": "quiet-money-studio", "session_hash": "cdcd2851"}

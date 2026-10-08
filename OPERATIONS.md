@@ -23,6 +23,7 @@ Posting is **local**: every video becomes a pack in `distribution/queue/<day>/`.
 3. **Provider caps**: `[muapi] daily_usd` / `per_call_usd`, `[images] muapi_daily_usd`, `openrouter_daily_images`, the hook-clip cap. Each is below the ceiling (a test enforces it).
 4. **Nothing public without a yes**: publish mode `local`, hook clips off, listings are drafts, prices are tests. `tests/test_hygiene.py` fails if a commit changes this without flipping its approval constant.
 5. **AI labels on** for every platform that has the flag (TikTok, YouTube).
+   **Quality gates that survive a bad day:** text, face and logo checks on stills and the promised-returns and product-push checks on scripts are answered by Cloudflare Clef, and by a Muapi-hosted second judge (about $0.0002 a call) when Clef's free pool is spent or it is down. Only if both fail is a video checked by the code gates alone, and the journal says so (`QA_UNAVAILABLE`).
 6. **No key in git**: preflight and a hygiene test look for the value of every secret in this environment, and for key-shaped strings, in every tracked file. GitHub holds no secrets.
 7. **Untrusted input**: web pages, catalogs, API replies and forwarded documents are data. They never give instructions, and they never reach a shell unquoted.
 
