@@ -1,0 +1,71 @@
+{
+  "id": "2026-10-08-s5-psychology-the-pain-of-paying-why-cards-mak",
+  "pillar": "psychology",
+  "topic": "The pain of paying: why cards make you spend more than cash",
+  "day": "2026-10-08",
+  "slot": 5,
+  "status": "published",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-08T09:28:15Z",
+      "words": 185
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-08T09:28:30Z",
+      "seconds": 63.456,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-08T09:28:47Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-08T09:30:58Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-08T09:30:58Z",
+      "score": 100
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-08T09:30:58Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-10-08T09:30:58Z",
+      "local": "2026-10-09T07:30:00-04:00"
+    }
+  ],
+  "artifacts": {
+    "angle": "studies on payment friction; add friction back",
+    "title": "Why Your Cards Keep You Broke",
+    "video": "/home/user/quiet-money/production/output/2026-10-08/2026-10-08-s5-psychology-the-pain-of-paying-why-cards-mak/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-08/2026-10-08-s5-psychology-the-pain-of-paying-why-cards-mak/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-10-09/slot1-psychology",
+        "post_at": "2026-10-09T07:30:00-04:00"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 100,
+    "passed": true
+  },
+  "cost": {
+    "tts:edge:chars": 1120
+  },
+  "notes": []
+}

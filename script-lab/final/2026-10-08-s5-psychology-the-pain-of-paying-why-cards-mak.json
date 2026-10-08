@@ -1,0 +1,93 @@
+{
+  "title": "Why Your Cards Keep You Broke",
+  "hook_text": "THE CARD TRAP",
+  "beats": [
+    {
+      "say": "Swiping a credit card actively numbs the specific pain center inside your brain.",
+      "callout": "",
+      "visual": "A close-up of a hand holding a sleek black credit card over a POS terminal, shot from behind the hand, dramatic side-lighting."
+    },
+    {
+      "say": "A famous MIT study proved card buyers willingly bid up to 100% more than cash buyers.",
+      "callout": "100% MORE",
+      "visual": "A clean, minimalistic overhead shot of a bidding paddle on a dark wooden table, soft museum-like lighting."
+    },
+    {
+      "say": "When you hold physical paper cash, parting with it triggers mild, actual discomfort in your mind.",
+      "callout": "",
+      "visual": "A macro shot of a hand counting crisp paper hundred-dollar bills, dramatic shadows, warm light."
+    },
+    {
+      "say": "Psychologists call this the pain of paying, and it's your natural, biological spending brake.",
+      "callout": "PAIN OF PAYING",
+      "visual": "A moody silhouette of a person sitting at a desk with their head in their hands, warm desk lamp casting long shadows."
+    },
+    {
+      "say": "But modern credit cards and digital wallets completely bypass this biological friction.",
+      "callout": "",
+      "visual": "A sleek card sliding smoothly through a card reader, extremely shallow depth of field, cool blue tones."
+    },
+    {
+      "say": "But here's the part nobody mentions: the easier it is to pay, the less you care.",
+      "callout": "NO FRICTION",
+      "visual": "An abstract shot of a glowing smartphone screen reflecting on a dark, polished table surface."
+    },
+    {
+      "say": "Features like Apple Pay and face scans make parting with your money entirely invisible.",
+      "callout": "",
+      "visual": "A hand hovering near a payment terminal, a blue light glowing from the machine, cinematic atmosphere."
+    },
+    {
+      "say": "You're not careless; your brain simply doesn't register that you've lost anything at all.",
+      "callout": "",
+      "visual": "A low-angle shot of a person walking down a quiet, dimly lit city street at night, seen from behind."
+    },
+    {
+      "say": "To protect your wealth, you must build the transaction friction back manually.",
+      "callout": "",
+      "visual": "A close-up of hands typing deliberately on a classic mechanical keyboard, warm brass lighting."
+    },
+    {
+      "say": "Step one: delete all saved credit card details from your phone and favorite shopping apps.",
+      "callout": "STEP ONE",
+      "visual": "A macro shot of a sleek smartphone screen being tapped by a thumb, screen completely blurred out."
+    },
+    {
+      "say": "Step two: set up immediate phone alerts for every single transaction, no matter how small.",
+      "callout": "STEP TWO",
+      "visual": "A dramatic overhead shot of a phone screen lighting up in a dark room, casting a soft glow."
+    },
+    {
+      "say": "Follow for the money rules school never taught you, and take back control of your budget.",
+      "callout": "",
+      "visual": "A high-contrast shot of a vintage leather wallet resting open on a rustic wooden desk."
+    },
+    {
+      "say": "Because if you don't feel the pain of paying, you'll never stop",
+      "callout": "",
+      "visual": "A slow-motion style image of a hand dropping a credit card onto a dark, reflective glass table."
+    }
+  ],
+  "caption": "Why does swiping feel so easy? Because your brain literally cannot feel the transaction. 💳\n\n#money #personalfinance #moneypsychology #savingmoney #wealth",
+  "description": "Discover how credit cards and digital wallets bypass your brain's natural pain receptors, leading you to spend more. Learn how to manually reintroduce friction into your transactions to regain control over your money.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#moneypsychology",
+    "#savingmoney",
+    "#wealth"
+  ],
+  "first_comment": "Do you find yourself spending more when you use tap-to-pay compared to cash?",
+  "facts": [
+    {
+      "claim": "A famous MIT study proved card buyers willingly bid up to 100% more than cash buyers.",
+      "basis": "The 2001 MIT study by Drazen Prelec and Duncan Simester ('Always Leave Home Without It') found that credit card users bid up to 64% to 100% more than those paying with cash."
+    },
+    {
+      "claim": "Swiping a credit card actively numbs the specific pain center inside your brain.",
+      "basis": "fMRI research published in 2007 (Knutson et al.) demonstrated that paying with cash stimulates the insula, the brain's physical pain center, whereas credit card payments do not register this same standard of friction."
+    }
+  ],
+  "source": "llm",
+  "pillar": "psychology"
+}

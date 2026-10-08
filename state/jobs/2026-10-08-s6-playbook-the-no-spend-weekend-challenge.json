@@ -1,0 +1,71 @@
+{
+  "id": "2026-10-08-s6-playbook-the-no-spend-weekend-challenge",
+  "pillar": "playbook",
+  "topic": "The no-spend weekend challenge",
+  "day": "2026-10-08",
+  "slot": 6,
+  "status": "published",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-08T09:33:56Z",
+      "words": 182
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-08T09:34:30Z",
+      "seconds": 63.672,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-08T09:34:42Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-08T09:36:32Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-08T09:36:32Z",
+      "score": 92
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-08T09:36:32Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-10-08T09:36:32Z",
+      "local": "2026-10-09T11:30:00-04:00"
+    }
+  ],
+  "artifacts": {
+    "angle": "a plan that makes it fun, not painful",
+    "title": "The No-Spend Weekend That Actually Feels Fun",
+    "video": "/home/user/quiet-money/production/output/2026-10-08/2026-10-08-s6-playbook-the-no-spend-weekend-challenge/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-08/2026-10-08-s6-playbook-the-no-spend-weekend-challenge/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-10-09/slot2-playbook",
+        "post_at": "2026-10-09T11:30:00-04:00"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 92,
+    "passed": true
+  },
+  "cost": {
+    "tts:edge:chars": 994
+  },
+  "notes": []
+}

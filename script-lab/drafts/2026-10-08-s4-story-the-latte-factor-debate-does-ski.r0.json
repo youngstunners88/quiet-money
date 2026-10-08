@@ -1,0 +1,78 @@
+{
+  "title": "The Latte Myth: Small Leaks vs Big Wins",
+  "hook_text": "SKIPPING LATTES WON'T SAVE YOU",
+  "beats": [
+    {
+      "say": "Skipping your $5 daily coffee for 30 years saves you $54,750.",
+      "callout": "",
+      "visual": "A single takeaway coffee cup sitting on a dark wooden cafe table, moody morning light, cinematic side view."
+    },
+    {
+      "say": "Financial gurus swear that's the secret to wealth. But it's a massive distraction from the numbers that actually matter.",
+      "callout": "THE BIG LIE",
+      "visual": "A stack of bills and receipts blurred in the background, a person's hand pressing a calculator, top-down view."
+    },
+    {
+      "say": "In 2014, researchers tracked household spending. They found a shocking truth about where your money really goes.",
+      "callout": "2014 STUDY",
+      "visual": "A dimly lit room with an open ledger on a rustic desk, vintage brass pen resting beside it, moody shadows."
+    },
+    {
+      "say": "It isn't the $5 latte draining your paycheck. It's the big three: housing, transportation, and healthcare.",
+      "callout": "BIG THREE",
+      "visual": "Silhouette of a person looking out a large apartment window at a busy city street below, dusk lighting."
+    },
+    {
+      "say": "Let's look at a real car loan. A $40,000 auto loan at 8% interest costs you $14,000 in pure interest.",
+      "callout": "$40,000 VS $14,000",
+      "visual": "Car keys resting on a dark dashboard, rain streaks on the windshield, cinematic blue-toned lighting."
+    },
+    {
+      "say": "That's three decades of daily coffee, wiped out by one bad car purchase in a single afternoon.",
+      "callout": "ONE AFTERNOON",
+      "visual": "Close up of a hand turning a metal car ignition key, soft dashboard glow, shallow depth of field."
+    },
+    {
+      "say": "But here's the part nobody mentions. Obsessing over tiny expenses creates constant mental fatigue.",
+      "callout": "MENTAL FATIGUE",
+      "visual": "A person pinching the bridge of their nose in a dimly lit home office, silhouette, cinematic shadows."
+    },
+    {
+      "say": "You stress over a muffin, while a bloated housing payment silently devours 50% of your take-home pay.",
+      "callout": "50% OF PAY",
+      "visual": "A stack of unopened mail sitting on a plain kitchen counter, dramatic single light source from the side."
+    },
+    {
+      "say": "Cut the big fixed costs first. Downsize your wheels, optimize your rent, and ignore the coffee shaming.",
+      "callout": "",
+      "visual": "A sharp kitchen knife resting on a clean wooden cutting board, minimalist aesthetic, moody natural light."
+    },
+    {
+      "say": "Protect your energy for the choices that move millions, because obsessing over small leaks won't fix",
+      "callout": "",
+      "visual": "A closed front door viewed from the inside hallway, golden hour sunlight bleeding under the crack."
+    }
+  ],
+  "caption": "Stop stressing over $5 lattes. Fix your housing and transport costs instead.\n\n#moneypsychology #personalfinance #wealthbuilding #smartmoney",
+  "description": "Skipping small treats won't make you rich if your fixed costs are broken. Here's why you should focus on big wins instead.",
+  "hashtags": [
+    "#moneypsychology",
+    "#personalfinance",
+    "#wealthbuilding",
+    "#smartmoney",
+    "#budgetingtips"
+  ],
+  "first_comment": "What's the biggest fixed expense in your budget right now?",
+  "facts": [
+    {
+      "claim": "$5 daily coffee for 30 years equals $54,750",
+      "basis": "5 * 365 * 30 = 54,750"
+    },
+    {
+      "claim": "$40,000 auto loan at 8% interest costs $14,000 in interest over standard terms",
+      "basis": "Standard amortization math on a 60-month auto loan at 8% APR."
+    }
+  ],
+  "source": "llm",
+  "pillar": "story"
+}

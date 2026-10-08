@@ -1,0 +1,88 @@
+{
+  "title": "The No-Spend Weekend That Actually Feels Fun",
+  "hook_text": "A NO-SPEND WEEKEND CAN BE EASY",
+  "beats": [
+    {
+      "say": "A no-spend weekend doesn't mean sitting in an empty room staring at the wall.",
+      "callout": "",
+      "visual": "A sunlit living room with an empty sofa, morning light, cinematic film still, muted warm tones."
+    },
+    {
+      "say": "It's a game to find out how much cash you can keep in your account by Monday morning.",
+      "callout": "",
+      "visual": "A closed leather wallet resting on a dark wooden table, macro shot, soft natural light."
+    },
+    {
+      "say": "Step one. Clean out your pantry tonight and plan every meal using only what's already inside.",
+      "callout": "STEP ONE",
+      "visual": "A hand holding a wooden spoon over a rustic kitchen counter with jars of dried grains."
+    },
+    {
+      "say": "That single move stops the sneaky delivery apps from eating your paycheck.",
+      "callout": "",
+      "visual": "A smartphone resting face down on a concrete countertop, moody side lighting."
+    },
+    {
+      "say": "Step two. Swap expensive weekend outings for a library card and a public park walk.",
+      "callout": "STEP TWO",
+      "visual": "Rows of old hardcover books on wooden shelves, shallow depth of field, warm ambient light."
+    },
+    {
+      "say": "Remember, a $5/day habit turns into $1,825 a year that could be working for you.",
+      "callout": "$5/DAY VS $1,825",
+      "visual": "A single metal coin resting on a rustic oak surface, sharp focus, dark shadows."
+    },
+    {
+      "say": "Step three. Freeze your debit card in a cup of water in the freezer before you sleep.",
+      "callout": "STEP THREE",
+      "visual": "A glass of clear ice cubes sitting on a kitchen table, moody window light."
+    },
+    {
+      "say": "If you want to spend money on Saturday, you've got to wait for the ice to melt.",
+      "callout": "",
+      "visual": "Frost forming on the edge of a clean glass window, macro view, cool blue tones."
+    },
+    {
+      "say": "That simple friction kills impulse buys dead in their tracks.",
+      "callout": "",
+      "visual": "A closed wooden door in a hallway, dramatic contrast, cinematic side light."
+    },
+    {
+      "say": "Just like a $3,000 credit card balance at 24% APR takes years to clear out if you only pay the minimum...",
+      "callout": "$3,000 DEBT",
+      "visual": "A blank paper envelope sitting on a minimal desk, dramatic shadows, overhead shot."
+    },
+    {
+      "say": "Small daily habits compound just as fast against you when you aren't paying close attention.",
+      "callout": "",
+      "visual": "A pocket watch ticking on a dark surface, macro shot, vintage aesthetic."
+    },
+    {
+      "say": "Follow for the money rules school never taught you, starting with why",
+      "callout": "",
+      "visual": "A pair of hands sliding a dark notebook across a wooden table, cinematic lighting."
+    }
+  ],
+  "caption": "A no-spend weekend doesn't have to feel like punishment. It's just a reset button. #moneymindset #personalfinance #savingmoney #financialliteracy #budgeting",
+  "description": "Master the no-spend weekend with a simple 3-step action plan that makes keeping your cash easy and fun.",
+  "hashtags": [
+    "#moneymindset",
+    "#personalfinance",
+    "#savingmoney",
+    "#financialliteracy",
+    "#budgeting"
+  ],
+  "first_comment": "What's the hardest part of a no-spend weekend for you?",
+  "facts": [
+    {
+      "claim": "$5/day habit equals $1,825/year",
+      "basis": "$5/day habit = $1,825/year; invested monthly at 8% for 30 years = $226,659"
+    },
+    {
+      "claim": "$3,000 credit card at 24% APR takes years to clear on minimums",
+      "basis": "$3,000 credit card at 24% APR paying only the minimum (1% + interest, min $25): 183 months (~15 years), $4,887 interest"
+    }
+  ],
+  "source": "llm",
+  "pillar": "playbook"
+}

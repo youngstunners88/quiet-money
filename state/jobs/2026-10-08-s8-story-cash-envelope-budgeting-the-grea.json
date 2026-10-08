@@ -1,0 +1,71 @@
+{
+  "id": "2026-10-08-s8-story-cash-envelope-budgeting-the-grea",
+  "pillar": "story",
+  "topic": "Cash envelope budgeting: the Great Depression system that still beats apps",
+  "day": "2026-10-08",
+  "slot": 8,
+  "status": "published",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-08T09:42:42Z",
+      "words": 177
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-08T09:42:58Z",
+      "seconds": 67.896,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-08T09:43:15Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-08T09:45:38Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-08T09:45:38Z",
+      "score": 100
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-08T09:45:38Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-10-08T09:45:38Z",
+      "local": "2026-10-09T18:30:00-04:00"
+    }
+  ],
+  "artifacts": {
+    "angle": "physical limits make overspending visible; how to run it digitally today",
+    "title": "The 1932 Envelope Trick That Beats Budgeting Apps",
+    "video": "/home/user/quiet-money/production/output/2026-10-08/2026-10-08-s8-story-cash-envelope-budgeting-the-grea/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-08/2026-10-08-s8-story-cash-envelope-budgeting-the-grea/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-10-09/slot4-story",
+        "post_at": "2026-10-09T18:30:00-04:00"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 100,
+    "passed": true
+  },
+  "cost": {
+    "tts:edge:chars": 1126
+  },
+  "notes": []
+}

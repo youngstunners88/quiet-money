@@ -1,0 +1,88 @@
+{
+  "title": "Why Skipping Your Daily Coffee Won't Make You Rich",
+  "hook_text": "SKIPPING COFFEE WON'T MAKE YOU RICH",
+  "beats": [
+    {
+      "say": "Skipping your daily coffee won't actually make you rich.",
+      "callout": "",
+      "visual": "Cinematic close-up of a warm cup of coffee on a sleek wooden table, soft morning light, shallow depth of field."
+    },
+    {
+      "say": "While financial gurus tell you to skip your $5 daily brew, they're hiding a much bigger math problem.",
+      "callout": "$5 VS THE TRUTH",
+      "visual": "Slightly out-of-focus silhouette of a person holding a smartphone, sitting in a dimly lit modern cafe."
+    },
+    {
+      "say": "According to the Bureau of Labor Statistics, the average household spends over 60% of their budget on just three things:",
+      "callout": "THE BIG THREE",
+      "visual": "Wide low-angle shot of modern suburban houses lining a quiet street at dusk, warm window lights glowing."
+    },
+    {
+      "say": "housing, transportation, and food. These giant expenses are where you win or lose the wealth game.",
+      "callout": "",
+      "visual": "A modern car dashboard at night, glowing instrument panel, hands on the steering wheel, city lights blurred outside."
+    },
+    {
+      "say": "A standard $40,000 car loan at 8% interest costs you over $10,000 in pure interest.",
+      "callout": "$10,000 INTEREST",
+      "visual": "Over the shoulder shot of a person looking at a sleek new car through a showroom window, reflections on the glass."
+    },
+    {
+      "say": "That's nearly six years of daily coffees vaporized in a single afternoon.",
+      "callout": "6 YEARS OF COFFEE",
+      "visual": "A stack of crisp dollar bills sitting on a dark concrete desk, one corner gently blowing in a draft."
+    },
+    {
+      "say": "But here's the part nobody mentions. When you obsess over tiny $5 decisions, you drain your limited mental energy.",
+      "callout": "",
+      "visual": "Close-up of a person's hands holding a pen over a notebook with columns of numbers, warm soft lighting."
+    },
+    {
+      "say": "That decision fatigue stops you from focusing on the massive financial wins that move the needle.",
+      "callout": "",
+      "visual": "An empty modern workspace at night, a single desk lamp illuminating a laptop viewed from behind."
+    },
+    {
+      "say": "Negotiating your rent down by just $100 a month saves you $1,200 every single year.",
+      "callout": "",
+      "visual": "A silver key sitting on a polished wooden kitchen counter, morning sunlight streaming through a window."
+    },
+    {
+      "say": "Buying a reliable used vehicle instead of a new model saves you over $20,000 in five years.",
+      "callout": "$20,000 SAVED",
+      "visual": "Cinematic medium shot of the rear of a clean, dark sedan parked under a streetlamp at twilight."
+    },
+    {
+      "say": "Stop feeling guilty about the small daily joys. Follow for the money rules school never taught you,",
+      "callout": "",
+      "visual": "Side profile silhouette of a person looking out of a high-rise window at a sprawling city skyline at sunset."
+    },
+    {
+      "say": "because obsessing over small leaks won't fix a sinking ship. That's why",
+      "callout": "",
+      "visual": "An empty, elegant coffee shop counter at sunrise, clean minimalist design, soft shadows."
+    }
+  ],
+  "caption": "Stop feeling guilty about your $5 coffee. The math proves that wealth is won or lost on the big decisions, not your morning caffeine. ☕️📉\n#money #personalfinance #wealthbuilding #savingmoney #financialfreedom",
+  "description": "An analysis of the Latte Factor, showing why focusing on major expenses like housing and transportation yields far greater financial returns than cutting out small daily pleasures.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#wealthbuilding",
+    "#savingmoney",
+    "#financialfreedom"
+  ],
+  "first_comment": "What is one 'big win' expense you have cut down on recently? Let's talk in the comments.",
+  "facts": [
+    {
+      "claim": "The average household spends over 60% of their budget on housing, transportation, and food.",
+      "basis": "According to the Bureau of Labor Statistics (BLS) Consumer Expenditure Surveys, housing, transportation, and food consistently consume the largest share (over 60%) of average household budgets."
+    },
+    {
+      "claim": "A standard $40,000 car loan at 8% interest costs over $10,000 in pure interest.",
+      "basis": "A 72-month (6-year) loan for $40,000 at 8% APR results in approximately $10,515 in total interest payments."
+    }
+  ],
+  "source": "llm",
+  "pillar": "story"
+}

@@ -1,0 +1,71 @@
+{
+  "id": "2026-10-08-s4-story-the-latte-factor-debate-does-ski",
+  "pillar": "story",
+  "topic": "The Latte Factor debate: does skipping coffee really make you rich",
+  "day": "2026-10-08",
+  "slot": 4,
+  "status": "published",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-08T09:22:56Z",
+      "words": 186
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-08T09:23:13Z",
+      "seconds": 66.216,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-08T09:24:22Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-08T09:27:00Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-08T09:27:00Z",
+      "score": 100
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-08T09:27:00Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-10-08T09:27:00Z",
+      "local": "2026-10-08T21:00:00-04:00"
+    }
+  ],
+  "artifacts": {
+    "angle": "small leaks vs big wins (housing, cars) with real numbers",
+    "title": "Why Skipping Your Daily Coffee Won't Make You Rich",
+    "video": "/home/user/quiet-money/production/output/2026-10-08/2026-10-08-s4-story-the-latte-factor-debate-does-ski/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-08/2026-10-08-s4-story-the-latte-factor-debate-does-ski/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-10-08/slot5-story",
+        "post_at": "2026-10-08T21:00:00-04:00"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 100,
+    "passed": true
+  },
+  "cost": {
+    "tts:edge:chars": 1097
+  },
+  "notes": []
+}

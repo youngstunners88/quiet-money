@@ -1560,3 +1560,14 @@ def test_wallet_watch_warns_only_when_runway_is_short(monkeypatch):
     assert got and got[0]["id"] == "muapi-topup" and got[0]["autonomy"] == "owner" and "10 days" in got[0]["title"]
     monkeypatch.setattr(images, "muapi_balance", lambda: None)
     assert scout.watch_wallet() == []
+
+
+def test_step_card_gist_stays_clear_of_the_caption_band():
+    import re
+    from faceless import config
+    src = (Path(__file__).resolve().parent.parent / "faceless" / "pipeline" / "cards.py").read_text(encoding="utf-8")
+    top = int(re.search(r"\.sg\{\{[^}]*?top:(\d+)px", src).group(1))
+    caption_bottom = config.load()["production"]["caption_y"] + 60     # 88px caption + outline, centred on caption_y
+    safe_bottom = round(config.load()["production"]["height"] * 0.78)  # nothing in the bottom ~22%
+    assert top >= caption_bottom, "gist text would overlap the live captions"
+    assert top + 3 * 72 <= safe_bottom, "three lines of gist would run into the platform UI zone"

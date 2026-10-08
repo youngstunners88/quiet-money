@@ -1,0 +1,72 @@
+{
+  "id": "2026-10-08-s7-escape-more-better-new-why-beginners-qu",
+  "pillar": "escape",
+  "topic": "More, Better, New: why beginners quit what's working too early",
+  "day": "2026-10-08",
+  "slot": 7,
+  "status": "published",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-08T09:38:07Z",
+      "words": 185
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-08T09:38:26Z",
+      "seconds": 63.6,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-08T09:38:37Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-08T09:40:49Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-08T09:40:49Z",
+      "score": 91
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-08T09:40:49Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-10-08T09:40:49Z",
+      "local": "2026-10-09T15:00:00-04:00"
+    }
+  ],
+  "artifacts": {
+    "angle": "do more of what works before trying anything new",
+    "brief": "hormozi",
+    "title": "Why You Abandon Your Best Money Ideas Too Soon",
+    "video": "/home/user/quiet-money/production/output/2026-10-08/2026-10-08-s7-escape-more-better-new-why-beginners-qu/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-08/2026-10-08-s7-escape-more-better-new-why-beginners-qu/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-10-09/slot3-escape",
+        "post_at": "2026-10-09T15:00:00-04:00"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 90,
+    "passed": true
+  },
+  "cost": {
+    "tts:edge:chars": 1087
+  },
+  "notes": []
+}

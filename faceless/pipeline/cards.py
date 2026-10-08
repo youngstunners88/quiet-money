@@ -292,7 +292,7 @@ html,body{{width:1080px;height:1920px;overflow:hidden;background:#000}}
 .ring{{position:absolute;left:320px;top:420px;width:440px;height:440px;opacity:0}}
 .rn{{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font:400 270px/1 "Anton";color:#fff}}
 .sw{{position:absolute;left:0;top:930px;width:1080px;text-align:center;font:400 84px/1 "Anton";letter-spacing:12px;color:#fff;opacity:0}}
-.sg{{position:absolute;left:100px;top:1090px;width:880px;text-align:center;font:400 60px/1.2 "MontserratBlack";color:#fff;opacity:0;
+.sg{{position:absolute;left:100px;top:1270px;width:880px;text-align:center;font:400 60px/1.2 "MontserratBlack";color:#fff;opacity:0;
   text-shadow:0 4px 30px rgba(0,0,0,.6)}}
 </style></head>
 <body>
