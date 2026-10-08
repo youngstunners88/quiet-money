@@ -726,6 +726,12 @@
 {"ts": "2026-10-02T01:11:19Z", "t": 1790903479.105, "actor": "engine", "type": "JOB_TRANSITION", "job": "2026-10-02-s7-escape-the-rule-of-100-a-100-day-plan-f", "to": "gated", "score": 93}
 {"ts": "2026-10-02T01:11:19Z", "t": 1790903479.106, "actor": "engine", "type": "JOB_TRANSITION", "job": "2026-10-02-s7-escape-the-rule-of-100-a-100-day-plan-f", "to": "packaged"}
 {"ts": "2026-10-02T01:11:19Z", "t": 1790903479.11, "actor": "engine", "type": "JOB_TRANSITION", "job": "2026-10-02-s7-escape-the-rule-of-100-a-100-day-plan-f", "to": "published", "local": "2026-10-03T15:00:00-04:00"}
+{"ts": "2026-10-02T03:26:14Z", "t": 1790911574.938, "actor": "engine", "type": "PROVIDER_OK", "capability": "llm", "provider": "gemini", "job": null, "ms": 13054}
+{"ts": "2026-10-02T03:26:20Z", "t": 1790911580.035, "actor": "engine", "type": "SCOUT_TOPUP", "pillar": "playbook", "added": 3}
+{"ts": "2026-10-02T03:26:32Z", "t": 1790911592.324, "actor": "engine", "type": "SCOUT_TOPUP", "pillar": "playbook", "added": 1}
+{"ts": "2026-10-02T03:26:54Z", "t": 1790911614.32, "actor": "engine", "type": "SCOUT_TOPUP", "pillar": "playbook", "added": 1}
+{"ts": "2026-10-02T03:27:23Z", "t": 1790911643.731, "actor": "engine", "type": "SCOUT_TOPUP", "pillar": "playbook", "added": 1}
+{"ts": "2026-10-02T04:54:40Z", "t": 1790916880.198, "actor": "engine", "type": "COMPOSIO_SESSION", "user": "quiet-money-studio", "session_hash": "08348a52"}
 {"ts": "2026-10-02T09:18:16Z", "t": 1790932696.169, "actor": "engine", "type": "SCOUT_TOPUP", "pillar": "playbook", "added": 1}
 {"ts": "2026-10-02T09:18:19Z", "t": 1790932699.865, "actor": "engine", "type": "DAILY_PLAN", "slots": ["2026-10-03#4", "2026-10-03#5", "2026-10-04#1", "2026-10-04#2", "2026-10-04#3"], "extra": 5, "weights": {"story": 1.0, "math": 1.0, "psychology": 1.0, "myth": 1.0, "playbook": 1.0, "escape": 1.5}}
 {"ts": "2026-10-02T09:18:19Z", "t": 1790932699.869, "actor": "engine", "type": "JOB_CREATED", "job": "2026-10-02-s8-escape-the-four-ways-to-earn-money-and", "pillar": "escape", "topic": "The four ways to earn money, and why only two set you free", "slot": 8}
@@ -978,14 +984,12 @@
 {"ts": "2026-10-02T09:48:24Z", "t": 1790934504.24, "actor": "engine", "type": "JOB_TRANSITION", "job": "2026-10-02-s12-escape-side-income-plus-compounding-1-0", "to": "gated", "score": 98}
 {"ts": "2026-10-02T09:48:24Z", "t": 1790934504.241, "actor": "engine", "type": "JOB_TRANSITION", "job": "2026-10-02-s12-escape-side-income-plus-compounding-1-0", "to": "packaged"}
 {"ts": "2026-10-02T09:48:24Z", "t": 1790934504.247, "actor": "engine", "type": "JOB_TRANSITION", "job": "2026-10-02-s12-escape-side-income-plus-compounding-1-0", "to": "published", "local": "2026-10-04T15:00:00-04:00"}
-{"ts": "2026-10-02T03:26:14Z", "t": 1790911574.938, "actor": "engine", "type": "PROVIDER_OK", "capability": "llm", "provider": "gemini", "job": null, "ms": 13054}
-{"ts": "2026-10-02T03:26:20Z", "t": 1790911580.035, "actor": "engine", "type": "SCOUT_TOPUP", "pillar": "playbook", "added": 3}
-{"ts": "2026-10-02T03:26:32Z", "t": 1790911592.324, "actor": "engine", "type": "SCOUT_TOPUP", "pillar": "playbook", "added": 1}
-{"ts": "2026-10-02T03:26:54Z", "t": 1790911614.32, "actor": "engine", "type": "SCOUT_TOPUP", "pillar": "playbook", "added": 1}
-{"ts": "2026-10-02T03:27:23Z", "t": 1790911643.731, "actor": "engine", "type": "SCOUT_TOPUP", "pillar": "playbook", "added": 1}
-{"ts": "2026-10-02T04:54:40Z", "t": 1790916880.198, "actor": "engine", "type": "COMPOSIO_SESSION", "user": "quiet-money-studio", "session_hash": "08348a52"}
 {"ts": "2026-10-02T10:01:10Z", "t": 1790935270.529, "actor": "engine", "type": "COMPOSIO_SESSION", "user": "quiet-money-studio", "session_hash": "cf755f66"}
 {"ts": "2026-10-02T10:01:52Z", "t": 1790935312.123, "actor": "engine", "type": "SCOUT_TOPUP", "pillar": "playbook", "added": 1}
+{"ts": "2026-10-02T14:05:21Z", "t": 1790949921.644, "actor": "engine", "type": "COMPOSIO_SESSION", "user": "quiet-money-studio", "session_hash": "3194330b"}
+{"ts": "2026-10-02T14:05:21Z", "t": 1790949921.644, "actor": "engine", "type": "COMPOSIO_SESSION", "user": "quiet-money-studio", "session_hash": "3194330b"}
+{"ts": "2026-10-02T18:08:48Z", "t": 1790964528.522, "actor": "engine", "type": "COMPOSIO_SESSION", "user": "quiet-money-studio", "session_hash": "d12b3bb7"}
+{"ts": "2026-10-02T18:08:48Z", "t": 1790964528.522, "actor": "engine", "type": "COMPOSIO_SESSION", "user": "quiet-money-studio", "session_hash": "d12b3bb7"}
 {"ts": "2026-10-03T09:18:08Z", "t": 1791019088.059, "actor": "engine", "type": "SCOUT_TOPUP", "pillar": "playbook", "added": 1}
 {"ts": "2026-10-03T09:18:11Z", "t": 1791019091.741, "actor": "engine", "type": "DAILY_PLAN", "slots": ["2026-10-04#4", "2026-10-04#5", "2026-10-05#1", "2026-10-05#2", "2026-10-05#3"], "extra": 5, "weights": {"story": 1.0, "math": 1.0, "psychology": 1.0, "myth": 1.0, "playbook": 1.0, "escape": 1.5}}
 {"ts": "2026-10-03T09:18:11Z", "t": 1791019091.744, "actor": "engine", "type": "JOB_CREATED", "job": "2026-10-03-s8-story-mike-tyson-earned-around-300-mil", "pillar": "story", "topic": "Mike Tyson earned around $300 million and filed for bankruptcy in 2003", "slot": 8}
@@ -1289,6 +1293,8 @@
 {"ts": "2026-10-03T09:58:05Z", "t": 1791021485.877, "actor": "engine", "type": "PROVIDER_OK", "capability": "llm", "provider": "gemini", "job": "2026-10-03-s9-math-the-rule-of-72-how-fast-your-mon", "ms": 1497}
 {"ts": "2026-10-03T09:58:06Z", "t": 1791021486.058, "actor": "engine", "type": "GAUNTLET", "job": "2026-10-03-s9-math-the-rule-of-72-how-fast-your-mon", "score": 94, "passed": false, "hard": ["no_placeholder_art"]}
 {"ts": "2026-10-03T09:58:06Z", "t": 1791021486.084, "actor": "engine", "type": "JOB_TRANSITION", "job": "2026-10-03-s9-math-the-rule-of-72-how-fast-your-mon", "to": "held", "reason": "no_placeholder_art"}
+{"ts": "2026-10-03T10:01:34Z", "t": 1791021694.47, "actor": "engine", "type": "COMPOSIO_SESSION", "user": "quiet-money-studio", "session_hash": "9d7f8ae9"}
+{"ts": "2026-10-03T10:01:34Z", "t": 1791021694.47, "actor": "engine", "type": "COMPOSIO_SESSION", "user": "quiet-money-studio", "session_hash": "9d7f8ae9"}
 {"ts": "2026-10-04T09:18:15Z", "t": 1791105495.206, "actor": "engine", "type": "SCOUT_TOPUP", "pillar": "playbook", "added": 1}
 {"ts": "2026-10-04T09:18:19Z", "t": 1791105499.232, "actor": "engine", "type": "DAILY_PLAN", "slots": ["2026-10-04#5", "2026-10-05#1", "2026-10-05#2", "2026-10-05#3", "2026-10-05#4"], "extra": 5, "weights": {"story": 1.0, "math": 1.0, "psychology": 1.0, "myth": 1.0, "playbook": 1.0, "escape": 1.5}}
 {"ts": "2026-10-04T09:18:19Z", "t": 1791105499.239, "actor": "engine", "type": "JOB_CREATED", "job": "2026-10-04-s4-math-how-a-5-a-day-habit-becomes-over", "pillar": "math", "topic": "How a $5-a-day habit becomes over $226,000 in 30 years if invested", "slot": 4}
@@ -1497,6 +1503,8 @@
 {"ts": "2026-10-04T09:46:16Z", "t": 1791107176.663, "actor": "engine", "type": "PROVIDER_OK", "capability": "llm", "provider": "gemini", "job": "2026-10-04-s5-myth-myth-a-budget-means-you-can-neve", "ms": 10217}
 {"ts": "2026-10-04T09:46:16Z", "t": 1791107176.93, "actor": "engine", "type": "GAUNTLET", "job": "2026-10-04-s5-myth-myth-a-budget-means-you-can-neve", "score": 87, "passed": true, "hard": []}
 {"ts": "2026-10-04T09:46:17Z", "t": 1791107177.141, "actor": "engine", "type": "JOB_TRANSITION", "job": "2026-10-04-s5-myth-myth-a-budget-means-you-can-neve", "to": "published", "manual": true, "forced": false}
+{"ts": "2026-10-04T10:01:13Z", "t": 1791108073.757, "actor": "engine", "type": "COMPOSIO_SESSION", "user": "quiet-money-studio", "session_hash": "a83b76f3"}
+{"ts": "2026-10-04T10:01:13Z", "t": 1791108073.757, "actor": "engine", "type": "COMPOSIO_SESSION", "user": "quiet-money-studio", "session_hash": "a83b76f3"}
 {"ts": "2026-10-05T09:18:26Z", "t": 1791191906.131, "actor": "engine", "type": "SCOUT_TOPUP", "pillar": "playbook", "added": 1}
 {"ts": "2026-10-05T09:18:30Z", "t": 1791191910.004, "actor": "engine", "type": "DAILY_PLAN", "slots": ["2026-10-05#5", "2026-10-06#1", "2026-10-06#2", "2026-10-06#3", "2026-10-06#4"], "extra": 5, "weights": {"story": 1.0, "math": 1.0, "psychology": 1.0, "myth": 1.0, "playbook": 1.0, "escape": 1.5}}
 {"ts": "2026-10-05T09:18:30Z", "t": 1791191910.009, "actor": "engine", "type": "JOB_CREATED", "job": "2026-10-05-s4-psychology-the-diderot-effect-how-one-new-p", "pillar": "psychology", "topic": "The Diderot Effect: how one new purchase triggers ten more", "slot": 4}
@@ -1685,10 +1693,6 @@
 {"ts": "2026-10-05T11:11:12Z", "t": 1791198672.089, "actor": "engine", "type": "PROVIDER_OK", "capability": "llm", "provider": "gemini", "job": null, "ms": 4196}
 {"ts": "2026-10-05T11:11:14Z", "t": 1791198674.576, "actor": "engine", "type": "SCOUT_TOPUP", "pillar": "escape", "added": 2}
 {"ts": "2026-10-05T21:18:54Z", "t": 1791235134.816, "actor": "engine", "type": "AEO_TRACK", "probes": 16, "ok": 0, "mentioned": 0}
-{"ts": "2026-10-02T14:05:21Z", "t": 1790949921.644, "actor": "engine", "type": "COMPOSIO_SESSION", "user": "quiet-money-studio", "session_hash": "3194330b"}
-{"ts": "2026-10-02T18:08:48Z", "t": 1790964528.522, "actor": "engine", "type": "COMPOSIO_SESSION", "user": "quiet-money-studio", "session_hash": "d12b3bb7"}
-{"ts": "2026-10-03T10:01:34Z", "t": 1791021694.47, "actor": "engine", "type": "COMPOSIO_SESSION", "user": "quiet-money-studio", "session_hash": "9d7f8ae9"}
-{"ts": "2026-10-04T10:01:13Z", "t": 1791108073.757, "actor": "engine", "type": "COMPOSIO_SESSION", "user": "quiet-money-studio", "session_hash": "a83b76f3"}
 {"ts": "2026-10-06T02:52:24Z", "t": 1791255144.974, "actor": "engine", "type": "SCOUT_TOPUP", "pillar": "playbook", "added": 1}
 {"ts": "2026-10-06T02:54:39Z", "t": 1791255279.199, "actor": "engine", "type": "CARDS_RENDERED", "job": "2026-10-02-s0-math-starting-to-invest-at-25-vs-35-t", "cards": 5, "seconds": 31.2}
 {"ts": "2026-10-06T02:56:10Z", "t": 1791255370.134, "actor": "engine", "type": "CARDS_RENDERED", "job": "2026-10-02-s0-math-starting-to-invest-at-25-vs-35-t", "cards": 5, "seconds": 31.2}
@@ -1781,10 +1785,6 @@
 {"ts": "2026-10-06T03:07:45Z", "t": 1791256065.678, "actor": "engine", "type": "JOB_TRANSITION", "job": "2026-10-06-s41-math-the-10-year-delay-that-costs-400", "to": "held"}
 {"ts": "2026-10-06T03:07:47Z", "t": 1791256067.612, "actor": "engine", "type": "JOB_TRANSITION", "job": "2026-10-06-s41-math-the-10-year-delay-that-costs-400", "to": "failed", "error": "test render"}
 {"ts": "2026-10-06T03:08:23Z", "t": 1791256103.205, "actor": "engine", "type": "SCOUT_TOPUP", "pillar": "playbook", "added": 1}
-{"ts": "2026-10-02T14:05:21Z", "t": 1790949921.644, "actor": "engine", "type": "COMPOSIO_SESSION", "user": "quiet-money-studio", "session_hash": "3194330b"}
-{"ts": "2026-10-02T18:08:48Z", "t": 1790964528.522, "actor": "engine", "type": "COMPOSIO_SESSION", "user": "quiet-money-studio", "session_hash": "d12b3bb7"}
-{"ts": "2026-10-03T10:01:34Z", "t": 1791021694.47, "actor": "engine", "type": "COMPOSIO_SESSION", "user": "quiet-money-studio", "session_hash": "9d7f8ae9"}
-{"ts": "2026-10-04T10:01:13Z", "t": 1791108073.757, "actor": "engine", "type": "COMPOSIO_SESSION", "user": "quiet-money-studio", "session_hash": "a83b76f3"}
 {"ts": "2026-10-06T05:02:26Z", "t": 1791262946.356, "actor": "engine", "type": "SCOUT_TOPUP", "pillar": "playbook", "added": 1}
 {"ts": "2026-10-06T05:02:39Z", "t": 1791262959.55, "actor": "engine", "type": "DAILY_PLAN", "slots": ["2026-10-06#5"], "extra": 0, "weights": {"story": 1.0, "math": 1.0, "psychology": 1.0, "myth": 1.0, "playbook": 1.0, "escape": 1.5}}
 {"ts": "2026-10-06T05:02:39Z", "t": 1791262959.556, "actor": "engine", "type": "JOB_CREATED", "job": "2026-10-06-s4-playbook-the-50-30-20-budget-in-3-steps", "pillar": "playbook", "topic": "The 50/30/20 budget in 3 steps", "slot": 4}
@@ -2600,3 +2600,9 @@
 {"ts": "2026-10-08T09:58:49Z", "t": 1791453529.888, "actor": "engine", "type": "KIT_BUILT", "job": "2026-10-08-s8-story-cash-envelope-budgeting-the-grea", "files": 8, "audio": true}
 {"ts": "2026-10-08T09:58:50Z", "t": 1791453530.657, "actor": "engine", "type": "SCOUT_TOPUP", "pillar": "playbook", "added": 1}
 {"ts": "2026-10-08T09:59:10Z", "t": 1791453550.578, "actor": "engine", "type": "VISUALS_DONE", "job": "qa1", "providers": {"cloudflare": 3}, "qa_flagged": 1, "qa_swapped": 1}
+{"ts": "2026-10-08T13:01:19Z", "t": 1791464479.184, "actor": "engine", "type": "SCOUT_TOPUP", "pillar": "playbook", "added": 1}
+{"ts": "2026-10-08T13:01:32Z", "t": 1791464492.597, "actor": "engine", "type": "VISUALS_DONE", "job": "qa1", "providers": {"cloudflare": 3}, "qa_flagged": 1, "qa_swapped": 1}
+{"ts": "2026-10-08T13:01:59Z", "t": 1791464519.867, "actor": "engine", "type": "SCOUT_TOPUP", "pillar": "playbook", "added": 1}
+{"ts": "2026-10-08T13:02:12Z", "t": 1791464532.587, "actor": "engine", "type": "VISUALS_DONE", "job": "qa1", "providers": {"cloudflare": 3}, "qa_flagged": 1, "qa_swapped": 1}
+{"ts": "2026-10-08T13:02:13Z", "t": 1791464533.781, "actor": "engine", "type": "SCOUT_TOPUP", "pillar": "playbook", "added": 1}
+{"ts": "2026-10-08T13:02:50Z", "t": 1791464570.398, "actor": "engine", "type": "VISUALS_DONE", "job": "qa1", "providers": {"cloudflare": 3}, "qa_flagged": 1, "qa_swapped": 1}

@@ -1495,6 +1495,7 @@ def _hook_env(monkeypatch, tmp_path, session, *, enabled=True, frames_bad=False)
     monkeypatch.setitem(config.load()["production"].setdefault("hookclip", {}), "enabled", enabled)
     monkeypatch.setattr(hookclip, "http", lambda: session)
     monkeypatch.setattr(hookclip.time, "sleep", lambda s: None)
+    monkeypatch.setattr(hookclip.shutil, "which", lambda name, *a, **k: f"/usr/bin/{name}")      # CI runners have no ffmpeg
     monkeypatch.setattr(hookclip, "estimate", lambda *a: 0.15)
     monkeypatch.setattr(hookclip.flow, "probe", lambda p: {"duration": 6.0, "width": 720, "height": 1280})
     monkeypatch.setattr(hookclip, "_frames", lambda clip, d, secs: [d / "f0.jpg", d / "f1.jpg", d / "f2.jpg"])
