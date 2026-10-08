@@ -8,8 +8,8 @@ permissions:
   contents: read
 
 concurrency:
-  group: ci-${{ github.ref }}
-  cancel-in-progress: true
+  group: ci-${{ github.ref == 'refs/heads/main' && github.sha || github.ref }}      # on main every commit is its own group, so none is skipped or cancelled
+  cancel-in-progress: ${{ github.ref != 'refs/heads/main' }}                       # branches and pull requests supersede themselves
 
 jobs:
   test:
