@@ -22,7 +22,7 @@ from pathlib import Path
 from faceless.config import STUDIO
 
 # What the runner has after its install step. LibreOffice and Node are deliberately absent: tests that need them must skip, not fail.
-TOOLS = ("git", "ffmpeg", "ffprobe", "pdftoppm", "pdftotext")
+TOOLS = ("bash", "git", "ffmpeg", "ffprobe", "pdftoppm", "pdftotext")
 # The commands of .github/workflows/ci.yml, word for word (tests/test_hygiene.py fails if the two drift apart).
 STEPS = [
     ("tests", "python -m pytest -q tests"),
