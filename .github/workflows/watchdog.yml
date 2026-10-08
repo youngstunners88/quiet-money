@@ -43,14 +43,21 @@ jobs:
             echo "The watchdog could not run. See the workflow log." > findings.md
             status=1
           fi
+          extra=""
           if [ "$DRILL" = "true" ]; then
-            printf -- '- **WARN: DRILL.** This is a test of the alert path, not a real problem. Run the Watchdog workflow again with drill off and this issue closes itself.\n' >> findings.md
-            status=1
+            extra="${extra}- **WARN: DRILL.** This is a test of the alert path, not a real problem. Run the Watchdog workflow again with drill off and this issue closes itself.\n"
           fi
           # CI red on main means the code the routines run may be broken
           red=$(gh run list --workflow CI --branch main --limit 1 --json conclusion,url --jq '.[0] | select(.conclusion=="failure") | .url' || true)
           if [ -n "$red" ]; then
-            printf -- '- **WARN: CI is red on main.** %s\n' "$red" >> findings.md
+            extra="${extra}- **WARN: CI is red on main.** ${red}\n"
+          fi
+          if [ -n "$extra" ]; then
+            # the repository itself may be healthy while these are not: never print "healthy" above a finding
+            if grep -q '^Quiet Money is healthy' findings.md; then
+              printf 'Watchdog findings as of %s. This issue closes itself when every finding clears.\n\n' "$(date -u '+%Y-%m-%d %H:%M UTC')" > findings.md
+            fi
+            printf '%b' "$extra" >> findings.md
             status=1
           fi
           echo "status=$status" >> "$GITHUB_OUTPUT"

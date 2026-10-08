@@ -1,13 +1,14 @@
-requests>=2.31
-pillow>=10.0
-openpyxl>=3.1
-numpy>=1.26
-opencv-python-headless>=4.9
-edge-tts>=7.0
-pytest>=8.0
+# Every dependency stops at the next major version: a new major can break the daily run overnight, so it arrives only through a commit that passes CI (python -m faceless ci).
+requests>=2.31,<3
+pillow>=10.0,<13
+openpyxl>=3.1,<4
+numpy>=1.26,<3
+opencv-python-headless>=4.9,<6
+edge-tts>=7.0,<8
+pytest>=8.0,<10
 # connected apps (YouTube/TikTok/Drive...). On Debian Python, if pysher fails to build:
 #   pip install --use-pep517 pysher && pip install composio
-composio>=0.25
+composio>=0.25,<1
 # optional: Jev decision layer (set TYPESAFE_API_KEY)
 # typesafe-sdk>=0.7
 # optional, build-time only: the music library (python -m faceless music --build)

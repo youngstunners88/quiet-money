@@ -154,3 +154,20 @@ def test_only_append_only_logs_use_the_union_driver():
     attrs = dict(line.split()[:2] for line in (STUDIO / ".gitattributes").read_text(encoding="utf-8").splitlines() if line and not line.startswith("#"))
     assert attrs.get("state/journal.jsonl") == "merge=union" and attrs.get("state/ledger.jsonl") == "merge=union"
     assert not {"channel/empire/portfolio.jsonl", "script-lab/ideas/backlog.jsonl"} & set(attrs), "rewritten files would duplicate lines under a union merge"
+
+
+def test_every_dependency_stops_at_the_next_major_version():
+    """A new major release can break the daily run overnight; it should arrive only through a commit that passes CI."""
+    loose = []
+    for line in (STUDIO / "requirements.txt").read_text(encoding="utf-8").splitlines():
+        line = line.split("#")[0].strip()
+        if line and "<" not in line:
+            loose.append(line)
+    assert not loose, f"requirements without an upper bound: {loose}"
+
+
+def test_the_session_start_hook_retries_its_installs():
+    hook = (STUDIO / ".claude" / "hooks" / "session-start.sh").read_text(encoding="utf-8")
+    assert "retry python -m pip install" in hook and hook.count("retry python -m pip install") >= 2
+    r = subprocess.run(["bash", "-n", str(STUDIO / ".claude" / "hooks" / "session-start.sh")], capture_output=True, text=True)
+    assert r.returncode == 0, r.stderr
