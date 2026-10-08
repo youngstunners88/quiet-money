@@ -53,8 +53,22 @@ The round-by-round improvement log lives in `gauntlet/CONTEXT.md`.
 | Claude Code routine | daily | five videos, gauntlet, posting packs, commit state, send the videos to the owner |
 | `site.yml` | every push to `main` | build the library, publish to `gh-pages`, ping IndexNow |
 | `aeo.yml` | Mondays | answer-engine visibility probe → `analytics/aeo.jsonl` |
-| `ci.yml` | every push | tests, imports, site build |
+| `ci.yml` | every push | tests, failure drills, a real render smoke test, skills lint, imports, site build |
+| `watchdog.yml` | every 6 hours | is the operation alive? Opens, updates and closes one "Ops alert" issue by itself (needs no key) |
+| `shop.yml` | when listing code changes, or by hand | rebuilds the Etsy and Gumroad listing packs from scratch and attaches them as a download (Actions > Shop packs > Artifacts) |
 | `daily.yml` | manual only | optional GitHub-hosted batch (needs the keys as Actions secrets) |
+
+## Is it healthy? Is it safe?
+```bash
+python -m faceless preflight     # can today's run succeed? a traffic light per check, with the fix for each
+python -m faceless watchdog      # the repo-only dead-man's switch (GitHub runs it every 6 hours)
+python -m faceless pause "why"   # kill switch: stops paid calls, posting, daily and make (--resume to undo)
+python -m faceless ci            # CI as GitHub sees it (clean export, no keys): before every push of code
+```
+Spend is capped three ways (per provider, the Muapi desk, a $3 studio-wide daily ceiling), posting is local until you say go,
+AI labels are on, and nothing stores a key in git. [`OPERATIONS.md`](OPERATIONS.md) is the runbook; the failure table lives in
+`.claude/skills/faceless-daily/references/failure-playbook.md`; what the environment holds is in
+[`channel/empire/ENVIRONMENT.md`](channel/empire/ENVIRONMENT.md).
 
 ## Where the keys live
 No API key is stored in this repository or on GitHub. Pick one:
@@ -77,6 +91,9 @@ Required: `GEMINI_API_KEY` (or `OPENROUTER_API_KEY`), `CLOUDFLARE_API_KEY`, `CLO
 | `script-lab/` | Topic backlog, drafts, final scripts |
 | `faceless/` | The engine: pipeline, providers (LLM/TTS/images/publish/Composio), gauntlet, site, AEO, brand |
 | `gauntlet/`, `analytics/`, `state/` | Reports, metrics, journal, ledger, decision records |
-| `.claude/skills/` | Claude Code skills: daily, script, gauntlet, trends, publish, analytics, composio, channel-setup, seo, aeo, growth |
+| `.claude/skills/` | Claude Code skills: daily, script, gauntlet, trends, publish, analytics, composio, channel-setup, seo, aeo, growth, muapi, intake |
+| `channel/shop/` | Etsy and Gumroad listing packs (copy and a click-by-click checklist per product; pictures and video rebuild with `python -m faceless listing build all`) |
+| `repo-farm/` | Outside tools: the registry and one dossier per tool looked at (`python -m faceless intake`) |
+| `OPERATIONS.md` | The runbook: what runs when, the safety layers, what to do when something breaks |
 
 Educational content, not financial advice. Narration and visuals are AI-assisted and labeled on every platform.
