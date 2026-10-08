@@ -8,6 +8,11 @@ on:
   schedule:
     - cron: "23 */6 * * *"
   workflow_dispatch:
+    inputs:
+      drill:
+        description: "Drill: inject a fake finding to prove the alert path (opens the Ops alert issue). Run again with drill off to see it close itself."
+        type: boolean
+        default: false
 
 permissions:
   contents: read
@@ -38,6 +43,10 @@ jobs:
             echo "The watchdog could not run. See the workflow log." > findings.md
             status=1
           fi
+          if [ "$DRILL" = "true" ]; then
+            printf -- '- **WARN: DRILL.** This is a test of the alert path, not a real problem. Run the Watchdog workflow again with drill off and this issue closes itself.\n' >> findings.md
+            status=1
+          fi
           # CI red on main means the code the routines run may be broken
           red=$(gh run list --workflow CI --branch main --limit 1 --json conclusion,url --jq '.[0] | select(.conclusion=="failure") | .url' || true)
           if [ -n "$red" ]; then
@@ -47,6 +56,7 @@ jobs:
           echo "status=$status" >> "$GITHUB_OUTPUT"
         env:
           GH_TOKEN: ${{ github.token }}
+          DRILL: ${{ github.event.inputs.drill }}
       - name: Keep the Ops alert issue in step
         env:
           GH_TOKEN: ${{ github.token }}
