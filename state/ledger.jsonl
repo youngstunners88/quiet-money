@@ -1278,3 +1278,11 @@
 {"day": "2026-10-08", "provider": "gemini", "unit": "tokens", "amount": 2096, "usd": 0.0, "job": null}
 {"day": "2026-10-08", "provider": "gemini", "unit": "tokens", "amount": 3112, "usd": 0.0, "job": null}
 {"day": "2026-10-08", "provider": "gemini", "unit": "tokens", "amount": 2005, "usd": 0.0, "job": null}
+{"day": "2026-10-08", "provider": "edge", "unit": "chars", "amount": 279, "usd": 0.0, "job": null}
+{"day": "2026-10-08", "provider": "muapi", "unit": "desk_usd", "amount": 0.014, "usd": 0.01395, "job": null}
+{"day": "2026-10-08", "provider": "muapi", "unit": "desk_usd", "amount": 0.0098, "usd": 0.009765, "job": null}
+{"day": "2026-10-08", "provider": "muapi", "unit": "desk_usd", "amount": 0.0148, "usd": 0.0148, "job": null}
+{"day": "2026-10-08", "provider": "muapi", "unit": "desk_usd", "amount": 0.0164, "usd": 0.0164, "job": null}
+{"day": "2026-10-08", "provider": "muapi", "unit": "desk_usd", "amount": 0.06, "usd": 0.06, "job": null}
+{"day": "2026-10-08", "provider": "muapi", "unit": "desk_usd", "amount": 0.02, "usd": 0.02, "job": null}
+{"day": "2026-10-08", "provider": "muapi", "unit": "desk_usd", "amount": 0.1, "usd": 0.1, "job": null}

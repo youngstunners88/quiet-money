@@ -19,7 +19,7 @@ import urllib.parse
 
 from PIL import Image, ImageDraw, ImageFilter
 
-from faceless import config, ledger
+from faceless import config, ledger, safety
 from faceless.config import Paths
 from faceless.providers import ProviderError, ProviderUnavailable, http, run_chain
 
@@ -53,7 +53,8 @@ def cloudflare(prompt: str, w: int, h: int, seed: int, out, hero: bool = False) 
     cfg = config.load()["images"]
     model = cfg["cloudflare_hero_model"] if hero else cfg["cloudflare_model"]
     cost = neurons(model, w, h)
-    if ledger.used("cloudflare", "blocked") or not ledger.allow("cloudflare", "neurons", cost, cfg["cloudflare_daily_neurons"]):
+    gen_cap = cfg["cloudflare_daily_neurons"] - cfg.get("cloudflare_qa_reserve", 2500)   # the rest of the free pool is kept for semantic QA (qa.py, clef.py)
+    if ledger.used("cloudflare", "blocked") or not ledger.allow("cloudflare", "neurons", cost, gen_cap):
         if hero:  # fall back to the cheap model before leaving Cloudflare
             return cloudflare(prompt, w, h, seed, out, hero=False)
         raise ProviderUnavailable("daily free neuron budget used")
@@ -95,6 +96,7 @@ def openrouter(prompt: str, w: int, h: int, seed: int, out, hero: bool = False) 
     if not key:
         raise ProviderUnavailable("OPENROUTER_API_KEY not set")
     cfg = config.load()["images"]
+    safety.guard("openrouter image", 0.04)
     with _OR_LOCK:   # check and reserve atomically so concurrent workers can't overshoot the paid cap
         if ledger.used("openrouter", "blocked") or \
                 ledger.used("openrouter", "images") + _or_inflight + 1 > cfg.get("openrouter_daily_images", 60):
@@ -151,6 +153,7 @@ def muapi(prompt: str, w: int, h: int, seed: int, out, hero: bool = False) -> No
     model = cfg.get("muapi_hero_model", "flux-2-klein-4b") if hero else cfg.get("muapi_model", "flux-2-klein-4b-turbo")
     price = {"flux-2-klein-4b-turbo": 0.0052, "flux-2-klein-4b": 0.0104, "flux-schnell-image": 0.003}.get(model, 0.03)
     cap = float(cfg.get("muapi_daily_usd", 1.5))
+    safety.guard("muapi image", price)
     with _MU_LOCK:
         if ledger.used("muapi", "blocked") or ledger.used("muapi", "usd") + _mu_inflight + price > cap:
             raise ProviderUnavailable("muapi daily spend cap reached")

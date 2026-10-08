@@ -63,6 +63,7 @@ chain = ["cloudflare", "muapi", "openrouter", "pollinations", "procedural"]
 cloudflare_model = "@cf/black-forest-labs/flux-2-klein-4b"
 cloudflare_hero_model = "@cf/black-forest-labs/flux-2-klein-4b"   # 9b is sharper but costs ~9x the neurons
 cloudflare_daily_neurons = 9500              # free tier is 10,000 neurons/day; keep a margin
+cloudflare_qa_reserve = 2500                # of those, neurons kept for semantic QA (about 28 per still): generation stops at 7,000 so the checks never starve (day 1 of the live run lost them)
 muapi_model = "flux-2-klein-4b-turbo"        # $0.0052 an image (FLUX.2 klein 4B, 720x1280); the free Cloudflare budget is used first
 muapi_hero_model = "flux-2-klein-4b"         # $0.0104, the hook still
 muapi_daily_usd = 1.5                        # spend cap per UTC day (about 290 images); the wallet itself is the hard limit
@@ -78,6 +79,14 @@ gemini_models = ["gemini-3.8-flash", "gemini-3.5-flash", "gemini-3.5-flash-lite"
 openrouter_models = ["google/gemini-3.8-flash", "deepseek/deepseek-v4.1-flash", "google/gemma-4-31b-it:free"]   # paid ~$0.002/script, then cheaper/free
 temperature = 0.9
 longcat_model = "LongCat-2.5-Preview"
+
+[safety]                                     # see faceless/safety.py
+daily_usd_ceiling = 3.0                      # every paid call refuses once the ledger shows this much spent today (all providers together)
+paused = false                               # or create state/PAUSE ("python -m faceless pause <reason>"): stops paid calls, posting, daily and make
+
+[muapi]                                      # the general desk (faceless/muapi.py); per-image and hook-clip spend have their own caps below
+daily_usd = 2.0                              # all desk runs together per UTC day
+per_call_usd = 0.5                           # one run above this is refused unless the caller raises it for that call
 
 [decide]
 # Jev (TypeSafe System One) answers typed questions; it never writes content.

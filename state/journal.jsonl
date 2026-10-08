@@ -2606,3 +2606,12 @@
 {"ts": "2026-10-08T13:02:12Z", "t": 1791464532.587, "actor": "engine", "type": "VISUALS_DONE", "job": "qa1", "providers": {"cloudflare": 3}, "qa_flagged": 1, "qa_swapped": 1}
 {"ts": "2026-10-08T13:02:13Z", "t": 1791464533.781, "actor": "engine", "type": "SCOUT_TOPUP", "pillar": "playbook", "added": 1}
 {"ts": "2026-10-08T13:02:50Z", "t": 1791464570.398, "actor": "engine", "type": "VISUALS_DONE", "job": "qa1", "providers": {"cloudflare": 3}, "qa_flagged": 1, "qa_swapped": 1}
+{"ts": "2026-10-08T13:24:41Z", "t": 1791465881.376, "actor": "engine", "type": "COMPOSIO_SESSION", "user": "quiet-money-studio", "session_hash": "243a0dbf"}
+{"ts": "2026-10-08T13:52:43Z", "t": 1791467563.353, "actor": "engine", "type": "COMPOSIO_SESSION", "user": "quiet-money-studio", "session_hash": "748aed58"}
+{"ts": "2026-10-08T13:54:35Z", "t": 1791467675.097, "actor": "engine", "type": "MUAPI_RUN", "job": null, "model": "elevenlabs-tts-turbo-2-5", "usd": 0.014, "request": "7cbf305f-3ae", "balance": "20.8721"}
+{"ts": "2026-10-08T13:54:58Z", "t": 1791467698.526, "actor": "engine", "type": "MUAPI_RUN", "job": null, "model": "gemini-3-1-flash-tts", "usd": 0.0098, "request": "9baee6bc-702", "balance": "20.8623"}
+{"ts": "2026-10-08T13:56:17Z", "t": 1791467777.166, "actor": "engine", "type": "MUAPI_RUN", "job": null, "model": "seo-keywords-search-volume", "usd": 0.0148, "request": "13536b28-267", "balance": "20.8475"}
+{"ts": "2026-10-08T13:56:37Z", "t": 1791467797.104, "actor": "engine", "type": "MUAPI_RUN", "job": null, "model": "seo-keywords-search-volume", "usd": 0.0164, "request": "3a27ebb5-f1f", "balance": "20.6659"}
+{"ts": "2026-10-08T13:57:17Z", "t": 1791467837.525, "actor": "engine", "type": "MUAPI_RUN", "job": null, "model": "nano-banana-2-1-edit", "usd": 0.06, "request": "f4eae937-79f", "balance": "20.4423"}
+{"ts": "2026-10-08T14:00:28Z", "t": 1791468028.922, "actor": "engine", "type": "MUAPI_RUN", "job": null, "model": "ocr-recognize-text", "usd": 0.02, "request": "7ef1ac5c-65f", "balance": "20.4223"}
+{"ts": "2026-10-08T14:00:57Z", "t": 1791468057.085, "actor": "engine", "type": "MUAPI_RUN", "job": null, "model": "social-search-posts", "usd": 0.1, "request": "018f9a0e-827", "balance": "20.3223"}

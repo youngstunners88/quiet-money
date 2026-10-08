@@ -34,7 +34,8 @@ def emit(kind: str, actor: str = "engine", **payload) -> dict:
     return event
 
 
-def read(path: Path = JOURNAL, kind: str | None = None) -> list[dict]:
+def read(path: Path | None = None, kind: str | None = None) -> list[dict]:
+    path = path or JOURNAL            # resolved per call so a redirected journal is honored
     if not path.exists():
         return []
     out = []

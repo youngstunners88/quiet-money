@@ -37,6 +37,11 @@ def used(provider: str, unit: str, day: str | None = None) -> float:
     return sum(r["amount"] for r in _rows(day) if r["provider"] == provider and r["unit"] == unit)
 
 
+def usd_total(day: str | None = None) -> float:
+    """Every dollar spent on `day` (default today) across all providers: the number the daily spend ceiling is checked against."""
+    return round(sum(float(r.get("usd") or 0) for r in _rows(day or today())), 6)
+
+
 def allow(provider: str, unit: str, amount: float, cap: float) -> bool:
     return used(provider, unit) + amount <= cap
 

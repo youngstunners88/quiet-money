@@ -7,7 +7,7 @@ import re
 
 import requests
 
-from faceless import config, ledger
+from faceless import config, ledger, safety
 from faceless.providers import ProviderError, ProviderUnavailable, http, run_chain
 
 GEMINI_URL = "https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
@@ -81,6 +81,7 @@ def openrouter(prompt: str, *, system: str | None, want_json: bool, temperature:
     key = config.env("OPENROUTER_API_KEY")
     if not key:
         raise ProviderUnavailable("OPENROUTER_API_KEY not set")
+    safety.guard("openrouter llm", 0.003)
     cfg = config.load()["llm"]
     msgs = ([{"role": "system", "content": system}] if system else []) + [{"role": "user", "content": prompt}]
     errs = []

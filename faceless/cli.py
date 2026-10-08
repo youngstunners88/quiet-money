@@ -86,6 +86,10 @@ def cmd_daily(args) -> int:
         print(f"{j.slot + 1}. [{j.status:9}] {j.scores.get('gauntlet', '-'):>3}  {j.pillar:10} {j.artifacts.get('title', j.topic)}")
     print(json.dumps(ledger.summary(), indent=1))
     if not jobs:
+        from faceless import safety
+        if safety.paused():
+            print(f"HALTED: the studio is paused ({safety.paused()}). `python -m faceless pause --resume` to continue.")
+            return 3
         print("Nothing to do: every requested slot already has a finished video.")
         return 0
     produced = sum(1 for j in jobs if j.status in ("published", "packaged", "held"))
@@ -287,6 +291,182 @@ def cmd_variety(args) -> int:
     return 0
 
 
+def _muapi_payload(args, upload: bool) -> dict:
+    """--json FILE and --set key=value (values parse as JSON when they can; @file reads text). A local media file for an input
+    becomes a hosted URL when `upload` is true (free); for an estimate it becomes a placeholder so nothing is uploaded."""
+    from faceless import muapi
+    payload = {}
+    if args.json:
+        payload.update(json.loads(Path(args.json).read_text(encoding="utf-8")))
+    for item in args.set or []:
+        k, eq, v = item.partition("=")
+        if not eq:
+            raise SystemExit(f"--set expects key=value, got {item!r}")
+        if v.startswith("@") and Path(v[1:]).is_file() and Path(v[1:]).suffix.lower() in (".txt", ".md", ".json", ""):
+            v = Path(v[1:]).read_text(encoding="utf-8").strip()
+        else:
+            try:
+                v = json.loads(v)
+            except ValueError:
+                pass
+        payload[k] = v
+    media = (".jpg", ".jpeg", ".png", ".webp", ".gif", ".mp4", ".mov", ".webm", ".mp3", ".wav")
+
+    def lift(v):
+        if isinstance(v, str) and v.lower().endswith(media) and Path(v).is_file():
+            return muapi.upload(v) if upload else "https://example.com/" + Path(v).name
+        if isinstance(v, list):
+            return [lift(x) for x in v]
+        return v
+    return {k: lift(v) for k, v in payload.items()}
+
+
+def cmd_muapi(args) -> int:
+    """The Muapi desk: find, inspect, price and run any model under the studio's spend limits."""
+    from faceless import muapi, safety
+    act, rest = args.action, args.rest
+    if act == "catalog":
+        rows = muapi.catalog(refresh=args.refresh)
+        if args.category:
+            rows = [m for m in rows if (m["category"] or "").lower() == args.category.lower()]
+            for m in sorted(rows, key=lambda m: (m["cost"] if m["cost"] is not None else 9e9))[:args.limit]:
+                print(f"{'~' if m['dynamic'] else ' '}${(m['cost'] if m['cost'] is not None else -1):8.4f}  {m['name']:46} {m['desc'][:70]}")
+        else:
+            from collections import Counter
+            print(f"{len(rows)} enabled models")
+            for cat, n in Counter(m["category"] for m in rows).most_common():
+                print(f"  {n:4}  {cat}")
+        return 0
+    if act == "find":
+        for m in muapi.find(" ".join(rest), category=args.category, family=args.family, max_usd=args.max_usd, limit=args.limit):
+            print(f"{'~' if m['dynamic'] else ' '}${(m['cost'] if m['cost'] is not None else -1):8.4f}  {m['name']:44} [{m['category']}] needs {', '.join(m['required'][:4])}\n            {m['desc'][:100]}")
+        return 0
+    if act == "inspect" and rest:
+        m = muapi.get(rest[0])
+        if not m:
+            print(f"unknown model {rest[0]!r}")
+            return 1
+        print(f"{m['name']}  [{m['category']}]  ${m['cost']} {'(varies with the request)' if m['dynamic'] else ''}\n{m['desc']}\n")
+        for f in muapi.params(m["name"]):
+            print(f"  {'*' if f['required'] else ' '} {f['name']:22} {str(f['type']):9} default={f['default']!r:12} {('options ' + str(f['enum'])[:60]) if f['enum'] else ''} {f['description'][:60]}")
+        print("\n  * = required")
+        return 0
+    if act == "estimate" and rest:
+        e = muapi.estimate(rest[0], _muapi_payload(args, upload=False))
+        print("no price available" if e is None else f"${e:.4f}")
+        return 0 if e is not None else 1
+    if act == "run" and rest:
+        name = rest[0]
+        payload = _muapi_payload(args, upload=bool(args.yes))
+        est = muapi.estimate(name, payload)
+        print(f"{name}: estimated {'unknown' if est is None else f'${est:.4f}'}; spent today ${ledger.usd_total():.2f} of the ${safety.ceiling():.2f} ceiling")
+        if not args.yes:
+            print("dry run: nothing was spent. Add --yes to run it.")
+            return 0
+        out = muapi.run(name, payload, args.out, max_usd=args.max_usd, label=args.label)
+        print(f"done: ${out['usd']:.4f}, wallet {out['balance']}, {out['seconds']} s")
+        for f in out["files"]:
+            print("  file:", f)
+        for t in out["text"]:
+            print("  text:", t[:2000])
+        for d in out["data"]:
+            print("  data:", json.dumps(d)[:800])
+        return 0
+    if act == "result" and rest:
+        out = muapi.result(rest[0], args.out)
+        print(json.dumps({k: v for k, v in out.items() if v}, indent=1)[:3000])
+        return 0
+    if act == "balance":
+        bal = muapi.balance()
+        print("no key or unreachable" if bal is None else f"wallet ${bal:.2f}")
+        print(f"spent today ${ledger.usd_total():.2f} of the ${safety.ceiling():.2f} daily ceiling; desk used ${ledger.used('muapi', muapi.UNIT):.2f} of ${float(muapi.cfg()['daily_usd']):.2f}")
+        return 0
+    if act == "snapshot":
+        rows = muapi.catalog(refresh=True)
+        n = muapi.write_snapshot(rows)
+        ref = Path(config.STUDIO) / ".claude" / "skills" / "muapi" / "references" / "catalog.md"
+        ref.parent.mkdir(parents=True, exist_ok=True)
+        ref.write_text(muapi.digest(rows), encoding="utf-8")
+        print(f"snapshot: {n} models -> {muapi.SNAPSHOT.relative_to(config.STUDIO)} and {ref.relative_to(config.STUDIO)}")
+        return 0
+    if act == "doctor":
+        bal = muapi.balance()
+        rows = muapi.catalog()
+        print(f"  {'OK ' if muapi.available() else 'ERR'} MUAPI_API_KEY {'set' if muapi.available() else 'missing'}")
+        print(f"  {'OK ' if bal is not None else '..  '} wallet {'$%.2f' % bal if bal is not None else 'unknown'}")
+        print(f"  {'OK ' if rows else 'ERR'} catalog {len(rows)} models; snapshot {'present' if muapi.SNAPSHOT.exists() else 'MISSING (run `muapi snapshot`)'}")
+        print(f"  {'OK ' if not safety.paused() else 'ERR'} {'running' if not safety.paused() else 'PAUSED: ' + str(safety.paused())}")
+        print(f"  ..  limits: desk ${float(muapi.cfg()['daily_usd']):.2f}/day, ${float(muapi.cfg()['per_call_usd']):.2f}/call; studio ceiling ${safety.ceiling():.2f}/day")
+        return 0 if muapi.available() and rows else 1
+    print("usage: muapi catalog|find <words>|inspect <model>|estimate <model>|run <model>|result <id>|balance|snapshot|doctor")
+    return 2
+
+
+def cmd_pause(args) -> int:
+    from faceless import safety
+    if args.resume:
+        print("resumed" if safety.resume() else "was not paused")
+    elif args.reason:
+        safety.pause(" ".join(args.reason))
+        print("PAUSED: no paid calls, no publishing, `daily`/`make` refuse. `python -m faceless pause --resume` to continue.")
+    else:
+        print(f"paused: {safety.paused()}" if safety.paused() else f"running; spent ${ledger.usd_total():.2f} of the ${safety.ceiling():.2f} daily ceiling")
+    return 0
+
+
+def cmd_skills(args) -> int:
+    """Lint every skill: the skills are the scheduled routines' instructions, so a stale one is a production bug."""
+    from faceless import skilllint
+    res = skilllint.lint_all()
+    print(skilllint.report(res))
+    bad = skilllint.failures(res)
+    print(f"\n{len(res)} skills, {bad} failure(s)")
+    return 1 if bad else 0
+
+
+def cmd_listing(args) -> int:
+    """Etsy and Gumroad listing packs: build (images, video, copy, checklist) or check (the gauntlet only)."""
+    from faceless import listing
+    if args.action == "build":
+        res = listing.build(args.product, video=not args.no_video)
+        print(listing.report(res))
+        return 0 if all(r["passed"] for r in res.values()) else 1
+    if args.action == "check":
+        bad = 0
+        for pid, gates in listing.check(args.product).items():
+            ok = listing.passed(gates)
+            bad += not ok
+            print(f"{'PASS' if ok else 'FAIL'}  {pid}: {sum(g.ok for g in gates)}/{len(gates)} gates")
+            for g in gates:
+                if not g.ok:
+                    print(f"        {'hard' if g.hard else 'soft'}: {g.name}: {g.detail}")
+        return 1 if bad else 0
+    print("usage: listing build|check [product|all] [--no-video]")
+    return 2
+
+
+def cmd_shop(args) -> int:
+    """Storefront connections and Gumroad drafts: status | plan | push [--yes] | sales."""
+    from faceless import shop
+    if args.action == "status":
+        for r in shop.status():
+            print(f"{r['state']:12} {r['rail']}: {r['detail']}" + (f"\n{'':13}next: {r['next']}" if r["next"] else ""))
+        return 0
+    if args.action in ("plan", "push"):
+        res = shop.push(args.product if args.product != "all" else None, run=bool(args.yes) and args.action == "push")
+        for r in res:
+            print(f"{r['product']:28} {r['action']}  ({r['name']})")
+        if args.action == "push" and not args.yes:
+            print("dry run: nothing was created. Add --yes to create DRAFT products (they are never published).")
+        return 0
+    if args.action == "sales":
+        fresh = shop.sales(args.days)
+        print(f"{len(fresh)} new sale(s) recorded in analytics/sales.jsonl")
+        return 0
+    print("usage: shop status|plan|push|sales [product] [--yes] [--days N]")
+    return 2
+
+
 def cmd_forecast(_args) -> int:
     from faceless import forecast
     print(forecast.report())
@@ -426,6 +606,36 @@ def main(argv: list[str] | None = None) -> int:
     va = sub.add_parser("variety", help="sameness audit of the last N videos (YouTube's inauthentic-content risk); writes analytics/variety.md")
     va.add_argument("-n", type=int, default=20)
     va.set_defaults(fn=cmd_variety)
+    mp = sub.add_parser("muapi", help="Muapi desk: catalog | find <words> | inspect <model> | estimate <model> | run <model> [--yes] | result <id> | balance | snapshot | doctor")
+    mp.add_argument("action")
+    mp.add_argument("rest", nargs="*")
+    mp.add_argument("--set", action="append", metavar="KEY=VALUE", help="a request field; a local image or video path is uploaded for you")
+    mp.add_argument("--json", help="a JSON file with the request fields")
+    mp.add_argument("--out", help="folder for downloaded results (default production/cache/muapi)")
+    mp.add_argument("--yes", action="store_true", help="actually spend (run is a dry run without it)")
+    mp.add_argument("--max-usd", type=float, help="raise the per-call limit for this one call")
+    mp.add_argument("--category")
+    mp.add_argument("--family")
+    mp.add_argument("--label")
+    mp.add_argument("--limit", type=int, default=15)
+    mp.add_argument("--refresh", action="store_true")
+    mp.set_defaults(fn=cmd_muapi)
+    pz = sub.add_parser("pause", help="kill switch: `pause <reason>` stops paid calls and publishing, `pause --resume` continues, bare `pause` shows the state")
+    pz.add_argument("reason", nargs="*")
+    pz.add_argument("--resume", action="store_true")
+    pz.set_defaults(fn=cmd_pause)
+    sub.add_parser("skills", help="lint every skill (format rules from Anthropic's skill guide, plus: every command and file a skill names must exist)").set_defaults(fn=cmd_skills)
+    ls = sub.add_parser("listing", help="Etsy and Gumroad listing packs: `listing build [product|all]` makes images, video, copy and a checklist; `listing check` runs the listing gauntlet")
+    ls.add_argument("action", choices=["build", "check"])
+    ls.add_argument("product", nargs="?", default="all")
+    ls.add_argument("--no-video", action="store_true")
+    ls.set_defaults(fn=cmd_listing)
+    sh = sub.add_parser("shop", help="storefronts: `shop status` (what is connected, the owner's next step), `shop plan`, `shop push --yes` (DRAFT products on Gumroad, never published), `shop sales`")
+    sh.add_argument("action", choices=["status", "plan", "push", "sales"])
+    sh.add_argument("product", nargs="?", default="all")
+    sh.add_argument("--yes", action="store_true")
+    sh.add_argument("--days", type=int, default=30)
+    sh.set_defaults(fn=cmd_shop)
     sub.add_parser("forecast", help="the math: next batch cost, monthly cost, and assumption-labeled revenue ladder").set_defaults(fn=cmd_forecast)
     me = sub.add_parser("memory", help="search everything we've made (scripts, outcomes, failed gates)")
     me.add_argument("query", nargs="*")

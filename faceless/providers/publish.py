@@ -14,7 +14,7 @@ from datetime import date, datetime, timedelta
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
-from faceless import config, events
+from faceless import config, events, safety
 from faceless.config import Paths
 from faceless.providers import ProviderError, ProviderUnavailable, http
 
@@ -111,5 +111,9 @@ def publish(job, meta: dict) -> dict:
     mode = config.load()["publish"]["mode"]
     out = {"local": local_pack(job, meta)}  # always keep a local pack as the record of truth
     if mode != "local":
-        out[mode] = PUBLISHERS[mode](job, meta)
+        try:
+            safety.guard(f"publish via {mode}")           # the kill switch stops posting; the local pack above is still written
+            out[mode] = PUBLISHERS[mode](job, meta)
+        except ProviderUnavailable as e:
+            out[mode] = {"skipped": str(e)}
     return out

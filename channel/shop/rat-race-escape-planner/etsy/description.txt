@@ -1,0 +1,26 @@
+Find your freedom number and the year it arrives.
+
+The Rat Race Escape Planner is a spreadsheet that turns a few honest numbers (what you spend, what you earn, what you invest, what you expect it to grow at) into a plain answer: the invested amount that would cover your spending for good, how many years away it is, and what one extra monthly amount does to that date.
+
+WHAT IS INSIDE (one file, six tabs)
+- Start here: five minutes to your first answer
+- 1 Your numbers: type your figures; see your freedom number, years to freedom and freedom age
+- 2 Income streams: tag every stream Active, Passive or Asset; see dollars per hour and how much of your spending money that works without you already covers
+- 3 Rule of 100: the volume math for any offer (100 outreaches a day for 100 days) with a table for your own yes-rate
+- 4 Projection: forty years, year by year, in today's dollars, with a chart
+- 5 Weekly log: thirteen weeks of tracking, with reply rate, close rate and revenue per hour calculated for you
+
+HOW IT WORKS
+1. Buy and download the file (instant).
+2. Open it in Excel, Google Sheets or LibreOffice.
+3. Change the blue cells. The gray cells are formulas.
+
+GOOD TO KNOW
+- Every formula was recalculated in a real spreadsheet engine and checked against independent math.
+- No macros, no scripts, no login, no subscription.
+- Example numbers are shown so you can see how it works. Replace them with yours.
+- It is a planning tool for education, not financial advice. Returns are never guaranteed and results depend on the assumptions you enter.
+- Designed by Quiet Money with AI assistance.
+
+FILE: one spreadsheet (.xlsx). Personal use for you and your household; please do not resell or share the file.
+If anything is wrong with the file, message me and I will fix it or refund you.

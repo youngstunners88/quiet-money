@@ -278,7 +278,7 @@ def build_escape_planner(dest: Path) -> Path:
         sh.sheet_properties.tabColor = GOLD if sh.title == SHEETS[1] else INK
         sh.page_setup.orientation = "landscape"
         sh.page_setup.fitToWidth = 1
-        sh.page_setup.fitToHeight = 0
+        sh.page_setup.fitToHeight = 1          # one tab prints (and previews) as one page
         sh.sheet_properties.pageSetUpPr.fitToPage = True
     wb.properties.title = "Rat Race Escape Planner"
     wb.properties.creator = "Quiet Money"

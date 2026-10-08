@@ -25,3 +25,9 @@ state/memory.db
 # derived caches (rebuilt on demand)
 state/embeddings.db
 state/embeddings.db-*
+
+# listing packs: pictures and video are rebuilt by `python -m faceless listing build` (and sent to the owner); copy, checklists and reports are committed
+channel/shop/*/etsy/images/
+channel/shop/*/etsy/video.mp4
+channel/shop/*/gumroad/*.jpg
+channel/shop/*.zip

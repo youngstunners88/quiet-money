@@ -1,0 +1,27 @@
+See your debt-free date, and how much interest the right plan saves, before you pay another dollar.
+
+This spreadsheet takes up to eight debts and shows you the month you are debt-free, the total interest you will pay, and what you save compared with paying only the minimums. Choose Avalanche (highest interest rate first, the least interest) or Snowball (smallest balance first, quick wins) and watch the order change.
+
+WHAT IS INSIDE (one file, six tabs)
+- Start here: five minutes to your first answer
+- 1 Your debts: balance, yearly rate and monthly minimum for up to eight debts, plus your extra monthly payment
+- 2 Payoff plan: your debt-free month, total interest, interest and months saved against minimums only, and the order each debt disappears, with a chart
+- 3 Compound growth: a starting amount plus a monthly amount over forty years, with a chart of what you put in against what compounding added
+- 4 Pay debt or invest: what paying a debt saves (its interest rate) against an assumed investment return, with a plain verdict
+- Engine (math): every month of the calculation in ordinary formulas, so you can check any number
+
+HOW IT WORKS
+1. Buy and download the file (instant).
+2. Open it in Excel, Google Sheets or LibreOffice.
+3. Replace the example debts with yours (the blue cells). The gray cells are formulas.
+
+GOOD TO KNOW
+- The plan keeps the total monthly payment constant and rolls each paid-off debt's payment onto the next.
+- Interest is calculated monthly with no rounding, so your lender's exact figures will differ slightly.
+- Recalculated in a real spreadsheet engine and compared against an independent simulation.
+- No macros, no scripts, no login, no subscription.
+- It is a planning tool for education, not financial advice. Results depend on the numbers you enter.
+- Designed by Quiet Money with AI assistance.
+
+FILE: one spreadsheet (.xlsx). Personal use for you and your household; please do not resell or share the file.
+If anything is wrong with the file, message me and I will fix it or refund you.

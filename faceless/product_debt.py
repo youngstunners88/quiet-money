@@ -45,7 +45,7 @@ def build_debt_planner(dest: Path, **over) -> Path:
     steps = ["1. Open '1 Your debts' and replace the blue example debts with yours (up to 8). Choose Avalanche or Snowball and type your extra monthly payment.",
              "2. Open '2 Payoff plan': your debt-free month, total interest, and how much interest and time the plan saves against paying only minimums.",
              "3. '3 Compound growth' shows what a lump sum and a monthly amount become once the debt is gone.",
-             "4. '4 Pay debt or invest' compares the guaranteed 'return' of paying a debt (its rate) with an assumed investment return.",
+             "4. '4 Pay debt or invest' compares what paying a debt saves (its interest rate) with an assumed investment return.",
              "5. 'Engine (math)' is every month of the calculation in plain formulas, so you can check any number."]
     for i, t in enumerate(steps):
         _label(ws, f"A{4 + i}", t)
@@ -234,7 +234,7 @@ def build_debt_planner(dest: Path, **over) -> Path:
 
     # ---- 4 Pay debt or invest
     x = wb.create_sheet(SHEETS[4], 4)
-    _title(x, "4 Pay debt or invest?", "Paying a debt earns its interest rate with certainty. Investing earns an assumed return with risk.", 4)
+    _title(x, "4 Pay debt or invest?", "Paying a debt saves its interest rate. Investing earns an assumed return, with risk.", 4)
     for k, (lab, key, fmt) in enumerate([("Interest rate of the debt (yearly)", "apr", "0.00%"), ("Extra you could use each month", "x_extra", "$#,##0"),
                                          ("Expected investment return (assumption)", "x_ret", "0.0%"), ("Years", "x_years", "0")]):
         _label(x, f"A{4 + k}", lab)
@@ -247,7 +247,7 @@ def build_debt_planner(dest: Path, **over) -> Path:
     _put(x, "B11", '=IF(B4>B6,"Pay the debt first: its rate beats your assumed return","Investing may win on paper, but returns are not guaranteed: keep a $1,000 buffer, then compare risk")', bold=True)
     x["B11"].alignment = Alignment(wrap_text=True, vertical="center")
     x.row_dimensions[11].height = 48
-    _label(x, "A13", "Rule of thumb: a guaranteed 24% beats almost any assumed return; a 4% loan may not. Paying a debt is also a risk-free return. "
+    _label(x, "A13", "Rule of thumb: paying off a 24% debt beats almost any assumed return; a 4% loan may not. Paying a debt saves its known rate; investing earns an assumed return, with risk. "
                      "Taxes, employer matches and your own situation change the answer; this is education, not advice.")
     x.merge_cells("A13:D13")
     x.row_dimensions[13].height = 60
@@ -257,7 +257,7 @@ def build_debt_planner(dest: Path, **over) -> Path:
         sh.sheet_properties.tabColor = GOLD if sh.title in (SHEETS[1], SHEETS[2]) else INK
         sh.page_setup.orientation = "landscape"
         sh.page_setup.fitToWidth = 1
-        sh.page_setup.fitToHeight = 0
+        sh.page_setup.fitToHeight = 0 if sh.title == SHEETS[5] else 1     # every tab prints as one page except the 240-row engine
         sh.sheet_properties.pageSetUpPr.fitToPage = True
     wb.properties.title = "Debt Payoff & Compound Interest Planner"
     wb.properties.creator = "Quiet Money"
@@ -363,7 +363,7 @@ See your debt-free date, and how much interest the right plan saves, before you 
 - **Your debts**: up to eight debts with balance, rate and minimum. Choose Avalanche (highest rate first, least interest) or Snowball (smallest balance first, quick wins).
 - **Payoff plan**: your debt-free month, total interest, and the interest and months saved against paying only minimums, plus the order each debt disappears.
 - **Compound growth**: a starting amount plus a monthly amount, 40 years, with a chart of what you put in vs what compounding added.
-- **Pay debt or invest?**: the guaranteed return of paying a debt (its rate) against an assumed investment return, with a plain verdict.
+- **Pay debt or invest?**: what paying a debt saves (its interest rate) against an assumed investment return, with a plain verdict.
 - **Engine (math)**: every month of the calculation in ordinary formulas, so you can check any number. No macros, no scripts, no login.
 
 **Honest notes:** the plan keeps the total monthly payment constant and rolls each paid-off debt's payment onto the next. Interest is calculated monthly with no rounding, so your lender's exact figures will differ slightly. The workbook was recalculated and compared against an independent simulation. It is a planning tool and education, not financial advice.

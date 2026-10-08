@@ -1,6 +1,6 @@
 # Listing: Rat Race Escape Planner
 
-Prepared 2026-10-07. The owner approves price, copy and the account before anything goes live.
+Prepared 2026-10-08. The owner approves price, copy and the account before anything goes live.
 
 ## Gumroad (first: 10% fee, no AI rule)
 - **Name:** Rat Race Escape Planner (Excel + Google Sheets)

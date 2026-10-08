@@ -15,7 +15,7 @@ import subprocess
 import time
 from pathlib import Path
 
-from faceless import config, flow, ledger
+from faceless import config, flow, ledger, safety
 from faceless.providers import ProviderError, ProviderUnavailable, http
 
 API = "https://api.muapi.ai/api/v1"
@@ -63,6 +63,10 @@ def make(job, still: str, need: float, narration: str = "") -> dict | None:
     seconds = max(5, math.ceil(need + 0.5))
     price = estimate(c["model"], c["resolution"], seconds) or 0.25
     if ledger.used("muapi", "clip_usd") + price > float(c["daily_usd"]):
+        return None
+    try:
+        safety.guard("hook clip", price)
+    except ProviderUnavailable:
         return None
     key = config.env("MUAPI_API_KEY")
     headers = {"x-api-key": key}

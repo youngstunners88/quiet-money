@@ -16,7 +16,7 @@ import traceback
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
-from faceless import analytics, config, decide, events, gauntlet, qa, research
+from faceless import analytics, config, decide, events, gauntlet, qa, research, safety
 from faceless.config import Paths
 from faceless.pipeline import ideate, package, render, script as script_stage, visuals, voice as voice_stage
 from faceless.providers import publish as publisher
@@ -150,6 +150,9 @@ def start_job(pillar: str, item: dict, slot: int) -> Job:
 
 def run_one(pillar: str, topic: str | None = None, slot: int = 0, **kw) -> Job:
     Paths.ensure()
+    why = safety.paused()
+    if why:
+        raise RuntimeError(f"studio is paused ({why}); `python -m faceless pause --resume` to continue")
     item = (ideate.find_topic(topic) or {"topic": topic}) if topic else ideate.next_topic(pillar)
     job = start_job(pillar, item, slot)
     try:
@@ -186,6 +189,10 @@ def open_slots(count: int, extra: int = 0, now: datetime | None = None) -> list[
 
 def daily(count: int | None = None, extra: int = 0, pillar: str | None = None, **kw) -> list[Job]:
     Paths.ensure()
+    why = safety.paused()
+    if why:
+        events.emit("DAILY_HALTED", reason=why)
+        return []
     cfg = config.load()
     per_day = len(cfg["publish"]["slots"])
     count = count or cfg["production"]["videos_per_day"]

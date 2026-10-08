@@ -1,0 +1,518 @@
+{
+  "version": 1,
+  "note": "Source of truth for the Etsy and Gumroad listings. `python -m faceless listing build` turns it into images, a video, copy files and a compliance report. The owner approves price, copy and the account before anything goes live.",
+  "brand": "Quiet Money",
+  "refund": "30 days, no questions",
+  "ai_line": "Designed by Quiet Money with AI assistance.",
+  "free_tools": "https://youngstunners88.github.io/quiet-money/money-reset/",
+  "products": [
+    {
+      "id": "rat-race-escape-planner",
+      "kind": "spreadsheet",
+      "name": "Rat Race Escape Planner",
+      "subtitle": "Find your freedom number and the date it arrives",
+      "file": "channel/products/rat-race-escape-planner/Rat-Race-Escape-Planner.xlsx",
+      "verified_compat": [
+        "Excel",
+        "Google Sheets",
+        "LibreOffice"
+      ],
+      "price": 19,
+      "price_test": [
+        12,
+        19,
+        29
+      ],
+      "chips": [
+        "Instant download",
+        "Excel + Google Sheets",
+        "No subscription"
+      ],
+      "pages": {
+        "start": 1,
+        "numbers": 2,
+        "streams": 3,
+        "rule": 4,
+        "projection": 5,
+        "log": 6
+      },
+      "features": [
+        {
+          "page": 2,
+          "headline": "See your freedom number and the year it arrives",
+          "bullets": [
+            "Freedom number: the invested amount that covers your spending",
+            "Years to freedom and your freedom age, from your own numbers",
+            "What one extra monthly amount does to the date"
+          ]
+        },
+        {
+          "page": 3,
+          "headline": "Sort every income stream: trade time or own it",
+          "bullets": [
+            "Tag each stream Active, Passive or Asset",
+            "Dollars per hour for every stream",
+            "How much of your spending is already paid by money that works without you"
+          ]
+        },
+        {
+          "page": 4,
+          "headline": "Turn effort into numbers with the Rule of 100",
+          "bullets": [
+            "100 outreaches a day for 100 days, laid out as plain volume math",
+            "A table for your own yes-rate, with example numbers you replace",
+            "Hypothetical until you log real results"
+          ]
+        },
+        {
+          "page": 5,
+          "headline": "Forty years, year by year, in today's dollars",
+          "bullets": [
+            "A chart of your invested money against your freedom number",
+            "The row turns green the year your money covers your spending",
+            "Inflation-adjusted, so the numbers stay real"
+          ]
+        },
+        {
+          "page": 6,
+          "headline": "Log thirteen weeks of what really happened",
+          "bullets": [
+            "Outreaches, replies, sales, revenue and hours for each week",
+            "Reply rate, close rate and revenue per hour calculated for you",
+            "Copy your real yes-rate back into the Rule of 100"
+          ]
+        }
+      ],
+      "steps": [
+        [
+          "Buy and download",
+          "Your file arrives the moment you pay. Nothing to install."
+        ],
+        [
+          "Open it anywhere",
+          "Excel, Google Sheets or LibreOffice."
+        ],
+        [
+          "Type your numbers",
+          "Change the blue cells. The gray cells do the math."
+        ]
+      ],
+      "notes": [
+        "Every formula was recalculated in a real spreadsheet engine and checked against independent math.",
+        "A planning tool for education, not financial advice. Returns are never guaranteed and results depend on the numbers you enter.",
+        "No macros, no scripts, no login, no subscription.",
+        "Designed by Quiet Money with AI assistance."
+      ],
+      "grid_sub": "Every number is a formula you can read and change",
+      "etsy": {
+        "title": "Rat Race Escape Planner Spreadsheet | Financial Freedom Calculator | FIRE Calculator | Excel and Google Sheets Template",
+        "tags": [
+          "financial freedom",
+          "fire calculator",
+          "freedom number",
+          "financial planner",
+          "spreadsheet template",
+          "excel template",
+          "google sheets",
+          "income tracker",
+          "retirement planner",
+          "savings planner",
+          "money planner",
+          "digital download",
+          "budget planner"
+        ],
+        "description": "Find your freedom number and the year it arrives.\n\nThe Rat Race Escape Planner is a spreadsheet that turns a few honest numbers (what you spend, what you earn, what you invest, what you expect it to grow at) into a plain answer: the invested amount that would cover your spending for good, how many years away it is, and what one extra monthly amount does to that date.\n\nWHAT IS INSIDE (one file, six tabs)\n- Start here: five minutes to your first answer\n- 1 Your numbers: type your figures; see your freedom number, years to freedom and freedom age\n- 2 Income streams: tag every stream Active, Passive or Asset; see dollars per hour and how much of your spending money that works without you already covers\n- 3 Rule of 100: the volume math for any offer (100 outreaches a day for 100 days) with a table for your own yes-rate\n- 4 Projection: forty years, year by year, in today's dollars, with a chart\n- 5 Weekly log: thirteen weeks of tracking, with reply rate, close rate and revenue per hour calculated for you\n\nHOW IT WORKS\n1. Buy and download the file (instant).\n2. Open it in Excel, Google Sheets or LibreOffice.\n3. Change the blue cells. The gray cells are formulas.\n\nGOOD TO KNOW\n- Every formula was recalculated in a real spreadsheet engine and checked against independent math.\n- No macros, no scripts, no login, no subscription.\n- Example numbers are shown so you can see how it works. Replace them with yours.\n- It is a planning tool for education, not financial advice. Returns are never guaranteed and results depend on the assumptions you enter.\n- Designed by Quiet Money with AI assistance.\n\nFILE: one spreadsheet (.xlsx). Personal use for you and your household; please do not resell or share the file.\nIf anything is wrong with the file, message me and I will fix it or refund you.",
+        "who_made": "I did",
+        "what_is_it": "A finished product",
+        "when_made": "2020 - 2026",
+        "type": "Digital download"
+      },
+      "gumroad": {
+        "name": "Rat Race Escape Planner (Excel + Google Sheets)",
+        "summary": "Know your freedom number, how many years it is away, and what one boring monthly habit does to that date.",
+        "tags": [
+          "financial planner",
+          "budget",
+          "spreadsheet",
+          "financial freedom",
+          "excel"
+        ],
+        "description": "Know your freedom number, how many years it is away, and what one boring monthly habit does to that date.\n\n**What you get (one spreadsheet, six tabs):**\n- **Your numbers**: type your spending, income, savings and return assumptions. See your *freedom number* (the invested amount that covers your spending), months and years to freedom, your freedom age, and the years an extra monthly amount saves.\n- **Income streams**: list every stream and tag it Active, Passive or Asset. See your dollars per hour and how much of your spending is already covered by money that works without you.\n- **Rule of 100**: the volume math for any offer (100 outreaches a day for 100 days) with a sensitivity table for your yes-rate.\n- **Projection**: forty years in today's dollars, with a chart; the row turns green the year your money covers your spending.\n- **Weekly log**: 13 weeks of execution tracking with reply rate, close rate and revenue per hour.\n- **Start here**: how to use it in five minutes.\n\n**Honest notes:** every formula was recalculated and checked against independent math. It is a planning tool: results depend on your assumptions, returns are never guaranteed, and it is not financial advice. No login, no subscription, no upsell inside the file.\n\n*Designed by Quiet Money with AI assistance.*",
+        "after_purchase": "Thanks for grabbing the planner. Start on tab 1 and change one number at a time. If something looks wrong, reply to this message and it gets fixed. More free tools: https://youngstunners88.github.io/quiet-money/money-reset/"
+      }
+    },
+    {
+      "id": "debt-payoff-planner",
+      "kind": "spreadsheet",
+      "name": "Debt Payoff & Compound Interest Planner",
+      "subtitle": "See your debt-free date and the interest the right plan saves",
+      "file": "channel/products/debt-payoff-planner/Debt-Payoff-and-Compound-Interest-Planner.xlsx",
+      "verified_compat": [
+        "Excel",
+        "Google Sheets",
+        "LibreOffice"
+      ],
+      "price": 19,
+      "price_test": [
+        12,
+        19,
+        29
+      ],
+      "chips": [
+        "Instant download",
+        "Excel + Google Sheets",
+        "No macros"
+      ],
+      "pages": {
+        "start": 1,
+        "debts": 2,
+        "plan": 3,
+        "growth": 4,
+        "choice": 5
+      },
+      "features": [
+        {
+          "page": 2,
+          "headline": "List up to eight debts, pick your plan",
+          "bullets": [
+            "Balance, yearly rate and monthly minimum for each debt",
+            "Avalanche: highest rate first, the least interest",
+            "Snowball: smallest balance first, quick wins"
+          ]
+        },
+        {
+          "page": 3,
+          "headline": "See your debt-free month and what it saves",
+          "bullets": [
+            "Total interest, with your plan against minimums only",
+            "Months and interest saved, in plain numbers",
+            "The order each debt disappears, and when"
+          ]
+        },
+        {
+          "page": 4,
+          "headline": "Watch compounding work for you",
+          "bullets": [
+            "A starting amount plus a monthly amount, over forty years",
+            "A chart of what you put in against what compounding added",
+            "Years to double, by the rule of 72"
+          ]
+        },
+        {
+          "page": 5,
+          "headline": "Pay the debt, or invest the extra?",
+          "bullets": [
+            "Paying a debt saves its interest rate: compare that with an assumed investment return",
+            "A plain verdict, with the numbers behind it",
+            "Education, not advice: your situation can change the answer"
+          ]
+        }
+      ],
+      "steps": [
+        [
+          "Buy and download",
+          "Your file arrives the moment you pay. Nothing to install."
+        ],
+        [
+          "Replace the examples",
+          "Type your debts into the blue cells and choose a plan."
+        ],
+        [
+          "Read your plan",
+          "Debt-free month, interest saved, and the order to pay."
+        ]
+      ],
+      "notes": [
+        "Interest is calculated monthly with no rounding, so your lender's exact figures will differ slightly.",
+        "Recalculated in a real spreadsheet engine and compared with an independent simulation. Every month of the math is visible on the Engine tab.",
+        "A planning tool for education, not financial advice.",
+        "No macros, no scripts, no login. Designed by Quiet Money with AI assistance."
+      ],
+      "grid_sub": "The math is on its own tab, in ordinary formulas, so you can check any number",
+      "etsy": {
+        "title": "Debt Payoff Planner Spreadsheet | Debt Snowball and Avalanche Calculator | Compound Interest Calculator | Excel and Google Sheets",
+        "tags": [
+          "debt payoff planner",
+          "debt snowball",
+          "debt avalanche",
+          "snowball calculator",
+          "compound interest",
+          "interest calculator",
+          "debt tracker",
+          "spreadsheet template",
+          "excel template",
+          "google sheets",
+          "budget planner",
+          "digital download",
+          "financial planner"
+        ],
+        "description": "See your debt-free date, and how much interest the right plan saves, before you pay another dollar.\n\nThis spreadsheet takes up to eight debts and shows you the month you are debt-free, the total interest you will pay, and what you save compared with paying only the minimums. Choose Avalanche (highest interest rate first, the least interest) or Snowball (smallest balance first, quick wins) and watch the order change.\n\nWHAT IS INSIDE (one file, six tabs)\n- Start here: five minutes to your first answer\n- 1 Your debts: balance, yearly rate and monthly minimum for up to eight debts, plus your extra monthly payment\n- 2 Payoff plan: your debt-free month, total interest, interest and months saved against minimums only, and the order each debt disappears, with a chart\n- 3 Compound growth: a starting amount plus a monthly amount over forty years, with a chart of what you put in against what compounding added\n- 4 Pay debt or invest: what paying a debt saves (its interest rate) against an assumed investment return, with a plain verdict\n- Engine (math): every month of the calculation in ordinary formulas, so you can check any number\n\nHOW IT WORKS\n1. Buy and download the file (instant).\n2. Open it in Excel, Google Sheets or LibreOffice.\n3. Replace the example debts with yours (the blue cells). The gray cells are formulas.\n\nGOOD TO KNOW\n- The plan keeps the total monthly payment constant and rolls each paid-off debt's payment onto the next.\n- Interest is calculated monthly with no rounding, so your lender's exact figures will differ slightly.\n- Recalculated in a real spreadsheet engine and compared against an independent simulation.\n- No macros, no scripts, no login, no subscription.\n- It is a planning tool for education, not financial advice. Results depend on the numbers you enter.\n- Designed by Quiet Money with AI assistance.\n\nFILE: one spreadsheet (.xlsx). Personal use for you and your household; please do not resell or share the file.\nIf anything is wrong with the file, message me and I will fix it or refund you.",
+        "who_made": "I did",
+        "what_is_it": "A finished product",
+        "when_made": "2020 - 2026",
+        "type": "Digital download"
+      },
+      "gumroad": {
+        "name": "Debt Payoff & Compound Interest Planner (Excel + Google Sheets)",
+        "summary": "See your debt-free date, and how much interest the right plan saves, before you pay another dollar.",
+        "tags": [
+          "debt payoff",
+          "financial planner",
+          "spreadsheet",
+          "budget",
+          "excel"
+        ],
+        "description": "See your debt-free date, and how much interest the right plan saves, before you pay another dollar.\n\n**One spreadsheet, five tabs plus the math:**\n- **Your debts**: up to eight debts with balance, rate and minimum. Choose Avalanche (highest interest rate first, least interest) or Snowball (smallest balance first, quick wins).\n- **Payoff plan**: your debt-free month, total interest, and the interest and months saved against paying only minimums, plus the order each debt disappears.\n- **Compound growth**: a starting amount plus a monthly amount, 40 years, with a chart of what you put in vs what compounding added.\n- **Pay debt or invest?**: what paying a debt saves (its interest rate) against an assumed investment return, with a plain verdict.\n- **Engine (math)**: every month of the calculation in ordinary formulas, so you can check any number. No macros, no scripts, no login.\n\n**Honest notes:** the plan keeps the total monthly payment constant and rolls each paid-off debt's payment onto the next. Interest is calculated monthly with no rounding, so your lender's exact figures will differ slightly. The workbook was recalculated and compared against an independent simulation. It is a planning tool and education, not financial advice.\n\n*Designed by Quiet Money with AI assistance.*",
+        "after_purchase": "Thanks for grabbing the planner. Start on tab 1 and replace the example debts with yours. If a number looks wrong, reply and it gets fixed. More free tools: https://youngstunners88.github.io/quiet-money/money-reset/"
+      }
+    },
+    {
+      "id": "money-reset-printables",
+      "kind": "printable",
+      "name": "Money Reset Printables",
+      "subtitle": "Six clean pages to look at your money once, on paper",
+      "file": "channel/products/money-reset-printables/Money-Reset-Printables-Letter.pdf",
+      "extra_files": [
+        "channel/products/money-reset-printables/Money-Reset-Printables-A4.pdf"
+      ],
+      "verified_compat": [
+        "PDF"
+      ],
+      "price": 9,
+      "price_test": [
+        7,
+        9,
+        12
+      ],
+      "chips": [
+        "Instant PDF",
+        "Letter + A4",
+        "Prints on any printer"
+      ],
+      "pages": {
+        "howto": 1,
+        "split": 2,
+        "subs": 3,
+        "sinking": 4,
+        "debt": 5,
+        "networth": 6
+      },
+      "features": [
+        {
+          "page": 2,
+          "headline": "Split every paycheck on purpose",
+          "bullets": [
+            "A 50/30/20 paycheck split you fill in by hand",
+            "Needs, wants and saving in one view",
+            "A guideline, not a rule: change the percentages"
+          ]
+        },
+        {
+          "page": 3,
+          "headline": "Audit every subscription in ten minutes",
+          "bullets": [
+            "List what you pay, how often, and what you actually use",
+            "Circle what to keep and what to cancel",
+            "See the yearly total in one number"
+          ]
+        },
+        {
+          "page": 4,
+          "headline": "Plan for the bills that are not monthly",
+          "bullets": [
+            "Sinking funds for insurance, gifts, repairs and trips",
+            "A monthly amount for each goal",
+            "Fewer surprises, calmer months"
+          ]
+        },
+        {
+          "page": 5,
+          "headline": "Put every debt on one page",
+          "bullets": [
+            "Balance, rate and minimum for each debt",
+            "Your order to pay them",
+            "Pairs with the Debt Payoff & Compound Interest Planner"
+          ]
+        },
+        {
+          "page": 6,
+          "headline": "Know your net worth, once",
+          "bullets": [
+            "What you own, what you owe, one number",
+            "A snapshot to repeat every quarter",
+            "Pen and paper, no accounts, no apps"
+          ]
+        }
+      ],
+      "steps": [
+        [
+          "Buy and download",
+          "Two PDFs arrive the moment you pay: US Letter and A4."
+        ],
+        [
+          "Print what you need",
+          "Thin lines use little ink on any home printer."
+        ],
+        [
+          "Fill it in with a pen",
+          "Start with page 2. It takes ten minutes."
+        ]
+      ],
+      "notes": [
+        "Educational tool, not financial advice. 50/30/20 is a guideline, not a rule.",
+        "Both US Letter and A4 sizes are included. Nothing is drawn in the printer-unsafe margins (checked pixel by pixel).",
+        "Instant PDF download. Nothing ships.",
+        "Designed by Quiet Money with AI assistance."
+      ],
+      "grid_sub": "Pen and paper. No account, no app, no subscription",
+      "etsy": {
+        "title": "Money Reset Printables | Budget Planner, Subscription Tracker, Sinking Funds, Debt List, Net Worth Tracker | Printable PDF Letter and A4",
+        "tags": [
+          "budget printable",
+          "subscription audit",
+          "sinking funds",
+          "net worth tracker",
+          "debt list printable",
+          "subscription tracker",
+          "50 30 20 budget",
+          "money planner",
+          "finance printable",
+          "printable pdf",
+          "a4 and letter",
+          "digital download",
+          "budget planner"
+        ],
+        "description": "Six clean pages that make you look at your money once, on paper.\n\nA how-to page, a 50/30/20 paycheck split, a subscription audit, sinking funds, a debt list and a net worth snapshot. Thin lines print cheaply on any home printer. US Letter and A4 are both included.\n\nWHAT IS INSIDE\n- Two PDF files: Money-Reset-Printables-Letter.pdf and Money-Reset-Printables-A4.pdf (the same six pages)\n- Page 1: how to use the pack\n- Page 2: 50/30/20 paycheck split\n- Page 3: subscription audit\n- Page 4: sinking funds\n- Page 5: debt list\n- Page 6: net worth snapshot\n\nHOW IT WORKS\n1. Buy and download the PDFs (instant).\n2. Print the pages you want.\n3. Start with page 2 and fill it in with a pen.\n\nGOOD TO KNOW\n- This is an educational tool, not financial advice. 50/30/20 is a guideline, not a rule.\n- Nothing is drawn in the printer-unsafe margins, so pages print without clipped edges.\n- Instant digital download. Nothing is shipped.\n- Designed by Quiet Money with AI assistance.\n\nFILES: two PDFs. Personal use for you and your household; please do not resell or share the files.\nIf anything is wrong with a file, message me and I will fix it or refund you.",
+        "who_made": "I did",
+        "what_is_it": "A finished product",
+        "when_made": "2020 - 2026",
+        "type": "Digital download"
+      },
+      "gumroad": {
+        "name": "Money Reset Printables: budget, subscriptions, sinking funds, debt and net worth (Letter + A4 PDF)",
+        "summary": "Six clean pages that make you look at your money once, on paper. Letter and A4 included.",
+        "tags": [
+          "printable",
+          "budget",
+          "planner",
+          "finance",
+          "pdf"
+        ],
+        "description": "Six clean pages that make you look at your money once, on paper: a how-to page, a 50/30/20 paycheck split, a subscription audit, sinking funds, a debt list and a net worth snapshot. Thin lines print cheaply on any printer. Letter and A4 included.\n\n**Honest notes:** educational tool, not financial advice; 50/30/20 is a guideline. Instant PDF download, nothing ships.\n\n*Designed by Quiet Money with AI assistance.*",
+        "after_purchase": "Thanks! Start with page 2. More free tools: https://youngstunners88.github.io/quiet-money/money-reset/"
+      }
+    },
+    {
+      "id": "money-reset-kit",
+      "kind": "bundle",
+      "name": "Money Reset Kit",
+      "subtitle": "Two spreadsheet planners and six printable pages",
+      "file": "channel/products/money-reset-kit/Money-Reset-Kit.zip",
+      "verified_compat": [
+        "Excel",
+        "Google Sheets",
+        "LibreOffice",
+        "PDF"
+      ],
+      "price": 28,
+      "price_test": [
+        24,
+        28,
+        34
+      ],
+      "chips": [
+        "Instant download",
+        "2 planners + 6 pages",
+        "Excel, Sheets, PDF"
+      ],
+      "parts": [
+        "rat-race-escape-planner",
+        "debt-payoff-planner",
+        "money-reset-printables"
+      ],
+      "steps": [
+        [
+          "Buy and download",
+          "One zip arrives the moment you pay."
+        ],
+        [
+          "Start with the printables",
+          "Page 2: split your paycheck. Ten minutes with a pen."
+        ],
+        [
+          "Then open the planners",
+          "Your freedom number first, your debt plan second."
+        ]
+      ],
+      "notes": [
+        "Two spreadsheets, recalculated in a real spreadsheet engine and checked against independent math.",
+        "Six printable pages in US Letter and A4.",
+        "Educational tools, not financial advice. Results depend on the numbers you enter.",
+        "Designed by Quiet Money with AI assistance."
+      ],
+      "grid_sub": "Everything to see your money clearly in one weekend",
+      "etsy": {
+        "title": "Money Reset Kit | Budget Planner Bundle | Debt Payoff and Financial Freedom Spreadsheets Plus Printable Pages | Excel Google Sheets PDF",
+        "tags": [
+          "budget planner",
+          "debt payoff planner",
+          "financial freedom",
+          "money planner",
+          "spreadsheet template",
+          "printable pdf",
+          "finance bundle",
+          "budget bundle",
+          "excel template",
+          "google sheets",
+          "net worth tracker",
+          "digital download",
+          "financial planner"
+        ],
+        "description": "Everything to get a clear picture of your money in one weekend.\n\nFind your freedom number, build your debt payoff plan and see the interest it saves, then fill in six printable pages (paycheck split, subscription audit, sinking funds, debt list, net worth). Excel and Google Sheets plus Letter and A4 PDFs.\n\nWHAT IS INSIDE (one zip)\n- Rat Race Escape Planner (spreadsheet, six tabs): your freedom number, years to freedom, income streams, forty-year projection, weekly log\n- Debt Payoff & Compound Interest Planner (spreadsheet, five tabs plus the math): debt-free month, interest saved, compound growth, pay debt or invest\n- Money Reset Printables (PDF, Letter and A4): six pages for pen and paper\n- A read-me and a licence\n\nHOW IT WORKS\n1. Buy and download the zip (instant).\n2. Start with the printables, page 2.\n3. Open the planners in Excel, Google Sheets or LibreOffice and change the blue cells.\n\nGOOD TO KNOW\n- Both spreadsheets were recalculated in a real spreadsheet engine and checked against independent math.\n- No macros, no scripts, no login, no subscription.\n- Educational tools, not financial advice. Results depend on the numbers you enter; returns are never guaranteed.\n- Designed by Quiet Money with AI assistance.\n\nFILE: one zip. Personal use for you and your household; please do not resell or share the files.\nIf anything is wrong with a file, message me and I will fix it or refund you.",
+        "who_made": "I did",
+        "what_is_it": "A finished product",
+        "when_made": "2020 - 2026",
+        "type": "Digital download"
+      },
+      "gumroad": {
+        "name": "Money Reset Kit: two spreadsheet planners + six printable pages",
+        "summary": "Find your freedom number, build your debt plan, and fill in six printable pages. One download.",
+        "tags": [
+          "bundle",
+          "financial planner",
+          "budget",
+          "spreadsheet",
+          "printable"
+        ],
+        "description": "Everything to get a clear picture of your money in one weekend: find your freedom number, build your debt payoff plan with the interest it saves, and fill in six printable pages (paycheck split, subscription audit, sinking funds, debt list, net worth). Excel and Google Sheets plus Letter and A4 PDFs.\n\nEducational tools, not financial advice. Results depend on your assumptions. *Designed by Quiet Money with AI assistance;* spreadsheets were recalculated and checked against independent math.",
+        "after_purchase": "Thanks for grabbing the kit. Start with the Rat Race Escape Planner. Free 7-day Money Reset emails: https://youngstunners88.github.io/quiet-money/money-reset/"
+      },
+      "parts_detail": {
+        "rat-race-escape-planner": {
+          "label": "Rat Race Escape Planner",
+          "lines": [
+            "Spreadsheet, six tabs",
+            "Your freedom number and years to freedom",
+            "Income streams, Rule of 100, projection, weekly log"
+          ]
+        },
+        "debt-payoff-planner": {
+          "label": "Debt Payoff & Compound Interest Planner",
+          "lines": [
+            "Spreadsheet, five tabs plus the math",
+            "Your debt-free month and the interest saved",
+            "Compound growth, and pay debt or invest"
+          ]
+        },
+        "money-reset-printables": {
+          "label": "Money Reset Printables",
+          "lines": [
+            "Six pages, US Letter and A4",
+            "Paycheck split, subscription audit, sinking funds",
+            "Debt list and net worth snapshot"
+          ]
+        }
+      }
+    }
+  ]
+}
