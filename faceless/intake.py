@@ -401,11 +401,19 @@ def apply_verdicts(folder: Path) -> dict[str, int]:
     return {"dossiers": written, "ids_without_dossier": missing}
 
 
-def verdict_table(data: dict, heading_level: str = "##") -> str:
+DEFAULT_TITLE = "Quiet Money 3 and setup lists"
+
+
+def resources_heading(data: dict, folder_name: str | None = None, heading_level: str = "##") -> str:
+    """One heading per batch: the title the verdict file gives (or the original list's) and the folder it came from, so two batches on one day never share a section."""
+    return f"{heading_level} {data.get('title') or DEFAULT_TITLE} ({folder_name or data['date']})"
+
+
+def verdict_table(data: dict, heading_level: str = "##", folder_name: str | None = None) -> str:
     """The decisions as Markdown tables for channel/empire/RESOURCES.md: repositories and packages first, then pages and services."""
     mark = {"USE": "**use**", "TRIAL": "**trial**", "PARK": "**park**", "KILL": "**kill**"}
-    out = [f"{heading_level} Quiet Money 3 and setup lists ({data['date']})", "",
-           "Read with `python -m faceless intake` (dossiers in `repo-farm/intake/%s/`). %s" % (data["date"], data["source"].split(". ", 1)[-1]), "",
+    out = [resources_heading(data, folder_name, heading_level), "",
+           "Read with `python -m faceless intake` (dossiers in `repo-farm/intake/%s/`). %s" % (folder_name or data["date"], data["source"].split(". ", 1)[-1]), "",
            "| resource | verdict | stage | why | worth taking |", "|---|---|---|---|---|"]
     for it in data["items"] + data["web"]:
         steal = it.get("steal") or ""
@@ -425,13 +433,16 @@ REGISTRY = STUDIO / "repo-farm" / "registry.md"
 
 def _first_sentence(text: str, cap: int = 230) -> str:
     m = re.match(r"(.+?[.!?])(\s|$)", text)
-    return (m.group(1) if m else text)[:cap]
+    sentence = m.group(1) if m else text
+    if len(sentence) > cap:          # cut at a word, never in the middle of a number
+        sentence = sentence[:cap].rsplit(" ", 1)[0].rstrip(",;:( ") + "…"
+    return sentence
 
 
 def registry_section(data: dict, folder_name: str | None = None) -> str:
     """The compact verified rows for repo-farm/registry.md: adopted, parked and rejected, one line of reason each."""
     where = folder_name or data["date"]
-    out = [f"## Intake {data['date']} (verified from dossiers in `repo-farm/intake/{where}/`)", "",
+    out = [f"## Intake {where} (verified from dossiers in `repo-farm/intake/{where}/`)", "",
            "Each row was read from the project's own README, manifest, licence file or registry entry; nothing was installed or run. "
            "Stars and dates were unavailable where the GitHub API is closed to this machine.", ""]
     for verdict, title in (("USE", "Active or adopted"), ("TRIAL", "On trial"), ("PARK", "Parked (named condition)"), ("KILL", "Rejected (recorded so nobody re-evaluates)")):
@@ -442,14 +453,23 @@ def registry_section(data: dict, folder_name: str | None = None) -> str:
 
 
 def _replace_section(path: Path, marker: str, new: str) -> None:
-    """Put `new` (which starts with `marker`) at the end of the file, dropping an earlier copy of the same section. Idempotent."""
+    """Put `new` (which starts with `marker`) where an earlier copy of the same section sits, or at the end of the file when there is none.
+    A section runs from its heading line to the next `## ` heading, so neighbours are never touched. Idempotent."""
     text = path.read_text(encoding="utf-8") if path.exists() else ""
-    text = text.split(marker)[0].rstrip("\n")
-    path.write_text((text + "\n\n" if text else "") + new.rstrip("\n") + "\n", encoding="utf-8")
+    start = next((m.start() for m in re.finditer(r"^" + re.escape(marker), text, re.M)), None)
+    block = new.rstrip("\n") + "\n"
+    if start is None:
+        path.write_text((text.rstrip("\n") + "\n\n" if text.strip() else "") + block, encoding="utf-8")
+        return
+    nxt = re.search(r"^## ", text[start + len(marker):], re.M)
+    end = start + len(marker) + nxt.start() if nxt else len(text)
+    before, after = text[:start].rstrip("\n"), text[end:].lstrip("\n")
+    path.write_text((before + "\n\n" if before else "") + block + ("\n" + after if after else ""), encoding="utf-8")
 
 
 def refresh_registers(folder: Path, resources: Path = RESOURCES, registry: Path = REGISTRY) -> None:
     """Write the decisions into channel/empire/RESOURCES.md (full table) and repo-farm/registry.md (compact rows)."""
     data = load_verdicts(folder)
-    _replace_section(resources, f"## Quiet Money 3 and setup lists ({data['date']})", verdict_table(data))
-    _replace_section(registry, f"## Intake {data['date']} (verified", registry_section(data, Path(folder).name))
+    name = Path(folder).name
+    _replace_section(resources, resources_heading(data, name), verdict_table(data, folder_name=name))
+    _replace_section(registry, f"## Intake {name} (verified", registry_section(data, name))

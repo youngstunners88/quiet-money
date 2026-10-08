@@ -44,18 +44,11 @@ def slot_time(day: str, slot: int) -> datetime:
     return when
 
 
-def local_pack(job, meta: dict) -> dict:
-    when = slot_time(job.day, job.slot)
-    post_day, k = nominal_slot(job.day, job.slot)
-    folder = Paths.queue / post_day / f"slot{k + 1}-{job.pillar}"
-    folder.mkdir(parents=True, exist_ok=True)
-    video = Path(job.artifacts["video"])
-    shutil.copy2(video, folder / "video.mp4")
-    if job.artifacts.get("cover"):
-        shutil.copy2(job.artifacts["cover"], folder / "cover.jpg")
+def render_post(k: int, when_text: str, meta: dict) -> str:
+    """POST.md for slot k (0-based): what to paste where, and what to tick. Pure, so a pack can be rewritten from its meta.json."""
     post = [
         f"# Slot {k + 1}: {meta['title']}",
-        f"Post at: {when.strftime('%Y-%m-%d %H:%M %Z')}",
+        f"Post at: {when_text}",
         "",
         "## YouTube Shorts",
         f"Title: {meta['title']}",
@@ -69,9 +62,22 @@ def local_pack(job, meta: dict) -> dict:
         "## Checklist",
         "- [ ] Toggle the platform's AI-generated content label ON",
         "- [ ] TikTok: add a trending sound at 5-10% volume under the voice",
-        "- [ ] Pin a comment with the link-in-bio CTA",
+        f"- [ ] Pin this comment: {pinned}" if (pinned := (meta.get("offer") or {}).get("pinned_comment")) else "- [ ] Pin a comment with the link-in-bio CTA",
+        "- [ ] Profile link on every platform is the hub page (see OFFER.md); links in captions and comments are not tappable",
     ]
-    (folder / "POST.md").write_text("\n".join(post), encoding="utf-8")
+    return "\n".join(post)
+
+
+def local_pack(job, meta: dict) -> dict:
+    when = slot_time(job.day, job.slot)
+    post_day, k = nominal_slot(job.day, job.slot)
+    folder = Paths.queue / post_day / f"slot{k + 1}-{job.pillar}"
+    folder.mkdir(parents=True, exist_ok=True)
+    video = Path(job.artifacts["video"])
+    shutil.copy2(video, folder / "video.mp4")
+    if job.artifacts.get("cover"):
+        shutil.copy2(job.artifacts["cover"], folder / "cover.jpg")
+    (folder / "POST.md").write_text(render_post(k, when.strftime('%Y-%m-%d %H:%M %Z'), meta), encoding="utf-8")
     (folder / "meta.json").write_text(json.dumps({**meta, "post_at": when.isoformat()}, indent=2), encoding="utf-8")
     return {"mode": "local", "folder": str(folder), "post_at": when.isoformat()}
 

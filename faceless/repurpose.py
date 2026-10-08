@@ -70,15 +70,21 @@ def paragraphs(script: dict, per: int = 2, limit: int = 4) -> list[str]:
     return [" ".join(every[i:i + per]) for i in range(0, len(every), per)][:limit + 1]
 
 
-def link() -> str:
-    return config.load()["channel"].get("link_in_bio", "")
+def link(vid: str = "", source: str = "", medium: str = "", slug: str = "checklist") -> str:
+    """The link in a repurposed asset. Where a link is tappable (a thread, a post, a pin, a newsletter) it is the hub page tagged with the
+    asset and the video, so a click can be traced to this post; without those it is the plain bio link."""
+    plain = config.load()["channel"].get("link_in_bio", "")
+    if not (vid and source):
+        return plain
+    from faceless import offer
+    return offer.tracked(offer.hub_url(), source, medium or "post", slug, content=vid, focus=slug) or plain
 
 
 def _clip(text: str, n: int) -> str:
     return text if len(text) <= n else text[: n - 1].rsplit(" ", 1)[0].rstrip(",;:") + "…"
 
 
-def thread(script: dict) -> str:
+def thread(script: dict, vid: str = "", slug: str = "checklist") -> str:
     """Tweet 1 is the hook; the body beats are packed two sentences at a time; the last tweet carries the link."""
     lines = [s for b in facts(script) for s in sentences(b["say"])]
     chunks, cur = [], ""
@@ -94,24 +100,24 @@ def thread(script: dict) -> str:
     n = len(chunks) + 2
     out = [f"1/{n} {_clip(script['title'], 120)}\n\n{_clip(script['hook_text'].capitalize(), 140)}"]
     out += [f"{i}/{n} {_clip(c, 270)}" for i, c in enumerate(chunks, 2)]
-    out.append(f"{n}/{n} Free 7-day Money Reset (checklist + calculators): {link()}\n\n{DISCLOSE}")
+    out.append(f"{n}/{n} Free 7-day Money Reset (checklist + calculators): {link(vid, 'x', 'thread', slug)}\n\n{DISCLOSE}")
     return "\n\n---\n\n".join(out) + "\n"
 
 
-def linkedin(script: dict) -> str:
+def linkedin(script: dict, vid: str = "", slug: str = "checklist") -> str:
     post = [script["title"], "", script["hook_text"].capitalize() + ".", ""]
     for para in paragraphs(script):
         post += [para, ""]
     post += ["Try this: " + action_beat(script), "", script.get("first_comment") or "What would you change first?", "",
-             f"Free checklist and calculators: {link()}", "", DISCLOSE, "", " ".join(script.get("hashtags", [])[:3])]
+             f"Free checklist and calculators: {link(vid, 'linkedin', 'post', slug)}", "", DISCLOSE, "", " ".join(script.get("hashtags", [])[:3])]
     return _clip("\n".join(post), 2900) + "\n"
 
 
-def newsletter_item(script: dict, meta: dict) -> str:
+def newsletter_item(script: dict, meta: dict, vid: str = "", slug: str = "checklist") -> str:
     out = [f"### {script['title']}", "", script.get("description") or sentences(facts(script)[0]["say"])[0], ""]
     if num := the_number(script):
         out += [f"**The number** — {num}", ""]
-    out += [f"**Try this:** {action_beat(script)}", "", f"*{meta.get('pillar', '')} series* · [Free 7-day Money Reset]({link()})", ""]
+    out += [f"**Try this:** {action_beat(script)}", "", f"*{meta.get('pillar', '')} series* · [Free 7-day Money Reset]({link(vid, 'newsletter', 'email', slug)})", ""]
     return "\n".join(out)
 
 
@@ -187,11 +193,11 @@ def carousel(script: dict, cover: Path | None, out: Path) -> int:
     return len(slides)
 
 
-def pin(script: dict, meta: dict, cover: Path | None, out: Path) -> None:
+def pin(script: dict, meta: dict, cover: Path | None, out: Path, vid: str = "", slug: str = "checklist") -> None:
     im = _slide(PIN, cover, script["hook_text"], "", config.load()["channel"]["handle"], "money rules", 0.65)
     im.save(out / "pin.png", optimize=True)
     (out / "pin.txt").write_text(
-        f"Title: {_clip(script['title'], 100)}\nLink: {link()}\n\n{_clip(meta.get('description', '').split(chr(10) + chr(10))[0], 480)}\n\n"
+        f"Title: {_clip(script['title'], 100)}\nLink: {link(vid, 'pinterest', 'pin', slug)}\n\n{_clip(meta.get('description', '').split(chr(10) + chr(10))[0], 480)}\n\n"
         f"{DISCLOSE}\n", encoding="utf-8")
 
 
@@ -229,10 +235,11 @@ def build_pack(job, folder: Path) -> dict:
     kit.mkdir(parents=True, exist_ok=True)
     cover = folder / "cover.jpg"
     made = {}
-    (kit / "thread.txt").write_text(thread(script), encoding="utf-8")
-    (kit / "linkedin.txt").write_text(linkedin(script), encoding="utf-8")
-    (kit / "newsletter.md").write_text(newsletter_item(script, meta), encoding="utf-8")
-    pin(script, meta, cover, kit)
+    slug = (meta.get("offer") or {}).get("slug", "checklist")
+    (kit / "thread.txt").write_text(thread(script, job.id, slug), encoding="utf-8")
+    (kit / "linkedin.txt").write_text(linkedin(script, job.id, slug), encoding="utf-8")
+    (kit / "newsletter.md").write_text(newsletter_item(script, meta, job.id, slug), encoding="utf-8")
+    pin(script, meta, cover, kit, job.id, slug)
     made["carousel"] = carousel(script, cover, kit / "carousel")
     made["audio"] = audio(folder / "video.mp4", kit / "audio.mp3")
     (kit / "KIT.md").write_text(GUIDE, encoding="utf-8")

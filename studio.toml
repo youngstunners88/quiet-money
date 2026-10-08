@@ -9,7 +9,7 @@ tagline = "The money rules nobody taught you."
 niche = "money psychology and personal finance"
 audience = "18-40 year olds who earn a paycheck, feel behind with money, and want simple rules that work"
 language = "en"
-link_in_bio = "https://youngstunners88.github.io/quiet-money/money-reset/"   # the site's free checklist page
+link_in_bio = "https://youngstunners88.github.io/quiet-money/links/"   # the hub page on the site: the one URL in every profile (see [offer])
 has_affiliate_links = false                  # flip to true when affiliate links go live (adds the FTC disclosure)
 cta_follow = "Follow for the money rules school never taught you."
 
@@ -131,6 +131,26 @@ enabled = true
 [newsletter]
 # CAN-SPAM needs a real postal address on every issue; the weekly issue is marked NOT SENDABLE until this is set
 postal_address = ""
+# The email service's public signup form (its "embed" or "hosted form" action URL; it is not a secret). While this is empty the site shows
+# no signup form at all. When it is set, /money-reset/ and /links/ show the form and the 7-day sequence starts from the service's side.
+form_action = ""
+form_email_field = "email"                   # the name of the email input the service expects
+
+[offer]
+# Every video carries one offer (faceless/offer.py). Short-video platforms only make the profile link tappable, so the offer is "link in
+# bio" and the bio link is the hub page below. Nothing is posted by the engine; the owner pins the comment.
+hub_path = "/links/"                         # on [site] base_url; put <hub>?utm_source=<platform>&utm_medium=bio in each profile (python -m faceless offer)
+paid_every = 3                               # at most one paid offer in this many videos; the free checklist builds the list first
+# A paid offer is chosen only when its live listing URL is set here (slug from channel/shop/catalog.json). Empty = the free checklist for every video.
+shop_urls = {}
+# shop_urls = { "debt-payoff-planner" = "https://youngstunners.gumroad.com/l/debt-payoff-planner" }
+[offer.match]                                # which product follows which series (the first live one that was not the previous paid offer)
+story = ["money-reset-kit"]
+math = ["debt-payoff-planner"]
+psychology = ["money-reset-printables"]
+myth = ["money-reset-kit"]
+escape = ["rat-race-escape-planner"]
+playbook = []                                # a how-to always points at the free checklist
 
 [site]
 # GitHub Pages project site (repo youngstunners88/quiet-money). Swap for a custom domain later.

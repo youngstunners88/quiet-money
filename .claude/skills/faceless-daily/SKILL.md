@@ -19,6 +19,8 @@ Produces the day's videos end to end with the repo root and leaves posting packs
    fills today's slots that have no finished video (held/failed slots get a fresh topic).
    `--extra N` makes N more now; they bank into the next free posting slots (tomorrow's first), and the
    next daily run skips slots that are already banked.
+2b. `python -m faceless offer --batch today` (the `faceless-offer` skill): every passed video must leave with one offer, a pinned-comment line in `OFFER.md` and a row in
+   `state/offers.jsonl`. It is idempotent and repairs packs that lack one. Exit 1 lists the videos without a usable offer: fix the cause, never post one without.
 3. Read `gauntlet/reports/daily-<day>.md`. For every row that is not `published`:
    - `held`: open `gauntlet/reports/<job_id>.md`, read the failing gates, then use the `faceless-gauntlet` skill.
    - `failed`: `grep JOB_FAILED state/journal.jsonl | tail -3` shows the trace; fix the root cause, then
@@ -28,7 +30,8 @@ Produces the day's videos end to end with the repo root and leaves posting packs
    clipped, images match the narration, no text artifacts in images.
 5. Check the supply and QA: `python -m faceless doctor` shows the Muapi wallet and whether the semantic checks are on. A video's `images.json` rows carry `qa` and
    `qa_swapped` (stills replaced by cards because a decision model saw text, a face or a logo). If Muapi's wallet is under 21 days of runway the weekly scout proposes a top-up (owner).
-6. Report: titles, scores, durations, spend (`python -m faceless status`), and anything held.
+6. Report: titles, scores, durations, spend (`python -m faceless status`), anything held, and the offer line from `python -m faceless offer` (offers written, free versus paid,
+   how many still wait for the owner to pin).
 
 ## Delivering videos
 - Posting packs: `distribution/queue/<day>/slot<N>-<pillar>/` (video.mp4, POST.md, cover.jpg).
@@ -40,7 +43,7 @@ The batch runs daily as a Claude Code routine in the owner's cloud environment, 
 keys as environment variables, so no key is stored on GitHub. `.claude/hooks/session-start.sh` installs the
 Python dependencies when the session starts. In a routine session:
 1. Steps 0-4 above (`daily` and `make` also run a fast gate themselves: on a machine that cannot render they print BLOCKED, spend nothing and exit 4).
-2. Commit `state/`, `script-lab/`, `gauntlet/reports/` and `analytics/` (never media) and push to `main`;
+2. Commit `state/` (including `offers.jsonl`), `script-lab/`, `gauntlet/reports/`, `analytics/` and the text files of `distribution/queue/` (never media) and push to `main`;
    the push rebuilds the website. If the push is rejected, the remote moved: `git fetch origin main`, rebase onto it (the logs in
    `state/` merge by union, so both sessions' lines survive), run the tests, push again. Never force-push.
    `python -m faceless watchdog` should say `healthy` afterwards; the same check runs every six hours on GitHub and opens an "Ops alert" issue

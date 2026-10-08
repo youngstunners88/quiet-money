@@ -153,6 +153,7 @@ def test_two_sessions_appending_to_the_journal_merge_without_a_conflict(tmp_path
 def test_only_append_only_logs_use_the_union_driver():
     attrs = dict(line.split()[:2] for line in (STUDIO / ".gitattributes").read_text(encoding="utf-8").splitlines() if line and not line.startswith("#"))
     assert attrs.get("state/journal.jsonl") == "merge=union" and attrs.get("state/ledger.jsonl") == "merge=union"
+    assert attrs.get("state/offers.jsonl") == "merge=union", "the offer ledger is appended to by every daily run"
     assert not {"channel/empire/portfolio.jsonl", "script-lab/ideas/backlog.jsonl"} & set(attrs), "rewritten files would duplicate lines under a union merge"
 
 
@@ -171,3 +172,16 @@ def test_the_session_start_hook_retries_its_installs():
     assert "retry python -m pip install" in hook and hook.count("retry python -m pip install") >= 2
     r = subprocess.run(["bash", "-n", str(STUDIO / ".claude" / "hooks" / "session-start.sh")], capture_output=True, text=True)
     assert r.returncode == 0, r.stderr
+
+
+def test_the_offer_settings_only_point_at_real_products_and_secure_listings():
+    """A paid offer is chosen only when its live listing URL is set, so a wrong slug or an http link must fail here, not in a caption."""
+    from faceless import offer
+    cfg = config.load()["offer"]
+    cat = offer.catalog()
+    assert set(cfg.get("shop_urls", {})) <= set(cat), "shop_urls names a product that is not in channel/shop/catalog.json"
+    assert all(str(u).startswith("https://") for u in cfg.get("shop_urls", {}).values())
+    assert all(set(slugs) <= set(cat) for slugs in cfg["match"].values()), "[offer.match] names a product that is not in the catalog"
+    assert cfg["match"].get("playbook", []) == [], "a how-to video always points at the free checklist"
+    assert int(cfg["paid_every"]) >= 2, "the free checklist must lead: at most every other video may be a paid offer"
+    assert str(cfg["hub_path"]).startswith("/") and config.load()["channel"]["link_in_bio"].endswith(cfg["hub_path"]), "link_in_bio is the hub page"

@@ -2616,3 +2616,13 @@
 {"ts": "2026-10-08T14:00:28Z", "t": 1791468028.922, "actor": "engine", "type": "MUAPI_RUN", "job": null, "model": "ocr-recognize-text", "usd": 0.02, "request": "7ef1ac5c-65f", "balance": "20.4223"}
 {"ts": "2026-10-08T14:00:57Z", "t": 1791468057.085, "actor": "engine", "type": "MUAPI_RUN", "job": null, "model": "social-search-posts", "usd": 0.1, "request": "018f9a0e-827", "balance": "20.3223"}
 {"ts": "2026-10-08T15:17:30Z", "t": 1791472650.202, "actor": "engine", "type": "COMPOSIO_SESSION", "user": "quiet-money-studio", "session_hash": "cdcd2851"}
+{"ts": "2026-10-08T17:08:57Z", "t": 1791479337.732, "actor": "engine", "type": "OFFER_RECORDED", "job": "2026-10-07-s5-math-the-real-cost-of-a-15-subscripti", "slug": "checklist", "status": "draft"}
+{"ts": "2026-10-08T17:08:57Z", "t": 1791479337.734, "actor": "engine", "type": "OFFER_RECORDED", "job": "2026-10-07-s6-myth-myth-you-can-time-the-stock-mark", "slug": "checklist", "status": "draft"}
+{"ts": "2026-10-08T17:08:57Z", "t": 1791479337.735, "actor": "engine", "type": "OFFER_RECORDED", "job": "2026-10-07-s7-playbook-turn-on-these-3-free-bank-alerts", "slug": "checklist", "status": "draft"}
+{"ts": "2026-10-08T17:08:57Z", "t": 1791479337.736, "actor": "engine", "type": "OFFER_RECORDED", "job": "2026-10-07-s8-escape-execution-over-education-why-ano", "slug": "checklist", "status": "draft"}
+{"ts": "2026-10-08T17:08:57Z", "t": 1791479337.737, "actor": "engine", "type": "OFFER_RECORDED", "job": "2026-10-08-s4-story-the-latte-factor-debate-does-ski", "slug": "checklist", "status": "draft"}
+{"ts": "2026-10-08T17:08:57Z", "t": 1791479337.739, "actor": "engine", "type": "OFFER_RECORDED", "job": "2026-10-08-s5-psychology-the-pain-of-paying-why-cards-mak", "slug": "checklist", "status": "draft"}
+{"ts": "2026-10-08T17:08:57Z", "t": 1791479337.74, "actor": "engine", "type": "OFFER_RECORDED", "job": "2026-10-08-s6-playbook-the-no-spend-weekend-challenge", "slug": "checklist", "status": "draft"}
+{"ts": "2026-10-08T17:08:57Z", "t": 1791479337.741, "actor": "engine", "type": "OFFER_RECORDED", "job": "2026-10-08-s7-escape-more-better-new-why-beginners-qu", "slug": "checklist", "status": "draft"}
+{"ts": "2026-10-08T17:08:57Z", "t": 1791479337.742, "actor": "engine", "type": "OFFER_RECORDED", "job": "2026-10-08-s8-story-cash-envelope-budgeting-the-grea", "slug": "checklist", "status": "draft"}
+{"ts": "2026-10-08T17:16:09Z", "t": 1791479769.784, "actor": "engine", "type": "COMPOSIO_SESSION", "user": "quiet-money-studio", "session_hash": "59f856a0"}

@@ -11,7 +11,8 @@ recommender on who the audience is; breakouts usually come from a hook pattern f
 
 ## Daily operations (automated by `faceless-daily` + CI)
 - 5 videos, one per series, posted in the `[publish].slots` times (audience-local).
-- Each post: AI label on, pinned first comment (a question), caption with 4-5 hashtags, and the library link in bio.
+- Each post: AI label on, caption with 4-5 hashtags and a "link in bio" line, a pinned comment with the offer (`OFFER.md`, `faceless-offer`), and the hub page
+  as the profile link on every platform (`python -m faceless offer` prints the three tagged URLs).
 - First hour: reply to every comment (comment velocity is a ranking signal). Use the reply-with-video feature on
   TikTok for the best question (free extra post).
 

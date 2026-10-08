@@ -7,7 +7,7 @@ import os
 import pytest
 import requests.adapters
 
-from faceless import config, events, ledger
+from faceless import config, events, ledger, offer
 from faceless.providers import clef
 
 KEY_MARKERS = ("API_KEY", "_TOKEN", "API_TOKEN", "SECRET", "ACCOUNT_ID", "COMPOSIO_API", "FIRECRAWL", "ELEVENLABS", "MUAPI", "GEMINI",
@@ -27,6 +27,7 @@ def _hermetic_environment(monkeypatch, tmp_path_factory):
     scratch = tmp_path_factory.mktemp("state")
     monkeypatch.setattr(events, "JOURNAL", scratch / "journal.jsonl")      # a test never writes the real audit trail or ledger
     monkeypatch.setattr(ledger, "LEDGER", scratch / "ledger.jsonl")
+    monkeypatch.setattr(offer, "OFFERS", scratch / "offers.jsonl")
     monkeypatch.setattr(requests.adapters.HTTPAdapter, "send", _no_network)
     monkeypatch.setattr(clef, "available", lambda: False)
     monkeypatch.setitem(config.load().setdefault("qa", {}), "enabled", False)

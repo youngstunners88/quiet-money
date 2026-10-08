@@ -17,10 +17,10 @@ Assets: `brand-kit/avatar.png`, `brand-kit/banner-youtube.png`, `brand-kit/water
 > • Money Stories • The Math They Hide • Money Psychology • Money Myths • Do This Today • Escape the Rat Race
 >
 > Educational content, not financial advice. Narration and visuals are AI-assisted.
-> Free 7-day Money Reset checklist: link below.
+> Free 7-day Money Reset checklist: see the links below.
 
 - **Keywords:** personal finance, money psychology, money tips, investing for beginners, compound interest, budgeting, debt payoff, saving money, financial literacy, money mindset, frugal living, wealth building
-- **Links:** website (money rules library + free checklist), TikTok, Instagram
+- **Links** (channel page, up to 14, tappable): the hub page tagged for YouTube (`utm_source=youtube&utm_medium=bio&utm_campaign=profile`; `python -m faceless offer` prints it), TikTok, Instagram. Links in Shorts descriptions and comments are plain text.
 - **Branding:** profile picture `avatar.png`, banner `banner-youtube.png`, video watermark `watermark.png` (display: entire video)
 - **Defaults:** category Education, language English, "altered or synthetic content" = Yes on every upload
 
@@ -28,14 +28,15 @@ Assets: `brand-kit/avatar.png`, `brand-kit/banner-youtube.png`, `brand-kit/water
 - **Name:** Quiet Money
 - **Username:** quietmoneyrules
 - **Bio (69):** `Money rules nobody taught you. Real numbers, 60 sec a day. 👇 Free checklist`
-- **Link:** website link (needs 1k followers on personal accounts; switch to a Business account to add it earlier)
+- **Link:** the hub page tagged `utm_source=tiktok&utm_medium=bio&utm_campaign=profile` (`python -m faceless offer` prints it). The Website field may need a Business account or about 1k followers; check Edit profile. Captions and comments are not tappable.
 - Turn on: AI-generated content label for every post.
 
 ## Instagram (bio max 150 chars)
 - **Name:** Quiet Money | Money Rules
 - **Username:** quietmoneyrules
 - **Bio (118):** `The money rules nobody taught you.\nReal stories. Real math. 60 seconds a day.\n📩 Free 7-day Money Reset ↓`
-- **Link:** website
+- **Link:** the hub page tagged `utm_source=instagram&utm_medium=bio&utm_campaign=profile` (`python -m faceless offer` prints it). Captions and comments are not tappable.
 
-## Pinned comment template (every video)
-`Which part hit hardest? 👇 Free 7-day Money Reset checklist is in our profile.`
+## Pinned comment (every video)
+Each video's own line is in `distribution/queue/<day>/slot<N>-<pillar>/OFFER.md` (one offer per video, checked for money claims). The default is
+`Free 60-second money reset checklist is in my bio. Educational only, not financial advice.` After pinning it: `python -m faceless offer mark <video id> pinned`.

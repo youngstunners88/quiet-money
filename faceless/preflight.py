@@ -128,12 +128,29 @@ def _bad_lines(path) -> int:
 
 def checks_state() -> list[Check]:
     out = []
-    for path in (Paths.state / "journal.jsonl", Paths.state / "ledger.jsonl"):
+    for path in (Paths.state / "journal.jsonl", Paths.state / "ledger.jsonl", Paths.state / "offers.jsonl"):
         if path.exists() and re.search(r"^(<{7}|={7}|>{7})", path.read_text(encoding="utf-8", errors="replace"), re.M):
             out.append(Check(f"state:{path.name}", FAIL, "merge conflict markers", "union-merge both sides, sorted by timestamp, and keep every line"))
             continue
         bad = _bad_lines(path)
         out.append(Check(f"state:{path.name}", WARN if bad else OK, f"{bad} unreadable line(s), skipped" if bad else "every line parses", "" if not bad else "readers skip them; find the writer that broke atomicity"))
+    out += checks_offer()
+    return out
+
+
+def checks_offer() -> list[Check]:
+    """Does every passed video of today carry an offer, and is there a hub page to send people to? Warnings only: an offer never blocks a video."""
+    from faceless import offer
+    out = []
+    hub = offer.hub_url()
+    out.append(Check("offer:hub", OK if hub else WARN, hub or "[site] base_url is empty", "" if hub else "set the site address in studio.toml: every video's call to action points at the hub page"))
+    try:
+        today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+        missing = offer.unoffered(today)
+    except Exception as e:   # noqa: BLE001 - a broken job file must not stop the traffic lights
+        return out + [Check("offer:coverage", WARN, f"could not read today's jobs ({type(e).__name__})", "")]
+    out.append(Check("offer:coverage", WARN if missing else OK, f"{len(missing)} passed video(s) today have no offer" if missing else "every passed video today has an offer",
+                     "`python -m faceless offer --batch today` writes the missing packs and ledger rows" if missing else ""))
     return out
 
 

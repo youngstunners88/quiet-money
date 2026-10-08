@@ -1,0 +1,51 @@
+{
+  "date": "2026-10-08",
+  "title": "Distribution and demand tools",
+  "source": "The owner's SEO, SEO WORK and QM with Grok documents, read from Drive on 2026-10-08. Dossiers were produced by `python -m faceless intake`; the GitHub API was closed for these repositories from this machine, so stars and dates are unknown and the judgments rest on READMEs, manifests and licence files. The treg.to pages and Anthropic's Haiku 5.5 page were read with Exa; prices were checked against OpenRouter's public model list and the Muapi catalog.",
+  "items": [
+    {
+      "id": "superdesigndev-treg",
+      "name": "superdesigndev/treg (treg.to)",
+      "verdict": "PARK",
+      "stage": "ideate",
+      "why": "A hosted per-call tool gateway ('OpenRouter for agent tools', Apache-2.0, self-hostable) whose lead-signals skill finds B2B buyers by hiring, funding, tech-stack and job-change signals and then looks up their emails and phones. Wrong audience for a consumer money channel, and contact lookup is the one thing we would not run. The data we do need (what people search, what is trending, page text) already comes from TokConnect, Exa, TinyFish and the Muapi desk at known prices. The gateway would add a prepaid balance and a bearer token held by a third party, an installer that pipes a download into a shell (HIGH), and vendor-only numbers (4,710 signals for $0.52; 78.2% against 43% on a benchmark it ran itself).",
+      "steal": "The pattern: describe the signal in one sentence, put it on a schedule, report only what is new (the weekly scout already does this for topics), and show the price before the call (the Muapi desk already does this).",
+      "owner": "Nothing now. If backlink or SERP data is wanted later, trial it in a sandbox copy with a $5 prepaid balance and a spend cap, never with a production token."
+    },
+    {
+      "id": "morluto-rea",
+      "name": "morluto/rea (rea-agents)",
+      "verdict": "KILL",
+      "stage": "",
+      "why": "A reverse-engineering toolkit (MIT, MCP server) for binaries, applications and runtime behaviour. Its purpose in the Grok document was to rebuild private platform APIs so an agent could drive Etsy or Flow with no official path, which means automating the owner's real seller account through endpoints the platform never published: the quickest way to lose the shop. The package runs a script when installed (`prepare`) and its docs run `npx -y rea-agents@latest`, unpinned. No pipeline stage needs it. Recorded again so nobody re-evaluates it (portfolio X5).",
+      "steal": "none",
+      "owner": ""
+    }
+  ],
+  "web": [
+    {
+      "name": "Claude Haiku 5.5 (Anthropic announcement, 2026-10-07)",
+      "verdict": "USE",
+      "stage": "visuals",
+      "why": "Anthropic's cheapest model: $0.10 in and $0.50 out per million tokens for prompts up to 100k, adaptive thinking on by default, 1M context. OpenRouter lists `anthropic/claude-haiku-5.5` at the same price (a batch variant at half); the Muapi catalog has Haiku 4.5 but not 5.5 yet. The right job here is writing the scene code for animated graphics (a few thousand tokens a scene, a fraction of a cent) and cheap drafting. The wrong job is scripts and listing copy, where the free Gemini chain costs nothing and independent tests rank it below GPT-6 Luna on business writing.",
+      "steal": "Run it at low effort with a token cap, and measure cost per finished scene rather than per million tokens.",
+      "owner": ""
+    },
+    {
+      "name": "SpringPrompt: Claude Haiku 5.5 review (2026-10-08)",
+      "verdict": "USE",
+      "stage": "measure",
+      "why": "An independent benchmark write-up, used as the cross-check on Anthropic's own numbers: far better than Haiku 4.5, behind GPT-6 Luna on listings, decks and ad planning, wordy at the default medium effort (a product listing cost $0.0012 against $0.0005 for Luna), and 85% on 18 small coding and drawing tests at $0.11 in all, which is the job we want it for.",
+      "steal": "Report cost per finished task at the default setting, not the best one, and say which setting a number was measured at.",
+      "owner": ""
+    },
+    {
+      "name": "treg.to lead-signals and tutorial pages",
+      "verdict": "PARK",
+      "stage": "ideate",
+      "why": "Vendor pages: marketing claims only (a 4,710-signal run for $0.52 on 26 September 2026; 78.2% against 43% on People Search Bench for the same agent with and without treg). The tutorial is an interactive widget that did not come through as text. Nothing here was verified by us.",
+      "steal": "none",
+      "owner": ""
+    }
+  ]
+}

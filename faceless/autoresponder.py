@@ -35,7 +35,8 @@ def numbers() -> dict:
 def emails() -> list[dict]:
     n = numbers()
     cfg = config.load()
-    link = cfg["channel"].get("link_in_bio", "")
+    from faceless import offer
+    link = offer.checklist_url() or cfg["channel"].get("link_in_bio", "")     # the whole checklist, not the hub page that links to it
     planner = cfg.get("newsletter", {}).get("planner_url", "")
     d7_cta = (f"If you want the numbers laid out for you, the Rat Race Escape Planner is a spreadsheet that does it: {planner}\n\n"
               if planner else "")

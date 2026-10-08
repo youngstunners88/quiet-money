@@ -6,16 +6,21 @@ Title: The Subscription Creep Costing You Thousands
 
 Small recurring charges drain thousands over a decade. Learn the real math behind subscription creep and why you need to audit your monthly expenses today.
 
-Free 7-day Money Reset checklist + calculators: https://youngstunners88.github.io/quiet-money/money-reset/
+Free 7-day Money Reset checklist + calculators: https://youngstunners88.github.io/quiet-money/links/?utm_source=youtube&utm_medium=short&utm_campaign=checklist&utm_content=2026-10-07-s5-math-the-real-cost-of-a-15-subscripti&o=checklist
 
 Educational content, not financial advice. Narration and visuals are AI-assisted.
 
 #SubscriptionCreep #PersonalFinance #MoneyTips #WealthBuilding #QuietMoney #shorts
 
 ## TikTok / Instagram caption
-Subscription creep is stealing your future wealth one tiny charge at a time. Time to audit your bank statement. #SubscriptionCreep #PersonalFinance #MoneyTips #WealthBuilding #QuietMoney
+Subscription creep is stealing your future wealth one tiny charge at a time. Time to audit your bank statement.
+
+Free money reset checklist: link in bio.
+
+#SubscriptionCreep #PersonalFinance #MoneyTips #WealthBuilding #QuietMoney
 
 ## Checklist
 - [ ] Toggle the platform's AI-generated content label ON
 - [ ] TikTok: add a trending sound at 5-10% volume under the voice
-- [ ] Pin a comment with the link-in-bio CTA
+- [ ] Pin this comment: Free 60-second money reset checklist is in my bio. Educational only, not financial advice.
+- [ ] Profile link on every platform is the hub page (see OFFER.md); links in captions and comments are not tappable

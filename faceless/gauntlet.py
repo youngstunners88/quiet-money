@@ -262,7 +262,20 @@ def check_package(meta: dict) -> list[Gate]:
         Gate("affiliate_disclosure", not config.load()["channel"].get("has_affiliate_links") or "affiliate" in d, 8, True,
              "affiliate links are on but the description has no affiliate disclosure", "package"),
         Gate("caption_tags", "#" in meta["caption"], 2, False, "caption has no hashtags", "package"),
+        _offer_gate(meta),
     ]
+
+
+def _offer_gate(meta: dict) -> Gate:
+    """One offer per video: present, one link, no money promise in the call to action itself (the script has its own gates)."""
+    from faceless import offer
+    o = meta.get("offer") or {}
+    cta = " ".join(str(o.get(k, "")) for k in ("pinned_comment", "caption_line", "description_line"))
+    links = set(re.findall(r"https?://\S+", meta.get("description", "")))
+    ok = o.get("status") == "draft" and len(links) <= 1 and not offer.violations(cta)
+    why = ("no offer on this video" if not o else f"offer status {o.get('status')}" if o.get("status") != "draft"
+           else "the description carries more than one link" if len(links) > 1 else "; ".join(offer.violations(cta)) or "")
+    return Gate("offer_cta", ok, 3, False, why, "package")
 
 
 def score(gates: list[Gate]) -> tuple[int, list[Gate]]:

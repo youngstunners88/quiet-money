@@ -5,15 +5,18 @@ programs gate entry. So the plan stacks income sources that start on day 1 and l
 payouts arrive on top.
 
 ## Phase 0 (day 1): link in bio, no thresholds needed
-1. **Free link-in-bio page** (Stan Store, Beacons, or Linktree free tier). Set `channel.link_in_bio` in `studio.toml`
-   so every description carries it with an affiliate disclosure.
-2. **Lead magnet**: a free "60-Second Money Reset" checklist (one page: automate savings, kill 3 fees,
-   50/30/20 split, starter emergency fund). Collect emails; the list is the asset you own.
+1. **The hub page** (`/links/` on our own site, built by `faceless/site.py`) is the one link in every profile. Short-video captions and comments are not
+   tappable, so every post says "link in bio" and the hub carries the offer: the free checklist first, then any product with a live listing.
+   `python -m faceless offer` prints the three profile URLs (same page, tagged by platform) and `faceless-offer` writes the pinned comment per video.
+   No link-in-bio service is needed; Stan Store or Gumroad are only the checkout behind a product card.
+2. **Lead magnet**: the free "60-Second Money Reset" checklist (one page: automate savings, kill 3 fees, 50/30/20 split, starter emergency fund).
+   The list is the asset you own: pick an email service, paste its public form address into `[newsletter] form_action`, and the hub and the
+   checklist page show the signup form. The 7-day sequence is already written (`python -m faceless autoresponder`).
 3. **Affiliate links** that match the pillars (apply to the ones available in your country):
    - Budgeting apps (YNAB-style, Monarch-style), high-yield savings accounts, brokerages with sign-up bonuses
      (Webull/M1/eToro-style CPA $50-$250), credit monitoring (Credit Karma-style, ~$7/sign-up), cashback apps.
    - Networks that aggregate finance offers: Impact, FlexOffers, Awin/ShareASale, CJ.
-   - Pin a comment on top videos pointing to the bio link ("free money reset checklist in bio").
+   - Affiliate links go in the hub or a description with the disclosure on (`channel.has_affiliate_links`), never in the pinned comment.
 
 ## Phase 1 (weeks 1-4): your own digital product
 - **$9-$19 "Quiet Money Playbook"**: the 30 money rules from the channel, the calculators, the scripts

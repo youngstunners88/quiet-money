@@ -120,3 +120,12 @@ def test_failing_decides_the_exit_code_by_level():
 def test_emit_leaves_a_line_in_the_journal(repo):
     watchdog.emit([{"level": "warn", "what": "x", "detail": "", "action": ""}])
     assert any(e["type"] == "WATCHDOG" and e["status"].startswith("warn") and e["findings"] == 1 for e in events.read())
+
+
+def test_a_video_shipped_without_an_offer_is_a_warning(repo, monkeypatch):
+    from faceless import offer
+    monkeypatch.setattr(offer, "unoffered", lambda day=None: ["2026-10-08-s1-math-x"] if day == "2026-10-08" else [])
+    found = [f for f in watchdog.evaluate(NOW) if f["what"] == "videos shipped without an offer"]
+    assert found and found[0]["level"] == "warn" and "offer --batch" in found[0]["action"]
+    monkeypatch.setattr(offer, "unoffered", lambda day=None: [])
+    assert not [f for f in watchdog.evaluate(NOW) if "offer" in f["what"]]

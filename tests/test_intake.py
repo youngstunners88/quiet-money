@@ -251,4 +251,43 @@ def test_the_registers_are_refreshed_in_place_and_idempotently(tmp_path):
     data["items"][1]["why"] = "Changed my mind. Really."
     (tmp_path / "verdicts.json").write_text(json.dumps(data), encoding="utf-8")
     intake.refresh_registers(tmp_path, resources, registry)
-    assert "Changed my mind." in registry.read_text(encoding="utf-8") and registry.read_text(encoding="utf-8").count("## Intake 2026-10-08") == 1
+    assert "Changed my mind." in registry.read_text(encoding="utf-8") and registry.read_text(encoding="utf-8").count("## Intake ") == 1
+
+
+def test_two_batches_on_one_day_keep_their_own_sections_and_text_after_a_section_survives(tmp_path):
+    """The registers are edited in place: a second batch dated the same day must not erase the first, and a section in the middle of the file
+    is replaced without dropping what follows it."""
+    first, second = tmp_path / "2026-10-08", tmp_path / "2026-10-08b"
+    first.mkdir()
+    second.mkdir()
+    base = {"date": "2026-10-08", "source": "Test. Read from a list.", "web": []}
+    (first / "verdicts.json").write_text(json.dumps({**base, "items": [
+        {"id": "a", "name": "first/tool", "verdict": "USE", "stage": "sell", "why": "Official.", "steal": "", "owner": ""}]}), encoding="utf-8")
+    (second / "verdicts.json").write_text(json.dumps({**base, "title": "Distribution tools", "items": [
+        {"id": "b", "name": "second/tool", "verdict": "KILL", "stage": "", "why": "Unsafe.", "steal": "", "owner": ""}]}), encoding="utf-8")
+    resources, registry = tmp_path / "RESOURCES.md", tmp_path / "registry.md"
+    resources.write_text("# Resources\n", encoding="utf-8")
+    registry.write_text("# Registry\n", encoding="utf-8")
+    intake.refresh_registers(first, resources, registry)
+    intake.refresh_registers(second, resources, registry)
+    for text in (resources.read_text(encoding="utf-8"), registry.read_text(encoding="utf-8")):
+        assert "first/tool" in text and "second/tool" in text
+    assert "## Quiet Money 3 and setup lists (2026-10-08)" in resources.read_text(encoding="utf-8")
+    assert "## Distribution tools (2026-10-08b)" in resources.read_text(encoding="utf-8")
+    both = (resources.read_text(encoding="utf-8"), registry.read_text(encoding="utf-8"))
+    (first / "verdicts.json").write_text(json.dumps({**base, "items": [
+        {"id": "a", "name": "first/tool", "verdict": "PARK", "stage": "sell", "why": "Changed.", "steal": "", "owner": ""}]}), encoding="utf-8")
+    intake.refresh_registers(first, resources, registry)                       # re-running the older batch edits it where it sits
+    text = resources.read_text(encoding="utf-8")
+    assert "Changed." in text and "second/tool" in text and text.count("## Quiet Money 3 and setup lists") == 1
+    assert text.index("## Quiet Money 3") < text.index("## Distribution tools")
+    intake.refresh_registers(second, resources, registry)
+    intake.refresh_registers(first, resources, registry)
+    assert resources.read_text(encoding="utf-8") == text and both[0] != text
+
+
+def test_a_long_first_sentence_is_cut_at_a_word_not_inside_a_number():
+    text = "Cheap model (a listing cost $0.0012 against $0.0005 for the other one), and " + "word " * 60 + "end."
+    cut = intake._first_sentence(text, cap=60)
+    assert cut.endswith("…") and "$0.0012" in cut and not cut.endswith("$0.00…") and len(cut) <= 61
+    assert intake._first_sentence("Short one. Second sentence.") == "Short one."

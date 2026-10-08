@@ -61,7 +61,15 @@ def evaluate(now: datetime | None = None) -> list[dict]:
         out.append(_finding(CRITICAL if len(open_slots) >= 4 else WARN, "slots are open after a held or failed video",
                             f"{len(open_slots)} slot(s) in the last two days have no finished video: {sorted(open_slots)[:4]}",
                             "read gauntlet/reports for the failing gates; use the faceless-gauntlet skill; `python -m faceless daily` refills open slots"))
-    for path in (Paths.state / "journal.jsonl", Paths.state / "ledger.jsonl"):
+    try:
+        from faceless import offer
+        shipped = [vid for d in sorted(recent) for vid in offer.unoffered(d)]
+        if shipped:
+            out.append(_finding(WARN, "videos shipped without an offer", f"{len(shipped)} passed video(s) in the last two days have no call to action: {shipped[:3]}",
+                                "`python -m faceless offer --batch today` writes the missing packs and ledger rows"))
+    except Exception:  # noqa: BLE001 - the watchdog itself must never crash
+        pass
+    for path in (Paths.state / "journal.jsonl", Paths.state / "ledger.jsonl", Paths.state / "offers.jsonl"):
         if path.exists():
             text = path.read_text(encoding="utf-8", errors="replace")
             if any(line.startswith(("<<<<<<<", ">>>>>>>")) for line in text.splitlines()):

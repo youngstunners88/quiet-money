@@ -117,12 +117,27 @@ def produce(job: Job, *, judge: bool = True, prefer_voice: str | None = None, do
         res = publisher.publish(job, meta)
         job.artifacts["publish"] = res
         job.advance("published", **{k: v.get("post_at") for k, v in res.items() if isinstance(v, dict)})
+        _offer(job, meta)
         _kit(job)
     elif next_step != "publish":
         job.notes.append("held for review: " + ", ".join(rep["hard_failures"] or ["low score"]))
         job.advance("held")
     job.save()
     return rep
+
+
+def _offer(job: Job, meta: dict) -> None:
+    """OFFER.md beside the posting pack and the ledger row. A failure here never costs a video its slot (`offer --batch` repairs it)."""
+    local = (job.artifacts.get("publish") or {}).get("local") or {}
+    if not local.get("folder") or not meta.get("offer"):
+        return
+    try:
+        from faceless import offer
+        built = offer.build(job.id, job.pillar, meta.get("title", ""), post_day=Path(local["folder"]).parent.name, force=meta["offer"]["slug"])
+        offer.record(job.id, Path(local["folder"]), built)
+    except Exception as e:   # noqa: BLE001 - best-effort side product
+        job.notes.append(f"offer skipped: {type(e).__name__}")
+        events.emit("OFFER_FAILED", job=job.id, error=f"{type(e).__name__}: {e}"[:200])
 
 
 def _kit(job: Job) -> None:

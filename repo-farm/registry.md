@@ -112,3 +112,27 @@ Each row was read from the project's own README, manifest, licence file or regis
 | Freebuff (freebuff.com) | none | An ad-funded coding agent. |
 | opensourceprojects.dev post (MiroFish-Offline) | none | A blog post about a local-first agent playground that needs a local language model. |
 | LiquidAI system-one-arcade (Hugging Face Space) | none | A Docker Space whose page gave no readable description from here. |
+
+## Intake 2026-10-08b (verified from dossiers in `repo-farm/intake/2026-10-08b/`)
+
+Each row was read from the project's own README, manifest, licence file or registry entry; nothing was installed or run. Stars and dates were unavailable where the GitHub API is closed to this machine.
+
+### Active or adopted
+
+| Tool | Stage | Why |
+|---|---|---|
+| Claude Haiku 5.5 (Anthropic announcement, 2026-10-07) | visuals | Anthropic's cheapest model: $0.10 in and $0.50 out per million tokens for prompts up to 100k, adaptive thinking on by default, 1M context. |
+| SpringPrompt: Claude Haiku 5.5 review (2026-10-08) | measure | An independent benchmark write-up, used as the cross-check on Anthropic's own numbers: far better than Haiku 4.5, behind GPT-6 Luna on listings, decks and ad planning, wordy at the default medium effort (a product listing cost… |
+
+### Parked (named condition)
+
+| Tool | Stage | Why |
+|---|---|---|
+| superdesigndev/treg (treg.to) | ideate | A hosted per-call tool gateway ('OpenRouter for agent tools', Apache-2.0, self-hostable) whose lead-signals skill finds B2B buyers by hiring, funding, tech-stack and job-change signals and then looks up their emails and phones. |
+| treg.to lead-signals and tutorial pages | ideate | Vendor pages: marketing claims only (a 4,710-signal run for $0.52 on 26 September 2026; 78.2% against 43% on People Search Bench for the same agent with and without treg). |
+
+### Rejected (recorded so nobody re-evaluates)
+
+| Tool | Stage | Why |
+|---|---|---|
+| morluto/rea (rea-agents) |  | A reverse-engineering toolkit (MIT, MCP server) for binaries, applications and runtime behaviour. |

@@ -200,3 +200,14 @@ def test_daily_and_make_stop_before_spending_anything_when_the_machine_cannot_fi
     assert cli.cmd_make(argparse.Namespace(pillar="math", topic=None, script=None, slot=0, voice=None, no_judge=True, no_publish=True, skip_preflight=False)) == 4
     from faceless import events
     assert [e["checks"] for e in events.read() if e["type"] == "PREFLIGHT_BLOCKED"] == [["ffmpeg"], ["ffmpeg"]]
+
+
+def test_offer_checks_warn_when_a_passed_video_has_no_offer_and_pass_when_it_does(tmp_path, monkeypatch):
+    from faceless import offer
+    monkeypatch.setattr(offer, "unoffered", lambda day=None: ["v1", "v2"])
+    got = {c.name: c for c in preflight.checks_offer()}
+    assert got["offer:hub"].level == preflight.OK and got["offer:coverage"].level == preflight.WARN and "2 passed" in got["offer:coverage"].detail
+    monkeypatch.setattr(offer, "unoffered", lambda day=None: [])
+    assert {c.name: c.level for c in preflight.checks_offer()}["offer:coverage"] == preflight.OK
+    monkeypatch.setitem(preflight.config.load()["site"], "base_url", "")
+    assert {c.name: c.level for c in preflight.checks_offer()}["offer:hub"] == preflight.WARN

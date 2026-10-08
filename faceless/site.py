@@ -36,6 +36,7 @@ def cfg() -> dict:
         "google_verification": s.get("google_verification", ""),
         "bing_verification": s.get("bing_verification", ""),
         "socials": s.get("socials", {}),
+        "head_snippet": s.get("head_snippet", ""),
         "channel": c["channel"],
         "pillars": {p.id: p for p in c["pillars"]},
     }
@@ -43,6 +44,13 @@ def cfg() -> dict:
 
 def e(text) -> str:
     return html.escape(str(text or ""), quote=True)
+
+
+SOCIAL_NAMES = {"youtube": "YouTube", "tiktok": "TikTok", "instagram": "Instagram", "x": "X", "linkedin": "LinkedIn", "pinterest": "Pinterest"}
+
+
+def social_links(socials: dict) -> str:
+    return " · ".join(f'<a href="{e(u)}" rel="me">{e(SOCIAL_NAMES.get(k, k.title()))}</a>' for k, u in socials.items() if u)
 
 
 def ld_json(data) -> str:
@@ -152,14 +160,37 @@ article .summary{font-size:20px;color:var(--muted)}
 .calc input{width:100%;background:var(--ink);color:var(--cream);border:1px solid var(--line);border-radius:10px;padding:10px;font-size:17px}
 .calc output{display:block;font:900 26px Montserrat,sans-serif;color:var(--gold);margin-top:14px}
 .check li{list-style:none;margin:6px 0}.check li:before{content:"☐ ";color:var(--gold)}
+.hubcards{display:grid;gap:12px;margin:18px 0 8px}
+.hubcard{display:block;background:var(--ink2);border:1px solid var(--line);border-radius:16px;padding:16px 18px;color:var(--cream)}
+.hubcard:hover{text-decoration:none;border-color:var(--gold)}
+.hubcard b{display:block;font:900 19px/1.25 Montserrat,sans-serif}
+.hubcard span{display:block;color:var(--muted);font-size:15px;margin-top:2px}
+.hubcard.primary,.hubcard.feat{border-color:var(--gold)}
+.badge{display:inline-block;font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--ink);background:var(--gold);border-radius:999px;padding:1px 9px;margin-left:8px;vertical-align:middle}
+.signup{background:var(--ink2);border:1px solid var(--gold);border-radius:16px;padding:16px 18px;margin:12px 0}
+.signup label{display:block;font-weight:800;margin-bottom:8px}
+.signup input[type=email]{width:100%;background:var(--ink);color:var(--cream);border:1px solid var(--line);border-radius:10px;padding:12px;font-size:17px;box-sizing:border-box}
+.signup button{margin-top:10px;border:0;cursor:pointer;font-size:16px}
+.fine{color:var(--muted);font-size:14px}
 footer{border-top:1px solid var(--line);margin-top:60px;padding:26px 0 40px;color:var(--muted);font-size:14px}
 .pref{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:999px;padding:8px 14px;color:var(--cream);font-size:14px}
 @media print{header.top,footer,.btn{display:none}body{background:#fff;color:#000}}
 """
 
 
+def head_snippet() -> str:
+    """The owner's analytics tag, if one is configured: `[site] head_snippet` names a file of HTML (any provider; a cookieless one needs no banner).
+    It is inserted as written, so it is the owner's to review; nothing here knows or loads a particular provider."""
+    name = cfg()["head_snippet"]
+    path = (Paths.root / name) if name else None
+    try:
+        return path.read_text(encoding="utf-8").strip() if path and path.is_file() else ""
+    except OSError:
+        return ""
+
+
 def page(path: str, title: str, description: str, body: str, *, jsonld: list | None = None,
-         og_type: str = "website", image: str | None = None) -> str:
+         og_type: str = "website", image: str | None = None, noindex: bool = False) -> str:
     c = cfg()
     depth = path.strip("/").count("/") + (1 if path.strip("/") else 0)
     root = "../" * depth if depth else "./"
@@ -187,7 +218,7 @@ def page(path: str, title: str, description: str, body: str, *, jsonld: list | N
 <link rel="alternate" type="application/rss+xml" title="{e(ch['name'])}" href="{root}feed.xml">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Montserrat:wght@900&display=swap" rel="stylesheet">
-<style>{CSS}</style>{verify}{ld}
+<style>{CSS}</style>{verify}{'<meta name="robots" content="noindex,follow">' if noindex else ""}{ld}{head_snippet()}
 </head><body>
 <header class="top"><div class="wrap"><a class="brand" href="{root}"><img src="{root}favicon-180.png" alt="">QUIET MONEY</a>
 <nav><a href="{root}rules/">Rules</a><a href="{root}tools/">Tools</a><a href="{root}money-reset/">Checklist</a><a href="{root}about/">About</a></nav></div></header>
@@ -195,7 +226,7 @@ def page(path: str, title: str, description: str, body: str, *, jsonld: list | N
 <footer><div class="wrap">
 <p><a class="pref" href="https://www.google.com/preferences/source?q={e(domain)}" rel="nofollow">★ Add Quiet Money as a preferred source on Google</a></p>
 <p>{e(ch['name'])}: {e(ch['tagline'])} Educational content, not financial advice. Narration and visuals in our videos are AI-assisted; every number is computed and every story is sourced.</p>
-<p>{" · ".join(f'<a href="{e(u)}" rel="me">{e(k.title())}</a>' for k, u in c["socials"].items() if u)}</p>
+<p>{social_links(c["socials"])}</p>
 </div></footer>
 </body></html>"""
 
@@ -325,6 +356,56 @@ def about_page(rules: list[dict]) -> str:
                 body, jsonld=[org_ld()])
 
 
+def signup_form(heading: str = "Get the 7-day Money Reset by email") -> str:
+    """The email signup. It exists only once the owner has put their email service's public form address in `[newsletter] form_action`;
+    until then nothing is rendered, so no page ever shows a form that goes nowhere."""
+    nl = config.load().get("newsletter", {})
+    action = str(nl.get("form_action", "")).strip()
+    if not action.startswith("https://"):
+        return ""
+    field = re.sub(r"[^A-Za-z0-9_\-\[\]]", "", str(nl.get("form_email_field", "email"))) or "email"
+    return (f'<form class="signup" action="{e(action)}" method="post"><label for="signup-email">{e(heading)}</label>'
+            f'<input id="signup-email" type="email" name="{e(field)}" placeholder="you@example.com" required autocomplete="email">'
+            f'<button class="btn" type="submit">Send it</button>'
+            f'<p class="fine">Free. One short email a day for seven days, then a weekly note. Unsubscribe any time.</p></form>')
+
+
+HUB_JS = ("(function(){try{var o=new URLSearchParams(location.search).get('o');if(!o)return;o=o.replace(/[^a-z0-9._-]/g,'');"
+          "var c=document.querySelector('.hubcards');var el=c&&c.querySelector('[data-o=\"'+o+'\"]');"
+          "if(el&&el!==c.firstElementChild){el.classList.add('feat');c.insertBefore(el,c.firstElementChild);}}catch(e){}})();")
+
+
+def hub_page() -> str:
+    """The page every profile links to: the free checklist first, then any paid product that has a live listing, then the tools. Not in the
+    sitemap and marked noindex (it is a destination for people who watched a video, not a page for search). `?o=<slug>` moves that card to the
+    top, which is how a video about the planner lands on the planner."""
+    from faceless import offer
+    c = cfg()
+    ch = c["channel"]
+    cards = []
+    for d in offer.destinations():
+        if d["kind"] == "free":
+            href = offer.tracked("../money-reset/", "hub", "link", d["slug"])
+            cards.append(f'<a class="hubcard primary" data-o="{e(d["slug"])}" href="{e(href)}"><b>Free 7-day Money Reset</b>'
+                         f'<span>Seven 10-minute steps, one a day. Find the leaks, automate savings, split every paycheck. Printable.</span></a>')
+        else:
+            href = offer.tracked(d["url"], "quietmoney", "hub", d["slug"])
+            cards.append(f'<a class="hubcard" data-o="{e(d["slug"])}" href="{e(href)}" rel="noopener"><b>{e(d["name"])}<span class="badge">Paid</span></b>'
+                         f'<span>See the listing for what is included. Educational tools, no promised results.</span></a>')
+    cards.append(f'<a class="hubcard" data-o="tools" href="{e(offer.tracked("../tools/", "hub", "link", "tools"))}"><b>Calculators</b>'
+                 f'<span>Compound growth, credit card payoff, inflation: put your own numbers in.</span></a>')
+    cards.append(f'<a class="hubcard" data-o="rules" href="{e(offer.tracked("../rules/", "hub", "link", "rules"))}"><b>Every money rule, written out</b>'
+                 f'<span>The math and the sources behind each video.</span></a>')
+    socials = social_links(c["socials"])
+    affiliate = "<p class=\"fine\">Some links may be affiliate links; if you buy through one we may earn a commission at no cost to you.</p>" if ch.get("has_affiliate_links") else ""
+    body = (f'<section class="hero"><h1>Start <span>here</span></h1><p class="lead">The money rules nobody taught you, with the real numbers.</p></section>'
+            f'{signup_form()}<div class="hubcards">{"".join(cards)}</div>'
+            f'<p class="fine">Follow: {socials}</p>{affiliate}'
+            f'<p class="fine">Educational content, not financial advice. Examples use assumed numbers; nothing here promises a result.</p>'
+            f'<script>{HUB_JS}</script>')
+    return page("links", f"Start here | {ch['name']}", f"The free 7-day Money Reset, calculators and every money rule from {ch['name']}.", body, noindex=True)
+
+
 def md_checklist(md: str) -> str:
     out = []
     for line in md.splitlines():
@@ -391,8 +472,11 @@ def build() -> dict:
         (SITE / path / "index.html").write_text(html_text, encoding="utf-8")
         urls.append(f"{c['base']}/{path}/")
 
+    (SITE / "links").mkdir()
+    (SITE / "links" / "index.html").write_text(hub_page(), encoding="utf-8")        # the profile link: no sitemap entry, noindex
+
     (SITE / "money-reset").mkdir()
-    body = md_checklist(CHECKLIST.read_text(encoding="utf-8")) + '<p><a class="btn" href="javascript:window.print()">Print it</a></p>'
+    body = signup_form() + md_checklist(CHECKLIST.read_text(encoding="utf-8")) + '<p><a class="btn" href="javascript:window.print()">Print it</a></p>'
     (SITE / "money-reset" / "index.html").write_text(page("money-reset", "The free 7-day Money Reset checklist | Quiet Money",
                                                           "Seven 10-minute steps that put your money on rules instead of willpower: find leaks, automate savings, kill expensive debt.",
                                                           body), encoding="utf-8")

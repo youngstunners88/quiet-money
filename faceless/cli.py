@@ -6,6 +6,7 @@ import argparse
 import json
 import shutil
 import sys
+from datetime import datetime, timezone
 from pathlib import Path
 
 from faceless import config, ledger
@@ -487,6 +488,50 @@ def cmd_shop(args) -> int:
     return 2
 
 
+def cmd_offer(args) -> int:
+    """Offers: coverage and profile links | --batch [DAY] (make sure every passed video has its pack and row) | check TEXT | mark VIDEO pinned."""
+    from faceless import offer
+    if args.batch is not None:
+        day = datetime.now(timezone.utc).strftime("%Y-%m-%d") if args.batch in ("today", "") else args.batch
+        res = offer.batch(day)
+        print(f"{res['day']}: {res['videos']} passed video(s), {res['with_offer']} with an offer, {res['written']} written now")
+        for p in res["problems"]:
+            print("  problem:", p)
+        return 0 if not res["problems"] and res["with_offer"] == res["videos"] else 1
+    if args.action == "check":
+        bad = offer.violations(" ".join(args.args))
+        print("clean" if not bad else "refused:\n  " + "\n  ".join(bad))
+        return 0 if not bad else 1
+    if args.action == "mark":
+        if len(args.args) != 2:
+            print("usage: offer mark VIDEO_ID draft|pinned")
+            return 2
+        try:
+            row = offer.mark(args.args[0], args.args[1])
+        except (KeyError, ValueError) as e:
+            print(e)
+            return 1
+        print(f"{row['video_id']}: {row['status']}")
+        return 0
+    st = offer.status()
+    print(f"offers on {st['videos']} video(s): {st['draft']} waiting to be pinned, {st['pinned']} pinned, {st['link_missing']} without a link")
+    print("mix:", ", ".join(f"{k} x{v}" for k, v in sorted(st["by_slug"].items())) or "none yet")
+    print("paid offers live:", ", ".join(st["paid_live"]) or "none (the free checklist leads every video until [offer] shop_urls has a live listing)")
+    print("hub page:", st["hub"] or "NOT SET ([site] base_url)")
+    print("put these in each profile's link field:")
+    for p, u in st["profile_links"].items():
+        print(f"  {p:10} {u}")
+    return 0
+
+
+def cmd_distribute(args) -> int:
+    """Where a finished video can go from here: every rail with its state and the owner's next step (nothing is posted or paid for)."""
+    from faceless import distribute
+    rows = distribute.status(live=args.live)
+    print(distribute.as_json(rows) if args.json else distribute.render(rows))
+    return 0
+
+
 def cmd_preflight(args) -> int:
     """Can today's run succeed? One traffic light per check; exit 1 on any fail (2 on warn with --strict)."""
     from faceless import preflight
@@ -714,6 +759,15 @@ def main(argv: list[str] | None = None) -> int:
     sh.add_argument("--yes", action="store_true")
     sh.add_argument("--days", type=int, default=30)
     sh.set_defaults(fn=cmd_shop)
+    of = sub.add_parser("offer", help="the call to action on every video: coverage and profile links, `--batch [today|DAY]` writes missing packs and ledger rows, `check TEXT` runs the claim check, `mark VIDEO pinned`")
+    of.add_argument("action", nargs="?", default="status", choices=["status", "check", "mark"])
+    of.add_argument("args", nargs="*")
+    of.add_argument("--batch", nargs="?", const="today", default=None, metavar="DAY")
+    of.set_defaults(fn=cmd_offer)
+    ds = sub.add_parser("distribute", help="distribution rails: posting, profile links, offers, email list, products, measurement, with each one's state and the owner's next step; `--live` also checks the hub page is published")
+    ds.add_argument("--live", action="store_true")
+    ds.add_argument("--json", action="store_true")
+    ds.set_defaults(fn=cmd_distribute)
     pf = sub.add_parser("preflight", help="can today's run succeed? traffic lights for tools, keys, spend, kill switch, disk, state, freshness, skills, leaked secrets")
     pf.add_argument("--strict", action="store_true", help="exit 2 when something only warns")
     pf.add_argument("--offline", action="store_true", help="skip the wallet call")

@@ -22,7 +22,8 @@ description: Publish or schedule Quiet Money posting packs to TikTok, YouTube Sh
 ## Every post must have
 - AI label ON (`tiktok_is_ai_generated`, `containsSyntheticMedia`; set automatically by the engine).
 - Description disclaimers (added by `pipeline/package.py`): not financial advice, AI-assisted, affiliate disclosure if links.
-- A pinned first comment (the script's `first_comment`).
+- The post's call to action: the caption's "link in bio" line and the pinned-comment text in `OFFER.md` (see `faceless-offer`). The script's `first_comment`
+  is the engagement question; the pinned comment is the offer. Links in captions and comments are not tappable, so the profile link (the hub page) carries them.
 
 ## Manual mode
-Open `distribution/queue/<day>/slot<N>-<pillar>/POST.md` and follow its checklist.
+Open `distribution/queue/<day>/slot<N>-<pillar>/POST.md` and follow its checklist; `OFFER.md` beside it holds the comment to pin. After pinning it, `python -m faceless offer mark <video id> pinned`.
