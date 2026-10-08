@@ -7,19 +7,28 @@ on:
 permissions:
   contents: read
 
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   test:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
+      - name: System tools (ffmpeg renders the smoke-test video, poppler reads PDFs)
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg poppler-utils
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
           cache: pip
       - run: pip install --use-pep517 pysher && pip install -r requirements.txt
-      - name: Unit tests
+      - name: Unit tests, failure drills and the render smoke test
         run: python -m pytest -q tests
+      - name: Skills lint clean (the scheduled routines follow these files)
+        run: python -m faceless skills
       - name: Import every module
-        run: python -c "import faceless.cli, faceless.orchestrator, faceless.site, faceless.aeo, faceless.brand"
+        run: python -c "import faceless.cli, faceless.orchestrator, faceless.site, faceless.aeo, faceless.brand, faceless.muapi, faceless.preflight, faceless.watchdog, faceless.shop, faceless.listing"
       - name: Site builds
         run: python -m faceless site build

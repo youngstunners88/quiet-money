@@ -1,0 +1,55 @@
+name: Shop packs
+
+# Rebuilds the Etsy and Gumroad listing packs from scratch on a clean machine: LibreOffice recalculates every spreadsheet and the figures are checked
+# against independent Python math, the pictures are drawn in code from the real product pages, and the listing gauntlet must pass.
+# The result is attached to the run as a downloadable artifact (Actions > this run > Artifacts). Nothing is published anywhere.
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "channel/shop/catalog.json"
+      - "faceless/listing.py"
+      - "faceless/mockup.py"
+      - "faceless/products.py"
+      - "faceless/product_debt.py"
+      - "faceless/shop.py"
+      - ".github/workflows/shop.yml"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: shop-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  packs:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - name: System tools (LibreOffice recalculates the spreadsheets, ffmpeg makes the listing video, poppler reads PDF pages)
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq --no-install-recommends libreoffice-calc ffmpeg poppler-utils fonts-dejavu-core
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r <(grep -vE "composio" requirements.txt)
+      - name: Build the spreadsheets and PDFs, verify them against independent math
+        run: python -m faceless products
+      - name: Build the listing packs (pictures, video, copy, checklist) and run the listing gauntlet
+        run: python -m faceless listing build all
+      - name: Gauntlet again, from the files on disk
+        run: python -m faceless listing check
+      - name: What would go to Gumroad (drafts only, nothing is sent)
+        run: python -m faceless shop plan
+      - uses: actions/upload-artifact@v4
+        with:
+          name: shop-packs
+          path: |
+            channel/shop/
+            channel/products/**/*.xlsx
+            channel/products/**/*.pdf
+            channel/products/**/*.zip
+          retention-days: 14

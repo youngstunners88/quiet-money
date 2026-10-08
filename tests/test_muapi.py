@@ -35,7 +35,7 @@ class _Muapi:
 
     def __init__(self, outputs=("https://cdn.example/out.png",), status="completed", cost=0.01, nsfw=False, submit_code=200, submit_text="", refunded=False):
         self.outputs, self.status, self.cost, self.nsfw, self.submit_code, self.submit_text, self.refunded = list(outputs), status, cost, nsfw, submit_code, submit_text, refunded
-        self.calls, self.polls = [], 0
+        self.calls, self.polls, self.poll_reply = [], 0, None
 
     def get(self, url, **kw):
         self.calls.append(("GET", url))
@@ -47,6 +47,8 @@ class _Muapi:
                 "properties": {"prompt": {"type": "string", "description": "what to draw"}, "aspect_ratio": {"enum": ["1:1", "9:16"], "default": "1:1"}}}}}})
         if "/predictions/" in url:
             self.polls += 1
+            if self.poll_reply is not None:
+                return self.poll_reply
             if self.polls < 2:
                 return _Resp(200, {"status": "processing"})
             body = {"status": self.status, "outputs": self.outputs, "has_nsfw_contents": [self.nsfw], "executionTime": 2500,
@@ -159,6 +161,31 @@ def test_a_failed_job_that_muapi_refunds_is_credited_back(desk, tmp_path):
     with pytest.raises(ProviderError, match="bad prompt"):
         muapi.run("m-img", {"prompt": "x"}, tmp_path)
     assert ledger.used("muapi", muapi.UNIT) == 0                                      # +0.01 on submit, -0.01 on the refund
+
+
+def test_a_failure_reported_as_http_400_with_the_record_under_detail_stops_at_once(desk, tmp_path):
+    # Real reply from social-search-posts on 2026-10-08. The first poller read this as "status None" and waited 600 s.
+    desk.poll_reply = _Resp(400, {"detail": {"id": "req-12345678", "status": "failed", "error": "Enrichment service balance is exhausted"}})
+    with pytest.raises(ProviderError, match="Enrichment service balance is exhausted"):
+        muapi.run("m-img", {"prompt": "x"}, tmp_path)
+    assert desk.polls == 1
+
+
+def test_replies_that_say_nothing_stop_the_wait_after_five(desk, tmp_path):
+    class _Html(_Resp):
+        def json(self):
+            raise ValueError("not json")
+    desk.poll_reply = _Html(502, None, text="<html>bad gateway</html>")
+    with pytest.raises(ProviderError, match="without a job status"):
+        muapi.run("m-img", {"prompt": "x"}, tmp_path)
+    assert desk.polls == 5
+
+
+def test_a_job_that_is_not_ours_or_not_there_is_not_waited_for(desk, tmp_path):
+    desk.poll_reply = _Resp(404, {"detail": "not found"})
+    with pytest.raises(ProviderError, match="HTTP 404"):
+        muapi.run("m-img", {"prompt": "x"}, tmp_path)
+    assert desk.polls == 1
 
 
 def test_unsafe_outputs_are_not_saved_unless_allowed(desk, tmp_path):

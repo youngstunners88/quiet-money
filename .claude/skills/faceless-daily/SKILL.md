@@ -9,6 +9,9 @@ Produces the day's videos end to end with the repo root and leaves posting packs
 `distribution/queue/<day>/`.
 
 ## Steps
+0. `python -m faceless preflight` (add `--offline` to skip the wallet call). It prints a traffic light per check, with the fix for each, and writes nothing.
+   Any FAIL: stop and follow `references/failure-playbook.md` before starting. WARN lines go into your report. If the studio is paused
+   (`state/PAUSE`), do not resume it: report the reason and stop.
 1. `python -m faceless doctor`. Fix any `ERR` line before continuing
    (`pip install -r requirements.txt`; ffmpeg via apt). Missing optional keys are fine.
 2. Run the batch: `python -m faceless daily` (5 videos; `--count N` to change, `--no-publish` to only package).
@@ -38,7 +41,10 @@ keys as environment variables, so no key is stored on GitHub. `.claude/hooks/ses
 Python dependencies when the session starts. In a routine session:
 1. Steps 1-4 above.
 2. Commit `state/`, `script-lab/`, `gauntlet/reports/` and `analytics/` (never media) and push to `main`;
-   the push rebuilds the website.
+   the push rebuilds the website. If the push is rejected, the remote moved: `git fetch origin main`, rebase onto it (the logs in
+   `state/` merge by union, so both sessions' lines survive), run the tests, push again. Never force-push.
+   `python -m faceless watchdog` should say `healthy` afterwards; the same check runs every six hours on GitHub and opens an "Ops alert" issue
+   when it does not.
 3. Send the finished `video.mp4` files to the owner (re-encode any copy over 30 MB), then report as in step 5.
 
 ### Also in every routine run (the printing press)
@@ -48,6 +54,11 @@ Python dependencies when the session starts. In a routine session:
   `python -m faceless flow` (writes `channel/flow/shotlists/<today>.md`, commit it) and `python -m faceless flow status`, and put
   the 3 prompts and the clip count in the report so the owner can run their own Google Flow session. Never log in to Flow for them.
 
+## When something breaks
+`references/failure-playbook.md` maps each symptom to its cause and the safe move. The studio has a kill switch (`python -m faceless pause "reason"`,
+`--resume` to undo), a $3 daily spend ceiling across all providers, and per-provider caps; a refusal from any of them is the system working.
+
 ## Never
+- Never resume a paused studio, raise a spend cap, or turn on posting or hook clips without the owner's yes.
 - Never publish a `held` video without fixing its hard gates.
 - Never commit media (mp4/wav/jpg); state, scripts, and reports are what get committed.

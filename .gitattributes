@@ -1,0 +1,7 @@
+# Append-only logs: when two sessions each add lines (a routine run and a manual one, say), git keeps both sides instead of stopping on a
+# conflict, and no event or spend record is ever lost. Never list a file here that is rewritten rather than appended to.
+state/journal.jsonl merge=union
+state/ledger.jsonl merge=union
+state/decisions.jsonl merge=union
+analytics/aeo.jsonl merge=union
+analytics/opportunities.jsonl merge=union

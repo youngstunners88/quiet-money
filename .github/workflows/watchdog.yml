@@ -1,0 +1,71 @@
+name: Watchdog
+
+# The dead-man's switch. The studio's work happens in scheduled Claude sessions; if one fails to start, or stalls, nothing inside it can say so.
+# This runs on GitHub's own scheduler, needs no key (only the built-in token), reads only what is committed, and keeps ONE issue titled
+# "Ops alert" in step with the findings: opened or updated while something is wrong, closed when everything is healthy again.
+# Locally: python -m faceless watchdog
+on:
+  schedule:
+    - cron: "23 */6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+  actions: read
+
+concurrency:
+  group: watchdog
+  cancel-in-progress: false
+
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install requests
+      - name: Evaluate the repository
+        id: eval
+        run: |
+          status=0
+          python -m faceless watchdog --out findings.md --fail-on warn || status=$?
+          # a crash in the watchdog itself is an alert too, never a silent pass
+          if [ ! -s findings.md ]; then
+            echo "The watchdog could not run. See the workflow log." > findings.md
+            status=1
+          fi
+          # CI red on main means the code the routines run may be broken
+          red=$(gh run list --workflow CI --branch main --limit 1 --json conclusion,url --jq '.[0] | select(.conclusion=="failure") | .url' || true)
+          if [ -n "$red" ]; then
+            printf -- '- **WARN: CI is red on main.** %s\n' "$red" >> findings.md
+            status=1
+          fi
+          echo "status=$status" >> "$GITHUB_OUTPUT"
+        env:
+          GH_TOKEN: ${{ github.token }}
+      - name: Keep the Ops alert issue in step
+        env:
+          GH_TOKEN: ${{ github.token }}
+          STATUS: ${{ steps.eval.outputs.status }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          OWNER: ${{ github.repository_owner }}
+        run: |
+          gh label create ops-alert --color B60205 --description "Opened by the watchdog workflow; closes itself" 2>/dev/null || true
+          number=$(gh issue list --label ops-alert --state open --json number --jq '.[0].number // empty')
+          if [ "$STATUS" = "0" ]; then
+            if [ -n "$number" ]; then
+              gh issue close "$number" --comment "Every finding cleared as of $(date -u '+%Y-%m-%d %H:%M UTC'). Closing. ($RUN_URL)"
+            fi
+            exit 0
+          fi
+          { printf '@%s\n\n' "$OWNER"; cat findings.md; printf '\nChecked by %s\n' "$RUN_URL"; } > body.md
+          if [ -n "$number" ]; then
+            gh issue edit "$number" --body-file body.md
+          else
+            gh issue create --title "Ops alert" --label ops-alert --assignee "$OWNER" --body-file body.md \
+              || gh issue create --title "Ops alert" --label ops-alert --body-file body.md
+          fi

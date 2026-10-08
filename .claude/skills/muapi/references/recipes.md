@@ -68,8 +68,8 @@ python -m faceless muapi run gemini-3-8-flash --set prompt="Summarise in one lin
 
 ## 9. Search and competitor data (cheap; run once to see the shape)
 `seo-google-serp` $0.001, `seo-rank-track` $0.001 (is our page ranking for a phrase), `seo-youtube-organic` $0.0033, `seo-youtube-video-info` $0.01 (views, tags, channel),
-`seo-youtube-video-subtitles` $0.01, `social-search-posts` $0.02 (platform tiktok, instagram, youtube, x, reddit or linkedin; query; limit), `news-search` $0.02,
-`research-web-answer` $0.05. Check: these report what is public today; never copy another creator's script or caption, only learn what topics and hooks get attention.
+`seo-youtube-video-subtitles` $0.01, `social-search-posts` $0.02 (platform tiktok, instagram, youtube, x, reddit or linkedin; query; limit; failed upstream on 2026-10-08 with
+"Enrichment service balance is exhausted", so it is not verified), `news-search` $0.02, `research-web-answer` $0.05. Check: these report what is public today; never copy another creator's script or caption, only learn what topics and hooks get attention.
 
 ## 10. Publishing (not run: needs the owner's one-time connection)
 `tiktok-publish` (`account_id`, `media_url`, `title`, `is_ai_generated` must be true), `youtube-publish` (no synthetic-media field), `instagram-publish`,

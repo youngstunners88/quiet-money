@@ -75,6 +75,8 @@ muapi.ai, Integrations). Before the owner has done that, publishing is not possi
 - **402 or "insufficient credits"**: the desk marks Muapi blocked for the day and the image chain falls through to the next provider.
   Report `muapi balance`; the owner tops up in the dashboard (the studio never pays by itself).
 - **Job failed**: read the `error` text, change the prompt or fields, then try once more. Muapi refunds failed jobs and the ledger follows.
+- **"Enrichment service balance is exhausted"** (seen on `social-search-posts` on 2026-10-08): the data provider behind that model is out of credit, not our wallet.
+  The job fails at once, nothing is charged, and trying again today will not help. Use `seo-*` data or TokConnect for social research and try the model another day.
 - **Flagged output**: reword the prompt. Do not allow flagged output.
 - **Timed out**: the job still runs. `python -m faceless muapi result REQUEST_ID --out DIR` collects it later.
 - **Unknown model or field**: names change. `muapi snapshot` refreshes the offline copy and `references/catalog.md`.

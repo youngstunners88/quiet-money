@@ -467,6 +467,31 @@ def cmd_shop(args) -> int:
     return 2
 
 
+def cmd_preflight(args) -> int:
+    """Can today's run succeed? One traffic light per check; exit 1 on any fail (2 on warn with --strict)."""
+    from faceless import preflight
+    checks = preflight.run(wallet=not args.offline)
+    if args.json:
+        print(json.dumps([c.__dict__ for c in checks], indent=1))
+    else:
+        print(preflight.report(checks))
+    return preflight.exit_code(checks, args.strict)
+
+
+def cmd_watchdog(args) -> int:
+    """The dead-man's switch: reads only the repo. Prints the findings; --out writes them as Markdown for the workflow's issue step."""
+    from faceless import watchdog
+    findings = watchdog.evaluate()
+    body = watchdog.render_md(findings)
+    if args.out:
+        Path(args.out).write_text(body, encoding="utf-8")
+    if args.json:
+        print(json.dumps(findings, indent=1))
+    else:
+        print(f"{watchdog.summary(findings)}\n\n{body}")
+    return 1 if watchdog.failing(findings, args.fail_on) else 0
+
+
 def cmd_forecast(_args) -> int:
     from faceless import forecast
     print(forecast.report())
@@ -636,6 +661,16 @@ def main(argv: list[str] | None = None) -> int:
     sh.add_argument("--yes", action="store_true")
     sh.add_argument("--days", type=int, default=30)
     sh.set_defaults(fn=cmd_shop)
+    pf = sub.add_parser("preflight", help="can today's run succeed? traffic lights for tools, keys, spend, kill switch, disk, state, freshness, skills, leaked secrets")
+    pf.add_argument("--strict", action="store_true", help="exit 2 when something only warns")
+    pf.add_argument("--offline", action="store_true", help="skip the wallet call")
+    pf.add_argument("--json", action="store_true")
+    pf.set_defaults(fn=cmd_preflight)
+    wd = sub.add_parser("watchdog", help="dead-man's switch: is the operation alive? reads only the repo (the scheduled workflow opens an issue when it is not)")
+    wd.add_argument("--out", help="write the findings as Markdown to this file")
+    wd.add_argument("--json", action="store_true")
+    wd.add_argument("--fail-on", choices=["critical", "warn"])
+    wd.set_defaults(fn=cmd_watchdog)
     sub.add_parser("forecast", help="the math: next batch cost, monthly cost, and assumption-labeled revenue ladder").set_defaults(fn=cmd_forecast)
     me = sub.add_parser("memory", help="search everything we've made (scripts, outcomes, failed gates)")
     me.add_argument("query", nargs="*")

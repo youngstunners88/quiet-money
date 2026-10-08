@@ -208,13 +208,31 @@ def _download(url: str, dest_stem: Path) -> Path:
     return dest
 
 
+def _record(r) -> dict:
+    """The job record from a result reply. Muapi reports a failed job as HTTP 400 with the record nested under `detail`."""
+    try:
+        body = r.json()
+    except ValueError:
+        return {}
+    if isinstance(body, dict) and isinstance(body.get("detail"), dict):
+        body = body["detail"]
+    return body if isinstance(body, dict) else {}
+
+
 def _poll(request_id: str, timeout: float, every: float) -> dict:
     t0 = time.time()
     wait = every
+    unreadable = 0
     while True:
-        res = http().get(f"{BASE}/predictions/{request_id}/result", headers=_headers(), timeout=30).json()
+        r = http().get(f"{BASE}/predictions/{request_id}/result", headers=_headers(), timeout=30)
+        res = _record(r)
         if res.get("status") in ("completed", "failed", "cancelled"):
             return res
+        if r.status_code in (401, 403, 404):                      # not ours, not there, or not allowed: waiting cannot fix it
+            raise ProviderError(f"muapi result {request_id[:8]}: HTTP {r.status_code}")
+        unreadable = unreadable + 1 if (r.status_code >= 400 or not res.get("status")) else 0
+        if unreadable >= 5:                                       # five replies in a row that say nothing: stop paying for the wait
+            raise ProviderError(f"muapi result {request_id[:8]}: HTTP {r.status_code} without a job status; try `muapi result {request_id}` later")
         if time.time() - t0 > timeout:
             raise ProviderError(f"muapi job {request_id} still {res.get('status')} after {int(timeout)} s (fetch it later with `muapi result {request_id}`)")
         time.sleep(wait)
