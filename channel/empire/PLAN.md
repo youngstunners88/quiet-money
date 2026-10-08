@@ -39,10 +39,13 @@ numeric beats. Variety comes from format, not from more spend.
 |---|---|---|
 | generated images per video | 11.5 | measured, 12 videos |
 | free Cloudflare images per day | about 24 (about 2 videos) | measured: 417 neurons per image |
-| next batch of 5, free tier used up | about $2.21 | measured price x images |
-| next batch of 5 on Cloudflare Workers Paid | about $0.25 | Cloudflare's published rate |
-| 5 videos a day for a month, Workers Paid | about $10 all in | forecast |
-| 5 videos a day for a month, OpenRouter fallback | about $42 | forecast |
+| Muapi image (FLUX.2 klein 4B turbo) | $0.0052 each, hook still $0.0104 | Muapi's public model catalog |
+| next batch of 5, free tier then Muapi | about $0.25 | measured images x Muapi price |
+| same batch on OpenRouter (the old fallback) | about $1.77 | measured price x images |
+| 5 videos a day for a month, free tier + Muapi | about $5.94 | forecast |
+| same month on Cloudflare Workers Paid | about $9.78 (with its $5 base) | Cloudflare's published rate |
+| same month on OpenRouter | about $42 | forecast |
+| Muapi wallet today | $21.09, about 107 days at this rate | `GET /api/v1/account/balance` |
 | revenue per month, low / base / high | $33 / $229 / $1,828 | **assumed**: 300 / 2,000 / 15,000 views per video, 1% reach the link, 25% join the list, 3% of the list buys a $19 product |
 Reading: cost is small and known; revenue depends almost entirely on views and the list. That is why distribution (accounts
 live) is the first unlock and the list the second.
@@ -53,7 +56,8 @@ variety, two spreadsheet products (Rat Race Escape Planner and Debt Payoff & Com
 real spreadsheet engine and matched to independent math), the 7-day Money Reset autoresponder (every number computed), the
 printable pack (six pages, Letter and A4) and the Money Reset Kit bundle, the newsletter compiler, the Fiverr brand-kit engine with gallery samples,
 the empire gauntlet and the forecast.
-**Phase 1, week 1 (owner, about 30 minutes):** create the channels and connect posting; pay $5 for Cloudflare Workers.
+**Phase 1, week 1 (owner, about 30 minutes):** create the channels and connect posting. Image supply needs no owner step any more:
+free Cloudflare first, then the Muapi wallet (already funded), with OpenRouter and procedural stills behind it.
 Result: 5 videos a day actually post, with enough image supply for every one.
 **Phase 2, weeks 2-4:** open a Gumroad shop, list the planner (price test $12 / $19 / $29); pick an email service, a
 domain and a postal address, start the 7-day autoresponder and the weekly issue. The agent builds the next unblocked item
@@ -76,16 +80,17 @@ Scores in the ranking are judgment until these numbers exist; the weekly run re-
 ## Risks
 - **Platform policy on AI content / "inauthentic" content** can limit reach or monetization. Mitigation: AI disclosure on, original scripts and research, varied formats, no reused third-party media; the weekly scan re-checks the rules.
 - **Account loss.** The agent never touches platform logins; the owner holds every account on one domain mailbox so recovery is possible.
-- **Image supply.** Single biggest operational bottleneck; fixed by the $5 plan, with motion cards and Flow clips reducing the need.
+- **Image supply.** Was the biggest operational bottleneck; now Cloudflare's free tier, then the Muapi wallet (about $6 a month at 5 videos a day), with a daily dollar cap, a top-up warning 21 days out, and two more fallbacks. Motion cards and clips reduce the need further.
+- **Image quality.** Image models print text, faces and logos despite the prompts. A decision model checks every still; flagged beats become designed cards (see `faceless qa`).
 - **No data yet.** All revenue figures are assumptions; the plan front-loads getting posts live to replace guesses with numbers.
 - **Legal.** Education only, no advice; newsletter needs a postal address and unsubscribe before the first send; no income claims.
 
 ## What the owner unlocks, in order of value
 1. Open the shop (Gumroad first): unlocks two planners, the printables and the bundle, all built and checked.
 2. Channels live with auto-posting: unlocks distribution, the metrics loop, long-form and rewards.
-3. Cloudflare Workers Paid ($5/month): unlocks full 5-a-day image supply.
-4. Email service + domain + postal address: unlocks the list, autoresponder and weekly issue.
-5. Ten minutes a day in Flow: unlocks moving hooks.
+3. Email service + domain + postal address: unlocks the list, autoresponder and weekly issue.
+4. Ten minutes a day in Flow, or approve about $0.30 a day for Muapi hook clips (`[production.hookclip] enabled = true`): unlocks moving hooks.
+5. A free LongCat API key: a third script provider behind Gemini.
 6. Fiverr gig, podcast host, Etsy + Printify, Adobe Stock, affiliates: later, in that order.
 
 ## Not doing (killed by the attack round)

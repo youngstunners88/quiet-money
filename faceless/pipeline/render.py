@@ -20,6 +20,7 @@ from PIL import Image, ImageDraw, ImageFilter, ImageFont
 
 from faceless import config, events
 from faceless.config import Paths
+from faceless import musiclib
 from faceless.pipeline import captions, cards, music
 
 GRADES = {
@@ -221,7 +222,16 @@ def run(job, script: dict, voice: dict, imgs: list[dict]) -> dict:
     cut_times = [s["start"] for s in shots[1:]]
     music_wav, sfx_wav = job.dir / "music.wav", job.dir / "sfx.wav"
     mode = cfg.get("music", "procedural")
-    if mode == "procedural":
+    bed = "procedural"
+    track = musiclib.pick(job.pillar, seed) if mode == "library" else None
+    if track:       # a real instrumental bed from the library, from a seed-chosen start so one track never sounds the same twice
+        length = musiclib._duration(track)
+        start = (seed % 1000) / 1000 * max(0.0, length - total - 3.0)
+        _run(["ffmpeg", "-hide_banner", "-y", "-ss", f"{start:.2f}", "-stream_loop", "-1", "-i", str(track), "-t", f"{total + 0.5:.2f}", "-ac", "1",
+              "-ar", "44100", "-af", "acompressor=threshold=0.06:ratio=3:attack=60:release=500,loudnorm=I=-17.5:TP=-2:LRA=5,"
+              f"afade=t=in:d=0.8,afade=t=out:st={max(0.0, total - 1.5):.2f}:d=2.0", str(music_wav)])
+        bed = track.name
+    elif mode in ("procedural", "library"):
         music.write_wav(music_wav, music.ambient_bed(total + 0.5, pillar.music_key, 84 + seed % 12, seed))
     elif mode != "none" and Path(mode).exists():
         _run(["ffmpeg", "-hide_banner", "-y", "-stream_loop", "-1", "-i", mode, "-t", f"{total + 0.5:.2f}",
@@ -262,7 +272,7 @@ def run(job, script: dict, voice: dict, imgs: list[dict]) -> dict:
             f.unlink(missing_ok=True)
     info = {"video": str(out), "cover": str(cover), "shots": len(shots), "captioned_words": covered,
             "avg_shot": round(total / max(1, len(shots)), 2),
-            "cards": len(card_specs) if reel else 0, "clips": len(clip_tasks)}
+            "cards": len(card_specs) if reel else 0, "clips": len(clip_tasks), "music": bed}
     (job.dir / "render.json").write_text(json.dumps(info, indent=1), encoding="utf-8")
     events.emit("RENDERED", job=job.id, **info)
     return info

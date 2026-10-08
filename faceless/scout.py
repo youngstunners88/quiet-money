@@ -18,7 +18,7 @@ import json
 from collections import Counter
 from datetime import datetime, timedelta, timezone
 
-from faceless import config, empire, events, keywords, ledger
+from faceless import config, empire, events, keywords, ledger, policy, variety
 from faceless.config import Paths
 from faceless.pipeline import ideate
 from faceless.state import all_jobs
@@ -156,6 +156,7 @@ def topup(pillar: str, n: int = TOPUP_BATCH) -> list[dict]:
 def run(act: bool = False, extra: list[dict] | None = None) -> dict:
     h = health()
     props = proposals(h) + [dict(x, score=round(x.get("impact", 3) / max(1, x.get("effort", 3)), 2)) for x in (extra or [])]
+    props += watch_policies() + watch_variety() + watch_wallet()
     done: list[str] = []
     if act:
         for p in [p for p in props if p["autonomy"] == "auto" and p["id"].startswith("topup-")]:
@@ -168,6 +169,49 @@ def run(act: bool = False, extra: list[dict] | None = None) -> dict:
     port = portfolio()
     write_report(h, props, done, port)
     return {"health": h, "proposals": props, "done": done, "portfolio": port}
+
+
+def watch_policies() -> list[dict]:
+    """Re-read the rule pages that govern us. A changed page is an urgent, cheap-to-review proposal; pages this machine cannot read
+    become one proposal to fetch them another way (the weekly session has Exa) and `faceless policy --record`. Never blocks the scan."""
+    try:
+        res = policy.check()
+        policy.write_report(res)
+    except Exception:  # noqa: BLE001 - network or disk trouble must not break the weekly scan
+        return []
+    out = [dict(p, score=round(p["impact"] / p["effort"], 2)) for p in policy.proposals(res)]
+    blind = [r["id"] for r in res if r["status"] == "unfetchable"]
+    if blind:
+        out.append({"id": "policy-fetch", "title": f"{len(blind)} rule pages need a session fetch (Exa) and `faceless policy --record`", "category": "compliance",
+                    "impact": 3, "effort": 1, "autonomy": "operator", "why": ", ".join(blind), "score": 3.0})
+    return out
+
+
+def watch_wallet(days_floor: int = 21) -> list[dict]:
+    """Muapi supplies images once the free Cloudflare budget is spent: warn the owner while there are still weeks of runway."""
+    try:
+        from faceless import forecast
+        from faceless.providers import images
+        bal = images.muapi_balance()
+        if bal is None:
+            return []
+        per_day = max(0.01, forecast.monthly_cost()["muapi"] / 30)
+        left = bal / per_day
+    except Exception:  # noqa: BLE001 - a status check must never break the weekly scan
+        return []
+    if left >= days_floor:
+        return []
+    return [{"id": "muapi-topup", "title": f"Top up the Muapi wallet: ${bal:.2f} is about {left:.0f} days of images", "category": "supply",
+             "impact": 5, "effort": 1, "autonomy": "owner", "why": f"at about ${per_day:.2f} a day; when it hits zero images fall back to OpenRouter (8x dearer) or placeholder art",
+             "score": 5.0}]
+
+
+def watch_variety() -> list[dict]:
+    """Sameness audit of the last videos (YouTube's inauthentic-content risk). Never blocks the scan."""
+    try:
+        return variety.proposals(variety.write())
+    except Exception:  # noqa: BLE001 - embeddings or disk trouble must not break the weekly scan
+        return []
 
 
 def portfolio() -> list[str]:

@@ -1,8 +1,9 @@
 """Text-to-image providers.
 
 Chain (studio.toml [images].chain): cloudflare (free FLUX.2 klein, neuron-capped) ->
-openrouter (paid, cents) -> pollinations (free, low-res, watermark cropped) ->
-procedural (always works, abstract gradient art). Results are cached by prompt hash.
+muapi (paid, about half a cent: the same FLUX.2 klein family) -> openrouter (paid, 4 cents) ->
+pollinations (free, low-res, watermark cropped) -> procedural (always works, abstract gradient art).
+Results are cached by prompt hash.
 """
 
 from __future__ import annotations
@@ -123,6 +124,73 @@ def openrouter(prompt: str, w: int, h: int, seed: int, out, hero: bool = False) 
     _save(data, out)
 
 
+MUAPI = "https://api.muapi.ai/api/v1"
+_MU_LOCK = threading.Lock()
+_mu_inflight = 0.0   # USD reserved by requests in flight (4 workers), so the daily cap cannot be overshot
+
+
+def muapi_balance() -> float | None:
+    """Wallet balance in USD, or None when there is no key or the call fails."""
+    key = config.env("MUAPI_API_KEY")
+    if not key:
+        return None
+    try:
+        r = http().get(f"{MUAPI}/account/balance", headers={"x-api-key": key}, timeout=20)
+        return float(r.json()["balance"]) if r.status_code == 200 else None
+    except Exception:  # noqa: BLE001 - a status call must never break anything
+        return None
+
+
+def muapi(prompt: str, w: int, h: int, seed: int, out, hero: bool = False) -> None:
+    """Muapi (submit, then poll): FLUX.2 klein 4B at 720x1280, $0.0052 (turbo) or $0.0104. Roughly 8x cheaper than OpenRouter's image model."""
+    global _mu_inflight
+    key = config.env("MUAPI_API_KEY")
+    if not key:
+        raise ProviderUnavailable("MUAPI_API_KEY not set")
+    cfg = config.load()["images"]
+    model = cfg.get("muapi_hero_model", "flux-2-klein-4b") if hero else cfg.get("muapi_model", "flux-2-klein-4b-turbo")
+    price = {"flux-2-klein-4b-turbo": 0.0052, "flux-2-klein-4b": 0.0104, "flux-schnell-image": 0.003}.get(model, 0.03)
+    cap = float(cfg.get("muapi_daily_usd", 1.5))
+    with _MU_LOCK:
+        if ledger.used("muapi", "blocked") or ledger.used("muapi", "usd") + _mu_inflight + price > cap:
+            raise ProviderUnavailable("muapi daily spend cap reached")
+        _mu_inflight += price
+    try:
+        s = http()
+        headers = {"x-api-key": key}
+        body = {"prompt": prompt, "aspect_ratio": "9:16", "seed": seed}
+        if "klein" not in model:      # other families take sizes (multiples of 64) instead of an aspect ratio
+            body = {"prompt": prompt, "width": 832, "height": 1472}
+        r = s.post(f"{MUAPI}/{model}", json=body, headers=headers, timeout=60)
+        if r.status_code in (401, 402, 403) and any(t in r.text.lower() for t in ("credit", "balance", "insufficient", "payment")):
+            ledger.spend("muapi", "blocked", 1)       # out of credit: skip the provider for the rest of the day
+            raise ProviderUnavailable("muapi credit exhausted")
+        if r.status_code == 429:
+            raise ProviderUnavailable("muapi rate limited")
+        if r.status_code != 200:
+            raise ProviderError(f"muapi {r.status_code}: {r.text[:160]}")
+        d = r.json()
+        paid = float((d.get("cost") or {}).get("amount_usd") or price)
+        ledger.spend("muapi", "usd", paid, usd=paid)            # billed on submit
+        ledger.spend("muapi", "images", 1, usd=0.0)
+        rid = d["request_id"]
+        for _ in range(75):
+            time.sleep(2)
+            res = s.get(f"{MUAPI}/predictions/{rid}/result", headers=headers, timeout=30).json()
+            if res.get("status") == "completed":
+                break
+            if res.get("status") in ("failed", "cancelled"):
+                raise ProviderError(f"muapi job {res.get('status')}: {str(res.get('error'))[:120]}")
+        else:
+            raise ProviderError("muapi job timed out")
+        if any(res.get("has_nsfw_contents") or []):
+            raise ProviderError("muapi flagged the output")
+        _save(s.get(res["outputs"][0], timeout=120).content, out)
+    finally:
+        with _MU_LOCK:
+            _mu_inflight = max(0.0, _mu_inflight - price)
+
+
 _POLL_LOCK = threading.Lock()   # the anonymous tier allows one request at a time per IP
 
 
@@ -167,7 +235,7 @@ def procedural(prompt: str, w: int, h: int, seed: int, out, hero: bool = False) 
     Image.blend(base, glow, 0.55).save(out, "JPEG", quality=92)
 
 
-PROVIDERS = {"cloudflare": cloudflare, "openrouter": openrouter, "pollinations": pollinations,
+PROVIDERS = {"cloudflare": cloudflare, "muapi": muapi, "openrouter": openrouter, "pollinations": pollinations,
              "procedural": procedural}
 
 

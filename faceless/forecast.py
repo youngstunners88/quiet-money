@@ -17,6 +17,7 @@ from faceless.providers import images as image_providers
 from faceless.state import all_jobs
 
 OPENROUTER_PER_IMAGE = 0.04
+MUAPI_PER_IMAGE = 0.0057           # klein 4B turbo $0.0052 for most beats, $0.0104 for the hook still (Muapi catalog, 2026-10-08)
 CF_PAID_PER_1K_NEURONS = 0.011     # Workers Paid, beyond the free 10k/day (Cloudflare pricing page, 2026-10-05)
 CF_PAID_BASE_MONTH = 5.0
 RENDER_MINUTES = 4.5               # measured wall-clock per video on this machine
@@ -71,9 +72,9 @@ def next_batch(n: int = 5) -> dict:
     over = max(0.0, images - free_images)
     return {"slots": rows, "images": round(images, 1), "neurons_per_image": round(npi),
             "free_images_left_today": round(free_images, 1), "render_minutes": round(len(rows) * RENDER_MINUTES),
-            "cost": {"now (free Cloudflare, then OpenRouter)": round(over * OPENROUTER_PER_IMAGE, 2),
-                     "Cloudflare Workers Paid": round(over * npi / 1000 * CF_PAID_PER_1K_NEURONS, 2),
-                     "all OpenRouter": round(images * OPENROUTER_PER_IMAGE, 2)}}
+            "cost": {"now (free Cloudflare, then Muapi)": round(over * MUAPI_PER_IMAGE, 2),
+                     "Cloudflare Workers Paid (plus its $5 a month)": round(over * npi / 1000 * CF_PAID_PER_1K_NEURONS, 2),
+                     "OpenRouter instead of Muapi (the old fallback)": round(over * OPENROUTER_PER_IMAGE, 2)}}
 
 
 def monthly_cost(videos_per_day: int | None = None) -> dict:
@@ -85,14 +86,14 @@ def monthly_cost(videos_per_day: int | None = None) -> dict:
     free = config.load()["images"]["cloudflare_daily_neurons"] / npi * 30
     over = max(0.0, imgs - free)
     return {"images_per_month": round(imgs), "free_images_per_month": round(free),
-            "openrouter": round(over * OPENROUTER_PER_IMAGE, 2),
+            "muapi": round(over * MUAPI_PER_IMAGE, 2), "openrouter": round(over * OPENROUTER_PER_IMAGE, 2),
             "cloudflare_paid": round(CF_PAID_BASE_MONTH + over * npi / 1000 * CF_PAID_PER_1K_NEURONS, 2)}
 
 
 def ladder() -> list[dict]:
     """Low/base/high monthly picture. ASSUMPTIONS, not predictions: edit [forecast] in studio.toml."""
     cfg = {**DEFAULTS, **config.load().get("forecast", {})}
-    cost = monthly_cost()["cloudflare_paid"]
+    cost = monthly_cost()["muapi"]
     out = []
     for name, v, rpm in zip(("low", "base", "high"), cfg["views_per_video"], cfg["rpm_per_1000_views"]):
         views = cfg["videos_per_day"] * 30 * v
@@ -118,8 +119,14 @@ def report() -> str:
     L += ["", f"Total {b['images']} images; free Cloudflare left today carries {b['free_images_left_today']}. "
               f"Render time about {b['render_minutes']} minutes.", "", "Cost of the batch by image setup:"]
     L += [f"- {k}: ${v}" for k, v in b["cost"].items()]
+    from faceless.providers import images as image_providers
+    bal = image_providers.muapi_balance()
+    if bal is not None:
+        per_day = mc["muapi"] / 30
+        L += ["", f"Muapi wallet: ${bal:.2f}" + (f", about {bal / per_day:.0f} days of images at this rate." if per_day else ".")]
     L += ["", f"## A month at {cfg['videos_per_day']} videos/day", f"{mc['images_per_month']} images; free tier covers {mc['free_images_per_month']}.",
-          f"- OpenRouter for the rest: ${mc['openrouter']}/month", f"- Cloudflare Workers Paid: ${mc['cloudflare_paid']}/month (all-in, including the $5 base)",
+          f"- Muapi for the rest: ${mc['muapi']}/month (the plan)", f"- OpenRouter for the rest instead: ${mc['openrouter']}/month",
+          f"- Cloudflare Workers Paid: ${mc['cloudflare_paid']}/month (all-in, including the $5 base: dearer than Muapi at this volume)",
           "", "## What it could earn (ASSUMPTIONS, not data: no posts are live, so no real views exist yet)",
           f"Assumed: {cfg['link_visit_rate']:.0%} of views reach the link, {cfg['email_capture_rate']:.0%} of those join the list, "
           f"{cfg['list_buys_per_month']:.0%} of the list buys one ${cfg['product_price']:.0f} product a month, Shorts ads pay "

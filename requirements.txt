@@ -10,3 +10,5 @@ pytest>=8.0
 composio>=0.25
 # optional: Jev decision layer (set TYPESAFE_API_KEY)
 # typesafe-sdk>=0.7
+# optional, build-time only: the music library (python -m faceless music --build)
+# google-genai>=2.0

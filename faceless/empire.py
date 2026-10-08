@@ -24,7 +24,6 @@ RANKING = DIR / "RANKING.md"
 STAGES = ["idea", "vetted", "built", "pilot", "scaled"]   # built = the asset exists and is verified; pilot = live at small scale
 GATES = {   # owner-only steps: money, accounts, legal, face. Codes keep the ask list consistent.
     "channels": "Create the YouTube, TikTok and Instagram accounts (@quietmoneyrules), connect them, and turn on auto-posting",
-    "cloudflare": "Pay for Cloudflare Workers ($5/month) so image generation stops running out",
     "shop": "Open a Gumroad shop (and Etsy for printables); approve prices and listings",
     "email": "Pick an email service, a domain and a postal address, and connect them",
     "domain": "Register a domain with one mailbox (the identity layer)",
@@ -34,6 +33,8 @@ GATES = {   # owner-only steps: money, accounts, legal, face. Codes keep the ask
     "pod": "Open Etsy + Printify accounts",
     "adobe": "Open an Adobe Stock contributor account and confirm the image model's terms allow resale",
     "affiliate": "Sign affiliate programs, after a compliance review of each offer",
+    "hookspend": "Approve about $0.30 a day for animated hook clips (set [production.hookclip] enabled = true)",
+    "longcat": "Create a free LongCat API account (longcat.chat/platform) and add LONGCAT_API_KEY to the environment",
 }
 SAT = {"low": 1.0, "med": 0.9, "high": 0.7}
 TOS = {"ok": 1.0, "watch": 0.8}

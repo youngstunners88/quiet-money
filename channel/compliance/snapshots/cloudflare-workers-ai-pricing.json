@@ -1,0 +1,27 @@
+{
+ "id": "cloudflare-workers-ai-pricing",
+ "fetched": "2026-10-08",
+ "sha": "4ca14e7d71276e23",
+ "snippets": [
+  "Fetch the complete documentation index at: https://developers.cloudflare.com/workers-ai/llms.txt",
+  "Workers AI llms.txt âï¸",
+  "Workers AI llms-full.txt âï¸",
+  "OverviewPay with AI Gateway creditsWhat are Neurons?LLM model pricingEmbeddings model pricingImage model pricingAudio model pricingOther model pricing",
+  "Workers AI has updated pricing to be more granular, with per-model unit-based pricing presented, but still billing in neurons in the back end.",
+  "Workers AI is included in both the Free and Paid Workers plans and is priced at $0.011 per 1,000 Neurons.",
+  "You can monitor your Neuron usage in the Cloudflare Workers AI dashboard âï¸.",
+  "This applies to @cf/moonshotai/kimi-k2.6, @cf/moonshotai/kimi-k2.7-code, @cf/zai-org/glm-5.2, @cf/zai-org/glm-5.3, @cf/zai-org/glm-5.3-flash, @cf/deepseek-ai/deepseek-v4-flash-0731, and @cf/deepseek-ai/deepseek-v4-pro-0813.",
+  "You can access these models with either the Workers Paid plan or prepaid AI Gateway credits.",
+  "Pay with AI Gateway credits",
+  "You can use prepaid AI Gateway credits to pay for Workers AI inference.",
+  "Set the gateway's Workers AI billing setting to Unified billing, then specify that gateway in the AI binding or REST API request.",
+  "Neurons are our way of measuring AI outputs across different models, representing the GPU compute needed to perform your request.",
+  "The Price in Tokens column is equivalent to the Price in Neurons column - the different units are displayed so you can easily compare and understand pricing.",
+  "@cf/deepseek-ai/deepseek-r1-distill-qwen-32b",
+  "@cf/deepseek-ai/deepseek-v4-flash-0731",
+  "@cf/deepseek-ai/deepseek-v4-pro-0813",
+  "@cf/pipecat-ai/smart-turn-v2",
+  "SolutionsSSE and SASE platformCloudflare AI CloudAI SecurityFrontend Development PlatformMulti-Tenant Platform DevelopmentWeb Security Platform"
+ ],
+ "changed": "2026-10-08"
+}

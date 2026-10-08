@@ -1,0 +1,148 @@
+{
+  "tracks": [
+    {
+      "file": "story-1.mp3",
+      "pillar": "story",
+      "mood": "warm nostalgic felt piano with soft strings, slow and reflective",
+      "bpm": 78,
+      "scale": "MAJOR",
+      "model": "lyria-realtime-exp",
+      "seconds": 80.0,
+      "sha256": "05ee9380b25538d0",
+      "made": "2026-10-08",
+      "note": "AI-generated instrumental (Google Lyria RealTime via the Gemini API); output carries Google's SynthID watermark"
+    },
+    {
+      "file": "story-2.mp3",
+      "pillar": "story",
+      "mood": "gentle acoustic guitar with light brushed percussion and a hint of cello, storytelling mood",
+      "bpm": 84,
+      "scale": "MAJOR",
+      "model": "lyria-realtime-exp",
+      "seconds": 80.0,
+      "sha256": "3f709c3114df56bd",
+      "made": "2026-10-08",
+      "note": "AI-generated instrumental (Google Lyria RealTime via the Gemini API); output carries Google's SynthID watermark"
+    },
+    {
+      "file": "math-1.mp3",
+      "pillar": "math",
+      "mood": "minimal glassy marimba and soft pulses, precise and curious, slowly building",
+      "bpm": 96,
+      "scale": "PENTATONIC",
+      "model": "lyria-realtime-exp",
+      "seconds": 80.0,
+      "sha256": "a92e7db43100bbdf",
+      "made": "2026-10-08",
+      "note": "AI-generated instrumental (Google Lyria RealTime via the Gemini API); output carries Google's SynthID watermark"
+    },
+    {
+      "file": "math-2.mp3",
+      "pillar": "math",
+      "mood": "clean electric piano arpeggios over a quiet synth pad, analytical and calm",
+      "bpm": 100,
+      "scale": "MAJOR",
+      "model": "lyria-realtime-exp",
+      "seconds": 80.0,
+      "sha256": "47a8ac2b961f435c",
+      "made": "2026-10-08",
+      "note": "AI-generated instrumental (Google Lyria RealTime via the Gemini API); output carries Google's SynthID watermark"
+    },
+    {
+      "file": "psychology-1.mp3",
+      "pillar": "psychology",
+      "mood": "introspective soft pads with a subtle heartbeat-like pulse and distant piano, thoughtful",
+      "bpm": 70,
+      "scale": "MINOR",
+      "model": "lyria-realtime-exp",
+      "seconds": 80.0,
+      "sha256": "00492a4b73342094",
+      "made": "2026-10-08",
+      "note": "AI-generated instrumental (Google Lyria RealTime via the Gemini API); output carries Google's SynthID watermark"
+    },
+    {
+      "file": "psychology-2.mp3",
+      "pillar": "psychology",
+      "mood": "dreamy lo-fi keys with warm tape texture and muted drums, contemplative",
+      "bpm": 76,
+      "scale": "MAJOR",
+      "model": "lyria-realtime-exp",
+      "seconds": 80.0,
+      "sha256": "9b021a8cc41c8d7c",
+      "made": "2026-10-08",
+      "note": "AI-generated instrumental (Google Lyria RealTime via the Gemini API); output carries Google's SynthID watermark"
+    },
+    {
+      "file": "myth-1.mp3",
+      "pillar": "myth",
+      "mood": "tense low cello drone with dry clicky percussion, skeptical and investigative",
+      "bpm": 92,
+      "scale": "MINOR",
+      "model": "lyria-realtime-exp",
+      "seconds": 80.0,
+      "sha256": "f9ca9057341b562c",
+      "made": "2026-10-08",
+      "note": "AI-generated instrumental (Google Lyria RealTime via the Gemini API); output carries Google's SynthID watermark"
+    },
+    {
+      "file": "myth-2.mp3",
+      "pillar": "myth",
+      "mood": "dark minimal electronic pulse with plucked strings, myth-busting edge",
+      "bpm": 98,
+      "scale": "MINOR",
+      "model": "lyria-realtime-exp",
+      "seconds": 80.0,
+      "sha256": "7353d0dc56177895",
+      "made": "2026-10-08",
+      "note": "AI-generated instrumental (Google Lyria RealTime via the Gemini API); output carries Google's SynthID watermark"
+    },
+    {
+      "file": "playbook-1.mp3",
+      "pillar": "playbook",
+      "mood": "upbeat light groove with plucked bass, bright keys and finger snaps, practical and motivating",
+      "bpm": 104,
+      "scale": "MAJOR",
+      "model": "lyria-realtime-exp",
+      "seconds": 80.0,
+      "sha256": "f150bf27b496b9d3",
+      "made": "2026-10-08",
+      "note": "AI-generated instrumental (Google Lyria RealTime via the Gemini API); output carries Google's SynthID watermark"
+    },
+    {
+      "file": "playbook-2.mp3",
+      "pillar": "playbook",
+      "mood": "friendly clean funk guitar with soft drums, can-do energy",
+      "bpm": 108,
+      "scale": "MAJOR",
+      "model": "lyria-realtime-exp",
+      "seconds": 80.0,
+      "sha256": "eb585e1d0e1939ec",
+      "made": "2026-10-08",
+      "note": "AI-generated instrumental (Google Lyria RealTime via the Gemini API); output carries Google's SynthID watermark"
+    },
+    {
+      "file": "escape-1.mp3",
+      "pillar": "escape",
+      "mood": "cinematic rising strings and hopeful piano with a restrained driving pulse, escape and freedom",
+      "bpm": 90,
+      "scale": "MAJOR",
+      "model": "lyria-realtime-exp",
+      "seconds": 80.0,
+      "sha256": "8d886dd715ba054c",
+      "made": "2026-10-08",
+      "note": "AI-generated instrumental (Google Lyria RealTime via the Gemini API); output carries Google's SynthID watermark"
+    },
+    {
+      "file": "escape-2.mp3",
+      "pillar": "escape",
+      "mood": "quiet orchestral build with warm brass swells, ambitious and determined",
+      "bpm": 94,
+      "scale": "MAJOR",
+      "model": "lyria-realtime-exp",
+      "seconds": 80.0,
+      "sha256": "eea5f30ec0a362b1",
+      "made": "2026-10-08",
+      "note": "AI-generated instrumental (Google Lyria RealTime via the Gemini API); output carries Google's SynthID watermark"
+    }
+  ]
+}

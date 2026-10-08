@@ -21,7 +21,7 @@ fps = 30
 target_seconds = [61.0, 72.0]               # >60s qualifies for TikTok Creator Rewards; Shorts allow up to 3 min
 words_range = [175, 200]              # Edge voice at +14% speaks ~2.8 words/sec
 shot_max_seconds = 3.2                       # longer beats are split into two shots (wide + punch-in)
-music = "procedural"                         # procedural | none | path/to/file.wav
+music = "library"                            # library (real beds in assets/music, procedural if none) | procedural | none | path/to/file.wav
 music_volume = 0.16
 sfx_volume = 0.22
 caption_words_max = 3
@@ -34,8 +34,20 @@ accent2 = "#2EE59D"                          # money green
 mode = "numbers"                             # off | auto (only replaces placeholder-art beats) | numbers (+ count-up cards for numeric callouts)
 pillars = ["math", "escape"]                 # numbers mode applies to these pillars
 
+[music]
+# Real instrumental beds (Google Lyria RealTime via the Gemini API, free tier), generated once into assets/music and reused by every
+# video. production.music = "library" uses them; no track found means the procedural bed, so nothing can break.
+tracks_per_series = 2
+
 [production.flow]                            # owner-made Google Flow clips replace the hook still (see faceless/flow.py); empty inbox = no change
 enabled = true
+
+[production.hookclip]                        # animate the hook still with Muapi image-to-video when no owner-made Flow clip is waiting
+enabled = false                              # OFF: about $0.10-0.15 a clip (catalog price). max_per_day x that is the daily cost; frames are QA-checked first
+model = "seedance-pro-i2v-fast"
+resolution = "720p"
+max_per_day = 2
+daily_usd = 0.5
 
 [voice]
 chain = ["edge", "elevenlabs", "gemini"]     # first healthy provider wins
@@ -47,10 +59,13 @@ gemini_voice = "Charon"
 gemini_model = "gemini-2.5-flash-preview-tts"
 
 [images]
-chain = ["cloudflare", "openrouter", "pollinations", "procedural"]
+chain = ["cloudflare", "muapi", "openrouter", "pollinations", "procedural"]
 cloudflare_model = "@cf/black-forest-labs/flux-2-klein-4b"
 cloudflare_hero_model = "@cf/black-forest-labs/flux-2-klein-4b"   # 9b is sharper but costs ~9x the neurons
 cloudflare_daily_neurons = 9500              # free tier is 10,000 neurons/day; keep a margin
+muapi_model = "flux-2-klein-4b-turbo"        # $0.0052 an image (FLUX.2 klein 4B, 720x1280); the free Cloudflare budget is used first
+muapi_hero_model = "flux-2-klein-4b"         # $0.0104, the hook still
+muapi_daily_usd = 1.5                        # spend cap per UTC day (about 290 images); the wallet itself is the hard limit
 openrouter_model = "google/gemini-3.1-flash-lite-image"
 openrouter_daily_images = 60                 # paid fallback cap: ~$0.04 each, so at most ~$2.40/day
 width = 864                                  # 2x3 Cloudflare tiles: same 156 neurons as 768x1344, exact 9:16
@@ -58,10 +73,11 @@ height = 1536
 concurrency = 4
 
 [llm]
-chain = ["gemini", "openrouter", "pollinations"]
+chain = ["gemini", "longcat", "openrouter", "pollinations"]   # longcat needs LONGCAT_API_KEY (free daily allowance); skipped without it
 gemini_models = ["gemini-3.8-flash", "gemini-3.5-flash", "gemini-3.5-flash-lite"]
 openrouter_models = ["google/gemini-3.8-flash", "deepseek/deepseek-v4.1-flash", "google/gemma-4-31b-it:free"]   # paid ~$0.002/script, then cheaper/free
 temperature = 0.9
+longcat_model = "LongCat-2.5-Preview"
 
 [decide]
 # Jev (TypeSafe System One) answers typed questions; it never writes content.
@@ -70,6 +86,20 @@ backend = "auto"
 jev_model = "jev-latest"
 dry_run = true                               # log Jev answers but act on heuristics until you flip this
 confidence_floor = 0.85
+
+[qa]
+# Semantic gates answered by Cloudflare Clef (a decision model on Workers AI; about 28 neurons per still, about 6 per script).
+# A still over a threshold becomes a designed motion card (the hook beat is regenerated once); a script that promises returns is held.
+enabled = true
+text_max = 0.7
+face_max = 0.6
+logo_max = 0.6
+max_swaps = 3
+promises_max = 0.5
+advice_max = 0.5
+hype_max = 0.7
+dup_soft = 0.55                              # centered embedding similarity to the closest earlier script: soft penalty
+dup_hard = 0.72                              # ...and hold (same topic again)
 
 [gauntlet]
 pass_score = 80

@@ -187,7 +187,19 @@ def check_visuals(imgs: list[dict], beats: int) -> list[Gate]:
         Gate("no_placeholder_art", not fallback, 6, len(fallback) * 2 > max(1, beats),
              f"beats using abstract fallback art: {fallback}", "visuals"),
         Gate("image_quality", not lowres, 3, False, f"beats using low-res fallback images: {lowres}", "visuals"),
-    ]
+    ] + check_image_qa(imgs)
+
+
+def check_image_qa(imgs: list[dict]) -> list[Gate]:
+    """Stills the decision model still flags after the beat was swapped for a card or regenerated (hook beat, or no cards available).
+    A visible face breaks our rule that real people are never shown by face, so it holds the video."""
+    left = [i for i in imgs if i.get("qa", {}).get("flags") and not i.get("card")]
+    if not any(i.get("qa") for i in imgs):
+        return []      # the semantic check had no opinion (no key, no free budget): nothing to gate
+    faces = [i["beat"] + 1 for i in left if "face" in i["qa"]["flags"]]
+    other = [i["beat"] + 1 for i in left if set(i["qa"]["flags"]) - {"face"}]
+    return [Gate("no_faces", not faces, 6, True, f"beats showing a clear human face: {faces}", "visuals"),
+            Gate("image_qa", not other, 3, False, f"beats with readable text or a logo: {other}", "visuals")]
 
 
 def probe(path: str) -> dict:

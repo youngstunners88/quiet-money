@@ -16,7 +16,7 @@ import traceback
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
-from faceless import analytics, config, decide, events, gauntlet, research
+from faceless import analytics, config, decide, events, gauntlet, qa, research
 from faceless.config import Paths
 from faceless.pipeline import ideate, package, render, script as script_stage, visuals, voice as voice_stage
 from faceless.providers import publish as publisher
@@ -39,6 +39,7 @@ def script_loop(job: Job, history: list[str], judge: bool, feedback: list[str] |
         if judge:
             jg, judged = gauntlet.judge_script(scr, job.id, brief=research.brief(job.artifacts.get("brief")))
             gates += jg
+        gates += qa.script_gates(scr, job.id) + qa.duplicate_gates(scr, job.id)   # decision-model + semantic checks; no opinion when unavailable
         s, hard = gauntlet.score(gates)
         bad = gauntlet.failing(gates)
         events.emit("SCRIPT_GATES", job=job.id, round=rnd, score=s, failing=[g.name for g in bad])

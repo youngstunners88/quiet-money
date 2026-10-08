@@ -2211,3 +2211,173 @@
 {"ts": "2026-10-07T13:02:51Z", "t": 1791378171.986, "actor": "engine", "type": "SCOUT_TOPUP", "pillar": "playbook", "added": 1}
 {"ts": "2026-10-07T13:03:20Z", "t": 1791378200.155, "actor": "engine", "type": "SCOUT_TOPUP", "pillar": "playbook", "added": 1}
 {"ts": "2026-10-07T13:03:47Z", "t": 1791378227.676, "actor": "engine", "type": "SCOUT_TOPUP", "pillar": "playbook", "added": 1}
+{"ts": "2026-10-08T02:10:42Z", "t": 1791425442.414, "actor": "engine", "type": "COMPOSIO_SESSION", "user": "quiet-money-studio", "session_hash": "abc50280"}
+{"ts": "2026-10-08T02:17:29Z", "t": 1791425849.106, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["text", "face", "logo"], "images": 1, "input_tokens": 899}
+{"ts": "2026-10-08T02:17:30Z", "t": 1791425850.26, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["text", "face", "logo"], "images": 1, "input_tokens": 899}
+{"ts": "2026-10-08T02:17:31Z", "t": 1791425851.106, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["text", "face", "logo"], "images": 1, "input_tokens": 899}
+{"ts": "2026-10-08T02:17:32Z", "t": 1791425852.067, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["text", "face", "logo"], "images": 1, "input_tokens": 899}
+{"ts": "2026-10-08T02:17:33Z", "t": 1791425853.143, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["text", "face", "logo"], "images": 1, "input_tokens": 1325}
+{"ts": "2026-10-08T02:17:34Z", "t": 1791425854.256, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["text", "face", "logo"], "images": 1, "input_tokens": 899}
+{"ts": "2026-10-08T02:17:35Z", "t": 1791425855.594, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["text", "face", "logo"], "images": 1, "input_tokens": 899}
+{"ts": "2026-10-08T02:17:37Z", "t": 1791425857.259, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["text", "face", "logo"], "images": 1, "input_tokens": 1325}
+{"ts": "2026-10-08T02:17:38Z", "t": 1791425858.067, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["text", "face", "logo"], "images": 1, "input_tokens": 899}
+{"ts": "2026-10-08T02:17:39Z", "t": 1791425859.144, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["text", "face", "logo"], "images": 1, "input_tokens": 1325}
+{"ts": "2026-10-08T02:17:40Z", "t": 1791425860.262, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["text", "face", "logo"], "images": 1, "input_tokens": 1325}
+{"ts": "2026-10-08T02:17:41Z", "t": 1791425861.386, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["text", "face", "logo"], "images": 1, "input_tokens": 899}
+{"ts": "2026-10-08T02:17:42Z", "t": 1791425862.154, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["text", "face", "logo"], "images": 1, "input_tokens": 899}
+{"ts": "2026-10-08T02:17:42Z", "t": 1791425862.964, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["text", "face", "logo"], "images": 1, "input_tokens": 899}
+{"ts": "2026-10-08T02:17:43Z", "t": 1791425863.989, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["text", "face", "logo"], "images": 1, "input_tokens": 1325}
+{"ts": "2026-10-08T02:17:45Z", "t": 1791425865.544, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["text", "face", "logo"], "images": 1, "input_tokens": 1325}
+{"ts": "2026-10-08T02:17:46Z", "t": 1791425866.418, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["text", "face", "logo"], "images": 1, "input_tokens": 899}
+{"ts": "2026-10-08T02:17:47Z", "t": 1791425867.337, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["text", "face", "logo"], "images": 1, "input_tokens": 899}
+{"ts": "2026-10-08T02:17:48Z", "t": 1791425868.673, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["text", "face", "logo"], "images": 1, "input_tokens": 1325}
+{"ts": "2026-10-08T02:17:50Z", "t": 1791425870.267, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["text", "face", "logo"], "images": 1, "input_tokens": 1325}
+{"ts": "2026-10-08T02:17:51Z", "t": 1791425871.479, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["text", "face", "logo"], "images": 1, "input_tokens": 1325}
+{"ts": "2026-10-08T02:17:52Z", "t": 1791425872.47, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["text", "face", "logo"], "images": 1, "input_tokens": 1325}
+{"ts": "2026-10-08T02:17:53Z", "t": 1791425873.789, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["text", "face", "logo"], "images": 1, "input_tokens": 1325}
+{"ts": "2026-10-08T02:17:55Z", "t": 1791425875.325, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["text", "face", "logo"], "images": 1, "input_tokens": 1367}
+{"ts": "2026-10-08T02:17:56Z", "t": 1791425876.378, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["text", "face", "logo"], "images": 1, "input_tokens": 1325}
+{"ts": "2026-10-08T02:17:58Z", "t": 1791425878.141, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["text", "face", "logo"], "images": 1, "input_tokens": 1367}
+{"ts": "2026-10-08T02:17:58Z", "t": 1791425878.988, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["text", "face", "logo"], "images": 1, "input_tokens": 899}
+{"ts": "2026-10-08T02:17:59Z", "t": 1791425879.901, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["text", "face", "logo"], "images": 1, "input_tokens": 899}
+{"ts": "2026-10-08T02:18:01Z", "t": 1791425881.345, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["text", "face", "logo"], "images": 1, "input_tokens": 899}
+{"ts": "2026-10-08T02:18:02Z", "t": 1791425882.162, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["text", "face", "logo"], "images": 1, "input_tokens": 899}
+{"ts": "2026-10-08T02:18:03Z", "t": 1791425883.575, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["text", "face", "logo"], "images": 1, "input_tokens": 1367}
+{"ts": "2026-10-08T02:18:04Z", "t": 1791425884.467, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["text", "face", "logo"], "images": 1, "input_tokens": 1367}
+{"ts": "2026-10-08T02:18:05Z", "t": 1791425885.456, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["text", "face", "logo"], "images": 1, "input_tokens": 1367}
+{"ts": "2026-10-08T02:18:06Z", "t": 1791425886.519, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["text", "face", "logo"], "images": 1, "input_tokens": 899}
+{"ts": "2026-10-08T02:18:07Z", "t": 1791425887.574, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["text", "face", "logo"], "images": 1, "input_tokens": 899}
+{"ts": "2026-10-08T02:18:08Z", "t": 1791425888.557, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["text", "face", "logo"], "images": 1, "input_tokens": 1367}
+{"ts": "2026-10-08T02:18:09Z", "t": 1791425889.628, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["text", "face", "logo"], "images": 1, "input_tokens": 1325}
+{"ts": "2026-10-08T02:18:10Z", "t": 1791425890.625, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["text", "face", "logo"], "images": 1, "input_tokens": 1367}
+{"ts": "2026-10-08T02:18:11Z", "t": 1791425891.545, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["text", "face", "logo"], "images": 1, "input_tokens": 899}
+{"ts": "2026-10-08T02:18:12Z", "t": 1791425892.853, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["text", "face", "logo"], "images": 1, "input_tokens": 1367}
+{"ts": "2026-10-08T02:18:13Z", "t": 1791425893.583, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["promises_returns", "specific_advice", "hype"], "images": 0, "input_tokens": 586}
+{"ts": "2026-10-08T02:18:14Z", "t": 1791425894.382, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["promises_returns", "specific_advice", "hype"], "images": 0, "input_tokens": 551}
+{"ts": "2026-10-08T02:18:15Z", "t": 1791425895.088, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["promises_returns", "specific_advice", "hype"], "images": 0, "input_tokens": 608}
+{"ts": "2026-10-08T02:18:15Z", "t": 1791425895.802, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["promises_returns", "specific_advice", "hype"], "images": 0, "input_tokens": 550}
+{"ts": "2026-10-08T02:18:16Z", "t": 1791425896.683, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["promises_returns", "specific_advice", "hype"], "images": 0, "input_tokens": 543}
+{"ts": "2026-10-08T02:18:17Z", "t": 1791425897.493, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["promises_returns", "specific_advice", "hype"], "images": 0, "input_tokens": 587}
+{"ts": "2026-10-08T02:18:18Z", "t": 1791425898.555, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["promises_returns", "specific_advice", "hype"], "images": 0, "input_tokens": 567}
+{"ts": "2026-10-08T02:18:19Z", "t": 1791425899.255, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["promises_returns", "specific_advice", "hype"], "images": 0, "input_tokens": 527}
+{"ts": "2026-10-08T02:18:20Z", "t": 1791425900.008, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["promises_returns", "specific_advice", "hype"], "images": 0, "input_tokens": 562}
+{"ts": "2026-10-08T02:18:20Z", "t": 1791425900.745, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["promises_returns", "specific_advice", "hype"], "images": 0, "input_tokens": 537}
+{"ts": "2026-10-08T02:18:21Z", "t": 1791425901.486, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["promises_returns", "specific_advice", "hype"], "images": 0, "input_tokens": 539}
+{"ts": "2026-10-08T02:18:22Z", "t": 1791425902.192, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["promises_returns", "specific_advice", "hype"], "images": 0, "input_tokens": 545}
+{"ts": "2026-10-08T02:18:22Z", "t": 1791425902.912, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["promises_returns", "specific_advice", "hype"], "images": 0, "input_tokens": 553}
+{"ts": "2026-10-08T02:18:23Z", "t": 1791425903.592, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["promises_returns", "specific_advice", "hype"], "images": 0, "input_tokens": 583}
+{"ts": "2026-10-08T02:18:25Z", "t": 1791425905.106, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["promises_returns", "specific_advice", "hype"], "images": 0, "input_tokens": 550}
+{"ts": "2026-10-08T02:18:25Z", "t": 1791425905.877, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["promises_returns", "specific_advice", "hype"], "images": 0, "input_tokens": 565}
+{"ts": "2026-10-08T02:18:26Z", "t": 1791425906.583, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["promises_returns", "specific_advice", "hype"], "images": 0, "input_tokens": 567}
+{"ts": "2026-10-08T02:18:27Z", "t": 1791425907.388, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["promises_returns", "specific_advice", "hype"], "images": 0, "input_tokens": 580}
+{"ts": "2026-10-08T02:18:28Z", "t": 1791425908.347, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["promises_returns", "specific_advice", "hype"], "images": 0, "input_tokens": 602}
+{"ts": "2026-10-08T02:18:29Z", "t": 1791425909.169, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["promises_returns", "specific_advice", "hype"], "images": 0, "input_tokens": 549}
+{"ts": "2026-10-08T02:18:29Z", "t": 1791425909.881, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["promises_returns", "specific_advice", "hype"], "images": 0, "input_tokens": 620}
+{"ts": "2026-10-08T02:18:30Z", "t": 1791425910.699, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["promises_returns", "specific_advice", "hype"], "images": 0, "input_tokens": 559}
+{"ts": "2026-10-08T02:18:31Z", "t": 1791425911.385, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["promises_returns", "specific_advice", "hype"], "images": 0, "input_tokens": 557}
+{"ts": "2026-10-08T02:18:32Z", "t": 1791425912.268, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["promises_returns", "specific_advice", "hype"], "images": 0, "input_tokens": 563}
+{"ts": "2026-10-08T02:18:33Z", "t": 1791425913.018, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["promises_returns", "specific_advice", "hype"], "images": 0, "input_tokens": 467}
+{"ts": "2026-10-08T02:18:33Z", "t": 1791425913.794, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["promises_returns", "specific_advice", "hype"], "images": 0, "input_tokens": 564}
+{"ts": "2026-10-08T02:18:34Z", "t": 1791425914.786, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["promises_returns", "specific_advice", "hype"], "images": 0, "input_tokens": 541}
+{"ts": "2026-10-08T02:18:35Z", "t": 1791425915.487, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["promises_returns", "specific_advice", "hype"], "images": 0, "input_tokens": 545}
+{"ts": "2026-10-08T02:18:36Z", "t": 1791425916.202, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["promises_returns", "specific_advice", "hype"], "images": 0, "input_tokens": 543}
+{"ts": "2026-10-08T02:18:36Z", "t": 1791425916.95, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["promises_returns", "specific_advice", "hype"], "images": 0, "input_tokens": 576}
+{"ts": "2026-10-08T02:19:06Z", "t": 1791425946.87, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["text", "face", "logo"], "images": 1, "input_tokens": 1367}
+{"ts": "2026-10-08T02:19:21Z", "t": 1791425961.064, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["text", "face", "logo"], "images": 1, "input_tokens": 1367}
+{"ts": "2026-10-08T02:20:14Z", "t": 1791426014.225, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["text", "face", "logo"], "images": 1, "input_tokens": 1367}
+{"ts": "2026-10-08T02:20:51Z", "t": 1791426051.664, "actor": "engine", "type": "SCOUT_TOPUP", "pillar": "playbook", "added": 1}
+{"ts": "2026-10-08T02:21:34Z", "t": 1791426094.196, "actor": "engine", "type": "SCOUT_TOPUP", "pillar": "playbook", "added": 1}
+{"ts": "2026-10-08T02:22:13Z", "t": 1791426133.035, "actor": "engine", "type": "VISUALS_DONE", "job": "qa1", "providers": {"cloudflare": 3}, "qa_flagged": 1, "qa_swapped": 1}
+{"ts": "2026-10-08T02:26:07Z", "t": 1791426367.044, "actor": "engine", "type": "SCOUT_TOPUP", "pillar": "playbook", "added": 1}
+{"ts": "2026-10-08T02:26:29Z", "t": 1791426389.188, "actor": "engine", "type": "VISUALS_DONE", "job": "qa1", "providers": {"cloudflare": 3}, "qa_flagged": 1, "qa_swapped": 1}
+{"ts": "2026-10-08T02:26:42Z", "t": 1791426402.362, "actor": "engine", "type": "SCOUT_TOPUP", "pillar": "playbook", "added": 1}
+{"ts": "2026-10-08T02:27:04Z", "t": 1791426424.206, "actor": "engine", "type": "VISUALS_DONE", "job": "qa1", "providers": {"cloudflare": 3}, "qa_flagged": 1, "qa_swapped": 1}
+{"ts": "2026-10-08T02:31:22Z", "t": 1791426682.468, "actor": "engine", "type": "SCOUT_TOPUP", "pillar": "playbook", "added": 1}
+{"ts": "2026-10-08T02:31:44Z", "t": 1791426704.181, "actor": "engine", "type": "VISUALS_DONE", "job": "qa1", "providers": {"cloudflare": 3}, "qa_flagged": 1, "qa_swapped": 1}
+{"ts": "2026-10-08T02:32:04Z", "t": 1791426724.39, "actor": "engine", "type": "SCOUT_TOPUP", "pillar": "playbook", "added": 1}
+{"ts": "2026-10-08T02:32:25Z", "t": 1791426745.49, "actor": "engine", "type": "VISUALS_DONE", "job": "qa1", "providers": {"cloudflare": 3}, "qa_flagged": 1, "qa_swapped": 1}
+{"ts": "2026-10-08T02:33:25Z", "t": 1791426805.539, "actor": "engine", "type": "RENDERED", "job": "e2e-story", "video": "/tmp/claude-0/-home-user-agent-universe/f5601aee-9ad2-56f0-b555-f8765d1cb68d/scratchpad/e2e/out/2026-10-07/e2e-story/final.mp4", "cover": "/tmp/claude-0/-home-user-agent-universe/f5601aee-9ad2-56f0-b555-f8765d1cb68d/scratchpad/e2e/out/2026-10-07/e2e-story/cover.jpg", "shots": 3, "captioned_words": 1, "avg_shot": 3.0, "cards": 0, "clips": 1, "music": "story-2.mp3"}
+{"ts": "2026-10-08T02:33:50Z", "t": 1791426830.29, "actor": "engine", "type": "SCOUT_TOPUP", "pillar": "playbook", "added": 1}
+{"ts": "2026-10-08T02:34:12Z", "t": 1791426852.04, "actor": "engine", "type": "VISUALS_DONE", "job": "qa1", "providers": {"cloudflare": 3}, "qa_flagged": 1, "qa_swapped": 1}
+{"ts": "2026-10-08T02:35:06Z", "t": 1791426906.879, "actor": "engine", "type": "SCOUT_TOPUP", "pillar": "playbook", "added": 1}
+{"ts": "2026-10-08T02:35:28Z", "t": 1791426928.262, "actor": "engine", "type": "VISUALS_DONE", "job": "qa1", "providers": {"cloudflare": 3}, "qa_flagged": 1, "qa_swapped": 1}
+{"ts": "2026-10-08T02:36:27Z", "t": 1791426987.657, "actor": "engine", "type": "CLEF_CALL", "job": "vis-int", "model": "clef", "questions": ["text", "face", "logo"], "images": 1, "input_tokens": 1347}
+{"ts": "2026-10-08T02:36:28Z", "t": 1791426988.689, "actor": "engine", "type": "CLEF_CALL", "job": "vis-int", "model": "clef", "questions": ["text", "face", "logo"], "images": 1, "input_tokens": 1389}
+{"ts": "2026-10-08T02:36:29Z", "t": 1791426989.68, "actor": "engine", "type": "CLEF_CALL", "job": "vis-int", "model": "clef", "questions": ["text", "face", "logo"], "images": 1, "input_tokens": 1343}
+{"ts": "2026-10-08T02:36:30Z", "t": 1791426990.771, "actor": "engine", "type": "CLEF_CALL", "job": "vis-int", "model": "clef", "questions": ["text", "face", "logo"], "images": 1, "input_tokens": 1382}
+{"ts": "2026-10-08T02:36:31Z", "t": 1791426991.585, "actor": "engine", "type": "CLEF_CALL", "job": "vis-int", "model": "clef", "questions": ["text", "face", "logo"], "images": 1, "input_tokens": 912}
+{"ts": "2026-10-08T02:36:33Z", "t": 1791426993.065, "actor": "engine", "type": "CLEF_CALL", "job": "vis-int", "model": "clef", "questions": ["text", "face", "logo"], "images": 1, "input_tokens": 1341}
+{"ts": "2026-10-08T02:36:33Z", "t": 1791426993.958, "actor": "engine", "type": "CLEF_CALL", "job": "vis-int", "model": "clef", "questions": ["text", "face", "logo"], "images": 1, "input_tokens": 914}
+{"ts": "2026-10-08T02:36:34Z", "t": 1791426994.697, "actor": "engine", "type": "CLEF_CALL", "job": "vis-int", "model": "clef", "questions": ["text", "face", "logo"], "images": 1, "input_tokens": 913}
+{"ts": "2026-10-08T02:36:34Z", "t": 1791426994.705, "actor": "engine", "type": "VISUALS_DONE", "job": "vis-int", "providers": {"cloudflare": 7, "card": 5}, "qa_flagged": 0, "qa_swapped": 0}
+{"ts": "2026-10-08T02:39:20Z", "t": 1791427160.656, "actor": "engine", "type": "PROVIDER_OK", "capability": "image", "provider": "muapi", "job": "muapi-test", "ms": 5537}
+{"ts": "2026-10-08T02:39:59Z", "t": 1791427199.533, "actor": "engine", "type": "SCOUT_TOPUP", "pillar": "playbook", "added": 1}
+{"ts": "2026-10-08T02:40:20Z", "t": 1791427220.663, "actor": "engine", "type": "VISUALS_DONE", "job": "qa1", "providers": {"cloudflare": 3}, "qa_flagged": 1, "qa_swapped": 1}
+{"ts": "2026-10-08T02:41:57Z", "t": 1791427317.351, "actor": "engine", "type": "SCOUT_TOPUP", "pillar": "playbook", "added": 1}
+{"ts": "2026-10-08T02:42:18Z", "t": 1791427338.443, "actor": "engine", "type": "VISUALS_DONE", "job": "qa1", "providers": {"cloudflare": 3}, "qa_flagged": 1, "qa_swapped": 1}
+{"ts": "2026-10-08T02:43:48Z", "t": 1791427428.691, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["flag"], "images": 3, "input_tokens": 2843}
+{"ts": "2026-10-08T02:44:12Z", "t": 1791427452.498, "actor": "engine", "type": "SCOUT_TOPUP", "pillar": "playbook", "added": 1}
+{"ts": "2026-10-08T02:44:33Z", "t": 1791427473.453, "actor": "engine", "type": "VISUALS_DONE", "job": "qa1", "providers": {"cloudflare": 3}, "qa_flagged": 1, "qa_swapped": 1}
+{"ts": "2026-10-08T02:44:46Z", "t": 1791427486.012, "actor": "engine", "type": "SCOUT_TOPUP", "pillar": "playbook", "added": 1}
+{"ts": "2026-10-08T02:45:07Z", "t": 1791427507.479, "actor": "engine", "type": "VISUALS_DONE", "job": "qa1", "providers": {"cloudflare": 3}, "qa_flagged": 1, "qa_swapped": 1}
+{"ts": "2026-10-08T02:45:26Z", "t": 1791427526.469, "actor": "engine", "type": "CLEF_CALL", "job": "vis-int2", "model": "clef", "questions": ["text", "face", "logo"], "images": 1, "input_tokens": 1382}
+{"ts": "2026-10-08T02:45:27Z", "t": 1791427527.389, "actor": "engine", "type": "CLEF_CALL", "job": "vis-int2", "model": "clef", "questions": ["text", "face", "logo"], "images": 1, "input_tokens": 1343}
+{"ts": "2026-10-08T02:45:29Z", "t": 1791427529.141, "actor": "engine", "type": "CLEF_CALL", "job": "vis-int2", "model": "clef", "questions": ["text", "face", "logo"], "images": 1, "input_tokens": 1382}
+{"ts": "2026-10-08T02:45:30Z", "t": 1791427530.284, "actor": "engine", "type": "CLEF_CALL", "job": "vis-int2", "model": "clef", "questions": ["text", "face", "logo"], "images": 1, "input_tokens": 1338}
+{"ts": "2026-10-08T02:45:31Z", "t": 1791427531.19, "actor": "engine", "type": "CLEF_CALL", "job": "vis-int2", "model": "clef", "questions": ["text", "face", "logo"], "images": 1, "input_tokens": 1378}
+{"ts": "2026-10-08T02:45:32Z", "t": 1791427532.264, "actor": "engine", "type": "CLEF_CALL", "job": "vis-int2", "model": "clef", "questions": ["text", "face", "logo"], "images": 1, "input_tokens": 1378}
+{"ts": "2026-10-08T02:45:33Z", "t": 1791427533.322, "actor": "engine", "type": "CLEF_CALL", "job": "vis-int2", "model": "clef", "questions": ["text", "face", "logo"], "images": 1, "input_tokens": 907}
+{"ts": "2026-10-08T02:45:34Z", "t": 1791427534.308, "actor": "engine", "type": "CLEF_CALL", "job": "vis-int2", "model": "clef", "questions": ["text", "face", "logo"], "images": 1, "input_tokens": 1342}
+{"ts": "2026-10-08T02:45:35Z", "t": 1791427535.261, "actor": "engine", "type": "CLEF_CALL", "job": "vis-int2", "model": "clef", "questions": ["text", "face", "logo"], "images": 1, "input_tokens": 1341}
+{"ts": "2026-10-08T02:45:36Z", "t": 1791427536.197, "actor": "engine", "type": "CLEF_CALL", "job": "vis-int2", "model": "clef", "questions": ["text", "face", "logo"], "images": 1, "input_tokens": 908}
+{"ts": "2026-10-08T02:45:36Z", "t": 1791427536.204, "actor": "engine", "type": "VISUALS_DONE", "job": "vis-int2", "providers": {"cloudflare": 10, "card": 3}, "qa_flagged": 0, "qa_swapped": 0}
+{"ts": "2026-10-08T02:45:59Z", "t": 1791427559.718, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["t"], "images": 1, "input_tokens": 1184}
+{"ts": "2026-10-08T02:46:01Z", "t": 1791427561.027, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["t"], "images": 1, "input_tokens": 1198}
+{"ts": "2026-10-08T02:46:02Z", "t": 1791427562.31, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["t"], "images": 1, "input_tokens": 1184}
+{"ts": "2026-10-08T02:46:03Z", "t": 1791427563.725, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["t"], "images": 1, "input_tokens": 1198}
+{"ts": "2026-10-08T02:46:05Z", "t": 1791427565.071, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["t"], "images": 1, "input_tokens": 1142}
+{"ts": "2026-10-08T02:46:06Z", "t": 1791427566.176, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["t"], "images": 1, "input_tokens": 1156}
+{"ts": "2026-10-08T02:46:07Z", "t": 1791427567.152, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["t"], "images": 1, "input_tokens": 1184}
+{"ts": "2026-10-08T02:46:08Z", "t": 1791427568.22, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["t"], "images": 1, "input_tokens": 1198}
+{"ts": "2026-10-08T02:46:15Z", "t": 1791427575.598, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["text", "face", "logo"], "images": 1, "input_tokens": 913}
+{"ts": "2026-10-08T02:46:16Z", "t": 1791427576.584, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["text", "face", "logo"], "images": 1, "input_tokens": 913}
+{"ts": "2026-10-08T02:46:17Z", "t": 1791427577.573, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["text", "face", "logo"], "images": 1, "input_tokens": 913}
+{"ts": "2026-10-08T02:46:18Z", "t": 1791427578.928, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["text", "face", "logo"], "images": 1, "input_tokens": 1339}
+{"ts": "2026-10-08T02:46:20Z", "t": 1791427580.001, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["text", "face", "logo"], "images": 1, "input_tokens": 1339}
+{"ts": "2026-10-08T02:46:20Z", "t": 1791427580.86, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["text", "face", "logo"], "images": 1, "input_tokens": 1339}
+{"ts": "2026-10-08T02:46:21Z", "t": 1791427581.813, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["text", "face", "logo"], "images": 1, "input_tokens": 1381}
+{"ts": "2026-10-08T02:46:22Z", "t": 1791427582.76, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["text", "face", "logo"], "images": 1, "input_tokens": 1339}
+{"ts": "2026-10-08T02:46:23Z", "t": 1791427583.573, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["text", "face", "logo"], "images": 1, "input_tokens": 913}
+{"ts": "2026-10-08T02:46:24Z", "t": 1791427584.431, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["text", "face", "logo"], "images": 1, "input_tokens": 1339}
+{"ts": "2026-10-08T02:46:25Z", "t": 1791427585.213, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["text", "face", "logo"], "images": 1, "input_tokens": 913}
+{"ts": "2026-10-08T02:46:26Z", "t": 1791427586.667, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["text", "face", "logo"], "images": 1, "input_tokens": 1339}
+{"ts": "2026-10-08T02:46:27Z", "t": 1791427587.504, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["text", "face", "logo"], "images": 1, "input_tokens": 913}
+{"ts": "2026-10-08T02:46:28Z", "t": 1791427588.292, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["text", "face", "logo"], "images": 1, "input_tokens": 913}
+{"ts": "2026-10-08T02:46:29Z", "t": 1791427589.428, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["text", "face", "logo"], "images": 1, "input_tokens": 1339}
+{"ts": "2026-10-08T02:46:30Z", "t": 1791427590.194, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["text", "face", "logo"], "images": 1, "input_tokens": 1339}
+{"ts": "2026-10-08T02:46:31Z", "t": 1791427591.158, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["text", "face", "logo"], "images": 1, "input_tokens": 913}
+{"ts": "2026-10-08T02:46:32Z", "t": 1791427592.033, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["text", "face", "logo"], "images": 1, "input_tokens": 913}
+{"ts": "2026-10-08T02:46:33Z", "t": 1791427593.175, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["text", "face", "logo"], "images": 1, "input_tokens": 1339}
+{"ts": "2026-10-08T02:46:34Z", "t": 1791427594.573, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["text", "face", "logo"], "images": 1, "input_tokens": 1339}
+{"ts": "2026-10-08T02:46:35Z", "t": 1791427595.67, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["text", "face", "logo"], "images": 1, "input_tokens": 1339}
+{"ts": "2026-10-08T02:46:36Z", "t": 1791427596.493, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["text", "face", "logo"], "images": 1, "input_tokens": 1339}
+{"ts": "2026-10-08T02:46:37Z", "t": 1791427597.206, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["text", "face", "logo"], "images": 1, "input_tokens": 913}
+{"ts": "2026-10-08T02:46:38Z", "t": 1791427598.225, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["text", "face", "logo"], "images": 1, "input_tokens": 1381}
+{"ts": "2026-10-08T02:46:39Z", "t": 1791427599.155, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["text", "face", "logo"], "images": 1, "input_tokens": 1339}
+{"ts": "2026-10-08T02:46:40Z", "t": 1791427600.259, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["text", "face", "logo"], "images": 1, "input_tokens": 1381}
+{"ts": "2026-10-08T02:46:41Z", "t": 1791427601.396, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["text", "face", "logo"], "images": 1, "input_tokens": 913}
+{"ts": "2026-10-08T02:46:42Z", "t": 1791427602.33, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["text", "face", "logo"], "images": 1, "input_tokens": 1381}
+{"ts": "2026-10-08T02:46:43Z", "t": 1791427603.377, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["text", "face", "logo"], "images": 1, "input_tokens": 913}
+{"ts": "2026-10-08T02:46:44Z", "t": 1791427604.278, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["text", "face", "logo"], "images": 1, "input_tokens": 1339}
+{"ts": "2026-10-08T02:46:45Z", "t": 1791427605.021, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["text", "face", "logo"], "images": 1, "input_tokens": 913}
+{"ts": "2026-10-08T02:46:45Z", "t": 1791427605.98, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["text", "face", "logo"], "images": 1, "input_tokens": 1381}
+{"ts": "2026-10-08T02:46:47Z", "t": 1791427607.443, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["text", "face", "logo"], "images": 1, "input_tokens": 1339}
+{"ts": "2026-10-08T02:46:48Z", "t": 1791427608.295, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["text", "face", "logo"], "images": 1, "input_tokens": 913}
+{"ts": "2026-10-08T02:46:49Z", "t": 1791427609.214, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["text", "face", "logo"], "images": 1, "input_tokens": 913}
+{"ts": "2026-10-08T02:46:50Z", "t": 1791427610.158, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["text", "face", "logo"], "images": 1, "input_tokens": 1253}
+{"ts": "2026-10-08T02:46:51Z", "t": 1791427611.488, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["text", "face", "logo"], "images": 1, "input_tokens": 1381}
+{"ts": "2026-10-08T02:46:52Z", "t": 1791427612.807, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["text", "face", "logo"], "images": 1, "input_tokens": 1381}
+{"ts": "2026-10-08T02:46:53Z", "t": 1791427613.563, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["text", "face", "logo"], "images": 1, "input_tokens": 913}
+{"ts": "2026-10-08T02:46:54Z", "t": 1791427614.442, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["text", "face", "logo"], "images": 1, "input_tokens": 1381}
+{"ts": "2026-10-08T02:48:27Z", "t": 1791427707.161, "actor": "engine", "type": "SCOUT_TOPUP", "pillar": "playbook", "added": 1}
+{"ts": "2026-10-08T02:48:48Z", "t": 1791427728.717, "actor": "engine", "type": "VISUALS_DONE", "job": "qa1", "providers": {"cloudflare": 3}, "qa_flagged": 1, "qa_swapped": 1}

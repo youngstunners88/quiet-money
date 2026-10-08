@@ -1,0 +1,15 @@
+[
+  {"id": "youtube-monetization", "name": "YouTube channel monetization policies (inauthentic / reused content)", "url": "https://support.google.com/youtube/answer/1311392", "why": "Mass-produced or templated AI content is not monetizable; the biggest risk to the Shorts rail."},
+  {"id": "youtube-genai-disclosure", "name": "YouTube GenAI disclosure", "url": "https://support.google.com/youtube/answer/14328491", "why": "When the 'AI use' label is required (AI music and realistic scenes are listed)."},
+  {"id": "tiktok-creator-rewards", "name": "TikTok Creator Rewards Program", "url": "https://support.tiktok.com/en/business-and-creator/creator-rewards-program/creator-rewards-program", "why": "Eligibility (10k followers, 100k views, 1 minute, personal account, original content)."},
+  {"id": "tiktok-aigc", "name": "TikTok AI-generated content", "url": "https://support.tiktok.com/en/using-tiktok/creating-videos/ai-generated-content", "why": "Labeling rules and prohibited AI content."},
+  {"id": "gumroad-prohibited", "name": "Gumroad: things not allowed", "url": "https://gumroad.com/help/article/155-things-you-cant-sell-on-gumroad", "why": "Credit-repair/credit-improvement, AI services, reselling and off-platform delivery are barred."},
+  {"id": "etsy-ai-stance", "name": "Etsy's stance on AI creations", "url": "https://www.etsy.com/seller-handbook/article/1275449912004", "why": "AI-assisted items need a disclosure in the listing; prompt bundles are barred."},
+  {"id": "etsy-creativity", "name": "Etsy Creativity Standards", "url": "https://www.etsy.com/legal/creativity", "why": "What counts as designed by the seller."},
+  {"id": "adobe-genai", "name": "Adobe Stock generative AI content guidelines", "url": "https://helpx.adobe.com/stock/contributor/submit-your-content/submit-generative-ai-content/generative-ai-content-guidelines.html", "why": "Labeling and prompt/keyword rules for the stock rail."},
+  {"id": "fiverr-standards", "name": "Fiverr Community Standards", "url": "https://help.fiverr.com/hc/en-us/articles/32242973123985-Our-Community-Standards", "why": "Honest profile, one account, no copied gigs; AI use conditions."},
+  {"id": "ftc-canspam", "name": "FTC CAN-SPAM compliance guide", "url": "https://www.ftc.gov/business-guidance/resources/can-spam-act-compliance-guide-business", "why": "Postal address, opt-out within 10 business days, honest headers: required before the first newsletter send."},
+  {"id": "cloudflare-workers-ai-pricing", "name": "Cloudflare Workers AI pricing", "url": "https://developers.cloudflare.com/workers-ai/platform/pricing/", "why": "Free neuron allowance and unit prices drive the image supply cost."},
+  {"id": "gemini-pricing", "name": "Gemini API pricing", "url": "https://ai.google.dev/gemini-api/docs/pricing", "why": "Free-tier limits for scripts, music and embeddings."},
+  {"id": "muapi-pricing", "name": "Muapi pricing", "url": "https://muapi.ai/docs/pricing", "why": "Image and video prices drive the supply cost; the public catalog is checked by `faceless forecast`."}
+]

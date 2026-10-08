@@ -21,3 +21,7 @@ distribution/queue/**/kit/*.mp3
 # built website (deployed to the gh-pages branch by CI)
 site/
 state/memory.db
+
+# derived caches (rebuilt on demand)
+state/embeddings.db
+state/embeddings.db-*

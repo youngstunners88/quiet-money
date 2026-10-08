@@ -33,3 +33,17 @@ The gauntlet has two levels:
 | captions clipped/odd breaks | `caption_chars_max`, `chunk_words()` |
 | image ignores the subject | put the key object first in `visual`; make it concrete |
 | provider failures | check keys and quotas (`python -m faceless status`), chain order in `studio.toml` |
+
+## Semantic gates (decision model + embeddings)
+Added 2026-10-08. A decision model (Cloudflare Clef, see `faceless/qa.py`) answers typed yes/no questions with probabilities; thresholds live in `studio.toml [qa]`.
+They have no opinion (no gate, no failure) when the Cloudflare key or the free neuron budget is missing.
+| gate | meaning | what to do |
+|---|---|---|
+| `no_faces` (hard) | a still the model says shows a clear human face (our rule: never by face) | regenerate that beat with "objects only, no people"; the hook is retried automatically once |
+| `image_qa` (soft) | readable text or a logo left in a still (non-hook beats are swapped for a card automatically, at most `max_swaps`) | usually nothing; if it repeats, tighten `SUFFIX` in `pipeline/visuals.py` |
+| `no_promised_returns`, `no_specific_advice` (hard) | the script promises returns or pushes a product | rewrite the beat; never loosen the threshold to ship |
+| `no_hype` (soft) | get-rich or fear language | rewrite if it repeats |
+| `not_semantic_duplicate` (hard), `distinct_topic` (soft) | the script means nearly the same as an earlier one (centered embedding similarity, `dup_hard` / `dup_soft`) | pick a different angle or topic; the closest earlier script is named in the gate detail |
+Tune thresholds from data, not from a failing video: `python -m faceless qa --images 40 --scripts 30` prints the distribution and what it flagged.
+`python -m faceless variety` scores how interchangeable the last 20 videos look (YouTube's inauthentic-content rule).
+

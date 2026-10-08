@@ -44,6 +44,9 @@ humans set strategy, connect accounts, and review held videos.
 | Whole-business plan: products, services, newsletter, repurposing, what to build next | `/channel/empire` | `channel/empire/PLAN.md`, `RANKING.md` | `faceless-empire` |
 | Repurpose a video (thread, carousel, pin, newsletter item, audio) | `/faceless/repurpose.py` | `python -m faceless kit` | `faceless-empire` |
 | Flow clips (owner's daily Google Flow session) and hook motion | `/faceless/flow.py` | `python -m faceless flow` | `faceless-empire` |
+| Quality gates answered by a decision model, duplicate and variety checks | `/faceless/qa.py`, `variety.py`, `embed.py` | `.claude/skills/faceless-gauntlet` (Semantic gates) | `faceless-gauntlet` |
+| Platform rules, policy changes, what each marketplace allows | `/channel/compliance` | `channel/compliance/platform-rules.md` | `faceless-scout` |
+| Music beds | `/faceless/musiclib.py` | `python -m faceless music` | `faceless-empire` |
 | Spreadsheet products and shop listings | `/faceless/products.py`, `product_debt.py`, `product_print.py` | `channel/products/*/LISTING.md` | `faceless-empire` |
 | Email sequence (autoresponder) and the weekly issue | `/faceless/autoresponder.py`, `repurpose.py` | `channel/offers/autoresponder/README.md` | `faceless-empire` |
 | Fiverr brand-kit service | `/faceless/brandkit.py` | `channel/services/brand-kit/GIG.md` | `faceless-empire` |
@@ -67,6 +70,7 @@ python -m faceless forecast                    # the math: next batch, monthly c
 python -m faceless kit [day]                   # repurposing kit per video; `kit --issue` compiles the weekly newsletter
 python -m faceless flow                        # today's Flow shot list for the owner's session
 python -m faceless products                    # build + verify spreadsheet products, write listings
+python -m faceless qa                          # calibrate semantic QA gates (Clef); `variety`, `policy`, `music` live beside it
 python -m faceless autoresponder               # 7-day Money Reset email sequence for the email service
 python -m faceless brandkit "<Name>" --palette mint   # Fiverr brand-kit order (--samples rebuilds the gig gallery)
 python -m pytest -q tests                      # engine tests

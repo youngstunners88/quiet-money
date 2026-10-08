@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+from datetime import date
 from pathlib import Path
 
 import pytest
@@ -657,6 +658,9 @@ def test_scout_act_only_tops_up_backlogs(tmp_path, monkeypatch):
     monkeypatch.setattr(empire, "DIR", tmp_path)
     monkeypatch.setattr(empire, "RANKING", tmp_path / "RANKING.md")
     monkeypatch.setattr(scout, "health", lambda days=7: _health(publish_mode="local", backlog_unused={"story": 2, "math": 20}))
+    monkeypatch.setattr(scout, "watch_policies", lambda: [])
+    monkeypatch.setattr(scout, "watch_variety", lambda: [])
+    monkeypatch.setattr(scout, "watch_wallet", lambda: [])
     called = []
     monkeypatch.setattr(scout, "topup", lambda pillar, n=6: called.append(pillar) or [{"topic": "t"}])
     res = scout.run(act=True, extra=[{"id": "x", "title": "Find a sponsor", "category": "money", "impact": 5, "effort": 5,
@@ -1166,3 +1170,393 @@ def test_printables_have_six_pages_nothing_in_the_unsafe_margins_and_a_complete_
     assert "Money-Reset-Kit/READ-ME-FIRST.txt" in names and len(names) == 5
     assert "not financial advice" in zipfile.ZipFile(z).read("Money-Reset-Kit/READ-ME-FIRST.txt").decode()
     assert "$" in pp.listing_bundle({"escape": 19.0, "debt": 19.0, "print": 9.0}) and "assumed" in pp.listing_bundle({"escape": 19.0, "debt": 19.0, "print": 9.0})
+
+
+# ---- semantic QA (Clef decision model) ---------------------------------------------------------
+
+def _fake_clef(monkeypatch, answers_by_call):
+    """Replace the Workers AI call with canned typed answers; records what was asked."""
+    from faceless.providers import clef
+    calls = []
+
+    def run(state, questions, images=None, model="clef", job=None):
+        calls.append({"state": state, "questions": list(questions), "images": len(images or [])})
+        return answers_by_call(len(calls), questions)
+    monkeypatch.setattr(clef, "run", run)
+    monkeypatch.setattr(clef, "available", lambda: True)
+    monkeypatch.setitem(config.load()["qa"], "enabled", True)
+    return calls
+
+
+def test_qa_image_flags_follow_thresholds(monkeypatch):
+    from faceless import qa
+    _fake_clef(monkeypatch, lambda n, q: {"text": {"type": "noul", "noul": 0.77}, "face": {"type": "noul", "noul": 0.2}, "logo": {"type": "noul", "noul": 0.05}})
+    got = qa.check_image("x.jpg", "narration")
+    assert got["flags"] == ["text"] and got["text"] == 0.77 and set(got) == {"text", "face", "logo", "flags"}
+    monkeypatch.setitem(config.load()["qa"], "text_max", 0.9)
+    assert qa.check_image("x.jpg")["flags"] == []
+
+
+def test_qa_has_no_opinion_when_unavailable(monkeypatch):
+    from faceless import qa
+    from faceless.providers import ProviderUnavailable, clef
+    _fake_clef(monkeypatch, lambda n, q: {})
+    monkeypatch.setattr(clef, "run", lambda *a, **k: (_ for _ in ()).throw(ProviderUnavailable("budget used")))
+    assert qa.check_image("x.jpg") is None and qa.check_script("text") is None and qa.script_gates({"beats": [{"say": "hi"}]}) == []
+    monkeypatch.setitem(config.load()["qa"], "enabled", False)
+    assert qa.check_image("x.jpg") is None
+
+
+def test_qa_script_gates_make_promised_returns_hard(monkeypatch):
+    from faceless import qa
+    _fake_clef(monkeypatch, lambda n, q: {"promises_returns": {"noul": 0.94}, "specific_advice": {"noul": 0.1}, "hype": {"noul": 0.8}})
+    gates = {g.name: g for g in qa.script_gates({"beats": [{"say": "Guaranteed 20% a month."}]})}
+    assert not gates["no_promised_returns"].passed and gates["no_promised_returns"].hard
+    assert gates["no_specific_advice"].passed and not gates["no_hype"].passed and not gates["no_hype"].hard
+
+
+def test_gauntlet_holds_a_visible_face_but_only_notes_text():
+    from faceless import gauntlet
+    imgs = [{"beat": 0, "provider": "cloudflare", "qa": {"flags": ["face"]}}, {"beat": 1, "provider": "cloudflare", "qa": {"flags": ["text"]}},
+            {"beat": 2, "provider": "cloudflare", "qa": {"flags": ["text"]}, "card": {"kind": "phrase"}}, {"beat": 3, "provider": "cloudflare", "qa": {"flags": []}}]
+    g = {x.name: x for x in gauntlet.check_image_qa(imgs)}
+    assert not g["no_faces"].passed and g["no_faces"].hard and "[1]" in g["no_faces"].detail
+    assert not g["image_qa"].passed and not g["image_qa"].hard and "[2]" in g["image_qa"].detail   # the swapped beat 3 no longer counts
+    assert gauntlet.check_image_qa([{"beat": 0, "provider": "cloudflare"}]) == []                    # no opinion, no gate
+
+
+def test_visuals_swaps_a_flagged_still_for_a_card_and_retries_the_hook(tmp_path, monkeypatch):
+    from faceless import qa
+    from faceless.pipeline import cards, visuals
+    from faceless.providers import images
+    calls = []
+    monkeypatch.setattr(images, "generate", lambda prompt, seed=0, hero=False, job=None: (calls.append(prompt) or "cloudflare", str(tmp_path / f"{len(calls)}.jpg")))
+    flags = {1: ["face"], 2: [], 3: ["text"], 4: [], 5: ["text"]}   # call number -> flags
+    monkeypatch.setattr(qa, "check_image", lambda path, narration="", job=None: {"text": 0.0, "face": 0.0, "logo": 0.0, "flags": flags.get(int(Path(path).stem), [])})
+    monkeypatch.setattr(cards, "available", lambda: True)
+    monkeypatch.setitem(config.load()["qa"], "max_swaps", 1)
+    job = Job(id="qa1", pillar="story", topic="t", day="2026-10-08")
+    monkeypatch.setattr(Job, "dir", property(lambda self: tmp_path))
+    script = {"beats": [{"say": "hook line", "callout": "", "visual": "v0"}, {"say": "second beat here", "callout": "", "visual": "v1"},
+                        {"say": "third beat here", "callout": "", "visual": "v2"}]}
+    from concurrent.futures import ThreadPoolExecutor
+    monkeypatch.setitem(config.load()["images"], "concurrency", 1)
+    res = visuals.run(job, script)
+    assert any("no faces" in c for c in calls)                       # the hook was regenerated once with the stricter prompt
+    swapped = [r["beat"] for r in res if r.get("qa_swapped")]
+    assert len(swapped) <= 1 and 0 not in swapped                    # swap budget respected; the hook never becomes a card
+
+
+# ---- policy watchdog ---------------------------------------------------------------------------
+
+POLICY_HTML = ("<html><head><title>x</title><script>var a='AI must not appear'</script></head><body><nav>Home</nav><main>"
+               "<p>AI-generated content made with generic templates is not allowed to monetize on this platform.</p>"
+               "<p>Creators must disclose realistic AI content in the upload settings.</p><p>Short.</p>"
+               "<p>Fees are 10% per sale and there is no free tier for listings.</p></main></body></html>")
+
+
+def test_policy_snippets_keep_only_rule_sentences_and_skip_scripts():
+    from faceless import policy
+    got = policy.snippets(policy.to_text(POLICY_HTML))
+    assert len(got) == 3 and all(25 <= len(s) <= 300 for s in got) and not any("var a" in s for s in got)
+    assert policy.snippets("Nothing about rules here, only a long calm sentence about the weather today.") == []
+
+
+def test_policy_record_reports_new_unchanged_and_changed(tmp_path, monkeypatch):
+    from faceless import policy
+    monkeypatch.setattr(policy, "SNAP", tmp_path)
+    text = policy.to_text(POLICY_HTML)
+    assert policy.record_text("p", text)["status"] == "new"
+    assert policy.record_text("p", text)["status"] == "unchanged"
+    changed = policy.record_text("p", text.replace("not allowed to monetize", "allowed to monetize") + "\nNew rule: you may not reuse another creator's footage at all.")
+    assert changed["status"] == "changed" and any("may not reuse" in s for s in changed["added"]) and any("not allowed" in s for s in changed["removed"])
+    assert [p for p in policy.proposals([changed])][0]["id"] == "policy-p"
+
+
+def test_policy_check_marks_unreadable_pages_and_flags_stale_snapshots(tmp_path, monkeypatch):
+    from faceless import policy
+    monkeypatch.setattr(policy, "SNAP", tmp_path / "snaps")
+    monkeypatch.setattr(policy, "WATCHLIST", tmp_path / "w.json")
+    (tmp_path / "w.json").write_text(json.dumps([{"id": "a", "name": "A", "url": "u1", "why": ""}, {"id": "b", "name": "B", "url": "u2", "why": ""}]))
+    res = policy.check(fetch_fn=lambda url: policy.to_text(POLICY_HTML) if url == "u1" else None)
+    assert {r["id"]: r["status"] for r in res} == {"a": "new", "b": "unfetchable"}
+    assert policy.stale(today=date.today().isoformat()) == ["b"] and policy.stale(today="2030-01-01") == ["a", "b"]
+    monkeypatch.setattr(policy, "REPORT", tmp_path / "R.md")
+    monkeypatch.setattr(policy, "DIR", tmp_path)
+    policy.write_report(res)
+    assert "unfetchable" in (tmp_path / "R.md").read_text()
+    assert policy.fetch.__name__ == "fetch" and all(w["url"].startswith("https://") for w in json.loads((Path(__file__).parent.parent / "channel/compliance/watchlist.json").read_text()))
+
+
+# ---- embeddings, semantic duplicates, variety ---------------------------------------------------
+
+def _unit(*xs):
+    import math
+    n = math.sqrt(sum(x * x for x in xs))
+    return [x / n for x in xs]
+
+
+def test_embed_centering_separates_a_near_duplicate_from_ordinary_neighbours():
+    from faceless import embed
+    # three vectors share a big common component (same domain); only a and b also share a direction of their own
+    a, b, c = _unit(10, 1, 0, 0), _unit(10, 1.1, 0.1, 0), _unit(10, 0, 1, 0)
+    assert embed.cosine(a, c) > 0.98                        # raw cosines all look alike
+    ca, cb, cc = embed.centered([a, b, c])
+    assert embed.cosine(ca, cb) > 0.9 > embed.cosine(ca, cc)
+
+
+def test_embed_cache_and_provider_fallback(tmp_path, monkeypatch):
+    from faceless import embed
+    from faceless.providers import ProviderUnavailable
+    monkeypatch.setattr(embed, "DB", tmp_path / "e.db")
+    calls = []
+
+    def gem(texts, model):
+        calls.append(("gemini", len(texts)))
+        raise ProviderUnavailable("down")
+
+    def cf(texts, model):
+        calls.append(("cloudflare", len(texts)))
+        return [_unit(*([1.0] + [0.0] * 255)) if "a" in t else _unit(*([0.0, 1.0] + [0.0] * 254)) for t in texts]
+    monkeypatch.setattr(embed, "_gemini", gem)
+    monkeypatch.setattr(embed, "_cloudflare", cf)
+    v = embed.embed(["alpha", "xyz"])
+    assert v is not None and len(v[0]) == embed.DIM and calls == [("gemini", 2), ("cloudflare", 2)]
+    calls.clear()
+    assert embed.embed(["alpha", "xyz"]) is not None and calls == []           # served from the cache
+    monkeypatch.setattr(embed, "_cloudflare", lambda *a: (_ for _ in ()).throw(ProviderUnavailable("down")))
+    assert embed.embed(["never seen before"]) is None                          # no provider: callers fall back to lexical gates
+
+
+def test_duplicate_gates_follow_thresholds_and_stay_silent_without_embeddings(monkeypatch):
+    from faceless import qa
+    monkeypatch.setattr(qa, "nearest_in_history", lambda script, job=None, k=3: [(0.80, "2026-10-02-s0-math-start-early")])
+    g = {x.name: x for x in qa.duplicate_gates({"title": "t", "beats": []})}
+    assert not g["not_semantic_duplicate"].passed and g["not_semantic_duplicate"].hard and not g["distinct_topic"].passed
+    monkeypatch.setattr(qa, "nearest_in_history", lambda script, job=None, k=3: [(0.60, "x")])
+    g = {x.name: x for x in qa.duplicate_gates({"title": "t", "beats": []})}
+    assert g["not_semantic_duplicate"].passed and not g["distinct_topic"].passed and not g["distinct_topic"].hard
+    monkeypatch.setattr(qa, "nearest_in_history", lambda script, job=None, k=3: None)
+    assert qa.duplicate_gates({"title": "t", "beats": []}) == []
+
+
+def test_variety_audit_scores_a_template_channel_high_and_a_varied_one_low(monkeypatch):
+    from faceless import variety
+    ref = [f"ref{i}" for i in range(16)]           # everything we ever wrote: distinct directions, so the centering mean is small
+
+    def vec(t):
+        idx = ref.index(t) if t in ref else int(t[1:]) if t[0] == "v" else 17
+        return _unit(*[1.0 if j == idx else 0.0 for j in range(20)])
+    monkeypatch.setattr(variety, "_all_texts", lambda: ref)
+    monkeypatch.setattr(variety.embed, "embed", lambda texts: [vec(t) for t in texts])
+    same = [{"job": f"j{i}", "pillar": "math", "title": "The cost of waiting", "hook": "YOUR DELAY IS COSTING YOU", "text": "same",
+             "render": {"cards": 0, "clips": 0, "music": "procedural"}} for i in range(8)]
+    varied = [{"job": f"j{i}", "pillar": ["math", "story", "myth", "escape"][i % 4], "title": f"{['Why', 'The', 'How', 'Myth', 'Rule', 'Stop', 'Your', 'Is'][i]} thing {i}",
+               "hook": f"HOOK NUMBER {i} {chr(65 + i)}", "text": f"v{i}", "render": {"cards": i % 2, "clips": 0, "music": f"m{i % 4}.mp3"}} for i in range(8)]
+    monkeypatch.setattr(variety, "recent", lambda n=20: same)
+    hi = variety.audit()
+    monkeypatch.setattr(variety, "recent", lambda n=20: varied)
+    lo = variety.audit()
+    assert hi["risk"] >= 60 and hi["level"] == "high" and lo["risk"] < 35 and lo["level"] == "low"
+    assert variety.proposals({"risk": 80})[0]["id"] == "variety-high" and variety.proposals({"risk": 20}) == [] and variety.proposals({"risk": None}) == []
+    monkeypatch.setattr(variety, "recent", lambda n=20: same[:3])
+    assert variety.audit()["risk"] is None
+
+
+def test_longcat_provider_is_skipped_without_a_key_and_handles_rate_limits(monkeypatch):
+    from faceless.providers import ProviderError, ProviderUnavailable, llm
+    monkeypatch.delenv("LONGCAT_API_KEY", raising=False)
+    with pytest.raises(ProviderUnavailable):
+        llm.longcat("hi", system=None, want_json=False, temperature=0.5)
+    monkeypatch.setenv("LONGCAT_API_KEY", "k")
+    seen = {}
+
+    class R:
+        def __init__(self, code, body=None):
+            self.status_code, self._b = code, body
+
+        def json(self):
+            return self._b
+
+    class H:
+        def __init__(self, r):
+            self.r = r
+
+        def post(self, url, **kw):
+            seen.update(url=url, auth=kw["headers"]["Authorization"], model=kw["json"]["model"])
+            return self.r
+    monkeypatch.setattr(llm, "http", lambda: H(R(200, {"choices": [{"message": {"content": "hello"}}]})))
+    assert llm.longcat("hi", system="s", want_json=False, temperature=0.5) == "hello" and seen["url"].startswith("https://api.longcat.chat/openai/")
+    assert seen["model"] == config.load()["llm"]["longcat_model"]
+    monkeypatch.setattr(llm, "http", lambda: H(R(429)))
+    with pytest.raises(ProviderUnavailable):
+        llm.longcat("hi", system=None, want_json=False, temperature=0.5)
+    monkeypatch.setattr(llm, "http", lambda: H(R(500)))
+    with pytest.raises(ProviderError):
+        llm.longcat("hi", system=None, want_json=False, temperature=0.5)
+    assert "longcat" in config.load()["llm"]["chain"] and "longcat" in llm.PROVIDERS
+
+
+def test_qa_never_raises_into_production(monkeypatch, tmp_path):
+    from faceless import qa
+    from faceless.providers import clef
+    _fake_clef(monkeypatch, lambda n, q: {})
+    monkeypatch.setattr(clef, "run", lambda *a, **k: (_ for _ in ()).throw(OSError("cannot identify image file")))
+    monkeypatch.setattr(qa.events, "emit", lambda *a, **k: None)
+    assert qa.check_image(str(tmp_path / "missing.jpg")) is None and qa.check_script("hello") is None
+    monkeypatch.setattr(qa, "nearest_in_history", lambda *a, **k: (_ for _ in ()).throw(RuntimeError("db locked")))
+    assert qa.duplicate_gates({"title": "t", "beats": []}) == []
+
+
+# ---- Muapi image provider ----------------------------------------------------------------------
+
+class _MuResp:
+    def __init__(self, code=200, body=None, content=b"", text=""):
+        self.status_code, self._b, self.content, self.text = code, body, content, text or json.dumps(body or {})
+
+    def json(self):
+        return self._b
+
+
+def _jpeg_bytes(size=(720, 1280)):
+    import io
+    from PIL import Image
+    buf = io.BytesIO()
+    Image.new("RGB", size, (30, 40, 50)).save(buf, "JPEG")
+    return buf.getvalue()
+
+
+def _mu_env(monkeypatch, tmp_path, session):
+    from faceless import ledger
+    from faceless.providers import images
+    monkeypatch.setattr(ledger, "LEDGER", tmp_path / "ledger.jsonl")
+    monkeypatch.setenv("MUAPI_API_KEY", "test-key")
+    monkeypatch.setattr(images, "http", lambda: session)
+    monkeypatch.setattr(images.time, "sleep", lambda s: None)
+    monkeypatch.setattr(images, "_mu_inflight", 0.0)
+    return images, ledger
+
+
+class _MuSession:
+    def __init__(self, submit, polls, download=None):
+        self.submit, self.polls, self.download, self.posted = submit, list(polls), download or _MuResp(content=_jpeg_bytes()), []
+
+    def post(self, url, **kw):
+        self.posted.append((url, kw["json"], kw["headers"]))
+        return self.submit
+
+    def get(self, url, **kw):
+        return self.polls.pop(0) if "predictions" in url else self.download
+
+
+def test_muapi_generates_records_spend_and_sends_the_key_only_as_a_header(tmp_path, monkeypatch):
+    sess = _MuSession(_MuResp(200, {"request_id": "r1", "status": "processing", "cost": {"amount_usd": 0.0052}}),
+                      [_MuResp(200, {"status": "processing"}), _MuResp(200, {"status": "completed", "outputs": ["https://cdn.example/x.png"], "has_nsfw_contents": [False]})])
+    images, ledger = _mu_env(monkeypatch, tmp_path, sess)
+    out = tmp_path / "a.jpg"
+    images.muapi("a coin on a desk", 864, 1536, 7, out)
+    assert out.exists() and ledger.used("muapi", "usd") == pytest.approx(0.0052) and ledger.used("muapi", "images") == 1
+    url, body, headers = sess.posted[0]
+    assert url.endswith("/flux-2-klein-4b-turbo") and body["aspect_ratio"] == "9:16" and headers == {"x-api-key": "test-key"} and "test-key" not in url
+
+
+def test_muapi_respects_the_daily_cap_and_blocks_itself_when_credit_runs_out(tmp_path, monkeypatch):
+    from faceless.providers import ProviderError, ProviderUnavailable
+    images, ledger = _mu_env(monkeypatch, tmp_path, _MuSession(_MuResp(402, text='{"detail":"Insufficient credits"}'), []))
+    with pytest.raises(ProviderUnavailable, match="credit"):
+        images.muapi("p", 864, 1536, 1, tmp_path / "a.jpg")
+    assert ledger.used("muapi", "blocked") == 1
+    with pytest.raises(ProviderUnavailable, match="cap"):                      # blocked for the rest of the day: no more requests are sent
+        images.muapi("p", 864, 1536, 1, tmp_path / "a.jpg")
+    monkeypatch.setattr(ledger, "LEDGER", tmp_path / "other.jsonl")
+    monkeypatch.setitem(config.load()["images"], "muapi_daily_usd", 0.004)      # below one image: cap reached before any request
+    with pytest.raises(ProviderUnavailable, match="cap"):
+        images.muapi("p", 864, 1536, 1, tmp_path / "a.jpg")
+    monkeypatch.setitem(config.load()["images"], "muapi_daily_usd", 1.5)
+    monkeypatch.setattr(images, "http", lambda: _MuSession(_MuResp(200, {"request_id": "r", "cost": {"amount_usd": 0.0052}}), [_MuResp(200, {"status": "completed", "outputs": ["u"], "has_nsfw_contents": [True]})]))
+    with pytest.raises(ProviderError, match="flagged"):
+        images.muapi("p", 864, 1536, 1, tmp_path / "a.jpg")
+    monkeypatch.delenv("MUAPI_API_KEY")
+    with pytest.raises(ProviderUnavailable, match="not set"):
+        images.muapi("p", 864, 1536, 1, tmp_path / "a.jpg")
+
+
+def test_image_chain_tries_cloudflare_then_muapi_before_openrouter():
+    chain = config.load()["images"]["chain"]
+    assert chain.index("cloudflare") < chain.index("muapi") < chain.index("openrouter") < chain.index("procedural")
+
+
+# ---- Muapi hook clips --------------------------------------------------------------------------
+
+def _hook_env(monkeypatch, tmp_path, session, *, enabled=True, frames_bad=False):
+    from faceless import hookclip, ledger, qa
+    monkeypatch.setattr(ledger, "LEDGER", tmp_path / "ledger.jsonl")
+    monkeypatch.setenv("MUAPI_API_KEY", "k")
+    monkeypatch.setitem(config.load()["production"].setdefault("hookclip", {}), "enabled", enabled)
+    monkeypatch.setattr(hookclip, "http", lambda: session)
+    monkeypatch.setattr(hookclip.time, "sleep", lambda s: None)
+    monkeypatch.setattr(hookclip, "estimate", lambda *a: 0.15)
+    monkeypatch.setattr(hookclip.flow, "probe", lambda p: {"duration": 6.0, "width": 720, "height": 1280})
+    monkeypatch.setattr(hookclip, "_frames", lambda clip, d, secs: [d / "f0.jpg", d / "f1.jpg", d / "f2.jpg"])
+    monkeypatch.setattr(qa, "check_frames", lambda paths, job=None: frames_bad)
+    monkeypatch.setattr(Job, "dir", property(lambda self: tmp_path / "job"))
+    return hookclip, ledger
+
+
+class _ClipSession:
+    def __init__(self, status="completed"):
+        self.status, self.calls = status, []
+
+    def post(self, url, **kw):
+        self.calls.append(url)
+        if url.endswith("/upload_file"):
+            return _MuResp(200, {"url": "https://s3/x.jpg"})
+        return _MuResp(200, {"request_id": "q1", "cost": {"amount_usd": 0.15}})
+
+    def get(self, url, **kw):
+        if "predictions" in url:
+            return _MuResp(200, {"status": self.status, "outputs": ["https://cdn/x.mp4"] if self.status == "completed" else []})
+        return _MuResp(content=b"mp4bytes")
+
+
+def test_hookclip_is_off_by_default_and_never_calls_out_when_off(tmp_path, monkeypatch):
+    hookclip, _ = _hook_env(monkeypatch, tmp_path, _ClipSession(), enabled=False)
+    assert hookclip.cfg()["enabled"] is False and hookclip.make(Job(id="j", pillar="story", topic="t", day="2026-10-08"), str(tmp_path / "s.jpg"), 3.0) is None
+    assert config.load()["production"]["hookclip"].get("max_per_day", 2) <= 3        # the daily spend stays small by design
+
+
+def test_hookclip_makes_a_clip_meters_spend_and_respects_the_daily_count(tmp_path, monkeypatch):
+    sess = _ClipSession()
+    hookclip, ledger = _hook_env(monkeypatch, tmp_path, sess)
+    still = tmp_path / "s.jpg"
+    still.write_bytes(_jpeg_bytes())
+    job = Job(id="j", pillar="story", topic="t", day="2026-10-08")
+    got = hookclip.make(job, str(still), 3.2)
+    assert got and got["source"].startswith("muapi:") and Path(got["clip"]).read_bytes() == b"mp4bytes" and sess.calls[0].endswith("/upload_file")
+    assert ledger.used("muapi", "clip_usd") == pytest.approx(0.15) and ledger.used("muapi", "clips") == 1
+    assert hookclip.make(job, str(still), 3.2) is not None and hookclip.make(job, str(still), 3.2) is None     # max_per_day = 2
+
+
+def test_hookclip_falls_back_to_the_still_on_failure_or_flagged_frames(tmp_path, monkeypatch):
+    still = tmp_path / "s.jpg"
+    still.write_bytes(_jpeg_bytes())
+    job = Job(id="j", pillar="story", topic="t", day="2026-10-08")
+    hookclip, _ = _hook_env(monkeypatch, tmp_path, _ClipSession(status="failed"))
+    assert hookclip.make(job, str(still), 3.2) is None
+    hookclip, _ = _hook_env(monkeypatch, tmp_path / "b", _ClipSession(), frames_bad=True)
+    assert hookclip.make(job, str(still), 3.2) is None and not (tmp_path / "b" / "job" / "hook-clip.mp4").exists()
+    hookclip, _ = _hook_env(monkeypatch, tmp_path / "c", _ClipSession(), frames_bad=None)           # no QA opinion: unchecked motion is not shipped
+    assert hookclip.make(job, str(still), 3.2) is None
+
+
+def test_wallet_watch_warns_only_when_runway_is_short(monkeypatch):
+    from faceless import forecast, scout
+    from faceless.providers import images
+    monkeypatch.setattr(forecast, "monthly_cost", lambda *a: {"muapi": 6.0})          # $0.20 a day
+    monkeypatch.setattr(images, "muapi_balance", lambda: 21.0)
+    assert scout.watch_wallet() == []                                                  # 105 days
+    monkeypatch.setattr(images, "muapi_balance", lambda: 2.0)
+    got = scout.watch_wallet()
+    assert got and got[0]["id"] == "muapi-topup" and got[0]["autonomy"] == "owner" and "10 days" in got[0]["title"]
+    monkeypatch.setattr(images, "muapi_balance", lambda: None)
+    assert scout.watch_wallet() == []

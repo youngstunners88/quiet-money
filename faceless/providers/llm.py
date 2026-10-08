@@ -106,6 +106,26 @@ def openrouter(prompt: str, *, system: str | None, want_json: bool, temperature:
     raise ProviderError("openrouter: " + ",".join(errs))
 
 
+def longcat(prompt: str, *, system: str | None, want_json: bool, temperature: float) -> str:
+    """Meituan LongCat API (OpenAI-compatible, MIT-licensed models; a free daily allowance per account, set LONGCAT_API_KEY).
+    A third free-or-cheap voice for scripts when Gemini's free tier is spent; absent key means skipped."""
+    key = config.env("LONGCAT_API_KEY")
+    if not key:
+        raise ProviderUnavailable("LONGCAT_API_KEY not set")
+    cfg = config.load()["llm"]
+    msgs = ([{"role": "system", "content": system}] if system else []) + [{"role": "user", "content": prompt}]
+    r = http().post("https://api.longcat.chat/openai/v1/chat/completions", headers={"Authorization": f"Bearer {key}"}, timeout=180,
+                    json={"model": cfg.get("longcat_model", "LongCat-2.5-Preview"), "messages": msgs, "temperature": temperature, "max_tokens": 8192})
+    if r.status_code == 429:
+        raise ProviderUnavailable("longcat rate limit or daily allowance used")
+    if r.status_code != 200:
+        raise ProviderError(f"longcat {r.status_code}")
+    try:
+        return r.json()["choices"][0]["message"]["content"]
+    except (KeyError, IndexError, ValueError) as e:
+        raise ProviderError("longcat: empty response") from e
+
+
 def pollinations(prompt: str, *, system: str | None, want_json: bool, temperature: float) -> str:
     msgs = ([{"role": "system", "content": system}] if system else []) + [{"role": "user", "content": prompt}]
     r = http().post("https://text.pollinations.ai/openai", json={"model": "openai", "messages": msgs,
@@ -115,7 +135,7 @@ def pollinations(prompt: str, *, system: str | None, want_json: bool, temperatur
     return r.json()["choices"][0]["message"]["content"]
 
 
-PROVIDERS = {"gemini": gemini, "openrouter": openrouter, "pollinations": pollinations}
+PROVIDERS = {"gemini": gemini, "longcat": longcat, "openrouter": openrouter, "pollinations": pollinations}
 
 
 def complete(prompt: str, *, system: str | None = None, want_json: bool = False,

@@ -4,6 +4,8 @@ Every routing / scoring / approval question goes through `ask()` with a code-com
 fallback. Backends:
   heuristic  - the fallback itself (always available, free, deterministic)
   jev        - TypeSafe's System One model (needs TYPESAFE_API_KEY + `pip install typesafe-sdk`)
+  clef       - Cloudflare's open (Apache 2.0) decision model hosted on Workers AI: no new account, uses the Cloudflare key we already
+               have (auto-selected when no Jev/Laya is configured; counts against the free neuron budget)
   laya       - open-source (Apache 2.0) Jev-compatible engine you host yourself (needs LAYA_URL, optional
                LAYA_API_KEY); same choice/score/noul questions over POST /v1/systemone
 
@@ -51,8 +53,33 @@ def _backend() -> str:
     if b == "auto":
         if config.env("LAYA_URL"):
             return "laya"
-        return "jev" if config.env("TYPESAFE_API_KEY") else "heuristic"
+        if config.env("TYPESAFE_API_KEY"):
+            return "jev"
+        from faceless.providers import clef
+        return "clef" if clef.available() else "heuristic"
     return b
+
+
+def _ask_clef(questions: dict[str, Q], state: dict) -> dict:
+    """Cloudflare Clef (open weights, Jev-API compatible) on Workers AI. Counts against the free neuron budget; skipped when it is spent."""
+    from faceless.providers import clef
+    qs = {}
+    for name, q in questions.items():
+        if q.kind == "choice":
+            qs[name] = {"type": "choice", "instructions": q.instructions, "criteria": dict(q.options)}
+        elif q.kind == "score":
+            qs[name] = {"type": "score", "instructions": q.instructions, "criteria": list(q.levels)}
+        else:
+            qs[name] = {"type": "noul", "instructions": q.instructions}
+    out = {}
+    for name, a in clef.run(json.dumps(state, default=str), qs).items():
+        if "choice" in a:
+            out[name] = (a["choice"], a.get("confidence", 0.0))
+        elif "score" in a:
+            out[name] = (a["score"], a.get("confidence", 0.0))
+        elif "noul" in a:
+            out[name] = (a["noul"], abs(a["noul"] - 0.5) * 2)
+    return out
 
 
 def _ask_laya(questions: dict[str, Q], state: dict) -> dict:
@@ -121,10 +148,10 @@ def ask(questions: dict[str, Q], state: dict, job: str | None = None) -> dict[st
     backend = _backend()
     floor = cfg.get("confidence_floor", 0.85)
     decisions = {n: Decision(n, q.fallback, 1.0, "heuristic") for n, q in questions.items()}
-    if backend in ("jev", "laya"):
+    if backend in ("jev", "laya", "clef"):
         t0 = time.time()
         try:
-            answers = (_ask_laya if backend == "laya" else _ask_jev)(questions, state)
+            answers = {"laya": _ask_laya, "jev": _ask_jev, "clef": _ask_clef}[backend](questions, state)
         except Exception as e:  # noqa: BLE001 - on any Jev error keep the ordinary route
             events.emit("JEV_ERROR", job=job, backend=backend, error=str(e)[:300])
             answers = {}

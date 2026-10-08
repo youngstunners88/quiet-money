@@ -23,7 +23,9 @@ Produces the day's videos end to end with the repo root and leaves posting packs
 4. Spot-check at least one video visually: extract frames at 0.5 s, 3 s, mid, and end
    (`ffmpeg -ss <t> -i final.mp4 -frames:v 1 frame.jpg`) and look at them: hook box readable, captions not
    clipped, images match the narration, no text artifacts in images.
-5. Report: titles, scores, durations, spend (`python -m faceless status`), and anything held.
+5. Check the supply and QA: `python -m faceless doctor` shows the Muapi wallet and whether the semantic checks are on. A video's `images.json` rows carry `qa` and
+   `qa_swapped` (stills replaced by cards because a decision model saw text, a face or a logo). If Muapi's wallet is under 21 days of runway the weekly scout proposes a top-up (owner).
+6. Report: titles, scores, durations, spend (`python -m faceless status`), and anything held.
 
 ## Delivering videos
 - Posting packs: `distribution/queue/<day>/slot<N>-<pillar>/` (video.mp4, POST.md, cover.jpg).

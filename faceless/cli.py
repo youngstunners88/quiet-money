@@ -35,8 +35,16 @@ def cmd_doctor(_args) -> int:
     from faceless.pipeline import cards
     print(f"  {'OK ' if cards.available() else '..  '}motion cards: HyperFrames {cards.CLI} needs Node 22+ and npx "
           f"({'ready' if cards.available() else 'unavailable: videos use stills only'}); mode {cfg_cards_mode()}")
+    from faceless import musiclib, qa
+    n_tracks = len(musiclib.tracks())
+    print(f"  {'OK ' if n_tracks else '..  '}music library: {n_tracks} tracks ({'real instrumental beds' if n_tracks else 'procedural bed only; `music --build`'}); "
+          f"production.music = {config.load()['production'].get('music')}")
+    from faceless.providers import images as _img
+    bal = _img.muapi_balance()
+    print(f"  {'OK ' if bal else '..  '}Muapi image fallback: " + (f"wallet ${bal:.2f}" if bal is not None else "no key or unreachable (falls back to OpenRouter)"))
+    print(f"  {'OK ' if qa.enabled() else '..  '}semantic QA (Cloudflare Clef): {'on' if qa.enabled() else 'off (needs the Cloudflare keys and [qa] enabled)'}")
     keys = {
-        "llm": ["GEMINI_API_KEY", "OPENROUTER_API_KEY"],
+        "llm": ["GEMINI_API_KEY", "LONGCAT_API_KEY", "OPENROUTER_API_KEY"],
         "images": ["CLOUDFLARE_API_KEY", "CLOUDFLARE_ACCOUNT_ID", "OPENROUTER_API_KEY"],
         "voice (optional premium)": ["ELEVENLABS_API_KEY"],
         "publish (optional)": ["UPLOAD_POST_API_KEY", "UPLOAD_POST_USER"],
@@ -225,6 +233,60 @@ def cmd_brandkit(args) -> int:
     return 0
 
 
+def cmd_qa(args) -> int:
+    from faceless import qa
+    res = qa.calibrate(args.images, args.scripts)
+    for kind in ("images", "scripts"):
+        rows = res[kind]
+        print(f"{kind}: {len(rows)} scored")
+        keys = [k for k in (rows[0] if rows else {}) if k not in ("file", "flags")]
+        for k in keys:
+            vals = sorted(r[k] for r in rows)
+            print(f"  {k}: median {vals[len(vals) // 2]:.2f}  p90 {vals[int(len(vals) * .9)]:.2f}  max {vals[-1]:.2f}  over-threshold {sum(1 for r in rows if k in r['flags'])}")
+        for r in rows:
+            if r["flags"]:
+                print("   flagged", r["file"], {k: r[k] for k in keys}, r["flags"])
+    return 0
+
+
+def cmd_music(args) -> int:
+    from faceless import musiclib
+    if args.build:
+        for r in musiclib.build(args.limit):
+            print(json.dumps({k: r[k] for k in r if k in ("file", "seconds", "bpm", "failed", "skipped")}))
+        return 0
+    rows = musiclib.tracks()
+    for t in rows:
+        print(f"{t['file']:14} {t['seconds']:>5}s  {t['bpm']} bpm  {t['mood'][:70]}")
+    print(f"{len(rows)} tracks; {len(musiclib.plan())} still to build (`music --build`)")
+    return 0
+
+
+def cmd_policy(args) -> int:
+    from pathlib import Path
+
+    from faceless import policy
+    if args.record:
+        pid, file = args.record
+        res = [policy.record_text(pid, Path(file).read_text(encoding="utf-8", errors="replace"))]
+    else:
+        res = policy.check()
+    policy.write_report(res)
+    for r in res:
+        print(f"{r['id']:34} {r['status']:12} {r['rules']:>3} rules" + (f"  +{len(r['added'])} -{len(r['removed'])}" if r["status"] == "changed" else ""))
+    late = policy.stale()
+    if late:
+        print("never read or older than 14 days:", ", ".join(late))
+    return 0
+
+
+def cmd_variety(args) -> int:
+    from faceless import variety
+    variety.write(args.n)
+    print(variety.REPORT.read_text(encoding="utf-8"))
+    return 0
+
+
 def cmd_forecast(_args) -> int:
     from faceless import forecast
     print(forecast.report())
@@ -350,6 +412,20 @@ def main(argv: list[str] | None = None) -> int:
     bk.add_argument("--out", help="output folder")
     bk.add_argument("--samples", action="store_true", help="(re)build the four gallery samples and GIG.md")
     bk.set_defaults(fn=cmd_brandkit)
+    qq = sub.add_parser("qa", help="calibrate the semantic QA gates (Clef) on cached images and finished scripts; spends free neurons")
+    qq.add_argument("--images", type=int, default=40)
+    qq.add_argument("--scripts", type=int, default=30)
+    qq.set_defaults(fn=cmd_qa)
+    mu = sub.add_parser("music", help="the music library: list tracks, or --build the missing ones (Lyria RealTime, free tier, about 90 s each)")
+    mu.add_argument("--build", action="store_true")
+    mu.add_argument("--limit", type=int, help="build at most N tracks")
+    mu.set_defaults(fn=cmd_music)
+    po = sub.add_parser("policy", help="policy watchdog: fetch the watched rule pages and report changes; --record ID FILE saves text fetched another way")
+    po.add_argument("--record", nargs=2, metavar=("ID", "FILE"))
+    po.set_defaults(fn=cmd_policy)
+    va = sub.add_parser("variety", help="sameness audit of the last N videos (YouTube's inauthentic-content risk); writes analytics/variety.md")
+    va.add_argument("-n", type=int, default=20)
+    va.set_defaults(fn=cmd_variety)
     sub.add_parser("forecast", help="the math: next batch cost, monthly cost, and assumption-labeled revenue ladder").set_defaults(fn=cmd_forecast)
     me = sub.add_parser("memory", help="search everything we've made (scripts, outcomes, failed gates)")
     me.add_argument("query", nargs="*")

@@ -20,7 +20,13 @@ python -m faceless flow        # today's 3 Flow prompts for the owner; `flow sta
 python -m faceless products    # build + recalculate + verify the spreadsheet products, write shop listings
 python -m faceless autoresponder  # the 7-day Money Reset email sequence (numbers computed, rule-checked, import-ready)
 python -m faceless brandkit "<Name>" --tagline "..." --palette mint   # Fiverr brand-kit order; `--samples` rebuilds the gig gallery
+python -m faceless qa          # calibrate the semantic QA gates (Clef) on cached stills and scripts; spends free neurons
+python -m faceless variety     # sameness audit of the last 20 videos (YouTube's inauthentic-content risk)
+python -m faceless policy      # re-read the watched rule pages and report changes (`--record ID FILE` for pages fetched with Exa)
+python -m faceless music       # the music library (`--build` makes missing beds; needs `pip install google-genai`)
 ```
+
+Resource verdicts (the coach's list, connectors, skills) are in `channel/empire/RESOURCES.md`; verified platform rules in `channel/compliance/platform-rules.md`.
 
 ## The gauntlet (portfolio.jsonl -> RANKING.md)
 Data: `channel/empire/portfolio.jsonl`, one line per opportunity. Scores 1-5 are judgment until metrics exist.

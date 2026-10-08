@@ -1,0 +1,27 @@
+{
+ "id": "muapi-pricing",
+ "fetched": "2026-10-08",
+ "sha": "6b8492f14e2eca7c",
+ "snippets": [
+  "You only pay for what you generate — no monthly subscription fees for API access.",
+  "Every API call deducts credits from your wallet based on the model used and the complexity of the generation.",
+  "Each model has a per-generation cost shown on its playground page.",
+  "Output duration — video generations scale with length (e.g.",
+  "Every API response includes the actual charge for that request, so you don't have to compute it from a pricing table:",
+  "If you're building on top of MuAPI (resellers, agents, custom dashboards), you can fetch the live pricing catalog programmatically.",
+  "List every model with pricing",
+  "curl https://api.muapi.ai/api/v1/models",
+  "\"group_of\": \"image-generation\",",
+  "Optional query filters: ?category=Text+to+Video, ?family=flux, ?group_of=image-generation.",
+  "For fixed-price models, cost is exactly what you'll be charged per call.",
+  "For models where dynamic_pricing is true (most video and audio models, where duration or resolution affect the price), use the estimate endpoint below to get the exact price for a specific request.",
+  "curl https://api.muapi.ai/api/v1/models/flux-dev",
+  "For models with dynamic pricing, send the same request body you'd submit to the generation endpoint and you'll get back the exact USD cost:",
+  "curl -X POST https://api.muapi.ai/api/v1/models/veo3-fast/estimate-cost \\",
+  "Safe to use as the basis for your own pricing markup — fetch it server-side before showing the user a \"this will cost $X\" confirmation.",
+  "High-volume customers can contact us for custom credit packages, private deployment pricing, and volume discounts.",
+  "One API for all state-of-the-art AI models.",
+  "Build, scale, and deploy generative AI workflows at the lowest cost.All Systems Operational"
+ ],
+ "changed": "2026-10-08"
+}
