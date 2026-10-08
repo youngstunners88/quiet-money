@@ -36,14 +36,17 @@ def files() -> list[str]:
     """What a commit would contain: tracked files plus new ones that are not ignored, minus anything deleted."""
     r = subprocess.run(["git", "ls-files", "-z", "--cached", "--others", "--exclude-standard"], cwd=STUDIO, capture_output=True, check=True)
     names = [n for n in r.stdout.decode("utf-8", "replace").split("\0") if n]
-    return sorted({n for n in names if (STUDIO / n).is_file()})
+    return sorted({n for n in names if (STUDIO / n).is_file() or (STUDIO / n).is_symlink()})          # skills are symlinked into .claude/skills; a checkout keeps them
 
 
 def export(dest: Path) -> int:
     n = 0
     for rel in files():
         (dest / rel).parent.mkdir(parents=True, exist_ok=True)
-        shutil.copy2(STUDIO / rel, dest / rel)
+        if (STUDIO / rel).is_symlink():
+            os.symlink(os.readlink(STUDIO / rel), dest / rel)
+        else:
+            shutil.copy2(STUDIO / rel, dest / rel)
         n += 1
     git = {"GIT_AUTHOR_NAME": "ci", "GIT_AUTHOR_EMAIL": "ci@example.com", "GIT_COMMITTER_NAME": "ci", "GIT_COMMITTER_EMAIL": "ci@example.com"}
     subprocess.run(["git", "init", "-q"], cwd=dest, check=True, env={**os.environ, **git})

@@ -1,7 +1,7 @@
 {
  "id": "cloudflare-workers-ai-pricing",
  "fetched": "2026-10-08",
- "sha": "4ca14e7d71276e23",
+ "sha": "2227d893353fec34",
  "snippets": [
   "Fetch the complete documentation index at: https://developers.cloudflare.com/workers-ai/llms.txt",
   "Workers AI llms.txt âï¸",
@@ -20,8 +20,7 @@
   "@cf/deepseek-ai/deepseek-r1-distill-qwen-32b",
   "@cf/deepseek-ai/deepseek-v4-flash-0731",
   "@cf/deepseek-ai/deepseek-v4-pro-0813",
-  "@cf/pipecat-ai/smart-turn-v2",
-  "SolutionsSSE and SASE platformCloudflare AI CloudAI SecurityFrontend Development PlatformMulti-Tenant Platform DevelopmentWeb Security Platform"
+  "@cf/pipecat-ai/smart-turn-v2"
  ],
  "changed": "2026-10-08"
 }

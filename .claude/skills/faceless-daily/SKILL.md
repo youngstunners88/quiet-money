@@ -39,7 +39,7 @@ Produces the day's videos end to end with the repo root and leaves posting packs
 The batch runs daily as a Claude Code routine in the owner's cloud environment, which already holds the API
 keys as environment variables, so no key is stored on GitHub. `.claude/hooks/session-start.sh` installs the
 Python dependencies when the session starts. In a routine session:
-1. Steps 1-4 above.
+1. Steps 0-4 above (`daily` and `make` also run a fast gate themselves: on a machine that cannot render they print BLOCKED, spend nothing and exit 4).
 2. Commit `state/`, `script-lab/`, `gauntlet/reports/` and `analytics/` (never media) and push to `main`;
    the push rebuilds the website. If the push is rejected, the remote moved: `git fetch origin main`, rebase onto it (the logs in
    `state/` merge by union, so both sessions' lines survive), run the tests, push again. Never force-push.

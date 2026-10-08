@@ -1,7 +1,7 @@
 {
  "id": "youtube-monetization",
  "fetched": "2026-10-08",
- "sha": "4dab213f412944c2",
+ "sha": "66ca2a133befa766",
  "snippets": [
   "YouTube channel monetization policies",
   "July 15, 2025: We’re making a minor update to our “repetitious content” policy to better clarify this includes content that is repetitive or mass-produced.",
@@ -63,7 +63,6 @@
   "Channels that do not meet that bar will not be eligible for the YouTube Partner Program.",
   "Channels that heavily rely on generic templates or emotionally manipulative themes, like a series showing repetitive scenarios of animals in exaggerated distress or peril",
   "Content that lacks a clear narrative arc or logical progression, such as videos that stitch together unrelated or inconsistent AI clips to surprise or shock viewers",
-  "AI Personas Related to Sensitive Topics",
   "This policy refers to channels that use AI-generated personas to deliver information on sensitive topics.",
   "To protect viewers who may be confused or otherwise negatively impacted by this content, channels uploading this content will not be allowed to monetize.",
   "An AI “doctor” providing medical diagnoses, health advice, or wellness remedies",
@@ -92,7 +91,8 @@
   "If your channel is terminated or suspended from the YouTube Partner Program, you are no longer entitled to earn any revenue.",
   "As a member of the YouTube Partner Program, you can make your videos eligible to earn ad revenue if they meet our advertiser-friendly content guidelines.",
   "For more information about reasons why content may not be eligible for monetization, see: Understand your Content tab & manage notices on your video content.",
-  "Suspend your participation in the YouTube Partner Program"
+  "Suspend your participation in the YouTube Partner Program",
+  "Violation of our YouTube channel monetization policies may result in monetization being suspended or permanently disabled on all or any of your accounts."
  ],
  "changed": "2026-10-08"
 }

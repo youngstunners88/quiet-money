@@ -54,7 +54,8 @@ def checks_tools() -> list[Check]:
             importlib.import_module(mod)
             out.append(Check(f"python:{mod}", OK, "importable"))
         except ImportError:
-            out.append(Check(f"python:{mod}", FAIL, "not installed", "pip install -r requirements.txt"))
+            other_voice = mod == "edge_tts" and _present("ELEVENLABS_API_KEY", "GEMINI_API_KEY")           # the voice chain falls through to a keyed voice
+            out.append(Check(f"python:{mod}", WARN if other_voice else FAIL, "not installed" + (" (another voice will be used)" if other_voice else ""), "pip install -r requirements.txt"))
     fonts = sorted(p.name for p in Paths.fonts.glob("*.ttf"))
     out.append(Check("fonts", OK if len(fonts) >= 4 else FAIL, f"{len(fonts)} font files", "" if len(fonts) >= 4 else "git checkout assets/fonts"))
     out.append(Check("optional:node", OK if shutil.which("npx") else WARN, "motion cards available" if shutil.which("npx") else "no Node: videos use stills only (fine)", ""))
@@ -215,6 +216,22 @@ def run(wallet: bool = True) -> list[Check]:
         except Exception as e:  # noqa: BLE001
             out.append(Check("muapi wallet", WARN, f"the check failed to run: {type(e).__name__}"))
     return out
+
+
+# Failures that make a production run impossible or unsafe. Everything else is advice: a stale report, a leaked-secret hit, broken skills or a spent
+# ceiling must be reported, but must not stop today's videos (the free providers still work, and a stalled batch is what the watchdog exists to catch).
+BLOCKING = {"config", "ffmpeg", "ffprobe", "python:PIL", "python:numpy", "python:cv2", "python:requests", "fonts", "git state", "disk:repo", "disk:temp"}
+
+
+def gate() -> list[Check]:
+    """The blocking failures, from only the checks that can block (fast: no network, no repo scan). `daily` and `make` refuse to start while any exist."""
+    out: list[Check] = []
+    for g in (checks_config, checks_tools, checks_machine):
+        try:
+            out += g()
+        except Exception as e:  # noqa: BLE001 - a check that cannot run must not stop production by itself
+            out.append(Check(g.__name__.replace("checks_", ""), WARN, f"the check failed to run: {type(e).__name__}: {str(e)[:80]}"))
+    return [c for c in out if c.level == FAIL and c.name in BLOCKING]
 
 
 def exit_code(checks: list[Check], strict: bool = False) -> int:

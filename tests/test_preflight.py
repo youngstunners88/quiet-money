@@ -154,3 +154,49 @@ def test_the_tool_checks_name_what_to_install(monkeypatch):
     c = by_name(preflight.checks_tools())
     assert c["ffmpeg"].level == preflight.FAIL and "apt-get" in c["ffmpeg"].fix
     assert c["optional:node"].level == preflight.WARN and c["optional:libreoffice"].level == preflight.WARN
+
+
+# ---------------------------------------------------------------- the gate in front of production
+
+def test_the_gate_names_only_failures_that_make_a_run_impossible(monkeypatch):
+    monkeypatch.setattr(preflight.shutil, "which", lambda t: None)
+    names = {c.name for c in preflight.gate()}
+    assert {"ffmpeg", "ffprobe"} <= names
+    assert not names & {"optional:node", "optional:libreoffice", "last daily batch", "skills", "secrets in git"}
+
+
+def test_a_stale_report_or_a_leaked_secret_never_blocks_production(repo, monkeypatch):
+    (Paths.reports / "daily-2020-01-01.md").write_text("old", encoding="utf-8")
+    monkeypatch.setattr(preflight, "leaked_secrets", lambda: ["notes.md"])
+    assert by_name(preflight.checks_freshness())["last daily batch"].level == preflight.FAIL          # the standalone report still fails loudly
+    assert by_name(preflight.checks_secrets())["secrets in git"].level == preflight.FAIL
+    assert not [c for c in preflight.gate() if c.name in ("last daily batch", "secrets in git")]
+
+
+def test_a_broken_git_state_blocks_and_edge_tts_blocks_only_without_another_voice(repo, monkeypatch):
+    (repo / ".git").mkdir()
+    (repo / ".git" / "rebase-merge").mkdir()
+    assert "git state" in {c.name for c in preflight.gate()}
+    real_import = preflight.importlib.import_module
+
+    def no_edge(name):
+        if name == "edge_tts":
+            raise ImportError(name)
+        return real_import(name)
+    monkeypatch.setattr(preflight.importlib, "import_module", no_edge)
+    assert by_name(preflight.checks_tools())["python:edge_tts"].level == preflight.FAIL
+    monkeypatch.setenv("ELEVENLABS_API_KEY", "k")
+    assert by_name(preflight.checks_tools())["python:edge_tts"].level == preflight.WARN
+
+
+def test_daily_and_make_stop_before_spending_anything_when_the_machine_cannot_finish(monkeypatch, capsys):
+    import argparse
+    from faceless import cli, orchestrator
+    monkeypatch.setattr(preflight, "gate", lambda: [preflight.Check("ffmpeg", preflight.FAIL, "missing", "apt-get install -y ffmpeg")])
+    monkeypatch.setattr(orchestrator, "daily", lambda *a, **k: pytest.fail("a run started on a machine that cannot render"))
+    assert cli.cmd_daily(argparse.Namespace(count=None, extra=0, pillar=None, no_judge=False, no_publish=True, skip_preflight=False)) == 4
+    out = capsys.readouterr().out
+    assert "BLOCKED" in out and "apt-get install -y ffmpeg" in out and "nothing was spent" in out
+    assert cli.cmd_make(argparse.Namespace(pillar="math", topic=None, script=None, slot=0, voice=None, no_judge=True, no_publish=True, skip_preflight=False)) == 4
+    from faceless import events
+    assert [e["checks"] for e in events.read() if e["type"] == "PREFLIGHT_BLOCKED"] == [["ffmpeg"], ["ffmpeg"]]

@@ -55,13 +55,19 @@ def to_text(html: str) -> str:
     return re.sub(r"[ \t\r\f\v]+", " ", "".join(p.out))
 
 
+def headline(s: str) -> bool:
+    """A Title Case line with no closing punctuation is a page headline or a news-sidebar item, not a rule ("FTC Secures Fair Pricing Protections by Taking Action ...")."""
+    words = s.split()
+    return len(words) >= 6 and s[-1] not in ".!?:;" and sum(w[:1].isupper() for w in words) / len(words) >= 0.7
+
+
 def snippets(text: str, cap: int = 90) -> list[str]:
-    """Rule-stating sentences: 25-300 characters, mentioning a rule word. Order kept, duplicates dropped."""
+    """Rule-stating sentences: 25-300 characters, mentioning a rule word, not a headline. Order kept, duplicates dropped."""
     seen, out = set(), []
     for part in re.split(r"(?<=[.!?])\s+|\n+", text):
         s = " ".join(part.split())
         key = s.lower()
-        if 25 <= len(s) <= 300 and RULE.search(s) and key not in seen:
+        if 25 <= len(s) <= 300 and RULE.search(s) and not headline(s) and key not in seen:
             seen.add(key)
             out.append(s)
         if len(out) >= cap:

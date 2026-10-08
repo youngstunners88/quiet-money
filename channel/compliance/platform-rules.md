@@ -18,7 +18,11 @@ check the live page before the owner lists, posts or sends.
 ## TikTok ([Creator Rewards](https://support.tiktok.com/en/business-and-creator/creator-rewards-program/creator-rewards-program), [AI content](https://support.tiktok.com/en/using-tiktok/creating-videos/ai-generated-content))
 - Creator Rewards needs: personal account (not Business), 18+, 10,000 followers, 100,000 views in 30 days, videos at least one minute, original content "filmed,
   designed, and produced entirely by yourself", at least 1,000 qualified For You views per video. Sponsored content and Series videos do not qualify.
-- Not original: duets/stitches, copied or slightly modified content, content from other creators without new ideas, looping or templated reuse.
+- Not original: duets/stitches, copied or slightly modified content (sped up, filters, fixed texts or stickers), content from other creators without new ideas, looping or templated reuse,
+  and, word for word, "content that contains looping videos, single or multiple photos, or only text overlays". Re-read 2026-10-08.
+  **What it means for a stills-and-voice format:** a slideshow of photos is named as not original. Our defence is substance and motion, not hope: computed numbers, a distinct story or steps, motion cards for numeric beats, step cards, Ken Burns movement on every shot, varied formats, and owner Flow clips or Muapi hook clips when the owner switches them on. Do not rely on stills alone for the rewards application.
+- Copyrighted music that plays over one minute is at risk of being muted; our beds are generated instrumentals (`assets/music`), not licensed tracks.
+- AI labels: TikTok also applies an "AI-generated" label itself when it finds C2PA Content Credentials, and an auto label cannot be removed. Our own label stays ON either way.
 - Label realistic AI-generated content; fake authoritative sources, crisis events and the likeness of private people or minors are prohibited.
 - What it means here: our 61-72 second videos clear the length bar; the account must be a Personal account; follower and view thresholds come first.
 

@@ -31,11 +31,16 @@ def test_the_export_holds_what_a_commit_would_and_never_an_ignored_file(tmp_path
     (repo / "new.py").write_text("z = 3\n", encoding="utf-8")    # untracked and not ignored: a commit would add it
     (repo / "build.zip").write_bytes(b"zip")                     # ignored build output: absent from a clean checkout
     (repo / "secret.env").write_text("KEY=1\n", encoding="utf-8")
+    (repo / "shared").mkdir()
+    (repo / "shared" / "skill.md").write_text("s\n", encoding="utf-8")
+    (repo / "linked").symlink_to("shared")                          # a directory symlink, like .claude/skills/composio
+    _git(repo, "add", "linked", "shared")
     monkeypatch.setattr(cilocal, "STUDIO", repo)
-    assert cilocal.files() == [".gitignore", "kept.py", "new.py"]
+    assert cilocal.files() == [".gitignore", "kept.py", "linked", "new.py", "shared/skill.md"]
     dest = tmp_path / "out"
     dest.mkdir()
-    assert cilocal.export(dest) == 3 and not (dest / "build.zip").exists() and (dest / ".git").exists()
+    assert cilocal.export(dest) == 5 and not (dest / "build.zip").exists() and (dest / ".git").exists()
+    assert (dest / "linked").is_symlink() and (dest / "linked" / "skill.md").read_text(encoding="utf-8") == "s\n"
 
 
 def test_the_runner_environment_has_no_keys_and_only_the_runner_tools(tmp_path, monkeypatch):

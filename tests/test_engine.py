@@ -1262,6 +1262,15 @@ def test_policy_snippets_keep_only_rule_sentences_and_skip_scripts():
     assert policy.snippets("Nothing about rules here, only a long calm sentence about the weather today.") == []
 
 
+def test_policy_snippets_ignore_headlines_and_news_sidebars_but_keep_short_title_case_rules():
+    from faceless import policy
+    news = "FTC Secures Fair Pricing Protections by Taking Action Against Major Wholesale T-Shirt Distributors"
+    rule = "You Must Label Realistic AI-Generated Content Before You Post It."
+    bullet = "Creators must disclose AI-generated content in the post settings"
+    assert policy.headline(news) and not policy.headline(rule) and not policy.headline(bullet)
+    assert policy.snippets(f"{news}\n{rule}\n{bullet}") == [rule, bullet]
+
+
 def test_policy_record_reports_new_unchanged_and_changed(tmp_path, monkeypatch):
     from faceless import policy
     monkeypatch.setattr(policy, "SNAP", tmp_path)

@@ -61,6 +61,8 @@ def cmd_doctor(_args) -> int:
 
 
 def cmd_make(args) -> int:
+    if _blocked_by_preflight(args):
+        return 4
     from faceless import orchestrator
     from faceless.state import new_job
     Paths.ensure()
@@ -78,7 +80,25 @@ def cmd_make(args) -> int:
     return 0
 
 
+def _blocked_by_preflight(args) -> bool:
+    """Refuse to start a run on a machine that cannot finish it: nothing is spent on scripts that can never be rendered."""
+    if getattr(args, "skip_preflight", False):
+        return False
+    from faceless import events, preflight
+    blockers = preflight.gate()
+    if not blockers:
+        return False
+    print("BLOCKED: this machine cannot finish a video, so nothing was started (and nothing was spent):")
+    for b in blockers:
+        print(f"  FAIL {b.name}: {b.detail}" + (f"\n       fix: {b.fix}" if b.fix else ""))
+    print("Fix the above and run again (or --skip-preflight if you know better).")
+    events.emit("PREFLIGHT_BLOCKED", checks=[b.name for b in blockers])
+    return True
+
+
 def cmd_daily(args) -> int:
+    if _blocked_by_preflight(args):
+        return 4
     from faceless import orchestrator
     jobs = orchestrator.daily(args.count, extra=args.extra, pillar=args.pillar, judge=not args.no_judge,
                               do_publish=not args.no_publish)
@@ -613,6 +633,7 @@ def main(argv: list[str] | None = None) -> int:
     m.add_argument("--voice", choices=["edge", "elevenlabs", "gemini"])
     m.add_argument("--no-judge", action="store_true")
     m.add_argument("--no-publish", action="store_true")
+    m.add_argument("--skip-preflight", action="store_true", help="start even if the machine cannot finish a video (not recommended)")
     m.set_defaults(fn=cmd_make)
     d = sub.add_parser("daily", help="produce the day's batch (resumes: only fills slots without a finished video)")
     d.add_argument("--count", type=int)
@@ -620,6 +641,7 @@ def main(argv: list[str] | None = None) -> int:
     d.add_argument("--pillar", choices=[x.id for x in config.load()["pillars"]], help="series for every new slot (with --extra)")
     d.add_argument("--no-judge", action="store_true")
     d.add_argument("--no-publish", action="store_true")
+    d.add_argument("--skip-preflight", action="store_true", help="start even if the machine cannot finish a video (not recommended)")
     d.set_defaults(fn=cmd_daily)
     sub.add_parser("status", help="today's jobs and spend").set_defaults(fn=cmd_status)
     sc = sub.add_parser("scout", help="rank the next best opportunities; --act tops up topic backlogs")
