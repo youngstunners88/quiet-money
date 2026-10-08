@@ -478,6 +478,26 @@ def cmd_preflight(args) -> int:
     return preflight.exit_code(checks, args.strict)
 
 
+def cmd_intake(args) -> int:
+    """Look at outside tools without installing or running them: allowlisted metadata, a red-flag scan, one dossier each."""
+    from faceless import intake
+    rows = intake.run(args.items, out_dir=args.out)
+    for r in rows:
+        high = [c for sev, c, _ in r["flags"] if sev == "high"]
+        stars = (r.get("facts") or {}).get("stars")
+        print(f"{r['kind']:7} {r['name'][:46]:46} " + (f"{stars:>6} stars  " if stars is not None else " " * 14) + (f"HIGH: {', '.join(high)}" if high else r.get("note", "no high flags") if r["kind"] == "web" else "no high flags"))
+    first = next((r["file"] for r in rows if r.get("file")), None)
+    if first:
+        print(f"\ndossiers in {Path(first).parent} (index.md lists them); each ends with a verdict box for the reviewer")
+    return 0
+
+
+def cmd_ci(args) -> int:
+    """CI as GitHub sees it: a clean export of what a commit would contain, a scrubbed environment, the same steps as ci.yml."""
+    from faceless import cilocal
+    return cilocal.run(only=args.only, keep=args.keep)
+
+
 def cmd_watchdog(args) -> int:
     """The dead-man's switch: reads only the repo. Prints the findings; --out writes them as Markdown for the workflow's issue step."""
     from faceless import watchdog
@@ -666,6 +686,14 @@ def main(argv: list[str] | None = None) -> int:
     pf.add_argument("--offline", action="store_true", help="skip the wallet call")
     pf.add_argument("--json", action="store_true")
     pf.set_defaults(fn=cmd_preflight)
+    it = sub.add_parser("intake", help="look at outside tools safely (repos, npm/PyPI packages, install lines): metadata + red flags + a verdict box; nothing is cloned, installed or run")
+    it.add_argument("items", nargs="+", help="GitHub URLs, install lines such as 'npx tool', 'pip install tool', or other links (listed, not fetched)")
+    it.add_argument("--out", help="folder for the dossiers (default repo-farm/intake/<day>)")
+    it.set_defaults(fn=cmd_intake)
+    ci = sub.add_parser("ci", help="run CI as GitHub sees it (clean export, no keys, runner tools only) before you push")
+    ci.add_argument("--only", choices=["tests", "skills", "imports", "site"], help="run one step")
+    ci.add_argument("--keep", action="store_true", help="keep the exported folder even when everything passes")
+    ci.set_defaults(fn=cmd_ci)
     wd = sub.add_parser("watchdog", help="dead-man's switch: is the operation alive? reads only the repo (the scheduled workflow opens an issue when it is not)")
     wd.add_argument("--out", help="write the findings as Markdown to this file")
     wd.add_argument("--json", action="store_true")

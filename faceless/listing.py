@@ -129,6 +129,21 @@ def math_gate(p: dict) -> Gate | None:
 
 # ---------------------------------------------------------------- file, image and video gates
 
+def ensure_files(p: dict) -> list[str]:
+    """The kit's zip is a gitignored build output, so a clean checkout has its parts but not the bundle: assemble it from the committed parts.
+    Returns the files it made. A part that is missing too is left for the files_exist gate to report."""
+    made = []
+    for rel in [p["file"], *p.get("extra_files", [])]:
+        if not (STUDIO / rel).exists() and Path(rel).name == "Money-Reset-Kit.zip":
+            from faceless import product_print
+            try:
+                product_print.assemble_kit()
+                made.append(rel)
+            except FileNotFoundError:
+                pass
+    return made
+
+
 def file_gates(p: dict) -> list[Gate]:
     files = [STUDIO / p["file"], *[STUDIO / f for f in p.get("extra_files", [])]]
     out = [Gate("files_exist", all(f.exists() for f in files), ", ".join(f.name for f in files))]
@@ -282,6 +297,7 @@ def build(only: str | None = None, video: bool = True) -> dict[str, dict]:
     by_id = {q["id"]: q for q in catalog()["products"]}
     for p in products(only):
         folder = OUT / p["id"]
+        ensure_files(p)
         (folder / "etsy" / "images").mkdir(parents=True, exist_ok=True)
         (folder / "gumroad").mkdir(parents=True, exist_ok=True)
         if p["kind"] == "bundle":
@@ -325,6 +341,7 @@ def check(only: str | None = None) -> dict[str, list[Gate]]:
     out = {}
     for p in products(only):
         folder = OUT / p["id"]
+        ensure_files(p)
         gates = text_gates(p) + file_gates(p)
         imgs = sorted((folder / "etsy" / "images").glob("*.jpg"))
         if imgs:

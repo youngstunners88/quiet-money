@@ -242,6 +242,20 @@ def bundle(parts: dict[str, Path], printables: dict[str, Path], dest: Path) -> P
     return z
 
 
+def assemble_kit(root: Path | None = None) -> Path:
+    """Rebuild Money-Reset-Kit.zip from the spreadsheets and PDFs that are committed, with no LibreOffice or recalculation.
+    The zip itself is a gitignored build output, so a clean checkout (CI, a fresh container) has the parts but not the bundle."""
+    root = Path(root) if root else OUT
+    parts = {"escape": root / "rat-race-escape-planner" / "Rat-Race-Escape-Planner.xlsx",
+             "debt": root / "debt-payoff-planner" / "Debt-Payoff-and-Compound-Interest-Planner.xlsx"}
+    printables = {"Letter": root / "money-reset-printables" / "Money-Reset-Printables-Letter.pdf",
+                  "A4": root / "money-reset-printables" / "Money-Reset-Printables-A4.pdf"}
+    missing = [p.name for p in [*parts.values(), *printables.values()] if not p.is_file()]
+    if missing:
+        raise FileNotFoundError(f"cannot assemble the kit, missing: {missing} (run `python -m faceless products`)")
+    return bundle(parts, printables, root / "money-reset-kit")
+
+
 def listing_printables(price: float = 9.0) -> str:
     link = config.load()["channel"].get("link_in_bio", "")
     return f"""# Listing: Money Reset Printables (pen-and-paper pack)

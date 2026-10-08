@@ -2,6 +2,7 @@
 
 import copy
 import shutil
+import zipfile
 
 import pytest
 from PIL import Image, ImageDraw
@@ -20,7 +21,36 @@ def failing(gates):
 
 def test_the_real_catalog_passes_every_text_and_file_gate(products):
     for p in products:
+        listing.ensure_files(p)                      # the kit zip is a gitignored build output: a clean checkout (CI) has to assemble it
         assert failing(listing.text_gates(p) + listing.file_gates(p)) == set(), p["id"]
+
+
+def test_a_missing_kit_zip_is_assembled_from_the_committed_parts(tmp_path, monkeypatch):
+    from faceless import product_print
+    root = tmp_path / "channel" / "products"
+    for rel in ("rat-race-escape-planner/Rat-Race-Escape-Planner.xlsx", "debt-payoff-planner/Debt-Payoff-and-Compound-Interest-Planner.xlsx",
+                "money-reset-printables/Money-Reset-Printables-Letter.pdf", "money-reset-printables/Money-Reset-Printables-A4.pdf"):
+        (root / rel).parent.mkdir(parents=True, exist_ok=True)
+        (root / rel).write_bytes(b"part " + rel.encode())
+    monkeypatch.setattr(listing, "STUDIO", tmp_path)
+    monkeypatch.setattr(product_print, "OUT", root)
+    p = {"file": "channel/products/money-reset-kit/Money-Reset-Kit.zip", "extra_files": []}
+    assert {g.name: g.ok for g in listing.file_gates(p)}["files_exist"] is False
+    assert listing.ensure_files(p) == [p["file"]]
+    with zipfile.ZipFile(tmp_path / p["file"]) as zf:
+        names = zf.namelist()
+    assert "Money-Reset-Kit/READ-ME-FIRST.txt" in names and sum(n.endswith((".xlsx", ".pdf")) for n in names) == 4
+    assert {g.name: g.ok for g in listing.file_gates(p)}["files_exist"] is True
+    assert listing.ensure_files(p) == []             # nothing left to make
+
+
+def test_a_kit_with_a_part_missing_is_reported_not_faked(tmp_path, monkeypatch):
+    from faceless import product_print
+    monkeypatch.setattr(listing, "STUDIO", tmp_path)
+    monkeypatch.setattr(product_print, "OUT", tmp_path / "channel" / "products")
+    p = {"file": "channel/products/money-reset-kit/Money-Reset-Kit.zip", "extra_files": []}
+    assert listing.ensure_files(p) == []
+    assert {g.name: g.ok for g in listing.file_gates(p)}["files_exist"] is False
 
 
 def test_every_product_has_the_fields_a_listing_needs(products):
