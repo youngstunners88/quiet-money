@@ -481,6 +481,15 @@ def cmd_preflight(args) -> int:
 def cmd_intake(args) -> int:
     """Look at outside tools without installing or running them: allowlisted metadata, a red-flag scan, one dossier each."""
     from faceless import intake
+    if args.apply:
+        folder = Path(args.apply)
+        counts = intake.apply_verdicts(folder)
+        (folder / "decisions.md").write_text(intake.verdict_table(intake.load_verdicts(folder)), encoding="utf-8")
+        print(f"ticked and explained {counts['dossiers']} dossiers ({counts['ids_without_dossier']} ids without one); wrote {folder / 'decisions.md'}")
+        return 0
+    if not args.items:
+        print("give at least one link or install line, or --apply FOLDER to record verdicts.json into the dossiers")
+        return 2
     rows = intake.run(args.items, out_dir=args.out)
     for r in rows:
         high = [c for sev, c, _ in r["flags"] if sev == "high"]
@@ -687,8 +696,9 @@ def main(argv: list[str] | None = None) -> int:
     pf.add_argument("--json", action="store_true")
     pf.set_defaults(fn=cmd_preflight)
     it = sub.add_parser("intake", help="look at outside tools safely (repos, npm/PyPI packages, install lines): metadata + red flags + a verdict box; nothing is cloned, installed or run")
-    it.add_argument("items", nargs="+", help="GitHub URLs, install lines such as 'npx tool', 'pip install tool', or other links (listed, not fetched)")
+    it.add_argument("items", nargs="*", help="GitHub URLs, install lines such as 'npx tool', 'pip install tool', or other links (listed, not fetched)")
     it.add_argument("--out", help="folder for the dossiers (default repo-farm/intake/<day>)")
+    it.add_argument("--apply", metavar="FOLDER", help="record FOLDER/verdicts.json into its dossiers (ticks the box, adds the decision) and write decisions.md")
     it.set_defaults(fn=cmd_intake)
     ci = sub.add_parser("ci", help="run CI as GitHub sees it (clean export, no keys, runner tools only) before you push")
     ci.add_argument("--only", choices=["tests", "skills", "imports", "site"], help="run one step")

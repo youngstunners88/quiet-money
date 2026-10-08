@@ -135,3 +135,31 @@ def test_secrets_never_reach_the_committed_journal(state, monkeypatch):
     events.emit("PROVIDER_FAIL", error="401 for key abcdef1234567890SECRET at https://x.test/?key=hunter2hunter2")
     text = events.JOURNAL.read_text(encoding="utf-8")
     assert "abcdef1234567890SECRET" not in text and "hunter2hunter2" not in text
+
+
+# ---------------------------------------------------------------- research feeds production
+
+def test_topics_with_researched_demand_are_picked_first_and_the_rest_keep_their_order(tmp_path, monkeypatch):
+    from faceless.pipeline import ideate
+    backlog = tmp_path / "backlog.jsonl"
+    rows = [{"pillar": "math", "topic": "first written"},
+            {"pillar": "math", "topic": "weak demand", "demand": {"source": "tokconnect", "score": 20}},
+            {"pillar": "story", "topic": "other pillar", "demand": {"score": 99}},
+            {"pillar": "math", "topic": "strong demand", "demand": {"source": "muapi-seo", "keyword": "fire calculator", "value": 18100, "score": 85}},
+            {"pillar": "math", "topic": "second written"}]
+    backlog.write_text("\n".join(json.dumps(r) for r in rows) + "\n", encoding="utf-8")
+    monkeypatch.setattr(ideate, "BACKLOG", backlog)
+    monkeypatch.setattr(ideate, "history_texts", lambda: [])
+    order, reserved = [], []
+    for _ in range(4):
+        topic = ideate.next_topic("math", reserved)["topic"]
+        order.append(topic)
+        reserved.append(topic)
+    assert order == ["strong demand", "weak demand", "first written", "second written"]
+
+
+def test_a_malformed_demand_block_scores_zero_instead_of_breaking_the_pick():
+    from faceless.pipeline import ideate
+    assert ideate.demand_score({"demand": "lots"}) == 0 and ideate.demand_score({"demand": {"score": "x"}}) == 0
+    assert ideate.demand_score({"demand": {"score": 250}}) == 100 and ideate.demand_score({"demand": {"score": -5}}) == 0
+    assert ideate.demand_score({"topic": "no research"}) == 0

@@ -47,6 +47,12 @@ BRAND_RISK = re.compile(r"\b(?:airdrop|memecoin|pump and dump|forex signals?|get
 KEYS = re.compile(r"\b[A-Z][A-Z0-9]{2,}(?:_[A-Z0-9]+)*_(?:API_KEY|TOKEN|SECRET|KEY)\b")
 RESTRICTIVE = re.compile(r"\b(?:AGPL|GPL-3|GPL-2|SSPL|BUSL|CC-BY-NC|non[- ]commercial|noncommercial)\b", re.I)
 INSTALL_HOOKS = ("preinstall", "install", "postinstall", "prepare", "prepublish")
+LICENSE_FILES = ("LICENSE", "LICENSE.md", "LICENSE.txt", "LICENCE", "COPYING")
+LICENSE_SIGNS = [("AGPL-3.0", r"gnu affero general public license"), ("LGPL", r"gnu lesser general public license"), ("GPL-3.0", r"gnu general public license[\s,]+version 3"),
+                 ("GPL-2.0", r"gnu general public license[\s,]+version 2"), ("Apache-2.0", r"apache license[\s,]+version 2\.0"), ("MPL-2.0", r"mozilla public license"),
+                 ("MIT", r"permission is hereby granted, free of charge"), ("ISC", r"permission to use, copy, modify, and/or distribute this software for any purpose"),
+                 ("BSD", r"redistribution and use in source and binary forms"), ("Unlicense", r"free and unencumbered software released into the public domain"),
+                 ("non-commercial", r"non[- ]?commercial")]
 
 
 # ---------------------------------------------------------------- fetching (the only place that touches the network)
@@ -97,9 +103,16 @@ def slug(c: dict) -> str:
 
 # ---------------------------------------------------------------- facts per source
 
+def detect_license(text: str) -> str | None:
+    """Name the licence a LICENSE file carries, from its own wording (used when the API is not reachable)."""
+    low = re.sub(r"\s+", " ", text[:12000].lower())
+    return next((name for name, rx in LICENSE_SIGNS if re.search(rx, low)), None)
+
+
 def github_facts(owner: str, repo: str, get=http_get) -> dict:
     f: dict = {"kind": "github", "name": f"{owner}/{repo}", "url": f"https://github.com/{owner}/{repo}", "texts": {}, "notes": []}
     code, meta = _json(get, f"https://api.github.com/repos/{owner}/{repo}")
+    f["api_ok"] = code == 200
     if code == 200:
         f.update(stars=meta.get("stargazers_count"), forks=meta.get("forks_count"), license=(meta.get("license") or {}).get("spdx_id"), pushed=meta.get("pushed_at"),
                  created=meta.get("created_at"), archived=meta.get("archived"), language=meta.get("language"), size_kb=meta.get("size"), topics=meta.get("topics") or [],
@@ -123,6 +136,23 @@ def github_facts(owner: str, repo: str, get=http_get) -> dict:
         code, text = get(base + name)
         if code == 200:
             f["texts"][name] = text
+    if not f.get("license"):                                    # the API names the licence; without it, read the file
+        for name in LICENSE_FILES:
+            code, text = get(base + name)
+            if code == 200:
+                found = detect_license(text)
+                f["license"] = f"{found} (read from {name})" if found else f"unrecognised text in {name}"
+                f["license_file"] = True
+                break
+    try:                                                         # a published package gives download counts and a last-publish date even when the API is closed
+        pkg = json.loads(f["texts"].get("package.json", "{}"))
+    except ValueError:
+        pkg = {}
+    if pkg.get("name") and not pkg.get("private"):
+        npm = npm_facts(pkg["name"], get)
+        if npm.get("version"):
+            f.update(npm_name=pkg["name"], weekly_downloads=npm.get("weekly_downloads"), npm_published=npm.get("pushed"), npm_version=npm.get("version"))
+            f.setdefault("pushed", npm.get("pushed"))
     return f
 
 
@@ -206,7 +236,10 @@ def flags(f: dict) -> list[tuple[str, str, str]]:
     if RESTRICTIVE.search(f"{f.get('license') or ''}\n{all_text[:6000]}"):
         out.append(("med", "restrictive-license", "copyleft or non-commercial terms: read before using in a paid product"))
     if f["kind"] == "github" and not f.get("license"):
-        out.append(("med", "no-license", "no licence declared: no right to use it"))
+        if f.get("api_ok"):
+            out.append(("med", "no-license", "no licence declared: no right to use it"))
+        else:
+            out.append(("low", "license-unknown", "no LICENSE file at the top level and the API was not reachable: check by hand"))
     if f.get("archived"):
         out.append(("high", "archived", "the repository is archived (read-only, unmaintained)"))
     age = _days(f.get("pushed"))
@@ -215,7 +248,7 @@ def flags(f: dict) -> list[tuple[str, str, str]]:
     born = _days(f.get("created"))
     if born is not None and born < 60:
         out.append(("low", "young", f"created {born:.0f} days ago: popularity and stability not yet proven"))
-    if f["kind"] == "github" and (f.get("stars") or 0) < 25:
+    if f["kind"] == "github" and f.get("api_ok") and (f.get("stars") or 0) < 25:
         out.append(("low", "tiny", f"{f.get('stars') or 0} stars: few other people have looked at it"))
     if f["kind"] == "npm" and f.get("weekly_downloads") is not None and f["weekly_downloads"] < 200:
         out.append(("low", "tiny", f"{f['weekly_downloads']} downloads last week"))
@@ -254,7 +287,9 @@ def commands_in(text: str) -> list[str]:
 
 
 def dossier(f: dict, fl: list[tuple[str, str, str]]) -> str:
-    facts = [(k, f.get(k)) for k in ("version", "stars", "forks", "license", "created", "pushed", "archived", "language", "size_kb", "weekly_downloads", "versions", "maintainers", "issues") if f.get(k) not in (None, "", [])]
+    facts = [(k, f.get(k)) for k in ("version", "npm_name", "stars", "forks", "license", "created", "pushed", "archived", "language", "size_kb", "weekly_downloads", "versions", "maintainers", "issues") if f.get(k) not in (None, "", [])]
+    if f["kind"] == "github" and not f.get("api_ok"):
+        facts.append(("stars, dates, forks", "unknown: GitHub's API is not reachable from this machine for this repository"))
     lines = [f"# Intake: {f['name']}", "", f"- **Source:** {f['url']}", f"- **Looked at:** {time.strftime('%Y-%m-%d %H:%M UTC', time.gmtime())} (public metadata and text only; nothing was cloned, installed or run)",
              f"- **What it says it is:** {f.get('description') or 'n/a'}", ""]
     if facts:
@@ -323,3 +358,60 @@ def index_md(rows: list[dict]) -> str:
         last = (f.get("pushed") or "")[:10]
         lines.append(f"| {r['name'][:60]} | {r['kind']} | {pop} | {f.get('license') or ''} | {last} | {high} | {rest} | {Path(r['file']).name if r.get('file') else r.get('note', '')} |")
     return "\n".join(lines) + "\n"
+
+
+# ---------------------------------------------------------------- verdicts
+
+VERDICTS = ("USE", "TRIAL", "PARK", "KILL")
+
+
+def load_verdicts(folder: Path) -> dict:
+    return json.loads((Path(folder) / "verdicts.json").read_text(encoding="utf-8"))
+
+
+def dossier_files(folder: Path, item_id: str) -> list[Path]:
+    """The dossier for an id plus numbered twins (`x.md`, `x-2.md`): one decision can cover an npm package and its repository."""
+    folder = Path(folder)
+    return [p for p in sorted(folder.glob(f"{item_id}*.md")) if p.stem == item_id or re.fullmatch(rf"{re.escape(item_id)}-\d+", p.stem)]
+
+
+def apply_verdicts(folder: Path) -> dict[str, int]:
+    """Tick the verdict box in each dossier and add a Decision block (why, what to steal, what only the owner can do). Idempotent."""
+    folder = Path(folder)
+    data = load_verdicts(folder)
+    written, missing = 0, 0
+    for it in data["items"]:
+        files = dossier_files(folder, it["id"])
+        if not files:
+            missing += 1
+            continue
+        if it["verdict"] not in VERDICTS:
+            raise ValueError(f"{it['id']}: verdict must be one of {VERDICTS}")
+        for f in files:
+            text = f.read_text(encoding="utf-8")
+            text = re.sub(r"- \[[ x]\] \*\*(USE|TRIAL|PARK|KILL)\*\*", lambda m: f"- [{'x' if m.group(1) == it['verdict'] else ' '}] **{m.group(1)}**", text)
+            text = text.split("\n## Decision")[0].rstrip("\n") + "\n"
+            block = [f"\n## Decision ({data['date']})", "", f"**{it['verdict']}**, pipeline stage: {it.get('stage') or 'none'}.", "", it["why"]]
+            if it.get("steal") and it["steal"].lower() not in ("none", "n/a", "none needed"):
+                block += ["", f"**Worth taking:** {it['steal']}"]
+            if it.get("owner"):
+                block += ["", f"**Only the owner can:** {it['owner']}"]
+            f.write_text(text + "\n".join(block) + "\n", encoding="utf-8")
+            written += 1
+    return {"dossiers": written, "ids_without_dossier": missing}
+
+
+def verdict_table(data: dict, heading_level: str = "##") -> str:
+    """The decisions as Markdown tables for channel/empire/RESOURCES.md: repositories and packages first, then pages and services."""
+    mark = {"USE": "**use**", "TRIAL": "**trial**", "PARK": "**park**", "KILL": "**kill**"}
+    out = [f"{heading_level} Quiet Money 3 and setup lists ({data['date']})", "",
+           "Read with `python -m faceless intake` (dossiers in `repo-farm/intake/%s/`). %s" % (data["date"], data["source"].split(". ", 1)[-1]), "",
+           "| resource | verdict | stage | why | worth taking |", "|---|---|---|---|---|"]
+    for it in data["items"] + data["web"]:
+        steal = it.get("steal") or ""
+        steal = "" if steal.lower() in ("none", "n/a", "none needed") else steal
+        out.append(f"| {it['name']} | {mark[it['verdict']]} | {it.get('stage') or ''} | {it['why']} | {steal} |")
+    asks = [(it["name"], it["owner"]) for it in data["items"] + data["web"] if it.get("owner")]
+    if asks:
+        out += ["", f"{heading_level}# Decisions only the owner can make", ""] + [f"- **{n}:** {o}" for n, o in asks]
+    return "\n".join(out) + "\n"

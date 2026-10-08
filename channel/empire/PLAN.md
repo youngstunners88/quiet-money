@@ -86,12 +86,19 @@ Scores in the ranking are judgment until these numbers exist; the weekly run re-
 - **Legal.** Education only, no advice; newsletter needs a postal address and unsubscribe before the first send; no income claims.
 
 ## What the owner unlocks, in order of value
-1. Open the shop (Gumroad first): unlocks two planners, the printables and the bundle, all built and checked.
+1. Open the shop (Gumroad first): unlocks two planners, the printables and the bundle, all built and checked. The Etsy and Gumroad listing packs are ready for all four products (nine 2800x2100 pictures, a silent square video, copy and a click-by-click checklist each), pass a 28-gate listing gauntlet, and rebuild from scratch on a clean GitHub runner (download them from Actions, workflow "Shop packs", artifact `shop-packs`). Etsy has no agent path: the first listings are made by hand, about 15 minutes each.
 2. Channels live with auto-posting: unlocks distribution, the metrics loop, long-form and rewards.
 3. Email service + domain + postal address: unlocks the list, autoresponder and weekly issue.
 4. Ten minutes a day in Flow, or approve about $0.30 a day for Muapi hook clips (`[production.hookclip] enabled = true`): unlocks moving hooks.
 5. A free LongCat API key: a third script provider behind Gemini.
-6. Fiverr gig, podcast host, Etsy + Printify, Adobe Stock, affiliates: later, in that order.
+6. Authorize keys already in the environment, each one a one-line yes: Mistral as a fallback script provider, PostHog for site analytics. A free FRED key unlocks timely macro numbers.
+7. Fiverr gig, podcast host, Etsy + Printify, Adobe Stock, affiliates: later, in that order.
+
+## Pass 5 (2026-10-08): the Quiet Money 3 and setup lists, and the operating system
+- **Looked at 36 resources** with `python -m faceless intake` (dossiers in `repo-farm/intake/2026-10-08/`): 6 used or adopted, 13 parked with a named condition, 17 rejected. Almost none were worth installing; several were worth stealing from (a table of free economic APIs, ad-angle mining for listings, sound effects, dubbing).
+- **Built from them:** TokConnect research wired into the trends skill and the engine (topics with researched demand are picked first); the Muapi desk and skill; an intake protocol so the next list is handled the same way, safely.
+- **New opportunities, scored in the ranking:** second-language editions (C7, free Edge voices exist for Spanish and Portuguese), a sound-effect layer (C8), macro facts (O17), a Mistral fallback (O14), PostHog analytics (O15), an Etsy draft rail kept parked on purpose (O16).
+- **Bulletproofing:** preflight, a watchdog that opens an "Ops alert" issue by itself, a kill switch and a $3 ceiling, union-merged logs, failure drills, a clean-checkout CI check (`python -m faceless ci`), and an operations runbook (`OPERATIONS.md`).
 
 ## Not doing (killed by the attack round)
 Cloning other sellers' best-sellers; scripting a personal Google login to automate Flow; agent-created accounts and mailbox

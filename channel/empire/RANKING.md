@@ -34,7 +34,10 @@ The owner's act is the work.
 |---|---|---|---|---|---|
 | O2 | Identity layer: one owner-controlled domain mailbox with plus-addresses per platform | ops | vetted | 86.4 | owner: Register a domain with one mailbox (the identity layer) |
 | O3 | Metrics loop: YouTube via Composio, others pasted weekly | ops | vetted | 67.5 | owner: Create the YouTube, TikTok and Instagram accounts (@quietmoneyrules), connect them, and turn on auto-posting |
+| O14 | Mistral as a fourth script provider (resilience) | ops | vetted | 37.5 | owner: Say yes to using the Mistral key already in the environment (MINSTRAL_API_KEY) as a fallback script provider |
+| O15 | Site analytics with PostHog: visits, calculator use and clicks to the shop | ops | vetted | 30.0 | owner: Say yes to using the PostHog key already in the environment, and add its snippet id to studio.toml [site] |
 | O5 | Go live: channel accounts + auto-posting (Upload-Post) | ops | vetted | 30.0 | owner: Create the YouTube, TikTok and Instagram accounts (@quietmoneyrules), connect them, and turn on auto-posting |
+| O16 | Etsy draft rail: create DRAFT listings through the Etsy API, never publish | ops | idea | 2.56 | owner: After the first listings are live, create an Etsy developer app and give the studio its keystring and a draft-only token |
 
 ## Running: measure against the kill rule
 | id | opportunity | rail | stage | score | next |
@@ -43,6 +46,7 @@ The owner's act is the work.
 | O6 | Semantic QA: Clef decision model gates every still and script | ops | built | 250.0 | measure; kill if: false-positive holds on more than 5% of videos for 2 weeks. |
 | O8 | Policy watchdog and verified platform rules | ops | built | 200.0 | measure; kill if: never: it is insurance. |
 | C1 | Daily Shorts factory | content | scaled | 150.0 | measure; kill if: hold rate > 40% for 2 weeks. |
+| O13 | Demand-ranked topics: TokConnect and Muapi data feed the backlog, production picks high scores first | ops | built | 120.0 | measure; kill if: no difference after 40 videos. |
 | O9 | Variety audit and semantic duplicate gate | ops | built | 100.0 | measure; kill if: the audit never moves a decision after 8 weeks. |
 | O7 | Music library: real instrumental beds per series (Lyria RealTime, free tier) | content | built | 80.0 | measure; kill if: any copyright or Content ID claim on a bed, or no retention lift after 30 videos. |
 | C2 | Variety layer: motion cards + Flow/Veo hook clips | content | pilot | 72.0 | measure; kill if: no retention lift after 30 videos. Launch needs the owner: Generate the day's 3 Flow clips (about 10 minutes) and drop them in the inbox |
@@ -56,6 +60,9 @@ The owner's act is the work.
 ## Ideas to validate cheaply
 | id | opportunity | rail | stage | score | next |
 |---|---|---|---|---|---|
+| C8 | Sound-effect layer: a one-time library of short hits mixed under hooks and transitions | content | idea | 27.0 | validate cheaply (research, one test asset), then vet |
+| O17 | Timely macro facts for scripts: US Treasury (keyless) and FRED | content | idea | 21.6 | validate cheaply (research, one test asset), then vet |
+| C7 | Second-language editions: the same videos in Spanish and Portuguese | content | idea | 15.36 | validate cheaply (research, one test asset), then vet |
 | P5 | Original 'money rules' typography posters (print on demand) | product | idea | 3.73 | validate cheaply (research, one test asset), then vet |
 | M1 | Adobe Stock AI: abstract backgrounds, textures, objects (no people, brands, artist names) | marketplace | idea | 2.8 | validate cheaply (research, one test asset), then vet |
 | R2 | Finance affiliates + sponsors (with disclosure) | partnership | idea | 1.73 | validate cheaply (research, one test asset), then vet |
@@ -71,8 +78,13 @@ The owner's act is the work.
 - **Register a domain with one mailbox (the identity layer)**: 86.4 points (O2)
 - **List the gig on your Fiverr account and handle client messages**: 64.2 points (S1, S2)
 - **Open a free podcast host account**: 40.5 points (C4)
+- **Say yes to using the Mistral key already in the environment (MINSTRAL_API_KEY) as a fallback script provider**: 37.5 points (O14)
+- **Say yes to using the PostHog key already in the environment, and add its snippet id to studio.toml [site]**: 30.0 points (O15)
+- **Create a free FRED API key (fred.stlouisfed.org) and add FRED_API_KEY to the environment**: 21.6 points (O17)
+- **Open a second-language channel per platform (Spanish first) and approve machine translation with a native-speaker spot check**: 15.4 points (C7)
 - **Open Etsy + Printify accounts**: 3.7 points (P5)
 - **Open an Adobe Stock contributor account and confirm the image model's terms allow resale**: 2.8 points (M1)
+- **After the first listings are live, create an Etsy developer app and give the studio its keystring and a draft-only token**: 2.6 points (O16)
 - **Sign affiliate programs, after a compliance review of each offer**: 1.7 points (R2)
 
 ## Killed by the attack round

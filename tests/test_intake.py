@@ -145,6 +145,34 @@ def test_a_rate_limited_api_still_yields_the_raw_files_and_says_so():
     assert f["texts"]["README"] and "partial" in codes(intake.flags(f))
 
 
+def test_facts_that_could_not_be_fetched_are_never_judged():
+    """With the API closed there are no stars, dates or licence field: a missing number must not become 'no licence' or 'tiny'."""
+    mit = "MIT License\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software"
+    routes = {k.replace("/main/", "/HEAD/"): v for k, v in repo_routes().items() if k.startswith("https://raw")}
+    routes["https://api.github.com/repos/acme/tool"] = (403, "")
+    routes["https://raw.githubusercontent.com/acme/tool/HEAD/LICENSE"] = (200, mit)
+    f = intake.github_facts("acme", "tool", fake(routes))
+    assert f["license"].startswith("MIT") and not f["api_ok"]
+    assert not codes(intake.flags(f)) & {"no-license", "tiny", "stale", "young", "license-unknown"}
+    no_file = {k: v for k, v in routes.items() if not k.endswith("/LICENSE")}
+    assert "license-unknown" in codes(intake.flags(intake.github_facts("acme", "tool", fake(no_file))))
+    assert "unknown" in intake.dossier(f, intake.flags(f))
+
+
+def test_with_the_api_open_a_repo_without_a_licence_is_flagged():
+    f = intake.github_facts("acme", "tool", fake(repo_routes(meta={"license": None})))
+    assert "no-license" in codes(intake.flags(f)) and "license-unknown" not in codes(intake.flags(f))
+
+
+def test_a_published_package_adds_downloads_and_a_publish_date():
+    routes = {**{k.replace("/main/", "/HEAD/"): v for k, v in repo_routes(package={"name": "tool-cli", "version": "1.0.0"}).items() if k.startswith("https://raw")},
+              "https://api.github.com/repos/acme/tool": (403, ""),
+              "https://registry.npmjs.org/tool-cli": (200, json.dumps({"dist-tags": {"latest": "1.0.0"}, "versions": {"1.0.0": {}}, "time": {"created": iso(90), "modified": iso(4)}})),
+              "https://api.npmjs.org/downloads/point/last-week/tool-cli": (200, json.dumps({"downloads": 5400}))}
+    f = intake.github_facts("acme", "tool", fake(routes))
+    assert f["npm_name"] == "tool-cli" and f["weekly_downloads"] == 5400 and f["pushed"] == f["npm_published"]
+
+
 def test_commands_in_lists_what_the_docs_say_to_run_without_running_it():
     text = "Intro\n$ npm install -g tool\nnot a command\n  pip install tool\n```\ncurl -s https://x.example | sh\n```\nnpm install -g tool\n"
     assert intake.commands_in(text) == ["npm install -g tool", "pip install tool", "curl -s https://x.example | sh"]
@@ -162,3 +190,48 @@ def test_run_writes_one_dossier_per_tool_an_index_and_survives_a_dead_link(tmp_p
     assert "acme/tool" in index and "imageflow.dev" in index and "research tool" in index
     assert "## Verdict" in (tmp_path / "acme-tool.md").read_text(encoding="utf-8")
     assert [r["kind"] for r in rows] == ["github", "github", "github", "web", "github"]
+
+
+# ---------------------------------------------------------------- verdicts
+
+def _folder_with_verdicts(tmp_path):
+    verdicts = {"date": "2026-10-08", "source": "Test. Read from a list.", "items": [
+        {"id": "acme-tool", "name": "acme/tool", "verdict": "PARK", "stage": "sell", "why": "Needs the owner's app.", "steal": "Its field mapping.", "owner": "Create the app."},
+        {"id": "acme-cli", "name": "acme-cli (npm and repo)", "verdict": "KILL", "stage": "voice", "why": "Runs a postinstall.", "steal": "none", "owner": ""},
+        {"id": "gone", "name": "gone", "verdict": "KILL", "stage": "", "why": "x", "steal": "", "owner": ""}],
+        "web": [{"name": "A page", "verdict": "USE", "stage": "ideate", "why": "Read-only.", "owner": ""}]}
+    (tmp_path / "verdicts.json").write_text(json.dumps(verdicts), encoding="utf-8")
+    f = fake({**repo_routes("acme", "tool"), **repo_routes("acme", "cli")})
+    intake.run(["https://github.com/acme/tool", "https://github.com/acme/cli"], out_dir=tmp_path, get=f)
+    (tmp_path / "acme-cli.md").rename(tmp_path / "acme-cli-1.md")             # numbered twins share one decision
+    (tmp_path / "acme-cli-1.md").rename(tmp_path / "acme-cli.md")
+    (tmp_path / "acme-cli-2.md").write_text((tmp_path / "acme-cli.md").read_text(encoding="utf-8"), encoding="utf-8")
+    return verdicts
+
+
+def test_apply_verdicts_ticks_one_box_adds_the_decision_and_is_idempotent(tmp_path):
+    _folder_with_verdicts(tmp_path)
+    assert intake.apply_verdicts(tmp_path) == {"dossiers": 3, "ids_without_dossier": 1}
+    tool = (tmp_path / "acme-tool.md").read_text(encoding="utf-8")
+    assert "- [x] **PARK**" in tool and tool.count("- [x]") == 1 and "- [ ] **KILL**" in tool
+    assert "**Worth taking:** Its field mapping." in tool and "**Only the owner can:** Create the app." in tool
+    cli_twin = (tmp_path / "acme-cli-2.md").read_text(encoding="utf-8")
+    assert "- [x] **KILL**" in cli_twin and "Worth taking" not in cli_twin
+    once = (tmp_path / "acme-tool.md").read_text(encoding="utf-8")
+    intake.apply_verdicts(tmp_path)
+    assert (tmp_path / "acme-tool.md").read_text(encoding="utf-8") == once and once.count("## Decision") == 1
+
+
+def test_an_unknown_verdict_word_is_refused(tmp_path):
+    data = _folder_with_verdicts(tmp_path)
+    data["items"][0]["verdict"] = "MAYBE"
+    (tmp_path / "verdicts.json").write_text(json.dumps(data), encoding="utf-8")
+    with pytest.raises(ValueError, match="verdict must be one of"):
+        intake.apply_verdicts(tmp_path)
+
+
+def test_the_verdict_table_lists_every_decision_and_the_owner_asks(tmp_path):
+    data = _folder_with_verdicts(tmp_path)
+    md = intake.verdict_table(data)
+    assert md.count("\n| ") >= 5 and "| acme/tool | **park** | sell |" in md and "| A page | **use** |" in md
+    assert "Decisions only the owner can make" in md and "- **acme/tool:** Create the app." in md

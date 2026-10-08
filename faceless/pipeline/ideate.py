@@ -73,13 +73,24 @@ def find_topic(topic: str) -> dict | None:
     return next((i for i in load_backlog() if i["topic"].lower() == topic.lower()), None)
 
 
+def demand_score(item: dict) -> float:
+    """0 to 100: how much audience demand the research session found for this topic (see the faceless-trends skill). No evidence scores 0."""
+    d = item.get("demand")
+    try:
+        return max(0.0, min(100.0, float(d.get("score", 0)))) if isinstance(d, dict) else 0.0
+    except (TypeError, ValueError):
+        return 0.0
+
+
 def next_topic(pillar_id: str, reserved: list[str] | None = None) -> dict:
+    """The best unused topic for the pillar: topics with researched demand first (highest score), the rest in the order they were written."""
     cfg = config.load()
     threshold = cfg["gauntlet"]["similarity_max"]
     history = history_texts() + list(reserved or [])
     used = {h.lower() for h in history}
-    for item in load_backlog():
-        if item["pillar"] == pillar_id and item["topic"].lower() not in used and is_fresh(item["topic"], history, 0.8):
+    pool = sorted((i for i in load_backlog() if i["pillar"] == pillar_id), key=lambda i: -demand_score(i))        # stable: ties keep file order
+    for item in pool:
+        if item["topic"].lower() not in used and is_fresh(item["topic"], history, 0.8):
             return item
     # backlog dry for this pillar: ask the LLM for fresh ideas and keep the extras for later
     pillar = config.pillar(pillar_id)

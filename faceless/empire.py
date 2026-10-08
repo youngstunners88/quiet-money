@@ -35,6 +35,11 @@ GATES = {   # owner-only steps: money, accounts, legal, face. Codes keep the ask
     "affiliate": "Sign affiliate programs, after a compliance review of each offer",
     "hookspend": "Approve about $0.30 a day for animated hook clips (set [production.hookclip] enabled = true)",
     "longcat": "Create a free LongCat API account (longcat.chat/platform) and add LONGCAT_API_KEY to the environment",
+    "mistral": "Say yes to using the Mistral key already in the environment (MINSTRAL_API_KEY) as a fallback script provider",
+    "posthog": "Say yes to using the PostHog key already in the environment, and add its snippet id to studio.toml [site]",
+    "etsydev": "After the first listings are live, create an Etsy developer app and give the studio its keystring and a draft-only token",
+    "langchannel": "Open a second-language channel per platform (Spanish first) and approve machine translation with a native-speaker spot check",
+    "fred": "Create a free FRED API key (fred.stlouisfed.org) and add FRED_API_KEY to the environment",
 }
 SAT = {"low": 1.0, "med": 0.9, "high": 0.7}
 TOS = {"ok": 1.0, "watch": 0.8}
