@@ -11,11 +11,13 @@ Unblocked and buildable without the owner; only the launch needs them.
 | C3 | Weekly long-form: 'Money Rules Weekly' (8-10 min, 16:9, chapters) | content | vetted | 36.0 | agent builds it now. Launch needs the owner: Create the YouTube, TikTok and Instagram accounts (@quietmoneyrules), connect them, and turn on auto-posting |
 | P6 | Fillable PDF versions of the printable pack | product | vetted | 36.0 | agent builds it now. Launch needs the owner: Open a Gumroad shop (and Etsy for printables); approve prices and listings |
 | S2 | Fiverr studio mode: concept sheets in minutes for logo/art/character gigs | service | vetted | 16.2 | agent builds it now. Launch needs the owner: List the gig on your Fiverr account and handle client messages |
+| O19 | Outreach drafts: collaborators, newsletters and podcasts in the niche, drafted for the owner to send | growth | vetted | 9.72 | agent builds it now. Launch needs the owner: Send the drafted collaboration notes yourself (the studio never sends a message in your name); Create the YouTube, TikTok and Instagram accounts (@quietmoneyrules), connect them, and turn on auto-posting |
 
 ## Built: waiting for the owner to launch
 Finished and checked; one owner step turns each on.
 | id | opportunity | rail | stage | score | next |
 |---|---|---|---|---|---|
+| O18 | Offer layer: one tracked offer per video, the link-in-bio hub page, the distribution rails report | ops | built | 200.0 | built and verified. Launch needs the owner: Create the YouTube, TikTok and Instagram accounts (@quietmoneyrules), connect them, and turn on auto-posting; Pick an email service, a domain and a postal address, and connect them; Pick a cookieless visit counter and save its tag as the file named in studio.toml [site] head_snippet |
 | P4 | Money Reset Kit bundle (P1+P2+P3) | product | built | 135.0 | built and verified. Launch needs the owner: Open a Gumroad shop (and Etsy for printables); approve prices and listings |
 | O10 | LongCat as a third script provider (free daily allowance) | ops | built | 112.5 | built and verified. Launch needs the owner: Create a free LongCat API account (longcat.chat/platform) and add LONGCAT_API_KEY to the environment |
 | A2 | Money Reset 7-day challenge as an autoresponder | owned-audience | built | 108.0 | built and verified. Launch needs the owner: Pick an email service, a domain and a postal address, and connect them |
@@ -26,6 +28,7 @@ Finished and checked; one owner step turns each on.
 | A1 | Newsletter: Quiet Money Weekly (auto-compiled issue) | owned-audience | built | 67.5 | built and verified. Launch needs the owner: Pick an email service, a domain and a postal address, and connect them |
 | O4 | Flow lane: daily shot list in, owner's clips back, renderer uses them | ops | built | 57.6 | built and verified. Launch needs the owner: Generate the day's 3 Flow clips (about 10 minutes) and drop them in the inbox |
 | S1 | Fiverr: productized faceless-channel brand kit | service | built | 48.0 | built and verified. Launch needs the owner: List the gig on your Fiverr account and handle client messages |
+| C9 | Motion scenes designed by Claude Haiku 5.5: data in, HyperFrames out, a frame review before a scene replaces a still | content | built | 45.0 | built and verified. Launch needs the owner: Look at a sample video with model-designed motion scenes and say go (studio.toml [production.sketch] mode = "on", plus the approval constant in tests/test_hygiene.py) |
 | P3 | Printable budget pack (50/30/20, sinking funds, subscription audit, net worth) | product | built | 31.5 | built and verified. Launch needs the owner: Open a Gumroad shop (and Etsy for printables); approve prices and listings |
 
 ## Needs the owner first
@@ -69,19 +72,22 @@ The owner's act is the work.
 
 ## What the owner unlocks, biggest first
 
+- **Create the YouTube, TikTok and Instagram accounts (@quietmoneyrules), connect them, and turn on auto-posting**: 446.7 points (O18, C5, O3, C3, O5, R1, O19)
+- **Pick an email service, a domain and a postal address, and connect them**: 375.5 points (O18, A2, A1)
 - **Open a Gumroad shop (and Etsy for printables); approve prices and listings**: 346.5 points (P4, P1, P2, P6, P3)
-- **Create the YouTube, TikTok and Instagram accounts (@quietmoneyrules), connect them, and turn on auto-posting**: 237.0 points (C5, O3, C3, O5, R1)
-- **Pick an email service, a domain and a postal address, and connect them**: 175.5 points (A2, A1)
+- **Pick a cookieless visit counter and save its tag as the file named in studio.toml [site] head_snippet**: 200.0 points (O18)
 - **Generate the day's 3 Flow clips (about 10 minutes) and drop them in the inbox**: 129.6 points (C2, O4)
 - **Create a free LongCat API account (longcat.chat/platform) and add LONGCAT_API_KEY to the environment**: 112.5 points (O10)
 - **Approve about $0.30 a day for animated hook clips (set [production.hookclip] enabled = true)**: 106.7 points (O12)
 - **Register a domain with one mailbox (the identity layer)**: 86.4 points (O2)
 - **List the gig on your Fiverr account and handle client messages**: 64.2 points (S1, S2)
+- **Look at a sample video with model-designed motion scenes and say go (studio.toml [production.sketch] mode = "on", plus the approval constant in tests/test_hygiene.py)**: 45.0 points (C9)
 - **Open a free podcast host account**: 40.5 points (C4)
 - **Say yes to using the Mistral key already in the environment (MINSTRAL_API_KEY) as a fallback script provider**: 37.5 points (O14)
 - **Say yes to using the PostHog key already in the environment, and add its snippet id to studio.toml [site]**: 30.0 points (O15)
 - **Create a free FRED API key (fred.stlouisfed.org) and add FRED_API_KEY to the environment**: 21.6 points (O17)
 - **Open a second-language channel per platform (Spanish first) and approve machine translation with a native-speaker spot check**: 15.4 points (C7)
+- **Send the drafted collaboration notes yourself (the studio never sends a message in your name)**: 9.7 points (O19)
 - **Open Etsy + Printify accounts**: 3.7 points (P5)
 - **Open an Adobe Stock contributor account and confirm the image model's terms allow resale**: 2.8 points (M1)
 - **After the first listings are live, create an Etsy developer app and give the studio its keystring and a draft-only token**: 2.6 points (O16)

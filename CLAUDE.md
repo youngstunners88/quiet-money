@@ -37,6 +37,7 @@ humans set strategy, connect accounts, and review held videos.
 | What to do next, find profitable operations, weekly planning | `/analytics` | `analytics/opportunities.md` | `faceless-scout` |
 | Search past scripts, outcomes, why videos were held | `/faceless/memory.py` | `python -m faceless memory "<words>"` | `faceless-trends` |
 | Motion graphics: count-up numbers, charts, kinetic text (HyperFrames) | `/faceless/pipeline/cards.py` | `.claude/skills/faceless-hyperframes` | `faceless-hyperframes` |
+| Diagram scenes designed by Claude Haiku 5.5 as data, drawn by HyperFrames, reviewed on rendered frames (off until the owner says go) | `/faceless/pipeline/sketch.py` | `.claude/skills/faceless-hyperframes` (Sketch scenes) | `faceless-hyperframes` |
 | Decision engine (Laya/Jev): routing, triage, gating | `/faceless/decide.py` | `.claude/skills/faceless-decide` | `faceless-decide` |
 | Research a person, book, or framework for videos | `/channel/research` | the brief format in the skill | `faceless-research` |
 | Escape the Rat Race series (Hormozi, Kiyosaki, Peña, passive income) | `/channel/research` | `channel/brand.md` | `faceless-rat-race` |

@@ -39,6 +39,18 @@ pillars = ["math", "escape"]                 # numbers mode applies to these pil
 # video. production.music = "library" uses them; no track found means the procedural bed, so nothing can break.
 tracks_per_series = 2
 
+[production.sketch]                          # motion scenes designed by Claude Haiku 5.5 as data and drawn by HyperFrames (faceless/pipeline/sketch.py)
+mode = "off"                                 # OFF until the owner has looked at a sample and said go; a scene replaces a still only after a review of its rendered frames passes
+model = "anthropic/claude-haiku-5.5"         # $0.10 in and $0.50 out per million tokens on OpenRouter; measured about $0.0015 a scene and $0.0002 a review
+effort = "low"
+max_per_video = 4
+pillars = ["math", "playbook", "escape", "myth"]
+daily_usd = 0.25                             # its own cap, below the studio ceiling (a test enforces it)
+per_scene_usd = 0.01
+min_seconds = 2.5                            # a beat shorter than this keeps its still
+min_score = 4                                # the reviewer's 1-5 score a scene must reach
+revise = true                                # one more try, with the reviewer's words, for a scene it turned down
+
 [production.flow]                            # owner-made Google Flow clips replace the hook still (see faceless/flow.py); empty inbox = no change
 enabled = true
 

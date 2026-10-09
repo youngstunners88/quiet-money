@@ -7,7 +7,7 @@ import json
 from concurrent.futures import ThreadPoolExecutor
 
 from faceless import config, events, flow, hookclip, qa
-from faceless.pipeline import cards
+from faceless.pipeline import cards, sketch
 from faceless.providers import images
 
 SUFFIX = ("vertical 9:16 composition, subject in the center third, cinematic, highly detailed, "
@@ -71,8 +71,18 @@ def run(job, script: dict) -> list[dict]:
                 events.emit("HOOK_CLIP_MADE", job=job.id, source=got["source"], usd=got["usd"], seconds=round(got["duration"], 1))
         return row
 
-    with ThreadPoolExecutor(max_workers=cfg.get("concurrency", 4)) as ex:
-        results = list(ex.map(one, enumerate(script["beats"])))
+    with ThreadPoolExecutor(max_workers=1) as sx:           # motion scenes are written while the stills are drawn; they only ever replace a still after a review
+        pending = sx.submit(sketch.plan, job, script, planned)
+        with ThreadPoolExecutor(max_workers=cfg.get("concurrency", 4)) as ex:
+            results = list(ex.map(one, enumerate(script["beats"])))
+        try:
+            drafts = pending.result()
+        except Exception as e:   # noqa: BLE001 - an optional lane must never cost a video its stills
+            events.emit("SKETCH_FAILED", job=job.id, error=f"{type(e).__name__}: {e}"[:200])
+            drafts = {}
+    for i, draft in drafts.items():
+        if i < len(results) and results[i].get("path") and not results[i].get("card"):
+            results[i]["sketch"] = draft
     # a beat whose image fell all the way to procedural placeholder art becomes a designed motion card instead
     for i, spec in cards.pick(script, results, job.pillar).items():
         if results[i]["provider"] == "procedural":

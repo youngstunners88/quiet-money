@@ -163,3 +163,27 @@ def test_a_malformed_demand_block_scores_zero_instead_of_breaking_the_pick():
     assert ideate.demand_score({"demand": "lots"}) == 0 and ideate.demand_score({"demand": {"score": "x"}}) == 0
     assert ideate.demand_score({"demand": {"score": 250}}) == 100 and ideate.demand_score({"demand": {"score": -5}}) == 0
     assert ideate.demand_score({"topic": "no research"}) == 0
+
+
+def test_an_openrouter_text_call_shows_up_in_the_ledger_so_the_ceiling_can_see_it(monkeypatch):
+    from faceless.providers import llm
+
+    class Reply:
+        status_code = 200
+
+        def json(self):
+            return {"choices": [{"message": {"content": "a script"}}], "usage": {"cost": 0.0004, "total_tokens": 700}}
+
+    class Session:
+        def __init__(self):
+            self.body = None
+
+        def post(self, url, json=None, timeout=None, headers=None):
+            self.body = json
+            return Reply()
+    s = Session()
+    monkeypatch.setattr(llm, "http", lambda: s)
+    monkeypatch.setenv("OPENROUTER_API_KEY", "k")
+    assert llm.openrouter("write", system=None, want_json=False, temperature=0.5) == "a script"
+    assert s.body["usage"] == {"include": True}
+    assert ledger.used("openrouter", "tokens") == 700 and ledger.usd_total() == pytest.approx(0.0004)

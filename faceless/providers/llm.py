@@ -87,7 +87,7 @@ def openrouter(prompt: str, *, system: str | None, want_json: bool, temperature:
     errs = []
     s = http()
     for model in cfg["openrouter_models"]:
-        body = {"model": model, "messages": msgs, "temperature": temperature}
+        body = {"model": model, "messages": msgs, "temperature": temperature, "usage": {"include": True}}
         if want_json:
             body["response_format"] = {"type": "json_object"}
         try:
@@ -100,6 +100,9 @@ def openrouter(prompt: str, *, system: str | None, want_json: bool, temperature:
             errs.append(f"{model}:{r.status_code}")
             continue
         d = r.json()
+        usage = d.get("usage") or {}
+        cost = usage.get("cost") if isinstance(usage.get("cost"), (int, float)) else 0.0
+        ledger.spend("openrouter", "tokens", usage.get("total_tokens", 0), usd=cost)   # a paid call the ceiling must be able to see
         try:
             return d["choices"][0]["message"]["content"]
         except (KeyError, IndexError):

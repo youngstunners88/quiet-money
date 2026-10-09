@@ -27,7 +27,7 @@ TOOLS = ("bash", "git", "ffmpeg", "ffprobe", "pdftoppm", "pdftotext")
 STEPS = [
     ("tests", "python -m pytest -q tests"),
     ("skills", "python -m faceless skills"),
-    ("imports", 'python -c "import faceless.cli, faceless.orchestrator, faceless.site, faceless.aeo, faceless.brand, faceless.muapi, faceless.preflight, faceless.watchdog, faceless.shop, faceless.listing"'),
+    ("imports", 'python -c "import faceless.cli, faceless.orchestrator, faceless.site, faceless.aeo, faceless.brand, faceless.muapi, faceless.preflight, faceless.watchdog, faceless.shop, faceless.listing, faceless.offer, faceless.distribute, faceless.pipeline.sketch"'),
     ("site", "python -m faceless site build"),
 ]
 

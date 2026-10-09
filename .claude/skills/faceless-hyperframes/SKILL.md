@@ -48,6 +48,27 @@ reel fails, the video falls back to stills (event `CARDS_FAILED`), so cards can 
 4. Ideas not built yet: two-value comparison bars (25 vs 35 years old), step list for playbook videos, animated
    caption styles, transitions between stills.
 
+## Sketch scenes: diagrams a small model designs (`faceless/pipeline/sketch.py`)
+The owner's "JavaScript Claude" video describes a model writing a frame as a function of time, drawing it in a headless browser and checking contact sheets.
+Here the same loop runs with a safer shape: **Claude Haiku 5.5 designs a scene as JSON, not code** (rectangles, circles, lines, paths, text, repeats, and tweens for
+fade, slide, scale, rotate and draw), code validates every field and emits the same HTML + GSAP timeline as the cards, and HyperFrames draws it into the video's reel.
+Nothing the model writes is ever executed.
+
+- Switch: `[production.sketch] mode` (`off` by default; the owner turns it on after seeing a sample, and flips `OWNER_APPROVED_SKETCHES` in `tests/test_hygiene.py` in the same commit).
+- Which beats: up to `max_per_video` explanatory beats of the listed series, never the hook or the closing line, never next to a card. The still is generated as usual and is the fallback.
+- What the validator refuses (the reason goes back to the model for one retry): a shape outside the frame or in the caption band (y 1085-1275) at rest or at the end of a slide, text over
+  text, a picture too small, a tween aimed at an element that does not exist, an ease or property outside the list, **a number that is not in the beat's narration, callout or checked facts,
+  and a word the narrator never said** ("LOST" over a gain was the real example).
+- The review: after the reel is drawn, three frames of each scene go to the same small model as a reviewer (score 1-5, problems in words) after two cheap pixel checks (empty, washed out,
+  something in the caption band). Score `min_score` (4) or more keeps the scene; otherwise the model sees its own JSON and the reviewer's words once (`revise`), the reel is drawn again as
+  `reel2.mp4`, and the new scene is looked at again. A reviewer that cannot answer keeps every still. Nothing generated ships unreviewed.
+- Cost and time, measured on 2026-10-09: about $0.0011 and 6-10 s a scene at low effort ($0.10 in, $0.50 out per million tokens), $0.0002 a review, $0.0015 per accepted scene counting retries;
+  a real video with two candidates cost $0.010 in total and added about 100 s of rendering. Spend is metered in the ledger as provider `sketch` under `[production.sketch] daily_usd`.
+- Honest value: it does not save money (a still from the free Cloudflare pool costs nothing). It adds variety and animated graphics instead of photographs. Quality is mixed: in a sample of 11
+  scenes about 3 were good, 4 filler, 4 poor; the reviewer matched my own ratings on 10 of 11, so only the good ones reach a video.
+- Debug: `grep SKETCH_ state/journal.jsonl | tail` (AUTHORED, REVIEWED with the score and the reviewer's words, REVISED, SETTLED, FAILED with the refusal reasons); each job's `images.json` rows
+  carry `sketch` (the scene) and `sketch_review` (the verdict); `cards/index.html` is the drawn composition.
+
 ## Security and hygiene
 - `npx hyperframes init` also installs third-party agent skills that "run with full agent permissions". **We never run
   `init` or install those skills**; the engine writes its own project and calls only `render`.

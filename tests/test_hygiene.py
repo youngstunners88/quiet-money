@@ -16,6 +16,7 @@ from faceless.config import STUDIO
 # The owner's go, as a switch in the open. Flip a constant only in the commit that records the owner saying yes.
 OWNER_APPROVED_LIVE_POSTING = False
 OWNER_APPROVED_HOOK_CLIPS = False
+OWNER_APPROVED_SKETCHES = False                        # motion scenes written by a model: on only after the owner has looked at a sample
 LIVE_PUBLISH_MODES = {"upload_post", "composio", "muapi"}
 
 SECRET_SHAPES = {
@@ -82,7 +83,8 @@ def test_spend_caps_add_up():
     caps = {"[muapi] daily_usd": cfg["muapi"]["daily_usd"],
             "[images] muapi_daily_usd": cfg["images"]["muapi_daily_usd"],
             "[images] openrouter_daily_images x $0.04": cfg["images"]["openrouter_daily_images"] * 0.04,
-            "[production.hookclip] daily_usd": cfg["production"]["hookclip"]["daily_usd"]}
+            "[production.hookclip] daily_usd": cfg["production"]["hookclip"]["daily_usd"],
+            "[production.sketch] daily_usd": cfg["production"]["sketch"]["daily_usd"]}
     over = {k: v for k, v in caps.items() if v > ceiling}
     assert not over, f"a provider cap above the studio ceiling is a cap that can never bind: {over}"
     assert cfg["muapi"]["per_call_usd"] <= cfg["muapi"]["daily_usd"]
@@ -96,6 +98,7 @@ def test_nothing_goes_public_without_the_owners_go():
     assert OWNER_APPROVED_LIVE_POSTING or mode not in LIVE_PUBLISH_MODES, f"publish mode {mode!r} posts for real; the owner has not said go"
     assert OWNER_APPROVED_LIVE_POSTING or mode == "local"
     assert OWNER_APPROVED_HOOK_CLIPS or not cfg["production"]["hookclip"]["enabled"], "hook clips cost money per video and need the owner's yes"
+    assert OWNER_APPROVED_SKETCHES or cfg["production"]["sketch"]["mode"] == "off", "model-written motion scenes change how every video looks and need the owner's yes"
     assert cfg["channel"].get("has_affiliate_links") is False or "has_affiliate_links" in cfg["channel"]
 
 

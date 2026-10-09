@@ -70,6 +70,14 @@ AI labels are on, and nothing stores a key in git. [`OPERATIONS.md`](OPERATIONS.
 `.claude/skills/faceless-daily/references/failure-playbook.md`; what the environment holds is in
 [`channel/empire/ENVIRONMENT.md`](channel/empire/ENVIRONMENT.md).
 
+## Distribution: how a video reaches people
+```bash
+python -m faceless distribute    # every rail (posting, profile links, offers, email list, products, measurement) with its state and the owner's next step
+python -m faceless offer         # one offer per video: coverage, mix, and the three profile URLs to paste into TikTok, Instagram and YouTube
+```
+Short-video captions and comments are not tappable, so every post says "link in bio" and the bio link is one page on our own site (`/links/`).
+The gap analysis, what was built and what was declined are in [`channel/empire/DISTRIBUTION.md`](channel/empire/DISTRIBUTION.md).
+
 ## Where the keys live
 No API key is stored in this repository or on GitHub. Pick one:
 1. **Claude Code environment (default).** The keys are environment variables of the Claude Code cloud
@@ -91,7 +99,7 @@ Required: `GEMINI_API_KEY` (or `OPENROUTER_API_KEY`), `CLOUDFLARE_API_KEY`, `CLO
 | `script-lab/` | Topic backlog, drafts, final scripts |
 | `faceless/` | The engine: pipeline, providers (LLM/TTS/images/publish/Composio), gauntlet, site, AEO, brand |
 | `gauntlet/`, `analytics/`, `state/` | Reports, metrics, journal, ledger, decision records |
-| `.claude/skills/` | Claude Code skills: daily, script, gauntlet, trends, publish, analytics, composio, channel-setup, seo, aeo, growth, muapi, intake |
+| `.claude/skills/` | Claude Code skills: daily, script, gauntlet, trends, publish, analytics, composio, channel-setup, seo, aeo, growth, muapi, intake, offer |
 | `channel/shop/` | Etsy and Gumroad listing packs (copy and a click-by-click checklist per product; pictures and video rebuild with `python -m faceless listing build all`) |
 | `repo-farm/` | Outside tools: the registry and one dossier per tool looked at (`python -m faceless intake`) |
 | `OPERATIONS.md` | The runbook: what runs when, the safety layers, what to do when something breaks |

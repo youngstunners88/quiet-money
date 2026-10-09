@@ -134,14 +134,15 @@ def _scene(n: int, t0: float, dur: float, spec: dict, pal: tuple, accent: str, f
     pre = f'<div class="scene clip" id="{sid}" data-start="{t0:.3f}" data-duration="{dur:.3f}" data-track-index="0">'
     bg = (f'<div class="bg" style="background:radial-gradient(120% 70% at 50% 28%,{bg0} 0%,{bg1} 70%)"></div>'
           f'<div class="glow" id="{sid}g" style="background:radial-gradient(closest-side,{glow}55,transparent)"></div>')
-    grid = "".join(f'<div class="ln" id="{sid}l{k}" style="top:{150 + k * 210}px"></div>' for k in range(8))
-    dots = "".join(f'<div class="dot" id="{sid}d{k}" style="left:{(k * 137) % 1000 + 40}px;top:{(k * 241) % 1500 + 120}px;'
-                   f'background:{accent}"></div>' for k in range(10))
+    drawn = spec["kind"] == "sketch"        # an authored scene brings its own drawing: no drifting lines or dots behind it
+    grid = "" if drawn else "".join(f'<div class="ln" id="{sid}l{k}" style="top:{150 + k * 210}px"></div>' for k in range(8))
+    dots = "" if drawn else "".join(f'<div class="dot" id="{sid}d{k}" style="left:{(k * 137) % 1000 + 40}px;top:{(k * 241) % 1500 + 120}px;'
+                                    f'background:{accent}"></div>' for k in range(10))
     js = [f'tl.set("#{sid}",{{opacity:1}},{t0:.3f});',
           f'tl.fromTo("#{sid}g",{{scale:0.6,opacity:0}},{{scale:1.15,opacity:1,duration:{dur:.3f},ease:"sine.out"}},{t0:.3f});']
-    for k in range(8):   # grid lines drift upward: constant motion keeps the scene alive
+    for k in range(0 if drawn else 8):   # grid lines drift upward: constant motion keeps the scene alive
         js.append(f'tl.fromTo("#{sid}l{k}",{{y:0,opacity:0.0}},{{y:-90,opacity:0.16,duration:{dur:.3f},ease:"none"}},{t0:.3f});')
-    for k in range(10):
+    for k in range(0 if drawn else 10):
         js.append(f'tl.fromTo("#{sid}d{k}",{{y:0,opacity:0}},{{y:-{160 + k * 25},opacity:0.5,duration:{dur:.3f},ease:"sine.inOut"}},{t0 + (k % 4) * 0.08:.3f});')
     if spec["kind"] == "stat":
         steps = 0 if spec.get("static") else max(8, min(48, round(dur * 14)))
@@ -182,6 +183,11 @@ def _scene(n: int, t0: float, dur: float, spec: dict, pal: tuple, accent: str, f
         js += extra
     elif spec["kind"] == "steps":
         body, extra = _steps(sid, t0, dur, spec, accent, kicker)
+        js += extra
+    elif spec["kind"] == "sketch":
+        from faceless.pipeline import sketch
+        svg, extra = sketch.emit(sid, t0, spec["spec"], sketch.palette(accent, config.load()["production"].get("accent2", "#2EE59D"), glow))
+        body = f'<div class="kick">{html.escape(kicker)}</div>{svg}'
         js += extra
     else:
         words = spec["text"].split()
@@ -291,6 +297,7 @@ html,body{{width:1080px;height:1920px;overflow:hidden;background:#000}}
   text-shadow:0 6px 40px rgba(0,0,0,.6)}}
 .ring{{position:absolute;left:320px;top:420px;width:440px;height:440px;opacity:0}}
 .rn{{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font:400 270px/1 "Anton";color:#fff}}
+.sk{{position:absolute;left:0;top:0;overflow:visible}}
 .sw{{position:absolute;left:0;top:930px;width:1080px;text-align:center;font:400 84px/1 "Anton";letter-spacing:12px;color:#fff;opacity:0}}
 .sg{{position:absolute;left:100px;top:1270px;width:880px;text-align:center;font:400 60px/1.2 "MontserratBlack";color:#fff;opacity:0;
   text-shadow:0 4px 30px rgba(0,0,0,.6)}}
@@ -314,12 +321,13 @@ tl.seek(0);
 
 
 def render_reel(job, picked: dict[int, dict], beat_spans: dict[int, tuple[float, float]], pillar_id: str,
-                accent: str, fps: int) -> tuple[Path, dict[int, float]] | None:
-    """Render every card of the video in one HyperFrames run. Returns (reel.mp4, {beat: offset seconds in reel})."""
+                accent: str, fps: int, name: str = "reel") -> tuple[Path, dict[int, float]] | None:
+    """Render every card of the video in one HyperFrames run. Returns (<name>.mp4, {beat: offset seconds in reel}).
+    A second pass uses another `name`, so the first reel and its offsets stay valid whatever happens to the second."""
     root = job.dir / "cards"
     specs = [(i, spec, max(0.5, beat_spans[i][1] - beat_spans[i][0])) for i, spec in sorted(picked.items())]
     total = build_project(root, specs, pillar_id, accent, fps, kicker=config.pillar(pillar_id).name.upper())
-    out = root / "reel.mp4"
+    out = root / f"{name}.mp4"
     cmd = ["npx", "--yes", CLI, "render", str(root), "-o", str(out), "-f", str(fps), "-q", "looks", "--quiet", "--workers", "2"]
     try:
         p = subprocess.run(cmd, capture_output=True, text=True, timeout=420,

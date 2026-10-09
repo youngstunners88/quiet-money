@@ -29,6 +29,6 @@ jobs:
       - name: Skills lint clean (the scheduled routines follow these files)
         run: python -m faceless skills
       - name: Import every module
-        run: python -c "import faceless.cli, faceless.orchestrator, faceless.site, faceless.aeo, faceless.brand, faceless.muapi, faceless.preflight, faceless.watchdog, faceless.shop, faceless.listing"
+        run: python -c "import faceless.cli, faceless.orchestrator, faceless.site, faceless.aeo, faceless.brand, faceless.muapi, faceless.preflight, faceless.watchdog, faceless.shop, faceless.listing, faceless.offer, faceless.distribute, faceless.pipeline.sketch"
       - name: Site builds
         run: python -m faceless site build

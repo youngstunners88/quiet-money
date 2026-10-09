@@ -21,7 +21,7 @@ from PIL import Image, ImageDraw, ImageFilter, ImageFont
 from faceless import config, events
 from faceless.config import Paths
 from faceless import musiclib
-from faceless.pipeline import captions, cards, music
+from faceless.pipeline import captions, cards, music, sketch
 
 GRADES = {
     "warm": "colorbalance=rs=0.05:gs=0.01:bs=-0.06:rm=0.03:bm=-0.04,eq=contrast=1.06:saturation=1.04",
@@ -179,6 +179,18 @@ def run(job, script: dict, voice: dict, imgs: list[dict]) -> dict:
     work = job.dir / "shots"
     work.mkdir(exist_ok=True)
 
+    spans = {i: tuple(b) for i, b in enumerate(voice["beats"])}
+    card_specs = {r["beat"]: r["card"] for r in imgs if r.get("card")}
+    drafts = sketch.candidates(imgs)                 # motion scenes that may replace a still, if the rendered frames pass a review
+    reel = cards.render_reel(job, {**card_specs, **drafts}, spans, job.pillar, cfg["accent"], fps) if (card_specs or drafts) else None
+    if reel and drafts:
+        try:       # an optional lane: whatever goes wrong in it, every beat keeps its still and the first reel stays valid
+            reel, kept, report = sketch.settle(job, reel, {**card_specs, **drafts}, drafts, voice["beats"], script,
+                                               lambda picked: cards.render_reel(job, picked, spans, job.pillar, cfg["accent"], fps, name="reel2"))
+            sketch.apply_to_rows(imgs, kept, report)
+            (job.dir / "images.json").write_text(json.dumps(imgs, indent=1), encoding="utf-8")
+        except Exception as e:   # noqa: BLE001
+            events.emit("SKETCH_FAILED", job=job.id, error=f"{type(e).__name__}: {e}"[:200], stage="review")
     shots = plan_shots(voice["beats"], imgs, fps, cfg["shot_max_seconds"], job.id)
     expected = round(total * fps)
     have = sum(s["frames"] for s in shots)
@@ -187,9 +199,6 @@ def run(job, script: dict, voice: dict, imgs: list[dict]) -> dict:
     grade = GRADES.get(pillar.grade, GRADES["warm"])
     vig = "PI/7" if pillar.grade == "clean" else "PI/4.6"
     look = f"{grade},vignette={vig},noise=alls=3:allf=t+u,format=yuv420p"
-    card_specs = {r["beat"]: r["card"] for r in imgs if r.get("card")}
-    reel = cards.render_reel(job, card_specs, {i: tuple(b) for i, b in enumerate(voice["beats"])}, job.pillar,
-                             cfg["accent"], fps) if card_specs else None
     tasks, card_tasks, clip_tasks = [], [], []
     for i, s in enumerate(shots):
         out_i = work / f"shot{i:03d}.mp4"

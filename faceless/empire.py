@@ -40,6 +40,9 @@ GATES = {   # owner-only steps: money, accounts, legal, face. Codes keep the ask
     "etsydev": "After the first listings are live, create an Etsy developer app and give the studio its keystring and a draft-only token",
     "langchannel": "Open a second-language channel per platform (Spanish first) and approve machine translation with a native-speaker spot check",
     "fred": "Create a free FRED API key (fred.stlouisfed.org) and add FRED_API_KEY to the environment",
+    "sketch": "Look at a sample video with model-designed motion scenes and say go (studio.toml [production.sketch] mode = \"on\", plus the approval constant in tests/test_hygiene.py)",
+    "counter": "Pick a cookieless visit counter and save its tag as the file named in studio.toml [site] head_snippet",
+    "outreach": "Send the drafted collaboration notes yourself (the studio never sends a message in your name)",
 }
 SAT = {"low": 1.0, "med": 0.9, "high": 0.7}
 TOS = {"ok": 1.0, "watch": 0.8}

@@ -30,6 +30,7 @@ The owner's reference case (a Grok conversation about autonomous shops) makes th
 | **Visit counter slot** | `[site] head_snippet` | one file of the owner's own analytics tag, inserted on every page; no provider is baked in |
 | **Tagged links where links work** | `repurpose.py` | thread, LinkedIn post, pin and newsletter item carry `utm_source=x|linkedin|pinterest|newsletter` and the video id |
 | **Rails report** | `faceless/distribute.py`, `python -m faceless distribute` | every rail with its state and the owner's next step; `--live` checks the hub is published |
+| **Model-designed motion scenes** (off until the owner says go) | `faceless/pipeline/sketch.py` | for a few explanatory beats a video, Claude Haiku 5.5 designs a diagram scene as JSON (never code), code validates it (frame, caption band, overlap, only the beat's own numbers and words), HyperFrames draws it, a reviewer scores three rendered frames, one revision for a scene it turns down, otherwise the still stays |
 | **Safety nets** | preflight `offer:coverage`, watchdog "videos shipped without an offer", gauntlet soft gate `offer_cta` | a video is never held for its call to action, but a missing one is reported |
 | **Intake fix** | `faceless/intake.py` | a second batch dated the same day no longer overwrites the first batch's rows in the registers |
 
@@ -39,6 +40,30 @@ The owner's reference case (a Grok conversation about autonomous shops) makes th
   and the card the visitor asked for (`o=`); per-video attribution holds for the repurposed assets and the long video.
 - The ledger is JSONL (`state/offers.jsonl`), not CSV: two sessions that append at once merge by union, which a CSV header would break.
 - "Publish only ships a video whose offer row exists" became a soft gate plus the `offer --batch` net, because a call-to-action problem must never hold a good video.
+
+## Haiku 5.5 and "coded videos" (the owner's JavaScript video): what was measured
+The video's technique is a model writing a frame as a function of time, a headless browser drawing it, and the model checking contact sheets. HyperFrames (already in the studio) is that
+technique with a deterministic timeline, so the build is the safe version: **the model returns data, never code**, and code does the rest. Measured on 2026-10-09 with the real model through OpenRouter:
+
+| Question | Answer |
+|---|---|
+| Price | Haiku 5.5 is $0.10 in and $0.50 out per million tokens (Anthropic and OpenRouter list the same; Muapi has Haiku 4.5 only so far) |
+| Cost and speed per scene | about $0.0011 and 6 to 10 s at low effort; $0.0015 per accepted scene counting retries; a review of the rendered frames is $0.0002 |
+| Does it save money? | **No.** A still from the free Cloudflare pool is free, so a scene is an addition, not a saving. Per video the whole lane costs about $0.01 |
+| Then why? | variety (every scene is composed for its own beat) and animated graphics instead of photographs; TikTok's Creator Rewards excludes videos made of photos or text overlays alone, and YouTube's templated-content rule is about sameness |
+| Quality | in a sample of 11 scenes about 3 were good, 4 filler and 4 poor (text over shapes, near-static, incoherent), so unreviewed output is not shippable. A reviewer that looks at the rendered frames agreed with my ratings on 10 to 11 of 11, so only reviewed scenes reach a video |
+| Real videos | two sandbox jobs re-rendered with the lane on: one kept 1 of 2 candidates after a revision (3.5 min render, $0.010), one kept its only candidate (1.5 min); the kept scenes read cleanly with the captions over them |
+| Risk | a poisoned script cannot run code (there is none); the worst case is an ugly scene, which the review replaces with the still; labels are limited to words the narrator said, which stops invented meaning ("LOST" over a gain) |
+
+The "household figure" idea in the owner's notes: a **recurring code-drawn mascot** is the version that fits this lane (a fixed drawing, so it is consistent for free, with no face and no likeness),
+but a cartoon character risks YouTube's "made for kids" classification, which switches off comments and personalised ads, and nothing shows yet that this audience follows a character. It stays an
+idea until real posts give a retention baseline to test against. Face-swapping into other people's videos and a character token were rejected above.
+
+## Outreach: when, not whether
+The owner asked for networking outreach with Haiku and Jev. It is planned (portfolio O19) and deliberately not built yet: asking a small creator, a newsletter or a podcast for a collaboration with an
+empty profile costs the studio credibility it cannot get back. Start when the channel has been live a month with about thirty posts and a few hundred followers. The design is ready: the weekly scout
+session finds up to ten public prospects with the research connectors (no contact scraping, no email harvesting), Haiku drafts one individual note each, a typed check (the claim check and a
+spam check, with Jev when its key exists) gates every draft, a ledger records them, and the owner sends each message by hand. Platforms treat automated messages as spam, and an account is at stake.
 
 ## What the numbers can and cannot tell us
 Bio-link traffic arrives from every video of a platform at once. We can see which platform converts, which day's mix of videos was followed by clicks, and which

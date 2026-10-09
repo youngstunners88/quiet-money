@@ -67,7 +67,11 @@ def checks_tools() -> list[Check]:
 def checks_keys() -> list[Check]:
     llm = _present("GEMINI_API_KEY", "LONGCAT_API_KEY", "OPENROUTER_API_KEY")
     img = _present("CLOUDFLARE_API_KEY", "MUAPI_API_KEY", "OPENROUTER_API_KEY")
-    return [Check("keys:llm", OK if llm else FAIL, f"{', '.join(llm)}" if llm else "no script-writing provider has a key (only the anonymous fallback is left)", "" if llm else "add GEMINI_API_KEY to the environment"),
+    sketch_on = config.load()["production"].get("sketch", {}).get("mode") == "on"
+    sketch = [Check("keys:sketch", OK if _present("OPENROUTER_API_KEY") else WARN, "motion scenes are on and OPENROUTER_API_KEY is set" if _present("OPENROUTER_API_KEY")
+                    else "motion scenes are on but OPENROUTER_API_KEY is not set: every video keeps its stills",
+                    "" if _present("OPENROUTER_API_KEY") else "add OPENROUTER_API_KEY to the environment, or set [production.sketch] mode = \"off\"")] if sketch_on else []
+    return sketch + [Check("keys:llm", OK if llm else FAIL, f"{', '.join(llm)}" if llm else "no script-writing provider has a key (only the anonymous fallback is left)", "" if llm else "add GEMINI_API_KEY to the environment"),
             Check("keys:images", OK if len(img) >= 2 else WARN, f"{', '.join(img) or 'none'}; procedural art is the last resort",
                   "" if len(img) >= 2 else "a second image provider makes a day survive one outage"),
             Check("keys:qa", OK if (_present("CLOUDFLARE_API_KEY") and _present("CLOUDFLARE_ACCOUNT_ID")) or _present("MUAPI_API_KEY") else WARN,

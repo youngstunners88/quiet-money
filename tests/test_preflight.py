@@ -211,3 +211,12 @@ def test_offer_checks_warn_when_a_passed_video_has_no_offer_and_pass_when_it_doe
     assert {c.name: c.level for c in preflight.checks_offer()}["offer:coverage"] == preflight.OK
     monkeypatch.setitem(preflight.config.load()["site"], "base_url", "")
     assert {c.name: c.level for c in preflight.checks_offer()}["offer:hub"] == preflight.WARN
+
+
+def test_the_motion_scene_key_check_only_appears_when_the_lane_is_on(monkeypatch):
+    names = lambda: {c.name: c for c in preflight.checks_keys()}               # noqa: E731
+    assert "keys:sketch" not in names()
+    monkeypatch.setitem(config.load()["production"]["sketch"], "mode", "on")
+    assert names()["keys:sketch"].level == preflight.WARN and "keeps its stills" in names()["keys:sketch"].detail
+    monkeypatch.setenv("OPENROUTER_API_KEY", "k")
+    assert names()["keys:sketch"].level == preflight.OK

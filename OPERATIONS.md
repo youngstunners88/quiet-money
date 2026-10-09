@@ -21,7 +21,7 @@ Posting is **local**: every video becomes a pack in `distribution/queue/<day>/`.
 1. **Kill switch**: `python -m faceless pause "reason"` writes `state/PAUSE`. Paid calls, posting, `daily` and `make` all refuse. `--resume` removes it. Only the owner resumes.
 2. **Studio ceiling**: `[safety] daily_usd_ceiling` ($3) across every paid provider together, read from the ledger before each paid call.
 3. **Provider caps**: `[muapi] daily_usd` / `per_call_usd`, `[images] muapi_daily_usd`, `openrouter_daily_images`, the hook-clip cap. Each is below the ceiling (a test enforces it).
-4. **Nothing public without a yes**: publish mode `local`, hook clips off, listings are drafts, prices are tests. `tests/test_hygiene.py` fails if a commit changes this without flipping its approval constant.
+4. **Nothing public without a yes**: publish mode `local`, hook clips off, model-designed motion scenes off, listings are drafts, prices are tests. `tests/test_hygiene.py` fails if a commit changes this without flipping its approval constant.
 5. **AI labels on** for every platform that has the flag (TikTok, YouTube).
    **Quality gates that survive a bad day:** text, face and logo checks on stills and the promised-returns and product-push checks on scripts are answered by Cloudflare Clef, and by a Muapi-hosted second judge (about $0.0002 a call) when Clef's free pool is spent or it is down. Only if both fail is a video checked by the code gates alone, and the journal says so (`QA_UNAVAILABLE`).
 6. **No key in git**: preflight and a hygiene test look for the value of every secret in this environment, and for key-shaped strings, in every tracked file. GitHub holds no secrets.
@@ -35,6 +35,8 @@ python -m faceless watchdog           # the repo-only dead-man's switch (what Gi
 python -m faceless status             # today's jobs and spend
 python -m faceless muapi balance      # wallet and today's spend against the ceiling
 python -m faceless shop status        # which storefront rails are connected, and the owner's next step
+python -m faceless distribute         # every distribution rail (posting, profile links, offers, email list, products, measurement) with its state and the owner's next step
+python -m faceless offer              # offer coverage and mix, and the three profile URLs to paste into TikTok, Instagram and YouTube
 ```
 
 If the watchdog finds a problem, GitHub opens one issue titled **Ops alert**, assigned to the owner, keeps it current, and closes it when everything is healthy.
@@ -64,7 +66,8 @@ this command reproduces that failure on the old commit. Routine runs push state 
 | Action | Why it is yours | How |
 |---|---|---|
 | Resume a paused studio, raise a spend cap, top up the Muapi wallet | money | edit `studio.toml` in a commit that says so; top up at muapi.ai |
-| Turn on live posting or hook clips | public and paid | set `[publish] mode` / `[production.hookclip] enabled`, and flip the matching constant in `tests/test_hygiene.py` in the same commit |
+| Turn on live posting, hook clips or model-designed motion scenes | public, paid, or changes how every video looks | set `[publish] mode` / `[production.hookclip] enabled` / `[production.sketch] mode`, and flip the matching constant in `tests/test_hygiene.py` in the same commit |
+| Put a profile link in each platform, list a product, choose an email service | your accounts | `python -m faceless distribute` lists every rail with the exact next step; the product URL goes in `[offer] shop_urls`, the email form address in `[newsletter] form_action` |
 | Connect Gumroad (read) | your account | `python -m faceless composio connect gumroad` and open the link |
 | Allow Gumroad drafts from the machine | your account | put `GUMROAD_ACCESS_TOKEN` in the Claude Code environment (never in a file); `python -m faceless shop push` then makes drafts, never publishes |
 | Etsy listings | Etsy has no agent path | follow `channel/shop/<product>/CHECKLIST.md` (about 15 minutes); the pictures, video and text are ready |
