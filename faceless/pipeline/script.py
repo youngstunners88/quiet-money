@@ -114,6 +114,16 @@ def recent_titles(limit: int = 25) -> list[str]:
     return [t for t in titles if t]
 
 
+def script_object(value) -> dict | None:
+    """The script dict inside a model answer: the object itself, or the first object with beats inside a list
+    (or a one-key wrapper such as {"script": {...}}). None when there is no usable script."""
+    if isinstance(value, list):
+        value = next((v for v in value if isinstance(v, dict) and isinstance(v.get("beats"), list)), None)
+    if isinstance(value, dict) and not isinstance(value.get("beats"), list):
+        value = next((v for v in value.values() if isinstance(v, dict) and isinstance(v.get("beats"), list)), None)
+    return value if isinstance(value, dict) and value.get("beats") else None
+
+
 def write(job, angle: str = "", feedback: list[str] | None = None) -> dict:
     """Return the job's script, drafting one if no final script exists yet."""
     fp = final_path(job)
@@ -126,7 +136,14 @@ def write(job, angle: str = "", feedback: list[str] | None = None) -> dict:
     prompt = script_prompt(pillar, job.topic, angle or job.artifacts.get("angle", ""), feedback, recent_titles(),
                            brief=research.brief(job.artifacts.get("brief")))
     from faceless.prompts import identity
-    raw = llm.complete(prompt, system=identity(), want_json=True, job=job.id)
+    raw = None
+    for attempt in range(2):     # a model sometimes answers with a list or an unrelated object: ask once more
+        raw = script_object(llm.complete(prompt, system=identity(), want_json=True, job=job.id))
+        if raw:
+            break
+        events.emit("SCRIPT_BAD_SHAPE", job=job.id, attempt=attempt)
+    if not raw:
+        raise ValueError("the model did not return a script object (no 'beats') after 2 tries")
     raw["pillar"] = job.pillar
     script = normalize(raw)
     rnd = len(list(Paths.drafts.glob(f"{job.id}*.json")))

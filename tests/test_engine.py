@@ -1581,3 +1581,14 @@ def test_step_card_gist_stays_clear_of_the_caption_band():
     safe_bottom = round(config.load()["production"]["height"] * 0.78)  # nothing in the bottom ~22%
     assert top >= caption_bottom, "gist text would overlap the live captions"
     assert top + 3 * 72 <= safe_bottom, "three lines of gist would run into the platform UI zone"
+
+
+def test_script_object_unwraps_the_shapes_models_return():
+    from faceless.pipeline.script import script_object
+    obj = {"title": "t", "beats": [{"say": "x"}]}
+    assert script_object(obj) is obj
+    assert script_object([obj]) is obj
+    assert script_object([{"note": "hi"}, obj]) is obj
+    assert script_object({"script": obj}) is obj
+    assert script_object([]) is None and script_object({"title": "no beats"}) is None
+    assert script_object("text") is None and script_object({"beats": []}) is None
