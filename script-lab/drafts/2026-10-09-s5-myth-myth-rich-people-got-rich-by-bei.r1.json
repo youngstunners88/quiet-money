@@ -1,0 +1,83 @@
+{
+  "title": "Why Penny Pinching Won't Make You Rich",
+  "hook_text": "THAT $5 COFFEE IS NOT THE ENEMY",
+  "beats": [
+    {
+      "say": "That five-dollar morning habit is not the reason you aren't a millionaire.",
+      "callout": "",
+      "visual": "Macro shot of a dark coffee cup on a dark wooden table, warm morning light, cinematic side angle."
+    },
+    {
+      "say": "Most financial advice tells you to stop buying lattes to build real wealth.",
+      "callout": "LATTE MYTH",
+      "visual": "A minimalist kitchen counter, blurred background, moody morning shadows falling across marble surface."
+    },
+    {
+      "say": "It's a distraction. Cutting a $15 subscription for 10 years only saves you $1,800.",
+      "callout": "$1,800 SAVED",
+      "visual": "Close-up of a hand holding a sleek black credit card, shallow depth of field, dark tones."
+    },
+    {
+      "say": "That amount won't change your life. But here's the part nobody mentions about big wins.",
+      "callout": "",
+      "visual": "A person walking down a concrete city sidewalk at dusk, motion blur, back view, cinematic lighting."
+    },
+    {
+      "say": "Real wealth isn't built by pinching pennies. It's built by scaling your income.",
+      "callout": "PINCH VS SCALE",
+      "visual": "An empty desk with a glowing desk lamp in a dark room, minimalist aesthetic, cool blue tones."
+    },
+    {
+      "say": "Look at the stark math. An extra $1,000/month from a side income, invested at 8% for 10 years, yields $182,946.",
+      "callout": "$182,946 TOTAL",
+      "visual": "A close-up of fingers typing on a dark mechanical keyboard, warm amber backlight, moody atmosphere."
+    },
+    {
+      "say": "You put in $120,000 of your own hard-earned cash to hit that milestone.",
+      "callout": "$120,000 PRINCIPAL",
+      "visual": "A stack of old leather-bound books on a dark wooden shelf, cinematic side lighting, soft focus."
+    },
+    {
+      "say": "Compare that to skipping daily lattes for a decade. It doesn't even compare to income growth.",
+      "callout": "INCOME WINS",
+      "visual": "An open window overlooking a rainy city street at night, neon lights reflecting on wet glass."
+    },
+    {
+      "say": "Focusing entirely on defense keeps you stressed and stuck in a scarcity mindset.",
+      "callout": "DEFENSE VS OFFENSE",
+      "visual": "A heavy iron door slightly ajar in a dark concrete hallway, dramatic shadows, cool color grade."
+    },
+    {
+      "say": "You need to fix your offense instead. Earn more, then invest the difference automatically.",
+      "callout": "",
+      "visual": "A minimalist wristwatch resting on a dark concrete block, sharp focus, cinematic vignette."
+    },
+    {
+      "say": "That's how you actually build lasting freedom. And that's exactly why",
+      "callout": "",
+      "visual": "A person standing on a high balcony overlooking a city skyline at twilight, back view, wide shot."
+    }
+  ],
+  "caption": "Stop stressing over micro-expenses and focus on what actually moves the needle. #wealthmindset #personalfinance #moneyrules #incomerising",
+  "description": "Penny pinching on small luxuries won't make you rich. Learn why scaling your income and investing heavily dwarfs any amount of coupon clipping.",
+  "hashtags": [
+    "#wealthmindset",
+    "#personalfinance",
+    "#moneyrules",
+    "#incomerising",
+    "#financialfreedom"
+  ],
+  "first_comment": "What's one 'small expense' people always tell you to cut?",
+  "facts": [
+    {
+      "claim": "A $15/month subscription for 10 years = $1,800",
+      "basis": "Fact sheet: A $15/month subscription for 10 years = $1,800"
+    },
+    {
+      "claim": "An extra $1,000/month from a side income, invested at 8% for 10 years = $182,946 (you put in $120,000)",
+      "basis": "Fact sheet: An extra $1,000/month from a side income, invested at 8% for 10 years = $182,946 (you put in $120,000)"
+    }
+  ],
+  "source": "llm",
+  "pillar": "myth"
+}

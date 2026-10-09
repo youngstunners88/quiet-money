@@ -1,0 +1,71 @@
+{
+  "id": "2026-10-09-s8-math-the-true-cost-of-a-new-car-loan",
+  "pillar": "math",
+  "topic": "The true cost of a new car loan vs a reliable used car over 10 years",
+  "day": "2026-10-09",
+  "slot": 8,
+  "status": "published",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-09T09:49:15Z",
+      "words": 197
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-09T09:49:37Z",
+      "seconds": 70.392,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-09T09:49:55Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-09T09:51:47Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-09T09:51:47Z",
+      "score": 98
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-09T09:51:48Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-10-09T09:51:48Z",
+      "local": "2026-10-10T18:30:00-04:00"
+    }
+  ],
+  "artifacts": {
+    "angle": "depreciation + interest + the invested difference",
+    "title": "The Hidden $300,000 Car Trap",
+    "video": "/home/user/quiet-money/production/output/2026-10-09/2026-10-09-s8-math-the-true-cost-of-a-new-car-loan/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-09/2026-10-09-s8-math-the-true-cost-of-a-new-car-loan/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-10-10/slot4-math",
+        "post_at": "2026-10-10T18:30:00-04:00"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 98,
+    "passed": true
+  },
+  "cost": {
+    "tts:edge:chars": 1191
+  },
+  "notes": []
+}

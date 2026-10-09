@@ -1,0 +1,65 @@
+{
+  "id": "2026-10-09-s4-math-why-a-0-interest-buy-now-pay-lat",
+  "pillar": "math",
+  "topic": "Why a 0% interest buy-now-pay-later plan can still cost you",
+  "day": "2026-10-09",
+  "slot": 4,
+  "status": "held",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-09T09:22:16Z",
+      "words": 181
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-09T09:22:32Z",
+      "seconds": 69.24,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-09T09:23:27Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-09T09:25:30Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-09T09:25:30Z",
+      "score": 98
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-09T09:25:31Z"
+    },
+    {
+      "from": "packaged",
+      "to": "held",
+      "ts": "2026-10-09T09:25:31Z"
+    }
+  ],
+  "artifacts": {
+    "angle": "late fees, overspending, and the psychology of small payments",
+    "title": "Why 0% Interest Still Costs You Fortunes",
+    "video": "/home/user/quiet-money/production/output/2026-10-09/2026-10-09-s4-math-why-a-0-interest-buy-now-pay-lat/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-09/2026-10-09-s4-math-why-a-0-interest-buy-now-pay-lat/cover.jpg"
+  },
+  "scores": {
+    "gauntlet": 98,
+    "passed": false
+  },
+  "cost": {
+    "tts:edge:chars": 1072
+  },
+  "notes": [
+    "held for review: first_frame_visible"
+  ]
+}

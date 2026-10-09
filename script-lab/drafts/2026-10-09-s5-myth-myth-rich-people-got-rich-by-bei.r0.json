@@ -1,0 +1,88 @@
+{
+  "title": "Why Penny Pinching Keeps You Broke",
+  "hook_text": "SKIPPING LATTES WON'T MAKE YOU RICH",
+  "beats": [
+    {
+      "say": "Skipping your daily coffee won't make you rich.",
+      "callout": "",
+      "visual": "A ceramic coffee mug sitting on a dark wooden cafe table, morning light casting long shadows, cinematic shot from above."
+    },
+    {
+      "say": "You can't save your way to true wealth.",
+      "callout": "SAVE VS EARN",
+      "visual": "A single copper coin resting on a blank white marble slab, harsh side lighting, minimalist composition."
+    },
+    {
+      "say": "Because pennies saved pale next to big financial moves.",
+      "callout": "",
+      "visual": "A leather wallet lying open on a concrete desk, blurred background, moody ambient light."
+    },
+    {
+      "say": "Look at what happens when you cut out a tiny $5 daily habit.",
+      "callout": "$5 A DAY",
+      "visual": "A hand dropping a single metal coin into a dark glass jar, close-up macro lens, shallow depth of field."
+    },
+    {
+      "say": "It turns into $226,659 over 30 years if invested monthly at 8%.",
+      "callout": "$226,000",
+      "visual": "A tall stack of plain white paper notebooks on a minimalist wooden shelf, soft afternoon window light."
+    },
+    {
+      "say": "That sounds great until you factor in inflation eating your buying power.",
+      "callout": "INFLATION",
+      "visual": "An old brass desk lamp turned off in a quiet room, moody shadows, cinematic film grain."
+    },
+    {
+      "say": "But here's the part nobody mentions about real fortune building.",
+      "callout": "THE TRUTH",
+      "visual": "A closed heavy wooden door in a dimly lit hallway, cinematic framing, tight crop."
+    },
+    {
+      "say": "Rich people don't win by cutting costs to the bone.",
+      "callout": "",
+      "visual": "A modern glass office building exterior viewed from street level looking straight up against a grey sky."
+    },
+    {
+      "say": "They win by focusing on massive income and smart investing.",
+      "callout": "INCOME VS COST",
+      "visual": "A person walking up concrete outdoor stairs past a tall glass facade, shot from behind, low angle."
+    },
+    {
+      "say": "An extra $1,000 a month from a side income invested at 8% for 10 years hits $182,946.",
+      "callout": "$182,946",
+      "visual": "A closed laptop resting on a dark walnut desk, minimalist workspace, warm side lighting."
+    },
+    {
+      "say": "That dwarfs any savings you'll ever get from clipping coupons.",
+      "callout": "",
+      "visual": "A pair of metal scissors resting on a blank dark countertop, sharp focus, cinematic vignette."
+    },
+    {
+      "say": "Stop obsessing over small expenses and start focusing on scaling your income because",
+      "callout": "",
+      "visual": "A hand typing on a blank mechanical keyboard in a dark room, blue screen glow reflecting softly."
+    }
+  ],
+  "caption": "Stop stressing over $5 lattes. The real game is income and investing. Follow for the money rules school never taught you. #money #personalfinance #wealthmindset #investing #moneymyths",
+  "description": "Penny pinching has a hard limit. Shifting your focus to income growth and investing unlocks the kind of wealth coupon clipping can never touch.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#wealthmindset",
+    "#investing",
+    "#moneymyths"
+  ],
+  "first_comment": "What's one expense you used to stress over that turned out not to matter?",
+  "facts": [
+    {
+      "claim": "$5/day habit equals $226,659 invested monthly at 8% for 30 years",
+      "basis": "$5/day habit = $1,825/year; invested monthly at 8% for 30 years = $226,659"
+    },
+    {
+      "claim": "An extra $1,000/month from a side income invested at 8% for 10 years = $182,946",
+      "basis": "An extra $1,000/month from a side income, invested at 8% for 10 years = $182,946 (you put in $120,000)"
+    }
+  ],
+  "source": "llm",
+  "pillar": "myth"
+}

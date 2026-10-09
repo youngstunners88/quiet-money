@@ -1,0 +1,94 @@
+{
+  "title": "The Hidden $300,000 Car Trap",
+  "hook_text": "NEW CAR WEALTH KILLER",
+  "beats": [
+    {
+      "say": "A new car loan is the single biggest wealth killer in America.",
+      "callout": "",
+      "visual": "A high-end modern car showroom with a sleek sports car under dramatic spotlights, low-angle shot, moody lighting, dark background, no people."
+    },
+    {
+      "say": "The actual math shows how a simple upgrade quietly drains a massive fortune over your working lifetime.",
+      "callout": "",
+      "visual": "A close-up shot of a person's hands holding a simple steel house key, cinematic soft lighting, shallow depth of field."
+    },
+    {
+      "say": "Today, the average monthly payment for a brand-new vehicle has climbed to over $700.",
+      "callout": "$700 A MONTH",
+      "visual": "A crisp, cinematic shot of a clean, dark garage floor with a single set of keys lying on the concrete, dramatic side-lighting."
+    },
+    {
+      "say": "Dropping to a modest used car or keeping your paid-off ride frees up at least $500 a month.",
+      "callout": "+$500 A MONTH",
+      "visual": "A vintage, reliable hatchback parked under a warm streetlamp at dusk, cinematic atmosphere, moody shadows."
+    },
+    {
+      "say": "That extra cash isn't just savings; it's leverage for your future.",
+      "callout": "",
+      "visual": "A close-up of a rustic wooden desk, a neat stack of crisp dollar bills sitting on the side, soft morning light."
+    },
+    {
+      "say": "It's the exact fuel you need to build long-term passive wealth.",
+      "callout": "",
+      "visual": "A minimalist glass jar on a wooden table slowly filling with water droplets, dramatic low-key lighting."
+    },
+    {
+      "say": "But here's the part nobody mentions when you sign the paperwork.",
+      "callout": "",
+      "visual": "A close-up of a heavy fountain pen sitting on top of a dark, blank document folder, cinematic mood, dark tones."
+    },
+    {
+      "say": "Most people spend their entire adult lives trapped in a continuous loop of car payments.",
+      "callout": "",
+      "visual": "An overhead shot of an empty, winding highway at night, long exposure showing blurred red taillights fading into the distance."
+    },
+    {
+      "say": "If you perpetually finance new cars every five years instead of investing that $500 difference at an 8% return...",
+      "callout": "8% RETURN",
+      "visual": "A macro shot of green plant sprouts growing out of rich dark soil, cinematic soft-focus background, warm morning sunlight."
+    },
+    {
+      "say": "...you'll end up putting $120,000 of your hard-earned cash straight into interest and depreciation over 20 years.",
+      "callout": "$120,000 LOST",
+      "visual": "A high-angle shot of a dusty, abandoned driveway with dry autumn leaves blowing across the concrete, melancholic lighting."
+    },
+    {
+      "say": "Meanwhile, that same $500 monthly investment would have compounded into exactly $294,510 over those two decades.",
+      "callout": "$294,510 FUTURE",
+      "visual": "A massive, ancient oak tree standing in an open field under a golden sunset, cinematic wide shot."
+    },
+    {
+      "say": "That is almost $300,000 surrendered just to sit in a depreciating badge.",
+      "callout": "LOST WEALTH",
+      "visual": "A close-up of a sleek, chrome emblem on a car grille, blurred background, rain droplets clinging to the metal, moody grading."
+    },
+    {
+      "say": "Follow for the money rules school never taught you to escape the trap...",
+      "callout": "",
+      "visual": "A warm, dimly lit library with shelves of leather-bound books, cozy and quiet atmosphere."
+    },
+    {
+      "say": "...and to remember why driving a reliable paid-off ride matters, because...",
+      "callout": "",
+      "visual": "A dashboard view looking out onto a long, straight, empty road heading toward mountains at sunrise, sense of freedom."
+    }
+  ],
+  "caption": "The true cost of that new car smell is almost $300,000. Here is the math they hide when you sign the papers. \n\n#money #personalfinance #investing #carloans #wealthbuilding",
+  "description": "This script breaks down the hidden opportunity cost of a new car loan. By showing the difference between buying new every five years and investing the $500 monthly savings, it reveals how depreciation and interest compound into a massive lost fortune over 20 years.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#investing",
+    "#carloans",
+    "#wealthbuilding"
+  ],
+  "first_comment": "How long have you kept your current car? Let's talk in the comments.",
+  "facts": [
+    {
+      "claim": "$500/month invested for 20 years at 8%/yr (monthly compounding) = $294,510 (you put in $120,000)",
+      "basis": "Official Quiet Money Fact Sheet calculations."
+    }
+  ],
+  "source": "llm",
+  "pillar": "math"
+}

@@ -1,0 +1,89 @@
+{
+  "title": "The $294,510 New Car Smell",
+  "hook_text": "THE $294,510 CAR TRAP",
+  "beats": [
+    {
+      "say": "Your shiny new car smell actually costs you a staggering $294,510.",
+      "callout": "",
+      "visual": "Close-up of a steering wheel in a dark, luxury vehicle, a key in the ignition, moody and dramatic lighting."
+    },
+    {
+      "say": "Here's the brutal hidden math dealerships hope you never calculate before signing your life away.",
+      "callout": "",
+      "visual": "A person's hands holding a black pen, hovering over a financial document on a dark wood desk, warm overhead spotlight."
+    },
+    {
+      "say": "Today, the average brand new car payment easily sits at $700 every single month.",
+      "callout": "$700/MONTH",
+      "visual": "A sleek, modern garage floor with the shadow of a parked luxury sedan cast against a textured concrete wall."
+    },
+    {
+      "say": "But choosing a reliable, five-year-old used ride drops your monthly cost to just $200.",
+      "callout": "NEW VS USED",
+      "visual": "A reliable, clean older car parked under a streetlamp at dusk, wet asphalt reflecting the soft yellow light."
+    },
+    {
+      "say": "This simple, quiet decision instantly leaves a clean $500 difference sitting in your bank account.",
+      "callout": "+$500/MONTH",
+      "visual": "A stack of hundred-dollar bills sitting quietly inside an open leather wallet on a dark marble countertop."
+    },
+    {
+      "say": "But here's the compounding part nobody ever mentions when you walk onto the showroom floor.",
+      "callout": "",
+      "visual": "The glass facade of a car dealership at night, illuminated from within, glowing softly with no people visible."
+    },
+    {
+      "say": "If you sign that new car loan, that monthly cash evaporates forever into depreciation and interest.",
+      "callout": "DEPRECIATION",
+      "visual": "An empty car key fob sitting on a dusty wooden table, shafts of sunlight cutting through a dark room."
+    },
+    {
+      "say": "If you drive the reliable used car instead, you can put that exact difference to work.",
+      "callout": "",
+      "visual": "A close-up of a hand placing a glass jar filled with folded bills onto a dark shelf."
+    },
+    {
+      "say": "Investing that $500 a month at an 8% annual return over 20 years compounds quietly.",
+      "callout": "8% RETURN",
+      "visual": "A macro shot of green moss growing steadily over a damp stone wall, soft morning light, shallow depth of field."
+    },
+    {
+      "say": "Your actual out-of-pocket contributions over those two decades stop at exactly $120,000.",
+      "callout": "$120,000 IN",
+      "visual": "A hand typing on a mechanical keyboard in a dark room, only the glow of the keys illuminating the fingers."
+    },
+    {
+      "say": "But the sheer power of compounding interest grows your final balance to $294,510.",
+      "callout": "$294,510 TOTAL",
+      "visual": "A vast forest of tall pine trees stretching into the misty horizon, shot from a low angle looking up."
+    },
+    {
+      "say": "That's nearly a quarter-million dollars sacrificed just to show off a temporary status symbol.",
+      "callout": "",
+      "visual": "A car's side mirror reflecting a blurred urban street at sunset, golden hour light."
+    },
+    {
+      "say": "Follow for the money rules school never taught you, because you deserve to know why...",
+      "callout": "",
+      "visual": "A simple black coffee mug sitting on a rustic wooden desk next to a closed notebook, soft side-lighting."
+    }
+  ],
+  "caption": "The math behind why new cars keep you broke. Drive used, invest the difference.",
+  "description": "We look at the true cost of driving a brand-new car versus a reliable pre-owned vehicle. By investing the $500 monthly difference at an 8% return over 20 years, you compound your wealth to nearly $300,000 instead of losing it to depreciation.",
+  "hashtags": [
+    "#personalfinance",
+    "#moneytips",
+    "#investing",
+    "#carloans",
+    "#financialfreedom"
+  ],
+  "first_comment": "Would you rather drive a brand-new car today or have $294,510 in 20 years?",
+  "facts": [
+    {
+      "claim": "Investing $500/month at 8% for 20 years yields $294,510 while putting in $120,000.",
+      "basis": "Sourced directly from the compound interest formula with monthly compounding over 20 years at an 8% annual percentage rate."
+    }
+  ],
+  "source": "llm",
+  "pillar": "math"
+}

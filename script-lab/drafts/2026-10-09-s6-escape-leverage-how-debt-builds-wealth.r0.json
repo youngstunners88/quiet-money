@@ -1,0 +1,79 @@
+{
+  "title": "The Math That Wipes Out 5x Leverage",
+  "hook_text": "BORROWED MONEY MULTIPLIES BOTH WAYS",
+  "beats": [
+    {
+      "say": "Borrowed money multiplies gains, but it destroys you just as fast.",
+      "callout": "",
+      "visual": "A towering stack of hundred-dollar bills under harsh industrial lighting, shot from a low angle."
+    },
+    {
+      "say": "Here is the exact math of a 5x leverage play.",
+      "callout": "",
+      "visual": "A person's hands sliding a single stack of cash away from four larger stacks on a dark wooden table."
+    },
+    {
+      "say": "Take a $100,000 property bought with a $20,000 down payment.",
+      "callout": "$100,000 VS $20,000",
+      "visual": "A minimalist architectural model of a modern home sitting alone in a dimly lit concrete room."
+    },
+    {
+      "say": "That is 5x leverage. You control a massive asset with a fraction of your own cash.",
+      "callout": "5X LEVERAGE",
+      "visual": "A single chess piece standing apart from a dense grid of wooden blocks, cinematic side lighting."
+    },
+    {
+      "say": "If the market climbs 20%, your property is worth $120,000.",
+      "callout": "+20% GAIN",
+      "visual": "A sleek digital wall graph ticking upward in soft blue ambient light, blurred background."
+    },
+    {
+      "say": "Your $20,000 down payment just doubled to $40,000 before costs and interest.",
+      "callout": "DOUBLED",
+      "visual": "Two stacks of currency standing side by side, illuminated by a sharp spotlight from above."
+    },
+    {
+      "say": "But here is the part nobody mentions when things go wrong.",
+      "callout": "THE HONEST CATCH",
+      "visual": "A pendulum hanging still in a concrete hallway, dramatic shadows cast against the wall."
+    },
+    {
+      "say": "A 20% price drop wipes out the whole down payment instantly.",
+      "callout": "-20% DROP",
+      "visual": "A hand sweeping a small stack of coins off a dark metal desk into the shadows."
+    },
+    {
+      "say": "Your equity hits zero while you still owe the bank every single dollar.",
+      "callout": "EQUITY ZERO",
+      "visual": "A blank paper document lying on a scarred wooden tabletop, shot from directly overhead."
+    },
+    {
+      "say": "That is why debt cuts both ways and the risk is entirely yours.",
+      "callout": "",
+      "visual": "A heavy steel scale balancing unevenly on a concrete floor, cool morning light."
+    },
+    {
+      "say": "Follow for the money rules school never taught you, because borrowed money",
+      "callout": "",
+      "visual": "A silhouette of a person walking down a long, narrow corridor toward a faint exit light."
+    }
+  ],
+  "caption": "Leverage is a double-edged sword. It builds fortunes when markets rise, and wipes them out instantly when they fall. #leverage #debt #personalfinance #wealthbuilding #moneyrules",
+  "description": "A breakdown of how 5x leverage works in real estate, the math behind a 20% drop, and why borrowed money magnifies both gains and losses.",
+  "hashtags": [
+    "#leverage",
+    "#debt",
+    "#personalfinance",
+    "#wealthbuilding",
+    "#moneyrules"
+  ],
+  "first_comment": "Would you take 5x leverage on an asset today? Let us know below.",
+  "facts": [
+    {
+      "claim": "A $100,000 property bought with $20,000 down is 5x leverage; a 20% price drop ($20,000) wipes out the whole down payment, a 20% rise doubles it",
+      "basis": "Money Fact Sheet"
+    }
+  ],
+  "source": "llm",
+  "pillar": "escape"
+}

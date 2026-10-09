@@ -1,0 +1,83 @@
+{
+  "title": "Why Most Wealth Growth Happens at the End",
+  "hook_text": "DON'T STOP INVESTING EARLY",
+  "beats": [
+    {
+      "say": "Starting at 25 instead of 35 changes everything.",
+      "callout": "",
+      "visual": "A cinematic shot of a single glowing snow globe resting on a dark wooden desk, soft rim light, macro lens."
+    },
+    {
+      "say": "Invest $200 a month at 8% until 65, and the math gets wild.",
+      "callout": "$200 / MONTH",
+      "visual": "A hand rolling a heavy metal sphere across a smooth concrete surface, moody studio lighting, slow motion."
+    },
+    {
+      "say": "Start at 25 and you hit $698,202.",
+      "callout": "START AT 25",
+      "visual": "A towering stack of clean white ceramic tiles catching golden hour light from a side window, minimalist aesthetic."
+    },
+    {
+      "say": "Start at 35 and you end up with $298,072.",
+      "callout": "START AT 35",
+      "visual": "A much smaller stack of ceramic tiles sitting on a dark grey concrete table, dim moody atmosphere."
+    },
+    {
+      "say": "That 10-year delay costs you $400,130.",
+      "callout": "$698,202 VS $298,072",
+      "visual": "A digital pendulum swinging silently against a deep charcoal background, cinematic depth of field."
+    },
+    {
+      "say": "Most people look at that gap and feel defeated.",
+      "callout": "",
+      "visual": "A closed brass door handle reflecting a distant window, cold cinematic color grading, shadows."
+    },
+    {
+      "say": "But here's the part nobody mentions.",
+      "callout": "PAY ATTENTION",
+      "visual": "A sharp shift in focus from a blurry foreground to a single lit candle in a dark room, high contrast."
+    },
+    {
+      "say": "The snowball doesn't grow evenly.",
+      "callout": "THE SNOWBALL",
+      "visual": "A thick blanket of pristine white snow on a pine branch, macro shot, soft morning haze."
+    },
+    {
+      "say": "Almost all the weight stacks up at the very end.",
+      "callout": "THE END GAME",
+      "visual": "A slow pan across an array of polished brass gears turning smoothly in sync, dramatic side lighting."
+    },
+    {
+      "say": "Quit early and you miss the entire avalanche.",
+      "callout": "",
+      "visual": "A silhouette of a person walking away down a long empty hallway toward a bright exit, high contrast."
+    },
+    {
+      "say": "Keep going, because that's exactly how",
+      "callout": "",
+      "visual": "A close-up of a vintage brass hourglass with fine black sand pouring downward, cinematic rim light."
+    }
+  ],
+  "caption": "The math behind compounding isn't linear. The final years do all the heavy lifting. #compoundinterest #investing #wealthbuilding #personalfinance #moneytips",
+  "description": "Discover why delaying your investments by ten years costs hundreds of thousands, and why the final stretch of compounding matters most.",
+  "hashtags": [
+    "#compoundinterest",
+    "#investing",
+    "#wealthbuilding",
+    "#personalfinance",
+    "#moneytips"
+  ],
+  "first_comment": "At what age did you start investing? Let's talk about it below.",
+  "facts": [
+    {
+      "claim": "Starting at 25 vs 35 with $200/month at 8% until 65 gives $698,202 vs $298,072",
+      "basis": "Monthly compounding at 8% per year over 40 years ($698,202) versus 30 years ($298,072)"
+    },
+    {
+      "claim": "The difference between starting at 25 and 35 is $400,130",
+      "basis": "Mathematical difference of $698,202 minus $298,072"
+    }
+  ],
+  "source": "llm",
+  "pillar": "math"
+}

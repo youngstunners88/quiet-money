@@ -1,0 +1,24 @@
+{
+  "id": "2026-10-09-s8-math-paying-300-a-month-on-a-3-000-ca",
+  "pillar": "math",
+  "topic": "Paying $300 a month on a $3,000 card: 12 months and $381 vs 15 years and $4,887",
+  "day": "2026-10-09",
+  "slot": 8,
+  "status": "failed",
+  "history": [
+    {
+      "from": "planned",
+      "to": "failed",
+      "ts": "2026-10-09T09:36:21Z",
+      "error": "list indices must be integers or slices, not str"
+    }
+  ],
+  "artifacts": {
+    "angle": "the same debt, two totally different futures"
+  },
+  "scores": {},
+  "cost": {},
+  "notes": [
+    "list indices must be integers or slices, not str"
+  ]
+}

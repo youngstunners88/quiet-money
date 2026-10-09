@@ -1,0 +1,25 @@
+{
+  "id": "2026-10-09-s6-escape-make-an-offer-too-good-to-refuse",
+  "pillar": "escape",
+  "topic": "Make an offer too good to refuse instead of cutting your price",
+  "day": "2026-10-09",
+  "slot": 6,
+  "status": "failed",
+  "history": [
+    {
+      "from": "planned",
+      "to": "failed",
+      "ts": "2026-10-09T09:31:15Z",
+      "error": "list indices must be integers or slices, not str"
+    }
+  ],
+  "artifacts": {
+    "angle": "raise value, not discounts: bonuses, a guarantee, a name that sells the result",
+    "brief": "hormozi"
+  },
+  "scores": {},
+  "cost": {},
+  "notes": [
+    "list indices must be integers or slices, not str"
+  ]
+}

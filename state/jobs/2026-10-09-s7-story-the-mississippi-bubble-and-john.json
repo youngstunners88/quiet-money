@@ -1,0 +1,71 @@
+{
+  "id": "2026-10-09-s7-story-the-mississippi-bubble-and-john",
+  "pillar": "story",
+  "topic": "The Mississippi Bubble and John Law: when a whole country went broke on paper money",
+  "day": "2026-10-09",
+  "slot": 7,
+  "status": "published",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-09T09:32:00Z",
+      "words": 192
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-09T09:32:22Z",
+      "seconds": 70.32,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-09T09:33:36Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-09T09:35:25Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-09T09:35:25Z",
+      "score": 99
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-09T09:35:26Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-10-09T09:35:26Z",
+      "local": "2026-10-10T15:00:00-04:00"
+    }
+  ],
+  "artifacts": {
+    "angle": "manias repeat; spot the pattern",
+    "title": "When Paper Money Broke a Country",
+    "video": "/home/user/quiet-money/production/output/2026-10-09/2026-10-09-s7-story-the-mississippi-bubble-and-john/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-09/2026-10-09-s7-story-the-mississippi-bubble-and-john/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-10-10/slot3-story",
+        "post_at": "2026-10-10T15:00:00-04:00"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 99,
+    "passed": true
+  },
+  "cost": {
+    "tts:edge:chars": 1152
+  },
+  "notes": []
+}

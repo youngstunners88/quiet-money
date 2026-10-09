@@ -1,0 +1,106 @@
+{
+  "title": "Why the Last 10 Years Make You Rich",
+  "hook_text": "THE COMPOUND INTEREST SNOWBALL TRICK",
+  "beats": [
+    {
+      "say": "A $500 monthly investment makes $1,000,000 of its wealth in the final decade alone.",
+      "callout": "",
+      "visual": "A vast, frozen alpine ridge at dawn, blue shadows stretching across deep untracked snow, cinematic wide shot."
+    },
+    {
+      "say": "If you invest $500 a month at an 8% return, something unnatural happens after year 30.",
+      "callout": "$500 A MONTH",
+      "visual": "A vintage brass compass and a weathered leather ledger resting on a dark walnut desk under warm side lighting."
+    },
+    {
+      "say": "Think of rolling a tiny snowball right at the top of a steep mountain slope.",
+      "callout": "",
+      "visual": "Close-up of gloved hands shaping a small sphere of white snow against a moody mountain backdrop, shallow depth of field."
+    },
+    {
+      "say": "At first, each rotation feels slow and pointless, gathering barely a dusting of fresh snow.",
+      "callout": "",
+      "visual": "A solitary small snowball resting on a vast snowy hillside, tiny tracks trailing behind it into distant pine trees."
+    },
+    {
+      "say": "After 20 years, you've put in $120,000 of your own cash, and you have $294,510.",
+      "callout": "$120,000 VS $294,510",
+      "visual": "A heavy iron safe door standing slightly ajar in a dim stone cellar, golden light spilling from the inside."
+    },
+    {
+      "say": "Two decades of hard work just to double your money. That's where most people give up.",
+      "callout": "",
+      "visual": "Silhouette of a tired hiker standing still on a wind-swept ridge, looking out over a misty valley at dusk."
+    },
+    {
+      "say": "But here's the part nobody mentions.",
+      "callout": "THE HIDDEN SHIFT",
+      "visual": "A macro shot of an antique mechanical hourglass, grains of sand accelerating through the narrow glass neck."
+    },
+    {
+      "say": "By year 30, your balance reaches $745,180, while you've only contributed $180,000 from your paychecks.",
+      "callout": "YEAR 30: $745,180",
+      "visual": "A thick boulder-sized sphere of packed snow rolling forcefully down a steep incline, throwing up white powder."
+    },
+    {
+      "say": "Now your snowball is massive. Every single rotation pulls in a wall of snow.",
+      "callout": "",
+      "visual": "Dramatic low-angle cinematic shot of a massive snow formation cutting a deep trench through a snowy forest."
+    },
+    {
+      "say": "Between year 30 and year 40, your balance explodes all the way to $1,745,504.",
+      "callout": "YEAR 40: $1,745,504",
+      "visual": "Warm morning sunlight breaking over a majestic alpine peak, illuminating an enormous, towering field of untouched snow."
+    },
+    {
+      "say": "That final decade alone created over $1,000,000 of profit, completely crushing your first 30 years combined.",
+      "callout": "+$1,000,000 AT THE END",
+      "visual": "Overhead cinematic view of an immense avalanche track widening into a grand, glowing valley at golden hour."
+    },
+    {
+      "say": "The real fortune isn't built early. It's collected by refusing to step off the ride.",
+      "callout": "",
+      "visual": "A traveler viewed from behind, standing resolute before a grand panorama of towering mountain ranges in bright sun."
+    },
+    {
+      "say": "Follow for the money rules school never taught you, so you always remember...",
+      "callout": "",
+      "visual": "A warm interior library with tall wooden bookshelves, golden light falling across an open, blank parchment."
+    },
+    {
+      "say": "...that when you don't quit early...",
+      "callout": "",
+      "visual": "A sweeping aerial view tracking backwards over a pristine, snowy mountain ridge into the crisp morning horizon."
+    }
+  ],
+  "caption": "Why you should never cash out too early. The real wealth compounding creates only arrives at the very end. #compoundinterest #investing #wealthbuilding #personalfinance #quietmoney",
+  "description": "Compound interest acts like a rolling snowball: slow at the beginning, but unstoppable at the end. By investing $500 a month at an 8% return, over $1,000,000 of your total $1.7M balance is created in the final 10 years alone. Patience is where fortunes are built.",
+  "hashtags": [
+    "#compoundinterest",
+    "#investing",
+    "#wealthbuilding",
+    "#personalfinance",
+    "#moneymath"
+  ],
+  "first_comment": "Did you realize over half of your 40-year investment returns show up in the last 10 years?",
+  "facts": [
+    {
+      "claim": "$500/month invested for 20 years at 8%/yr equals $294,510 with $120,000 contributed.",
+      "basis": "Standard compound interest formula with monthly contributions and compounding at 8% annual return."
+    },
+    {
+      "claim": "$500/month invested for 30 years at 8%/yr equals $745,180 with $180,000 contributed.",
+      "basis": "Standard compound interest formula with monthly contributions and compounding at 8% annual return."
+    },
+    {
+      "claim": "$500/month invested for 40 years at 8%/yr equals $1,745,504 with $240,000 contributed.",
+      "basis": "Standard compound interest formula with monthly contributions and compounding at 8% annual return."
+    },
+    {
+      "claim": "The final 10 years (from year 30 to year 40) add over $1,000,000.",
+      "basis": "$1,745,504 minus $745,180 equals $1,000,324 in growth between year 30 and year 40."
+    }
+  ],
+  "source": "llm",
+  "pillar": "math"
+}

@@ -1,0 +1,93 @@
+{
+  "title": "Why 0% Interest Still Costs You Fortunes",
+  "hook_text": "THE 0% INTEREST LIE EXPOSED",
+  "beats": [
+    {
+      "say": "Zero percent interest is the most profitable lie in retail.",
+      "callout": "",
+      "visual": "Cinematic close-up of a sleek glass checkout counter in a luxury boutique, dramatic moody overhead spotlight, blurred background, low angle."
+    },
+    {
+      "say": "Companies don't give you free installment plans out of kindness. There's a hidden formula draining your account.",
+      "callout": "",
+      "visual": "A silhouette of a person standing before towering glass skyscraper windows at dusk, sharp shadows, cinematic corporate lighting, wide shot."
+    },
+    {
+      "say": "When you split a $200 purchase into 4 payments of $50, your brain stops feeling the real pain.",
+      "callout": "$200 VS $50",
+      "visual": "Over-the-shoulder view of hands holding a dark smartphone angled sharply away, screen glow illuminating the knuckles without visible text, shallow depth of field."
+    },
+    {
+      "say": "Data shows shoppers spend up to 20% more because the purchase feels small and harmless.",
+      "callout": "+20% SPENDING",
+      "visual": "A shopping cart filled with unmarked luxury gift boxes inside a dimly lit designer store, warm golden side lighting, medium shot."
+    },
+    {
+      "say": "Then life happens. Miss one automated payment date, and you're slapped with an aggressive late fee.",
+      "callout": "",
+      "visual": "Close-up of a leather wallet lying open on a dark polished oak desk, soft ambient lamp light, macro lens focusing on empty card slots."
+    },
+    {
+      "say": "But here's the part nobody mentions.",
+      "callout": "",
+      "visual": "A lone chess piece standing on a dark wooden board, heavy cinematic contrast, single dramatic rim light, low table-level angle."
+    },
+    {
+      "say": "Stacking just two $50 installments quietly robs $100 every month from your real wealth.",
+      "callout": "$100 A MONTH",
+      "visual": "A glass jar sitting on a windowsill during a rainy evening, few coins visible inside, moody cinematic blue tones, tight framing."
+    },
+    {
+      "say": "If you invested that $100 a month at 8% a year instead, the real math appears.",
+      "callout": "",
+      "visual": "An antique brass compass resting next to an unrolled blank parchment map on a rustic wooden table, warm library lamp lighting, top-down angle."
+    },
+    {
+      "say": "In 20 years, that $100 a month compounds into $58,902.",
+      "callout": "$58,902",
+      "visual": "A tall stack of unmarked gold coins standing on a dark reflective surface, dramatic side lighting, shallow depth of field."
+    },
+    {
+      "say": "In 30 years, it grows into $149,036, even though you only contributed $36,000.",
+      "callout": "$149,036 VS $36,000",
+      "visual": "A miniature green sapling growing through cracked concrete, soft morning sunrise glow, cinematic ground-level shot."
+    },
+    {
+      "say": "You surrender nearly $150,000 in future freedom for impulse buys that lose value by next week.",
+      "callout": "$150,000 SACRIFICED",
+      "visual": "A row of empty clothing hangers inside a dark minimalist walk-in closet, dramatic spotlight casting long vertical shadows, wide angle."
+    },
+    {
+      "say": "Follow for the money rules school never taught you, so you can stop leaking cash on checkout screens...",
+      "callout": "",
+      "visual": "Back view of a person standing on a quiet misty bridge at dawn, looking toward a distant glowing city skyline, atmospheric lighting."
+    },
+    {
+      "say": "...because lenders know tiny payments hide giant costs, which is exactly why...",
+      "callout": "",
+      "visual": "Cinematic close-up of heavy bronze bank vault gears turning slowly in low light, sharp metallic reflections, eye-level macro shot."
+    }
+  ],
+  "caption": "0% interest doesn't mean free money. Here's the math behind micro-installments. #personalfinance #moneytips #financialfreedom #smartmoney #compoundinterest",
+  "description": "Buy-now-pay-later services advertise zero interest, but tiny payments remove spending friction and derail your compound growth. Diverting just $100 a month into compound investing can cost you over $149,000 over 30 years. Learn the real psychological and financial cost behind split checkout plans.",
+  "hashtags": [
+    "#personalfinance",
+    "#moneytips",
+    "#compoundinterest",
+    "#financialliteracy",
+    "#debtfree"
+  ],
+  "first_comment": "How many split-payment plans have you used without noticing the monthly total?",
+  "facts": [
+    {
+      "claim": "$100/month invested for 20 years at 8%/yr (monthly compounding) = $58,902",
+      "basis": "Standard compound interest formula with monthly deposits: FV = PMT * [((1 + r/n)^(nt) - 1) / (r/n)] at 8% annual return compounded monthly."
+    },
+    {
+      "claim": "$100/month invested for 30 years at 8%/yr (monthly compounding) = $149,036 (you put in $36,000)",
+      "basis": "Standard compound interest formula with monthly deposits: FV = PMT * [((1 + r/n)^(nt) - 1) / (r/n)] over 360 months; principal = 360 * $100 = $36,000."
+    }
+  ],
+  "source": "llm",
+  "pillar": "math"
+}

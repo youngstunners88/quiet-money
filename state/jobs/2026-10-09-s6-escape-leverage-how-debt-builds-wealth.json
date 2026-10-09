@@ -1,0 +1,72 @@
+{
+  "id": "2026-10-09-s6-escape-leverage-how-debt-builds-wealth",
+  "pillar": "escape",
+  "topic": "Leverage: how debt builds wealth and how it wipes people out",
+  "day": "2026-10-09",
+  "slot": 6,
+  "status": "published",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-09T09:44:44Z",
+      "words": 186
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-09T09:44:59Z",
+      "seconds": 65.736,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-09T09:46:02Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-09T09:47:56Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-09T09:47:56Z",
+      "score": 99
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-09T09:47:57Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-10-09T09:47:57Z",
+      "local": "2026-10-10T11:30:00-04:00"
+    }
+  ],
+  "artifacts": {
+    "angle": "borrowed money multiplies gains and losses; the math of a 20% drop at 5x leverage",
+    "brief": "kiyosaki",
+    "title": "The Math of Leverage: How Debt Wipes People Out",
+    "video": "/home/user/quiet-money/production/output/2026-10-09/2026-10-09-s6-escape-leverage-how-debt-builds-wealth/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-09/2026-10-09-s6-escape-leverage-how-debt-builds-wealth/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-10-10/slot2-escape",
+        "post_at": "2026-10-10T11:30:00-04:00"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 99,
+    "passed": true
+  },
+  "cost": {
+    "tts:edge:chars": 1084
+  },
+  "notes": []
+}

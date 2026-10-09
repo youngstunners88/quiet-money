@@ -1,0 +1,71 @@
+{
+  "id": "2026-10-09-s5-myth-myth-rich-people-got-rich-by-bei",
+  "pillar": "myth",
+  "topic": "Myth: rich people got rich by being cheap",
+  "day": "2026-10-09",
+  "slot": 5,
+  "status": "published",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-09T09:27:11Z",
+      "words": 154
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-09T09:27:57Z",
+      "seconds": 63.6,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-09T09:28:59Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-09T09:30:17Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-09T09:30:17Z",
+      "score": 97
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-09T09:30:18Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-10-09T09:30:18Z",
+      "local": "2026-10-10T07:30:00-04:00"
+    }
+  ],
+  "artifacts": {
+    "angle": "big wins (income, investing, housing) vs penny pinching",
+    "title": "Why Penny Pinching Won't Make You Rich",
+    "video": "/home/user/quiet-money/production/output/2026-10-09/2026-10-09-s5-myth-myth-rich-people-got-rich-by-bei/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-09/2026-10-09-s5-myth-myth-rich-people-got-rich-by-bei/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-10-10/slot1-myth",
+        "post_at": "2026-10-10T07:30:00-04:00"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 97,
+    "passed": true
+  },
+  "cost": {
+    "tts:edge:chars": 921
+  },
+  "notes": []
+}

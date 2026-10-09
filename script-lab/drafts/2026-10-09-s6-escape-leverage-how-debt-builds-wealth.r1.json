@@ -1,0 +1,93 @@
+{
+  "title": "The Math of Leverage: How Debt Wipes People Out",
+  "hook_text": "A 20% DROP WIPES YOU OUT",
+  "beats": [
+    {
+      "say": "A 20% drop in price can instantly wipe out 100% of your wealth.",
+      "callout": "",
+      "visual": "Extreme close-up of a house key sitting on a dark wooden table, soft dramatic lighting."
+    },
+    {
+      "say": "Here's the exact math of how leverage quietly builds massive empires and suddenly bankrupts them.",
+      "callout": "",
+      "visual": "Wide shot of a modern glass skyscraper reflecting a stormy grey sky."
+    },
+    {
+      "say": "Say you buy a $100,000 property. You put down $20,000 and borrow the other $80,000.",
+      "callout": "",
+      "visual": "Hand placing a stack of hundred-dollar bills onto a dark stone countertop."
+    },
+    {
+      "say": "That's 5x leverage, meaning you control a massive asset with a very small deposit.",
+      "callout": "5X LEVERAGE",
+      "visual": "Overhead shot of a clean blueprint layout of a residential house."
+    },
+    {
+      "say": "If the market goes up 20%, the property is now worth $120,000.",
+      "callout": "",
+      "visual": "A clean white model house sitting on a polished reflective surface, bright overhead light."
+    },
+    {
+      "say": "You just doubled your $20,000 investment, turning a small win into a massive victory.",
+      "callout": "$20K TO $40K",
+      "visual": "A person's hands in shadows opening a heavy, empty leather folder on a desk."
+    },
+    {
+      "say": "But here's the part nobody mentions about the dark side of using borrowed money.",
+      "callout": "",
+      "visual": "Close-up of a pen resting on a blank contract, side lighting casting a long shadow."
+    },
+    {
+      "say": "If the property value drops by 20%, your entire $20,000 down payment is completely gone.",
+      "callout": "THE DARK SIDE",
+      "visual": "A weathered brick wall with a faint shadow of a person walking away."
+    },
+    {
+      "say": "The bank still wants their $80,000, and you're left holding a completely empty pocket.",
+      "callout": "",
+      "visual": "An empty concrete parking lot of a commercial building at dusk, single streetlight on."
+    },
+    {
+      "say": "This double-edged sword is why even famous real estate gurus have faced massive corporate bankruptcies.",
+      "callout": "",
+      "visual": "Close-up of a vintage brass scale tipping heavily to one side on a dark desk."
+    },
+    {
+      "say": "This week, calculate the leverage on your own home or any asset you want to buy.",
+      "callout": "STEP ONE",
+      "visual": "A person's hand typing numbers on an old-school silver calculator, soft focus."
+    },
+    {
+      "say": "If your total debt is more than 80% of the asset's value, you're in danger.",
+      "callout": "DANGER ZONE",
+      "visual": "A simple red line graph on a piece of paper, showing a sharp downward trend, no text."
+    },
+    {
+      "say": "Follow for the money rules school never taught you, and protect your downside because...",
+      "callout": "",
+      "visual": "Silhouette of a person standing by a large office window looking out at a quiet city skyline at night."
+    }
+  ],
+  "caption": "Leverage is a double-edged sword that can build fortunes or wipe you out overnight. Here's the brutal math. #money #personalfinance #leverage #debt #wealthbuilding",
+  "description": "Learn how 5x leverage turns a small 20% price gain into a 100% return, and how a 20% drop completely destroys your initial investment. Protect your downside by tracking your debt-to-asset ratio.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#leverage",
+    "#debt",
+    "#wealthbuilding"
+  ],
+  "first_comment": "Have you ever calculated the exact leverage on your home or investments? Let us know below.",
+  "facts": [
+    {
+      "claim": "A $100,000 property bought with $20,000 down represents 5x leverage, where a 20% drop wipes out equity and a 20% rise doubles it.",
+      "basis": "Standard mathematical formula for leverage: $100,000 total value divided by $20,000 equity equals 5x leverage. A 20% fluctuation of $100,000 is $20,000, representing 100% of the equity."
+    },
+    {
+      "claim": "Famous real estate gurus have faced massive corporate bankruptcies.",
+      "basis": "Robert Kiyosaki's company Rich Global LLC filed for bankruptcy protection in 2012."
+    }
+  ],
+  "source": "llm",
+  "pillar": "escape"
+}

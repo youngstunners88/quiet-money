@@ -1,0 +1,71 @@
+{
+  "id": "2026-10-09-s4-math-compound-interest-explained-with",
+  "pillar": "math",
+  "topic": "Compound interest explained with a snowball: why the last 10 years matter most",
+  "day": "2026-10-09",
+  "slot": 4,
+  "status": "published",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-09T09:39:16Z",
+      "words": 190
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-09T09:40:01Z",
+      "seconds": 72.048,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-09T09:41:16Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-09T09:43:14Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-09T09:43:14Z",
+      "score": 96
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-09T09:43:15Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-10-09T09:43:15Z",
+      "local": "2026-10-09T21:00:00-04:00"
+    }
+  ],
+  "artifacts": {
+    "angle": "most growth happens at the end; don't stop early",
+    "title": "Why the Last 10 Years Make You Rich",
+    "video": "/home/user/quiet-money/production/output/2026-10-09/2026-10-09-s4-math-compound-interest-explained-with/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-09/2026-10-09-s4-math-compound-interest-explained-with/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-10-09/slot5-math",
+        "post_at": "2026-10-09T21:00:00-04:00"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 96,
+    "passed": true
+  },
+  "cost": {
+    "tts:edge:chars": 1109
+  },
+  "notes": []
+}

@@ -1,0 +1,88 @@
+{
+  "title": "When Paper Money Broke a Country",
+  "hook_text": "THE 1720 CRASH THAT CREATED MILLIONAIRES",
+  "beats": [
+    {
+      "say": "In 1720, a convicted murderer took over France's entire economy and printed paper out of thin air.",
+      "callout": "",
+      "visual": "A dimly lit 18th-century Parisian study with a quill pen resting on an empty parchment, heavy shadows, cinematic lighting."
+    },
+    {
+      "say": "His name was John Law, and he promised paper notes would replace gold. Stay to see how it ends.",
+      "callout": "",
+      "visual": "A close-up of a silver coin sitting next to a blank stack of paper notes, shot from a high angle, moody atmosphere."
+    },
+    {
+      "say": "Law founded the Mississippi Company, claiming America's Louisiana territory held mountains of pure gold.",
+      "callout": "GOLD RUSH",
+      "visual": "A silhouetted traveler looking at a vast, foggy river at dawn, dramatic low-angle shot, muted tones."
+    },
+    {
+      "say": "Citizens rushed to swap hard coins for shares. Stocks jumped from 500 livres to 10,000 livres.",
+      "callout": "500 VS 10,000",
+      "visual": "A blurred hand stacking heavy leather money bags on a dark wooden table, soft focus background."
+    },
+    {
+      "say": "Ordinary folks became rich overnight. Waiters bought estates, and coachmen drove past their former masters.",
+      "callout": "",
+      "visual": "An empty horse-drawn carriage rolling down a cobblestone street in thick fog, dark and cinematic."
+    },
+    {
+      "say": "But here's the part nobody mentions. The gold in Louisiana didn't exist. It was an illusion.",
+      "callout": "THE ILLUSION",
+      "visual": "A flickering candle casting long shadows against a cracked plaster wall, slow camera drift."
+    },
+    {
+      "say": "In late 1720, smart investors tried cashing out their paper shares for actual silver coins.",
+      "callout": "",
+      "visual": "A pair of hands sliding a small leather pouch across a scarred wooden desk, moody side lighting."
+    },
+    {
+      "say": "The central bank ran out of silver in days. Panic hit Paris like a tidal wave.",
+      "callout": "",
+      "visual": "Heavy wooden doors bolted shut with giant iron locks, dark atmospheric shot, high contrast."
+    },
+    {
+      "say": "Share values collapsed to zero. Thousands of families lost every single cent they owned.",
+      "callout": "100% LOSS",
+      "visual": "A torn piece of parchment lying abandoned on a wet street at dusk, cinematic blue grade."
+    },
+    {
+      "say": "John Law fled France in disguise, penniless and hunted by the mobs he once made rich.",
+      "callout": "",
+      "visual": "A solitary figure in a heavy cloak walking away down a dark alley, back to the camera, low angle."
+    },
+    {
+      "say": "Manias repeat every single generation under new names. Follow for the money rules school never taught you...",
+      "callout": "FOLLOW",
+      "visual": "A single pocket watch resting on a dark velvet cloth, ticking in slow motion, macro lens."
+    },
+    {
+      "say": "...In 1720, a convicted murderer took over France's entire economy and printed paper out of thin air.",
+      "callout": "",
+      "visual": "A dim Parisian study with an empty parchment, repeating the loop smoothly, moody cinematic shadows."
+    }
+  ],
+  "caption": "When hype replaces reality, the fall is always fast. Spot the pattern before it repeats. #moneystories #finance #history #wealth #investing",
+  "description": "The true story of John Law and the Mississippi Bubble shows how paper money manias destroy wealth when fundamentals vanish.",
+  "hashtags": [
+    "#moneystories",
+    "#finance",
+    "#history",
+    "#wealth",
+    "#investing"
+  ],
+  "first_comment": "What modern asset reminds you the most of the Mississippi Company?",
+  "facts": [
+    {
+      "claim": "John Law took over French finances and formed the Mississippi Company",
+      "basis": "Historical record of the Banque Royale and Mississippi Company in 1720"
+    },
+    {
+      "claim": "Stock prices rose from 500 livres to 10,000 livres before collapsing",
+      "basis": "Standard financial history of the Mississippi Bubble inflation and crash"
+    }
+  ],
+  "source": "llm",
+  "pillar": "story"
+}

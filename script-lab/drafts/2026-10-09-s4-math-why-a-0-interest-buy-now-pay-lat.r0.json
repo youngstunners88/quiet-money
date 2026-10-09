@@ -1,0 +1,78 @@
+{
+  "title": "Why 0% Interest Plans Cost You More",
+  "hook_text": "ZERO PERCENT INTEREST IS A TRAP",
+  "beats": [
+    {
+      "say": "Split it into four easy payments. That phrase tricks your brain every single time.",
+      "callout": "",
+      "visual": "A sleek smartphone resting on a dark walnut table, screen glowing with a soft neutral light in a dim room."
+    },
+    {
+      "say": "It feels harmless because the price tag looks small. But here is the exact math they hide.",
+      "callout": "",
+      "visual": "A pair of hands sliding a minimalist leather wallet across a concrete surface."
+    },
+    {
+      "say": "When debt sits at 24% APR, debt doubles every 3 years. That is the rule of 72.",
+      "callout": "24% APR",
+      "visual": "A vintage mechanical calculator resting on a messy desk under an amber desk lamp."
+    },
+    {
+      "say": "Now add missed deadlines. A single late fee turns that free plan into an expensive mistake.",
+      "callout": "",
+      "visual": "A close-up of a silver wristwatch ticking in slow motion against a dark background."
+    },
+    {
+      "say": "Retailers offer zero percent because shoppers spend up to 40% more with it.",
+      "callout": "40% MORE",
+      "visual": "Empty wooden shopping hangers swaying gently on a steel clothing rack."
+    },
+    {
+      "say": "You do not buy the item. You buy the illusion of affordability.",
+      "callout": "",
+      "visual": "A brass key resting on top of a stack of closed cardboard delivery boxes."
+    },
+    {
+      "say": "Small payments stack up until you are juggling four different payment apps at once.",
+      "callout": "",
+      "visual": "A steaming ceramic mug of black coffee sitting on a wooden counter with morning light."
+    },
+    {
+      "say": "That is how a fifty dollar purchase quietly morphs into a cash flow emergency.",
+      "callout": "",
+      "visual": "A blurred stack of crisp paper notes held by a rubber band on a slate table."
+    },
+    {
+      "say": "If you cannot pay cash today, you cannot afford the payment tomorrow.",
+      "callout": "",
+      "visual": "A minimalist metal lamp casting harsh shadows across a bare white wall."
+    },
+    {
+      "say": "Break the habit before the tiny bills break your monthly budget completely.",
+      "callout": "",
+      "visual": "A pair of hands closing a black leather journal with a sharp click."
+    },
+    {
+      "say": "Follow for the money rules school never taught you, because split into four easy...",
+      "callout": "",
+      "visual": "A silhouette of a person walking down a quiet hallway toward an open doorway."
+    }
+  ],
+  "caption": "Split payments feel free until the fees hit. Know the math. #money #personalfinance #budgeting #debtfree",
+  "description": "Buy-now-pay-later plans seem harmless with zero interest, but the psychology of small payments leads to massive overspending and hidden fees.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#budgeting",
+    "#debtfree"
+  ],
+  "first_comment": "Have you ever used a buy-now-pay-later plan? Did you finish it on time?",
+  "facts": [
+    {
+      "claim": "At 24% APR, debt doubles every 3 years. That is the rule of 72.",
+      "basis": "Rule of 72: at 24% debt doubles every 3 years"
+    }
+  ],
+  "source": "llm",
+  "pillar": "math"
+}
