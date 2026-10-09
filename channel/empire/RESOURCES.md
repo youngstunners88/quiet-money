@@ -114,3 +114,16 @@ Read with `python -m faceless intake` (dossiers in `repo-farm/intake/2026-10-08b
 ### Decisions only the owner can make
 
 - **superdesigndev/treg (treg.to):** Nothing now. If backlink or SERP data is wanted later, trial it in a sandbox copy with a $5 prepaid balance and a spend cap, never with a production token.
+
+## The owner's environment pack (claude-environment.zip, Drive, 2026-10-09)
+
+An operating file (AGENTS.md, imported by CLAUDE.md) plus routing cards for Muapi, Monid, ElevenLabs, Firecrawl, TinyFish, GitHub, Vercel, Tripo, Browser Use and Codemagic, meant for `~/.claude/` on the owner's own machine. Read as data; nothing from it was installed or run here. The pack says a repo's own CLAUDE.md wins inside that repo, so this repository's rules stand.
+
+| Point in the pack | Here |
+|---|---|
+| Use the highest finished layer; do not hand-roll a model client | Agrees in spirit. The one deliberate exception is `faceless/muapi.py`: an unattended routine needs the per-job spend cap, the daily ceiling and the ledger, which the CLI and MCP do not give. Everything else (research, browsing, GitHub) goes through the vendor tool |
+| Muapi: stdio MCP works, HTTP shows connected with no tools | Not used here (the desk calls the REST API). Worth knowing for the owner's own sessions |
+| Monid only when no dedicated tool covers the job; it spends the owner's balance | Same as our verdict (park). The Drive file's owner is the account that holds the Monid wallet, so the open question is only whether Quiet Money may use it |
+| Leave Mistral Vibe, the Copilot SDK and the ci-cd topic page uninstalled | Same verdicts |
+| `npm install -g muapi-cli`, `@elevenlabs/cli` (piped installer) | Differs from our verdicts (kill: a postinstall binary download, a script piped into a shell). Fine on the owner's own machine at their discretion; not for the routines |
+| Two of the eleven cards (`maintain-skills`, `vercel`) could not be read intact in this session | Re-send those two if they matter |
