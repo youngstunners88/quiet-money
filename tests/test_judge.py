@@ -1,7 +1,6 @@
 """The fallback judge keeps the quality gates alive when Cloudflare Clef cannot answer: same questions, same answer shape, same thresholds.
 Live calibration (2026-10-08): clean stills scored 0.20 to 0.28, a still with printed words 0.72, a generated face 0.72 to 0.75."""
 
-import json
 
 import pytest
 from PIL import Image

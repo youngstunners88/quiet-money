@@ -389,7 +389,7 @@ def apply_verdicts(folder: Path) -> dict[str, int]:
             raise ValueError(f"{it['id']}: verdict must be one of {VERDICTS}")
         for f in files:
             text = f.read_text(encoding="utf-8")
-            text = re.sub(r"- \[[ x]\] \*\*(USE|TRIAL|PARK|KILL)\*\*", lambda m: f"- [{'x' if m.group(1) == it['verdict'] else ' '}] **{m.group(1)}**", text)
+            text = re.sub(r"- \[[ x]\] \*\*(USE|TRIAL|PARK|KILL)\*\*", lambda m, it=it: f"- [{'x' if m.group(1) == it['verdict'] else ' '}] **{m.group(1)}**", text)
             text = text.split("\n## Decision")[0].rstrip("\n") + "\n"
             block = [f"\n## Decision ({data['date']})", "", f"**{it['verdict']}**, pipeline stage: {it.get('stage') or 'none'}.", "", it["why"]]
             if it.get("steal") and it["steal"].lower() not in ("none", "n/a", "none needed"):

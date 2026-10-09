@@ -17,6 +17,7 @@ from html.parser import HTMLParser
 
 from faceless import config
 from faceless.config import Paths
+from faceless.fsutil import write_atomic
 
 DIR = Paths.root / "channel" / "compliance"
 WATCHLIST = DIR / "watchlist.json"
@@ -85,13 +86,14 @@ def watchlist() -> list[dict]:
 def fetch(url: str) -> str | None:
     """Plain HTTP fetch; None when the page cannot be read as text here."""
     import requests
+    from faceless.providers import ProviderError, fetch_bytes
     try:
-        r = requests.get(url, timeout=25, headers={"User-Agent": "Mozilla/5.0 (compatible; QuietMoneyPolicyWatch/1.0)"})
-    except requests.RequestException:
+        body, ctype = fetch_bytes(url, timeout=25, limit=4 * 2**20, session=requests, headers={"User-Agent": "Mozilla/5.0 (compatible; QuietMoneyPolicyWatch/1.0)"})
+    except (requests.RequestException, ProviderError):
         return None
-    if r.status_code != 200 or "html" not in r.headers.get("content-type", "html"):
+    if "html" not in (ctype or "html"):
         return None
-    text = to_text(r.text)
+    text = to_text(body.decode("utf-8", "replace"))
     return text if len(text) > 1500 and len(snippets(text)) >= 3 else None     # a shell page with no rules in it is not a read
 
 
@@ -110,12 +112,12 @@ def record_text(pid: str, text: str, today: str | None = None) -> dict:
     removed = [s for s in (old["snippets"] if old else []) if s.lower() not in {x.lower() for x in new}]
     status = "new" if old is None else "changed" if added or removed else "unchanged"
     SNAP.mkdir(parents=True, exist_ok=True)
-    snap = {"id": pid, "fetched": today or date.today().isoformat(), "sha": hashlib.sha256("\n".join(new).encode()).hexdigest()[:16], "snippets": new}
+    snap = {"id": pid, "fetched": today or config.today_utc().isoformat(), "sha": hashlib.sha256("\n".join(new).encode()).hexdigest()[:16], "snippets": new}
     if status != "unchanged" or old is None:
         snap["changed"] = snap["fetched"]
     elif old:
         snap["changed"] = old.get("changed", old["fetched"])
-    (SNAP / f"{pid}.json").write_text(json.dumps(snap, indent=1, ensure_ascii=False), encoding="utf-8")
+    write_atomic(SNAP / f"{pid}.json", json.dumps(snap, indent=1, ensure_ascii=False))
     return {"id": pid, "status": status, "added": added[:12], "removed": removed[:12], "rules": len(new)}
 
 
@@ -136,7 +138,7 @@ def check(fetch_fn=fetch, ids: list[str] | None = None) -> list[dict]:
 
 def stale(days: int = 14, today: str | None = None) -> list[str]:
     """Watched pages whose snapshot is missing or older than `days`."""
-    now = date.fromisoformat(today) if today else date.today()
+    now = date.fromisoformat(today) if today else config.today_utc()
     late = []
     for w in watchlist():
         snap = load(w["id"])
@@ -147,7 +149,7 @@ def stale(days: int = 14, today: str | None = None) -> list[str]:
 
 def write_report(results: list[dict]) -> None:
     names = {w["id"]: w for w in watchlist()}
-    L = [f"# Policy watch, {date.today().isoformat()}", "",
+    L = [f"# Policy watch, {config.today_utc().isoformat()}", "",
          "Rule sentences saved per page; a change below means a rule moved. Review the diff before the next listing, post run or send.", "",
          "| page | status | rules kept | note |", "|---|---|---|---|"]
     for r in results:

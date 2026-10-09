@@ -11,6 +11,7 @@ from pathlib import Path
 
 from faceless import config, ledger
 from faceless.config import Paths
+from faceless.fsutil import write_atomic
 
 
 def cfg_cards_mode() -> str:
@@ -71,7 +72,7 @@ def cmd_make(args) -> int:
         src = json.loads(open(args.script, encoding="utf-8").read())
         src.setdefault("source", "human")
         job = new_job(args.pillar, args.topic or src.get("title", "untitled"), slot=args.slot)
-        (Paths.final / f"{job.id}.json").write_text(json.dumps(src, indent=2, ensure_ascii=False), encoding="utf-8")
+        write_atomic(Paths.final / f"{job.id}.json", json.dumps(src, indent=2, ensure_ascii=False))
         orchestrator.produce(job, judge=not args.no_judge, prefer_voice=args.voice, do_publish=not args.no_publish)
     else:
         job = orchestrator.run_one(args.pillar, args.topic, slot=args.slot, judge=not args.no_judge,
@@ -182,7 +183,7 @@ def cmd_publish(args) -> int:
 def cmd_scout(args) -> int:
     from faceless import scout
     extra = json.loads(Path(args.import_file).read_text(encoding="utf-8")) if args.import_file else None
-    res = scout.run(act=args.act, extra=extra)
+    scout.run(act=args.act, extra=extra)
     print((scout.REPORT).read_text(encoding="utf-8"))
     return 0
 

@@ -465,7 +465,7 @@ def test_failed_slot_never_fails_the_previous_finished_job(tmp_path, monkeypatch
     def produce(job, **kw):
         job.status = "packaged"
     monkeypatch.setattr(orchestrator, "produce", produce)
-    jobs = orchestrator.daily(5)
+    orchestrator.daily(5)
 
 
 # ---- audit regressions (2026-10-02) -----------------------------------------------------------
@@ -1239,7 +1239,6 @@ def test_visuals_swaps_a_flagged_still_for_a_card_and_retries_the_hook(tmp_path,
     monkeypatch.setattr(Job, "dir", property(lambda self: tmp_path))
     script = {"beats": [{"say": "hook line", "callout": "", "visual": "v0"}, {"say": "second beat here", "callout": "", "visual": "v1"},
                         {"say": "third beat here", "callout": "", "visual": "v2"}]}
-    from concurrent.futures import ThreadPoolExecutor
     monkeypatch.setitem(config.load()["images"], "concurrency", 1)
     res = visuals.run(job, script)
     assert any("no faces" in c for c in calls)                       # the hook was regenerated once with the stricter prompt
@@ -1422,6 +1421,7 @@ def test_qa_never_raises_into_production(monkeypatch, tmp_path):
 class _MuResp:
     def __init__(self, code=200, body=None, content=b"", text=""):
         self.status_code, self._b, self.content, self.text = code, body, content, text or json.dumps(body or {})
+        self.headers = {"content-type": "image/jpeg"}
 
     def json(self):
         return self._b

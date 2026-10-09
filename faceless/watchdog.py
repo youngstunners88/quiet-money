@@ -12,7 +12,7 @@ from __future__ import annotations
 import json
 from datetime import datetime, timedelta, timezone
 
-from faceless import config, events, ledger, safety
+from faceless import events, ledger, safety
 from faceless.config import Paths
 
 CRITICAL, WARN, INFO = "critical", "warn", "info"

@@ -9,6 +9,7 @@ from concurrent.futures import ThreadPoolExecutor
 from faceless import config, events, flow, hookclip, qa
 from faceless.pipeline import cards, sketch
 from faceless.providers import images
+from faceless.fsutil import write_atomic
 
 SUFFIX = ("vertical 9:16 composition, subject in the center third, cinematic, highly detailed, "
           "no text, no letters, no numbers, no watermark, no logo, any printed surface out of focus")
@@ -51,7 +52,7 @@ def run(job, script: dict) -> list[dict]:
             return {"beat": i, "provider": "card", "path": None, "prompt": "", "card": planned[i]}
         if i == 0 and hook_clip:
             return {"beat": 0, "provider": "clip", "path": hook_clip["frame"], "prompt": "", "clip": hook_clip["clip"]}
-        seed = int(hashlib.sha1(f"{job.id}:{i}".encode()).hexdigest()[:8], 16) % 2_000_000_000
+        seed = int(hashlib.sha1(f"{job.id}:{i}".encode(), usedforsecurity=False).hexdigest()[:8], 16) % 2_000_000_000
         prompt = build_prompt(beat["visual"] or beat["say"], pillar.style)
         provider, path = images.generate(prompt, seed=seed, hero=(i == 0), job=job.id)
         row = {"beat": i, "provider": provider, "path": path, "prompt": prompt}
@@ -93,7 +94,7 @@ def run(job, script: dict) -> list[dict]:
             continue
         results[i] = {**r, "card": {"kind": "phrase", "text": cards.key_phrase(script["beats"][i])}, "qa_swapped": r["qa"]["flags"]}
         swaps -= 1
-    (job.dir / "images.json").write_text(json.dumps(results, indent=1), encoding="utf-8")
+    write_atomic(job.dir / "images.json", json.dumps(results, indent=1))
     by_provider: dict = {}
     for r in results:
         by_provider[r["provider"]] = by_provider.get(r["provider"], 0) + 1

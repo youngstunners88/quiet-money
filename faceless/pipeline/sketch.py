@@ -37,13 +37,13 @@ AREA = (10.0, 360.0, 1070.0, 1870.0)              # x0, y0, x1, y1 every element
 MAX_ELEMENTS, MAX_TWEENS, MAX_REPEAT = 60, 140, 24
 
 ROLES = ("accent", "accent2", "ink", "muted", "dim", "danger", "glow")
-EASE_RE = re.compile(r"^(?:(?:power[1-4]|sine|expo|circ)\.(?:in|out|inOut)|back\.(?:in|out|inOut)(?:\(\d(?:\.\d+)?\))?|linear|none)$")
+EASE_RE = re.compile(r"^(?:(?:power[1-4]|sine|expo|circ)\.(?:in|out|inOut)|back\.(?:in|out|inOut)(?:\(\d(?:\.\d+)?\))?|linear|none)\Z")
 ORIGINS = {f"{a}% {b}%" for a in (0, 25, 50, 75, 100) for b in (0, 25, 50, 75, 100)}
 TWEEN_PROPS = {"opacity": (0.0, 1.0, 1.0), "x": (-400.0, 400.0, 0.0), "y": (-400.0, 400.0, 0.0), "scale": (0.0, 3.0, 1.0), "scaleX": (0.0, 3.0, 1.0),
                "scaleY": (0.0, 3.0, 1.0), "rotation": (-360.0, 360.0, 0.0), "draw": (0.0, 1.0, 1.0)}      # name -> (min, max, resting value)
-ID_RE = re.compile(r"^[a-z][a-z0-9_]{0,15}$")
-HEX_RE = re.compile(r"^#[0-9a-fA-F]{6}$")
-TEXT_RE = re.compile(r"^[A-Za-z0-9 .,:;!?%$€£&'\"()+=/*×→≈·\-–]{1,36}$")
+ID_RE = re.compile(r"^[a-z][a-z0-9_]{0,15}\Z")
+HEX_RE = re.compile(r"^#[0-9a-fA-F]{6}\Z")
+TEXT_RE = re.compile(r"^[A-Za-z0-9 .,:;!?%$€£&'\"()+=/*×→≈·\-–]{1,36}\Z")
 NUM_RE = re.compile(r"\d[\d,]*(?:\.\d+)?")
 FONT_EM = {"anton": 0.50, "black": 0.68}          # average advance as a share of the font size: deliberately generous
 FONTS = {"anton": "Anton", "black": "MontserratBlack"}
@@ -563,7 +563,7 @@ SYSTEM = (HEAD + "EXAMPLE 1 (two bars grow and a figure lands; everything sits a
 
 def motif_for(job_id: str, beat: int, used: list[str] | None = None) -> str:
     """A visual idea chosen from the job and the beat, so the same video always asks for the same scenes and different videos ask for different ones."""
-    h = int(hashlib.sha1(f"{job_id}:{beat}".encode()).hexdigest()[:8], 16)
+    h = int(hashlib.sha1(f"{job_id}:{beat}".encode(), usedforsecurity=False).hexdigest()[:8], 16)
     pool = [m for m in MOTIFS if m not in (used or [])] or MOTIFS
     return pool[h % len(pool)]
 

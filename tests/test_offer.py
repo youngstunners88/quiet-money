@@ -2,7 +2,6 @@
 Nothing here reaches a network or a model, and nothing posts."""
 
 import json
-from pathlib import Path
 
 import pytest
 

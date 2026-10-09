@@ -9,6 +9,7 @@ import subprocess
 from faceless import config, events
 from faceless.pipeline.script import narration
 from faceless.providers import tts
+from faceless.fsutil import write_atomic
 
 
 def _norm(s: str) -> str:
@@ -82,7 +83,7 @@ def attach_display(words: list[dict], text: str) -> list[dict]:
 
 def _atempo(src, dst, factor: float) -> None:
     subprocess.run(["ffmpeg", "-hide_banner", "-loglevel", "error", "-y", "-i", str(src),
-                    "-af", f"atempo={factor:.4f}", str(dst)], check=True)
+                    "-af", f"atempo={factor:.4f}", str(dst)], check=True, timeout=300)
 
 
 def run(job, script: dict, prefer: str | None = None) -> dict:
@@ -114,6 +115,6 @@ def run(job, script: dict, prefer: str | None = None) -> dict:
     words = attach_display(words, text)
     spans = align_beats([b["say"] for b in script["beats"]], words, total)
     data = {"provider": provider, "duration": total, "words": words, "beats": spans}
-    (job.dir / "voice.json").write_text(json.dumps(data, indent=1), encoding="utf-8")
+    write_atomic(job.dir / "voice.json", json.dumps(data, indent=1))
     job.add_cost(f"tts:{provider}:chars", len(text))
     return data

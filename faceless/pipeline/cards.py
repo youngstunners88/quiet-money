@@ -11,6 +11,8 @@ Any failure returns None and the caller keeps the still image, so cards can neve
 
 from __future__ import annotations
 
+import base64
+import hashlib
 import html
 import json
 import os
@@ -24,6 +26,36 @@ from faceless.config import Paths
 
 CLI = "hyperframes@0.8.136"      # pinned: the same input must keep producing the same video
 GSAP = "https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"
+GSAP_SRI = "sha384-sG0Hv1tP1lZCk9KQmrIbY/XNwi+OY84GQqhMscbnsoBFqAz8KNCil1kvfL3Hbbk2"   # of exactly that file
+LOCAL_GSAP = "assets/gsap.min.js"
+SECRET_NAME = re.compile(r"KEY|TOKEN|SECRET|PASSWORD|PASSWD|CREDENTIAL|ACCOUNT_ID|AUTH|COOKIE|_PAT$|SESSION_ID", re.I)
+
+
+def gsap_digest(data: bytes) -> str:
+    return "sha384-" + base64.b64encode(hashlib.sha384(data).digest()).decode()
+
+
+def ensure_gsap(root: Path) -> None:
+    """Put a copy of GSAP whose hash we checked into the project. HyperFrames downloads and inlines a CDN script itself, so a browser-side `integrity`
+    attribute is never evaluated and would only look like protection; the check has to be ours, on the bytes the renderer will run."""
+    cache = Paths.cache / "gsap-3.14.2.min.js"
+    data = cache.read_bytes() if cache.exists() else b""
+    if gsap_digest(data) != GSAP_SRI:
+        from faceless.providers import http
+        data = http().get(GSAP, timeout=30).content
+        if gsap_digest(data) != GSAP_SRI:
+            raise RuntimeError("GSAP from the CDN does not match its pinned hash; not rendering with it")
+        cache.parent.mkdir(parents=True, exist_ok=True)
+        cache.write_bytes(data)
+    (root / "assets").mkdir(parents=True, exist_ok=True)
+    (root / LOCAL_GSAP).write_bytes(data)
+
+
+def renderer_env() -> dict:
+    """The environment for `npx hyperframes`: third-party npm code runs there, so it gets paths, proxies and certificates, and no key, token or secret."""
+    env = {k: v for k, v in os.environ.items() if not SECRET_NAME.search(k)}
+    env.update({"HYPERFRAMES_NO_TELEMETRY": "1", "DO_NOT_TRACK": "1"})
+    return env
 
 # per-pillar look: (background top, background bottom, glow). The accent comes from [production].accent.
 PALETTE = {
@@ -49,7 +81,7 @@ def available() -> bool:
 
 def parse_number(callout: str) -> dict | None:
     """'$698,202' -> value 698202; '21 YEARS' -> value 21 + tail 'YEARS'; '8%' -> suffix '%'. None if not numeric."""
-    m = NUM.match(callout or "")
+    m = NUM.match((callout or "")[:80])   # callouts are a few words; the cap keeps a pathological string from costing quadratic time
     if not m:
         return None
     cur, digits, suf, tail = m.groups()
@@ -67,7 +99,7 @@ VS = re.compile(r"\s+(?:VS\.?|VERSUS)\s+", re.I)
 
 def parse_compare(callout: str) -> dict | None:
     """'$698,202 VS $298,072' -> two bars sized by value; 'ASSET VS LIABILITY' -> a two-word face-off. None otherwise."""
-    parts = VS.split((callout or "").strip())
+    parts = VS.split((callout or "").strip()[:200])
     if len(parts) != 2 or not all(0 < len(x) <= 16 for x in parts):
         return None
     nums = [parse_number(x) for x in parts]
@@ -265,7 +297,7 @@ def build_project(root: Path, specs: list[tuple[int, dict, float]], pillar_id: s
         t += dur
     page = f"""<!doctype html>
 <html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=1080, height=1920">
-<script src="{GSAP}"></script>
+<script src="{LOCAL_GSAP}"></script>
 <style>
 @font-face{{font-family:"Anton";src:url("assets/Anton-Regular.ttf")}}
 @font-face{{font-family:"MontserratBlack";src:url("assets/Montserrat-Black.ttf")}}
@@ -330,9 +362,9 @@ def render_reel(job, picked: dict[int, dict], beat_spans: dict[int, tuple[float,
     out = root / f"{name}.mp4"
     cmd = ["npx", "--yes", CLI, "render", str(root), "-o", str(out), "-f", str(fps), "-q", "looks", "--quiet", "--workers", "2"]
     try:
-        p = subprocess.run(cmd, capture_output=True, text=True, timeout=420,
-                           env={**os.environ, "HYPERFRAMES_NO_TELEMETRY": "1", "DO_NOT_TRACK": "1"})
-    except (OSError, subprocess.TimeoutExpired) as e:
+        ensure_gsap(root)
+        p = subprocess.run(cmd, capture_output=True, text=True, timeout=420, env=renderer_env())
+    except (OSError, RuntimeError, subprocess.TimeoutExpired) as e:
         events.emit("CARDS_FAILED", job=job.id, error=type(e).__name__)
         return None
     if p.returncode != 0 or not out.exists():

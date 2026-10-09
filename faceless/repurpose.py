@@ -249,7 +249,7 @@ def build_pack(job, folder: Path) -> dict:
 
 def build(selector: str | None = None) -> list[dict]:
     """Kits for every packaged/published job matching a day (YYYY-MM-DD, by post day) or a job id; default: today's queue."""
-    want = selector or date.today().isoformat()
+    want = selector or config.today_utc().isoformat()
     out = []
     for j in all_jobs():
         local = (j.artifacts.get("publish") or {}).get("local") or {}
@@ -267,7 +267,7 @@ def build(selector: str | None = None) -> list[dict]:
 
 def weekly_issue(end: str | None = None, days: int = 7) -> Path | None:
     """Compile the newsletter items of the last `days` post days into one issue under channel/newsletter/."""
-    last = date.fromisoformat(end) if end else date.today()
+    last = date.fromisoformat(end) if end else config.today_utc()
     first = last - timedelta(days=days - 1)
     items = []
     for folder in sorted(Paths.queue.glob("*/slot*/kit/newsletter.md")):

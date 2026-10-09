@@ -34,12 +34,12 @@ def speed_to_rate(speed: float) -> str:
 
 
 def _ffmpeg(*args: str) -> None:
-    subprocess.run(["ffmpeg", "-hide_banner", "-loglevel", "error", "-y", *args], check=True)
+    subprocess.run(["ffmpeg", "-hide_banner", "-loglevel", "error", "-y", *args], check=True, timeout=300)
 
 
 def duration(path: Path) -> float:
     out = subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0",
-                          str(path)], capture_output=True, text=True, check=True).stdout.strip()
+                          str(path)], capture_output=True, text=True, check=True, timeout=60).stdout.strip()
     return float(out)
 
 
@@ -166,7 +166,7 @@ def gemini(text: str, out: Path, *, rate: str | None = None) -> list[dict]:
 def _silences(path: Path, noise_db: int = -35, min_d: float = 0.18) -> list[tuple[float, float]]:
     p = subprocess.run(["ffmpeg", "-hide_banner", "-i", str(path), "-af",
                         f"silencedetect=noise={noise_db}dB:d={min_d}", "-f", "null", "-"],
-                       capture_output=True, text=True)
+                       capture_output=True, text=True, timeout=120)
     starts = [float(x) for x in re.findall(r"silence_start: ([\d.]+)", p.stderr)]
     ends = [float(x) for x in re.findall(r"silence_end: ([\d.]+)", p.stderr)]
     return list(zip(starts, ends))

@@ -13,10 +13,10 @@ Scores are judgment, not data, until metrics exist; the weekly run re-scores wit
 
 from __future__ import annotations
 
-import json
 from collections import defaultdict
 
 from faceless.config import STUDIO
+from faceless.fsutil import read_jsonl
 
 DIR = STUDIO / "channel" / "empire"
 PORTFOLIO = DIR / "portfolio.jsonl"
@@ -50,17 +50,7 @@ AGENT = {"yes": 1.0, "partly": 0.8, "no": 0.5}
 
 
 def load() -> list[dict]:
-    if not PORTFOLIO.exists():
-        return []
-    out = []
-    for line in PORTFOLIO.read_text(encoding="utf-8").splitlines():
-        try:
-            r = json.loads(line) if line.strip() else None
-        except json.JSONDecodeError:
-            continue
-        if isinstance(r, dict) and r.get("id"):
-            out.append(r)
-    return out
+    return [r for r in read_jsonl(PORTFOLIO) if r.get("id")]
 
 
 def attack(o: dict) -> dict:

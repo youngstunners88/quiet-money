@@ -13,6 +13,7 @@ import json
 import math
 import random
 import subprocess
+import threading
 from concurrent.futures import ProcessPoolExecutor
 from pathlib import Path
 
@@ -22,6 +23,9 @@ from faceless import config, events
 from faceless.config import Paths
 from faceless import musiclib
 from faceless.pipeline import captions, cards, music, sketch
+from faceless.fsutil import write_atomic
+
+ENCODE_TIMEOUT = 900   # seconds; a hung ffmpeg must fail the render, not stall the routine until its session limit
 
 GRADES = {
     "warm": "colorbalance=rs=0.05:gs=0.01:bs=-0.06:rm=0.03:bm=-0.04,eq=contrast=1.06:saturation=1.04",
@@ -106,16 +110,26 @@ def render_shot(args) -> str:
         ["ffmpeg", "-hide_banner", "-loglevel", "error", "-y", "-f", "rawvideo", "-pix_fmt", "rgb24",
          "-s", f"{W}x{H}", "-r", str(fps), "-i", "-", "-vf", look, "-c:v", "libx264", "-preset", "ultrafast",
          "-crf", "13", "-pix_fmt", "yuv420p", "-r", str(fps), str(out_path)], stdin=subprocess.PIPE)
-    for i in range(frames):
-        p = _ease(i / max(1, frames - 1))
-        z = z0 + (z1 - z0) * p
-        s = over / z                      # source pixels per output pixel
-        ww, hh = W * s, H * s             # visible window in source pixels
-        ncx = min(1.0, max(0.0, cx0 + (cx1 - cx0) * p))
-        ncy = min(1.0, max(0.0, cy0 + (cy1 - cy0) * p))
-        proc.stdin.write(warp(s, (SW - ww) * ncx, (SH - hh) * ncy))
-    proc.stdin.close()
-    if proc.wait() != 0:
+    guard = threading.Timer(ENCODE_TIMEOUT, proc.kill)   # a stalled encoder would block the pipe write forever
+    guard.start()
+    try:
+        for i in range(frames):
+            p = _ease(i / max(1, frames - 1))
+            z = z0 + (z1 - z0) * p
+            s = over / z                      # source pixels per output pixel
+            ww, hh = W * s, H * s             # visible window in source pixels
+            ncx = min(1.0, max(0.0, cx0 + (cx1 - cx0) * p))
+            ncy = min(1.0, max(0.0, cy0 + (cy1 - cy0) * p))
+            proc.stdin.write(warp(s, (SW - ww) * ncx, (SH - hh) * ncy))
+        proc.stdin.close()
+        code = proc.wait()
+    except (BrokenPipeError, OSError) as e:
+        proc.kill()
+        proc.wait()
+        raise RuntimeError(f"shot encode failed ({type(e).__name__}): {out_path}") from e
+    finally:
+        guard.cancel()
+    if code != 0:
         raise RuntimeError(f"shot encode failed: {out_path}")
     return str(out_path)
 
@@ -144,7 +158,10 @@ def clip_shot(args) -> str:
 
 
 def _run(cmd: list[str]) -> None:
-    p = subprocess.run(cmd, capture_output=True, text=True)
+    try:
+        p = subprocess.run(cmd, capture_output=True, text=True, timeout=ENCODE_TIMEOUT)
+    except subprocess.TimeoutExpired as e:
+        raise RuntimeError(f"ffmpeg timed out after {ENCODE_TIMEOUT}s: {cmd[-1]}") from e
     if p.returncode != 0:
         raise RuntimeError(f"ffmpeg failed: {p.stderr[-1500:]}")
 
@@ -188,7 +205,7 @@ def run(job, script: dict, voice: dict, imgs: list[dict]) -> dict:
             reel, kept, report = sketch.settle(job, reel, {**card_specs, **drafts}, drafts, voice["beats"], script,
                                                lambda picked: cards.render_reel(job, picked, spans, job.pillar, cfg["accent"], fps, name="reel2"))
             sketch.apply_to_rows(imgs, kept, report)
-            (job.dir / "images.json").write_text(json.dumps(imgs, indent=1), encoding="utf-8")
+            write_atomic(job.dir / "images.json", json.dumps(imgs, indent=1))
         except Exception as e:   # noqa: BLE001
             events.emit("SKETCH_FAILED", job=job.id, error=f"{type(e).__name__}: {e}"[:200], stage="review")
     shots = plan_shots(voice["beats"], imgs, fps, cfg["shot_max_seconds"], job.id)
@@ -227,7 +244,7 @@ def run(job, script: dict, voice: dict, imgs: list[dict]) -> dict:
     _run(["ffmpeg", "-hide_banner", "-y", "-f", "concat", "-safe", "0", "-i", str(concat), "-c", "copy", str(raw)])
 
     # audio beds
-    seed = int(hashlib.sha1(job.id.encode()).hexdigest()[:8], 16)
+    seed = int(hashlib.sha1(job.id.encode(), usedforsecurity=False).hexdigest()[:8], 16)
     cut_times = [s["start"] for s in shots[1:]]
     music_wav, sfx_wav = job.dir / "music.wav", job.dir / "sfx.wav"
     mode = cfg.get("music", "procedural")
@@ -282,6 +299,6 @@ def run(job, script: dict, voice: dict, imgs: list[dict]) -> dict:
     info = {"video": str(out), "cover": str(cover), "shots": len(shots), "captioned_words": covered,
             "avg_shot": round(total / max(1, len(shots)), 2),
             "cards": len(card_specs) if reel else 0, "clips": len(clip_tasks), "music": bed}
-    (job.dir / "render.json").write_text(json.dumps(info, indent=1), encoding="utf-8")
+    write_atomic(job.dir / "render.json", json.dumps(info, indent=1))
     events.emit("RENDERED", job=job.id, **info)
     return info

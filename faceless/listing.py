@@ -89,7 +89,6 @@ def text_gates(p: dict) -> list[Gate]:
     bad_tags = [t for t in e["tags"] if not ETSY_TAG_OK.match(t)]
     out.append(Gate("etsy_tags_valid", len(e["tags"]) == 13 and len(set(e["tags"])) == 13 and not bad_tags,
                     f"{len(e['tags'])} tags (13 allowed, all used), each 20 characters or fewer; bad: {bad_tags or 'none'}"))
-    hits = INCOME_CLAIMS.findall(scrub)
     found = [m.group(0) for m in INCOME_CLAIMS.finditer(scrub)]
     out.append(Gate("no_income_claims", not found, f"found: {found[:4]}" if found else "none"))
     cr = [m.group(0) for m in CREDIT_REPAIR.finditer(everything)]

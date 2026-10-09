@@ -18,7 +18,7 @@ from openpyxl.utils import get_column_letter as L
 from openpyxl.worksheet.datavalidation import DataValidation
 
 from faceless import config
-from faceless.products import (DISCLAIMER, GOLD, GOOD_FILL, INK, MUTED, OUT, _header, _label, _put, _title, _widths, load_workbook,
+from faceless.products import (DISCLAIMER, GOLD, GOOD_FILL, INK, MUTED, _header, _label, _put, _title, _widths, load_workbook,
                                recalc)
 
 SHEETS = ["Start here", "1 Your debts", "2 Payoff plan", "3 Compound growth", "4 Pay debt or invest", "Engine (math)"]

@@ -96,8 +96,8 @@ def fact_sheet() -> str:
         for m in (500, 1000, 2000):
             mo = months_to_target(m, 0.08, cap)
             lines.append(f"    - investing {money(m)}/month at 8%/yr reaches {money(cap)} in {mo / 12:.1f} years")
-    lines.append(f"- Rule of 100 volume math: 100 reach-outs a day for 100 days = 10,000 contacts; "
-                 f"at a 1% yes-rate that's 100 customers (hypothetical rate)")
+    lines.append("- Rule of 100 volume math: 100 reach-outs a day for 100 days = 10,000 contacts; "
+                 "at a 1% yes-rate that's 100 customers (hypothetical rate)")
     lines.append("- Leverage: a $100,000 property bought with $20,000 down is 5x leverage; a 20% price drop ($20,000) "
                  "wipes out the whole down payment, a 20% rise doubles it (before costs and interest)")
     lines.append(f"- An extra $1,000/month from a side income, invested at 8% for 10 years = "

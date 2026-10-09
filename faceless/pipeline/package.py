@@ -5,6 +5,7 @@ from __future__ import annotations
 import json
 
 from faceless import config, events, offer
+from faceless.fsutil import write_atomic
 
 DISCLAIMER = "Educational content, not financial advice. Narration and visuals are AI-assisted."
 
@@ -46,5 +47,5 @@ def run(job, script: dict) -> dict:
     }
     if off:
         offer.apply_to_meta(meta, off)
-    (job.dir / "meta.json").write_text(json.dumps(meta, indent=2, ensure_ascii=False), encoding="utf-8")
+    write_atomic(job.dir / "meta.json", json.dumps(meta, indent=2, ensure_ascii=False))
     return meta

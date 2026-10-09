@@ -9,6 +9,7 @@ from faceless import config, events
 from faceless.config import Paths
 from faceless.prompts import script_prompt
 from faceless.providers import llm
+from faceless.fsutil import write_atomic
 
 
 def narration(script: dict) -> str:
@@ -129,10 +130,10 @@ def write(job, angle: str = "", feedback: list[str] | None = None) -> dict:
     raw["pillar"] = job.pillar
     script = normalize(raw)
     rnd = len(list(Paths.drafts.glob(f"{job.id}*.json")))
-    (Paths.drafts / f"{job.id}.r{rnd}.json").write_text(json.dumps(script, indent=2, ensure_ascii=False), encoding="utf-8")
+    write_atomic(Paths.drafts / f"{job.id}.r{rnd}.json", json.dumps(script, indent=2, ensure_ascii=False))
     events.emit("SCRIPT_DRAFTED", job=job.id, words=word_count(script), beats=len(script["beats"]), round=rnd)
     return script
 
 
 def finalize(job, script: dict) -> None:
-    final_path(job).write_text(json.dumps(script, indent=2, ensure_ascii=False), encoding="utf-8")
+    write_atomic(final_path(job), json.dumps(script, indent=2, ensure_ascii=False))

@@ -39,7 +39,7 @@ def session():
     s = Composio().create(user_id=user_id())
     sid = str(getattr(s, "session_id", "") or "")
     # log a short fingerprint, never the session id itself (the journal is committed, possibly publicly)
-    events.emit("COMPOSIO_SESSION", user=user_id(), session_hash=hashlib.sha1(sid.encode()).hexdigest()[:8])
+    events.emit("COMPOSIO_SESSION", user=user_id(), session_hash=hashlib.sha1(sid.encode(), usedforsecurity=False).hexdigest()[:8])
     return s
 
 

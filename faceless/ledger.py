@@ -10,6 +10,7 @@ import json
 from datetime import datetime, timezone
 
 from faceless.config import Paths
+from faceless.fsutil import read_jsonl
 
 LEDGER = Paths.state / "ledger.jsonl"
 
@@ -19,27 +20,24 @@ def today() -> str:
 
 
 def _rows(day: str | None = None) -> list[dict]:
-    if not LEDGER.exists():
-        return []
-    rows = []
-    for line in LEDGER.read_text(encoding="utf-8").splitlines():
-        try:
-            r = json.loads(line)
-        except json.JSONDecodeError:
-            continue
-        if day is None or r.get("day") == day:
-            rows.append(r)
-    return rows
+    return [r for r in read_jsonl(LEDGER) if day is None or r.get("day") == day]
+
+
+def _num(value) -> float:
+    try:
+        return float(value or 0)
+    except (TypeError, ValueError):   # a damaged row counts as nothing; it must not stop every provider call
+        return 0.0
 
 
 def used(provider: str, unit: str, day: str | None = None) -> float:
     day = day or today()
-    return sum(r["amount"] for r in _rows(day) if r["provider"] == provider and r["unit"] == unit)
+    return sum(_num(r.get("amount")) for r in _rows(day) if r.get("provider") == provider and r.get("unit") == unit)
 
 
 def usd_total(day: str | None = None) -> float:
     """Every dollar spent on `day` (default today) across all providers: the number the daily spend ceiling is checked against."""
-    return round(sum(float(r.get("usd") or 0) for r in _rows(day or today())), 6)
+    return round(sum(_num(r.get("usd")) for r in _rows(day or today())), 6)
 
 
 def allow(provider: str, unit: str, amount: float, cap: float) -> bool:
@@ -57,7 +55,7 @@ def spend(provider: str, unit: str, amount: float, usd: float = 0.0, job: str | 
 def summary(day: str | None = None) -> dict:
     out: dict = {}
     for r in _rows(day or today()):
-        k = f"{r['provider']}:{r['unit']}"
-        out[k] = round(out.get(k, 0) + r["amount"], 3)
-        out["usd"] = round(out.get("usd", 0) + r.get("usd", 0), 4)
+        k = f"{r.get('provider')}:{r.get('unit')}"
+        out[k] = round(out.get(k, 0) + _num(r.get("amount")), 3)
+        out["usd"] = round(out.get("usd", 0) + _num(r.get("usd")), 4)
     return out

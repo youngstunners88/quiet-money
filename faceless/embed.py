@@ -69,7 +69,7 @@ def embed(texts: list[str]) -> list[list[float]] | None:
     texts = [t[:6000] for t in texts]
     con = _db()
     out: list[list[float] | None] = [None] * len(texts)
-    keys = [hashlib.sha1(f"{DIM}:{t}".encode()).hexdigest() for t in texts]
+    keys = [hashlib.sha1(f"{DIM}:{t}".encode(), usedforsecurity=False).hexdigest() for t in texts]
     for i, k in enumerate(keys):
         row = con.execute("select v from vec where k=?", (k,)).fetchone()
         if row:

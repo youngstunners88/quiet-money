@@ -9,6 +9,7 @@ from __future__ import annotations
 import os
 import re
 import tomllib
+from datetime import date, datetime, timezone
 from dataclasses import dataclass
 from functools import lru_cache
 from pathlib import Path
@@ -88,14 +89,30 @@ def load_dotenv(path: Path | None = None) -> int:
     return n
 
 
+def today_utc() -> date:
+    """Today's date in UTC. Job days, the spend ledger and the posting calendar are all UTC; `date.today()` follows the machine's clock zone and would
+    name tomorrow (or yesterday) for a few hours a day on a laptop outside UTC."""
+    return datetime.now(timezone.utc).date()
+
+
 _SECRET_NAME = re.compile(r"KEY|TOKEN|SECRET|PASSWORD|COMPOSIO_API")
 _SECRET_QUERY = re.compile(r"(?i)([?&](?:key|api_key|apikey|token|access_token|auth)=)[^&\s\"'\\#)]+")   # stops at \ so JSON stays valid
 
 
+# Credentials have recognisable shapes, so a key that is NOT in this process's environment (a vendor's error message echoing a rotated key, a header
+# dumped by a library) is still scrubbed before it reaches the public journal. Same shapes as the committed-file scan in tests/test_hygiene.py.
+_SECRET_SHAPES = re.compile(
+    r"\bsk-[A-Za-z0-9_-]{20,}|\bAIza[0-9A-Za-z_-]{35}|\bgh[pousr]_[A-Za-z0-9]{30,}|\bgithub_pat_[A-Za-z0-9_]{30,}|\bxox[abprs]-[A-Za-z0-9-]{10,}"
+    r"|\bAKIA[0-9A-Z]{16}\b|\beyJ[A-Za-z0-9_-]{15,}\.eyJ[A-Za-z0-9_-]{15,}\.[A-Za-z0-9_-]{8,}"
+    r"|(?i:\b(?:bearer|apikey|api-key)\s+)[A-Za-z0-9._~+/=-]{20,}"
+    r"|-----BEGIN [A-Z ]*PRIVATE KEY-----[A-Za-z0-9+/=\\n\s]*(?:-----END [A-Z ]*PRIVATE KEY-----)?")
+
+
 def redact(text: str) -> str:
     """Scrub credentials from text bound for committed files (journal, job notes, reports): query-string
-    keys that HTTP libraries echo in error messages, and the value of every secret-looking env var."""
+    keys that HTTP libraries echo in error messages, the value of every secret-looking env var, and anything shaped like a known key."""
     text = _SECRET_QUERY.sub(r"\1[redacted]", text)
+    text = _SECRET_SHAPES.sub("[redacted]", text)
     for name, val in os.environ.items():
         if val and len(val) >= 12 and _SECRET_NAME.search(name) and val in text:
             text = text.replace(val, "[redacted]")

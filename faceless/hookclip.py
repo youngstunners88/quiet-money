@@ -16,7 +16,7 @@ import time
 from pathlib import Path
 
 from faceless import config, flow, ledger, safety
-from faceless.providers import ProviderError, ProviderUnavailable, http
+from faceless.providers import ProviderError, ProviderUnavailable, fetch_bytes, http
 
 API = "https://api.muapi.ai/api/v1"
 MOTION = ("Slow cinematic camera push-in with subtle natural motion, soft light shifting, shallow depth of field. Keep every object and the "
@@ -96,7 +96,7 @@ def make(job, still: str, need: float, narration: str = "") -> dict | None:
             raise ProviderError(f"clip job {res.get('status')}")
         job.dir.mkdir(parents=True, exist_ok=True)
         dest = job.dir / "hook-clip.mp4"
-        dest.write_bytes(s.get(res["outputs"][0], timeout=180).content)
+        dest.write_bytes(fetch_bytes(res["outputs"][0], session=s, timeout=180)[0])
     except (ProviderError, ProviderUnavailable, OSError, KeyError, ValueError):
         return None
     info = flow.probe(dest)

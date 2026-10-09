@@ -24,7 +24,8 @@ from urllib.parse import urlparse
 
 from faceless import config, events, ledger, safety
 from faceless.config import Paths
-from faceless.providers import ProviderError, ProviderUnavailable, http
+from faceless.providers import ProviderError, ProviderUnavailable, fetch_bytes, http
+from faceless.fsutil import write_atomic
 
 BASE = "https://api.muapi.ai/api/v1"
 UNIT = "desk_usd"
@@ -88,7 +89,7 @@ def catalog(refresh: bool = False) -> list[dict]:
             rows = [_compact(m) for m in r.json().get("models", []) if m.get("is_enabled", True) and not m.get("is_coming_soon")]
             if rows:
                 p.parent.mkdir(parents=True, exist_ok=True)
-                p.write_text(json.dumps(rows), encoding="utf-8")
+                write_atomic(p, json.dumps(rows))
                 return rows
     except Exception:  # noqa: BLE001 - the catalog is advice; fall through to older copies
         pass
@@ -196,15 +197,18 @@ def _ext(url: str, content_type: str = "") -> str:
     return {"image/png": ".png", "image/jpeg": ".jpg", "image/webp": ".webp", "video/mp4": ".mp4", "audio/mpeg": ".mp3", "audio/wav": ".wav"}.get(content_type.split(";")[0], ".bin")
 
 
+def _part(text: str, n: int = 8) -> str:
+    """A piece of a name that came back from the API, safe to use inside a file name: letters, digits, dash and underscore only."""
+    return re.sub(r"[^A-Za-z0-9_-]", "", str(text))[:n] or "x"
+
+
 def _download(url: str, dest_stem: Path) -> Path:
-    if urlparse(url).scheme != "https":
-        raise ProviderError(f"refusing a non-https result URL: {url[:60]}")
-    r = http().get(url, timeout=300)
-    if r.status_code != 200 or not r.content:
-        raise ProviderError(f"download failed: HTTP {r.status_code}")
-    dest = dest_stem.with_suffix(_ext(url, r.headers.get("content-type", "")))
+    body, content_type = fetch_bytes(url, session=http(), timeout=300)
+    if not body:
+        raise ProviderError("download failed: empty body")
+    dest = dest_stem.with_suffix(_ext(url, content_type))
     dest.parent.mkdir(parents=True, exist_ok=True)
-    dest.write_bytes(r.content)
+    dest.write_bytes(body)
     return dest
 
 
@@ -256,7 +260,7 @@ def result(request_id: str, out_dir: str | Path | None = None, *, label: str = "
     for i, o in enumerate(outputs):
         if isinstance(o, str) and o.startswith("http"):
             urls.append(o)
-            files.append(_download(o, out_dir / f"{label}-{request_id[:8]}-{i}"))
+            files.append(_download(o, out_dir / f"{_part(label, 60)}-{_part(request_id)}-{i}"))
         elif isinstance(o, str):
             text.append(o)
         else:
@@ -264,9 +268,9 @@ def result(request_id: str, out_dir: str | Path | None = None, *, label: str = "
     if isinstance(res.get("output"), dict) and not outputs:
         data.append(res["output"])
     if text or data:                                   # an answer you paid for is never lost: it is saved next to the media
-        saved = out_dir / f"{label}-{request_id[:8]}.json"
+        saved = out_dir / f"{_part(label, 60)}-{_part(request_id)}.json"
         saved.parent.mkdir(parents=True, exist_ok=True)
-        saved.write_text(json.dumps({"request_id": request_id, "text": text, "data": data}, ensure_ascii=False, indent=1), encoding="utf-8")
+        write_atomic(saved, json.dumps({"request_id": request_id, "text": text, "data": data}, ensure_ascii=False, indent=1))
         files.append(saved)
     return {"request_id": request_id, "files": [str(f) for f in files], "urls": urls, "text": text, "data": data,
             "seconds": round((res.get("executionTime") or 0) / 1000, 1)}
@@ -350,5 +354,5 @@ def digest(rows: list[dict] | None = None, per_category: int = 12) -> str:
 def write_snapshot(rows: list[dict] | None = None) -> int:
     rows = rows or catalog(refresh=True)
     SNAPSHOT.parent.mkdir(parents=True, exist_ok=True)
-    SNAPSHOT.write_text(json.dumps(sorted(rows, key=lambda m: m["name"]), separators=(",", ":")), encoding="utf-8")
+    write_atomic(SNAPSHOT, json.dumps(sorted(rows, key=lambda m: m["name"]), separators=(",", ":")))
     return len(rows)

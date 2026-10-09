@@ -15,6 +15,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 from faceless import events
+from faceless.fsutil import write_atomic
 from faceless.config import Paths
 
 STAGES = ["planned", "scripted", "voiced", "visualized", "rendered", "gated", "packaged", "published"]
@@ -74,13 +75,20 @@ class Job:
     def save(self) -> None:
         Paths.jobs.mkdir(parents=True, exist_ok=True)
         from faceless.config import redact   # job files are committed publicly; error notes can echo request URLs
-        self.path.write_text(redact(json.dumps(asdict(self), indent=2, ensure_ascii=False)), encoding="utf-8")
+        write_atomic(self.path, redact(json.dumps(asdict(self), indent=2, ensure_ascii=False)))
 
 
 def new_job(pillar: str, topic: str, slot: int = 0, day: str | None = None) -> Job:
     day = day or datetime.now(timezone.utc).strftime("%Y-%m-%d")
     jid = f"{day}-s{slot}-{pillar}-{slugify(topic, 32)}"
     job = Job(id=jid, pillar=pillar, topic=topic, day=day, slot=slot)
+    try:   # the same topic in the same slot is the same job id: the run starts over (stages go forward from planned), but what was spent and why it stopped is kept
+        before = load_job(jid)
+        job.cost = dict(before.cost)
+        job.notes = [*before.notes, f"restarted from {before.status}"]
+        events.emit("JOB_RESTARTED", job=jid, was=before.status)
+    except (OSError, ValueError, TypeError):
+        pass
     job.dir.mkdir(parents=True, exist_ok=True)
     job.save()
     events.emit("JOB_CREATED", job=jid, pillar=pillar, topic=topic, slot=slot)
@@ -92,7 +100,18 @@ def load_job(job_id: str) -> Job:
     return Job(**data)
 
 
-def all_jobs() -> list[Job]:
+def scan_jobs() -> tuple[list[Job], list[str]]:
+    """Every readable job, and the names of the job files that could not be read. One damaged file must never stop the others."""
     if not Paths.jobs.exists():
-        return []
-    return [Job(**json.loads(p.read_text(encoding="utf-8"))) for p in sorted(Paths.jobs.glob("*.json"))]
+        return [], []
+    jobs, bad = [], []
+    for p in sorted(Paths.jobs.glob("*.json")):
+        try:
+            jobs.append(Job(**json.loads(p.read_text(encoding="utf-8"))))
+        except (OSError, ValueError, TypeError):   # truncated JSON, a conflict marker, a field this version does not know
+            bad.append(p.name)
+    return jobs, bad
+
+
+def all_jobs() -> list[Job]:
+    return scan_jobs()[0]

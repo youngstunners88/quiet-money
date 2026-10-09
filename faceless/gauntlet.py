@@ -19,6 +19,7 @@ from faceless.pipeline.ideate import similarity
 from faceless.pipeline.script import narration, spoken_word_count
 from faceless.prompts import BANNED, COMPLIANCE_BANNED, judge_prompt
 from faceless.providers import llm
+from faceless.fsutil import write_atomic
 
 
 @dataclass
@@ -205,13 +206,13 @@ def check_image_qa(imgs: list[dict]) -> list[Gate]:
 def probe(path: str) -> dict:
     out = subprocess.run(["ffprobe", "-v", "error", "-show_entries",
                           "stream=codec_type,width,height,r_frame_rate:format=duration,size", "-of", "json", path],
-                         capture_output=True, text=True, check=True).stdout
+                         capture_output=True, text=True, check=True, timeout=60).stdout
     return json.loads(out)
 
 
 def frame_luma(path: str, at: float) -> bytes:
     p = subprocess.run(["ffmpeg", "-hide_banner", "-ss", f"{at:.2f}", "-i", path, "-frames:v", "1", "-vf",
-                        "scale=64:114,format=gray", "-f", "rawvideo", "-"], capture_output=True)
+                        "scale=64:114,format=gray", "-f", "rawvideo", "-"], capture_output=True, timeout=120)
     return p.stdout
 
 
@@ -304,7 +305,7 @@ def report(job, gates: list[Gate], extra: dict | None = None) -> dict:
     data = {"job": job.id, "score": s, "passed": passed, "hard_failures": [g.name for g in hard],
             "gates": [asdict(g) for g in gates], **(extra or {})}
     Paths.reports.mkdir(parents=True, exist_ok=True)
-    (Paths.reports / f"{job.id}.json").write_text(json.dumps(data, indent=2, ensure_ascii=False), encoding="utf-8")
+    write_atomic(Paths.reports / f"{job.id}.json", json.dumps(data, indent=2, ensure_ascii=False))
     md = [f"# Gauntlet: {job.id}", f"Score **{s}/100**, {'PASS' if passed else 'FAIL'}", "",
           "| gate | result | weight | detail |", "|---|---|---|---|"]
     for g in gates:

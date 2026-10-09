@@ -12,7 +12,6 @@ import numpy as np
 import pytest
 
 from faceless import config, ledger, safety
-from faceless.config import Paths
 from faceless.pipeline import render, sketch, visuals
 from faceless.providers import ProviderError, ProviderUnavailable, images
 from faceless.state import Job

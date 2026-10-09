@@ -23,6 +23,8 @@ from faceless.config import STUDIO
 
 # What the runner has after its install step. LibreOffice and Node are deliberately absent: tests that need them must skip, not fail.
 TOOLS = ("bash", "git", "ffmpeg", "ffprobe", "pdftoppm", "pdftotext")
+STEP_TIMEOUT = 3600   # seconds per CI step
+
 # The commands of .github/workflows/ci.yml, word for word (tests/test_hygiene.py fails if the two drift apart).
 STEPS = [
     ("tests", "python -m pytest -q tests"),
@@ -34,7 +36,7 @@ STEPS = [
 
 def files() -> list[str]:
     """What a commit would contain: tracked files plus new ones that are not ignored, minus anything deleted."""
-    r = subprocess.run(["git", "ls-files", "-z", "--cached", "--others", "--exclude-standard"], cwd=STUDIO, capture_output=True, check=True)
+    r = subprocess.run(["git", "ls-files", "-z", "--cached", "--others", "--exclude-standard"], cwd=STUDIO, capture_output=True, check=True, timeout=120)
     names = [n for n in r.stdout.decode("utf-8", "replace").split("\0") if n]
     return sorted({n for n in names if (STUDIO / n).is_file() or (STUDIO / n).is_symlink()})          # skills are symlinked into .claude/skills; a checkout keeps them
 
@@ -49,8 +51,8 @@ def export(dest: Path) -> int:
             shutil.copy2(STUDIO / rel, dest / rel)
         n += 1
     git = {"GIT_AUTHOR_NAME": "ci", "GIT_AUTHOR_EMAIL": "ci@example.com", "GIT_COMMITTER_NAME": "ci", "GIT_COMMITTER_EMAIL": "ci@example.com"}
-    subprocess.run(["git", "init", "-q"], cwd=dest, check=True, env={**os.environ, **git})
-    subprocess.run(["git", "add", "-A"], cwd=dest, check=True, env={**os.environ, **git})
+    subprocess.run(["git", "init", "-q"], cwd=dest, check=True, env={**os.environ, **git}, timeout=120)
+    subprocess.run(["git", "add", "-A"], cwd=dest, check=True, env={**os.environ, **git}, timeout=300)
     return n
 
 
@@ -86,7 +88,10 @@ def run(only: str | None = None, keep: bool = False) -> int:
         argv = shlex.split(command)
         argv[0] = sys.executable
         t0 = time.time()
-        r = subprocess.run(argv, cwd=repo, env=env, capture_output=True, text=True, check=False)
+        try:
+            r = subprocess.run(argv, cwd=repo, env=env, capture_output=True, text=True, check=False, timeout=STEP_TIMEOUT)
+        except subprocess.TimeoutExpired:
+            r = subprocess.CompletedProcess(argv, 124, "", f"timed out after {STEP_TIMEOUT} s")   # a hung step is a red step, never a stuck run
         ok = r.returncode == 0
         failed += not ok
         print(f"{'PASS' if ok else 'FAIL'}  {name:8} {time.time() - t0:5.0f} s   {command if len(command) < 70 else command[:67] + '...'}")

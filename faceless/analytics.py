@@ -8,11 +8,11 @@ shifts tomorrow's slots toward what works while keeping exploration alive.
 
 from __future__ import annotations
 
-import json
 import math
 
 from faceless import config
 from faceless.config import Paths
+from faceless.fsutil import read_jsonl
 
 METRICS = Paths.analytics / "metrics.jsonl"
 
@@ -20,17 +20,7 @@ METRICS = Paths.analytics / "metrics.jsonl"
 def load() -> list[dict]:
     """Metric rows; hand-pasted or connector-written lines that aren't JSON objects are skipped, not fatal
     (the daily batch reads these weights before it makes anything)."""
-    if not METRICS.exists():
-        return []
-    rows = []
-    for line in METRICS.read_text(encoding="utf-8").splitlines():
-        try:
-            r = json.loads(line) if line.strip() else None
-        except json.JSONDecodeError:
-            continue
-        if isinstance(r, dict):
-            rows.append(r)
-    return rows
+    return read_jsonl(METRICS)
 
 
 def _num(value, default: float = 0.0) -> float:

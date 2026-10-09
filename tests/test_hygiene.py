@@ -130,6 +130,25 @@ def test_workflows_use_least_privilege_and_open_triggers_see_no_secrets(wf: Path
         assert "@" in action and not action.endswith(("@main", "@master")), f"{wf.name} uses an unpinned action {action}"
 
 
+@pytest.mark.parametrize("wf", WORKFLOWS, ids=lambda p: p.name)
+def test_every_workflow_job_has_a_timeout_and_no_event_text_reaches_a_shell(wf: Path):
+    """A hung job otherwise runs for six hours. And anything an outsider can type (inputs, titles, branch names) may only enter a step through `env:`,
+    where the shell sees a variable, never inside a `run:` script where `${{ }}` is pasted in as code."""
+    text = wf.read_text(encoding="utf-8")
+    jobs = re.findall(r"^  [A-Za-z0-9_-]+:\n    runs-on:", text, re.M)
+    assert jobs and text.count("timeout-minutes:") >= len(jobs), f"{wf.name}: every job needs timeout-minutes"
+    in_run = False
+    for line in text.splitlines():
+        stripped = line.strip()
+        if re.match(r"^\s*-?\s*run:\s*[|>]", line):
+            in_run, indent = True, len(line) - len(line.lstrip())
+            continue
+        if in_run and stripped and len(line) - len(line.lstrip()) <= indent:
+            in_run = False
+        if (in_run or re.match(r"^\s*-?\s*run:\s*\S", line)) and re.search(r"\$\{\{[^}]*(github\.event|github\.head_ref|inputs\.|steps\.[^}]*outputs)", line):
+            pytest.fail(f"{wf.name}: untrusted text pasted into a shell script: {stripped}")
+
+
 def test_two_sessions_appending_to_the_journal_merge_without_a_conflict(tmp_path):
     """The routine and a manual session both push events. With the union driver in .gitattributes both sets of lines survive and nothing stops the merge."""
     def git(*a):

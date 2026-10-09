@@ -109,7 +109,7 @@ def checks_quota() -> list[Check]:
 
 def checks_machine() -> list[Check]:
     out = []
-    for label, path in (("repo", STUDIO), ("temp", "/tmp")):
+    for label, path in (("repo", STUDIO), ("temp", "/tmp")):   # nosec B108 - only asks how much space is free
         free = shutil.disk_usage(path).free / 2**30
         out.append(Check(f"disk:{label}", FAIL if free < 1.5 else WARN if free < 4 else OK, f"{free:.1f} GB free", "delete production/output and production/cache for old days" if free < 4 else ""))
     git = STUDIO / ".git"
@@ -138,6 +138,10 @@ def checks_state() -> list[Check]:
             continue
         bad = _bad_lines(path)
         out.append(Check(f"state:{path.name}", WARN if bad else OK, f"{bad} unreadable line(s), skipped" if bad else "every line parses", "" if not bad else "readers skip them; find the writer that broke atomicity"))
+    from faceless.state import scan_jobs
+    _, damaged = scan_jobs()
+    out.append(Check("state:jobs", FAIL if damaged else OK, f"unreadable job file(s): {damaged[:5]}" if damaged else "every job file parses",
+                     "restore each from git (`git checkout -- state/jobs/<file>`); the other jobs run on without it" if damaged else ""))
     out += checks_offer()
     return out
 
@@ -194,7 +198,10 @@ def checks_assets() -> list[Check]:
 
 
 def tracked_text_files() -> list:
-    r = subprocess.run(["git", "ls-files", "-z"], cwd=STUDIO, capture_output=True, check=False)
+    try:
+        r = subprocess.run(["git", "ls-files", "-z"], cwd=STUDIO, capture_output=True, check=False, timeout=60)
+    except subprocess.TimeoutExpired:
+        return []
     names = [n for n in r.stdout.decode("utf-8", "replace").split("\0") if n]
     skip = {".png", ".jpg", ".jpeg", ".gif", ".mp3", ".mp4", ".wav", ".zip", ".pdf", ".xlsx", ".ttf", ".db", ".woff2", ".ico"}
     return [STUDIO / n for n in names if (STUDIO / n).suffix.lower() not in skip and (STUDIO / n).is_file() and (STUDIO / n).stat().st_size < 3_000_000]

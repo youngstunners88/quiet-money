@@ -12,7 +12,6 @@ import math
 import shutil
 import subprocess
 import tempfile
-from datetime import date
 from pathlib import Path
 
 from openpyxl import Workbook, load_workbook
@@ -365,7 +364,7 @@ def listing_escape(price: float | None = None) -> str:
     link = config.load()["channel"].get("link_in_bio", "")
     return f"""# Listing: Rat Race Escape Planner
 
-Prepared {date.today().isoformat()}. The owner approves price, copy and the account before anything goes live.
+Prepared {config.today_utc().isoformat()}. The owner approves price, copy and the account before anything goes live.
 
 ## Gumroad (first: 10% fee, no AI rule)
 - **Name:** Rat Race Escape Planner (Excel + Google Sheets)

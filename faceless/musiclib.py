@@ -12,11 +12,11 @@ import hashlib
 import json
 import shutil
 import subprocess
-from datetime import date
 from pathlib import Path
 
 from faceless import config
 from faceless.config import Paths
+from faceless.fsutil import write_atomic
 
 DIR = Paths.root / "assets" / "music"
 MANIFEST = DIR / "manifest.json"
@@ -113,9 +113,9 @@ def build(limit: int | None = None) -> list[dict]:
             continue
         tmp.replace(DIR / name)
         row = {"file": name, "pillar": pillar, "mood": mood, "bpm": bpm, "scale": scale, "model": "lyria-realtime-exp", "seconds": round(secs, 1),
-               "sha256": hashlib.sha256((DIR / name).read_bytes()).hexdigest()[:16], "made": date.today().isoformat(),
+               "sha256": hashlib.sha256((DIR / name).read_bytes()).hexdigest()[:16], "made": config.today_utc().isoformat(),
                "note": "AI-generated instrumental (Google Lyria RealTime via the Gemini API); output carries Google's SynthID watermark"}
         man["tracks"] = [t for t in man["tracks"] if t["file"] != name] + [row]
-        MANIFEST.write_text(json.dumps(man, indent=2), encoding="utf-8")
+        write_atomic(MANIFEST, json.dumps(man, indent=2))
         done.append(row)
     return done

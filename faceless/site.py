@@ -21,6 +21,7 @@ from email.utils import format_datetime
 from faceless import config
 from faceless.config import Paths
 from faceless.state import all_jobs, slugify
+from faceless.fsutil import write_atomic
 
 SITE = Paths.root / "site"
 KIT = Paths.root / "channel" / "brand-kit"
@@ -49,8 +50,21 @@ def e(text) -> str:
 SOCIAL_NAMES = {"youtube": "YouTube", "tiktok": "TikTok", "instagram": "Instagram", "x": "X", "linkedin": "LinkedIn", "pinterest": "Pinterest"}
 
 
+def plain(text, limit: int = 300) -> str:
+    """One line of plain text for a Markdown file crawlers and answer engines read: no line breaks (a title could start a heading or an instruction on its
+    own line), no brackets or angle brackets (they would end the link or open a tag)."""
+    return re.sub(r"[\[\]<>]", "", " ".join(str(text or "").split()))[:limit]
+
+
+def safe_url(url) -> str:
+    """The address if it is plain http(s), else nothing. Escaping stops a quote from breaking out of an attribute; it does not stop `javascript:`,
+    which runs when clicked. Every address that comes from configuration or a model goes through here before it becomes a link."""
+    u = str(url or "").strip()
+    return u if re.match(r"https?://[^\s<>\"']+$", u, re.I) else ""
+
+
 def social_links(socials: dict) -> str:
-    return " · ".join(f'<a href="{e(u)}" rel="me">{e(SOCIAL_NAMES.get(k, k.title()))}</a>' for k, u in socials.items() if u)
+    return " · ".join(f'<a href="{e(safe_url(u))}" rel="me">{e(SOCIAL_NAMES.get(k, k.title()))}</a>' for k, u in socials.items() if safe_url(u))
 
 
 def ld_json(data) -> str:
@@ -94,9 +108,14 @@ def published_rules() -> list[dict]:
         fp = Paths.final / f"{job.id}.json"
         if not fp.exists():
             continue
-        s = json.loads(fp.read_text(encoding="utf-8"))
         meta_p = job.dir / "meta.json"
-        meta = json.loads(meta_p.read_text(encoding="utf-8")) if meta_p.exists() else {}
+        try:   # one unreadable file costs that video its page, never the whole site
+            s = json.loads(fp.read_text(encoding="utf-8"))
+            meta = json.loads(meta_p.read_text(encoding="utf-8")) if meta_p.exists() else {}
+        except (OSError, ValueError):
+            continue
+        if not isinstance(s, dict) or not isinstance(meta, dict):
+            continue
         yt = (job.artifacts.get("publish") or {}).get("youtube_id") or job.artifacts.get("youtube_id")
         rules.append({
             "slug": slugify(s.get("title", job.topic), 64),
@@ -497,7 +516,7 @@ def build() -> dict:
             f"- [Calculators]({c['base']}/tools/): compound growth, credit card payoff, inflation",
             f"- [Free 7-day Money Reset]({c['base']}/money-reset/): printable checklist",
             f"- [About]({c['base']}/about/): what Quiet Money is and how videos are made", "", "## Money rules"]
-    llms += [f"- [{r['title']}]({c['base']}/rules/{r['slug']}/): {r['description']}" for r in rules]
+    llms += [f"- [{plain(r['title'])}]({c['base']}/rules/{r['slug']}/): {plain(r['description'])}" for r in rules]
     (SITE / "llms.txt").write_text("\n".join(llms) + "\n", encoding="utf-8")
     items = "".join(f"<item><title>{e(r['title'])}</title><link>{c['base']}/rules/{r['slug']}/</link>"
                     f"<guid>{c['base']}/rules/{r['slug']}/</guid><pubDate>{rfc822(r['day'])}</pubDate>"
@@ -508,7 +527,7 @@ def build() -> dict:
     if c["indexnow_key"]:
         (SITE / f"{c['indexnow_key']}.txt").write_text(c["indexnow_key"], encoding="utf-8")
     (SITE / ".nojekyll").write_text("", encoding="utf-8")
-    (SITE / "urls.json").write_text(json.dumps(urls, indent=1), encoding="utf-8")
+    write_atomic(SITE / "urls.json", json.dumps(urls, indent=1))
     return {"pages": len(urls), "rules": len(rules), "dir": str(SITE)}
 
 

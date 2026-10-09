@@ -62,7 +62,7 @@ def enabled() -> bool:
 
 def shotlist(day: str | None = None, n: int = 3) -> Path:
     """Three prompts for the day: the series with the biggest weight first, subjects rotated by date. Deterministic."""
-    day = day or date.today().isoformat()
+    day = day or config.today_utc().isoformat()
     ordinal = date.fromisoformat(day).toordinal()
     weights = analytics.pillar_weights()
     order = sorted(weights, key=lambda k: (-weights[k], (list(weights).index(k) - ordinal) % len(weights)))

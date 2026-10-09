@@ -17,6 +17,7 @@ from zoneinfo import ZoneInfo
 from faceless import config, events, safety
 from faceless.config import Paths
 from faceless.providers import ProviderError, ProviderUnavailable, http
+from faceless.fsutil import write_atomic
 
 
 def nominal_slot(day: str, slot: int) -> tuple[str, int]:
@@ -78,7 +79,7 @@ def local_pack(job, meta: dict) -> dict:
     if job.artifacts.get("cover"):
         shutil.copy2(job.artifacts["cover"], folder / "cover.jpg")
     (folder / "POST.md").write_text(render_post(k, when.strftime('%Y-%m-%d %H:%M %Z'), meta), encoding="utf-8")
-    (folder / "meta.json").write_text(json.dumps({**meta, "post_at": when.isoformat()}, indent=2), encoding="utf-8")
+    write_atomic(folder / "meta.json", json.dumps({**meta, "post_at": when.isoformat()}, indent=2))
     return {"mode": "local", "folder": str(folder), "post_at": when.isoformat()}
 
 

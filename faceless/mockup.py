@@ -16,7 +16,7 @@ from pathlib import Path
 
 from PIL import Image, ImageChops, ImageDraw, ImageFilter, ImageFont
 
-from faceless.brand import CREAM, DEEP_GOLD, GOLD, INK, MUTED, coin
+from faceless.brand import CREAM, GOLD, INK, MUTED, coin
 from faceless.config import Paths
 
 W, H = 2400, 1800                      # Etsy: 4:3, both sides above the 2000 px the help center asks for

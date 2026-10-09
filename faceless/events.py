@@ -13,6 +13,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 from faceless.config import Paths, redact
+from faceless.fsutil import read_jsonl
 
 JOURNAL = Paths.state / "journal.jsonl"
 
@@ -36,16 +37,4 @@ def emit(kind: str, actor: str = "engine", **payload) -> dict:
 
 def read(path: Path | None = None, kind: str | None = None) -> list[dict]:
     path = path or JOURNAL            # resolved per call so a redirected journal is honored
-    if not path.exists():
-        return []
-    out = []
-    for line in path.read_text(encoding="utf-8").splitlines():
-        if not line.strip():
-            continue
-        try:
-            e = json.loads(line)
-        except json.JSONDecodeError:
-            continue
-        if kind is None or e.get("type") == kind:
-            out.append(e)
-    return out
+    return [e for e in read_jsonl(path) if kind is None or e.get("type") == kind]

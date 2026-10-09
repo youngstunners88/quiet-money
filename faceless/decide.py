@@ -88,7 +88,7 @@ def _ask_laya(questions: dict[str, Q], state: dict) -> dict:
 
     from faceless.providers import http
     url = config.env("LAYA_URL").rstrip("/") + "/v1/systemone"
-    qs, shuffled = {}, {}
+    qs = {}
     for name, q in questions.items():
         if q.kind == "choice":
             keys = list(q.options)

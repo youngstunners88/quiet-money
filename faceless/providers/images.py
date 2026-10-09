@@ -21,7 +21,7 @@ from PIL import Image, ImageDraw, ImageFilter
 
 from faceless import config, ledger, safety
 from faceless.config import Paths
-from faceless.providers import ProviderError, ProviderUnavailable, http, run_chain
+from faceless.providers import ProviderError, ProviderUnavailable, fetch_bytes, http, run_chain
 
 
 def _save(img_bytes: bytes, out) -> None:
@@ -122,7 +122,7 @@ def openrouter(prompt: str, w: int, h: int, seed: int, out, hero: bool = False) 
     if not imgs:
         raise ProviderError("openrouter-image returned no image")
     url = imgs[0]["image_url"]["url"]
-    data = base64.b64decode(url.split(",", 1)[1]) if url.startswith("data:") else http().get(url, timeout=120).content
+    data = base64.b64decode(url.split(",", 1)[1]) if url.startswith("data:") else fetch_bytes(url, timeout=120)[0]
     _save(data, out)
 
 
@@ -188,7 +188,7 @@ def muapi(prompt: str, w: int, h: int, seed: int, out, hero: bool = False) -> No
             raise ProviderError("muapi job timed out")
         if any(res.get("has_nsfw_contents") or []):
             raise ProviderError("muapi flagged the output")
-        _save(s.get(res["outputs"][0], timeout=120).content, out)
+        _save(fetch_bytes(res["outputs"][0], session=s, timeout=120)[0], out)
     finally:
         with _MU_LOCK:
             _mu_inflight = max(0.0, _mu_inflight - price)
@@ -219,7 +219,7 @@ def pollinations(prompt: str, w: int, h: int, seed: int, out, hero: bool = False
 
 def procedural(prompt: str, w: int, h: int, seed: int, out, hero: bool = False) -> None:
     """Last resort: moody abstract gradient with soft light orbs. Never fails, never repeats exactly."""
-    rnd = random.Random(seed ^ int(hashlib.sha1(prompt.encode()).hexdigest()[:8], 16))
+    rnd = random.Random(seed ^ int(hashlib.sha1(prompt.encode(), usedforsecurity=False).hexdigest()[:8], 16))
     base = Image.new("RGB", (w, h))
     top = (rnd.randint(5, 40), rnd.randint(10, 45), rnd.randint(20, 60))
     bot = (rnd.randint(0, 25), rnd.randint(0, 20), rnd.randint(5, 35))
@@ -248,7 +248,7 @@ def generate(prompt: str, *, seed: int, hero: bool = False, job: str | None = No
     w, h = cfg["width"], cfg["height"]
     cache = Paths.cache / "images"
     cache.mkdir(parents=True, exist_ok=True)
-    digest = hashlib.sha1(f"{prompt}|{w}x{h}|{seed}|{hero}".encode()).hexdigest()[:16]
+    digest = hashlib.sha1(f"{prompt}|{w}x{h}|{seed}|{hero}".encode(), usedforsecurity=False).hexdigest()[:16]
     for existing in cache.glob(f"{digest}.*.jpg"):
         return existing.name.split(".")[1], str(existing)
 

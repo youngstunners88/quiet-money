@@ -24,13 +24,15 @@ from __future__ import annotations
 
 import json
 import re
-from datetime import date, datetime, timezone
+from datetime import datetime
 from pathlib import Path
 from urllib.parse import urlencode
 
 from faceless import config, events
 from faceless.config import Paths
+from faceless.fsutil import read_jsonl
 from faceless.prompts import COMPLIANCE_BANNED
+from faceless.fsutil import write_atomic
 
 OFFERS = Paths.state / "offers.jsonl"
 STATUSES = ("draft", "pinned")
@@ -115,7 +117,8 @@ def tracked(url: str, source: str, medium: str, campaign: str, content: str = ""
         q["utm_content"] = _part(content)
     if focus:
         q["o"] = _part(focus)
-    return url + ("&" if "?" in url else "?") + urlencode(q)
+    base, hash_, frag = url.partition("#")           # the tags go before a #fragment, or the browser would keep them to itself
+    return base + ("&" if "?" in base else "?") + urlencode(q) + hash_ + frag
 
 
 def profile_links() -> dict[str, str]:
@@ -138,17 +141,7 @@ def destinations() -> list[dict]:
 # ---------------------------------------------------------------- the ledger
 
 def rows() -> list[dict]:
-    if not OFFERS.exists():
-        return []
-    out = []
-    for line in OFFERS.read_text(encoding="utf-8").splitlines():
-        try:
-            r = json.loads(line) if line.strip() else None
-        except json.JSONDecodeError:
-            continue
-        if isinstance(r, dict) and r.get("video_id"):
-            out.append(r)
-    return out
+    return [r for r in read_jsonl(OFFERS) if r.get("video_id")]
 
 
 def latest(all_rows: list[dict] | None = None) -> list[dict]:
@@ -312,7 +305,7 @@ def repair_pack(folder: Path, offer: dict) -> bool:
         lines[at] = offer["description_line"]
     meta["description"] = "\n".join(lines)
     apply_to_meta(meta, offer)
-    path.write_text(json.dumps(meta, indent=2), encoding="utf-8")
+    write_atomic(path, json.dumps(meta, indent=2))
     m = re.match(r"slot(\d+)-", folder.name)
     try:
         when = datetime.fromisoformat(meta["post_at"]).astimezone(ZoneInfo(config.load()["publish"]["timezone"])).strftime("%Y-%m-%d %H:%M %Z")
@@ -350,7 +343,7 @@ def _passed_videos(day: str):
 def batch(day: str | None = None) -> dict:
     """Make sure every passed video of the day has an offer pack and a ledger row. Idempotent; the daily route runs it after the batch
     as a net under the packaging step. Returns counts and problems; a video without a usable offer is listed, never published silently."""
-    want = day or date.today().isoformat()
+    want = day or config.today_utc().isoformat()
     out = {"day": want, "videos": 0, "with_offer": 0, "written": 0, "problems": []}
     for j, folder in _passed_videos(want):
         out["videos"] += 1
@@ -384,6 +377,6 @@ def status() -> dict:
 
 def unoffered(day: str | None = None) -> list[str]:
     """Ids of passed videos of the day with no usable offer: what preflight and the watchdog warn about."""
-    want = day or date.today().isoformat()
+    want = day or config.today_utc().isoformat()
     have = {r["video_id"] for r in latest() if r.get("status") in STATUSES}
     return [j.id for j, _ in _passed_videos(want) if j.id not in have]

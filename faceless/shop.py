@@ -20,10 +20,10 @@ import os
 import re
 import shutil
 import subprocess
-from pathlib import Path
 
 from faceless import config, events, listing, safety
 from faceless.config import STUDIO, Paths
+from faceless.fsutil import read_jsonl
 from faceless.providers import ProviderError, ProviderUnavailable
 
 SALES = Paths.analytics / "sales.jsonl"
@@ -63,7 +63,7 @@ def status() -> list[dict]:
 
 def md_to_html(md: str) -> str:
     """The little Markdown our descriptions use (paragraphs, bullet lists, bold, italics) as the HTML Gumroad's description field takes."""
-    out, in_list = [], False
+    out = []
     for block in re.split(r"\n\s*\n", md.strip()):
         lines = block.splitlines()
         if all(ln.strip().startswith("- ") for ln in lines):
@@ -161,7 +161,7 @@ def sales(days: int = 30) -> list[dict]:
     rows = rows.get("sales", rows) if isinstance(rows, dict) else rows
     seen = set()
     if SALES.exists():
-        seen = {json.loads(ln).get("id") for ln in SALES.read_text(encoding="utf-8").splitlines() if ln.strip()}
+        seen = {r.get("id") for r in read_jsonl(SALES)}
     fresh = []
     for s in rows if isinstance(rows, list) else []:
         sid = s.get("id")

@@ -23,9 +23,9 @@ def repo(tmp_path, monkeypatch):
     return tmp_path
 
 
-def _job(day, slot, status, n=[0]):
-    n[0] += 1
-    (Paths.jobs / f"{day}-{slot}-{n[0]}.json").write_text(json.dumps({"day": day, "slot": slot, "status": status}), encoding="utf-8")
+def _job(day, slot, status, n=iter(range(1, 10**6))):
+    k = next(n)
+    (Paths.jobs / f"{day}-{slot}-{k}.json").write_text(json.dumps({"day": day, "slot": slot, "status": status}), encoding="utf-8")
 
 
 def whats(findings):
