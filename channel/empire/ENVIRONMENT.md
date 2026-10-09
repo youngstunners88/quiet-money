@@ -1,4 +1,15 @@
-# What this environment holds (2026-10-08)
+# What this environment holds (2026-10-09 re-check)
+
+**Verified with `python -m faceless keys`** (free, read-only; values never printed). The owner authorised testing every variable, including the several keys some services have.
+Full table and gotchas: `.claude/skills/faceless-keys/references/tools.md`. Headlines:
+- **Live variable differs from the obvious name:** Firecrawl is `FIRECRAWL` (`FIRECRAWL_API_KEY` is rejected); TinyFish is `TINYFISH_API_kEY2` (`TINYFISH_API_KEY` is rejected).
+- **Low or empty:** OpenRouter $4.01 left of $95; Browser Use $0; Pixellab $0; xAI has no credit; Tripo rejected; ElevenLabs keys are restricted (models yes, account page no).
+- **Healthy:** Muapi $20.19, Monid $9.71, Firecrawl 1,556 credits, Gemini, Cloudflare (three active tokens), Mistral (two keys), Vercel and v0, GitHub (three variables), Composio, PostHog, Sentry, NameSilo, AgentMail.
+- Earlier cautions in this file ("waiting for your yes") are superseded: the owner has asked for everything given to be opened and operated.
+
+---
+
+## Earlier inventory (2026-10-08)
 
 An inventory of the Claude Code environment the routines and sessions run in: key **names** (never values), tools on the machine, connected services,
 and what each could unlock. Nothing here was spent. Every key is the owner's; the studio uses only the ones its own code is wired to, and asks about the rest.

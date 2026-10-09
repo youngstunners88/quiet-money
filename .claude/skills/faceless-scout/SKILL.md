@@ -31,6 +31,9 @@ Run `python -m faceless distribute` and `python -m faceless offer`, and put in t
 visit counter), how many videos carry an offer and how many the owner has pinned, and, once posts are live and `analytics/metrics.jsonl` has rows, which platform and which offer card the hub visits followed.
 Production without distribution is the failure mode of every autonomous shop we read about: if the same rail has waited on the owner for two weeks, say so first in the report.
 
+## Keys check (every weekly run)
+Run `python -m faceless keys` (skill `faceless-keys`). Put in the report: any service the studio relies on with no working key, and any balance under $5 (OpenRouter and Muapi run dry first). Name the variable and the dashboard, never a value.
+
 ## Policy watch (every weekly run)
 `scout --act` re-reads the rule pages in `channel/compliance/watchlist.json` and writes `channel/compliance/POLICY-WATCH.md`. Pages the machine cannot fetch
 (`unfetchable`) are fetched by you with Exa (`web_fetch_exa`, `maxCharacters` 9000), written to a scratch file, and recorded with

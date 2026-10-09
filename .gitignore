@@ -31,3 +31,6 @@ channel/shop/*/etsy/images/
 channel/shop/*/etsy/video.mp4
 channel/shop/*/gumroad/*.jpg
 channel/shop/*.zip
+
+# personal Claude Code overrides
+.claude/settings.local.json

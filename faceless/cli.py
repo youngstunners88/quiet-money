@@ -489,6 +489,13 @@ def cmd_shop(args) -> int:
     return 2
 
 
+def cmd_keys(args) -> int:
+    from faceless import keys
+    rows = keys.check(only=args.service)
+    print(json.dumps(rows, indent=1) if args.json else keys.render(rows))
+    return 0
+
+
 def cmd_offer(args) -> int:
     """Offers: coverage and profile links | --batch [DAY] (make sure every passed video has its pack and row) | check TEXT | mark VIDEO pinned."""
     from faceless import offer
@@ -760,6 +767,10 @@ def main(argv: list[str] | None = None) -> int:
     sh.add_argument("--yes", action="store_true")
     sh.add_argument("--days", type=int, default=30)
     sh.set_defaults(fn=cmd_shop)
+    ky = sub.add_parser("keys", help="which key of each service works and what is left on it (free, read-only; values are never printed)")
+    ky.add_argument("service", nargs="?", default=None)
+    ky.add_argument("--json", action="store_true")
+    ky.set_defaults(fn=cmd_keys)
     of = sub.add_parser("offer", help="the call to action on every video: coverage and profile links, `--batch [today|DAY]` writes missing packs and ledger rows, `check TEXT` runs the claim check, `mark VIDEO pinned`")
     of.add_argument("action", nargs="?", default="status", choices=["status", "check", "mark"])
     of.add_argument("args", nargs="*")
