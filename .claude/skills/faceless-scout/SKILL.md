@@ -26,6 +26,11 @@ recorded, so say so in every report.
 4. Commit `analytics/opportunities.*` and any new backlog lines; push to main.
 5. Report to the owner: the top 3 with who must act, what the scanner did itself, and what it needs from them.
 
+## Distribution check (every weekly run)
+Run `python -m faceless distribute` and `python -m faceless offer`, and put in the report: which rails are `needs owner` with their one next step (accounts, posting rail, profile links, email service, first product URL,
+visit counter), how many videos carry an offer and how many the owner has pinned, and, once posts are live and `analytics/metrics.jsonl` has rows, which platform and which offer card the hub visits followed.
+Production without distribution is the failure mode of every autonomous shop we read about: if the same rail has waited on the owner for two weeks, say so first in the report.
+
 ## Policy watch (every weekly run)
 `scout --act` re-reads the rule pages in `channel/compliance/watchlist.json` and writes `channel/compliance/POLICY-WATCH.md`. Pages the machine cannot fetch
 (`unfetchable`) are fetched by you with Exa (`web_fetch_exa`, `maxCharacters` 9000), written to a scratch file, and recorded with

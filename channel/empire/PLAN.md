@@ -100,6 +100,13 @@ Scores in the ranking are judgment until these numbers exist; the weekly run re-
 - **New opportunities, scored in the ranking:** second-language editions (C7, free Edge voices exist for Spanish and Portuguese), better sound effects (C8, a polish idea: the renderer already mixes synthesized hits at cuts), macro facts (O17), a Mistral fallback (O14), PostHog analytics (O15), an Etsy draft rail kept parked on purpose (O16).
 - **Bulletproofing:** preflight, a watchdog that opens an "Ops alert" issue by itself, a kill switch and a $3 ceiling, union-merged logs, failure drills, a clean-checkout CI check (`python -m faceless ci`), and an operations runbook (`OPERATIONS.md`).
 
+## Pass 6 (2026-10-09): distribution, the blind spot
+- **Finding:** production was closed-loop and tested; distribution was not. Nothing posted, every video carried the same untracked link that no short-video platform makes tappable, the site could not collect an email address, nothing joined a video to a signup or a sale, and nobody had been asked to collaborate. Full analysis in `channel/empire/DISTRIBUTION.md`.
+- **Built:** the offer layer (`faceless/offer.py`: one claim-checked offer per video, the link-in-bio hub page, an append-only ledger), the rails report (`python -m faceless distribute`), tagged links in the repurposing kit, an email signup form that appears once the owner names a service, a slot for the owner's visit counter, and model-designed motion scenes (`faceless/pipeline/sketch.py`, Haiku 5.5, off until the owner has seen a sample).
+- **Verdicts:** treg parked (B2B lead look-ups; our data already comes from TokConnect, Exa and Muapi), rea killed again, Haiku 5.5 adopted for the one job it fits (scene design and reviews, about a tenth of a cent each), not for scripts or listing copy.
+- **Corrected the Grok draft of `faceless-offer`:** a pinned link is plain text on every short-video platform, so the offer is "link in bio"; TikTok's own rule is 1,000 followers or a Verified Business Account, and a Business account gives up the general music library.
+- **Owner unlocks, in order of value now:** go live (accounts, then Upload-Post or posting by hand), a short domain, an email service with the postal address, the first product's listing URL in `[offer] shop_urls`, a visit counter, and a look at the motion-scene samples.
+
 ## Not doing (killed by the attack round)
 Cloning other sellers' best-sellers; scripting a personal Google login to automate Flow; agent-created accounts and mailbox
 signups; prompt packs on Etsy. Each risks the owner's accounts or breaks a platform's rules for a small gain.
