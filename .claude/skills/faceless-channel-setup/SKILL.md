@@ -34,7 +34,10 @@ watermark, OG card, favicons, logo.svg) from `studio.toml`. Review the banner's 
 4. YouTube Studio → Customization: upload `avatar.png`, `banner-youtube.png`, `watermark.png`; paste the description, links, keywords from `profiles.md`.
 5. Studio → Settings → Upload defaults: category Education, language English.
 
-**TikTok** (3 min, in the app): Sign up → username from `profiles.md` → profile photo `avatar.png` → bio → switch to a **Business account** (enables the link in bio before 1k followers) → turn on the AI-generated content label when posting.
+**TikTok** (3 min, in the app): Sign up → username from `profiles.md` → profile photo `avatar.png` → bio → turn on the AI-generated content label when posting. Stay on a General (personal) account.
+The profile link needs **1,000 followers or a *Verified* Business Account** (TikTok's help page as quoted by three 2026 guides; claims that a free switch to Business unlocks it at once look outdated). Business verification takes documents and up to
+5 business days, is offered only in listed countries, and a Business account cannot use the general music library, which our pack checklist uses for the trending-sound step. So: General account now, the link when the follower count gets there,
+and until then the short typed address in the bio text (`channel/empire/DISTRIBUTION.md`, domain).
 
 **Instagram** (2 min): new account with the same username → photo → bio → Professional account (Creator).
 

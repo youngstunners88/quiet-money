@@ -306,3 +306,31 @@ def test_the_owners_analytics_tag_is_inserted_as_written_on_every_page_or_not_at
 def test_a_query_value_cannot_break_out_of_the_hub_script():
     js = site.HUB_JS
     assert "replace(/[^a-z0-9._-]/g,'')" in js and "innerHTML" not in js and "eval(" not in js
+
+
+# ---------------------------------------------------------------- the orchestrator step
+
+def test_after_publishing_the_orchestrator_writes_the_offer_pack_and_one_ledger_row(tmp_path, monkeypatch, pkg_job):
+    from faceless import orchestrator
+    job = pkg_job("2026-10-08-s1-math-x")
+    meta = package.run(job, _script())
+    folder = tmp_path / "queue" / "2026-10-08" / "slot1-math"
+    job.artifacts["publish"] = {"local": {"folder": str(folder)}}
+    orchestrator._offer(job, meta)
+    assert (folder / "OFFER.md").exists() and [r["video_id"] for r in offer.rows()] == [job.id]
+    orchestrator._offer(job, meta)                                                           # a re-run adds nothing
+    assert len(offer.rows()) == 1
+    job.artifacts["publish"] = {"local": {}}
+    orchestrator._offer(job, meta)                                                           # no pack folder: nothing to do, nothing breaks
+    orchestrator._offer(job, {k: v for k, v in meta.items() if k != "offer"})                # no offer on this video: same
+    assert len(offer.rows()) == 1
+
+
+def test_a_failure_while_recording_an_offer_never_costs_the_video_its_slot(tmp_path, monkeypatch, pkg_job):
+    from faceless import events, orchestrator
+    job = pkg_job("2026-10-08-s2-math-y")
+    meta = package.run(job, _script())
+    job.artifacts["publish"] = {"local": {"folder": str(tmp_path / "queue" / "2026-10-08" / "slot2-math")}}
+    monkeypatch.setattr(offer, "record", lambda *a, **k: (_ for _ in ()).throw(OSError("disk full")))
+    orchestrator._offer(job, meta)
+    assert any("offer skipped" in n for n in job.notes) and any(e["type"] == "OFFER_FAILED" for e in events.read())

@@ -73,7 +73,7 @@ def status(live: bool = False, connected: dict | None = None) -> list[dict]:
     pinned = st["pinned"] > 0
     rows.append(_row("profile links (the hub page, tagged per platform)", "ready" if pinned else "needs owner",
                      st["hub"] or "[site] base_url is empty",
-                     "" if pinned else "put the three URLs from `python -m faceless offer` in the TikTok, Instagram and YouTube link fields (TikTok's Website field may need a business account)"))
+                     "" if pinned else "put the three URLs from `python -m faceless offer` in the Instagram and YouTube link fields now; TikTok shows its link field only at 1,000 followers or with a Verified Business Account (see faceless-offer references/link-rules.md)"))
     if live and st["hub"]:
         ok, detail = _hub_live(st["hub"])
         rows.append(_row("hub page published", "ready" if ok else "needs owner", f"{st['hub']} answered {detail}",

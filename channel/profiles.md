@@ -28,7 +28,7 @@ Assets: `brand-kit/avatar.png`, `brand-kit/banner-youtube.png`, `brand-kit/water
 - **Name:** Quiet Money
 - **Username:** quietmoneyrules
 - **Bio (69):** `Money rules nobody taught you. Real numbers, 60 sec a day. 👇 Free checklist`
-- **Link:** the hub page tagged `utm_source=tiktok&utm_medium=bio&utm_campaign=profile` (`python -m faceless offer` prints it). The Website field may need a Business account or about 1k followers; check Edit profile. Captions and comments are not tappable.
+- **Link:** the hub page tagged `utm_source=tiktok&utm_medium=bio&utm_campaign=profile` (`python -m faceless offer` prints it). TikTok shows the Links field only with 1,000 followers or a Verified Business Account (documents, up to 5 business days; a Business account also loses the general music library). Until then put the site address in the bio text (not tappable). Captions and comments are never tappable.
 - Turn on: AI-generated content label for every post.
 
 ## Instagram (bio max 150 chars)

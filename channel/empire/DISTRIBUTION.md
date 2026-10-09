@@ -71,6 +71,8 @@ offer card was asked for. We cannot see which single short sent a visitor unless
 assets matter for learning, not only for reach.
 
 ## Ranked next moves (distribution only)
+0. **A short domain** (portfolio O2). TikTok's link field needs 1,000 followers or a Verified Business Account, captions and comments are never tappable, and the site lives at a long project address. A short
+   typeable address (GitHub Pages takes a custom domain) is the only link that works from the first post, in the bio text and later on screen, and it gives the newsletter a real sender address. About $10 a year.
 1. **Go live (owner).** Accounts, then either posting by hand from `POST.md` or an auto-posting rail (Upload-Post is the one that sets the AI labels on TikTok and YouTube).
    Nothing below matters until posts exist. `python -m faceless distribute` lists the exact steps.
 2. **Email list on.** Pick a service, paste its form address into `[newsletter] form_action`, add the postal address, import `channel/offers/autoresponder/sequence.json`.
