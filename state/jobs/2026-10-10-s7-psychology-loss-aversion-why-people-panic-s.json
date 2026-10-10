@@ -1,0 +1,71 @@
+{
+  "id": "2026-10-10-s7-psychology-loss-aversion-why-people-panic-s",
+  "pillar": "psychology",
+  "topic": "Loss aversion: why people panic-sell investments at the worst time",
+  "day": "2026-10-10",
+  "slot": 7,
+  "status": "published",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-10T09:49:13Z",
+      "words": 135
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-10T09:49:36Z",
+      "seconds": 62.314,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-10T09:49:56Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-10T09:51:44Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-10T09:51:44Z",
+      "score": 92
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-10T09:51:44Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-10-10T09:51:44Z",
+      "local": "2026-10-11T15:00:00-04:00"
+    }
+  ],
+  "artifacts": {
+    "angle": "losses hurt about twice as much as gains feel good",
+    "title": "Why Loss Aversion Triggers Panic Selling",
+    "video": "/home/user/quiet-money/production/output/2026-10-10/2026-10-10-s7-psychology-loss-aversion-why-people-panic-s/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-10/2026-10-10-s7-psychology-loss-aversion-why-people-panic-s/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-10-11/slot3-psychology",
+        "post_at": "2026-10-11T15:00:00-04:00"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 92,
+    "passed": true
+  },
+  "cost": {
+    "tts:edge:chars": 796
+  },
+  "notes": []
+}

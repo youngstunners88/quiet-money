@@ -1,0 +1,98 @@
+{
+  "title": "The $6,000 Credit Card Trap",
+  "hook_text": "THE TRUTH ABOUT MINIMUM PAYMENTS",
+  "beats": [
+    {
+      "say": "A $6,000 balance can cost you $10,887 in interest alone.",
+      "callout": "",
+      "visual": "A cinematic close-up of a sleek metal credit card resting on a dark marble table, shallow depth of field, dramatic moody sidelight."
+    },
+    {
+      "say": "Most people think making the minimum payment protects them. It doesn't.",
+      "callout": "",
+      "visual": "A silhouette of an adult sitting late at night at a wooden desk beside a warm desk lamp, viewed from behind."
+    },
+    {
+      "say": "Here's the math your bank statement hides in the fine print.",
+      "callout": "",
+      "visual": "A folded paper statement lying on an oak desk under soft shadows, text completely out of focus, cinematic low angle."
+    },
+    {
+      "say": "Imagine you owe $6,000 on a card at 24% APR.",
+      "callout": "$6,000 AT 24% APR",
+      "visual": "A close-up of hands typing numbers into an analog desk calculator, backlit by window light, shallow focus."
+    },
+    {
+      "say": "Your bank calculates the minimum as 1% of the balance plus monthly interest.",
+      "callout": "",
+      "visual": "An antique mechanical balance scale on a dark wooden shelf, tilted unevenly, subtle atmospheric dust particles."
+    },
+    {
+      "say": "If you pay only that required minimum, it takes 252 months to clear.",
+      "callout": "252 MONTHS",
+      "visual": "A wall calendar with pages gently fluttering in a slow breeze, bathed in dramatic evening sunlight."
+    },
+    {
+      "say": "That's 21 years of your life spent paying off one purchase.",
+      "callout": "21 YEARS",
+      "visual": "An empty hallway inside an old house, sunlight shifting across floorboards through tall windows, cinematic stillness."
+    },
+    {
+      "say": "You end up handing the bank $10,887 in interest charges.",
+      "callout": "$10,887 INTEREST",
+      "visual": "A neat stack of currency bands inside an open antique safe, shadowed interior, cold cinematic lighting."
+    },
+    {
+      "say": "But here's the part nobody mentions.",
+      "callout": "",
+      "visual": "A person standing at a high-rise window looking out at city lights at dusk, seen only from the back."
+    },
+    {
+      "say": "If you lock your payment at $300 a month instead, everything changes.",
+      "callout": "$300 PER MONTH",
+      "visual": "A pair of hands placing a smooth river stone firmly on a flat table, sharp focus, overhead cinematic shot."
+    },
+    {
+      "say": "The exact same debt gets wiped clean in just 26 months.",
+      "callout": "26 MONTHS VS 21 YEARS",
+      "visual": "An hourglass on a minimalist walnut desk with sand almost finished running through, soft morning backlight."
+    },
+    {
+      "say": "Your total interest drops to $1,739. You save over $9,000.",
+      "callout": "$1,739 VS $10,887",
+      "visual": "A leather wallet resting beside a cup of black coffee on a sunlit kitchen counter, quiet cinematic realism."
+    },
+    {
+      "say": "Follow for the money rules school never taught you...",
+      "callout": "",
+      "visual": "A closed vintage ledger notebook lying on an old wooden library table, warm ambient glow."
+    },
+    {
+      "say": "...because the system is designed to keep you paying forever, and",
+      "callout": "",
+      "visual": "A towering glass skyscraper reaching into foggy skies, viewed looking straight up from street level at twilight."
+    }
+  ],
+  "caption": "The minimum payment is designed to keep you profitable, not debt-free. Here is the math.\n\n#personalfinance #debtfree #moneytips #creditcard #quietmoney",
+  "description": "We break down how a $6,000 credit card balance at 24% APR costs over $10,000 in interest if you only pay the minimum. Learn the exact numbers and how paying a fixed amount clears the debt decades faster.",
+  "hashtags": [
+    "#personalfinance",
+    "#debtfree",
+    "#moneytips",
+    "#creditcard",
+    "#quietmoney"
+  ],
+  "first_comment": "Did your bank ever explain how minimum payments are calculated, or did you have to figure it out yourself?",
+  "facts": [
+    {
+      "claim": "A $6,000 credit card balance at 24% APR paying only the minimum (1% + interest, min $25) takes 252 months (~21 years) and costs $10,887 in interest.",
+      "basis": "Standard revolving minimum payment formula from fact sheet: 1% principal plus monthly accrued interest, subject to a $25 floor."
+    },
+    {
+      "claim": "Paying a fixed $300 per month on a $6,000 balance at 24% APR clears the debt in 26 months with $1,739 in interest.",
+      "basis": "Exact amortization calculation from fact sheet: fixed $300/month payoff schedule at 24% APR."
+    }
+  ],
+  "source": "llm",
+  "pillar": "math"
+}

@@ -1,0 +1,88 @@
+{
+  "title": "The Hidden Cost of Status Spending",
+  "hook_text": "THE FAKE WEALTH TRAP",
+  "beats": [
+    {
+      "say": "Most luxury status in parking lots is just high-interest debt disguised as success.",
+      "callout": "",
+      "visual": "A dark, silhouette shot of a sleek luxury sedan parked under a single streetlamp on a wet city street at night."
+    },
+    {
+      "say": "We buy shiny things to impress people we don't even like, but there's a silent trap hidden inside.",
+      "callout": "",
+      "visual": "Back of a person in a tailored coat walking past a wall of blurred floor-to-ceiling glass in a modern skyscraper."
+    },
+    {
+      "say": "It's called status spending. You stretch your budget for a brand new car payment to look wealthy to strangers.",
+      "callout": "",
+      "visual": "Close-up of hands holding a polished steering wheel inside a luxury vehicle interior with city lights reflecting off the windshield."
+    },
+    {
+      "say": "Upgrading your car payment by $200 a month seems harmless today. But look at what that flex costs you.",
+      "callout": "STATUS VS WEALTH",
+      "visual": "A sleek metal car key sitting alone on a dark polished wooden table under low evening lighting."
+    },
+    {
+      "say": "$200 a month invested for 30 years at 8% a year grows into $298,072.",
+      "callout": "$200/MO AT 8%",
+      "visual": "Cinematic side angle of an old brass hour-glass sitting on a rustic wooden desk with warm light streaming in."
+    },
+    {
+      "say": "You only put in $72,000 over those 30 years. Compound interest pays the other $226,072.",
+      "callout": "$72,000 VS $298,072",
+      "visual": "A vintage mechanical bank vault wheel glowing softly under dim architectural lighting."
+    },
+    {
+      "say": "But here's the part nobody mentions. True financial freedom isn't what you show, it's what you keep.",
+      "callout": "",
+      "visual": "Wide silhouette of a figure standing calmly on a quiet hill overlooking a foggy valley at sunrise."
+    },
+    {
+      "say": "Stealth wealth is driving a paid-off car while quietly building freedom behind closed doors.",
+      "callout": "STEALTH WEALTH",
+      "visual": "A simple sedan parked quietly in a home driveway during late afternoon blue hour."
+    },
+    {
+      "say": "If you swap status flexes for quiet investing, $500 a month at 8% reaches $745,180 in 30 years.",
+      "callout": "$500/MO AT 8%",
+      "visual": "Overhead view of a minimalist desk with coffee cup, pen, and notebook sitting under soft sunlight."
+    },
+    {
+      "say": "Step one is breaking the social comparison loop before your paycheck gets eaten alive by lifestyle creep.",
+      "callout": "STEP ONE",
+      "visual": "Hands calmly closing a plain leather notebook on a dimly lit mahogany surface."
+    },
+    {
+      "say": "Follow for the money rules school never taught you, so you don't fall into the trap where...",
+      "callout": "",
+      "visual": "Cinematic low-angle shot looking up at minimalist modern architecture against a clear twilight sky."
+    },
+    {
+      "say": "...you spend money you don't have, just because...",
+      "callout": "",
+      "visual": "Silhouette of a person walking away down a quiet concrete hallway with soft dim overhead lights."
+    }
+  ],
+  "caption": "Flexing costs far more than you think. Build quiet wealth instead. #money #personalfinance #moneytips #investing #wealth",
+  "description": "Status spending eats away at your future wealth before you even realize it. Upgrading payments to impress strangers steals compounding power that could build true financial independence.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#stealthwealth",
+    "#moneypsychology",
+    "#investing"
+  ],
+  "first_comment": "What's one purchase you made just for status that you regret today?",
+  "facts": [
+    {
+      "claim": "$200/month invested for 30 years at 8%/yr grows into $298,072 (you put in $72,000)",
+      "basis": "Money Fact Sheet calculation"
+    },
+    {
+      "claim": "$500/month invested for 30 years at 8%/yr reaches $745,180",
+      "basis": "Money Fact Sheet calculation"
+    }
+  ],
+  "source": "llm",
+  "pillar": "psychology"
+}

@@ -1,0 +1,79 @@
+{
+  "title": "Why Loss Aversion Triggers Panic Selling",
+  "hook_text": "YOUR BRAIN HATES LOSSES TWICE AS MUCH",
+  "beats": [
+    {
+      "say": "Your brain is hardwired to panic when red numbers flash on a screen.",
+      "callout": "",
+      "visual": "A dark wooden desk with a single red glowing lamp casting long shadows, moody cinematic lighting."
+    },
+    {
+      "say": "Psychologists found that the pain of a loss hurts twice as much as a gain feels good.",
+      "callout": "2X PAIN",
+      "visual": "A close-up of a brass scale balancing two iron weights on a dark marble surface."
+    },
+    {
+      "say": "It's called loss aversion. And it quietly destroys your portfolio.",
+      "callout": "THE BIAS",
+      "visual": "A person's hands holding an empty ceramic coffee cup by a foggy window at dawn."
+    },
+    {
+      "say": "When the market drops, fear takes the wheel. You want safety right now.",
+      "callout": "PANIC MODE",
+      "visual": "Raindrops sliding down a tall glass skyscraper window overlooking a grey city."
+    },
+    {
+      "say": "So you sell at the absolute bottom, locking in a permanent dent.",
+      "callout": "LOCKED IN",
+      "visual": "A heavy metal door closing slowly in a dimly lit concrete hallway."
+    },
+    {
+      "say": "But here's the part nobody mentions. The best days always follow the worst drops.",
+      "callout": "THE TURN",
+      "visual": "A single beam of bright morning sunlight cutting through a dusty, dark room."
+    },
+    {
+      "say": "If you miss just a few of those rebound days, your returns get crushed.",
+      "callout": "MISSED GAINS",
+      "visual": "A vintage hourglass on a stack of old books with sand draining to the bottom."
+    },
+    {
+      "say": "Here's the counter-move. Build an automated system that runs without your emotions.",
+      "callout": "STEP ONE",
+      "visual": "A mechanical clock gear turning smoothly inside an antique pocket watch."
+    },
+    {
+      "say": "Set a fixed monthly deposit, like $500, and delete the tracking app from your phone.",
+      "callout": "",
+      "visual": "A hand sliding a sleek black smartphone face down onto a wooden table."
+    },
+    {
+      "say": "Let time do the heavy lifting while you ignore the daily noise entirely.",
+      "callout": "",
+      "visual": "A calm, empty ocean horizon under a wide grey sky during the late afternoon."
+    },
+    {
+      "say": "That is how you beat your own biology and keep building wealth while",
+      "callout": "",
+      "visual": "A person walking away down a quiet, minimalist corridor with soft overhead lighting."
+    }
+  ],
+  "caption": "Your mind is your biggest financial risk. Stop letting fear make your moves. #LossAversion #MoneyPsychology #PersonalFinance #InvestingTips #SmartMoney",
+  "description": "Loss aversion makes investors panic-sell at the worst possible time. Learn the psychological trap and how to automate your way past it.",
+  "hashtags": [
+    "#LossAversion",
+    "#MoneyPsychology",
+    "#PersonalFinance",
+    "#InvestingTips",
+    "#SmartMoney"
+  ],
+  "first_comment": "What's the hardest part about holding investments during a market drop?",
+  "facts": [
+    {
+      "claim": "The pain of a loss hurts about twice as much as the joy of a gain.",
+      "basis": "Behavioral economics prospect theory by Kahneman and Tversky."
+    }
+  ],
+  "source": "llm",
+  "pillar": "psychology"
+}

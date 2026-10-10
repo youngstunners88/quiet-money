@@ -1,0 +1,71 @@
+{
+  "id": "2026-10-10-s4-psychology-social-comparison-spending-keepi",
+  "pillar": "psychology",
+  "topic": "Social comparison spending: keeping up with people you don't even like",
+  "day": "2026-10-10",
+  "slot": 4,
+  "status": "published",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-10T09:22:32Z",
+      "words": 187
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-10T09:23:15Z",
+      "seconds": 70.56,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-10T09:24:09Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-10T09:26:24Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-10T09:26:24Z",
+      "score": 99
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-10T09:26:24Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-10-10T09:26:24Z",
+      "local": "2026-10-10T21:00:00-04:00"
+    }
+  ],
+  "artifacts": {
+    "angle": "stealth wealth vs status spending",
+    "title": "The Brutal Cost of Impressing Strangers",
+    "video": "/home/user/quiet-money/production/output/2026-10-10/2026-10-10-s4-psychology-social-comparison-spending-keepi/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-10/2026-10-10-s4-psychology-social-comparison-spending-keepi/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-10-10/slot5-psychology",
+        "post_at": "2026-10-10T21:00:00-04:00"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 99,
+    "passed": true
+  },
+  "cost": {
+    "tts:edge:chars": 1193
+  },
+  "notes": []
+}

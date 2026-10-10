@@ -1,0 +1,92 @@
+{
+  "title": "The $6,000 Minimum Payment Trap",
+  "hook_text": "THAT $6,000 BALANCE KEEPS YOU TRAPPED",
+  "beats": [
+    {
+      "say": "A $6,000 credit card balance at 24% APR destroys your finances slowly.",
+      "callout": "",
+      "visual": "A dark wooden desk with a black credit card resting flat under harsh single-source spotlight, close-up shot."
+    },
+    {
+      "say": "If you only pay the minimum each month, here's what happens.",
+      "callout": "",
+      "visual": "A stack of unopened paper bills sitting beside a ceramic coffee cup on a grey kitchen counter, moody morning light."
+    },
+    {
+      "say": "You think you're handling it because the monthly bill looks small.",
+      "callout": "",
+      "visual": "A person's hand pressing buttons on a dark calculator, side angle, no visible numbers on screen."
+    },
+    {
+      "say": "At 24% interest, debt doubles every three years according to the rule of 72.",
+      "callout": "DEBT DOUBLES",
+      "visual": "A heavy iron key sitting on a blank dark leather notebook, dramatic side shadows, macro shot."
+    },
+    {
+      "say": "Paying only the 1% minimum plus interest keeps you locked in for 252 months.",
+      "callout": "252 MONTHS",
+      "visual": "A wall calendar with pages fluttering in slow motion, out of focus background, moody cinematic lighting."
+    },
+    {
+      "say": "That's roughly 21 years of payments on a single balance.",
+      "callout": "21 YEARS",
+      "visual": "A vintage hourglass resting on a dark slate surface, sand grains falling slowly, close-up."
+    },
+    {
+      "say": "But here's the part credit card companies never highlight.",
+      "callout": "",
+      "visual": "A closed laptop lid on a dark desk with a single pen beside it, top-down view."
+    },
+    {
+      "say": "By the time it's zero, you've paid $10,887 in interest alone.",
+      "callout": "$10,887",
+      "visual": "A spilled cup of dark coffee spreading across a wooden tabletop, moody high-contrast lighting."
+    },
+    {
+      "say": "That's nearly double the original item you bought.",
+      "callout": "$6,000 VS $10,887",
+      "visual": "Two empty metal scales hanging on a dark minimalist balance beam, studio lighting."
+    },
+    {
+      "say": "Switching to a $300 fixed payment clears that exact balance in just 26 months.",
+      "callout": "26 MONTHS",
+      "visual": "A hand sliding a sleek metal pen across a blank dark paper journal, close-up macro."
+    },
+    {
+      "say": "Stop feeding the trap and pay more than the minimum.",
+      "callout": "",
+      "visual": "A hand turning off a brass desk lamp in a dim room, deep shadows, cinematic atmosphere."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "A dark hallway with a single warm light at the far end, symmetrical framing, cinematic depth."
+    }
+  ],
+  "caption": "The math behind credit card minimum payments is brutal. Here's why paying just the minimum costs you thousands. #personalfinance #debtfree #moneytips #financialfreedom",
+  "description": "Breaking down how a $6,000 credit card balance at 24% APR takes 21 years and over $10,000 in interest when paying only the minimum.",
+  "hashtags": [
+    "#personalfinance",
+    "#debtfree",
+    "#moneytips",
+    "#financialfreedom",
+    "#smartmoney"
+  ],
+  "first_comment": "What's the highest interest rate on your cards right now?",
+  "facts": [
+    {
+      "claim": "At 24% APR, debt doubles every 3 years",
+      "basis": "Rule of 72 formula (72 divided by 24 equals 3)"
+    },
+    {
+      "claim": "$6,000 credit card at 24% APR paying minimum takes 252 months and $10,887 interest",
+      "basis": "Fact sheet calculation: $6,000 credit card at 24% APR paying only the minimum (1% + interest, min $25)"
+    },
+    {
+      "claim": "Same $6,000 at 24% paying $300/month takes 26 months and $1,739 interest",
+      "basis": "Fact sheet calculation: Same $6,000 at 24% paying $300/month"
+    }
+  ],
+  "source": "llm",
+  "pillar": "math"
+}

@@ -1,0 +1,79 @@
+{
+  "title": "The Emergency Fund Myth That Destroys Finances",
+  "hook_text": "YOUR EMERGENCY FUND IS NOT WASTED MONEY",
+  "beats": [
+    {
+      "say": "You think that cash sitting in your savings account is wasted money because it's not earning high returns.",
+      "callout": "",
+      "visual": "Close-up of a lone steel vault door in a dark, quiet bank basement with dramatic side lighting."
+    },
+    {
+      "say": "That's completely wrong. It's not an investment. It's insurance against a debt spiral.",
+      "callout": "ASSET VS DEBT",
+      "visual": "A single heavy metal lock snapping shut in sharp focus against a dark, minimalist background."
+    },
+    {
+      "say": "Here's what happens when a sudden car repair or medical bill hits an empty bank account.",
+      "callout": "",
+      "visual": "A sleek modern car parked on an empty wet street under a single amber streetlight at night."
+    },
+    {
+      "say": "Most people put that $6,000 bill on a credit card running at 24% APR.",
+      "callout": "$6,000 BALANCE",
+      "visual": "A dark credit card resting flat on a polished dark wood table, shot from a high angle."
+    },
+    {
+      "say": "If you only pay the minimum, that debt takes 252 months to clear out.",
+      "callout": "21 YEARS",
+      "visual": "An old mechanical clock ticking in heavy shadow with a slow, cinematic shutter speed."
+    },
+    {
+      "say": "By the time it's paid off, you've handed over $10,887 just in interest alone.",
+      "callout": "$10,887 INTEREST",
+      "visual": "A towering stack of dull copper coins resting on a dark surface, casting long shadows."
+    },
+    {
+      "say": "That is the exact trap that keeps a paycheck earner stuck for decades.",
+      "callout": "THE TRAP",
+      "visual": "A pair of hands resting motionless on a dark desk, palms down, in a quiet room."
+    },
+    {
+      "say": "But here's the part nobody mentions about true financial peace.",
+      "callout": "THE SHIFT",
+      "visual": "A bright ray of natural morning light cutting across a clean, minimalist concrete floor."
+    },
+    {
+      "say": "Cash in an emergency fund buys you time so you never touch high interest debt.",
+      "callout": "TIME BUYS PEACE",
+      "visual": "A simple black leather notebook lying open on a clean wooden table with a soft blur."
+    },
+    {
+      "say": "It protects your future investments from getting completely wiped out by bad luck.",
+      "callout": "",
+      "visual": "A seedling sprouting through cracked grey pavement under soft, overcast daylight."
+    },
+    {
+      "say": "That's why keeping cash isn't losing. It's winning the slow game, and that's exactly how",
+      "callout": "",
+      "visual": "A smooth stone resting perfectly balanced on top of another smooth river rock by water."
+    }
+  ],
+  "caption": "An emergency fund isn't an investment. It's your shield against ruin. #emergencyfund #debtfree #personalfinance #moneytips #wealthbuilding",
+  "description": "Why viewing your emergency fund as a wasted investment opens you up to high-interest debt spirals. Keep cash to protect your future.",
+  "hashtags": [
+    "#emergencyfund",
+    "#debtfree",
+    "#personalfinance",
+    "#moneytips",
+    "#wealthbuilding"
+  ],
+  "first_comment": "What's the biggest unexpected expense that ever caught you off guard?",
+  "facts": [
+    {
+      "claim": "$6,000 credit card at 24% APR paying only the minimum takes 252 months and $10,887 interest",
+      "basis": "MONEY FACT SHEET: $6,000 credit card at 24% APR paying only the minimum (1% + interest, min $25): 252 months (~21 years), $10,887 interest"
+    }
+  ],
+  "source": "llm",
+  "pillar": "myth"
+}

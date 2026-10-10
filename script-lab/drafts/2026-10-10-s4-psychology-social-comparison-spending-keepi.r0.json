@@ -1,0 +1,88 @@
+{
+  "title": "Why You're Buying Things You Don't Even Want",
+  "hook_text": "YOU'RE SPENDING MONEY TO IMPRESS PEOPLE YOU HATE",
+  "beats": [
+    {
+      "say": "You're spending money to impress people you don't even like.",
+      "callout": "",
+      "visual": "A person's hands holding a sleek smartphone in a dimly lit minimalist room, shadows cast across the wall."
+    },
+    {
+      "say": "It's called status spending, and it's a silent wealth killer.",
+      "callout": "STATUS SPENDING",
+      "visual": "A designer shopping bag resting alone on a polished concrete floor, dramatic side lighting."
+    },
+    {
+      "say": "Here's the part nobody mentions. True wealth is invisible.",
+      "callout": "INVISIBLE WEALTH",
+      "visual": "An empty wooden desk with a single brass pen, top-down cinematic overhead shot."
+    },
+    {
+      "say": "People buying the flashiest cars often have the lowest net worth.",
+      "callout": "FLASH VS CASH",
+      "visual": "The blurred taillights of a sports car driving away down a wet dark city street at night."
+    },
+    {
+      "say": "Meanwhile, the person next to you in a plain hoodie might be a millionaire.",
+      "callout": "HOODIE VS SUIT",
+      "visual": "A close-up of a plain grey cotton hoodie texture, moody studio lighting with shallow depth of field."
+    },
+    {
+      "say": "Every dollar spent on show is a dollar that can't work for you.",
+      "callout": "ASSET VS LIABILITY",
+      "visual": "A single heavy metal coin resting on a dark wooden table, macro lens focus."
+    },
+    {
+      "say": "Take a $5 daily habit. That's $1,825 a year.",
+      "callout": "$5/DAY = $1,825",
+      "visual": "A ceramic coffee mug sitting on a dark oak kitchen counter, early morning ambient light."
+    },
+    {
+      "say": "Invest that monthly at 8% for 30 years and you get $226,659.",
+      "callout": "$226,659",
+      "visual": "A vintage glass hourglass with white sand trickling down, macro shot against a dark background."
+    },
+    {
+      "say": "That's freedom traded for a temporary glance from a stranger.",
+      "callout": "",
+      "visual": "A silhouette of a person looking out a large apartment window at a distant skyline at dusk."
+    },
+    {
+      "say": "Stealth wealth means keeping your cash and letting your results speak.",
+      "callout": "",
+      "visual": "A closed leather journal resting on a dark mahogany desk, soft overhead spotlight."
+    },
+    {
+      "say": "Stop trading your actual life to buy props for an audience that doesn't care.",
+      "callout": "",
+      "visual": "A person walking down a quiet brick-paved alleyway, shot from behind with a wide-angle lens."
+    },
+    {
+      "say": "Build a quiet fortress instead, and follow for the money rules school never taught",
+      "callout": "",
+      "visual": "A heavy wooden door with a brass handle, softly lit from the interior warmth."
+    }
+  ],
+  "caption": "Stop funding a lifestyle for strangers. True power is staying quiet while your money builds in the background. \n\n#moneypsychology #wealthbuilding #personalfinance #stealthwealth #smartmoney",
+  "description": "Status spending is a quiet trap that drains your paycheck for people you don't even like. Learn the power of stealth wealth and building a quiet fortress instead.",
+  "hashtags": [
+    "#moneypsychology",
+    "#wealthbuilding",
+    "#personalfinance",
+    "#stealthwealth",
+    "#smartmoney"
+  ],
+  "first_comment": "What's one thing you bought just because you thought other people would judge you if you didn't?",
+  "facts": [
+    {
+      "claim": "A $5/day habit equals $1,825 a year",
+      "basis": "$5/day habit = $1,825/year"
+    },
+    {
+      "claim": "Investing $5/day monthly at 8% for 30 years yields $226,659",
+      "basis": "invested monthly at 8% for 30 years = $226,659"
+    }
+  ],
+  "source": "llm",
+  "pillar": "psychology"
+}

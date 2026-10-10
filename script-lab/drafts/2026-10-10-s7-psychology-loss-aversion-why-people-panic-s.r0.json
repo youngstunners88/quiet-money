@@ -1,0 +1,79 @@
+{
+  "title": "Why Loss Aversion Triggers Panic Selling",
+  "hook_text": "YOUR BRAIN HATES LOSSES TWICE AS MUCH",
+  "beats": [
+    {
+      "say": "Your brain hates losing money about twice as much as it likes winning it.",
+      "callout": "",
+      "visual": "Macro shot of an old mechanical scale tipping heavily on one side, dramatic side lighting, dark moody background."
+    },
+    {
+      "say": "That quirk is called loss aversion, and it ruins portfolios every single year.",
+      "callout": "",
+      "visual": "A person's hand resting on a closed wooden desk, blurred warm light from a single desk lamp."
+    },
+    {
+      "say": "Here's what happens when the market dips and red numbers flash on your screen.",
+      "callout": "",
+      "visual": "Close-up of a dark bedroom ceiling with a faint blue reflection moving slowly across it."
+    },
+    {
+      "say": "Panic sets in. The pain of seeing a balance drop feels unbearable.",
+      "callout": "",
+      "visual": "A ceramic coffee mug sitting untouched on a kitchen counter during early morning shadows."
+    },
+    {
+      "say": "So you sell at the absolute bottom just to stop the bleeding.",
+      "callout": "",
+      "visual": "Raindrops sliding down a pane of glass, out-of-focus streetlights blurring in the distance."
+    },
+    {
+      "say": "But here's the part nobody mentions. The market always recovers over long stretches.",
+      "callout": "BUT HERE",
+      "visual": "A long empty concrete hallway with a single bright light at the far end, stark shadows."
+    },
+    {
+      "say": "Take an investment of $500/month at 8% a year. It hits $745,180 in 30 years.",
+      "callout": "$745,180",
+      "visual": "An open window with sheer white curtains swaying gently in a quiet, minimalist room."
+    },
+    {
+      "say": "Panic sellers miss those exact rebounds because they let fear make the calls.",
+      "callout": "",
+      "visual": "A vintage brass key resting on a heavy oak table, top-down cinematic angle."
+    },
+    {
+      "say": "The counter-move is simple. Automate your buys and close your banking app.",
+      "callout": "STEP ONE",
+      "visual": "A closed heavy front door made of dark wood, morning light seeping under the frame."
+    },
+    {
+      "say": "Remove the temptation to react to short-term noise with your hard-earned cash.",
+      "callout": "STEP TWO",
+      "visual": "A stack of plain white books sitting on a wooden floor, soft natural side light."
+    },
+    {
+      "say": "Follow for the money rules school never taught you, because your brain hates",
+      "callout": "",
+      "visual": "A slow pan across a quiet empty library aisle with tall wooden bookshelves, dim atmosphere."
+    }
+  ],
+  "caption": "Your brain is wired to sabotage your investments. Here's how to stop it. #lossaversion #investing101 #personalfinance #moneypsychology",
+  "description": "Loss aversion causes investors to panic-sell at the worst possible moments. Learn how this psychological bias drains wealth and how to fix it.",
+  "hashtags": [
+    "#lossaversion",
+    "#investing101",
+    "#personalfinance",
+    "#moneypsychology",
+    "#wealthbuilding"
+  ],
+  "first_comment": "Have you ever sold an investment during a market dip and regretted it later?",
+  "facts": [
+    {
+      "claim": "$500/month invested for 30 years at 8%/yr reaches $745,180",
+      "basis": "$500/month for 30 years at 8%/yr (monthly compounding) = $745,180"
+    }
+  ],
+  "source": "llm",
+  "pillar": "psychology"
+}

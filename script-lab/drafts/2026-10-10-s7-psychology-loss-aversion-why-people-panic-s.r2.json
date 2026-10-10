@@ -1,0 +1,93 @@
+{
+  "title": "Why Loss Aversion Triggers Panic Selling",
+  "hook_text": "YOUR BRAIN HATES LOSING TWICE AS MUCH",
+  "beats": [
+    {
+      "say": "Losses hurt about twice as much as gains feel good to your brain.",
+      "callout": "",
+      "visual": "A person's hands holding a phone showing a dark screen, moody cinematic shadows, soft warm lamplight."
+    },
+    {
+      "say": "It's a built-in survival trap called loss aversion.",
+      "callout": "",
+      "visual": "An empty wooden desk with a single brass desk lamp casting a sharp beam, dark room background."
+    },
+    {
+      "say": "When markets drop, that old wiring takes over completely.",
+      "callout": "",
+      "visual": "A blurry silhouette of a person standing by a large glass window at dusk, city lights far below."
+    },
+    {
+      "say": "You feel an urgent panic to sell and stop the bleeding.",
+      "callout": "",
+      "visual": "A close-up of a hand tightly gripping the edge of a polished wooden table, dramatic shadows."
+    },
+    {
+      "say": "That single emotional reaction destroys long-term returns faster than anything else.",
+      "callout": "",
+      "visual": "An old brass pocket watch resting open on a dark slate surface, macro lens, shallow depth."
+    },
+    {
+      "say": "Let's look at the numbers behind steady investing.",
+      "callout": "",
+      "visual": "A stack of dark leather-bound notebooks resting on a minimalist concrete shelf, moody lighting."
+    },
+    {
+      "say": "For example, $100 a month invested for 20 years at 8% a year reaches $58,902.",
+      "callout": "$58,902 TOTAL",
+      "visual": "A ceramic coffee mug sitting next to a potted fern on a dark wooden windowsill, soft daylight."
+    },
+    {
+      "say": "Push that timeline to 40 years, and it grows to $349,101.",
+      "callout": "$349,101 TOTAL",
+      "visual": "A vintage glass hourglass sitting on a dark wooden desk, sand slowly falling, macro shot."
+    },
+    {
+      "say": "Panic selling cuts you off right before the recovery happens.",
+      "callout": "",
+      "visual": "A closed heavy wooden door with a single streak of warm evening light underneath, cinematic."
+    },
+    {
+      "say": "So what's the counter-move to beat your own biology?",
+      "callout": "",
+      "visual": "A fountain pen resting across a blank dark gray notebook page, overhead angle, stark contrast."
+    },
+    {
+      "say": "Automate your deposits and delete your portfolio app today.",
+      "callout": "STEP ONE",
+      "visual": "A modern smartphone lying face down on a dark textured desk, soft ambient room glow."
+    },
+    {
+      "say": "Let time do the heavy lifting while you ignore the noise.",
+      "callout": "STEP TWO",
+      "visual": "A steaming cup of tea on a dark stone countertop, soft morning fog visible through a window."
+    },
+    {
+      "say": "Follow for the money rules school never taught you, because",
+      "callout": "",
+      "visual": "An abstract shot of a hand turning the page of a thick dark book, soft cinematic lighting."
+    }
+  ],
+  "caption": "Your brain is wired to panic when investments drop. Here is how to stop emotional selling from ruining your future wealth. #lossaversion #investing #moneypsychology #personalfinance #wealthbuilding",
+  "description": "Discover why loss aversion causes panic selling and learn the simple automation trick to protect your long-term investments from emotional decisions.",
+  "hashtags": [
+    "#lossaversion",
+    "#investing",
+    "#moneypsychology",
+    "#personalfinance",
+    "#wealthbuilding"
+  ],
+  "first_comment": "Have you ever sold an investment during a market drop and regretted it later?",
+  "facts": [
+    {
+      "claim": "$100 a month invested for 20 years at 8%/yr reaches $58,902",
+      "basis": "$100/month invested for 20 years at 8%/yr (monthly compounding) = $58,902 (you put in $24,000)"
+    },
+    {
+      "claim": "$100 a month invested for 40 years at 8%/yr reaches $349,101",
+      "basis": "$100/month invested for 40 years at 8%/yr (monthly compounding) = $349,101 (you put in $48,000)"
+    }
+  ],
+  "source": "llm",
+  "pillar": "psychology"
+}

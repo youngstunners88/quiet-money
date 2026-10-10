@@ -1,0 +1,89 @@
+{
+  "title": "The Brutal Cost of Impressing Strangers",
+  "hook_text": "THE TRAP OF STATUS SPENDING",
+  "beats": [
+    {
+      "say": "Most luxury status in parking lots is debt disguised as winning.",
+      "callout": "",
+      "visual": "Cinematic low-angle tracking shot of a polished black luxury sedan in a dim corporate parking garage, moody shadows, rain dripping from the ceiling, no visible logos or faces."
+    },
+    {
+      "say": "A $700 note on an entry-level German sedan isn't winning. It's quietly bleeding your paycheck every month.",
+      "callout": "",
+      "visual": "Close-up of a person's hands gripping a leather steering wheel at dusk, city streetlights reflecting softly in the windshield, gloomy cinematic atmosphere."
+    },
+    {
+      "say": "Economists call this conspicuous consumption: destroying real net worth just to project a fake financial image.",
+      "callout": "CONSPICUOUS CONSUMPTION",
+      "visual": "A silhouette of a figure walking past gleaming storefront windows in a luxury shopping district at night, dramatic contrast lighting."
+    },
+    {
+      "say": "We finance leases, expensive dinners, and logos to impress coworkers we don't even like.",
+      "callout": "",
+      "visual": "Over-the-shoulder shot of a sleek restaurant table with empty wine glasses and an unbranded leather billfold resting on dark marble, shallow depth of field."
+    },
+    {
+      "say": "Meanwhile, stealth wealth plays an entirely different game that flashy spenders never see coming.",
+      "callout": "",
+      "visual": "A person seen from behind in a clean unbranded navy wool coat, standing calmly on a quiet foggy morning sidewalk overlooking a financial skyline."
+    },
+    {
+      "say": "Real wealth wears plain shirts, drives ordinary cars, and buys time instead of fleeting social applause.",
+      "callout": "STATUS VS FREEDOM",
+      "visual": "A vintage modest vehicle parked quietly beside a tranquil pine forest at sunrise, cinematic soft light filtering through trees."
+    },
+    {
+      "say": "But here's the part nobody mentions about the brutal opportunity cost.",
+      "callout": "",
+      "visual": "Macro shot of a bronze pocket watch resting on dark wood, gears faintly visible beneath glass, dramatic chiaroscuro lighting."
+    },
+    {
+      "say": "Redirecting that $500 monthly payment into an investment at 8% a year changes your entire future.",
+      "callout": "",
+      "visual": "Close-up of hands calmly folding an unmarked notebook beside a cup of black coffee on a rustic timber desk, warm morning sidelight."
+    },
+    {
+      "say": "Invested for 30 years at 8%, that $500 monthly becomes $745,180.",
+      "callout": "$745,180",
+      "visual": "Cinematic aerial view of an expansive quiet coastal road at golden hour, waves gently breaking against rocky cliffs, feeling of immense freedom."
+    },
+    {
+      "say": "You put in $180,000, while silent compounding hands you over half a million dollars in gains.",
+      "callout": "$180,000 VS $745,180",
+      "visual": "A lone silhouette standing at the edge of a minimalist architectural balcony overlooking a vast open valley at dusk."
+    },
+    {
+      "say": "Status spending buys fragile validation, but stealth wealth buys permanent independence and quiet peace of mind.",
+      "callout": "STEALTH WEALTH",
+      "visual": "Close-up of a brass key sitting on a solid oak table next to an open book, soft sunlight cutting across the frame."
+    },
+    {
+      "say": "Stop funding other people's opinions, and follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "A person seen from the back walking steadily toward a sunlit open doorway in a modern concrete corridor."
+    },
+    {
+      "say": "Because the moment you stop performing for people you don't like, you realize that",
+      "callout": "",
+      "visual": "A wide cinematic shot of tail lights fading into a misty evening highway, looping seamlessly into darkness."
+    }
+  ],
+  "caption": "Looking rich and being rich are two entirely different sports.\nChoose freedom over applause.",
+  "description": "Status spending drains wealth through financed appearances and social pressure. Redirecting lifestyle inflation into quiet compounding creates true financial autonomy.",
+  "hashtags": [
+    "#quietmoney",
+    "#personalfinance",
+    "#moneypsychology",
+    "#stealthwealth",
+    "#investingrules"
+  ],
+  "first_comment": "What is one purchase people make purely to impress others?",
+  "facts": [
+    {
+      "claim": "Invested for 30 years at 8%, $500 monthly becomes $745,180 with $180,000 out of pocket.",
+      "basis": "Fact sheet calculation: $500/month invested for 30 years at 8%/yr (monthly compounding) = $745,180 (you put in $180,000)."
+    }
+  ],
+  "source": "llm",
+  "pillar": "psychology"
+}

@@ -1,0 +1,72 @@
+{
+  "id": "2026-10-10-s5-escape-the-rule-of-100-for-income-gener",
+  "pillar": "escape",
+  "topic": "The Rule of 100 for Income Generation",
+  "day": "2026-10-10",
+  "slot": 5,
+  "status": "published",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-10T09:33:42Z",
+      "words": 183
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-10T09:34:09Z",
+      "seconds": 70.104,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-10T09:34:54Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-10T09:36:50Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-10T09:36:50Z",
+      "score": 95
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-10T09:36:51Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-10-10T09:36:51Z",
+      "local": "2026-10-11T07:30:00-04:00"
+    }
+  ],
+  "artifacts": {
+    "angle": "Break down the Rule of 100 as an income-building framework to secure your first clients or customers through sheer volume of outreach.",
+    "brief": "hormozi",
+    "title": "The Rule of 100: How to Land Your First Clients",
+    "video": "/home/user/quiet-money/production/output/2026-10-10/2026-10-10-s5-escape-the-rule-of-100-for-income-gener/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-10/2026-10-10-s5-escape-the-rule-of-100-for-income-gener/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-10-11/slot1-escape",
+        "post_at": "2026-10-11T07:30:00-04:00"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 95,
+    "passed": true
+  },
+  "cost": {
+    "tts:edge:chars": 1081
+  },
+  "notes": []
+}

@@ -1,0 +1,71 @@
+{
+  "id": "2026-10-10-s6-math-the-minimum-payment-trap",
+  "pillar": "math",
+  "topic": "The Minimum Payment Trap",
+  "day": "2026-10-10",
+  "slot": 6,
+  "status": "published",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-10T09:41:36Z",
+      "words": 148
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-10T09:42:06Z",
+      "seconds": 62.952,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-10T09:42:18Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-10T09:44:05Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-10T09:44:05Z",
+      "score": 99
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-10T09:44:06Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-10-10T09:44:06Z",
+      "local": "2026-10-11T11:30:00-04:00"
+    }
+  ],
+  "artifacts": {
+    "angle": "Break down how a $5,000 credit card balance at 21% APR takes over 30 years and thousands in interest to clear if you only pay the 2% minimum.",
+    "title": "The $6,000 Credit Card Trap",
+    "video": "/home/user/quiet-money/production/output/2026-10-10/2026-10-10-s6-math-the-minimum-payment-trap/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-10/2026-10-10-s6-math-the-minimum-payment-trap/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-10-11/slot2-math",
+        "post_at": "2026-10-11T11:30:00-04:00"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 99,
+    "passed": true
+  },
+  "cost": {
+    "tts:edge:chars": 839
+  },
+  "notes": []
+}

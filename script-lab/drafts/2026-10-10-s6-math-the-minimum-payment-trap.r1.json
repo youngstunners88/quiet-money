@@ -1,0 +1,93 @@
+{
+  "title": "The $10,000 Minimum Payment Trap Explained",
+  "hook_text": "THE 21-YEAR CREDIT CARD TRAP",
+  "beats": [
+    {
+      "say": "A $6,000 credit card balance can keep you trapped for over 21 years.",
+      "callout": "",
+      "visual": "Cinematic close-up silhouette of a hand resting a dark credit card on a polished obsidian table under spotlight."
+    },
+    {
+      "say": "If you only make the minimum payment every month, the math works quietly against you.",
+      "callout": "MINIMUM PAYMENTS",
+      "visual": "Dimly lit modern apartment at night with a person viewed from behind looking out a rain-streaked window."
+    },
+    {
+      "say": "At 24% APR, paying the minimum takes 252 months to completely clear your balance.",
+      "callout": "252 MONTHS",
+      "visual": "Slow cinematic tracking shot of an vintage analog clock on a dark shelf, shadows stretching across the wall."
+    },
+    {
+      "say": "That's 21 long years of recurring monthly bills for a balance you spent in days.",
+      "callout": "",
+      "visual": "Moody low-angle shot of a person's silhouette standing at the end of an empty dark hallway."
+    },
+    {
+      "say": "Over those two decades, you'll pay a staggering $10,887 in interest alone.",
+      "callout": "$10,887 INTEREST",
+      "visual": "Dramatic moody view of a neat stack of hundred dollar bills illuminated on a dark marble desk."
+    },
+    {
+      "say": "Your original $6,000 purchase ends up costing you almost $17,000 in total cash.",
+      "callout": "$6,000 VS $17,000",
+      "visual": "High-contrast brass balance scale resting on a wooden surface, tilted heavily under dramatic warm lighting."
+    },
+    {
+      "say": "But here's the part nobody mentions about how credit card minimum payments work.",
+      "callout": "",
+      "visual": "Cinematic back-view of a figure walking down a quiet city street lined with dark glass skyscrapers at dusk."
+    },
+    {
+      "say": "The minimum amount is calculated to cover mostly interest, barely touching your actual balance.",
+      "callout": "",
+      "visual": "Macro view of water drops falling slowly onto smooth dark stones in a dimly lit studio setting."
+    },
+    {
+      "say": "It's designed to keep you paying as long as legally possible without default.",
+      "callout": "",
+      "visual": "Low key lighting shot of an old leather armchair sitting empty in a quiet dark room."
+    },
+    {
+      "say": "If you fixed your payment at $300 a month instead, everything changes instantly.",
+      "callout": "",
+      "visual": "Cinematic side shot of hands resting calmly on a dark mahogany desk next to a glowing table lamp."
+    },
+    {
+      "say": "You completely eliminate the whole debt in just 26 months instead of 21 years.",
+      "callout": "26 MONTHS VS 21 YEARS",
+      "visual": "Person viewed from behind stepping out of shadow into bright sunlight near an open minimalist entryway."
+    },
+    {
+      "say": "Your total interest collapses from $10,887 down to just $1,739.",
+      "callout": "$10,887 VS $1,739",
+      "visual": "Side-by-side comparison of two metal stacks on a dark table, one tall and shadowy, one tiny under bright spotlight."
+    },
+    {
+      "say": "Follow for the money rules school never taught you, so you never fall for...",
+      "callout": "",
+      "visual": "Cinematic close-up of an elegant black fountain pen resting beside an open dark leather journal."
+    }
+  ],
+  "caption": "The minimum payment on your credit card isn't designed to help you—it's designed to keep you paying interest for decades.\n\n#money #personalfinance #creditcard #financialliteracy #debttips",
+  "description": "Paying only the minimum on a $6,000 credit card at 24% APR takes over 21 years and costs $10,887 in interest. Paying $300 a month clears it in 26 months and saves over $9,000.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#creditcard",
+    "#financialliteracy",
+    "#debttips"
+  ],
+  "first_comment": "How much credit card debt are you currently trying to pay off?",
+  "facts": [
+    {
+      "claim": "$6,000 credit card debt at 24% APR taking minimum payments takes 252 months (~21 years) and costs $10,887 in interest.",
+      "basis": "$6,000 credit card at 24% APR paying only the minimum (1% + interest, min $25): 252 months (~21 years), $10,887 interest"
+    },
+    {
+      "claim": "$6,000 credit card debt at 24% APR paying $300/month takes 26 months and costs $1,739 in interest.",
+      "basis": "Same $6,000 at 24% paying $300/month: 26 months, $1,739 interest"
+    }
+  ],
+  "source": "llm",
+  "pillar": "math"
+}
