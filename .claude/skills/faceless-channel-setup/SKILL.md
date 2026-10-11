@@ -49,11 +49,11 @@ python -m faceless composio connect instagram
 ```
 If YouTube was connected before to another channel, the new link must select the **Quiet Money** channel.
 
-## 5. Apply branding via API (safety-checked)
-Before any write, list the connected channel (`YOUTUBE_LIST_CHANNELS` with `mine=true`) and **stop unless its
-title is the brand name**. Then: update description/keywords (`YOUTUBE_UPDATE_CHANNEL`), create one playlist
-per series (`YOUTUBE_CREATE_PLAYLIST`), and a channel section for them. Discover exact arguments with the
-`faceless-composio` skill (never guess slugs). Banner and avatar uploads stay manual (no API tool).
+## 5. Apply branding (code, safety-checked)
+The channel page lives in `studio.toml [youtube]`. `python -m faceless yt-channel` lists what differs from the live channel and refuses to touch
+anything unless the connection acts as `[publish.youtube].channel_id`; `--apply` writes the description, keywords, language, banner, one playlist
+per series and the series section. Repeating it changes nothing. Only the profile picture (`channel/brand-kit/avatar.png`) and the channel links are
+set by hand in Studio. See `faceless-youtube-seo` for the wording rules and the Composio sign-in gotchas in `faceless-composio`.
 
 ## 6. Wire the engine
 Set `[publish].mode` (Composio YouTube uploads or Upload-Post), confirm `[site.socials]` URLs, run

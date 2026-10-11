@@ -135,6 +135,11 @@ def youtube(job, meta: dict) -> dict:
                             expected_channel_id=cfg["channel_id"], publish_at=when.astimezone(ZoneInfo("UTC")).strftime("%Y-%m-%dT%H:%M:%SZ"),
                             job=job.id)
     job.artifacts["youtube"] = {**out, "post_at": when.isoformat(), "comment_posted": False}
+    try:   # the series playlist is how viewers (and YouTube) find the next video of the same kind; a failure here never costs the upload
+        from faceless import ytchannel
+        job.artifacts["youtube"]["series"] = ytchannel.add_to_series(out["video_id"], job.pillar)
+    except (ProviderError, ProviderUnavailable) as e:
+        job.notes.append(f"series playlist: {str(e)[:120]}")
     events.emit("PUBLISH_SCHEDULED", job=job.id, provider="youtube", when=when.isoformat(), video_id=out["video_id"])
     return {"mode": "youtube", "post_at": when.isoformat(), **out}
 
