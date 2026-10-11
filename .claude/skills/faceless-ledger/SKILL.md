@@ -14,6 +14,14 @@ First end-to-end run: 12 drawn scenes, 63.7 s, gauntlet 93; contact sheet `chann
 It rotates with the other six series in the daily plan (7 pillars, 5 slots: one rests each day) and has its own YouTube playlist.
 Known rough edge: every count-up card draws the same rising curve, even for a number that is a drop; a falling or flat curve is the next card improvement.
 
+## v2: the cast (2026-10-11, after the owner called the first version dull)
+`faceless/pipeline/cast.py`: **Penny**, the brand's gold Q coin with a face, arms and legs (mouth opens on every word from the voice's own word timings, blinks,
+cheers, panics, walks), the **Fee Gremlin** that eats coin stacks, nine stage templates (hero, stack, fee, race, step, years, shock, think, sign), five colour
+schemes (navy, gold, paper, green, red), a wipe between scenes, a slow camera push, floating glyphs and a coin belt. `cast.choose` picks a template per beat from
+the callout (number, face-off, STEP n, N YEARS, money-draining words) and never repeats a template or colour next to itself; the gremlin is capped at two a video.
+The series is **off** in the daily plan (`enabled = false`) until the owner approves a sample. Test: `python -m faceless make --pillar ledger --no-publish`.
+Ideas not built: a third character, a falling curve for drops, Lottie stickers, a recurring story arc across a week of videos.
+
 ## The look (also available to other series, off)
 
 One brand, two looks. The **cinematic** look (AI stills, slow camera moves, dark cards) is the house style. The **ledger** look is a
