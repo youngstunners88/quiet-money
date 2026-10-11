@@ -18,8 +18,8 @@ a two-bar comparison, two numbered steps, two phrase cards).
   the hook becomes a drawn scene: comparison, numbered step, counting number, or the beat's key phrase. The hook keeps its still (cover and hook box sit on it).
 - `faceless/pipeline/visuals.py` picks the look once per video and records it in `job.artifacts["style"]`; `render_reel` reads it for the theme.
 - `[production.ledger]` in `studio.toml`: `mode` (off | on), `pillars`, `share` (fraction of those series drawn in ledger, fixed per video by a hash of its id), `accent`.
-- Cost: a ledger video makes about one image instead of ten, so no image quota, no Muapi fallback and no still that image QA can flag. Measured spend so
-  far is mostly OpenRouter text calls, not images, so expect a small saving, not a large one. The value is the variation and the A/B.
+- Cost: a ledger video makes about one image instead of ten, so almost no image spend. Image spend is already small (Muapi about $0.50 a day since 8 October; OpenRouter
+  images were the $9.79 of the first week and are now a handful a day), so expect a small saving. The value is the variation and the A/B.
 
 ## Turn it on (owner decision)
 It ships **off**. The owner looks at a sample and says go (same rule as sketch scenes). To make a sample:
