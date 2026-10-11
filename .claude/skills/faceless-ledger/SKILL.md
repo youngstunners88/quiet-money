@@ -3,7 +3,18 @@ name: faceless-ledger
 description: The second visual style of the Quiet Money series, the "ledger" look (warm ledger paper, ink type, gold marker, every beat after the hook drawn in code, no generated stills), on the same brand kit as the cinematic look. Use to turn it on or off, compare it with the cinematic look on retention, render a sample, add a new ledger scene, or decide whether another animation library belongs in the stack.
 ---
 
-# Ledger style (the second look)
+# Ledger: the second look, and the drawn series
+
+## The drawn series "The Ledger" (pillar `ledger`, `drawn = true`)
+Owner's rule (2026-10-11): no OpenRouter for images, and a series independent of Muapi. The Ledger is that series. It calls **no image generator of any kind**
+(no Cloudflare, Muapi, OpenRouter or Pollinations): `visuals.run_drawn` draws every beat, the hook included, as a scene in code; the hook opens on a drawn title page
+(`open` card) with the caption layer's hook box on top, and the cover is the hook on ledger paper (`render.paper_page`). Voice is Edge (free), the script comes from
+the free text chain. Marginal cost per video is about zero; it cannot be held up by an image quota. Without Node 22 and ffmpeg the video is refused, never shipped with placeholder art.
+First end-to-end run: 12 drawn scenes, 63.7 s, gauntlet 93; contact sheet `channel/empire/ledger-series-sample.png`.
+It rotates with the other six series in the daily plan (7 pillars, 5 slots: one rests each day) and has its own YouTube playlist.
+Known rough edge: every count-up card draws the same rising curve, even for a number that is a drop; a falling or flat curve is the next card improvement.
+
+## The look (also available to other series, off)
 
 One brand, two looks. The **cinematic** look (AI stills, slow camera moves, dark cards) is the house style. The **ledger** look is a
 bookkeeper's page: cream paper, ink type in Anton and Montserrat Black, the brand gold as a marker under the key number, the series

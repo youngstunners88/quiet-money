@@ -166,6 +166,25 @@ def _run(cmd: list[str]) -> None:
         raise RuntimeError(f"ffmpeg failed: {p.stderr[-1500:]}")
 
 
+def paper_page(out: Path) -> Path:
+    """The ledger's page as a picture: warm paper, a soft gold glow, ruled lines. The base of a drawn video's cover."""
+    W, H = 1080, 1920
+    top, bottom = (0xfb, 0xf4, 0xe3), (0xe9, 0xdf, 0xc4)
+    im = Image.new("RGB", (W, H))
+    d = ImageDraw.Draw(im)
+    for y in range(H):
+        p = y / H
+        d.line([(0, y), (W, y)], fill=tuple(round(a + (b - a) * p) for a, b in zip(top, bottom)))
+    glow = Image.new("RGB", (W, H), (0xfb, 0xf4, 0xe3))
+    ImageDraw.Draw(glow).ellipse([90, 230, 990, 1130], fill=(0xff, 0xd2, 0x3f))
+    im = Image.blend(im, glow.filter(ImageFilter.GaussianBlur(220)), 0.35)
+    d = ImageDraw.Draw(im)
+    for k in range(5, 17):
+        d.line([(90, 150 + k * 100), (990, 150 + k * 100)], fill=(0xc9, 0xbb, 0x95), width=3)
+    im.save(out, "JPEG", quality=92)
+    return out
+
+
 def cover_image(first_image: str, hook: str, out: Path, accent: str) -> None:
     W, H = 1080, 1920
     im = Image.open(first_image).convert("RGB")
@@ -288,7 +307,9 @@ def run(job, script: dict, voice: dict, imgs: list[dict]) -> dict:
           "-r", str(fps), "-c:a", "aac", "-b:a", "192k", "-ac", "2", "-t", f"{total:.3f}",
           "-movflags", "+faststart", str(out)])
     cover = job.dir / "cover.jpg"
-    cover_image(imgs[0]["path"], script.get("hook_text") or script["title"], cover, cfg["accent"])
+    first = imgs[0]["path"] or str(paper_page(job.dir / "cover-paper.jpg"))     # a drawn series has no still: its cover is the hook on ledger paper
+    cover_image(first, script.get("hook_text") or script["title"], cover, cfg["accent"])
+    (job.dir / "cover-paper.jpg").unlink(missing_ok=True)
     for t in tasks:  # shots are reproducible from cache; keep the job folder light
         Path(t[1]).unlink(missing_ok=True)
     raw.unlink(missing_ok=True)

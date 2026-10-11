@@ -49,6 +49,7 @@ class Pillar:
     style: str
     grade: str
     music_key: str
+    drawn: bool = False        # a series drawn entirely in code (no image generator of any kind): see pipeline/cards.py
 
 
 @lru_cache(maxsize=1)

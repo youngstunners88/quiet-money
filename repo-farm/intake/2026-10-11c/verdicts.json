@@ -1,0 +1,80 @@
+{
+  "date": "2026-10-11",
+  "title": "Motion designs: eight more repos from the owner's second Google Doc",
+  "source": "The owner's Google Doc 'Motion designs' (id 1BIonbd5ESm0b4EpSe9VZp38h77M0adWOriGOYFvT3ZQ), read from Drive on 2026-10-11 (GSAP and lottie-web in it are covered in 2026-10-11). Dossiers by `python -m faceless intake`; READMEs were mostly short, so these judgments rest on stated purpose, licence files and what the studio already runs.",
+  "items": [
+    {
+      "id": "howseen-ai-claude-motion-design",
+      "name": "claude-motion-design (howseen-ai)",
+      "verdict": "TRIAL",
+      "stage": "render",
+      "why": "MIT. A Claude Code skill for motion videos in pure code with HTML, Playwright and ffmpeg: the same method the studio already runs (HyperFrames is HTML plus headless Chrome plus ffmpeg), and the same loop the JavaScript Claude video teaches (storyboard first, contact sheet, fix, re-render). Read from its README only.",
+      "steal": "Its storyboard-before-code step and contact-sheet check, as a gate for new drawn scenes.",
+      "owner": "Read it once before building the next ledger scene kinds; do not install it."
+    },
+    {
+      "id": "sunwood-ai-labs-hyperframes-motion-reel-skill",
+      "name": "hyperframes-motion-reel-skill (Sunwood-ai-labs)",
+      "verdict": "TRIAL",
+      "stage": "render",
+      "why": "MIT. A skill for motion reels on HyperFrames, which is our renderer. Closest match to the stack, so the likeliest source of scene patterns that already respect HyperFrames' seek rules.",
+      "steal": "Reel structures and scene patterns for new card kinds.",
+      "owner": "Read its patterns when adding a card kind; copy ideas, not files."
+    },
+    {
+      "id": "charlie947-motion-graphics-skills",
+      "name": "motion-graphics-skills (charlie947)",
+      "verdict": "PARK",
+      "stage": "render",
+      "why": "MIT. A set of motion-graphics skills; the README gave the dossier little to judge, so it is not wired in. Our own skills (faceless-hyperframes, faceless-ledger) already cover the loop.",
+      "steal": "Prompts for specific effects, if one is missing.",
+      "owner": "Skim when a scene needs an effect we lack."
+    },
+    {
+      "id": "whaleyxbt-claude-motion",
+      "name": "claude-motion (whaleyxbt)",
+      "verdict": "PARK",
+      "stage": "render",
+      "why": "MIT, but the dossier found nothing about what it does. The same author's patchright-enhanced is already rejected in the registry (anti-detection scraping), which is no reason to reject this one, but it is a reason not to install it unread.",
+      "steal": "Unknown.",
+      "owner": "Read the README by hand before any use."
+    },
+    {
+      "id": "haidrrrry-claude-remotion-skill",
+      "name": "claude-remotion-skill (haidrrrry)",
+      "verdict": "KILL",
+      "stage": "render",
+      "why": "MIT skill for Remotion. We render with HyperFrames; a Remotion skill would pull in a second renderer and a Node/React build for no gain.",
+      "steal": "Nothing.",
+      "owner": "None."
+    },
+    {
+      "id": "remotion-dev-remotion",
+      "name": "Remotion (remotion-dev/remotion)",
+      "verdict": "KILL",
+      "stage": "render",
+      "why": "React video renderer. The intake tool read the licence file as MIT, but Remotion's own terms are a source-available licence that asks companies above a small size to buy one; verify by hand before ever relying on it. It duplicates HyperFrames (HTML to MP4 locally, Apache-2.0, already pinned and hash-checked). Moves the registry's earlier PARK to KILL.",
+      "steal": "Its idea of a video as a function of the frame number, which the drawn series already uses.",
+      "owner": "None."
+    },
+    {
+      "id": "t3knobox-klik-anim-skill-creation",
+      "name": "klik-anim-skill-creation (t3knobox)",
+      "verdict": "PARK",
+      "stage": "render",
+      "why": "No licence file found and no README text the dossier could judge; unverified.",
+      "steal": "Unknown.",
+      "owner": "Check the licence and README by hand before using any of it."
+    },
+    {
+      "id": "frankxai-awesome-motion-design-agent-skills",
+      "name": "awesome-motion-design-agent-skills (frankxai)",
+      "verdict": "PARK",
+      "stage": "render",
+      "why": "A curated list (CC0 by its badge; the licence file text was not recognised, so check). Useful as a reading list, not a dependency.",
+      "steal": "Names of other skills worth a look.",
+      "owner": "Browse it when looking for a specific technique."
+    }
+  ],
+  "web": []
+}

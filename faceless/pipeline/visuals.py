@@ -8,7 +8,7 @@ from concurrent.futures import ThreadPoolExecutor
 
 from faceless import config, events, flow, hookclip, qa
 from faceless.pipeline import cards, sketch
-from faceless.providers import images
+from faceless.providers import ProviderUnavailable, images
 from faceless.fsutil import write_atomic
 
 SUFFIX = ("vertical 9:16 composition, subject in the center third, cinematic, highly detailed, "
@@ -39,8 +39,24 @@ def _claim_hook_clip(job) -> dict | None:
     return got
 
 
+def run_drawn(job, script: dict) -> list[dict]:
+    """A drawn series: every beat, the hook included, is a scene drawn in code. No image generator of any kind is called (no Cloudflare, Muapi,
+    OpenRouter or Pollinations), so the series costs nothing and cannot be held up by an image quota. Needs Node 22 and ffmpeg; without them the
+    video is refused rather than shipped with placeholder art."""
+    if not cards.available():
+        raise ProviderUnavailable("a drawn series needs Node 22 and ffmpeg (HyperFrames); not making a video with placeholder art")
+    job.artifacts["style"] = "ledger"
+    planned = cards.pick(script, None, job.pillar, "ledger")
+    results = [{"beat": i, "provider": "card", "path": None, "prompt": "", "card": planned[i]} for i in range(len(script["beats"]))]
+    write_atomic(job.dir / "images.json", json.dumps(results, indent=1))
+    events.emit("VISUALS_DONE", job=job.id, providers={"card": len(results)}, qa_flagged=0, qa_swapped=0)
+    return results
+
+
 def run(job, script: dict) -> list[dict]:
     pillar = config.pillar(job.pillar)
+    if pillar.drawn:
+        return run_drawn(job, script)
     cfg = config.load()["images"]
 
     style = cards.style_for(job.id, job.pillar)
