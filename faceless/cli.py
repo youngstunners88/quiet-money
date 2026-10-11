@@ -181,6 +181,37 @@ def cmd_publish(args) -> int:
     return 0
 
 
+def cmd_post_backlog(args) -> int:
+    """Put made, quality-passed videos that never reached YouTube on today's remaining slots (strongest series first)."""
+    from datetime import datetime
+    from zoneinfo import ZoneInfo
+    from faceless import backlog, safety
+    from faceless.providers import ProviderError, ProviderUnavailable, publish
+    from faceless.state import all_jobs
+    jobs = all_jobs()
+    todo = backlog.plan(jobs, args.n)
+    for job, when in todo:
+        print(f"{when:%a %H:%M %Z}  {job.pillar:<10} score {job.scores.get('gauntlet')}  {job.artifacts.get('title') or job.id}")
+    if not todo or not args.apply:
+        print("nothing to post" if not todo else "dry run; add --apply to schedule these")
+        return 0
+    failed = 0
+    for job, when in todo:
+        job.artifacts["youtube_plan"] = {"post_at": when.isoformat()}
+        meta = backlog.meta(job)
+        try:
+            safety.guard("publish via youtube")
+            res = publish.youtube(job, meta)
+            print(f"scheduled {job.id}: {res.get('video_id')} at {when:%H:%M %Z}")
+        except (ProviderError, ProviderUnavailable) as e:
+            failed += 1
+            print(f"NOT scheduled {job.id}: {e}", file=sys.stderr)
+        job.save()
+        if failed and isinstance(sys.exc_info()[1], ProviderUnavailable):
+            break
+    return 1 if failed else 0
+
+
 def cmd_yt_channel(args) -> int:
     """Show what differs between studio.toml [youtube] and the live channel; --apply makes the channel match."""
     from faceless import ytchannel
@@ -867,6 +898,10 @@ def main(argv: list[str] | None = None) -> int:
     g.add_argument("job")
     g.add_argument("--no-judge", action="store_true")
     g.set_defaults(fn=cmd_gauntlet)
+    pbl = sub.add_parser("post-backlog", help="schedule made, passed videos that never reached YouTube on today's remaining slots (dry run unless --apply)")
+    pbl.add_argument("--n", type=int, default=5)
+    pbl.add_argument("--apply", action="store_true")
+    pbl.set_defaults(fn=cmd_post_backlog)
     pb = sub.add_parser("publish", help="(re)publish a packaged job")
     pb.add_argument("job")
     pb.add_argument("--force", action="store_true", help="publish even though the gauntlet did not pass (human-reviewed)")

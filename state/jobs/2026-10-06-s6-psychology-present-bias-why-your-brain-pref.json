@@ -58,6 +58,16 @@
         "folder": "/home/user/quiet-money/distribution/queue/2026-10-07/slot2-psychology",
         "post_at": "2026-10-07T11:30:00-04:00"
       }
+    },
+    "youtube": {
+      "video_id": "23eTM0G1z2s",
+      "channel_id": "UC9B1QBr3_8Eulok8IdQbCqQ",
+      "privacy": "public",
+      "post_at": "2026-10-11T07:47:22+00:00",
+      "comment_posted": false,
+      "series": false,
+      "note": "posted by hand with a script on 2026-10-11 during the channel set-up",
+      "comment_tries": 1
     }
   },
   "scores": {
@@ -67,5 +77,7 @@
   "cost": {
     "tts:edge:chars": 1127
   },
-  "notes": []
+  "notes": [
+    "first comment failed: COMPOSIO_API_KEY not set"
+  ]
 }
