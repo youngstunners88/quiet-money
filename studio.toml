@@ -204,7 +204,7 @@ entities = ["short videos that explain money psychology",
 user_id = "quiet-money-studio"
 toolkits = ["youtube"]                       # connected so far; add tiktok, instagram, googledrive as you link them
 
-# Six pillars = six different formats, looks, and music keys (five slots a day).
+# Seven pillars = seven different formats, looks, and music keys (five slots a day).
 # Rotating them daily is what keeps the channel clear of "mass-produced" signals.
 [[pillars]]
 id = "story"
@@ -248,6 +248,16 @@ name = "Do This Today"
 weight = 1.0
 format = "A concrete 3-step action the viewer can do today in under 15 minutes (automate savings, kill a fee, negotiate a bill). Beats start with 'Step one.', 'Step two.', 'Step three.'; each step is specific (where to click, what to say). Back it with one number from the fact sheet. No fluff."
 style = "clean modern lifestyle photography, bright soft daylight, minimal tidy desk scenes, fresh green and white palette"
+grade = "clean"
+music_key = "G"
+
+[[pillars]]
+id = "ledger"
+name = "The Ledger"
+weight = 1.0
+drawn = true                                 # no generated picture anywhere: every beat is drawn in code on ledger paper (free, and independent of Muapi and OpenRouter)
+format = "One calculation or comparison drawn on ledger paper. Every beat has a drawable callout: a counting number ('$698,202'), a face-off ('$500 VS $2,000'), a numbered move ('STEP ONE'), or a rule in four words ('RULE OF 72'). Open on the number that surprises, show how it is computed in plain steps with exact numbers the viewer can check, end on the one move to make today. About money mechanics, not people: no stories about real individuals, nothing that needs a photograph."
+style = ""
 grade = "clean"
 music_key = "G"
 
@@ -313,6 +323,11 @@ description = "Popular beliefs about money that are wrong or incomplete, and the
 pillar = "playbook"
 title = "Do This Today: 15-Minute Money Moves for Beginners"
 description = "Concrete three-step actions you can finish in under 15 minutes: automate savings, cut a fee, negotiate a bill, set up alerts. Educational content, not financial advice."
+
+[[youtube.playlists]]
+pillar = "ledger"
+title = "The Ledger: Money Math Drawn Step by Step"
+description = "One calculation or comparison drawn on ledger paper, step by step with numbers you can check: what a habit really costs, how long a goal really takes. Educational content, not financial advice."
 
 [[youtube.playlists]]
 pillar = "escape"

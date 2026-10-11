@@ -170,3 +170,30 @@ Each row was read from the project's own README, manifest, licence file or regis
 | Theatre.js (theatre-js/theatre) | render | AGPL-3.0: network-use copyleft that would reach anything we ship around it, and it is a visual editor built for a person dragging keyframes, so an unattended pipeline gets little from it. |
 | theater.js (theater-js/theater.js) | render | A small typing-effect library with no licence file at the top level. |
 | VideoDB (video-db/videodb-python) | render | Apache-2.0 SDK for a paid cloud service: it needs an API key and uploads our videos to a third party, to do search, scene extraction and editing that ffmpeg, the existing transcript tools and our own render already cover for free. |
+
+## Intake 2026-10-11c (verified from dossiers in `repo-farm/intake/2026-10-11c/`)
+
+Each row was read from the project's own README, manifest, licence file or registry entry; nothing was installed or run. Stars and dates were unavailable where the GitHub API is closed to this machine.
+
+### On trial
+
+| Tool | Stage | Why |
+|---|---|---|
+| claude-motion-design (howseen-ai) | render | MIT. |
+| hyperframes-motion-reel-skill (Sunwood-ai-labs) | render | MIT. |
+
+### Parked (named condition)
+
+| Tool | Stage | Why |
+|---|---|---|
+| motion-graphics-skills (charlie947) | render | MIT. |
+| claude-motion (whaleyxbt) | render | MIT, but the dossier found nothing about what it does. |
+| klik-anim-skill-creation (t3knobox) | render | No licence file found and no README text the dossier could judge; unverified. |
+| awesome-motion-design-agent-skills (frankxai) | render | A curated list (CC0 by its badge; the licence file text was not recognised, so check). |
+
+### Rejected (recorded so nobody re-evaluates)
+
+| Tool | Stage | Why |
+|---|---|---|
+| claude-remotion-skill (haidrrrry) | render | MIT skill for Remotion. |
+| Remotion (remotion-dev/remotion) | render | React video renderer. |

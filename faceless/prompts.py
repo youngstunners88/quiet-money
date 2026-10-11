@@ -47,7 +47,7 @@ def script_prompt(pillar, topic: str, angle: str = "", feedback: list[str] | Non
         "replays (e.g. last line '...and that's exactly how' -> first line 'A janitor died with $8 million').",
         f"6. One follow CTA woven into the last 2 beats, in this spirit: \"{ch['cta_follow']}\"",
         "",
-        moneymath.fact_sheet() if pillar.id in ("math", "playbook", "myth", "psychology", "escape") else "",
+        moneymath.fact_sheet() if pillar.id in ("math", "playbook", "myth", "psychology", "escape", "ledger") else "",
         *(["", "# RESEARCH BRIEF (verified background. Teach the frameworks in your own words and use one item from "
             "'The honest catch'. Do NOT quote anyone and do not make the video about a person; if you name someone at "
             "all, state only facts from this brief, with 'he says' on self-reported numbers)",

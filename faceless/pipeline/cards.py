@@ -145,6 +145,8 @@ def style_for(job_id: str, pillar_id: str) -> str:
     """"ledger" or "cinematic" for a video. The ledger style is the second look of the series (every beat after the hook drawn in code, no
     generated stills); `[production.ledger].share` of the listed series' videos use it, chosen by a hash of the job id so the split is fixed
     per video and the two looks can be compared on retention. Off until the owner has seen a sample."""
+    if config.pillar(pillar_id).drawn:      # a drawn series is always ledger; it has no picture to fall back to
+        return "ledger"
     cfg = config.load()["production"].get("ledger", {})
     if cfg.get("mode", "off") != "on" or pillar_id not in cfg.get("pillars", []) or not available():
         return "cinematic"
@@ -160,7 +162,9 @@ def pick(script: dict, imgs: list[dict] | None, pillar_id: str, style: str = "ci
         return {}
     out: dict[int, dict] = {}
     for i, beat in enumerate(script["beats"]):
-        if i == 0:      # the hook beat keeps its hero still (cover image + hook box sit on it)
+        if i == 0:      # the hook beat keeps its hero still (cover image + hook box sit on it); a drawn series has no still, so it opens on a drawn title page
+            if mode == "ledger" and config.pillar(pillar_id).drawn:
+                out[0] = {"kind": "open"}
             continue
         if mode == "ledger":      # every later beat is drawn: a comparison, a numbered step, a counting number, or the beat's key phrase
             num = parse_number(beat.get("callout", ""))
@@ -241,6 +245,9 @@ def _scene(n: int, t0: float, dur: float, spec: dict, pal: tuple, accent: str, f
     elif spec["kind"] == "steps":
         body, extra = _steps(sid, t0, dur, spec, accent, kicker)
         js += extra
+    elif spec["kind"] == "open":
+        body, extra = _open(sid, t0, dur, accent, kicker)
+        js += extra
     elif spec["kind"] == "sketch":
         from faceless.pipeline import sketch
         svg, extra = sketch.emit(sid, t0, spec["spec"], sketch.palette(accent, config.load()["production"].get("accent2", "#2EE59D"), glow))
@@ -286,6 +293,17 @@ def _compare(sid: str, t0: float, dur: float, spec: dict, accent: str, kicker: s
     js += [f'tl.fromTo("#{sid}a",{{opacity:0,x:-320}},{{opacity:1,x:0,duration:0.5,ease:"power3.out"}},{t0 + 0.15:.3f});',
            f'tl.fromTo("#{sid}x",{{opacity:0,scale:0.4}},{{opacity:1,scale:1,duration:0.4,ease:"back.out(2)"}},{t0 + 0.55:.3f});',
            f'tl.fromTo("#{sid}c",{{opacity:0,x:320}},{{opacity:1,x:0,duration:0.5,ease:"power3.out"}},{t0 + 0.75:.3f});']
+    return body, js
+
+
+def _open(sid: str, t0: float, dur: float, accent: str, kicker: str) -> tuple[str, list[str]]:
+    """Title page of a drawn series: a ledger's ruled lines wiping in and a gold marker stroke drawn under where the hook headline lands
+    (the headline itself is the caption layer's hook box, so no text is repeated here). Only fromTo tweens."""
+    rows = "".join(f'<div class="rr" id="{sid}r{k}" style="top:{560 + k * 120}px"></div>' for k in range(5))
+    body = (f'<div class="kick" style="top:230px">{html.escape(kicker)}</div>{rows}'
+            f'<div class="mk" id="{sid}m" style="background:{accent}"></div>')
+    js = [f'tl.fromTo("#{sid}r{k}",{{scaleX:0}},{{scaleX:1,duration:0.7,ease:"power2.out"}},{t0 + 0.1 + k * 0.12:.3f});' for k in range(5)]
+    js.append(f'tl.fromTo("#{sid}m",{{scaleX:0}},{{scaleX:1,duration:0.8,ease:"power3.out"}},{t0 + 0.5:.3f});')
     return body, js
 
 
@@ -359,6 +377,8 @@ html,body{{width:1080px;height:1920px;overflow:hidden;background:#000}}
 .ring{{position:absolute;left:320px;top:420px;width:440px;height:440px;opacity:0}}
 .rn{{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font:400 270px/1 "Anton";color:var(--ink)}}
 .sk{{position:absolute;left:0;top:0;overflow:visible}}
+.rr{{position:absolute;left:90px;width:900px;height:3px;background:var(--rule);opacity:.45;transform-origin:left center}}
+.mk{{position:absolute;left:190px;top:1010px;width:700px;height:26px;border-radius:13px;opacity:.9;transform-origin:left center}}
 .sw{{position:absolute;left:0;top:930px;width:1080px;text-align:center;font:400 84px/1 "Anton";letter-spacing:12px;color:var(--ink);opacity:0}}
 .sg{{position:absolute;left:100px;top:1270px;width:880px;text-align:center;font:400 60px/1.2 "MontserratBlack";color:var(--ink);opacity:0;
   text-shadow:0 4px 30px var(--shade)}}
