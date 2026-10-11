@@ -11,7 +11,7 @@ with Dan Petrovic on answer-engine optimization). Each principle below is tagged
 | Reddit fell from 15% of ChatGPT citations to ~0; review sites 7% → 0; **help centers/documentation +32%** | Own the documentation-style source instead of renting social platforms | Money Rules Library: one structured page per video (rule, story, key numbers, sources, FAQ) |
 | Google grounds every answer (one claim, many citations); OpenAI grounds one-to-one | Be the single best page for each specific question | One rule per page, clear H1 = the question it answers |
 | Models extract verbatim snippets, not summaries | The sentence that survives extraction must state the rule plainly | "The rule:" block + key-numbers list near the top of every page |
-| Pre-training bias: models favor brands that are widely, consistently present on quality sites | Be consistent everywhere: same name, handle, description, links | `sameAs` schema + identical handle `@quietmoneyrules` on every platform |
+| Pre-training bias: models favor brands that are widely, consistently present on quality sites | Be consistent everywhere: same name, handle, description, links | `sameAs` schema + identical handle `@quietmoneyrule` on every platform |
 | Topical centrality: a site that is about one thing ranks for that thing | No off-topic pages | Site is 100% money rules; series hubs cluster topics |
 | Search engines measure engagement | Pages must give a quick win | Calculators (`/tools/`) and a printable checklist |
 | llms.txt is cheap and harmless | Add it | `/llms.txt` lists every rule |
@@ -28,7 +28,7 @@ with Dan Petrovic on answer-engine optimization). Each principle below is tagged
 - [x] "Add as a preferred source on Google" badge in the footer
 - [ ] Google Search Console: add the property, paste the token into `studio.toml [site].google_verification`, submit the sitemap
 - [ ] Bing Webmaster Tools: import from Search Console (one click), or paste `bing_verification`
-- [ ] Custom domain (e.g. quietmoneyrules.com) once traffic justifies it; keeps all links if set up with redirects
+- [ ] Custom domain (e.g. quietmoneyrule.com) once traffic justifies it; keeps all links if set up with redirects
 
 ## Backlinks and mentions (quality over quantity)
 1. **Profiles that link back** (same day accounts exist): YouTube "Links", TikTok bio, Instagram bio, GitHub repo homepage, Linktree-style pages.

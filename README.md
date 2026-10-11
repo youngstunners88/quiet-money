@@ -9,7 +9,7 @@ writes, voices, renders, quality-gates, and schedules five 61-72 second vertical
 YouTube Shorts, and Instagram Reels, then publishes each one as a written page in the
 [Money Rules Library](https://youngstunners88.github.io/quiet-money/).
 
-- 📺 YouTube [@quietmoneyrules](https://www.youtube.com/@quietmoneyrules) · TikTok [@quietmoneyrules](https://www.tiktok.com/@quietmoneyrules) · Instagram [@quietmoneyrules](https://www.instagram.com/quietmoneyrules)
+- 📺 YouTube [@quietmoneyrule](https://www.youtube.com/@quietmoneyrule) · TikTok [@quietmoneyrule](https://www.tiktok.com/@quietmoneyrule) · Instagram [@quietmoneyrule](https://www.instagram.com/quietmoneyrule)
 - 🌐 Website: https://youngstunners88.github.io/quiet-money/ (library, calculators, free 7-day Money Reset)
 - 💸 Runs on free tiers: under $1/day
 

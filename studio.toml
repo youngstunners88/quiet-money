@@ -4,7 +4,7 @@
 
 [channel]
 name = "Quiet Money"
-handle = "@quietmoneyrules"                 # verified free on YouTube + TikTok (2026-10-01); @quietmoney is taken
+handle = "@quietmoneyrule"                 # verified free on YouTube + TikTok (2026-10-01); @quietmoney is taken
 tagline = "The money rules nobody taught you."
 niche = "money psychology and personal finance"
 audience = "18-40 year olds who earn a paycheck, feel behind with money, and want simple rules that work"
@@ -184,9 +184,9 @@ indexnow_key = "bee5b74c8cf0c051f5cd5ebc11c78628"   # public by design (IndexNow
 google_verification = ""                     # Search Console HTML-tag token, when you add the property
 bing_verification = ""                       # Bing Webmaster Tools msvalidate.01 token
 [site.socials]
-youtube = "https://www.youtube.com/@quietmoneyrules"
-tiktok = "https://www.tiktok.com/@quietmoneyrules"
-instagram = "https://www.instagram.com/quietmoneyrules"
+youtube = "https://www.youtube.com/@quietmoneyrule"
+tiktok = "https://www.tiktok.com/@quietmoneyrule"
+instagram = "https://www.instagram.com/quietmoneyrule"
 
 [aeo]
 # Quantized probes: "A viewer is looking for <entity>. Recommend some channels." (weekly, ~$0.20)

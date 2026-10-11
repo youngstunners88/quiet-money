@@ -14,11 +14,11 @@ signup or enter the owner's credentials; prepare everything so their part takes 
 
 python - <<'EOF'
 from faceless.providers import composio_tools as ct
-for h in ["@quietmoneyrules", "@itsquietmoney"]:
+for h in ["@quietmoneyrule", "@itsquietmoney"]:
     items = ct.execute("YOUTUBE_GET_CHANNEL_ID_BY_HANDLE", {"channel_handle": h})["data"].get("items") or []
     print(h, "TAKEN" if items else "available")
 EOF
-curl -sL -A "Mozilla/5.0 (iPhone)" https://www.tiktok.com/@quietmoneyrules | grep -c "Couldn't find this account"   # 1 = free
+curl -sL -A "Mozilla/5.0 (iPhone)" https://www.tiktok.com/@quietmoneyrule | grep -c "Couldn't find this account"   # 1 = free
 ```
 Record the result in `channel/profiles.md` and `studio.toml [channel].handle`. Use one handle everywhere.
 

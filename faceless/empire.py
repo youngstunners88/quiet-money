@@ -23,7 +23,7 @@ PORTFOLIO = DIR / "portfolio.jsonl"
 RANKING = DIR / "RANKING.md"
 STAGES = ["idea", "vetted", "built", "pilot", "scaled"]   # built = the asset exists and is verified; pilot = live at small scale
 GATES = {   # owner-only steps: money, accounts, legal, face. Codes keep the ask list consistent.
-    "channels": "Create the YouTube, TikTok and Instagram accounts (@quietmoneyrules), connect them, and turn on auto-posting",
+    "channels": "Create the YouTube, TikTok and Instagram accounts (@quietmoneyrule), connect them, and turn on auto-posting",
     "shop": "Open a Gumroad shop (and Etsy for printables); approve prices and listings",
     "email": "Pick an email service, a domain and a postal address, and connect them",
     "domain": "Register a domain with one mailbox (the identity layer)",

@@ -37,5 +37,5 @@ Do one box a day. In a week your money runs on rules instead of willpower.
 - [ ] Put your money rules on one index card. Keep it in your wallet.
 
 ---
-**Next:** follow @quietmoneyrules for one money rule a day.
+**Next:** follow @quietmoneyrule for one money rule a day.
 *Numbers are illustrations using stated assumptions; your situation may differ.*
