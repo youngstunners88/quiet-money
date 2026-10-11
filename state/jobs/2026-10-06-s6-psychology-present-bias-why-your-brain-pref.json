@@ -67,7 +67,7 @@
       "comment_posted": false,
       "series": false,
       "note": "posted by hand with a script on 2026-10-11 during the channel set-up",
-      "comment_tries": 1
+      "comment_tries": 3
     }
   },
   "scores": {
@@ -78,6 +78,8 @@
     "tts:edge:chars": 1127
   },
   "notes": [
+    "first comment failed: COMPOSIO_API_KEY not set",
+    "first comment failed: COMPOSIO_API_KEY not set",
     "first comment failed: COMPOSIO_API_KEY not set"
   ]
 }
