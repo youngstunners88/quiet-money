@@ -116,6 +116,13 @@ def _youtube_cfg() -> dict:
     return config.load()["publish"].get("youtube", {})
 
 
+def _post_day(job) -> str:
+    y = job.artifacts.get("youtube") or {}
+    if y.get("post_at"):
+        return datetime.fromisoformat(y["post_at"]).astimezone(ZoneInfo(config.load()["publish"]["timezone"])).date().isoformat()
+    return nominal_slot(job.day, job.slot)[0]
+
+
 def youtube(job, meta: dict) -> dict:
     """Schedule the video on the studio's YouTube channel for its slot. Idempotent per job; refuses any channel but the configured one."""
     from faceless.providers import composio_tools as ct
@@ -126,9 +133,10 @@ def youtube(job, meta: dict) -> dict:
     done = job.artifacts.get("youtube") or {}
     if done.get("video_id"):
         return {"mode": "youtube", "skipped": "already uploaded", "video_id": done["video_id"]}
-    when = slot_time(job.day, job.slot)
-    post_day = nominal_slot(job.day, job.slot)[0]
-    taken = sum(1 for j in all_jobs() if (j.artifacts.get("youtube") or {}).get("video_id") and nominal_slot(j.day, j.slot)[0] == post_day)
+    planned = (job.artifacts.get("youtube_plan") or {}).get("post_at")      # set by `post-backlog`: a made video given a slot of its own
+    when = datetime.fromisoformat(planned) if planned else slot_time(job.day, job.slot)
+    post_day = when.astimezone(ZoneInfo(config.load()["publish"]["timezone"])).date().isoformat() if planned else nominal_slot(job.day, job.slot)[0]
+    taken = sum(1 for j in all_jobs() if (j.artifacts.get("youtube") or {}).get("video_id") and _post_day(j) == post_day)
     if taken >= int(cfg.get("max_per_day", 5)):
         raise ProviderUnavailable(f"YouTube daily cap reached ({taken} scheduled for {post_day}); the local pack is ready")
     out = ct.youtube_upload(job.artifacts["video"], meta["title"], meta["description"], [t.lstrip("#") for t in meta.get("hashtags", [])],

@@ -3584,3 +3584,25 @@
 {"ts": "2026-10-11T10:10:16Z", "t": 1791713416.283, "actor": "engine", "type": "DECISIONS", "job": "2026-10-11-s7-myth-myth-paying-off-your-mortgage-ea", "backend": "clef", "ms": 13, "dry_run": true}
 {"ts": "2026-10-11T10:10:16Z", "t": 1791713416.507, "actor": "engine", "type": "GAUNTLET", "job": "2026-10-11-s7-myth-myth-paying-off-your-mortgage-ea", "score": 100, "passed": true, "hard": []}
 {"ts": "2026-10-11T10:10:32Z", "t": 1791713432.227, "actor": "engine", "type": "KIT_BUILT", "job": "2026-10-11-s7-myth-myth-paying-off-your-mortgage-ea", "files": 8, "audio": true}
+{"ts": "2026-10-11T11:45:29Z", "t": 1791719129.327, "actor": "engine", "type": "COMPOSIO_SESSION", "user": "quiet-money-studio", "session_hash": "983e45bf"}
+{"ts": "2026-10-11T11:45:30Z", "t": 1791719130.22, "actor": "engine", "type": "COMPOSIO_EXECUTE", "tool": "YOUTUBE_LIST_CHANNELS", "ok": true, "log_id": "log_Oi7hZEUgVFwC", "job": "2026-10-02-s3-escape-the-rat-race-math-the-exact-numb"}
+{"ts": "2026-10-11T11:45:33Z", "t": 1791719133.867, "actor": "engine", "type": "YOUTUBE_UPLOAD", "video_id": "XH2N4wp48gs", "channel": "UC9B1QBr3_8Eulok8IdQbCqQ", "bytes": 11094960, "job": "2026-10-02-s3-escape-the-rat-race-math-the-exact-numb"}
+{"ts": "2026-10-11T11:45:34Z", "t": 1791719134.896, "actor": "engine", "type": "YOUTUBE_API", "path": "playlists", "method": "GET", "status": 200}
+{"ts": "2026-10-11T11:45:36Z", "t": 1791719136.038, "actor": "engine", "type": "YOUTUBE_API", "path": "playlistItems", "method": "POST", "status": 200}
+{"ts": "2026-10-11T11:45:36Z", "t": 1791719136.038, "actor": "engine", "type": "PUBLISH_SCHEDULED", "job": "2026-10-02-s3-escape-the-rat-race-math-the-exact-numb", "provider": "youtube", "when": "2026-10-11T11:30:00-04:00", "video_id": "XH2N4wp48gs"}
+{"ts": "2026-10-11T11:46:14Z", "t": 1791719174.713, "actor": "engine", "type": "COMPOSIO_SESSION", "user": "quiet-money-studio", "session_hash": "fb6e6633"}
+{"ts": "2026-10-11T11:46:15Z", "t": 1791719175.548, "actor": "engine", "type": "COMPOSIO_EXECUTE", "tool": "YOUTUBE_LIST_CHANNELS", "ok": true, "log_id": "log_1ipZ1NLZQMDr", "job": "2026-10-01-s0-story-ronald-read-the-janitor-who-died"}
+{"ts": "2026-10-11T11:46:20Z", "t": 1791719180.105, "actor": "engine", "type": "YOUTUBE_UPLOAD", "video_id": "BzKkwMRqkxc", "channel": "UC9B1QBr3_8Eulok8IdQbCqQ", "bytes": 32370557, "job": "2026-10-01-s0-story-ronald-read-the-janitor-who-died"}
+{"ts": "2026-10-11T11:46:20Z", "t": 1791719180.919, "actor": "engine", "type": "YOUTUBE_API", "path": "playlists", "method": "GET", "status": 200}
+{"ts": "2026-10-11T11:46:21Z", "t": 1791719181.98, "actor": "engine", "type": "YOUTUBE_API", "path": "playlistItems", "method": "POST", "status": 200}
+{"ts": "2026-10-11T11:46:21Z", "t": 1791719181.982, "actor": "engine", "type": "PUBLISH_SCHEDULED", "job": "2026-10-01-s0-story-ronald-read-the-janitor-who-died", "provider": "youtube", "when": "2026-10-11T18:30:00-04:00", "video_id": "BzKkwMRqkxc"}
+{"ts": "2026-10-11T11:46:22Z", "t": 1791719182.626, "actor": "engine", "type": "COMPOSIO_EXECUTE", "tool": "YOUTUBE_LIST_CHANNELS", "ok": true, "log_id": "log_NzHuWbXv6Kji", "job": "2026-10-01-s1-math-why-paying-only-the-minimum-on-a"}
+{"ts": "2026-10-11T11:46:26Z", "t": 1791719186.606, "actor": "engine", "type": "YOUTUBE_UPLOAD", "video_id": "zgqd8x42_sE", "channel": "UC9B1QBr3_8Eulok8IdQbCqQ", "bytes": 13382956, "job": "2026-10-01-s1-math-why-paying-only-the-minimum-on-a"}
+{"ts": "2026-10-11T11:46:28Z", "t": 1791719188.291, "actor": "engine", "type": "YOUTUBE_API", "path": "playlistItems", "method": "POST", "status": 200}
+{"ts": "2026-10-11T11:46:28Z", "t": 1791719188.293, "actor": "engine", "type": "PUBLISH_SCHEDULED", "job": "2026-10-01-s1-math-why-paying-only-the-minimum-on-a", "provider": "youtube", "when": "2026-10-11T21:00:00-04:00", "video_id": "zgqd8x42_sE"}
+{"ts": "2026-10-11T11:46:29Z", "t": 1791719189.341, "actor": "engine", "type": "COMPOSIO_EXECUTE", "tool": "YOUTUBE_LIST_CHANNELS", "ok": true, "log_id": "log_Fpdg0mkDdezF", "job": "2026-10-06-s7-myth-myth-your-house-is-your-best-inv"}
+{"ts": "2026-10-11T11:46:32Z", "t": 1791719192.898, "actor": "engine", "type": "YOUTUBE_UPLOAD", "video_id": "om0qWihW1Kw", "channel": "UC9B1QBr3_8Eulok8IdQbCqQ", "bytes": 15796388, "job": "2026-10-06-s7-myth-myth-your-house-is-your-best-inv"}
+{"ts": "2026-10-11T11:46:33Z", "t": 1791719193.871, "actor": "engine", "type": "YOUTUBE_API", "path": "playlistItems", "method": "POST", "status": 200}
+{"ts": "2026-10-11T11:46:33Z", "t": 1791719193.871, "actor": "engine", "type": "PUBLISH_SCHEDULED", "job": "2026-10-06-s7-myth-myth-your-house-is-your-best-inv", "provider": "youtube", "when": "2026-10-11T15:00:00-04:00", "video_id": "om0qWihW1Kw"}
+{"ts": "2026-10-11T11:46:43Z", "t": 1791719203.653, "actor": "engine", "type": "COMPOSIO_SESSION", "user": "quiet-money-studio", "session_hash": "403d60ac"}
+{"ts": "2026-10-11T11:46:44Z", "t": 1791719204.537, "actor": "engine", "type": "YOUTUBE_API", "path": "videos", "method": "GET", "status": 200}

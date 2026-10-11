@@ -59,6 +59,17 @@
         "folder": "/home/user/quiet-money/distribution/queue/2026-10-02/slot4-escape",
         "post_at": "2026-10-02T18:30:00-04:00"
       }
+    },
+    "youtube_plan": {
+      "post_at": "2026-10-11T11:30:00-04:00"
+    },
+    "youtube": {
+      "video_id": "XH2N4wp48gs",
+      "channel_id": "UC9B1QBr3_8Eulok8IdQbCqQ",
+      "privacy": "private",
+      "post_at": "2026-10-11T11:30:00-04:00",
+      "comment_posted": false,
+      "series": true
     }
   },
   "scores": {

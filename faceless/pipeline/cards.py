@@ -66,6 +66,15 @@ PALETTE = {
     "playbook": ("#0e2118", "#04100a", "#35e0a1"),
     "escape": ("#0b1630", "#03060f", "#ff7a2f"),
 }
+# Two looks on one brand kit (Anton + Montserrat Black, gold, the series kicker). "night" is the house look: dark pages, white type.
+# "ledger" is the second style: warm ledger paper, ink type, gold marker. Colours live in CSS variables so a scene is drawn the same way in both.
+THEMES = {
+    "night": {"ink": "#ffffff", "rule": "#ffffff", "faint": "rgba(255,255,255,.14)", "mute": "rgba(255,255,255,.38)",
+              "shade": "rgba(0,0,0,.6)", "numglow": "rgba(255,255,255,.25)", "kick": ".55"},
+    "ledger": {"ink": "#14110a", "rule": "#7a6a3c", "faint": "rgba(20,17,10,.12)", "mute": "rgba(20,17,10,.28)",
+               "shade": "rgba(0,0,0,0)", "numglow": "rgba(0,0,0,0)", "kick": ".6"},
+}
+LEDGER_PAPER = ("#fbf4e3", "#e9dfc4", "#ffd23f")      # page top, page bottom, glow: the paper keeps the brand gold as its highlight
 NUM = re.compile(r"^\s*([$€£]?)\s*(\d[\d,]*(?:\.\d+)?)\s*([%xX]|[KkMmBb](?![a-z]))?\s*(.*?)\s*$")
 
 
@@ -132,15 +141,31 @@ def key_phrase(beat: dict) -> str:
     return " ".join(words[:5]).upper().rstrip(".,")
 
 
-def pick(script: dict, imgs: list[dict] | None, pillar_id: str) -> dict[int, dict]:
+def style_for(job_id: str, pillar_id: str) -> str:
+    """"ledger" or "cinematic" for a video. The ledger style is the second look of the series (every beat after the hook drawn in code, no
+    generated stills); `[production.ledger].share` of the listed series' videos use it, chosen by a hash of the job id so the split is fixed
+    per video and the two looks can be compared on retention. Off until the owner has seen a sample."""
+    cfg = config.load()["production"].get("ledger", {})
+    if cfg.get("mode", "off") != "on" or pillar_id not in cfg.get("pillars", []) or not available():
+        return "cinematic"
+    bucket = int(hashlib.sha1(job_id.encode(), usedforsecurity=False).hexdigest()[:6], 16) % 100
+    return "ledger" if bucket < round(100 * float(cfg.get("share", 0.5))) else "cinematic"
+
+
+def pick(script: dict, imgs: list[dict] | None, pillar_id: str, style: str = "cinematic") -> dict[int, dict]:
     """Which beats become cards, with their specs. imgs=None means the decision is made before images exist."""
     cfg = config.load()["production"].get("cards", {})
-    mode = cfg.get("mode", "auto")
+    mode = "ledger" if style == "ledger" else cfg.get("mode", "auto")
     if mode == "off" or not available():
         return {}
     out: dict[int, dict] = {}
     for i, beat in enumerate(script["beats"]):
         if i == 0:      # the hook beat keeps its hero still (cover image + hook box sit on it)
+            continue
+        if mode == "ledger":      # every later beat is drawn: a comparison, a numbered step, a counting number, or the beat's key phrase
+            num = parse_number(beat.get("callout", ""))
+            spec = parse_compare(beat.get("callout", "")) or parse_step(beat.get("callout", ""), beat.get("say", ""))
+            out[i] = spec or ({"kind": "stat", **num} if num else {"kind": "phrase", "text": key_phrase(beat)})
             continue
         num = parse_number(beat.get("callout", ""))
         placeholder = imgs is not None and i < len(imgs) and imgs[i]["provider"] == "procedural"
@@ -243,7 +268,7 @@ def _compare(sid: str, t0: float, dur: float, spec: dict, accent: str, kicker: s
         base, top = 1090, 560     # the whole chart sits above the caption band (centred on caption_y), so live
                                   # captions never print over a bar or its value label
         parts = []
-        for k, (label, v, col, cx) in enumerate(((spec["a"], spec["va"], accent, 340), (spec["b"], spec["vb"], "rgba(255,255,255,.38)", 740))):
+        for k, (label, v, col, cx) in enumerate(((spec["a"], spec["va"], accent, 340), (spec["b"], spec["vb"], "var(--mute)", 740))):
             h = max(70, round(top * v / hi))
             fs = min(104, int(400 / (max(4, len(label)) * 0.47)))
             parts.append(f'<div class="cb" id="{sid}b{k}" style="left:{cx - 160}px;top:{base - h}px;width:320px;height:{h}px;background:{col}"></div>'
@@ -270,7 +295,7 @@ def _steps(sid: str, t0: float, dur: float, spec: dict, accent: str, kicker: str
     gist = html.escape(spec.get("gist", "")).upper()
     body = (f'<div class="kick">{html.escape(kicker)}</div>'
             f'<div class="ring" id="{sid}n"><svg width="440" height="440" viewBox="0 0 440 440"><circle cx="220" cy="220" r="190" fill="none" '
-            f'stroke="rgba(255,255,255,.14)" stroke-width="14"/><circle id="{sid}o" cx="220" cy="220" r="190" fill="none" stroke="{accent}" '
+            f'stroke="var(--faint)" stroke-width="14"/><circle id="{sid}o" cx="220" cy="220" r="190" fill="none" stroke="{accent}" '
             f'stroke-width="14" stroke-linecap="round" stroke-dasharray="{circ}" stroke-dashoffset="{circ}" transform="rotate(-90 220 220)"/></svg>'
             f'<div class="rn">{spec["n"]}</div></div>'
             f'<div class="sw" id="{sid}w">STEP {html.escape(spec["word"])}</div>'
@@ -283,13 +308,15 @@ def _steps(sid: str, t0: float, dur: float, spec: dict, accent: str, kicker: str
 
 
 def build_project(root: Path, specs: list[tuple[int, dict, float]], pillar_id: str, accent: str, fps: int,
-                  kicker: str = "") -> float:
+                  kicker: str = "", theme: str = "night") -> float:
     """Write the HyperFrames project for the reel; returns its total duration. specs: (beat, spec, seconds)."""
     root.mkdir(parents=True, exist_ok=True)
     (root / "assets").mkdir(exist_ok=True)
     for f in ("Anton-Regular.ttf", "Montserrat-Black.ttf"):
         shutil.copy2(Paths.fonts / f, root / "assets" / f)
-    pal = PALETTE.get(pillar_id, PALETTE["math"])
+    pal = LEDGER_PAPER if theme == "ledger" else PALETTE.get(pillar_id, PALETTE["math"])
+    tok = THEMES.get(theme, THEMES["night"])
+    root_vars = "".join(f"--{k}:{v};" for k, v in tok.items())
     scenes, js, t = [], [], 0.0
     for n, (_beat, spec, dur) in enumerate(specs):
         h, j = _scene(n, t, dur, spec, pal, accent, fps, kicker)
@@ -302,38 +329,39 @@ def build_project(root: Path, specs: list[tuple[int, dict, float]], pillar_id: s
 <style>
 @font-face{{font-family:"Anton";src:url("assets/Anton-Regular.ttf")}}
 @font-face{{font-family:"MontserratBlack";src:url("assets/Montserrat-Black.ttf")}}
+:root{{{root_vars}}}
 *{{margin:0;padding:0;box-sizing:border-box}}
 html,body{{width:1080px;height:1920px;overflow:hidden;background:#000}}
 .scene{{position:absolute;left:0;top:0;width:1080px;height:1920px;overflow:hidden;opacity:0}}
 .bg,.glow{{position:absolute}} .bg{{inset:0}}
 .glow{{left:90px;top:230px;width:900px;height:900px;border-radius:50%}}
-.ln{{position:absolute;left:60px;width:960px;height:2px;background:#fff;opacity:0}}
+.ln{{position:absolute;left:60px;width:960px;height:2px;background:var(--rule);opacity:0}}
 .dot{{position:absolute;width:10px;height:10px;border-radius:50%;opacity:0}}
 .kick{{position:absolute;left:0;top:300px;width:1080px;text-align:center;font:400 40px/1 "Anton";letter-spacing:12px;
-  color:#fff;opacity:.55}}
+  color:var(--ink);opacity:var(--kick)}}
 .chart{{position:absolute;left:60px;top:1290px;width:0;height:520px;overflow:hidden;opacity:.9}}
 .stat{{position:absolute;left:0;top:430px;width:1080px;text-align:center;opacity:0}}
 .numwrap{{position:relative;height:300px}}
-.num{{position:absolute;left:0;width:1080px;top:0;font:400 300px/1 "Anton";color:#fff;letter-spacing:-4px;
-  text-shadow:0 0 60px rgba(255,255,255,.25);visibility:hidden}}
+.num{{position:absolute;left:0;width:1080px;top:0;font:400 300px/1 "Anton";color:var(--ink);letter-spacing:-4px;
+  text-shadow:0 0 60px var(--numglow);visibility:hidden}}
 .bar{{height:12px;width:560px;margin:34px auto 0;transform-origin:left center;border-radius:6px}}
-.lab{{margin-top:34px;font:400 74px/1.1 "Anton";letter-spacing:8px;color:#fff;opacity:0}}
+.lab{{margin-top:34px;font:400 74px/1.1 "Anton";letter-spacing:8px;color:var(--ink);opacity:0}}
 .pwrap{{position:absolute;left:70px;top:430px;width:940px}}
 .phrase{{width:940px;text-align:center;font:400 128px/1.12 "MontserratBlack";
-  color:#fff;text-transform:uppercase;text-shadow:0 6px 40px rgba(0,0,0,.6)}}
+  color:var(--ink);text-transform:uppercase;text-shadow:0 6px 40px var(--shade)}}
 .pwrap .bar{{margin-top:44px}}
 .w{{display:inline-block;opacity:0}}
 .cb{{position:absolute;transform-origin:center bottom;border-radius:14px 14px 0 0;opacity:.95}}
-.cv{{position:absolute;text-align:center;font:400 96px/1 "Anton";color:#fff;opacity:0;letter-spacing:-1px}}
-.vs{{position:absolute;width:100px;text-align:center;font:400 54px/1 "Anton";color:#fff;opacity:0;letter-spacing:4px}}
-.fo{{position:absolute;left:60px;width:960px;text-align:center;font:400 150px/1 "Anton";color:#fff;opacity:0;letter-spacing:2px;
-  text-shadow:0 6px 40px rgba(0,0,0,.6)}}
+.cv{{position:absolute;text-align:center;font:400 96px/1 "Anton";color:var(--ink);opacity:0;letter-spacing:-1px}}
+.vs{{position:absolute;width:100px;text-align:center;font:400 54px/1 "Anton";color:var(--ink);opacity:0;letter-spacing:4px}}
+.fo{{position:absolute;left:60px;width:960px;text-align:center;font:400 150px/1 "Anton";color:var(--ink);opacity:0;letter-spacing:2px;
+  text-shadow:0 6px 40px var(--shade)}}
 .ring{{position:absolute;left:320px;top:420px;width:440px;height:440px;opacity:0}}
-.rn{{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font:400 270px/1 "Anton";color:#fff}}
+.rn{{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font:400 270px/1 "Anton";color:var(--ink)}}
 .sk{{position:absolute;left:0;top:0;overflow:visible}}
-.sw{{position:absolute;left:0;top:930px;width:1080px;text-align:center;font:400 84px/1 "Anton";letter-spacing:12px;color:#fff;opacity:0}}
-.sg{{position:absolute;left:100px;top:1270px;width:880px;text-align:center;font:400 60px/1.2 "MontserratBlack";color:#fff;opacity:0;
-  text-shadow:0 4px 30px rgba(0,0,0,.6)}}
+.sw{{position:absolute;left:0;top:930px;width:1080px;text-align:center;font:400 84px/1 "Anton";letter-spacing:12px;color:var(--ink);opacity:0}}
+.sg{{position:absolute;left:100px;top:1270px;width:880px;text-align:center;font:400 60px/1.2 "MontserratBlack";color:var(--ink);opacity:0;
+  text-shadow:0 4px 30px var(--shade)}}
 </style></head>
 <body>
 <div id="root" data-composition-id="cards" data-start="0" data-duration="{t:.3f}" data-width="1080" data-height="1920" data-fps="{fps}">
@@ -359,7 +387,10 @@ def render_reel(job, picked: dict[int, dict], beat_spans: dict[int, tuple[float,
     A second pass uses another `name`, so the first reel and its offsets stay valid whatever happens to the second."""
     root = job.dir / "cards"
     specs = [(i, spec, max(0.5, beat_spans[i][1] - beat_spans[i][0])) for i, spec in sorted(picked.items())]
-    total = build_project(root, specs, pillar_id, accent, fps, kicker=config.pillar(pillar_id).name.upper())
+    theme = "ledger" if (job.artifacts or {}).get("style") == "ledger" else "night"
+    if theme == "ledger":
+        accent = config.load()["production"].get("ledger", {}).get("accent", accent)    # gold deep enough to read on paper
+    total = build_project(root, specs, pillar_id, accent, fps, kicker=config.pillar(pillar_id).name.upper(), theme=theme)
     out = root / f"{name}.mp4"
     cmd = ["npx", "--yes", CLI, "render", str(root), "-o", str(out), "-f", str(fps), "-q", "looks", "--quiet", "--workers", "2"]
     try:
