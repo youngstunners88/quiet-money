@@ -100,6 +100,7 @@ def youtube_upload(video_path: str, title: str, description: str, tags: list[str
     unless the connected channel is `expected_channel_id`. The AI-content declaration is always set from `synthetic`.
     `publish_at` (UTC, "2026-10-12T15:30:00Z") uploads it private and lets YouTube make it public at that time.
     Quota and rate refusals raise ProviderUnavailable (wait for the reset); other refusals raise ProviderError.
+    Opening a session makes YouTube create the video at once (empty, "Processing will begin shortly"), so never open one you will not finish.
     Returns {"video_id", "channel_id", "privacy"}.
     """
     _ensure_key()
@@ -128,7 +129,12 @@ def youtube_upload(video_path: str, title: str, description: str, tags: list[str
         location = (getattr(started, "headers", None) or {}).get("location", "")
         if not location.startswith("https://www.googleapis.com/upload/youtube/"):
             raise ProviderError("YouTube did not return an upload session")
-        r = http().put(location, data=f, headers={"Content-Type": "video/mp4", "Content-Length": str(size)}, timeout=900)
+        try:
+            r = http().put(location, data=f, headers={"Content-Type": "video/mp4", "Content-Length": str(size)}, timeout=900)
+        except Exception:
+            # opening the session already made YouTube create an empty video ("Processing will begin shortly"); say so, so it gets cleaned up
+            events.emit("YOUTUBE_SESSION_ORPHAN", job=job, note="upload session opened but the bytes never arrived: delete the empty video on the channel")
+            raise
     if r.status_code in (403, 429):
         raise ProviderUnavailable(f"YouTube refused the upload (HTTP {r.status_code}): quota or rate limit; it resets at midnight Pacific")
     if r.status_code not in (200, 201):

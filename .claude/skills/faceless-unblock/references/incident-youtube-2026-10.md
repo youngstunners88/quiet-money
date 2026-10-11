@@ -9,6 +9,7 @@
 | Upload 2 | Same result. YouTube's help calls it "processing abandoned" (file shortened or invalid) | The local file was fine (`ffprobe`, a clean decode), so the fault was in transit |
 | Fix | Open a resumable session through `Composio().tools.proxy(...)`, then PUT the whole file to Google ourselves | Bypass the wrapper through the vendor's documented path. The third upload stayed up past 20 minutes |
 | Side issues | 403 and 429 quota errors that cleared at midnight Pacific | Wait for the reset instead of looping |
+| Own mistake | A probe that opened a resumable session (to look at the response) made YouTube create an empty video; it sat at "Processing will begin shortly" and was first taken for the owner's upload | A probe must not leave anything behind. Check ids and timestamps before saying a stray item is not yours, and clean up your own debris |
 | Codified | `composio_tools.youtube_upload()` with a channel guard and the AI label; tests; skill notes | Every fix leaves a test and a note |
 
 Time to cause: a long afternoon of reconnects. With this loop it should be: probe identity, probe end state, read the tool schema, go to the raw API.
