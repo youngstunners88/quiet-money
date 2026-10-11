@@ -66,7 +66,7 @@ def _names(text: str) -> list[str]:
 
 def _is_us(name: str) -> bool:
     n = name.lower().replace(" ", "")
-    return "quietmoney" in n or "quietmoneyrules" in n
+    return "quietmoney" in n or "quietmoneyrule" in n
 
 
 def track(entities: list[str] | None = None, engines: list[str] | None = None) -> list[dict]:
