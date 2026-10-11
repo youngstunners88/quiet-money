@@ -90,13 +90,16 @@ def _start_youtube_session(account_id: str, body: dict, size: int):
 
 
 def youtube_upload(video_path: str, title: str, description: str, tags: list[str] | None = None, *, expected_channel_id: str,
-                   category_id: str = "27", privacy: str = "public", synthetic: bool = True, job: str | None = None) -> dict:
+                   category_id: str = "27", privacy: str = "public", synthetic: bool = True, publish_at: str | None = None,
+                   job: str | None = None) -> dict:
     """Upload one video to YouTube through the studio's Composio connection, sending the bytes ourselves.
 
     The `YOUTUBE_UPLOAD_VIDEO` tool reported success but YouTube later marked two uploads "processing abandoned"
     (the video arrived cut short). Here Composio only authorises a resumable session; the whole file goes straight
     to Google in one request, so the byte count is known. The connection is checked first: the upload refuses to start
     unless the connected channel is `expected_channel_id`. The AI-content declaration is always set from `synthetic`.
+    `publish_at` (UTC, "2026-10-12T15:30:00Z") uploads it private and lets YouTube make it public at that time.
+    Quota and rate refusals raise ProviderUnavailable (wait for the reset); other refusals raise ProviderError.
     Returns {"video_id", "channel_id", "privacy"}.
     """
     _ensure_key()
@@ -111,13 +114,23 @@ def youtube_upload(video_path: str, title: str, description: str, tags: list[str
         size = os.fstat(f.fileno()).st_size
         body = {
             "snippet": {"title": title, "description": description, "tags": tags or [], "categoryId": category_id},
-            "status": {"privacyStatus": privacy, "selfDeclaredMadeForKids": False, "containsSyntheticMedia": synthetic},
+            "status": {"privacyStatus": "private" if publish_at else privacy, "selfDeclaredMadeForKids": False,
+                       "containsSyntheticMedia": synthetic},
         }
+        if publish_at:
+            body["status"]["publishAt"] = publish_at
         started = _start_youtube_session(account_id, body, size)
+        code = int(getattr(started, "status", 200) or 200)
+        if code in (403, 429):
+            raise ProviderUnavailable(f"YouTube refused the upload session (HTTP {code}): quota or rate limit; it resets at midnight Pacific")
+        if code >= 400:
+            raise ProviderError(f"YouTube refused the upload session (HTTP {code})")
         location = (getattr(started, "headers", None) or {}).get("location", "")
         if not location.startswith("https://www.googleapis.com/upload/youtube/"):
             raise ProviderError("YouTube did not return an upload session")
         r = http().put(location, data=f, headers={"Content-Type": "video/mp4", "Content-Length": str(size)}, timeout=900)
+    if r.status_code in (403, 429):
+        raise ProviderUnavailable(f"YouTube refused the upload (HTTP {r.status_code}): quota or rate limit; it resets at midnight Pacific")
     if r.status_code not in (200, 201):
         raise ProviderError(f"YouTube upload failed with HTTP {r.status_code}")
     out = r.json()

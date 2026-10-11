@@ -1,6 +1,7 @@
 """Publishing providers.
 
 local       -> writes a ready-to-post pack (video + caption + title + schedule) into distribution/queue
+youtube     -> schedules the video on the studio's YouTube channel (Composio authorises, we send the bytes), public at its slot time.
 upload_post -> pushes through Upload-Post (one API for TikTok, YouTube, Instagram), scheduled per slot.
                Their accounts are already API-approved, which sidesteps YouTube's "locked private"
                rule for unaudited API projects and TikTok's direct-post audit.
@@ -111,7 +112,68 @@ def upload_post(job, meta: dict) -> dict:
     return {"mode": "upload_post", "post_at": when.isoformat(), "response": res}
 
 
-PUBLISHERS = {"local": local_pack, "upload_post": upload_post}
+def _youtube_cfg() -> dict:
+    return config.load()["publish"].get("youtube", {})
+
+
+def youtube(job, meta: dict) -> dict:
+    """Schedule the video on the studio's YouTube channel for its slot. Idempotent per job; refuses any channel but the configured one."""
+    from faceless.providers import composio_tools as ct
+    from faceless.state import all_jobs
+    cfg = _youtube_cfg()
+    if not cfg.get("channel_id"):
+        raise ProviderUnavailable("[publish.youtube] channel_id is not set")
+    done = job.artifacts.get("youtube") or {}
+    if done.get("video_id"):
+        return {"mode": "youtube", "skipped": "already uploaded", "video_id": done["video_id"]}
+    when = slot_time(job.day, job.slot)
+    post_day = nominal_slot(job.day, job.slot)[0]
+    taken = sum(1 for j in all_jobs() if (j.artifacts.get("youtube") or {}).get("video_id") and nominal_slot(j.day, j.slot)[0] == post_day)
+    if taken >= int(cfg.get("max_per_day", 5)):
+        raise ProviderUnavailable(f"YouTube daily cap reached ({taken} scheduled for {post_day}); the local pack is ready")
+    out = ct.youtube_upload(job.artifacts["video"], meta["title"], meta["description"], [t.lstrip("#") for t in meta.get("hashtags", [])],
+                            expected_channel_id=cfg["channel_id"], publish_at=when.astimezone(ZoneInfo("UTC")).strftime("%Y-%m-%dT%H:%M:%SZ"),
+                            job=job.id)
+    job.artifacts["youtube"] = {**out, "post_at": when.isoformat(), "comment_posted": False}
+    events.emit("PUBLISH_SCHEDULED", job=job.id, provider="youtube", when=when.isoformat(), video_id=out["video_id"])
+    return {"mode": "youtube", "post_at": when.isoformat(), **out}
+
+
+def post_due_comments(now: datetime | None = None) -> list[str]:
+    """First comment on every scheduled YouTube video that has gone public (YouTube takes none while it is still scheduled).
+    Tries each video three times, then leaves it for the owner. Returns the job ids commented on. API cannot pin: pin in Studio."""
+    from faceless.providers import composio_tools as ct
+    from faceless.state import all_jobs
+    cfg = _youtube_cfg()
+    if not cfg.get("channel_id"):
+        return []
+    now = now or datetime.now(ZoneInfo("UTC"))
+    done = []
+    for j in all_jobs():
+        y = j.artifacts.get("youtube") or {}
+        if not y.get("video_id") or y.get("comment_posted") or y.get("comment_tries", 0) >= 3:
+            continue
+        if datetime.fromisoformat(y["post_at"]) + timedelta(minutes=10) > now:
+            continue
+        try:
+            text = json.loads((j.dir / "meta.json").read_text(encoding="utf-8")).get("first_comment")
+        except (OSError, ValueError):
+            text = None
+        if text:
+            try:
+                ct.execute("YOUTUBE_POST_COMMENT", {"videoId": y["video_id"], "channelId": cfg["channel_id"], "textOriginal": text}, job=j.id)
+            except (ProviderError, ProviderUnavailable) as e:
+                y["comment_tries"] = y.get("comment_tries", 0) + 1
+                j.notes.append(f"first comment failed: {str(e)[:120]}")
+                j.save()
+                continue
+        y["comment_posted"] = True
+        j.save()
+        done.append(j.id)
+    return done
+
+
+PUBLISHERS = {"local": local_pack, "upload_post": upload_post, "youtube": youtube}
 
 
 def publish(job, meta: dict) -> dict:
