@@ -176,7 +176,16 @@ def cmd_publish(args) -> int:
     job.artifacts["publish"] = res
     if job.status != "published":
         job.advance("published", manual=True, forced=bool(args.force and not job.scores.get("passed")))
+    job.save()   # a job that was already published still keeps what this run added (the YouTube upload)
     print(json.dumps(res, indent=2, default=str))
+    return 0
+
+
+def cmd_yt_comments(args) -> int:
+    """Post the first comment on every scheduled YouTube video that has gone public."""
+    from faceless.providers import publish
+    done = publish.post_due_comments()
+    print(f"first comment posted on {len(done)} video(s)" + (": " + ", ".join(done) if done else ""))
     return 0
 
 
@@ -767,6 +776,8 @@ def main(argv: list[str] | None = None) -> int:
     sh.add_argument("--yes", action="store_true")
     sh.add_argument("--days", type=int, default=30)
     sh.set_defaults(fn=cmd_shop)
+    yc = sub.add_parser("yt-comments", help="post the first comment on YouTube videos that have gone public (YouTube takes none while a video is scheduled)")
+    yc.set_defaults(fn=cmd_yt_comments)
     ky = sub.add_parser("keys", help="which key of each service works and what is left on it (free, read-only; values are never printed)")
     ky.add_argument("service", nargs="?", default=None)
     ky.add_argument("--json", action="store_true")

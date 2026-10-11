@@ -14,10 +14,12 @@ from faceless import config, preflight
 from faceless.config import STUDIO
 
 # The owner's go, as a switch in the open. Flip a constant only in the commit that records the owner saying yes.
-OWNER_APPROVED_LIVE_POSTING = False
+# 2026-10-11: the owner asked for the daily run to post to YouTube by itself ("the entire operation needs to occur autonomously"; "wire it in the
+# daily run"). It stays gated by the kill switch (state/PAUSE), the channel check, and the owner merging the pull request that turns it on.
+OWNER_APPROVED_LIVE_POSTING = True
 OWNER_APPROVED_HOOK_CLIPS = False
 OWNER_APPROVED_SKETCHES = False                        # motion scenes written by a model: on only after the owner has looked at a sample
-LIVE_PUBLISH_MODES = {"upload_post", "composio", "muapi"}
+LIVE_PUBLISH_MODES = {"upload_post", "composio", "muapi", "youtube"}
 
 SECRET_SHAPES = {
     "OpenAI/OpenRouter style key": r"\bsk-[A-Za-z0-9_-]{32,}",

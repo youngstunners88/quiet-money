@@ -9,7 +9,20 @@ def state_of(rows, start):
     return next(r for r in rows if r["rail"].startswith(start))
 
 
-def test_the_default_studio_posts_nothing_and_every_gap_names_the_owners_next_step():
+def in_mode(monkeypatch, mode):
+    cfg = dict(config.load())
+    cfg["publish"] = {**cfg["publish"], "mode": mode}
+    monkeypatch.setattr(config, "load", lambda: cfg)
+
+
+def test_the_youtube_mode_studio_reports_posting_as_ready(monkeypatch):
+    in_mode(monkeypatch, "youtube")
+    row = state_of(distribute.status(connected={"youtube": "ok"}), "posting")
+    assert row["state"] == "ready" and "youtube" in row["detail"]
+
+
+def test_a_local_mode_studio_posts_nothing_and_every_gap_names_the_owners_next_step(monkeypatch):
+    in_mode(monkeypatch, "local")
     rows = distribute.status(connected={"youtube": "ok"})
     assert state_of(rows, "posting")["state"] == "manual"
     for r in rows:

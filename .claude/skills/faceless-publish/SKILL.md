@@ -13,6 +13,14 @@ description: Publish or schedule Quiet Money posting packs to TikTok, YouTube Sh
    and/or the local environment).
 4. Set `[publish].mode = "upload_post"` in `studio.toml`.
 
+## YouTube mode (the daily run posts by itself)
+`[publish].mode = "youtube"` in `studio.toml` makes every video that passes the gauntlet get scheduled on the studio's channel (`[publish.youtube].channel_id`)
+for its slot, through `composio_tools.youtube_upload` (Composio authorises, we send the bytes). It refuses to run if the connection acts as any other channel,
+never uploads a job twice, stops at `max_per_day`, and treats a quota refusal as "try again after the reset" (the local pack is always written first).
+First comments cannot go on a scheduled video, so `python -m faceless yt-comments` (also run at the start of every `daily`) posts them once the video is public;
+pin the comment in YouTube Studio, the API cannot. While there are no metrics, the first three days of posting follow the launch order in `[publish.launch]`
+(`faceless/launch.py`): the Escape series takes the slot we expect to do best. `state/PAUSE` stops all of it. When something here fails, use the `faceless-unblock` skill.
+
 ## Publish a job
 - Automatic: `python -m faceless daily` schedules each gated video in its slot.
 - Manual re-publish: `python -m faceless publish <job_id>` (uses an Idempotency-Key = job id, so retries don't duplicate).

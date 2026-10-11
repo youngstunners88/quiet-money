@@ -16,7 +16,7 @@ import traceback
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
-from faceless import analytics, config, decide, events, gauntlet, qa, research, safety
+from faceless import analytics, config, decide, events, gauntlet, launch, qa, research, safety
 from faceless.config import Paths
 from faceless.pipeline import ideate, package, render, script as script_stage, visuals, voice as voice_stage
 from faceless.providers import publish as publisher
@@ -209,6 +209,11 @@ def daily(count: int | None = None, extra: int = 0, pillar: str | None = None, *
         events.emit("DAILY_HALTED", reason=why)
         return []
     cfg = config.load()
+    if cfg["publish"]["mode"] == "youtube":    # yesterday's scheduled videos have gone public by now: their first comment goes on
+        try:
+            publisher.post_due_comments()
+        except Exception as e:  # noqa: BLE001 - a comment problem never costs the day's videos
+            events.emit("COMMENTS_FAILED", error=str(e)[:200])
     per_day = len(cfg["publish"]["slots"])
     count = count or cfg["production"]["videos_per_day"]
     if count > per_day:   # more than a day of slots: make them all now, banking the rest into the next free slots
@@ -222,7 +227,8 @@ def daily(count: int | None = None, extra: int = 0, pillar: str | None = None, *
     jobs, reserved = [], [j.topic for j in all_jobs() if j.day == today.isoformat()]
     forced = pillar
     for post_day, k in slots:
-        plan = plans.setdefault(post_day, analytics.allocate(per_day, weights, date.fromisoformat(post_day).toordinal()))
+        plan = plans.setdefault(post_day, launch.strategic_plan(
+            analytics.allocate(per_day, weights, date.fromisoformat(post_day).toordinal()), post_day))
         pillar = forced or plan[k]
         slot = (date.fromisoformat(post_day) - today).days * per_day + k
         job = None
