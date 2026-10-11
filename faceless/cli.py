@@ -181,6 +181,38 @@ def cmd_publish(args) -> int:
     return 0
 
 
+def cmd_yt_channel(args) -> int:
+    """Show what differs between studio.toml [youtube] and the live channel; --apply makes the channel match."""
+    from faceless import ytchannel
+    want = ytchannel.desired()
+    now = ytchannel.live(want["channel_id"])
+    todo = ytchannel.plan(want, now)
+    print("the live channel already matches studio.toml" if not todo else "to change: " + ", ".join(todo))
+    if todo and args.apply:
+        print("done: " + ", ".join(ytchannel.apply(want, now, todo)))
+    elif todo:
+        print("run again with --apply to make these changes")
+    print("by hand in Studio (the API cannot): profile picture channel/brand-kit/avatar.png, channel links, pinning a comment")
+    return 0
+
+
+def cmd_yt_verify(args) -> int:
+    """Read back every video scheduled in the last 14 days: still there, processed, public on time. Exit 2 if any is not."""
+    from datetime import timedelta
+    from faceless import ytchannel
+    from faceless.state import all_jobs
+    since = datetime.now(timezone.utc) - timedelta(days=14)
+    videos = {y["video_id"]: {"job": j.id, "post_at": y.get("post_at")} for j in all_jobs()
+              if (y := j.artifacts.get("youtube")) and y.get("video_id") and (not y.get("post_at") or datetime.fromisoformat(y["post_at"]) > since)}
+    problems, rows = ytchannel.verify(videos)
+    for r in rows:
+        print(f"{r['video']}  {str(r['privacy']):8} {str(r['processing']):10} views {r['views']:>6}  likes {r['likes']:>4}  comments {r['comments']:>3}  {r['job']}")
+    for p in problems:
+        print("PROBLEM:", p)
+    print(f"{len(rows)} video(s) checked, {len(problems)} problem(s)")
+    return 2 if problems else 0
+
+
 def cmd_yt_comments(args) -> int:
     """Post the first comment on every scheduled YouTube video that has gone public."""
     from faceless.providers import publish
@@ -776,6 +808,11 @@ def main(argv: list[str] | None = None) -> int:
     sh.add_argument("--yes", action="store_true")
     sh.add_argument("--days", type=int, default=30)
     sh.set_defaults(fn=cmd_shop)
+    ych = sub.add_parser("yt-channel", help="the YouTube channel page as code: description, keywords, banner, series playlists (`--apply` makes the live channel match studio.toml)")
+    ych.add_argument("--apply", action="store_true")
+    ych.set_defaults(fn=cmd_yt_channel)
+    yv = sub.add_parser("yt-verify", help="read back every video scheduled on YouTube in the last 14 days: still there, processed, public on time (exit 2 on any problem); prints views and likes")
+    yv.set_defaults(fn=cmd_yt_verify)
     yc = sub.add_parser("yt-comments", help="post the first comment on YouTube videos that have gone public (YouTube takes none while a video is scheduled)")
     yc.set_defaults(fn=cmd_yt_comments)
     ky = sub.add_parser("keys", help="which key of each service works and what is left on it (free, read-only; values are never printed)")

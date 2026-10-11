@@ -91,7 +91,7 @@ def _start_youtube_session(account_id: str, body: dict, size: int):
 
 def youtube_upload(video_path: str, title: str, description: str, tags: list[str] | None = None, *, expected_channel_id: str,
                    category_id: str = "27", privacy: str = "public", synthetic: bool = True, publish_at: str | None = None,
-                   job: str | None = None) -> dict:
+                   language: str = "en", job: str | None = None) -> dict:
     """Upload one video to YouTube through the studio's Composio connection, sending the bytes ourselves.
 
     The `YOUTUBE_UPLOAD_VIDEO` tool reported success but YouTube later marked two uploads "processing abandoned"
@@ -114,7 +114,8 @@ def youtube_upload(video_path: str, title: str, description: str, tags: list[str
     with open(video_path, "rb") as f:
         size = os.fstat(f.fileno()).st_size
         body = {
-            "snippet": {"title": title, "description": description, "tags": tags or [], "categoryId": category_id},
+            "snippet": {"title": title, "description": description, "tags": tags or [], "categoryId": category_id,
+                        "defaultLanguage": language, "defaultAudioLanguage": language},
             "status": {"privacyStatus": "private" if publish_at else privacy, "selfDeclaredMadeForKids": False,
                        "containsSyntheticMedia": synthetic},
         }

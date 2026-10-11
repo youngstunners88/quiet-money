@@ -264,3 +264,53 @@ email_capture_rate = 0.25                    # share of link visitors who join t
 list_buys_per_month = 0.03                   # share of the list buying one product a month
 product_price = 19.0
 videos_per_day = 5
+
+[youtube]
+# The channel page as code: `python -m faceless yt-channel` shows what differs from the live channel, `--apply` makes it match (safe to repeat).
+# Search phrases below come from YouTube's own search autocomplete (2026-10-11), not guesses.
+language = "en"
+banner = "channel/brand-kit/banner-youtube.png"
+trailer = ""                                  # YouTube ignored a Short as the channel trailer (2026-10-11); set a video id here once the channel has a long video
+keywords = ["personal finance", "personal finance for beginners", "money tips", "money psychology", "money mindset", "investing for beginners",
+            "compound interest explained", "how to save money", "how to pay off debt", "budgeting for beginners", "financial literacy",
+            "financial freedom", "passive income", "lifestyle creep", "rule of 72", "emergency fund", "50 30 20 budget", "money myths", "wealth building"]
+description = """Personal finance and money psychology in 60-second Shorts: real numbers, true stories and money tips for beginners. New video every day.
+
+Quiet Money explains how money really works: true stories of ordinary people who quietly built wealth, the math banks hope you never do (compound interest, fees, debt, inflation), the mental traps that drain paychecks, the myths everyone repeats, and 15-minute money moves you can make today.
+
+Six series, one new Short a day:
+• Money Stories • The Math They Hide • Money Psychology • Money Myths • Do This Today • Escape the Rat Race
+
+Subscribe for one money rule a day. Free 7-day Money Reset checklist and every link: {hub}
+
+Educational content, not financial advice. Narration and visuals are AI-assisted."""
+
+[[youtube.playlists]]
+pillar = "story"
+title = "Money Stories: How Ordinary People Quietly Got Rich"
+description = "True stories of ordinary people and the money lessons inside them: how they saved, invested and built wealth quietly. One 60-second Short each. Educational content, not financial advice."
+
+[[youtube.playlists]]
+pillar = "math"
+title = "The Math They Hide: Compound Interest, Fees and Debt Explained"
+description = "The calculations banks and lenders hope you never do: compound interest, the rule of 72, fees, inflation and minimum payments, with exact numbers. Educational content, not financial advice."
+
+[[youtube.playlists]]
+pillar = "psychology"
+title = "Money Psychology: Lifestyle Creep, Spending Habits and Money Mindset"
+description = "The mental traps that quietly drain your money (lifestyle creep, anchoring, mental accounting, present bias) and the counter-move for each. Educational content, not financial advice."
+
+[[youtube.playlists]]
+pillar = "myth"
+title = "Money Myths Debunked: What Everyone Gets Wrong About Money"
+description = "Popular beliefs about money that are wrong or incomplete, and the rule that replaces each one. Educational content, not financial advice."
+
+[[youtube.playlists]]
+pillar = "playbook"
+title = "Do This Today: 15-Minute Money Moves for Beginners"
+description = "Concrete three-step actions you can finish in under 15 minutes: automate savings, cut a fee, negotiate a bill, set up alerts. Educational content, not financial advice."
+
+[[youtube.playlists]]
+pillar = "escape"
+title = "Escape the Rat Race: Passive Income and Financial Freedom Frameworks"
+description = "Proven frameworks for building income beyond a paycheck, with the real numbers and the honest catch for each. No promised income. Educational content, not financial advice."

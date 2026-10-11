@@ -7,19 +7,7 @@ Assets: `brand-kit/avatar.png`, `brand-kit/banner-youtube.png`, `brand-kit/water
 ## YouTube
 - **Name:** Quiet Money
 - **Handle:** @quietmoneyrule
-- **Description** (paste as-is, 870 chars):
-
-> The money rules nobody taught you, in 60 seconds, with real numbers.
->
-> Quiet Money explains the psychology and math of money in short videos: true stories of ordinary people who quietly got rich (like the janitor who left $8 million), the math banks hope you never do, the mental traps that drain paychecks, the myths everyone repeats, and 15-minute actions you can take today.
->
-> Every calculation is computed and every story is sourced. New Shorts every day across six series:
-> • Money Stories • The Math They Hide • Money Psychology • Money Myths • Do This Today • Escape the Rat Race
->
-> Educational content, not financial advice. Narration and visuals are AI-assisted.
-> Free 7-day Money Reset checklist: see the links below.
-
-- **Keywords:** personal finance, money psychology, money tips, investing for beginners, compound interest, budgeting, debt payoff, saving money, financial literacy, money mindset, frugal living, wealth building
+- **Description, keywords, language, banner, series playlists:** live in `studio.toml [youtube]` and are applied by `python -m faceless yt-channel --apply` (never paste by hand; `faceless-youtube-seo` explains the wording).
 - **Links** (channel page, up to 14, tappable): the hub page tagged for YouTube (`utm_source=youtube&utm_medium=bio&utm_campaign=profile`; `python -m faceless offer` prints it), TikTok, Instagram. Links in Shorts descriptions and comments are plain text.
 - **Branding:** profile picture `avatar.png`, banner `banner-youtube.png`, video watermark `watermark.png` (display: entire video)
 - **Defaults:** category Education, language English, "altered or synthetic content" = Yes on every upload

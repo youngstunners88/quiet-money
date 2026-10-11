@@ -48,7 +48,12 @@ Python dependencies when the session starts. In a routine session:
    `state/` merge by union, so both sessions' lines survive), run the tests, push again. Never force-push.
    `python -m faceless watchdog` should say `healthy` afterwards; the same check runs every six hours on GitHub and opens an "Ops alert" issue
    when it does not.
-3. Send the finished `video.mp4` files to the owner (re-encode any copy over 30 MB), then report as in step 5.
+3. **YouTube** (`[publish].mode = "youtube"`): the daily run itself schedules each passed video on the channel. Afterwards run `python -m faceless yt-verify`
+   (exit 2 and a PROBLEM line for any video that vanished, stayed empty, or is not public on time) and run it again a few hours later, because YouTube can drop a
+   video minutes after a successful upload. Then `python -m faceless yt-comments` (first comments on videos that went public) and `python -m faceless yt-channel`
+   (should say the channel matches). A PROBLEM or a refusal: use the `faceless-unblock` skill; a quota refusal means wait for the midnight-Pacific reset, the local pack is
+   already written. Never re-upload a video YouTube removed without finding out why.
+4. Send the finished `video.mp4` files to the owner (re-encode any copy over 30 MB), then report as in step 5, adding the live YouTube state from `yt-verify`.
 
 ### Also in every routine run (the printing press)
 - **Repurposing kit**: each published pack gets `<pack>/kit/` automatically (thread, LinkedIn post, newsletter item, pin, carousel, audio).
@@ -62,6 +67,8 @@ Python dependencies when the session starts. In a routine session:
 `--resume` to undo), a $3 daily spend ceiling across all providers, and per-provider caps; a refusal from any of them is the system working.
 
 ## Never
-- Never resume a paused studio, raise a spend cap, or turn on posting or hook clips without the owner's yes.
+- Never resume a paused studio, raise a spend cap, or turn on hook clips without the owner's yes. YouTube posting is on (the owner's yes is recorded in
+  `tests/test_hygiene.py`); any other platform, or changing `[publish].mode`, still needs the owner's yes.
+- Never delete a channel, playlist or someone else's video, replace or revoke the Composio connection, or work around a verification or policy check.
 - Never publish a `held` video without fixing its hard gates.
 - Never commit media (mp4/wav/jpg); state, scripts, and reports are what get committed.

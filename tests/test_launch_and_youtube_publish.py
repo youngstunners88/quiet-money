@@ -50,6 +50,8 @@ def wired(monkeypatch, tmp_path):
     monkeypatch.setattr(ct, "youtube_upload", lambda *a, **k: calls.append((a, k)) or {"video_id": "v1", "channel_id": "UCq", "privacy": "private"})
     jobs = []
     monkeypatch.setattr("faceless.state.all_jobs", lambda: jobs)
+    from faceless import ytchannel
+    monkeypatch.setattr(ytchannel, "add_to_series", lambda video_id, pillar: True)
     return calls, jobs, ct
 
 
@@ -104,3 +106,16 @@ def test_first_comment_waits_for_the_video_to_go_public_and_gives_up_after_three
     for _ in range(5):
         pub.post_due_comments(now)
     assert again.artifacts["youtube"]["comment_tries"] == 3 and not again.artifacts["youtube"]["comment_posted"]
+
+
+def test_a_series_playlist_failure_never_costs_the_upload(wired, tmp_path, monkeypatch):
+    from faceless import ytchannel
+    calls, jobs, _ = wired
+
+    def boom(video_id, pillar):
+        raise ProviderError("playlist refused")
+
+    monkeypatch.setattr(ytchannel, "add_to_series", boom)
+    job = FakeJob(tmp_path)
+    assert pub.youtube(job, META)["video_id"] == "v1"
+    assert job.artifacts["youtube"]["video_id"] == "v1" and any("series playlist" in n for n in job.notes)
