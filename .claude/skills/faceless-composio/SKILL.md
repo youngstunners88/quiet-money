@@ -71,3 +71,9 @@ Dashboard: dashboard.composio.dev → Platform → your project → Logs (search
 ## CI
 The daily workflow reads `COMPOSIO_API_KEY` from repository secrets. Connections made here persist for CI
 because they belong to the same project + `user_id`.
+
+## YouTube gotchas (learned 2026-10-11)
+- **Pick the channel at sign-in.** A Google login can own several channels. The Connect Link opens a "Choose your account or a brand account" screen: choose the channel (Quiet Money, `UC9B1QBr3_8Eulok8IdQbCqQ`), not the personal profile. Changing the default channel in YouTube does nothing for the API. If Google skips the screen, remove Composio at myaccount.google.com/connections and connect again from a private window. Check with `YOUTUBE_LIST_CHANNELS {"mine": true}`.
+- **Do not use `YOUTUBE_UPLOAD_VIDEO`.** It returned success twice, then YouTube marked both videos "processing abandoned" (cut short). Use `composio_tools.youtube_upload()`, which sends the whole file itself and refuses to run if the connected channel is not the expected one.
+- **Quota.** Uploads and reads share one daily YouTube quota that resets at midnight Pacific; a 403/429 "quota" error means wait, not a broken connection.
+- The API cannot pin a comment; pin the first comment in Studio.
