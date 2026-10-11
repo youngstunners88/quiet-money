@@ -77,7 +77,7 @@ gemini_voice = "Charon"
 gemini_model = "gemini-2.5-flash-preview-tts"
 
 [images]
-chain = ["cloudflare", "muapi", "openrouter", "pollinations", "procedural"]
+chain = ["cloudflare", "muapi", "pollinations", "procedural"]   # never openrouter: the owner banned paid OpenRouter images (2026-10-11)
 cloudflare_model = "@cf/black-forest-labs/flux-2-klein-4b"
 cloudflare_hero_model = "@cf/black-forest-labs/flux-2-klein-4b"   # 9b is sharper but costs ~9x the neurons
 cloudflare_daily_neurons = 9500              # free tier is 10,000 neurons/day; keep a margin
@@ -85,8 +85,6 @@ cloudflare_qa_reserve = 2500                # of those, neurons kept for semanti
 muapi_model = "flux-2-klein-4b-turbo"        # $0.0052 an image (FLUX.2 klein 4B, 720x1280); the free Cloudflare budget is used first
 muapi_hero_model = "flux-2-klein-4b"         # $0.0104, the hook still
 muapi_daily_usd = 1.5                        # spend cap per UTC day (about 290 images); the wallet itself is the hard limit
-openrouter_model = "google/gemini-3.1-flash-lite-image"
-openrouter_daily_images = 60                 # paid fallback cap: ~$0.04 each, so at most ~$2.40/day
 width = 864                                  # 2x3 Cloudflare tiles: same 156 neurons as 768x1344, exact 9:16
 height = 1536
 concurrency = 4

@@ -1,9 +1,9 @@
 """Text-to-image providers.
 
 Chain (studio.toml [images].chain): cloudflare (free FLUX.2 klein, neuron-capped) ->
-muapi (paid, about half a cent: the same FLUX.2 klein family) -> openrouter (paid, 4 cents) ->
+muapi (paid, about half a cent: the same FLUX.2 klein family) ->
 pollinations (free, low-res, watermark cropped) -> procedural (always works, abstract gradient art).
-Results are cached by prompt hash.
+Results are cached by prompt hash. OpenRouter is NOT an image provider here (owner's rule, 2026-10-11: it cost $9.79 in the first week at 4 cents a still).
 """
 
 from __future__ import annotations
@@ -84,46 +84,6 @@ def cloudflare(prompt: str, w: int, h: int, seed: int, out, hero: bool = False) 
         data = r.content
     _save(data, out)
     ledger.spend("cloudflare", "neurons", cost, usd=0.0)
-
-
-_OR_LOCK = threading.Lock()
-_or_inflight = 0   # paid requests in flight: visuals runs 4 workers, so the cap check must count them too
-
-
-def openrouter(prompt: str, w: int, h: int, seed: int, out, hero: bool = False) -> None:
-    global _or_inflight
-    key = config.env("OPENROUTER_API_KEY")
-    if not key:
-        raise ProviderUnavailable("OPENROUTER_API_KEY not set")
-    cfg = config.load()["images"]
-    safety.guard("openrouter image", 0.04)
-    with _OR_LOCK:   # check and reserve atomically so concurrent workers can't overshoot the paid cap
-        if ledger.used("openrouter", "blocked") or \
-                ledger.used("openrouter", "images") + _or_inflight + 1 > cfg.get("openrouter_daily_images", 60):
-            raise ProviderUnavailable("daily paid image cap reached")
-        _or_inflight += 1
-    try:
-        body = {"model": cfg["openrouter_model"], "modalities": ["image", "text"],
-                "messages": [{"role": "user", "content": f"Generate one vertical 9:16 image. {prompt}"}],
-                "image_config": {"aspect_ratio": "9:16"}}
-        r = http().post("https://openrouter.ai/api/v1/chat/completions", json=body, timeout=240,
-                        headers={"Authorization": f"Bearer {key}"})
-        if r.status_code == 402:   # out of credit: skip this provider for the rest of the day
-            ledger.spend("openrouter", "blocked", 1)
-            raise ProviderUnavailable("openrouter credit exhausted")
-        if r.status_code != 200:
-            raise ProviderError(f"openrouter-image {r.status_code}: {r.text[:200]}")
-        ledger.spend("openrouter", "images", 1, usd=0.04)   # billed once the model answered, even if unusable
-    finally:
-        with _OR_LOCK:
-            _or_inflight -= 1
-    msg = r.json()["choices"][0]["message"]
-    imgs = msg.get("images") or []
-    if not imgs:
-        raise ProviderError("openrouter-image returned no image")
-    url = imgs[0]["image_url"]["url"]
-    data = base64.b64decode(url.split(",", 1)[1]) if url.startswith("data:") else fetch_bytes(url, timeout=120)[0]
-    _save(data, out)
 
 
 MUAPI = "https://api.muapi.ai/api/v1"
@@ -238,7 +198,7 @@ def procedural(prompt: str, w: int, h: int, seed: int, out, hero: bool = False) 
     Image.blend(base, glow, 0.55).save(out, "JPEG", quality=92)
 
 
-PROVIDERS = {"cloudflare": cloudflare, "muapi": muapi, "openrouter": openrouter, "pollinations": pollinations,
+PROVIDERS = {"cloudflare": cloudflare, "muapi": muapi, "pollinations": pollinations,
              "procedural": procedural}
 
 

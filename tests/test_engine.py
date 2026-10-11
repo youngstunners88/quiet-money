@@ -330,15 +330,6 @@ def test_dotenv_loads_without_overriding(tmp_path, monkeypatch):
     monkeypatch.delenv("QM_TEST_D")
 
 
-def test_paid_image_fallback_is_capped(tmp_path, monkeypatch):
-    from faceless import ledger
-    from faceless.providers import ProviderUnavailable, images
-    monkeypatch.setenv("OPENROUTER_API_KEY", "test")
-    monkeypatch.setattr(ledger, "used", lambda provider, unit, day=None: 60 if provider == "openrouter" else 0)
-    with pytest.raises(ProviderUnavailable):
-        images.openrouter("a quiet kitchen table", 864, 1536, 1, tmp_path / "x.jpg")
-
-
 def test_allocate_rotates_the_skipped_pillar():
     w = {"story": 1.0, "math": 1.0, "psychology": 1.0, "myth": 1.0, "playbook": 1.0, "escape": 1.5}
     plans = [analytics.allocate(5, w, d) for d in range(6)]
@@ -430,16 +421,6 @@ def test_escape_gate_needs_whole_words():
     beats = {"pillar": "escape", "beats": [{"say": s} for s in (
         "A realistic number.", "Listen closely.", "Honestly, it's brisk work.", "A specialist knows.", "That's it.")]}
     assert not check_structure(beats, "")[0].passed
-
-
-def test_paid_image_cap_counts_requests_in_flight(tmp_path, monkeypatch):
-    from faceless import ledger
-    from faceless.providers import ProviderUnavailable, images
-    monkeypatch.setenv("OPENROUTER_API_KEY", "test")
-    monkeypatch.setattr(ledger, "used", lambda provider, unit, day=None: 59 if unit == "images" else 0)
-    monkeypatch.setattr(images, "_or_inflight", 1)   # another worker already holds the 60th
-    with pytest.raises(ProviderUnavailable):
-        images.openrouter("a desk", 864, 1536, 1, tmp_path / "x.jpg")
 
 
 def test_failed_slot_never_fails_the_previous_finished_job(tmp_path, monkeypatch):
@@ -1490,9 +1471,9 @@ def test_muapi_respects_the_daily_cap_and_blocks_itself_when_credit_runs_out(tmp
         images.muapi("p", 864, 1536, 1, tmp_path / "a.jpg")
 
 
-def test_image_chain_tries_cloudflare_then_muapi_before_openrouter():
+def test_image_chain_tries_cloudflare_then_muapi_and_never_openrouter():
     chain = config.load()["images"]["chain"]
-    assert chain.index("cloudflare") < chain.index("muapi") < chain.index("openrouter") < chain.index("procedural")
+    assert chain.index("cloudflare") < chain.index("muapi") < chain.index("procedural") and "openrouter" not in chain
 
 
 # ---- Muapi hook clips --------------------------------------------------------------------------
