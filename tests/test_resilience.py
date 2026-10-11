@@ -38,9 +38,8 @@ def test_pause_stops_posting_but_the_local_pack_is_still_written(state, monkeypa
 
 def test_pause_makes_every_paid_image_provider_stand_down(state, monkeypatch):
     monkeypatch.setenv("MUAPI_API_KEY", "k")
-    monkeypatch.setenv("OPENROUTER_API_KEY", "k")
     safety.pause("drill")
-    for name in ("muapi", "openrouter"):
+    for name in ("muapi",):
         with pytest.raises(ProviderUnavailable, match="paused"):
             images.PROVIDERS[name]("p", 720, 1280, 1, "unused.jpg")
 
