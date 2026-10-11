@@ -60,3 +60,10 @@ def test_open_scene_has_no_text_of_its_own(tmp_path):
     cards.build_project(tmp_path / "p", [(0, {"kind": "open"}, 3.0)], "ledger", "#D9A400", 30, "THE LEDGER", theme="ledger")
     page = (tmp_path / "p" / "index.html").read_text(encoding="utf-8")
     assert 'class="mk"' in page and "THE LEDGER" in page
+
+
+def test_a_switched_off_pillar_never_enters_the_daily_plan():
+    from faceless import analytics
+    assert config.pillar("ledger").enabled is False
+    assert "ledger" not in analytics.pillar_weights()
+    assert all(p.enabled for p in config.load()["pillars"] if p.id != "ledger")
