@@ -84,7 +84,6 @@ def test_spend_caps_add_up():
     assert 0 < ceiling <= 10, "the studio-wide ceiling should be small, and above zero"
     caps = {"[muapi] daily_usd": cfg["muapi"]["daily_usd"],
             "[images] muapi_daily_usd": cfg["images"]["muapi_daily_usd"],
-            "[images] openrouter_daily_images x $0.04": cfg["images"]["openrouter_daily_images"] * 0.04,
             "[production.hookclip] daily_usd": cfg["production"]["hookclip"]["daily_usd"],
             "[production.sketch] daily_usd": cfg["production"]["sketch"]["daily_usd"]}
     over = {k: v for k, v in caps.items() if v > ceiling}
@@ -209,3 +208,10 @@ def test_the_offer_settings_only_point_at_real_products_and_secure_listings():
     assert cfg["match"].get("playbook", []) == [], "a how-to video always points at the free checklist"
     assert int(cfg["paid_every"]) >= 2, "the free checklist must lead: at most every other video may be a paid offer"
     assert str(cfg["hub_path"]).startswith("/") and config.load()["channel"]["link_in_bio"].endswith(cfg["hub_path"]), "link_in_bio is the hub page"
+
+
+def test_openrouter_is_never_an_image_provider():
+    """Owner's rule (2026-10-11): no OpenRouter for images. It cost $9.79 in the first week at 4 cents a still."""
+    from faceless.providers import images
+    assert "openrouter" not in config.load()["images"]["chain"] and "openrouter" not in images.PROVIDERS
+    assert not any(k.startswith("openrouter") for k in config.load()["images"])
