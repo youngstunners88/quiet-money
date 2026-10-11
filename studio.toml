@@ -34,6 +34,12 @@ accent2 = "#2EE59D"                          # money green
 mode = "numbers"                             # off | auto (only replaces placeholder-art beats) | numbers (+ count-up cards for numeric callouts)
 pillars = ["math", "escape"]                 # numbers mode applies to these pillars
 
+[production.ledger]                          # the second look of the series: ledger paper, ink type, gold marker; every beat after the hook is drawn in code (faceless/pipeline/cards.py)
+mode = "off"                                 # OFF until the owner has looked at a sample and said go (see .claude/skills/faceless-ledger/SKILL.md)
+pillars = ["math", "escape", "playbook"]     # series that get a ledger version; stories, psychology and myths keep the cinematic look
+share = 0.5                                  # fraction of those series' videos drawn in the ledger look (fixed per video by a hash of its id), so retention can compare the two
+accent = "#D9A400"                           # brand gold, one step deeper so it reads on paper
+
 [music]
 # Real instrumental beds (Google Lyria RealTime via the Gemini API, free tier), generated once into assets/music and reused by every
 # video. production.music = "library" uses them; no track found means the procedural bed, so nothing can break.

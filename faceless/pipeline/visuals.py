@@ -43,7 +43,9 @@ def run(job, script: dict) -> list[dict]:
     pillar = config.pillar(job.pillar)
     cfg = config.load()["images"]
 
-    planned = cards.pick(script, None, job.pillar)     # numeric beats of card pillars: no image needed at all
+    style = cards.style_for(job.id, job.pillar)
+    job.artifacts["style"] = style                      # recorded so retention can be compared per look
+    planned = cards.pick(script, None, job.pillar, style)     # numeric beats of card pillars (every beat after the hook in the ledger style): no image needed at all
     hook_clip = _claim_hook_clip(job)                   # an owner-made Flow clip replaces the hook still
 
     def one(i_beat):
@@ -85,7 +87,7 @@ def run(job, script: dict) -> list[dict]:
         if i < len(results) and results[i].get("path") and not results[i].get("card"):
             results[i]["sketch"] = draft
     # a beat whose image fell all the way to procedural placeholder art becomes a designed motion card instead
-    for i, spec in cards.pick(script, results, job.pillar).items():
+    for i, spec in cards.pick(script, results, job.pillar, style).items():
         if results[i]["provider"] == "procedural":
             results[i] = {**results[i], "provider": "card", "card": spec}
     swaps = int(qa.cfg()["max_swaps"])       # a flagged still becomes a designed card: free, and never has text artifacts

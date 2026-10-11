@@ -18,6 +18,16 @@
 - [ ] **USE**: wire into the engine now (behind a provider interface, with a test)
 - [ ] **TRIAL**: try in a sandbox copy with throwaway credentials, then decide
 - [ ] **PARK**: useful later; name the phase
-- [ ] **KILL**: not useful, or not safe; record why so nobody re-evaluates it
+- [x] **KILL**: not useful, or not safe; record why so nobody re-evaluates it
 
 Questions to answer before the box is ticked: which pipeline stage does it serve (ideate, script, voice, visuals, render, post, measure, sell)? Does it beat what we already run on cost, quality or speed? Does it run headless on a keyless CI runner? Is there a steal worth taking (a prompt, a table, a script) even if the tool itself is not used?
+
+## Decision (2026-10-11)
+
+**KILL**, pipeline stage: render.
+
+A small typing-effect library with no licence file at the top level. Kinetic text is already done with GSAP in the phrase card.
+
+**Worth taking:** Nothing.
+
+**Only the owner can:** None.

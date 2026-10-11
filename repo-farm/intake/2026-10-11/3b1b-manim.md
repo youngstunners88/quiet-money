@@ -49,7 +49,17 @@ Note, there are two versions of manim.  This repository began as a personal proj
 
 - [ ] **USE**: wire into the engine now (behind a provider interface, with a test)
 - [ ] **TRIAL**: try in a sandbox copy with throwaway credentials, then decide
-- [ ] **PARK**: useful later; name the phase
+- [x] **PARK**: useful later; name the phase
 - [ ] **KILL**: not useful, or not safe; record why so nobody re-evaluates it
 
 Questions to answer before the box is ticked: which pipeline stage does it serve (ideate, script, voice, visuals, render, post, measure, sell)? Does it beat what we already run on cost, quality or speed? Does it run headless on a keyless CI runner? Is there a steal worth taking (a prompt, a table, a script) even if the tool itself is not used?
+
+## Decision (2026-10-11)
+
+**PARK**, pipeline stage: render.
+
+MIT and the right look for compounding and rule-of-72 graphs, but it is the OpenGL edition (ManimGL), built for a person at a desktop; the pipeline-friendly fork is Manim Community (cairo, pango, optional LaTeX), which needs system libraries and an install the keyless CI runner does not have. The graphs and number lines it is known for are reproducible in GSAP/SVG (cards already draw a compounding curve), and equations can use KaTeX in the page with no LaTeX install.
+
+**Worth taking:** Its visual grammar: axes that draw themselves, a curve that traces, a number line that fills. Add these as ledger card kinds.
+
+**Only the owner can:** Revisit if a sample of the ledger look still lacks equation morphing after KaTeX. Then trial Manim Community in a container build, not on every run.

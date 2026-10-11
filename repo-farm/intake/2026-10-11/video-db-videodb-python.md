@@ -71,6 +71,16 @@ VideoDB Python SDK provides programmatic access to VideoDB's serverless video in
 - [ ] **USE**: wire into the engine now (behind a provider interface, with a test)
 - [ ] **TRIAL**: try in a sandbox copy with throwaway credentials, then decide
 - [ ] **PARK**: useful later; name the phase
-- [ ] **KILL**: not useful, or not safe; record why so nobody re-evaluates it
+- [x] **KILL**: not useful, or not safe; record why so nobody re-evaluates it
 
 Questions to answer before the box is ticked: which pipeline stage does it serve (ideate, script, voice, visuals, render, post, measure, sell)? Does it beat what we already run on cost, quality or speed? Does it run headless on a keyless CI runner? Is there a steal worth taking (a prompt, a table, a script) even if the tool itself is not used?
+
+## Decision (2026-10-11)
+
+**KILL**, pipeline stage: render.
+
+Apache-2.0 SDK for a paid cloud service: it needs an API key and uploads our videos to a third party, to do search, scene extraction and editing that ffmpeg, the existing transcript tools and our own render already cover for free.
+
+**Worth taking:** Nothing.
+
+**Only the owner can:** If competitor-video search is ever needed, TokConnect (connected) already reads public TikTok data; no new vendor.

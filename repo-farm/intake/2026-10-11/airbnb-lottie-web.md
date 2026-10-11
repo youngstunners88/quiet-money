@@ -78,8 +78,18 @@ CC 2014 and up.
 ## Verdict (a person or the review step fills this in)
 
 - [ ] **USE**: wire into the engine now (behind a provider interface, with a test)
-- [ ] **TRIAL**: try in a sandbox copy with throwaway credentials, then decide
+- [x] **TRIAL**: try in a sandbox copy with throwaway credentials, then decide
 - [ ] **PARK**: useful later; name the phase
 - [ ] **KILL**: not useful, or not safe; record why so nobody re-evaluates it
 
 Questions to answer before the box is ticked: which pipeline stage does it serve (ideate, script, voice, visuals, render, post, measure, sell)? Does it beat what we already run on cost, quality or speed? Does it run headless on a keyless CI runner? Is there a steal worth taking (a prompt, a table, a script) even if the tool itself is not used?
+
+## Decision (2026-10-11)
+
+**TRIAL**, pipeline stage: render.
+
+MIT, plays After Effects JSON animations in a page, and goToAndStop(frame) makes it seek-safe like GSAP. Value is a sticker layer (coin, arrow, check, stamp) that gives motion-designer polish without a designer. Two cautions: the last release was 2025-05 (stable, not abandoned, but not moving) and free Lottie libraries carry mixed licences, so only animations we generate ourselves or ones whose licence is read and recorded may ship. The earlier diffusionstudio/lottie dossier (text to our own Lottie) is the clean source.
+
+**Worth taking:** Own-made Lottie stickers: no licence question, no per-asset cost.
+
+**Only the owner can:** Trial in a sandbox copy: five stickers, rendered inside a card, frames checked.

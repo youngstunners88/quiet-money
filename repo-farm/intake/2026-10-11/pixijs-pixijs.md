@@ -57,7 +57,17 @@ npm install --save-dev @types/web
 
 - [ ] **USE**: wire into the engine now (behind a provider interface, with a test)
 - [ ] **TRIAL**: try in a sandbox copy with throwaway credentials, then decide
-- [ ] **PARK**: useful later; name the phase
+- [x] **PARK**: useful later; name the phase
 - [ ] **KILL**: not useful, or not safe; record why so nobody re-evaluates it
 
 Questions to answer before the box is ticked: which pipeline stage does it serve (ideate, script, voice, visuals, render, post, measure, sell)? Does it beat what we already run on cost, quality or speed? Does it run headless on a keyless CI runner? Is there a steal worth taking (a prompt, a table, a script) even if the tool itself is not used?
+
+## Decision (2026-10-11)
+
+**PARK**, pipeline stage: render.
+
+MIT WebGL 2D engine for particles, shaders and thousands of sprites (coin rain, glow trails). Headless Chrome draws WebGL in software, which is slow and varies by machine, so it risks the render time budget; the intake flagged an install hook. Nothing in the current beats needs thousands of sprites.
+
+**Worth taking:** Particle ideas for the Escape series, done first with CSS and GSAP dots as cards already do.
+
+**Only the owner can:** Revisit when a scene needs particles that CSS cannot do at 30 fps.

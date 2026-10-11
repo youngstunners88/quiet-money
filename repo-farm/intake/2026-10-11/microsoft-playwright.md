@@ -52,9 +52,19 @@ Choose the path that fits your workflow:
 
 ## Verdict (a person or the review step fills this in)
 
-- [ ] **USE**: wire into the engine now (behind a provider interface, with a test)
+- [x] **USE**: wire into the engine now (behind a provider interface, with a test)
 - [ ] **TRIAL**: try in a sandbox copy with throwaway credentials, then decide
 - [ ] **PARK**: useful later; name the phase
 - [ ] **KILL**: not useful, or not safe; record why so nobody re-evaluates it
 
 Questions to answer before the box is ticked: which pipeline stage does it serve (ideate, script, voice, visuals, render, post, measure, sell)? Does it beat what we already run on cost, quality or speed? Does it run headless on a keyless CI runner? Is there a steal worth taking (a prompt, a table, a script) even if the tool itself is not used?
+
+## Decision (2026-10-11)
+
+**USE**, pipeline stage: render.
+
+Apache-2.0 and already in the environment (a Chromium is pre-installed). Two jobs HyperFrames does not do: (1) screen scenes, a real recording of our own Money Reset calculators and rule pages as authentic free b-roll; (2) contact-sheet QA of any rendered scene. HyperFrames stays the renderer for cards; Playwright is the camera for pages.
+
+**Worth taking:** Frame-by-frame capture with the page clock paused (seek, screenshot, repeat) gives deterministic video of any HTML scene, including ones GSAP alone cannot draw.
+
+**Only the owner can:** Build the screen-scene lane only after the ledger sample is approved.

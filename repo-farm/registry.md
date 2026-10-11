@@ -136,3 +136,37 @@ Each row was read from the project's own README, manifest, licence file or regis
 | Tool | Stage | Why |
 |---|---|---|
 | morluto/rea (rea-agents) |  | A reverse-engineering toolkit (MIT, MCP server) for binaries, applications and runtime behaviour. |
+
+## Intake 2026-10-11 (verified from dossiers in `repo-farm/intake/2026-10-11/`)
+
+Each row was read from the project's own README, manifest, licence file or registry entry; nothing was installed or run. Stars and dates were unavailable where the GitHub API is closed to this machine.
+
+### Active or adopted
+
+| Tool | Stage | Why |
+|---|---|---|
+| GSAP (greensock/GSAP) | render | Already the clock under every card and sketch scene (pinned 3.14.2, hash-checked in cards.ensure_gsap). |
+| Playwright (microsoft/playwright) | render | Apache-2.0 and already in the environment (a Chromium is pre-installed). |
+
+### On trial
+
+| Tool | Stage | Why |
+|---|---|---|
+| lottie-web (airbnb/lottie-web) | render | MIT, plays After Effects JSON animations in a page, and goToAndStop(frame) makes it seek-safe like GSAP. |
+
+### Parked (named condition)
+
+| Tool | Stage | Why |
+|---|---|---|
+| manim (3b1b/manim) | render | MIT and the right look for compounding and rule-of-72 graphs, but it is the OpenGL edition (ManimGL), built for a person at a desktop; the pipeline-friendly fork is Manim Community (cairo, pango, optional LaTeX), which needs… |
+| PixiJS (pixijs/pixijs) | render | MIT WebGL 2D engine for particles, shaders and thousands of sprites (coin rain, glow trails). |
+| WhisperX (m-bain/whisperX) | voice | BSD licence, word-level forced alignment. |
+
+### Rejected (recorded so nobody re-evaluates)
+
+| Tool | Stage | Why |
+|---|---|---|
+| anime.js (juliangarnier/anime) | render | MIT and well kept, but it does the job GSAP already does here. |
+| Theatre.js (theatre-js/theatre) | render | AGPL-3.0: network-use copyleft that would reach anything we ship around it, and it is a visual editor built for a person dragging keyframes, so an unattended pipeline gets little from it. |
+| theater.js (theater-js/theater.js) | render | A small typing-effect library with no licence file at the top level. |
+| VideoDB (video-db/videodb-python) | render | Apache-2.0 SDK for a paid cloud service: it needs an API key and uploads our videos to a third party, to do search, scene extraction and editing that ffmpeg, the existing transcript tools and our own render already cover for free. |

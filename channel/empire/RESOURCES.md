@@ -122,3 +122,33 @@ The owner's original setup doc is a list of tools for the agent to be aware of (
 `claude-environment.zip` is Grok's rewrite of that doc: an operating file with routing rules and per-tool cards. Its rules ("never install X", "Monid only as a fallback") are Grok's, not the owner's, and are not adopted. Read as data; nothing from it was installed or run.
 
 Standing notes: the studio keeps its own Muapi client (`faceless/muapi.py`) because unattended routines need the spend caps and the ledger; the earlier kill/park verdicts above are about what the scheduled routines may install, not about the owner's own sessions or machine. The cards for `maintain-skills` and `vercel` could not be read intact.
+
+## Motion Studio: nine repos from the owner's Google Doc (2026-10-11)
+
+Read with `python -m faceless intake` (dossiers in `repo-farm/intake/2026-10-11/`). Dossiers made by `python -m faceless intake`; GitHub's API was closed from this machine, so stars and dates are partly unknown and the judgments rest on READMEs, licence files and what the studio already runs.
+
+| resource | verdict | stage | why | worth taking |
+|---|---|---|---|---|
+| GSAP (greensock/GSAP) | **use** | render | Already the clock under every card and sketch scene (pinned 3.14.2, hash-checked in cards.ensure_gsap). The dossier could not read a licence file: GSAP is free for commercial use under GreenSock's own no-charge licence, not an OSI one, so check the current terms by hand before the channel earns money. Only set/to/from/fromTo and a few properties are seek-safe in HyperFrames, which is the rule the card skill already records. | Nothing new to build; the ledger look is GSAP scenes in a new theme. |
+| Playwright (microsoft/playwright) | **use** | render | Apache-2.0 and already in the environment (a Chromium is pre-installed). Two jobs HyperFrames does not do: (1) screen scenes, a real recording of our own Money Reset calculators and rule pages as authentic free b-roll; (2) contact-sheet QA of any rendered scene. HyperFrames stays the renderer for cards; Playwright is the camera for pages. | Frame-by-frame capture with the page clock paused (seek, screenshot, repeat) gives deterministic video of any HTML scene, including ones GSAP alone cannot draw. |
+| lottie-web (airbnb/lottie-web) | **trial** | render | MIT, plays After Effects JSON animations in a page, and goToAndStop(frame) makes it seek-safe like GSAP. Value is a sticker layer (coin, arrow, check, stamp) that gives motion-designer polish without a designer. Two cautions: the last release was 2025-05 (stable, not abandoned, but not moving) and free Lottie libraries carry mixed licences, so only animations we generate ourselves or ones whose licence is read and recorded may ship. The earlier diffusionstudio/lottie dossier (text to our own Lottie) is the clean source. | Own-made Lottie stickers: no licence question, no per-asset cost. |
+| manim (3b1b/manim) | **park** | render | MIT and the right look for compounding and rule-of-72 graphs, but it is the OpenGL edition (ManimGL), built for a person at a desktop; the pipeline-friendly fork is Manim Community (cairo, pango, optional LaTeX), which needs system libraries and an install the keyless CI runner does not have. The graphs and number lines it is known for are reproducible in GSAP/SVG (cards already draw a compounding curve), and equations can use KaTeX in the page with no LaTeX install. | Its visual grammar: axes that draw themselves, a curve that traces, a number line that fills. Add these as ledger card kinds. |
+| anime.js (juliangarnier/anime) | **kill** | render | MIT and well kept, but it does the job GSAP already does here. A second animation engine would be a second dependency to pin and hash-check, and HyperFrames' seek rules are written for GSAP. | Nothing. |
+| PixiJS (pixijs/pixijs) | **park** | render | MIT WebGL 2D engine for particles, shaders and thousands of sprites (coin rain, glow trails). Headless Chrome draws WebGL in software, which is slow and varies by machine, so it risks the render time budget; the intake flagged an install hook. Nothing in the current beats needs thousands of sprites. | Particle ideas for the Escape series, done first with CSS and GSAP dots as cards already do. |
+| WhisperX (m-bain/whisperX) | **park** | voice | BSD licence, word-level forced alignment. Our primary voice (Edge) and ElevenLabs return word timings; only the Gemini fallback estimates them. WhisperX needs PyTorch (gigabytes) and is meant for GPU, so it would slow every CI run to fix a fallback. Lighter aligners exist if the fallback ever matters. | The idea: align the text to the audio instead of estimating. |
+| Theatre.js (theatre-js/theatre) | **kill** | render | AGPL-3.0: network-use copyleft that would reach anything we ship around it, and it is a visual editor built for a person dragging keyframes, so an unattended pipeline gets little from it. (The Doc's link, theater-js/theater.js, is a different small project; see its own dossier.) | Nothing. |
+| theater.js (theater-js/theater.js) | **kill** | render | A small typing-effect library with no licence file at the top level. Kinetic text is already done with GSAP in the phrase card. | Nothing. |
+| VideoDB (video-db/videodb-python) | **kill** | render | Apache-2.0 SDK for a paid cloud service: it needs an API key and uploads our videos to a third party, to do search, scene extraction and editing that ffmpeg, the existing transcript tools and our own render already cover for free. | Nothing. |
+
+### Decisions only the owner can make
+
+- **GSAP (greensock/GSAP):** Read gsap.com/standard-license once and note the date here.
+- **Playwright (microsoft/playwright):** Build the screen-scene lane only after the ledger sample is approved.
+- **lottie-web (airbnb/lottie-web):** Trial in a sandbox copy: five stickers, rendered inside a card, frames checked.
+- **manim (3b1b/manim):** Revisit if a sample of the ledger look still lacks equation morphing after KaTeX. Then trial Manim Community in a container build, not on every run.
+- **anime.js (juliangarnier/anime):** None.
+- **PixiJS (pixijs/pixijs):** Revisit when a scene needs particles that CSS cannot do at 30 fps.
+- **WhisperX (m-bain/whisperX):** Revisit if the Gemini voice becomes the default.
+- **Theatre.js (theatre-js/theatre):** None.
+- **theater.js (theater-js/theater.js):** None.
+- **VideoDB (video-db/videodb-python):** If competitor-video search is ever needed, TokConnect (connected) already reads public TikTok data; no new vendor.

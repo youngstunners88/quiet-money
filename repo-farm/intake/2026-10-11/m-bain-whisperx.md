@@ -59,7 +59,17 @@ If you’re looking for a transcription API for meetings, consider checking out 
 
 - [ ] **USE**: wire into the engine now (behind a provider interface, with a test)
 - [ ] **TRIAL**: try in a sandbox copy with throwaway credentials, then decide
-- [ ] **PARK**: useful later; name the phase
+- [x] **PARK**: useful later; name the phase
 - [ ] **KILL**: not useful, or not safe; record why so nobody re-evaluates it
 
 Questions to answer before the box is ticked: which pipeline stage does it serve (ideate, script, voice, visuals, render, post, measure, sell)? Does it beat what we already run on cost, quality or speed? Does it run headless on a keyless CI runner? Is there a steal worth taking (a prompt, a table, a script) even if the tool itself is not used?
+
+## Decision (2026-10-11)
+
+**PARK**, pipeline stage: voice.
+
+BSD licence, word-level forced alignment. Our primary voice (Edge) and ElevenLabs return word timings; only the Gemini fallback estimates them. WhisperX needs PyTorch (gigabytes) and is meant for GPU, so it would slow every CI run to fix a fallback. Lighter aligners exist if the fallback ever matters.
+
+**Worth taking:** The idea: align the text to the audio instead of estimating.
+
+**Only the owner can:** Revisit if the Gemini voice becomes the default.
