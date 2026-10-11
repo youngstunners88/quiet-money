@@ -2045,3 +2045,15 @@
 {"day": "2026-10-11", "provider": "composio", "unit": "calls", "amount": 1, "usd": 0.0, "job": "2026-10-01-s0-story-ronald-read-the-janitor-who-died"}
 {"day": "2026-10-11", "provider": "composio", "unit": "calls", "amount": 1, "usd": 0.0, "job": "2026-10-01-s1-math-why-paying-only-the-minimum-on-a"}
 {"day": "2026-10-11", "provider": "composio", "unit": "calls", "amount": 1, "usd": 0.0, "job": "2026-10-06-s7-myth-myth-your-house-is-your-best-inv"}
+{"day": "2026-10-11", "provider": "gemini", "unit": "tokens", "amount": 4697, "usd": 0.0, "job": null}
+{"day": "2026-10-11", "provider": "gemini", "unit": "tokens", "amount": 4063, "usd": 0.0, "job": null}
+{"day": "2026-10-11", "provider": "gemini", "unit": "tokens", "amount": 667, "usd": 0.0, "job": null}
+{"day": "2026-10-11", "provider": "muapi", "unit": "desk_usd", "amount": 0.0002, "usd": 0.0002, "job": "2026-10-11-s0-ledger-whole-life-insurance-vs-term-lif"}
+{"day": "2026-10-11", "provider": "muapi", "unit": "desk_usd", "amount": 0.0002, "usd": 0.0002, "job": "2026-10-11-s0-ledger-whole-life-insurance-vs-term-lif"}
+{"day": "2026-10-11", "provider": "gemini", "unit": "tokens", "amount": 4129, "usd": 0.0, "job": null}
+{"day": "2026-10-11", "provider": "gemini", "unit": "tokens", "amount": 758, "usd": 0.0, "job": null}
+{"day": "2026-10-11", "provider": "muapi", "unit": "desk_usd", "amount": 0.0002, "usd": 0.0002, "job": "2026-10-11-s0-ledger-whole-life-insurance-vs-term-lif"}
+{"day": "2026-10-11", "provider": "edge", "unit": "chars", "amount": 1018, "usd": 0.0, "job": null}
+{"day": "2026-10-11", "provider": "edge", "unit": "chars", "amount": 1018, "usd": 0.0, "job": null}
+{"day": "2026-10-11", "provider": "composio", "unit": "calls", "amount": 1, "usd": 0.0, "job": "2026-10-02-s3-escape-the-rat-race-math-the-exact-numb"}
+{"day": "2026-10-11", "provider": "composio", "unit": "calls", "amount": 1, "usd": 0.0, "job": "2026-10-06-s7-myth-myth-your-house-is-your-best-inv"}
