@@ -240,7 +240,8 @@ def _compare(sid: str, t0: float, dur: float, spec: dict, accent: str, kicker: s
     js: list[str] = []
     if spec["numeric"]:
         hi = max(spec["va"], spec["vb"])
-        base, top = 1500, 820
+        base, top = 1090, 560     # the whole chart sits above the caption band (centred on caption_y), so live
+                                  # captions never print over a bar or its value label
         parts = []
         for k, (label, v, col, cx) in enumerate(((spec["a"], spec["va"], accent, 340), (spec["b"], spec["vb"], "rgba(255,255,255,.38)", 740))):
             h = max(70, round(top * v / hi))
@@ -249,7 +250,7 @@ def _compare(sid: str, t0: float, dur: float, spec: dict, accent: str, kicker: s
                          f'<div class="cv" id="{sid}v{k}" style="left:{cx - 200}px;top:{base - h - fs - 36}px;width:400px;font-size:{fs}px">{html.escape(label)}</div>')
             js.append(f'tl.fromTo("#{sid}b{k}",{{scaleY:0}},{{scaleY:1,duration:{dur * 0.5:.3f},ease:"power3.out"}},{t0 + 0.25 + 0.15 * k:.3f});')
             js.append(f'tl.fromTo("#{sid}v{k}",{{opacity:0,y:24}},{{opacity:1,y:0,duration:0.4,ease:"power2.out"}},{t0 + 0.25 + dur * 0.4 + 0.15 * k:.3f});')
-        parts.append(f'<div class="vs" id="{sid}x" style="left:490px;top:{base + 40}px">VS</div>')
+        parts.append(f'<div class="vs" id="{sid}x" style="left:490px;top:{base - 100}px">VS</div>')
         js.append(f'tl.fromTo("#{sid}x",{{opacity:0,scale:0.5}},{{opacity:1,scale:1,duration:0.4,ease:"back.out(2)"}},{t0 + 0.2:.3f});')
         return f'<div class="kick">{html.escape(kicker)}</div>' + "".join(parts), js
     fs = min(170, int(900 / (max(5, len(spec["a"]), len(spec["b"])) * 0.5)))

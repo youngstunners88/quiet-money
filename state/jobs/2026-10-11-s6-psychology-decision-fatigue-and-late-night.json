@@ -1,0 +1,71 @@
+{
+  "id": "2026-10-11-s6-psychology-decision-fatigue-and-late-night",
+  "pillar": "psychology",
+  "topic": "Decision fatigue and late-night online shopping",
+  "day": "2026-10-11",
+  "slot": 6,
+  "status": "published",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-11T09:35:51Z",
+      "words": 185
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-11T09:36:09Z",
+      "seconds": 71.208,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-11T09:38:53Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-11T09:41:13Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-11T09:41:13Z",
+      "score": 99
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-11T09:41:14Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-10-11T09:41:14Z",
+      "local": "2026-10-12T11:30:00-04:00"
+    }
+  ],
+  "artifacts": {
+    "angle": "why tired brains buy; the 48-hour rule",
+    "title": "Why Tired Brains Buy Stuff at Night",
+    "video": "/home/user/quiet-money/production/output/2026-10-11/2026-10-11-s6-psychology-decision-fatigue-and-late-night/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-11/2026-10-11-s6-psychology-decision-fatigue-and-late-night/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-10-12/slot2-psychology",
+        "post_at": "2026-10-12T11:30:00-04:00"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 99,
+    "passed": true
+  },
+  "cost": {
+    "tts:edge:chars": 1128
+  },
+  "notes": []
+}

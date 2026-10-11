@@ -1,0 +1,84 @@
+{
+  "title": "Why Tired Brains Fall For Late-Night Online Shopping",
+  "hook_text": "YOUR TIRED BRAIN WANTS TO SHOP",
+  "beats": [
+    {
+      "say": "Your brain makes thousands of choices all day long.",
+      "callout": "",
+      "visual": "A steaming ceramic coffee mug resting on a dark wood desk under a single warm desk lamp, cinematic side lighting, low angle."
+    },
+    {
+      "say": "By midnight, the part of your mind that says no is completely offline.",
+      "callout": "STEP ONE",
+      "visual": "An open laptop casting a cool blue glow onto a messy wooden nightstand in a dark bedroom, macro shot, blurred background."
+    },
+    {
+      "say": "That's when online cart checkouts spike by over forty percent.",
+      "callout": "STEP TWO",
+      "visual": "Close-up of a hand tapping a smooth glass tabletop next to a closed leather notebook, moody lighting, shallow depth of field."
+    },
+    {
+      "say": "Retailers know you're exhausted, so they make buying as easy as one tap.",
+      "callout": "STEP THREE",
+      "visual": "A sleek dark ceramic plate sitting empty on a marble kitchen counter, overhead shot, stark shadows from afternoon sun."
+    },
+    {
+      "say": "You think you're treating yourself after a brutal week at work.",
+      "callout": "",
+      "visual": "A heavy velvet armchair pulled up to a tall window in a quiet room, dusk light filtering through sheer white curtains."
+    },
+    {
+      "say": "In reality, you're just paying an impulse tax on pure mental fatigue.",
+      "callout": "IMPULSE VS TAX",
+      "visual": "A stainless steel kitchen faucet with a single water droplet frozen mid-fall, moody backlighting, high contrast."
+    },
+    {
+      "say": "Think about it. A $15 subscription over 10 years costs you $1,800.",
+      "callout": "$1,800",
+      "visual": "A stack of old paper books bound together with a simple brown twine string on a slate shelf, dramatic shadows."
+    },
+    {
+      "say": "Small mindless charges quietly ruin budgets before the month even ends.",
+      "callout": "",
+      "visual": "A pair of heavy brass keys resting on a rustic oak dining table, soft morning light, shallow focus."
+    },
+    {
+      "say": "That's why you need the forty-eight-hour rule.",
+      "callout": "48-HOUR RULE",
+      "visual": "A pocket watch lying face down on a concrete surface, dramatic edge lighting, cinematic industrial style."
+    },
+    {
+      "say": "Put the item in your cart, walk away, and wait two full days.",
+      "callout": "",
+      "visual": "A quiet hallway with a single closed wooden door at the end, soft warm ambient light from an overhead sconce."
+    },
+    {
+      "say": "If you still want it then, buy it. Most times, the urge vanishes.",
+      "callout": "DESIRE VS GONE",
+      "visual": "A bare wooden coat rack standing alone against a neutral plaster wall, minimalist composition, soft shadows."
+    },
+    {
+      "say": "Because protecting your wallet starts with guarding your energy, and that's exactly how",
+      "callout": "",
+      "visual": "A glowing amber streetlamp casting a long shadow on an empty urban sidewalk at night, cinematic moody tones."
+    }
+  ],
+  "caption": "Your late-night scrolling is costing more than sleep. Try the 48-hour rule tonight.\n\n#moneypsychology #personalfinance #smartmoney #savingmoney #budgeting",
+  "description": "Late-night online shopping happens when decision fatigue takes over. Learn the simple 48-hour rule to stop impulse purchases before they drain your bank account.",
+  "hashtags": [
+    "#moneypsychology",
+    "#personalfinance",
+    "#smartmoney",
+    "#savingmoney",
+    "#budgeting"
+  ],
+  "first_comment": "What's the last late-night impulse buy you regret? Drop it below.",
+  "facts": [
+    {
+      "claim": "A $15/month subscription for 10 years = $1,800",
+      "basis": "$15 * 12 months = $180 per year. $180 * 10 years = $1,800 total paid out."
+    }
+  ],
+  "source": "llm",
+  "pillar": "psychology"
+}

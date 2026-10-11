@@ -1,0 +1,92 @@
+{
+  "title": "One Index Card Beats Every Financial Plan",
+  "hook_text": "COMPLEX FINANCIAL PLANS ALWAYS FAIL",
+  "beats": [
+    {
+      "say": "Complex financial plans always fail because they require too much willpower.",
+      "callout": "",
+      "visual": "A dark wooden desk with a single blank white index card under dramatic top-down lighting."
+    },
+    {
+      "say": "Here's the one rule system you need instead.",
+      "callout": "",
+      "visual": "A hand placing a black fountain pen flat onto the center of the wooden desk."
+    },
+    {
+      "say": "Step one. Grab a blank card and write your top three rules.",
+      "callout": "STEP ONE",
+      "visual": "Extreme close-up of dark ink writing clear rules on thick white paper."
+    },
+    {
+      "say": "Keep it simple so you never have to guess.",
+      "callout": "",
+      "visual": "A blurred stack of heavy financial textbooks pushed out of frame."
+    },
+    {
+      "say": "Step two. Automate every single bill on payday.",
+      "callout": "STEP TWO",
+      "visual": "Fingers typing on a sleek silver laptop keyboard in a dim room."
+    },
+    {
+      "say": "That stops late fees and mindless spending instantly.",
+      "callout": "",
+      "visual": "A smartphone screen glowing with a transaction notification, shot from behind."
+    },
+    {
+      "say": "Step three. Invest $200 a month into broad index funds.",
+      "callout": "STEP THREE",
+      "visual": "A ceramic coffee cup sitting next to a closed laptop on a marble table."
+    },
+    {
+      "say": "Because investing $200 a month at 8% for 40 years reaches $698,202.",
+      "callout": "$698,202 VS $298,072",
+      "visual": "An open leather notebook showing abstract financial growth charts in soft light."
+    },
+    {
+      "say": "Wait until you see what happens if you wait just ten years.",
+      "callout": "",
+      "visual": "A calendar page flipping rapidly in soft focus."
+    },
+    {
+      "say": "Starting at 35 drops that final total down to $298,072.",
+      "callout": "10 YEARS LATE",
+      "visual": "An hourglass with white sand pouring down against a dark textured backdrop."
+    },
+    {
+      "say": "That's a $400,130 penalty for waiting.",
+      "callout": "$400,130 LOSS",
+      "visual": "A sharp shadow stretching across a minimalist gray concrete wall."
+    },
+    {
+      "say": "Keep your card on your mirror so you don't forget that...",
+      "callout": "",
+      "visual": "A hand pinning a small white card to the edge of a foggy bathroom mirror."
+    }
+  ],
+  "caption": "Throw out the complex spreadsheets. One index card is all you need to build real wealth. Follow for the money rules school never taught you. #PersonalFinance #MoneyTips #WealthBuilding #Investing101 #SmartMoney",
+  "description": "Stop relying on complex financial plans that require endless willpower. Grab an index card, write down three simple rules, and automate your wealth today.",
+  "hashtags": [
+    "#PersonalFinance",
+    "#MoneyTips",
+    "#WealthBuilding",
+    "#Investing101",
+    "#SmartMoney"
+  ],
+  "first_comment": "What's the #1 rule on your personal money card?",
+  "facts": [
+    {
+      "claim": "Investing $200 a month at 8% for 40 years reaches $698,202",
+      "basis": "$200/month invested for 40 years at 8%/yr (monthly compounding) = $698,202"
+    },
+    {
+      "claim": "Starting at 35 drops that final total down to $298,072",
+      "basis": "$200/month invested for 30 years at 8%/yr (monthly compounding) = $298,072"
+    },
+    {
+      "claim": "10 years late costs $400,130",
+      "basis": "Starting at 25 vs 35 with $200/month at 8% until 65: $698,202 vs $298,072 (10 years late costs $400,130)"
+    }
+  ],
+  "source": "llm",
+  "pillar": "playbook"
+}

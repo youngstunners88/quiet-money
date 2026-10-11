@@ -1,0 +1,94 @@
+{
+  "title": "The Credit Score Myth That Keeps You Blind",
+  "hook_text": "DOES CHECKING YOUR CREDIT SCORE HURT?",
+  "beats": [
+    {
+      "say": "Checking your own credit score drops your score by exactly zero points.",
+      "callout": "",
+      "visual": "Cinematic close-up of a hand holding a sleek black smartphone at night, ambient blue screen glow bouncing off a dark oak desk, shallow depth of field."
+    },
+    {
+      "say": "Yet millions of smart people stay completely blind to their real finances because of this myth.",
+      "callout": "",
+      "visual": "Moody atmospheric shot of a massive brutalist concrete tower against a stormy grey sky, symbolizing financial institutions."
+    },
+    {
+      "say": "Credit rating bureaus divide every single inquiry into two completely different buckets.",
+      "callout": "",
+      "visual": "Close-up of a heavy antique brass scale balanced evenly in a dimly lit, minimalist study with moody window lighting."
+    },
+    {
+      "say": "The first category is known as a soft inquiry.",
+      "callout": "SOFT INQUIRY",
+      "visual": "Cinematic silhouette of a person standing quietly near a floor-to-ceiling glass window overlooking a foggy urban skyline."
+    },
+    {
+      "say": "Whenever you log in to check your own credit score, it's counted as a soft pull.",
+      "callout": "",
+      "visual": "Over-the-shoulder shot of a blurred phone screen held by hands in a warm, dimly lit cafe setting."
+    },
+    {
+      "say": "Employer background checks and pre-approved credit offers use soft pulls as well.",
+      "callout": "",
+      "visual": "Extreme close-up of dark leather executive chairs surrounding a polished mahogany boardroom table in soft shadows."
+    },
+    {
+      "say": "Soft pulls never hurt your score, no matter how many times you check.",
+      "callout": "",
+      "visual": "High-contrast shot of hands neatly organizing dark paper files in a sleek modern desk environment."
+    },
+    {
+      "say": "But here's the part nobody mentions.",
+      "callout": "THE REAL TRAP",
+      "visual": "Dramatic low-angle view of a dark hallway with doors slightly cracked open, harsh directional light cutting through the shadows."
+    },
+    {
+      "say": "A hard inquiry only occurs when you actively apply for a brand new credit line.",
+      "callout": "HARD INQUIRY",
+      "visual": "Close-up of a fountain pen resting on top of a thick black leather folder on a dark marble surface."
+    },
+    {
+      "say": "A lender inspects your full financial history to see if you're a high risk borrower.",
+      "callout": "",
+      "visual": "Overhead shot of a glass desk with architectural scale models and soft overhead spotlighting."
+    },
+    {
+      "say": "That single hard pull might knock about 5 points off your credit score temporarily.",
+      "callout": "",
+      "visual": "Cinematic shot of a silver pocket watch lying flat on a dark slate surface, moody lighting."
+    },
+    {
+      "say": "In reality, ignoring your credit card balances is what actually ruins your credit score.",
+      "callout": "",
+      "visual": "Dramatic silhouette of a person sitting at a minimalist desk at night with a single warm lamp casting deep shadows."
+    },
+    {
+      "say": "A $3,000 card balance at 24% APR paying minimums takes 15 years and $4,887 in interest.",
+      "callout": "$4,887 IN INTEREST",
+      "visual": "Close-up of hands typing slowly on a dark mechanical keyboard, backlit with subtle amber LED light."
+    },
+    {
+      "say": "Follow for the money rules school never taught you, so you know why...",
+      "callout": "",
+      "visual": "Cinematic wide shot of a solitary figure walking down an empty, illuminated city street at dusk."
+    }
+  ],
+  "caption": "Checking your credit score doesn't hurt it. Here is the difference between soft and hard inquiries.\n\n#money #creditscore #personalfinance #financialliteracy #quietmoney",
+  "description": "Checking your own credit score is a soft inquiry that carries zero penalty. Hard inquiries only happen when you formally apply for new credit lines, temporarily dipping your score by a few points. Real financial damage comes from avoiding your numbers and making minimum payments on high-interest debt.",
+  "hashtags": [
+    "#money",
+    "#creditscore",
+    "#personalfinance",
+    "#financialliteracy",
+    "#quietmoney"
+  ],
+  "first_comment": "How often do you check your credit score?",
+  "facts": [
+    {
+      "claim": "A $3,000 card balance at 24% APR paying minimums takes 15 years and $4,887 in interest.",
+      "basis": "Credit card minimum payment math: $3,000 at 24% APR paying minimum (1% principal + interest, min $25) takes 183 months (~15 years) and costs $4,887 in interest."
+    }
+  ],
+  "source": "llm",
+  "pillar": "myth"
+}

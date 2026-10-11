@@ -1,0 +1,83 @@
+{
+  "title": "Why Checking Your Credit Score Doesn't Lower It",
+  "hook_text": "CHECKING YOUR SCORE LOWERS IT?",
+  "beats": [
+    {
+      "say": "Most people think checking their credit score hurts it. That's completely false.",
+      "callout": "",
+      "visual": "Cinematic close-up of a dark wooden desk with a vintage brass lamp, warm single-source lighting, shallow depth of field."
+    },
+    {
+      "say": "Here's what banks don't tell you about how credit checks actually work behind closed doors.",
+      "callout": "THE TRUTH",
+      "visual": "A sleek dark metal fountain pen resting on a blank textured paper notebook, moody side lighting."
+    },
+    {
+      "say": "Every time you look at your own score, you trigger a soft inquiry.",
+      "callout": "SOFT INQUIRY",
+      "visual": "Fingers of a person in a dark wool sweater scrolling slowly on a matte black smartphone screen from behind."
+    },
+    {
+      "say": "Soft inquiries never touch your score. You can check it every single day for years.",
+      "callout": "ZERO DAMAGE",
+      "visual": "A steaming ceramic coffee cup on a reclaimed wood table, soft morning window light cutting across the room."
+    },
+    {
+      "say": "Your score stays completely safe. The myth comes from confusing soft pulls with hard pulls.",
+      "callout": "SOFT VS HARD",
+      "visual": "A close-up of a heavy metal key ring on a dark slate surface, dramatic shadows."
+    },
+    {
+      "say": "A hard inquiry happens when you apply for a loan or a new credit card.",
+      "callout": "STEP ONE",
+      "visual": "An open leather-bound planner under dim amber desk lighting, shot from a high angle."
+    },
+    {
+      "say": "That specific action puts a temporary dent in your numbers.",
+      "callout": "",
+      "visual": "A blurred silhouette of a person walking past a tall frosted glass window in a quiet hallway."
+    },
+    {
+      "say": "Even then, a single hard pull rarely drops your score by more than five points.",
+      "callout": "5 POINTS",
+      "visual": "A heavy glass paperweight sitting on top of stacked leather books, moody cinematic grading."
+    },
+    {
+      "say": "It falls off your report completely after two years, and fades away.",
+      "callout": "24 MONTHS",
+      "visual": "A solitary silver pocket watch ticking on a dark wooden surface, extreme macro shot."
+    },
+    {
+      "say": "So stop flying blind out of fear. Knowledge costs you nothing.",
+      "callout": "",
+      "visual": "An unlit black candle on a stone slab, atmospheric smoke curling slowly in the background."
+    },
+    {
+      "say": "Follow for the money rules school never taught you, because most people think checking...",
+      "callout": "",
+      "visual": "A pair of hands sliding a dark leather journal shut on a minimalist concrete table."
+    }
+  ],
+  "caption": "Stop letting old wives' tales keep you in the dark about your own finances. Check your score today. #creditscore #personalfinance #moneymyth #moneytips #financialliteracy",
+  "description": "The myth that checking your credit score lowers it stops millions from monitoring their financial health. Here is the exact difference between soft and hard inquiries.",
+  "hashtags": [
+    "#creditscore",
+    "#personalfinance",
+    "#moneymyth",
+    "#moneytips",
+    "#financialliteracy"
+  ],
+  "first_comment": "Did you use to think checking your score hurt it? Drop a comment below.",
+  "facts": [
+    {
+      "claim": "Checking your own credit score is a soft inquiry that does not lower your score",
+      "basis": "Standard credit bureau scoring rules regarding consumer-initiated checks"
+    },
+    {
+      "claim": "Hard inquiries occur during loan or credit card applications and temporarily impact your score",
+      "basis": "Standard FICO and VantageScore calculation models"
+    }
+  ],
+  "source": "llm",
+  "pillar": "myth"
+}

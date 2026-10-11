@@ -1,0 +1,84 @@
+{
+  "title": "One Index Card Beats Every Budget App",
+  "hook_text": "COMPLEX BUDGETS ALWAYS FAIL YOU",
+  "beats": [
+    {
+      "say": "Complex budgets always fail you because humans hate math.",
+      "callout": "",
+      "visual": "A blank paper index card resting on a dark walnut desk under warm side lighting, cinematic macro shot."
+    },
+    {
+      "say": "Here's the fix. Grab a physical index card today.",
+      "callout": "STEP ONE",
+      "visual": "A hand placing a black pen beside a blank white card on a wooden table, top-down view."
+    },
+    {
+      "say": "Step one. Write down your absolute maximum savings rate.",
+      "callout": "STEP TWO",
+      "visual": "A hand writing crisp numbers on a card with a black fountain pen, extreme close-up on fingers."
+    },
+    {
+      "say": "Step two. Pick two fixed spending categories you refuse to track.",
+      "callout": "STEP THREE",
+      "visual": "A minimalist leather wallet and keys sitting next to a blank card, dramatic shadows."
+    },
+    {
+      "say": "Step three. Put a hard cap on your variable weekend spending.",
+      "callout": "HARD CAP",
+      "visual": "A hand sliding a blank index card into a leather pocket planner, moody soft focus."
+    },
+    {
+      "say": "That's it. No spreadsheets. No fifty dollar apps.",
+      "callout": "NO APPS",
+      "visual": "A closed laptop on a minimalist desk with warm amber lamp light filtering through blinds."
+    },
+    {
+      "say": "But here's the part nobody mentions about simplicity.",
+      "callout": "",
+      "visual": "A single index card propped up against a ceramic coffee mug on a dark concrete counter."
+    },
+    {
+      "say": "Rules you can see every morning actually stick in your brain.",
+      "callout": "VISIBLE RULES",
+      "visual": "A hand turning off a brass bedside lamp at dawn, cinematic shadows across a nightstand."
+    },
+    {
+      "say": "Because a $5 day habit turns into $226,659 over thirty years.",
+      "callout": "$226,659",
+      "visual": "A lone coin resting on a dark slate surface, moody rim lighting from the side."
+    },
+    {
+      "say": "That wealth isn't built on complex math.",
+      "callout": "",
+      "visual": "A vintage mechanical desk clock ticking silently in soft focus, dark aesthetic."
+    },
+    {
+      "say": "It's built on boring rules you follow every single day.",
+      "callout": "",
+      "visual": "A clean wooden desk with a single closed notebook and pen, minimalist aesthetic."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "A blank index card sitting under a warm spotlight on a dark wooden table, fading out."
+    }
+  ],
+  "caption": "Throw out the spreadsheets. Write your rules on a single card today. #moneyrules #personalfinance #wealth #budgeting #investing",
+  "description": "Complex budgets fail because they rely on willpower and math. A single index card keeps your financial rules visible and simple.",
+  "hashtags": [
+    "#moneyrules",
+    "#personalfinance",
+    "#wealth",
+    "#budgeting",
+    "#investing"
+  ],
+  "first_comment": "What's the #1 rule currently written on your index card?",
+  "facts": [
+    {
+      "claim": "$5/day habit equals $226,659 over 30 years invested monthly at 8%",
+      "basis": "$5/day habit = $1,825/year; invested monthly at 8% for 30 years = $226,659 from fact sheet"
+    }
+  ],
+  "source": "llm",
+  "pillar": "playbook"
+}

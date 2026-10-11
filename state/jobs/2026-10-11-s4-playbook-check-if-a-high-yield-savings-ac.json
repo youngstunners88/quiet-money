@@ -1,0 +1,71 @@
+{
+  "id": "2026-10-11-s4-playbook-check-if-a-high-yield-savings-ac",
+  "pillar": "playbook",
+  "topic": "Check if a high-yield savings account beats your current one",
+  "day": "2026-10-11",
+  "slot": 4,
+  "status": "published",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-11T09:21:19Z",
+      "words": 184
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-11T09:21:59Z",
+      "seconds": 68.856,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-11T09:22:43Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-11T09:24:56Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-11T09:24:56Z",
+      "score": 99
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-11T09:24:57Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-10-11T09:24:57Z",
+      "local": "2026-10-11T21:00:00-04:00"
+    }
+  ],
+  "artifacts": {
+    "angle": "compare APY; move the emergency fund",
+    "title": "The 15-Minute Bank Move You Need Today",
+    "video": "/home/user/quiet-money/production/output/2026-10-11/2026-10-11-s4-playbook-check-if-a-high-yield-savings-ac/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-11/2026-10-11-s4-playbook-check-if-a-high-yield-savings-ac/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-10-11/slot5-playbook",
+        "post_at": "2026-10-11T21:00:00-04:00"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 98,
+    "passed": true
+  },
+  "cost": {
+    "tts:edge:chars": 1130
+  },
+  "notes": []
+}

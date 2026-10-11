@@ -1,0 +1,89 @@
+{
+  "title": "The One Index Card That Beats Complex Budgets",
+  "hook_text": "THIS $400,130 DELAY TRAP",
+  "beats": [
+    {
+      "say": "Waiting 10 years to invest $200 a month at 8% costs $400,130 in gains.",
+      "callout": "",
+      "visual": "A dramatic close-up of an hourglass on a dark wooden desk with sunlight filtering through blinds."
+    },
+    {
+      "say": "Overcomplicated money plans always fail, but three simple rules written down today fix that.",
+      "callout": "",
+      "visual": "Overhead shot of hands placing a clean white index card on a dark oak table."
+    },
+    {
+      "say": "At 8% interest, $200 a month from 25 to 65 turns into $698,202 wealth.",
+      "callout": "",
+      "visual": "Cinematic shot of a single vintage brass key lying next to a neat stack of golden coins."
+    },
+    {
+      "say": "Wait until 35 to start, and that exact same habit yields only $298,072 at 65.",
+      "callout": "$698,202 VS $298,072",
+      "visual": "Side angle of two glass jars on a stone shelf, one overflowing with coins and one mostly empty."
+    },
+    {
+      "say": "You don't need a complex 50 page spreadsheet to build your financial future.",
+      "callout": "",
+      "visual": "Wide cinematic shot of an empty minimalist office with soft morning sunlight across dark walls."
+    },
+    {
+      "say": "You just need three strict rules written on a single index card today.",
+      "callout": "",
+      "visual": "Close-up of a matte black fountain pen resting across a plain white paper card."
+    },
+    {
+      "say": "Step one. Grab a blank card and write your exact monthly target investment.",
+      "callout": "STEP ONE",
+      "visual": "Hands holding a simple index card above a tidy desk setup bathed in warm lamplight."
+    },
+    {
+      "say": "But here's the part nobody mentions about human behavior and daily spending.",
+      "callout": "",
+      "visual": "Silhouette of a person standing thoughtfully by a large floor-to-ceiling window at dusk."
+    },
+    {
+      "say": "If your financial rules aren't binary, your brain negotiates away your savings nightly.",
+      "callout": "",
+      "visual": "Atmospheric shot of a quiet living room with soft shadows and warm evening ambiance."
+    },
+    {
+      "say": "Step two. Write a strict rule, like never buying non-essentials on credit cards.",
+      "callout": "STEP TWO",
+      "visual": "A sleek dark leather wallet sitting closed next to a small desk lamp."
+    },
+    {
+      "say": "Step three. Log into your bank app right now and automate the monthly transfer.",
+      "callout": "STEP THREE",
+      "visual": "Close-up from behind a hand tapping a modern smartphone screen in dim light."
+    },
+    {
+      "say": "Follow for the money rules school never taught you to stay quietly ahead.",
+      "callout": "",
+      "visual": "Cinematic shot of a quiet architectural study with rich wood textures and sunlight."
+    },
+    {
+      "say": "Keep that index card on your desk starting right now, because delaying and",
+      "callout": "",
+      "visual": "A single pristine index card resting under a desk lamp on a clean wooden workspace."
+    }
+  ],
+  "caption": "Complex financial plans fail because they require too much energy. Simplify your wealth into 3 non-negotiable rules on one index card today.\n\n#quietmoney #moneyrules #personalfinance #wealthbuilding #investing101",
+  "description": "Discover why simple personal rules outperform complex financial spreadsheets every time. Learn the exact 3-step index card framework to automate your savings and eliminate financial hesitation.",
+  "hashtags": [
+    "#quietmoney",
+    "#moneyrules",
+    "#personalfinance",
+    "#wealthbuilding",
+    "#investing101"
+  ],
+  "first_comment": "What's one non-negotiable money rule you live by?",
+  "facts": [
+    {
+      "claim": "Starting at 25 vs 35 with $200/month at 8% until 65 yields $698,202 vs $298,072, costing $400,130.",
+      "basis": "Starting at 25 vs 35 with $200/month at 8% until 65: $698,202 vs $298,072 (10 years late costs $400,130)"
+    }
+  ],
+  "source": "llm",
+  "pillar": "playbook"
+}

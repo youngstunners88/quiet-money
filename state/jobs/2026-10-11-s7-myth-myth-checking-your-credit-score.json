@@ -1,0 +1,65 @@
+{
+  "id": "2026-10-11-s7-myth-myth-checking-your-credit-score",
+  "pillar": "myth",
+  "topic": "Myth: checking your credit score lowers it",
+  "day": "2026-10-11",
+  "slot": 7,
+  "status": "held",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-11T09:46:35Z",
+      "words": 183
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-11T09:47:05Z",
+      "seconds": 63.0,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-11T09:49:50Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-11T09:51:28Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-11T09:51:28Z",
+      "score": 91
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-11T09:51:29Z"
+    },
+    {
+      "from": "packaged",
+      "to": "held",
+      "ts": "2026-10-11T09:51:29Z"
+    }
+  ],
+  "artifacts": {
+    "angle": "soft vs hard inquiries",
+    "title": "The Credit Score Myth That Keeps You Blind",
+    "video": "/home/user/quiet-money/production/output/2026-10-11/2026-10-11-s7-myth-myth-checking-your-credit-score/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-11/2026-10-11-s7-myth-myth-checking-your-credit-score/cover.jpg"
+  },
+  "scores": {
+    "gauntlet": 91,
+    "passed": false
+  },
+  "cost": {
+    "tts:edge:chars": 1070
+  },
+  "notes": [
+    "held for review: originality"
+  ]
+}

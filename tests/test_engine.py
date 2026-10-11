@@ -1592,3 +1592,17 @@ def test_script_object_unwraps_the_shapes_models_return():
     assert script_object({"script": obj}) is obj
     assert script_object([]) is None and script_object({"title": "no beats"}) is None
     assert script_object("text") is None and script_object({"beats": []}) is None
+
+
+def test_numeric_compare_card_stays_above_the_caption_band():
+    import re
+    from faceless import config
+    from faceless.pipeline import cards
+    band_top = config.load()["production"]["caption_y"] - 60
+    for va, vb in ((3, 8), (1739, 10887), (100, 100), (5, 500)):
+        body, _ = cards._compare("s0", 0.0, 4.0, {"numeric": True, "a": "3%", "b": "8%", "va": va, "vb": vb}, "#FFD23F", "K")
+        for top, height in re.findall(r'class="cb"[^>]*?top:(\d+)px;width:\d+px;height:(\d+)px', body):
+            assert int(top) + int(height) <= band_top, "a bar runs into the caption band"
+        for top, fs in re.findall(r'class="cv"[^>]*?top:(-?\d+)px;width:\d+px;font-size:(\d+)px', body):
+            assert int(top) >= 340, "a value label would climb into the kicker line"
+            assert int(top) + int(fs) <= band_top, "a value label would sit under the captions"

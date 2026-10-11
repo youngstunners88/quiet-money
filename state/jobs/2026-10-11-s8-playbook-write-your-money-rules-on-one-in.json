@@ -1,0 +1,71 @@
+{
+  "id": "2026-10-11-s8-playbook-write-your-money-rules-on-one-in",
+  "pillar": "playbook",
+  "topic": "Write your money rules on one index card",
+  "day": "2026-10-11",
+  "slot": 8,
+  "status": "published",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-11T09:55:22Z",
+      "words": 117
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-11T09:56:34Z",
+      "seconds": 64.188,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-11T09:56:48Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-11T09:58:35Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-11T09:58:35Z",
+      "score": 91
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-11T09:58:36Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-10-11T09:58:36Z",
+      "local": "2026-10-12T18:30:00-04:00"
+    }
+  ],
+  "artifacts": {
+    "angle": "simple personal rules beat complex plans",
+    "title": "Write Your Money Rules On One Index Card",
+    "video": "/home/user/quiet-money/production/output/2026-10-11/2026-10-11-s8-playbook-write-your-money-rules-on-one-in/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-11/2026-10-11-s8-playbook-write-your-money-rules-on-one-in/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-10-12/slot4-playbook",
+        "post_at": "2026-10-12T18:30:00-04:00"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 91,
+    "passed": true
+  },
+  "cost": {
+    "tts:edge:chars": 1520
+  },
+  "notes": []
+}

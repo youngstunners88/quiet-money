@@ -1,0 +1,83 @@
+{
+  "title": "Why Checking Your Credit Score Doesn't Lower It",
+  "hook_text": "CHECKING YOUR SCORE DOESN'T LOWER IT",
+  "beats": [
+    {
+      "say": "Checking your own credit score doesn't lower it by even a single point. That's a myth.",
+      "callout": "",
+      "visual": "A person's hand opening a banking app on a smartphone, filmed from over the shoulder in dim warm lighting."
+    },
+    {
+      "say": "Most people stay terrified of looking. But the truth about soft inquiries will change how you manage money.",
+      "callout": "SOFT VS HARD",
+      "visual": "Close-up of fingers scrolling through a clean financial dashboard on a laptop screen, blurred background."
+    },
+    {
+      "say": "When you check your own score, it's called a soft inquiry. Lenders can't even see those.",
+      "callout": "ZERO IMPACT",
+      "visual": "A dark desk with a steaming ceramic mug and a closed notebook next to a modern laptop."
+    },
+    {
+      "say": "You can check it every single day for a year, and your score won't drop at all.",
+      "callout": "DAILY CHECKS OK",
+      "visual": "A sleek metal credit card resting on a dark wood table under a single overhead pendant light."
+    },
+    {
+      "say": "Hard inquiries are completely different. That's what happens when you actually apply for new credit.",
+      "callout": "APPLYING IS HARD",
+      "visual": "A silhouette of a person walking past a large city window at dusk, cinematic low angle."
+    },
+    {
+      "say": "A mortgage application, an auto loan, or a new credit card will trigger a hard pull.",
+      "callout": "LOANS AND CARS",
+      "visual": "Car keys sitting on a polished wooden entryway table, shallow depth of field, moody shadows."
+    },
+    {
+      "say": "Those hard checks can shave a few points off your profile temporarily.",
+      "callout": "FEW POINTS",
+      "visual": "A hand sliding a minimalist leather wallet out of a jacket pocket in a softly lit hallway."
+    },
+    {
+      "say": "But here's the part nobody mentions. Multiple inquiries for the same car loan in fourteen days count as one.",
+      "callout": "14-DAY WINDOW",
+      "visual": "A calendar page with bold minimalist typography under dramatic side lighting, macro shot."
+    },
+    {
+      "say": "Scoring models know you're just shopping around for the best rate.",
+      "callout": "",
+      "visual": "A close-up of a calculator on a minimalist glass desk, showing blurred digits."
+    },
+    {
+      "say": "If you avoid looking at your score out of fear, you miss errors that cost you thousands.",
+      "callout": "",
+      "visual": "An open planner on a wooden table with a pen resting beside it, moody atmospheric lighting."
+    },
+    {
+      "say": "Ignorance isn't protection. Visibility is control over your financial life, and checking your credit score",
+      "callout": "",
+      "visual": "A person standing by a tall window overlooking a quiet street at night, back to camera."
+    }
+  ],
+  "caption": "Stop hiding from your own credit score. Soft inquiries don't hurt you—only applications do. Follow for the money rules school never taught you. #CreditScore #PersonalFinance #MoneyTips #CreditMyth #FinancialLiteracy",
+  "description": "Discover the real difference between soft and hard credit inquiries. Checking your own score has zero impact, and understanding this stops financial anxiety.",
+  "hashtags": [
+    "#CreditScore",
+    "#PersonalFinance",
+    "#MoneyTips",
+    "#CreditMyth",
+    "#FinancialLiteracy"
+  ],
+  "first_comment": "When was the last time you checked your credit report?",
+  "facts": [
+    {
+      "claim": "Checking your own credit score is a soft inquiry and does not lower it.",
+      "basis": "Standard credit scoring mechanics established by FICO and VantageScore where consumer-initiated checks are soft inquiries."
+    },
+    {
+      "claim": "Multiple auto or mortgage inquiries within a 14-day window typically count as a single inquiry.",
+      "basis": "FICO scoring model rules for rate shopping aggregation."
+    }
+  ],
+  "source": "llm",
+  "pillar": "myth"
+}

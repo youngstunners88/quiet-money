@@ -1,0 +1,83 @@
+{
+  "title": "When $315 Million Ruined a Life",
+  "hook_text": "$315 MILLION GONE",
+  "beats": [
+    {
+      "say": "In 2002, Jack Whittaker won the largest jackpot in US history. He took home $315 million.",
+      "callout": "",
+      "visual": "Cinematic low-angle shot of a glowing neon lottery sign outside a dark convenience store at night, moody lighting."
+    },
+    {
+      "say": "He thought money solved every problem. Instead, it destroyed his family completely, because...",
+      "callout": "THE COST",
+      "visual": "A silhouette of a man holding a thick stack of hundred-dollar bills inside a dimly lit vintage sedan."
+    },
+    {
+      "say": "Within hours of winning, thieves broke into his car and stole $545,000 in cash he left sitting on the front seat.",
+      "callout": "$545,000 STOLEN",
+      "visual": "Close-up of a shattered car window glass resting on a dark asphalt street under streetlamps."
+    },
+    {
+      "say": "That was just the start. News spread fast, and thousands of strangers flooded his office asking for handouts.",
+      "callout": "",
+      "visual": "Overhead shot of a rustic wooden desk covered in scattered paper envelopes and unopened mail."
+    },
+    {
+      "say": "Lawsuits piled up by the dozens. Strip clubs and bars targeted him relentlessly, draining his accounts.",
+      "callout": "CASH DRAIN",
+      "visual": "A dark, moody bar counter with a single half-empty glass and a leather wallet resting nearby."
+    },
+    {
+      "say": "But here's the part nobody mentions. Massive liquidity without hard boundaries acts like a magnet for total exploitation.",
+      "callout": "BOUNDARIES VS CASH",
+      "visual": "A heavy steel vault door opening slowly into pitch blackness, dramatic cinematic rim lighting."
+    },
+    {
+      "say": "Jack tried to protect his teenage granddaughter by handing her thousands in weekly cash allowances.",
+      "callout": "WEEKLY CASH",
+      "visual": "A pair of hands sliding a crisp stack of paper currency across a polished marble kitchen island."
+    },
+    {
+      "say": "That cash fueled a fatal drug addiction. She died of an overdose in 2004, just two years after the win.",
+      "callout": "TRAGEDY",
+      "visual": "A solitary wooden park bench outdoors on a foggy autumn morning, soft muted color grade."
+    },
+    {
+      "say": "By 2007, his bank accounts hit zero. Every penny was gone, leaving him broke and broken.",
+      "callout": "ZERO DOLLARS",
+      "visual": "A close-up of a rejection stamp pressing firmly onto a blank white paper document."
+    },
+    {
+      "say": "Sudden wealth doesn't change who you are. It simply strips away your defenses and amplifies your flaws,",
+      "callout": "",
+      "visual": "A weathered set of brass keys sitting alone on a bare concrete floor in harsh morning light."
+    },
+    {
+      "say": "and that's exactly how",
+      "callout": "",
+      "visual": "A dark hallway with a single distant doorway emitting a sharp beam of bright white light."
+    }
+  ],
+  "caption": "More money doesn't fix broken boundaries. It just breaks you faster. #moneystories #jackwhittaker #wealthmindset #personalfinance #moneyrules",
+  "description": "Jack Whittaker won $315 million in 2002, but without guardrails or boundaries, the sudden cash attracted theft, lawsuits, and personal tragedy. A stark reminder that money amplifies vulnerability.",
+  "hashtags": [
+    "#moneystories",
+    "#jackwhittaker",
+    "#wealthmindset",
+    "#personalfinance",
+    "#moneyrules"
+  ],
+  "first_comment": "What's the first boundary you'd set if you suddenly became a multi-millionaire?",
+  "facts": [
+    {
+      "claim": "Jack Whittaker won $315 million in 2002.",
+      "basis": "Powerball jackpot historical records from West Virginia, December 2002."
+    },
+    {
+      "claim": "$545,000 was stolen from his car shortly after the win.",
+      "basis": "Documented police reports and news coverage from 2003."
+    }
+  ],
+  "source": "llm",
+  "pillar": "story"
+}

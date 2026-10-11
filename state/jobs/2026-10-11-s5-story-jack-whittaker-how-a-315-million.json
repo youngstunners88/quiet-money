@@ -1,0 +1,71 @@
+{
+  "id": "2026-10-11-s5-story-jack-whittaker-how-a-315-million",
+  "pillar": "story",
+  "topic": "Jack Whittaker: How a $315 Million Windfall Led to Complete Ruin",
+  "day": "2026-10-11",
+  "slot": 5,
+  "status": "published",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-11T09:27:59Z",
+      "words": 174
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-11T09:28:19Z",
+      "seconds": 65.448,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-11T09:29:11Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-11T09:31:21Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-11T09:31:21Z",
+      "score": 99
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-11T09:31:22Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-10-11T09:31:22Z",
+      "local": "2026-10-12T07:30:00-04:00"
+    }
+  ],
+  "artifacts": {
+    "angle": "Sudden wealth magnifies existing personal boundaries and vulnerabilities; without guardrails, massive liquidity attracts exploitation.",
+    "title": "When $315 Million Ruined a Life",
+    "video": "/home/user/quiet-money/production/output/2026-10-11/2026-10-11-s5-story-jack-whittaker-how-a-315-million/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-11/2026-10-11-s5-story-jack-whittaker-how-a-315-million/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-10-12/slot1-story",
+        "post_at": "2026-10-12T07:30:00-04:00"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 99,
+    "passed": true
+  },
+  "cost": {
+    "tts:edge:chars": 1054
+  },
+  "notes": []
+}

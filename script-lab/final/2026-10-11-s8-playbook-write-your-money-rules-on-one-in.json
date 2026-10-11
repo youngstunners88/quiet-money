@@ -1,0 +1,87 @@
+{
+  "title": "Write Your Money Rules On One Index Card",
+  "hook_text": "COMPLEX FINANCIAL PLANS ALWAYS FAIL",
+  "beats": [
+    {
+      "say": "Complex financial plans always fail because they require too much daily discipline to maintain.",
+      "callout": "",
+      "visual": "A cinematic shot of a messy stack of papers on a dark wooden desk, dim overhead warm light, shallow depth of field."
+    },
+    {
+      "say": "Here's the fix. You can fit every rule you actually need on a single index card.",
+      "callout": "STEP ONE",
+      "visual": "A hand placing a blank white index card on a clean oak table, sharp focus, moody side lighting."
+    },
+    {
+      "say": "Step one. Grab a blank card and write down your absolute maximum savings rate.",
+      "callout": "",
+      "visual": "A person holding a black pen over a blank card, writing softly, silhouette view from behind."
+    },
+    {
+      "say": "For instance, investing $500 a month at 8% a year builds $745,180 in 30 years.",
+      "callout": "$745,180",
+      "visual": "A close-up shot of an analog metal clock ticking on a dark shelf, soft dust motes floating in a single beam of light."
+    },
+    {
+      "say": "Step two. Write down your hard limits on credit card debt and impulse shopping.",
+      "callout": "STEP TWO",
+      "visual": "A dark leather wallet resting on a minimalist concrete countertop, cold blue ambient light."
+    },
+    {
+      "say": "Carrying a $6,000 balance at 24% APR paying only the minimum takes 252 months to clear.",
+      "callout": "252 MONTHS",
+      "visual": "A red warning light reflecting on a polished metallic surface, blurred background."
+    },
+    {
+      "say": "That single habit costs you $10,887 in interest alone.",
+      "callout": "$10,887",
+      "visual": "A heavy steel chain lying on a dark stone floor, dramatic shadows, high contrast."
+    },
+    {
+      "say": "But here's the part nobody mentions. Simplicity beats perfection every single time.",
+      "callout": "SIMPLE VS COMPLEX",
+      "visual": "A single unlit candle standing on a dark wooden table, minimalist composition, dramatic side light."
+    },
+    {
+      "say": "Step three. Tape that card to your bathroom mirror where you'll see it every morning.",
+      "callout": "STEP THREE",
+      "visual": "A foggy glass mirror in a dimly lit bathroom, warm amber glow from a wall sconce."
+    },
+    {
+      "say": "When a money choice pops up, check the card before you spend a single dollar.",
+      "callout": "",
+      "visual": "A hand opening a minimalist wooden drawer, clean empty space inside, sharp focus."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "A brass key resting on a dark leather notebook, cinematic overhead lighting, rich textures."
+    }
+  ],
+  "caption": "Complex plans break under pressure. Put your rules on one card and stick to them. #moneyrules #personalfinance #wealthbuilding #smartmoney",
+  "description": "Complex financial strategies often fail because they are too hard to maintain. Write your core money rules on a single index card and follow them daily.",
+  "hashtags": [
+    "#moneyrules",
+    "#personalfinance",
+    "#wealthbuilding",
+    "#smartmoney",
+    "#financialfreedom"
+  ],
+  "first_comment": "What is the number one rule currently written on your index card?",
+  "facts": [
+    {
+      "claim": "Investing $500 a month at 8% a year builds $745,180 in 30 years.",
+      "basis": "$500/month invested for 30 years at 8%/yr (monthly compounding) = $745,180"
+    },
+    {
+      "claim": "Carrying a $6,000 balance at 24% APR paying only the minimum takes 252 months to clear.",
+      "basis": "$6,000 credit card at 24% APR paying only the minimum (1% + interest, min $25): 252 months (~21 years)"
+    },
+    {
+      "claim": "That single habit costs you $10,887 in interest alone.",
+      "basis": "$6,000 credit card at 24% APR paying only the minimum results in $10,887 interest"
+    }
+  ],
+  "source": "llm",
+  "pillar": "playbook"
+}

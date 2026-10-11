@@ -1,0 +1,71 @@
+{
+  "id": "2026-10-11-s7-myth-myth-paying-off-your-mortgage-ea",
+  "pillar": "myth",
+  "topic": "Myth: Paying off your mortgage early is always the smartest financial move",
+  "day": "2026-10-11",
+  "slot": 7,
+  "status": "published",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-11T09:59:09Z",
+      "words": 162
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-11T09:59:41Z",
+      "seconds": 63.096,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-11T09:59:51Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-11T10:01:36Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-11T10:01:36Z",
+      "score": 100
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-11T10:01:37Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-10-11T10:01:37Z",
+      "local": "2026-10-12T15:00:00-04:00"
+    }
+  ],
+  "artifacts": {
+    "angle": "Explain the opportunity cost of low-interest fixed debt versus inflation and risk-free returns, using a comparative mathematical rule.",
+    "title": "The Mortgage Payoff Trap",
+    "video": "/home/user/quiet-money/production/output/2026-10-11/2026-10-11-s7-myth-myth-paying-off-your-mortgage-ea/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-11/2026-10-11-s7-myth-myth-paying-off-your-mortgage-ea/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-10-12/slot3-myth",
+        "post_at": "2026-10-12T15:00:00-04:00"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 100,
+    "passed": true
+  },
+  "cost": {
+    "tts:edge:chars": 927
+  },
+  "notes": []
+}

@@ -1,0 +1,88 @@
+{
+  "title": "Your Bank Is Robbing You Blind on Interest",
+  "hook_text": "YOUR BANK IS ROBBING YOU BLIND",
+  "beats": [
+    {
+      "say": "Your big bank pays you zero point zero one percent on your savings.",
+      "callout": "",
+      "visual": "A sleek modern metal bank door closed tight, dramatic side lighting casting long shadows across polished concrete floors."
+    },
+    {
+      "say": "While they lend your cash out at much higher rates. Here's how to fix it today.",
+      "callout": "STEP ONE",
+      "visual": "A hand placing a sleek metal credit card flat on a dark mahogany desk next to a ceramic cup of black coffee."
+    },
+    {
+      "say": "Step one. Open a new high yield savings account with no monthly fees.",
+      "callout": "STEP TWO",
+      "visual": "Fingers typing on a sleek silver laptop keyboard in a dimly lit minimalist home office with warm amber glow."
+    },
+    {
+      "say": "Step two. Transfer your entire emergency fund out of your old checking account.",
+      "callout": "STEP THREE",
+      "visual": "A close up of a brass house key resting on a stack of crisp white paper on a bare wooden table."
+    },
+    {
+      "say": "Step three. Set up automatic monthly transfers so your balance grows on autopilot.",
+      "callout": "0.01% VS 5%",
+      "visual": "A vintage brass desk lamp illuminating a stack of dark coins resting on a textured gray slate surface."
+    },
+    {
+      "say": "That's how investing $500 a month at 8% reaches $600,000 in 27.6 years.",
+      "callout": "$600,000",
+      "visual": "A wide cinematic shot of a deserted concrete parking structure at dusk with cool blue tones and deep shadows."
+    },
+    {
+      "say": "Or hits $900,000 in 32.2 years if you keep that cash compounding.",
+      "callout": "$900,000",
+      "visual": "A close up of an hourglass with fine black sand pouring steadily through the center glass against a dark backdrop."
+    },
+    {
+      "say": "But here's the part nobody mentions about parking cash in low yield accounts.",
+      "callout": "THE TRAP",
+      "visual": "A lone leather briefcase sitting on an empty wooden bench in a quiet subway station with overhead fluorescent light."
+    },
+    {
+      "say": "Inflation eats your buying power quietly while you sleep every single night.",
+      "callout": "",
+      "visual": "A single white ceramic coffee mug sitting on a dark concrete windowsill with morning mist blurring the glass outside."
+    },
+    {
+      "say": "Don't leave free money on the table when moving it takes under 15 minutes.",
+      "callout": "",
+      "visual": "A pair of hands sliding a dark leather notebook closed on a polished oak table with soft natural window light."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "A dark hallway with a single bright lightbulb hanging from the ceiling casting a sharp geometric shadow below."
+    },
+    {
+      "say": "Your big bank pays you zero point zero one percent on your savings.",
+      "callout": "",
+      "visual": "A sleek modern metal bank door closed tight, dramatic side lighting casting long shadows across polished concrete floors."
+    }
+  ],
+  "caption": "Stop letting traditional banks shortchange your savings. Move your cash today. #personalfinance #moneypays #savingmoney #wealthbuilding #smartmoney",
+  "description": "Most traditional banks pay virtually zero interest on your emergency fund. Here is a simple three-step action to check your APY and move your cash into a high yield savings account today.",
+  "hashtags": [
+    "#personalfinance",
+    "#moneypays",
+    "#savingmoney",
+    "#wealthbuilding",
+    "#smartmoney"
+  ],
+  "first_comment": "What interest rate is your current bank paying you right now?",
+  "facts": [
+    {
+      "claim": "investing $500/month at 8%/yr reaches $600,000 in 27.6 years",
+      "basis": "$2,000/month of passive income needs about $600,000 invested - investing $500/month at 8%/yr reaches $600,000 in 27.6 years"
+    },
+    {
+      "claim": "investing $500/month at 8%/yr reaches $900,000 in 32.2 years",
+      "basis": "$3,000/month of passive income needs about $900,000 invested - investing $500/month at 8%/yr reaches $900,000 in 32.2 years"
+    }
+  ],
+  "source": "llm",
+  "pillar": "playbook"
+}
