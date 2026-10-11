@@ -161,6 +161,9 @@ def pick(script: dict, imgs: list[dict] | None, pillar_id: str, style: str = "ci
     if mode == "off" or not available():
         return {}
     out: dict[int, dict] = {}
+    if mode == "ledger" and config.pillar(pillar_id).drawn:      # a drawn series is acted out by the cast, every beat including the hook
+        from faceless.pipeline import cast
+        return {i: {**spec, **({"hook": True} if i == 0 else {})} for i, spec in cast.choose(script, pillar_id).items()}
     for i, beat in enumerate(script["beats"]):
         if i == 0:      # the hook beat keeps its hero still (cover image + hook box sit on it); a drawn series has no still, so it opens on a drawn title page
             if mode == "ledger" and config.pillar(pillar_id).drawn:
@@ -193,9 +196,15 @@ def _scene(n: int, t0: float, dur: float, spec: dict, pal: tuple, accent: str, f
     bg0, bg1, glow = pal
     sid = f"s{n}"
     pre = f'<div class="scene clip" id="{sid}" data-start="{t0:.3f}" data-duration="{dur:.3f}" data-track-index="0">'
+    stage_pal = None
+    if spec["kind"] == "stage":
+        from faceless.pipeline import cast
+        stage_body, stage_js, stage_pal = cast.build(sid, t0, dur, spec)
+        bg0, bg1, glow = stage_pal[:3]
+        pre = pre.replace('class="scene clip"', f'class="scene clip" style="--ink:{stage_pal[3]};--soft:{stage_pal[4]};--rule:{stage_pal[3]};--bgc:{stage_pal[0]}"', 1)
     bg = (f'<div class="bg" style="background:radial-gradient(120% 70% at 50% 28%,{bg0} 0%,{bg1} 70%)"></div>'
           f'<div class="glow" id="{sid}g" style="background:radial-gradient(closest-side,{glow}55,transparent)"></div>')
-    drawn = spec["kind"] == "sketch"        # an authored scene brings its own drawing: no drifting lines or dots behind it
+    drawn = spec["kind"] in ("sketch", "stage")        # an authored scene brings its own drawing: no drifting lines or dots behind it
     grid = "" if drawn else "".join(f'<div class="ln" id="{sid}l{k}" style="top:{150 + k * 210}px"></div>' for k in range(8))
     dots = "" if drawn else "".join(f'<div class="dot" id="{sid}d{k}" style="left:{(k * 137) % 1000 + 40}px;top:{(k * 241) % 1500 + 120}px;'
                                     f'background:{accent}"></div>' for k in range(10))
@@ -245,6 +254,9 @@ def _scene(n: int, t0: float, dur: float, spec: dict, pal: tuple, accent: str, f
     elif spec["kind"] == "steps":
         body, extra = _steps(sid, t0, dur, spec, accent, kicker)
         js += extra
+    elif spec["kind"] == "stage":
+        body = stage_body
+        js += stage_js
     elif spec["kind"] == "open":
         body, extra = _open(sid, t0, dur, accent, kicker)
         js += extra
@@ -334,6 +346,8 @@ def build_project(root: Path, specs: list[tuple[int, dict, float]], pillar_id: s
         shutil.copy2(Paths.fonts / f, root / "assets" / f)
     pal = LEDGER_PAPER if theme == "ledger" else PALETTE.get(pillar_id, PALETTE["math"])
     tok = THEMES.get(theme, THEMES["night"])
+    from faceless.pipeline.cast import CSS as _CAST
+    CAST_CSS = _CAST
     root_vars = "".join(f"--{k}:{v};" for k, v in tok.items())
     scenes, js, t = [], [], 0.0
     for n, (_beat, spec, dur) in enumerate(specs):
@@ -377,6 +391,7 @@ html,body{{width:1080px;height:1920px;overflow:hidden;background:#000}}
 .ring{{position:absolute;left:320px;top:420px;width:440px;height:440px;opacity:0}}
 .rn{{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font:400 270px/1 "Anton";color:var(--ink)}}
 .sk{{position:absolute;left:0;top:0;overflow:visible}}
+{CAST_CSS}
 .rr{{position:absolute;left:90px;width:900px;height:3px;background:var(--rule);opacity:.45;transform-origin:left center}}
 .mk{{position:absolute;left:190px;top:1010px;width:700px;height:26px;border-radius:13px;opacity:.9;transform-origin:left center}}
 .sw{{position:absolute;left:0;top:930px;width:1080px;text-align:center;font:400 84px/1 "Anton";letter-spacing:12px;color:var(--ink);opacity:0}}
@@ -406,6 +421,13 @@ def render_reel(job, picked: dict[int, dict], beat_spans: dict[int, tuple[float,
     """Render every card of the video in one HyperFrames run. Returns (<name>.mp4, {beat: offset seconds in reel}).
     A second pass uses another `name`, so the first reel and its offsets stay valid whatever happens to the second."""
     root = job.dir / "cards"
+    try:
+        words = json.loads((job.dir / "voice.json").read_text(encoding="utf-8"))["words"]
+    except (OSError, ValueError, KeyError):
+        words = []
+    picked = {i: ({**spec, "words": [(round(w["start"] - beat_spans[i][0], 3), round(w["end"] - beat_spans[i][0], 3)) for w in words
+                                     if beat_spans[i][0] <= w["start"] < beat_spans[i][1]]} if spec.get("kind") == "stage" else spec)
+              for i, spec in picked.items()}
     specs = [(i, spec, max(0.5, beat_spans[i][1] - beat_spans[i][0])) for i, spec in sorted(picked.items())]
     theme = "ledger" if (job.artifacts or {}).get("style") == "ledger" else "night"
     if theme == "ledger":
