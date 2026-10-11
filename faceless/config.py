@@ -49,6 +49,7 @@ class Pillar:
     style: str
     grade: str
     music_key: str
+    enabled: bool = True       # a pillar switched off never enters the daily plan; its code and settings stay
     drawn: bool = False        # a series drawn entirely in code (no image generator of any kind): see pipeline/cards.py
 
 

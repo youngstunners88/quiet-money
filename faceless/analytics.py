@@ -33,7 +33,7 @@ def _num(value, default: float = 0.0) -> float:
 
 def pillar_weights(window: int = 60) -> dict[str, float]:
     pillars = config.load()["pillars"]
-    base = {p.id: p.weight for p in pillars}
+    base = {p.id: p.weight for p in pillars if p.enabled}
     rows = load()[-window:]
     if len(rows) < 10:          # not enough signal yet: stay balanced
         return base
