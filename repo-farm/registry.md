@@ -197,3 +197,25 @@ Each row was read from the project's own README, manifest, licence file or regis
 |---|---|---|
 | claude-remotion-skill (haidrrrry) | render | MIT skill for Remotion. |
 | Remotion (remotion-dev/remotion) | render | React video renderer. |
+
+## Intake 2026-10-12 (verified from dossiers in `repo-farm/intake/2026-10-12/`)
+
+Each row was read from the project's own README, manifest, licence file or registry entry; nothing was installed or run. Stars and dates were unavailable where the GitHub API is closed to this machine.
+
+### On trial
+
+| Tool | Stage | Why |
+|---|---|---|
+| HyperFrames Motion Reel skill (Sunwood-ai-labs/hyperframes-motion-reel-skill) | render | MIT. |
+
+### Parked (named condition)
+
+| Tool | Stage | Why |
+|---|---|---|
+| claude-motion-design (howseen-ai/claude-motion-design) | render | MIT. |
+| Motion Graphics Skill Pack (charlie947/motion-graphics-skills) | render | MIT. |
+| Claude Remotion Skill (haidrrrry/claude-remotion-skill) | render | MIT. |
+| Klik Motion-Graphics System (t3knobox/klik-anim-skill-creation) | render | No licence file was found at the top level, so there is no right to copy or use its text, however good it looks. |
+| claude-motion (whaleyxbt/claude-motion) | render | MIT. |
+| Remotion (remotion-dev/remotion) | render | The code is MIT and it is the best-known React video renderer, with a large agent-facing skill set. |
+| Awesome Motion Design Agent Skills (frankxai/awesome-motion-design-agent-skills) | render | A curated list of motion-design skills and resources (GSAP, Motion, Remotion, Lottie, Rive), which the intake read as a directory. |

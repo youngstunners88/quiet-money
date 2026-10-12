@@ -1,0 +1,80 @@
+{
+  "date": "2026-10-12",
+  "title": "Motion Studio, part 2: the motion-design repos from the owner's second Google Doc",
+  "source": "The owner's Google Doc 'Motion designs' (id 1BIonbd5ESm0b4EpSe9VZp38h77M0adWOriGOYFvT3ZQ), read in full from Drive on 2026-10-12, with its question: can these be stacked into cheap, high-quality video skills, and what scripts and automations can we build? The first Doc's nine repos were decided on 2026-10-11 (see that folder); this batch covers the eight that are new. Dossiers were made by `python -m faceless intake`. GitHub's API refused most lookups (403), so stars, dates and licences are partly unknown. Judgments rest on the READMEs as scanned, with hidden comments and agent-directed text removed. Nothing was cloned, installed or run. No dossier here has had its code read yet, so no tool is USE, and anything marked TRIAL runs only in a sandbox copy after the owner's go.",
+  "items": [
+    {
+      "id": "sunwood-ai-labs-hyperframes-motion-reel-skill",
+      "name": "HyperFrames Motion Reel skill (Sunwood-ai-labs/hyperframes-motion-reel-skill)",
+      "verdict": "TRIAL",
+      "stage": "render",
+      "why": "MIT. It is built on HyperFrames, the same renderer our motion cards already use (cards.py, GSAP inside HyperFrames), and it adds what we lack: a one-line theme to a beat-synced reel at 120 BPM, a draft quality for checking and a delivery quality for the final, and a documented project layout. That makes it the closest thing in the list to a ready-made 'motion reel' lane on the stack we already run. Its install is a git clone into the skills folder and a pinned-nothing `npx hyperframes` line, so it must be pinned to a reviewed version before any use.",
+      "steal": "Two-pass rendering (draft to check, delivery to ship) and beat-placed scene cuts. Both go into our render step as a flag, with no new dependency.",
+      "owner": "Sandbox trial: copy the studio to a scratch folder, run one 20-second reel from the skill's example, compare its frames with one of our cards. Pin the HyperFrames version first."
+    },
+    {
+      "id": "howseen-ai-claude-motion-design",
+      "name": "claude-motion-design (howseen-ai/claude-motion-design)",
+      "verdict": "PARK",
+      "stage": "render",
+      "why": "MIT. It makes motion design in pure code: HTML, Playwright and ffmpeg, with no editing app and no Remotion licence. Its strongest ideas are design choices, not dependencies: every frame is a function of time (seek(t)), so the same input gives the same frames, one scene can change without touching the others, and audio is aligned to measured peaks and loudness-normalised to -14 LUFS. We already have all three pieces (HyperFrames for frames, Playwright in the image, ffmpeg in the render) and do not need its pipeline. It also downloads music, SFX and fonts with a script, which the studio does not allow in an unattended run.",
+      "steal": "Deterministic seek(t) frames and -14 LUFS loudness normalisation for the final audio mix (rule: one measured loudness per video, not whatever the voice happens to be). Both can be added as steps in the existing render, with a test.",
+      "owner": "Only if a sample shows our audio varies too much in loudness across videos: then add the normalisation step. No install needed for that."
+    },
+    {
+      "id": "charlie947-motion-graphics-skills",
+      "name": "Motion Graphics Skill Pack (charlie947/motion-graphics-skills)",
+      "verdict": "PARK",
+      "stage": "render",
+      "why": "MIT. Fifteen skills for motion graphics written as code, aimed at Claude Code and Codex. The value is the craft text in the skills, which the intake did not read (only the README header was scanned). The install line `npx skills add` runs the newest published code on every use, so nothing should be installed as it stands. The README also suggests a second pack from another owner, which would need its own intake.",
+      "steal": "Unknown until the skill text is read. Candidate: the craft rules for timing and easing, if they are written as rules rather than as a sales page.",
+      "owner": "Read the skill files on the repo page (text only, nothing installed) and say which one is worth a full intake of its own."
+    },
+    {
+      "id": "haidrrrry-claude-remotion-skill",
+      "name": "Claude Remotion Skill (haidrrrry/claude-remotion-skill)",
+      "verdict": "PARK",
+      "stage": "render",
+      "why": "MIT. The most useful part is the workflow, not the tool: it sets hard motion-craft rules (springs, staggered choreography, colour grade, film grain, Ken Burns, word-synced captions, sound design) and a mandatory loop of render, inspect the frames, fix, re-render. We already run that loop as the gauntlet. The tool itself is Remotion, which we would be adding beside HyperFrames for no new capability, and Remotion's own licence needs a check (see its verdict). The README and install lines are scanned; the rules text was not read in full.",
+      "steal": "The written craft rules, once read in full, go into the card skill as our own rules, credited to the source in a comment. The render-inspect-fix rule already exists in faceless-gauntlet.",
+      "owner": "None needed now. The rules text is for a later reading pass."
+    },
+    {
+      "id": "t3knobox-klik-anim-skill-creation",
+      "name": "Klik Motion-Graphics System (t3knobox/klik-anim-skill-creation)",
+      "verdict": "PARK",
+      "stage": "render",
+      "why": "No licence file was found at the top level, so there is no right to copy or use its text, however good it looks. Its README describes three skills (element animation laws, camera movement, and a full end-to-end method) and warns that videos over 30 seconds run out of session limits. Its install lines run the newest code and fetch Remotion skills. Without a licence it cannot be used or copied, so it stays parked until the maintainer answers.",
+      "steal": "Nothing may be copied while unlicensed. Ideas can be re-derived in our own words, as the card skill already does.",
+      "owner": "Ask the maintainer through the owner (via the repo's issues) whether the skills are licensed for reuse. Until then: no copy."
+    },
+    {
+      "id": "whaleyxbt-claude-motion",
+      "name": "claude-motion (whaleyxbt/claude-motion)",
+      "verdict": "PARK",
+      "stage": "render",
+      "why": "MIT. A motion design toolkit for coding agents: skills that teach taste, a self-check of its own frames, a sound engine, and web simulations rendered to 60 fps video through Playwright. It is the most ambitious of the set and overlaps our render. The intake found a 137-character HTML comment that is invisible when rendered; by intake rule its content must be read by a person before any trial, and the install line runs the newest code on every use. Parked until the comment is read.",
+      "steal": "The sound engine idea (every effect placed at a measured peak) and the 'web sim to 60 fps' capture are worth a look once the code is read; both can be done with our existing tools.",
+      "owner": "A person reads the repo's hidden comment and the sound engine's code (text only). Then decide whether a trial is worth the time."
+    },
+    {
+      "id": "remotion-dev-remotion",
+      "name": "Remotion (remotion-dev/remotion)",
+      "verdict": "PARK",
+      "stage": "render",
+      "why": "The code is MIT and it is the best-known React video renderer, with a large agent-facing skill set. It would be a second renderer beside HyperFrames, which already draws our cards, so there is no new capability to buy. The intake flagged a HIGH install hook: the package runs a git config step when installed. The licence for the repo is MIT, but Remotion's own terms ask companies above a size limit to buy a company licence, and the dossier did not check that. Both points must be settled before any use.",
+      "steal": "Nothing to take that HyperFrames and the card skill do not already give us.",
+      "owner": "Check Remotion's company-licence terms on its site by hand, and say whether the business is above the free size limit. Revisit only if HyperFrames cannot do a scene we need."
+    },
+    {
+      "id": "frankxai-awesome-motion-design-agent-skills",
+      "name": "Awesome Motion Design Agent Skills (frankxai/awesome-motion-design-agent-skills)",
+      "verdict": "PARK",
+      "stage": "render",
+      "why": "A curated list of motion-design skills and resources (GSAP, Motion, Remotion, Lottie, Rive), which the intake read as a directory. Its LICENSE is unrecognised text while the README says CC0, so the licence is unclear. It ships or downloads prebuilt binaries (MED flag), which is unreviewed code, and its install lines run the newest code on every use. A directory is useful only as a list of leads: each entry needs its own intake.",
+      "steal": "A list of leads to check one at a time. Nothing copied from it.",
+      "owner": "None now. If a lead from this list looks right, send that one repo through intake on its own."
+    }
+  ],
+  "web": []
+}
