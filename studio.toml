@@ -355,3 +355,8 @@ locate_model = "anthropic/claude-haiku-5.5"  # finds the @handle on a poster (pl
 daily_minutes = 15                           # FreeConvert's free tier is 20 conversion minutes a day and 5 minutes per file; one picture costs about one minute
 per_file_mb = 10
 timeout = 180
+
+[panel]                                      # model panels for decisions (faceless/panel.py): several models answer one brief, a person adjudicates
+daily_usd = 0.10                             # below the studio ceiling (a test enforces it)
+per_call_usd = 0.01
+max_runs = 5

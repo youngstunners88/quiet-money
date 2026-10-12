@@ -1,6 +1,6 @@
 # Daily Quiet Money Planner: style guide and rules
 
-A 375-page printable (US Letter and A4), undated: one picture, one short lesson and one small action for every day of the year. Complements the video
+A 415-page printable (US Letter and A4), undated: one picture, one short lesson and one small action for every day of the year. Complements the video
 series and the spreadsheets in `channel/products/`. The owner approves price, copy, files and accounts before anything goes live (CLAUDE.md rule 9).
 
 ## What is in the book

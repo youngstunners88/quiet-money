@@ -354,3 +354,26 @@ def test_live_photopea_crop_matches_pillow():
     with ph.Photopea() as pp:
         out = pp.crop(b.getvalue(), (0, 0, 832, 1170))
     assert ph.agrees(out, ph.pillow_crop(b.getvalue(), (0, 0, 832, 1170)))
+
+
+# ---------------------------------------------------------------- the model panel
+
+def test_the_panel_tallies_votes_counts_failures_and_respects_its_cap(monkeypatch):
+    from faceless import panel
+    replies = iter(['{"choice": "A", "confidence": 0.6}', '{"choice": "C", "confidence": 0.5}', "no json here", '{"choice": "C", "confidence": 0.9}'])
+
+    class S:
+        def post(self, url, json=None, timeout=None, headers=None):
+            assert json["reasoning"] == {"effort": "low"} and json["max_tokens"] >= 2000
+            return FakeResp(200, {"model": json["model"], "choices": [{"message": {"content": next(replies)}}], "usage": {"cost": 0.001}})
+    monkeypatch.setattr(panel, "http", lambda: S())
+    with pytest.raises(ProviderUnavailable):
+        panel.ask("m/one", "brief")                                                              # no key: refused
+    monkeypatch.setenv("OPENROUTER_API_KEY", "k")
+    res = panel.run("brief", ["m/one", "m/two"], runs=2, label="Test: A or C?")
+    assert res["models"]["m/one"]["votes"] == {"A": 1, "C": 1} and res["models"]["m/two"]["failed"] == 1 and res["tally"] == {"A": 1, "C": 2}
+    assert res["models"]["m/two"]["mean_confidence"] == 0.9 and ledger.used(panel.PROVIDER, "usd") == pytest.approx(0.004)
+    monkeypatch.setitem(config.load()["panel"], "daily_usd", 0.0035)                             # the fifth call would pass the cap
+    again = panel.run("brief", ["m/one"], runs=1)
+    assert again["models"]["m/one"]["failed"] == 1 and "cap" in again["models"]["m/one"]["answers"][0]["out"]["error"]
+    assert panel.run("brief", ["m/one"], runs=99)["runs"] == config.load()["panel"]["max_runs"]

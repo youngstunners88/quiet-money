@@ -1,6 +1,6 @@
 # The Quiet Money Daily Planner
 
-Printable PDF, 375 pages, US Letter and A4. Built entirely from files in this repository, free and offline. Nothing is published by any command here.
+Printable PDF, 415 pages, US Letter and A4. Built entirely from files in this repository, free and offline. Nothing is published by any command here.
 
 | File | What it is |
 |---|---|
@@ -59,3 +59,9 @@ decisions), framed that way on the page. They live in `assets/planner/wellness/`
 - Pictures where the pixels and the model disagree are never changed: they come back as `needs_human`.
 - Measured on the 44 posters (15 had a handle, checked by eye): Claude Haiku 5.5 as the second opinion found 15 of 15, none wrong, $0.007 for all 44; `typesafe/jev-router` found 9 of 15 and flagged 10 posters that have no handle ($0.029),
   so Haiku does the locating and Jev Router (through OpenRouter, only `OPENROUTER_API_KEY` needed) is the review gate (`[planner] gate_backend`, `[decide] jev_openrouter_*`).
+
+## Covers (skill `faceless-cover`)
+`python -m faceless planner cover` writes `cover.png` (default: Quinton seated with steepled hands, rim-lit, glowing Q pin, title typeset in code) plus the alternates `cover-desk.png` (Quinton looking at the open planner) and
+`cover-coin.png` (the brand coin, no person) for A/B. Scenes are made with Muapi from his reference photo (about $0.03 each, $0.02 to upscale) and live in `assets/planner/cover/`. A deep dive by Claude Haiku
+(`.claude/skills/faceless-cover/references/haiku-cover-research.md`) found no evidence that a man, steepled hands or a silhouette raises sales; the one cue with some support is a visible face looking at the product. So the face stays readable
+(rim light, not shadow) and the covers should be rotated and measured, not assumed. The cover character is disclosed as a virtual AI-generated host on the About page and in both listings.

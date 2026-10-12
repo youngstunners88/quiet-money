@@ -133,7 +133,7 @@ def t_cover(_a: dict) -> dict:
     from faceless import planner_cover, product_planner as pp
     out = STUDIO / "channel" / "products" / pp.PRODUCT / "cover.png"
     planner_cover.cover(1700, 2200).save(out)
-    return {"cover": _rel(out)}
+    return {"cover": _rel(out), "styles": ["steeple (default)", "desk", "coin"]}
 
 
 def _schema(props: dict, required: list[str] | None = None) -> dict:

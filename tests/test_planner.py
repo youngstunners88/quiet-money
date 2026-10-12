@@ -128,9 +128,9 @@ def test_the_pdf_builds_with_every_page_kind_and_stays_inside_the_margins(tmp_pa
         planner_art.render_motif(d.motif, d.n).save(art[d.n], "JPEG", quality=70)
     out = pp.build_pdf("Letter", days, art, None, tmp_path / "t.pdf", pc.week_themes(every))
     r = pypdf.PdfReader(str(out))
-    assert len(r.pages) == pp.FRONT + 14 + pp.BACK
+    assert len(r.pages) == pp.FRONT + 14 + 2 + pp.BACK                 # weeks 1 and 2 each end with a wellness break page
     text = " ".join(p.extract_text() for p in r.pages)
-    assert "DAY 006" in text and "WEEKLY CHECK-IN" in text and "REFLECT AND RESET" in text and "not financial advice" in text.lower()
+    assert "WELLNESS BREAK" in text and "not medical advice" in text.lower() and "DAY 006" in text and "WEEKLY CHECK-IN" in text and "REFLECT AND RESET" in text and "not financial advice" in text.lower()
     assert str(out.stat().st_size) and out.stat().st_size < 3 * 2**20
 
 
@@ -151,3 +151,27 @@ def test_the_catalog_lists_the_planner_with_both_sizes():
     assert p["layout"] == "planner" and len(p["etsy"]["tags"]) == 13 and p["price"] in p["price_test"]
     assert p["file"].endswith("Letter.pdf") and p["extra_files"][0].endswith("A4.pdf")
     assert {g.name: g.ok for g in listing.text_gates(p)}.get("no_income_claims") is True
+
+
+def test_the_wellness_manifest_drops_the_duplicates_and_every_poster_has_a_line_and_a_file():
+    from faceless import planner_wellness as w
+    assert w.check() == [] and len(w.kept()) == 40
+    assert set(w.DUPLICATES) == {8, 25, 30, 31} and not set(w.DUPLICATES) & set(w.kept())
+    assert all(1 <= len(line.split()) <= 40 for _t, line in w.POSTERS.values())
+    assert set(w.REVIEW) <= set(w.kept())                                                     # every flagged poster is one that is used
+    assert w.week_poster(1) == 1 and w.week_poster(40) == 44 and w.week_poster(41) is None
+    assert "not medical advice" in w.NOT_MEDICAL
+
+
+def test_the_quinton_cover_renders_at_any_size_with_a_glowing_pin_and_falls_back_to_the_coin():
+    import numpy as np
+    from faceless import planner_cover as pc
+    big = pc.cover(850, 1100)
+    assert big.size == (850, 1100) and pc.cover(595, 842).size == (595, 842)
+    scene = Image.open(pc.Paths.root / "assets" / "planner" / "cover" / pc.SCENES["steeple"])
+    pin = pc._pin(scene)
+    assert pin is not None and 0.5 < pin[0] < 0.85 and 0.45 < pin[1] < 0.8                      # the pin is on the right chest (his left lapel)
+    a = np.asarray(big).astype(int)
+    assert a[:int(1100 * 0.03)].mean() < 60 and a[:, :, 0].max() > 230                           # dark ground at the top, gold in the title
+    assert pc.cover_coin(425, 550).size == (425, 550)
+    assert pc.cover(425, 550, style="nope").size == (425, 550)                                    # an unknown style gives the coin cover, never a crash

@@ -19,6 +19,8 @@ from faceless.config import Paths
 INK, GOLD, DEEP, CREAM, MUTED = brand.INK, brand.GOLD, brand.DEEP_GOLD, brand.CREAM, brand.MUTED
 TITLE_1, TITLE_2 = "THE QUIET MONEY", "DAILY PLANNER"
 SUB = "365 days of basic money lessons.\nOne picture. One lesson. One small action."
+SCENES = {"steeple": "quinton-steeple.jpg", "desk": "quinton-desk.jpg"}      # Quinton, the channel's virtual host, generated from his reference photo (assets/planner/cover)
+DEFAULT_STYLE = "steeple"
 CHIPS = ("365 PAGES", "LETTER + A4", "UNDATED")
 TAGLINE = "The money rules nobody taught you."
 
@@ -78,8 +80,95 @@ def _stacks(w: int, h: int, seed: int) -> Image.Image:
     return big.resize((w, h), Image.LANCZOS)
 
 
-def cover(w: int = 1700, h: int = 2200, seed: int = 11) -> Image.Image:
-    """The print cover at any size (w x h pixels). All positions are fractions, so it holds from Letter to A4 to a square crop."""
+def _pin(scene: Image.Image) -> tuple[float, float] | None:
+    """Where the gold Q pin is on the lapel, as fractions of the scene: the centre of the brightest gold pixels in the right half of the chest."""
+    a = np.asarray(scene.convert("RGB")).astype(int)
+    h, w, _ = a.shape
+    x0, x1, y0, y1 = int(w * 0.5), int(w * 0.85), int(h * 0.45), int(h * 0.8)
+    sub = a[y0:y1, x0:x1]
+    gold = (sub[..., 0] > 190) & (sub[..., 1] > 130) & (sub[..., 2] < 140) & (sub[..., 0] - sub[..., 2] > 90)
+    ys, xs = np.nonzero(gold)
+    if len(xs) < 20:
+        return None
+    return (x0 + float(np.median(xs))) / w, (y0 + float(np.median(ys))) / h
+
+
+def cover_quinton(w: int = 1700, h: int = 2200, style: str = DEFAULT_STYLE, seed: int = 11) -> Image.Image:
+    """The cover with Quinton: the scene (assets/planner/cover) scaled to the page height on the brand ground, a real glow on the Q pin, the title and the promise typeset in code
+    (nothing in the picture is AI-made text). Title sits in the dark space above his head, the chips and the tagline in the dark band below his hands."""
+    scene = Image.open(Paths.root / "assets" / "planner" / "cover" / SCENES[style]).convert("RGB")
+    top = int(h * {"steeple": 0.125, "desk": 0.17}.get(style, 0.125))
+    sh = h + top
+    sw = int(scene.width * sh / scene.height)
+    sc = scene.resize((sw, sh), Image.LANCZOS)
+    im = Image.new("RGB", (w, h), INK)
+    mask = Image.new("L", (sw, sh), 255)
+    md = ImageDraw.Draw(mask)
+    feather = max(8, int(w * 0.06))
+    for i in range(feather):                                           # fade the scene's sides into the ground so a narrower scene never shows an edge
+        a = int(255 * i / feather)
+        md.line([(i, 0), (i, sh)], fill=a)
+        md.line([(sw - 1 - i, 0), (sw - 1 - i, sh)], fill=a)
+    im.paste(sc, ((w - sw) // 2, 0), mask) if sw < w else im.paste(sc.crop(((sw - w) // 2, 0, (sw - w) // 2 + w, sh)).crop((0, 0, w, h)), (0, 0))
+    pin = _pin(sc)
+    if pin:
+        px = (w - sw) // 2 + int(pin[0] * sw) if sw < w else int(pin[0] * sw) - (sw - w) // 2
+        py = int(pin[1] * sh)
+        glow = Image.new("RGB", (w, h), (0, 0, 0))
+        gd = ImageDraw.Draw(glow)
+        r = int(w * 0.05)
+        gd.ellipse([px - r, py - r, px + r, py + r], fill=(255, 190, 40))
+        im = ImageChops.add(im, glow.filter(ImageFilter.GaussianBlur(int(w * 0.03))).point(lambda v: int(v * 0.8)))
+    g = Image.new("L", (1, h))
+    for y in range(h):                                                 # darken the top for the title and the bottom for the chips
+        t = max(0.0, 1 - y / (h * 0.36)) ** 1.4 * 0.78 + max(0.0, (y - h * 0.78) / (h * 0.14)) ** 1.0 * 0.97
+        g.putpixel((0, y), int(255 * min(1.0, t)))
+    im = Image.composite(Image.new("RGB", (w, h), INK), im, g.resize((w, h)))
+    d = ImageDraw.Draw(im)
+    f = brand.font("Montserrat-ExtraBold.ttf", int(w * 0.024))
+    word, sp = "QUIET MONEY", int(w * 0.012)
+    tw = sum(d.textlength(ch, font=f) + sp for ch in word) - sp
+    _spaced(d, ((w - tw) / 2, h * 0.035), word, f, CREAM, sp)
+    d.rectangle([w / 2 - w * 0.03, h * 0.035 + w * 0.042, w / 2 + w * 0.03, h * 0.035 + w * 0.046], fill=GOLD)
+    width = int(w * 0.86)
+    f1, tw1 = _fit(d, TITLE_1, "Anton-Regular.ttf", width, int(w * 0.105))
+    y = int(h * 0.085)
+    d.text(((w - tw1) / 2, y), TITLE_1, font=f1, fill=CREAM)
+    f2, tw2 = _fit(d, TITLE_2, "Anton-Regular.ttf", width, int(w * 0.17))
+    y2 = y + int(f1.size * 1.2)
+    d.text(((w - tw2) / 2, y2), TITLE_2, font=f2, fill=GOLD)
+    fs = brand.font("Montserrat-ExtraBold.ttf", int(w * 0.027))
+    ys = int(h * 0.862)
+    for line in SUB.split("\n"):
+        lw = d.textlength(line, font=fs)
+        d.text(((w - lw) / 2, ys), line, font=fs, fill=(226, 220, 204))
+        ys += int(fs.size * 1.5)
+    fc = brand.font("Montserrat-ExtraBold.ttf", int(w * 0.02))
+    pads, gap = int(w * 0.022), int(w * 0.02)
+    widths = [d.textlength(c, font=fc) + pads * 2 for c in CHIPS]
+    x = (w - (sum(widths) + gap * (len(CHIPS) - 1))) / 2
+    ych = ys + int(w * 0.012)
+    chip_h = int(fc.size * 2.2)
+    for c, cw in zip(CHIPS, widths):
+        d.rounded_rectangle([x, ych, x + cw, ych + chip_h], radius=chip_h // 2, outline=GOLD, width=max(2, int(w * 0.002)))
+        d.text((x + pads, ych + (chip_h - fc.size) / 2 - fc.size * 0.08), c, font=fc, fill=GOLD)
+        x += cw + gap
+    ft = brand.font("Montserrat-ExtraBold.ttf", int(w * 0.017))
+    tl = d.textlength(TAGLINE.upper(), font=ft) + int(w * 0.005) * (len(TAGLINE) - 1)
+    _spaced(d, ((w - tl) / 2, min(h * 0.972, ych + chip_h + h * 0.012)), TAGLINE.upper(), ft, (240, 214, 120), int(w * 0.005))
+    return im
+
+
+def cover(w: int = 1700, h: int = 2200, seed: int = 11, style: str | None = None) -> Image.Image:
+    """The print cover at any size (w x h pixels). The Quinton cover when its scene is in the repo (style steeple or desk), otherwise the coin cover. All positions are fractions."""
+    st = style or DEFAULT_STYLE
+    if st in SCENES and (Paths.root / "assets" / "planner" / "cover" / SCENES[st]).exists():
+        return cover_quinton(w, h, st, seed)
+    return cover_coin(w, h, seed)
+
+
+def cover_coin(w: int = 1700, h: int = 2200, seed: int = 11) -> Image.Image:
+    """The brand-coin cover (no person): the fallback and the product-first variant."""
     im = _ground(w, h, 0.5, 0.26)
     im = _dust(im, seed)
     d = ImageDraw.Draw(im)

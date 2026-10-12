@@ -360,9 +360,22 @@ def cmd_planner(args) -> int:
         print(json.dumps(planner_clean.inventory(), indent=2))
         return 0
     from faceless import planner_cover
-    out = Path(config.STUDIO) / "channel" / "products" / pp.PRODUCT / "cover.png"
-    planner_cover.cover(1700, 2200).save(out)
-    print(out)
+    folder = Path(config.STUDIO) / "channel" / "products" / pp.PRODUCT
+    planner_cover.cover(1700, 2200).save(folder / "cover.png")
+    print(folder / "cover.png")
+    for name, style in (("cover-desk.png", "desk"), ("cover-coin.png", None)):                       # the alternates for A/B (skill faceless-cover)
+        (planner_cover.cover(1700, 2200, style=style) if style else planner_cover.cover_coin(1700, 2200)).save(folder / name)
+        print(folder / name)
+    return 0
+
+
+def cmd_panel(args) -> int:
+    from faceless import panel
+    brief = Path(args.brief).read_text(encoding="utf-8")
+    res = panel.run(brief, [m.strip() for m in args.models.split(",") if m.strip()], args.runs, label=args.label or Path(args.brief).stem)
+    for m, r in res["models"].items():
+        print(f"{m}: votes {r['votes'] or 'none'}, failed {r['failed']}, mean confidence {r['mean_confidence']}, ${r['usd']}")
+    print("tally:", res["tally"], "| saved:", panel.save(res))
     return 0
 
 
@@ -854,6 +867,12 @@ def main(argv: list[str] | None = None) -> int:
     pl.add_argument("--start", type=int, default=1, help="ingest: the day number of the first picture")
     pl.add_argument("--box", help="clean: x0,y0,x1,y1 as fractions of the picture, when the handle is somewhere unusual")
     pl.set_defaults(fn=cmd_planner)
+    pn = sub.add_parser("panel", help="put one decision brief to several models through OpenRouter, several runs each, and tally their answers (a person adjudicates)")
+    pn.add_argument("brief", help="a text file that tells the models to answer in JSON with a choice")
+    pn.add_argument("--models", required=True, help="comma-separated OpenRouter model ids")
+    pn.add_argument("--runs", type=int, default=3)
+    pn.add_argument("--label")
+    pn.set_defaults(fn=cmd_panel)
     sub.add_parser("autoresponder", help="write the 7-day Money Reset email sequence (numbers computed, ready to import)").set_defaults(fn=cmd_autoresponder)
     bk = sub.add_parser("brandkit", help="build a client brand kit (avatar, banner, watermark, share image, favicons, logo, BRAND.md) for the Fiverr service")
     bk.add_argument("name", nargs="?", help="channel name (1-24 characters)")

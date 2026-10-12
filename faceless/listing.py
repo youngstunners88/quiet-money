@@ -266,7 +266,7 @@ def _printable_images(p: dict, pages: list[Image.Image]) -> list[tuple[str, Imag
     if p.get("layout") == "planner":
         imgs = [("hero", mockup.hero_pages(p["name"], p["subtitle"], _planner_shots(p, pages), p["chips"]))]
         grid = [("Cover", "cover"), ("Welcome", "welcome"), ("Net worth", "snapshot"), ("Debt map", "debts"), ("Year map", "year"), ("A daily page", "learn")]
-        imgs.append(("inside", mockup.paper_grid("Inside the planner", [(lab, pages[p["pages"][k] - 1]) for lab, k in grid], sub=p.get("grid_sub", ""), footer="US Letter  ·  A4  ·  375 pages")))
+        imgs.append(("inside", mockup.paper_grid("Inside the planner", [(lab, pages[p["pages"][k] - 1]) for lab, k in grid], sub=p.get("grid_sub", ""), footer="US Letter  ·  A4  ·  415 pages")))
     else:
         imgs = [("hero", mockup.hero_pages(p["name"], p["subtitle"], [pages[1], pages[2], pages[3]], p["chips"]))]
         labels = ["How to use", "Paycheck split", "Subscription audit", "Sinking funds", "Debt list", "Net worth"]

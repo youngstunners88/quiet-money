@@ -1,7 +1,7 @@
-"""Product: the Quiet Money Daily Planner (printable PDF, US Letter and A4, 375 pages, undated).
+"""Product: the Quiet Money Daily Planner (printable PDF, US Letter and A4, 415 pages, undated).
 
 One picture, one short lesson and one small action for every day of the year: Monday Learn, Tuesday By the numbers, Wednesday Do it, Thursday Mindset,
-Friday Action, Saturday weekly check-in, Sunday reflect and reset, 52 weeks plus a bonus Day 365. Front matter: cover, welcome, net worth snapshot,
+Friday Action, Saturday weekly check-in, Sunday reflect and reset, 52 weeks plus a bonus Day 365. Weeks 1 to 40 each end with a Wellness Break page (the owner's wellness poster with a line that ties it to money; planner_wellness.py). Front matter: cover, welcome, net worth snapshot,
 debt map, year map. Back matter: summary and goals, money words, notes, the licence page.
 
 Pictures: the owner's own artwork when `assets/planner/source/day-NNN.*` exists (cleaned by planner_clean.py), otherwise drawn in code by planner_art.py in
@@ -24,7 +24,7 @@ from pathlib import Path
 
 from PIL import Image
 
-from faceless import brand, planner_art, planner_content
+from faceless import brand, planner_art, planner_content, planner_wellness
 from faceless.config import STUDIO, Paths
 from faceless.fsutil import write_atomic
 
@@ -132,7 +132,7 @@ class Pen:
             y = self.para(M, y, sub, "BodyI", 12, self.W - 2 * M, GREY)
         return y - 6
 
-    def image(self, im: Image.Image, x: float, y: float, w: float, h: float, radius: float = 7, quality: int = 78) -> None:
+    def image(self, im: Image.Image, x: float, y: float, w: float, h: float, radius: float = 7, quality: int = 70) -> None:
         from reportlab.lib.utils import ImageReader
         buf = io.BytesIO()
         im.convert("RGB").save(buf, "JPEG", quality=quality, optimize=True, progressive=True)
@@ -283,6 +283,34 @@ def last_page(p: Pen, d: planner_content.Day, art: Image.Image, n: int, total: i
 PAGERS = {"S": checkin_page, "R": reflect_page, "X": last_page}
 
 
+def wellness_page(p: Pen, week: int, pos: int, n: int, total: int) -> None:
+    """A supporting page: the owner's wellness poster (handle already cropped off), the line that ties it to money, and the not-medical-advice note."""
+    W, H, inner = p.W, p.H, p.W - 2 * M
+    topic, line = planner_wellness.POSTERS[pos]
+    p.text(M, H - M + 2, "WELLNESS BREAK", "MontBlack", 11, INK)
+    p.text(M + 122, H - M + 2, f"WEEK {week}  |  {topic.upper()}", "MontXB", 8.5, GREY)
+    top, bottom = H - M - 10, 205
+    im = Image.open(planner_wellness.poster_path(pos)).convert("RGB")
+    im.thumbnail((900, 900), Image.LANCZOS)
+    s = min(inner / im.width, (top - bottom) / im.height)
+    w, h = im.width * s, im.height * s
+    p.image(im, (W - w) / 2, top - h, w, h, radius=6, quality=64)
+    y = top - h - 20
+    lines = p.split(line, "BodyB", 12, inner - 24)
+    bh = 30 + 15 * len(lines)
+    p.box(M, y - bh, inner, bh, GOLD, 1, fill="#FFF8DC", r=5)
+    p.text(M + 12, y - 16, "WELLNESS AND MONEY", "MontXB", 8, DEEP)
+    ty = y - 32
+    for ln in lines:
+        p.text(M + 12, ty, ln, "BodyB", 12, INK)
+        ty -= 15
+    y -= bh + 12
+    end = p.para(M, y, planner_wellness.NOT_MEDICAL, "BodyI", 8.5, inner, GREY, 11)
+    if end < 40:
+        raise Overflow(f"wellness page for week {week} does not fit")
+    p.footer(n, total)
+
+
 # ---------------------------------------------------------------- front and back matter
 
 def welcome(p: Pen, n: int, total: int) -> None:
@@ -425,7 +453,7 @@ def last_back(p: Pen, n: int, total: int) -> None:
     y = p.title(H - M - 24, "About this planner")
     for head, body in (
         ("Education, not advice", "The Quiet Money Daily Planner is an educational tool. It is not financial, tax, legal or investment advice and it never recommends a particular product. Examples use made-up numbers and stated assumptions. Returns are never guaranteed and past results do not predict the future. Talk to a qualified professional about your own situation."),
-        ("Made with AI assistance", f"{AI_LINE} The lessons were written and fact-checked with the Quiet Money studio's tools, and every computed figure comes from one shared set of math functions that is tested. The pictures are original artwork drawn in code or made with AI tools."),
+        ("Made with AI assistance", f"{AI_LINE} The lessons were written and fact-checked with the Quiet Money studio's tools, and every computed figure comes from one shared set of math functions that is tested. The pictures are original artwork drawn in code or made with AI tools. The man on the cover is Quinton, the Quiet Money host: a virtual, AI-generated character, not a real person. The wellness posters are the owner's own artwork."),
         ("Licence", f"{LICENSE} One purchase covers printing as many copies as you need for yourself and your household."),
         ("Questions or mistakes", "If you find an error, reply to the message where you bought this. It gets fixed and you get the update."),
     ):
@@ -462,7 +490,9 @@ def ensure_art(days: list[planner_content.Day], workers: int | None = None) -> d
 def build_pdf(size: str, days: list[planner_content.Day], art: dict[int, Path], cover: Image.Image | None, out: Path, weeks: list | None = None) -> Path:
     from reportlab.pdfgen import canvas
     W, H = SIZES[size]
-    total = FRONT + len(days) + BACK
+    wk = {d.week: planner_wellness.week_poster(d.week) for d in days if d.kind == "R"}
+    wk = {w: pos for w, pos in wk.items() if pos}
+    total = FRONT + len(days) + len(wk) + BACK
     c = canvas.Canvas(str(out), pagesize=(W, H), pageCompression=1)
     c.setTitle(NAME)
     c.setAuthor("Quiet Money")
@@ -491,6 +521,9 @@ def build_pdf(size: str, days: list[planner_content.Day], art: dict[int, Path], 
         im = Image.open(art[d.n])
         PAGERS.get(d.kind, day_page)(p, d, im, page, total)
         done()
+        if d.kind == "R" and d.week in wk:
+            wellness_page(p, d.week, wk[d.week], page, total)
+            done()
     summary(p, page, total); done()
     money_words(p, page, total); done()
     notes(p, "Notes", page, total); done()
@@ -571,7 +604,7 @@ def check(build_first: bool = False) -> list[tuple[str, bool, str, bool]]:
     if cat:
         gates += [(g.name, g.ok, g.detail, g.hard) for g in listing.text_gates(cat) + listing.file_gates(cat)]
     from pypdf import PdfReader
-    want = FRONT + 365 + BACK
+    want = FRONT + 365 + len(planner_wellness.kept()) + BACK
     for size in SIZES:
         f = OUT / f"Quiet-Money-Daily-Planner-{size}.pdf"
         if not f.exists():
@@ -584,6 +617,9 @@ def check(build_first: bool = False) -> list[tuple[str, bool, str, bool]]:
         text2 = (r.pages[1].extract_text() or "") + (r.pages[-1].extract_text() or "")
         gates.append((f"pdf_{size.lower()}_disclosures", "not financial" in text2.lower() and "AI assistance" in text2, "not-advice and AI lines on the welcome and last pages", True))
         gates.append((f"pdf_{size.lower()}_etsy_size", f.stat().st_size <= MAX_BYTES, f"{f.stat().st_size / 2**20:.1f} MB (Etsy: 20 MB per file)", True))
+    wb = planner_wellness.check()
+    gates.append(("wellness_manifest", not wb, "40 posters, 4 duplicates dropped, every file present" if not wb else "; ".join(wb), True))
+    gates.append(("wellness_claims_for_owner_review", False, f"{len(planner_wellness.REVIEW)} posters make quantified or clinical claims the studio has not checked: {sorted(planner_wellness.REVIEW)}", False))
     gen = sorted(planner_art.GENERATED.glob("day-*.jpg"))
     if gen:
         same = len(gen) - len({hashlib.md5(g.read_bytes()).hexdigest() for g in gen})

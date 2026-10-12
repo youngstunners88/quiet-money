@@ -1,0 +1,137 @@
+{
+ "microsoft/phi-4": [
+  {
+   "out": {
+    "choice": "C",
+    "confidence": 0.85,
+    "reasons": [
+     "Listing both separately and as a bundle provides flexibility for customer preferences.",
+     "Bundling can attract customers looking for a comprehensive solution.",
+     "Separate listings allow for targeted marketing to specific needs.",
+     "Etsy's keyword and page count preferences can be leveraged with multiple listings."
+    ],
+    "risks": [
+     "Increased listing fees on Etsy for multiple listings.",
+     "Potential complexity in managing multiple product listings.",
+     "Risk of cannibalization between separate and bundled sales."
+    ],
+    "test_prices_usd": {
+     "daily": 17,
+     "debt": 19,
+     "bundle": 28
+    },
+    "first_test": "Measure conversion rates for separate and bundled listings to determine customer preference.",
+    "what_would_change_my_mind": "If separate listings significantly underperform compared to the bundle, reconsider strategy."
+   },
+   "usd": 8.113e-05
+  },
+  {
+   "out": {
+    "choice": "C",
+    "confidence": 0.8,
+    "reasons": [
+     "Bundling offers perceived value and convenience.",
+     "Separate listings provide flexibility for different customer needs.",
+     "Etsy favors keyword-stacked titles and page counts, supporting multiple listings.",
+     "Existing bundle already includes Debt Payoff Planner, aligning with current strategy."
+    ],
+    "risks": [
+     "Higher listing fees on Etsy for multiple products.",
+     "Potential complexity in managing multiple listings.",
+     "New shop with no reviews may struggle to gain initial traction."
+    ],
+    "test_prices_usd": {
+     "daily": 17,
+     "debt": 19,
+     "bundle": 28
+    },
+    "first_test": "Measure conversion rates for separate and bundled listings to assess customer preference.",
+    "what_would_change_my_mind": "Significant difference in conversion rates favoring one format over the other."
+   },
+   "usd": 8.071e-05
+  },
+  {
+   "out": {
+    "choice": "C",
+    "confidence": 0.85,
+    "reasons": [
+     "Offering both options caters to different customer preferences.",
+     "Bundling can attract customers looking for a comprehensive solution.",
+     "Separate listings allow for targeted marketing and pricing strategies.",
+     "Etsy's structure supports multiple listings, even with fees."
+    ],
+    "risks": [
+     "Increased listing fees on Etsy.",
+     "Potential customer confusion with multiple options.",
+     "Higher management overhead for multiple listings."
+    ],
+    "test_prices_usd": {
+     "daily": 17,
+     "debt": 19,
+     "bundle": 28
+    },
+    "first_test": "Measure conversion rates for each listing to see which option attracts more customers.",
+    "what_would_change_my_mind": "If data shows significantly higher conversions for one option over the others."
+   },
+   "usd": 7.917e-05
+  }
+ ],
+ "anthropic/claude-haiku-5.5": [
+  {
+   "out": {
+    "choice": "A",
+    "confidence": 0.6,
+    "reasons": [
+     "The shop has no sales, reviews, or audience data, so adding a third listing tests nothing useful yet.",
+     "The Debt Payoff Planner is already inside the Money Reset Kit at $28, so a Daily+Debt bundle would overlap with it and could cannibalise that sale.",
+     "Two separate products keep the habit product (Daily) and calculation product (Debt) distinct, and the Daily Planner's weeks 14 to 16 can point readers to the spreadsheet without a bundle.",
+     "Skipping the bundle avoids extra Etsy listing fees until there is evidence a bundle adds value."
+    ],
+    "risks": [
+     "Without a bundle, a buyer who wants both may not find or buy the second product, so some combined demand goes unserved.",
+     "Pricing both products at full test prices may still sit well above bestseller ranges, and a new shop may struggle regardless of structure.",
+     "If the owner later wants a bundle discount, the studio rule means both parts must already be listed separately at those prices, so the bundle price must be planned from the start."
+    ],
+    "test_prices_usd": {
+     "daily": 17,
+     "debt": 19,
+     "bundle": null
+    },
+    "first_test": "Measure view-to-sale conversion for the Daily Planner at $17 against one lower step (about $14), with at least 20 views per price step, and if the lower price converts markedly better, adjust the Daily price before adding any bundle.",
+    "what_would_change_my_mind": "If buyers of the Daily Planner repeatedly ask for or purchase the Debt spreadsheet alongside it, or Gumroad data shows a clear combined-purchase pattern, I would switch to C with a bundle priced below the sum of the parts."
+   },
+   "usd": 0.0006897
+  },
+  {
+   "out": {
+    "choice": "C",
+    "confidence": 0.55,
+    "reasons": [
+     "The Daily Planner's weeks 14-16 send readers to the spreadsheet, so the two products are a natural pair and a bundle has a clear buyer.",
+     "Listing both products separately satisfies the studio rule, so a bundle discount can be advertised.",
+     "Keeping the separate products lets the shop test each one on its own before bundling them.",
+     "Both files fit Etsy limits: the 17 MB planner is under 20 MB, and two files are well under the five-file cap."
+    ],
+    "risks": [
+     "A third listing adds Etsy listing fees and splits early traffic across three products in a shop with no reviews.",
+     "The Debt Payoff Planner already sits inside the $28 Money Reset Kit, so the new bundle could cannibalise it or confuse buyers.",
+     "Bundle price of $29 is an untested assumption, and the bundle could sell below the separate products or add little margin."
+    ],
+    "test_prices_usd": {
+     "daily": 17,
+     "debt": 19,
+     "bundle": 29
+    },
+    "first_test": "Measure whether the Daily Planner at $17 gets at least 20 views and any sales on Gumroad before changing prices; if it gets no sales after 20 views, the separate-product test has failed and A or a single-product listing should replace C.",
+    "what_would_change_my_mind": "If the Money Reset Kit already sells the Debt Payoff Planner well, or if the shop can't afford a third listing, I would switch to A and skip the bundle."
+   },
+   "usd": 0.0007177
+  },
+  {
+   "out": {
+    "error": "no JSON in response: '{\"choice\": \"A\", \"confidence\": 0.6, \"re"
+   },
+   "usd": 0.0007177
+  }
+ ]
+}

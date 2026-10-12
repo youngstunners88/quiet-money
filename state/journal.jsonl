@@ -3660,3 +3660,9 @@
 {"ts": "2026-10-12T09:38:26Z", "t": 1791797906.208, "actor": "engine", "type": "DECISIONS", "job": null, "backend": "jev-openrouter", "ms": 4371, "dry_run": true}
 {"ts": "2026-10-12T09:38:29Z", "t": 1791797909.795, "actor": "engine", "type": "JEV_CALL", "questions": ["look"], "via": "openrouter", "model": "openai/gpt-6-luna"}
 {"ts": "2026-10-12T09:38:29Z", "t": 1791797909.798, "actor": "engine", "type": "DECISIONS", "job": null, "backend": "jev-openrouter", "ms": 3588, "dry_run": true}
+{"ts": "2026-10-12T11:06:58Z", "t": 1791803218.482, "actor": "engine", "type": "MUAPI_RUN", "job": null, "model": "nano-banana-2-lite-edit", "usd": 0.03, "request": "d70cefa4-026", "balance": "11.9449"}
+{"ts": "2026-10-12T11:07:24Z", "t": 1791803244.222, "actor": "engine", "type": "MUAPI_RUN", "job": null, "model": "nano-banana-2-lite-edit", "usd": 0.03, "request": "97e153ef-b63", "balance": "11.9149"}
+{"ts": "2026-10-12T11:07:59Z", "t": 1791803279.349, "actor": "engine", "type": "MUAPI_RUN", "job": null, "model": "nano-banana-2-lite-edit", "usd": 0.03, "request": "b1ce5edd-ce1", "balance": "11.8849"}
+{"ts": "2026-10-12T11:08:28Z", "t": 1791803308.702, "actor": "engine", "type": "MUAPI_RUN", "job": null, "model": "nano-banana-2-lite-edit", "usd": 0.03, "request": "0a38ff10-2a7", "balance": "11.8549"}
+{"ts": "2026-10-12T11:09:14Z", "t": 1791803354.22, "actor": "engine", "type": "MUAPI_RUN", "job": null, "model": "seedvr2-image-upscale", "usd": 0.02, "request": "d44e4399-e63", "balance": "11.8349"}
+{"ts": "2026-10-12T11:10:09Z", "t": 1791803409.609, "actor": "engine", "type": "MUAPI_RUN", "job": null, "model": "seedvr2-image-upscale", "usd": 0.02, "request": "8c8d7084-c20", "balance": "11.8149"}
