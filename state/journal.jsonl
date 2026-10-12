@@ -4082,3 +4082,4 @@
 {"ts": "2026-10-12T11:14:16Z", "t": 1791803656.616, "actor": "engine", "type": "SCOUT_TOPUP", "pillar": "ledger", "added": 6}
 {"ts": "2026-10-12T11:14:21Z", "t": 1791803661.385, "actor": "engine", "type": "PROVIDER_OK", "capability": "llm", "provider": "gemini", "job": null, "ms": 3422}
 {"ts": "2026-10-12T11:14:25Z", "t": 1791803665.016, "actor": "engine", "type": "SCOUT_TOPUP", "pillar": "escape", "added": 3}
+{"ts": "2026-10-12T11:17:57Z", "t": 1791803877.913, "actor": "engine", "type": "COMPOSIO_SESSION", "user": "quiet-money-studio", "session_hash": "83b8436d"}
