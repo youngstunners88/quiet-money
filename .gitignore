@@ -36,3 +36,5 @@ channel/shop/*.zip
 .claude/settings.local.json
 channel/host/tmp/
 state/tmp/
+music/videos/**/*.mp4
+production/cache/songvideo/
