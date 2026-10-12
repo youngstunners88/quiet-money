@@ -176,10 +176,12 @@ def make(image: Path, audio: Path, title: str, out: Path, *, grade: str = "deep"
         f"[1:v]scale={w}:{h}:flags=bicubic,format=gbrp[pt];"
         f"[bg][pt]blend=all_mode=screen:all_opacity=0.75[b2];"
         f"[2:v]format=rgba,fade=t=in:st=0.6:d=1.6:alpha=1[ov];"
-        f"[b2]format=rgba[b3];[b3][ov]overlay=0:0,noise=alls=7:allf=t,format=yuv420p[b4];"
+        f"[b2]format=rgba[b3];[b3][ov]overlay=0:0,noise=alls=7:allf=t,format=gbrp[b4];"
         f"[3:a]asplit[wa][ma];"
-        f"[wa]showwaves=s={wave_w}x{wave_h}:mode=cline:rate={fps}:colors=0xFFD23F@0.9:scale=sqrt,format=rgba,fade=t=in:st=1.2:d=1.6:alpha=1[wv];"
-        f"[b4][wv]overlay=x=(W-w)/2:y={wave_y}:format=auto,format=yuv420p[v];"
+        f"[wa]aformat=channel_layouts=mono,showwaves=s={wave_w}x{wave_h}:mode=cline:rate={fps}:colors=white:scale=sqrt,format=gray[wm];"
+        f"color=c=0xFFD23F:s={wave_w}x{wave_h}:r={fps},format=rgba[gold];"
+        f"[gold][wm]alphamerge,colorchannelmixer=aa=0.9,fade=t=in:st=1.2:d=1.6:alpha=1[wv];"
+        f"[b4][wv]overlay=x=(W-w)/2:y={wave_y}:format=gbrp,format=yuv420p[v];"
         f"[ma]afade=t=in:d=0.6,afade=t=out:st={max(0, dur - 3):.2f}:d=3,loudnorm=I=-14:TP=-1.5:LRA=11[a]"
     )
     out.parent.mkdir(parents=True, exist_ok=True)
@@ -189,7 +191,7 @@ def make(image: Path, audio: Path, title: str, out: Path, *, grade: str = "deep"
            "-loop", "1", "-framerate", str(fps), "-i", str(ov),
            "-i", str(audio),
            "-filter_complex", fc, "-map", "[v]", "-map", "[a]", "-t", f"{dur:.3f}", "-r", str(fps),
-           "-c:v", "libx264", "-preset", "ultrafast" if draft else "medium", "-crf", "30" if draft else "18", "-pix_fmt", "yuv420p",
+           "-c:v", "libx264", "-preset", "ultrafast" if draft else "medium", "-crf", "30" if draft else "20", *([] if draft else ["-maxrate", "16M", "-bufsize", "32M"]), "-pix_fmt", "yuv420p",
            "-c:a", "aac", "-b:a", "192k", "-movflags", "+faststart", str(out)]
     subprocess.run(cmd, check=True, timeout=FFMPEG_TIMEOUT)
     info = {"video": str(out), "seconds": round(dur, 2), "size": f"{w}x{h}", "draft": draft, "grade": grade, "title": title}
