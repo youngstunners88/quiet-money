@@ -32,3 +32,19 @@ python -m pytest -q tests/test_planner.py
 - **A lesson:** edit the line in `content/qN.txt`, run `planner build`, then `planner check`. Computed numbers use `{name:args}` placeholders (`faceless/planner_content.py` lists them).
 - **A page design:** `faceless/product_planner.py`. **The cover:** `faceless/planner_cover.py`. **A picture motif:** `faceless/planner_art.py`.
 - A page that would clip is refused at build time, never shipped.
+
+## The quiet-planner MCP server (for agents)
+`.mcp.json` registers `python -m faceless.planner_mcp`, a dependency-free stdio MCP server, so an agent can do the whole picture job with tools instead of shell commands:
+`planner_status`, `planner_normalize`, `planner_ingest`, `planner_clean`, `planner_review`, `planner_build`, `planner_check`, `planner_cover`. None of them publishes, lists, posts or prices anything.
+
+| Layer | What it does | Cost | Needs |
+|---|---|---|---|
+| Local (always) | OpenCV handle finder and inpainting; local before/after checks (nothing changed outside the handle's area, under 2% of the picture repainted, no text still found) | free | nothing |
+| Vision look (optional) | a small model through OpenRouter (`[planner] review_model`) sees one before \| after crop and answers three yes/no questions; its answer can only hold a picture back | about $0.0002 a picture, cap `[planner] daily_usd = 0.10` | `OPENROUTER_API_KEY` |
+| Decision gate (optional) | `decide.ask` (Jev when `TYPESAFE_API_KEY` is set, Laya if `LAYA_URL` is) may escalate to "a person looks", never release a held picture; stays in `dry_run` until the owner flips it | per `[decide]` | `TYPESAFE_API_KEY` |
+| FreeConvert (optional) | `planner_normalize` turns HEIC, TIFF, PSD, AVIF pictures into PNG (it cannot remove a watermark; that is the local layer's job) | free tier 20 conversion minutes a day, cap `[freeconvert] daily_minutes = 15` | `FREECONVERT_API_KEY` (a free FreeConvert account token the owner creates) |
+
+Jev is TypeSafe's decision API, not a model served by OpenRouter: the two are separate keys and separate jobs (Jev answers short typed questions, OpenRouter's vision model looks at pictures). Each layer is
+skipped quietly when its key is missing, and the report says which layers actually looked. `planner_clean` ends with a picture list: `needs_a_person` names the days the owner should open in the contact sheet first.
+
+Typical run for an agent: `planner_status` -> `planner_normalize` (if phone pictures) -> `planner_ingest` -> `planner_clean` -> owner looks at `assets/planner/clean-before-after.jpg` -> `planner_build` -> `planner_check`.

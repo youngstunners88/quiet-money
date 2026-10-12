@@ -3652,3 +3652,7 @@
 {"ts": "2026-10-11T19:16:13Z", "t": 1791746173.652, "actor": "engine", "type": "COMPOSIO_EXECUTE", "tool": "YOUTUBE_POST_COMMENT", "ok": true, "log_id": "log_XCRpp3Vwye9K", "job": "2026-10-06-s7-myth-myth-your-house-is-your-best-inv"}
 {"ts": "2026-10-12T01:46:35Z", "t": 1791769595.478, "actor": "engine", "type": "COMPOSIO_SESSION", "user": "quiet-money-studio", "session_hash": "831470cf"}
 {"ts": "2026-10-12T01:46:36Z", "t": 1791769596.479, "actor": "engine", "type": "YOUTUBE_API", "path": "videos", "method": "GET", "status": 200}
+{"ts": "2026-10-12T07:51:39Z", "t": 1791791499.841, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["person_should_look"], "images": 0, "input_tokens": 219}
+{"ts": "2026-10-12T07:51:39Z", "t": 1791791499.843, "actor": "engine", "type": "DECISIONS", "job": null, "backend": "clef", "ms": 838, "dry_run": true}
+{"ts": "2026-10-12T07:51:44Z", "t": 1791791504.436, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["person_should_look"], "images": 0, "input_tokens": 239}
+{"ts": "2026-10-12T07:51:44Z", "t": 1791791504.437, "actor": "engine", "type": "DECISIONS", "job": null, "backend": "clef", "ms": 680, "dry_run": true}

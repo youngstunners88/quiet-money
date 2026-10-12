@@ -2057,3 +2057,8 @@
 {"day": "2026-10-11", "provider": "edge", "unit": "chars", "amount": 1018, "usd": 0.0, "job": null}
 {"day": "2026-10-11", "provider": "composio", "unit": "calls", "amount": 1, "usd": 0.0, "job": "2026-10-02-s3-escape-the-rat-race-math-the-exact-numb"}
 {"day": "2026-10-11", "provider": "composio", "unit": "calls", "amount": 1, "usd": 0.0, "job": "2026-10-06-s7-myth-myth-your-house-is-your-best-inv"}
+{"day": "2026-10-12", "provider": "openrouter-planner", "unit": "usd", "amount": 0.0001, "usd": 0.000128, "job": null}
+{"day": "2026-10-12", "provider": "openrouter-planner", "unit": "usd", "amount": 0.0002, "usd": 0.000213, "job": null}
+{"day": "2026-10-12", "provider": "cloudflare", "unit": "neurons", "amount": 4.7782, "usd": 0.0, "job": null}
+{"day": "2026-10-12", "provider": "openrouter-planner", "unit": "usd", "amount": 0.0001, "usd": 0.000128, "job": null}
+{"day": "2026-10-12", "provider": "cloudflare", "unit": "neurons", "amount": 5.2145, "usd": 0.0, "job": null}

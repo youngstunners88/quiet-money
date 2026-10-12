@@ -197,3 +197,20 @@ Each row was read from the project's own README, manifest, licence file or regis
 |---|---|---|
 | claude-remotion-skill (haidrrrry) | render | MIT skill for Remotion. |
 | Remotion (remotion-dev/remotion) | render | React video renderer. |
+
+## Intake 2026-10-12 (verified from dossiers in `repo-farm/intake/2026-10-12/`)
+
+Each row was read from the project's own README, manifest, licence file or registry entry; nothing was installed or run. Stars and dates were unavailable where the GitHub API is closed to this machine.
+
+### On trial
+
+| Tool | Stage | Why |
+|---|---|---|
+| FreeConvert (freeconvert.com, API v1) | visuals | A hosted file-conversion API (convert, compress, resize 200+ formats; job of import, convert, export/url). |
+
+### Parked (named condition)
+
+| Tool | Stage | Why |
+|---|---|---|
+| firecrawl-cli (npm) | ideate | Three HIGH flags (install hook, pipe-to-shell in its docs, asks for secrets) and the exact line the owner pasted, `init --all --browser`, installs skills into every detected coding agent globally and opens a browser login: that… |
+| icm-architect (RinDig, MIT) | package | A Claude skill that scaffolds 'folder structure as agent architecture'. |

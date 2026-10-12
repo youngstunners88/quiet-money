@@ -129,7 +129,7 @@ def ingest(folder: Path, start: int = 1) -> list[tuple[int, Path]]:
     return out
 
 
-def run_clean(boxes_frac: tuple[float, float, float, float] | None = None, sheet: bool = True) -> dict:
+def run_clean(boxes_frac: tuple[float, float, float, float] | None = None, sheet: bool = True, reviewer=None) -> dict:
     files = sorted(planner_art.SOURCE.glob("day-*.*"), key=natural_key)
     planner_art.CLEAN.mkdir(parents=True, exist_ok=True)
     report, pairs = {}, []
@@ -151,6 +151,8 @@ def run_clean(boxes_frac: tuple[float, float, float, float] | None = None, sheet
                           "residual": [x.zone for x in detect(cleaned)] if found and not boxes else []}
         if found:
             pairs.append((src, cleaned))
+            if reviewer:
+                report[f.name]["review"] = reviewer(f.name, src, cleaned, found)
     write_atomic(REPORT, json.dumps(report, indent=1) + "\n")
     if sheet and pairs:
         _sheet(pairs)
@@ -170,7 +172,7 @@ def _sheet(pairs: list[tuple[Image.Image, Image.Image]], cell: int = 360) -> Pat
     return out
 
 
-def inventory(total: int = 365) -> dict:
+def inventory(total: int = 365, write: bool = True) -> dict:
     have = sorted(int(m.group(1)) for f in planner_art.SOURCE.glob("day-*.*") if (m := re.match(r"day-(\d+)", f.name)))
     cleaned = {int(m.group(1)) for f in planner_art.CLEAN.glob("day-*.*") if (m := re.match(r"day-(\d+)", f.name))}
     missing = [d for d in range(1, total + 1) if d not in have]
@@ -181,5 +183,6 @@ def inventory(total: int = 365) -> dict:
     if have:
         lines += ["## Owner pictures", ", ".join(map(str, have)), ""]
     lines += ["## Drawn days", ", ".join(map(str, missing)) if missing else "none", ""]
-    write_atomic(INVENTORY, "\n".join(lines))
-    return {"owner": len(have), "drawn": len(missing), "cleaned": len(cleaned & set(have))}
+    if write:
+        write_atomic(INVENTORY, "\n".join(lines))
+    return {"owner": len(have), "drawn": len(missing), "cleaned": len(cleaned & set(have)), "owner_days": have}
