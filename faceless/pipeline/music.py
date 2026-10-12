@@ -95,8 +95,8 @@ def ambient_bed(seconds: float, key: str = "A", bpm: float = 88, seed: int = 0) 
     return mix / (np.abs(mix).max() + 1e-9) * 0.8
 
 
-def sfx_track(seconds: float, cuts: list[float], seed: int = 0) -> np.ndarray:
-    """Whoosh into every cut plus a low impact under the hook."""
+def sfx_track(seconds: float, cuts: list[float], seed: int = 0, hits: list[tuple[float, str]] | None = None) -> np.ndarray:
+    """Whoosh into every cut plus a low impact under the hook; `hits` are (second, kind) sound effects tied to what happens on screen (see `hit`)."""
     rng = np.random.default_rng(seed)
     n = int(seconds * SR)
     out = np.zeros(n)
@@ -115,4 +115,39 @@ def sfx_track(seconds: float, cuts: list[float], seed: int = 0) -> np.ndarray:
     it = np.arange(il) / SR
     impact = np.sin(2 * np.pi * (40 + 70 * np.exp(-it * 18)) * it) * np.exp(-it * 4.5)
     out[:il] += impact[: min(il, n)] * 0.9
+    for t, kind in hits or []:
+        h = hit(kind, rng)
+        a = int(max(0.0, t) * SR)
+        b = min(n, a + len(h))
+        if b > a:
+            out[a:b] += h[: b - a]
     return out
+
+
+def hit(kind: str, rng) -> np.ndarray:
+    """Small synthesized effects for the cast: coin (two bright pings), ding (a bell), chomp (a thump and a snap), gulp (a falling blip), pop, thud, gasp."""
+    def tone(freq, dur, decay, amp=1.0, glide=0.0):
+        t = np.arange(int(dur * SR)) / SR
+        return np.sin(2 * np.pi * (freq + glide * np.exp(-t * 30)) * t) * np.exp(-t * decay) * amp
+    if kind == "coin":
+        a, b = tone(1568, 0.18, 22, 0.28), tone(2093, 0.26, 18, 0.22)
+        out = np.zeros(int(0.05 * SR) + len(b))
+        out[: len(a)] += a
+        out[int(0.05 * SR): int(0.05 * SR) + len(b)] += b
+        return out
+    if kind == "ding":
+        return tone(1318, 0.7, 5.5, 0.32) + tone(1976, 0.7, 7.0, 0.16)
+    if kind == "chomp":
+        n = int(0.16 * SR)
+        thump = tone(95, 0.16, 20, 0.7, 120)
+        snap = _bandpass(rng.normal(0, 1, n), 1200, 5000) * np.exp(-np.arange(n) / SR * 40) * 0.5
+        return thump + snap
+    if kind == "gulp":
+        return tone(220, 0.22, 14, 0.4, 260)
+    if kind == "gasp":
+        n = int(0.4 * SR)
+        env = np.sin(np.linspace(0, np.pi, n)) ** 2
+        return _bandpass(rng.normal(0, 1, n), 800, 3500) * env * 0.28
+    if kind == "thud":
+        return tone(70, 0.3, 12, 0.7, 90)
+    return tone(660, 0.12, 30, 0.35, 380)          # pop

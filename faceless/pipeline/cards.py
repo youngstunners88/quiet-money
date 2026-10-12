@@ -433,6 +433,9 @@ def render_reel(job, picked: dict[int, dict], beat_spans: dict[int, tuple[float,
     if theme == "ledger":
         accent = config.load()["production"].get("ledger", {}).get("accent", accent)    # gold deep enough to read on paper
     total = build_project(root, specs, pillar_id, accent, fps, kicker=config.pillar(pillar_id).name.upper(), theme=theme)
+    events_ = [(round(beat_spans[i][0] + t, 3), kind) for i, spec, _d in specs for t, kind in spec.get("_ev", [])]     # sound-effect moments, in video time
+    if events_ and name == "reel":
+        (job.dir / "sfx_events.json").write_text(json.dumps(events_), encoding="utf-8")
     out = root / f"{name}.mp4"
     cmd = ["npx", "--yes", CLI, "render", str(root), "-o", str(out), "-f", str(fps), "-q", "looks", "--quiet", "--workers", "2"]
     try:
