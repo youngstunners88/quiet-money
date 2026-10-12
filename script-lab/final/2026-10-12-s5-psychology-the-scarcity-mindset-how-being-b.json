@@ -1,0 +1,88 @@
+{
+  "title": "Why Being Broke Shrinks Your Decision-Making Bandwidth",
+  "hook_text": "FINANCIAL STRESS ACTUALLY LOWERS YOUR IQ",
+  "beats": [
+    {
+      "say": "Financial scarcity does something brutal to your brain. It literally shrinks your decision-making bandwidth.",
+      "callout": "",
+      "visual": "A dark room lit only by the cold blue glow of a smartphone screen, viewed from behind a hunched figure."
+    },
+    {
+      "say": "Psychology research shows that being broke consumes so much mental energy that it causes a drop in cognitive function.",
+      "callout": "TUNNEL VISION",
+      "visual": "Extreme close-up of a hand tightly gripping a stack of past-due bills on a dark wooden table."
+    },
+    {
+      "say": "When you're trapped in survival mode, your brain focuses entirely on immediate threats. Long-term planning vanishes completely.",
+      "callout": "SURVIVAL MODE",
+      "visual": "A silhouette of a person staring blankly out a rain-streaked window at night, low key lighting."
+    },
+    {
+      "say": "This is why you ignore massive opportunities or fall for high-interest traps. You don't have the mental space to look up.",
+      "callout": "STEP ONE",
+      "visual": "A red credit card lying face down on a concrete floor, sharp cinematic lighting from above."
+    },
+    {
+      "say": "Take a simple credit card balance of $6,000 at 24% APR. Paying only the minimum turns it into a 252-month nightmare.",
+      "callout": "$6,000 DEBT",
+      "visual": "An open leather wallet with empty card slots and a single receipt, shot at a steep macro angle."
+    },
+    {
+      "say": "That minimum payment trap costs you $10,887 in pure interest over time. It's the scarcity mindset at work.",
+      "callout": "$10,887 INTEREST",
+      "visual": "A calculator screen displaying a large red number, resting on a scratched metal desk."
+    },
+    {
+      "say": "Meanwhile, the same $6,000 balance paid off at $300 a month takes just 26 months and costs $1,739 in interest.",
+      "callout": "STEP TWO",
+      "visual": "A hand flipping a clean white page in a leather-bound notebook, soft warm desk lamp light."
+    },
+    {
+      "say": "That's a massive difference of thousands of dollars saved, simply by lifting your head out of the fog.",
+      "callout": "SAVINGS VS COST",
+      "visual": "A close-up of a mechanical desk clock ticking away the seconds, out-of-focus background."
+    },
+    {
+      "say": "The counter-move isn't just making more money. It's building a financial buffer so scarcity stops hijacking your choices.",
+      "callout": "",
+      "visual": "A heavy ceramic coffee mug sitting untouched on a minimalist oak desk, cinematic morning light."
+    },
+    {
+      "say": "Start with a tiny emergency fund. Even small amounts put aside remove the daily panic of unexpected bills.",
+      "callout": "",
+      "visual": "A pristine glass jar being placed gently onto a wooden shelf, soft diffuse shadows."
+    },
+    {
+      "say": "When your brain isn't fighting a fire every second, you can finally play the long game with your money.",
+      "callout": "",
+      "visual": "A wide shot of a quiet urban street at dawn, calm and uncluttered atmosphere."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "A dark minimalist screen with clean typography, steady cinematic fade to black."
+    }
+  ],
+  "caption": "Scarcity doesn't just empty your bank account. It hijacks your brain. #MoneyPsychology #PersonalFinance #FinancialLiteracy #DebtFreeJourney #WealthBuilding",
+  "description": "Research shows financial scarcity reduces cognitive bandwidth and leads to costly decisions. Learn how building a buffer breaks the cycle.",
+  "hashtags": [
+    "#moneypsychology",
+    "#personalfinance",
+    "#financialliteracy",
+    "#debtfreejourney",
+    "#wealthbuilding"
+  ],
+  "first_comment": "What money decision did you make out of stress that you later regretted?",
+  "facts": [
+    {
+      "claim": "$6,000 credit card at 24% APR paying only the minimum (1% + interest, min $25): 252 months (~21 years), $10,887 interest",
+      "basis": "$6,000 credit card at 24% APR paying only the minimum (1% + interest, min $25): 252 months (~21 years), $10,887 interest"
+    },
+    {
+      "claim": "Same $6,000 at 24% paying $300/month: 26 months, $1,739 interest",
+      "basis": "Same $6,000 at 24% paying $300/month: 26 months, $1,739 interest"
+    }
+  ],
+  "source": "llm",
+  "pillar": "psychology"
+}

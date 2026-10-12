@@ -1,0 +1,66 @@
+{
+  "id": "2026-10-12-s6-myth-myth-you-need-a-high-income-to-s",
+  "pillar": "myth",
+  "topic": "Myth: You need a high income to start building wealth",
+  "day": "2026-10-12",
+  "slot": 6,
+  "status": "packaged",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-12T09:37:36Z",
+      "words": 158
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-12T09:37:59Z",
+      "seconds": 63.198,
+      "provider": "gemini"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-12T09:38:21Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-12T09:40:42Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-12T09:40:42Z",
+      "score": 94
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-12T09:40:43Z"
+    }
+  ],
+  "artifacts": {
+    "angle": "People believe wealth is strictly an income problem, but the savings rate and compounding velocity matter far more than the top-line number, as proven by the mechanics of the wealthy.",
+    "title": "Why Wealth Isn't an Income Problem",
+    "style": "cinematic",
+    "video": "/home/user/quiet-money/production/output/2026-10-12/2026-10-12-s6-myth-myth-you-need-a-high-income-to-s/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-12/2026-10-12-s6-myth-myth-you-need-a-high-income-to-s/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-10-13/slot2-myth",
+        "post_at": "2026-10-13T11:30:00-04:00"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 94,
+    "passed": true
+  },
+  "cost": {
+    "tts:gemini:chars": 917
+  },
+  "notes": []
+}

@@ -1,0 +1,79 @@
+{
+  "title": "Why Wealth Isn't an Income Problem",
+  "hook_text": "YOUR SALARY IS NOT THE PROBLEM",
+  "beats": [
+    {
+      "say": "Your salary is not the main reason you feel stuck. Most people think wealth requires a massive paycheck.",
+      "callout": "",
+      "visual": "Cinematic shot of a single desk lamp illuminating a stack of unopened mail in a dark room, top-down angle."
+    },
+    {
+      "say": "That belief keeps you waiting for a raise that never fixes the underlying habit.",
+      "callout": "THE MYTH",
+      "visual": "A person's hands sliding a sleek modern calculator across a dark wooden table."
+    },
+    {
+      "say": "The data proves otherwise. If you invest $500 a month at 8% a year, you reach $1,745,504 in 40 years.",
+      "callout": "$1,745,504",
+      "visual": "Macro shot of a vintage metal hourglass resting on a dark slate surface, sand trickling down slowly."
+    },
+    {
+      "say": "You put in $240,000 of your own money. The rest is pure velocity.",
+      "callout": "$240,000",
+      "visual": "A close-up of heavy brass keys resting on a clean concrete floor, moody cinematic side lighting."
+    },
+    {
+      "say": "Here is the part nobody mentions. A high earner who saves zero dollars builds zero wealth.",
+      "callout": "ASSET VS LIABILITY",
+      "visual": "Silhouette of a person walking away down a long, narrow hallway lit by overhead warm bulbs."
+    },
+    {
+      "say": "Meanwhile, a modest earner with a strict savings rate compounds past them every single year.",
+      "callout": "VELOCITY",
+      "visual": "A sleek silver fountain pen resting on a blank dark leather journal, macro shot."
+    },
+    {
+      "say": "Wealth is a mechanical equation, not a status symbol. It cares about your retention, not your title.",
+      "callout": "THE RULE",
+      "visual": "A minimalist black analog clock on a concrete shelf, soft shadows moving across the wall."
+    },
+    {
+      "say": "Start small today. Automate a fixed transfer before you ever see your paycheck balance.",
+      "callout": "STEP ONE",
+      "visual": "A smartphone lying flat on a dark wooden desk, screen dark and reflecting soft window light."
+    },
+    {
+      "say": "Let compound interest do the heavy lifting while you sleep through the noise.",
+      "callout": "",
+      "visual": "A ceramic coffee mug casting a long shadow on a minimalist kitchen counter at sunrise."
+    },
+    {
+      "say": "Build the system that works without your constant attention.",
+      "callout": "",
+      "visual": "A pair of hands folding a crisp white paper note on a dark walnut table."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "A single brass coin resting on a dark slate tile, centered, cinematic lighting."
+    }
+  ],
+  "caption": "Your income isn't keeping you broke. Your system is. #moneypsychology #wealthbuilding #personalfinance #smartmoney #financialfreedom",
+  "description": "Wealth isn't an income problem; it's a velocity problem. Discover why savings rate beats salary every time.",
+  "hashtags": [
+    "#moneypsychology",
+    "#wealthbuilding",
+    "#personalfinance",
+    "#smartmoney",
+    "#financialfreedom"
+  ],
+  "first_comment": "What is the hardest part of building a consistent savings habit for you?",
+  "facts": [
+    {
+      "claim": "$500/month invested for 40 years at 8%/yr (monthly compounding) = $1,745,504 (you put in $240,000)",
+      "basis": "$500/month invested for 40 years at 8%/yr (monthly compounding) = $1,745,504 (you put in $240,000)"
+    }
+  ],
+  "source": "llm",
+  "pillar": "myth"
+}

@@ -1,0 +1,66 @@
+{
+  "id": "2026-10-12-s5-psychology-the-scarcity-mindset-how-being-b",
+  "pillar": "psychology",
+  "topic": "The scarcity mindset: how being broke shrinks your decision-making bandwidth",
+  "day": "2026-10-12",
+  "slot": 5,
+  "status": "held",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-12T09:30:29Z",
+      "words": 163
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-12T09:34:16Z",
+      "seconds": 38.581,
+      "provider": "gemini"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-12T09:35:00Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-12T09:37:07Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-12T09:37:07Z",
+      "score": 93
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-12T09:37:08Z"
+    },
+    {
+      "from": "packaged",
+      "to": "held",
+      "ts": "2026-10-12T09:37:08Z"
+    }
+  ],
+  "artifacts": {
+    "angle": "research on scarcity and tunnel vision; build a buffer",
+    "title": "Why Being Broke Shrinks Your Decision-Making Bandwidth",
+    "style": "cinematic",
+    "video": "/home/user/quiet-money/production/output/2026-10-12/2026-10-12-s5-psychology-the-scarcity-mindset-how-being-b/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-12/2026-10-12-s5-psychology-the-scarcity-mindset-how-being-b/cover.jpg"
+  },
+  "scores": {
+    "gauntlet": 93,
+    "passed": false
+  },
+  "cost": {
+    "tts:gemini:chars": 2315
+  },
+  "notes": [
+    "held for review: duration"
+  ]
+}

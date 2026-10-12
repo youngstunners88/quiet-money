@@ -1,0 +1,66 @@
+{
+  "id": "2026-10-12-s7-playbook-kill-a-hidden-recurring-bank-fee",
+  "pillar": "playbook",
+  "topic": "Kill a hidden recurring bank fee in under 10 minutes",
+  "day": "2026-10-12",
+  "slot": 7,
+  "status": "packaged",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-12T09:42:09Z",
+      "words": 176
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-12T09:42:29Z",
+      "seconds": 63.213,
+      "provider": "gemini"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-12T09:42:47Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-12T09:45:05Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-12T09:45:05Z",
+      "score": 98
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-12T09:45:06Z"
+    }
+  ],
+  "artifacts": {
+    "angle": "Step-by-step guide to finding and removing the sneaky maintenance fee eating your balance.",
+    "title": "Kill This Hidden Bank Fee Today",
+    "style": "cinematic",
+    "video": "/home/user/quiet-money/production/output/2026-10-12/2026-10-12-s7-playbook-kill-a-hidden-recurring-bank-fee/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-12/2026-10-12-s7-playbook-kill-a-hidden-recurring-bank-fee/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-10-13/slot3-playbook",
+        "post_at": "2026-10-13T15:00:00-04:00"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 98,
+    "passed": true
+  },
+  "cost": {
+    "tts:gemini:chars": 972
+  },
+  "notes": []
+}

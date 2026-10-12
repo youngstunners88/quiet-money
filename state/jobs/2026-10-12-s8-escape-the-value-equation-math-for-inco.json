@@ -1,0 +1,67 @@
+{
+  "id": "2026-10-12-s8-escape-the-value-equation-math-for-inco",
+  "pillar": "escape",
+  "topic": "The Value Equation Math for Income Growth",
+  "day": "2026-10-12",
+  "slot": 8,
+  "status": "packaged",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-12T09:45:34Z",
+      "words": 129
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-12T09:46:20Z",
+      "seconds": 63.182,
+      "provider": "gemini"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-12T09:46:40Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-12T09:49:48Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-12T09:49:48Z",
+      "score": 96
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-12T09:49:49Z"
+    }
+  ],
+  "artifacts": {
+    "angle": "Break down dream outcome multiplied by perceived likelihood divided by time delay and effort, showing how to double income without working double the hours.",
+    "brief": "hormozi",
+    "title": "The Value Equation Math for Income Growth",
+    "style": "cinematic",
+    "video": "/home/user/quiet-money/production/output/2026-10-12/2026-10-12-s8-escape-the-value-equation-math-for-inco/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-12/2026-10-12-s8-escape-the-value-equation-math-for-inco/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-10-13/slot4-escape",
+        "post_at": "2026-10-13T18:30:00-04:00"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 96,
+    "passed": true
+  },
+  "cost": {
+    "tts:gemini:chars": 1714
+  },
+  "notes": []
+}

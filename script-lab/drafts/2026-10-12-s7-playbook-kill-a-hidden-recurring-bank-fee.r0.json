@@ -1,0 +1,84 @@
+{
+  "title": "Kill This Hidden Bank Fee Today",
+  "hook_text": "YOUR BANK IS STEALING $15 EVERY MONTH",
+  "beats": [
+    {
+      "say": "Your bank is quietly draining $15 every month for a fee you didn't agree to.",
+      "callout": "",
+      "visual": "A dark wooden desk with a single brass lamp casting a warm glow, high angle shot."
+    },
+    {
+      "say": "A $15 monthly fee adds up to $1,800 over 10 years just sitting in charges.",
+      "callout": "$1,800 LOST",
+      "visual": "Macro shot of a silver coin resting on a dark ledger, moody cinematic lighting."
+    },
+    {
+      "say": "Most people never check their statements, so banks keep taking it. Here's how to stop them.",
+      "callout": "",
+      "visual": "An empty coffee cup next to a closed leather notebook on a minimal gray desk."
+    },
+    {
+      "say": "Step one. Open your banking app right now and tap on your checking account statement.",
+      "callout": "STEP ONE",
+      "visual": "A hand holding a dark smartphone at a sharp angle, screen blurred out."
+    },
+    {
+      "say": "Step two. Scroll down until you spot a maintenance fee, service charge, or inactivity fee.",
+      "callout": "STEP TWO",
+      "visual": "Fingers turning the pages of an old paper ledger in dim natural light."
+    },
+    {
+      "say": "Step three. Call your bank's support line or open the live chat immediately.",
+      "callout": "STEP THREE",
+      "visual": "A vintage rotary phone sitting on a concrete surface, dramatic side lighting."
+    },
+    {
+      "say": "Type these exact words. I noticed a maintenance fee and I want it permanently refunded.",
+      "callout": "",
+      "visual": "A close up of hands typing on a mechanical keyboard with no text visible."
+    },
+    {
+      "say": "Then ask them to switch your account to a free tier with no monthly minimums.",
+      "callout": "",
+      "visual": "A sleek metal pen resting on a blank white sheet of paper."
+    },
+    {
+      "say": "If they refuse to remove it, tell them you're moving your direct deposit to a credit union.",
+      "callout": "",
+      "visual": "A closed oak door viewed from a dimly lit hallway, minimalist aesthetic."
+    },
+    {
+      "say": "Banks hate losing deposits, so 9 times out of 10 they'll waive the fee on the spot.",
+      "callout": "",
+      "visual": "A pair of hands sliding a small leather wallet across a dark marble table."
+    },
+    {
+      "say": "Take back your cash today because no bank deserves to profit off your ignorance.",
+      "callout": "",
+      "visual": "An open window with evening light filtering through sheer curtains into a quiet room."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "FOLLOW",
+      "visual": "A silhouette of a person walking down a quiet hallway toward warm light."
+    }
+  ],
+  "caption": "Stop letting banks steal your hard-earned cash with hidden fees. Take 10 minutes today to audit your statements and get your money back. Follow for the money rules school never taught you.\n\n#personalfinance #moneysavingtips #financialfreedom #bankfees #smartmoney",
+  "description": "A step-by-step guide to finding and eliminating sneaky bank maintenance fees in under 10 minutes. Learn how to talk to customer service and protect your balance.",
+  "hashtags": [
+    "#personalfinance",
+    "#moneysavingtips",
+    "#financialfreedom",
+    "#bankfees",
+    "#smartmoney"
+  ],
+  "first_comment": "What's the highest monthly fee you've ever caught your bank charging you?",
+  "facts": [
+    {
+      "claim": "A $15 monthly subscription for 10 years equals $1,800",
+      "basis": "A $15/month subscription for 10 years = $1,800 from the fact sheet"
+    }
+  ],
+  "source": "llm",
+  "pillar": "playbook"
+}
