@@ -341,3 +341,13 @@ description = "Penny the gold coin and the Fee Gremlin act out one calculation o
 pillar = "escape"
 title = "Escape the Rat Race: Passive Income and Financial Freedom Frameworks"
 description = "Proven frameworks for building income beyond a paycheck, with the real numbers and the honest catch for each. No promised income. Educational content, not financial advice."
+
+[planner]                                    # the Daily Planner's picture review (faceless/planner_review.py); a vision model looks at before | after crops of a cleaned picture
+review_model = "anthropic/claude-haiku-5.5"  # through OpenRouter, the same small model the sketch scenes use (about $0.0002 a look); needs OPENROUTER_API_KEY
+daily_usd = 0.10                             # its own cap, below the studio ceiling (a test enforces it)
+per_call_usd = 0.01
+
+[freeconvert]                                # optional picture-format normaliser for HEIC, TIFF, PSD, AVIF (faceless/freeconvert.py); OFF until FREECONVERT_API_KEY is set
+daily_minutes = 15                           # FreeConvert's free tier is 20 conversion minutes a day and 5 minutes per file; one picture costs about one minute
+per_file_mb = 10
+timeout = 180

@@ -1,0 +1,14 @@
+{
+ "days": 365,
+ "files": {
+  "Letter": {
+   "path": "channel/products/daily-quiet-money-planner/Quiet-Money-Daily-Planner-Letter.pdf",
+   "mb": 17.0
+  },
+  "A4": {
+   "path": "channel/products/daily-quiet-money-planner/Quiet-Money-Daily-Planner-A4.pdf",
+   "mb": 17.0
+  }
+ },
+ "seconds": 34
+}

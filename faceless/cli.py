@@ -329,6 +329,43 @@ def cmd_products(_args) -> int:
     return 1 if bad else 0
 
 
+def cmd_planner(args) -> int:
+    from faceless import planner_art, planner_clean, product_planner as pp
+    if args.action == "build":
+        sizes = ("Letter", "A4") if args.size == "both" else (args.size,)
+        res = pp.build(sizes, limit=args.days)
+        for size, f in res["files"].items():
+            print(f"{size}: {f['path']} ({f['mb']} MB)")
+        print(f"{res['days']} days in {res['seconds']} s. Next: python -m faceless planner check")
+        return 0
+    if args.action == "check":
+        bad = 0
+        for name, ok, detail, hard in pp.check():
+            print(f"{'ok  ' if ok else ('FAIL' if hard else 'warn')} {name}: {detail}")
+            bad += 0 if ok or not hard else 1
+        return 1 if bad else 0
+    if args.action == "ingest":
+        if not args.folder:
+            raise SystemExit("usage: planner ingest <folder> [--start N]")
+        done = planner_clean.ingest(Path(args.folder), args.start)
+        print(f"{len(done)} pictures copied to assets/planner/source (days {done[0][0]} to {done[-1][0]})" if done else "no pictures found")
+        return 0
+    if args.action == "clean":
+        box = tuple(float(v) for v in args.box.split(",")) if args.box else None
+        rep = planner_clean.run_clean(box)
+        hit = {k: v for k, v in rep.items() if v["removed"]}
+        print(f"{len(rep)} pictures checked, {len(hit)} had a handle removed (report: assets/planner/clean-report.json). Look at assets/planner/clean-before-after.jpg before you trust it.")
+        return 0
+    if args.action == "inventory":
+        print(json.dumps(planner_clean.inventory(), indent=2))
+        return 0
+    from faceless import planner_cover
+    out = Path(config.STUDIO) / "channel" / "products" / pp.PRODUCT / "cover.png"
+    planner_cover.cover(1700, 2200).save(out)
+    print(out)
+    return 0
+
+
 def cmd_autoresponder(_args) -> int:
     from faceless import autoresponder
     for path in autoresponder.write():
@@ -809,6 +846,14 @@ def main(argv: list[str] | None = None) -> int:
     fl.add_argument("--day", help="YYYY-MM-DD (default today)")
     fl.set_defaults(fn=cmd_flow)
     sub.add_parser("products", help="build the spreadsheet products, recalculate them in LibreOffice, check against Python math, write listings").set_defaults(fn=cmd_products)
+    pl = sub.add_parser("planner", help="the Daily Planner product: `build` the PDFs, `check` the gauntlet, `ingest <folder>` the owner's pictures, `clean` the handle off them, `inventory`, `cover`")
+    pl.add_argument("action", choices=["build", "check", "ingest", "clean", "inventory", "cover"])
+    pl.add_argument("folder", nargs="?", help="ingest: the folder with the owner's pictures")
+    pl.add_argument("--size", choices=["Letter", "A4", "both"], default="both")
+    pl.add_argument("--days", type=int, help="build only the first N days (a quick test)")
+    pl.add_argument("--start", type=int, default=1, help="ingest: the day number of the first picture")
+    pl.add_argument("--box", help="clean: x0,y0,x1,y1 as fractions of the picture, when the handle is somewhere unusual")
+    pl.set_defaults(fn=cmd_planner)
     sub.add_parser("autoresponder", help="write the 7-day Money Reset email sequence (numbers computed, ready to import)").set_defaults(fn=cmd_autoresponder)
     bk = sub.add_parser("brandkit", help="build a client brand kit (avatar, banner, watermark, share image, favicons, logo, BRAND.md) for the Fiverr service")
     bk.add_argument("name", nargs="?", help="channel name (1-24 characters)")

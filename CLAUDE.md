@@ -49,6 +49,7 @@ humans set strategy, connect accounts, and review held videos.
 | Platform rules, policy changes, what each marketplace allows | `/channel/compliance` | `channel/compliance/platform-rules.md` | `faceless-scout` |
 | Music beds | `/faceless/musiclib.py` | `python -m faceless music` | `faceless-empire` |
 | Spreadsheet products and shop listings | `/faceless/products.py`, `product_debt.py`, `product_print.py` | `channel/products/*/LISTING.md` | `faceless-empire` |
+| The Daily Planner (365-page printable: pictures + lessons, cover, owner artwork intake, handle cleaning, review, MCP server `quiet-planner`) | `/faceless/product_planner.py`, `planner_art.py`, `planner_clean.py`, `planner_review.py`, `planner_mcp.py`, `freeconvert.py` | `channel/products/daily-quiet-money-planner/CONTEXT.md` | `faceless-empire` |
 | Email sequence (autoresponder) and the weekly issue | `/faceless/autoresponder.py`, `repurpose.py` | `channel/offers/autoresponder/README.md` | `faceless-empire` |
 | Fiverr brand-kit service | `/faceless/brandkit.py` | `channel/services/brand-kit/GIG.md` | `faceless-empire` |
 | Connect an app (YouTube, TikTok, Drive...), pull channel stats | `/faceless/providers` | `composio_tools.py` | `faceless-composio` (+ `composio`) |
@@ -77,6 +78,7 @@ python -m faceless forecast                    # the math: next batch, monthly c
 python -m faceless kit [day]                   # repurposing kit per video; `kit --issue` compiles the weekly newsletter
 python -m faceless flow                        # today's Flow shot list for the owner's session
 python -m faceless products                    # build + verify spreadsheet products, write listings
+python -m faceless planner build|check|ingest|clean|inventory|cover   # the 365-page Daily Planner PDFs (Letter + A4), its gauntlet, the owner's picture intake
 python -m faceless qa                          # calibrate semantic QA gates (Clef); `variety`, `policy`, `music` live beside it
 python -m faceless autoresponder               # 7-day Money Reset email sequence for the email service
 python -m faceless brandkit "<Name>" --palette mint   # Fiverr brand-kit order (--samples rebuilds the gig gallery)

@@ -1,0 +1,120 @@
+# Quiet Money Daily Planner: weeks 1-13 (days 1-91)
+# Line format:  L|N|D|M|A = Monday..Friday day: kind | title | lesson | task        S = Saturday check-in prompt        R = Sunday reflect prompt
+# Numbers in {braces} are computed by faceless/moneymath.py (see product_planner.py FUNCS). Never type a computed number by hand.
+
+# WEEK 1 | Where you stand | coin,stack,grid
+L | Start with the truth | Net worth is what you own minus what you owe. It can be negative, and that is a starting line, not a verdict. Most people have never written it down, so doing it once already puts you ahead of yesterday. | Fill in the Net Worth Snapshot at the front of this book. Round every number to the nearest $10 and do not judge any of it.
+N | The $5 rounding error | A $5 a day habit is {x:5,365} a year. Put the same money into an investment every month for 30 years at a hypothetical 8% a year and it becomes {fv:5*365/12,8,30}. Small and daily is how both costs and savings grow. | Write down one small thing you buy almost every day. Multiply its price by 365.
+D | Find every account | Money hides in places you forgot: an old savings account, a work retirement plan, a prepaid card, a refund you never claimed. You cannot manage what you cannot see. | Log into every account you have. Write each name and balance on one page so nothing hides from you.
+M | The ostrich effect | Researchers use the name ostrich effect for the habit of not checking your accounts when you fear the news. Avoiding the number does not change the number. It only removes your chance to change it. | Check one balance you have been avoiding. Write the number here, then take one slow breath.
+A | Pick your tracking day | Money work sticks when it has a time. Pick one weekday and a time, such as Sunday at 6 pm, and treat it like a standing appointment with yourself. | Choose your weekly money hour. Put it in your calendar with a repeating reminder.
+S | Weekly check-in: how did looking at the real numbers feel, and which number surprised you most?
+R | What is one thing you now know about your money that you did not know seven days ago?
+
+# WEEK 2 | Where it goes | bars,pair,curve
+L | Income minus everything | Spending tracking is not budgeting. It is a camera, not a cage. For a few weeks you only watch where the money goes, because you cannot design a plan around a guess. | Pull your last 30 days of bank and card statements. Put each purchase in one of five boxes: housing, food, transport, bills, everything else.
+N | The latte is a distraction | A $4 coffee every workday is about {x:4,260} a year. The big levers are housing, transport and food, which for many households make up most of their spending. Check the large lines before the small ones. | Find your three biggest spending categories. Write each as a percentage of your take-home pay.
+D | Three numbers | Every budget starts from three numbers: what comes in after tax, what is already committed (rent, loans, insurance) and what is left. The third one is the only number you can steer. | Write your monthly take-home pay, your fixed bills and the difference between them.
+M | Cash feels different | Studies of how people spend show that paying with cash feels more painful than paying with a card. A tap hides the cost. Knowing this lets you add friction on purpose. | Check how many of your purchases this week were taps or one-click orders. Count them.
+A | Name the leak | A leak is a small recurring cost that gives you little in return. You do not need to cut it today. You only need to see it. | Circle three charges from your statements that you would not choose again.
+S | Weekly check-in: what did you spend in each of your five boxes this week? Write the biggest surprise.
+R | If your spending were a story, what would a stranger say you care about most?
+
+# WEEK 3 | The paycheck split | ring,scale,stack
+L | The 50/30/20 guideline | A simple split popularised by the 2005 book All Your Worth: about 50% of take-home pay to needs, 30% to wants and 20% to savings and debt repayment. It is a starting guideline, not a law. | Take your take-home pay and multiply by 0.5, 0.3 and 0.2. Write the three amounts in the margin.
+N | What 20% does | If you save and invest {x:3000,0.2} a month (20% of a $3,000 paycheck) for 20 years at a hypothetical 7% a year, it grows to {fv:3000*0.2,7,20}, of which you put in {put:3000*0.2,20}. Returns are never guaranteed, but the habit is the part you control. | Take your own take-home pay and multiply it by 0.2. Write the monthly amount and what it adds up to in a year.
+D | Sort last month | Take last month's spending and sort every line into needs, wants or future (savings and debt payments above the minimum). Your own split is the real data. | Add up each group and write it as a percentage of take-home pay. Compare with 50/30/20.
+M | Needs creep | Many people start by calling most things needs. A phone is a need. The newest phone is a want. Honest sorting is the skill. | Move one item you called a need into wants. Notice how it feels.
+A | Set one number | You do not need to hit 50/30/20 this week. Change one number by a small amount and keep it for a month. | Choose one category to trim by 5 percentage points. Write the new monthly amount.
+S | Weekly check-in: did your spending this week match the split you wrote on Monday?
+R | What would your 20% be buying you in five years if you kept it going?
+
+# WEEK 4 | Needs and wants | scale,rain,pair
+L | The line between them | A need is something you cannot safely go without: shelter, basic food, utilities, transport to work, insurance, minimum debt payments. A want is everything that makes life nicer. Wants are not bad. They just need a budget. | Write 10 of your regular purchases. Mark each N (need) or W (want). Mark the ones that could be both with a question mark.
+N | The want that becomes a need | A $350 monthly car payment is {x:350,12} a year. For some people the car is a transport need. For others the payment is a status choice. Notice how a want can lock in as a fixed cost for years. | Write down one want that has become a fixed monthly cost. Multiply it by 12, then by the years left on it.
+D | The 30-day wish list | Impulse buys lose power with time. Put a wish list at the top of a page and write the date next to each item. If you still want it in 30 days, it can go into next month's wants budget. | Start a 30-day wish list. Add anything you were tempted to buy this week.
+M | Hedonic adaptation | Researchers find that people tend to get used to upgrades quickly. The new thing feels great for a while, then it becomes normal and the bill stays. | Name one purchase from the last year that you stopped noticing. What did it cost?
+A | Buy the experience | Many people say they get more lasting satisfaction from experiences and time with other people than from objects. Treat that as an idea to test, not a rule. | Plan one low-cost experience for this month. Write its price next to it.
+S | Weekly check-in: which wants did you enjoy most this week, and which did you forget by the weekend?
+R | What is one want you would keep even if it meant cutting somewhere else?
+
+# WEEK 5 | Spending leaks | rain,bars,grid
+L | Subscriptions that sleep | Subscriptions are built to be easy to start and slow to cancel. A dozen small ones can add up to a surprising amount. A yearly audit is one of the fastest ways to recover money. | Search your last three months of statements for repeating charges. List every one with its monthly cost.
+N | The $15 forever bill | A $15 a month subscription is {x:15,12} a year and {x:15,120} over 10 years. If the same $15 went into an investment each month for 10 years at a hypothetical 8% a year it would be {fv:15,8,10}. | Pick your most expensive subscription. Calculate its cost over 10 years.
+D | Cancel or keep | For each subscription ask: did I use it this month? Would I buy it again today at full price? If either answer is no, cancelling is not a loss. It is a decision. | Cancel at least one subscription you do not use. Write down the date and the monthly amount saved.
+M | Free trials | Companies use free trials because people forget to cancel. This is called inertia. A calendar reminder on day one beats willpower on day thirty. | Check any free trial you started this year. Set a reminder to cancel before the date it converts.
+A | Bank fee check | Look for fees on your accounts: overdraft, monthly maintenance, ATM, foreign transaction. Many banks will waive a fee if you ask or change account type. | Search your statements for the word fee. Write down every fee in the last 90 days.
+S | Weekly check-in: how much per month did your audit free up, and where will it go?
+R | Which subscription taught you something about what you really value?
+
+# WEEK 6 | Make it automatic | steps,tree,road
+L | Willpower is a bad system | Behavioural economists point out that good habits survive when they are the default. Automation takes the monthly decision away. You do it once and it keeps working on busy and tired days. | Look at your bank's automatic transfer options. Note what is possible: day, amount, destination.
+N | Small, steady, early | Saving {x:50,12} a year does not sound like much. At a hypothetical 7% a year for 30 years, $50 a month grows to {fv:50,7,30}, and only {put:50,30} of it came from you. | Write the smallest monthly amount you could automate without noticing. Calculate its 10-year total.
+D | Set the transfer | Set a recurring transfer for the day after payday, from checking to a separate savings account. Start with an amount that feels almost too small. You can raise it later. | Schedule your first automatic transfer today. Write the amount, the day and the account.
+M | Defaults rule | Studies of workplace retirement plans found that when people were enrolled automatically, far more of them ended up saving. The people were the same; the default was different. | Name one money habit that would be better as a default than as a decision.
+A | Automate one bill | A late fee is a pure loss. Autopay the minimum on every bill you can, so nothing is ever late, and check statements monthly. | Turn on autopay for at least one bill. Keep the due-date reminder on in case funds are short.
+S | Weekly check-in: did your transfer run? Did the amount feel too small, too big or right?
+R | What else in your life runs on autopilot because you set it up once?
+
+# WEEK 7 | Pay yourself first | stack,steps,curve
+L | The oldest rule | The 1926 book The Richest Man in Babylon puts it simply: a part of all you earn is yours to keep. The order matters. Save first, spend the rest, instead of saving what is left. | Write the sentence "A part of all I earn is mine to keep" at the top of this page, then write the percentage you will start with.
+N | Order beats amount | Saving {x:100,12} a year at a hypothetical 6% a year for 25 years gives {fv:100,6,25}. Saving the same amount only when you have leftovers often means saving none of it. | Look at your last three months. How much was left over each month? Write all three numbers.
+D | Split the paycheck at the source | If your employer allows it, ask for part of your pay to go straight to a savings account. Money you never see is money you do not miss. | Ask your employer or your bank how to split a deposit. Write what you learn.
+M | The 1% raise | Increasing your savings rate by one percentage point a year is nearly painless. In five years it adds up to 5 points without any single big change. | Decide when you will raise your savings amount. Pick a date and a small increase.
+A | Name your accounts | Giving savings accounts a name such as Emergency or Car makes them feel like jobs rather than a pile. Many banks let you rename accounts. | Rename or label your savings accounts by their purpose.
+S | Weekly check-in: how much did you pay yourself first this week? How did the rest of the week go?
+R | When has saving felt good to you? What was different that time?
+
+# WEEK 8 | The first $1,000 | shield,stack,steps
+L | A starter buffer | Before anything else many planners suggest a small emergency buffer, often $500 to $1,000, so one surprise bill does not land on a credit card. It is a first step, not a full emergency fund. | Write the amount you will use as your starter buffer and the date you want to reach it.
+N | How fast? | Setting aside $100 a month reaches {x:100,10} in 10 months, and $200 a month gets there in 5. Break any goal into months and it stops being a feeling and becomes a schedule. | Divide your buffer goal by the monthly amount you can set aside. Write the number of months.
+D | Open a separate account | Keep the buffer apart from daily spending so it does not disappear into groceries. A free savings account at a different bank is one way. Check the terms and the fees. | Open or choose the account that will hold your buffer. Write its name.
+M | The scarcity tunnel | Research on scarcity suggests that worry about money can narrow attention and crowd out long-term thinking. A buffer is partly a mental space investment. | Write the last unexpected cost you faced. How did you pay for it?
+A | Find the first $50 | A first deposit builds momentum. Sell something you do not use, return an item or pause one subscription. | Move your first $50 into the buffer today. Write the date.
+S | Weekly check-in: how much is in your buffer now, and what is next month's goal?
+R | How would you feel with a small cushion under you? What would you do differently?
+
+# WEEK 9 | The full emergency fund | shield,gauge,stack
+L | Three to six months | A common guideline is to keep three to six months of essential expenses in cash. People with irregular income or one earner at home often aim for the higher end. It is a guideline, not a promise of safety. | Add up one month of essentials: housing, utilities, food, transport, insurance, minimum debt payments. Write the total.
+N | Your number | If your essentials are $2,500 a month, three months is {x:2500,3} and six months is {x:2500,6}. The target is about essentials, not your full spending. | Multiply your essentials by 3 and by 6. Circle the target you will aim for.
+D | Choose where it lives | An emergency fund should be safe and easy to reach. Many people use a high-yield savings account. Check that it is insured where you live and what the current rate is. | Write the account you will use and one question to check before you commit.
+M | What counts as an emergency | Unplanned, necessary and urgent. A sale is not an emergency. A broken water heater is. Writing the rules in advance protects the fund. | Write three things that count as an emergency and three that do not.
+A | Set the milestones | Big goals are easier in pieces. One month of essentials, then two, then three. Each milestone is a win. | Write your first three milestones with dates.
+S | Weekly check-in: how far are you toward month one of essentials?
+R | What would having this fund change about how you handle your job, your housing or your health?
+
+# WEEK 10 | Sinking funds | stack,grid,ring
+L | Turn surprises into plans | A sinking fund is money set aside monthly for a cost you know is coming: car repairs, gifts, annual fees, travel. A big bill becomes a small monthly habit instead of a crisis. | List five costs you know will come this year that are not monthly. Write the estimated amount for each.
+N | The monthly share | A $1,200 yearly cost is {div:1200,12} a month. Five of those is {x:100,5} a month, which feels very different from {x:1200,5} landing at once. | Pick one big yearly cost. Divide by 12 and write the monthly amount.
+D | Create the envelopes | You can use separate savings buckets, a spreadsheet or even cash envelopes. What matters is that each fund has a name and a target. | Set up one sinking fund. Name it, set the target and the monthly amount.
+M | Mental accounting | Behavioural economists call it mental accounting: people treat money differently depending on its label. That can be a trap, and it can also be a tool when you label money for a purpose. | Write one label you could give a pile of money to make it harder to spend.
+A | Pay the first month | Starting is the hardest part. Move the first monthly amount today, even if it is small. | Transfer your first sinking fund payment. Write the amount.
+S | Weekly check-in: did every fund get its monthly share? Did any cost arrive that you had not planned for?
+R | Which surprise cost from last year could a sinking fund have turned into a plan?
+
+# WEEK 11 | Money psychology | gauge,scale,rain
+L | You are not a spreadsheet | Behavioural economists have documented many predictable biases: we overvalue the present, hate losses, follow the crowd and stick to defaults. Knowing them does not make you immune, but it helps you design around them. | List two money decisions you regret. Write what you were feeling when you made them.
+N | Loss aversion | Prospect theory, a famous idea in behavioural economics, suggests that losses can feel roughly twice as strong as equal gains. Losing $100 can hurt about as much as gaining $200 feels good. That is why people hold losing investments too long. | Think of a time you refused to sell something at a loss. What would you do now?
+D | Anchoring | The first number you see shapes every later judgement. A $400 price crossed out to $250 feels like a bargain even when $250 is more than it is worth. | Next time you see a sale, write the original price, the sale price and what you would pay if there were no tag.
+M | Sunk cost | Money already spent cannot be recovered. The question is only whether future costs are worth future benefits. A class you hate is not worth finishing just because you paid. | Name one thing you keep paying for because of what you already spent.
+A | Pause button | A cooling-off rule can protect you from many biases at once. A common version is to wait 24 hours before any non-essential purchase over a set amount. | Write your own rule: the amount that triggers the wait and how long you will wait.
+S | Weekly check-in: which bias did you catch yourself using this week?
+R | Which bias do you think costs you the most, and what is one guardrail you can build?
+
+# WEEK 12 | Lifestyle creep | bars,scale,steps
+L | The raise that disappears | Lifestyle creep is when spending rises every time income rises, so you never feel richer. A bigger paycheck gives you the option to save more. It does not do it for you. | Write your income and your spending from one year ago and now. Which grew faster?
+N | Half the raise | If you get a $4,000 raise and save half of it, that is {usd:2000} a year, or about {div:2000,12} a month. Invested every month for 20 years at a hypothetical 7% a year, that becomes {fv:2000/12,7,20}. | Decide your rule for the next raise: what percentage goes to your future first.
+D | Keep one old standard | Pick one area where you keep your old, cheaper habit even when you could afford more. It is a quiet way to keep a gap between what you earn and what you spend. | Choose one habit you will keep at its old level on purpose.
+M | Keeping up | People compare themselves with people just above them, not people far away. Social media makes the comparison group bigger and richer. Spending to match them is expensive. | Write whose spending you compare yourself to most. Note one thing you really want, not one you were shown.
+A | Raise the floor first | Before you spend a raise, send a share of it to savings or debt. Do it the day it hits your account. | If a raise is coming, write the percentage you will send to savings first.
+S | Weekly check-in: did any spending creep up this week? Was it a decision or a drift?
+R | What does enough look like for you? Describe it in one sentence.
+
+# WEEK 13 | Quarter review | grid,curve,road
+L | A checkpoint | Thirteen weeks is a quarter, and it is long enough to see patterns. A review is not a grade. It is a chance to see which small habits held and which did not. | Fill in your net worth again on the snapshot page. Compare it with Day 1.
+N | How far you came | If your net worth moved by even a small amount, that is the system working. Calculate the change in dollars and in percent. For example, going from $1,000 to $1,250 is {pct:250,1000} growth. | Write your change in net worth since Day 1 in dollars and in percent.
+D | Keep, change, drop | Go through the habits you tried this quarter. Keep the ones that worked, change the ones that half worked and drop the ones that did not fit your life. | Write one habit to keep, one to change and one to drop.
+M | Progress is not a straight line | Months go badly for everyone. A month with no saving does not erase the quarter. What predicts success is returning to the plan. | Write the thing that most often knocks you off track and a one-line plan for next time.
+A | Reward the work | Celebrating small wins can keep habits going. Pick a reward that costs little and say it out loud. | Choose a low-cost reward for finishing the first quarter. Write the date you will take it.
+S | Weekly check-in: write three wins from this quarter, however small.
+R | What is the one thing you want to be true about your money 90 days from now?

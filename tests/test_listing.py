@@ -54,7 +54,7 @@ def test_a_kit_with_a_part_missing_is_reported_not_faked(tmp_path, monkeypatch):
 
 
 def test_every_product_has_the_fields_a_listing_needs(products):
-    assert len(products) == 4 and {p["kind"] for p in products} == {"spreadsheet", "printable", "bundle"}
+    assert len(products) == 5 and {p["kind"] for p in products} == {"spreadsheet", "printable", "bundle"}
     for p in products:
         assert len(p["etsy"]["title"]) <= 140 and len(p["etsy"]["tags"]) == 13 and p["gumroad"]["after_purchase"]
         assert p["price"] in p["price_test"] and len(p["chips"]) == 3 and p["steps"] and p["notes"]

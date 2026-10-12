@@ -1,0 +1,118 @@
+# Quiet Money Daily Planner: weeks 14-26 (days 92-182)
+
+# WEEK 14 | The debt map | gauge,bars,scale
+L | Look at every debt | You cannot plan a debt payoff from memory. A debt map lists each balance, its interest rate (APR) and its minimum payment on one page. Seeing it all together usually feels better than the vague worry of not looking. | Fill in the Debt Map page: lender, balance, APR and minimum payment for every debt you have.
+N | The cost of a rate | Interest is the price of borrowing. The interest on a $5,000 balance at 24% APR is about {x:5000,0.24} a year before compounding, while the same balance at 6% is about {x:5000,0.06}. | Write the highest APR on your debt map. Multiply the balance by the rate to see a year of interest.
+D | Rank by rate | Put the debts in order from highest APR to lowest. The top of the list is where each extra dollar does the most work. | Number each debt on the map from 1 (highest APR) to the last.
+M | Debt shame | Debt carries shame for many people, which makes them avoid the statements. Debt is a tool that went wrong, not a personality trait. A map turns a feeling into a list of numbers. | Write one sentence about how you feel about your debt. Then write one fact about it from the map.
+A | Find the minimums | Late payments can bring fees and a higher rate. Confirm every minimum payment and due date and put them on your calendar. | Write every due date on one monthly calendar.
+S | Weekly check-in: did every payment arrive on time this week? What did the map teach you?
+R | If your debt were gone, what is the first thing you would do with the monthly payment?
+
+# WEEK 15 | Interest math | curve,gauge,stack
+L | Why minimums are slow | A minimum payment is set so the balance falls slowly, which keeps interest flowing. A typical card minimum is about 1% of the balance plus that month's interest. | Look at one statement. Find the minimum payment, the interest charged and the new balance.
+N | The 21-year card | A $6,000 balance at 24% APR with only the minimum payment (1% of the balance plus interest, at least $25) takes {cmin_y:6000,24} years and costs {cmin_i:6000,24} in interest. | Look up your own card's payoff warning on your statement. Many show a time to pay off on minimums.
+D | The $300 test | The same $6,000 at 24% with a fixed $300 a month is gone in {cpay_m:6000,24,300} months and costs {cpay_i:6000,24,300} in interest. A fixed payment turns a card from a trap into a countdown. | Pick the amount you can pay each month, above the minimum, on your highest-rate debt.
+M | Interest is not a bill | Interest does not arrive on an invoice. It is added quietly to the balance. The shock is delayed, which is why it is easy to ignore. | Check how much interest you were charged in the last month across all debts. Add it up.
+A | Pay a little more, twice a month | Interest on many cards is calculated daily on the balance. Paying half the amount twice a month can cut a little interest. Check your terms before you rely on it. | Set up one extra payment this month, even $10, above the minimum.
+S | Weekly check-in: what did you pay on your top debt this week and how much interest did that avoid?
+R | What would you change about debt if you were designing the system yourself?
+
+# WEEK 16 | Snowball or avalanche | steps,bars,scale
+L | Two proven methods | The avalanche pays extra on the highest-rate debt first and saves the most interest. The snowball pays extra on the smallest balance first and gives quicker wins. Both start by paying every minimum. | Look at your debt map. Mark your highest-rate debt with an A and your smallest balance with an S.
+N | Same debts, two orders | With $300 a month extra toward debt, the avalanche usually costs less. The snowball can feel better. The best method is the one you will keep doing for the whole payoff. A $1,000 balance paid at $300 a month takes about {cpay_m:1000,24,300} months at 24% APR. | Try the math on your own map. Which order finishes first and which costs less?
+D | Pick one | Decide today. Staying in the decision costs more than a small difference between methods. Write the rule: all extra money goes to this one debt until it is gone. | Write the name of the debt you will attack first and the monthly amount you will add.
+M | The progress principle | Seeing progress is a strong motivator. A visual tracker of paid-off balances can keep you going when the work is dull. | Draw a bar or a thermometer on this page for your first debt. Colour in what you have paid.
+A | Roll the payment | When a debt is paid off, keep paying the same total amount and send it to the next debt. This is the roll in the snowball. | Write what you will do with the freed-up payment on the day your first debt ends.
+S | Weekly check-in: what did you pay on your target debt this week? How far did the bar move?
+R | When has a visible scoreboard helped you finish something hard?
+
+# WEEK 17 | Credit cards | gauge,shield,rain
+L | A card is a loan with a tap | A credit card is short-term borrowing. If you pay the full statement balance by the due date, many cards charge no interest on purchases. If you carry a balance, interest starts to apply. | Read the terms of your main card. Write its APR, its due date and the grace period.
+N | The 30% guideline | Credit utilisation is how much of your limit you use. A commonly cited guideline is to stay below 30%, and lower is generally better. A $2,000 balance on a $5,000 limit is {pct:2000,5000} utilisation. | Calculate utilisation for each card: balance divided by limit.
+D | Statement vs due date | The statement balance is what you owe from the last cycle. The current balance may be higher. Paying the statement balance in full by the due date is how people use cards without paying interest. | Check which amount you paid last month and whether any interest was charged.
+M | Rewards and spending | Rewards of 1% or 2% can look generous. If using a card makes you spend even a few percent more, the reward is cancelled out. Pay attention to how your own spending changes. | Look at the last three months. Did your spending rise after you got a rewards card?
+A | Lock the basics | Turn on alerts for payments due, balances and unusual purchases. Know where to freeze your card in an app. | Switch on three alerts on your main card and write what they are.
+S | Weekly check-in: did every card get paid on time? What was this week's utilisation?
+R | What role does a credit card play in your life: a tool, a crutch or something in between?
+
+# WEEK 18 | Credit scores | gauge,grid,shield
+L | What a score is | A credit score is a number lenders use to estimate how likely you are to repay. In the US the best-known models weigh payment history, amounts owed, length of history, new credit and mix of credit. Other countries use different systems. | Find out which agencies and scores matter where you live. Write their names.
+N | The biggest piece | In the common US FICO model, payment history is about 35% of the score and amounts owed about 30%. Paying on time, every time, is the largest single lever. Those two factors together make up about {pct:65,100} of the model. | Write your own payment record. Any late payments in the last two years?
+D | Check your report | In the US you can get free credit reports from the three bureaus through AnnualCreditReport.com. Look for accounts you do not recognise and for mistakes. Errors can be disputed. | Pull one credit report and check every account. Write anything that looks wrong.
+M | Score vs worth | A credit score measures how lenders see your borrowing record. It says nothing about you as a person. It can be rebuilt and it changes with behaviour, not with luck. | Write what you want your score to open up for you, such as lower rates or a rental.
+A | Hard and soft checks | Applying for credit can create a hard inquiry that may lower your score slightly for a time. Checking your own score is a soft check and does not hurt it. | List any credit applications you plan this year. Space them out where possible.
+S | Weekly check-in: how did your credit report look and what is the one thing you will fix?
+R | What would better credit make possible for you in the next two years?
+
+# WEEK 19 | Student loans and car loans | bars,road,scale
+L | Loans have shapes | Loans differ in rate, term and rules. The total cost of a loan is the monthly payment times the number of months, so a longer term means a lower payment and more total interest. | Write the rate, term and remaining balance for each loan you have.
+N | The longer term | A $20,000 loan at 7% over 36 months has a payment of about {pmt:20000,7,36} and costs {pmti:20000,7,36} in interest. Stretched to 72 months the payment falls to about {pmt:20000,7,72}, but interest grows to {pmti:20000,7,72}. | Take one loan and calculate the total interest. Payment times months, minus the amount borrowed.
+D | Extra to principal | If your lender allows it, extra payments marked as principal-only reduce the balance without paying extra interest in advance. Check for prepayment penalties first. | Call or log in and ask: can I pay extra toward principal, and is there any penalty?
+M | The car as identity | Cars are a place where status and money collide. A guideline some planners use is to keep total transport costs well below 15% of take-home pay. Treat it as a prompt to check, not a rule. | Add your car payment, fuel, insurance and repairs. Write them as a percentage of take-home pay.
+A | Refinance check | Refinancing can lower a rate when rates have dropped or your credit has improved. There can be fees, so compare the total cost. | Write two lenders you could ask for a quote and the date you will ask.
+S | Weekly check-in: what extra did you pay on a loan this week and what did it do to the balance?
+R | Which loan do you most want to be finished with, and why?
+
+# WEEK 20 | Negotiating bills | scale,stack,rain
+L | Asking is free | Companies often have retention offers that are not advertised. Phone, internet, insurance and many other services can sometimes be reduced if you ask politely and compare competing offers. Results vary. | List your five biggest recurring bills with their monthly amount.
+N | One call, a year of savings | If a single call lowers a bill by $15 a month, that is {x:15,12} a year and {x:15,120} over ten years. If the call takes 20 minutes, the first year's saving works out to {div:15*12,1/3} for each hour of your time. | Pick one bill. Write what a $10 monthly cut would save over ten years.
+D | Make the call | Prepare three things: your account details, a competitor's price you have found and a calm sentence such as "I would like to reduce my bill. What can you offer?" Be polite. Be ready to say you will consider switching. | Call one provider today. Write the date, the person's name and the result.
+M | Fear of asking | Many people do not negotiate because they fear sounding rude. In practice, the worst usual answer is no, which leaves you where you started. | Write the sentence you will say. Practise it aloud once.
+A | Shop your insurance | Insurance prices can differ a lot between companies for the same cover. Compare the same level of cover, not only the price. | Get one quote for an insurance you hold. Write it next to your current price.
+S | Weekly check-in: what did you ask for this week and what was the result?
+R | What other things in life might you get just by asking?
+
+# WEEK 21 | Meet the fee gremlin | rain,stack,shield
+L | Small fees, big impact | Fees are small, regular and easy to ignore. They work like a gremlin eating a stack of coins one by one: bank fees, card fees, late fees, fund fees, subscription fees. A few minutes spent finding them pays for years. | Look through your accounts for annual, monthly and transaction fees. List each with its yearly cost.
+N | The 1% fee | $100,000 invested for 30 years at a hypothetical 7% a year grows to {lump:100000,7,30}. If a 1% yearly fee takes it to a 6% return, it becomes {lump:100000,6,30}, a gap of {gap:100000,7,6,30}. | Find the annual fee on any fund or retirement account you hold. Write it as a percentage.
+D | Compare expense ratios | An expense ratio is the yearly percentage a fund charges. At 0.05% a year, the same $100,000 for 30 years at a gross 7% grows to {lump:100000,6.95,30}. Differences like this compound. | Look up the expense ratio of any fund you own. Write the number.
+M | Convenience tax | You often pay a fee for convenience: ATM fees, delivery fees, instant transfer fees. A little planning avoids most of them. | Count how many convenience fees you paid last month. Write the total.
+A | Ask for a refund | Banks sometimes refund a first late fee or overdraft if you ask. It is often worth one phone call. | If you have paid a fee recently, contact the company and ask for it back. Note the answer.
+S | Weekly check-in: what fees did you find and cancel or negotiate this week?
+R | What is the gremlin in your own money story, and what keeps it fed?
+
+# WEEK 22 | Compound interest | curve,tree,steps
+L | Interest on interest | Compound interest means earning returns on your earlier returns as well as on your original money. Time is the main ingredient. The curve is slow at first and then rises steeply. | Draw a rough curve on this page that goes slowly and then steeply. Label the early years and the late years.
+N | The 30-year curve | $200 a month at a hypothetical 8% a year grows to {fv:200,8,10} after 10 years, {fv:200,8,20} after 20 and {fv:200,8,30} after 30. You put in {put:200,30} over the 30 years. Returns are never guaranteed. | Pick a monthly amount you could save. Write what it becomes over 10, 20 and 30 years at 6%.
+D | Use a calculator | A free compound interest calculator lets you test different amounts, rates and times. Use it to see how each variable changes the result. Change one input at a time. | Run your numbers through a calculator. Write the result for three different monthly amounts.
+M | Exponential blindness | People find it hard to picture exponential growth. The first years look boring and the last years look huge. This is why patience is rare and valuable. | Write what you tend to do when progress looks slow.
+A | Start now | The most reliable lever is starting earlier. Even a small amount begun today beats a large amount begun later. | Write your start date, your amount and the account.
+S | Weekly check-in: did your regular deposit happen? How long until it doubles?
+R | What did you start years ago that quietly compounded into something good?
+
+# WEEK 23 | The rule of 72 | curve,gauge,pair
+L | A mental shortcut | Divide 72 by an annual rate to estimate the years it takes money to double. At 8% a year that is {r72:8} years. At 6% it is {r72:6} years. It is an approximation that works best for rates between about 6% and 10%. | Pick three rates, such as 4%, 6% and 8%. Divide 72 by each. Write the doubling times.
+N | Debt doubles too | The rule works for debt. At 24% a year a balance left alone doubles roughly every {r72:24} years. That is why high-interest debt can feel like it follows you. | Write the APR of your highest debt and divide 72 by it.
+D | Doubling chain | Starting at $1,000 and doubling every 9 years gives $2,000, $4,000, $8,000 and $16,000 after 36 years. That is the same as {lump:1000,8,36} at a hypothetical 8% a year, roughly. | Write your own doubling chain starting from an amount you could invest.
+M | Patience is a skill | Doubling takes years. Most people stop before the later doublings, where most of the growth happens. | Write one goal you quit early and what the next doubling might have brought.
+A | Check your returns | If your savings account pays 4% a year, your money doubles in {r72:4} years if the rate stays the same. Rates change, so check the number now and then. | Find the interest rate on your savings account today. Divide 72 by it.
+S | Weekly check-in: which of your numbers is doubling and which one is also doubling in the wrong direction?
+R | What would you want to double in the next 10 years?
+
+# WEEK 24 | Time beats timing | pair,curve,tree
+L | Starting early | Two people save the same monthly amount to the same age. The one who starts ten years earlier ends up with much more than the extra ten years of deposits alone would explain, because those early deposits compound for decades. | Draw two lines on a timeline: one starting at 25, one at 35. Mark the finish at 65.
+N | The ten-year gap | $200 a month from 25 to 65 at a hypothetical 8% a year gives {fv:200,8,40}. Starting at 35 gives {fv:200,8,30}. Waiting ten years costs {fvgap:200,8,40,30}. | Write your own start age and your target age. Count the years.
+D | Do not try to time it | People who wait for the perfect moment to invest often wait too long. Markets fall and rise unpredictably. Regular investing over time is one way people avoid betting on a single day. | Write the date of your next regular investment. Make it a repeating date.
+M | Fear and greed | Markets can make people greedy at the top and afraid at the bottom. A written plan helps you act the same way in both. | Write what you will do the next time the market falls sharply. One sentence.
+A | Rebalance the calendar | Put one yearly review date on your calendar for your long-term investments. That is the only date you really need. | Add the yearly review date to your calendar now.
+S | Weekly check-in: how did the time you spent on your plan compare with the time you spent worrying?
+R | What would you tell a younger version of yourself about starting?
+
+# WEEK 25 | Inflation | bars,gauge,rain
+L | The slow leak | Inflation is the rise in prices over time, so the same money buys less. Cash is safe from market drops but not from inflation. Your savings need to be placed with that in mind. | Ask an older relative what something cost when they were your age. Write the number and the item.
+N | $100 in 20 years | At 3% inflation, $100 today has the buying power of about {infl:100,3,20} in 20 years. Inflation rates change from year to year, so this is a scenario, not a forecast. | Choose any amount you hold in cash. Calculate its buying power after 20 years at 3%.
+D | Real return | A real return is your return minus inflation. A savings account paying 4% in a year with 3% inflation grows your buying power by about 1%. If the rate is below inflation, you lose buying power. | Look up your savings rate and the current inflation rate where you live. Subtract.
+M | Money illusion | People tend to focus on the number on the paycheck instead of what it buys. A 3% raise during 4% inflation is a small pay cut in real terms. | Write your last raise and compare it with the inflation rate for that year.
+A | Cash with a job | Keep what you need for emergencies and near-term bills in safe cash. Longer-term money has a different job. Match the tool to the time. | Write which money you need in less than 2 years and which you will not touch for 10 or more.
+S | Weekly check-in: what rose in price this week, and what did you do about it?
+R | Which of your possessions have held their value, and which have not?
+
+# WEEK 26 | Half-year review | grid,curve,road
+L | Halfway | You have done 26 weeks. Even if some weeks were missed, you are far ahead of where you started. A midyear review is the moment to adjust the plan and keep going. | Update your Net Worth Snapshot. Compare it with Day 1 and Day 91.
+N | The scoreboard | Add up what you saved in 26 weeks and what you paid toward debt. If you averaged $60 a week for 26 weeks, that is {x:60,26}. Write your own totals. | Write your total savings and total debt paid since Day 1.
+D | What worked | Look back through your check-ins. Which weeks were easiest? Which habits survived the busiest weeks? | Write the three habits that stuck.
+M | Do not restart | If you missed weeks, you do not need to begin again from Day 1. Skip to today's page and keep going. A missed day is just a missed day. | Write the biggest obstacle of the last six months and one way around it.
+A | Reset the goal | Choose one money goal for the second half. Make it specific, with a number and a date. | Write your goal for Day 365.
+S | Weekly check-in: write five things you now do with money that you did not do 26 weeks ago.
+R | What would you like to be able to say on the last page of this book?

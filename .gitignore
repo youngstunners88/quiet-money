@@ -35,3 +35,7 @@ channel/shop/*.zip
 # personal Claude Code overrides
 .claude/settings.local.json
 channel/host/tmp/
+
+# planner: the drawn pictures are rebuilt by `python -m faceless planner build`; the owner pictures in assets/planner/source and the PDFs are committed
+assets/planner/generated/
+assets/planner/clean-before-after.jpg

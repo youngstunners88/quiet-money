@@ -85,7 +85,8 @@ def test_spend_caps_add_up():
     caps = {"[muapi] daily_usd": cfg["muapi"]["daily_usd"],
             "[images] muapi_daily_usd": cfg["images"]["muapi_daily_usd"],
             "[production.hookclip] daily_usd": cfg["production"]["hookclip"]["daily_usd"],
-            "[production.sketch] daily_usd": cfg["production"]["sketch"]["daily_usd"]}
+            "[production.sketch] daily_usd": cfg["production"]["sketch"]["daily_usd"],
+            "[planner] daily_usd": cfg["planner"]["daily_usd"]}
     over = {k: v for k, v in caps.items() if v > ceiling}
     assert not over, f"a provider cap above the studio ceiling is a cap that can never bind: {over}"
     assert cfg["muapi"]["per_call_usd"] <= cfg["muapi"]["daily_usd"]
