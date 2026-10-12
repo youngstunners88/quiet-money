@@ -1,0 +1,59 @@
+{
+  "id": "2026-10-12-s0-ledger-the-50-30-20-rule-reality-check",
+  "pillar": "ledger",
+  "topic": "The 50/30/20 Rule Reality Check",
+  "day": "2026-10-12",
+  "slot": 0,
+  "status": "packaged",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-12T03:29:01Z",
+      "words": 177
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-12T03:29:29Z",
+      "seconds": 62.647,
+      "provider": "elevenlabs"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-12T03:29:29Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-12T03:31:57Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-12T03:31:57Z",
+      "score": 99
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-12T03:31:58Z"
+    }
+  ],
+  "artifacts": {
+    "angle": "Examine how strict adherence to the famous 50/30/20 budget breaks down when living in high-inflation urban centers.",
+    "title": "Why the 50/30/20 Rule Fails in High-Cost Cities",
+    "style": "ledger",
+    "video": "/home/user/quiet-money/production/output/2026-10-12/2026-10-12-s0-ledger-the-50-30-20-rule-reality-check/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-12/2026-10-12-s0-ledger-the-50-30-20-rule-reality-check/cover.jpg"
+  },
+  "scores": {
+    "gauntlet": 99,
+    "passed": true
+  },
+  "cost": {
+    "tts:elevenlabs:chars": 1045
+  },
+  "notes": []
+}

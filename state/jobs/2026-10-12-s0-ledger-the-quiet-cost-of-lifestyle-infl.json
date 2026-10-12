@@ -1,0 +1,59 @@
+{
+  "id": "2026-10-12-s0-ledger-the-quiet-cost-of-lifestyle-infl",
+  "pillar": "ledger",
+  "topic": "The Quiet Cost of Lifestyle Inflation",
+  "day": "2026-10-12",
+  "slot": 0,
+  "status": "packaged",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-12T03:55:20Z",
+      "words": 169
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-12T03:55:48Z",
+      "seconds": 63.108,
+      "provider": "elevenlabs"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-12T03:55:48Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-12T03:57:48Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-12T03:57:48Z",
+      "score": 94
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-12T03:57:48Z"
+    }
+  ],
+  "artifacts": {
+    "angle": "Calculate how a 10% raise every year leads to zero extra savings if spending scales up at the exact same rate.",
+    "title": "The 10% Raise Trap That Leaves You Broke",
+    "style": "ledger",
+    "video": "/home/user/quiet-money/production/output/2026-10-12/2026-10-12-s0-ledger-the-quiet-cost-of-lifestyle-infl/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-12/2026-10-12-s0-ledger-the-quiet-cost-of-lifestyle-infl/cover.jpg"
+  },
+  "scores": {
+    "gauntlet": 94,
+    "passed": true
+  },
+  "cost": {
+    "tts:elevenlabs:chars": 1040
+  },
+  "notes": []
+}

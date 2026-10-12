@@ -35,3 +35,4 @@ channel/shop/*.zip
 # personal Claude Code overrides
 .claude/settings.local.json
 channel/host/tmp/
+state/tmp/

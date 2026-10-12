@@ -250,8 +250,8 @@ def register(video: str | Path, line: str, title: str, approved: bool = False) -
     job = new_job("host", title, slot=0)
     job.artifacts.update(video=str(video), title=title)
     meta = {"title": title, "description": (f"{title}\n\nQuinton, Quiet Money's host, checks in. He is a virtual host: the picture, voice and video are AI-generated. "
-                                              "Educational content, not financial advice.\n\n#quietmoney #personalfinance #financialfreedom #shorts"),
-            "hashtags": ["#quietmoney", "#personalfinance", "#financialfreedom", "#shorts"], "caption": line, "first_comment": line}
+                                              "Educational content, not financial advice.\n\n#quietmoney #personalfinance #financialfreedom"),
+            "hashtags": ["#quietmoney", "#personalfinance", "#financialfreedom"], "caption": line, "first_comment": line}
     write_atomic(job.dir / "meta.json", json.dumps(meta, indent=1))
     job.scores = {"gauntlet": 100, "passed": approved, "note": "host clip: it passes only when the owner approves it (approved=True), not by the script gauntlet"}
     job.status = "packaged"
