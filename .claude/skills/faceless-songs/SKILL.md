@@ -1,6 +1,6 @@
 ---
 name: faceless-songs
-description: Write three original songs a day for Quiet Money as ready-to-paste Suno packs (style prompt, structured lyrics, cover-image prompt, post copy with the AI label), written by Claude Haiku 5.5 with the decision layer choosing between candidates. Never calls Suno, never uploads. Use when the user says "songs", "music desk", "Suno prompts", "lyrics", "drop the songs", "song cover image", or asks for audio and streaming content.
+description: Write three original songs a day for Quiet Money as ready-to-paste Suno packs (style prompt, structured lyrics, cover-image prompt, post copy with the AI label), written by Claude Haiku 5.5 with the decision layer choosing between candidates. Never calls Suno; uploads only with `songpost --apply`. Use when the user says "songs", "music desk", "Suno prompts", "lyrics", "drop the songs", "song cover image", or asks for audio and streaming content.
 ---
 
 # Faceless songs
