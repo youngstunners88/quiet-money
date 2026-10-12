@@ -619,10 +619,10 @@ def cmd_songvideo(args) -> int:
     from faceless import songvideo
     if args.poster:
         image, title, out = args.args[:3]
-        print(songvideo.poster(Path(image), title, Path(out), grade=args.grade, focus=args.focus))
+        print(songvideo.poster(Path(image), title, Path(out), grade=args.grade, portrait=args.portrait, focus=args.focus))
         return 0
     image, audio, title, out = args.args[:4]
-    info = songvideo.make(Path(image), Path(audio), title, Path(out), grade=args.grade, draft=args.draft, pan=(args.pan_from, args.pan_to))
+    info = songvideo.make(Path(image), Path(audio), title, Path(out), grade=args.grade, draft=args.draft, portrait=args.portrait, pan=(args.pan_from, args.pan_to))
     print(f"{info['video']}: {info['seconds']}s {info['size']}{' (draft)' if info['draft'] else ''}")
     return 0
 
@@ -914,10 +914,11 @@ def main(argv: list[str] | None = None) -> int:
     sg.add_argument("--day", default=None)
     sg.add_argument("--force", action="store_true")
     sg.set_defaults(fn=cmd_songs)
-    sv = sub.add_parser("songvideo", help="a song and a picture become a 1080x1920 music video (grade, bloom, pan, particles, grain, waveform, wordmark): `songvideo IMAGE AUDIO TITLE OUT.mp4 [--draft]`, `--poster IMAGE TITLE OUT.jpg`")
+    sv = sub.add_parser("songvideo", help="a song and a picture become a 16:9 music video (1920x1080; --portrait for 1080x1920) (grade, bloom, pan, particles, grain, waveform, wordmark): `songvideo IMAGE AUDIO TITLE OUT.mp4 [--draft]`, `--poster IMAGE TITLE OUT.jpg`")
     sv.add_argument("args", nargs="+")
     sv.add_argument("--poster", action="store_true")
     sv.add_argument("--draft", action="store_true")
+    sv.add_argument("--portrait", action="store_true", help="1080x1920 for Shorts and Reels (default is 16:9, 1920x1080)")
     sv.add_argument("--grade", default="deep", choices=["dusk", "warm", "deep"])
     sv.add_argument("--focus", type=float, default=0.5)
     sv.add_argument("--pan-from", type=float, default=0.0)

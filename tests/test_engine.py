@@ -1603,7 +1603,8 @@ def test_song_gates_and_lanes():
 
 def test_songvideo_pan_and_title():
     from faceless import songvideo
-    e = songvideo.pan_x(200.0, 0.1, 0.9, fw=360)
-    assert "iw-360" in e and "min(t/200.000,1)" in e and "0.1+" in e
-    assert songvideo.title_lines("First One Off The Line") == ["FIRST ONE OFF", "THE LINE"]
+    e = songvideo.drift_x(200.0, 960, 0.1, 0.9)
+    assert "iw-960" in e and "min(t/200.000,1)" in e and "0.1+" in e
+    assert songvideo.frame_size(False, 1.0) == (1920, 1080) and songvideo.frame_size(True, 1.0) == (1080, 1920)
+    assert songvideo.title_lines("First One Off The Line", 14) == ["FIRST ONE OFF", "THE LINE"]
     assert songvideo.title_lines("Hush") == ["HUSH"]
