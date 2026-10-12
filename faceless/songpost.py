@@ -59,6 +59,14 @@ def tags_for(pack: dict) -> list[str]:
     return out
 
 
+def sung_lyrics(pack: dict) -> str:
+    """The lyrics as sung: the ones embedded in the finished audio when we have them (the music tool can change lines), else the written ones.
+    A cue line wholly in parentheses and any stray code fence are dropped."""
+    text = pack.get("sung_lyrics") or pack["lyrics"]
+    keep = [ln for ln in text.splitlines() if not ln.strip().startswith("```") and not re.fullmatch(r"\(.*\)", ln.strip())]
+    return re.sub(r"\n+(?=\[)", "\n\n", "\n".join(keep).strip())          # a blank line before every section tag
+
+
 def link_for(pack: dict) -> str:
     slug = re.sub(r"[^a-z0-9]+", "-", pack["title"].lower()).strip("-")
     return offer.tracked(offer.checklist_url(), "youtube", "song", slug)
@@ -88,7 +96,7 @@ def description_for(pack: dict) -> str:
         lines += [f"Free 7-day Money Reset checklist from Quiet Money: {url}", ""]
     lines += [
         "LYRICS",
-        pack["lyrics"].strip(),
+        sung_lyrics(pack),
         "",
         "AI disclosure: the lyrics were written with AI assistance and the audio was made with an AI music tool. Not financial advice.",
         "",
@@ -96,8 +104,9 @@ def description_for(pack: dict) -> str:
     ]
     text = "\n".join(lines)
     if len(text) > DESC_MAX:                                   # YouTube allows 5000 characters; the lyrics are what gives way
-        keep = DESC_MAX - len(text) + len(pack["lyrics"].strip()) - 40
-        text = text.replace(pack["lyrics"].strip(), pack["lyrics"].strip()[:max(0, keep)].rsplit("\n", 1)[0] + "\n...")
+        ly = sung_lyrics(pack)
+        keep = DESC_MAX - len(text) + len(ly) - 40
+        text = text.replace(ly, ly[:max(0, keep)].rsplit("\n", 1)[0] + "\n...")
     return text
 
 

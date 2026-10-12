@@ -23,7 +23,6 @@ Free 7-day Money Reset checklist from Quiet Money: https://youngstunners88.githu
 
 LYRICS
 [Intro]
-(soft tape hiss, a porch light hum)
 
 [Verse 1]
 Dad counted coins in a mason jar,

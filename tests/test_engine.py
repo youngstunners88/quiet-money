@@ -1622,3 +1622,12 @@ def test_songpost_copy_is_clean_and_findable():
     assert len([t for t in copy["description"].split() if t.startswith("#")]) <= 3
     assert songpost.problems({**copy, "description": copy["description"] + " https://a.example https://b.example"})
     assert songpost.problems({**copy, "first_comment": "guaranteed passive income"})
+
+
+def test_songpost_uses_sung_lyrics_and_drops_cues():
+    from faceless import songpost
+    pack = {"title": "T", "theme": "x", "hook_line": "h", "description": "d", "lyrics": "[Chorus]\nwritten line",
+            "sung_lyrics": "[Intro]\n(soft tape hiss)\n[Chorus]\nsung line\n```"}
+    ly = songpost.sung_lyrics(pack)
+    assert "sung line" in ly and "written line" not in ly and "tape hiss" not in ly and "```" not in ly
+    assert "sung line" in songpost.build(pack)["description"]

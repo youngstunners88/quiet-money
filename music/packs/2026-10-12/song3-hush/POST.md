@@ -40,6 +40,7 @@ So I let the small things in before
 I bought myself a little light
 To sit with me when the rooms went dark
 It cost me more than the bag would say
+It cost me more than the bag would say
 And I can forgive the one who paid
 
 [Verse 2]
@@ -56,6 +57,7 @@ So I let the warm things in, and I'm back
 
 [Chorus]
 I bought myself a little light
+To sit with me when the rooms went dark
 To sit with me when the rooms went dark
 It cost me more than the bag would say
 And I can forgive the one who paid
