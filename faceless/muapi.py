@@ -230,6 +230,8 @@ def _poll(request_id: str, timeout: float, every: float) -> dict:
     while True:
         r = http().get(f"{BASE}/predictions/{request_id}/result", headers=_headers(), timeout=30)
         res = _record(r)
+        if r.status_code == 200 and not res.get("status") and "cost" in res and len(res) > 1:      # instant models (voice profiles, characters) answer at once with no job record
+            res = {"status": "completed", "output": {k: v for k, v in res.items() if k != "cost"}, "cost": res["cost"]}
         if res.get("status") in ("completed", "failed", "cancelled"):
             return res
         if r.status_code in (401, 403, 404):                      # not ours, not there, or not allowed: waiting cannot fix it

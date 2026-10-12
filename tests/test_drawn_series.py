@@ -64,11 +64,32 @@ def test_open_scene_has_no_text_of_its_own(tmp_path):
     assert 'class="mk"' in page and "THE LEDGER" in page
 
 
-def test_a_switched_off_pillar_never_enters_the_daily_plan():
+def test_a_switched_off_pillar_never_enters_the_daily_plan(monkeypatch):
+    from dataclasses import replace
     from faceless import analytics
-    assert config.pillar("ledger").enabled is False
-    assert "ledger" not in analytics.pillar_weights()
-    assert all(p.enabled for p in config.load()["pillars"] if p.id != "ledger")
+    cfg = dict(config.load())
+    cfg["pillars"] = [replace(p, enabled=False) if p.id == "ledger" else p for p in cfg["pillars"]]
+    monkeypatch.setattr(config, "load", lambda: cfg)
+    assert "ledger" not in analytics.pillar_weights() and "story" in analytics.pillar_weights()
+
+
+def test_the_drawn_series_is_on_in_the_shipped_plan():
+    assert config.pillar("ledger").enabled and config.pillar("ledger").name == "Penny's Money Lab"
+
+
+def test_muapi_instant_models_answer_without_a_job_record(monkeypatch):
+    """gemini-omni-audio and gemini-omni-character reply at once with {audio_id, name, cost}: that is a finished result, not a stuck job."""
+    from faceless import muapi
+
+    class R:
+        status_code = 200
+        def json(self):
+            return {"audio_id": "abc123", "name": "Host", "cost": {"amount_usd": 0.0}}
+
+    monkeypatch.setattr(muapi, "http", lambda: type("H", (), {"get": staticmethod(lambda *a, **k: R())})())
+    monkeypatch.setattr(muapi, "_headers", lambda: {})
+    res = muapi._poll("rid", 5, 0.01)
+    assert res["status"] == "completed" and res["output"] == {"audio_id": "abc123", "name": "Host"}
 
 
 def test_no_two_neighbouring_scenes_share_a_template_or_a_colour_and_the_gremlin_is_capped(monkeypatch):

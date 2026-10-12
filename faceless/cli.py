@@ -181,6 +181,30 @@ def cmd_publish(args) -> int:
     return 0
 
 
+def cmd_host(args) -> int:
+    """The recurring host: status | voice | character | line | clip [--apply] | anchor VIDEO."""
+    from faceless import host
+    a = args.action
+    if a == "status":
+        print(json.dumps(host.status(), indent=1))
+    elif a == "voice":
+        print("voice profile:", host.design_voice(force=args.force))
+    elif a == "character":
+        print("character:", host.create_character())
+    elif a == "line":
+        key, text, backend = host.choose_line()
+        print(f"chosen by {backend}: [{key}] {text}")
+    elif a == "clip":
+        line = args.text or host.choose_line()[1]
+        res = host.make_clip(line, apply=args.apply, max_usd=args.max_usd)
+        print(json.dumps(res, indent=1, default=str))
+        if not args.apply:
+            print("priced only; add --apply to generate (spends the price above)")
+    elif a == "anchor":
+        print("voice anchor:", host.keep_voice_anchor(args.text))
+    return 0
+
+
 def cmd_post_backlog(args) -> int:
     """Put made, quality-passed videos that never reached YouTube on today's remaining slots (strongest series first)."""
     from datetime import datetime
@@ -898,6 +922,13 @@ def main(argv: list[str] | None = None) -> int:
     g.add_argument("job")
     g.add_argument("--no-judge", action="store_true")
     g.set_defaults(fn=cmd_gauntlet)
+    ho = sub.add_parser("host", help="the recurring host (one face, one voice, once a week): status | voice | character | line | clip | anchor")
+    ho.add_argument("action", choices=["status", "voice", "character", "line", "clip", "anchor"])
+    ho.add_argument("text", nargs="?", help="clip: the spoken line (default: the decision layer's pick); anchor: the video to take the voice from")
+    ho.add_argument("--apply", action="store_true", help="clip: actually generate (spends money)")
+    ho.add_argument("--force", action="store_true", help="voice: make a new profile even if one exists")
+    ho.add_argument("--max-usd", type=float, default=2.5)
+    ho.set_defaults(fn=cmd_host)
     pbl = sub.add_parser("post-backlog", help="schedule made, passed videos that never reached YouTube on today's remaining slots (dry run unless --apply)")
     pbl.add_argument("--n", type=int, default=5)
     pbl.add_argument("--apply", action="store_true")

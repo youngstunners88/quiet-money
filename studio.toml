@@ -104,6 +104,13 @@ paused = false                               # or create state/PAUSE ("python -m
 daily_usd = 2.0                              # all desk runs together per UTC day
 per_call_usd = 0.5                           # one run above this is refused unless the caller raises it for that call
 
+[host]                                       # the recurring front man (faceless/host.py): one face, one voice, once a week
+enabled = false                              # OFF until the owner has approved the intro video; then one clip a week
+weekday = 0                                  # Monday
+model = "seedance-2-i2v"                     # image-to-video with native speech and lip-sync; later clips switch to the reference-audio model so the voice carries over
+seconds = 10
+per_clip_usd = 2.5                           # one clip may cost up to this (Seedance 2 about $0.75 to $1.50); the desk's daily budget and the studio ceiling still apply
+
 [decide]
 # Jev (TypeSafe System One) answers typed questions; it never writes content.
 # backend: auto -> jev when TYPESAFE_API_KEY is set, else heuristic.
@@ -253,10 +260,10 @@ music_key = "G"
 
 [[pillars]]
 id = "ledger"
-name = "The Ledger"
+name = "Penny's Money Lab"
 weight = 1.0
-enabled = false                              # OFF: the owner watched the first test video and did not like it (2026-10-11). Code stays; `make --pillar ledger` still works for tests
-drawn = true                                 # no generated picture anywhere: every beat is drawn in code on ledger paper (free, and independent of Muapi and OpenRouter)
+enabled = true                               # ON (2026-10-12): the owner approved the redrawn cast. Set false to take it out of the daily plan
+drawn = true                                 # no generated picture anywhere: every beat is acted out by the cast (Penny and the Fee Gremlin) in code (free, and independent of Muapi and OpenRouter)
 format = "One calculation or comparison drawn on ledger paper. Every beat has a drawable callout: a counting number ('$698,202'), a face-off ('$500 VS $2,000'), a numbered move ('STEP ONE'), or a rule in four words ('RULE OF 72'). Open on the number that surprises, show how it is computed in plain steps with exact numbers the viewer can check, end on the one move to make today. About money mechanics, not people: no stories about real individuals, nothing that needs a photograph."
 style = ""
 grade = "clean"
@@ -327,8 +334,8 @@ description = "Concrete three-step actions you can finish in under 15 minutes: a
 
 [[youtube.playlists]]
 pillar = "ledger"
-title = "The Ledger: Money Math Drawn Step by Step"
-description = "One calculation or comparison drawn on ledger paper, step by step with numbers you can check: what a habit really costs, how long a goal really takes. Educational content, not financial advice."
+title = "Penny's Money Lab: Money Math With a Coin and a Gremlin"
+description = "Penny the gold coin and the Fee Gremlin act out one calculation or comparison, step by step, with numbers you can check: what a habit really costs, how long a goal really takes. Educational content, not financial advice."
 
 [[youtube.playlists]]
 pillar = "escape"

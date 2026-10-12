@@ -283,7 +283,11 @@ def run(job, script: dict, voice: dict, imgs: list[dict]) -> dict:
               "-ac", "1", "-ar", "44100", str(music_wav)])
     else:
         music.write_wav(music_wav, music.ambient_bed(total + 0.5) * 0)
-    music.write_wav(sfx_wav, music.sfx_track(total + 0.5, cut_times, seed))
+    try:        # sound effects tied to what the drawn series shows (coin pings, chomps, bells), when the reel recorded any
+        hits = [(float(t), str(k)) for t, k in json.loads((job.dir / "sfx_events.json").read_text(encoding="utf-8"))]
+    except (OSError, ValueError):
+        hits = []
+    music.write_wav(sfx_wav, music.sfx_track(total + 0.5, cut_times, seed, hits))
 
     ass = job.dir / "captions.ass"
     covered = captions.build(script, voice, ass, skip_callouts={i for i in card_specs if reel})

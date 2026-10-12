@@ -82,9 +82,10 @@ def penny(pid: str, x: float, y: float, scale: float = 1.0) -> tuple[str, dict]:
              + part(f"{pid}lgR", 220, 396, 70, 150, _limb(35, 6, 35, 100, 28) + f'<ellipse cx="48" cy="118" rx="42" ry="20" fill="{EDGE}"/><ellipse cx="48" cy="116" rx="39" ry="17" fill="{SKIN}"/>', origin="50% 4%")
              + part(f"{pid}bd", 0, 0, 420, 560, face + eyes + pupils + lids + brows + blush + mouths + sweat, origin="50% 44%")
              + _arm(pid, "L", 52, 286, 1) + _arm(pid, "R", 368, 286, -1))
+    wrap = part(f"{pid}w", 0, 0, 420, 560, "", origin="50% 100%").replace("</div>", parts + "</div>", 1)     # w: whole-character emphasis (hops, breathing) without fighting the body's own tweens
     root = part(pid, x, y, 420, 560, "", origin="50% 100%")
-    ids = {k: f"{pid}{k}" for k in ("lgL", "lgR", "aL", "aR", "fL", "fR", "bd", "lk", "pu", "ey", "eh", "br", "m0", "m1", "m2", "m3", "m4", "m5", "sw")}
-    return root.replace("</div>", parts + "</div>", 1), ids
+    ids = {k: f"{pid}{k}" for k in ("w", "lgL", "lgR", "aL", "aR", "fL", "fR", "bd", "lk", "pu", "ey", "eh", "br", "m0", "m1", "m2", "m3", "m4", "m5", "sw")}
+    return root.replace("</div>", wrap + "</div>", 1), ids
 
 
 def _arm(pid: str, side: str, sx: float, sy: float, sgn: int) -> str:
@@ -145,6 +146,46 @@ def st(sel: str, props: str, t: float) -> str:
     return f'tl.set("#{sel}",{{{props}}},{t:.3f});'
 
 
+def land(sel: str, t: float, squash: float = 0.84) -> str:
+    """Squash and stretch on landing: flatten and widen, then spring back with an elastic overshoot."""
+    return tw(sel, {"scaleY": squash, "scaleX": 2 - squash + 0.06}, {"scaleY": 1, "scaleX": 1}, t, 0.55, "elastic.out(1,0.45)")
+
+
+def breathe(sel: str, t0: float, dur: float, amp: float = 0.022, period: float = 1.6) -> list[str]:
+    """Idle breathing: a slow squash and stretch on the whole character."""
+    js, t, up = [], 0.0, True
+    while t < dur - 0.05:
+        seg = min(period / 2, dur - t)
+        js.append(tw(sel, {"scaleY": 1 if up else 1 + amp, "scaleX": 1 if up else 1 - amp / 2}, {"scaleY": 1 + amp if up else 1, "scaleX": 1 - amp / 2 if up else 1}, t0 + t, seg, "sine.inOut"))
+        t += seg
+        up = not up
+    return js
+
+
+def hop(sel: str, t: float, h: float = 16) -> list[str]:
+    """A small emphasis hop (up fast, down with a bounce) for a stressed word."""
+    return [tw(sel, {"y": 0}, {"y": -h}, t, 0.1, "power2.out"), tw(sel, {"y": -h}, {"y": 0}, t + 0.1, 0.22, "bounce.out")]
+
+
+def burst(sid: str, t: float, cx: float, cy: float, n: int = 26, colors: tuple = ("#FFD23F", "#ffffff", "#ff7a2f", "#3ad0d0", "#ff4d5e")) -> tuple[str, list[str]]:
+    """Confetti: n bits fly out from (cx, cy), spin, fall and fade. Positions are a fixed function of the index, so a frame always looks the same.
+    Each bit is hidden until its moment (immediateRender off), so nothing sits at the origin before the burst."""
+    h, js = [], []
+    for k in range(n):
+        ang = (k / n) * 2 * math.pi + (k % 3) * 0.2
+        dist = 190 + (k * 37) % 230
+        dx, dy = math.cos(ang) * dist, math.sin(ang) * dist - 80
+        w, hh = 20 + k % 3 * 8, 14 + k % 2 * 10
+        h.append(f'<div class="cf" id="{sid}k{k}" style="left:{cx:g}px;top:{cy:g}px;background:{colors[k % len(colors)]};width:{w}px;height:{hh}px"></div>')
+        js.append(f'tl.fromTo("#{sid}k{k}",{{x:0,y:0,rotation:0,opacity:1}},{{x:{dx:.0f},y:{dy + 300:.0f},rotation:{360 + k * 40},opacity:0,duration:1.1,ease:"power2.out",immediateRender:false}},{t:.3f});')
+    return "".join(h), js
+
+
+def ev(spec: dict, t0: float, t: float, kind: str) -> None:
+    """Note a sound-effect moment (seconds into the scene) for the audio mix: spec['_ev'] is read back by the reel renderer."""
+    spec.setdefault("_ev", []).append((round(max(0.0, t - t0), 3), kind))
+
+
 def talk(ids: dict, words: list[tuple[float, float]], t0: float, dur: float) -> list[str]:
     """Lip sync from the voice's own word timings: the mouth shape follows the word (long word wide, middling open, short small), shut between words.
     Blinks vary (full, half) and every few blinks Penny glances left or right."""
@@ -157,6 +198,8 @@ def talk(ids: dict, words: list[tuple[float, float]], t0: float, dur: float) -> 
         if k % 5 == 4:
             kind = "m2"
         end = min(b, dur - 0.02)
+        if d > 0.5 and "w" in ids and a > 0.6:                  # a stressed (long) word: a small hop
+            js += hop(ids["w"], t0 + a, 14)
         js += [st(ids["m0"], "visibility:'hidden'", t0 + a), st(ids[kind], "visibility:'visible'", t0 + a),
                st(ids[kind], "visibility:'hidden'", t0 + end), st(ids["m0"], "visibility:'visible'", t0 + end)]
     t, n = 0.8 + (len(words) % 3) * 0.3 + (sum(map(ord, ids['bd'])) % 7) * 0.12, 0       # a different blink rhythm in every scene
@@ -269,7 +312,7 @@ def stage_hero(sid, t0, dur, spec, words, hook=False):
     big = 1.1 if hook else 0.95
     p, ids = penny(f"{sid}p", 330, y)
     js = [tw(f"{sid}p", {"y": 380, "scale": 0.5, "opacity": 0}, {"y": 0, "scale": big, "opacity": 1}, t0 + 0.05, 0.5, "back.out(1.6)")]
-    js += bob(ids["bd"], t0 + 0.6, dur - 0.6, 12) + talk(ids, words, t0, dur)
+    js += [land(ids["bd"], t0 + 0.5)] + breathe(ids["w"], t0 + 0.9, dur - 0.9) + bob(ids["bd"], t0 + 0.6, dur - 0.6, 12) + talk(ids, words, t0, dur)
     js += arms(ids, t0 + 0.5, (28, -20), (-150, 28))                       # a wave
     k, t = 0, t0 + 1.0
     while t < t0 + dur - 0.4:
@@ -291,11 +334,17 @@ def stage_stack(sid, t0, dur, spec, words):
     for k in range(coins):
         h.append(coin(f"{sid}c{k}", 560 + (k % 2) * 6, 880 - k * 56, 190))
         js.append(tw(f"{sid}c{k}", {"y": -700, "opacity": 0, "rotation": -20 + k % 3 * 20}, {"y": 0, "opacity": 1, "rotation": 0}, t0 + 0.25 + k * dur * 0.5 / coins, 0.42, "bounce.out"))
+        ev(spec, t0, t0 + 0.55 + k * dur * 0.5 / coins, "coin")
     p, ids = penny(f"{sid}p", 20, 400)
     js += [tw(f"{sid}p", {"x": -460, "opacity": 0, "scale": 0.82}, {"x": 0, "opacity": 1, "scale": 0.82}, t0 + 0.05, 0.5, "back.out(1.4)")]
     js += talk(ids, words, t0, dur * 0.55)
     cheer = t0 + dur * 0.55
     js += mood(ids, cheer, "m4", -14) + arms(ids, cheer, (145, 24), (-145, -24), 0.35, "back.out(2.2)") + bob(ids["bd"], cheer, dur * 0.45, 24, 0.5)
+    js += [land(ids["bd"], cheer + 0.2), tw(ids["lk"], {"x": 0}, {"x": 14}, t0 + 0.3, 0.3)] + breathe(ids["w"], t0 + 0.9, dur - 0.9)
+    bh, bj = burst(sid, cheer, 230, 500, 26)
+    h.append(bh)
+    js += bj
+    ev(spec, t0, cheer, "ding")
     num, nj = counter(sid, n["value"], n["prefix"], n["suffix"], n["decimals"], t0, dur, min(250, int(930 / (max(3, len(fmt(n["value"], n["decimals"]) + n["prefix"] + n["suffix"])) * 0.47))))
     lab, lj = label(sid, n.get("label") or "", t0 + 0.5, 70, 1680, hi=True) if n.get("label") else ("", [])
     box = f'<div class="nb" id="{sid}nb" style="top:1330px">{num}</div>'
@@ -325,7 +374,10 @@ def stage_fee(sid, t0, dur, spec, words):
                tw(f"{sid}c{k}", {"x": 0, "y": 0, "scale": 1, "opacity": 1, "rotation": 0}, {"x": 190, "y": -60 - e * 10, "scale": 0.25, "opacity": 0, "rotation": 240}, t + 0.05, 0.3, "power2.in"),
                tw(gi["jw"], {"y": 46}, {"y": 0}, t + 0.2, 0.1, "power3.in"),                                # bite
                tw(gi["bl"], {"scale": 1}, {"scale": 1.12}, t + 0.3, 0.12, "power2.out"), tw(gi["bl"], {"scale": 1.12}, {"scale": 1}, t + 0.42, 0.14, "sine.inOut"),   # swallow
-               tw(gi["bd"], {"y": 0, "scaleY": 1}, {"y": 8, "scaleY": 0.96}, t, 0.12, "power1.out"), tw(gi["bd"], {"y": 8, "scaleY": 0.96}, {"y": 0, "scaleY": 1}, t + 0.2, 0.16, "back.out(2)")]
+               tw(gi["bd"], {"y": 0, "scaleY": 1}, {"y": 8, "scaleY": 0.96}, t, 0.12, "power1.out"), tw(gi["bd"], {"y": 8, "scaleY": 0.96}, {"y": 0, "scaleY": 1}, t + 0.2, 0.16, "back.out(2)"),
+               tw(f"{sid}s", {"x": 0}, {"x": 9}, t + 0.2, 0.05, "none"), tw(f"{sid}s", {"x": 9}, {"x": -9}, t + 0.25, 0.06, "none"), tw(f"{sid}s", {"x": -9}, {"x": 0}, t + 0.31, 0.06, "none")]
+        ev(spec, t0, t + 0.2, "chomp")
+        ev(spec, t0, t + 0.38, "gulp")
     p, ids = penny(f"{sid}p", 10, 400)
     js += [tw(f"{sid}p", {"x": -440, "opacity": 0, "scale": 0.8}, {"x": 0, "opacity": 1, "scale": 0.8}, t0 + 0.05, 0.5, "back.out(1.4)")]
     js += talk(ids, words, t0, dur * 0.25)
@@ -359,6 +411,8 @@ def stage_race(sid, t0, dur, spec, words):
         h.append(f'<div class="rv" id="{sid}v{k}" style="top:{y + 20}px;left:520px;color:{col if k == 0 else "var(--ink)"}">{html.escape(name)}</div>')
         js.append(tw(f"{sid}v{k}", {"opacity": 0, "x": 40}, {"opacity": 1, "x": 0}, t0 + 0.5 + dur * 0.5 + k * 0.15, 0.4))
     lab, lj = label(sid, spec.get("text", "") or "WHO WINS?", t0 + 0.3, 90, 1400, hi=True)
+    ev(spec, t0, t0 + 0.3, "pop")
+    ev(spec, t0, t0 + 0.4 + dur * 0.55, "ding")
     js += talk(first, words, t0, dur)
     fh, fj = _floaters(sid, t0, dur, 6)
     return fh + "".join(h) + lab, js + lj + fj
@@ -378,7 +432,9 @@ def stage_step(sid, t0, dur, spec, words):
     js = [tw(f"{sid}p", {"x": -420, "opacity": 0, "scale": 0.82}, {"x": 0, "opacity": 1, "scale": 0.82}, t0 + 0.05, 0.5, "back.out(1.4)"),
           tw(f"{sid}b", {"scale": 0.4, "opacity": 0, "rotation": -8}, {"scale": 1, "opacity": 1, "rotation": 0}, t0 + 0.2, 0.5, "back.out(1.7)"),
           tw(f"{sid}o", {"strokeDashoffset": circ}, {"strokeDashoffset": 0}, t0 + 0.5, dur * 0.55, "power2.inOut")]
-    js += arms(ids, t0 + 0.5, None, (-100, 10), 0.45)               # presenting arm
+    js += arms(ids, t0 + 0.5, None, (-100, 10), 0.45) + [land(ids["bd"], t0 + 0.55)] + breathe(ids["w"], t0 + 0.9, dur - 0.9)               # presenting arm
+    ev(spec, t0, t0 + 0.4, "pop")
+    ev(spec, t0, t0 + 0.5 + dur * 0.55, "ding")
     js += talk(ids, words, t0, dur) + bob(ids["bd"], t0 + 0.6, dur - 0.6, 10)
     js += [tw(ids["lk"], {"x": 0}, {"x": 16}, t0 + 0.5, 0.3)]
     lab, lj = label(sid, s.get("gist", ""), t0 + 0.6, 66, 1380, hi=False)
@@ -410,6 +466,8 @@ def stage_shock(sid, t0, dur, spec, words):
     shake = t0 + 0.35
     js = [tw(f"{sid}p", {"y": 380, "scale": 0.5, "opacity": 0}, {"y": 0, "scale": 1.0, "opacity": 1}, t0 + 0.05, 0.4, "back.out(2)")]
     js += mood(ids, shake, "m3", -24) + [st(ids["sw"], "visibility:'visible'", shake + 0.3)] + arms(ids, shake, (30, -140), (-30, 140), 0.25, "back.out(2.4)")
+    js += [land(ids["bd"], shake, 0.78)] + breathe(ids["w"], t0 + 1.0, dur - 1.0)
+    ev(spec, t0, shake, "gasp")
     j = 0
     while shake + j * 0.12 < t0 + dur * 0.55:
         js.append(tw(ids["bd"], {"x": -8 if j % 2 == 0 else 8}, {"x": 8 if j % 2 == 0 else -8}, shake + j * 0.12, 0.12, "none"))
@@ -436,7 +494,9 @@ def stage_think(sid, t0, dur, spec, words):
           tw(f"{sid}cl", {"scale": 0.2, "opacity": 0}, {"scale": 1, "opacity": 1}, t0 + 0.7, 0.55, "back.out(1.5)"),
           tw(ids["pu"], {"x": 0, "y": 0}, {"x": 10, "y": -28}, t0 + 0.3, 0.3)]
     js += arms(ids, t0 + 0.4, None, (-25, 128), 0.4, "back.out(1.4)") + [st(ids["m0"], "visibility:'hidden'", t0 + 0.4), st(ids["m5"], "visibility:'visible'", t0 + 0.4)]
-    js += bob(ids["bd"], t0 + 0.6, dur - 0.6, 10)
+    js += bob(ids["bd"], t0 + 0.6, dur - 0.6, 10) + breathe(ids["w"], t0 + 0.9, dur - 0.9)
+    ev(spec, t0, t0 + 0.5, "pop")
+    ev(spec, t0, t0 + 0.8, "pop")
     fh, fj = _floaters(sid, t0, dur, 6, "?")
     return fh + cloud + p, js + fj
 
@@ -445,13 +505,16 @@ def stage_sign(sid, t0, dur, spec, words):
     """Penny points at a sign with the phrase: it swings in on its post."""
     p, ids = penny(f"{sid}p", 40, 400)
     words_ = spec.get("text", "").split()
-    text = html.escape(" ".join(words_[:5]))            # a board holds five words
-    size = 78 if len(words_[:5]) <= 3 else 56
+    first = " ".join(words_).replace("! ", ". ").replace("? ", ". ").split(". ")[0]      # prefer the beat's first whole sentence over a cut-off one
+    cut = first.split() if len(first.split()) <= 7 else words_[:7]
+    text = html.escape(" ".join(cut))                    # a board holds seven words
+    size = 78 if len(cut) <= 3 else 60 if len(cut) <= 5 else 50
     sign = (f'<div class="sg" id="{sid}sg" style="left:490px;top:430px;width:520px;height:480px;transform-origin:50% 0%"><div class="post"></div>'
             f'<div class="brd"><div class="bt" style="font-size:{size}px">{text}</div></div></div>')
     js = [tw(f"{sid}p", {"x": -420, "opacity": 0, "scale": 0.82}, {"x": 0, "opacity": 1, "scale": 0.82}, t0 + 0.05, 0.5, "back.out(1.4)"),
           tw(f"{sid}sg", {"rotation": -35, "opacity": 0, "y": -140}, {"rotation": 0, "opacity": 1, "y": 0}, t0 + 0.3, 0.7, "bounce.out")]
-    js += arms(ids, t0 + 0.7, None, (-95, 6), 0.4) + [tw(ids["lk"], {"x": 0}, {"x": 16}, t0 + 0.6, 0.3)]
+    js += arms(ids, t0 + 0.7, None, (-95, 6), 0.4) + [tw(ids["lk"], {"x": 0}, {"x": 16}, t0 + 0.6, 0.3), land(ids["bd"], t0 + 0.8)] + breathe(ids["w"], t0 + 1.0, dur - 1.0)
+    ev(spec, t0, t0 + 0.95, "thud")
     js += talk(ids, words, t0, dur) + bob(ids["bd"], t0 + 0.7, dur - 0.7, 9)
     fh, fj = _floaters(sid, t0, dur, 6, "$")
     return fh + p + sign, js + fj
@@ -511,15 +574,43 @@ def choose(script: dict, pillar_id: str = "ledger") -> dict[int, dict]:
             pal = (pal + 1) % len(PALS)
         if tpl == "hero" and i == 0:
             pal = 0
-        out[i] = {"kind": "stage", "tpl": tpl, "pal": pal, **spec}
+        out[i] = {"kind": "stage", "tpl": tpl, "pal": pal, "cam": ("push", "pan", "pull", "tilt")[i % 4], "trans": ("wipe", "iris", "slide", "flip")[(i + 1) % 4], **spec}
         last_tpl, last_pal = tpl, pal
     return out
+
+
+def _camera(sid: str, t0: float, dur: float, kind: str) -> list[str]:
+    w = f"{sid}w"
+    if kind == "pull":
+        return [tw(w, {"scale": 1.1}, {"scale": 1.0}, t0, dur, "none")]
+    if kind == "pan":
+        return [tw(w, {"scale": 1.06, "x": -30}, {"scale": 1.06, "x": 30}, t0, dur, "none")]
+    if kind == "tilt":
+        return [tw(w, {"scale": 1.05, "rotation": -1.4}, {"scale": 1.05, "rotation": 1.4}, t0, dur, "none")]
+    return [tw(w, {"scale": 1.0}, {"scale": 1.08}, t0, dur, "none")]
+
+
+def _transition(sid: str, t0: float, kind: str) -> tuple[str, list[str]]:
+    """What covers the cut into this scene: a gold wipe, a gold iris, a dark panel sliding up, or a spinning coin."""
+    if kind == "iris":
+        return (f'<div class="tr-iris" id="{sid}tr"></div>',
+                [st(f"{sid}tr", "opacity:1", t0), tw(f"{sid}tr", {"scale": 0.05}, {"scale": 4.2}, t0, 0.42, "power2.in"), st(f"{sid}tr", "opacity:0", t0 + 0.43)])
+    if kind == "slide":
+        return (f'<div class="tr-slide" id="{sid}tr"></div>', [tw(f"{sid}tr", {"y": 1960}, {"y": -1960}, t0, 0.5, "power2.inOut")])
+    if kind == "flip":
+        return (f'<div class="tr-flip" id="{sid}tr"><svg width="520" height="520" viewBox="0 0 520 520"><circle cx="260" cy="260" r="236" fill="{RIM}"/>'
+                f'<circle cx="260" cy="260" r="216" fill="{GOLD}"/><circle cx="260" cy="260" r="180" fill="none" stroke="{GOLD_D}" stroke-width="10"/>'
+                f'<text x="260" y="330" text-anchor="middle" font-family="Anton" font-size="230" fill="{RIM}">Q</text></svg></div>',
+                [st(f"{sid}tr", "opacity:1", t0), tw(f"{sid}tr", {"scaleX": 0, "scaleY": 0.6}, {"scaleX": 1, "scaleY": 1.5}, t0, 0.22, "power2.out"),
+                 tw(f"{sid}tr", {"scaleX": 1, "scaleY": 1.5}, {"scaleX": 0, "scaleY": 1.9}, t0 + 0.22, 0.22, "power2.in"), st(f"{sid}tr", "opacity:0", t0 + 0.45)])
+    return (f'<div class="sw0" id="{sid}tr"></div>', [tw(f"{sid}tr", {"x": -1200}, {"x": 1300}, t0, 0.45, "power2.inOut")])
 
 
 def build(sid: str, t0: float, dur: float, spec: dict) -> tuple[str, list[str], tuple]:
     """(html, js, palette) for one stage scene. spec['words'] = [(start, end)] relative to the scene start (the voice's word timings)."""
     words = spec.get("words", [])
     fn = TEMPLATES[spec["tpl"]]
+    spec["_ev"] = []
     if spec["tpl"] == "hero":
         h, js = stage_hero(sid, t0, dur, spec, words, hook=spec.get("hook", False))
     else:
@@ -527,16 +618,18 @@ def build(sid: str, t0: float, dur: float, spec: dict) -> tuple[str, list[str], 
     belt = "".join(coin(f"{sid}bc{k}", 40 + k * 190, 1830, 90) for k in range(7))
     for k in range(7):
         js.append(tw(f"{sid}bc{k}", {"x": 0, "opacity": 0.85}, {"x": -190, "opacity": 0.85}, t0, dur, "none"))
-    h = h + belt
-    swipe = f'<div class="sw0" id="{sid}sw0"></div>'
-    js.append(tw(f"{sid}sw0", {"x": -1200}, {"x": 1300}, t0, 0.45, "power2.inOut"))
-    js.append(tw(f"{sid}w", {"scale": 1.0}, {"scale": 1.07}, t0, dur, "none"))
-    world = f'<div class="wd" id="{sid}w">{h}</div>'
-    return world + swipe, js, PALS[spec["pal"] % len(PALS)]
+    tr_html, tr_js = _transition(sid, t0, spec.get("trans", "wipe"))
+    js += tr_js + _camera(sid, t0, dur, spec.get("cam", "push"))
+    world = f'<div class="wd" id="{sid}w"><div class="wd" id="{sid}s">{h}{belt}</div></div>'
+    return world + tr_html, js, PALS[spec["pal"] % len(PALS)]
 
 
 CSS = """
 .cp{position:absolute}
+.cf{position:absolute;opacity:0;border-radius:3px}
+.tr-iris{position:absolute;left:240px;top:660px;width:600px;height:600px;border-radius:50%;background:#FFD23F;opacity:0}
+.tr-slide{position:absolute;left:0;top:0;width:1080px;height:1920px;background:#101018;transform:translateY(1960px)}
+.tr-flip{position:absolute;left:280px;top:700px;width:520px;height:520px;opacity:0}
 .wd{position:absolute;inset:0;transform-origin:50% 38%}
 .cn{position:absolute;left:0;width:1080px;top:0;text-align:center;font:400 250px/1 "Anton";color:var(--ink);letter-spacing:-3px;visibility:hidden}
 .cw{position:relative}
