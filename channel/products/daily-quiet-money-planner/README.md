@@ -1,6 +1,6 @@
 # The Quiet Money Daily Planner
 
-Printable PDF, 415 pages, US Letter and A4. Built entirely from files in this repository, free and offline. Nothing is published by any command here.
+Printable PDF, 427 pages, US Letter and A4. Built entirely from files in this repository, free and offline. Nothing is published by any command here.
 
 | File | What it is |
 |---|---|
@@ -51,14 +51,14 @@ Typical run for an agent: `planner_status` -> `planner_normalize` (if phone pict
 
 ## The wellness posters (supporting pages) and the Photopea crop
 The owner's 44 "DID YOU KNOW" posters are the planner's supporting pages: wellness that goes hand in hand with money (a calm, rested, moving body makes steadier money
-decisions), framed that way on the page. They live in `assets/planner/wellness/`:
+decisions), framed that way on the page. Forty are the owner's artwork; twelve more (weeks 41 to 52) are typeset by `python -m faceless planner posters-make` in the same style. They live in `assets/planner/wellness/`:
 `original/` (as made, never changed), `cropped/` (handle removed), `report.json` (what was done to each, by which engine). The owner's logo and wordmark are in `assets/planner/brand/`.
 - `planner_crop` (MCP) or `planner_posters.process()` finds the @handle (pixels first, then a vision model through OpenRouter as the second opinion), **crops it off in Photopea**
   (photopea.com driven headlessly through its official messaging API, the same crop the owner makes by hand), and checks the result against a plain Pillow crop (Pillow is the fallback).
 - Two handles sit on the poster itself, over plain white: those are repainted (OpenCV), nothing else touched. Cut lines for handles right against the poster are given by hand (`manual_cuts`).
 - Pictures where the pixels and the model disagree are never changed: they come back as `needs_human`.
-- Measured on the 44 posters (15 had a handle, checked by eye): Claude Haiku 5.5 as the second opinion found 15 of 15, none wrong, $0.007 for all 44; `typesafe/jev-router` found 9 of 15 and flagged 10 posters that have no handle ($0.029),
-  so Haiku does the locating and Jev Router (through OpenRouter, only `OPENROUTER_API_KEY` needed) is the review gate (`[planner] gate_backend`, `[decide] jev_openrouter_*`).
+- Measured on the 44 posters (15 had a handle, checked by eye): Claude Haiku 5.5 as the second opinion found 15 of 15, none wrong, $0.007 for all 44; the chat router `typesafe/jev-router` found 9 of 15 and flagged 10 posters that have no handle ($0.029),
+  so Haiku does the locating and Jev (the real decision model, `typesafe/jev-1.13`, through OpenRouter's Decisions API, only `OPENROUTER_API_KEY` needed) is the review gate (`[planner] gate_backend`, `[decide] decisions_*`).
 
 ## Covers (skill `faceless-cover`)
 `python -m faceless planner cover` writes `cover.png` (default: Quinton seated with steepled hands, rim-lit, glowing Q pin, title typeset in code) plus the alternates `cover-desk.png` (Quinton looking at the open planner) and

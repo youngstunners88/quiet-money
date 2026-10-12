@@ -1,6 +1,6 @@
 ---
 name: faceless-planner
-description: Build, check and ship the Quiet Money Daily Planner, the 415-page printable (US Letter and A4, undated) with one picture, one lesson and one action per day, weekly check-ins, wellness break pages, a cover, and its Etsy and Gumroad listing pack. Use when asked to build or rebuild the planner, change a lesson, a page, the cover or the art, check it before it is sold, make its listing, or add the owner's pictures to it.
+description: Build, check and ship the Quiet Money Daily Planner, the 427-page printable (US Letter and A4, undated) with one picture, one lesson and one action per day, weekly check-ins, wellness break pages, a cover, and its Etsy and Gumroad listing pack. Use when asked to build or rebuild the planner, change a lesson, a page, the cover or the art, check it before it is sold, make its listing, or add the owner's pictures to it.
 metadata:
   author: quiet-money
   version: 1.0.0
@@ -36,6 +36,6 @@ A product, not a video. Everything is built from files in this repo, free and of
 It is stated in `catalog.json` (two descriptions and the notes), `LISTING.md`, `README.md`, `CONTEXT.md`, and computed in `planner check`. Change all of them in one commit and rebuild.
 
 ## Troubleshooting
-- **PDF over 20 MB:** lower the picture quality in `Pen.image` (default 78; wellness pages use 72) or the drawn-art size in `planner_art.W/H`. Do not drop pages.
+- **PDF over 20 MB:** lower the picture quality in `Pen.image` (default 70; wellness pages use 58 at 820 px) or the drawn-art size in `planner_art.W/H`. Do not drop pages.
 - **A lesson placeholder fails:** it is a closed set of functions in `planner_content.FUNCS`; add a function there with a test, never `eval`.
 - **Title longer than one line:** shorten it (Anton 27 pt, one line).

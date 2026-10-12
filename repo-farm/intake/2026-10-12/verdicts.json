@@ -42,13 +42,22 @@
       "owner": "none"
     },
     {
-      "id": "typesafe-jev-router",
-      "name": "TypeSafe Jev Router on OpenRouter (typesafe/jev-router)",
+      "id": "typesafe-jev-decisions",
+      "name": "Jev 1.13 on OpenRouter (typesafe/jev-1.13, Decisions API)",
       "verdict": "USE",
       "stage": "package",
-      "why": "On OpenRouter with the existing OPENROUTER_API_KEY (no TypeSafe key needed): a router that picks the model and effort per request, multimodal, variable price. USE as the typed-question gate (decide backend `jev-openrouter`, opt-in, capped, dry-run): live, it answered a clean case `accepted` and a smudged one `needs_human`, both at 0.99. NOT used to find the handle on posters: measured on 44 posters it routed to small models, flagged 10 handle-free posters and found 9 of 15 real handles ($0.029), while Claude Haiku 5.5 found 15 of 15 with none wrong ($0.007). It stays a drop-in `[planner] locate_model` to re-test later.",
-      "steal": "Ask typed questions as JSON through chat completions; measure any model on hand-checked ground truth before it decides anything.",
-      "owner": "Say if TYPESAFE_API_KEY is meant to be in this environment: it is not set in this container (only OPENROUTER_API_KEY, OPENROUTER_2, MUAPI_API_KEY, FIRECRAWL_API_KEY are), so the direct TypeSafe backend stays off."
+      "why": "The decision surface is OpenRouter's Decisions API (POST /api/alpha/decisions), not the chat router: question types are choice, noul (yes/no probability) and score, and the answer carries calibrated probabilities. It runs on the existing OPENROUTER_API_KEY (no TypeSafe key needed), costs a fraction of a cent and is capped by [decide] decisions_daily_usd. USE as the typed-question gate (decide backend openrouter-decisions; the old jev-openrouter alias maps to it). The chat router typesafe/jev-router is not a decision model; it stays a locator candidate only (9 of 15 handles on the 44 posters against Haiku 5.5's 15 of 15).",
+      "steal": "Ask every gate as typed questions and act on the probability: defer to a person when it is low.",
+      "owner": "none"
+    },
+    {
+      "id": "microsoft-decision-1",
+      "name": "Microsoft-Decision-1 on OpenRouter (microsoft/microsoft-decision-1)",
+      "verdict": "USE",
+      "stage": "package",
+      "why": "A small Azure decision model (ctx 32768, $0.042 per million input tokens) that returns a calibrated probability for each fixed answer instead of text, so the answer carries its own confidence and the app can act, defer or ask for review. Same Decisions API and the same cap as Jev. Used in the product-structure panel (picked C at 0.86 but rated a third listing justified at only 0.07, which the coherence check overruled) and available as a gate backend.",
+      "steal": "Use the confidence to route: act above a high bar, ask a person below it.",
+      "owner": "none"
     }
   ]
 }

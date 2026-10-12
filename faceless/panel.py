@@ -33,7 +33,7 @@ def ask(model: str, brief: str) -> dict:
     if not key:
         raise ProviderUnavailable("OPENROUTER_API_KEY not set")
     safety.guard("panel", s["per_call_usd"])
-    if not ledger.allow(PROVIDER, "usd", s["per_call_usd"], s["daily_usd"]):
+    if not ledger.allow_usd(PROVIDER, s["per_call_usd"], s["daily_usd"]):
         raise ProviderUnavailable(f"panel daily cap ${s['daily_usd']} reached")
     body = {"model": model, "max_tokens": s["max_tokens"], "temperature": s["temperature"], "reasoning": {"effort": "low"},      # a reasoning model with a small budget returns empty text
             "messages": [{"role": "user", "content": brief}]}
@@ -42,7 +42,7 @@ def ask(model: str, brief: str) -> dict:
         return {"out": {"error": f"http {r.status_code}"}, "usd": 0.0, "model_used": model}
     d = r.json()
     cost = float((d.get("usage") or {}).get("cost") or 0.0)
-    ledger.spend(PROVIDER, "usd", cost, usd=cost)
+    ledger.spend_usd(PROVIDER, cost)
     from faceless.providers.llm import _extract_json
     try:
         out = _extract_json(d["choices"][0]["message"].get("content") or "")
@@ -78,3 +78,17 @@ def save(result: dict) -> str:
     path = Paths.state / "panels" / f"{time.strftime('%Y-%m-%d', time.gmtime())}-{slug}.json"
     write_atomic(path, json.dumps(result, indent=1, default=str) + "\n")
     return str(path.relative_to(Paths.root))
+
+
+def run_decisions(state, questions: dict, models: list[str], label: str = "decisions") -> dict:
+    """The same typed questions (the Decisions API's own shape: choice, noul, score) put to several decision models, with the probability each gives every option.
+    Decision models return calibrated probabilities instead of text, so the spread between models is visible directly. Result: {model: {question: answer or error}}."""
+    from faceless import decide
+    out = {"label": label, "models": {}}
+    for m in models:
+        try:
+            r = decide.openrouter_decide(m, state, questions, cap_provider=PROVIDER)
+            out["models"][m] = {"answers": r["answers"], "build": r["model"], "usd": round(r["usd"], 6)}
+        except Exception as e:  # noqa: BLE001 - a model that fails is reported, the others still answer
+            out["models"][m] = {"error": str(e)[:120]}
+    return out

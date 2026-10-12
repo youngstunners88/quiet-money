@@ -24,8 +24,8 @@ A model answering is not a model being right. In the planner job, `typesafe/jev-
 3. Pick the best on right and wrongly flagged first, cost second. Put the winner in `studio.toml` (`[planner] locate_model`) with a comment that says what was measured.
 4. Add a unit test with a fake session and, if possible, a negative control (the dirty picture passed off as clean must be held).
 
-## Jev through OpenRouter
-`typesafe/jev-router` is on OpenRouter and needs only `OPENROUTER_API_KEY`; its price is variable (`-1`) and it picks small models. Typed questions work well as text (a clean case answered accepted at 0.99, a smudged one needs_human at 0.99): decide backend `jev-openrouter` (opt-in, `[decide] jev_openrouter_*`). The direct TypeSafe SDK backend needs `TYPESAFE_API_KEY`, which is not set in the cloud container.
+## Jev and the other decision models through OpenRouter
+OpenRouter's **Decisions API** (`POST /api/alpha/decisions`) serves 19 decision models, including `typesafe/jev-1.13` (Jev) and `microsoft/microsoft-decision-1`; they need only `OPENROUTER_API_KEY` and return a probability per option (skill `faceless-panel`). Typed questions work well: Jev answered a clean case accepted (0.55) and a smudged one needs_human (0.99). The studio backend is `openrouter-decisions` (`[decide] decisions_model`, opt-in, capped). `typesafe/jev-router` is a different thing: a chat router that picks a small model per request and measured poorly at locating a handle. The direct TypeSafe SDK backend needs `TYPESAFE_API_KEY`, which is not set in the cloud container and is not needed.
 
 ## Troubleshooting
 - **content is null:** the model spent its tokens thinking; raise `max_tokens` and lower the reasoning effort.

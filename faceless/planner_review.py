@@ -87,7 +87,7 @@ def vision_review(before: Image.Image, after: Image.Image, found: list[Found], j
         return None
     try:
         safety.guard("planner review", s["per_call_usd"])
-        if not ledger.allow(PROVIDER, "usd", s["per_call_usd"], s["daily_usd"]):
+        if not ledger.allow_usd(PROVIDER, s["per_call_usd"], s["daily_usd"]):
             return None
     except ProviderUnavailable:
         return None
@@ -101,7 +101,7 @@ def vision_review(before: Image.Image, after: Image.Image, found: list[Found], j
         raise ProviderError(f"openrouter {r.status_code}")
     d = r.json()
     cost = float((d.get("usage") or {}).get("cost") or 0.0)
-    ledger.spend(PROVIDER, "usd", cost, usd=cost, job=job)
+    ledger.spend_usd(PROVIDER, cost, job=job)
     from faceless.providers.llm import _extract_json
     out = _extract_json(d["choices"][0]["message"].get("content") or "")
     if not isinstance(out, dict):

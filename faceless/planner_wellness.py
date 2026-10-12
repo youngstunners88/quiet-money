@@ -1,7 +1,7 @@
 """The wellness posters as the planner's supporting pages: which posters, in what order, the money framing line under each, and which claims the owner should check.
 
 The owner's 44 "DID YOU KNOW" posters (assets/planner/wellness/) are wellness that goes hand in hand with money, so each page carries a short line that ties it to money decisions
-and a not-medical-advice note. Four posters repeat another one (same topic, same words) and are left out, which leaves 40: one "Wellness break" page after each of weeks 1 to 40.
+and a not-medical-advice note. Four of the owner's posters repeat another one and are left out, which leaves 40; twelve more are typeset by the studio (planner_poster_make.py), so each of the 52 weeks ends with one "Wellness break" page.
 
 `REVIEW` lists the posters whose text makes quantified, hormonal or clinical claims the studio has not checked (rule 1: every number is true). They are the owner's words and stay as made;
 the page adds the disclaimer, and the owner should read these before the planner is sold. Nothing here edits a poster.
@@ -56,7 +56,21 @@ POSTERS: dict[int, tuple[str, str]] = {
     42: ("Water with watermelon", "Hydration is cheap. Many drinks you buy out of habit are not what your body asked for."),
     43: ("Dogs and stress", "Pets cost money, and so do the things we buy to cope with stress. Notice what really helps you relax and what only feels like it."),
     44: ("Looking forward", "Looking forward to something can feel as good as having it. Plan a small treat and save for it: the anticipation is free."),
+    # 45 to 56 are weeks 41 to 52: made by the studio in the owner's style (planner_poster_make.py), hedged, no clinical figures
+    45: ("Sleep and impulse buys", "A tired brain finds it harder to say no. Put any unplanned purchase off until you have slept on it."),
+    46: ("Shopping hungry", "Hungry shoppers tend to put more in the basket. Eat first, shop with a list, and keep the receipt for what you planned."),
+    47: ("Gratitude", "Noticing what you already have can take the edge off wanting more. Write down three things before you open a shopping app."),
+    48: ("Comparison", "Comparing your real life with other people's highlights can push you to spend to keep up. Compare yourself with last year's you instead."),
+    49: ("A quiet hour", "A notification-free hour gives you space to look at your money without the pull of an offer. Try it once this week."),
+    50: ("Stretch breaks", "Movement breaks cost nothing and clear your head. Take one before you make a money decision you have been putting off."),
+    51: ("Meal planning", "A plan for the week's meals makes a shopping list easy and wasted food rare. It is one of the simplest ways to trim a food budget."),
+    52: ("Walking with a friend", "Time with people you like is some of the cheapest good time there is. Suggest a walk in place of a paid outing."),
+    53: ("Writing worries down", "A worry on paper is easier to size up than one in your head. Write the number next to it, then choose one small next step."),
+    54: ("The pause", "Wait a day before an unplanned purchase. If you still want it tomorrow and it fits your plan, you can buy it calmly."),
+    55: ("Giving", "Some research suggests that giving can feel rewarding. A small, planned gift line in your budget lets you be generous without strain."),
+    56: ("Rest", "Rest is part of the plan, not a reward for finishing it. A rested mind makes steadier money choices and a year of them adds up."),
 }
+MADE = tuple(range(45, 57))                           # posters typeset by the studio; the other 40 are the owner's artwork
 DUPLICATES = {8: 3, 25: 19, 30: 18, 31: 9}            # dropped position -> the poster it repeats (kept)
 REVIEW = {2: "growth hormone rise stated as a percentage", 4: "claim about copper and bacteria", 5: "grip strength and testosterone", 9: "performance claims for baking soda and creatine",
           10: "grounding", 12: "dementia percentages", 13: "cacao and blood pressure figures", 14: "hormone claims (estrogen, aromatase)", 17: "beef liver, nutrient and toxicity claims",
@@ -88,6 +102,6 @@ def check() -> list[str]:
             bad.append(f"wellness-{pos:03d}: the line is over 40 words")
     if set(POSTERS) & set(DUPLICATES):
         bad.append("a dropped duplicate is still listed")
-    if set(POSTERS) | set(DUPLICATES) != set(range(1, 45)):
-        bad.append(f"positions not accounted for: {sorted(set(range(1, 45)) - set(POSTERS) - set(DUPLICATES))}")
+    if set(POSTERS) | set(DUPLICATES) != set(range(1, 57)):
+        bad.append(f"positions not accounted for: {sorted(set(range(1, 57)) - set(POSTERS) - set(DUPLICATES))}")
     return bad

@@ -49,7 +49,7 @@ def ask_model(im: Image.Image, job: str | None = None) -> dict | None:
         safety.guard("planner locate", s["per_call_usd"])
     except ProviderUnavailable:
         return None
-    if not ledger.allow(PROVIDER, "usd", s["per_call_usd"], s["daily_usd"]):
+    if not ledger.allow_usd(PROVIDER, s["per_call_usd"], s["daily_usd"]):
         return None
     url = "data:image/jpeg;base64," + base64.b64encode(_downscale(im)).decode()
     body = {"model": s["locate_model"], "max_tokens": 800, "temperature": 0,
@@ -59,7 +59,7 @@ def ask_model(im: Image.Image, job: str | None = None) -> dict | None:
         raise ProviderError(f"openrouter {r.status_code}")
     d = r.json()
     cost = float((d.get("usage") or {}).get("cost") or 0.0)
-    ledger.spend(PROVIDER, "usd", cost, usd=cost, job=job)
+    ledger.spend_usd(PROVIDER, cost, job=job)
     from faceless.providers.llm import _extract_json
     try:
         out = _extract_json((d["choices"][0]["message"].get("content") or ""))

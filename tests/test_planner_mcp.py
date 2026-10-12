@@ -132,7 +132,7 @@ def test_the_vision_look_is_capped_spent_and_can_only_hold_more(monkeypatch):
     url, body = sent[0]
     assert url.startswith("https://openrouter.ai/") and body["model"] == config.load()["planner"]["review_model"]
     assert body["messages"][0]["content"][1]["image_url"]["url"].startswith("data:image/jpeg;base64,")
-    assert ledger.used(planner_review.PROVIDER, "usd") == pytest.approx(0.0002)
+    assert ledger.used_usd(planner_review.PROVIDER) == pytest.approx(0.0002)
     monkeypatch.setitem(config.load()["planner"], "daily_usd", 0.0001)             # cap below one look: it does not ask
     sent.clear()
     assert planner_review.review(dirty, out, found)["vision"] is None and not sent
@@ -245,25 +245,48 @@ def test_freeconvert_refuses_what_it_should(monkeypatch, tmp_path):
 
 # ---------------------------------------------------------------- Jev through OpenRouter, the locator, Photopea and the poster pipeline
 
-def test_jev_through_openrouter_answers_typed_questions_and_is_capped(monkeypatch):
-    q = {"look": decide.Q("choice", "Should a person look?", fallback="accepted", options={"accepted": "fine", "needs_human": "off"})}
+def test_jev_through_the_openrouter_decisions_api_answers_typed_questions_and_is_capped(monkeypatch):
+    q = {"look": decide.Q("choice", "Should a person look?", fallback="accepted", options={"accepted": "fine", "needs_human": "off"}),
+         "bad": decide.Q("noul", "Is it damaged?", fallback=0.0)}
     seen = []
 
     class S:
         def post(self, url, json=None, timeout=None, headers=None):
-            seen.append(json["model"])
-            return FakeResp(200, {"model": "x/y", "choices": [{"message": {"content": '{"look": {"answer": "needs_human", "confidence": 0.97}, "other": {"answer": 1, "confidence": 1}}'}}], "usage": {"cost": 0.001}})
+            seen.append((url, json["model"], json["questions"]["look"]["criteria"], json["questions"]["bad"]["type"]))
+            return FakeResp(200, {"model": "typesafe/jev-1.13-20260917", "usage": {"cost": 0.00004}, "answers": {
+                "look": {"type": "choice", "choice": "needs_human", "probabilities": {"accepted": 0.03, "needs_human": 0.97}},
+                "bad": {"type": "noul", "noul": 0.9}, "extra": {"type": "noul", "noul": 1.0}}})
     import faceless.providers as prov
     monkeypatch.setattr(prov, "http", lambda: S())
     with pytest.raises(RuntimeError):                                                          # no key: it says so, ask() then keeps the fallback
-        decide._ask_jev_openrouter(q, {})
-    assert decide.ask(q, {"x": 1}, backend="jev-openrouter")["look"].value == "accepted"
+        decide.openrouter_decide("typesafe/jev-1.13", {}, q)
+    assert decide.ask(q, {"x": 1}, backend="openrouter-decisions")["look"].value == "accepted"
     monkeypatch.setenv("OPENROUTER_API_KEY", "k")
-    d = decide.ask(q, {"x": 1}, backend="jev-openrouter")["look"]
-    assert seen == ["typesafe/jev-router"] and d.jev_value == "needs_human" and d.jev_confidence == 0.97 and d.value == "accepted"   # dry_run: logged, not acted on
-    assert ledger.used("openrouter-jev", "usd") == pytest.approx(0.001)
-    monkeypatch.setitem(config.load()["decide"], "jev_openrouter_daily_usd", 0.0005)
-    assert decide.ask(q, {"x": 1}, backend="jev-openrouter")["look"].jev_value is None         # over the cap: no call
+    d = decide.ask(q, {"x": 1}, backend="openrouter-decisions")
+    assert seen[0][0] == "https://openrouter.ai/api/alpha/decisions" and seen[0][1] == "typesafe/jev-1.13" and seen[0][2] == {"accepted": "fine", "needs_human": "off"}
+    assert d["look"].jev_value == "needs_human" and d["look"].jev_confidence == 0.97 and d["look"].value == "accepted"   # dry_run: logged, not acted on
+    assert d["bad"].jev_value == 0.9 and "extra" not in d                                       # an answer to a question we never asked is ignored
+    assert decide.ask(q, {"x": 1}, backend="jev-openrouter")["look"].jev_value == "needs_human"  # the old name still works
+    assert ledger.used_usd("openrouter-decisions") == pytest.approx(0.00008)
+    monkeypatch.setitem(config.load()["decide"], "decisions_daily_usd", 0.00001)
+    assert decide.ask(q, {"x": 1}, backend="openrouter-decisions")["look"].jev_value is None   # over the cap: no call
+
+
+def test_a_decision_panel_asks_each_model_the_same_questions_and_reports_a_failure_without_stopping(monkeypatch):
+    from faceless import panel
+    monkeypatch.setenv("OPENROUTER_API_KEY", "k")
+
+    class S:
+        def post(self, url, json=None, timeout=None, headers=None):
+            if json["model"] == "bad/model":
+                return FakeResp(400, {})
+            assert json["questions"]["pick"]["criteria"] == {"A": "one", "B": "two"}                # raw API-shaped questions pass through unchanged
+            return FakeResp(200, {"model": json["model"] + "-build", "usage": {"cost": 0.00002}, "answers": {"pick": {"type": "choice", "choice": "A", "probabilities": {"A": 0.7, "B": 0.3}}}})
+    import faceless.providers as prov
+    monkeypatch.setattr(prov, "http", lambda: S())
+    res = panel.run_decisions({"s": 1}, {"pick": {"type": "choice", "instructions": "?", "criteria": {"A": "one", "B": "two"}}}, ["m/ok", "bad/model"])
+    assert res["models"]["m/ok"]["answers"]["pick"]["probabilities"]["A"] == 0.7 and res["models"]["m/ok"]["build"] == "m/ok-build"
+    assert "400" in res["models"]["bad/model"]["error"]
 
 
 def test_the_review_honours_a_jev_hold_even_in_dry_run(monkeypatch):
@@ -372,7 +395,7 @@ def test_the_panel_tallies_votes_counts_failures_and_respects_its_cap(monkeypatc
     monkeypatch.setenv("OPENROUTER_API_KEY", "k")
     res = panel.run("brief", ["m/one", "m/two"], runs=2, label="Test: A or C?")
     assert res["models"]["m/one"]["votes"] == {"A": 1, "C": 1} and res["models"]["m/two"]["failed"] == 1 and res["tally"] == {"A": 1, "C": 2}
-    assert res["models"]["m/two"]["mean_confidence"] == 0.9 and ledger.used(panel.PROVIDER, "usd") == pytest.approx(0.004)
+    assert res["models"]["m/two"]["mean_confidence"] == 0.9 and ledger.used_usd(panel.PROVIDER) == pytest.approx(0.004)
     monkeypatch.setitem(config.load()["panel"], "daily_usd", 0.0035)                             # the fifth call would pass the cap
     again = panel.run("brief", ["m/one"], runs=1)
     assert again["models"]["m/one"]["failed"] == 1 and "cap" in again["models"]["m/one"]["answers"][0]["out"]["error"]

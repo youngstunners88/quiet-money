@@ -359,6 +359,10 @@ def cmd_planner(args) -> int:
     if args.action == "inventory":
         print(json.dumps(planner_clean.inventory(), indent=2))
         return 0
+    if args.action == "posters-make":
+        from faceless import planner_poster_make
+        print(f"typeset wellness posters {planner_poster_make.make()}")
+        return 0
     from faceless import planner_cover
     folder = Path(config.STUDIO) / "channel" / "products" / pp.PRODUCT
     planner_cover.cover(1700, 2200).save(folder / "cover.png")
@@ -859,8 +863,8 @@ def main(argv: list[str] | None = None) -> int:
     fl.add_argument("--day", help="YYYY-MM-DD (default today)")
     fl.set_defaults(fn=cmd_flow)
     sub.add_parser("products", help="build the spreadsheet products, recalculate them in LibreOffice, check against Python math, write listings").set_defaults(fn=cmd_products)
-    pl = sub.add_parser("planner", help="the Daily Planner product: `build` the PDFs, `check` the gauntlet, `ingest <folder>` the owner's pictures, `clean` the handle off them, `inventory`, `cover`")
-    pl.add_argument("action", choices=["build", "check", "ingest", "clean", "inventory", "cover"])
+    pl = sub.add_parser("planner", help="the Daily Planner product: `build` the PDFs, `check` the gauntlet, `ingest <folder>` the owner's pictures, `clean` the handle off them, `inventory`, `cover`, `posters-make` (typeset the studio's twelve wellness posters)")
+    pl.add_argument("action", choices=["build", "check", "ingest", "clean", "inventory", "cover", "posters-make"])
     pl.add_argument("folder", nargs="?", help="ingest: the folder with the owner's pictures")
     pl.add_argument("--size", choices=["Letter", "A4", "both"], default="both")
     pl.add_argument("--days", type=int, help="build only the first N days (a quick test)")

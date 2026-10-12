@@ -4,21 +4,24 @@
 **Approved by:** Claude Code, under the owner's advance permission given in the same task ("get to a conclusion and then approve the best result"). The approval covers the
 **product structure only**. It does not set a price, publish, list or post anything: the owner still approves prices, copy and accounts (CLAUDE.md rule 9).
 
-## Method
-One brief (`2026-10-12-daily-debt-bundle.brief.txt`, facts from the studio's own files plus a Haiku market brief) put to two models through OpenRouter, three runs each, temperature 0.4:
-`python -m faceless panel <brief> --models microsoft/phi-4,anthropic/claude-haiku-5.5 --runs 3`. Raw answers: `state/panels/2026-10-12-daily-debt-bundle.json`. Cost under $0.003.
-(`microsoft/phi-4` is the only current Microsoft model on OpenRouter besides the older WizardLM-2.)
+## Method (re-run on the right models, 2026-10-12)
+The first pass used `microsoft/phi-4`, a chat model: **that was the wrong tool.** The owner meant **`microsoft/microsoft-decision-1`**, one of 19 *decision models* on OpenRouter's Decisions API
+(`POST /api/alpha/decisions`): it reads the state and returns a calibrated probability for each answer option instead of generating text. The same request
+(`2026-10-12-daily-debt-bundle.request.json`: the facts as `state`, one `choice` question and three `noul` yes/no questions) was put to four decision models; raw answers in
+`state/panels/2026-10-12-daily-debt-bundle-decisions.json`. Cost under $0.0004. (The first pass, Phi-4 and Claude Haiku 5.5 as chat models, is kept at `state/panels/2026-10-12-daily-debt-bundle.json`: Phi-4 voted C three times with generic reasons; Haiku voted A, C and failed once, and was the only one to notice the overlap in words.)
 
-## What the models said
-| Model | Votes | Confidence | Noticed |
-|---|---|---|---|
-| Microsoft Phi-4 | C, C, C | 0.80 to 0.85 | generic: flexibility, targeted marketing, Etsy fees, cannibalisation in the abstract |
-| Claude Haiku 5.5 | A, C, (one run out of tokens) | 0.55 to 0.60 | **the Debt Payoff Planner is already inside the Money Reset Kit**, so a Daily + Debt bundle overlaps it; a shop with no sales or reviews has nothing to learn from a third listing; the discount rule means both parts must be listed apart first; Etsy listing fees |
+## What the decision models said
+| Model | Pick (probability) | Overlap with the Kit | Has data | Third listing justified |
+|---|---|---|---|---|
+| Microsoft-Decision-1 | C (0.86), A 0.13 | 1.00 | 0.00 | **0.07** |
+| Jev 1.13 (typesafe) | **A (0.61)**, C 0.36 | 0.95 | 0.04 | 0.23 |
+| Solar Decide Flash (upstage) | C (0.97) | 0.95 | 0.04 | **0.13** |
+| GPT-6 Luna Decisions (openai) | **A (0.91)**, C 0.08 | 1.00 | 0.00 | 0.22 |
 
 ## Adjudication
-1. Agreement is not correctness. Phi-4 was consistent but did not use the fact that matters most (the overlap with the Kit); Haiku did, and its disagreement with itself (A vs C at about 0.55) says the call is close.
-2. When a call is close and one option is reversible and cheaper, take that one: A can become C later with one new listing; C cannot undo its Etsy fees or the cannibalisation of the Kit.
-3. The facts agree with A: new shop, no data, a price 5 to 17 times the cheap Etsy bundles (so price is the bigger test than structure), and the discount can only be advertised once the parts are live.
+1. **The sub-questions are unanimous and match the facts:** every model says a new bundle would overlap the Kit (0.95 to 1.00), the shop has no data (at most 0.04), and a third listing is not justified (0.07 to 0.23).
+2. **The headline pick splits two and two, and the two that chose C contradict themselves:** option C *is* a third listing, yet Microsoft-Decision-1 rates "third listing justified" at 0.07 and Solar at 0.13. Coherence gating (a pick must agree with the model's own answers about its consequences) leaves A (Jev 0.61, GPT-6 Luna 0.91).
+3. A close call goes to the reversible, cheaper option: A can become C later with one new listing; C cannot undo its Etsy fees or the cannibalisation of the Kit.
 
 ## Actions this decision sets
 - List the Daily Planner and the Debt Payoff Planner as separate products, Gumroad first. The Kit stays as it is.

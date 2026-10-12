@@ -1,7 +1,7 @@
-"""Product: the Quiet Money Daily Planner (printable PDF, US Letter and A4, 415 pages, undated).
+"""Product: the Quiet Money Daily Planner (printable PDF, US Letter and A4, 427 pages, undated).
 
 One picture, one short lesson and one small action for every day of the year: Monday Learn, Tuesday By the numbers, Wednesday Do it, Thursday Mindset,
-Friday Action, Saturday weekly check-in, Sunday reflect and reset, 52 weeks plus a bonus Day 365. Weeks 1 to 40 each end with a Wellness Break page (the owner's wellness poster with a line that ties it to money; planner_wellness.py). Front matter: cover, welcome, net worth snapshot,
+Friday Action, Saturday weekly check-in, Sunday reflect and reset, 52 weeks plus a bonus Day 365. Every week ends with a Wellness Break page (a wellness poster with a line that ties it to money; planner_wellness.py). Front matter: cover, welcome, net worth snapshot,
 debt map, year map. Back matter: summary and goals, money words, notes, the licence page.
 
 Pictures: the owner's own artwork when `assets/planner/source/day-NNN.*` exists (cleaned by planner_clean.py), otherwise drawn in code by planner_art.py in
@@ -291,10 +291,10 @@ def wellness_page(p: Pen, week: int, pos: int, n: int, total: int) -> None:
     p.text(M + 122, H - M + 2, f"WEEK {week}  |  {topic.upper()}", "MontXB", 8.5, GREY)
     top, bottom = H - M - 10, 205
     im = Image.open(planner_wellness.poster_path(pos)).convert("RGB")
-    im.thumbnail((900, 900), Image.LANCZOS)
+    im.thumbnail((820, 820), Image.LANCZOS)
     s = min(inner / im.width, (top - bottom) / im.height)
     w, h = im.width * s, im.height * s
-    p.image(im, (W - w) / 2, top - h, w, h, radius=6, quality=64)
+    p.image(im, (W - w) / 2, top - h, w, h, radius=6, quality=58)
     y = top - h - 20
     lines = p.split(line, "BodyB", 12, inner - 24)
     bh = 30 + 15 * len(lines)
@@ -453,7 +453,7 @@ def last_back(p: Pen, n: int, total: int) -> None:
     y = p.title(H - M - 24, "About this planner")
     for head, body in (
         ("Education, not advice", "The Quiet Money Daily Planner is an educational tool. It is not financial, tax, legal or investment advice and it never recommends a particular product. Examples use made-up numbers and stated assumptions. Returns are never guaranteed and past results do not predict the future. Talk to a qualified professional about your own situation."),
-        ("Made with AI assistance", f"{AI_LINE} The lessons were written and fact-checked with the Quiet Money studio's tools, and every computed figure comes from one shared set of math functions that is tested. The pictures are original artwork drawn in code or made with AI tools. The man on the cover is Quinton, the Quiet Money host: a virtual, AI-generated character, not a real person. The wellness posters are the owner's own artwork."),
+        ("Made with AI assistance", f"{AI_LINE} The lessons were written and fact-checked with the Quiet Money studio's tools, and every computed figure comes from one shared set of math functions that is tested. The pictures are original artwork drawn in code or made with AI tools. The man on the cover is Quinton, the Quiet Money host: a virtual, AI-generated character, not a real person. Forty of the wellness posters are the owner's own artwork; the last twelve were made in the same style with AI tools, with every word typeset in code."),
         ("Licence", f"{LICENSE} One purchase covers printing as many copies as you need for yourself and your household."),
         ("Questions or mistakes", "If you find an error, reply to the message where you bought this. It gets fixed and you get the update."),
     ):
@@ -618,7 +618,7 @@ def check(build_first: bool = False) -> list[tuple[str, bool, str, bool]]:
         gates.append((f"pdf_{size.lower()}_disclosures", "not financial" in text2.lower() and "AI assistance" in text2, "not-advice and AI lines on the welcome and last pages", True))
         gates.append((f"pdf_{size.lower()}_etsy_size", f.stat().st_size <= MAX_BYTES, f"{f.stat().st_size / 2**20:.1f} MB (Etsy: 20 MB per file)", True))
     wb = planner_wellness.check()
-    gates.append(("wellness_manifest", not wb, "40 posters, 4 duplicates dropped, every file present" if not wb else "; ".join(wb), True))
+    gates.append(("wellness_manifest", not wb, "52 posters (40 the owner's, 12 typeset by the studio), 4 duplicates dropped, every file present" if not wb else "; ".join(wb), True))
     gates.append(("wellness_claims_for_owner_review", False, f"{len(planner_wellness.REVIEW)} posters make quantified or clinical claims the studio has not checked: {sorted(planner_wellness.REVIEW)}", False))
     gen = sorted(planner_art.GENERATED.glob("day-*.jpg"))
     if gen:

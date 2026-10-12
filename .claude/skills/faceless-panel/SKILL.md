@@ -1,6 +1,6 @@
 ---
 name: faceless-panel
-description: Put one decision to several models through OpenRouter (for example Microsoft Phi-4 against Claude Haiku 5.5), tally their answers, adjudicate them against the facts, and record the approved result. Use when the owner asks to get a decision from two models, to compare models on a business or design question, to settle one option against another, or says to approve the best result.
+description: Put one decision to several models through OpenRouter (for example Microsoft-Decision-1 against Jev and Claude Haiku 5.5), tally their answers, adjudicate them against the facts, and record the approved result. Use when the owner asks to get a decision from two models, to compare models on a business or design question, to settle one option against another, or says to approve the best result.
 metadata:
   author: quiet-money
   version: 1.0.0
@@ -9,7 +9,7 @@ metadata:
 
 # Model panel
 
-`python -m faceless panel brief.txt --models microsoft/phi-4,anthropic/claude-haiku-5.5 --runs 3` asks each model the same brief several times and prints votes, confidence, failures and cost; the raw answers are saved in `state/panels/`.
+`python -m faceless panel brief.txt --models anthropic/claude-haiku-5.5 --runs 3` asks each model the same brief several times and prints votes, confidence, failures and cost; the raw answers are saved in `state/panels/`.
 
 ## Rules
 1. **The brief carries the facts.** Pull them from the studio's own files (catalog, prices, rules, what already exists) and mark anything unverified as unverified. Models are not asked to know the business.
@@ -20,8 +20,18 @@ metadata:
 6. **Record it:** `channel/empire/decisions/<date>-<slug>.md` with the method, the table of what each model said, the adjudication, the actions it sets and what would change it, plus the brief next to it. Keep the raw answers in `state/panels/`.
 7. Spend is capped by `[panel]` in `studio.toml` ($0.10 a day, $0.01 a call, 5 runs); the studio ceiling and `state/PAUSE` still apply. Keys stay in the environment.
 
+## Two kinds of panel
+- **Chat models** (`python -m faceless panel brief.txt --models anthropic/claude-haiku-5.5,... --runs 3`): the brief asks for JSON with a `choice`; good for open judgement and for reading the reasons.
+- **Decision models** (OpenRouter Decisions API, `POST /api/alpha/decisions`, `faceless/panel.py` `run_decisions`): the facts go in as `state`, the questions as typed `choice`, `noul` (yes/no) and `score`; the model returns a calibrated **probability per option** instead of text, in about 0.3 s for a few thousandths of a cent. 19 are served (list them: `GET https://openrouter.ai/api/v1/models?output_modalities=decisions`): `microsoft/microsoft-decision-1` (Azure), `typesafe/jev-1.13` (Jev), `upstage/solar-decide-flash`, `openai/gpt-6-luna-decisions`, `perplexity/pplx-decider-v1.1-27b`, `cloudflare/clef`, `liquid/d1`, `inception/mercury-decide`, and more. **A decision model is not a chat model** (`microsoft/phi-4` is a chat model; sending a decision model to chat completions is refused).
+
+## Gate in code, and check coherence
+1. Ask the headline `choice` **and** yes/no questions about its consequences ("would this overlap an existing bundle", "is there data", "is a third listing justified"). Independent questions over the same state go in one request.
+2. **A pick must agree with the same model's answers about what the pick implies.** In the bundle decision Microsoft-Decision-1 chose "bundle" at 0.86 while rating "a third listing is justified" at 0.07: the pick is overruled by its own answer.
+3. Treat the models as voters on the sub-questions first; the headline split is information, not a verdict. A near-0.5 probability means unsure, not "medium".
+4. Pin the exact build (`response.model`, e.g. `microsoft/microsoft-decision-1-20261009`), never an alias; record it with the answer.
+
 ## Choosing models
-Which models exist: `GET https://openrouter.ai/api/v1/models` (public). The only Microsoft model currently there besides the older WizardLM-2 is `microsoft/phi-4` (14B, 16k context): cheap, so a useful second voice, but weak at using a long fact sheet. `anthropic/claude-haiku-5.5` is the studio's cheap strong reader. `typesafe/jev-router` picks its own model per request and measured worse on a locating job (skill `faceless-bench`). To trust a model for a recurring job, benchmark it on ground truth; a panel is for one-off judgement calls.
+`anthropic/claude-haiku-5.5` is the studio's cheap strong reader for open questions and for vision. For a recurring typed job, benchmark candidates on ground truth first (skill `faceless-bench`); a panel is for one-off judgement calls. In the studio, `[decide] decisions_model` pins the decision model behind the `openrouter-decisions` backend (Jev 1.13 today).
 
 ## Troubleshooting
 - **A run fails with no JSON:** a reasoning model ran out of tokens; the panel already sends `max_tokens` 2000 and low reasoning effort. Count failures; do not drop them silently.

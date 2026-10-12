@@ -52,6 +52,20 @@ def spend(provider: str, unit: str, amount: float, usd: float = 0.0, job: str | 
         f.write(json.dumps(row) + "\n")
 
 
+def spend_usd(provider: str, cost: float, job: str | None = None) -> None:
+    """Record a paid call whose cost is a few thousandths of a cent (decision models, small vision looks). `spend` rounds `amount` to 4 decimals, which turns $0.00004 into 0
+    and lets a daily cap never bind; this stores the cost in micro-dollars (unit `microusd`), so `used_usd` and `allow_usd` add it up exactly."""
+    spend(provider, "microusd", cost * 1e6, usd=cost, job=job)
+
+
+def used_usd(provider: str, day: str | None = None) -> float:
+    return used(provider, "microusd", day) / 1e6
+
+
+def allow_usd(provider: str, cost: float, cap_usd: float) -> bool:
+    return used_usd(provider) + cost <= cap_usd + 1e-12
+
+
 def summary(day: str | None = None) -> dict:
     out: dict = {}
     for r in _rows(day or today()):

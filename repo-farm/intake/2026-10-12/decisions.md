@@ -17,3 +17,8 @@ Read with `python -m faceless intake` (dossiers in `repo-farm/intake/2026-10-12/
 - **FreeConvert (freeconvert.com, API v1):** Create a free FreeConvert account and put the API token in the environment as FREECONVERT_API_KEY (intake never signs up for anyone).
 - **Photopea (photopea.com, live-messaging API):** none
 - **TypeSafe Jev Router on OpenRouter (typesafe/jev-router):** Say if TYPESAFE_API_KEY is meant to be in this environment: it is not set in this container (only OPENROUTER_API_KEY, OPENROUTER_2, MUAPI_API_KEY, FIRECRAWL_API_KEY are), so the direct TypeSafe backend stays off.
+
+
+## Correction, later the same day
+
+The decision surface is OpenRouter's Decisions API, not the Jev chat router. Verdicts: **Jev 1.13 (typesafe/jev-1.13): USE** and **Microsoft-Decision-1 (microsoft/microsoft-decision-1): USE**, both through `decide.openrouter_decide` (backend `openrouter-decisions`), capped by `[decide] decisions_daily_usd`. The chat router `typesafe/jev-router` is not a decision model and stays a locator candidate only. See `verdicts.json`.

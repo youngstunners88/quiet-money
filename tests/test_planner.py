@@ -155,11 +155,12 @@ def test_the_catalog_lists_the_planner_with_both_sizes():
 
 def test_the_wellness_manifest_drops_the_duplicates_and_every_poster_has_a_line_and_a_file():
     from faceless import planner_wellness as w
-    assert w.check() == [] and len(w.kept()) == 40
+    assert w.check() == [] and len(w.kept()) == 52
     assert set(w.DUPLICATES) == {8, 25, 30, 31} and not set(w.DUPLICATES) & set(w.kept())
     assert all(1 <= len(line.split()) <= 40 for _t, line in w.POSTERS.values())
     assert set(w.REVIEW) <= set(w.kept())                                                     # every flagged poster is one that is used
-    assert w.week_poster(1) == 1 and w.week_poster(40) == 44 and w.week_poster(41) is None
+    assert w.week_poster(1) == 1 and w.week_poster(40) == 44 and w.week_poster(41) == 45 and w.week_poster(52) == 56 and w.week_poster(53) is None
+    assert set(w.MADE) <= set(w.kept()) and not set(w.MADE) & set(w.REVIEW)
     assert "not medical advice" in w.NOT_MEDICAL
 
 
