@@ -1,7 +1,7 @@
 {
  "id": "gemini-pricing",
- "fetched": "2026-10-08",
- "sha": "6cd5d7cde3f1886b",
+ "fetched": "2026-10-12",
+ "sha": "fe17689001f509f3",
  "snippets": [
   "Agents in AI Studio Playground",
   "Gemini Developer API pricing",
@@ -14,9 +14,9 @@
   "$1.00 / 1,000,000 tokens per hour (storage price) starting January 1, 2027.",
   "Our previous generation Flash model, balancing speed and multimodal capabilities across general agentic and everyday tasks.",
   "** Can be tested in Google AI Studio.",
-  "$1.00 / 1,000,000 tokens per hour (storage price)",
   "* Billing is based on total input and output audio token consumption, calculated at a rate of 25 tokens per second of audio, equating to an effective price of approximately $0.0368 per minute.",
   "* Estimated pricing is based on 25 audio tokens per second for input",
+  "$1.00 / 1,000,000 tokens per hour (storage price)",
   "$0.50 / 1,000,000 tokens per hour (storage price)",
   "$1.80 / 1,000,000 tokens per hour (storage price)",
   "Our next-generation video generation and editing model, now generally available",

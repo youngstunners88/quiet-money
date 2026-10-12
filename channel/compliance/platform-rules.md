@@ -1,4 +1,4 @@
-# Platform rules we run on (verified 2026-10-08)
+# Platform rules we run on (verified 2026-10-12; TikTok, Gumroad, Etsy, Adobe, Fiverr re-read and unchanged in substance)
 
 Read from the platforms' own pages on the date above (sources linked; `python -m faceless policy` re-reads the ones this machine can
 fetch and the weekly session re-reads the rest). Where a row says *unverified*, nobody has read the primary page yet. Rules change:

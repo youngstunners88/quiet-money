@@ -1,0 +1,14 @@
+{
+ "id": "adobe-genai",
+ "fetched": "2026-10-12",
+ "sha": "dc30608d966fa3e8",
+ "snippets": [
+  "You must have all necessary rights to submit generative AI images, vectors, or videos to Adobe Stock for commercial licensing as described in the Contributor Agreement.",
+  "Don't include names of artists, real people, or fictional characters in generative AI prompts, titles, or keywords.",
+  "Don't include references to creative works still in copyright, names of government agencies, or references to third-party intellectual property.",
+  "Don't include descriptions implying the content depicts an actual newsworthy event.",
+  "Violations of this policy may result in the removal of content or the termination of the account.",
+  "Created using generative AI tools: required for all content created with generative AI software."
+ ],
+ "changed": "2026-10-12"
+}

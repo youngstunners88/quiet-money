@@ -4068,3 +4068,17 @@
 {"ts": "2026-10-12T10:59:27Z", "t": 1791802767.572, "actor": "engine", "type": "OFFER_RECORDED", "job": "2026-10-12-s6-myth-myth-you-need-a-high-income-to-s", "slug": "checklist", "status": "draft"}
 {"ts": "2026-10-12T10:59:27Z", "t": 1791802767.573, "actor": "engine", "type": "OFFER_RECORDED", "job": "2026-10-12-s7-playbook-kill-a-hidden-recurring-bank-fee", "slug": "checklist", "status": "draft"}
 {"ts": "2026-10-12T10:59:27Z", "t": 1791802767.575, "actor": "engine", "type": "OFFER_RECORDED", "job": "2026-10-12-s8-escape-the-value-equation-math-for-inco", "slug": "checklist", "status": "draft"}
+{"ts": "2026-10-12T11:10:24Z", "t": 1791803424.118, "actor": "engine", "type": "PROVIDER_OK", "capability": "llm", "provider": "gemini", "job": null, "ms": 83524}
+{"ts": "2026-10-12T11:10:35Z", "t": 1791803435.101, "actor": "engine", "type": "SCOUT_TOPUP", "pillar": "story", "added": 6}
+{"ts": "2026-10-12T11:10:40Z", "t": 1791803440.988, "actor": "engine", "type": "PROVIDER_OK", "capability": "llm", "provider": "gemini", "job": null, "ms": 3879}
+{"ts": "2026-10-12T11:10:50Z", "t": 1791803450.573, "actor": "engine", "type": "SCOUT_TOPUP", "pillar": "math", "added": 6}
+{"ts": "2026-10-12T11:12:11Z", "t": 1791803531.673, "actor": "engine", "type": "PROVIDER_OK", "capability": "llm", "provider": "gemini", "job": null, "ms": 79289}
+{"ts": "2026-10-12T11:12:14Z", "t": 1791803534.883, "actor": "engine", "type": "SCOUT_TOPUP", "pillar": "psychology", "added": 4}
+{"ts": "2026-10-12T11:13:35Z", "t": 1791803615.347, "actor": "engine", "type": "PROVIDER_OK", "capability": "llm", "provider": "gemini", "job": null, "ms": 79044}
+{"ts": "2026-10-12T11:13:46Z", "t": 1791803626.968, "actor": "engine", "type": "SCOUT_TOPUP", "pillar": "myth", "added": 6}
+{"ts": "2026-10-12T11:13:53Z", "t": 1791803633.366, "actor": "engine", "type": "PROVIDER_OK", "capability": "llm", "provider": "gemini", "job": null, "ms": 4504}
+{"ts": "2026-10-12T11:14:03Z", "t": 1791803643.368, "actor": "engine", "type": "SCOUT_TOPUP", "pillar": "playbook", "added": 6}
+{"ts": "2026-10-12T11:14:06Z", "t": 1791803646.782, "actor": "engine", "type": "PROVIDER_OK", "capability": "llm", "provider": "gemini", "job": null, "ms": 3406}
+{"ts": "2026-10-12T11:14:16Z", "t": 1791803656.616, "actor": "engine", "type": "SCOUT_TOPUP", "pillar": "ledger", "added": 6}
+{"ts": "2026-10-12T11:14:21Z", "t": 1791803661.385, "actor": "engine", "type": "PROVIDER_OK", "capability": "llm", "provider": "gemini", "job": null, "ms": 3422}
+{"ts": "2026-10-12T11:14:25Z", "t": 1791803665.016, "actor": "engine", "type": "SCOUT_TOPUP", "pillar": "escape", "added": 3}

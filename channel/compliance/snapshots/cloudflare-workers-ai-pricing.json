@@ -1,15 +1,14 @@
 {
  "id": "cloudflare-workers-ai-pricing",
- "fetched": "2026-10-08",
- "sha": "2227d893353fec34",
+ "fetched": "2026-10-12",
+ "sha": "f115ea60bb92abb3",
  "snippets": [
   "Fetch the complete documentation index at: https://developers.cloudflare.com/workers-ai/llms.txt",
-  "Workers AI llms.txt âï¸",
-  "Workers AI llms-full.txt âï¸",
+  "Workers AI llms-full.txt ↗︎",
   "OverviewPay with AI Gateway creditsWhat are Neurons?LLM model pricingEmbeddings model pricingImage model pricingAudio model pricingOther model pricing",
   "Workers AI has updated pricing to be more granular, with per-model unit-based pricing presented, but still billing in neurons in the back end.",
   "Workers AI is included in both the Free and Paid Workers plans and is priced at $0.011 per 1,000 Neurons.",
-  "You can monitor your Neuron usage in the Cloudflare Workers AI dashboard âï¸.",
+  "You can monitor your Neuron usage in the Cloudflare Workers AI dashboard ↗︎.",
   "This applies to @cf/moonshotai/kimi-k2.6, @cf/moonshotai/kimi-k2.7-code, @cf/zai-org/glm-5.2, @cf/zai-org/glm-5.3, @cf/zai-org/glm-5.3-flash, @cf/deepseek-ai/deepseek-v4-flash-0731, and @cf/deepseek-ai/deepseek-v4-pro-0813.",
   "You can access these models with either the Workers Paid plan or prepaid AI Gateway credits.",
   "Pay with AI Gateway credits",
@@ -22,5 +21,5 @@
   "@cf/deepseek-ai/deepseek-v4-pro-0813",
   "@cf/pipecat-ai/smart-turn-v2"
  ],
- "changed": "2026-10-08"
+ "changed": "2026-10-12"
 }
