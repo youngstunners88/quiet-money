@@ -612,6 +612,21 @@ def cmd_songs(args) -> int:
     return 0 if res["made"] >= res["wanted"] else 1
 
 
+def cmd_songvideo(args) -> int:
+    """Song video: `songvideo IMAGE AUDIO "Title" OUT.mp4 [--draft] [--grade dusk|warm|deep]` | `songvideo --poster IMAGE "Title" OUT.jpg`."""
+    from pathlib import Path
+
+    from faceless import songvideo
+    if args.poster:
+        image, title, out = args.args[:3]
+        print(songvideo.poster(Path(image), title, Path(out), grade=args.grade, focus=args.focus))
+        return 0
+    image, audio, title, out = args.args[:4]
+    info = songvideo.make(Path(image), Path(audio), title, Path(out), grade=args.grade, draft=args.draft, pan=(args.pan_from, args.pan_to))
+    print(f"{info['video']}: {info['seconds']}s {info['size']}{' (draft)' if info['draft'] else ''}")
+    return 0
+
+
 def cmd_offer(args) -> int:
     """Offers: coverage and profile links | --batch [DAY] (make sure every passed video has its pack and row) | check TEXT | mark VIDEO pinned."""
     from faceless import offer
@@ -899,6 +914,15 @@ def main(argv: list[str] | None = None) -> int:
     sg.add_argument("--day", default=None)
     sg.add_argument("--force", action="store_true")
     sg.set_defaults(fn=cmd_songs)
+    sv = sub.add_parser("songvideo", help="a song and a picture become a 1080x1920 music video (grade, bloom, pan, particles, grain, waveform, wordmark): `songvideo IMAGE AUDIO TITLE OUT.mp4 [--draft]`, `--poster IMAGE TITLE OUT.jpg`")
+    sv.add_argument("args", nargs="+")
+    sv.add_argument("--poster", action="store_true")
+    sv.add_argument("--draft", action="store_true")
+    sv.add_argument("--grade", default="deep", choices=["dusk", "warm", "deep"])
+    sv.add_argument("--focus", type=float, default=0.5)
+    sv.add_argument("--pan-from", type=float, default=0.0)
+    sv.add_argument("--pan-to", type=float, default=1.0)
+    sv.set_defaults(fn=cmd_songvideo)
     of = sub.add_parser("offer", help="the call to action on every video: coverage and profile links, `--batch [today|DAY]` writes missing packs and ledger rows, `check TEXT` runs the claim check, `mark VIDEO pinned`")
     of.add_argument("action", nargs="?", default="status", choices=["status", "check", "mark"])
     of.add_argument("args", nargs="*")

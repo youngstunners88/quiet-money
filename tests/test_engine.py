@@ -1599,3 +1599,11 @@ def test_song_gates_and_lanes():
     assert any("promise" in v for v in songs.violations({**good, "description": "guaranteed passive income"}, prior=[]))
     assert any("close" in v for v in songs.violations(good, prior=[("old", songs._shingles(good["lyrics"]))]))
     assert len({n for n, _ in songs.lanes_for("2026-10-12", 3)}) == 3
+
+
+def test_songvideo_pan_and_title():
+    from faceless import songvideo
+    e = songvideo.pan_x(200.0, 0.1, 0.9, fw=360)
+    assert "iw-360" in e and "min(t/200.000,1)" in e and "0.1+" in e
+    assert songvideo.title_lines("First One Off The Line") == ["FIRST ONE OFF", "THE LINE"]
+    assert songvideo.title_lines("Hush") == ["HUSH"]
