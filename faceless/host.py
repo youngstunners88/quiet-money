@@ -16,13 +16,17 @@ from __future__ import annotations
 
 import json
 import subprocess
-from datetime import date
+from datetime import date, datetime, timezone
 from pathlib import Path
 
 from faceless import config, decide, events, muapi
 from faceless.config import STUDIO
 from faceless.fsutil import write_atomic
 from faceless.providers import ProviderError, ProviderUnavailable
+
+def _today() -> date:
+    return datetime.now(timezone.utc).date()          # dates come from UTC, never from the machine's zone
+
 
 DIR = STUDIO / "channel" / "host"
 STATE = DIR / "host.json"
@@ -91,7 +95,7 @@ def design_voice(force: bool = False) -> str:
     vid = _output(res, "audio_id")
     if not vid:
         raise ProviderError("the voice profile endpoint returned no audio_id")
-    s["voice"] = {"model": "gemini-omni-audio", "base_voice": VOICE_BASE, "name": VOICE_NAME, "audio_id": vid, "created": date.today().isoformat()}
+    s["voice"] = {"model": "gemini-omni-audio", "base_voice": VOICE_BASE, "name": VOICE_NAME, "audio_id": vid, "created": _today().isoformat()}
     save(s)
     events.emit("HOST_VOICE_CREATED", audio_id=vid)
     return vid
@@ -110,7 +114,7 @@ def create_character(image: Path = REFERENCE) -> str:
     cid = _output(res, "character_id", "id")
     if not cid:
         raise ProviderError("the character endpoint returned no id")
-    s["character"] = {"model": "gemini-omni-character", "character_id": cid, "created": date.today().isoformat()}
+    s["character"] = {"model": "gemini-omni-character", "character_id": cid, "created": _today().isoformat()}
     save(s)
     events.emit("HOST_CHARACTER_CREATED", character_id=cid)
     return cid
@@ -185,7 +189,7 @@ def make_clip(line: str, *, model: str = "seedance-2-i2v", seconds: int = 10, re
     payload["images_list"] = [muapi.upload(REFERENCE)]
     if use_anchor:
         payload["audio_files"] = [muapi.upload(ANCHOR)]
-    res = muapi.run(model, payload, DIR / "clips", max_usd=max_usd, label=f"host-{date.today().isoformat()}")
+    res = muapi.run(model, payload, DIR / "clips", max_usd=max_usd, label=f"host-{_today().isoformat()}")
     videos = [f for f in res.get("files", []) if str(f).lower().endswith((".mp4", ".mov", ".webm"))]
     if not videos:
         raise ProviderError("the video model returned no video file")
@@ -208,7 +212,7 @@ WEEKDAY = 0          # Monday
 
 def due(today: date | None = None) -> bool:
     """True when it is the host's day and this week's video has not been made."""
-    today = today or date.today()
+    today = today or _today()
     if not config.load().get("host", {}).get("enabled", False):
         return False
     weekday = int(config.load().get("host", {}).get("weekday", WEEKDAY))
@@ -235,7 +239,7 @@ def weekly_line(theme: str = "", recent: list[str] | None = None) -> str:
     if line and not check_line(line):
         return line.strip()
     pool = [v for v in INTRO_CANDIDATES.values() if v not in (recent or [])] or list(INTRO_CANDIDATES.values())
-    return pool[date.today().isocalendar()[1] % len(pool)]
+    return pool[_today().isocalendar()[1] % len(pool)]
 
 
 def register(video: str | Path, line: str, title: str) -> dict:
@@ -251,6 +255,6 @@ def register(video: str | Path, line: str, title: str) -> dict:
     job.status = "packaged"
     job.save()
     s = state()
-    s.setdefault("videos", []).append({"date": date.today().isoformat(), "job": job.id, "line": line, "video": str(video)})
+    s.setdefault("videos", []).append({"date": _today().isoformat(), "job": job.id, "line": line, "video": str(video)})
     save(s)
     return {"job": job.id, "meta": str(job.dir / "meta.json")}
