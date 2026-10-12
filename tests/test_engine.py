@@ -1587,3 +1587,15 @@ def test_numeric_compare_card_stays_above_the_caption_band():
         for top, fs in re.findall(r'class="cv"[^>]*?top:(-?\d+)px;width:\d+px;font-size:(\d+)px', body):
             assert int(top) >= 340, "a value label would climb into the kicker line"
             assert int(top) + int(fs) <= band_top, "a value label would sit under the captions"
+
+
+def test_song_gates_and_lanes():
+    from faceless import songs
+    good = {"title": "T", "style": "folk pop, warm vocal, 80 bpm", "hook_line": "one line", "image_prompt": "a lamp, no people, no text", "description": "d",
+            "lyrics": "[Verse 1]\n" + "\n".join(f"line number {i} here with words {i*7}" for i in range(14)) + "\n[Chorus]\nwe hold the light\nwe hold it now\nwe hold the light\nsay it out loud\n"
+            + "[Verse 2]\n" + "\n".join(f"second verse thing {i} plus other {i*3}" for i in range(8)) + "\n[Chorus]\nwe hold the light\nwe hold it now\nwe hold the light\nsay it out loud"}
+    assert songs.violations(good, prior=[]) == []
+    assert any("artist" in v for v in songs.violations({**good, "style": "sounds like a famous band"}, prior=[]))
+    assert any("promise" in v for v in songs.violations({**good, "description": "guaranteed passive income"}, prior=[]))
+    assert any("close" in v for v in songs.violations(good, prior=[("old", songs._shingles(good["lyrics"]))]))
+    assert len({n for n, _ in songs.lanes_for("2026-10-12", 3)}) == 3

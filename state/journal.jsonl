@@ -4098,3 +4098,12 @@
 {"ts": "2026-10-12T13:25:26Z", "t": 1791811526.578, "actor": "engine", "type": "JOB_TRANSITION", "job": "2026-10-12-s8-escape-the-value-equation-math-for-inco", "to": "published", "manual": true, "forced": false}
 {"ts": "2026-10-12T13:25:53Z", "t": 1791811553.17, "actor": "engine", "type": "COMPOSIO_SESSION", "user": "quiet-money-studio", "session_hash": "842c6f73"}
 {"ts": "2026-10-12T13:25:56Z", "t": 1791811556.027, "actor": "engine", "type": "YOUTUBE_API", "path": "videos", "method": "GET", "status": 200}
+{"ts": "2026-10-12T13:50:38Z", "t": 1791813038.66, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["pick"], "images": 0, "input_tokens": 1035}
+{"ts": "2026-10-12T13:50:38Z", "t": 1791813038.662, "actor": "engine", "type": "DECISIONS", "job": "2026-10-12-song1", "backend": "clef", "ms": 1995, "dry_run": true}
+{"ts": "2026-10-12T13:50:38Z", "t": 1791813038.665, "actor": "engine", "type": "SONG_MADE", "job": "2026-10-12-song1", "title": "The Quiet Kitchen", "lane": "midnight", "chosen_by": "heuristic"}
+{"ts": "2026-10-12T13:51:08Z", "t": 1791813068.667, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["pick"], "images": 0, "input_tokens": 1067}
+{"ts": "2026-10-12T13:51:08Z", "t": 1791813068.669, "actor": "engine", "type": "DECISIONS", "job": "2026-10-12-song2", "backend": "clef", "ms": 1280, "dry_run": true}
+{"ts": "2026-10-12T13:51:08Z", "t": 1791813068.672, "actor": "engine", "type": "SONG_MADE", "job": "2026-10-12-song2", "title": "First One Off the Line", "lane": "neon", "chosen_by": "heuristic"}
+{"ts": "2026-10-12T13:51:42Z", "t": 1791813102.839, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["pick"], "images": 0, "input_tokens": 1043}
+{"ts": "2026-10-12T13:51:42Z", "t": 1791813102.841, "actor": "engine", "type": "DECISIONS", "job": "2026-10-12-song3", "backend": "clef", "ms": 1467, "dry_run": true}
+{"ts": "2026-10-12T13:51:42Z", "t": 1791813102.843, "actor": "engine", "type": "SONG_MADE", "job": "2026-10-12-song3", "title": "Small Warm Light", "lane": "hush", "chosen_by": "heuristic"}

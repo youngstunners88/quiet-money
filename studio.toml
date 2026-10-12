@@ -57,6 +57,14 @@ min_seconds = 2.5                            # a beat shorter than this keeps it
 min_score = 4                                # the reviewer's 1-5 score a scene must reach
 revise = true                                # one more try, with the reviewer's words, for a scene it turned down
 
+[songs]                                       # the song desk (faceless/songs.py): 3 original songs a day as Suno prompts + lyrics + cover prompts for the owner; never calls Suno or posts
+per_day = 3
+candidates = 2                                  # two written per slot; the decision layer picks
+model = "anthropic/claude-haiku-5.5"
+effort = "low"
+daily_usd = 0.10                                # its own cap, far below the studio ceiling (about $0.003 a song measured on Haiku 5.5 pricing)
+per_call_usd = 0.01
+
 [production.flow]                            # owner-made Google Flow clips replace the hook still (see faceless/flow.py); empty inbox = no change
 enabled = true
 

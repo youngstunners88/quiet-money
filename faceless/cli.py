@@ -592,6 +592,26 @@ def cmd_keys(args) -> int:
     return 0
 
 
+def cmd_songs(args) -> int:
+    """Song desk: `songs` writes today's packs (idempotent; --force rewrites) | `songs status`."""
+    from faceless import songs
+    if args.action == "status":
+        st = songs.status(args.day)
+        print(f"{st['day']}: {st['packs']}/{st['wanted']} song packs ready: " + (", ".join(st["titles"]) or "none"))
+        return 0 if st["packs"] >= st["wanted"] else 1
+    try:
+        res = songs.build_day(args.day, force=args.force)
+    except Exception as e:  # noqa: BLE001 - provider and pause errors are reported, not raised
+        print("songs refused:", e)
+        return 1
+    print(f"{res['day']}: {res['made']}/{res['wanted']} song packs in music/packs/{res['day']}/")
+    for s in res["songs"]:
+        print(f"  {s['slot']}. {s['title']} ({s['lane']}) - {s['hook_line']}")
+    for p in res["problems"]:
+        print("  problem:", p)
+    return 0 if res["made"] >= res["wanted"] else 1
+
+
 def cmd_offer(args) -> int:
     """Offers: coverage and profile links | --batch [DAY] (make sure every passed video has its pack and row) | check TEXT | mark VIDEO pinned."""
     from faceless import offer
@@ -874,6 +894,11 @@ def main(argv: list[str] | None = None) -> int:
     ky.add_argument("service", nargs="?", default=None)
     ky.add_argument("--json", action="store_true")
     ky.set_defaults(fn=cmd_keys)
+    sg = sub.add_parser("songs", help="the song desk: 3 original songs a day as Suno style prompts, lyrics and cover-image prompts (`songs status`, `--day D`, `--force`)")
+    sg.add_argument("action", nargs="?", default="make", choices=["make", "status"])
+    sg.add_argument("--day", default=None)
+    sg.add_argument("--force", action="store_true")
+    sg.set_defaults(fn=cmd_songs)
     of = sub.add_parser("offer", help="the call to action on every video: coverage and profile links, `--batch [today|DAY]` writes missing packs and ledger rows, `check TEXT` runs the claim check, `mark VIDEO pinned`")
     of.add_argument("action", nargs="?", default="status", choices=["status", "check", "mark"])
     of.add_argument("args", nargs="*")
