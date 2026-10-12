@@ -1608,3 +1608,17 @@ def test_songvideo_pan_and_title():
     assert songvideo.frame_size(False, 1.0) == (1920, 1080) and songvideo.frame_size(True, 1.0) == (1080, 1920)
     assert songvideo.title_lines("First One Off The Line", 14) == ["FIRST ONE OFF", "THE LINE"]
     assert songvideo.title_lines("Hush") == ["HUSH"]
+
+
+def test_songpost_copy_is_clean_and_findable():
+    from faceless import songpost
+    pack = {"title": "The Quiet Kitchen", "theme": "What your parents' silence about money taught you", "hook_line": "We never talked about the money",
+            "description": "A song about the money talk that never happened at home.", "lyrics": "[Verse 1]\nline one\nline two\n[Chorus]\nwe hold the light"}
+    copy = songpost.build(pack)
+    assert copy["problems"] == []
+    assert len(copy["title"]) <= 100 and copy["title"].startswith("The Quiet Kitchen")
+    assert "Quiet Money" in copy["description"][:400] and "exit the rat race" in copy["description"]
+    assert "AI disclosure" in copy["description"] and copy["synthetic"] is True
+    assert len([t for t in copy["description"].split() if t.startswith("#")]) <= 3
+    assert songpost.problems({**copy, "description": copy["description"] + " https://a.example https://b.example"})
+    assert songpost.problems({**copy, "first_comment": "guaranteed passive income"})

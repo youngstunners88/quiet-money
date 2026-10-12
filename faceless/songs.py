@@ -72,12 +72,13 @@ Rules for the Suno style prompt (the style field)
 - Never name a real artist, band or song, and never write "in the style of". Describe the sound instead.
 - Also give a short "exclude" list (things to keep out, e.g. "autotune, spoken intro").
 
-Rules for the cover image prompt
-- Epic, powerful, poster-scale: ONE mythic scene that turns the song's idea into a giant visual metaphor (a table adrift in a storm sea, a shattered chain across a burning dawn, a lantern in a desert of black glass). Vast scale, dramatic sky, volumetric god rays, anamorphic lens, 8K blockbuster composition, 2-3 named colours.
-- Never a quiet small still life. No text, letters or logos in the image. No visible faces: silhouettes from behind, hands, objects, places. End the prompt with "No text, no letters, no logos, no visible faces."
+Rules for the cover image prompt (the standard is the faceless-song-art skill)
+- One IMPOSSIBLE scene, Inception-level, that makes a viewer stop and drift: commit to ONE impossibility (scale, nesting, gravity turned over, a loop with no seam, time running backward in one corner, a reflection that disagrees with its object) that carries the song's idea, add two or three small specific details, name the light with 2-3 colours, name the lens and angle. 16:9 widescreen, 8K, poster quality.
+- Never reuse a motif already used (kitchen table in a flood, lantern in a glass desert, a broken chain at dawn, a runner on a frozen highway, a mountain staircase, a rain street with a split skyscraper, a floorboard loop, an upside-down city under a sea, a mirror field with a swing, a folding city, a pocket watch of gears, a bathtub of stars, a whale carrying a city, a glass hand holding a sea, a recursive painting).
+- No text, letters or logos in the image. No visible faces: silhouettes from behind, hands, objects, places. End the prompt with "No text, no letters, no logos, no visible faces."
 
 Return ONLY a JSON object with keys:
-title (2-6 words), theme, hook_line (the single line people will remember), style, exclude, lyrics (string with newlines), image_prompt, video_notes (2-3 sentences: pacing and visuals for the owner's video), description (2 sentences for the post, no links, no money promise)."""
+title (2-6 words), theme, hook_line (the single line people will remember), style, exclude, lyrics (string with newlines), image_prompt, video_notes (2-3 sentences: pacing and visuals for the owner's video), description (2 sentences for the post, no links, no money promise), seo_topic (4-8 plain words a person would type into search to find this song, e.g. \"growing up with money silence\"; no brand or artist names)."""
 
 
 class SongError(Exception):
@@ -244,7 +245,7 @@ def suno_md(song: dict) -> str:
             f"## 1. Suno: Style of Music (paste in the style box)\n```\n{song['style']}\n```\n\n"
             f"## 2. Suno: Exclude styles (if your plan shows the field)\n```\n{song.get('exclude', '')}\n```\n\n"
             f"## 3. Suno: Lyrics (paste in the lyrics box, tags included)\n```\n{song['lyrics'].strip()}\n```\n\n"
-            f"## 4. Cover image prompt (9:16 and 1:1)\n```\n{song['image_prompt'].strip()}\n```\n\n"
+            f"## 4. Cover image prompt (16:9)\n```\n{song['image_prompt'].strip()}\n```\n\n"
             f"## 5. Post\n**Title:** {song['title']} (Original song)\n\n{song['description'].strip()}\n\n"
             f"{DISCLOSURE}\n\n## 6. Video notes for the edit\n{song.get('video_notes', '').strip()}\n\n"
             f"## Owner checklist\n- Make it on a paid Suno plan (free-tier songs are non-commercial); listen to 2-3 takes, keep the one that lands.\n"

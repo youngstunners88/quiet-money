@@ -627,6 +627,30 @@ def cmd_songvideo(args) -> int:
     return 0
 
 
+def cmd_songpost(args) -> int:
+    """Song post: `songpost --day D` writes POST.md for every song of a day | `songpost PACK_DIR VIDEO [--at ISO] [--apply]` (dry run unless --apply)."""
+    from pathlib import Path
+
+    from faceless import config, songpost
+    if not args.args:
+        day = args.day or config.today_utc().isoformat()
+        bad = 0
+        for pj in songpost.pack_dir_posts(day):
+            copy = songpost.write_pack(pj)
+            print(f"{pj.parent.name}: {copy['title']}" + (f"  PROBLEMS: {'; '.join(copy['problems'])}" if copy["problems"] else ""))
+            bad += bool(copy["problems"])
+        return 1 if bad else 0
+    pj = Path(args.args[0]) / "pack.json"
+    video = Path(args.args[1]) if len(args.args) > 1 else Path("")
+    try:
+        res = songpost.publish(pj, video, apply=args.apply, publish_at=args.at)
+    except Exception as e:  # noqa: BLE001 - quota, pause and channel refusals are reported, not raised
+        print("songpost refused:", e)
+        return 1
+    print(json.dumps(res, indent=1))
+    return 0 if not res["problems"] else 1
+
+
 def cmd_offer(args) -> int:
     """Offers: coverage and profile links | --batch [DAY] (make sure every passed video has its pack and row) | check TEXT | mark VIDEO pinned."""
     from faceless import offer
@@ -924,6 +948,12 @@ def main(argv: list[str] | None = None) -> int:
     sv.add_argument("--pan-from", type=float, default=0.0)
     sv.add_argument("--pan-to", type=float, default=1.0)
     sv.set_defaults(fn=cmd_songvideo)
+    sp = sub.add_parser("songpost", help="YouTube copy for a song (SEO, AEO, GEO, one tracked link, AI disclosure): `songpost --day D` writes POST.md for each pack, `songpost PACK_DIR VIDEO [--at ISO] [--apply]` uploads only with --apply")
+    sp.add_argument("args", nargs="*")
+    sp.add_argument("--day", default=None)
+    sp.add_argument("--at", default=None, help="UTC time to go public, e.g. 2026-10-13T15:30:00Z")
+    sp.add_argument("--apply", action="store_true")
+    sp.set_defaults(fn=cmd_songpost)
     of = sub.add_parser("offer", help="the call to action on every video: coverage and profile links, `--batch [today|DAY]` writes missing packs and ledger rows, `check TEXT` runs the claim check, `mark VIDEO pinned`")
     of.add_argument("action", nargs="?", default="status", choices=["status", "check", "mark"])
     of.add_argument("args", nargs="*")
