@@ -3656,3 +3656,7 @@
 {"ts": "2026-10-12T07:51:39Z", "t": 1791791499.843, "actor": "engine", "type": "DECISIONS", "job": null, "backend": "clef", "ms": 838, "dry_run": true}
 {"ts": "2026-10-12T07:51:44Z", "t": 1791791504.436, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["person_should_look"], "images": 0, "input_tokens": 239}
 {"ts": "2026-10-12T07:51:44Z", "t": 1791791504.437, "actor": "engine", "type": "DECISIONS", "job": null, "backend": "clef", "ms": 680, "dry_run": true}
+{"ts": "2026-10-12T09:38:26Z", "t": 1791797906.206, "actor": "engine", "type": "JEV_CALL", "questions": ["look"], "via": "openrouter", "model": "openai/gpt-6-luna"}
+{"ts": "2026-10-12T09:38:26Z", "t": 1791797906.208, "actor": "engine", "type": "DECISIONS", "job": null, "backend": "jev-openrouter", "ms": 4371, "dry_run": true}
+{"ts": "2026-10-12T09:38:29Z", "t": 1791797909.795, "actor": "engine", "type": "JEV_CALL", "questions": ["look"], "via": "openrouter", "model": "openai/gpt-6-luna"}
+{"ts": "2026-10-12T09:38:29Z", "t": 1791797909.798, "actor": "engine", "type": "DECISIONS", "job": null, "backend": "jev-openrouter", "ms": 3588, "dry_run": true}

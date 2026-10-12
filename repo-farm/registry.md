@@ -202,6 +202,13 @@ Each row was read from the project's own README, manifest, licence file or regis
 
 Each row was read from the project's own README, manifest, licence file or registry entry; nothing was installed or run. Stars and dates were unavailable where the GitHub API is closed to this machine.
 
+### Active or adopted
+
+| Tool | Stage | Why |
+|---|---|---|
+| Photopea (photopea.com, live-messaging API) | visuals | The owner's own cropper. |
+| TypeSafe Jev Router on OpenRouter (typesafe/jev-router) | package | On OpenRouter with the existing OPENROUTER_API_KEY (no TypeSafe key needed): a router that picks the model and effort per request, multimodal, variable price. |
+
 ### On trial
 
 | Tool | Stage | Why |

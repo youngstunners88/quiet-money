@@ -117,6 +117,8 @@ per_clip_usd = 2.5                           # one clip may cost up to this (See
 backend = "auto"
 jev_model = "jev-latest"
 dry_run = true                               # log Jev answers but act on heuristics until you flip this
+jev_openrouter_model = "typesafe/jev-router"  # Jev through OpenRouter; backend = "jev-openrouter" opts in (auto never picks it)
+jev_openrouter_daily_usd = 0.05
 confidence_floor = 0.85
 
 [qa]
@@ -346,6 +348,8 @@ description = "Proven frameworks for building income beyond a paycheck, with the
 review_model = "anthropic/claude-haiku-5.5"  # through OpenRouter, the same small model the sketch scenes use (about $0.0002 a look); needs OPENROUTER_API_KEY
 daily_usd = 0.10                             # its own cap, below the studio ceiling (a test enforces it)
 per_call_usd = 0.01
+gate_backend = "jev-openrouter"             # the review gate asks Jev Router through OpenRouter (only OPENROUTER_API_KEY needed); "" uses [decide] backend
+locate_model = "anthropic/claude-haiku-5.5"  # finds the @handle on a poster (planner_locate.py); typesafe/jev-router also works here but measured worse on this job (see planner_locate.py)
 
 [freeconvert]                                # optional picture-format normaliser for HEIC, TIFF, PSD, AVIF (faceless/freeconvert.py); OFF until FREECONVERT_API_KEY is set
 daily_minutes = 15                           # FreeConvert's free tier is 20 conversion minutes a day and 5 minutes per file; one picture costs about one minute

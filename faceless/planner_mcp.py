@@ -6,7 +6,8 @@ Tools (nothing here publishes, lists, posts or changes a price; CLAUDE.md rule 9
   planner_status     what is in place: owner pictures, drawn days, last build, which optional services have keys (yes/no, never the key), whether the studio is paused
   planner_normalize  turn HEIC, TIFF, PSD, AVIF pictures into PNG through FreeConvert (optional, needs the owner's token, capped), into assets/planner/incoming/
   planner_ingest     number a folder of pictures into assets/planner/source/day-NNN.*
-  planner_clean      remove the handle (local OpenCV), optionally review each result (local checks + a vision model through OpenRouter + the Jev gate)
+  planner_crop       take the @handle off the owner's wellness posters: find it (pixels + a vision model), crop it off in Photopea, verify; originals are kept
+  planner_clean      remove a handle by repainting (local OpenCV) for pictures where it sits on the art, optionally review each result (local checks + vision + the Jev gate)
   planner_review     review one day's cleaned picture
   planner_build      draw the missing days and build the Letter and A4 PDFs
   planner_check      the planner gauntlet (content, numbers, layout, files, listing copy)
@@ -22,7 +23,7 @@ import sys
 import traceback
 from pathlib import Path
 
-from faceless import config, freeconvert, planner_art, planner_clean, planner_review, safety
+from faceless import config, freeconvert, planner_art, planner_clean, planner_posters, planner_review, safety
 from faceless.config import STUDIO
 
 PROTOCOL = "2024-11-05"
@@ -82,6 +83,18 @@ def _reviewer(use_vision: bool):
     return run
 
 
+def t_crop(a: dict) -> dict:
+    if a.get("folder"):
+        planner_posters.ingest(_folder(a["folder"]), tuple(int(x) for x in a.get("skip", [])))
+    cuts = {k: float(v) for k, v in (a.get("manual_cuts") or {}).items()}
+    paint = {k: [float(x) for x in v] for k, v in (a.get("paint") or {}).items()}
+    rep = planner_posters.process(use_model=bool(a.get("model", True)), manual_cuts=cuts, paint=paint, engine=a.get("engine", "photopea"))
+    out = planner_posters.summary(rep)
+    out["report"] = _rel(planner_posters.REPORT)
+    out["cropped_folder"] = _rel(planner_posters.CROPPED)
+    return out
+
+
 def t_clean(a: dict) -> dict:
     box = tuple(float(v) for v in a["box"].split(",")) if a.get("box") else None
     rep = planner_clean.run_clean(box, reviewer=_reviewer(bool(a.get("vision", True))) if a.get("review", True) else None)
@@ -133,6 +146,13 @@ TOOLS = {
                           _schema({"folder": {"type": "string", "description": "Folder with the pictures"}}, ["folder"])),
     "planner_ingest": (t_ingest, "Copy a folder's jpg/png/webp pictures into assets/planner/source/ as day-NNN in natural file order.",
                        _schema({"folder": {"type": "string"}, "start": {"type": "integer", "description": "Day number of the first picture (default 1)"}}, ["folder"])),
+    "planner_crop": (t_crop, "Remove the @handle from the owner's wellness posters: locate it (pixels + a vision model through OpenRouter), crop it off in Photopea (Pillow if Photopea is unreachable), verify against a plain crop. Originals stay in assets/planner/wellness/original.",
+                     _schema({"folder": {"type": "string", "description": "Optional: a folder of poster pictures to bring in first (renamed wellness-NNN)"},
+                              "skip": {"type": "array", "items": {"type": "integer"}, "description": "1-based positions in that folder that are not posters (a logo, a banner)"},
+                              "manual_cuts": {"type": "object", "description": "{\"wellness-021\": 0.959}: cut line as a fraction of the height, for handles right against the poster", "additionalProperties": {"type": "number"}},
+                              "paint": {"type": "object", "description": "{\"wellness-036\": [x0, y0, x1, y1]} fractions: repaint a handle that sits on plain white inside the poster", "additionalProperties": {"type": "array", "items": {"type": "number"}}},
+                              "model": {"type": "boolean", "description": "Ask the vision model (default true; capped; off without a key)"},
+                              "engine": {"type": "string", "enum": ["photopea", "pillow"]}})),
     "planner_clean": (t_clean, "Remove the @handle watermark from every source picture (local OpenCV; originals untouched) and review each result. Writes a before|after contact sheet.",
                       _schema({"box": {"type": "string", "description": "x0,y0,x1,y1 as fractions of the picture, only when the handle is somewhere unusual"},
                                "review": {"type": "boolean", "description": "Review each result (default true)"},

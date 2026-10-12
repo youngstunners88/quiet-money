@@ -167,9 +167,9 @@ def test_the_decision_gate_may_hold_a_picture_but_never_release_one(monkeypatch)
     base, dirty = marked()
     out, found = planner_clean.clean_image(dirty)
     D = decide.Decision
-    monkeypatch.setattr(decide, "ask", lambda qs, state, job=None: {"person_should_look": D("person_should_look", "needs_human", 0.99, "jev")})
+    monkeypatch.setattr(decide, "ask", lambda qs, state, job=None, backend=None: {"person_should_look": D("person_should_look", "needs_human", 0.99, "jev")})
     assert planner_review.review(dirty, out, found, use_vision=False)["status"] == "needs_human"
-    monkeypatch.setattr(decide, "ask", lambda qs, state, job=None: {"person_should_look": D("person_should_look", "accepted", 0.99, "jev")})
+    monkeypatch.setattr(decide, "ask", lambda qs, state, job=None, backend=None: {"person_should_look": D("person_should_look", "accepted", 0.99, "jev")})
     assert planner_review.review(dirty, dirty, found, use_vision=False)["status"] == "needs_human"   # local checks failed: the gate cannot override
 
 
@@ -241,3 +241,116 @@ def test_freeconvert_refuses_what_it_should(monkeypatch, tmp_path):
     monkeypatch.setitem(config.load()["freeconvert"], "daily_minutes", 0)
     with pytest.raises(ProviderUnavailable, match="daily cap"):
         freeconvert.normalize(src)
+
+
+# ---------------------------------------------------------------- Jev through OpenRouter, the locator, Photopea and the poster pipeline
+
+def test_jev_through_openrouter_answers_typed_questions_and_is_capped(monkeypatch):
+    q = {"look": decide.Q("choice", "Should a person look?", fallback="accepted", options={"accepted": "fine", "needs_human": "off"})}
+    seen = []
+
+    class S:
+        def post(self, url, json=None, timeout=None, headers=None):
+            seen.append(json["model"])
+            return FakeResp(200, {"model": "x/y", "choices": [{"message": {"content": '{"look": {"answer": "needs_human", "confidence": 0.97}, "other": {"answer": 1, "confidence": 1}}'}}], "usage": {"cost": 0.001}})
+    import faceless.providers as prov
+    monkeypatch.setattr(prov, "http", lambda: S())
+    with pytest.raises(RuntimeError):                                                          # no key: it says so, ask() then keeps the fallback
+        decide._ask_jev_openrouter(q, {})
+    assert decide.ask(q, {"x": 1}, backend="jev-openrouter")["look"].value == "accepted"
+    monkeypatch.setenv("OPENROUTER_API_KEY", "k")
+    d = decide.ask(q, {"x": 1}, backend="jev-openrouter")["look"]
+    assert seen == ["typesafe/jev-router"] and d.jev_value == "needs_human" and d.jev_confidence == 0.97 and d.value == "accepted"   # dry_run: logged, not acted on
+    assert ledger.used("openrouter-jev", "usd") == pytest.approx(0.001)
+    monkeypatch.setitem(config.load()["decide"], "jev_openrouter_daily_usd", 0.0005)
+    assert decide.ask(q, {"x": 1}, backend="jev-openrouter")["look"].jev_value is None         # over the cap: no call
+
+
+def test_the_review_honours_a_jev_hold_even_in_dry_run(monkeypatch):
+    base, dirty = marked()
+    out, found = planner_clean.clean_image(dirty)
+    D = decide.Decision
+    monkeypatch.setattr(decide, "ask", lambda qs, state, job=None, backend=None: {"person_should_look": D("person_should_look", "accepted", 1.0, "heuristic", "needs_human", 0.99)})
+    assert planner_review.review(dirty, out, found, use_vision=False)["status"] == "needs_human"
+
+
+def poster(handle: bool, y0: int = 1180, size=(832, 1248)) -> Image.Image:
+    """A synthetic poster: white sheet on a coloured wall, a beige floor strip below it, and (optionally) a dark handle line on the floor."""
+    w, h = size
+    im = Image.new("RGB", size, (190, 60, 60))
+    d = ImageDraw.Draw(im)
+    d.rectangle([60, 140, w - 60, 1090], fill=(250, 250, 250))
+    d.rectangle([0, 1100, w, h], fill=(212, 190, 160))
+    d.rectangle([150, 400, 700, 470], fill=(20, 20, 20))                                      # poster text
+    if handle:
+        f = ImageFont.truetype(str(brand.Paths.fonts / "Montserrat-ExtraBold.ttf"), 44)
+        d.text((260, y0), "@youngstunnersss", font=f, fill=(15, 15, 15))
+    return im
+
+
+def test_the_locator_cuts_above_a_handle_on_the_floor_and_leaves_clean_posters_alone():
+    from faceless import planner_locate as pl
+    y = pl.plan_crop(poster(True))
+    assert y["action"] == "crop" and 1100 < y["y"] < 1185
+    assert pl.plan_crop(poster(False))["action"] == "keep"
+    yes = {"handle_present": True, "handle_top": 0.95, "note": "", "usd": 0, "model": "m"}
+    no = {"handle_present": False, "handle_top": None, "note": "none", "usd": 0, "model": "m"}
+    assert pl.plan_crop(poster(False), yes)["action"] == "needs_human"                          # the model sees one the pixels cannot find
+    assert pl.plan_crop(poster(True), no)["action"] == "needs_human"                            # the pixels see one the model cannot
+    assert pl.plan_crop(poster(True), {**yes, "handle_top": 0.70})["action"] == "needs_human"   # they disagree about where it is
+    assert pl.plan_crop(poster(True), yes)["action"] == "crop"
+
+
+def test_the_pillow_crop_and_the_agreement_check():
+    from faceless import planner_photopea as ph
+    b = io.BytesIO()
+    poster(True).save(b, "JPEG", quality=95)
+    ref = ph.pillow_crop(b.getvalue(), (0, 0, 832, 1170))
+    assert Image.open(io.BytesIO(ref)).size == (832, 1170) and ph.agrees(ref, ref)
+    assert not ph.agrees(ref, ph.pillow_crop(b.getvalue(), (0, 0, 832, 1100)))                  # a different size never agrees
+
+
+def test_the_poster_pipeline_crops_keeps_paints_and_never_touches_originals(monkeypatch, tmp_path):
+    from faceless import planner_posters as P
+    monkeypatch.setattr(P, "ORIGINAL", tmp_path / "o")
+    monkeypatch.setattr(P, "CROPPED", tmp_path / "c")
+    monkeypatch.setattr(P, "REPORT", tmp_path / "r.json")
+    monkeypatch.setattr(P, "ROOT", tmp_path)
+    (tmp_path / "o").mkdir()
+    for i, h in ((1, True), (2, False), (3, True)):
+        poster(h).save(tmp_path / "o" / f"wellness-{i:03d}.jpg", "JPEG", quality=95)
+    before = {p.name: p.read_bytes() for p in (tmp_path / "o").iterdir()}
+    rep = P.process(use_model=False, engine="pillow", manual_cuts={"wellness-003": 1170 / 1248})
+    assert rep["wellness-001"]["action"] == "cropped" and rep["wellness-002"]["action"] == "kept" and rep["wellness-003"].get("manual") is True
+    assert 1100 < Image.open(tmp_path / "c" / "wellness-001.jpg").height < 1190 and Image.open(tmp_path / "c" / "wellness-002.jpg").size == (832, 1248)
+    assert {p.name: p.read_bytes() for p in (tmp_path / "o").iterdir()} == before             # originals byte-identical
+    assert json.loads((tmp_path / "r.json").read_text())["wellness-001"]["engine"] == "pillow"
+    assert P.summary(rep)["cropped"] == 2 and P.summary(rep)["kept"] == 1
+
+
+def test_the_photopea_host_serves_one_page_and_nothing_else():
+    import threading
+    import socketserver
+    import urllib.request
+    from faceless import planner_photopea as ph
+    srv = socketserver.TCPServer(("127.0.0.1", 0), ph._Host)
+    threading.Thread(target=srv.serve_forever, daemon=True).start()
+    try:
+        port = srv.server_address[1]
+        ok = urllib.request.urlopen(f"http://127.0.0.1:{port}/host.html", timeout=10)
+        assert ok.status == 200 and b"photopea.com" in ok.read()
+        with pytest.raises(Exception):
+            urllib.request.urlopen(f"http://127.0.0.1:{port}/../../etc/passwd", timeout=10)
+    finally:
+        srv.shutdown()
+        srv.server_close()
+
+
+@pytest.mark.skipif(not __import__("os").environ.get("PLANNER_PHOTOPEA_LIVE"), reason="drives the real photopea.com in Chromium: set PLANNER_PHOTOPEA_LIVE=1")
+def test_live_photopea_crop_matches_pillow():
+    from faceless import planner_photopea as ph
+    b = io.BytesIO()
+    poster(True).save(b, "JPEG", quality=95)
+    with ph.Photopea() as pp:
+        out = pp.crop(b.getvalue(), (0, 0, 832, 1170))
+    assert ph.agrees(out, ph.pillow_crop(b.getvalue(), (0, 0, 832, 1170)))

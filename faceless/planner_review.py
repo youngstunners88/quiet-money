@@ -131,7 +131,8 @@ def review(before: Image.Image, after: Image.Image, found: list[Found], *, use_v
                                                                  "should a person look at the cleaned picture before it is used?",
                                                       fallback="needs_human" if held else "accepted",
                                                       options={"accepted": "all checks passed", "needs_human": "a check failed or something looks off"})},
-                      state, job=job)["person_should_look"]
-    if gate.value == "needs_human" and status != "needs_human":      # the gate may only hold more
+                      state, job=job, backend=settings().get("gate_backend") or None)["person_should_look"]
+    if "needs_human" in (gate.value, gate.jev_value) and status != "needs_human":      # the gate may only hold more: holding is safe even while [decide] is in dry_run
         status, reasons = "needs_human", reasons + ["the decision gate asked for a person to look"]
-    return {"status": status, "reasons": reasons, "local": local, "vision": vision, "gate": {"backend": gate.backend, "value": gate.value}}
+    return {"status": status, "reasons": reasons, "local": local, "vision": vision,
+            "gate": {"backend": gate.backend, "value": gate.value, "jev_value": gate.jev_value, "jev_confidence": gate.jev_confidence}}

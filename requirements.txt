@@ -16,3 +16,5 @@ composio>=0.25,<1
 # typesafe-sdk>=0.7
 # optional, build-time only: the music library (python -m faceless music --build)
 # google-genai>=2.0
+# optional, local only (not installed on the CI runner): the Photopea cropper in faceless/planner_photopea.py falls back to Pillow without it
+# playwright>=1.40,<2

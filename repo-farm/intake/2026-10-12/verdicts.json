@@ -31,6 +31,24 @@
       "why": "A hosted file-conversion API (convert, compress, resize 200+ formats; job of import, convert, export/url). It has no watermark or handle removal, so it is not the cleaner: that stays local (OpenCV). Its real use here is turning picture formats Pillow cannot open (HEIC, TIFF, PSD, AVIF) into PNG before ingest. Free accounts get 20 conversion minutes a day, 5 minutes per file, API use needs a free account token; files are uploaded to FreeConvert and deleted after a few hours. Written as an optional provider, off until the owner creates the token and sets FREECONVERT_API_KEY; never used for anything that must stay private.",
       "steal": "The job shape (import, convert, export/url, poll) and per-task refunds on failure.",
       "owner": "Create a free FreeConvert account and put the API token in the environment as FREECONVERT_API_KEY (intake never signs up for anyone)."
+    },
+    {
+      "id": "photopea",
+      "name": "Photopea (photopea.com, live-messaging API)",
+      "verdict": "USE",
+      "stage": "visuals",
+      "why": "The owner's own cropper. Photopea runs in the browser on our machine (its docs say files are not uploaded; the editor's code and ads load from photopea.com) and has an official, free messaging API: send the picture, run `app.activeDocument.crop([l,t,r,b])`, `saveToOE`. Driven headlessly in the pre-installed Chromium through Playwright (Apache-2.0, USE 2026-10-11). Measured: starts in about 3 s, a crop takes under a second, and every result is checked against a plain Pillow crop; Pillow is the fallback if the site is slow or blocked. Used on 14 of the owner's 44 wellness posters.",
+      "steal": "Its scripting API (crop, resize, layers, export) for any later batch edit the owner would do by hand.",
+      "owner": "none"
+    },
+    {
+      "id": "typesafe-jev-router",
+      "name": "TypeSafe Jev Router on OpenRouter (typesafe/jev-router)",
+      "verdict": "USE",
+      "stage": "package",
+      "why": "On OpenRouter with the existing OPENROUTER_API_KEY (no TypeSafe key needed): a router that picks the model and effort per request, multimodal, variable price. USE as the typed-question gate (decide backend `jev-openrouter`, opt-in, capped, dry-run): live, it answered a clean case `accepted` and a smudged one `needs_human`, both at 0.99. NOT used to find the handle on posters: measured on 44 posters it routed to small models, flagged 10 handle-free posters and found 9 of 15 real handles ($0.029), while Claude Haiku 5.5 found 15 of 15 with none wrong ($0.007). It stays a drop-in `[planner] locate_model` to re-test later.",
+      "steal": "Ask typed questions as JSON through chat completions; measure any model on hand-checked ground truth before it decides anything.",
+      "owner": "Say if TYPESAFE_API_KEY is meant to be in this environment: it is not set in this container (only OPENROUTER_API_KEY, OPENROUTER_2, MUAPI_API_KEY, FIRECRAWL_API_KEY are), so the direct TypeSafe backend stays off."
     }
   ]
 }
