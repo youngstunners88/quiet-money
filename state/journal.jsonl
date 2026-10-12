@@ -3743,3 +3743,27 @@
 {"ts": "2026-10-12T07:49:51Z", "t": 1791791391.398, "actor": "engine", "type": "YOUTUBE_API", "path": "videos", "method": "GET", "status": 200}
 {"ts": "2026-10-12T07:59:18Z", "t": 1791791958.622, "actor": "engine", "type": "COMPOSIO_SESSION", "user": "quiet-money-studio", "session_hash": "98978547"}
 {"ts": "2026-10-12T07:59:19Z", "t": 1791791959.564, "actor": "engine", "type": "COMPOSIO_EXECUTE", "tool": "YOUTUBE_POST_COMMENT", "ok": true, "log_id": "log_HrnJHZxWzTtT", "job": "2026-10-12-s0-host-welcome-to-quiet-money-meet-quin"}
+{"ts": "2026-10-12T09:14:59Z", "t": 1791796499.49, "actor": "engine", "type": "COMPOSIO_SESSION", "user": "quiet-money-studio", "session_hash": "f4efdee3"}
+{"ts": "2026-10-12T09:15:00Z", "t": 1791796500.341, "actor": "engine", "type": "COMPOSIO_EXECUTE", "tool": "YOUTUBE_LIST_CHANNELS", "ok": true, "log_id": "log_q-RxUp6fOksm", "job": "2026-10-02-s5-escape-your-circle-sets-your-ceiling-au"}
+{"ts": "2026-10-12T09:15:04Z", "t": 1791796504.293, "actor": "engine", "type": "YOUTUBE_UPLOAD", "video_id": "S_wUAXBc-VY", "channel": "UC9B1QBr3_8Eulok8IdQbCqQ", "bytes": 11507409, "job": "2026-10-02-s5-escape-your-circle-sets-your-ceiling-au"}
+{"ts": "2026-10-12T09:15:05Z", "t": 1791796505.333, "actor": "engine", "type": "YOUTUBE_API", "path": "playlists", "method": "GET", "status": 200}
+{"ts": "2026-10-12T09:15:06Z", "t": 1791796506.639, "actor": "engine", "type": "YOUTUBE_API", "path": "playlistItems", "method": "POST", "status": 200}
+{"ts": "2026-10-12T09:15:06Z", "t": 1791796506.64, "actor": "engine", "type": "PUBLISH_SCHEDULED", "job": "2026-10-02-s5-escape-your-circle-sets-your-ceiling-au", "provider": "youtube", "when": "2026-10-12T11:30:00-04:00", "video_id": "S_wUAXBc-VY"}
+{"ts": "2026-10-12T09:15:07Z", "t": 1791796507.916, "actor": "engine", "type": "COMPOSIO_EXECUTE", "tool": "YOUTUBE_LIST_CHANNELS", "ok": true, "log_id": "log_eP_sX5yXm4Ft", "job": "2026-10-06-s5-story-how-the-founder-of-ikea-ingvar-k"}
+{"ts": "2026-10-12T09:15:11Z", "t": 1791796511.806, "actor": "engine", "type": "YOUTUBE_UPLOAD", "video_id": "iPGcarrFBvo", "channel": "UC9B1QBr3_8Eulok8IdQbCqQ", "bytes": 14325607, "job": "2026-10-06-s5-story-how-the-founder-of-ikea-ingvar-k"}
+{"ts": "2026-10-12T09:15:13Z", "t": 1791796513.132, "actor": "engine", "type": "YOUTUBE_API", "path": "playlistItems", "method": "POST", "status": 200}
+{"ts": "2026-10-12T09:15:13Z", "t": 1791796513.134, "actor": "engine", "type": "PUBLISH_SCHEDULED", "job": "2026-10-06-s5-story-how-the-founder-of-ikea-ingvar-k", "provider": "youtube", "when": "2026-10-12T18:30:00-04:00", "video_id": "iPGcarrFBvo"}
+{"ts": "2026-10-12T09:15:13Z", "t": 1791796513.896, "actor": "engine", "type": "COMPOSIO_EXECUTE", "tool": "YOUTUBE_LIST_CHANNELS", "ok": true, "log_id": "log_OndMtBBvy4Bv", "job": "2026-10-02-s0-math-starting-to-invest-at-25-vs-35-t"}
+{"ts": "2026-10-12T09:15:18Z", "t": 1791796518.076, "actor": "engine", "type": "YOUTUBE_UPLOAD", "video_id": "AvG_HOwq1EQ", "channel": "UC9B1QBr3_8Eulok8IdQbCqQ", "bytes": 16174926, "job": "2026-10-02-s0-math-starting-to-invest-at-25-vs-35-t"}
+{"ts": "2026-10-12T09:15:19Z", "t": 1791796519.395, "actor": "engine", "type": "YOUTUBE_API", "path": "playlistItems", "method": "POST", "status": 200}
+{"ts": "2026-10-12T09:15:19Z", "t": 1791796519.398, "actor": "engine", "type": "PUBLISH_SCHEDULED", "job": "2026-10-02-s0-math-starting-to-invest-at-25-vs-35-t", "provider": "youtube", "when": "2026-10-12T21:00:00-04:00", "video_id": "AvG_HOwq1EQ"}
+{"ts": "2026-10-12T09:15:20Z", "t": 1791796520.152, "actor": "engine", "type": "COMPOSIO_EXECUTE", "tool": "YOUTUBE_LIST_CHANNELS", "ok": true, "log_id": "log_oaPwk6ygIlCN", "job": "2026-10-02-s1-psychology-mental-accounting-why-tax-refund"}
+{"ts": "2026-10-12T09:15:23Z", "t": 1791796523.928, "actor": "engine", "type": "YOUTUBE_UPLOAD", "video_id": "cL1u7jlOfLI", "channel": "UC9B1QBr3_8Eulok8IdQbCqQ", "bytes": 17986374, "job": "2026-10-02-s1-psychology-mental-accounting-why-tax-refund"}
+{"ts": "2026-10-12T09:15:25Z", "t": 1791796525.216, "actor": "engine", "type": "YOUTUBE_API", "path": "playlistItems", "method": "POST", "status": 200}
+{"ts": "2026-10-12T09:15:25Z", "t": 1791796525.219, "actor": "engine", "type": "PUBLISH_SCHEDULED", "job": "2026-10-02-s1-psychology-mental-accounting-why-tax-refund", "provider": "youtube", "when": "2026-10-12T15:00:00-04:00", "video_id": "cL1u7jlOfLI"}
+{"ts": "2026-10-12T09:15:30Z", "t": 1791796530.744, "actor": "engine", "type": "JOB_TRANSITION", "job": "2026-10-12-s0-ledger-the-50-30-20-rule-reality-check", "to": "published", "manual": true, "forced": false}
+{"ts": "2026-10-12T09:15:31Z", "t": 1791796531.701, "actor": "engine", "type": "JOB_TRANSITION", "job": "2026-10-12-s0-ledger-the-quiet-cost-of-lifestyle-infl", "to": "published", "manual": true, "forced": false}
+{"ts": "2026-10-12T09:15:37Z", "t": 1791796537.516, "actor": "engine", "type": "COMPOSIO_SESSION", "user": "quiet-money-studio", "session_hash": "94294857"}
+{"ts": "2026-10-12T09:15:38Z", "t": 1791796538.379, "actor": "engine", "type": "YOUTUBE_API", "path": "videos", "method": "GET", "status": 200}
+{"ts": "2026-10-12T09:15:48Z", "t": 1791796548.141, "actor": "engine", "type": "COMPOSIO_SESSION", "user": "quiet-money-studio", "session_hash": "491b1c10"}
+{"ts": "2026-10-12T09:15:50Z", "t": 1791796550.125, "actor": "engine", "type": "YOUTUBE_API", "path": "videos", "method": "GET", "status": 200}
