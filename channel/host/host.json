@@ -6,5 +6,17 @@
   "audio_id": "200aa70da23c46f5ba3b659b4b81f16e",
   "created": "2026-10-12"
  },
- "videos": []
+ "videos": [
+  {
+   "date": "2026-10-12",
+   "job": "2026-10-12-s0-host-welcome-to-quiet-money-meet-quin",
+   "line": "Welcome to Quiet Money. I'm Quinton. No hype, one money rule a day, and a community escaping the rat race together. Are you in?",
+   "video": "/home/user/quiet-money/channel/host/clips/host-2026-10-12-a5e6fe63-0.mp4"
+  }
+ ],
+ "character": {
+  "model": "gemini-omni-character",
+  "character_id": "7f1066bc24f74224986ae83497d8495c",
+  "created": "2026-10-12"
+ }
 }

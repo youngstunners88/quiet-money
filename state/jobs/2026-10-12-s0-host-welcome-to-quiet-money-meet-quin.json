@@ -1,0 +1,20 @@
+{
+  "id": "2026-10-12-s0-host-welcome-to-quiet-money-meet-quin",
+  "pillar": "host",
+  "topic": "Welcome to Quiet Money: meet Quinton",
+  "day": "2026-10-12",
+  "slot": 0,
+  "status": "packaged",
+  "history": [],
+  "artifacts": {
+    "video": "/home/user/quiet-money/channel/host/clips/host-2026-10-12-a5e6fe63-0.mp4",
+    "title": "Welcome to Quiet Money: meet Quinton"
+  },
+  "scores": {
+    "gauntlet": 100,
+    "passed": false,
+    "note": "host clip: it passes only when the owner approves it (approved=True), not by the script gauntlet"
+  },
+  "cost": {},
+  "notes": []
+}
