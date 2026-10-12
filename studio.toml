@@ -104,6 +104,13 @@ paused = false                               # or create state/PAUSE ("python -m
 daily_usd = 2.0                              # all desk runs together per UTC day
 per_call_usd = 0.5                           # one run above this is refused unless the caller raises it for that call
 
+[host]                                       # the recurring front man (faceless/host.py): one face, one voice, once a week
+enabled = false                              # OFF until the owner has approved the intro video; then one clip a week
+weekday = 0                                  # Monday
+model = "seedance-2-i2v"                     # image-to-video with native speech and lip-sync; later clips switch to the reference-audio model so the voice carries over
+seconds = 10
+per_clip_usd = 2.5                           # one clip may cost up to this (Seedance 2 about $0.75 to $1.50); the desk's daily budget and the studio ceiling still apply
+
 [decide]
 # Jev (TypeSafe System One) answers typed questions; it never writes content.
 # backend: auto -> jev when TYPESAFE_API_KEY is set, else heuristic.

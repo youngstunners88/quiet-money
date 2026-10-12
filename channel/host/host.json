@@ -1,0 +1,10 @@
+{
+ "voice": {
+  "model": "gemini-omni-audio",
+  "base_voice": "orus",
+  "name": "Quiet Money Host v1",
+  "audio_id": "200aa70da23c46f5ba3b659b4b81f16e",
+  "created": "2026-10-12"
+ },
+ "videos": []
+}
