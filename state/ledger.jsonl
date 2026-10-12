@@ -2303,3 +2303,4 @@
 {"day": "2026-10-12", "provider": "songs", "unit": "usd", "amount": 0.0014, "usd": 0.001369, "job": "2026-10-12-song3"}
 {"day": "2026-10-12", "provider": "songs", "unit": "usd", "amount": 0.0016, "usd": 0.001551, "job": "2026-10-12-song3"}
 {"day": "2026-10-12", "provider": "cloudflare", "unit": "neurons", "amount": 22.7564, "usd": 0.0, "job": null}
+{"day": "2026-10-12", "provider": "composio", "unit": "calls", "amount": 1, "usd": 0.0, "job": "song-the-quiet-kitchen"}

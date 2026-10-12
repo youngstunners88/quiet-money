@@ -4107,3 +4107,5 @@
 {"ts": "2026-10-12T13:51:42Z", "t": 1791813102.839, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["pick"], "images": 0, "input_tokens": 1043}
 {"ts": "2026-10-12T13:51:42Z", "t": 1791813102.841, "actor": "engine", "type": "DECISIONS", "job": "2026-10-12-song3", "backend": "clef", "ms": 1467, "dry_run": true}
 {"ts": "2026-10-12T13:51:42Z", "t": 1791813102.843, "actor": "engine", "type": "SONG_MADE", "job": "2026-10-12-song3", "title": "Small Warm Light", "lane": "hush", "chosen_by": "heuristic"}
+{"ts": "2026-10-12T17:09:47Z", "t": 1791824987.874, "actor": "engine", "type": "COMPOSIO_SESSION", "user": "quiet-money-studio", "session_hash": "608d59a6"}
+{"ts": "2026-10-12T17:09:48Z", "t": 1791824988.798, "actor": "engine", "type": "COMPOSIO_EXECUTE", "tool": "YOUTUBE_LIST_CHANNELS", "ok": true, "log_id": "log_FBeAlzClaoGg", "job": "song-the-quiet-kitchen"}
