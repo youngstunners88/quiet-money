@@ -33,6 +33,7 @@ STATE = DIR / "host.json"
 REFERENCE = DIR / "reference.png"
 ANCHOR = DIR / "voice-anchor.wav"
 
+NAME = "Quinton"       # the owner named him (2026-10-12)
 VOICE_BASE = "orus"
 VOICE_NAME = "Quiet Money Host v1"
 VOICE_DESCRIPTION = ("A one-of-a-kind male voice in his early thirties: low, warm baritone with a faint natural rasp, relaxed and unhurried, the calm "
@@ -50,6 +51,7 @@ INTRO_CANDIDATES = {
     "c": "I'm glad you're here. Quiet Money is a community: one small money rule a day, until the rat race is behind us. Subscribe.",
     "d": "Welcome to Quiet Money. No hype. One money rule a day, and a community working toward escaping the rat race. I'm in. Are you?",
     "e": "Welcome to Quiet Money, where ordinary people quietly build freedom. Subscribe, and let's escape the rat race together.",
+    "f": "Welcome to Quiet Money. I'm Quinton. No hype, one money rule a day, and a community escaping the rat race together. Are you in?",
 }
 MAX_WORDS = 26          # about ten seconds at a natural, unhurried pace (2.5 words a second)
 
@@ -109,8 +111,8 @@ def create_character(image: Path = REFERENCE) -> str:
     s = state()
     voice = design_voice()
     url = muapi.upload(image)
-    res = muapi.run("gemini-omni-character", {"descriptions": f"Quiet Money's host: {LOOK}. Warm, grounded, quietly confident.", "images_list": [url],
-                                              "character_name": "Quiet Money Host", "audio_ids": [voice]}, DIR / "tmp", max_usd=0.05, label="host-character")
+    res = muapi.run("gemini-omni-character", {"descriptions": f"{NAME}, Quiet Money's host: {LOOK}. Warm, grounded, quietly confident.", "images_list": [url],
+                                              "character_name": NAME, "audio_ids": [voice]}, DIR / "tmp", max_usd=0.05, label="host-character")
     cid = _output(res, "character_id", "id")
     if not cid:
         raise ProviderError("the character endpoint returned no id")
@@ -155,7 +157,7 @@ def choose_line(candidates: dict[str, str] | None = None) -> tuple[str, str, str
 # ------------------------------------------------------------------ the clip
 def shot_prompt(line: str, seconds: int = 10) -> str:
     """The Seedance 2 prompt: the reference photo is the host (@image1); native speech and lip-sync say `line` in the host's voice."""
-    return (f"Vertical 9:16, {seconds} seconds. The man in @image1, exactly as pictured ({LOOK}), stands in the same warm lounge and speaks straight to camera in a "
+    return (f"Vertical 9:16, {seconds} seconds. {NAME}, the man in @image1, exactly as pictured ({LOOK}), stands in the same warm lounge and speaks straight to camera in a "
             f"slow, steady medium close-up with a very gentle push-in. Natural, accurate lip-sync. He is relaxed and quietly smiling; one small open-hand gesture on the "
             f"key words; the gold Q pin on his lapel stays visible and unchanged. His voice: {VOICE_DESCRIPTION} He says, in one take: \"{line}\" "
             f"Soft room tone only, no music, no subtitles, no text on screen, no cuts.")
@@ -242,16 +244,16 @@ def weekly_line(theme: str = "", recent: list[str] | None = None) -> str:
     return pool[_today().isocalendar()[1] % len(pool)]
 
 
-def register(video: str | Path, line: str, title: str) -> dict:
+def register(video: str | Path, line: str, title: str, approved: bool = False) -> dict:
     """Record a finished host clip: a packaged job (so the normal publisher and the backlog planner can post it once approved), and a line in host.json."""
     from faceless.state import new_job
     job = new_job("host", title, slot=0)
     job.artifacts.update(video=str(video), title=title)
-    meta = {"title": title, "description": (f"{title}\n\nQuiet Money's host checks in. This is a virtual host: the picture, voice and video are AI-generated. "
+    meta = {"title": title, "description": (f"{title}\n\nQuinton, Quiet Money's host, checks in. He is a virtual host: the picture, voice and video are AI-generated. "
                                               "Educational content, not financial advice.\n\n#quietmoney #personalfinance #financialfreedom #shorts"),
             "hashtags": ["#quietmoney", "#personalfinance", "#financialfreedom", "#shorts"], "caption": line, "first_comment": line}
     write_atomic(job.dir / "meta.json", json.dumps(meta, indent=1))
-    job.scores = {"gauntlet": 100, "passed": True, "note": "host clip: approved by the owner, not by the script gauntlet"}
+    job.scores = {"gauntlet": 100, "passed": approved, "note": "host clip: it passes only when the owner approves it (approved=True), not by the script gauntlet"}
     job.status = "packaged"
     job.save()
     s = state()

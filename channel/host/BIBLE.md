@@ -1,5 +1,7 @@
 # The host: character bible
 
+**Name: Quinton** (the owner's choice, 2026-10-12). He says it in the intro: "I'm Quinton."
+
 The owner's front man for Quiet Money. He welcomes people, makes announcements and checks in with the community **once a week**. He is the
 face of "a place to build a community, grow, practise, and eventually escape the rat race". Penny and the Fee Gremlin are the cartoon cast; he is
 the human one. He is a virtual (AI-generated) host and says so in every description.

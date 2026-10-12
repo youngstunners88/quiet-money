@@ -75,3 +75,14 @@ def test_due_is_once_a_week_on_the_weekday_and_only_when_enabled(monkeypatch, tm
 
 def test_the_shipped_host_is_off_until_the_owner_approves():
     assert host.config.load()["host"]["enabled"] is False
+
+
+def test_a_registered_host_clip_cannot_be_posted_until_the_owner_approves(monkeypatch, tmp_path):
+    from faceless import state as st
+    monkeypatch.setattr(host, "STATE", tmp_path / "host.json")
+    monkeypatch.setattr("faceless.config.Paths.jobs", tmp_path / "jobs")
+    monkeypatch.setattr("faceless.config.Paths.output", tmp_path / "out", raising=False)
+    (tmp_path / "jobs").mkdir()
+    r = host.register(tmp_path / "v.mp4", "Welcome to Quiet Money.", "Welcome")
+    job = st.load_job(r["job"])
+    assert job.scores["passed"] is False and job.status == "packaged"
