@@ -69,8 +69,8 @@ def check_script(script: dict, history: list[str]) -> list[Gate]:
     tickers = re.findall(r"\$[A-Z]{2,5}\b", " ".join(b["say"] for b in beats))
     g.append(Gate("no_ticker_picks", not tickers, 8, True, f"no ticker callouts: {tickers}"))
     last = beats[-1]["say"].strip() if beats else ""
-    g.append(Gate("loop_ending", not last.endswith((".", "!")) or bool(re.search(r"\b(that's|this is|how|why)\b", last.lower())),
-                  4, False, "end the last line mid-thought so it loops back into the hook."))
+    g.append(Gate("complete_ending", last.endswith((".", "!", "?")) and not last.endswith(("...", "\u2026")),
+                  6, False, "end on a complete sentence (no trailing off with '...'): the viewer must hear the whole thought."))
     title = script.get("title", "")
     g.append(Gate("title", 10 <= len(title) <= 60, 3, False, f"title is {len(title)} chars; 25-60 works best.", "script"))
     tags = script.get("hashtags", [])

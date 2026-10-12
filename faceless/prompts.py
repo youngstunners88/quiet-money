@@ -43,8 +43,9 @@ def script_prompt(pillar, topic: str, angle: str = "", feedback: list[str] | Non
         "2. Open loop: by beat 2 promise a payoff the viewer only gets by staying.",
         "3. Pattern interrupt around the middle (e.g. 'But here's the part nobody mentions.').",
         "4. Specific numbers, names, and years beat vague claims.",
-        "5. LOOP ENDING: the final beat ends mid-thought so it flows back into the first line when the video "
-        "replays (e.g. last line '...and that's exactly how' -> first line 'A janitor died with $8 million').",
+        "5. COMPLETE ENDING: the final beat is a complete sentence that finishes its thought and lands the follow CTA. "
+        "NEVER trail off, never end on '...' or mid-sentence (the owner hears a cut-off video as a broken one). "
+        "Its closing words may echo the opening line so a replay feels continuous.",
         f"6. One follow CTA woven into the last 2 beats, in this spirit: \"{ch['cta_follow']}\"",
         "",
         moneymath.fact_sheet() if pillar.id in ("math", "playbook", "myth", "psychology", "escape", "ledger") else "",
@@ -140,6 +141,6 @@ def judge_prompt(script: dict, brief: str = "") -> str:
         "7-10 = tells the viewer to buy/sell a specific security or coin, or promises/guarantees returns.",
         "",
         'Return ONLY JSON: {"hook": 0-10, "retention": 0-10, "value": 0-10, "clarity": 0-10, '
-        '"loop_ending": 0-10, "factual_risk": 0-10, "compliance_risk": 0-10, '
+        '"complete_ending": 0-10 (10 = the last line is a complete sentence that finishes its thought; 0 = trails off or ends mid-sentence), "factual_risk": 0-10, "compliance_risk": 0-10, '
         '"suspect_claims": [str], "fixes": [str (max 3 concrete rewrites)]}',
     ])

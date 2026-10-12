@@ -86,6 +86,18 @@ def _atempo(src, dst, factor: float) -> None:
                     "-af", f"atempo={factor:.4f}", str(dst)], check=True, timeout=300)
 
 
+def _pad_tail(wav, speech_end: float, tail: float) -> float:
+    """Make sure the narration file runs `tail` seconds past the last word (silence appended when it does not). Returns the file's duration."""
+    dur = tts.duration(wav)
+    if dur >= speech_end + tail:
+        return dur
+    tmp = wav.with_name(wav.stem + ".pad.wav")
+    subprocess.run(["ffmpeg", "-hide_banner", "-loglevel", "error", "-y", "-i", str(wav), "-af", f"apad=pad_dur={speech_end + tail - dur + 0.05:.3f}", str(tmp)],
+                   check=True, timeout=300)
+    tmp.replace(wav)
+    return tts.duration(wav)
+
+
 def run(job, script: dict, prefer: str | None = None) -> dict:
     cfg = config.load()
     lo, hi = cfg["production"]["target_seconds"]
@@ -111,7 +123,8 @@ def run(job, script: dict, prefer: str | None = None) -> dict:
         dur = tts.duration(wav)
         speech_end = words[-1]["end"] if words else dur
         events.emit("VOICE_REFIT", job=job.id, speed=round(speed, 3), seconds=round(speech_end, 2))
-    total = round(min(dur, speech_end + 0.35), 3)
+    dur = _pad_tail(wav, speech_end, 0.65)       # the synthesizer stops on the last word's last sound: give it a breath of room, never a clipped ending
+    total = round(min(dur, speech_end + 0.6), 3)
     words = attach_display(words, text)
     spans = align_beats([b["say"] for b in script["beats"]], words, total)
     data = {"provider": provider, "duration": total, "words": words, "beats": spans}
