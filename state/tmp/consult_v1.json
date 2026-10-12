@@ -1,0 +1,56 @@
+[
+ {
+  "model": "google/gemini-3.1-pro-preview",
+  "text": "1. MISSING FAILURE PATTERNS\n- **Token expiration or refresh failures:** Run `python -m faceless composio status` or a cheap read call to check for 401 Unauthorized.\n- **Asynchronous processing stuck (e.g., endless \"processing\" state):** Poll the vendor's specific status/processing endpoint, checking API docs for standard delay times.\n- **Silent partial failures (missing audio or dropped metadata):** Fetch the live video metadata via API to verify descriptions, tags, and tracks match the exact payload.\n- **Shadowbanning or ghosting (uploaded but zero reach):** Probe public visibility by requesting the public URL through an unauthenticated proxy or scraping endpoint.\n\n2. WRONG OR RISKY RULES\n- **\"a background script that sleeps then retries\"**: Long-sleeping scripts create zombie processes that waste compute and memory. *Fix*: Schedule a deferred task or cron job in the engine instead.\n- **Using `rea` to inspect \"closed client\" binaries**: Reverse-engineering closed vendor apps (like TikTok/Instagram APKs) directly violates platform TOS and risks immediate, permanent IP/account bans. *Fix*: Remove `rea` for clients; restrict debugging to local media and APIs.",
+  "usage": {
+   "prompt_tokens": 1688,
+   "completion_tokens": 1796,
+   "total_tokens": 3484,
+   "cost": 0.024928,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.024928,
+    "upstream_inference_prompt_cost": 0.003376,
+    "upstream_inference_completions_cost": 0.021552
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1537,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "model": "microsoft/phi-4",
+  "text": "1. MISSING FAILURE PATTERNS:\n   - **API Rate Limiting:** Even if a call succeeds, excessive requests might trigger rate limits later; probe with `HEAD` requests to check headers.\n   - **Data Inconsistency Across Regions:** Verifying end state might differ by region; probe endpoints using `REGION_SPECIFIC_SLUG`.\n   - **Backend Lag:** Delays in backend processes can cause temporary inconsistencies; poll endpoint until a stable state is confirmed or timeout occurs.\n   - **Misconfigured OAuth Scopes:** Insufficient permissions might lead to silent failures; validate granted scopes against required ones in `YOUTUBE_SCOPE_VALIDATOR`.\n\n2. WRONG OR RISKY RULES:\n   - **3 Attempts Per Hypothesis:** This may ignore fast-flapping issues; increase attempts dynamically based on historical success rates.\n   - **Payment Caps Remain Unchallenged:** Unexamined paid call limits may hinder valid operations; ensure review logs for paying calls that stay within bounds.\n   - **\u2018Success Responses Lie\u2019 in All Cases:** This blanket statement may prevent efficient resolution; allow success checks where subsequent operations confirm validity.\n\n3. TOP 3 CONCRETE EDITS:\n   - **Add a Safeguard for Unidentified Errors Post-Fix:** \"Ensure consistent reliability after a fix by scheduling periodic checks on the restored functionality using `python -m faceless composio status`. This will flag even subtle regressions.\"\n   - **Clarify API Rate Limiting Awareness:** \"Beyond the initial success response, log response headers especially related to rate limits with `python -m faceless composio call <RATE_LIMIT_SLAUG>`, to preemptively identify limits not initially reported by the API.\"\n   - **Strengthen Proxy Usage Clarity:** \"Before engaging in a resumable upload via the raw path using `Composio().tools.proxy(...)`, log a detailed plan of your requests including headers to aid in debugging and future skills improvements.\"",
+  "usage": {
+   "prompt_tokens": 1609,
+   "completion_tokens": 398,
+   "total_tokens": 2007,
+   "cost": 0.00016835,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00016835,
+    "upstream_inference_prompt_cost": 0.00011263,
+    "upstream_inference_completions_cost": 5.572e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+]

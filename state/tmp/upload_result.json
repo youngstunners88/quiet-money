@@ -1,0 +1,59 @@
+{
+ "ok": true,
+ "attempt": 1,
+ "result": {
+  "data": {
+   "response_data": {
+    "etag": "ppuqG0t4A9pcQwkbxMkPG8n4uHQ",
+    "id": "GwRaBiGtr74",
+    "kind": "youtube#video",
+    "snippet": {
+     "categoryId": "27",
+     "channelId": "UC9B1QBr3_8Eulok8IdQbCqQ",
+     "channelTitle": "Quiet Money",
+     "description": "Present bias makes us favor instant gratification over long-term wealth. Learn how to trick your brain and protect your future self using automation.\n\nFree 7-day Money Reset checklist + calculators: https://youngstunners88.github.io/quiet-money/money-reset/\n\nEducational content, not financial advice. Narration and visuals are AI-assisted.\n\n#moneypsychology #personalfinance #wealthbuilding #investing #financialfreedom #shorts",
+     "liveBroadcastContent": "none",
+     "localized": {
+      "description": "Present bias makes us favor instant gratification over long-term wealth. Learn how to trick your brain and protect your future self using automation.\n\nFree 7-day Money Reset checklist + calculators: https://youngstunners88.github.io/quiet-money/money-reset/\n\nEducational content, not financial advice. Narration and visuals are AI-assisted.\n\n#moneypsychology #personalfinance #wealthbuilding #investing #financialfreedom #shorts",
+      "title": "Why Your Brain Hates Your Future Self"
+     },
+     "publishedAt": "2026-10-11T07:02:01Z",
+     "tags": [
+      "financialfreedom",
+      "investing",
+      "moneypsychology",
+      "personalfinance",
+      "wealthbuilding"
+     ],
+     "thumbnails": {
+      "default": {
+       "height": 90,
+       "url": "https://i.ytimg.com/vi/GwRaBiGtr74/default.jpg",
+       "width": 120
+      },
+      "high": {
+       "height": 360,
+       "url": "https://i.ytimg.com/vi/GwRaBiGtr74/hqdefault.jpg",
+       "width": 480
+      },
+      "medium": {
+       "height": 180,
+       "url": "https://i.ytimg.com/vi/GwRaBiGtr74/mqdefault.jpg",
+       "width": 320
+      }
+     },
+     "title": "Why Your Brain Hates Your Future Self"
+    },
+    "status": {
+     "embeddable": true,
+     "license": "youtube",
+     "privacyStatus": "public",
+     "publicStatsViewable": true,
+     "uploadStatus": "uploaded"
+    }
+   }
+  },
+  "log_id": "log_kc_MoEkYKqfU",
+  "successful": true
+ }
+}

@@ -1,0 +1,25 @@
+Sun 11:30 EDT  escape     score 96  The exact number that buys your freedom
+Sun 18:30 EDT  story      score 100  The Janitor Who Secretly Died With $8 Million
+Sun 21:00 EDT  math       score 99  The $6,000 credit card mistake that takes 21 years
+Sun 15:00 EDT  psychology score 100  Why your brain treats tax refunds like free money
+Sun 08:30 EDT  myth       score 95  The House Myth That Costs You Fortunes
+scheduled 2026-10-02-s3-escape-the-rat-race-math-the-exact-numb: XH2N4wp48gs at 11:30 EDT
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/user/quiet-money/faceless/__main__.py", line 4, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "/home/user/quiet-money/faceless/cli.py", line 924, in main
+    return args.fn(args)
+           ^^^^^^^^^^^^^
+  File "/home/user/quiet-money/faceless/cli.py", line 201, in cmd_post_backlog
+    meta = json.loads((job.dir / "meta.json").read_text(encoding="utf-8"))
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/pathlib.py", line 1058, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/pathlib.py", line 1044, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/home/user/quiet-money/production/output/2026-10-01/2026-10-01-s0-story-ronald-read-the-janitor-who-died/meta.json'

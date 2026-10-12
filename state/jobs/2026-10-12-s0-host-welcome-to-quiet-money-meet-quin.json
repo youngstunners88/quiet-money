@@ -4,11 +4,41 @@
   "topic": "Welcome to Quiet Money: meet Quinton",
   "day": "2026-10-12",
   "slot": 0,
-  "status": "packaged",
-  "history": [],
+  "status": "published",
+  "history": [
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-10-12T07:49:14Z",
+      "manual": true,
+      "forced": true
+    }
+  ],
   "artifacts": {
-    "video": "/home/user/quiet-money/channel/host/clips/host-2026-10-12-a5e6fe63-0.mp4",
-    "title": "Welcome to Quiet Money: meet Quinton"
+    "video": "/home/user/quiet-money/channel/host/clips/host-2026-10-12-a5e6fe63-0-wide.mp4",
+    "title": "Welcome to Quiet Money: meet Quinton",
+    "youtube": {
+      "video_id": "Fo1S32MSqg8",
+      "channel_id": "UC9B1QBr3_8Eulok8IdQbCqQ",
+      "privacy": "private",
+      "post_at": "2026-10-12T07:30:00-04:00",
+      "comment_posted": false,
+      "series": false
+    },
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-10-12/slot1-host",
+        "post_at": "2026-10-12T07:30:00-04:00"
+      },
+      "youtube": {
+        "mode": "youtube",
+        "post_at": "2026-10-12T07:30:00-04:00",
+        "video_id": "Fo1S32MSqg8",
+        "channel_id": "UC9B1QBr3_8Eulok8IdQbCqQ",
+        "privacy": "private"
+      }
+    }
   },
   "scores": {
     "gauntlet": 100,

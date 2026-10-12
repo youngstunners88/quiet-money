@@ -1,0 +1,908 @@
+{
+ "provider": "edge",
+ "duration": 63.72,
+ "words": [
+  {
+   "w": "A",
+   "start": 0.081,
+   "end": 0.139,
+   "display": "A"
+  },
+  {
+   "w": "1%",
+   "start": 0.139,
+   "end": 0.648,
+   "display": "1%"
+  },
+  {
+   "w": "management",
+   "start": 0.648,
+   "end": 1.1,
+   "display": "management"
+  },
+  {
+   "w": "fee",
+   "start": 1.1,
+   "end": 1.493,
+   "display": "fee"
+  },
+  {
+   "w": "doesn't",
+   "start": 1.655,
+   "end": 1.898,
+   "display": "doesn't"
+  },
+  {
+   "w": "sound",
+   "start": 1.898,
+   "end": 2.106,
+   "display": "sound"
+  },
+  {
+   "w": "like",
+   "start": 2.107,
+   "end": 2.234,
+   "display": "like"
+  },
+  {
+   "w": "much",
+   "start": 2.234,
+   "end": 2.72,
+   "display": "much."
+  },
+  {
+   "w": "But",
+   "start": 3.102,
+   "end": 3.148,
+   "display": "But"
+  },
+  {
+   "w": "it",
+   "start": 3.148,
+   "end": 3.218,
+   "display": "it"
+  },
+  {
+   "w": "drains",
+   "start": 3.218,
+   "end": 3.623,
+   "display": "drains"
+  },
+  {
+   "w": "your",
+   "start": 3.623,
+   "end": 3.727,
+   "display": "your"
+  },
+  {
+   "w": "life",
+   "start": 3.727,
+   "end": 4.005,
+   "display": "life"
+  },
+  {
+   "w": "savings",
+   "start": 4.005,
+   "end": 4.676,
+   "display": "savings."
+  },
+  {
+   "w": "Let's",
+   "start": 5.046,
+   "end": 5.185,
+   "display": "Let's"
+  },
+  {
+   "w": "run",
+   "start": 5.185,
+   "end": 5.347,
+   "display": "run"
+  },
+  {
+   "w": "the",
+   "start": 5.347,
+   "end": 5.405,
+   "display": "the"
+  },
+  {
+   "w": "exact",
+   "start": 5.417,
+   "end": 5.903,
+   "display": "exact"
+  },
+  {
+   "w": "math",
+   "start": 5.903,
+   "end": 6.377,
+   "display": "math"
+  },
+  {
+   "w": "on",
+   "start": 6.505,
+   "end": 6.655,
+   "display": "on"
+  },
+  {
+   "w": "two",
+   "start": 6.667,
+   "end": 6.968,
+   "display": "two"
+  },
+  {
+   "w": "identical",
+   "start": 6.979,
+   "end": 7.361,
+   "display": "identical"
+  },
+  {
+   "w": "portfolios",
+   "start": 7.361,
+   "end": 8.206,
+   "display": "portfolios"
+  },
+  {
+   "w": "starting",
+   "start": 8.391,
+   "end": 8.912,
+   "display": "starting"
+  },
+  {
+   "w": "at",
+   "start": 9.016,
+   "end": 9.109,
+   "display": "at"
+  },
+  {
+   "w": "$100,000",
+   "start": 9.109,
+   "end": 10.289,
+   "display": "$100,000."
+  },
+  {
+   "w": "We",
+   "start": 10.648,
+   "end": 10.764,
+   "display": "We"
+  },
+  {
+   "w": "assume",
+   "start": 10.764,
+   "end": 11.1,
+   "display": "assume"
+  },
+  {
+   "w": "an",
+   "start": 11.192,
+   "end": 11.319,
+   "display": "an"
+  },
+  {
+   "w": "8%",
+   "start": 11.447,
+   "end": 12.049,
+   "display": "8%"
+  },
+  {
+   "w": "annual",
+   "start": 12.06,
+   "end": 12.373,
+   "display": "annual"
+  },
+  {
+   "w": "return",
+   "start": 12.384,
+   "end": 12.836,
+   "display": "return"
+  },
+  {
+   "w": "over",
+   "start": 12.998,
+   "end": 13.194,
+   "display": "over"
+  },
+  {
+   "w": "30 years",
+   "start": 13.194,
+   "end": 13.993,
+   "display": "30 years"
+  },
+  {
+   "w": "with",
+   "start": 14.109,
+   "end": 14.248,
+   "display": "with"
+  },
+  {
+   "w": "monthly",
+   "start": 14.248,
+   "end": 14.618,
+   "display": "monthly"
+  },
+  {
+   "w": "compounding",
+   "start": 14.618,
+   "end": 15.289,
+   "display": "compounding."
+  },
+  {
+   "w": "Portfolio",
+   "start": 15.671,
+   "end": 16.296,
+   "display": "Portfolio"
+  },
+  {
+   "w": "one",
+   "start": 16.308,
+   "end": 16.562,
+   "display": "one"
+  },
+  {
+   "w": "uses",
+   "start": 16.562,
+   "end": 16.91,
+   "display": "uses"
+  },
+  {
+   "w": "a",
+   "start": 16.91,
+   "end": 16.944,
+   "display": "a"
+  },
+  {
+   "w": "low-cost",
+   "start": 16.944,
+   "end": 17.581,
+   "display": "low-cost"
+  },
+  {
+   "w": "index",
+   "start": 17.593,
+   "end": 17.94,
+   "display": "index"
+  },
+  {
+   "w": "fund",
+   "start": 17.94,
+   "end": 18.299,
+   "display": "fund"
+  },
+  {
+   "w": "with",
+   "start": 18.484,
+   "end": 18.588,
+   "display": "with"
+  },
+  {
+   "w": "a",
+   "start": 18.588,
+   "end": 18.634,
+   "display": "a"
+  },
+  {
+   "w": "tiny",
+   "start": 18.646,
+   "end": 19.051,
+   "display": "tiny"
+  },
+  {
+   "w": "0.05%",
+   "start": 19.051,
+   "end": 20.949,
+   "display": "0.05%"
+  },
+  {
+   "w": "fee",
+   "start": 20.961,
+   "end": 21.296,
+   "display": "fee."
+  },
+  {
+   "w": "Portfolio",
+   "start": 21.667,
+   "end": 22.465,
+   "display": "Portfolio"
+  },
+  {
+   "w": "two",
+   "start": 22.627,
+   "end": 22.87,
+   "display": "two"
+  },
+  {
+   "w": "uses",
+   "start": 22.882,
+   "end": 23.333,
+   "display": "uses"
+  },
+  {
+   "w": "an",
+   "start": 23.345,
+   "end": 23.507,
+   "display": "an"
+  },
+  {
+   "w": "active",
+   "start": 23.518,
+   "end": 23.854,
+   "display": "active"
+  },
+  {
+   "w": "advisor",
+   "start": 23.854,
+   "end": 24.34,
+   "display": "advisor"
+  },
+  {
+   "w": "charging",
+   "start": 24.352,
+   "end": 24.873,
+   "display": "charging"
+  },
+  {
+   "w": "a",
+   "start": 24.988,
+   "end": 25.081,
+   "display": "a"
+  },
+  {
+   "w": "1.00%",
+   "start": 25.081,
+   "end": 25.926,
+   "display": "1.00%"
+  },
+  {
+   "w": "annual",
+   "start": 26.042,
+   "end": 26.308,
+   "display": "annual"
+  },
+  {
+   "w": "management",
+   "start": 26.319,
+   "end": 26.713,
+   "display": "management"
+  },
+  {
+   "w": "fee",
+   "start": 26.713,
+   "end": 27.049,
+   "display": "fee."
+  },
+  {
+   "w": "After",
+   "start": 27.419,
+   "end": 27.627,
+   "display": "After"
+  },
+  {
+   "w": "30 years",
+   "start": 27.627,
+   "end": 28.519,
+   "display": "30 years,"
+  },
+  {
+   "w": "the",
+   "start": 28.727,
+   "end": 28.831,
+   "display": "the"
+  },
+  {
+   "w": "low-fee",
+   "start": 28.831,
+   "end": 29.317,
+   "display": "low-fee"
+  },
+  {
+   "w": "index",
+   "start": 29.329,
+   "end": 29.78,
+   "display": "index"
+  },
+  {
+   "w": "fund",
+   "start": 29.792,
+   "end": 30.139,
+   "display": "fund"
+  },
+  {
+   "w": "grows",
+   "start": 30.139,
+   "end": 30.741,
+   "display": "grows"
+  },
+  {
+   "w": "into",
+   "start": 30.81,
+   "end": 31.03,
+   "display": "into"
+  },
+  {
+   "w": "a",
+   "start": 31.03,
+   "end": 31.076,
+   "display": "a"
+  },
+  {
+   "w": "massive",
+   "start": 31.076,
+   "end": 31.574,
+   "display": "massive"
+  },
+  {
+   "w": "fortune",
+   "start": 31.586,
+   "end": 32.06,
+   "display": "fortune."
+  },
+  {
+   "w": "But",
+   "start": 32.431,
+   "end": 32.512,
+   "display": "But"
+  },
+  {
+   "w": "here's",
+   "start": 32.523,
+   "end": 32.824,
+   "display": "here's"
+  },
+  {
+   "w": "the",
+   "start": 32.824,
+   "end": 32.951,
+   "display": "the"
+  },
+  {
+   "w": "part",
+   "start": 32.951,
+   "end": 33.299,
+   "display": "part"
+  },
+  {
+   "w": "nobody",
+   "start": 33.368,
+   "end": 33.762,
+   "display": "nobody"
+  },
+  {
+   "w": "mentions",
+   "start": 33.762,
+   "end": 34.248,
+   "display": "mentions"
+  },
+  {
+   "w": "about",
+   "start": 34.259,
+   "end": 34.56,
+   "display": "about"
+  },
+  {
+   "w": "that",
+   "start": 34.56,
+   "end": 34.745,
+   "display": "that"
+  },
+  {
+   "w": "traditional",
+   "start": 34.757,
+   "end": 35.266,
+   "display": "traditional"
+  },
+  {
+   "w": "advisor",
+   "start": 35.266,
+   "end": 35.648,
+   "display": "advisor"
+  },
+  {
+   "w": "account",
+   "start": 35.648,
+   "end": 36.065,
+   "display": "account."
+  },
+  {
+   "w": "That",
+   "start": 36.435,
+   "end": 36.574,
+   "display": "That"
+  },
+  {
+   "w": "same",
+   "start": 36.574,
+   "end": 36.898,
+   "display": "same"
+  },
+  {
+   "w": "portfolio",
+   "start": 36.898,
+   "end": 37.488,
+   "display": "portfolio"
+  },
+  {
+   "w": "drops",
+   "start": 37.488,
+   "end": 38.021,
+   "display": "drops"
+  },
+  {
+   "w": "to",
+   "start": 38.218,
+   "end": 38.31,
+   "display": "to"
+  },
+  {
+   "w": "$574,349",
+   "start": 38.31,
+   "end": 41.748,
+   "display": "$574,349"
+  },
+  {
+   "w": "because",
+   "start": 41.921,
+   "end": 42.257,
+   "display": "because"
+  },
+  {
+   "w": "of",
+   "start": 42.257,
+   "end": 42.303,
+   "display": "of"
+  },
+  {
+   "w": "the",
+   "start": 42.303,
+   "end": 42.361,
+   "display": "the"
+  },
+  {
+   "w": "fee",
+   "start": 42.361,
+   "end": 42.65,
+   "display": "fee"
+  },
+  {
+   "w": "drag",
+   "start": 42.65,
+   "end": 43.09,
+   "display": "drag."
+  },
+  {
+   "w": "That",
+   "start": 43.472,
+   "end": 43.623,
+   "display": "That"
+  },
+  {
+   "w": "tiny",
+   "start": 43.623,
+   "end": 44.005,
+   "display": "tiny"
+  },
+  {
+   "w": "1%",
+   "start": 44.005,
+   "end": 44.734,
+   "display": "1%"
+  },
+  {
+   "w": "difference",
+   "start": 44.78,
+   "end": 45.069,
+   "display": "difference"
+  },
+  {
+   "w": "costs",
+   "start": 45.069,
+   "end": 45.44,
+   "display": "costs"
+  },
+  {
+   "w": "you",
+   "start": 45.44,
+   "end": 45.671,
+   "display": "you"
+  },
+  {
+   "w": "over",
+   "start": 45.822,
+   "end": 46.03,
+   "display": "over"
+  },
+  {
+   "w": "$176,000",
+   "start": 46.03,
+   "end": 48.125,
+   "display": "$176,000"
+  },
+  {
+   "w": "in",
+   "start": 48.137,
+   "end": 48.31,
+   "display": "in"
+  },
+  {
+   "w": "raw",
+   "start": 48.31,
+   "end": 48.542,
+   "display": "raw"
+  },
+  {
+   "w": "wealth",
+   "start": 48.542,
+   "end": 48.993,
+   "display": "wealth."
+  },
+  {
+   "w": "When",
+   "start": 49.34,
+   "end": 49.41,
+   "display": "When"
+  },
+  {
+   "w": "you",
+   "start": 49.41,
+   "end": 49.525,
+   "display": "you"
+  },
+  {
+   "w": "factor",
+   "start": 49.525,
+   "end": 50.069,
+   "display": "factor"
+  },
+  {
+   "w": "in",
+   "start": 50.081,
+   "end": 50.22,
+   "display": "in"
+  },
+  {
+   "w": "lost",
+   "start": 50.231,
+   "end": 50.567,
+   "display": "lost"
+  },
+  {
+   "w": "compounding",
+   "start": 50.567,
+   "end": 51.169,
+   "display": "compounding,"
+  },
+  {
+   "w": "the",
+   "start": 51.389,
+   "end": 51.47,
+   "display": "the"
+  },
+  {
+   "w": "true",
+   "start": 51.481,
+   "end": 51.771,
+   "display": "true"
+  },
+  {
+   "w": "wealth",
+   "start": 51.771,
+   "end": 52.037,
+   "display": "wealth"
+  },
+  {
+   "w": "gap",
+   "start": 52.037,
+   "end": 52.373,
+   "display": "gap"
+  },
+  {
+   "w": "exceeds",
+   "start": 52.5,
+   "end": 52.928,
+   "display": "exceeds"
+  },
+  {
+   "w": "$254,000",
+   "start": 52.94,
+   "end": 54.919,
+   "display": "$254,000."
+  },
+  {
+   "w": "Check",
+   "start": 55.278,
+   "end": 55.463,
+   "display": "Check"
+  },
+  {
+   "w": "your",
+   "start": 55.475,
+   "end": 55.567,
+   "display": "your"
+  },
+  {
+   "w": "fund",
+   "start": 55.567,
+   "end": 55.868,
+   "display": "fund"
+  },
+  {
+   "w": "expense",
+   "start": 55.868,
+   "end": 56.343,
+   "display": "expense"
+  },
+  {
+   "w": "ratios",
+   "start": 56.354,
+   "end": 56.875,
+   "display": "ratios"
+  },
+  {
+   "w": "today",
+   "start": 56.875,
+   "end": 57.269,
+   "display": "today"
+  },
+  {
+   "w": "and",
+   "start": 57.593,
+   "end": 57.72,
+   "display": "and"
+  },
+  {
+   "w": "keep",
+   "start": 57.731,
+   "end": 57.986,
+   "display": "keep"
+  },
+  {
+   "w": "every",
+   "start": 58.148,
+   "end": 58.356,
+   "display": "every"
+  },
+  {
+   "w": "dollar",
+   "start": 58.356,
+   "end": 58.646,
+   "display": "dollar"
+  },
+  {
+   "w": "you",
+   "start": 58.657,
+   "end": 58.773,
+   "display": "you"
+  },
+  {
+   "w": "earn",
+   "start": 58.773,
+   "end": 59.039,
+   "display": "earn."
+  },
+  {
+   "w": "Follow",
+   "start": 59.468,
+   "end": 59.711,
+   "display": "Follow"
+  },
+  {
+   "w": "for",
+   "start": 59.711,
+   "end": 59.803,
+   "display": "for"
+  },
+  {
+   "w": "the",
+   "start": 59.803,
+   "end": 59.861,
+   "display": "the"
+  },
+  {
+   "w": "money",
+   "start": 59.873,
+   "end": 60.162,
+   "display": "money"
+  },
+  {
+   "w": "rules",
+   "start": 60.162,
+   "end": 60.463,
+   "display": "rules"
+  },
+  {
+   "w": "school",
+   "start": 60.463,
+   "end": 60.799,
+   "display": "school"
+  },
+  {
+   "w": "never",
+   "start": 60.81,
+   "end": 61.134,
+   "display": "never"
+  },
+  {
+   "w": "taught",
+   "start": 61.146,
+   "end": 61.412,
+   "display": "taught"
+  },
+  {
+   "w": "you",
+   "start": 61.412,
+   "end": 61.632,
+   "display": "you"
+  },
+  {
+   "w": "because",
+   "start": 61.829,
+   "end": 62.118,
+   "display": "because"
+  },
+  {
+   "w": "a",
+   "start": 62.118,
+   "end": 62.187,
+   "display": "a"
+  },
+  {
+   "w": "1%",
+   "start": 62.199,
+   "end": 62.928,
+   "display": "1%"
+  },
+  {
+   "w": "fee",
+   "start": 62.94,
+   "end": 63.403,
+   "display": "fee..."
+  }
+ ],
+ "beats": [
+  [
+   0.0,
+   5.046
+  ],
+  [
+   5.046,
+   10.648
+  ],
+  [
+   10.648,
+   15.671
+  ],
+  [
+   15.671,
+   21.667
+  ],
+  [
+   21.667,
+   27.419
+  ],
+  [
+   27.419,
+   32.431
+  ],
+  [
+   32.431,
+   36.435
+  ],
+  [
+   36.435,
+   43.472
+  ],
+  [
+   43.472,
+   49.34
+  ],
+  [
+   49.34,
+   55.278
+  ],
+  [
+   55.278,
+   59.468
+  ],
+  [
+   59.468,
+   63.72
+  ]
+ ]
+}
