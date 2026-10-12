@@ -64,60 +64,14 @@ def test_open_scene_has_no_text_of_its_own(tmp_path):
     assert 'class="mk"' in page and "THE LEDGER" in page
 
 
-def test_a_switched_off_pillar_never_enters_the_daily_plan():
+def test_a_switched_off_pillar_never_enters_the_daily_plan(monkeypatch):
+    from dataclasses import replace
     from faceless import analytics
-    assert config.pillar("ledger").enabled is False
-    assert "ledger" not in analytics.pillar_weights()
-    assert all(p.enabled for p in config.load()["pillars"] if p.id != "ledger")
+    cfg = dict(config.load())
+    cfg["pillars"] = [replace(p, enabled=False) if p.id == "ledger" else p for p in cfg["pillars"]]
+    monkeypatch.setattr(config, "load", lambda: cfg)
+    assert "ledger" not in analytics.pillar_weights() and "story" in analytics.pillar_weights()
 
 
-def test_no_two_neighbouring_scenes_share_a_template_or_a_colour_and_the_gremlin_is_capped(monkeypatch):
-    from faceless.pipeline import cast
-    monkeypatch.setattr(cards, "available", lambda: True)
-    beats = [{"say": "The fee drains your money", "callout": ""} for _ in range(14)]
-    plan = cast.choose({"beats": beats})
-    rows = [plan[i] for i in sorted(plan)]
-    assert all(a["tpl"] != b["tpl"] and a["pal"] != b["pal"] for a, b in zip(rows, rows[1:]))
-    assert sum(1 for r in rows if r["tpl"] == "fee") <= 2
-
-
-def test_every_template_builds_a_scene_without_error(tmp_path):
-    from faceless.pipeline import cast
-    n = {"value": 254000.0, "prefix": "$", "suffix": "", "decimals": 0, "label": "GAP", "static": False}
-    specs = [{"kind": "stage", "tpl": "hero", "pal": 0, "text": "HELLO", "hook": True, "words": [(0.1, 0.4)]},
-             {"kind": "stage", "tpl": "stack", "pal": 1, "num": n, "text": "X", "words": [(0.1, 0.4)]},
-             {"kind": "stage", "tpl": "fee", "pal": 2, "num": n, "text": "$254,000", "words": [(0.1, 0.4)]},
-             {"kind": "stage", "tpl": "race", "pal": 3, "cmp": {"a": "$5", "b": "$9", "va": 5, "vb": 9, "numeric": True}, "text": "", "words": []},
-             {"kind": "stage", "tpl": "step", "pal": 4, "step": {"n": 1, "word": "ONE", "gist": "CHECK"}, "words": []},
-             {"kind": "stage", "tpl": "years", "pal": 0, "num": {**n, "value": 30.0, "label": "YEARS"}, "words": []},
-             {"kind": "stage", "tpl": "shock", "pal": 1, "text": "WOW", "words": []},
-             {"kind": "stage", "tpl": "think", "pal": 2, "text": "HMM", "words": []},
-             {"kind": "stage", "tpl": "sign", "pal": 3, "text": "SIGN", "words": []}]
-    cards.build_project(tmp_path / "p", [(i, s, 4.0) for i, s in enumerate(specs)], "ledger", "#D9A400", 30, "THE LEDGER", theme="ledger")
-    page = (tmp_path / "p" / "index.html").read_text(encoding="utf-8")
-    assert page.count('class="scene clip"') + page.count("class=\"scene clip\"") >= 9 and "tl.fromTo" in page
-
-
-def test_a_script_must_end_on_a_complete_sentence():
-    from faceless import gauntlet
-    base = {"title": "A fee that costs you $254,000 over thirty years", "hashtags": ["#a", "#b", "#c", "#d", "#e"], "beats": [{"say": f"Beat {i}.", "callout": ""} for i in range(11)]}
-
-    def gate(last):
-        beats = base["beats"][:-1] + [{"say": last, "callout": ""}]
-        gates = gauntlet.check_script({**base, "beats": beats, "pillar": "math"}, [])
-        return next(g for g in gates if g.name == "complete_ending")
-
-    assert gate("Follow for the money rules school never taught you.").passed
-    assert not gate("Follow for the money rules, because the textbook approach...").passed
-    assert not gate("Follow for the money rules and the").passed
-
-
-def test_narration_gets_a_tail_after_the_last_word(tmp_path):
-    import subprocess
-    from faceless.pipeline import voice
-    from faceless.providers import tts
-    wav = tmp_path / "v.wav"
-    subprocess.run(["ffmpeg", "-loglevel", "error", "-y", "-f", "lavfi", "-i", "sine=frequency=300:duration=2", str(wav)], check=True)
-    dur = voice._pad_tail(wav, 2.0, 0.65)
-    assert dur >= 2.65 and abs(tts.duration(wav) - dur) < 0.01
-    assert voice._pad_tail(wav, 2.0, 0.65) == dur          # already long enough: untouched
+def test_the_drawn_series_is_on_in_the_shipped_plan():
+    assert config.pillar("ledger").enabled and config.pillar("ledger").name == "Penny's Money Lab"

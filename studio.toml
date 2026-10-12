@@ -253,7 +253,7 @@ music_key = "G"
 
 [[pillars]]
 id = "ledger"
-name = "The Ledger"
+name = "Penny's Money Lab"
 weight = 1.0
 enabled = false                              # OFF: the owner watched the first test video and did not like it (2026-10-11). Code stays; `make --pillar ledger` still works for tests
 drawn = true                                 # no generated picture anywhere: every beat is drawn in code on ledger paper (free, and independent of Muapi and OpenRouter)
@@ -327,8 +327,8 @@ description = "Concrete three-step actions you can finish in under 15 minutes: a
 
 [[youtube.playlists]]
 pillar = "ledger"
-title = "The Ledger: Money Math Drawn Step by Step"
-description = "One calculation or comparison drawn on ledger paper, step by step with numbers you can check: what a habit really costs, how long a goal really takes. Educational content, not financial advice."
+title = "Penny's Money Lab: Money Math With a Coin and a Gremlin"
+description = "Penny the gold coin and the Fee Gremlin act out one calculation or comparison, step by step, with numbers you can check: what a habit really costs, how long a goal really takes. Educational content, not financial advice."
 
 [[youtube.playlists]]
 pillar = "escape"
