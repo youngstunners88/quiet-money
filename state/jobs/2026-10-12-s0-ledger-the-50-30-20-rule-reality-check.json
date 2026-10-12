@@ -4,7 +4,7 @@
   "topic": "The 50/30/20 Rule Reality Check",
   "day": "2026-10-12",
   "slot": 0,
-  "status": "packaged",
+  "status": "published",
   "history": [
     {
       "from": "planned",
@@ -39,6 +39,13 @@
       "from": "gated",
       "to": "packaged",
       "ts": "2026-10-12T03:31:58Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-10-12T09:15:30Z",
+      "manual": true,
+      "forced": false
     }
   ],
   "artifacts": {
@@ -46,7 +53,17 @@
     "title": "Why the 50/30/20 Rule Fails in High-Cost Cities",
     "style": "ledger",
     "video": "/home/user/quiet-money/production/output/2026-10-12/2026-10-12-s0-ledger-the-50-30-20-rule-reality-check/final.mp4",
-    "cover": "/home/user/quiet-money/production/output/2026-10-12/2026-10-12-s0-ledger-the-50-30-20-rule-reality-check/cover.jpg"
+    "cover": "/home/user/quiet-money/production/output/2026-10-12/2026-10-12-s0-ledger-the-50-30-20-rule-reality-check/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-10-12/slot1-ledger",
+        "post_at": "2026-10-12T07:30:00-04:00"
+      },
+      "youtube": {
+        "skipped": "YouTube daily cap reached (5 scheduled for 2026-10-12); the local pack is ready"
+      }
+    }
   },
   "scores": {
     "gauntlet": 99,
