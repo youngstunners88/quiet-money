@@ -29,7 +29,7 @@ Ideas go in, gated scripts come out. Read `../channel/brand.md` first; it is the
 | 3-8 | Open loop | Promise the payoff ("three boring rules", "here's the math") |
 | 8-50 | Body | 6-9 beats, one idea each, a callout number every 2-3 beats, a pattern interrupt mid-way |
 | 50-62 | Payoff | The lesson, stated plainly, with the viewer in it ("you don't need his 50 years...") |
-| 62-68 | CTA + loop | Follow CTA, last line ends mid-thought and flows into the hook on replay |
+| 62-68 | CTA + loop | Follow CTA; the last line is a complete sentence (never trails off) |
 
 ## Process
 1. **Pick** a topic: `python -m faceless ideas --pillar math --n 3` (or add your own lines to the backlog).

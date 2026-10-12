@@ -96,3 +96,28 @@ def test_every_template_builds_a_scene_without_error(tmp_path):
     cards.build_project(tmp_path / "p", [(i, s, 4.0) for i, s in enumerate(specs)], "ledger", "#D9A400", 30, "THE LEDGER", theme="ledger")
     page = (tmp_path / "p" / "index.html").read_text(encoding="utf-8")
     assert page.count('class="scene clip"') + page.count("class=\"scene clip\"") >= 9 and "tl.fromTo" in page
+
+
+def test_a_script_must_end_on_a_complete_sentence():
+    from faceless import gauntlet
+    base = {"title": "A fee that costs you $254,000 over thirty years", "hashtags": ["#a", "#b", "#c", "#d", "#e"], "beats": [{"say": f"Beat {i}.", "callout": ""} for i in range(11)]}
+
+    def gate(last):
+        beats = base["beats"][:-1] + [{"say": last, "callout": ""}]
+        gates = gauntlet.check_script({**base, "beats": beats, "pillar": "math"}, [])
+        return next(g for g in gates if g.name == "complete_ending")
+
+    assert gate("Follow for the money rules school never taught you.").passed
+    assert not gate("Follow for the money rules, because the textbook approach...").passed
+    assert not gate("Follow for the money rules and the").passed
+
+
+def test_narration_gets_a_tail_after_the_last_word(tmp_path):
+    import subprocess
+    from faceless.pipeline import voice
+    from faceless.providers import tts
+    wav = tmp_path / "v.wav"
+    subprocess.run(["ffmpeg", "-loglevel", "error", "-y", "-f", "lavfi", "-i", "sine=frequency=300:duration=2", str(wav)], check=True)
+    dur = voice._pad_tail(wav, 2.0, 0.65)
+    assert dur >= 2.65 and abs(tts.duration(wav) - dur) < 0.01
+    assert voice._pad_tail(wav, 2.0, 0.65) == dur          # already long enough: untouched
