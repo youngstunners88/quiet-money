@@ -631,12 +631,51 @@ def cmd_shop(args) -> int:
         if args.action == "push" and not args.yes:
             print("dry run: nothing was created. Add --yes to create DRAFT products (they are never published).")
         return 0
+    if args.action in ("draft", "publish"):
+        pid = args.product if args.product != "all" else "daily-quiet-money-planner"
+        if args.action == "draft":
+            if not args.yes:
+                print("dry run. Add --yes to create DRAFT listings on every rail that is ready (nothing goes live).")
+                return 0
+            for r in shop.draft_all(pid):
+                print(f"{r.get('rail', ''):8} {r.get('product', pid)}  {r['action']}  {r.get('why', '')}")
+            return 0
+        rail = args.rail
+        if not rail:
+            raise SystemExit("usage: shop publish <product> --rail gumroad|etsy --yes")
+        ok, why = shop.approval(pid, rail)
+        if not ok or not args.yes:
+            print(("refused: " + why) if not ok else "approved. Add --yes to set it live.")
+            return 1 if not ok else 0
+        print(shop.publish(pid, rail))
+        return 0
     if args.action == "sales":
         fresh = shop.sales(args.days)
         print(f"{len(fresh)} new sale(s) recorded in analytics/sales.jsonl")
         return 0
-    print("usage: shop status|plan|push|sales [product] [--yes] [--days N]")
+    print("usage: shop status|plan|push|draft|publish|sales [product] [--rail gumroad|etsy] [--yes] [--days N]")
     return 2
+
+
+def cmd_etsy(args) -> int:
+    """Etsy rail: status | auth [--code CODE] | plan PRODUCT | draft PRODUCT --yes."""
+    from faceless import etsy
+    pid = args.product or "daily-quiet-money-planner"
+    if args.action == "status":
+        print(json.dumps(etsy.status(), indent=1))
+    elif args.action == "auth":
+        if args.code:
+            print(json.dumps(etsy.finish_auth(args.code, args.state), indent=1))
+        else:
+            print("Open this link signed in to the Etsy shop, approve, then copy the `code` from the address bar and run `python -m faceless etsy auth --code <code>`:\n" + etsy.auth_url())
+    elif args.action == "plan":
+        print(json.dumps(etsy.plan(pid), indent=1))
+    else:
+        if not args.yes:
+            print("dry run. Add --yes to create an inactive DRAFT listing (nothing goes live).")
+            return 0
+        print(json.dumps(etsy.create_draft(pid), indent=1, default=str))
+    return 0
 
 
 def cmd_keys(args) -> int:
@@ -925,8 +964,16 @@ def main(argv: list[str] | None = None) -> int:
     ls.add_argument("product", nargs="?", default="all")
     ls.add_argument("--no-video", action="store_true")
     ls.set_defaults(fn=cmd_listing)
+    et = sub.add_parser("etsy", help="the Etsy rail: `etsy status`, `etsy auth` (one-time login), `etsy plan`, `etsy draft --yes` (inactive draft, never live)")
+    et.add_argument("action", choices=["status", "auth", "plan", "draft"])
+    et.add_argument("product", nargs="?")
+    et.add_argument("--code")
+    et.add_argument("--state")
+    et.add_argument("--yes", action="store_true")
+    et.set_defaults(fn=cmd_etsy)
     sh = sub.add_parser("shop", help="storefronts: `shop status` (what is connected, the owner's next step), `shop plan`, `shop push --yes` (DRAFT products on Gumroad, never published), `shop sales`")
-    sh.add_argument("action", choices=["status", "plan", "push", "sales"])
+    sh.add_argument("action", choices=["status", "plan", "push", "draft", "publish", "sales"])
+    sh.add_argument("--rail", choices=["gumroad", "etsy"])
     sh.add_argument("product", nargs="?", default="all")
     sh.add_argument("--yes", action="store_true")
     sh.add_argument("--days", type=int, default=30)

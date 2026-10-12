@@ -360,3 +360,14 @@ timeout = 180
 daily_usd = 0.10                             # below the studio ceiling (a test enforces it)
 per_call_usd = 0.01
 max_runs = 5
+
+[etsy]                                       # the Etsy rail (faceless/etsy.py); credentials live in the environment and under ~/.config/quiet-money, never here
+redirect_uri = "https://localhost/callback"  # must match the redirect added to the owner's Etsy app
+taxonomy_id = 0                              # the Planners category; 0 = look it up by name on the first draft
+
+[shop]                                       # going live is the owner's yes (CLAUDE.md rule 9). A product is published only when an entry below names its CURRENT catalog price
+# and the rail is true. The owner (or the agent, on the owner's explicit message giving the price) writes it; nothing writes it by itself:
+#   [shop.approved."daily-quiet-money-planner"]
+#   price = 17.0
+#   gumroad = true
+#   etsy = true

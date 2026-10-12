@@ -3686,3 +3686,5 @@
 {"ts": "2026-10-12T13:19:11Z", "t": 1791811151.862, "actor": "engine", "type": "MUAPI_RUN", "job": null, "model": "nano-banana-2-lite-edit", "usd": 0.03, "request": "92dd2c7b-a02", "balance": "11.4549"}
 {"ts": "2026-10-12T13:19:12Z", "t": 1791811152.081, "actor": "engine", "type": "MUAPI_RUN", "job": null, "model": "nano-banana-2-lite-edit", "usd": 0.03, "request": "78e6ec4c-e22", "balance": "11.4249"}
 {"ts": "2026-10-12T13:20:27Z", "t": 1791811227.963, "actor": "engine", "type": "MUAPI_RUN", "job": null, "model": "nano-banana-2-lite-edit", "usd": 0.03, "request": "7fe393d0-49e", "balance": "11.3949"}
+{"ts": "2026-10-12T13:31:04Z", "t": 1791811864.442, "actor": "engine", "type": "COMPOSIO_SESSION", "user": "quiet-money-studio", "session_hash": "bb22c9f5"}
+{"ts": "2026-10-12T13:33:30Z", "t": 1791812010.197, "actor": "engine", "type": "COMPOSIO_SESSION", "user": "quiet-money-studio", "session_hash": "c3aea4e4"}
