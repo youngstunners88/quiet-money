@@ -75,7 +75,7 @@ I'm allowed to be both the hurt and the healing
 
 ## 4. Cover image prompt (9:16 and 1:1)
 ```
-Cinematic still, no people, no text: a single lit candle on a rain-streaked windowsill at dusk, a folded paper takeout bag resting on a car passenger seat beyond the glass, shallow depth of field, 85mm lens feel, soft window light, limited palette of amber and slate blue, the candle flame as the central symbol of a small comfort held through hard hours, vertical 9:16 framing with room for a 1:1 crop
+Epic cinematic wide shot, 9:16 vertical. An immense midnight desert of black glass dunes under a sky of galaxies, and in the exact centre one small glowing lantern held up by a pair of hands, its warm light blooming into a giant halo that turns the dunes into rivers of gold. The Milky Way arcs overhead like a cathedral. Tiny footprints trail from the camera to the lantern. Ultra-sharp foreground sand, atmospheric haze, god rays from the lantern, anamorphic bokeh, palette of deep navy, teal and glowing amber, awe and mercy, 8K. No text, no letters, no faces, no people beyond hands.
 ```
 
 ## 5. Post

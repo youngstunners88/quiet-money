@@ -73,7 +73,8 @@ Rules for the Suno style prompt (the style field)
 - Also give a short "exclude" list (things to keep out, e.g. "autotune, spoken intro").
 
 Rules for the cover image prompt
-- One powerful still for a 9:16 video and 1:1 cover. Cinematic, no text or letters in the image, no real person's face (hands, silhouettes, objects, places only). Name the light, the lens feel, one symbol that carries the song's idea, a limited palette.
+- Epic, powerful, poster-scale: ONE mythic scene that turns the song's idea into a giant visual metaphor (a table adrift in a storm sea, a shattered chain across a burning dawn, a lantern in a desert of black glass). Vast scale, dramatic sky, volumetric god rays, anamorphic lens, 8K blockbuster composition, 2-3 named colours.
+- Never a quiet small still life. No text, letters or logos in the image. No visible faces: silhouettes from behind, hands, objects, places. End the prompt with "No text, no letters, no logos, no visible faces."
 
 Return ONLY a JSON object with keys:
 title (2-6 words), theme, hook_line (the single line people will remember), style, exclude, lyrics (string with newlines), image_prompt, video_notes (2-3 sentences: pacing and visuals for the owner's video), description (2 sentences for the post, no links, no money promise)."""
