@@ -4,7 +4,7 @@
   "topic": "The Value Equation Math for Income Growth",
   "day": "2026-10-12",
   "slot": 8,
-  "status": "packaged",
+  "status": "published",
   "history": [
     {
       "from": "planned",
@@ -39,6 +39,13 @@
       "from": "gated",
       "to": "packaged",
       "ts": "2026-10-12T09:49:49Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-10-12T13:25:26Z",
+      "manual": true,
+      "forced": false
     }
   ],
   "artifacts": {
@@ -53,7 +60,22 @@
         "mode": "local",
         "folder": "/home/user/quiet-money/distribution/queue/2026-10-13/slot4-escape",
         "post_at": "2026-10-13T18:30:00-04:00"
+      },
+      "youtube": {
+        "mode": "youtube",
+        "post_at": "2026-10-13T18:30:00-04:00",
+        "video_id": "Ldjc0VXFJFQ",
+        "channel_id": "UC9B1QBr3_8Eulok8IdQbCqQ",
+        "privacy": "private"
       }
+    },
+    "youtube": {
+      "video_id": "Ldjc0VXFJFQ",
+      "channel_id": "UC9B1QBr3_8Eulok8IdQbCqQ",
+      "privacy": "private",
+      "post_at": "2026-10-13T18:30:00-04:00",
+      "comment_posted": false,
+      "series": true
     }
   },
   "scores": {

@@ -4083,3 +4083,18 @@
 {"ts": "2026-10-12T11:14:21Z", "t": 1791803661.385, "actor": "engine", "type": "PROVIDER_OK", "capability": "llm", "provider": "gemini", "job": null, "ms": 3422}
 {"ts": "2026-10-12T11:14:25Z", "t": 1791803665.016, "actor": "engine", "type": "SCOUT_TOPUP", "pillar": "escape", "added": 3}
 {"ts": "2026-10-12T11:17:57Z", "t": 1791803877.913, "actor": "engine", "type": "COMPOSIO_SESSION", "user": "quiet-money-studio", "session_hash": "83b8436d"}
+{"ts": "2026-10-12T13:24:51Z", "t": 1791811491.368, "actor": "engine", "type": "COMPOSIO_SESSION", "user": "quiet-money-studio", "session_hash": "06821fbe"}
+{"ts": "2026-10-12T13:24:52Z", "t": 1791811492.958, "actor": "engine", "type": "COMPOSIO_EXECUTE", "tool": "YOUTUBE_LIST_CHANNELS", "ok": true, "log_id": "log_yXa6TG-NZ__C", "job": "2026-10-12-s6-myth-myth-you-need-a-high-income-to-s"}
+{"ts": "2026-10-12T13:24:53Z", "t": 1791811493.975, "actor": "engine", "type": "JOB_TRANSITION", "job": "2026-10-12-s6-myth-myth-you-need-a-high-income-to-s", "to": "published", "manual": true, "forced": false}
+{"ts": "2026-10-12T13:25:04Z", "t": 1791811504.932, "actor": "engine", "type": "COMPOSIO_SESSION", "user": "quiet-money-studio", "session_hash": "4ca277ab"}
+{"ts": "2026-10-12T13:25:05Z", "t": 1791811505.687, "actor": "engine", "type": "COMPOSIO_EXECUTE", "tool": "YOUTUBE_LIST_CHANNELS", "ok": true, "log_id": "log_p_8lJEaxOt7K", "job": "2026-10-12-s7-playbook-kill-a-hidden-recurring-bank-fee"}
+{"ts": "2026-10-12T13:25:06Z", "t": 1791811506.657, "actor": "engine", "type": "JOB_TRANSITION", "job": "2026-10-12-s7-playbook-kill-a-hidden-recurring-bank-fee", "to": "published", "manual": true, "forced": false}
+{"ts": "2026-10-12T13:25:19Z", "t": 1791811519.378, "actor": "engine", "type": "COMPOSIO_SESSION", "user": "quiet-money-studio", "session_hash": "107c32b6"}
+{"ts": "2026-10-12T13:25:20Z", "t": 1791811520.108, "actor": "engine", "type": "COMPOSIO_EXECUTE", "tool": "YOUTUBE_LIST_CHANNELS", "ok": true, "log_id": "log_P3OPrCVlSlBQ", "job": "2026-10-12-s8-escape-the-value-equation-math-for-inco"}
+{"ts": "2026-10-12T13:25:23Z", "t": 1791811523.899, "actor": "engine", "type": "YOUTUBE_UPLOAD", "video_id": "Ldjc0VXFJFQ", "channel": "UC9B1QBr3_8Eulok8IdQbCqQ", "bytes": 14851114, "job": "2026-10-12-s8-escape-the-value-equation-math-for-inco"}
+{"ts": "2026-10-12T13:25:25Z", "t": 1791811525.113, "actor": "engine", "type": "YOUTUBE_API", "path": "playlists", "method": "GET", "status": 200}
+{"ts": "2026-10-12T13:25:26Z", "t": 1791811526.574, "actor": "engine", "type": "YOUTUBE_API", "path": "playlistItems", "method": "POST", "status": 200}
+{"ts": "2026-10-12T13:25:26Z", "t": 1791811526.577, "actor": "engine", "type": "PUBLISH_SCHEDULED", "job": "2026-10-12-s8-escape-the-value-equation-math-for-inco", "provider": "youtube", "when": "2026-10-13T18:30:00-04:00", "video_id": "Ldjc0VXFJFQ"}
+{"ts": "2026-10-12T13:25:26Z", "t": 1791811526.578, "actor": "engine", "type": "JOB_TRANSITION", "job": "2026-10-12-s8-escape-the-value-equation-math-for-inco", "to": "published", "manual": true, "forced": false}
+{"ts": "2026-10-12T13:25:53Z", "t": 1791811553.17, "actor": "engine", "type": "COMPOSIO_SESSION", "user": "quiet-money-studio", "session_hash": "842c6f73"}
+{"ts": "2026-10-12T13:25:56Z", "t": 1791811556.027, "actor": "engine", "type": "YOUTUBE_API", "path": "videos", "method": "GET", "status": 200}

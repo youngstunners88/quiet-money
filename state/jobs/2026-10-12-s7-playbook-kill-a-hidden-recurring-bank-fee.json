@@ -4,7 +4,7 @@
   "topic": "Kill a hidden recurring bank fee in under 10 minutes",
   "day": "2026-10-12",
   "slot": 7,
-  "status": "packaged",
+  "status": "published",
   "history": [
     {
       "from": "planned",
@@ -39,6 +39,13 @@
       "from": "gated",
       "to": "packaged",
       "ts": "2026-10-12T09:45:06Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-10-12T13:25:06Z",
+      "manual": true,
+      "forced": false
     }
   ],
   "artifacts": {
@@ -52,6 +59,9 @@
         "mode": "local",
         "folder": "/home/user/quiet-money/distribution/queue/2026-10-13/slot3-playbook",
         "post_at": "2026-10-13T15:00:00-04:00"
+      },
+      "youtube": {
+        "skipped": "YouTube refused the upload session (HTTP 429): quota or rate limit; it resets at midnight Pacific"
       }
     }
   },
