@@ -1,0 +1,59 @@
+{
+  "id": "2026-10-11-s0-ledger-whole-life-insurance-vs-term-lif",
+  "pillar": "ledger",
+  "topic": "Whole Life Insurance vs. Term Life + Index Investing",
+  "day": "2026-10-11",
+  "slot": 0,
+  "status": "packaged",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-11T13:20:43Z",
+      "words": 163
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-11T13:21:13Z",
+      "seconds": 62.736,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-11T13:21:13Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-11T13:23:22Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-11T13:23:22Z",
+      "score": 100
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-11T13:23:22Z"
+    }
+  ],
+  "artifacts": {
+    "angle": "Comparing the internal fees and returns of whole life insurance against buying cheap term insurance and investing the monthly difference in low-cost index funds.",
+    "title": "Whole Life Insurance vs Term and Invest",
+    "style": "ledger",
+    "video": "/home/user/quiet-money/production/output/2026-10-11/2026-10-11-s0-ledger-whole-life-insurance-vs-term-lif/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-11/2026-10-11-s0-ledger-whole-life-insurance-vs-term-lif/cover.jpg"
+  },
+  "scores": {
+    "gauntlet": 100,
+    "passed": true
+  },
+  "cost": {
+    "tts:edge:chars": 1018
+  },
+  "notes": []
+}

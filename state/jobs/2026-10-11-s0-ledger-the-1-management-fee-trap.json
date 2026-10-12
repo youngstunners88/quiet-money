@@ -1,0 +1,59 @@
+{
+  "id": "2026-10-11-s0-ledger-the-1-management-fee-trap",
+  "pillar": "ledger",
+  "topic": "The 1% Management Fee Trap",
+  "day": "2026-10-11",
+  "slot": 0,
+  "status": "packaged",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-11T12:30:18Z",
+      "words": 144
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-11T12:30:47Z",
+      "seconds": 63.72,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-11T12:30:47Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-11T12:32:45Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-11T12:32:45Z",
+      "score": 93
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-11T12:32:45Z"
+    }
+  ],
+  "artifacts": {
+    "angle": "Comparing two identical $100,000 portfolios over 30 years at 8% annual return—one with a 0.1% index fund fee and one with a 1.1% advisor fee—reveals that a 1% difference costs over $254,000 in wealth.",
+    "title": "The 1% Management Fee Trap",
+    "style": "ledger",
+    "video": "/home/user/quiet-money/production/output/2026-10-11/2026-10-11-s0-ledger-the-1-management-fee-trap/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-11/2026-10-11-s0-ledger-the-1-management-fee-trap/cover.jpg"
+  },
+  "scores": {
+    "gauntlet": 93,
+    "passed": true
+  },
+  "cost": {
+    "tts:edge:chars": 849
+  },
+  "notes": []
+}
