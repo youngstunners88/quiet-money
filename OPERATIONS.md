@@ -70,7 +70,7 @@ this command reproduces that failure on the old commit. Routine runs push state 
 | Put a profile link in each platform, list a product, choose an email service | your accounts | `python -m faceless distribute` lists every rail with the exact next step; the product URL goes in `[offer] shop_urls`, the email form address in `[newsletter] form_action` |
 | Connect Gumroad (read) | your account | `python -m faceless composio connect gumroad` and open the link |
 | Allow Gumroad drafts from the machine | your account | put `GUMROAD_ACCESS_TOKEN` in the Claude Code environment (never in a file); `python -m faceless shop push` then makes drafts, never publishes |
-| Etsy listings | Etsy has no agent path | follow `channel/shop/<product>/CHECKLIST.md` (about 15 minutes); the pictures, video and text are ready |
+| Etsy listings | Etsy rail (`python -m faceless etsy`, MCP `quiet-shop`) once the owner has made an Etsy app and logged in; until then by hand | follow `channel/shop/<product>/CHECKLIST.md` (about 15 minutes); the pictures, video and text are ready |
 | Create or log in to any platform account | your identity | n/a |
 | Rotate a key that leaked | your account | provider dashboard, then update the environment |
 

@@ -105,4 +105,8 @@ def test_status_tells_the_owner_the_next_step(monkeypatch):
     monkeypatch.setattr(shop, "gumroad_cli", lambda: None)
     rows = {r["rail"]: r for r in shop.status()}
     assert rows["gumroad draft products"]["state"] == "needs owner" and "GUMROAD_ACCESS_TOKEN" in rows["gumroad draft products"]["next"]
-    assert rows["etsy"]["state"] == "manual" and "CHECKLIST" in rows["etsy"]["next"]
+    monkeypatch.delenv("ETSY_API_KEY", raising=False)
+    monkeypatch.setenv("ETSY_SECRETS_DIR", "/nonexistent-secrets")
+    monkeypatch.delenv("ETSY_REFRESH_TOKEN", raising=False)
+    rows = {r["rail"]: r for r in shop.status()}
+    assert rows["etsy draft + publish"]["state"] == "needs owner" and "ETSY_API_KEY" in rows["etsy draft + publish"]["next"]

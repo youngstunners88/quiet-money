@@ -4110,3 +4110,46 @@
 {"ts": "2026-10-12T17:09:47Z", "t": 1791824987.874, "actor": "engine", "type": "COMPOSIO_SESSION", "user": "quiet-money-studio", "session_hash": "608d59a6"}
 {"ts": "2026-10-12T17:09:48Z", "t": 1791824988.798, "actor": "engine", "type": "COMPOSIO_EXECUTE", "tool": "YOUTUBE_LIST_CHANNELS", "ok": true, "log_id": "log_FBeAlzClaoGg", "job": "song-the-quiet-kitchen"}
 {"ts": "2026-10-12T21:52:01Z", "t": 1791841921.069, "actor": "engine", "type": "AEO_TRACK", "probes": 16, "ok": 0, "mentioned": 0}
+{"ts": "2026-10-12T07:51:39Z", "t": 1791791499.841, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["person_should_look"], "images": 0, "input_tokens": 219}
+{"ts": "2026-10-12T07:51:39Z", "t": 1791791499.843, "actor": "engine", "type": "DECISIONS", "job": null, "backend": "clef", "ms": 838, "dry_run": true}
+{"ts": "2026-10-12T07:51:44Z", "t": 1791791504.436, "actor": "engine", "type": "CLEF_CALL", "job": null, "model": "clef", "questions": ["person_should_look"], "images": 0, "input_tokens": 239}
+{"ts": "2026-10-12T07:51:44Z", "t": 1791791504.437, "actor": "engine", "type": "DECISIONS", "job": null, "backend": "clef", "ms": 680, "dry_run": true}
+{"ts": "2026-10-12T09:38:26Z", "t": 1791797906.206, "actor": "engine", "type": "JEV_CALL", "questions": ["look"], "via": "openrouter", "model": "openai/gpt-6-luna"}
+{"ts": "2026-10-12T09:38:26Z", "t": 1791797906.208, "actor": "engine", "type": "DECISIONS", "job": null, "backend": "jev-openrouter", "ms": 4371, "dry_run": true}
+{"ts": "2026-10-12T09:38:29Z", "t": 1791797909.795, "actor": "engine", "type": "JEV_CALL", "questions": ["look"], "via": "openrouter", "model": "openai/gpt-6-luna"}
+{"ts": "2026-10-12T09:38:29Z", "t": 1791797909.798, "actor": "engine", "type": "DECISIONS", "job": null, "backend": "jev-openrouter", "ms": 3588, "dry_run": true}
+{"ts": "2026-10-12T11:06:58Z", "t": 1791803218.482, "actor": "engine", "type": "MUAPI_RUN", "job": null, "model": "nano-banana-2-lite-edit", "usd": 0.03, "request": "d70cefa4-026", "balance": "11.9449"}
+{"ts": "2026-10-12T11:07:24Z", "t": 1791803244.222, "actor": "engine", "type": "MUAPI_RUN", "job": null, "model": "nano-banana-2-lite-edit", "usd": 0.03, "request": "97e153ef-b63", "balance": "11.9149"}
+{"ts": "2026-10-12T11:07:59Z", "t": 1791803279.349, "actor": "engine", "type": "MUAPI_RUN", "job": null, "model": "nano-banana-2-lite-edit", "usd": 0.03, "request": "b1ce5edd-ce1", "balance": "11.8849"}
+{"ts": "2026-10-12T11:08:28Z", "t": 1791803308.702, "actor": "engine", "type": "MUAPI_RUN", "job": null, "model": "nano-banana-2-lite-edit", "usd": 0.03, "request": "0a38ff10-2a7", "balance": "11.8549"}
+{"ts": "2026-10-12T11:09:14Z", "t": 1791803354.22, "actor": "engine", "type": "MUAPI_RUN", "job": null, "model": "seedvr2-image-upscale", "usd": 0.02, "request": "d44e4399-e63", "balance": "11.8349"}
+{"ts": "2026-10-12T11:10:09Z", "t": 1791803409.609, "actor": "engine", "type": "MUAPI_RUN", "job": null, "model": "seedvr2-image-upscale", "usd": 0.02, "request": "8c8d7084-c20", "balance": "11.8149"}
+{"ts": "2026-10-12T13:12:06Z", "t": 1791810726.814, "actor": "engine", "type": "COMPOSIO_SESSION", "user": "quiet-money-studio", "session_hash": "9f880b08"}
+{"ts": "2026-10-12T13:12:22Z", "t": 1791810742.592, "actor": "engine", "type": "COMPOSIO_SESSION", "user": "quiet-money-studio", "session_hash": "389244fc"}
+{"ts": "2026-10-12T13:13:31Z", "t": 1791810811.153, "actor": "engine", "type": "JEV_CALL", "questions": ["look"], "via": "openrouter-decisions", "model": "typesafe/jev-1.13-20260917"}
+{"ts": "2026-10-12T13:13:31Z", "t": 1791810811.154, "actor": "engine", "type": "DECISIONS", "job": null, "backend": "openrouter-decisions", "ms": 872, "dry_run": true}
+{"ts": "2026-10-12T13:13:31Z", "t": 1791810811.82, "actor": "engine", "type": "JEV_CALL", "questions": ["look"], "via": "openrouter-decisions", "model": "typesafe/jev-1.13-20260917"}
+{"ts": "2026-10-12T13:13:31Z", "t": 1791810811.821, "actor": "engine", "type": "DECISIONS", "job": null, "backend": "openrouter-decisions", "ms": 666, "dry_run": true}
+{"ts": "2026-10-12T13:16:29Z", "t": 1791810989.059, "actor": "engine", "type": "MUAPI_RUN", "job": null, "model": "nano-banana-2-lite-edit", "usd": 0.03, "request": "571dd88a-07b", "balance": "11.7849"}
+{"ts": "2026-10-12T13:19:09Z", "t": 1791811149.584, "actor": "engine", "type": "MUAPI_RUN", "job": null, "model": "nano-banana-2-lite-edit", "usd": 0.03, "request": "9acae4b3-1cd", "balance": "11.7549"}
+{"ts": "2026-10-12T13:19:09Z", "t": 1791811149.95, "actor": "engine", "type": "MUAPI_RUN", "job": null, "model": "nano-banana-2-lite-edit", "usd": 0.03, "request": "4b5286a5-f22", "balance": "11.7249"}
+{"ts": "2026-10-12T13:19:10Z", "t": 1791811150.021, "actor": "engine", "type": "MUAPI_RUN", "job": null, "model": "nano-banana-2-lite-edit", "usd": 0.03, "request": "57ae3071-afe", "balance": "11.6949"}
+{"ts": "2026-10-12T13:19:10Z", "t": 1791811150.092, "actor": "engine", "type": "MUAPI_RUN", "job": null, "model": "nano-banana-2-lite-edit", "usd": 0.03, "request": "4cfd06a6-e41", "balance": "11.6649"}
+{"ts": "2026-10-12T13:19:10Z", "t": 1791811150.484, "actor": "engine", "type": "MUAPI_RUN", "job": null, "model": "nano-banana-2-lite-edit", "usd": 0.03, "request": "465617a3-04c", "balance": "11.6349"}
+{"ts": "2026-10-12T13:19:10Z", "t": 1791811150.744, "actor": "engine", "type": "MUAPI_RUN", "job": null, "model": "nano-banana-2-lite-edit", "usd": 0.03, "request": "d9480750-665", "balance": "11.6049"}
+{"ts": "2026-10-12T13:19:10Z", "t": 1791811150.942, "actor": "engine", "type": "MUAPI_RUN", "job": null, "model": "nano-banana-2-lite-edit", "usd": 0.03, "request": "26794607-d3e", "balance": "11.5749"}
+{"ts": "2026-10-12T13:19:11Z", "t": 1791811151.261, "actor": "engine", "type": "MUAPI_RUN", "job": null, "model": "nano-banana-2-lite-edit", "usd": 0.03, "request": "a22238c4-f7a", "balance": "11.5449"}
+{"ts": "2026-10-12T13:19:11Z", "t": 1791811151.347, "actor": "engine", "type": "MUAPI_RUN", "job": null, "model": "nano-banana-2-lite-edit", "usd": 0.03, "request": "d24b55d8-d01", "balance": "11.5149"}
+{"ts": "2026-10-12T13:19:11Z", "t": 1791811151.781, "actor": "engine", "type": "MUAPI_RUN", "job": null, "model": "nano-banana-2-lite-edit", "usd": 0.03, "request": "f02621d5-3e0", "balance": "11.4849"}
+{"ts": "2026-10-12T13:19:11Z", "t": 1791811151.862, "actor": "engine", "type": "MUAPI_RUN", "job": null, "model": "nano-banana-2-lite-edit", "usd": 0.03, "request": "92dd2c7b-a02", "balance": "11.4549"}
+{"ts": "2026-10-12T13:19:12Z", "t": 1791811152.081, "actor": "engine", "type": "MUAPI_RUN", "job": null, "model": "nano-banana-2-lite-edit", "usd": 0.03, "request": "78e6ec4c-e22", "balance": "11.4249"}
+{"ts": "2026-10-12T13:20:27Z", "t": 1791811227.963, "actor": "engine", "type": "MUAPI_RUN", "job": null, "model": "nano-banana-2-lite-edit", "usd": 0.03, "request": "7fe393d0-49e", "balance": "11.3949"}
+{"ts": "2026-10-12T13:31:04Z", "t": 1791811864.442, "actor": "engine", "type": "COMPOSIO_SESSION", "user": "quiet-money-studio", "session_hash": "bb22c9f5"}
+{"ts": "2026-10-12T13:33:30Z", "t": 1791812010.197, "actor": "engine", "type": "COMPOSIO_SESSION", "user": "quiet-money-studio", "session_hash": "c3aea4e4"}
+{"ts": "2026-10-13T03:26:50Z", "t": 1791862010.472, "actor": "engine", "type": "COMPOSIO_SESSION", "user": "quiet-money-studio", "session_hash": "f5207b46"}
+{"ts": "2026-10-13T03:27:12Z", "t": 1791862032.723, "actor": "engine", "type": "COMPOSIO_SESSION", "user": "quiet-money-studio", "session_hash": "7ffafc66"}
+{"ts": "2026-10-13T03:27:13Z", "t": 1791862033.579, "actor": "engine", "type": "COMPOSIO_CONNECT_LINK", "toolkit": "gumroad"}
+{"ts": "2026-10-13T03:35:35Z", "t": 1791862535.394, "actor": "engine", "type": "COMPOSIO_SESSION", "user": "quiet-money-studio", "session_hash": "3e38f4d6"}
+{"ts": "2026-10-13T03:43:49Z", "t": 1791863029.124, "actor": "engine", "type": "COMPOSIO_SESSION", "user": "quiet-money-studio", "session_hash": "e97073e9"}
+{"ts": "2026-10-13T03:47:14Z", "t": 1791863234.064, "actor": "engine", "type": "COMPOSIO_SESSION", "user": "quiet-money-studio", "session_hash": "4bcce659"}
+{"ts": "2026-10-13T03:47:36Z", "t": 1791863256.444, "actor": "engine", "type": "COMPOSIO_SESSION", "user": "quiet-money-studio", "session_hash": "1d03258e"}

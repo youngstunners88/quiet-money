@@ -329,6 +329,60 @@ def cmd_products(_args) -> int:
     return 1 if bad else 0
 
 
+def cmd_planner(args) -> int:
+    from faceless import planner_art, planner_clean, product_planner as pp
+    if args.action == "build":
+        sizes = ("Letter", "A4") if args.size == "both" else (args.size,)
+        res = pp.build(sizes, limit=args.days)
+        for size, f in res["files"].items():
+            print(f"{size}: {f['path']} ({f['mb']} MB)")
+        print(f"{res['days']} days in {res['seconds']} s. Next: python -m faceless planner check")
+        return 0
+    if args.action == "check":
+        bad = 0
+        for name, ok, detail, hard in pp.check():
+            print(f"{'ok  ' if ok else ('FAIL' if hard else 'warn')} {name}: {detail}")
+            bad += 0 if ok or not hard else 1
+        return 1 if bad else 0
+    if args.action == "ingest":
+        if not args.folder:
+            raise SystemExit("usage: planner ingest <folder> [--start N]")
+        done = planner_clean.ingest(Path(args.folder), args.start)
+        print(f"{len(done)} pictures copied to assets/planner/source (days {done[0][0]} to {done[-1][0]})" if done else "no pictures found")
+        return 0
+    if args.action == "clean":
+        box = tuple(float(v) for v in args.box.split(",")) if args.box else None
+        rep = planner_clean.run_clean(box)
+        hit = {k: v for k, v in rep.items() if v["removed"]}
+        print(f"{len(rep)} pictures checked, {len(hit)} had a handle removed (report: assets/planner/clean-report.json). Look at assets/planner/clean-before-after.jpg before you trust it.")
+        return 0
+    if args.action == "inventory":
+        print(json.dumps(planner_clean.inventory(), indent=2))
+        return 0
+    if args.action == "posters-make":
+        from faceless import planner_poster_make
+        print(f"typeset wellness posters {planner_poster_make.make()}")
+        return 0
+    from faceless import planner_cover
+    folder = Path(config.STUDIO) / "channel" / "products" / pp.PRODUCT
+    planner_cover.cover(1700, 2200).save(folder / "cover.png")
+    print(folder / "cover.png")
+    for name, style in (("cover-desk.png", "desk"), ("cover-coin.png", None)):                       # the alternates for A/B (skill faceless-cover)
+        (planner_cover.cover(1700, 2200, style=style) if style else planner_cover.cover_coin(1700, 2200)).save(folder / name)
+        print(folder / name)
+    return 0
+
+
+def cmd_panel(args) -> int:
+    from faceless import panel
+    brief = Path(args.brief).read_text(encoding="utf-8")
+    res = panel.run(brief, [m.strip() for m in args.models.split(",") if m.strip()], args.runs, label=args.label or Path(args.brief).stem)
+    for m, r in res["models"].items():
+        print(f"{m}: votes {r['votes'] or 'none'}, failed {r['failed']}, mean confidence {r['mean_confidence']}, ${r['usd']}")
+    print("tally:", res["tally"], "| saved:", panel.save(res))
+    return 0
+
+
 def cmd_autoresponder(_args) -> int:
     from faceless import autoresponder
     for path in autoresponder.write():
@@ -577,12 +631,51 @@ def cmd_shop(args) -> int:
         if args.action == "push" and not args.yes:
             print("dry run: nothing was created. Add --yes to create DRAFT products (they are never published).")
         return 0
+    if args.action in ("draft", "publish"):
+        pid = args.product if args.product != "all" else "daily-quiet-money-planner"
+        if args.action == "draft":
+            if not args.yes:
+                print("dry run. Add --yes to create DRAFT listings on every rail that is ready (nothing goes live).")
+                return 0
+            for r in shop.draft_all(pid):
+                print(f"{r.get('rail', ''):8} {r.get('product', pid)}  {r['action']}  {r.get('why', '')}")
+            return 0
+        rail = args.rail
+        if not rail:
+            raise SystemExit("usage: shop publish <product> --rail gumroad|etsy --yes")
+        ok, why = shop.approval(pid, rail)
+        if not ok or not args.yes:
+            print(("refused: " + why) if not ok else "approved. Add --yes to set it live.")
+            return 1 if not ok else 0
+        print(shop.publish(pid, rail))
+        return 0
     if args.action == "sales":
         fresh = shop.sales(args.days)
         print(f"{len(fresh)} new sale(s) recorded in analytics/sales.jsonl")
         return 0
-    print("usage: shop status|plan|push|sales [product] [--yes] [--days N]")
+    print("usage: shop status|plan|push|draft|publish|sales [product] [--rail gumroad|etsy] [--yes] [--days N]")
     return 2
+
+
+def cmd_etsy(args) -> int:
+    """Etsy rail: status | auth [--code CODE] | plan PRODUCT | draft PRODUCT --yes."""
+    from faceless import etsy
+    pid = args.product or "daily-quiet-money-planner"
+    if args.action == "status":
+        print(json.dumps(etsy.status(), indent=1))
+    elif args.action == "auth":
+        if args.code:
+            print(json.dumps(etsy.finish_auth(args.code, args.state), indent=1))
+        else:
+            print("Open this link signed in to the Etsy shop, approve, then copy the `code` from the address bar and run `python -m faceless etsy auth --code <code>`:\n" + etsy.auth_url())
+    elif args.action == "plan":
+        print(json.dumps(etsy.plan(pid), indent=1))
+    else:
+        if not args.yes:
+            print("dry run. Add --yes to create an inactive DRAFT listing (nothing goes live).")
+            return 0
+        print(json.dumps(etsy.create_draft(pid), indent=1, default=str))
+    return 0
 
 
 def cmd_keys(args) -> int:
@@ -868,6 +961,20 @@ def main(argv: list[str] | None = None) -> int:
     fl.add_argument("--day", help="YYYY-MM-DD (default today)")
     fl.set_defaults(fn=cmd_flow)
     sub.add_parser("products", help="build the spreadsheet products, recalculate them in LibreOffice, check against Python math, write listings").set_defaults(fn=cmd_products)
+    pl = sub.add_parser("planner", help="the Daily Planner product: `build` the PDFs, `check` the gauntlet, `ingest <folder>` the owner's pictures, `clean` the handle off them, `inventory`, `cover`, `posters-make` (typeset the studio's twelve wellness posters)")
+    pl.add_argument("action", choices=["build", "check", "ingest", "clean", "inventory", "cover", "posters-make"])
+    pl.add_argument("folder", nargs="?", help="ingest: the folder with the owner's pictures")
+    pl.add_argument("--size", choices=["Letter", "A4", "both"], default="both")
+    pl.add_argument("--days", type=int, help="build only the first N days (a quick test)")
+    pl.add_argument("--start", type=int, default=1, help="ingest: the day number of the first picture")
+    pl.add_argument("--box", help="clean: x0,y0,x1,y1 as fractions of the picture, when the handle is somewhere unusual")
+    pl.set_defaults(fn=cmd_planner)
+    pn = sub.add_parser("panel", help="put one decision brief to several models through OpenRouter, several runs each, and tally their answers (a person adjudicates)")
+    pn.add_argument("brief", help="a text file that tells the models to answer in JSON with a choice")
+    pn.add_argument("--models", required=True, help="comma-separated OpenRouter model ids")
+    pn.add_argument("--runs", type=int, default=3)
+    pn.add_argument("--label")
+    pn.set_defaults(fn=cmd_panel)
     sub.add_parser("autoresponder", help="write the 7-day Money Reset email sequence (numbers computed, ready to import)").set_defaults(fn=cmd_autoresponder)
     bk = sub.add_parser("brandkit", help="build a client brand kit (avatar, banner, watermark, share image, favicons, logo, BRAND.md) for the Fiverr service")
     bk.add_argument("name", nargs="?", help="channel name (1-24 characters)")
@@ -916,8 +1023,16 @@ def main(argv: list[str] | None = None) -> int:
     ls.add_argument("product", nargs="?", default="all")
     ls.add_argument("--no-video", action="store_true")
     ls.set_defaults(fn=cmd_listing)
+    et = sub.add_parser("etsy", help="the Etsy rail: `etsy status`, `etsy auth` (one-time login), `etsy plan`, `etsy draft --yes` (inactive draft, never live)")
+    et.add_argument("action", choices=["status", "auth", "plan", "draft"])
+    et.add_argument("product", nargs="?")
+    et.add_argument("--code")
+    et.add_argument("--state")
+    et.add_argument("--yes", action="store_true")
+    et.set_defaults(fn=cmd_etsy)
     sh = sub.add_parser("shop", help="storefronts: `shop status` (what is connected, the owner's next step), `shop plan`, `shop push --yes` (DRAFT products on Gumroad, never published), `shop sales`")
-    sh.add_argument("action", choices=["status", "plan", "push", "sales"])
+    sh.add_argument("action", choices=["status", "plan", "push", "draft", "publish", "sales"])
+    sh.add_argument("--rail", choices=["gumroad", "etsy"])
     sh.add_argument("product", nargs="?", default="all")
     sh.add_argument("--yes", action="store_true")
     sh.add_argument("--days", type=int, default=30)

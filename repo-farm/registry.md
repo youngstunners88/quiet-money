@@ -202,11 +202,19 @@ Each row was read from the project's own README, manifest, licence file or regis
 
 Each row was read from the project's own README, manifest, licence file or registry entry; nothing was installed or run. Stars and dates were unavailable where the GitHub API is closed to this machine.
 
+### Active or adopted
+
+| Tool | Stage | Why |
+|---|---|---|
+| Photopea (photopea.com, live-messaging API) | visuals | The owner's own cropper. |
+| TypeSafe Jev Router on OpenRouter (typesafe/jev-router) | package | On OpenRouter with the existing OPENROUTER_API_KEY (no TypeSafe key needed): a router that picks the model and effort per request, multimodal, variable price. |
+
 ### On trial
 
 | Tool | Stage | Why |
 |---|---|---|
 | HyperFrames Motion Reel skill (Sunwood-ai-labs/hyperframes-motion-reel-skill) | render | MIT. |
+| FreeConvert (freeconvert.com, API v1) | visuals | A hosted file-conversion API (convert, compress, resize 200+ formats; job of import, convert, export/url). |
 
 ### Parked (named condition)
 
@@ -219,3 +227,5 @@ Each row was read from the project's own README, manifest, licence file or regis
 | claude-motion (whaleyxbt/claude-motion) | render | MIT. |
 | Remotion (remotion-dev/remotion) | render | The code is MIT and it is the best-known React video renderer, with a large agent-facing skill set. |
 | Awesome Motion Design Agent Skills (frankxai/awesome-motion-design-agent-skills) | render | A curated list of motion-design skills and resources (GSAP, Motion, Remotion, Lottie, Rive), which the intake read as a directory. |
+| firecrawl-cli (npm) | ideate | Three HIGH flags (install hook, pipe-to-shell in its docs, asks for secrets) and the exact line the owner pasted, `init --all --browser`, installs skills into every detected coding agent globally and opens a browser login: that… |
+| icm-architect (RinDig, MIT) | package | A Claude skill that scaffolds 'folder structure as agent architecture'. |

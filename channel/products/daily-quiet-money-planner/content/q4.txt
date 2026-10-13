@@ -1,0 +1,119 @@
+# Quiet Money Daily Planner: weeks 40-52 (days 274-364) plus the bonus Day 365
+
+# WEEK 40 | Housing: rent or buy | road,scale,pair
+L | Neither side wins automatically | Renting is not always throwing money away and buying is not always building wealth. Owning has costs that do not build equity: interest, property tax, insurance, repairs. Renting buys flexibility. The right answer depends on prices, rates, how long you will stay and your own plans. | Write how long you expect to live where you are and what would make you move.
+N | The 5% rule of thumb | One rough test says the yearly cost of owning a home that does not build equity is about 5% of its price: about 1% for property tax, 1% for maintenance and 3% for the cost of the money tied up. On a $300,000 home that is {x:300000,0.05} a year, or {div:300000*0.05,12} a month. If rent for a similar home is lower, renting may cost less. It is a heuristic, not a verdict. | Take the price of a home you might buy. Multiply by 5% and divide by 12. Compare with rent.
+D | Housing as a share | A common guideline is to keep housing costs near 30% of gross income. Many people find it hard in expensive cities. Use it as a check on stretch, not as a rule. | Write your housing cost and divide it by your gross monthly income.
+M | The default dream | For many people, buying a home is a goal because they were taught it is the next step. It is fine to want it. It is also fine to ask whether you want it for you or because of the story. | Write why you want to own or why you want to rent. Be honest.
+A | Hidden costs | Closing costs, moving costs, furniture, repairs and utilities are the costs people forget. Add 1% of the home price a year for repairs as a starting guess. | Write three hidden costs of your housing situation that you had not counted.
+S | Weekly check-in: did you learn anything this week that changes how you think about your housing costs?
+R | What does home mean to you, apart from the building?
+
+# WEEK 41 | Insurance and protection | shield,gauge,scale
+L | Pay a little to avoid a disaster | Insurance moves risks that would ruin you onto a company for a small regular fee. It is for events too big to pay from savings. It is not for small, predictable costs. | List the big risks in your life: health, car, home or rental contents, income loss, liability. Mark which are covered.
+N | The deductible trade | A higher deductible usually means a lower premium. If it saves you $20 a month, that is {x:20,12} a year. It only makes sense if you have enough in savings to pay the higher deductible when needed. | Write your deductible on one policy and what is in savings to cover it.
+D | Read your policy | The summary page of an insurance policy lists what is covered, what is not and the limits. Most people have never read it. | Read the summary of one policy. Write one thing that is not covered.
+M | Underinsured and overinsured | Some people carry too little protection for large risks and too much for small ones, such as gadget warranties. Match cover to the size of the risk. | Write one policy that protects against a risk you could pay yourself.
+A | Check the beneficiaries | Where you have accounts or policies with beneficiaries, check that the names are current. A form can overrule a will. | Check one account's beneficiary. Write the date you checked.
+S | Weekly check-in: what did you learn about the risks in your own life this week?
+R | What would you most hate to lose, and is it protected?
+
+# WEEK 42 | Planning big purchases | stack,steps,grid
+L | Save first, buy later | Paying with saved money avoids interest and gives you time to change your mind. A big purchase plan has three parts: the price, the date and the monthly amount. | Write one big purchase you plan in the next two years, its price and the date.
+N | The monthly amount | A $2,400 purchase in 12 months needs {div:2400,12} a month. A $12,000 purchase in 24 months needs {div:12000,24} a month. Dividing the price by the months turns a wish into a number. | Divide your own purchase price by the months you have. Write the monthly amount.
+D | Research the real price | List the total cost: price, tax, delivery, accessories, running costs. Many purchases cost more after the sticker price. | Write the total cost of ownership for your planned purchase for the first year.
+M | The financing offer | Offers of 0% financing or low monthly payments can make a large purchase feel small. Check the total, the term and what happens if you miss a payment. | Write a purchase you financed and the total cost you paid or will pay.
+A | Start the fund | Open or name a sinking fund for the purchase and make the first transfer. | Write the fund name and today's first transfer.
+S | Weekly check-in: how close is your purchase fund to its first milestone?
+R | Is the thing you are saving for still the thing you want?
+
+# WEEK 43 | Holidays and gifts | rain,ring,stack
+L | The predictable surprise | Holidays and birthdays come at the same time every year, yet many people treat them as surprises. A yearly list with a budget turns the season from stress into a plan. | List every gift occasion this year with a person and an amount.
+N | Twelve small payments | A gift and holiday budget of {usd:600} is {div:600,12} a month when it is saved all year. The same {usd:600} spent in one month can mean a credit card balance. | Add your yearly gift costs and divide by 12.
+D | Gifts that cost less | Thoughtful gifts do not have to be expensive. Experiences, a handwritten note, a favourite meal, time. Agree with friends and family on limits. | Write three gifts that cost little but mean something to the person.
+M | Social pressure | Gift-giving carries expectations. It is acceptable to set a limit or to say you are doing less this year. Most people are relieved. | Write one tradition you could simplify and how you would say it kindly.
+A | Set aside now | Start the fund now, even if the season is months away. | Make the first transfer to your gift fund.
+S | Weekly check-in: how did you handle any social spending this week?
+R | What is the most meaningful gift you have ever received, and what did it cost?
+
+# WEEK 44 | Money and other people | pair,scale,road
+L | Money is a team sport | Money is one of the most common sources of stress in relationships. Talking early, calmly and with real numbers helps. Aim to understand each other, not to win. | Write one money topic you find hard to discuss and who you would need to discuss it with.
+N | The shared picture | If two people together spend {usd:4200} a month, a 10% difference between what each thinks is spent is {usd:420} every month, or {usd:420*12} a year. Seeing the same numbers matters more than agreeing about the rest. | Write the one number you would both want to see: income, spending or savings.
+D | A money date | Choose a regular time to look at your money together, keep it short and add something pleasant. Start with wins, then one topic. | Plan the date and the first topic. Write them here.
+M | Different money stories | People learn about money from their childhood. One person's careful is another person's stingy. Asking about where a belief came from changes the conversation. | Write a belief about money you learned as a child and where it came from.
+A | Agree on a limit | Many couples agree on an amount above which each person talks to the other before spending. The amount is a personal choice. | Write the amount that fits your life, or ask your partner or friend to do it with you.
+S | Weekly check-in: how did a money conversation go this week?
+R | What do you want people close to you to understand about your money goals?
+
+# WEEK 45 | Teaching and giving | tree,steps,coin
+L | Pass it on | Children learn from what they see. Letting them watch you make money choices, calmly, teaches more than lectures. Giving, even in small amounts, can also be part of a healthy money life. | Write one money habit you want a child, or a younger person you know, to see you doing.
+N | Small gifts, big habits | A $5 a week allowance split into spend, save and give is {x:5,52} a year. A child who saves $2 every week for 17 years at a hypothetical 5% a year has about {fv:2*52/12,5,17}. | Write a simple split for a child or a younger person: spend, save, give.
+D | Make saving visible | Use jars, a drawing of a goal or an app. Children and adults both stay motivated when they can see progress. | Create one visible tracker for a saving goal.
+M | Giving and gratitude | Many people report that giving to others feels good. It does not need to be a lot or only money. A plan for giving stops it from being an afterthought. | Write how much of your budget you want to give and where.
+A | Teach one idea | Explain one money idea to someone in plain words. Teaching helps you learn. | Write the idea you explained and one question you could not answer.
+S | Weekly check-in: what did you teach or share about money this week?
+R | What is the best money lesson you ever received?
+
+# WEEK 46 | Scams and fraud | shield,gauge,grid
+L | Slow down the fast | Most scams share the same ingredients: urgency, secrecy, fear or a prize, and a request for money, codes or gift cards. When something is fast and secret, stop. | Write three signs of a scam that you now recognise.
+N | The tell | A real bank or agency will not demand payment in gift cards, ask for a one-time code you receive by text or insist on speed. If someone does, hang up and call the official number on the back of your card or the official website. | Save the official fraud contact number for your bank in your phone.
+D | Lock the doors | Use unique passwords, a password manager and two-factor authentication on your money accounts. Turn on alerts for sign-ins and transfers. | Turn on two-factor authentication on your bank and email accounts today.
+M | Why smart people get fooled | Scammers use pressure and emotion, not stupidity. Anyone can be caught when tired, rushed or afraid. Having a rule ahead of time works better than relying on being clever. | Write your own rule, such as I never act on a request in the first hour.
+A | Freeze and monitor | Know how to freeze your credit where you live, and how to check your accounts for activity you did not make. | Find the steps for a credit freeze in your country and write the page where they are.
+S | Weekly check-in: did you see or avoid any suspicious message this week?
+R | Who could you tell about a scam you have seen, to protect them?
+
+# WEEK 47 | Goals and your freedom number | road,steps,curve
+L | A number, not a feeling | Your freedom number is the amount that could cover your yearly spending using a withdrawal rate such as 4%. Divide your yearly spending by 0.04. It is an estimate for planning, not a promise. | Write your monthly spending. Multiply by 12.
+N | Compute it | If you spend $3,000 a month, that is {usd:36000} a year. Divided by 0.04 the freedom number is {cap:3000}. At a hypothetical 8% a year, investing {usd:1000} a month would take about {mtt:1000,8,3000*12/0.04} years to get there. | Calculate your own freedom number. Write it in the box on the summary page.
+D | Lower the bottom | Every $100 you cut from monthly spending lowers the number by {cap:100} and is also money you can save. Both sides of the equation move. | Write one monthly cost you could cut and calculate its effect on your number.
+M | Enough | Moving the finish line every time you get near it keeps you running. Decide what enough looks like in your own life, in dollars and in days. | Write your version of enough in one paragraph.
+A | Set the three goals | Choose one short goal under 3 months, one medium goal under a year and one long goal of five or more years. Add a number and a date to each. | Write your three goals with numbers and dates.
+S | Weekly check-in: how far are you from each of your three goals this week?
+R | If you reached your freedom number, what would be the first thing you changed?
+
+# WEEK 48 | Build the system | steps,grid,tree
+L | Systems beat motivation | Motivation comes and goes. Systems work on bad days. A money system has four parts: money comes in, bills are paid, savings are moved, and you check in on a schedule. | Draw your own system as four boxes on this page. Fill in what happens in each box.
+N | Hours saved | If your money routine takes 30 minutes a week, it is {num:30*52/60} hours a year. Automating bills and savings can bring that down. | Time your next money check-in. Write the minutes.
+D | Make a money calendar | Put the repeating items on one calendar: payday, bills, transfers, a weekly check-in, a monthly review, a yearly review. | Fill in your calendar for the next month with every money date.
+M | Reduce the decisions | Each decision uses energy. Make the repeating ones automatic so you save your attention for the rare big ones. | Write three decisions you make every month that you could automate.
+A | One breakdown test | Imagine you were ill for a month. Would your bills still be paid, your savings still move? What would break? | Write the one point of failure and fix it.
+S | Weekly check-in: how much of your money system worked without you this week?
+R | Which part of your money life still depends on you remembering?
+
+# WEEK 49 | Money myths | scale,rain,gauge
+L | Beliefs worth testing | Some money beliefs spread because they are simple, not because they are true. It is worth testing the ones that cost you the most. | Write three money beliefs you hold. Mark each: true, false, or I have not checked.
+N | Myth: debt-free means rich | Being free of debt is a great step. But a person with no debt and no savings can still be one emergency away from trouble. A person with a mortgage and large investments may be in a stronger position. | Write one thing that matters about your situation beyond whether you have debt.
+D | Myth: you need a lot to start | Many platforms let people start investing with small amounts. The habit matters more than the first sum. A monthly $25 for 30 years at a hypothetical 7% a year grows to {fv:25,7,30}. | Write the smallest amount you could invest regularly and what it would be in 30 years.
+M | Myth: budgets are restrictive | A budget is permission as well as limits. People often find a budget gives them guilt-free spending in the categories they chose. | Write one thing you could spend on guilt-free if you planned for it.
+A | Myth: only experts can manage money | The basics need arithmetic and consistency. Experts help with complex situations, and getting help is smart. It is not a prerequisite for starting. | Write one question you could ask a qualified professional and the date you will ask it.
+S | Weekly check-in: which myth did you change your mind about this week?
+R | Which belief about money served you once and does not now?
+
+# WEEK 50 | Quiet wealth | coin,stack,tree
+L | Building, not showing | Quiet wealth is the idea of building security without displaying it. The point of money is the freedom it buys, such as time, choices and calm, not the things people see. | Write what you want your money to buy that nobody can photograph.
+N | The gap | Wealth is what you keep, not what you earn. Two people can earn the same and one can keep {pct:20,100} while the other keeps nothing. Saving $1,500 a month for 10 years adds up to {x:1500,12*10}, a very different life from saving none. | Write what you keep each month as a percentage of what you earn.
+D | Spend on purpose | Spending is not the enemy. Decide what matters most and spend generously on it, and cut without guilt on the things that do not. | Write your top three spending priorities and one thing you can cut without missing.
+M | Silence the scoreboard | Comparison can make you feel poor when you are doing fine. Muting a few accounts that make you spend is a cheap fix. | Write whose posts make you want to buy things and decide what to do about it.
+A | Make a rule of quiet | One rule can protect your plan: for instance, I wait a day before any purchase that is not on my list. | Write your rule and put it where you will see it.
+S | Weekly check-in: what did you do this week that your future self will thank you for?
+R | What does a quiet, secure life look like for you?
+
+# WEEK 51 | Year review | grid,curve,bars
+L | Look back honestly | A year of money habits is a real record. Look at the numbers, not the story you tell yourself. Whatever you find, you did the work of looking. | Update the Net Worth Snapshot. Compare it with Day 1.
+N | Your year in numbers | Add up your total saved, total debt paid, and the change in net worth. If you saved $250 a month for the year, that is {x:250,12}. Write your own total. | Write your year's totals in the table at the back of the book.
+D | Highs and lows | List your best money decision and your costliest mistake from the year. What did each teach you? | Write one best decision and one costly mistake. Write the lesson from each.
+M | Credit the effort | Many people only notice what they did not do. Naming what you did do reinforces habits. | Write ten things you did with money this year that you are glad about.
+A | Thank someone | Who helped you with money this year, a friend, a family member, a source? Thank them. | Write the person's name and send a short message today.
+S | Weekly check-in: write what you most want to carry into next year.
+R | What would you tell yourself on Day 1?
+
+# WEEK 52 | The next year | road,coin,steps
+L | Set the next 12 months | A good plan for the coming year has three parts: a number to reach, a habit to keep and a risk to cover. | Write one number, one habit and one risk for next year.
+N | The next year, in numbers | If you saved $300 a month next year, that is {x:300,12}. If you increased that by 10%, it would be {x:330,12}. Small increases are how a plan grows. | Write your savings goal for next year in monthly and yearly amounts.
+D | Choose your first three moves | Write the first three actions you will do in January. Specific beats ambitious. | Write three actions and the date for each.
+M | Do not wait for January | The best time to start a habit is today. A year is a collection of days. | Pick one habit and start it tonight.
+A | Plan the review | Put a date in your calendar for your next quarterly review. | Write the dates for next year's four reviews.
+S | Weekly check-in: what is the one sentence summary of what changed for you this year?
+R | Looking at the year, what are you proudest of?
+X | One year. One last page. | You finished the Quiet Money Daily Planner. Not by being perfect but by coming back. Money is built from small, steady, honest actions repeated over time, and you now know how to do that. This planner is education, not financial advice, and every number in it is an example. Your real numbers are the ones that matter. | Write one sentence to yourself about the person who started on Day 1 and the person who finished.

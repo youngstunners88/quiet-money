@@ -1,0 +1,18 @@
+{
+  "mcpServers": {
+    "quiet-planner": {
+      "command": "python",
+      "args": [
+        "-m",
+        "faceless.planner_mcp"
+      ]
+    },
+    "quiet-shop": {
+      "command": "python",
+      "args": [
+        "-m",
+        "faceless.shop_mcp"
+      ]
+    }
+  }
+}
