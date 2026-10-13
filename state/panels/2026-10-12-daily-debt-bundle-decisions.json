@@ -1,0 +1,117 @@
+{
+ "label": "daily-debt-bundle",
+ "models": {
+  "microsoft/microsoft-decision-1": {
+   "answers": {
+    "has_data": {
+     "type": "noul",
+     "noul": 0.0046096119912067005
+    },
+    "overlap": {
+     "type": "noul",
+     "noul": 0.9964063953127885
+    },
+    "structure": {
+     "type": "choice",
+     "choice": "C",
+     "probabilities": {
+      "A": 0.1311265837478759,
+      "B": 0.013820643541570286,
+      "C": 0.8550527727105538
+     },
+     "confidence": 0.7825791590658306
+    },
+    "third_listing_justified": {
+     "type": "noul",
+     "noul": 0.06754719723812525
+    }
+   },
+   "build": "microsoft/microsoft-decision-1-20261009",
+   "usd": 2.2e-05
+  },
+  "typesafe/jev-1.13": {
+   "answers": {
+    "structure": {
+     "type": "choice",
+     "choice": "A",
+     "probabilities": {
+      "A": 0.61,
+      "B": 0.03,
+      "C": 0.36
+     },
+     "confidence": 0.41
+    },
+    "overlap": {
+     "type": "noul",
+     "noul": 0.95
+    },
+    "has_data": {
+     "type": "noul",
+     "noul": 0.04
+    },
+    "third_listing_justified": {
+     "type": "noul",
+     "noul": 0.23
+    }
+   },
+   "build": "typesafe/jev-1.13-20260917",
+   "usd": 3.6e-05
+  },
+  "upstage/solar-decide-flash": {
+   "answers": {
+    "has_data": {
+     "type": "noul",
+     "noul": 0.03546
+    },
+    "overlap": {
+     "type": "noul",
+     "noul": 0.952646
+    },
+    "structure": {
+     "type": "choice",
+     "choice": "C",
+     "probabilities": {
+      "A": 0.007442,
+      "B": 0.017852,
+      "C": 0.974706
+     },
+     "confidence": 0.878657
+    },
+    "third_listing_justified": {
+     "type": "noul",
+     "noul": 0.132804
+    }
+   },
+   "build": "upstage/solar-decide-flash-20261008",
+   "usd": 0.000152
+  },
+  "openai/gpt-6-luna-decisions": {
+   "answers": {
+    "structure": {
+     "type": "choice",
+     "choice": "A",
+     "probabilities": {
+      "A": 0.91,
+      "B": 0.01,
+      "C": 0.08
+     },
+     "confidence": 0.86
+    },
+    "overlap": {
+     "type": "noul",
+     "noul": 1
+    },
+    "has_data": {
+     "type": "noul",
+     "noul": 0
+    },
+    "third_listing_justified": {
+     "type": "noul",
+     "noul": 0.22
+    }
+   },
+   "build": "openai/gpt-6-luna-decisions-20261006",
+   "usd": 9.9e-05
+  }
+ }
+}

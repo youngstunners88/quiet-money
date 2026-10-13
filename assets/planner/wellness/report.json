@@ -1,0 +1,721 @@
+{
+ "wellness-001": {
+  "size": [
+   750,
+   1151
+  ],
+  "model": {
+   "handle_present": false,
+   "handle_top": null,
+   "model": "anthropic/claude-haiku-5.5",
+   "usd": 0.00015
+  },
+  "plan": "no handle found",
+  "action": "kept",
+  "engine": "none",
+  "why": "no handle on this picture"
+ },
+ "wellness-002": {
+  "size": [
+   750,
+   1153
+  ],
+  "model": {
+   "handle_present": false,
+   "handle_top": null,
+   "model": "anthropic/claude-haiku-5.5",
+   "usd": 0.000157
+  },
+  "plan": "no handle found",
+  "action": "kept",
+  "engine": "none",
+  "why": "no handle on this picture"
+ },
+ "wellness-003": {
+  "size": [
+   750,
+   1159
+  ],
+  "model": {
+   "handle_present": false,
+   "handle_top": null,
+   "model": "anthropic/claude-haiku-5.5",
+   "usd": 0.00014
+  },
+  "plan": "no handle found",
+  "action": "kept",
+  "engine": "none",
+  "why": "no handle on this picture"
+ },
+ "wellness-004": {
+  "size": [
+   750,
+   1057
+  ],
+  "model": {
+   "handle_present": false,
+   "handle_top": null,
+   "model": "anthropic/claude-haiku-5.5",
+   "usd": 0.000144
+  },
+  "plan": "no handle found",
+  "action": "kept",
+  "engine": "none",
+  "why": "no handle on this picture"
+ },
+ "wellness-005": {
+  "size": [
+   750,
+   1162
+  ],
+  "model": {
+   "handle_present": false,
+   "handle_top": null,
+   "model": "anthropic/claude-haiku-5.5",
+   "usd": 0.000163
+  },
+  "plan": "no handle found",
+  "action": "kept",
+  "engine": "none",
+  "why": "no handle on this picture"
+ },
+ "wellness-006": {
+  "size": [
+   750,
+   1132
+  ],
+  "model": {
+   "handle_present": false,
+   "handle_top": null,
+   "model": "anthropic/claude-haiku-5.5",
+   "usd": 0.000133
+  },
+  "plan": "no handle found",
+  "action": "kept",
+  "engine": "none",
+  "why": "no handle on this picture"
+ },
+ "wellness-007": {
+  "size": [
+   750,
+   1157
+  ],
+  "model": {
+   "handle_present": false,
+   "handle_top": null,
+   "model": "anthropic/claude-haiku-5.5",
+   "usd": 0.000158
+  },
+  "plan": "no handle found",
+  "action": "kept",
+  "engine": "none",
+  "why": "no handle on this picture"
+ },
+ "wellness-008": {
+  "size": [
+   832,
+   1248
+  ],
+  "model": {
+   "handle_present": true,
+   "handle_top": 0.94,
+   "model": "anthropic/claude-haiku-5.5",
+   "usd": 0.000143
+  },
+  "plan": "handle text rows 1180-1229; cut at 1171 (removes 6.2%)",
+  "action": "cropped",
+  "engine": "photopea",
+  "cut_row": 1171,
+  "removed": "6.2%"
+ },
+ "wellness-009": {
+  "size": [
+   750,
+   1149
+  ],
+  "model": {
+   "handle_present": false,
+   "handle_top": null,
+   "model": "anthropic/claude-haiku-5.5",
+   "usd": 0.00016
+  },
+  "plan": "no handle found",
+  "action": "kept",
+  "engine": "none",
+  "why": "no handle on this picture"
+ },
+ "wellness-010": {
+  "size": [
+   750,
+   1168
+  ],
+  "model": {
+   "handle_present": false,
+   "handle_top": null,
+   "model": "anthropic/claude-haiku-5.5",
+   "usd": 0.00015
+  },
+  "plan": "no handle found",
+  "action": "kept",
+  "engine": "none",
+  "why": "no handle on this picture"
+ },
+ "wellness-011": {
+  "size": [
+   750,
+   1152
+  ],
+  "model": {
+   "handle_present": false,
+   "handle_top": null,
+   "model": "anthropic/claude-haiku-5.5",
+   "usd": 0.00014
+  },
+  "plan": "no handle found",
+  "action": "kept",
+  "engine": "none",
+  "why": "no handle on this picture"
+ },
+ "wellness-012": {
+  "size": [
+   750,
+   1152
+  ],
+  "model": {
+   "handle_present": false,
+   "handle_top": null,
+   "model": "anthropic/claude-haiku-5.5",
+   "usd": 0.000156
+  },
+  "plan": "no handle found",
+  "action": "kept",
+  "engine": "none",
+  "why": "no handle on this picture"
+ },
+ "wellness-013": {
+  "size": [
+   750,
+   1226
+  ],
+  "model": {
+   "handle_present": true,
+   "handle_top": 0.95,
+   "model": "anthropic/claude-haiku-5.5",
+   "usd": 0.000141
+  },
+  "plan": "handle text rows 1172-1210; cut at 1163 (removes 5.1%)",
+  "action": "cropped",
+  "engine": "photopea",
+  "cut_row": 1163,
+  "removed": "5.1%"
+ },
+ "wellness-014": {
+  "size": [
+   832,
+   1248
+  ],
+  "model": {
+   "handle_present": true,
+   "handle_top": 0.94,
+   "model": "anthropic/claude-haiku-5.5",
+   "usd": 0.000163
+  },
+  "plan": "handle text rows 1185-1232; cut at 1176 (removes 5.8%)",
+  "action": "cropped",
+  "engine": "photopea",
+  "cut_row": 1176,
+  "removed": "5.8%"
+ },
+ "wellness-015": {
+  "size": [
+   750,
+   1152
+  ],
+  "model": {
+   "handle_present": false,
+   "handle_top": null,
+   "model": "anthropic/claude-haiku-5.5",
+   "usd": 0.000138
+  },
+  "plan": "no handle found",
+  "action": "kept",
+  "engine": "none",
+  "why": "no handle on this picture"
+ },
+ "wellness-016": {
+  "size": [
+   750,
+   1151
+  ],
+  "model": {
+   "handle_present": false,
+   "handle_top": null,
+   "model": "anthropic/claude-haiku-5.5",
+   "usd": 0.000167
+  },
+  "plan": "no handle found",
+  "action": "kept",
+  "engine": "none",
+  "why": "no handle on this picture"
+ },
+ "wellness-017": {
+  "size": [
+   750,
+   1153
+  ],
+  "model": {
+   "handle_present": false,
+   "handle_top": null,
+   "model": "anthropic/claude-haiku-5.5",
+   "usd": 0.000145
+  },
+  "plan": "no handle found",
+  "action": "kept",
+  "engine": "none",
+  "why": "no handle on this picture"
+ },
+ "wellness-018": {
+  "size": [
+   750,
+   1151
+  ],
+  "model": {
+   "handle_present": false,
+   "handle_top": null,
+   "model": "anthropic/claude-haiku-5.5",
+   "usd": 0.000148
+  },
+  "plan": "no handle found",
+  "action": "kept",
+  "engine": "none",
+  "why": "no handle on this picture"
+ },
+ "wellness-019": {
+  "size": [
+   832,
+   1248
+  ],
+  "model": {
+   "handle_present": true,
+   "handle_top": 0.94,
+   "model": "anthropic/claude-haiku-5.5",
+   "usd": 0.00016
+  },
+  "plan": "handle text rows 1180-1229; cut at 1171 (removes 6.2%)",
+  "action": "cropped",
+  "engine": "photopea",
+  "cut_row": 1171,
+  "removed": "6.2%"
+ },
+ "wellness-020": {
+  "size": [
+   750,
+   1181
+  ],
+  "model": {
+   "handle_present": false,
+   "handle_top": null,
+   "model": "anthropic/claude-haiku-5.5",
+   "usd": 0.000139
+  },
+  "plan": "no handle found",
+  "action": "kept",
+  "engine": "none",
+  "why": "no handle on this picture"
+ },
+ "wellness-021": {
+  "size": [
+   832,
+   1248
+  ],
+  "model": {
+   "handle_present": true,
+   "handle_top": 0.955,
+   "model": "anthropic/claude-haiku-5.5",
+   "usd": 0.000168
+  },
+  "plan": "the model says a handle is there but pixels find none on clear floor (Handle sits on the floor strip below the poster, near the bottom edge.)",
+  "action": "cropped",
+  "engine": "photopea",
+  "cut_row": 1197,
+  "removed": "4.1%",
+  "manual": true
+ },
+ "wellness-022": {
+  "size": [
+   750,
+   1152
+  ],
+  "model": {
+   "handle_present": false,
+   "handle_top": null,
+   "model": "anthropic/claude-haiku-5.5",
+   "usd": 0.000142
+  },
+  "plan": "no handle found",
+  "action": "kept",
+  "engine": "none",
+  "why": "no handle on this picture"
+ },
+ "wellness-023": {
+  "size": [
+   832,
+   1248
+  ],
+  "model": {
+   "handle_present": true,
+   "handle_top": 0.94,
+   "model": "anthropic/claude-haiku-5.5",
+   "usd": 0.000149
+  },
+  "plan": "the model says a handle is there but pixels find none on clear floor (Handle '@youngstunnersss' sits on the floor strip below the poster.)",
+  "action": "cropped",
+  "engine": "photopea",
+  "cut_row": 1180,
+  "removed": "5.4%",
+  "manual": true
+ },
+ "wellness-024": {
+  "size": [
+   750,
+   1226
+  ],
+  "model": {
+   "handle_present": true,
+   "handle_top": 0.93,
+   "model": "anthropic/claude-haiku-5.5",
+   "usd": 0.000144
+  },
+  "plan": "handle text rows 1167-1210; cut at 1158 (removes 5.5%)",
+  "action": "cropped",
+  "engine": "photopea",
+  "cut_row": 1158,
+  "removed": "5.5%"
+ },
+ "wellness-025": {
+  "size": [
+   750,
+   1152
+  ],
+  "model": {
+   "handle_present": false,
+   "handle_top": null,
+   "model": "anthropic/claude-haiku-5.5",
+   "usd": 0.000136
+  },
+  "plan": "no handle found",
+  "action": "kept",
+  "engine": "none",
+  "why": "no handle on this picture"
+ },
+ "wellness-026": {
+  "size": [
+   832,
+   1248
+  ],
+  "model": {
+   "handle_present": true,
+   "handle_top": 0.94,
+   "model": "anthropic/claude-haiku-5.5",
+   "usd": 0.00016
+  },
+  "plan": "handle text rows 1180-1229; cut at 1171 (removes 6.2%)",
+  "action": "cropped",
+  "engine": "photopea",
+  "cut_row": 1171,
+  "removed": "6.2%"
+ },
+ "wellness-027": {
+  "size": [
+   750,
+   1152
+  ],
+  "model": {
+   "handle_present": false,
+   "handle_top": null,
+   "model": "anthropic/claude-haiku-5.5",
+   "usd": 0.000148
+  },
+  "plan": "no handle found",
+  "action": "kept",
+  "engine": "none",
+  "why": "no handle on this picture"
+ },
+ "wellness-028": {
+  "size": [
+   750,
+   1152
+  ],
+  "model": {
+   "handle_present": false,
+   "handle_top": null,
+   "model": "anthropic/claude-haiku-5.5",
+   "usd": 0.000138
+  },
+  "plan": "no handle found",
+  "action": "kept",
+  "engine": "none",
+  "why": "no handle on this picture"
+ },
+ "wellness-029": {
+  "size": [
+   750,
+   1152
+  ],
+  "model": {
+   "handle_present": false,
+   "handle_top": null,
+   "model": "anthropic/claude-haiku-5.5",
+   "usd": 0.000148
+  },
+  "plan": "no handle found",
+  "action": "kept",
+  "engine": "none",
+  "why": "no handle on this picture"
+ },
+ "wellness-030": {
+  "size": [
+   832,
+   1248
+  ],
+  "model": {
+   "handle_present": true,
+   "handle_top": 0.94,
+   "model": "anthropic/claude-haiku-5.5",
+   "usd": 0.000151
+  },
+  "plan": "handle text rows 1180-1229; cut at 1171 (removes 6.2%)",
+  "action": "cropped",
+  "engine": "photopea",
+  "cut_row": 1171,
+  "removed": "6.2%"
+ },
+ "wellness-031": {
+  "size": [
+   832,
+   1248
+  ],
+  "model": {
+   "handle_present": true,
+   "handle_top": 0.92,
+   "model": "anthropic/claude-haiku-5.5",
+   "usd": 0.000155
+  },
+  "plan": "handle text rows 1179-1227; cut at 1170 (removes 6.2%)",
+  "action": "cropped",
+  "engine": "photopea",
+  "cut_row": 1170,
+  "removed": "6.2%"
+ },
+ "wellness-032": {
+  "size": [
+   750,
+   1151
+  ],
+  "model": {
+   "handle_present": false,
+   "handle_top": null,
+   "model": "anthropic/claude-haiku-5.5",
+   "usd": 0.000146
+  },
+  "plan": "no handle found",
+  "action": "kept",
+  "engine": "none",
+  "why": "no handle on this picture"
+ },
+ "wellness-033": {
+  "size": [
+   750,
+   1162
+  ],
+  "model": {
+   "handle_present": false,
+   "handle_top": null,
+   "model": "anthropic/claude-haiku-5.5",
+   "usd": 0.00016
+  },
+  "plan": "no handle found",
+  "action": "kept",
+  "engine": "none",
+  "why": "no handle on this picture"
+ },
+ "wellness-034": {
+  "size": [
+   750,
+   1153
+  ],
+  "model": {
+   "handle_present": false,
+   "handle_top": null,
+   "model": "anthropic/claude-haiku-5.5",
+   "usd": 0.000164
+  },
+  "plan": "no handle found",
+  "action": "kept",
+  "engine": "none",
+  "why": "no handle on this picture"
+ },
+ "wellness-035": {
+  "size": [
+   750,
+   1221
+  ],
+  "model": {
+   "handle_present": true,
+   "handle_top": 0.95,
+   "model": "anthropic/claude-haiku-5.5",
+   "usd": 0.000158
+  },
+  "plan": "handle text rows 1162-1205; cut at 1153 (removes 5.6%)",
+  "action": "cropped",
+  "engine": "photopea",
+  "cut_row": 1153,
+  "removed": "5.6%"
+ },
+ "wellness-036": {
+  "size": [
+   1999,
+   1999
+  ],
+  "model": {
+   "handle_present": true,
+   "handle_top": 0.84,
+   "model": "anthropic/claude-haiku-5.5",
+   "usd": 0.000208
+  },
+  "plan": "the model says a handle is there but pixels find none on clear floor (Handle text '@youngstunnersss' sits near the bottom of the poster, below the caricature.)",
+  "action": "painted",
+  "engine": "opencv-inpaint",
+  "why": "handle is on the poster itself (plain white): repainted, nothing else touched"
+ },
+ "wellness-037": {
+  "size": [
+   750,
+   1178
+  ],
+  "model": {
+   "handle_present": false,
+   "handle_top": null,
+   "model": "anthropic/claude-haiku-5.5",
+   "usd": 0.000153
+  },
+  "plan": "no handle found",
+  "action": "kept",
+  "engine": "none",
+  "why": "no handle on this picture"
+ },
+ "wellness-038": {
+  "size": [
+   750,
+   1151
+  ],
+  "model": {
+   "handle_present": false,
+   "handle_top": null,
+   "model": "anthropic/claude-haiku-5.5",
+   "usd": 0.000147
+  },
+  "plan": "no handle found",
+  "action": "kept",
+  "engine": "none",
+  "why": "no handle on this picture"
+ },
+ "wellness-039": {
+  "size": [
+   832,
+   1248
+  ],
+  "model": {
+   "handle_present": true,
+   "handle_top": 0.88,
+   "model": "anthropic/claude-haiku-5.5",
+   "usd": 0.000157
+  },
+  "plan": "the model puts the handle at 88% of the height but the text pixels start at 95%",
+  "action": "painted",
+  "engine": "opencv-inpaint",
+  "why": "handle is on the poster itself (plain white): repainted, nothing else touched"
+ },
+ "wellness-040": {
+  "size": [
+   750,
+   1169
+  ],
+  "model": {
+   "handle_present": false,
+   "handle_top": null,
+   "model": "anthropic/claude-haiku-5.5",
+   "usd": 0.000131
+  },
+  "plan": "no handle found",
+  "action": "kept",
+  "engine": "none",
+  "why": "no handle on this picture"
+ },
+ "wellness-041": {
+  "size": [
+   750,
+   1149
+  ],
+  "model": {
+   "handle_present": false,
+   "handle_top": null,
+   "model": "anthropic/claude-haiku-5.5",
+   "usd": 0.000149
+  },
+  "plan": "no handle found",
+  "action": "kept",
+  "engine": "none",
+  "why": "no handle on this picture"
+ },
+ "wellness-042": {
+  "size": [
+   750,
+   1151
+  ],
+  "model": {
+   "handle_present": false,
+   "handle_top": null,
+   "model": "anthropic/claude-haiku-5.5",
+   "usd": 0.000164
+  },
+  "plan": "no handle found",
+  "action": "kept",
+  "engine": "none",
+  "why": "no handle on this picture"
+ },
+ "wellness-043": {
+  "size": [
+   832,
+   1248
+  ],
+  "model": {
+   "handle_present": true,
+   "handle_top": 0.94,
+   "model": "anthropic/claude-haiku-5.5",
+   "usd": 0.000165
+  },
+  "plan": "handle text rows 1180-1229; cut at 1171 (removes 6.2%)",
+  "action": "cropped",
+  "engine": "photopea",
+  "cut_row": 1171,
+  "removed": "6.2%"
+ },
+ "wellness-044": {
+  "size": [
+   784,
+   1168
+  ],
+  "model": {
+   "handle_present": true,
+   "handle_top": 0.93,
+   "model": "anthropic/claude-haiku-5.5",
+   "usd": 0.000151
+  },
+  "plan": "handle text rows 1089-1116; cut at 1080 (removes 7.5%)",
+  "action": "cropped",
+  "engine": "photopea",
+  "cut_row": 1080,
+  "removed": "7.5%"
+ }
+}

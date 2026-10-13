@@ -49,11 +49,30 @@ humans set strategy, connect accounts, and review held videos.
 | Platform rules, policy changes, what each marketplace allows | `/channel/compliance` | `channel/compliance/platform-rules.md` | `faceless-scout` |
 | Music beds | `/faceless/musiclib.py` | `python -m faceless music` | `faceless-empire` |
 | Spreadsheet products and shop listings | `/faceless/products.py`, `product_debt.py`, `product_print.py` | `channel/products/*/LISTING.md` | `faceless-empire` |
+| The Daily Planner (365-page printable: pictures + lessons, cover, owner artwork intake, handle cleaning, review, MCP server `quiet-planner`) | `/faceless/product_planner.py`, `planner_art.py`, `planner_clean.py`, `planner_review.py`, `planner_mcp.py`, `freeconvert.py` | `channel/products/daily-quiet-money-planner/CONTEXT.md` | `faceless-empire` |
+| Build, check or change the Daily Planner (lessons, pages, cover, wellness pages, listing) | `/faceless/product_planner.py`, `planner_content.py`, `planner_wellness.py` | `channel/products/daily-quiet-money-planner/CONTEXT.md` | `faceless-planner` |
+| The owner's pictures: bring in, crop the @handle (Photopea), check by eye | `/faceless/planner_posters.py`, `planner_locate.py`, `planner_photopea.py` | `assets/planner/wellness/report.json` | `faceless-poster-crop`, `faceless-photopea` |
+| quiet-planner MCP server (tools for the picture job, caps, Jev gate, FreeConvert) | `/faceless/planner_mcp.py` | `.mcp.json` | `faceless-planner-mcp` |
+| Owner's Drive links, docs with pictures, another agent's hand-off | `/repo-farm` | `.claude/skills/faceless-drive-intake` | `faceless-drive-intake` |
+| Trust a model for judging, locating or gating (measure first) | `/faceless/decide.py` | `.claude/skills/faceless-bench` | `faceless-bench` |
+| Settle a decision between options with several models (Phi-4 vs Haiku and so on), then record it | `/faceless/panel.py` | `channel/empire/decisions/` | `faceless-panel` |
+| One product or a bundle, what to list and test first | `/faceless/listing.py`, `channel/shop/catalog.json` | `channel/empire/decisions/2026-10-12-daily-debt-bundle.md` | `faceless-product-structure` |
+| Front covers, hero images, thumbnails, Quinton on a product, cover A/B | `/faceless/planner_cover.py`, `mockup.py` | `.claude/skills/faceless-cover/references/haiku-cover-research.md` | `faceless-cover` |
 | Email sequence (autoresponder) and the weekly issue | `/faceless/autoresponder.py`, `repurpose.py` | `channel/offers/autoresponder/README.md` | `faceless-empire` |
 | Fiverr brand-kit service | `/faceless/brandkit.py` | `channel/services/brand-kit/GIG.md` | `faceless-empire` |
 | Connect an app (YouTube, TikTok, Drive...), pull channel stats | `/faceless/providers` | `composio_tools.py` | `faceless-composio` (+ `composio`) |
 | Any media or data job beyond the engine's own (mockups, upscales, voice samples, OCR, search volume, 750+ models) | `/faceless/muapi.py` | `.claude/skills/muapi` | `muapi` |
 | Etsy and Gumroad listings (pictures, video, copy, checklist, drafts) | `/faceless/listing.py`, `shop.py` | `channel/shop/CHECKLIST` per product | `faceless-empire` |
+| Ship: connect Etsy and Gumroad, create drafts, go live only with the owner's approval of the price (MCP `quiet-shop`) | `/faceless/shop.py`, `etsy.py`, `shop_mcp.py` | `.mcp.json`, studio.toml `[shop]` | `faceless-ship` |
+| Songs: Suno packs, cover prompts, `songpost` | `/faceless/songs.py` | `python -m faceless songs` | `faceless-songs`, `faceless-song-art` |
+| The weekly host (face and voice kept identical) | `/faceless/host.py` | `python -m faceless host` | `faceless-host` |
+| Which key works, what is left on it, which tool a job should use | `/faceless/keys.py` | `python -m faceless keys` | `faceless-keys` |
+| Ledger look (second visual style) and the motion stack | `/faceless/pipeline` | `.claude/skills/faceless-motion-stack` | `faceless-ledger`, `faceless-motion-stack` |
+| A call failed, a result vanished, or a tool is blocked | `/` | `.claude/skills/faceless-unblock` | `faceless-unblock` |
+| YouTube channel page, titles, tags, verify uploads | `/distribution` | `python -m faceless yt-verify` | `faceless-youtube-seo` |
+| What is winning on a platform, hashtag size, competitor and market data, marketing angles (Monid, capped) | `/faceless/monid.py` | `python -m faceless monid find "<words>"` | `faceless-monid` |
+| Keep CLAUDE.md, the workspace CONTEXT.md files and the skills true after a build or decision (the coach's structure) | `/` | `python -m faceless context` | `faceless-context` |
+| Marketing: the weekly brief, funnel, measurement, experiments, what to tell the owner (the plan is `channel/empire/MARKETING.md`) | `/faceless/marketing.py`, `metrics.py` | `channel/empire/MARKETING.md` (section 8), `channel/empire/experiments.json` | `faceless-marketing` |
 | Is the operation healthy? Something failed, stalled or overspent | `/` | `OPERATIONS.md`, `.claude/skills/faceless-daily/references/failure-playbook.md` | `faceless-daily` |
 | Evaluate an outside tool, repo or list of links safely | `/repo-farm` | `.claude/skills/faceless-intake` | `faceless-intake` |
 | The call to action on every video, the link-in-bio hub page, UTM and the offer ledger | `/faceless/offer.py` | `.claude/skills/faceless-offer/references/link-rules.md` | `faceless-offer` |
@@ -77,17 +96,22 @@ python -m faceless forecast                    # the math: next batch, monthly c
 python -m faceless kit [day]                   # repurposing kit per video; `kit --issue` compiles the weekly newsletter
 python -m faceless flow                        # today's Flow shot list for the owner's session
 python -m faceless products                    # build + verify spreadsheet products, write listings
+python -m faceless panel brief.txt --models a,b --runs 3   # several models answer one brief; a person adjudicates (faceless-panel)
+python -m faceless planner build|check|ingest|clean|inventory|cover   # the 365-page Daily Planner PDFs (Letter + A4), its gauntlet, the owner's picture intake
 python -m faceless qa                          # calibrate semantic QA gates (Clef); `variety`, `policy`, `music` live beside it
 python -m faceless autoresponder               # 7-day Money Reset email sequence for the email service
 python -m faceless brandkit "<Name>" --palette mint   # Fiverr brand-kit order (--samples rebuilds the gig gallery)
 python -m faceless preflight                   # can today's run succeed? traffic lights + the fix for each (run first)
 python -m faceless watchdog                    # is the operation alive? (also runs every 6 h on GitHub and opens an Ops alert issue)
 python -m faceless pause "reason"               # kill switch: stops paid calls, posting, daily and make (--resume to undo)
+python -m faceless marketing                    # the weekly marketing brief: guards, funnel, experiments, owner queue (reads only); `metrics --pull` first records what videos earned
+python -m faceless monid find "hashtag"             # the Monid data desk: find, inspect, run (price first), balance; $1/day cap, results in analytics/monid/
 python -m faceless muapi find "product mockup"  # the Muapi desk: find, inspect, estimate, run (price first), balance, doctor
 python -m faceless offer                       # coverage, mix, the three profile URLs; `offer --batch today` makes sure every passed video has its offer pack and row
 python -m faceless distribute                  # every distribution rail with its state and the owner's next step (`--live` checks the hub page)
 python -m faceless listing build all           # Etsy + Gumroad packs; `listing check` runs the listing gauntlet; `shop status|plan|push`
 python -m faceless skills                      # lint every skill against Anthropic's guide
+python -m faceless context                     # do CLAUDE.md routing, the workspace CONTEXT.md files and the skills still agree? (reads only)
 python -m faceless ci                          # CI as GitHub sees it (clean export, no keys): run before every push of code
 python -m pytest -q tests                      # engine tests
 ```

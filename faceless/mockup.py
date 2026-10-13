@@ -366,12 +366,16 @@ def square_thumb(shot: Image.Image, title: str, size: int = 1200) -> Image.Image
     c = coin(150).convert("RGBA")
     img.paste(c, (W // 2 - 75, 100), c)
     big = font(ANTON, 210)
+    lines = wrap(d, title.upper(), big, W - 420)
+    if len(lines) > 2:                                              # three lines at full size ran into the page below them
+        big = font(ANTON, 170)
+        lines = wrap(d, title.upper(), big, W - 420)
     y = 300
-    for i, ln in enumerate(wrap(d, title.upper(), big, W - 420)[:3]):
+    for ln in lines[:3]:
         d.text((W // 2, y), ln, font=big, fill=WHITE, anchor="ma")
-        y += 214
-    win = fit_window(shot, 1900, W - y - 120)
-    place(img, win, W // 2, y + 20)
+        y += int(big.size * 1.16)
+    win = fit_window(shot, 1900, W - y - 110)
+    place(img, win, W // 2, y + 40)
     return img.resize((size, size), Image.LANCZOS)
 
 
@@ -429,10 +433,11 @@ def cover_wide(title: str, subtitle: str, shot: Image.Image, chips: list[str], t
     img.paste(c, (int(90 * s), int(72 * s)), c)
     tracked(d, (int(90 * s) + c.width + int(22 * s), int(72 * s) + int(24 * s)), "QUIET MONEY", font(XBOLD, int(34 * s)), CREAM, spacing=int(7 * s))
     fnt = font(ANTON, int(132 * s))
-    lines = wrap(d, title.upper(), fnt, int(780 * s))
-    while len(lines) > 3 and fnt.size > 80:
+    # the words stay left of the page: the title column ends at x=810 and the page starts at x=870 (a long title used to run under the page)
+    lines = wrap(d, title.upper(), fnt, int(720 * s))
+    while (len(lines) > 3 or max(d.textlength(l, font=fnt) for l in lines) > 720 * s) and fnt.size > 80:
         fnt = font(ANTON, fnt.size - 8)
-        lines = wrap(d, title.upper(), fnt, int(780 * s))
+        lines = wrap(d, title.upper(), fnt, int(720 * s))
     y = int(215 * s)
     for i, ln in enumerate(lines):
         d.text((int(90 * s), y), ln, font=fnt, fill=GOLD if i == len(lines) - 1 else WHITE, anchor="la")
@@ -450,8 +455,8 @@ def cover_wide(title: str, subtitle: str, shot: Image.Image, chips: list[str], t
         x += wch + int(16 * s)
         if x > int(840 * s):
             x, cy = int(90 * s), cy + int(78 * s)
-    win = fit_window(shot, int(1020 * s), int(900 * s), title=file_name, tabs=tabs, active=active)
-    place(img, win, int(1330 * s), (h - win.height) // 2)
+    win = fit_window(shot, int(980 * s), int(900 * s), title=file_name, tabs=tabs, active=active)
+    place(img, win, int(1370 * s), (h - win.height) // 2)
     return img
 
 
@@ -584,10 +589,11 @@ def cover_pages(title: str, subtitle: str, pages: list[Image.Image], chips: list
     img.paste(c, (int(90 * s), int(72 * s)), c)
     tracked(d, (int(90 * s) + c.width + int(22 * s), int(72 * s) + int(24 * s)), "QUIET MONEY", font(XBOLD, int(34 * s)), CREAM, spacing=int(7 * s))
     fnt = font(ANTON, int(132 * s))
-    lines = wrap(d, title.upper(), fnt, int(780 * s))
-    while len(lines) > 3 and fnt.size > 80:
+    # the words stay left of the page: the title column ends at x=810 and the page starts at x=870 (a long title used to run under the page)
+    lines = wrap(d, title.upper(), fnt, int(720 * s))
+    while (len(lines) > 3 or max(d.textlength(l, font=fnt) for l in lines) > 720 * s) and fnt.size > 80:
         fnt = font(ANTON, fnt.size - 8)
-        lines = wrap(d, title.upper(), fnt, int(780 * s))
+        lines = wrap(d, title.upper(), fnt, int(720 * s))
     y = int(215 * s)
     for i, ln in enumerate(lines):
         d.text((int(90 * s), y), ln, font=fnt, fill=GOLD if i == len(lines) - 1 else WHITE, anchor="la")

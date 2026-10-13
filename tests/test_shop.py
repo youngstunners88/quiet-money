@@ -67,6 +67,8 @@ def test_create_arguments_are_a_draft_with_every_file_and_picture(pack):
 
 def test_push_needs_the_token_the_cli_and_an_unpaused_studio(pack, monkeypatch):
     monkeypatch.delenv("GUMROAD_ACCESS_TOKEN", raising=False)
+    monkeypatch.delenv("GUMROAD", raising=False)
+    monkeypatch.delenv("GUMROAD_TOKEN", raising=False)
     with pytest.raises(ProviderUnavailable, match="GUMROAD_ACCESS_TOKEN"):
         shop.push("rat-race-escape-planner", run=True)
     monkeypatch.setenv("GUMROAD_ACCESS_TOKEN", "not-a-real-token")
@@ -102,7 +104,21 @@ def test_markdown_becomes_the_html_gumroad_takes():
 
 def test_status_tells_the_owner_the_next_step(monkeypatch):
     monkeypatch.delenv("GUMROAD_ACCESS_TOKEN", raising=False)
+    monkeypatch.delenv("GUMROAD", raising=False)
+    monkeypatch.delenv("GUMROAD_TOKEN", raising=False)
     monkeypatch.setattr(shop, "gumroad_cli", lambda: None)
     rows = {r["rail"]: r for r in shop.status()}
     assert rows["gumroad draft products"]["state"] == "needs owner" and "GUMROAD_ACCESS_TOKEN" in rows["gumroad draft products"]["next"]
-    assert rows["etsy"]["state"] == "manual" and "CHECKLIST" in rows["etsy"]["next"]
+    monkeypatch.delenv("ETSY_API_KEY", raising=False)
+    monkeypatch.setenv("ETSY_SECRETS_DIR", "/nonexistent-secrets")
+    monkeypatch.delenv("ETSY_REFRESH_TOKEN", raising=False)
+    rows = {r["rail"]: r for r in shop.status()}
+    assert rows["etsy draft + publish"]["state"] == "needs owner" and "ETSY_API_KEY" in rows["etsy draft + publish"]["next"]
+
+
+def test_token_accepts_the_owners_variable_name(monkeypatch):
+    for n in shop.TOKEN_NAMES:
+        monkeypatch.delenv(n, raising=False)
+    assert not shop.token_present()
+    monkeypatch.setenv("GUMROAD", "not-a-real-token")
+    assert shop.token_present() and shop.token() == "not-a-real-token"

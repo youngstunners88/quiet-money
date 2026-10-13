@@ -38,3 +38,7 @@ channel/host/tmp/
 state/tmp/
 music/videos/**/*.mp4
 production/cache/songvideo/
+
+# planner: the drawn pictures are rebuilt by `python -m faceless planner build`; the owner pictures in assets/planner/source and the PDFs are committed
+assets/planner/generated/
+assets/planner/clean-before-after.jpg

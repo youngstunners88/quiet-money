@@ -6,8 +6,9 @@ Gumroad has two rails, both owner-authorised and neither able to take anything l
   draft  the official `gumroad` CLI (github.com/antiwork/gumroad-cli) with GUMROAD_ACCESS_TOKEN in the environment: `products create --draft`
          builds an unpublished product with its files, cover, thumbnail and gallery. Publishing is one click in the dashboard and stays the
          owner's: this module has no publish command on purpose.
-Etsy has no agent rail yet: Composio has no Etsy toolkit, and the Open API needs the owner's own developer app and a one-time OAuth login.
-The listing pack (faceless/listing.py) is the way, about 15 minutes per listing, until the owner decides to create that app.
+Etsy has its own rail (faceless/etsy.py): the Open API v3 with the owner's developer app and a one-time OAuth login; it creates DRAFT listings too.
+Going live is gated by `approval()`: studio.toml [shop.approved."<product>"] must name the product's current catalog price and the rail. `publish()` then
+asks the rail to set the draft live; without that entry it refuses, so a "ship it" without a settled price cannot publish anything.
 
 Everything here is a dry run until `--yes`, refuses while the studio is paused, and skips a product whose name already exists.
 """
@@ -33,8 +34,16 @@ def gumroad_cli() -> str | None:
     return shutil.which("gumroad")
 
 
+TOKEN_NAMES = ("GUMROAD_ACCESS_TOKEN", "GUMROAD_TOKEN", "GUMROAD")
+
+
+def token() -> str | None:
+    """The owner's environment names the Gumroad token GUMROAD; the CLI wants GUMROAD_ACCESS_TOKEN."""
+    return config.env(*TOKEN_NAMES)
+
+
 def token_present() -> bool:
-    return bool(config.env("GUMROAD_ACCESS_TOKEN"))
+    return bool(token())
 
 
 def status() -> list[dict]:
@@ -56,8 +65,10 @@ def status() -> list[dict]:
                  "detail": f"token {'set' if token_present() else 'missing'}, CLI {'found' if gumroad_cli() else 'not installed'}",
                  "next": "" if ready else "Gumroad > Settings > Advanced > Applications > create an access token, add it to the environment as GUMROAD_ACCESS_TOKEN; "
                                          "the agent then installs the CLI (`go install github.com/antiwork/gumroad-cli/cmd/gumroad@<release tag>`)"})
-    rows.append({"rail": "etsy", "state": "manual", "detail": "no agent rail: the listing pack is complete and checked",
-                 "next": "open channel/shop/<product>/CHECKLIST.md; optional later: create a free Etsy developer app for draft listings"})
+    from faceless import etsy
+    e = etsy.status()
+    rows.append({"rail": "etsy draft + publish", "state": e["state"], "detail": f"app key {'set' if e['api_key'] else 'missing'}, login {'saved' if e['tokens'] else 'not done'}",
+                 "next": e["next"] or "ready"})
     return rows
 
 
@@ -109,7 +120,10 @@ def _run(argv: list[str], timeout: int = 600) -> dict:
     cli = gumroad_cli()
     if not cli:
         raise ProviderUnavailable("the gumroad CLI is not installed")
-    r = subprocess.run([cli, *argv], capture_output=True, text=True, timeout=timeout, env=os.environ.copy(), check=False)
+    env = os.environ.copy()
+    if token():
+        env["GUMROAD_ACCESS_TOKEN"] = token()
+    r = subprocess.run([cli, *argv], capture_output=True, text=True, timeout=timeout, env=env, check=False)
     try:
         data = json.loads(r.stdout or "{}")
     except ValueError:
@@ -173,3 +187,65 @@ def sales(days: int = 30) -> list[dict]:
         with open(SALES, "a", encoding="utf-8") as f:
             f.writelines(json.dumps(r) + "\n" for r in fresh)          # no buyer details are stored: the repo is public
     return fresh
+
+
+# ---------------------------------------------------------------- going live (the owner's yes)
+
+def approval(pid: str, rail: str) -> tuple[bool, str]:
+    """(allowed, why not). The owner's entry in studio.toml must carry the product's CURRENT price, so a price change cancels an old yes."""
+    p = listing.products(pid)[0]
+    entry = ((config.load().get("shop") or {}).get("approved") or {}).get(pid) or {}
+    if not entry:
+        return False, f'no approval: add [shop.approved."{pid}"] with price = {p["price"]} and {rail} = true to studio.toml once the owner has settled the price'
+    if abs(float(entry.get("price", -1)) - float(p["price"])) > 1e-9:
+        return False, f"the approval is for ${entry.get('price')} but the catalog price is ${p['price']}: the owner confirms the current price first"
+    if entry.get(rail) is not True:
+        return False, f"the owner has not approved the {rail} rail for {pid}"
+    bad = [g.name for g in listing.check(pid).get(pid, []) if g.hard and not g.ok]
+    if bad:
+        return False, f"the listing gauntlet fails: {bad}"
+    return True, ""
+
+
+def draft_all(pid: str, rails: tuple[str, ...] = ("gumroad", "etsy")) -> list[dict]:
+    """Create DRAFTS on each rail that is ready; a rail that is not ready is reported with the owner's next step, never skipped silently."""
+    out = []
+    for rail in rails:
+        try:
+            if rail == "gumroad":
+                out += push(pid, run=True)
+            elif rail == "etsy":
+                from faceless import etsy
+                out.append({"rail": "etsy", **etsy.create_draft(pid)})
+        except ProviderUnavailable as e:
+            out.append({"rail": rail, "product": pid, "action": "not ready", "why": str(e)[:200]})
+        except ProviderError as e:
+            out.append({"rail": rail, "product": pid, "action": "failed", "why": str(e)[:300]})
+    return out
+
+
+def publish(pid: str, rail: str, listing_id: str | None = None) -> dict:
+    """Set a DRAFT live on one rail, only with the owner's approval of this price. Returns what happened; raises ProviderError when refused."""
+    safety.guard(f"publish {rail}")
+    ok, why = approval(pid, rail)
+    if not ok:
+        raise ProviderError(f"refused: {why}")
+    if rail == "etsy":
+        from faceless import etsy
+        lid = listing_id or (etsy.existing(listing.products(pid)[0]["etsy"]["title"]) or {}).get("listing_id")
+        if not lid:
+            raise ProviderError("no Etsy draft found for this product: run draft first")
+        res = etsy.publish_listing(lid)
+        events.emit("SHOP_PUBLISHED", product=pid, rail="etsy", listing_id=str(lid))
+        return {"rail": "etsy", "listing_id": lid, "state": res.get("state"), "url": res.get("url", "")}
+    if rail == "gumroad":
+        name = listing.products(pid)[0]["gumroad"]["name"]
+        prods = _run(["products", "list", "--all", "--json", "--no-input"]).get("products", [])
+        found = next((x for x in prods if x.get("name") == name), None)
+        if not found:
+            raise ProviderError("no Gumroad draft found for this product: run draft first")
+        res = _run(["products", "publish", str(found["id"]), "--json", "--no-input"])
+        events.emit("SHOP_PUBLISHED", product=pid, rail="gumroad", gumroad_id=str(found["id"])[:24])
+        prod = res.get("product", found)
+        return {"rail": "gumroad", "id": found["id"], "published": bool(prod.get("published", True)), "url": prod.get("short_url") or prod.get("url", "")}
+    raise ProviderError(f"unknown rail {rail!r}")

@@ -257,10 +257,20 @@ def _spreadsheet_images(p: dict, pages: list[Image.Image]) -> list[tuple[str, Im
     return imgs
 
 
+def _planner_shots(p: dict, pages: list[Image.Image]) -> list[Image.Image]:
+    """The three pages the planner's pictures lead with: a daily page and the weekly check-in either side of the cover (page numbers come from the catalog)."""
+    return [pages[p["pages"][k] - 1] for k in ("learn", "checkin", "cover")]            # paper_fan puts the last one in front, in the middle
+
+
 def _printable_images(p: dict, pages: list[Image.Image]) -> list[tuple[str, Image.Image]]:
-    imgs = [("hero", mockup.hero_pages(p["name"], p["subtitle"], [pages[1], pages[2], pages[3]], p["chips"]))]
-    labels = ["How to use", "Paycheck split", "Subscription audit", "Sinking funds", "Debt list", "Net worth"]
-    imgs.append(("inside", mockup.paper_grid("Six pages, ten minutes each", list(zip(labels, pages)), sub=p.get("grid_sub", ""), footer="US Letter  ·  A4  ·  PDF")))
+    if p.get("layout") == "planner":
+        imgs = [("hero", mockup.hero_pages(p["name"], p["subtitle"], _planner_shots(p, pages), p["chips"]))]
+        grid = [("Cover", "cover"), ("Welcome", "welcome"), ("Net worth", "snapshot"), ("Debt map", "debts"), ("Year map", "year"), ("A daily page", "learn")]
+        imgs.append(("inside", mockup.paper_grid("Inside the planner", [(lab, pages[p["pages"][k] - 1]) for lab, k in grid], sub=p.get("grid_sub", ""), footer="US Letter  ·  A4  ·  427 pages")))
+    else:
+        imgs = [("hero", mockup.hero_pages(p["name"], p["subtitle"], [pages[1], pages[2], pages[3]], p["chips"]))]
+        labels = ["How to use", "Paycheck split", "Subscription audit", "Sinking funds", "Debt list", "Net worth"]
+        imgs.append(("inside", mockup.paper_grid("Six pages, ten minutes each", list(zip(labels, pages)), sub=p.get("grid_sub", ""), footer="US Letter  ·  A4  ·  PDF")))
     total = 2 + len(p["features"]) + 2
     for k, f in enumerate(p["features"], 3):
         imgs.append((f"feature-{k - 2}", mockup.feature_page(f["headline"], f["bullets"], pages[f["page"] - 1], k, total)))
@@ -307,17 +317,22 @@ def build(only: str | None = None, video: bool = True) -> dict[str, dict]:
         else:
             pages = _page_images(p)
             named = _spreadsheet_images(p, pages) if p["kind"] == "spreadsheet" else _printable_images(p, pages)
-            hero_shot = pages[(p["pages"].get("numbers") or p["pages"].get("debts") or 2) - 1] if p["kind"] == "spreadsheet" else pages[1]
+            hero_shot = pages[(p["pages"].get("numbers") or p["pages"].get("debts") or 2) - 1] if p["kind"] == "spreadsheet" else pages[0 if p.get("layout") == "planner" else 1]
         for old in (folder / "etsy" / "images").glob("*.jpg"):
             old.unlink()
         files = [_save(mockup.deliver(im), folder / "etsy" / "images" / f"{i:02d}-{name}.jpg", 86) for i, (name, im) in enumerate(named, 1)]
         tabs = _tabs(p)
         if p["kind"] == "printable":
-            cover_im = mockup.cover_pages(p["name"], p["subtitle"], [pages[1], pages[2], pages[3]], p["chips"])
+            cover_im = mockup.cover_pages(p["name"], p["subtitle"], _planner_shots(p, pages) if p.get("layout") == "planner" else [pages[1], pages[2], pages[3]], p["chips"])
         else:
             cover_im = mockup.cover_wide(p["name"], p["subtitle"], hero_shot, p["chips"], tabs=tabs, active=1 if tabs else 0, file_name=Path(p["file"]).name)
         cover = _save(cover_im, folder / "gumroad" / "cover.jpg", 88)
-        thumb = _save(mockup.square_thumb(hero_shot, p["name"]), folder / "gumroad" / "thumbnail.jpg", 88)
+        if p.get("layout") == "planner":
+            from faceless import planner_cover
+            thumb_im = planner_cover.thumbnail()
+        else:
+            thumb_im = mockup.square_thumb(hero_shot, p["name"])
+        thumb = _save(thumb_im, folder / "gumroad" / "thumbnail.jpg", 88)
         vid = folder / "etsy" / "video.mp4"
         made_video = False
         vid.unlink(missing_ok=True)

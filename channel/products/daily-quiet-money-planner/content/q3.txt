@@ -1,0 +1,118 @@
+# Quiet Money Daily Planner: weeks 27-39 (days 183-273)
+
+# WEEK 27 | Investing basics | tree,bars,gauge
+L | Owning versus lending | A stock is a small piece of ownership in a company. A bond is a loan to a company or a government that pays interest. Cash is stable but earns little. Most portfolios are a mix of the three. This book is education, not a recommendation to buy anything. | Write one sentence each, in your own words, explaining what a stock, a bond and cash do.
+N | Why not just cash? | $10,000 left in a drawer for 20 years at 3% inflation has the buying power of about {infl:10000,3,20}. The same $10,000 at a hypothetical 7% a year becomes {lump:10000,7,20}. Returns are not guaranteed and investments can fall in value. | Write what you hold in cash today. Write how many years you will not need it.
+D | Time horizon first | How long until you need the money matters more than any product. Money you need in two years has a different job from money you will not touch for twenty. | Write three goals with the year you need the money for each one.
+M | Investing is not gambling | Gambling has a negative expected value and ends with each bet. Long-term investing in broad markets owns real businesses that produce goods and profits. But returns still vary and losses happen. | Write one difference between a bet and a long-term investment in your own words.
+A | Open the window | Look at how one investment account works where you live. Find out the fees, the minimums and the tax rules. Write down three questions to ask. | Write three questions to ask before opening or funding an investment account.
+S | Weekly check-in: what is one investing word you now understand that you did not last week?
+R | What fear about investing would you most like to understand better?
+
+# WEEK 28 | Funds and costs | stack,curve,ring
+L | Do not pick one stock | A fund holds many investments in one package. An index fund copies a market index, like the largest companies in a country, instead of trying to pick winners. That spreads risk across many companies at a low cost. | Write what a fund is and how an index fund differs from picking individual stocks.
+N | The cost of picking | If a fund costs 1% a year and an index fund costs 0.05%, over 30 years on $100,000 at a gross 7% the gap is {gap:100000,6.95,6,30}. Costs are one of the few things you can control. | Find the cost percentage of any fund you own or are considering.
+D | Read the fund sheet | Every fund publishes a fact sheet with its fees, holdings and past performance. Past performance does not predict the future. | Download one fund fact sheet. Write the expense ratio and the top three holdings.
+M | The star manager story | Studies of fund performance have repeatedly found that most actively managed funds do not beat their benchmark index over long periods, after fees. That is a pattern in data, not a promise. | Write why a story about a star investor is more exciting than a boring index.
+A | Diversification check | Diversification means not putting everything in one place. Count how many different companies, countries and asset types your investments cover. | Look at your own holdings and write how concentrated they are.
+S | Weekly check-in: did you learn something about costs this week that changes any decision?
+R | Do you prefer a simple plan you can stick to or a clever plan you will drop?
+
+# WEEK 29 | Retirement accounts | shield,steps,stack
+L | Free money, with rules | Many workplaces offer a retirement plan with an employer match: they add money when you contribute. If your employer matches 50% of your contributions up to 6% of a $60,000 salary, you put in {x:60000,0.06} and they add {x:60000*0.06,0.5}. Plans and rules differ by country. | Find out whether your workplace has a retirement plan and a match. Write the match rule.
+N | Skipping the match | Not taking a match means refusing part of your pay. On the example above, over 20 years of the combined {x:60000*0.06*1.5,1} a year at a hypothetical 7% return the pot reaches {fv:60000*0.06*1.5/12,7,20}. It is an example, not a forecast. | If there is a match, write the percentage you would need to contribute to get all of it.
+D | Learn the tax wrapper | Retirement accounts often come with tax benefits, such as paying tax now or paying it later. The details vary by country and change over time. | Write the name of the retirement account type in your country and one tax rule you have verified from an official source.
+M | The distant self | People tend to treat their future self like a stranger. Research on this suggests that picturing your older self makes saving feel more personal. | Write a short note to yourself at 65. What do you want to be able to say?
+A | Check the default | If you have a workplace plan, check what the default investment choice is and what percentage you are contributing. Many people never revisit it. | Log in and write the contribution rate and the fund you are in.
+S | Weekly check-in: what did you find out about your retirement options this week?
+R | What does a good old age look like for you, in one sentence?
+
+# WEEK 30 | Risk and ups and downs | gauge,curve,scale
+L | Volatility is the price | Investments that can grow can also fall. Volatility is how much the value jumps around. It is the price of long-term growth, and it is why you do not invest money you will need soon. | Draw a zigzag line that trends upward. Write beside it what each drop would feel like.
+N | Big drops happen | Stock markets have fallen by more than half in the past: US stocks dropped by more than 50% between 2007 and 2009. A $10,000 investment that falls 50% loses {usd:10000*0.5} and has {usd:10000*0.5} left. It then takes a 100% gain just to get back to even. | Write how much a 50% drop on your own investments would be in dollars.
+D | Know your risk comfort | Risk tolerance is how much loss you can live with without selling in a panic. Imagine your investments down 30% for a year. What would you do? Write the truth. | Write your honest reaction to a 30% fall. Do you buy, hold or sell?
+M | Recency bias | We overweight what happened recently. After good years, people think good years last. After a crash, they think it will not end. Both are guesses dressed as facts. | Write one belief about markets that is based only on the last few years.
+A | A written plan | A one-page plan with your goals, your mix of investments and what you will do in a crash stops you from improvising under stress. | Write a three-line plan: what I own, how often I add, what I do when it falls.
+S | Weekly check-in: how did you react to any market news this week?
+R | What helps you stay calm when things are uncertain?
+
+# WEEK 31 | Active and passive income | road,tree,pair
+L | Time for money, or money for money | Active income comes from your time and work. Passive income comes from assets you own, such as investments, rental property or a business that runs without you. Passive rarely starts passive: it usually takes capital or years of work to build. | Draw two columns: Active and Passive. List every income source you have in the right one.
+N | The passive number | A common rule of thumb says a portfolio can pay out about 4% a year. At that rate, {usd:2000} a month of passive income needs about {cap:2000} invested. That 4% figure comes from US research done in the 1990s and is a guideline, not a guarantee. | Write the monthly amount you would want from passive income. Multiply it by 12, then divide by 0.04.
+D | Build the road | Investing {usd:1000} a month at a hypothetical 8% a year would take about {mtt:1000,8,2000*12/0.04} years to reach that amount. Change the monthly amount or the target and the date moves. | Write your target and how long it would take at the monthly amount you could invest.
+M | Passive is a slogan | Many online promises call income passive when it is really work you do first. That does not make it bad. It only means plan for the work, not for a miracle. | Write one income stream you have seen advertised as passive and what work it might hide.
+A | Income audit | Add up each source of income and mark how many hours it takes. Dollars per hour is a useful honest number. | Write each source's monthly income and weekly hours. Divide.
+S | Weekly check-in: which of your income streams gave the most money per hour this week?
+R | If you could own one income stream that runs without you, what would it be?
+
+# WEEK 32 | Raises and negotiation | steps,bars,scale
+L | Your biggest asset is you | For most people, the largest financial lever in their 20s and 30s is income, not investment returns. A raise of 5% compounds across every future year of work. | Write your current pay and the pay you would like in two years.
+N | A raise compounds | A $60,000 salary growing 3% a year for 10 years reaches {lump:60000,3,10}. Without any increases it stays at $60,000, and with the cost of living rising, that is a pay cut over time. | Write what your pay would be after 10 years of 3% growth.
+D | Collect your evidence | A good case for a raise lists what you did, the results, and what similar roles pay in your market. Specific facts beat feelings. | Write five things you did in the past year with a number or result for each.
+M | The fear of asking | Many people avoid negotiating because it feels risky. Asking politely with evidence usually costs little. The common answer, even if no, can still open a path to a plan. | Write the script of the first two sentences you would say.
+A | Ask or plan | Schedule the conversation or write the date you will be ready to have it. | Put the date in your calendar and write it here.
+S | Weekly check-in: what did you do this week that you could use as evidence for your value?
+R | What is the skill you most want to be paid for in three years?
+
+# WEEK 33 | Side income | rain,bars,grid
+L | A second stream | A side income can speed up debt payoff and saving. Common starting places are skills you already have: tutoring, freelance work, repairs, design, writing. Most take time before they pay. | List five skills you have that someone else might pay for.
+N | Where it goes | An extra $1,000 a month from a side income, invested at a hypothetical 8% a year for 10 years, becomes {fv:1000,8,10}. You put in {put:1000,10}. It is only possible if the side income lasts and you save it. | Write what an extra $300 a month would do for you over a year.
+D | Test small | Test an idea for 30 days before you spend money on it. Find one person who would pay and ask. Real customers teach more than plans. | Write the idea, the person you will ask and the date.
+M | Honest odds | Most new businesses close. About one in five US businesses close in their first year and close to half by their fifth year, according to the US Bureau of Labor Statistics. A side income is a way to learn with less risk. | Write what you could lose and what you could learn from a 30-day test.
+A | Track the hours | Write down the hours and income of any side work. Tracking tells you whether the effort is worth it. | Start a simple log: date, hours, income. Fill in this week.
+S | Weekly check-in: how many hours and how many dollars did your side work take this week?
+R | Which side income would you do even if it paid less than you hope?
+
+# WEEK 34 | The value equation | scale,steps,curve
+L | Why some work pays more | One way to think about value: the bigger the result a customer wants and the more they believe you can deliver, the more they will pay. The less time and effort it takes them, the more they will pay. Raise the top, shrink the bottom. | Write the dream outcome your work gives someone, in one sentence.
+N | Hourly to value | A freelancer charging $30 an hour for 10 hours earns {x:30,10}. A fixed price of $500 for the same result also earns $500 but shifts the focus from time to outcome. If they get faster, the effective rate on 5 hours is {div:500,5} an hour. | Write how you could price one of your skills by result instead of by hour.
+D | Shrink the wait | People pay more for speed and simplicity. Look at what makes your work slow or hard for the customer and fix one thing. | Write one step that makes your service slow or confusing for the customer.
+M | Proof builds belief | People believe what they can see: examples, reviews, before-and-after, a clear guarantee you can honour. Never invent proof. | Write one honest piece of proof you could collect this month.
+A | Learn a skill | Skills that solve costly problems tend to pay more. Pick one skill that would raise your value and give it 30 minutes. | Schedule 30 minutes for the next three days on one skill.
+S | Weekly check-in: what did you improve about your skill or your offer this week?
+R | What is the biggest problem you can help people solve?
+
+# WEEK 35 | Assets and liabilities | pair,scale,stack
+L | The pocket test | One simple definition says an asset puts money in your pocket each month, and a liability takes money out. By that test, a home you live in is a liability while it costs you money each month, even if its value may rise. Not everyone defines it this way. | Sort everything you own into two columns: puts money in my pocket, takes money out.
+N | Cash flow, not value | A rental that earns $1,500 a month and costs $1,200 in loan, tax, repairs and insurance has a positive cash flow of {usd:1500-1200} a month. A car that costs $450 a month is a negative cash flow of {usd:450}. Cash flow is what your monthly bank balance feels. | Write the monthly cash flow of one thing you own, positive or negative.
+D | The expense trap | The rat race is a cycle: earn, spend more as you earn more, and need the next paycheck. You step out when your passive income covers your monthly expenses. | Write your monthly expenses and your current passive income. Divide the second by the first.
+M | Good and bad debt | Debt that buys something that pays you can make sense. Debt that buys something that only costs you rarely does. Both carry risk. The line is thinner than it looks. | Write one debt you have and decide honestly which side it is on.
+A | One asset step | Choose one small step toward owning something that pays you: an index fund purchase, a skill course, a first customer. | Write the step and the date you will take it.
+S | Weekly check-in: did any money go to something that pays you instead of something that costs you?
+R | What does being free of the paycheck cycle mean to you?
+
+# WEEK 36 | The rule of 100 | grid,bars,road
+L | Volume beats hope | The Rule of 100 is a business habit: do 100 primary actions a day for 100 days, such as 100 outreaches or 100 minutes of making content. It makes effort measurable. It does not promise a result. | Write the one action you would repeat 100 times a day if you were building income.
+N | Do the math | 100 outreaches a day for 100 days is {num:100*100} contacts. If 1% of them said yes, that is {num:100*100*0.01} customers. The 1% is a hypothetical number: your real rate could be higher, lower or zero. | Write a yes-rate that you think is fair, and calculate the result for your own plan.
+D | Track the funnel | Count how many people you contact, how many reply, how many say yes. Funnel numbers show where the work leaks. | Make a tally with three columns: contacted, replied, yes. Fill in today.
+M | The honest catch | These are methods for building active income first. Most new businesses do not last. The people who teach these methods often worked for years before it paid off. | Write what you would be willing to try for 100 days and what would tell you to stop.
+A | Start day one | A hundred days is a long time. Today is only one. | Do your first set of actions today and write the count.
+S | Weekly check-in: write your contacts, replies and results for the week.
+R | What did you learn from the work you did that numbers cannot show?
+
+# WEEK 37 | Leverage cuts both ways | scale,gauge,steps
+L | Borrowed money magnifies | Leverage means using borrowed money to control a larger asset. If the asset rises, your gain is multiplied. If it falls, your loss is too. It can build wealth and it can also wipe it out. | Write what leverage means in your own words, in one sentence.
+N | The 5x house | A $100,000 property bought with $20,000 down is {num:100000/20000}x leverage. A 20% price rise adds {x:100000,0.2} to your value, which doubles your $20,000. A 20% fall removes the same amount and wipes out your whole down payment, before costs and interest. | Write one leveraged purchase you have made or might make and what a 10% drop would do.
+D | Margin for error | Planners suggest keeping a cushion: cash reserves, a fixed-rate loan and payments you could afford even if income dropped. Write your own margin. | Write what would have to go wrong for a loan you hold to become unaffordable.
+M | Survivorship | We hear from the people whose leveraged bets worked. We do not hear from those who lost everything. The silent group is large. | Write a story you have heard where debt worked out and ask: what are the silent cases?
+A | Stress test | Take a loan you hold. What if your income dropped 20% for six months? Could you cover it? | Write the answer and one change that would make it safer.
+S | Weekly check-in: did any borrowing decision come up this week? What did you ask before you decided?
+R | Which matters more to you: faster growth or fewer sleepless nights?
+
+# WEEK 38 | Taxes, in brief | ring,scale,shield
+L | Marginal and average | In many countries, income is taxed in bands: each band has its own rate. Your marginal rate applies only to the last dollars you earn, not all of them. Rules differ by country, so check your own official source. | Look up your country's tax bands from an official government site. Write them here.
+N | An example | Suppose the first $10,000 is taxed at 10% and everything above it at 20%. On $30,000 of income that is {usd:10000*0.1+20000*0.2} of tax, an average rate of {pct:10000*0.1+20000*0.2,30000}, not 20%. This is a made-up example, not any real tax system. | Use the example to calculate the tax on $50,000.
+D | Know what is deductible | Tax rules can let you reduce what you owe through allowances, credits or contributions to some accounts. This is general information, not tax advice. | Write two ways to lower tax that your official source says are available to you.
+M | Raise myths | Many people fear a raise will push them into a bracket and reduce their take-home pay. In a banded system, only the extra income is taxed at the higher rate, so a raise should still raise your pay. | Write one tax belief you have and check it against an official source.
+A | Save your records | Receipts, statements and a simple folder make tax time shorter. A shoebox is a start. | Create one folder, paper or digital, for this year's tax records.
+S | Weekly check-in: what did you do this week to make the next tax season easier?
+R | What is one tax question you would ask a qualified professional?
+
+# WEEK 39 | Quarter review | grid,curve,road
+L | Three quarters done | Nine months of weekly effort is a real record. Update your Net Worth Snapshot, compare it with Days 1, 91 and 182, and notice the direction of travel. | Update the Net Worth Snapshot. Write the three-quarter change.
+N | The rate of change | If your net worth grew from $2,000 to $5,000 over nine months, that is {pct:3000,2000} growth. Your own growth might be smaller or larger. What matters is the direction and the habits behind it. | Write your growth in dollars and percent since Day 1.
+D | Habits that stuck | Look through your check-ins from Q3. Which routines are automatic? Which ones still need a reminder? | List three habits that are automatic and one that still needs a reminder.
+M | Compare with yourself | Compare yourself with last year's you, not with other people. Their life and your life are different games. | Write one way your money life is better than it was nine months ago.
+A | Prepare for the last quarter | The next quarter is about planning: goals, a freedom number and a system that keeps going without you. | Write the one outcome you want from the final 13 weeks.
+S | Weekly check-in: write three things you are proud of from this quarter.
+R | What will you do differently in the final quarter?

@@ -4,6 +4,9 @@ pillow>=10.0,<13
 openpyxl>=3.1,<4
 numpy>=1.26,<3
 opencv-python-headless>=4.9,<6
+# the Daily Planner PDF (faceless/product_planner.py): vector text with embedded fonts keeps 375 pages under Etsy's 20 MB; pypdf checks the result
+reportlab>=4.0,<6
+pypdf>=4.0,<7
 edge-tts>=7.0,<8
 pytest>=8.0,<10
 # connected apps (YouTube/TikTok/Drive...). On Debian Python, if pysher fails to build:
@@ -13,3 +16,5 @@ composio>=0.25,<1
 # typesafe-sdk>=0.7
 # optional, build-time only: the music library (python -m faceless music --build)
 # google-genai>=2.0
+# optional, local only (not installed on the CI runner): the Photopea cropper in faceless/planner_photopea.py falls back to Pillow without it
+# playwright>=1.40,<2
