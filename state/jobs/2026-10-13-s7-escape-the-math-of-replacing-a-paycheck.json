@@ -1,0 +1,88 @@
+{
+  "id": "2026-10-13-s7-escape-the-math-of-replacing-a-paycheck",
+  "pillar": "escape",
+  "topic": "The Math of Replacing a Paycheck with Dividend Assets",
+  "day": "2026-10-13",
+  "slot": 7,
+  "status": "published",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-13T12:12:34Z",
+      "words": 181
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-13T12:12:50Z",
+      "seconds": 68.82,
+      "provider": "elevenlabs"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-13T12:13:13Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-13T12:16:27Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-13T12:16:27Z",
+      "score": 96
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-13T12:16:28Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-10-13T12:16:35Z",
+      "local": "2026-10-14T15:00:00-04:00",
+      "youtube": "2026-10-14T15:00:00-04:00"
+    }
+  ],
+  "artifacts": {
+    "angle": "Calculate the exact capital needed in income-producing assets at a 4 percent return to fully cover living expenses.",
+    "title": "The Math to Replace Your Paycheck Forever",
+    "style": "cinematic",
+    "video": "/home/user/quiet-money/production/output/2026-10-13/2026-10-13-s7-escape-the-math-of-replacing-a-paycheck/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-13/2026-10-13-s7-escape-the-math-of-replacing-a-paycheck/cover.jpg",
+    "youtube": {
+      "video_id": "VdMYSYRX98Y",
+      "channel_id": "UC9B1QBr3_8Eulok8IdQbCqQ",
+      "privacy": "private",
+      "post_at": "2026-10-14T15:00:00-04:00",
+      "comment_posted": false,
+      "series": true
+    },
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-10-14/slot3-escape",
+        "post_at": "2026-10-14T15:00:00-04:00"
+      },
+      "youtube": {
+        "mode": "youtube",
+        "post_at": "2026-10-14T15:00:00-04:00",
+        "video_id": "VdMYSYRX98Y",
+        "channel_id": "UC9B1QBr3_8Eulok8IdQbCqQ",
+        "privacy": "private"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 96,
+    "passed": true
+  },
+  "cost": {
+    "tts:elevenlabs:chars": 1096
+  },
+  "notes": []
+}

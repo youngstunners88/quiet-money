@@ -1,0 +1,89 @@
+{
+  "title": "The 15-Minute Bank Move Paying You 5%",
+  "hook_text": "YOUR BANK IS KEEPING YOUR YIELD",
+  "beats": [
+    {
+      "say": "Your traditional bank pays you 0.01% interest while earning 5% on your money.",
+      "callout": "",
+      "visual": "A towering gray stone bank facade bathed in dim overcast light, macro tilt-shift angle, quiet moody cinematography."
+    },
+    {
+      "say": "You're quietly losing hundreds every year, but you can fix it in under 15 minutes today.",
+      "callout": "0.01% VS 5%",
+      "visual": "A silver wristwatch sitting beside a cup of black coffee on a polished dark oak table, subtle warm side lighting."
+    },
+    {
+      "say": "When cash sits in a standard account, inflation constantly erodes what your dollars can buy.",
+      "callout": "",
+      "visual": "An old brass desk clock ticking slowly on a dusty wooden surface, atmospheric volumetric light beams."
+    },
+    {
+      "say": "Fact is, $100 today is worth $55 in buying power after 20 years of 3% inflation.",
+      "callout": "$100 TO $55",
+      "visual": "A single physical paper bill resting quietly inside an open leather wallet on a dark counter."
+    },
+    {
+      "say": "But here's the part nobody mentions: moving your savings is fast, free, and completely automated.",
+      "callout": "",
+      "visual": "Silhouetted hands typing softly on a sleek modern laptop in a minimalist dimly lit room."
+    },
+    {
+      "say": "Step one. Open an FDIC-insured high-yield savings account online that pays around 5% yield.",
+      "callout": "STEP ONE",
+      "visual": "A modern glass office tower reflection captured at twilight, cool blue and gold lighting."
+    },
+    {
+      "say": "Verify there are no monthly service fees, no minimum balances, and no hidden account lockups.",
+      "callout": "",
+      "visual": "Close-up of a sleek unbranded black payment card lying beside a key on a slate desk."
+    },
+    {
+      "say": "Step two. Connect your primary checking account using the new bank's secure transfer link.",
+      "callout": "STEP TWO",
+      "visual": "An overhead shot of two clean metal keys connected by a simple leather ring on dark marble."
+    },
+    {
+      "say": "Step three. Transfer your core emergency cash, leaving just one month of expenses in checking.",
+      "callout": "STEP THREE",
+      "visual": "A dark glass jar containing folded currency sitting securely inside a dimly lit safe."
+    },
+    {
+      "say": "Set up an automatic monthly transfer of $100 or more to keep building that balance.",
+      "callout": "",
+      "visual": "A clean geometric marble sculpture representing continuous steady balance, cinematic backlighting."
+    },
+    {
+      "say": "That 15-minute setup transforms idle cash into monthly interest payments flowing straight to you.",
+      "callout": "15 MINUTES",
+      "visual": "A calm foggy horizon viewed through a large floor-to-ceiling glass window at dawn."
+    },
+    {
+      "say": "You don't need a raise to stop letting big institutions profit off your lazy cash.",
+      "callout": "",
+      "visual": "An empty brutalist concrete hallway with striking geometric architecture and long quiet shadows."
+    },
+    {
+      "say": "Start collecting your real interest rate today. Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "A solitary figure standing in silhouette before a massive panoramic window overlooking a quiet city skyline."
+    }
+  ],
+  "caption": "Stop leaving your emergency cash in a 0.01% account. Switch to a 5% high-yield yield in under 15 minutes.",
+  "description": "Traditional bank savings accounts pay virtually zero interest while inflation slowly eats your buying power. By shifting your emergency reserve to a high-yield account, you capture real interest without taking market risk.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#savings",
+    "#financialfreedom",
+    "#quietmoney"
+  ],
+  "first_comment": "What interest rate is your primary savings account paying right now?",
+  "facts": [
+    {
+      "claim": "$100 today is worth $55 in buying power after 20 years of 3% inflation",
+      "basis": "Fact sheet statement: $100 today is worth $55 in buying power after 20 years of 3% inflation"
+    }
+  ],
+  "source": "llm",
+  "pillar": "playbook"
+}

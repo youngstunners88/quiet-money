@@ -1,0 +1,66 @@
+{
+  "id": "2026-10-13-s6-playbook-switch-your-emergency-cash-to-a",
+  "pillar": "playbook",
+  "topic": "Switch your emergency cash to a high-yield account today",
+  "day": "2026-10-13",
+  "slot": 6,
+  "status": "held",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-13T12:05:01Z",
+      "words": 181
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-13T12:05:13Z",
+      "seconds": 62.644,
+      "provider": "elevenlabs"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-13T12:05:30Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-13T12:08:12Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-13T12:08:12Z",
+      "score": 97
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-13T12:08:13Z"
+    },
+    {
+      "from": "packaged",
+      "to": "held",
+      "ts": "2026-10-13T12:08:13Z"
+    }
+  ],
+  "artifacts": {
+    "angle": "Move cash from a traditional 0.01% savings account to a 5% yield in under 15 minutes.",
+    "title": "Stop Letting Your Bank Keep Your Interest",
+    "style": "cinematic",
+    "video": "/home/user/quiet-money/production/output/2026-10-13/2026-10-13-s6-playbook-switch-your-emergency-cash-to-a/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-13/2026-10-13-s6-playbook-switch-your-emergency-cash-to-a/cover.jpg"
+  },
+  "scores": {
+    "gauntlet": 97,
+    "passed": false
+  },
+  "cost": {
+    "tts:elevenlabs:chars": 1135
+  },
+  "notes": [
+    "held for review: not_semantic_duplicate"
+  ]
+}

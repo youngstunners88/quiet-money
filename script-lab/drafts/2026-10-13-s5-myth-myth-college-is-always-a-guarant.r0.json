@@ -1,0 +1,88 @@
+{
+  "title": "The College Degree ROI Trap",
+  "hook_text": "YOUR DEGREE MIGHT BE A LIABILITY",
+  "beats": [
+    {
+      "say": "Society tells you any college degree is a guaranteed financial asset. That's a lie.",
+      "callout": "",
+      "visual": "A cinematic shot of an old leather diploma case resting on a dark mahogany desk, dramatic overhead lighting, moody shadows."
+    },
+    {
+      "say": "Here's what they don't teach you. A degree without market demand functions as an expensive liability.",
+      "callout": "ASSET VS LIABILITY",
+      "visual": "Close up of a fountain pen signing a loan document on a rustic wooden table, blurred background, moody film grain."
+    },
+    {
+      "say": "Let's look at the math of opportunity cost. Spending 4 years out of the workforce destroys your early compounding.",
+      "callout": "",
+      "visual": "An old hourglass sitting on a concrete surface, sand slowly falling, sharp cinematic focus, dark tones."
+    },
+    {
+      "say": "If you invest just $200 a month at 8% a year starting at 25, you hit $698,202 by 65.",
+      "callout": "$698,202",
+      "visual": "A silhouette of a person walking away down a long industrial hallway, cool blue tones, minimalist aesthetic."
+    },
+    {
+      "say": "Wait until 35 with that same $200 a month, and you only reach $298,072.",
+      "callout": "$698,000 VS $298,000",
+      "visual": "A vintage pocket watch resting on a stack of grey stones, soft morning light filtering through a dusty window."
+    },
+    {
+      "say": "That 10-year delay costs you $400,130 in lost growth. That's the real price of a slow start.",
+      "callout": "$400,130 LOST",
+      "visual": "A solitary chess piece standing alone on a dark wooden board, cinematic side lighting, sharp focus."
+    },
+    {
+      "say": "But here's the part nobody mentions. Unfocused degrees pile on heavy debt without boosting your earning power.",
+      "callout": "",
+      "visual": "A hand holding a sleek black calculator on a minimal grey surface, soft shadows, overcast daylight."
+    },
+    {
+      "say": "If you borrow $6,000 at 24% APR and pay only the minimum, you stay trapped for 252 months.",
+      "callout": "252 MONTHS",
+      "visual": "Close up of heavy iron chains resting on weathered dark wood, dramatic shadows, moody documentary style."
+    },
+    {
+      "say": "You'll waste $10,887 in interest alone on that balance. That's money vanishing into thin air.",
+      "callout": "$10,887 WASTE",
+      "visual": "A single match burning out in the dark, bright orange flame casting a warm glow on rough stone."
+    },
+    {
+      "say": "The rule is simple. Treat education like a business. Demand a clear, measurable return on your capital.",
+      "callout": "STEP ONE",
+      "visual": "A blank white index card and a black pen on a clean oak desk, minimalist flat lay, even lighting."
+    },
+    {
+      "say": "Don't buy credentials blindly. Buy skills that the market pays for right now.",
+      "callout": "",
+      "visual": "Hands typing on a mechanical keyboard with blank dark keycaps, shallow depth of field, cool cinematic tint."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "A glowing desk lamp casting a warm circle of light on an otherwise dark, quiet room, calm atmosphere."
+    }
+  ],
+  "caption": "Your degree isn't an automatic ticket to wealth. Without targeted market demand, it's just an expensive liability. Protect your capital and check the math before you commit. #moneyrules #personalfinance #collegedebt #investing101 #financialliteracy",
+  "description": "Society treats any college degree as a guaranteed asset. But the reality of career ROI and opportunity cost reveals that degrees without targeted market demand function as expensive liabilities.",
+  "hashtags": [
+    "#moneyrules",
+    "#personalfinance",
+    "#collegedebt",
+    "#investing101",
+    "#financialliteracy"
+  ],
+  "first_comment": "What's a better investment: a traditional degree or learning a high-income skill from day one?",
+  "facts": [
+    {
+      "claim": "Starting at 25 vs 35 with $200/month at 8% until 65: $698,202 vs $298,072 (10 years late costs $400,130)",
+      "basis": "Fact sheet: Starting at 25 vs 35 with $200/month at 8% until 65: $698,202 vs $298,072 (10 years late costs $400,130)"
+    },
+    {
+      "claim": "$6,000 credit card at 24% APR paying only the minimum (1% + interest, min $25): 252 months (~21 years), $10,887 interest",
+      "basis": "Fact sheet: $6,000 credit card at 24% APR paying only the minimum (1% + interest, min $25): 252 months (~21 years), $10,887 interest"
+    }
+  ],
+  "source": "llm",
+  "pillar": "myth"
+}

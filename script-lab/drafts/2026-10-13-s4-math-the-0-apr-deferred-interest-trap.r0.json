@@ -1,0 +1,79 @@
+{
+  "title": "The 0% Interest Trap That Back-Charges Your Purchase",
+  "hook_text": "THAT 0% DEAL HAS A HIDDEN CATCH",
+  "beats": [
+    {
+      "say": "That store sign promises 0% interest for 12 months. It sounds like free money. It isn't.",
+      "callout": "",
+      "visual": "A wide cinematic shot of a retail store window at night, warm neon glow on a wet sidewalk, moody shadows."
+    },
+    {
+      "say": "Here is the trap they hide in the fine print. Miss the payoff deadline by one single day.",
+      "callout": "THE TRAP",
+      "visual": "Macro close-up of a fountain pen hovering over a stack of dark paper contracts, shallow depth of field, dramatic lighting."
+    },
+    {
+      "say": "You do not just pay interest on what is left. They back-charge it on the full original purchase price.",
+      "callout": "ORIGINAL PRICE",
+      "visual": "An old brass desk lamp casting harsh light across a wooden table, empty chair, no people visible."
+    },
+    {
+      "say": "Imagine buying a $6,000 credit card balance or a large appliance on deferred terms.",
+      "callout": "$6,000 BALANCE",
+      "visual": "Close-up of a heavy metal store security shutter rolling down, cold blue twilight tones, gritty texture."
+    },
+    {
+      "say": "You pay down most of it. Only $100 remains when the promo period ends.",
+      "callout": "$100 LEFT",
+      "visual": "A single brass key resting on a dark concrete block, minimalist framing, high contrast overhead light."
+    },
+    {
+      "say": "Because of that tiny leftover sum, retroactive interest triggers at rates like 24% on the entire original amount.",
+      "callout": "24% APR",
+      "visual": "A vintage mechanical calculator sitting on a dark oak desk, blurred background, moody film grain."
+    },
+    {
+      "say": "At 24%, debt doubles every 3 years according to the rule of 72. That mistake costs you dearly.",
+      "callout": "RULE OF 72",
+      "visual": "A heavy iron gear mechanism turning slowly in the dark, sparks flying in the background, cinematic side light."
+    },
+    {
+      "say": "Banks count on you slipping up. They bake this exact penalty into their profit model.",
+      "callout": "BANK PROFIT",
+      "visual": "A tall glass skyscraper fading into thick grey fog, low angle shot looking straight up, cold color palette."
+    },
+    {
+      "say": "Treat every promotional offer like a ticking clock. Set your own deadline two weeks early.",
+      "callout": "",
+      "visual": "An analog pocket watch ticking on a dark wooden surface, sharp focus on the metallic hands."
+    },
+    {
+      "say": "Never leave a balance to chance. Pay it off completely before the clock runs out.",
+      "callout": "",
+      "visual": "A pair of hands wearing dark fabric closing a heavy leather notebook, dramatic side illumination."
+    },
+    {
+      "say": "Master the math they hide from you. Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "A solitary silhouette walking down a long, dimly lit concrete hallway toward a distant soft light."
+    }
+  ],
+  "caption": "The fine print on deferred interest is designed to catch you off guard. Always read the terms before you sign. #moneypsychology #personalfinance #debtfree #smartmoney #financialliteracy",
+  "description": "Exposing how 0% deferred interest promotions back-charge interest on the full original purchase price if you miss the deadline by even one day.",
+  "hashtags": [
+    "#moneypsychology",
+    "#personalfinance",
+    "#debtfree",
+    "#smartmoney",
+    "#financialliteracy"
+  ],
+  "first_comment": "Have you ever fallen for a deferred interest promo? Drop your story below.",
+  "facts": [
+    {
+      "claim": "At 24% debt doubles every 3 years",
+      "basis": "Rule of 72 math: 72 divided by 24 equals 3 years."
+    }
+  ],
+  "source": "llm",
+  "pillar": "math"
+}

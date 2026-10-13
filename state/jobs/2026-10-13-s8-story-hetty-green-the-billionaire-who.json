@@ -1,0 +1,76 @@
+{
+  "id": "2026-10-13-s8-story-hetty-green-the-billionaire-who",
+  "pillar": "story",
+  "topic": "Hetty Green: The Billionaire Who Refused to Turn on the Heat",
+  "day": "2026-10-13",
+  "slot": 8,
+  "status": "published",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-13T12:20:51Z",
+      "words": 192
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-13T12:21:07Z",
+      "seconds": 68.402,
+      "provider": "elevenlabs"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-13T12:21:30Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-13T12:24:52Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-13T12:24:52Z",
+      "score": 100
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-13T12:24:53Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-10-13T12:24:56Z",
+      "local": "2026-10-14T18:30:00-04:00",
+      "youtube": null
+    }
+  ],
+  "artifacts": {
+    "angle": "The psychological danger of wealth hoarding: money is an instrument for security and utility, but without healthy deployment, it becomes a prison.",
+    "title": "The $100M Fortune That Froze Its Owner",
+    "style": "cinematic",
+    "video": "/home/user/quiet-money/production/output/2026-10-13/2026-10-13-s8-story-hetty-green-the-billionaire-who/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-13/2026-10-13-s8-story-hetty-green-the-billionaire-who/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-10-14/slot4-story",
+        "post_at": "2026-10-14T18:30:00-04:00"
+      },
+      "youtube": {
+        "skipped": "YouTube refused the upload session (HTTP 429): quota or rate limit; it resets at midnight Pacific"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 100,
+    "passed": true
+  },
+  "cost": {
+    "tts:elevenlabs:chars": 1177
+  },
+  "notes": []
+}
