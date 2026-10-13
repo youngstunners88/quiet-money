@@ -4110,3 +4110,27 @@
 {"ts": "2026-10-12T17:09:47Z", "t": 1791824987.874, "actor": "engine", "type": "COMPOSIO_SESSION", "user": "quiet-money-studio", "session_hash": "608d59a6"}
 {"ts": "2026-10-12T17:09:48Z", "t": 1791824988.798, "actor": "engine", "type": "COMPOSIO_EXECUTE", "tool": "YOUTUBE_LIST_CHANNELS", "ok": true, "log_id": "log_FBeAlzClaoGg", "job": "song-the-quiet-kitchen"}
 {"ts": "2026-10-12T21:52:01Z", "t": 1791841921.069, "actor": "engine", "type": "AEO_TRACK", "probes": 16, "ok": 0, "mentioned": 0}
+{"ts": "2026-10-13T07:22:48Z", "t": 1791876168.866, "actor": "engine", "type": "COMPOSIO_SESSION", "user": "quiet-money-studio", "session_hash": "f56e4a68"}
+{"ts": "2026-10-13T07:22:50Z", "t": 1791876170.231, "actor": "engine", "type": "COMPOSIO_EXECUTE", "tool": "YOUTUBE_LIST_CHANNELS", "ok": true, "log_id": "log_dhfKmWcXNh6C", "job": "2026-10-12-s6-myth-myth-you-need-a-high-income-to-s"}
+{"ts": "2026-10-13T07:22:53Z", "t": 1791876173.471, "actor": "engine", "type": "YOUTUBE_UPLOAD", "video_id": "A4hZ3AX6tGQ", "channel": "UC9B1QBr3_8Eulok8IdQbCqQ", "bytes": 13525618, "job": "2026-10-12-s6-myth-myth-you-need-a-high-income-to-s"}
+{"ts": "2026-10-13T07:22:54Z", "t": 1791876174.557, "actor": "engine", "type": "YOUTUBE_API", "path": "playlists", "method": "GET", "status": 200}
+{"ts": "2026-10-13T07:22:55Z", "t": 1791876175.772, "actor": "engine", "type": "YOUTUBE_API", "path": "playlistItems", "method": "POST", "status": 200}
+{"ts": "2026-10-13T07:22:55Z", "t": 1791876175.774, "actor": "engine", "type": "PUBLISH_SCHEDULED", "job": "2026-10-12-s6-myth-myth-you-need-a-high-income-to-s", "provider": "youtube", "when": "2026-10-13T11:30:00-04:00", "video_id": "A4hZ3AX6tGQ"}
+{"ts": "2026-10-13T07:23:03Z", "t": 1791876183.112, "actor": "engine", "type": "COMPOSIO_SESSION", "user": "quiet-money-studio", "session_hash": "66ec8351"}
+{"ts": "2026-10-13T07:23:04Z", "t": 1791876184.318, "actor": "engine", "type": "COMPOSIO_EXECUTE", "tool": "YOUTUBE_LIST_CHANNELS", "ok": true, "log_id": "log_W6qusYm50UNL", "job": "2026-10-12-s7-playbook-kill-a-hidden-recurring-bank-fee"}
+{"ts": "2026-10-13T07:23:06Z", "t": 1791876186.802, "actor": "engine", "type": "YOUTUBE_UPLOAD", "video_id": "kEJJo40AaPg", "channel": "UC9B1QBr3_8Eulok8IdQbCqQ", "bytes": 10339912, "job": "2026-10-12-s7-playbook-kill-a-hidden-recurring-bank-fee"}
+{"ts": "2026-10-13T07:23:07Z", "t": 1791876187.919, "actor": "engine", "type": "YOUTUBE_API", "path": "playlists", "method": "GET", "status": 200}
+{"ts": "2026-10-13T07:23:09Z", "t": 1791876189.237, "actor": "engine", "type": "YOUTUBE_API", "path": "playlistItems", "method": "POST", "status": 200}
+{"ts": "2026-10-13T07:23:09Z", "t": 1791876189.239, "actor": "engine", "type": "PUBLISH_SCHEDULED", "job": "2026-10-12-s7-playbook-kill-a-hidden-recurring-bank-fee", "provider": "youtube", "when": "2026-10-13T15:00:00-04:00", "video_id": "kEJJo40AaPg"}
+{"ts": "2026-10-13T07:23:17Z", "t": 1791876197.587, "actor": "engine", "type": "COMPOSIO_SESSION", "user": "quiet-money-studio", "session_hash": "1e7b512b"}
+{"ts": "2026-10-13T07:23:18Z", "t": 1791876198.681, "actor": "engine", "type": "COMPOSIO_EXECUTE", "tool": "YOUTUBE_LIST_CHANNELS", "ok": true, "log_id": "log_mCwr2MtYCMTl", "job": "2026-10-08-s4-story-the-latte-factor-debate-does-ski"}
+{"ts": "2026-10-13T07:23:23Z", "t": 1791876203.378, "actor": "engine", "type": "YOUTUBE_UPLOAD", "video_id": "q-GxPjvFjBU", "channel": "UC9B1QBr3_8Eulok8IdQbCqQ", "bytes": 21549590, "job": "2026-10-08-s4-story-the-latte-factor-debate-does-ski"}
+{"ts": "2026-10-13T07:23:24Z", "t": 1791876204.336, "actor": "engine", "type": "YOUTUBE_API", "path": "playlists", "method": "GET", "status": 200}
+{"ts": "2026-10-13T07:23:25Z", "t": 1791876205.531, "actor": "engine", "type": "YOUTUBE_API", "path": "playlistItems", "method": "POST", "status": 200}
+{"ts": "2026-10-13T07:23:25Z", "t": 1791876205.533, "actor": "engine", "type": "PUBLISH_SCHEDULED", "job": "2026-10-08-s4-story-the-latte-factor-debate-does-ski", "provider": "youtube", "when": "2026-10-13T21:00:00-04:00", "video_id": "q-GxPjvFjBU"}
+{"ts": "2026-10-13T07:23:26Z", "t": 1791876206.837, "actor": "engine", "type": "COMPOSIO_EXECUTE", "tool": "YOUTUBE_LIST_CHANNELS", "ok": true, "log_id": "log_pTdZ8OKJKB-H", "job": "2026-10-07-s5-math-the-real-cost-of-a-15-subscripti"}
+{"ts": "2026-10-13T07:23:30Z", "t": 1791876210.713, "actor": "engine", "type": "YOUTUBE_UPLOAD", "video_id": "WXcOQUYvuHc", "channel": "UC9B1QBr3_8Eulok8IdQbCqQ", "bytes": 9176893, "job": "2026-10-07-s5-math-the-real-cost-of-a-15-subscripti"}
+{"ts": "2026-10-13T07:23:31Z", "t": 1791876211.999, "actor": "engine", "type": "YOUTUBE_API", "path": "playlistItems", "method": "POST", "status": 200}
+{"ts": "2026-10-13T07:23:32Z", "t": 1791876212.001, "actor": "engine", "type": "PUBLISH_SCHEDULED", "job": "2026-10-07-s5-math-the-real-cost-of-a-15-subscripti", "provider": "youtube", "when": "2026-10-13T07:30:00-04:00", "video_id": "WXcOQUYvuHc"}
+{"ts": "2026-10-13T07:23:37Z", "t": 1791876217.737, "actor": "engine", "type": "COMPOSIO_SESSION", "user": "quiet-money-studio", "session_hash": "ce5799f9"}
+{"ts": "2026-10-13T07:23:38Z", "t": 1791876218.66, "actor": "engine", "type": "YOUTUBE_API", "path": "videos", "method": "GET", "status": 200}
