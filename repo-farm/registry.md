@@ -239,13 +239,13 @@ Each row was read from the project's own README, manifest, licence file or regis
 | Tool | Stage | Why |
 |---|---|---|
 | GitHub MCP server (github/github-mcp-server) | package | MIT. |
+| Monid CLI and SKILL (monid-ai/monid) | ideate | Owner said yes on 2026-10-13: it is needed to find winning solutions and marketing angles. |
 | tinyfish (PyPI) | ideate | Official SDK for the TinyFish service we already use through the connected MCP; key works. |
 
 ### On trial
 
 | Tool | Stage | Why |
 |---|---|---|
-| Monid CLI and SKILL (monid-ai/monid) | ideate | MIT. |
 | Etsy official MCP (mcp.api.etsycloud.com/mcp) | sell | Hosted by Etsy (etsycloud.com is Etsy's). |
 
 ### Parked (named condition)

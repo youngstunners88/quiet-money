@@ -596,6 +596,49 @@ def cmd_skills(args) -> int:
     return 1 if bad else 0
 
 
+def cmd_context(args) -> int:
+    """Is the Markdown map (CLAUDE.md routing, workspace CONTEXT.md files, skills) still true? Reads only; never edits."""
+    from faceless import contextlint
+    res = contextlint.check()
+    print(contextlint.report(res))
+    return 1 if any(l == "fail" for l, _ in res) else 0
+
+
+def cmd_monid(args) -> int:
+    """The Monid desk: discover, inspect, price and run pay-per-use data endpoints under the studio's spend limits (dry run unless --yes)."""
+    from faceless import monid, safety
+    act, rest = args.action, args.rest
+    if act == "find" and rest:
+        for r in monid.discover(" ".join(rest), args.limit):
+            p = r.get("price") or {}
+            print(f"{r['provider']}{r['endpoint']}  {p.get('type')} ${monid._num(p.get('amount', p.get('value')))}\n    {str(r.get('description'))[:110]}")
+        return 0
+    if act == "inspect" and len(rest) == 2:
+        i = monid.inspect(rest[0], rest[1])
+        print(json.dumps({k: i.get(k) for k in ("id", "description", "price", "inputSchema", "notes")}, indent=1)[:4000])
+        return 0
+    if act == "run" and len(rest) == 2:
+        payload = json.loads(args.input or "{}")
+        est = monid.estimate(monid.inspect(rest[0], rest[1]), args.results)
+        print(f"{rest[0]}{rest[1]}: worst case {'unknown (pass --results N)' if est is None else f'${est:.4f}'}; spent today ${ledger.usd_total():.2f} of the ${safety.ceiling():.2f} ceiling")
+        if not args.yes:
+            print("dry run: nothing was spent. Add --yes to run it.")
+            return 0
+        out = monid.run(rest[0], rest[1], payload, results=args.results, max_usd=args.max_usd, label=args.label)
+        print(f"done: ${out['usd']:.4f}, wallet {out['balance']}\n  file: {out['file']}\n  output: {json.dumps(out['output'])[:1200]}")
+        return 0
+    if act == "result" and rest:
+        print(json.dumps(monid.result(rest[0]), indent=1, default=str)[:3000])
+        return 0
+    if act == "balance":
+        bal = monid.balance()
+        print("no key or unreachable" if bal is None else f"wallet ${bal:.2f}")
+        print(f"desk used ${ledger.used('monid', monid.UNIT):.2f} of ${float(monid.cfg()['daily_usd']):.2f} today")
+        return 0
+    print("usage: monid find <words> | inspect <provider> <endpoint> | run <provider> <endpoint> --input '{...}' [--results N] [--yes] | result <id> | balance")
+    return 1
+
+
 def cmd_listing(args) -> int:
     """Etsy and Gumroad listing packs: build (images, video, copy, checklist) or check (the gauntlet only)."""
     from faceless import listing
@@ -999,6 +1042,16 @@ def main(argv: list[str] | None = None) -> int:
     va = sub.add_parser("variety", help="sameness audit of the last N videos (YouTube's inauthentic-content risk); writes analytics/variety.md")
     va.add_argument("-n", type=int, default=20)
     va.set_defaults(fn=cmd_variety)
+    mo = sub.add_parser("monid", help="Monid desk (pay-per-use data endpoints): find <words> | inspect <provider> <endpoint> | run <provider> <endpoint> --input JSON [--yes] | result <id> | balance")
+    mo.add_argument("action", choices=["find", "inspect", "run", "result", "balance"])
+    mo.add_argument("rest", nargs="*")
+    mo.add_argument("--input", help="JSON body for run")
+    mo.add_argument("--results", type=int, help="how many results a per-result endpoint may return (sets the worst-case price)")
+    mo.add_argument("--max-usd", type=float, dest="max_usd", help="raise the per-call limit for this call")
+    mo.add_argument("--limit", type=int, default=8)
+    mo.add_argument("--label", help="name for the saved result")
+    mo.add_argument("--yes", action="store_true", help="actually run and spend")
+    mo.set_defaults(fn=cmd_monid)
     mp = sub.add_parser("muapi", help="Muapi desk: catalog | find <words> | inspect <model> | estimate <model> | run <model> [--yes] | result <id> | balance | snapshot | doctor")
     mp.add_argument("action")
     mp.add_argument("rest", nargs="*")
@@ -1017,6 +1070,7 @@ def main(argv: list[str] | None = None) -> int:
     pz.add_argument("reason", nargs="*")
     pz.add_argument("--resume", action="store_true")
     pz.set_defaults(fn=cmd_pause)
+    sub.add_parser("context", help="check CLAUDE.md routing, the workspace CONTEXT.md files and the skills still agree (reads only)").set_defaults(fn=cmd_context)
     sub.add_parser("skills", help="lint every skill (format rules from Anthropic's skill guide, plus: every command and file a skill names must exist)").set_defaults(fn=cmd_skills)
     ls = sub.add_parser("listing", help="Etsy and Gumroad listing packs: `listing build [product|all]` makes images, video, copy and a checklist; `listing check` runs the listing gauntlet")
     ls.add_argument("action", choices=["build", "check"])

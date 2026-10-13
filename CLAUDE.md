@@ -64,6 +64,14 @@ humans set strategy, connect accounts, and review held videos.
 | Any media or data job beyond the engine's own (mockups, upscales, voice samples, OCR, search volume, 750+ models) | `/faceless/muapi.py` | `.claude/skills/muapi` | `muapi` |
 | Etsy and Gumroad listings (pictures, video, copy, checklist, drafts) | `/faceless/listing.py`, `shop.py` | `channel/shop/CHECKLIST` per product | `faceless-empire` |
 | Ship: connect Etsy and Gumroad, create drafts, go live only with the owner's approval of the price (MCP `quiet-shop`) | `/faceless/shop.py`, `etsy.py`, `shop_mcp.py` | `.mcp.json`, studio.toml `[shop]` | `faceless-ship` |
+| Songs: Suno packs, cover prompts, `songpost` | `/faceless/songs.py` | `python -m faceless songs` | `faceless-songs`, `faceless-song-art` |
+| The weekly host (face and voice kept identical) | `/faceless/host.py` | `python -m faceless host` | `faceless-host` |
+| Which key works, what is left on it, which tool a job should use | `/faceless/keys.py` | `python -m faceless keys` | `faceless-keys` |
+| Ledger look (second visual style) and the motion stack | `/faceless/pipeline` | `.claude/skills/faceless-motion-stack` | `faceless-ledger`, `faceless-motion-stack` |
+| A call failed, a result vanished, or a tool is blocked | `/` | `.claude/skills/faceless-unblock` | `faceless-unblock` |
+| YouTube channel page, titles, tags, verify uploads | `/distribution` | `python -m faceless yt-verify` | `faceless-youtube-seo` |
+| What is winning on a platform, hashtag size, competitor and market data, marketing angles (Monid, capped) | `/faceless/monid.py` | `python -m faceless monid find "<words>"` | `faceless-monid` |
+| Keep CLAUDE.md, the workspace CONTEXT.md files and the skills true after a build or decision (the coach's structure) | `/` | `python -m faceless context` | `faceless-context` |
 | Is the operation healthy? Something failed, stalled or overspent | `/` | `OPERATIONS.md`, `.claude/skills/faceless-daily/references/failure-playbook.md` | `faceless-daily` |
 | Evaluate an outside tool, repo or list of links safely | `/repo-farm` | `.claude/skills/faceless-intake` | `faceless-intake` |
 | The call to action on every video, the link-in-bio hub page, UTM and the offer ledger | `/faceless/offer.py` | `.claude/skills/faceless-offer/references/link-rules.md` | `faceless-offer` |
@@ -95,11 +103,13 @@ python -m faceless brandkit "<Name>" --palette mint   # Fiverr brand-kit order (
 python -m faceless preflight                   # can today's run succeed? traffic lights + the fix for each (run first)
 python -m faceless watchdog                    # is the operation alive? (also runs every 6 h on GitHub and opens an Ops alert issue)
 python -m faceless pause "reason"               # kill switch: stops paid calls, posting, daily and make (--resume to undo)
+python -m faceless monid find "hashtag"             # the Monid data desk: find, inspect, run (price first), balance; $1/day cap, results in analytics/monid/
 python -m faceless muapi find "product mockup"  # the Muapi desk: find, inspect, estimate, run (price first), balance, doctor
 python -m faceless offer                       # coverage, mix, the three profile URLs; `offer --batch today` makes sure every passed video has its offer pack and row
 python -m faceless distribute                  # every distribution rail with its state and the owner's next step (`--live` checks the hub page)
 python -m faceless listing build all           # Etsy + Gumroad packs; `listing check` runs the listing gauntlet; `shop status|plan|push`
 python -m faceless skills                      # lint every skill against Anthropic's guide
+python -m faceless context                     # do CLAUDE.md routing, the workspace CONTEXT.md files and the skills still agree? (reads only)
 python -m faceless ci                          # CI as GitHub sees it (clean export, no keys): run before every push of code
 python -m pytest -q tests                      # engine tests
 ```

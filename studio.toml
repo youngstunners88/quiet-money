@@ -112,6 +112,10 @@ paused = false                               # or create state/PAUSE ("python -m
 daily_usd = 2.0                              # all desk runs together per UTC day
 per_call_usd = 0.5                           # one run above this is refused unless the caller raises it for that call
 
+[monid]                                      # the data desk (faceless/monid.py): social, search and product data to find what wins; owner approved 2026-10-13
+daily_usd = 1.0                              # all desk runs together per UTC day
+per_call_usd = 0.25                          # one run whose worst case is above this is refused unless the caller raises it for that call
+
 [host]                                       # the recurring front man (faceless/host.py): one face, one voice, once a week
 enabled = false                              # OFF until the owner has approved the intro video; then one clip a week
 weekday = 0                                  # Monday

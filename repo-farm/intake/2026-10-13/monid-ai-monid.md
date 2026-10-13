@@ -56,8 +56,8 @@ above is described in: how it is
 
 ## Verdict (a person or the review step fills this in)
 
-- [ ] **USE**: wire into the engine now (behind a provider interface, with a test)
-- [x] **TRIAL**: try in a sandbox copy with throwaway credentials, then decide
+- [x] **USE**: wire into the engine now (behind a provider interface, with a test)
+- [ ] **TRIAL**: try in a sandbox copy with throwaway credentials, then decide
 - [ ] **PARK**: useful later; name the phase
 - [ ] **KILL**: not useful, or not safe; record why so nobody re-evaluates it
 
@@ -65,10 +65,10 @@ Questions to answer before the box is ticked: which pipeline stage does it serve
 
 ## Decision (2026-10-13)
 
-**TRIAL**, pipeline stage: ideate.
+**USE**, pipeline stage: ideate.
 
-MIT. Pay-per-use data endpoints; `MONID_API_KEY` works with $9.71 balance. Already recorded 2026-10-08 as a marketplace; the CLI itself is a binary installer so the desk would call its HTTP API directly, like Muapi, behind a cap.
+Owner said yes on 2026-10-13: it is needed to find winning solutions and marketing angles. Wired as a capped desk (faceless/monid.py, [monid] $1/day, $0.25/call) that calls the HTTP API directly; the npm CLI is not installed. First live run: mrscraper /tiktok/hashtag for $0.01 returned #moneytok (43.6B views). Key works, wallet $9.71.
 
 **Worth taking:** Endpoint catalogue for search-volume and social-search data.
 
-**Only the owner can:** Say go to wire a capped desk.
+**Only the owner can:** None. Top up the wallet when it runs low.

@@ -60,11 +60,11 @@
   {
    "id": "monid-ai-monid",
    "name": "Monid CLI and SKILL (monid-ai/monid)",
-   "verdict": "TRIAL",
+   "verdict": "USE",
    "stage": "ideate",
-   "why": "MIT. Pay-per-use data endpoints; `MONID_API_KEY` works with $9.71 balance. Already recorded 2026-10-08 as a marketplace; the CLI itself is a binary installer so the desk would call its HTTP API directly, like Muapi, behind a cap.",
+   "why": "Owner said yes on 2026-10-13: it is needed to find winning solutions and marketing angles. Wired as a capped desk (faceless/monid.py, [monid] $1/day, $0.25/call) that calls the HTTP API directly; the npm CLI is not installed. First live run: mrscraper /tiktok/hashtag for $0.01 returned #moneytok (43.6B views). Key works, wallet $9.71.",
    "steal": "Endpoint catalogue for search-volume and social-search data.",
-   "owner": "Say go to wire a capped desk."
+   "owner": "None. Top up the wallet when it runs low."
   },
   {
    "id": "monid-ai-plugins",
