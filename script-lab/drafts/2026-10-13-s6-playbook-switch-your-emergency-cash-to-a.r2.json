@@ -1,0 +1,84 @@
+{
+  "title": "Stop Letting Your Bank Keep Your Interest",
+  "hook_text": "YOUR BANK KEEPS YOUR INTEREST",
+  "beats": [
+    {
+      "say": "Leaving $10,000 in a traditional bank pays you exactly one single dollar a year.",
+      "callout": "",
+      "visual": "A sleek dark bank vault door standing slightly ajar in a moody, dimly lit concrete hall, cinematic atmospheric lighting, slow track in."
+    },
+    {
+      "say": "That's not real safety. That's a silent financial leak you can plug this afternoon.",
+      "callout": "",
+      "visual": "Close-up of a person's hands resting calmly on a dark wooden desk beside an analog metal desk clock, dramatic side lighting."
+    },
+    {
+      "say": "Remember this math: $100 today is worth $55 in buying power after 20 years of 3% inflation.",
+      "callout": "$100 VS $55",
+      "visual": "A single crisp banknote resting on a dark slate surface, fading into heavy shadow on one side, macro lens, shallow depth of field."
+    },
+    {
+      "say": "Traditional institutions loan your deposits out at high rates and pay you back pennies.",
+      "callout": "",
+      "visual": "Low-angle exterior view of towering limestone financial district pillars at dusk, cool blue tone, imposing architectural scale."
+    },
+    {
+      "say": "Here's the part nobody mentions: reclaiming that yield takes under 15 minutes on your phone.",
+      "callout": "",
+      "visual": "Silhouette of a person seated by an open window in an apartment, holding a dark smartphone turned away from the camera, warm golden backlight."
+    },
+    {
+      "say": "Step one. Open your mobile browser and look up top-rated, FDIC-insured online banks.",
+      "callout": "STEP ONE",
+      "visual": "Over-the-shoulder view of hands holding a modern phone, the screen angled sharply away so no text is readable, clean modern interior."
+    },
+    {
+      "say": "Look for competitive high-yield accounts that typically pay 10 to 40 times the national average with zero monthly fees.",
+      "callout": "",
+      "visual": "A neat stack of polished metallic brass tokens arranged in a sharp row on matte black stone, soft directional spotlight."
+    },
+    {
+      "say": "Step two. Connect your primary checking account securely using your standard routing and account numbers.",
+      "callout": "STEP TWO",
+      "visual": "A clean leather wallet lying next to a metal fountain pen on an uncluttered slate work table, minimalist high-end composition."
+    },
+    {
+      "say": "Send a five-dollar test transfer first to confirm the digital connection works without any friction.",
+      "callout": "",
+      "visual": "Close-up of fingertips gently tapping a dark ceramic coffee mug beside an open laptop viewed strictly from the matte metal back lid."
+    },
+    {
+      "say": "Step three. Move your emergency cash balance over, keeping only immediate monthly bills behind.",
+      "callout": "STEP THREE",
+      "visual": "A sturdy steel lockbox sitting open on a polished walnut shelf, soft warm light revealing an empty velvet interior."
+    },
+    {
+      "say": "Your rainy-day fund stays fully accessible, but your idle cash finally begins working for you.",
+      "callout": "COMPOUND YOUR CASH",
+      "visual": "A glass of clear water resting on a windowsill during a gentle rain, calm natural lighting, tranquil mood."
+    },
+    {
+      "say": "Follow for the money rules school never taught you, and stop letting banks keep your interest.",
+      "callout": "",
+      "visual": "Rear silhouette of a person standing quietly in a contemporary minimalist loft overlooking a sprawling city skyline at sunrise."
+    }
+  ],
+  "caption": "Most big banks pay 0.01% on your hard-earned emergency fund. Here is how to fix it in 15 minutes.",
+  "description": "Leaving emergency savings in a standard account exposes your cash to inflation while earning virtually nothing. Moving your savings to an FDIC-insured high-yield account puts compound growth back on your side in three simple steps.",
+  "hashtags": [
+    "#personalfinance",
+    "#moneytips",
+    "#savings",
+    "#quietmoney",
+    "#financialliteracy"
+  ],
+  "first_comment": "What interest rate is your emergency fund currently earning?",
+  "facts": [
+    {
+      "claim": "$100 today is worth $55 in buying power after 20 years of 3% inflation",
+      "basis": "Fact Sheet: $100 today is worth $55 in buying power after 20 years of 3% inflation"
+    }
+  ],
+  "source": "llm",
+  "pillar": "playbook"
+}

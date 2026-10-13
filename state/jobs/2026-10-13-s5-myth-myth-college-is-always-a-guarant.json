@@ -1,0 +1,88 @@
+{
+  "id": "2026-10-13-s5-myth-myth-college-is-always-a-guarant",
+  "pillar": "myth",
+  "topic": "Myth: College is always a guaranteed financial investment",
+  "day": "2026-10-13",
+  "slot": 5,
+  "status": "published",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-13T11:51:37Z",
+      "words": 188
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-13T11:51:48Z",
+      "seconds": 65.383,
+      "provider": "elevenlabs"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-13T11:52:43Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-13T11:55:21Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-13T11:55:21Z",
+      "score": 97
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-13T11:55:22Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-10-13T11:55:30Z",
+      "local": "2026-10-14T07:30:00-04:00",
+      "youtube": "2026-10-14T07:30:00-04:00"
+    }
+  ],
+  "artifacts": {
+    "angle": "Society treats any degree as a guaranteed asset, but the reality of career ROI and opportunity cost reveals that degrees without targeted market demand function as expensive liabilities.",
+    "title": "The College Degree ROI Trap",
+    "style": "cinematic",
+    "video": "/home/user/quiet-money/production/output/2026-10-13/2026-10-13-s5-myth-myth-college-is-always-a-guarant/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-13/2026-10-13-s5-myth-myth-college-is-always-a-guarant/cover.jpg",
+    "youtube": {
+      "video_id": "cfF5bJzOpLM",
+      "channel_id": "UC9B1QBr3_8Eulok8IdQbCqQ",
+      "privacy": "private",
+      "post_at": "2026-10-14T07:30:00-04:00",
+      "comment_posted": false,
+      "series": true
+    },
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-10-14/slot1-myth",
+        "post_at": "2026-10-14T07:30:00-04:00"
+      },
+      "youtube": {
+        "mode": "youtube",
+        "post_at": "2026-10-14T07:30:00-04:00",
+        "video_id": "cfF5bJzOpLM",
+        "channel_id": "UC9B1QBr3_8Eulok8IdQbCqQ",
+        "privacy": "private"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 97,
+    "passed": true
+  },
+  "cost": {
+    "tts:elevenlabs:chars": 1080
+  },
+  "notes": []
+}

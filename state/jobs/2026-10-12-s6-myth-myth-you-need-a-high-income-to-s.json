@@ -61,8 +61,20 @@
         "post_at": "2026-10-13T11:30:00-04:00"
       },
       "youtube": {
-        "skipped": "YouTube refused the upload session (HTTP 429): quota or rate limit; it resets at midnight Pacific"
+        "mode": "youtube",
+        "post_at": "2026-10-13T11:30:00-04:00",
+        "video_id": "A4hZ3AX6tGQ",
+        "channel_id": "UC9B1QBr3_8Eulok8IdQbCqQ",
+        "privacy": "private"
       }
+    },
+    "youtube": {
+      "video_id": "A4hZ3AX6tGQ",
+      "channel_id": "UC9B1QBr3_8Eulok8IdQbCqQ",
+      "privacy": "private",
+      "post_at": "2026-10-13T11:30:00-04:00",
+      "comment_posted": false,
+      "series": true
     }
   },
   "scores": {

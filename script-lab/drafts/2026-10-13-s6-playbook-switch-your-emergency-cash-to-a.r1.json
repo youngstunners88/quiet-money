@@ -1,0 +1,83 @@
+{
+  "title": "The 0.01% Savings Account Mistake",
+  "hook_text": "YOUR BANK IS ROBBING YOU DAILY",
+  "beats": [
+    {
+      "say": "Your emergency cash sits in an old account paying 0.01% interest.",
+      "callout": "",
+      "visual": "A sleek modern metal bank vault door closed tight in dim moody lighting, shot from a low angle."
+    },
+    {
+      "say": "That traditional bank keeps the rest while you lose money to inflation every single day.",
+      "callout": "",
+      "visual": "A minimalist white ceramic cup sitting on a dark concrete table near a window with morning rain."
+    },
+    {
+      "say": "You can fix this leak in under 15 minutes right from your phone.",
+      "callout": "",
+      "visual": "A dark wooden desk with a black leather wallet and a stainless steel pen, top-down view."
+    },
+    {
+      "say": "Step one. Open a browser and search for FDIC-insured high-yield savings accounts online.",
+      "callout": "STEP ONE",
+      "visual": "A blurred backlit laptop keyboard glowing softly in a dark home office."
+    },
+    {
+      "say": "Compare rates offering near 5% annual yield with zero monthly fees attached.",
+      "callout": "0.01% VS 5%",
+      "visual": "A close-up of a brass mechanical scale balancing two stacks of plain metal tokens."
+    },
+    {
+      "say": "Step two. Link your main checking account to the new online platform securely.",
+      "callout": "STEP TWO",
+      "visual": "A pair of hands typing on a dark mechanical keyboard with soft amber backlight."
+    },
+    {
+      "say": "Step three. Transfer your emergency fund over and set up an automatic weekly deposit.",
+      "callout": "STEP THREE",
+      "visual": "A clean glass of water catching sunlight on a polished oak surface."
+    },
+    {
+      "say": "Watch out for hidden minimum balance rules before you commit your funds anywhere.",
+      "callout": "",
+      "visual": "A heavy iron key resting on a blank parchment paper document."
+    },
+    {
+      "say": "That old bank never sends a warning when your cash loses its purchasing power.",
+      "callout": "",
+      "visual": "An empty subway station corridor with polished concrete floors and cool blue lights."
+    },
+    {
+      "say": "Take control of your idle cash before inflation eats another dollar of your savings.",
+      "callout": "",
+      "visual": "A tall glass skyscraper reflecting evening clouds in its dark tinted glass windows."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "A single wooden chess piece standing upright on a dark slate board."
+    }
+  ],
+  "caption": "Stop leaving your emergency fund in a 0.01% account. Move it to a 5% yield today. #personalfinance #moneytips #savings #smartmoney #wealthbuilding",
+  "description": "Moving your emergency cash from a traditional 0.01% savings account to a high-yield account takes under 15 minutes and protects your purchasing power.",
+  "hashtags": [
+    "#personalfinance",
+    "#moneytips",
+    "#savings",
+    "#smartmoney",
+    "#wealthbuilding"
+  ],
+  "first_comment": "What interest rate is your main savings account paying you right now?",
+  "facts": [
+    {
+      "claim": "Traditional savings accounts pay about 0.01% interest.",
+      "basis": "General banking industry standard for traditional brick-and-mortar savings accounts."
+    },
+    {
+      "claim": "High-yield savings accounts can offer around 5% yield.",
+      "basis": "Current market average for online high-yield savings accounts."
+    }
+  ],
+  "source": "llm",
+  "pillar": "playbook"
+}

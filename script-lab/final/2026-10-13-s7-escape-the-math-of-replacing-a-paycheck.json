@@ -1,0 +1,97 @@
+{
+  "title": "The Math to Replace Your Paycheck Forever",
+  "hook_text": "REPLACE YOUR PAYCHECK WITH DIVIDEND ASSETS",
+  "beats": [
+    {
+      "say": "To replace a $3,000 monthly paycheck, you need a $900,000 total investment portfolio.",
+      "callout": "",
+      "visual": "A dark walnut desk with a brass fountain pen resting on blank ledger paper, lit by warm morning window light, high angle cinematic still."
+    },
+    {
+      "say": "That baseline comes directly from the 4% safe withdrawal rule established in 1998.",
+      "callout": "THE 4% RULE",
+      "visual": "A vintage mechanical adding machine on a polished mahogany surface, shallow depth of field, dramatic side lighting."
+    },
+    {
+      "say": "At a 4% withdrawal rate, your invested assets fund life without depleting your principal balance.",
+      "callout": "",
+      "visual": "A solid brass balancing scale standing steady on a marble tabletop, dark moody background, soft rim lighting."
+    },
+    {
+      "say": "Change your monthly living budget, and that freedom number changes right alongside it.",
+      "callout": "",
+      "visual": "An architect's brass compass resting on clean blueprint drafting paper, low angle view with soft shadows."
+    },
+    {
+      "say": "At $2,000 a month your target is $600,000; at $5,000 a month, it jumps to $1,500,000.",
+      "callout": "$600,000 VS $1,500,000",
+      "visual": "Two stacks of clean ceramic tokens of unequal height on a matte black slate surface, directional studio lighting."
+    },
+    {
+      "say": "The reality? Building that capital takes consistent investing over decades.",
+      "callout": "",
+      "visual": "A weathered stone sundial in an empty courtyard, long afternoon shadows stretching across stone pavers."
+    },
+    {
+      "say": "Here's the part nobody mentions: you can't skip the slow math of compounding.",
+      "callout": "THE HONEST CATCH",
+      "visual": "An antique bronze pocket watch lying open beside a heavy key on aged dark timber, soft cinematic spotlight."
+    },
+    {
+      "say": "Investing $1,000 a month at an 8% annual return reaches $900,000 in 24.4 years.",
+      "callout": "24.4 YEARS",
+      "visual": "A hand in silhouette placing a brass weight onto a heavy oak workbench, moody atmospheric haze."
+    },
+    {
+      "say": "If you invest $2,000 a month at 8%, you cut that wait down to 17.4 years.",
+      "callout": "17.4 YEARS",
+      "visual": "An hourglass with white sand flowing steadily through the glass neck, isolated against a dark textured wall."
+    },
+    {
+      "say": "The honest catch is market volatility; 4% is a historical guideline, not a contract.",
+      "callout": "",
+      "visual": "A heavy iron anchor chain resting on weathered dock wood near calm dark water, cinematic low light."
+    },
+    {
+      "say": "Make this move this week: calculate your bare minimum monthly expenses down to the dollar.",
+      "callout": "STEP ONE",
+      "visual": "Hands viewed from behind opening a blank leather notebook beside a ceramic coffee cup, soft overhead lighting."
+    },
+    {
+      "say": "Multiply that number by 300 to find the exact portfolio size you actually need.",
+      "callout": "EXPENSES X 300",
+      "visual": "A heavy brass desk ruler resting beside an unopened linen envelope on dark wood, sharp side lighting."
+    },
+    {
+      "say": "Follow for the money rules school never taught you, and start replacing your paycheck today.",
+      "callout": "",
+      "visual": "A silhouette of a person standing before a tall library window overlooking a quiet sunrise, wide cinematic shot."
+    }
+  ],
+  "caption": "The exact math of replacing your paycheck with dividend income. Multiply your monthly expenses by 300 to find your target number.",
+  "description": "Replacing earned income requires understanding capital targets and withdrawal rates. Using the 4% guideline, this breakdown calculates the exact portfolio size needed to cover monthly expenses and the time it takes to build it.",
+  "hashtags": [
+    "#quietmoney",
+    "#personalfinance",
+    "#investing",
+    "#financialindependence",
+    "#dividends"
+  ],
+  "first_comment": "What is your target monthly number to completely walk away from your job?",
+  "facts": [
+    {
+      "claim": "A $3,000 monthly passive income target requires about $900,000 invested under the 4% rule.",
+      "basis": "Fact sheet: $3,000/month of passive income needs about $900,000 invested based on the 4% rule guideline."
+    },
+    {
+      "claim": "A $2,000 monthly passive income target requires about $600,000 invested, while $5,000 monthly requires about $1,500,000.",
+      "basis": "Fact sheet: $2,000/month needs about $600,000 invested; $5,000/month needs about $1,500,000 invested."
+    },
+    {
+      "claim": "Investing $1,000/month at 8%/yr reaches $900,000 in 24.4 years, while $2,000/month reaches it in 17.4 years.",
+      "basis": "Fact sheet: investing $1,000/month at 8%/yr reaches $900,000 in 24.4 years; investing $2,000/month reaches $900,000 in 17.4 years."
+    }
+  ],
+  "source": "llm",
+  "pillar": "escape"
+}

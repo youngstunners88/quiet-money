@@ -1,0 +1,92 @@
+{
+  "title": "The Exact Math to Replace Your Paycheck",
+  "hook_text": "THE EXACT MATH TO RETIRE EARLY",
+  "beats": [
+    {
+      "say": "To replace a $3,000 monthly paycheck forever, you need about $900,000 in dividend assets.",
+      "callout": "",
+      "visual": "Cinematic low-angle shot of a minimalist concrete office building at dawn, glowing warm interior lights contrasting against a misty slate morning sky."
+    },
+    {
+      "say": "That figure isn't guesswork. It comes directly from the widely studied 4% rule.",
+      "callout": "",
+      "visual": "A vintage mechanical desk clock and heavy wooden fountain pen resting on an aged walnut table, soft side lighting from a window."
+    },
+    {
+      "say": "When your portfolio yields 4% a year, $900,000 generates $36,000 in passive cash annually.",
+      "callout": "$36,000 PER YEAR",
+      "visual": "A pair of hands neatly stacking heavy brass bullion bars onto a dark felt surface, overhead moody studio lighting."
+    },
+    {
+      "say": "Divide that by 12 months, and your investments replace your exact paycheck without working.",
+      "callout": "",
+      "visual": "A solitary coffee cup steaming on a rustic wooden balcony railing overlooking a calm pine forest at sunrise, shallow depth of field."
+    },
+    {
+      "say": "If your monthly expenses are lower, say $2,000 a month, your target drops to $600,000.",
+      "callout": "$600,000 VS $900,000",
+      "visual": "Macro close-up of a brass balance scale in equilibrium against a textured dark limestone wall, directional amber lighting."
+    },
+    {
+      "say": "If you need $5,000 every single month, your required portfolio jumps to $1,500,000.",
+      "callout": "$1,500,000 TARGET",
+      "visual": "A silhouette of a person seen from behind looking out from a high-rise window over an expansive urban skyline at dusk."
+    },
+    {
+      "say": "Here's the part nobody mentions online: building that capital takes serious time and discipline.",
+      "callout": "",
+      "visual": "A single empty train track stretching into a misty horizon through open countryside, muted cinematic tones."
+    },
+    {
+      "say": "If you invest $1,000 a month at an 8% annual return, reaching $900,000 takes 24.4 years.",
+      "callout": "24.4 YEARS",
+      "visual": "Hands opening a leather notebook beside a ceramic mug on a dimly lit wooden desk, warm lamplight casting deep shadows."
+    },
+    {
+      "say": "If you invest $2,000 a month at that same 8%, you cut that timeline down to 17.4 years.",
+      "callout": "17.4 YEARS",
+      "visual": "Time-lapse motion blur of subway commuters seen from behind, architectural symmetry with dramatic low-key lighting."
+    },
+    {
+      "say": "Here's the honest catch: markets fluctuate, taxes apply, and the 4% guideline is never a guarantee.",
+      "callout": "",
+      "visual": "A stark weathered lighthouse enduring rough dark waves under an overcast stormy sky, dramatic documentary framing."
+    },
+    {
+      "say": "This week, calculate your core monthly expenses and multiply that total number by 300.",
+      "callout": "EXPENSES X 300",
+      "visual": "Hands holding a simple graphite pencil over a clean unruled sheet of textured paper, intimate close-up shot."
+    },
+    {
+      "say": "That gives you your exact freedom number. Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "A lone figure walking along an empty misty coastline toward soft golden horizon light, shot from behind."
+    }
+  ],
+  "caption": "Your freedom isn't an abstract dream—it's a math problem. Here is the exact formula to replace your paycheck. #money #personalfinance #investing #financialindependence #firemovement",
+  "description": "Calculate the exact capital needed to replace your paycheck using the 4% rule. Learn how monthly living expenses translate into an asset target and how long it takes to reach it.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#investing",
+    "#financialfreedom",
+    "#firemovement"
+  ],
+  "first_comment": "What is your monthly bare-bones expense number right now?",
+  "facts": [
+    {
+      "claim": "Replacing $3,000/month of passive income needs about $900,000 invested under the 4% rule.",
+      "basis": "4% rule Trinity study guideline: $900,000 * 0.04 = $36,000/year = $3,000/month."
+    },
+    {
+      "claim": "Investing $1,000/month at 8%/year reaches $900,000 in 24.4 years.",
+      "basis": "Compound interest monthly compounding formula from fact sheet."
+    },
+    {
+      "claim": "Investing $2,000/month at 8%/year reaches $900,000 in 17.4 years.",
+      "basis": "Compound interest monthly compounding formula from fact sheet."
+    }
+  ],
+  "source": "llm",
+  "pillar": "escape"
+}

@@ -1,0 +1,76 @@
+{
+  "id": "2026-10-13-s4-math-the-0-apr-deferred-interest-trap",
+  "pillar": "math",
+  "topic": "The 0% APR Deferred Interest Trap",
+  "day": "2026-10-13",
+  "slot": 4,
+  "status": "published",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-13T11:45:58Z",
+      "words": 178
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-13T11:46:31Z",
+      "seconds": 64.176,
+      "provider": "elevenlabs"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-13T11:47:26Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-13T11:50:52Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-13T11:50:52Z",
+      "score": 100
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-13T11:50:52Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-10-13T11:50:53Z",
+      "local": "2026-10-13T21:00:00-04:00",
+      "youtube": null
+    }
+  ],
+  "artifacts": {
+    "angle": "Expose how deferred interest promotions back-charge interest on the full original purchase price, not the remaining balance, if missed by just one day.",
+    "title": "The 0% Interest Trap That Back-Charges Your Purchase",
+    "style": "cinematic",
+    "video": "/home/user/quiet-money/production/output/2026-10-13/2026-10-13-s4-math-the-0-apr-deferred-interest-trap/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-13/2026-10-13-s4-math-the-0-apr-deferred-interest-trap/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-10-13/slot5-math",
+        "post_at": "2026-10-13T21:00:00-04:00"
+      },
+      "youtube": {
+        "skipped": "YouTube daily cap reached (5 scheduled for 2026-10-13); the local pack is ready"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 100,
+    "passed": true
+  },
+  "cost": {
+    "tts:elevenlabs:chars": 992
+  },
+  "notes": []
+}
