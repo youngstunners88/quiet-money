@@ -1,0 +1,667 @@
+{
+ "chat": {
+  "D1": {
+   "question": "What public price should the Daily Planner carry for the first 30 days?",
+   "options": [
+    "Hold $17",
+    "Step down to $14",
+    "Step up to $24"
+   ],
+   "tally": {
+    "Hold $17": 2
+   },
+   "answers": [
+    {
+     "choice": "Hold $17",
+     "confidence": 0.7,
+     "reasons": [
+      "$17 is the only owner-approved price, and any change is owner-gated, so holding avoids an unapproved public change.",
+      "A handful of sales cannot separate $14, $17 and $24 (aut:F05, aut:F06), so a price move would be guesswork rather than tested evidence.",
+      "At $17 the $100 payout gate needs 8 sales, one fewer than at $14, and the net is $14.01 per direct sale versus $11.39 at $14.",
+      "$24 sits well above the nearest anchor, Rootlyn at $14.99 for 24 pages, and far above the $1-$10 volume shops, with no reviews or audience yet to justify it."
+     ],
+     "risks": [
+      "$17 may be high relative to $1-$10 volume files, so conversion from warm traffic could be weak.",
+      "The 427-page Daily Planner has no reviews, so buyers may anchor on the 0-review $17 calendar as a signal of low demand.",
+      "The audience skews UK, Australia and Canada, so a USD price may create friction, and holding $17 does not resolve that.",
+      "Gumroad Discover needs a first sale and a roughly 3-week review, so early sales may stay thin regardless of price.",
+      "Only about $5 of marketing budget and no paid ads means traffic may be too small to read any price signal in 30 days."
+     ],
+     "first_test": "With owner approval, publish the Daily Planner at $17 and keep it fixed for 30 days. Track link-in-bio clicks, checkout starts and sales against the ~350-view-per-post proxy, and log any refunds under the 30-day policy. Revisit price only if there is enough traffic to compare outcomes.",
+     "what_would_change_my_mind": "Evidence from owner-approved tests or real checkout data showing a clear conversion gap between price points at a meaningful sample, or a confirmed USD price problem for UK, Australia and Canada buyers. Either would justify an owner-approved change, with $14 favored if conversion is weak and $24 only if the product gains reviews and demand."
+    },
+    {
+     "choice": "Hold $17",
+     "confidence": 0.6,
+     "reasons": [
+      "$17 is the only owner-approved price, and changing a public price is owner-gated, so holding avoids an unapproved change.",
+      "Net per direct sale is highest at $17 ($14.01) versus $11.39 at $14; stepping down lowers margin without evidence it would lift volume.",
+      "The $100 payout gate needs 8 sales at $17 versus 9 at $14, so $14 makes the first payout harder to reach.",
+      "A handful of sales cannot separate prices, so a price test in 30 days would yield no reliable signal; holding keeps the variable fixed while traffic is built."
+     ],
+     "risks": [
+      "Rootlyn at $14.99 for 24 pages suggests $17 for 427 pages may look expensive to some buyers, possibly depressing conversion.",
+      "With no reviews and no audience yet, few sales may occur at any price, so the $17 anchor may go unseen.",
+      "A USD price may mismatch a UK/Australia/Canada audience, a question this decision does not resolve.",
+      "Holding may leave the product unpublished or unsold for 30 days regardless, so the price choice has limited near-term impact."
+     ],
+     "first_test": "Owner approves publishing at $17 USD, adds the payout method, and tracks views-to-click and click-to-sale on the link-in-bio for 30 days, with a checklist opt-in as the top-of-funnel signal before any price change.",
+     "what_would_change_my_mind": "Evidence from the owner's own warm traffic (for example, at least a few checkout-page visits per sale at $17 showing price objection, or competitor evidence in the target market showing sales at lower prices) would justify revisiting a step down; a currency or regional pricing decision would also reopen the question."
+    }
+   ],
+   "usd": 0.00104
+  },
+  "D2": {
+   "question": "What is the first thing cold viewers are asked to take?",
+   "options": [
+    "Free checklist first, planner 1 in 3",
+    "Planner first on matching pillars",
+    "Free Sample Week of the planner"
+   ],
+   "tally": {
+    "Free checklist first, planner 1 in 3": 2
+   },
+   "answers": [
+    {
+     "choice": "Free checklist first, planner 1 in 3",
+     "confidence": 0.6,
+     "reasons": [
+      "The free 7-day checklist already exists, so it can be published with no new build or extra compliance read, which fits the 6-hour week 2 and 4-5 hour weekly limits.",
+      "Cold viewers have no reason to buy a $17 planner before trust exists; a free opt-in is the lowest-friction first ask.",
+      "A list is the only way to re-reach viewers, and Gumroad email stays locked until the first payout, so the checklist is the sole route to repeat contact.",
+      "The stated default (paid_every = 3, checklist first) is already the engine setting, and the Sample Week option is a candidate that needs a build and second compliance read."
+     ],
+     "risks": [
+      "Opt-in conversion may fall roughly 74% under confirmed opt-in, so list growth could be slow.",
+      "Mixed-traffic opt-in figures are creator-reported and weak; the sales-page 1-2% figure comes from a 2014 dataset.",
+      "Planner sales may stay near zero while the checklist is the only live offer, and the $17 planner has no reviews and is unpublished.",
+      "US audience is absent from the data, so UK/AU/CA-weighted assumptions may not hold."
+     ],
+     "first_test": "Publish the free 7-day checklist as the first link-in-bio ask for cold viewers, with the planner shown as every third paid offer; over 30 days track opt-in rate from ~52,500 projected Shorts views (or actual views), and check whether any opt-ins reach the planner, using only the $5 budget and no paid ads.",
+     "what_would_change_my_mind": "Evidence that opt-in pages from this audience convert far below the stated range while direct sales pages convert materially higher, or a Sample Week build and compliance read completed early enough that a free sample-based magnet can launch without slipping the weekly hour limits."
+    },
+    {
+     "choice": "Free checklist first, planner 1 in 3",
+     "confidence": 0.6,
+     "reasons": [
+      "The free 7-day checklist already exists, so it can be used on day one without a new build or second compliance read.",
+      "A free, low-commitment first ask suits cold viewers from Shorts, and it creates the only route to re-reach them, since Gumroad email stays locked until the first payout.",
+      "The Daily Planner is an unpublished draft and not yet approved for public use, so it cannot be the day-one ask.",
+      "The Sample Week was deferred for build and compliance reasons; the current default already matches the constraints of a 6-hour week and a $5 budget."
+     ],
+     "risks": [
+      "Opt-in conversion is uncertain: the 4% figure is on mixed traffic, and the one cited study suggests confirmed opt-in can cut conversion by roughly 74%.",
+      "Reach is small: about 52,500 views in 30 days is a proxy, and link-in-bio is the only clickable path, so few viewers may reach the hub.",
+      "The checklist-first ask could attract lead-magnet seekers who never buy, leaving the planner with little warm audience.",
+      "The audience data is skewed (18-24, mostly female, UK/AU/CA) and US performance is unverified, which may affect which offer resonates."
+     ],
+     "first_test": "For 30 days, keep the free checklist as the first ask on all link-in-bio traffic, paid_every = 3, and 5 Shorts/day. Track link-in-bio visits, checklist opt-in rate, and the share of opt-ins who later view the planner. Compare against the 4% prior and stop or revise if opt-in is far below it.",
+     "what_would_change_my_mind": "I would switch if the owner approves and compliance clears a Sample Week build that can be produced within the time budget, or if opt-in data shows the checklist is converting well below the 4% prior while a planner-first page gets measurably more sales from social traffic."
+    }
+   ],
+   "usd": 0.00106
+  },
+  "D3": {
+   "question": "Which product should lead, and what is the second ask if the warm launch is weak?",
+   "options": [
+    "Daily Planner alone at $17",
+    "Planner plus Debt planner as two listings",
+    "Printables at $9 as entry product"
+   ],
+   "tally": {
+    "Daily Planner alone at $17": 2
+   },
+   "answers": [
+    {
+     "choice": "Daily Planner alone at $17",
+     "confidence": 0.6,
+     "reasons": [
+      "The Daily Planner is the only product that is built, owner-approved and priced at $17, so it can be listed soonest with no new compliance review.",
+      "The Debt Payoff Planner is a spreadsheet that is not owner-approved and would add hours plus a second review of credit and debt wording, which the 4-5 hour weekly budget cannot absorb.",
+      "Printables at $9 fit the Etsy volume band, but the format evidence favors Sheets, Notion and GoodNotes files over a printable PDF planner, and the $9 product is not built.",
+      "Traffic is only a proxy of about 350 views per post, so a single approved product gives a cleaner read on the warm launch than splitting attention across two listings."
+     ],
+     "risks": [
+      "A 427-page Daily Planner at $17 with no reviews may sell little regardless of cover, and the Gumroad Discover path needs a $100 balance and a first sale before any traction.",
+      "The Daily Planner is a printable PDF, a format the evidence rates as less proven than Sheets or Notion files.",
+      "Gumroad payouts need $100 and a 7-day hold, and nothing is live until a payout method is added, so revenue timing is uncertain.",
+      "Conversion priors of 1.5-7% are creator-reported and weak; the audience data is unverified for the US."
+     ],
+     "first_test": "Once the owner approves, publish the Daily Planner at $17 on Gumroad with the free 7-day checklist linked from the hub, and send the warm launch to the existing link-in-bio traffic from the first week's Shorts, tracking views, checklist sign-ups and sales over Days 1-14.",
+     "what_would_change_my_mind": "If the warm launch shows checklist sign-ups but no sales by Day 10-14, or if the Debt planner draft is approved and its 7-day sample performs better, I would switch the second ask to the Debt Payoff Planner or to a Sheets-format printable at $9 rather than a second PDF."
+    },
+    {
+     "choice": "Daily Planner alone at $17",
+     "confidence": 0.6,
+     "reasons": [
+      "The Daily Planner is the only product that is built, owner-approved at $17, and nets $14.01 per direct Gumroad sale, so it can go live soonest.",
+      "The Debt Payoff Planner is an unapproved spreadsheet that would add hours and a second compliance review on credit and debt wording, which the 4-5 hour weekly budget cannot absorb.",
+      "Printables at $9 fit the $1-$10 volume band, but the printable PDF planner format is less proven than Sheets, Notion and GoodNotes files, and switching would discard the approved asset.",
+      "With about 350 views per post and no audience yet, a single clear listing gives the warm launch a clean read rather than splitting the small traffic across two products."
+     ],
+     "risks": [
+      "A $17 365-day style planner with no reviews may sell little regardless of cover, and Gumroad Discover requires a first sale and ~3 week review.",
+      "Nothing is live until the payout method is added and the $100 payout threshold is reached, so revenue timing is uncertain.",
+      "Format evidence favors Sheets/Notion/GoodNotes files, so the PDF planner may underperform against expectations.",
+      "Conversion priors of 1.5-7% are weak creator-reported figures, and the US audience is unverified."
+     ],
+     "first_test": "Publish the Daily Planner listing once the owner approves, add the payout method, and drive the 7-day checklist link from link-in-bio across the first 30 days of Shorts, tracking views-to-checklist signups and checklist-to-planner sales.",
+     "what_would_change_my_mind": "If the warm launch shows weak checklist signups or zero planner sales by Day 10-14 (trigger X11), or if buyer evidence shows demand for debt content or a Sheets/Notion-format product, I would switch the second ask to the Debt Payoff Planner or a printable at $9 respectively."
+    }
+   ],
+   "usd": 0.00092
+  },
+  "D4": {
+   "question": "After the warm launch, which stranger channel gets the owner's scarce hours first (Days 8-30)?",
+   "options": [
+    "Creators on commission",
+    "Etsy edition",
+    "Owner TikTok/Reels cross-posts",
+    "YouTube bridge with Start Here"
+   ],
+   "tally": {
+    "Etsy edition": 2
+   },
+   "answers": [
+    {
+     "choice": "Etsy edition",
+     "confidence": 0.6,
+     "reasons": [
+      "Etsy is the only channel in the facts where strangers actively search to buy, so it is the only stranger channel that does not depend on first building an audience.",
+      "The recommended default already puts the Etsy edition first in Days 8-14, and the owner's roughly 6 hours in week 2 can cover the recompression and link-free file work without opening several channels at once.",
+      "TikTok/Reels cannot carry a profile link below 1,000 followers and averages about 350 views, so cross-posts would spend hours on traffic that cannot convert on the spot.",
+      "Creator commissions net $8.41 per sale with unmeasured acceptance, so their payoff is too uncertain to justify scarce hours ahead of a channel with a known buyer search."
+     ],
+     "risks": [
+      "Zero reviews against incumbents with thousands means the listing may get little search visibility regardless of quality.",
+      "Etsy approval is not confirmed, so the hours could be spent on a listing that cannot go live on schedule.",
+      "Recompressing the 427-page PDF and producing a link-free edition may take longer than the week-2 budget.",
+      "The $5 marketing budget cannot buy reviews or promotion, so early sales may be near zero."
+     ],
+     "first_test": "Within Days 8-14, produce one link-free, recompressed Etsy edition of the Daily Planner with a sample-page preview, publish it only after owner approval, and track 7 days of search impressions, views and favorites with no paid promotion.",
+     "what_would_change_my_mind": "If Etsy approval is refused or the listing gets near-zero search impressions after 7 days, or if creator acceptance data shows a real commission pipeline, I would move hours to creator pitches instead."
+    },
+    {
+     "choice": "Etsy edition",
+     "confidence": 0.55,
+     "reasons": [
+      "Etsy is the only channel where strangers actively search to buy, so it is the only option that targets purchase intent rather than hoping for reach.",
+      "The recommended default already sequences the Etsy edition into wave 1 (Days 8-14), which fits the 6-hour week-2 budget better than opening everything at once.",
+      "The other options are weaker on current facts: TikTok/Reels averages about 350 views and has no profile link below 1,000 followers, the YouTube bridge needs advanced features and has no click-through benchmark, and creator acceptance is unmeasured.",
+      "The $5 marketing budget and no-paid-ads constraint rule out buying Etsy traffic, so the owner's hours are the main lever on this channel."
+     ],
+     "risks": [
+      "Etsy is not approved yet, so the channel may not open within Days 8-14 and the hours could be lost to waiting.",
+      "Zero reviews against incumbents with thousands means the listing may sell little regardless of cover quality.",
+      "Files must be recompressed and a link-free edition built, which could consume more of the 6-hour week than estimated.",
+      "Incumbent Etsy sellers price planners and sheets at $1-$10, so a $17 listing faces price resistance.",
+      "Conversion and traffic on Etsy are unmeasured, so the decision rests on qualitative fit rather than observed sales."
+     ],
+     "first_test": "Within Days 8-10, list one link-free Etsy edition of the Daily Planner (after approval and file recompression) and track views, favorites and sales over 14 days against a fixed threshold, such as at least one sale or a clear listing-view signal, before allocating more hours.",
+     "what_would_change_my_mind": "If Etsy approval is not granted by Day 10, or if the link-free edition cannot be produced within about 2 hours, I would shift the hours to the owner's TikTok/Reels cross-posts or the creator pitches. I would also reconsider if the owner's own Shorts show clicks to the link-in-bio hub that suggest warm traffic is converting better than any stranger channel."
+    }
+   ],
+   "usd": 0.00133
+  },
+  "D6": {
+   "question": "What launch mechanic goes in the warm personal messages?",
+   "options": [
+    "No discount",
+    "FIRST14 code, real end date",
+    "Free Sample Week, no discount"
+   ],
+   "tally": {
+    "No discount": 2
+   },
+   "answers": [
+    {
+     "choice": "No discount",
+     "confidence": 0.6,
+     "reasons": [
+      "The product is an unpublished draft with no public launch approved, so any mechanic needs the owner's yes first. A plain no-discount message is the smallest change to approve.",
+      "FIRST14 is a price change. It nets $11.39 instead of $14.01 and pushes the $100 Discover/payout gate from about 8 sales to 9, which slows the one milestone that unlocks payouts and email workflows.",
+      "The facts give no evidence that a discount converts better. Conversion priors are creator-reported and weak, and a handful of sales cannot test $14 against $17.",
+      "With about 6 hours in week 2 and only $5 of marketing budget, a discount adds a deadline to track and a code to manage without a demonstrated benefit."
+     ],
+     "risks": [
+      "Warm contacts may convert less without a reason to act now, so early sales could stay slow.",
+      "Without a deadline, the message may get ignored or put off.",
+      "If the owner wants urgency, a real-deadline code can be added later as a separate, approved decision."
+     ],
+     "first_test": "Send 10-20 personal messages to warm contacts with the $17 link and a short, honest note about what the planner covers. Track link clicks and sales for 7 days, then compare the response rate with the earlier draft messages, if any.",
+     "what_would_change_my_mind": "I would switch to FIRST14 with a real end date if the owner approves a price change and warm contacts show clear hesitation about $17, or if the owner accepts the slower route to the $100 gate in exchange for a faster start. I would choose Free Sample Week if the owner wants to build trust first and can produce a sample within the time budget."
+    },
+    {
+     "choice": "No discount",
+     "confidence": 0.6,
+     "reasons": [
+      "FIRST14 needs the owner's yes because it is a price change, and it nets $11.39 per sale versus $14.01 at $17, so it adds cost without a tested benefit.",
+      "A handful of sales cannot show whether $14 beats $17, so a discount buys a launch bump, not learning.",
+      "Free Sample Week produces no sales toward the $100 Gumroad gate and costs owner time on a 427-page product with only about 6 hours in week 2.",
+      "Nothing is live yet (payout method not added), so the first priority is a clean, honest launch at the owner-approved $17 price."
+     ],
+     "risks": [
+      "Warm contacts may not buy at $17, so the $100 gate could take much longer to reach.",
+      "Without a reason to act now, the warm messages may get little response.",
+      "Skipping the discount forgoes a possible early-sales push that the owner may want.",
+      "No reviews means limited sales regardless of the message, so the launch may stay slow."
+     ],
+     "first_test": "After the owner approves going public, send a short personal message with the $17 Gumroad link to a small set of warm contacts, track clicks and sales for 14 days, and note any replies that mention price or timing.",
+     "what_would_change_my_mind": "If the owner approves a price change and a real end date, and warm contacts indicate they would only buy with a code, switch to FIRST14, since the 9-sale gate would still be reachable from warm contacts."
+    }
+   ],
+   "usd": 0.00127
+  },
+  "D7": {
+   "question": "How should the Escape the Rat Race series be handled for the next 90 days?",
+   "options": [
+    "Free checklist only, 1 slot a day, under the written rule",
+    "Pause until a copy gate clears",
+    "Run with planner offer attached"
+   ],
+   "tally": {
+    "Free checklist only, 1 slot a day, under the written rule": 2
+   },
+   "answers": [
+    {
+     "choice": "Free checklist only, 1 slot a day, under the written rule",
+     "confidence": 0.6,
+     "reasons": [
+      "Gumroad's terms ban unsubstantiated earnings claims on any channel the seller controls, and the series rests on passive-income and get-rich-style framing, so the planner offer cannot be attached safely.",
+      "The Daily Planner is unpublished and not live, and the payout method is not added, so there is no offer that can truthfully sit behind this series yet.",
+      "Limiting the series to 1 of 5 daily slots with a free-checklist CTA keeps exposure small while the phrase gate and research-brief rule are tested.",
+      "Using only education framing, no income language, and named figures only as sourced subjects with a not-affiliated line matches the business's no-advice and no-income-claims rules."
+     ],
+     "risks": [
+      "Platform policy conflicts (YouTube spam page, TikTok, MailerLite) are unresolved, so a flag or notice could hit the whole channel.",
+      "Named figures such as Hormozi, Kiyosaki and Pe\u00f1a could be read as implied endorsement even with a disclaimer.",
+      "Holding scripts that fail the phrase gate may leave slots empty and reduce output with a 4-5 hour weekly budget.",
+      "Limited reach: a single slot a day with no audience yet gives little signal, and the series may feel templated despite the variety goal."
+     ],
+     "first_test": "Write one Escape the Rat Race script in plain education language, run it through the phrase gate and the research brief for any named figure, add the not-affiliated line, and post it once in the 1-slot free-checklist CTA slot; hold it if any phrase fails rather than softening it.",
+     "what_would_change_my_mind": "A written reply from Gumroad or the platforms confirming that this series framing is allowed, or a flag or notice that would instead justify pausing the series entirely (option 2); or a published, approved planner with substantiated, non-earnings claims that would make option 3 viable."
+    },
+    {
+     "choice": "Free checklist only, 1 slot a day, under the written rule",
+     "confidence": 0.68,
+     "reasons": [
+      "The planner offer attached would send the series toward the Gumroad and platform language risks, since the Terms ban unsubstantiated earnings claims and the series relies on passive-income framing.",
+      "The Daily Planner is an unpublished draft with no payout method and no live Gumroad sale, so attaching it now adds risk without any delivery path.",
+      "One slot a day is about 30 posts a month at most, which fits the 4-5 hours a week after launch and keeps the channel's variety goal (cmp:F2) partly intact.",
+      "Pausing entirely would stop learning, while a free-checklist-only CTA keeps the series testable under the phrase gate and the written rule."
+     ],
+     "risks": [
+      "Phrase-gate holds may leave slots empty, which makes the 1-slot-a-day cadence hard to sustain on a thin budget.",
+      "Source-based research briefs for named figures (Hormozi, Kiyosaki, Pe\u00f1a) take time within 6 hours and may delay scripts.",
+      "Platform interpretation is unsettled (YouTube spam page is a hypothesis), so a notice could arrive mid-test.",
+      "The free checklist still drives little revenue without an audience, so the series may not justify the effort."
+     ],
+     "first_test": "Draft 5 Escape the Rat Race scripts with no passive-income, side-income-amount, quit-your-job, financial-freedom or get-rich language, each with a free-checklist CTA and a not-affiliated line for any named person. Run the phrase gate, hold any failure, post at most 1 per day for 2 weeks, and log holds, views and checklist sign-ups.",
+     "what_would_change_my_mind": "A written compliance check confirming that the series framing and named-figure references are allowed on Gumroad, TikTok, YouTube and MailerLite, or a live published planner with a payout method and clear terms that permit a planner offer, would justify attaching the planner offer. A platform notice or flag would push me to pause."
+    }
+   ],
+   "usd": 0.00137
+  },
+  "D10": {
+   "question": "Should the owner opt the product out of Gumroad's global affiliate program (10%) once it is Discover-eligible?",
+   "options": [
+    "Opt out for the first 90 days",
+    "Stay opted in",
+    "Decide at the Day-30 review with the first sales data"
+   ],
+   "tally": {
+    "Decide at the Day-30 review with the first sales data": 2
+   },
+   "answers": [
+    {
+     "choice": "Decide at the Day-30 review with the first sales data",
+     "confidence": 0.6,
+     "reasons": [
+      "Discover eligibility needs a $100 balance, a ~3 week review and a first sale, so the affiliate program cannot take effect before about Day 30; deciding now is premature.",
+      "The facts give no sales, conversion, or affiliate-performance data, so an opt-out for 90 days or staying in are both chosen without evidence.",
+      "Opting out is reversible, so deferring the choice to Day 30 loses little while keeping the option to use affiliates if they prove useful.",
+      "Uncontrolled affiliate endorsements carry advertiser liability and the brand is education-only with no income claims, so the risk is real and should be weighed against actual data rather than assumed."
+     ],
+     "risks": [
+      "Deferring may lead to auto-enrolment at the 10% rate running unmonitored for days before the review if the setting is not checked at listing.",
+      "Without a pre-set rule, the owner may default to staying opted in by inaction, exposing the brand to uncontrolled claims.",
+      "Day-30 data may be too thin (few or no sales) to be a meaningful basis for the decision."
+     ],
+     "first_test": "Before listing goes live, check the Gumroad affiliate setting and record the owner's default; at Day 30, review whether any affiliate-attributed sales or claims exist and whether any affiliate content breaches the no-income-claims and education-only rules.",
+     "what_would_change_my_mind": "If the owner confirms that affiliate enrolment can be set to off at listing without losing Discover eligibility, I would recommend opting out from day one; if affiliate sales are shown to be substantial and the content can be reviewed, I would lean to staying in."
+    },
+    {
+     "choice": "Decide at the Day-30 review with the first sales data",
+     "confidence": 0.6,
+     "reasons": [
+      "Discover eligibility needs $100 balance, a ~3 week review and a first sale, so the affiliate setting cannot matter before about Day 30; deciding now is premature.",
+      "The facts give no sales, conversion or affiliate-performance data, so an opt-out versus stay-in choice made today would be a guess.",
+      "Opting out is reversible, so waiting to Day 30 loses little, and the review gives real data on whether Discover traffic and uncontrolled promoters are worth the 10% fee.",
+      "Uncontrolled affiliate endorsements carry liability for the advertiser (cmp:F13), so the owner should decide with a clear view of what promoters are saying, which the Day-30 review can provide."
+     ],
+     "risks": [
+      "Waiting may leave the product auto-enrolled at 10% for a short window after eligibility, a small cost if promoters begin posting unmonitored claims.",
+      "If the owner does not schedule the Day-30 review, the default setting persists by inertia.",
+      "The recommendation to opt out for 90 days is reasonable on liability grounds, and deferring could drift past the point where it is easy to act."
+     ],
+     "first_test": "Once Discover eligibility is reached, check the affiliate setting and log every promoter post and claim; at the Day-30 review, compare affiliate-attributed sales and any compliance flags against direct sales before deciding.",
+     "what_would_change_my_mind": "If the owner's review shows affiliate sales meaningfully outperform direct sales with no problematic claims, or if the owner can monitor promoter posts within 48 hours at low cost, I would stay opted in; if any uncontrolled promoter makes income-type or unsubstantiated claims, I would opt out immediately."
+    }
+   ],
+   "usd": 0.00081
+  }
+ },
+ "decisions": {
+  "label": "mkt-strategy",
+  "models": {
+   "typesafe/jev-1.13": {
+    "answers": {
+     "d1": {
+      "type": "choice",
+      "choice": "A",
+      "probabilities": {
+       "A": 0.96,
+       "B": 0.04,
+       "C": 0
+      },
+      "confidence": 0.94
+     },
+     "d2": {
+      "type": "choice",
+      "choice": "A",
+      "probabilities": {
+       "A": 1,
+       "B": 0,
+       "C": 0
+      },
+      "confidence": 1
+     },
+     "d3": {
+      "type": "choice",
+      "choice": "A",
+      "probabilities": {
+       "A": 0.56,
+       "B": 0.41,
+       "C": 0.03
+      },
+      "confidence": 0.34
+     },
+     "d4": {
+      "type": "choice",
+      "choice": "B",
+      "probabilities": {
+       "A": 0.05,
+       "B": 0.93,
+       "C": 0.01,
+       "D": 0.01
+      },
+      "confidence": 0.91
+     },
+     "d6": {
+      "type": "choice",
+      "choice": "B",
+      "probabilities": {
+       "A": 0.01,
+       "B": 0.99,
+       "C": 0
+      },
+      "confidence": 0.98
+     },
+     "d7": {
+      "type": "choice",
+      "choice": "A",
+      "probabilities": {
+       "A": 0.96,
+       "B": 0.04,
+       "C": 0
+      },
+      "confidence": 0.94
+     },
+     "d10": {
+      "type": "choice",
+      "choice": "A",
+      "probabilities": {
+       "A": 0.98,
+       "B": 0,
+       "C": 0.02
+      },
+      "confidence": 0.97
+     }
+    },
+    "build": "typesafe/jev-1.13-20260917",
+    "usd": 0.000114
+   },
+   "microsoft/microsoft-decision-1": {
+    "answers": {
+     "d1": {
+      "type": "choice",
+      "choice": "A",
+      "probabilities": {
+       "A": 0.9015685599731056,
+       "B": 0.08385894409267428,
+       "C": 0.014572495934220227
+      },
+      "confidence": 0.8523528399596585
+     },
+     "d10": {
+      "type": "choice",
+      "choice": "A",
+      "probabilities": {
+       "A": 0.9768514134687004,
+       "B": 0.010851840385519755,
+       "C": 0.012296746145779821
+      },
+      "confidence": 0.9652771202030506
+     },
+     "d2": {
+      "type": "choice",
+      "choice": "A",
+      "probabilities": {
+       "A": 0.9378929225636837,
+       "B": 0.009194780660040073,
+       "C": 0.05291229677627622
+      },
+      "confidence": 0.9068393838455255
+     },
+     "d3": {
+      "type": "choice",
+      "choice": "A",
+      "probabilities": {
+       "A": 0.7676796622827657,
+       "B": 0.19409982130372413,
+       "C": 0.038220516413510146
+      },
+      "confidence": 0.6515194934241486
+     },
+     "d4": {
+      "type": "choice",
+      "choice": "B",
+      "probabilities": {
+       "A": 0.24702439935814835,
+       "B": 0.5229506575449361,
+       "C": 0.08019707118910076,
+       "D": 0.14982787190781474
+      },
+      "confidence": 0.3639342100599148
+     },
+     "d6": {
+      "type": "choice",
+      "choice": "B",
+      "probabilities": {
+       "A": 0.012349472610373816,
+       "B": 0.9810403310387413,
+       "C": 0.006610196350884832
+      },
+      "confidence": 0.9715604965581119
+     },
+     "d7": {
+      "type": "choice",
+      "choice": "A",
+      "probabilities": {
+       "A": 0.9691205885569045,
+       "B": 0.020113454861484917,
+       "C": 0.010765956581610645
+      },
+      "confidence": 0.9536808828353567
+     }
+    },
+    "build": "microsoft/microsoft-decision-1-20261009",
+    "usd": 9.2e-05
+   },
+   "upstage/solar-decide-flash": {
+    "answers": {
+     "d1": {
+      "type": "choice",
+      "choice": "A",
+      "probabilities": {
+       "A": 0.917667,
+       "B": 0.075327,
+       "C": 0.007006
+      },
+      "confidence": 0.719288
+     },
+     "d10": {
+      "type": "choice",
+      "choice": "A",
+      "probabilities": {
+       "A": 0.871138,
+       "B": 0.010966,
+       "C": 0.117896
+      },
+      "confidence": 0.616132
+     },
+     "d2": {
+      "type": "choice",
+      "choice": "C",
+      "probabilities": {
+       "A": 0.209343,
+       "B": 0.059978,
+       "C": 0.730679
+      },
+      "confidence": 0.339709
+     },
+     "d3": {
+      "type": "choice",
+      "choice": "A",
+      "probabilities": {
+       "A": 0.460029,
+       "B": 0.460029,
+       "C": 0.079941
+      },
+      "confidence": 0.165892
+     },
+     "d4": {
+      "type": "choice",
+      "choice": "B",
+      "probabilities": {
+       "A": 0.050553,
+       "B": 0.615863,
+       "C": 0.226563,
+       "D": 0.107021
+      },
+      "confidence": 0.260645
+     },
+     "d6": {
+      "type": "choice",
+      "choice": "B",
+      "probabilities": {
+       "A": 0.000709,
+       "B": 0.99826,
+       "C": 0.001031
+      },
+      "confidence": 0.987281
+     },
+     "d7": {
+      "type": "choice",
+      "choice": "A",
+      "probabilities": {
+       "A": 0.913515,
+       "B": 0.074986,
+       "C": 0.011499
+      },
+      "confidence": 0.701232
+     }
+    },
+    "build": "upstage/solar-decide-flash-20261008",
+    "usd": 0.000363
+   },
+   "openai/gpt-6-luna-decisions": {
+    "answers": {
+     "d1": {
+      "type": "choice",
+      "choice": "A",
+      "probabilities": {
+       "A": 0.98,
+       "B": 0.01,
+       "C": 0.01
+      },
+      "confidence": 0.97
+     },
+     "d2": {
+      "type": "choice",
+      "choice": "A",
+      "probabilities": {
+       "A": 0.72,
+       "B": 0.01,
+       "C": 0.27
+      },
+      "confidence": 0.58
+     },
+     "d3": {
+      "type": "choice",
+      "choice": "A",
+      "probabilities": {
+       "A": 0.87,
+       "B": 0.1,
+       "C": 0.03
+      },
+      "confidence": 0.8
+     },
+     "d4": {
+      "type": "choice",
+      "choice": "A",
+      "probabilities": {
+       "A": 0.5,
+       "B": 0.36,
+       "C": 0.1,
+       "D": 0.04
+      },
+      "confidence": 0.33
+     },
+     "d6": {
+      "type": "choice",
+      "choice": "B",
+      "probabilities": {
+       "A": 0,
+       "B": 0.97,
+       "C": 0.03
+      },
+      "confidence": 0.96
+     },
+     "d7": {
+      "type": "choice",
+      "choice": "B",
+      "probabilities": {
+       "A": 0.38,
+       "B": 0.61,
+       "C": 0.01
+      },
+      "confidence": 0.42
+     },
+     "d10": {
+      "type": "choice",
+      "choice": "A",
+      "probabilities": {
+       "A": 0.99,
+       "B": 0,
+       "C": 0.01
+      },
+      "confidence": 0.99
+     }
+    },
+    "build": "openai/gpt-6-luna-decisions-20261006",
+    "usd": 0.000263
+   }
+  }
+ }
+}
