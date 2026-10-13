@@ -179,6 +179,8 @@ def test_a_pause_stops_publishing(rail, monkeypatch):
 def test_draft_all_reports_a_rail_that_is_not_ready_instead_of_hiding_it(monkeypatch, tmp_path):
     monkeypatch.delenv("ETSY_API_KEY", raising=False)
     monkeypatch.delenv("GUMROAD_ACCESS_TOKEN", raising=False)
+    monkeypatch.delenv("GUMROAD", raising=False)
+    monkeypatch.delenv("GUMROAD_TOKEN", raising=False)
     monkeypatch.setattr(shop, "gumroad_cli", lambda: None)
     from faceless import safety
     monkeypatch.setattr(safety, "paused", lambda: None)

@@ -34,8 +34,16 @@ def gumroad_cli() -> str | None:
     return shutil.which("gumroad")
 
 
+TOKEN_NAMES = ("GUMROAD_ACCESS_TOKEN", "GUMROAD_TOKEN", "GUMROAD")
+
+
+def token() -> str | None:
+    """The owner's environment names the Gumroad token GUMROAD; the CLI wants GUMROAD_ACCESS_TOKEN."""
+    return config.env(*TOKEN_NAMES)
+
+
 def token_present() -> bool:
-    return bool(config.env("GUMROAD_ACCESS_TOKEN"))
+    return bool(token())
 
 
 def status() -> list[dict]:
@@ -112,7 +120,10 @@ def _run(argv: list[str], timeout: int = 600) -> dict:
     cli = gumroad_cli()
     if not cli:
         raise ProviderUnavailable("the gumroad CLI is not installed")
-    r = subprocess.run([cli, *argv], capture_output=True, text=True, timeout=timeout, env=os.environ.copy(), check=False)
+    env = os.environ.copy()
+    if token():
+        env["GUMROAD_ACCESS_TOKEN"] = token()
+    r = subprocess.run([cli, *argv], capture_output=True, text=True, timeout=timeout, env=env, check=False)
     try:
         data = json.loads(r.stdout or "{}")
     except ValueError:
