@@ -371,3 +371,8 @@ taxonomy_id = 0                              # the Planners category; 0 = look i
 #   price = 17.0
 #   gumroad = true
 #   etsy = true
+
+# Owner's message of 2026-10-13: "Set the price at $17 ... Lets go with Gumroad." Gumroad only; Etsy stays unapproved.
+[shop.approved."daily-quiet-money-planner"]
+price = 17.0
+gumroad = true

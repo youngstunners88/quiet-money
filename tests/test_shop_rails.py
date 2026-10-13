@@ -135,7 +135,7 @@ def test_the_login_link_uses_pkce_and_the_exchange_checks_state(rail, monkeypatc
 
 
 def test_publishing_is_refused_without_the_owners_approval_of_this_price(rail, monkeypatch):
-    cfg = config.load()
+    cfg = {**config.load(), "shop": {}}
     monkeypatch.setattr(config, "load", lambda: cfg)
     ok, why = shop.approval(PID, "etsy")
     assert not ok and "no approval" in why
@@ -152,7 +152,7 @@ def test_publishing_is_refused_without_the_owners_approval_of_this_price(rail, m
 
 
 def test_with_the_approval_the_draft_goes_live(rail, monkeypatch):
-    cfg = config.load()
+    cfg = {**config.load(), "shop": {}}
     price = listing.products(PID)[0]["price"]
     monkeypatch.setattr(config, "load", lambda: {**cfg, "shop": {"approved": {PID: {"price": price, "etsy": True}}}})
     title = listing.products(PID)[0]["etsy"]["title"]
@@ -163,7 +163,7 @@ def test_with_the_approval_the_draft_goes_live(rail, monkeypatch):
 
 
 def test_a_failing_listing_gauntlet_blocks_going_live_even_with_approval(rail, monkeypatch):
-    cfg = config.load()
+    cfg = {**config.load(), "shop": {}}
     price = listing.products(PID)[0]["price"]
     monkeypatch.setattr(config, "load", lambda: {**cfg, "shop": {"approved": {PID: {"price": price, "etsy": True}}}})
     assert "gauntlet fails" in shop.approval(PID, "etsy")[1]                           # the toy pack's images fail the real gates
@@ -190,7 +190,7 @@ def test_the_shop_mcp_speaks_the_protocol_and_publish_is_refused_over_it(monkeyp
     assert shop_mcp.handle({"jsonrpc": "2.0", "id": 1, "method": "initialize", "params": {}})["result"]["serverInfo"]["name"] == "quiet-shop"
     names = {t["name"] for t in shop_mcp.handle({"jsonrpc": "2.0", "id": 2, "method": "tools/list"})["result"]["tools"]}
     assert names == {"shop_status", "shop_plan", "shop_draft", "shop_publish", "etsy_auth_url", "etsy_auth_finish", "shop_sales"}
-    cfg = config.load()
+    cfg = {**config.load(), "shop": {}}
     monkeypatch.setattr(config, "load", lambda: {**cfg, "shop": {}})
     r = shop_mcp.handle({"jsonrpc": "2.0", "id": 3, "method": "tools/call", "params": {"name": "shop_publish", "arguments": {"product": PID, "rail": "etsy"}}})["result"]
     assert r["isError"] and "refused" in r["content"][0]["text"]
