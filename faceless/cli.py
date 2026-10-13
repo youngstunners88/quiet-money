@@ -639,6 +639,37 @@ def cmd_monid(args) -> int:
     return 1
 
 
+def cmd_marketing(args) -> int:
+    """The weekly marketing brief (reads only), or move an experiment / close an owner-queue item."""
+    from faceless import marketing
+    a, rest = args.action, args.rest
+    if a == "done" and rest:
+        print("closed:", marketing.mark_done(rest[0])["ask"][:120])
+    elif a == "start" and rest:
+        print("running:", marketing.set_experiment(rest[0], "running")["id"])
+    elif a == "result" and len(rest) >= 2:
+        print(marketing.set_experiment(rest[0], rest[1], " ".join(rest[2:]))["id"], rest[1])
+    else:
+        print(marketing.write_brief())
+    return 0
+
+
+def cmd_metrics(args) -> int:
+    """Read back what the last 14 days of videos earned (48-hour and 7-day snapshots) and record it for the scorer and the weekly brief."""
+    from faceless import metrics
+    if args.csv:
+        print(metrics.to_csv(), end="")
+        return 0
+    if not args.pull:
+        print(json.dumps(metrics.summary(), indent=1))
+        return 0
+    res = metrics.pull()
+    print(f"{res['checked']} video(s) read, {res['snapshots']} snapshot(s) recorded, {res['rows']} scorer row(s) written")
+    for p in res["problems"]:
+        print("PROBLEM:", p)
+    return 2 if res["problems"] else 0
+
+
 def cmd_listing(args) -> int:
     """Etsy and Gumroad listing packs: build (images, video, copy, checklist) or check (the gauntlet only)."""
     from faceless import listing
@@ -1042,6 +1073,14 @@ def main(argv: list[str] | None = None) -> int:
     va = sub.add_parser("variety", help="sameness audit of the last N videos (YouTube's inauthentic-content risk); writes analytics/variety.md")
     va.add_argument("-n", type=int, default=20)
     va.set_defaults(fn=cmd_variety)
+    mk = sub.add_parser("marketing", help="the weekly marketing brief (reads only; writes analytics/brief-<day>.md) | done <U01> | start <X1> | result <X1> won|killed [note]")
+    mk.add_argument("action", nargs="?", default="brief", choices=["brief", "done", "start", "result"])
+    mk.add_argument("rest", nargs="*")
+    mk.set_defaults(fn=cmd_marketing)
+    me = sub.add_parser("metrics", help="--pull reads back what the last 14 days of videos earned (48-hour and 7-day snapshots, read-only); --csv exports the snapshots; bare shows median 48-hour views by pillar")
+    me.add_argument("--pull", action="store_true")
+    me.add_argument("--csv", action="store_true")
+    me.set_defaults(fn=cmd_metrics)
     mo = sub.add_parser("monid", help="Monid desk (pay-per-use data endpoints): find <words> | inspect <provider> <endpoint> | run <provider> <endpoint> --input JSON [--yes] | result <id> | balance")
     mo.add_argument("action", choices=["find", "inspect", "run", "result", "balance"])
     mo.add_argument("rest", nargs="*")

@@ -31,7 +31,9 @@ def row(vid, slug="checklist", status="draft"):
 @pytest.mark.parametrize("text", [
     "Guaranteed to fix your budget", "You will make $5,000 a month", "Make $500 a week from home", "Build passive income now",
     "Risk-free way to save", "10% returns every year", "Get rich with this", "Clear your debt fast", "This is financial advice",
-    "You should buy this fund", "Become a millionaire", "Earn $300 today"])
+    "You should buy this fund", "Become a millionaire", "Earn $300 today",
+    "Loved by thousands of customers", "Five stars from readers", "Only 5 left at this price", "Last chance, hurry", "Limited-time offer", "Reach financial freedom",
+    "Boost your credit score fast", "Raise your credit score", "Real testimonials inside"])
 def test_the_claim_check_refuses_money_promises(text):
     assert offer.violations(text), text
 

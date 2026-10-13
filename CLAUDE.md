@@ -72,6 +72,7 @@ humans set strategy, connect accounts, and review held videos.
 | YouTube channel page, titles, tags, verify uploads | `/distribution` | `python -m faceless yt-verify` | `faceless-youtube-seo` |
 | What is winning on a platform, hashtag size, competitor and market data, marketing angles (Monid, capped) | `/faceless/monid.py` | `python -m faceless monid find "<words>"` | `faceless-monid` |
 | Keep CLAUDE.md, the workspace CONTEXT.md files and the skills true after a build or decision (the coach's structure) | `/` | `python -m faceless context` | `faceless-context` |
+| Marketing: the weekly brief, funnel, measurement, experiments, what to tell the owner (the plan is `channel/empire/MARKETING.md`) | `/faceless/marketing.py`, `metrics.py` | `channel/empire/MARKETING.md` (section 8), `channel/empire/experiments.json` | `faceless-marketing` |
 | Is the operation healthy? Something failed, stalled or overspent | `/` | `OPERATIONS.md`, `.claude/skills/faceless-daily/references/failure-playbook.md` | `faceless-daily` |
 | Evaluate an outside tool, repo or list of links safely | `/repo-farm` | `.claude/skills/faceless-intake` | `faceless-intake` |
 | The call to action on every video, the link-in-bio hub page, UTM and the offer ledger | `/faceless/offer.py` | `.claude/skills/faceless-offer/references/link-rules.md` | `faceless-offer` |
@@ -103,6 +104,7 @@ python -m faceless brandkit "<Name>" --palette mint   # Fiverr brand-kit order (
 python -m faceless preflight                   # can today's run succeed? traffic lights + the fix for each (run first)
 python -m faceless watchdog                    # is the operation alive? (also runs every 6 h on GitHub and opens an Ops alert issue)
 python -m faceless pause "reason"               # kill switch: stops paid calls, posting, daily and make (--resume to undo)
+python -m faceless marketing                    # the weekly marketing brief: guards, funnel, experiments, owner queue (reads only); `metrics --pull` first records what videos earned
 python -m faceless monid find "hashtag"             # the Monid data desk: find, inspect, run (price first), balance; $1/day cap, results in analytics/monid/
 python -m faceless muapi find "product mockup"  # the Muapi desk: find, inspect, estimate, run (price first), balance, doctor
 python -m faceless offer                       # coverage, mix, the three profile URLs; `offer --batch today` makes sure every passed video has its offer pack and row
