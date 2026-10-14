@@ -255,11 +255,16 @@ def cmd_yt_verify(args) -> int:
     """Read back every video scheduled in the last 14 days: still there, processed, public on time. Exit 2 if any is not."""
     from datetime import timedelta
     from faceless import ytchannel
+    from faceless.providers import ProviderUnavailable
     from faceless.state import all_jobs
     since = datetime.now(timezone.utc) - timedelta(days=14)
     videos = {y["video_id"]: {"job": j.id, "post_at": y.get("post_at")} for j in all_jobs()
               if (y := j.artifacts.get("youtube")) and y.get("video_id") and (not y.get("post_at") or datetime.fromisoformat(y["post_at"]) > since)}
-    problems, rows = ytchannel.verify(videos)
+    try:
+        problems, rows = ytchannel.verify(videos)
+    except ProviderUnavailable as e:    # a spent quota is a wait, not a defect: say so plainly instead of a traceback
+        print(f"yt-verify could not run: {e}. Nothing is wrong with the videos; run it again after 07:00 UTC.")
+        return 1
     for r in rows:
         print(f"{r['video']}  {str(r['privacy']):8} {str(r['processing']):10} views {r['views']:>6}  likes {r['likes']:>4}  comments {r['comments']:>3}  {r['job']}")
     for p in problems:

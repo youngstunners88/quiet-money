@@ -1631,3 +1631,16 @@ def test_songpost_uses_sung_lyrics_and_drops_cues():
     ly = songpost.sung_lyrics(pack)
     assert "sung line" in ly and "written line" not in ly and "tape hiss" not in ly and "```" not in ly
     assert "sung line" in songpost.build(pack)["description"]
+
+
+def test_yt_verify_reports_a_spent_quota_plainly(monkeypatch, capsys):
+    import argparse
+
+    from faceless import cli, ytchannel
+    from faceless.providers import ProviderUnavailable
+
+    def spent(videos):
+        raise ProviderUnavailable("YouTube quota used up; it resets at midnight Pacific")
+    monkeypatch.setattr(ytchannel, "verify", spent)
+    assert cli.cmd_yt_verify(argparse.Namespace()) == 1
+    assert "could not run" in capsys.readouterr().out

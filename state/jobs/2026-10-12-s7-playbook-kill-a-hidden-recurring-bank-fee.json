@@ -74,7 +74,8 @@
       "privacy": "private",
       "post_at": "2026-10-13T15:00:00-04:00",
       "comment_posted": false,
-      "series": true
+      "series": true,
+      "comment_tries": 1
     }
   },
   "scores": {
@@ -84,5 +85,7 @@
   "cost": {
     "tts:gemini:chars": 972
   },
-  "notes": []
+  "notes": [
+    "first comment failed: YOUTUBE_POST_COMMENT failed (log log_-f3OfWoddHxL): \"{\\n  \\\"error\\\": {\\n    \\\"code\\\": 403,\\n    \\\"message\\\": \\\"The reque"
+  ]
 }

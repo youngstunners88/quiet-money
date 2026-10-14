@@ -4418,3 +4418,11 @@
 {"ts": "2026-10-13T12:27:45Z", "t": 1791894465.443, "actor": "engine", "type": "YOUTUBE_API", "path": "playlists", "method": "POST", "status": 200}
 {"ts": "2026-10-13T12:27:46Z", "t": 1791894466.507, "actor": "engine", "type": "YOUTUBE_API", "path": "channelSections", "method": "POST", "status": 200}
 {"ts": "2026-10-13T12:27:46Z", "t": 1791894466.507, "actor": "engine", "type": "YOUTUBE_CHANNEL_APPLIED", "done": ["playlist: Penny's Money Lab: Money Math With a Coin and a Gremlin", "series section"]}
+{"ts": "2026-10-14T00:57:43Z", "t": 1791939463.493, "actor": "engine", "type": "COMPOSIO_SESSION", "user": "quiet-money-studio", "session_hash": "a77ccf27"}
+{"ts": "2026-10-14T00:57:44Z", "t": 1791939464.718, "actor": "engine", "type": "YOUTUBE_API", "path": "videos", "method": "GET", "status": 403}
+{"ts": "2026-10-14T00:57:52Z", "t": 1791939472.91, "actor": "engine", "type": "COMPOSIO_SESSION", "user": "quiet-money-studio", "session_hash": "de855ad6"}
+{"ts": "2026-10-14T00:57:53Z", "t": 1791939473.79, "actor": "engine", "type": "COMPOSIO_EXECUTE", "tool": "YOUTUBE_POST_COMMENT", "ok": true, "log_id": "log_CXch67T2jVU4", "job": "2026-10-12-s6-myth-myth-you-need-a-high-income-to-s"}
+{"ts": "2026-10-14T00:57:54Z", "t": 1791939474.244, "actor": "engine", "type": "COMPOSIO_EXECUTE", "tool": "YOUTUBE_POST_COMMENT", "ok": false, "log_id": "log_-f3OfWoddHxL", "job": "2026-10-12-s7-playbook-kill-a-hidden-recurring-bank-fee"}
+{"ts": "2026-10-14T00:57:54Z", "t": 1791939474.857, "actor": "engine", "type": "COMPOSIO_EXECUTE", "tool": "YOUTUBE_POST_COMMENT", "ok": false, "log_id": "log_PN0-Td3TfvT_", "job": "2026-10-12-s8-escape-the-value-equation-math-for-inco"}
+{"ts": "2026-10-14T00:58:12Z", "t": 1791939492.53, "actor": "engine", "type": "COMPOSIO_SESSION", "user": "quiet-money-studio", "session_hash": "8e9b3948"}
+{"ts": "2026-10-14T00:58:13Z", "t": 1791939493.422, "actor": "engine", "type": "YOUTUBE_API", "path": "videos", "method": "GET", "status": 403}
