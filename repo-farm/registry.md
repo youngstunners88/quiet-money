@@ -219,3 +219,13 @@ Each row was read from the project's own README, manifest, licence file or regis
 | claude-motion (whaleyxbt/claude-motion) | render | MIT. |
 | Remotion (remotion-dev/remotion) | render | The code is MIT and it is the best-known React video renderer, with a large agent-facing skill set. |
 | Awesome Motion Design Agent Skills (frankxai/awesome-motion-design-agent-skills) | render | A curated list of motion-design skills and resources (GSAP, Motion, Remotion, Lottie, Rive), which the intake read as a directory. |
+
+## Intake 2026-10-14 (verified from dossiers in `repo-farm/intake/2026-10-14/`)
+
+Each row was read from the project's own README, manifest, licence file or registry entry; nothing was installed or run. Stars and dates were unavailable where the GitHub API is closed to this machine.
+
+### Parked (named condition)
+
+| Tool | Stage | Why |
+|---|---|---|
+| SLM Agent (scaledown-team/SLM_Agent, npm @scaledown/migration-agent) | none | It is not a Claude Code token saver. |
