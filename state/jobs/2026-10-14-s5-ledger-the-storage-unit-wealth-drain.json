@@ -1,0 +1,66 @@
+{
+  "id": "2026-10-14-s5-ledger-the-storage-unit-wealth-drain",
+  "pillar": "ledger",
+  "topic": "The Storage Unit Wealth Drain",
+  "day": "2026-10-14",
+  "slot": 5,
+  "status": "held",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-14T09:31:06Z",
+      "words": 184
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-14T09:31:58Z",
+      "seconds": 70.566,
+      "provider": "gemini"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-14T09:31:58Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-14T09:34:22Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-14T09:34:22Z",
+      "score": 97
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-14T09:34:23Z"
+    },
+    {
+      "from": "packaged",
+      "to": "held",
+      "ts": "2026-10-14T09:34:23Z"
+    }
+  ],
+  "artifacts": {
+    "angle": "Calculating the total cost of renting a $150/month storage unit for items worth less than the rental fees over a decade.",
+    "title": "The $18,000 Storage Unit Wealth Drain",
+    "style": "ledger",
+    "video": "/home/user/quiet-money/production/output/2026-10-14/2026-10-14-s5-ledger-the-storage-unit-wealth-drain/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-14/2026-10-14-s5-ledger-the-storage-unit-wealth-drain/cover.jpg"
+  },
+  "scores": {
+    "gauntlet": 97,
+    "passed": false
+  },
+  "cost": {
+    "tts:gemini:chars": 1112
+  },
+  "notes": [
+    "held for review: first_frame_visible"
+  ]
+}

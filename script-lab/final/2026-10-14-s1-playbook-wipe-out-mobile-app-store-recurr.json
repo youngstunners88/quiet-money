@@ -1,0 +1,88 @@
+{
+  "title": "Wipe Out Hidden App Store Charges Right Now",
+  "hook_text": "YOUR PHONE IS DRAINING YOUR BANK ACCOUNT",
+  "beats": [
+    {
+      "say": "Your phone is quietly bleeding cash every single month on subscriptions you forgot you started.",
+      "callout": "",
+      "visual": "A dark smartphone resting on a wooden desk, harsh side lighting, macro shot."
+    },
+    {
+      "say": "Most people lose hundreds of dollars a year to apps they stopped using months ago.",
+      "callout": "",
+      "visual": "A person's hands holding a phone with screen blurred and out of focus."
+    },
+    {
+      "say": "That dead subscription money could easily turn into $226,659 over 30 years if you invested it at 8% a year.",
+      "callout": "30 YEARS VS $226,000",
+      "visual": "A stack of US dollar bills sitting next to a dark window, moody cinematic lighting."
+    },
+    {
+      "say": "Let's wipe them out right now in under two minutes. Here is step one.",
+      "callout": "STEP ONE",
+      "visual": "A finger pressing the settings icon on a sleek mobile device, shallow depth of field."
+    },
+    {
+      "say": "Step one. Open your profile settings in the app store on your phone right now.",
+      "callout": "STEP ONE",
+      "visual": "Close-up of a hand tapping an account profile icon on a phone screen, soft bokeh."
+    },
+    {
+      "say": "Step two. Tap on subscriptions to see the hidden list of active and expired trials.",
+      "callout": "STEP TWO",
+      "visual": "A person scrolling through a long list of digital service icons on a dimly lit screen."
+    },
+    {
+      "say": "Step three. Cancel every single recurring charge that you haven't used in the past week.",
+      "callout": "STEP THREE",
+      "visual": "A finger tapping a red cancel button on a digital interface, high contrast."
+    },
+    {
+      "say": "Look at the total amount you just saved yourself every month.",
+      "callout": "",
+      "visual": "A glowing desk lamp casting long shadows over a minimalist workspace."
+    },
+    {
+      "say": "A $15 a month subscription adds up to $1,800 down the drain over 10 years.",
+      "callout": "10 YEARS VS $1,800",
+      "visual": "An old brass desk clock ticking away time, dark atmospheric background."
+    },
+    {
+      "say": "That is cash straight out of your pocket for pixels you never touch.",
+      "callout": "",
+      "visual": "A modern smartphone lying face down on a concrete surface, dramatic shadows."
+    },
+    {
+      "say": "Stop funding tech companies for free and keep your hard-earned paycheck instead.",
+      "callout": "",
+      "visual": "A minimalist wallet resting on a dark walnut table, clean top-down perspective."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "A calm, empty room with morning sunlight streaming through vertical blinds."
+    }
+  ],
+  "caption": "Stop letting forgotten apps drain your bank account every month. Do this quick check today and keep your cash.\n\n#money #personalfinance #subscriptions #savemoney #budgeting",
+  "description": "Learn how to find and cancel hidden app store subscriptions on your phone to stop wasting money on forgotten trials.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#subscriptions",
+    "#savemoney",
+    "#budgeting"
+  ],
+  "first_comment": "How much money did you just find hiding in your app subscriptions?",
+  "facts": [
+    {
+      "claim": "$5/day habit equals $1,825/year; invested monthly at 8% for 30 years equals $226,659",
+      "basis": "$5/day habit = $1,825/year; invested monthly at 8% for 30 years = $226,659"
+    },
+    {
+      "claim": "A $15/month subscription for 10 years equals $1,800",
+      "basis": "A $15/month subscription for 10 years = $1,800"
+    }
+  ],
+  "source": "llm",
+  "pillar": "playbook"
+}

@@ -1,0 +1,79 @@
+{
+  "title": "Why You Keep Paying For Things You Don't Use",
+  "hook_text": "WHY YOU PAY FOR THINGS YOU DON'T USE",
+  "beats": [
+    {
+      "say": "You're still paying for a gym membership you haven't touched in eight months. Why?",
+      "callout": "",
+      "visual": "A close-up of a dusty metal locker door in dim lighting, shot on 35mm film."
+    },
+    {
+      "say": "It's not laziness. It's a mental glitch called the sunk cost fallacy.",
+      "callout": "",
+      "visual": "A hand holding a leather wallet with cards slipping out, moody cinematic shadow."
+    },
+    {
+      "say": "Your brain hates losing money more than it likes logic. So you keep bleeding cash.",
+      "callout": "",
+      "visual": "A brass key resting on a dark wooden desk, soft side lighting."
+    },
+    {
+      "say": "Take that monthly subscription. A $15 subscription for 10 years costs you $1,800.",
+      "callout": "$1,800",
+      "visual": "A cup of cold coffee on a concrete table, top-down minimalist view."
+    },
+    {
+      "say": "You keep it active just because you already paid for January.",
+      "callout": "",
+      "visual": "Fingers tapping on a dark wooden tabletop, shallow depth of field."
+    },
+    {
+      "say": "That dead investment from 2014? Same trap. You refuse to take the loss.",
+      "callout": "2014",
+      "visual": "An old brass desk lamp turned off in a quiet room, warm cinematic glow."
+    },
+    {
+      "say": "But here's the part nobody mentions. The money you spent is already gone.",
+      "callout": "",
+      "visual": "A dark hallway with a single strip of light on the floor, low angle."
+    },
+    {
+      "say": "Keeping the contract alive doesn't bring it back. It only steals from tomorrow.",
+      "callout": "",
+      "visual": "A closed wooden door with a brass handle, afternoon shadow."
+    },
+    {
+      "say": "The fix is simple. Judge every cost by what it does today, not yesterday.",
+      "callout": "TODAY VS YESTERDAY",
+      "visual": "A blank sheet of white paper on a dark desk, single overhead light."
+    },
+    {
+      "say": "Cut the dead weight. Put that cash toward your future self instead.",
+      "callout": "",
+      "visual": "A pair of keys dropped onto a clean wooden surface, slow motion."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "A quiet sidewalk at dusk with soft streetlights, distant silhouette."
+    }
+  ],
+  "caption": "Stop paying for your past mistakes. Look at your subscriptions today and cut what you don't use. #moneypk #personalfinance #moneytips #financialfreedom",
+  "description": "The sunk cost fallacy quietly drains your bank account every month. Here is why your brain tricks you into paying for unused subscriptions and dead investments, and how to fix it.",
+  "hashtags": [
+    "#moneypk",
+    "#personalfinance",
+    "#moneytips",
+    "#financialfreedom",
+    "#psychology"
+  ],
+  "first_comment": "What is the one subscription you are keeping just because you feel guilty canceling it?",
+  "facts": [
+    {
+      "claim": "A $15/month subscription for 10 years = $1,800",
+      "basis": "A $15/month subscription for 10 years = $1,800"
+    }
+  ],
+  "source": "llm",
+  "pillar": "psychology"
+}
