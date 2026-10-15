@@ -70,7 +70,10 @@ def execute(tool_slug: str, arguments: dict | None = None, job: str | None = Non
     events.emit("COMPOSIO_EXECUTE", tool=tool_slug, ok=ok, log_id=log_id, job=job)
     ledger.spend("composio", "calls", 1, job=job)
     if not ok:
-        raise ProviderError(f"{tool_slug} failed (log {log_id}): {json.dumps(data.get('error'))[:300]}")
+        err = json.dumps(data.get("error"))
+        if "exceeded your" in err and "quota" in err:       # a spent daily quota is a wait until the midnight-Pacific reset, not a defect
+            raise ProviderUnavailable(f"{tool_slug}: YouTube quota used up; it resets at midnight Pacific")
+        raise ProviderError(f"{tool_slug} failed (log {log_id}): {err[:300]}")
     return {"data": data.get("data", data), "log_id": log_id, "successful": ok}
 
 

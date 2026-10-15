@@ -1,0 +1,100 @@
+{
+ "title": "The Price Tag Hidden Behind Your Monthly Life",
+ "hook_text": "YOUR FINISH LINE KEEPS MOVING",
+ "beats": [
+  {
+   "say": "Somewhere, there's a price tag on your monthly life, and almost nobody has read it.",
+   "callout": "HIDDEN PRICE TAG",
+   "visual": "A paper apartment, car, and coffee cup sit on a desk, a folded paper price tag dangling from them, slowly flipping over to reveal blank."
+  },
+  {
+   "say": "It's not your rent, or your groceries, it's the pile of money that replaces them.",
+   "callout": "THE PILE",
+   "visual": "Paper bills for rent and groceries slide aside as a tall stack of paper coins rises behind them."
+  },
+  {
+   "say": "Planners use a rule of thumb, the 4% rule, to estimate that pile.",
+   "callout": "4% RULE",
+   "visual": "A paper ruler unfolds across the coin stack, a small 4% tab sliding along its edge."
+  },
+  {
+   "say": "The idea, withdraw about 4% a year, and the pile is meant to last.",
+   "callout": "WITHDRAW 4%",
+   "visual": "A paper hand lifts a thin slice off the top of the coin stack while the stack stays standing."
+  },
+  {
+   "say": "So here's the tag, living on $3,000 a month needs about $900,000 invested.",
+   "callout": "$900,000",
+   "visual": "A small paper envelope marked $3,000 sits beside a towering paper coin column marked $900,000."
+  },
+  {
+   "say": "Read that again, your lifestyle isn't just a monthly cost, it's a finish line.",
+   "callout": "FINISH LINE",
+   "visual": "A paper running track stretches into the distance, a torn-paper ribbon finish line at the far end."
+  },
+  {
+   "say": "And here's the strange part, every upgrade you buy quietly moves that line further away.",
+   "callout": "IT MOVES",
+   "visual": "The paper finish line ribbon slides backward down the track as a new shopping bag drops onto it."
+  },
+  {
+   "say": "A bigger apartment, a nicer car, a new subscription, each one raises the target.",
+   "callout": "TARGET RISES",
+   "visual": "Paper cutouts of an apartment, a car, and a phone app stack onto the coin column, pushing it taller."
+  },
+  {
+   "say": "Your brain sees a small monthly payment, it never sees the pile behind it.",
+   "callout": "INVISIBLE PILE",
+   "visual": "A tiny paper receipt sits in front, casting a huge shadow shaped like a coin tower on the wall."
+  },
+  {
+   "say": "That's why people earn more and feel further behind, the line keeps sprinting ahead.",
+   "callout": "FURTHER BEHIND",
+   "visual": "A paper paycheck arrow climbs upward while the paper finish line ribbon races away even faster."
+  },
+  {
+   "say": "It works in reverse too, trimming a recurring cost shrinks the pile you need.",
+   "callout": "REVERSE IT",
+   "visual": "Paper scissors snip a subscription card, and the coin column lowers by several layers."
+  },
+  {
+   "say": "Cutting monthly spending helps twice, more saved now, and a closer finish line later.",
+   "callout": "HELPS TWICE",
+   "visual": "A paper coin drops into a jar while the finish line ribbon slides closer down the track."
+  },
+  {
+   "say": "Today, before any new monthly cost, ask, how much pile does this add?",
+   "callout": "ASK FIRST",
+   "visual": "A paper index card reads a question mark, pinned beside a new paper price tag on the desk."
+  }
+ ],
+ "caption": "Every monthly cost has a hidden second price tag: the invested pile needed to cover it.",
+ "description": "Your lifestyle isn't just a bill, it's a finish line. Using the 4% rule of thumb, living on $3,000 a month means roughly $900,000 invested. Every upgrade moves that line, and every trimmed recurring cost pulls it closer. Education only, not financial advice.",
+ "hashtags": [
+  "#moneypsychology",
+  "#4percentrule",
+  "#personalfinance",
+  "#lifestyleinflation",
+  "#quietmoney"
+ ],
+ "first_comment": "What's one monthly cost you'd rethink after seeing the pile behind it?",
+ "facts": [
+  {
+   "claim": "Living on $3,000 a month at the 4% rule needs about $900,000 invested",
+   "basis": "To live on $3,000 a month at the 4% rule you need $900,000 invested"
+  },
+  {
+   "claim": "The 4% rule estimates withdrawing about 4% a year",
+   "basis": "To live on $3,000 a month at the 4% rule you need $900,000 invested"
+  }
+ ],
+ "source": "opus-collage",
+ "look": "torn-paper collage, hand-cut paper cutouts with drop shadows, visible paper fibre and torn white edges, warm off-white background, black ink, one burnt-orange accent and one teal accent, flat editorial illustration, no photorealism, no text, no letters, no faces",
+ "_gates_failing": [],
+ "_check": {
+  "words": 182,
+  "numbers_not_in_fact_sheet": [],
+  "gates_failing": [],
+  "usd": 0.0669
+ }
+}

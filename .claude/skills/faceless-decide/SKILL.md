@@ -56,3 +56,11 @@ d = decide.ask({"kind": decide.Q("choice", "What is this comment?", fallback="qu
 ```
 Always give a fallback the code can live with, and add a test with a mocked `faceless.providers.http` (see
 `test_laya_backend_answers_are_validated_and_dry_run_by_default`).
+
+## Images in the state (Jev 1.14, read 2026-10-15)
+Sources: typesafe.ai/blog/jev-1-14, docs.typesafe.ai/images, docs.typesafe.ai/models#context-length.
+- `decide.ask(questions, state, job, images={"name": path})` puts pictures in front of the model. Jev (SDK): each becomes an `Image` in the state and the request carries `TypeSafe-Danger-Zone-Images: true`. Laya: the pictures go in a top-level `assets` map (base64 PNG) and the state names them by reference. Clef (Cloudflare): up to 4 images, no header. Whichever backend `[decide]` selects gets them; `dry_run` still applies.
+- Limits (never resized for you): PNG or JPEG, still only; each side 256-1568 px; 78,400-2,458,624 pixels; 16 MiB a file; 32 MiB a request. `decide.prepare_image` makes every picture fit. Images cost ordinary input tokens.
+- Image skill is weaker than text skill (the authors say so): one picture and a simple yes/no or choice per question. Never use an image answer for compliance.
+- Other 1.14 items, not used yet: the `box` question type (where something is in a picture), long context (per-request 64k tokens, 262k with `TypeSafe-Danger-Zone-Long-Context: true`; less reliable), and the opt-in data sharing. Danger-zone features are the vendor's own warning: calibrate against gauntlet results before anything acts.
+- First use: `collage.check_frames(job_dir)` asks whether each drawn still keeps the paper look and has no text or face, and writes `frames-check.json`. No `TYPESAFE_API_KEY` is set here, so it runs on Clef; the Jev path is tested with a stand-in SDK, not live.
