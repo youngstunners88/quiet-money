@@ -1,0 +1,107 @@
+{
+ "title": "Why Starting Late Costs More Than Starting Small",
+ "hook_text": "$200 BEAT $10,000",
+ "beats": [
+  {
+   "say": "A $200 monthly habit beat a $10,000 windfall, and time was the reason.",
+   "callout": "TIME WINS",
+   "visual": "A small paper coin stack and a tall paper coin tower side by side, a paper clock rising behind the small stack and tipping the balance toward it."
+  },
+  {
+   "say": "Here's the setup, one person drops $10,000 in once, then never touches it again.",
+   "callout": "$10,000 ONCE",
+   "visual": "A single thick paper envelope labeled $10,000 slides into a paper jar, and the lid snaps shut."
+  },
+  {
+   "say": "Another person adds $200 a month, small, boring, easy to forget, for 30 years.",
+   "callout": "$200 A MONTH",
+   "visual": "Thin paper bills drop one by one into a second jar as torn calendar pages flutter past."
+  },
+  {
+   "say": "After 30 years, the $10,000 lump sum grows to $76,123, which sounds pretty great.",
+   "callout": "$76,123",
+   "visual": "The first jar's paper coins rise steadily into a neat column labeled $76,123."
+  },
+  {
+   "say": "But the $200 a month grows to $243,994, leaving the windfall far behind.",
+   "callout": "$243,994",
+   "visual": "The second jar's coin column shoots upward past the first, unfolding like a paper accordion."
+  },
+  {
+   "say": "And here's the strange part, that person only paid in $72,000 of their own money.",
+   "callout": "ONLY $72,000",
+   "visual": "A short paper strip labeled $72,000 sits at the base of the towering column, highlighted in yellow."
+  },
+  {
+   "say": "So most of that pile wasn't saved, it was grown, by time doing quiet work.",
+   "callout": "GROWN, NOT SAVED",
+   "visual": "Paper vines sprout from the base strip and weave upward, forming most of the tall coin tower."
+  },
+  {
+   "say": "Time works through doubling, the Rule of 72, at 8%, money doubles in 9 years.",
+   "callout": "RULE OF 72",
+   "visual": "One paper coin splits into two, then four, each split ticking forward on a paper timeline marked 9 years."
+  },
+  {
+   "say": "Which means waiting 9 years isn't a small delay, it's losing a whole doubling forever.",
+   "callout": "LOST DOUBLING",
+   "visual": "A pair of scissors cuts the first segment off the paper timeline, and those coins drift away."
+  },
+  {
+   "say": "Meanwhile waiting isn't neutral, at 3% inflation, $100 is worth $55 after 20 years.",
+   "callout": "$100 → $55",
+   "visual": "A paper $100 bill slowly shrinks and fades into a smaller bill marked $55."
+  },
+  {
+   "say": "So starting small beats starting perfect, because the clock counts every month you're in.",
+   "callout": "START SMALL",
+   "visual": "A paper clock's hand sweeps around, dropping one small coin into a jar with each tick."
+  },
+  {
+   "say": "Today, pick any amount you won't miss, and let time start its first doubling.",
+   "callout": "START TODAY",
+   "visual": "A single paper coin is placed on a blank timeline, and a faint outline of its doubled pair appears beside it."
+  }
+ ],
+ "caption": "$200 a month vs $10,000 once. Same 7%. Time picked the winner. ⏳",
+ "description": "Why does a small monthly habit outgrow a big one-time sum? It comes down to time and doubling. Using the Rule of 72 and a simple 30-year comparison, we look at why waiting costs more than starting small. Educational content only, not financial advice.",
+ "hashtags": [
+  "#moneypsychology",
+  "#compoundinterest",
+  "#personalfinance",
+  "#financialliteracy",
+  "#quietmoney"
+ ],
+ "first_comment": "The person putting in $200 a month only paid in $72,000, and time did the rest. What small amount could you start with today? (Education only, not advice.)",
+ "facts": [
+  {
+   "claim": "$200 a month at 7% for 30 years grows to $243,994",
+   "basis": "FACT SHEET: $200 a month at 7% for 30 years grows to $243,994"
+  },
+  {
+   "claim": "$200 a month for 30 years totals $72,000 paid in",
+   "basis": "FACT SHEET: the same $200 a month paid in only totals $72,000"
+  },
+  {
+   "claim": "$10,000 lump sum at 7% for 30 years grows to $76,123",
+   "basis": "FACT SHEET: $10,000 lump sum at 7% for 30 years grows to $76,123"
+  },
+  {
+   "claim": "At 8%, money doubles in 9 years by the Rule of 72",
+   "basis": "FACT SHEET: Rule of 72 at 8% = 9.0 years to double"
+  },
+  {
+   "claim": "$100 is worth $55 in today's money after 20 years at 3% inflation",
+   "basis": "FACT SHEET: $100 loses value to 3% inflation: worth $55 in today's money after 20 years"
+  }
+ ],
+ "source": "opus-collage",
+ "look": "torn-paper collage, hand-cut paper cutouts with drop shadows, visible paper fibre and torn white edges, warm off-white background, black ink, one burnt-orange accent and one teal accent, flat editorial illustration, no photorealism, no text, no letters, no faces",
+ "_check": {
+  "words": 197,
+  "numbers_not_in_fact_sheet": [
+   "9"
+  ],
+  "usd": 0.0573
+ }
+}

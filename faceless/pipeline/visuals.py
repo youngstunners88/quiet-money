@@ -15,7 +15,9 @@ SUFFIX = ("vertical 9:16 composition, subject in the center third, cinematic, hi
           "no text, no letters, no numbers, no watermark, no logo, any printed surface out of focus")
 
 
-def build_prompt(visual: str, style: str) -> str:
+def build_prompt(visual: str, style: str, look: str = "") -> str:
+    if look:     # a script's own look replaces the pillar style and the cinematic suffix
+        return f"{visual.rstrip('. ')}. {look}, vertical 9:16 composition, no text, no letters, no numbers, no watermark"
     return f"{visual.rstrip('. ')}. {style}, {SUFFIX}"
 
 
@@ -71,13 +73,13 @@ def run(job, script: dict) -> list[dict]:
         if i == 0 and hook_clip:
             return {"beat": 0, "provider": "clip", "path": hook_clip["frame"], "prompt": "", "clip": hook_clip["clip"]}
         seed = int(hashlib.sha1(f"{job.id}:{i}".encode(), usedforsecurity=False).hexdigest()[:8], 16) % 2_000_000_000
-        prompt = build_prompt(beat["visual"] or beat["say"], pillar.style)
+        prompt = build_prompt(beat["visual"] or beat["say"], pillar.style, script.get("look", ""))
         provider, path = images.generate(prompt, seed=seed, hero=(i == 0), job=job.id)
         row = {"beat": i, "provider": provider, "path": path, "prompt": prompt}
         if provider != "procedural" and (res := qa.check_image(path, beat["say"], job=job.id)):
             row["qa"] = res
             if res["flags"] and i == 0:        # the hook keeps a still: one cleaner retry, keep whichever looks better
-                clean = build_prompt((beat["visual"] or beat["say"]) + ", only objects and places, no people, no faces, no text, no numbers", pillar.style)
+                clean = build_prompt((beat["visual"] or beat["say"]) + ", only objects and places, no people, no faces, no text, no numbers", pillar.style, script.get("look", ""))
                 provider2, path2 = images.generate(clean, seed=seed + 101, hero=True, job=job.id)
                 res2 = qa.check_image(path2, beat["say"], job=job.id) if provider2 != "procedural" else None
                 if res2 is not None and len(res2["flags"]) < len(res["flags"]):

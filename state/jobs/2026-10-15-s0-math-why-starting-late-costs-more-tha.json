@@ -1,0 +1,37 @@
+{
+  "id": "2026-10-15-s0-math-why-starting-late-costs-more-tha",
+  "pillar": "math",
+  "topic": "Why Starting Late Costs More Than Starting Small",
+  "day": "2026-10-15",
+  "slot": 0,
+  "status": "visualized",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-15T02:36:45Z",
+      "words": 170
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-15T02:37:09Z",
+      "seconds": 63.24,
+      "provider": "gemini"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-15T02:37:57Z"
+    }
+  ],
+  "artifacts": {
+    "title": "Why Starting Late Costs More Than Starting Small",
+    "style": "cinematic"
+  },
+  "scores": {},
+  "cost": {
+    "tts:gemini:chars": 959
+  },
+  "notes": []
+}

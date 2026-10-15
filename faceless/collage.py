@@ -27,8 +27,7 @@ Return ONLY a JSON object with keys: title, hook_text (max 6 words, caps), beats
 Script: 175-200 spoken words in total, short comma-separated clauses, one idea per beat, about 14 words per beat. Open cold on the strangest concrete detail, create a curiosity gap,
 escalate every beat, end on one insight the viewer can use today. Education only: no buy or invest calls, no promised returns, no income claims.
 Every number you say must appear in the FACT SHEET; never invent a number, date, person or study. callout: one keyword or 1-3 words in caps, or empty; never a full sentence.
-visual: ONE paper-collage scene that SHOWS the idea as a visual metaphor (stacked paper coins growing, a torn calendar, a paper clock splitting). Start each visual with
-"{LOOK}:" then the scene. No faces and no real people. Explanatory motion only. facts: list of {{claim, basis}} using the fact sheet as basis.
+visual: ONE paper-collage scene that SHOWS the idea as a visual metaphor (stacked paper coins growing, a torn calendar, a paper clock splitting). Describe ONE scene only; the paper-collage look is added by code. No faces and no real people. Explanatory motion only. facts: list of {{claim, basis}} using the fact sheet as basis.
 """
 
 
@@ -60,6 +59,7 @@ def write(topic: str, angle: str = "", *, out: str | None = None) -> dict:
     from faceless.providers.llm import _extract_json
     script = _extract_json(d["choices"][0]["message"]["content"])
     script["source"] = "opus-collage"
+    script["look"] = LOOK
     words = sum(len(b["say"].split()) for b in script["beats"])
     allowed = set(re.findall(r"\d[\d,.]*", fact_sheet()))
     stray = sorted({n.strip(",.") for b in script["beats"] for n in re.findall(r"\d[\d,.]*", b["say"] + " " + b.get("callout", ""))} - {a.strip(",.") for a in allowed})

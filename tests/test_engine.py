@@ -1644,3 +1644,11 @@ def test_yt_verify_reports_a_spent_quota_plainly(monkeypatch, capsys):
     monkeypatch.setattr(ytchannel, "verify", spent)
     assert cli.cmd_yt_verify(argparse.Namespace()) == 1
     assert "could not run" in capsys.readouterr().out
+
+
+def test_script_look_replaces_the_pillar_style():
+    from faceless.pipeline import script as sc, visuals
+    assert "cinematic" in visuals.build_prompt("a coin", "dark gold")
+    p = visuals.build_prompt("a coin", "dark gold", "torn-paper collage")
+    assert "torn-paper collage" in p and "cinematic" not in p and "dark gold" not in p
+    assert sc.normalize({"beats": [{"say": "x"}], "look": " paper "})["look"] == "paper"

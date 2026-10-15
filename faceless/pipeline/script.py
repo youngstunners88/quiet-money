@@ -97,6 +97,7 @@ def normalize(script: dict) -> dict:
         "facts": facts,
         "source": script.get("source", "llm"),
         "pillar": script.get("pillar", ""),
+        "look": str(script.get("look") or "").strip(),        # an optional picture style of its own (paper collage); empty keeps the pillar's look
     }
 
 
