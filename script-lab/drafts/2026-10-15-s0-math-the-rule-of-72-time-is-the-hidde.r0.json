@@ -1,0 +1,100 @@
+{
+  "title": "The Rule of 72: How Time Multiplies Your Money",
+  "hook_text": "YOUR MONEY IS DOUBLING RIGHT NOW",
+  "beats": [
+    {
+      "say": "Here's the math banks don't want you to calculate.",
+      "callout": "",
+      "visual": "A cinematic shot of a dark room with a single desk lamp illuminating a stack of coins, moody shadows, 35mm film."
+    },
+    {
+      "say": "It's called the Rule of 72, and it explains how wealth actually builds.",
+      "callout": "",
+      "visual": "Close-up of a vintage metallic clock ticking slowly, blurred background, warm tungsten lighting, cinematic depth of field."
+    },
+    {
+      "say": "Divide 72 by your investment return, and you get the years it takes to double.",
+      "callout": "72 DIVIDED BY RATE",
+      "visual": "A sleek fountain pen resting on a blank parchment notebook, overhead shot, soft natural window light."
+    },
+    {
+      "say": "At 8% a year, your money doubles every 9 years without extra work.",
+      "callout": "8% RETURN",
+      "visual": "Macro shot of a tiny green seedling pushing through dark soil, soft morning sun rays, moody atmosphere."
+    },
+    {
+      "say": "Start at 25 investing $200 a month at 8%, and you reach $698,202 by 65.",
+      "callout": "AGE 25 START",
+      "visual": "A vintage leather briefcase resting on a wooden floor by a large factory window, dust motes in sunbeams."
+    },
+    {
+      "say": "Wait until 35 with that exact same plan, and you drop to $298,072.",
+      "callout": "$698,000 VS $298,000",
+      "visual": "A hand placing a single chess piece on a dark wooden board, cinematic sidelight, shallow focus."
+    },
+    {
+      "say": "That ten-year delay costs you $400,130 in final wealth.",
+      "callout": "COST: $400,130",
+      "visual": "A rusty iron key lying on a concrete slab, cold industrial lighting, minimalist framing."
+    },
+    {
+      "say": "But here's the part nobody mentions. The rule works against debt too.",
+      "callout": "",
+      "visual": "A dark hallway with a single flickering overhead light bulb casting long shadows on brick walls."
+    },
+    {
+      "say": "At 24% credit card APR, debt doubles every 3 years.",
+      "callout": "24% APR DEBT",
+      "visual": "Macro shot of a red warning light pulsing slowly in a dark server room, high contrast."
+    },
+    {
+      "say": "A $6,000 balance paid with minimums turns into 21 years and $10,887 in interest.",
+      "callout": "21 YEARS",
+      "visual": "An old mechanical calculator on a metal desk, numbers rolling on paper tape, moody film grain."
+    },
+    {
+      "say": "Time is the hidden multiplier of everything you own or owe.",
+      "callout": "",
+      "visual": "A silhouette of a person walking away down a long concrete pier at dusk, horizon glowing orange."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "A sleek dark fountain pen drawing a sharp straight line on heavy paper, dramatic studio lighting."
+    }
+  ],
+  "caption": "Time is your greatest asset or your worst enemy. The math doesn't care about your intentions. #personalfinance #investing #moneytips #wealthbuilding #finance",
+  "description": "Discover how the Rule of 72 dictates the speed of your wealth and your debt. A step-by-step breakdown of how a ten-year delay alters your financial future.",
+  "hashtags": [
+    "#personalfinance",
+    "#investing",
+    "#moneytips",
+    "#wealthbuilding",
+    "#finance"
+  ],
+  "first_comment": "Did you start investing in your 20s or wait until later? Let's talk numbers below.",
+  "facts": [
+    {
+      "claim": "$200/month invested for 40 years at 8%/yr (monthly compounding) = $698,202 (you put in $96,000)",
+      "basis": "Fact Sheet"
+    },
+    {
+      "claim": "$200/month invested for 20 years at 8%/yr (monthly compounding) = $117,804 (you put in $48,000)",
+      "basis": "Fact Sheet"
+    },
+    {
+      "claim": "Starting at 25 vs 35 with $200/month at 8% until 65: $698,202 vs $298,072 (10 years late costs $400,130)",
+      "basis": "Fact Sheet"
+    },
+    {
+      "claim": "Rule of 72: at 8% money doubles every 9 years; at 24% debt doubles every 3 years",
+      "basis": "Fact Sheet"
+    },
+    {
+      "claim": "$6,000 credit card at 24% APR paying only the minimum (1% + interest, min $25): 252 months (~21 years), $10,887 interest",
+      "basis": "Fact Sheet"
+    }
+  ],
+  "source": "llm",
+  "pillar": "math"
+}
