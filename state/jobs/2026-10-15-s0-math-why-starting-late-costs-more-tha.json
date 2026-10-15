@@ -4,7 +4,7 @@
   "topic": "Why Starting Late Costs More Than Starting Small",
   "day": "2026-10-15",
   "slot": 0,
-  "status": "visualized",
+  "status": "packaged",
   "history": [
     {
       "from": "planned",
@@ -23,13 +23,34 @@
       "from": "voiced",
       "to": "visualized",
       "ts": "2026-10-15T02:37:57Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-15T02:39:55Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-15T02:39:55Z",
+      "score": 99
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-15T02:39:56Z"
     }
   ],
   "artifacts": {
     "title": "Why Starting Late Costs More Than Starting Small",
-    "style": "cinematic"
+    "style": "cinematic",
+    "video": "/home/user/quiet-money/production/output/2026-10-15/2026-10-15-s0-math-why-starting-late-costs-more-tha/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-15/2026-10-15-s0-math-why-starting-late-costs-more-tha/cover.jpg"
   },
-  "scores": {},
+  "scores": {
+    "gauntlet": 99,
+    "passed": true
+  },
   "cost": {
     "tts:gemini:chars": 959
   },
