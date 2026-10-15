@@ -4,7 +4,7 @@
   "topic": "The Price Tag Hidden Behind Your Monthly Life",
   "day": "2026-10-15",
   "slot": 0,
-  "status": "visualized",
+  "status": "packaged",
   "history": [
     {
       "from": "planned",
@@ -23,13 +23,34 @@
       "from": "voiced",
       "to": "visualized",
       "ts": "2026-10-15T02:52:02Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-15T02:54:15Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-15T02:54:15Z",
+      "score": 99
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-15T02:54:17Z"
     }
   ],
   "artifacts": {
     "title": "The Price Tag Hidden Behind Your Monthly Life",
-    "style": "cinematic"
+    "style": "cinematic",
+    "video": "/home/user/quiet-money/production/output/2026-10-15/2026-10-15-s0-math-the-price-tag-hidden-behind-your/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-15/2026-10-15-s0-math-the-price-tag-hidden-behind-your/cover.jpg"
   },
-  "scores": {},
+  "scores": {
+    "gauntlet": 99,
+    "passed": true
+  },
   "cost": {
     "tts:gemini:chars": 1016
   },
