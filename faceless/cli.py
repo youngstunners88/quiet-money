@@ -617,6 +617,17 @@ def cmd_songs(args) -> int:
     return 0 if res["made"] >= res["wanted"] else 1
 
 
+def cmd_comics(args) -> int:
+    """Comics: `comics [--day D] [--n 5] [--reference IMG] [--theme TEXT]` draws the day's picture posts into distribution/comics/<day>/."""
+    from faceless import comics
+    try:
+        print(comics.build(args.day, args.n, Path(args.reference) if args.reference else None, args.theme or ""))
+    except Exception as e:
+        print("comics refused:", e)
+        return 1
+    return 0
+
+
 def cmd_songvideo(args) -> int:
     """Song video: `songvideo IMAGE AUDIO "Title" OUT.mp4 [--draft] [--grade dusk|warm|deep]` | `songvideo --poster IMAGE "Title" OUT.jpg`."""
     from pathlib import Path
@@ -953,6 +964,9 @@ def main(argv: list[str] | None = None) -> int:
     sv.add_argument("--pan-from", type=float, default=0.0)
     sv.add_argument("--pan-to", type=float, default=1.0)
     sv.set_defaults(fn=cmd_songvideo)
+    cm = sub.add_parser("comics", help="the funny picture-post series (five a day, for the channel's Posts tab): `comics [--day D] [--n 5] [--reference IMG] [--theme T]`")
+    cm.add_argument("--day"); cm.add_argument("--n", type=int, default=5); cm.add_argument("--reference"); cm.add_argument("--theme")
+    cm.set_defaults(fn=cmd_comics)
     sp = sub.add_parser("songpost", help="YouTube copy for a song (SEO, AEO, GEO, one tracked link, AI disclosure): `songpost --day D` writes POST.md for each pack, `songpost PACK_DIR VIDEO [--at ISO] [--apply]` uploads only with --apply")
     sp.add_argument("args", nargs="*")
     sp.add_argument("--day", default=None)

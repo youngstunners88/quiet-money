@@ -1691,3 +1691,15 @@ def test_decide_images_fit_jev_limits_and_reach_the_sdk(monkeypatch, tmp_path):
     out = decide._ask_jev({"q": decide.Q("choice", "x", "yes", options={"yes": "a", "no": "b"})}, {"t": 1}, {"still": big})
     assert out["q"] == ("yes", 0.99)
     assert seen["kw"]["extra_headers"] == {"TypeSafe-Danger-Zone-Images": "true"} and seen["state"]["still"][0] == "image"
+
+
+def test_comics_svg_and_caption_checks():
+    from faceless import comics
+    assert "line" in comics.clean_svg('<g><line x1="0" y1="0" x2="5" y2="5" stroke="#000"/></g>')
+    assert "http" not in comics.clean_svg('<text x="1" y="2" href="http://x">hi</text>')          # unknown attributes are dropped
+    for bad in ('<script>alert(1)</script>', '<rect fill="url(#a)" width="1" height="1"/>'):
+        with pytest.raises(ValueError):
+            comics.clean_svg(bad)
+    assert not comics.caption_problems({"caption": "A funny line about rent that reads well after the picture. Which one are you?"})
+    assert comics.caption_problems({"caption": "short"})
+    assert comics.caption_problems({"caption": "Click https://example.com to get rich guaranteed returns " * 2})
