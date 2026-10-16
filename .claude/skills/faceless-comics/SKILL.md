@@ -20,4 +20,7 @@ Output: `distribution/comics/<day>/NN-slug/picture.png`, `POST.md` (caption, has
 - Look at the pictures before sending: text inside the frame, punchline readable, gag lands.
 
 ## Delivery
-YouTube's API cannot publish Community posts and no image-post connector is attached, so the owner posts the five pictures by hand (Studio, Create, Create post, Image) with the caption from POST.md. If a connector appears (Instagram via Windsor, for example), add it here and only with the owner's yes (rule 9).
+YouTube's API cannot publish Community posts. Two ways to get them out:
+1. **The YouTube Posts MCP** (`mcp-servers/yt-community`, README inside): runs on the owner's own computer, drives their signed-in browser, dry run first, publishing only with `QM_COMMUNITY_APPROVED=1`. Untested against the live page until the owner's first dry run.
+2. By hand: Studio, Create, Create post, Image, with the caption from POST.md.
+Other platforms (Instagram, Facebook, Pinterest) go through a Composio connect link the owner approves, and only with the owner's yes (rule 9).
