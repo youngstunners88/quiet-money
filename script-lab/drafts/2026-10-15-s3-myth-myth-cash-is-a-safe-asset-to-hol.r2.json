@@ -1,0 +1,99 @@
+{
+  "title": "Why Holding Cash Guarantees You Lose Money",
+  "hook_text": "CASH IS NOT A SAFE ASSET",
+  "beats": [
+    {
+      "say": "Keeping your life savings in cash isn't safe; it's a guaranteed loss.",
+      "callout": "",
+      "visual": "Cinematic macro shot of an aged leather wallet lying closed on a dark slate tabletop, moody directional window lighting."
+    },
+    {
+      "say": "Here's the exact math that destroys your purchasing power, and the simple rule to stop it.",
+      "callout": "",
+      "visual": "Silhouette of a person seated at a clean dark oak desk at night, illuminated by the warm glow of an architect lamp."
+    },
+    {
+      "say": "Most people keep everything in checking accounts because seeing a steady balance feels comforting.",
+      "callout": "CASH FEELS SAFE",
+      "visual": "Overhead view of hands neatly aligning plain paper envelopes on a cool grey concrete surface."
+    },
+    {
+      "say": "Your account balance never drops on paper, so you feel completely protected from risk.",
+      "callout": "",
+      "visual": "Cinematic close-up of a magnifying glass resting over an empty textured notebook page, casting long sharp shadows."
+    },
+    {
+      "say": "Inflation doesn't steal your paper bills; it quietly drains what those bills can buy.",
+      "callout": "",
+      "visual": "Low-angle tracking shot through empty warehouse aisles with steel shelving receding into soft darkness."
+    },
+    {
+      "say": "At just 3% inflation, $100 today is worth $55 in buying power after 20 years.",
+      "callout": "$100 VS $55",
+      "visual": "Macro shot of an antique brass balance scale tilting slowly down to one side against a dark backdrop."
+    },
+    {
+      "say": "But here's the part nobody mentions.",
+      "callout": "",
+      "visual": "Cinematic low-angle view of a heavy circular steel bank vault door slightly cracked open under cold blue light."
+    },
+    {
+      "say": "While you avoided market dips, you locked in a permanent 45% drop in real wealth.",
+      "callout": "-45% BUYING POWER",
+      "visual": "Silhouette of an individual standing in profile before floor-to-ceiling glass windows overlooking a misty dawn."
+    },
+    {
+      "say": "Cash is a tool for short-term liquidity, not a vehicle for long-term storage.",
+      "callout": "EMERGENCY ONLY",
+      "visual": "Extreme close-up of hands turning a simple brass key inside a dark solid wood drawer."
+    },
+    {
+      "say": "Wealthy people hold three to six months of expenses in cash, then deploy the rest.",
+      "callout": "3 TO 6 MONTHS",
+      "visual": "Top-down view of hands drawing a straight dividing line with a fountain pen across thick paper."
+    },
+    {
+      "say": "They hold broad-market index funds and productive assets that naturally outpace rising living costs.",
+      "callout": "",
+      "visual": "Cinematic exterior view of a modern glass pavilion reflecting green trees under clear morning skies."
+    },
+    {
+      "say": "Invested monthly at 8% a year, even $100 a month reaches $58,902 in 20 years.",
+      "callout": "$24,000 VS $58,902",
+      "visual": "Slow dolly shot of a solitary green sprout thriving inside a smooth stone planter."
+    },
+    {
+      "say": "Drop it in the comments: how many months of cash do you hold right now?",
+      "callout": "",
+      "visual": "Hands setting down a plain ceramic mug beside an unmarked notebook on a rustic table."
+    },
+    {
+      "say": "Follow for the money rules school never taught you, and stop letting inflation quietly bleed your savings.",
+      "callout": "",
+      "visual": "Silhouette of a person walking away down a quiet, architecturally minimal museum hallway with soft ceiling light."
+    }
+  ],
+  "caption": "Cash feels safe until you measure its purchasing power. Keep an emergency fund, then put the rest to work.\n#money #personalfinance #wealthbuilding #inflation #financialfreedom",
+  "description": "Holding your long-term savings in cash exposes you to a guaranteed loss of purchasing power over time. Learn how inflation cuts cash value in half and how to structure your safety net properly.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#wealthbuilding",
+    "#inflation",
+    "#investingrules"
+  ],
+  "first_comment": "How many months of living expenses do you hold in pure cash? Tell me below.",
+  "facts": [
+    {
+      "claim": "At 3% inflation, $100 today is worth $55 in buying power after 20 years.",
+      "basis": "Fact Sheet: $100 today is worth $55 in buying power after 20 years of 3% inflation."
+    },
+    {
+      "claim": "Investing $100 a month for 20 years at 8% a year yields $58,902 on $24,000 invested.",
+      "basis": "Fact Sheet: $100/month invested for 20 years at 8%/yr (monthly compounding) = $58,902 (you put in $24,000)."
+    }
+  ],
+  "source": "llm",
+  "pillar": "myth",
+  "look": ""
+}

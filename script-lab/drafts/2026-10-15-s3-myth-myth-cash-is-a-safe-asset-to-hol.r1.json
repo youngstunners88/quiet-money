@@ -1,0 +1,80 @@
+{
+  "title": "Why Cash in the Bank Is Actually Shrinking",
+  "hook_text": "CASH IS LOSING VALUE EVERY SINGLE DAY",
+  "beats": [
+    {
+      "say": "Most people think keeping physical cash or a zero-yield checking account protects them from risk.",
+      "callout": "",
+      "visual": "A stack of crisp paper bills sitting on a dark wooden table, shot from a low angle with moody cinematic lighting."
+    },
+    {
+      "say": "They believe paper money in a drawer or a vault is the safest asset on earth.",
+      "callout": "CASH VS RISK",
+      "visual": "A heavy metal bank vault door half-closed, casting long shadows across a concrete floor."
+    },
+    {
+      "say": "But here's the part nobody mentions. That safety is an illusion.",
+      "callout": "",
+      "visual": "A single dollar bill resting under a harsh overhead spotlight, blurred edges, moody atmosphere."
+    },
+    {
+      "say": "Inflation quietly strips away your purchasing power while you sleep. It is a silent tax.",
+      "callout": "",
+      "visual": "A burning candle casting flickering light against a dark brick wall, symbolizing time passing."
+    },
+    {
+      "say": "Assuming a 3% annual inflation rate, $100 today is worth $55 in buying power after 20 years.",
+      "callout": "100 VS 55",
+      "visual": "An old mechanical calculator sitting on a wooden desk, dusty keys, dim side lighting."
+    },
+    {
+      "say": "You didn't spend the money. You didn't make a bad investment. The math simply changed.",
+      "callout": "",
+      "visual": "A close-up of a silver pocket watch ticking slowly, shallow depth of field, dark background."
+    },
+    {
+      "say": "Yet millions keep their life savings sitting idle, watching the real value bleed away.",
+      "callout": "",
+      "visual": "A blank bank statement resting on a dark desk next to a ceramic coffee mug, top-down view."
+    },
+    {
+      "say": "The rule that replaces this myth is simple. Never hold more cash than you need for emergencies.",
+      "callout": "STEP ONE",
+      "visual": "A person's hands sliding a leather wallet into the back pocket of dark jeans, backlit silhouette."
+    },
+    {
+      "say": "Put your long-term money into productive assets that outpace inflation over decades.",
+      "callout": "STEP TWO",
+      "visual": "A young professional walking up a concrete staircase in a modern office building, seen from behind."
+    },
+    {
+      "say": "Stop paying a hidden inflation penalty for holding cash.",
+      "callout": "",
+      "visual": "A close-up of a hand turning off a brass desk lamp, plunging the room into shadow."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "A minimalist white wall with clean morning light cutting diagonally across the frame."
+    }
+  ],
+  "caption": "Your cash is quietly losing half its power every decade. Stop letting inflation rob your future. Follow for the money rules school never taught you. #MoneyMyth #PersonalFinance #Inflation #WealthBuilding #FinancialLiteracy",
+  "description": "The belief that physical cash or zero-yield checking accounts are safe is a costly illusion. With a 3% inflation rate, $100 today turns into $55 in buying power over 20 years. Learn how to protect your long-term wealth from silent erosion.",
+  "hashtags": [
+    "#MoneyMyth",
+    "#PersonalFinance",
+    "#Inflation",
+    "#WealthBuilding",
+    "#FinancialLiteracy"
+  ],
+  "first_comment": "How much of your net worth is currently sitting in cash versus productive assets?",
+  "facts": [
+    {
+      "claim": "$100 today is worth $55 in buying power after 20 years of 3% inflation",
+      "basis": "$100 today is worth $55 in buying power after 20 years of 3% inflation"
+    }
+  ],
+  "source": "llm",
+  "pillar": "myth",
+  "look": ""
+}

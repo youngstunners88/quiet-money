@@ -1,0 +1,80 @@
+{
+  "title": "Why Cash is Actually Losing Value Every Day",
+  "hook_text": "YOUR SAFE CASH IS LOSING HALF ITS VALUE",
+  "beats": [
+    {
+      "say": "Your cash sitting in a bank account isn't safe. It's shrinking.",
+      "callout": "",
+      "visual": "A crisp paper banknote resting on a dark marble countertop, cinematic overhead shot, dim moody lighting."
+    },
+    {
+      "say": "Most people think physical paper bills or zero-yield checking accounts protect them from risk.",
+      "callout": "CASH VS RISK",
+      "visual": "A stack of physical cash under a heavy glass paperweight, low angle, shallow depth of field."
+    },
+    {
+      "say": "They're wrong. Here's why that habit quietly destroys your future.",
+      "callout": "",
+      "visual": "An antique mechanical clock ticking in a dark room, close-up macro shot, dramatic shadows."
+    },
+    {
+      "say": "Inflation is a silent tax that chips away at your purchasing power.",
+      "callout": "",
+      "visual": "A single droplet of water falling onto a worn leather surface, extreme slow motion, moody lighting."
+    },
+    {
+      "say": "Look at the hard math. $100 today is worth $55 in buying power after 20 years of 3% inflation.",
+      "callout": "$100 VS $55",
+      "visual": "An old brass scale resting on a wooden desk, one side slightly lower, side profile view."
+    },
+    {
+      "say": "That means your hard-earned dollars buy nearly half as much stuff in two decades.",
+      "callout": "",
+      "visual": "A half-empty glass of water sitting on a concrete windowsill, overcast natural light."
+    },
+    {
+      "say": "Holding cash for the long term guarantees you'll fall behind.",
+      "callout": "",
+      "visual": "A lone silhouette walking down a long empty corridor away from the camera, cinematic framing."
+    },
+    {
+      "say": "But here's the part nobody mentions. You don't have to accept that loss.",
+      "callout": "",
+      "visual": "A single warm desk lamp illuminating a dark wooden tabletop, cozy moody atmosphere."
+    },
+    {
+      "say": "Assets that outpace inflation protect your labor from disappearing into thin air.",
+      "callout": "ASSET VS CASH",
+      "visual": "A heavy iron key lying on an open blueprint, shot from directly above, dim industrial lighting."
+    },
+    {
+      "say": "Stop letting inflation rob your savings account while you sleep.",
+      "callout": "",
+      "visual": "A closed wooden door with soft light leaking underneath from the hallway, dramatic shadows."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "A sleek dark fountain pen resting beside a blank leather notebook, macro shot, soft cinematic glow."
+    }
+  ],
+  "caption": "Cash feels safe, but inflation is quietly erasing your purchasing power every single year. Don't let your savings sit still.\n\n#money #personalfinance #inflation #wealth #moneymindset",
+  "description": "Holding physical cash or zero-yield checking accounts feels safe, but inflation quietly strips away half your purchasing power over time. Learn how to protect your savings.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#inflation",
+    "#wealth",
+    "#moneymindset"
+  ],
+  "first_comment": "How much of your savings is currently sitting in cash versus invested assets?",
+  "facts": [
+    {
+      "claim": "$100 today is worth $55 in buying power after 20 years of 3% inflation",
+      "basis": "Provided money fact sheet"
+    }
+  ],
+  "source": "llm",
+  "pillar": "myth",
+  "look": ""
+}

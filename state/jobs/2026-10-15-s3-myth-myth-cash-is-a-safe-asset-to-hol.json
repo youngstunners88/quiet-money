@@ -1,0 +1,76 @@
+{
+  "id": "2026-10-15-s3-myth-myth-cash-is-a-safe-asset-to-hol",
+  "pillar": "myth",
+  "topic": "Myth: Cash is a safe asset to hold long-term",
+  "day": "2026-10-15",
+  "slot": 3,
+  "status": "published",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-15T09:21:31Z",
+      "words": 195
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-15T09:22:31Z",
+      "seconds": 70.624,
+      "provider": "gemini"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-15T09:22:53Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-15T09:24:59Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-15T09:24:59Z",
+      "score": 98
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-15T09:24:59Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-10-15T09:25:01Z",
+      "local": "2026-10-15T18:30:00-04:00",
+      "youtube": null
+    }
+  ],
+  "artifacts": {
+    "angle": "People think keeping money in physical cash or a zero-yield checking account protects them from risk, while inflation quietly strips away half their purchasing power every decade.",
+    "title": "Why Holding Cash Guarantees You Lose Money",
+    "style": "cinematic",
+    "video": "/home/user/quiet-money/production/output/2026-10-15/2026-10-15-s3-myth-myth-cash-is-a-safe-asset-to-hol/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-15/2026-10-15-s3-myth-myth-cash-is-a-safe-asset-to-hol/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-10-15/slot4-myth",
+        "post_at": "2026-10-15T18:30:00-04:00"
+      },
+      "youtube": {
+        "skipped": "YouTube refused the upload session (HTTP 429): quota or rate limit; it resets at midnight Pacific"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 98,
+    "passed": true
+  },
+  "cost": {
+    "tts:gemini:chars": 1148
+  },
+  "notes": []
+}

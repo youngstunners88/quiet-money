@@ -1,0 +1,94 @@
+{
+  "title": "Cancel Hidden Mobile Subscriptions in 3 Clicks",
+  "hook_text": "STOP MOBILE GHOST CHARGES NOW",
+  "beats": [
+    {
+      "say": "Your phone is quietly stealing money every month without sending you a single receipt.",
+      "callout": "",
+      "visual": "A dark, modern room with a sleek smartphone resting face up on a matte black desk, glowing softly from an unseen notification."
+    },
+    {
+      "say": "Most people pay for forgotten subscriptions for years, but you can wipe them out today.",
+      "callout": "KILL GHOST FEES",
+      "visual": "Cinematic close-up of hands typing on a laptop illuminated only by warm desk lamps in a moody office setting."
+    },
+    {
+      "say": "Tech companies hide these auto-renewing charges deep inside settings menus hoping you won't look.",
+      "callout": "",
+      "visual": "Macro shot of a leather wallet lying open next to a metallic payment card on a dark granite tabletop."
+    },
+    {
+      "say": "A $15/month subscription for 10 years equals $1,800 pulled straight from your bank account.",
+      "callout": "$1,800 WASTED",
+      "visual": "A neat stack of hundred dollar bills resting on a polished wooden desk with dramatic side lighting."
+    },
+    {
+      "say": "Step one. Open your iPhone settings, tap your profile name at the top, and click Subscriptions.",
+      "callout": "STEP ONE",
+      "visual": "Over-the-shoulder shot of a person holding a sleek mobile device, screen angled away from the camera in soft focus."
+    },
+    {
+      "say": "On Android, open Google Play, tap your profile icon, and select Payments and subscriptions.",
+      "callout": "",
+      "visual": "Extreme close-up of a finger navigating a smooth smartphone surface, subtle reflections visible on the screen edge."
+    },
+    {
+      "say": "But here's the part nobody mentions about deleting apps.",
+      "callout": "",
+      "visual": "A moody silhouette of a person sitting thoughtfully by a high-rise office window at twilight."
+    },
+    {
+      "say": "Deleting an app icon from your home screen does not stop the monthly credit card charges.",
+      "callout": "",
+      "visual": "A subtle trash can sitting in a minimalist room, illuminated by soft morning light."
+    },
+    {
+      "say": "Step two. Tap every service you haven't used this month and select Cancel Subscription immediately.",
+      "callout": "STEP TWO",
+      "visual": "Close-up of a hand firmly resting a pen on top of a financial ledger on a wooden workspace."
+    },
+    {
+      "say": "Step three. Toggle off purchase sharing or remove outdated cards so old trials can't restart.",
+      "callout": "STEP THREE",
+      "visual": "A pair of hands neatly closing a sleek leather cardholder on a dark wooden desk."
+    },
+    {
+      "say": "Putting $100/month invested for 30 years at 8% builds $149,036 for your future.",
+      "callout": "$149,036 BUILT",
+      "visual": "A solitary green sapling growing steadily inside a clean, modern indoor glass planter."
+    },
+    {
+      "say": "Reclaim your hard-earned cash right now before the next billing cycle sneaks through.",
+      "callout": "",
+      "visual": "A confident person standing in silhouette against a brightly lit modern architectural doorway."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "A clean, aesthetic desk setup with a cup of coffee and a plain notebook illuminated by warm sunlight."
+    }
+  ],
+  "caption": "Stop letting forgotten apps drain your bank account every month. Wipe them out in under 60 seconds.\n\n#personalfinance #subscriptions #moneytips #financialfreedom #quietmoney",
+  "description": "Learn how to find and cancel hidden auto-renewing app subscriptions on iOS and Android. Reclaim your cash and redirect it into wealth-building habits.",
+  "hashtags": [
+    "#personalfinance",
+    "#subscriptions",
+    "#moneytips",
+    "#financialfreedom",
+    "#quietmoney"
+  ],
+  "first_comment": "How many active subscriptions did you find hiding in your settings?",
+  "facts": [
+    {
+      "claim": "A $15/month subscription for 10 years equals $1,800",
+      "basis": "Fact sheet: A $15/month subscription for 10 years = $1,800"
+    },
+    {
+      "claim": "$100/month invested for 30 years at 8% builds $149,036",
+      "basis": "Fact sheet: $100/month invested for 30 years at 8%/yr (monthly compounding) = $149,036 (you put in $36,000)"
+    }
+  ],
+  "source": "llm",
+  "pillar": "playbook",
+  "look": ""
+}

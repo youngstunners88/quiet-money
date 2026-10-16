@@ -1,0 +1,66 @@
+{
+  "id": "2026-10-15-s4-playbook-cancel-forgotten-app-store-and-g",
+  "pillar": "playbook",
+  "topic": "Cancel Forgotten App Store and Google Play Subscriptions in 3 Clicks",
+  "day": "2026-10-15",
+  "slot": 4,
+  "status": "held",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-15T09:26:09Z",
+      "words": 177
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-15T09:26:37Z",
+      "seconds": 67.492,
+      "provider": "gemini"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-15T09:26:58Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-15T09:28:41Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-15T09:28:41Z",
+      "score": 96
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-15T09:28:42Z"
+    },
+    {
+      "from": "packaged",
+      "to": "held",
+      "ts": "2026-10-15T09:28:42Z"
+    }
+  ],
+  "artifacts": {
+    "angle": "Guide the viewer to wipe out ghost charges hidden deep inside their mobile settings.",
+    "title": "Cancel Hidden Mobile Subscriptions in 3 Clicks",
+    "style": "cinematic",
+    "video": "/home/user/quiet-money/production/output/2026-10-15/2026-10-15-s4-playbook-cancel-forgotten-app-store-and-g/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-15/2026-10-15-s4-playbook-cancel-forgotten-app-store-and-g/cover.jpg"
+  },
+  "scores": {
+    "gauntlet": 96,
+    "passed": false
+  },
+  "cost": {
+    "tts:gemini:chars": 1111
+  },
+  "notes": [
+    "held for review: not_semantic_duplicate"
+  ]
+}

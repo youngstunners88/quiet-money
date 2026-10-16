@@ -1,0 +1,76 @@
+{
+  "id": "2026-10-15-s7-psychology-the-decoy-effect",
+  "pillar": "psychology",
+  "topic": "The Decoy Effect",
+  "day": "2026-10-15",
+  "slot": 7,
+  "status": "published",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-15T09:40:42Z",
+      "words": 186
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-15T09:41:11Z",
+      "seconds": 65.779,
+      "provider": "gemini"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-15T09:42:19Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-15T09:44:21Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-15T09:44:21Z",
+      "score": 99
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-15T09:44:21Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-10-15T09:44:23Z",
+      "local": "2026-10-16T15:00:00-04:00",
+      "youtube": null
+    }
+  ],
+  "artifacts": {
+    "angle": "How restaurants and online stores trick your brain into buying the most expensive option by placing a fake third choice in the middle.",
+    "title": "The Decoy Effect: Why You Buy the Most Expensive Option",
+    "style": "cinematic",
+    "video": "/home/user/quiet-money/production/output/2026-10-15/2026-10-15-s7-psychology-the-decoy-effect/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-15/2026-10-15-s7-psychology-the-decoy-effect/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-10-16/slot3-psychology",
+        "post_at": "2026-10-16T15:00:00-04:00"
+      },
+      "youtube": {
+        "skipped": "YouTube refused the upload session (HTTP 429): quota or rate limit; it resets at midnight Pacific"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 99,
+    "passed": true
+  },
+  "cost": {
+    "tts:gemini:chars": 1045
+  },
+  "notes": []
+}

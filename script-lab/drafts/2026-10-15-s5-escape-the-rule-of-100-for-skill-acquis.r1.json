@@ -1,0 +1,94 @@
+{
+  "title": "The Rule of 100: How Volume Beats Talent",
+  "hook_text": "ESCAPE YOUR PAYCHECK WITH VOLUME MATH",
+  "beats": [
+    {
+      "say": "Most people fail to escape their paycheck because they stop at rep ten.",
+      "callout": "",
+      "visual": "Silhouette of an office worker sitting at an empty desk late at night, city lights blurred through a rainy window, moody cinematic lighting."
+    },
+    {
+      "say": "They think skill is talent, but escaping the rat race is pure volume math.",
+      "callout": "",
+      "visual": "A worn wooden workbench in dim workshop light, scattered mechanical brass gears and metal calipers, moody macro angle."
+    },
+    {
+      "say": "It's called the Rule of 100: dedicate 100 daily actions for 100 straight days.",
+      "callout": "RULE OF 100",
+      "visual": "A minimalist brass hourglass standing on a dark slate surface, illuminated by a sharp side beam of light."
+    },
+    {
+      "say": "If you do 100 reach-outs a day for 100 days, you make 10,000 contacts.",
+      "callout": "10,000 CONTACTS",
+      "visual": "Overhead view of an open leather-bound notebook with blank heavy paper, resting beside an antique fountain pen on dark oak."
+    },
+    {
+      "say": "Even at a modest 1% yes-rate, that's 100 paying customers for your new skill.",
+      "callout": "100 CUSTOMERS",
+      "visual": "A pair of hands in dim light sliding a sealed wax envelope across a dark polished mahogany table."
+    },
+    {
+      "say": "An extra $1,000 a month from that skill, invested at 8% for 10 years, becomes $182,946.",
+      "callout": "$182,946 GAINED",
+      "visual": "A row of solid cast iron weights arranged neatly on a stone floor, single directional spotlight, dramatic shadows."
+    },
+    {
+      "say": "That single income stream buys back your freedom years ahead of schedule.",
+      "callout": "",
+      "visual": "Silhouette of a figure standing before an open window in an empty minimalist loft, morning sun casting long shadows."
+    },
+    {
+      "say": "But here's the honest catch nobody talks about: the sheer, brutal boredom.",
+      "callout": "",
+      "visual": "A lone stone staircase spiraling up into dark mist, cold cinematic lighting, low-angle perspective."
+    },
+    {
+      "say": "You'll face hundreds of rejections, zero applause, and weeks where nothing seems to work.",
+      "callout": "",
+      "visual": "An empty vintage boxing ring under a single overhead industrial lamp, dust floating through the light beam."
+    },
+    {
+      "say": "The marketplace doesn't reward your passion; it only rewards proof of repeated competence.",
+      "callout": "",
+      "visual": "Close-up of hands carving dark hardwood with a sharp chisel, fine wood shavings falling, warm amber workshop light."
+    },
+    {
+      "say": "This week, pick one marketable skill and commit to your first 10 daily reps.",
+      "callout": "STEP ONE",
+      "visual": "A neat stack of blank white index cards beside a brass mechanical pencil on a clean granite tabletop."
+    },
+    {
+      "say": "Stack 100 days of focused output before you ever judge your results.",
+      "callout": "STEP TWO",
+      "visual": "A solitary lighthouse standing on a rocky cliff face against dark stormy ocean waves, long exposure dusk shot."
+    },
+    {
+      "say": "Follow for the money rules school never taught you, and break your paycheck cycle.",
+      "callout": "",
+      "visual": "Rear view of a person walking down a quiet, misty urban avenue lined with classical architecture, muted morning tones."
+    }
+  ],
+  "caption": "Escaping the rat race isn't about talent. It's an unglamorous numbers game.",
+  "description": "Breaking out of the paycheck-to-paycheck cycle requires building a valuable skill through sheer repetition. By applying the Rule of 100, you outwork randomness and create an income stream that changes your financial trajectory.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#sideincome",
+    "#wealthbuilding",
+    "#financialfreedom"
+  ],
+  "first_comment": "What high-income skill are you committing your next 100 days to master?",
+  "facts": [
+    {
+      "claim": "100 reach-outs a day for 100 days yields 10,000 contacts and 100 customers at a 1% rate",
+      "basis": "Rule of 100 volume math from fact sheet: 100 reach-outs a day for 100 days = 10,000 contacts; at a 1% yes-rate that's 100 customers (hypothetical rate)."
+    },
+    {
+      "claim": "An extra $1,000 a month invested at 8% for 10 years equals $182,946",
+      "basis": "Fact sheet: An extra $1,000/month from a side income, invested at 8% for 10 years = $182,946 (you put in $120,000)."
+    }
+  ],
+  "source": "llm",
+  "pillar": "escape",
+  "look": ""
+}

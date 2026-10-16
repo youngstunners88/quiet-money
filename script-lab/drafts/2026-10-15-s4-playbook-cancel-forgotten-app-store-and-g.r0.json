@@ -1,0 +1,75 @@
+{
+  "title": "Stop Ghost Charges Hiding in Your Phone Settings",
+  "hook_text": "YOU ARE PAYING FOR APPS YOU FORGOT",
+  "beats": [
+    {
+      "say": "You’re paying for apps you forgot existed. Let’s find them in 3 steps.",
+      "callout": "",
+      "visual": "A sleek modern smartphone resting on a dark walnut desk, soft side lighting, cinematic depth of field."
+    },
+    {
+      "say": "Step one. Open your settings app right now. Tap your profile name at the top.",
+      "callout": "STEP ONE",
+      "visual": "A person's hands holding a dark smartphone, pressing the settings icon with a thumb, moody overhead light."
+    },
+    {
+      "say": "Step two. Find the subscriptions tab and tap it. Don't skip this part.",
+      "callout": "STEP TWO",
+      "visual": "Close-up of a blurred phone screen reflecting warm neon light in a quiet room, cinematic shadows."
+    },
+    {
+      "say": "Step three. Look at the active list. See that app you haven’t opened since 2024?",
+      "callout": "STEP THREE",
+      "visual": "Fingers swiping up slowly on a dark touch screen, shallow focus, moody evening atmosphere."
+    },
+    {
+      "say": "That's a $15 monthly drain. A $15 subscription for 10 years adds up to $1,800.",
+      "callout": "$1,800",
+      "visual": "A stack of old paper bills sitting on a concrete surface, dramatic side lighting, high contrast."
+    },
+    {
+      "say": "That's money leaving your pocket for zero value. But here's the part nobody mentions.",
+      "callout": "ASSET VS LIABILITY",
+      "visual": "An empty coffee cup resting next to a closed notebook on a dark wooden table, moody shadows."
+    },
+    {
+      "say": "App stores bank on your silence. They rely on you ignoring those tiny monthly charges.",
+      "callout": "",
+      "visual": "A dark city street viewed through a rain-streaked window at night, cinematic blue and orange tones."
+    },
+    {
+      "say": "Tap cancel right now. Wipe out every single ghost charge draining your paycheck today.",
+      "callout": "",
+      "visual": "A hand tapping a minimalist wooden desk, warm practical light, sharp focus on the fingers."
+    },
+    {
+      "say": "Keep your hard-earned cash where it belongs. In your own savings account.",
+      "callout": "",
+      "visual": "A heavy steel door slightly ajar with a warm beam of light spilling across a dark floor."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "A minimalist black fountain pen resting on a blank white card, clean overhead architectural shot."
+    }
+  ],
+  "caption": "Stop letting ghost subscriptions drain your paycheck. Clean out your phone settings today. #personalfinance #moneymindset #budgeting #savingmoney #wealth",
+  "description": "Discover how to find and cancel hidden subscriptions buried in your phone settings. A quick 3-step action to stop losing money on forgotten apps.",
+  "hashtags": [
+    "#personalfinance",
+    "#moneymindset",
+    "#budgeting",
+    "#savingmoney",
+    "#wealth"
+  ],
+  "first_comment": "What's the most expensive forgotten app you just found?",
+  "facts": [
+    {
+      "claim": "A $15/month subscription for 10 years = $1,800",
+      "basis": "A $15/month subscription for 10 years = $1,800"
+    }
+  ],
+  "source": "llm",
+  "pillar": "playbook",
+  "look": ""
+}

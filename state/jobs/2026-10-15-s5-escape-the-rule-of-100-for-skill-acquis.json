@@ -1,0 +1,76 @@
+{
+  "id": "2026-10-15-s5-escape-the-rule-of-100-for-skill-acquis",
+  "pillar": "escape",
+  "topic": "The Rule of 100 for Skill Acquisition",
+  "day": "2026-10-15",
+  "slot": 5,
+  "status": "published",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-15T09:29:50Z",
+      "words": 176
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-15T09:30:17Z",
+      "seconds": 66.468,
+      "provider": "gemini"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-15T09:31:25Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-15T09:33:27Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-15T09:33:27Z",
+      "score": 96
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-15T09:33:28Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-10-15T09:33:29Z",
+      "local": "2026-10-16T07:30:00-04:00",
+      "youtube": null
+    }
+  ],
+  "artifacts": {
+    "angle": "Applying volume-based execution to master high-income skills required to escape the paycheck cycle.",
+    "title": "The Rule of 100: How Volume Beats Talent",
+    "style": "cinematic",
+    "video": "/home/user/quiet-money/production/output/2026-10-15/2026-10-15-s5-escape-the-rule-of-100-for-skill-acquis/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-15/2026-10-15-s5-escape-the-rule-of-100-for-skill-acquis/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-10-16/slot1-escape",
+        "post_at": "2026-10-16T07:30:00-04:00"
+      },
+      "youtube": {
+        "skipped": "YouTube refused the upload session (HTTP 429): quota or rate limit; it resets at midnight Pacific"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 96,
+    "passed": true
+  },
+  "cost": {
+    "tts:gemini:chars": 1021
+  },
+  "notes": []
+}
