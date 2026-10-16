@@ -1,0 +1,38 @@
+{
+  "id": "2026-10-16-s7-myth-myth-credit-cards-are-inherently",
+  "pillar": "myth",
+  "topic": "Myth: Credit cards are inherently dangerous financial tools",
+  "day": "2026-10-16",
+  "slot": 7,
+  "status": "visualized",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-16T09:47:28Z",
+      "words": 164
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-16T09:47:55Z",
+      "seconds": 62.171,
+      "provider": "gemini"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-16T09:48:14Z"
+    }
+  ],
+  "artifacts": {
+    "angle": "Many avoid credit entirely due to fear of debt, missing out on fraud protection, cash flow float, and structural benefits that reward disciplined users at the expense of banks.",
+    "title": "Why Avoiding Credit Cards Costs You More",
+    "style": "cinematic"
+  },
+  "scores": {},
+  "cost": {
+    "tts:gemini:chars": 986
+  },
+  "notes": []
+}

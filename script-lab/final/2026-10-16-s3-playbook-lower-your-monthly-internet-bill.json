@@ -1,0 +1,85 @@
+{
+  "title": "Drop Your Internet Bill in 5 Minutes",
+  "hook_text": "YOUR INTERNET BILL IS TOO HIGH",
+  "beats": [
+    {
+      "say": "Your internet provider is quietly overcharging you every single month.",
+      "callout": "",
+      "visual": "Close-up of a modern home router sitting on a dark wooden desk under moody amber lighting."
+    },
+    {
+      "say": "Stay here and you'll get the exact 5-minute script to slash it today.",
+      "callout": "",
+      "visual": "A person's hands holding a smartphone displaying a blurred billing statement at a steep angle."
+    },
+    {
+      "say": "That saved cash adds up fast. A $15 monthly bill cut for 10 years equals $1,800 saved.",
+      "callout": "$1,800 SAVED",
+      "visual": "A sleek silver laptop closed on a minimalist white table with soft morning light."
+    },
+    {
+      "say": "Step one. Call your current provider and skip straight to the cancellation department.",
+      "callout": "STEP ONE",
+      "visual": "A hand holding a smartphone to an ear, silhouette against a city window at dusk."
+    },
+    {
+      "say": "That specific department holds the real power to drop your monthly rate.",
+      "callout": "",
+      "visual": "A close-up of fingers typing numbers on a dark phone keypad."
+    },
+    {
+      "say": "Step two. Use this exact line. My bill went up and I found a cheaper local deal.",
+      "callout": "STEP TWO",
+      "visual": "A blank paper notebook resting on a desk with a sleek pen next to it."
+    },
+    {
+      "say": "Ask them to match the competitor price or you'll switch today.",
+      "callout": "",
+      "visual": "An open calendar planner on a clean wooden table, viewed from directly above."
+    },
+    {
+      "say": "Step three. Stay completely silent after you ask. Let them break the silence.",
+      "callout": "STEP THREE",
+      "visual": "A dark, quiet room illuminated only by the faint glow of a desk lamp."
+    },
+    {
+      "say": "That awkward pause forces the agent to pull up unadvertised promotional discounts.",
+      "callout": "",
+      "visual": "A blurred computer monitor casting blue light across a dark empty desk."
+    },
+    {
+      "say": "Don't let them downgrade your actual internet speed during the call.",
+      "callout": "",
+      "visual": "An ethernet cable plugged into a dark gray wall port in close-up."
+    },
+    {
+      "say": "Lock in the lower rate for 12 months before you hang up.",
+      "callout": "",
+      "visual": "A minimalist wall clock ticking in soft focus against a neutral background."
+    },
+    {
+      "say": "Put that freed-up cash toward your future. Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "A metal pen resting on a blank contract paper under clean overhead lighting."
+    }
+  ],
+  "caption": "Stop paying full price for Wi-Fi. Use this 3-step script today to lower your bill without losing speed. #personalfinance #moneysavingtips #budgetingtips #smartmoney",
+  "description": "Learn the exact 5-minute script to lower your monthly internet bill without losing speed. Stop overpaying and keep more of your paycheck.",
+  "hashtags": [
+    "#personalfinance",
+    "#moneysavingtips",
+    "#budgetingtips",
+    "#smartmoney",
+    "#financialfreedom"
+  ],
+  "first_comment": "How much does your current internet provider charge you every month?",
+  "facts": [
+    {
+      "claim": "A $15 monthly subscription for 10 years = $1,800",
+      "basis": "Fact sheet calculation of $15/month for 120 months."
+    }
+  ],
+  "source": "llm",
+  "pillar": "playbook",
+  "look": ""
+}

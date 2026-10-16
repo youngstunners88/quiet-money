@@ -1,0 +1,93 @@
+{
+  "title": "The Credit Card Myth Keeping You Broke",
+  "hook_text": "STOP CUTTING UP YOUR CREDIT CARDS",
+  "beats": [
+    {
+      "say": "Cutting up your credit cards might be the most expensive financial mistake you make.",
+      "callout": "",
+      "visual": "A pair of heavy vintage steel shears resting beside an unbranded matte black card on a dark walnut table, moody directional lighting."
+    },
+    {
+      "say": "Most people avoid credit out of fear, but disciplined users quietly flip the system against the banks.",
+      "callout": "FLIP THE SYSTEM",
+      "visual": "Silhouette of a person standing before a floor-to-ceiling glass window overlooking a rainy financial district at dusk."
+    },
+    {
+      "say": "When a scammer compromises your debit card, your actual rent money vanishes instantly from your checking account.",
+      "callout": "DEBIT VS CREDIT",
+      "visual": "Close-up of hands pulling an anonymous card out of an ATM slot in a dimly lit concrete alcove."
+    },
+    {
+      "say": "Federal law caps your credit liability at $50, meaning the bank fights to recover their money, not yours.",
+      "callout": "$50 MAXIMUM LIABILITY",
+      "visual": "Low-angle shot looking up at monolithic classical stone pillars outside a historic bank building under cold overcast skies."
+    },
+    {
+      "say": "Then there's cash flow float: you get 30 days of interest free borrowing on every single purchase.",
+      "callout": "30-DAY FLOAT",
+      "visual": "A heavy brass hourglass resting on an open vintage ledger, sand grains falling slowly in warm side light."
+    },
+    {
+      "say": "But here's the part nobody mentions: credit cards are only lethal when you carry a balance.",
+      "callout": "",
+      "visual": "An antique balance scale tipped sharply to one side on a dark polished surface, deep cinematic shadows."
+    },
+    {
+      "say": "At 24% APR, the Rule of 72 means your unpaid debt doubles every 3 years.",
+      "callout": "DOUBLES IN 3 YEARS",
+      "visual": "Macro shot of a vintage mechanical clock mechanism ticking inside a shadow-filled wooden study."
+    },
+    {
+      "say": "A $3,000 balance paid at the minimum takes 183 months and costs $4,887 in interest alone.",
+      "callout": "$4,887 IN INTEREST",
+      "visual": "Overhead still life of stacked parchment slips tied with rough string beneath a pool of warm incandescent desk light."
+    },
+    {
+      "say": "Banks design that trap knowing sloppy spenders subsidize perks for people who pay in full every month.",
+      "callout": "",
+      "visual": "Back view of a solitary figure walking through a quiet, vast modern banking lobby with polished stone floors."
+    },
+    {
+      "say": "Set autopay to wipe the full balance monthly, and you harvest cash back while risking zero interest.",
+      "callout": "",
+      "visual": "Close-up of fingers resting beside an unbranded metallic cardholder on a clean slate countertop."
+    },
+    {
+      "say": "Treat credit like cash, and you force the bank to work for you instead of paying them.",
+      "callout": "",
+      "visual": "A minimalist leather wallet and a heavy brass house key sitting on a dark marble nightstand."
+    },
+    {
+      "say": "Follow for the money rules school never taught you, so you avoid an expensive financial mistake.",
+      "callout": "",
+      "visual": "Silhouette of a solitary person walking down an empty architectural hallway toward soft natural daylight."
+    }
+  ],
+  "caption": "Credit cards aren't the enemy. Carrying a balance is.\n\n#personalfinance #moneytips #financialliteracy #credittips #moneyrules",
+  "description": "Avoiding credit cards completely doesn't protect you; it strips away legal fraud protection and cash flow benefits. When you pay in full every month, you exploit the system instead of letting it exploit you. Treat credit like cash and make the bank work for you.",
+  "hashtags": [
+    "#personalfinance",
+    "#moneytips",
+    "#creditcardhacks",
+    "#financialliteracy",
+    "#quietmoney"
+  ],
+  "first_comment": "Do you strictly use debit or credit for daily spending?",
+  "facts": [
+    {
+      "claim": "Federal law caps your credit liability at $50.",
+      "basis": "Truth in Lending Act (Regulation Z) standard statutory maximum liability for unauthorized credit card use."
+    },
+    {
+      "claim": "At 24% APR, debt doubles every 3 years under the Rule of 72.",
+      "basis": "Fact sheet: Rule of 72: at 8% money doubles every 9 years; at 24% debt doubles every 3 years."
+    },
+    {
+      "claim": "A $3,000 balance at 24% APR paying only the minimum takes 183 months and costs $4,887 in interest.",
+      "basis": "Fact sheet: $3,000 credit card at 24% APR paying only the minimum (1% + interest, min $25): 183 months (~15 years), $4,887 interest."
+    }
+  ],
+  "source": "llm",
+  "pillar": "myth",
+  "look": ""
+}

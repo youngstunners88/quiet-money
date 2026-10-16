@@ -1,0 +1,88 @@
+{
+  "id": "2026-10-16-s6-math-the-front-loaded-mortgage-shock",
+  "pillar": "math",
+  "topic": "The Front-Loaded Mortgage Shock",
+  "day": "2026-10-16",
+  "slot": 6,
+  "status": "published",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-16T09:41:46Z",
+      "words": 178
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-16T09:43:10Z",
+      "seconds": 63.196,
+      "provider": "gemini"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-16T09:43:30Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-16T09:45:41Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-16T09:45:41Z",
+      "score": 94
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-16T09:45:42Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-10-16T09:45:50Z",
+      "local": "2026-10-17T11:30:00-04:00",
+      "youtube": "2026-10-17T11:30:00-04:00"
+    }
+  ],
+  "artifacts": {
+    "angle": "Analyze a $400,000 30-year mortgage at 6.5% to show that after 5 years and $150,000 in payments, you have only paid down $17,000 of principal.",
+    "title": "The Front-Loaded Mortgage Shock",
+    "style": "cinematic",
+    "video": "/home/user/quiet-money/production/output/2026-10-16/2026-10-16-s6-math-the-front-loaded-mortgage-shock/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-16/2026-10-16-s6-math-the-front-loaded-mortgage-shock/cover.jpg",
+    "youtube": {
+      "video_id": "rIyvtx8DFbo",
+      "channel_id": "UC9B1QBr3_8Eulok8IdQbCqQ",
+      "privacy": "private",
+      "post_at": "2026-10-17T11:30:00-04:00",
+      "comment_posted": false,
+      "series": true
+    },
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-10-17/slot2-math",
+        "post_at": "2026-10-17T11:30:00-04:00"
+      },
+      "youtube": {
+        "mode": "youtube",
+        "post_at": "2026-10-17T11:30:00-04:00",
+        "video_id": "rIyvtx8DFbo",
+        "channel_id": "UC9B1QBr3_8Eulok8IdQbCqQ",
+        "privacy": "private"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 94,
+    "passed": true
+  },
+  "cost": {
+    "tts:gemini:chars": 1966
+  },
+  "notes": []
+}

@@ -1,0 +1,90 @@
+{
+  "title": "Lower Your Internet Bill in 5 Minutes",
+  "hook_text": "STOP OVERPAYING FOR YOUR INTERNET BILL",
+  "beats": [
+    {
+      "say": "You're overpaying for your home internet every single month.",
+      "callout": "",
+      "visual": "A sleek dark modem sitting on a wooden desk, harsh side lighting, cinematic macro shot, blurred background"
+    },
+    {
+      "say": "Providers count on you never making this one phone call.",
+      "callout": "",
+      "visual": "A person's hands holding a modern smartphone face down on a concrete table, moody shadows"
+    },
+    {
+      "say": "Here's the exact script to drop your price without losing speed.",
+      "callout": "",
+      "visual": "A close-up of a notepad with a pen resting next to it, warm tungsten light, shallow depth of field"
+    },
+    {
+      "say": "Step one. Call your current provider and skip the automated prompts.",
+      "callout": "STEP ONE",
+      "visual": "A hand pressing a button on a dark desk phone, dramatic sidelight, minimalist office setup"
+    },
+    {
+      "say": "Ask for the retention department immediately.",
+      "callout": "",
+      "visual": "An empty corridor in a modern office building, cool blue tones, symmetrical architecture"
+    },
+    {
+      "say": "They're the only reps with actual power to lower your rate.",
+      "callout": "",
+      "visual": "A silhouette of a person standing by a large glass window at dusk, city lights far below"
+    },
+    {
+      "say": "Step two. Deliver the exact line word for word.",
+      "callout": "STEP TWO",
+      "visual": "A blank sheet of paper lit by a single desk lamp, dark moody room, high contrast"
+    },
+    {
+      "say": "Say this. My bill went up and I found a cheaper local deal.",
+      "callout": "",
+      "visual": "A close-up of a coffee cup next to a dark keyboard, soft morning light streaming across the desk"
+    },
+    {
+      "say": "I want to stay with you, but I need my rate matched.",
+      "callout": "",
+      "visual": "Hands typing slowly on a minimalist mechanical keyboard, dim ambient lighting, cinematic blur"
+    },
+    {
+      "say": "Step three. Stay quiet and let them look for a promo.",
+      "callout": "STEP THREE",
+      "visual": "A vintage analog clock ticking on a dark wall, sharp focus on the second hand"
+    },
+    {
+      "say": "They almost always drop the price to keep you.",
+      "callout": "",
+      "visual": "A stack of minimalist books on a dark wooden shelf, moody directional light"
+    },
+    {
+      "say": "Save that cash instead. A $5 a day habit invested at 8% for 30 years becomes $226,659.",
+      "callout": "$226,659",
+      "visual": "A glowing desk lamp casting long shadows across a clean wooden floor, cinematic and calm"
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "A dark hallway with a single warm light at the end, cinematic perspective, zero motion"
+    }
+  ],
+  "caption": "Stop letting your internet provider bleed your wallet dry every single month. Use this quick script today. #money #personalfinance #savingmoney #budgeting #finance",
+  "description": "Learn the exact 3-step script to lower your monthly internet bill without sacrificing your speed or connection quality.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#savingmoney",
+    "#budgeting",
+    "#finance"
+  ],
+  "first_comment": "How much does your internet bill cost you every month?",
+  "facts": [
+    {
+      "claim": "A $5/day habit invested monthly at 8% for 30 years equals $226,659.",
+      "basis": "Fact sheet entry: $5/day habit = $1,825/year; invested monthly at 8% for 30 years = $226,659"
+    }
+  ],
+  "source": "llm",
+  "pillar": "playbook",
+  "look": ""
+}

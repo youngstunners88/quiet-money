@@ -1,0 +1,66 @@
+{
+  "id": "2026-10-16-s3-playbook-lower-your-monthly-internet-bill",
+  "pillar": "playbook",
+  "topic": "Lower Your Monthly Internet Bill Using a 5-Minute Script",
+  "day": "2026-10-16",
+  "slot": 3,
+  "status": "held",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-16T09:20:20Z",
+      "words": 157
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-16T09:20:55Z",
+      "seconds": 63.169,
+      "provider": "gemini"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-16T09:21:43Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-16T09:23:55Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-16T09:23:55Z",
+      "score": 91
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-16T09:23:56Z"
+    },
+    {
+      "from": "packaged",
+      "to": "held",
+      "ts": "2026-10-16T09:23:56Z"
+    }
+  ],
+  "artifacts": {
+    "angle": "Show the exact script to use when calling an internet provider to drop the price without losing speed.",
+    "title": "Drop Your Internet Bill in 5 Minutes",
+    "style": "cinematic",
+    "video": "/home/user/quiet-money/production/output/2026-10-16/2026-10-16-s3-playbook-lower-your-monthly-internet-bill/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-16/2026-10-16-s3-playbook-lower-your-monthly-internet-bill/cover.jpg"
+  },
+  "scores": {
+    "gauntlet": 91,
+    "passed": false
+  },
+  "cost": {
+    "tts:gemini:chars": 913
+  },
+  "notes": [
+    "held for review: not_semantic_duplicate"
+  ]
+}

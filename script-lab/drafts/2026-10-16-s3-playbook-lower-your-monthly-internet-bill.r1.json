@@ -1,0 +1,90 @@
+{
+  "title": "Lower Your Internet Bill in 5 Minutes",
+  "hook_text": "STOP OVERPAYING FOR YOUR INTERNET BILL",
+  "beats": [
+    {
+      "say": "You're overpaying for your home internet every single month.",
+      "callout": "",
+      "visual": "A cinematic close-up of a modern silver router sitting on a dark wooden desk under moody warm side lighting."
+    },
+    {
+      "say": "Stay for five minutes and you'll slash that monthly charge.",
+      "callout": "",
+      "visual": "A dark room illuminated only by the faint blue status light of a blinking modem."
+    },
+    {
+      "say": "Internet providers rely on your laziness to keep your rates high.",
+      "callout": "LAZY BILLS",
+      "visual": "A stack of unopened paper bills sitting on a concrete countertop in soft afternoon shadows."
+    },
+    {
+      "say": "Here's the exact script you need to drop the price today.",
+      "callout": "",
+      "visual": "A person's hands holding a smartphone, typing notes on a dark screen with the backlight dimmed."
+    },
+    {
+      "say": "Step one. Call your current provider and skip straight to retention.",
+      "callout": "STEP ONE",
+      "visual": "A close-up of a finger pressing a number button on a landline phone keypad."
+    },
+    {
+      "say": "Say this exact phrase to the representative.",
+      "callout": "EXACT SCRIPT",
+      "visual": "A hand holding a pen over a blank white notebook page resting on a dark desk."
+    },
+    {
+      "say": "My bill went up and I'm looking at a cheaper competitor nearby.",
+      "callout": "BILL VS COMPETITOR",
+      "visual": "A blurry silhouette of a person talking on a smartphone near a large window on a rainy day."
+    },
+    {
+      "say": "Step two. Ask them to match the new customer promotion rate.",
+      "callout": "STEP TWO",
+      "visual": "A crisp white promotional flyer lying crumpled on a minimalist grey table."
+    },
+    {
+      "say": "Keep your current speed while cutting your monthly expense.",
+      "callout": "SPEED VS SAVINGS",
+      "visual": "A fiber optic cable glowing with faint orange light against a dark charcoal background."
+    },
+    {
+      "say": "Step three. If they refuse, tell them you want to cancel service.",
+      "callout": "STEP THREE",
+      "visual": "A finger hovering over a red end-call button on a modern mobile phone display."
+    },
+    {
+      "say": "That's when their hidden supervisor discounts instantly appear.",
+      "callout": "",
+      "visual": "A dramatic beam of light breaking through dark vertical window blinds onto a clean floor."
+    },
+    {
+      "say": "Save that cash instead of handing it to a telecom giant.",
+      "callout": "",
+      "visual": "A heavy glass jar resting on a dark shelf, catching a single sharp highlight."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "A slow cinematic pan across an empty modern workspace at dusk with deep shadows."
+    }
+  ],
+  "caption": "Stop letting your internet provider bleed your wallet dry every month. Use this quick script today. #money #personalfinance #savingmoney #budgeting #finance",
+  "description": "Lower your monthly internet bill in under 5 minutes using a precise script. Stop overpaying telecom giants and keep your hard-earned cash.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#savingmoney",
+    "#budgeting",
+    "#finance"
+  ],
+  "first_comment": "How much does your internet provider charge you every month right now?",
+  "facts": [
+    {
+      "claim": "Lowering monthly bills increases available capital for saving and investing.",
+      "basis": "Standard personal finance logic supported by multiple compound interest benchmarks from the fact sheet."
+    }
+  ],
+  "source": "llm",
+  "pillar": "playbook",
+  "look": ""
+}

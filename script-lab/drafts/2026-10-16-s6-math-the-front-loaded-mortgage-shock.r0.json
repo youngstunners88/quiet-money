@@ -1,0 +1,85 @@
+{
+  "title": "The Front-Loaded Mortgage Shock",
+  "hook_text": "$150,000 PAID. $17,000 GONE TO PRINCIPAL",
+  "beats": [
+    {
+      "say": "You buy a $400,000 home with a 30 year mortgage at 6.5%.",
+      "callout": "",
+      "visual": "A cinematic macro shot of a single house key resting on a dark wooden table, warm low-key lighting, shallow depth of field."
+    },
+    {
+      "say": "You think your monthly payments are chipping away at that debt.",
+      "callout": "THE SHOCKING MATH",
+      "visual": "A sleek dark fountain pen resting on blank white paper, moody side lighting, slow subtle camera push-in."
+    },
+    {
+      "say": "Wait until you see where your money actually goes during the first five years.",
+      "callout": "",
+      "visual": "A close-up of a vintage brass desk lamp casting a warm pool of light on an empty leather planner."
+    },
+    {
+      "say": "Over 60 months, you hand the bank roughly $150,000 in total payments.",
+      "callout": "$150,000 PAID",
+      "visual": "A blurred abstract shot of dark water ripples catching faint golden reflections from a distant streetlight."
+    },
+    {
+      "say": "That sounds like massive progress on your massive loan.",
+      "callout": "",
+      "visual": "An extreme close-up of dark coarse sand falling slowly through a metal funnel, moody cinematic light."
+    },
+    {
+      "say": "It's not.",
+      "callout": "THE TRUTH",
+      "visual": "A stark minimalist concrete wall with a single sharp shadow cutting across the frame, overcast daylight."
+    },
+    {
+      "say": "Because of how banks front-load the interest, almost all of it vanishes.",
+      "callout": "",
+      "visual": "A dark, heavy metal gear turning slowly in half-shadow, industrial aesthetic, slow motion."
+    },
+    {
+      "say": "After 5 years and $150,000 spent, you have only paid down $17,000 of principal.",
+      "callout": "$150,000 VS $17,000",
+      "visual": "A hand wearing a dark wool coat sleeve sliding a heavy metal slider on a dark mixing board, macro shot."
+    },
+    {
+      "say": "The rest went straight to bank interest and escrow fees.",
+      "callout": "",
+      "visual": "A dark brass pocket watch ticking in a patch of morning light, dust motes floating in the air."
+    },
+    {
+      "say": "You didn't buy equity. You bought rented time.",
+      "callout": "RENTED TIME",
+      "visual": "A silhouette of a person standing by a tall glass window looking out at a moody twilight city skyline."
+    },
+    {
+      "say": "Know the rules of the debt before you sign the papers.",
+      "callout": "KNOW THE RULES",
+      "visual": "A stack of dark leather-bound books resting on a heavy oak desk, dramatic rim lighting from the side."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "FOLLOW FOR MORE",
+      "visual": "A clean cinematic shot of a dark hallway with a single glowing amber light at the far end."
+    }
+  ],
+  "caption": "Most homeowners have no idea where their first five years of payments actually go. Check the math before you sign. #mortgagemath #personalfinance #moneyrules #debtfree #housingmarket",
+  "description": "Analyzing a $400,000 30-year mortgage at 6.5% reveals the hidden reality of front-loaded interest. After paying $150,000 in 5 years, only $17,000 goes to principal.",
+  "hashtags": [
+    "#mortgagemath",
+    "#personalfinance",
+    "#moneyrules",
+    "#debtfree",
+    "#housingmarket"
+  ],
+  "first_comment": "Did your mortgage amortization schedule shock you when you first looked at it?",
+  "facts": [
+    {
+      "claim": "A $400,000 30-year mortgage at 6.5% leaves only about $17,000 paid to principal after 5 years of payments totaling roughly $150,000",
+      "basis": "Standard standard loan amortization mathematics for a 30-year fixed mortgage at 6.5% interest on a $400,000 principal balance."
+    }
+  ],
+  "source": "llm",
+  "pillar": "math",
+  "look": ""
+}
