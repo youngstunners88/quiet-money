@@ -63,6 +63,17 @@
       "youtube": {
         "skipped": "YouTube daily cap reached (5 scheduled for 2026-10-13); the local pack is ready"
       }
+    },
+    "youtube_plan": {
+      "post_at": "2026-10-16T15:00:00-04:00"
+    },
+    "youtube": {
+      "video_id": "ZoUg2lNTHn0",
+      "channel_id": "UC9B1QBr3_8Eulok8IdQbCqQ",
+      "privacy": "private",
+      "post_at": "2026-10-16T15:00:00-04:00",
+      "comment_posted": false,
+      "series": true
     }
   },
   "scores": {

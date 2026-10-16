@@ -4,7 +4,7 @@
   "topic": "Myth: Credit cards are inherently dangerous financial tools",
   "day": "2026-10-16",
   "slot": 7,
-  "status": "visualized",
+  "status": "published",
   "history": [
     {
       "from": "planned",
@@ -23,14 +23,64 @@
       "from": "voiced",
       "to": "visualized",
       "ts": "2026-10-16T09:48:14Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-16T09:49:59Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-16T09:49:59Z",
+      "score": 93
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-16T09:50:00Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-10-16T09:50:06Z",
+      "local": "2026-10-17T15:00:00-04:00",
+      "youtube": "2026-10-17T15:00:00-04:00"
     }
   ],
   "artifacts": {
     "angle": "Many avoid credit entirely due to fear of debt, missing out on fraud protection, cash flow float, and structural benefits that reward disciplined users at the expense of banks.",
     "title": "Why Avoiding Credit Cards Costs You More",
-    "style": "cinematic"
+    "style": "cinematic",
+    "video": "/home/user/quiet-money/production/output/2026-10-16/2026-10-16-s7-myth-myth-credit-cards-are-inherently/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-16/2026-10-16-s7-myth-myth-credit-cards-are-inherently/cover.jpg",
+    "youtube": {
+      "video_id": "PkXY3sgepWo",
+      "channel_id": "UC9B1QBr3_8Eulok8IdQbCqQ",
+      "privacy": "private",
+      "post_at": "2026-10-17T15:00:00-04:00",
+      "comment_posted": false,
+      "series": true
+    },
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-10-17/slot3-myth",
+        "post_at": "2026-10-17T15:00:00-04:00"
+      },
+      "youtube": {
+        "mode": "youtube",
+        "post_at": "2026-10-17T15:00:00-04:00",
+        "video_id": "PkXY3sgepWo",
+        "channel_id": "UC9B1QBr3_8Eulok8IdQbCqQ",
+        "privacy": "private"
+      }
+    }
   },
-  "scores": {},
+  "scores": {
+    "gauntlet": 93,
+    "passed": true
+  },
   "cost": {
     "tts:gemini:chars": 986
   },
