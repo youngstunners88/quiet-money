@@ -113,7 +113,7 @@ daily_usd = 2.0                              # all desk runs together per UTC da
 per_call_usd = 0.5                           # one run above this is refused unless the caller raises it for that call
 
 [host]                                       # the recurring front man (faceless/host.py): one face, one voice, once a week
-enabled = false                              # OFF until the owner has approved the intro video; then one clip a week
+enabled = true                               # ON since 2026-10-16: the owner asked for the weekly drop from Quinton; one clip a week, Monday
 weekday = 0                                  # Monday
 model = "seedance-2-i2v"                     # image-to-video with native speech and lip-sync; later clips switch to the reference-audio model so the voice carries over
 seconds = 10
