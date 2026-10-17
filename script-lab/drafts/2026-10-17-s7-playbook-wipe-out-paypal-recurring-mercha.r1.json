@@ -1,0 +1,85 @@
+{
+  "title": "How to Kill Hidden PayPal Billing Authorizations",
+  "hook_text": "Audit your PayPal recurring charges right now",
+  "beats": [
+    {
+      "say": "Old merchants can quietly pull money from your PayPal balance without ever asking your permission again.",
+      "callout": "",
+      "visual": "A dark moody overhead shot of a sleek leather wallet resting beside an unbranded metal laptop on a dark walnut desk, lit by a single warm desk lamp."
+    },
+    {
+      "say": "When you bought that one-off trial years ago, you likely granted permanent automatic billing authorization.",
+      "callout": "",
+      "visual": "A silhouette of hands typing quietly on a matte black keyboard in a dimly lit minimalist office, shallow depth of field."
+    },
+    {
+      "say": "Step one. Log into PayPal on a web browser, click the gear icon, and choose Account Settings.",
+      "callout": "STEP ONE",
+      "visual": "Cinematic close-up of fingers hovering over an aluminum trackpad, soft glow reflecting off polished wood, camera at an extreme low angle."
+    },
+    {
+      "say": "The phone app hides this menu, so a desktop browser or mobile web view works best.",
+      "callout": "",
+      "visual": "A dark smartphone lying face down on a stone table next to a steaming ceramic coffee mug, morning shadows stretching across the surface."
+    },
+    {
+      "say": "Step two. Click Money, Banks and Cards on the left, then scroll down to Automatic Payments.",
+      "callout": "STEP TWO",
+      "visual": "A high-angle architectural still of an organized modern workspace with warm amber lighting and deep shadows, completely clutter-free."
+    },
+    {
+      "say": "But here's the part nobody mentions. Every vendor you authorized over the years is still active.",
+      "callout": "",
+      "visual": "A slow macro camera push toward a vintage brass padlock resting unlocked on top of a stack of dark paper notebooks."
+    },
+    {
+      "say": "You'll likely spot at least one or two recurring charges you forgot about years ago.",
+      "callout": "",
+      "visual": "A stark side profile of a person viewed from behind in a high-back chair, looking out a rainy floor-to-ceiling window at city lights."
+    },
+    {
+      "say": "A $15/month subscription forgotten for 10 years drains $1,800 straight out of your pocket.",
+      "callout": "$1,800 LOST",
+      "visual": "A neat stack of crisp hundred-dollar banknotes resting on a dark slate surface under a sharp single directional spotlight."
+    },
+    {
+      "say": "Step three. Click on each outdated vendor name, select Cancel, and confirm Automatic Billing Cancellation.",
+      "callout": "STEP THREE",
+      "visual": "A close-up of a hand firmly closing the lid of a dark, elegant notebook, signifying a decisive end."
+    },
+    {
+      "say": "That instantly revokes their digital token so they can't charge your backup bank account ever again.",
+      "callout": "ACCESS REVOKED",
+      "visual": "A heavy vintage iron vault door slightly ajar in a dimly lit corridor, moody cinematic documentary lighting."
+    },
+    {
+      "say": "Take 5 minutes to audit this list twice a year to protect your hard-earned cash.",
+      "callout": "",
+      "visual": "A luxury minimalist analog wristwatch resting on a dark granite nightstand, ticking second hand frozen in soft illumination."
+    },
+    {
+      "say": "Follow for the money rules school never taught you, and stop silent cash drains today.",
+      "callout": "",
+      "visual": "A calm, wide shot of an anonymous figure in an overcoat walking down a quiet architectural hallway toward a warm light."
+    }
+  ],
+  "caption": "Old merchant permissions drain cash in the background without you noticing. Revoke them in under 5 minutes.",
+  "description": "PayPal stores recurring merchant billing agreements indefinitely unless you manually revoke them. Learn the exact 3-step path in your browser settings to cancel active merchant permissions and plug silent money leaks.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#financialtips",
+    "#moneymindset",
+    "#quietmoney"
+  ],
+  "first_comment": "How many active automatic payments did you find sitting in your account?",
+  "facts": [
+    {
+      "claim": "A $15/month subscription for 10 years equals $1,800.",
+      "basis": "Money Fact Sheet calculation: $15 * 12 months * 10 years = $1,800."
+    }
+  ],
+  "source": "llm",
+  "pillar": "playbook",
+  "look": ""
+}

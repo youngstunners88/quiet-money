@@ -1,0 +1,89 @@
+{
+  "title": "The $226,000 Lottery Habit",
+  "hook_text": "THAT $5 LOTTERY TICKET COSTS $226,000",
+  "beats": [
+    {
+      "say": "That daily $5 lottery habit isn't just a harmless game. It's stealing your future.",
+      "callout": "",
+      "visual": "A single lottery ticket resting on a dark wooden cafe table, dim moody lighting, shot from above."
+    },
+    {
+      "say": "Let's look at the actual math behind that paper slip.",
+      "callout": "",
+      "visual": "A person's hands sliding a silver fountain pen across a blank notepad, macro lens."
+    },
+    {
+      "say": "Spending $5 every single day adds up to $1,825 a year.",
+      "callout": "$1,825 / YEAR",
+      "visual": "A stack of $5 bills resting near a window with morning fog outside, cinematic framing."
+    },
+    {
+      "say": "Now, what if you didn't buy that ticket?",
+      "callout": "",
+      "visual": "A silhouette of a person walking past a glowing convenience store window at dusk."
+    },
+    {
+      "say": "What if you invested that exact same money every month instead?",
+      "callout": "INVEST VS SPEND",
+      "visual": "A close-up of a vintage brass desk lamp illuminating a clean white desk surface."
+    },
+    {
+      "say": "Put that $150 a month into an account earning an 8% annual return.",
+      "callout": "8% RETURN",
+      "visual": "A mechanical clock gear spinning slowly, cinematic macro shot with soft amber lighting."
+    },
+    {
+      "say": "Give it 30 years of consistent monthly compounding.",
+      "callout": "30 YEARS",
+      "visual": "A time-lapse style blurred background of city traffic streaks at night through a glass window."
+    },
+    {
+      "say": "That small daily habit turns into a massive sum.",
+      "callout": "",
+      "visual": "A heavy metal vault door opening slightly, casting a sharp beam of light across a dark floor."
+    },
+    {
+      "say": "It grows to $226,659 by the end.",
+      "callout": "$226,659",
+      "visual": "A minimalist black calculator sitting alone on a polished concrete countertop."
+    },
+    {
+      "say": "That's the real cost of chasing a jackpot.",
+      "callout": "THE TRUE COST",
+      "visual": "A blurred lottery terminal screen reflecting red neon light in a quiet storefront."
+    },
+    {
+      "say": "Stop trading your wealth for a slim chance.",
+      "callout": "",
+      "visual": "A person walking away from the camera down a long, dimly lit concrete hallway."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "FOLLOW",
+      "visual": "A sleek silver key resting on a dark marble surface, sharp focus, cinematic shadows."
+    }
+  ],
+  "caption": "The house always wins, but compounding lets you be the house. #money #personalfinance #wealth #investing",
+  "description": "Calculate the true opportunity cost of spending $5 a day on lottery tickets over 30 years at an 8% market return.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#wealth",
+    "#investing",
+    "#math"
+  ],
+  "first_comment": "What small daily habit are you cutting this week?",
+  "facts": [
+    {
+      "claim": "$5/day habit equals $1,825/year",
+      "basis": "5 * 365 = 1,825"
+    },
+    {
+      "claim": "$5/day invested monthly at 8% for 30 years equals $226,659",
+      "basis": "Money Fact Sheet: $5/day habit = $1,825/year; invested monthly at 8% for 30 years = $226,659"
+    }
+  ],
+  "source": "llm",
+  "pillar": "math",
+  "look": ""
+}

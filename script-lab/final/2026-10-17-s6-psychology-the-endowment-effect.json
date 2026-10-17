@@ -1,0 +1,94 @@
+{
+  "title": "Why You Irrationally Overvalue Things You Own",
+  "hook_text": "WHY WE HOARD THINGS WE DON'T USE",
+  "beats": [
+    {
+      "say": "The moment an object becomes yours, your brain automatically doubles its perceived value.",
+      "callout": "",
+      "visual": "Cinematic close-up of two hands gently holding a plain ceramic coffee mug on a rustic dark oak table, moody dramatic lighting, shallow depth of field."
+    },
+    {
+      "say": "It's called the endowment effect, and breaking it frees thousands of dollars in trapped cash.",
+      "callout": "THE ENDOWMENT EFFECT",
+      "visual": "A dimly lit walk-in closet packed with unworn jackets and unworn designer clothes hanging on wooden hangers, captured from behind a silhouette."
+    },
+    {
+      "say": "In 1990, Nobel economist Richard Thaler proved this irrational bias using simple coffee mugs.",
+      "callout": "",
+      "visual": "An empty university lecture hall with rows of vintage wooden tiered seating under soft amber overhead lighting, wide angle view."
+    },
+    {
+      "say": "Students given mugs refused to sell for under $7, while buyers wouldn't pay more than $3.",
+      "callout": "$7 VS $3",
+      "visual": "Two plain ceramic mugs sitting side by side on a polished dark seminar table, dramatic side lighting casting long stark shadows."
+    },
+    {
+      "say": "Nothing changed about the mug. The mere feeling of ownership completely distorted their financial judgment.",
+      "callout": "",
+      "visual": "A person's silhouette standing in an open garage filled with tall stacks of cardboard boxes and neglected household gear, dusk light spilling in."
+    },
+    {
+      "say": "But here's the part nobody mentions: you make this expensive mistake every single week.",
+      "callout": "",
+      "visual": "A silhouette standing in a dimly lit dressing room, looking at high shelves stacked with unworn footwear and accessories."
+    },
+    {
+      "say": "You hoard clothes with tags still attached, and keep an extra car bleeding monthly insurance payments.",
+      "callout": "TRAPPED CAPITAL",
+      "visual": "A neglected sedan parked in a shadowy suburban driveway at twilight beneath the amber glow of a solitary street lamp."
+    },
+    {
+      "say": "Selling that second vehicle could easily free up an extra $100 every single month.",
+      "callout": "",
+      "visual": "A close-up of a hand placing a set of car keys onto a cold polished marble countertop under soft architectural lighting."
+    },
+    {
+      "say": "Invested monthly at 8% a year for 30 years, that $100 compounds to $149,036.",
+      "callout": "$149,036",
+      "visual": "A clean, minimalist concrete garage floor with bright morning sunlight sweeping across the empty polished space."
+    },
+    {
+      "say": "Here's your exact counter-move to stop losing money: apply the replacement test.",
+      "callout": "THE REPLACEMENT TEST",
+      "visual": "A person's hand reaching out to touch a single wool coat hanging neatly inside a minimalist wardrobe."
+    },
+    {
+      "say": "Ask yourself: if I didn't own this today, would I spend real cash to buy it right now?",
+      "callout": "",
+      "visual": "A silhouette viewed from behind, standing thoughtfully in front of an open, uncluttered closet in soft morning daylight."
+    },
+    {
+      "say": "If the answer's no, it's just clutter draining your net worth. Sell it and invest the proceeds.",
+      "callout": "SELL AND INVEST",
+      "visual": "A neat stack of paper bills resting on a wooden desk next to a sealed cardboard mailing package, shot in warm studio lighting."
+    },
+    {
+      "say": "Stop letting phantom value trap your future. Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "Low-angle cinematic interior view of a calm, serene minimalist apartment living room bathed in natural sunlight."
+    }
+  ],
+  "caption": "The endowment effect makes you hoard items that drain your net worth. Apply the replacement test to reclaim your cash.\n#personalfinance #moneytips #moneypsychology #wealthbuilding #quietmoney",
+  "description": "Learn how the endowment effect tricks your brain into overvaluing everyday possessions, from unworn clothes to unused cars. By applying the replacement test, you can liquidate idle assets and put that money to work in compounding investments.",
+  "hashtags": [
+    "#personalfinance",
+    "#moneypsychology",
+    "#wealthbuilding",
+    "#behavioraleconomics",
+    "#quietmoney"
+  ],
+  "first_comment": "What is one item sitting in your house right now that you wouldn't buy again today?",
+  "facts": [
+    {
+      "claim": "In 1990, Richard Thaler and colleagues demonstrated that mug owners demanded roughly $7 to sell while buyers offered roughly $3.",
+      "basis": "Kahneman, Knetsch, and Thaler (1990), 'Experimental Tests of the Endowment Effect and the Coase Theorem', Journal of Political Economy, Cornell mug experiments."
+    },
+    {
+      "claim": "$100/month invested for 30 years at 8%/yr with monthly compounding grows to $149,036.",
+      "basis": "Quiet Money Fact Sheet: $100/month invested for 30 years at 8%/yr (monthly compounding) = $149,036 (principal invested $36,000)."
+    }
+  ],
+  "source": "llm",
+  "pillar": "psychology",
+  "look": ""
+}

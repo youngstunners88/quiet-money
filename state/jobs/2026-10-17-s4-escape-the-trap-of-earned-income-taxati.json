@@ -1,0 +1,89 @@
+{
+  "id": "2026-10-17-s4-escape-the-trap-of-earned-income-taxati",
+  "pillar": "escape",
+  "topic": "The Trap of Earned Income Taxation",
+  "day": "2026-10-17",
+  "slot": 4,
+  "status": "published",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-17T09:26:46Z",
+      "words": 191
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-17T09:29:02Z",
+      "seconds": 71.907,
+      "provider": "gemini"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-17T09:30:17Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-17T09:33:27Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-17T09:33:27Z",
+      "score": 99
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-17T09:33:27Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-10-17T09:33:34Z",
+      "local": "2026-10-17T21:00:00-04:00",
+      "youtube": "2026-10-17T21:00:00-04:00"
+    }
+  ],
+  "artifacts": {
+    "angle": "Examining why W2 income carries the highest structural penalty in the tax code compared to asset growth.",
+    "brief": "kiyosaki",
+    "title": "Why Your Paycheck Carries the Highest Tax",
+    "style": "cinematic",
+    "video": "/home/user/quiet-money/production/output/2026-10-17/2026-10-17-s4-escape-the-trap-of-earned-income-taxati/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-17/2026-10-17-s4-escape-the-trap-of-earned-income-taxati/cover.jpg",
+    "youtube": {
+      "video_id": "8tW9TqejAwM",
+      "channel_id": "UC9B1QBr3_8Eulok8IdQbCqQ",
+      "privacy": "private",
+      "post_at": "2026-10-17T21:00:00-04:00",
+      "comment_posted": false,
+      "series": true
+    },
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-10-17/slot5-escape",
+        "post_at": "2026-10-17T21:00:00-04:00"
+      },
+      "youtube": {
+        "mode": "youtube",
+        "post_at": "2026-10-17T21:00:00-04:00",
+        "video_id": "8tW9TqejAwM",
+        "channel_id": "UC9B1QBr3_8Eulok8IdQbCqQ",
+        "privacy": "private"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 99,
+    "passed": true
+  },
+  "cost": {
+    "tts:gemini:chars": 2416
+  },
+  "notes": []
+}

@@ -1,0 +1,85 @@
+{
+  "title": "The True Cost of a Daily $5 Lottery Ticket",
+  "hook_text": "THAT $5 TICKET COSTS WAY MORE",
+  "beats": [
+    {
+      "say": "That daily $5 lottery habit isn't just a harmless dollar bill. It's a massive wealth drain.",
+      "callout": "",
+      "visual": "A single scratched lottery ticket lying on a dark wooden table under dim warm light, macro shot."
+    },
+    {
+      "say": "Most people think it's pocket change. But the math tells a very different story.",
+      "callout": "",
+      "visual": "Close-up of a hand dropping coins into a glass jar, shallow depth of field."
+    },
+    {
+      "say": "That daily habit equals $1,825 every single year. Let's see what happens if you invest it instead.",
+      "callout": "",
+      "visual": "A modern silver calculator resting on a clean concrete desk with harsh window shadows."
+    },
+    {
+      "say": "If you put that exact amount into the market at an 8% annual return, the numbers get wild.",
+      "callout": "",
+      "visual": "A silhouette of a person looking out a large glass office window at a foggy city skyline at dusk."
+    },
+    {
+      "say": "After ten years, you've built up a serious pile of cash.",
+      "callout": "10 YEARS",
+      "visual": "A stack of US dollar bills tied with a simple black band, side view on a grey surface."
+    },
+    {
+      "say": "Push that timeline out to twenty years, and the compound growth really starts to accelerate.",
+      "callout": "20 YEARS",
+      "visual": "A vintage metal desk lamp casting a sharp light cone on an empty leather notebook."
+    },
+    {
+      "say": "Now let's look at a thirty-year timeline. That's when things get truly shocking.",
+      "callout": "30 YEARS",
+      "visual": "A lone wooden chair facing a white brick wall with dramatic afternoon light streaks."
+    },
+    {
+      "say": "At 8% interest over 30 years, your small daily habit turns into a massive sum.",
+      "callout": "$226,659",
+      "visual": "An aerial view of a busy highway at night with blurred car light trails."
+    },
+    {
+      "say": "You put in a fraction of that total amount out of your own paycheck.",
+      "callout": "INPUT VS TOTAL",
+      "visual": "A heavy metal vault door slightly open, emitting a soft amber glow from within."
+    },
+    {
+      "say": "The rest of that huge total is pure compound growth doing the heavy lifting for you.",
+      "callout": "COMPOUND INTEREST",
+      "visual": "A close-up of green plant sprouts pushing through dark soil in sharp focus."
+    },
+    {
+      "say": "Stop paying for false hope and let time build your actual net worth.",
+      "callout": "BUILD WEALTH",
+      "visual": "A minimalist black coffee mug sitting on a polished stone countertop with moody lighting."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "A dark hallway with a single bright light fixture at the far end, centered symmetry."
+    }
+  ],
+  "caption": "Small daily habits compound into massive numbers over time. Choose your investments wisely. #money #personalfinance #wealth #investing #math",
+  "description": "Calculate the true opportunity cost of spending $5 a day on lottery tickets over 30 years at an 8% return.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#wealth",
+    "#investing",
+    "#math"
+  ],
+  "first_comment": "What small daily habit are you cutting this week?",
+  "facts": [
+    {
+      "claim": "$5/day habit = $1,825/year; invested monthly at 8% for 30 years = $226,659",
+      "basis": "MONEY FACT SHEET: $5/day habit = $1,825/year; invested monthly at 8% for 30 years = $226,659"
+    }
+  ],
+  "source": "llm",
+  "pillar": "math",
+  "look": ""
+}

@@ -1,0 +1,89 @@
+{
+  "title": "The Extended Warranty Protection Fallacy",
+  "hook_text": "THE WARRANTY TRAP COSTS YOU HUNDREDS",
+  "beats": [
+    {
+      "say": "Stores push extended warranties because it's pure profit.",
+      "callout": "",
+      "visual": "A sleek modern checkout counter with an empty wooden ledger under dim warm lighting, macro shot."
+    },
+    {
+      "say": "Here's what that choice actually costs your future net worth.",
+      "callout": "",
+      "visual": "Close-up of a brass pen resting beside blank ledger lines, top-down angle, cinematic shadows."
+    },
+    {
+      "say": "Say you buy gadgets and add a $100 protection plan every year.",
+      "callout": "",
+      "visual": "A single modern ceramic mug resting on a dark concrete desk, moody window light."
+    },
+    {
+      "say": "That's $100 a month set aside instead in a self-insurance fund.",
+      "callout": "$100 A MONTH",
+      "visual": "An overhead shot of a minimalist wooden desk with a stack of clean paper and a metallic ruler."
+    },
+    {
+      "say": "If invested at 8% a year, that cash compounds over time.",
+      "callout": "8% A YEAR",
+      "visual": "A blurry close-up of a mechanical watch ticking slowly, shallow depth of field, warm ambient tones."
+    },
+    {
+      "say": "In 20 years, that routine turns into $58,902.",
+      "callout": "$58,902",
+      "visual": "A dark room illuminated by a single vertical strip of soft light hitting a blank wall."
+    },
+    {
+      "say": "You only put in $24,000 of your own hard-earned paycheck.",
+      "callout": "$24,000 VS $58,902",
+      "visual": "A minimalist metal paperweight sitting on a dark oak surface, cinematic side lighting."
+    },
+    {
+      "say": "Extend that timeline out to 30 years.",
+      "callout": "STEP ONE",
+      "visual": "An empty staircase viewed from a low angle, clean architectural lines, muted grey tones."
+    },
+    {
+      "say": "That exact same habit grows into $149,036.",
+      "callout": "$149,036",
+      "visual": "A close-up of dark textured leather grain under a soft spotlight, high contrast."
+    },
+    {
+      "say": "Meanwhile, the store warranty expired and left you with nothing.",
+      "callout": "ASSET VS LIABILITY",
+      "visual": "A single closed brass door at the end of a long dimly lit hallway, architectural shot."
+    },
+    {
+      "say": "Decline the store protection plan and keep the cash yourself.",
+      "callout": "",
+      "visual": "A clean wooden tabletop with a single folded white cloth napkin, minimalist aesthetic."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "A calm dark horizon at dusk with a single faint star fading into the blue sky."
+    }
+  ],
+  "caption": "Stop handing free cash to electronics stores for protection plans you'll likely never use. Self-insure and let time do the heavy lifting.\n\n#moneypsychology #personalfinance #smartmoney #wealthbuilding #investing",
+  "description": "Compare the hidden cumulative cost of store extended warranties against building your own self-insurance fund using exact compound growth math.",
+  "hashtags": [
+    "#moneypsychology",
+    "#personalfinance",
+    "#smartmoney",
+    "#wealthbuilding",
+    "#investing"
+  ],
+  "first_comment": "Do you usually buy store warranties or skip them? Drop your thoughts below.",
+  "facts": [
+    {
+      "claim": "$100/month invested for 20 years at 8%/yr (monthly compounding) = $58,902 (you put in $24,000)",
+      "basis": "Fact Sheet: $100/month invested for 20 years at 8%/yr (monthly compounding) = $58,902 (you put in $24,000)"
+    },
+    {
+      "claim": "$100/month invested for 30 years at 8%/yr (monthly compounding) = $149,036 (you put in $36,000)",
+      "basis": "Fact Sheet: $100/month invested for 30 years at 8%/yr (monthly compounding) = $149,036 (you put in $36,000)"
+    }
+  ],
+  "source": "llm",
+  "pillar": "ledger",
+  "look": ""
+}

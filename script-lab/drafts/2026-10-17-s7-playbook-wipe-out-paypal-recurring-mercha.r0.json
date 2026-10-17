@@ -1,0 +1,90 @@
+{
+  "title": "Revoke Hidden PayPal Merchant Billing Authorizations Now",
+  "hook_text": "DON'T LET PAYPAL ROB YOU BLIND",
+  "beats": [
+    {
+      "say": "Every month companies quietly drain your bank account through forgotten PayPal permissions.",
+      "callout": "",
+      "visual": "A dark wooden desk with a single unlit desk lamp casting long shadows over a sleek smartphone lying face down."
+    },
+    {
+      "say": "You click agree once for a free trial and they keep charging forever.",
+      "callout": "",
+      "visual": "A close-up of a hand tapping a glowing glass table in a dim minimalist room."
+    },
+    {
+      "say": "Stay tuned to find out how to revoke every single vendor's backdoor access today.",
+      "callout": "",
+      "visual": "An overhead shot of a person writing in a blank notebook with a heavy metal pen."
+    },
+    {
+      "say": "Step one. Open your browser and log into your PayPal account.",
+      "callout": "STEP ONE",
+      "visual": "A laptop screen glowing in a dark office, shot from behind the shoulder at an extreme angle."
+    },
+    {
+      "say": "Click the gear icon in the top right corner to open your settings.",
+      "callout": "",
+      "visual": "A close-up shot of a finger pressing a physical brass gear on a vintage clock face."
+    },
+    {
+      "say": "Step two. Click the payments tab right at the top of the page.",
+      "callout": "STEP TWO",
+      "visual": "A blurred computer monitor reflecting a window with heavy rain sliding down the glass."
+    },
+    {
+      "say": "Then select manage automatic payments from the menu.",
+      "callout": "",
+      "visual": "A hand sliding a thick leather bookmark across the center of an aged paper book."
+    },
+    {
+      "say": "Step three. Look down the left sidebar at every active merchant list.",
+      "callout": "STEP THREE",
+      "visual": "A dimly lit hallway with multiple closed wooden doors in a quiet modern building."
+    },
+    {
+      "say": "Click on any merchant you haven't used this year.",
+      "callout": "",
+      "visual": "An overhead shot of a hand tossing loose iron keys onto a scarred oak table."
+    },
+    {
+      "say": "Hit cancel automatic billing to shut the door immediately.",
+      "callout": "",
+      "visual": "A heavy metal vault door swinging shut in a dark concrete bank basement."
+    },
+    {
+      "say": "Most people find three or four ghost subscriptions bleeding them dry.",
+      "callout": "",
+      "visual": "A single water droplet falling slowly into a dark, still pool of black ink."
+    },
+    {
+      "say": "Stop funding zombie companies that you forgot existed.",
+      "callout": "",
+      "visual": "An empty ceramic coffee cup sitting on a cold concrete windowsill at dusk."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "A silhouette of a person walking away down a long, narrow alleyway at sunset."
+    }
+  ],
+  "caption": "Companies are still charging your PayPal for things you cancelled years ago. Take back control today. #moneytips #personalfinance #budgeting #paypal #savemoney",
+  "description": "Learn how to navigate hidden PayPal settings to revoke automatic vendor permissions and stop silent monthly drains on your bank account.",
+  "hashtags": [
+    "#moneytips",
+    "#personalfinance",
+    "#budgeting",
+    "#paypal",
+    "#savemoney"
+  ],
+  "first_comment": "How many ghost subscriptions did you find hiding in your PayPal account?",
+  "facts": [
+    {
+      "claim": "Forgotten PayPal recurring merchant billing authorizations cause ongoing unauthorized charges",
+      "basis": "Standard payment processor feature mechanics for billing agreements"
+    }
+  ],
+  "source": "llm",
+  "pillar": "playbook",
+  "look": ""
+}

@@ -1,0 +1,88 @@
+{
+  "id": "2026-10-17-s6-psychology-the-endowment-effect",
+  "pillar": "psychology",
+  "topic": "The Endowment Effect",
+  "day": "2026-10-17",
+  "slot": 6,
+  "status": "published",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-17T09:41:45Z",
+      "words": 194
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-17T09:42:17Z",
+      "seconds": 70.262,
+      "provider": "gemini"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-17T09:42:47Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-17T09:45:54Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-17T09:45:54Z",
+      "score": 99
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-17T09:45:54Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-10-17T09:46:00Z",
+      "local": "2026-10-18T11:30:00-04:00",
+      "youtube": "2026-10-18T11:30:00-04:00"
+    }
+  ],
+  "artifacts": {
+    "angle": "Why we irrationally overvalue things we own, making us keep clothes we never wear and cars we should sell.",
+    "title": "Why You Irrationally Overvalue Things You Own",
+    "style": "cinematic",
+    "video": "/home/user/quiet-money/production/output/2026-10-17/2026-10-17-s6-psychology-the-endowment-effect/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-17/2026-10-17-s6-psychology-the-endowment-effect/cover.jpg",
+    "youtube": {
+      "video_id": "iswxOpfeaFg",
+      "channel_id": "UC9B1QBr3_8Eulok8IdQbCqQ",
+      "privacy": "private",
+      "post_at": "2026-10-18T11:30:00-04:00",
+      "comment_posted": false,
+      "series": true
+    },
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-10-18/slot2-psychology",
+        "post_at": "2026-10-18T11:30:00-04:00"
+      },
+      "youtube": {
+        "mode": "youtube",
+        "post_at": "2026-10-18T11:30:00-04:00",
+        "video_id": "iswxOpfeaFg",
+        "channel_id": "UC9B1QBr3_8Eulok8IdQbCqQ",
+        "privacy": "private"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 99,
+    "passed": true
+  },
+  "cost": {
+    "tts:gemini:chars": 1187
+  },
+  "notes": []
+}

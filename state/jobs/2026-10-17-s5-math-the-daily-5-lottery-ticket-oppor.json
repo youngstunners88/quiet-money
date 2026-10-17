@@ -1,0 +1,66 @@
+{
+  "id": "2026-10-17-s5-math-the-daily-5-lottery-ticket-oppor",
+  "pillar": "math",
+  "topic": "The Daily $5 Lottery Ticket Opportunity Cost",
+  "day": "2026-10-17",
+  "slot": 5,
+  "status": "held",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-17T09:34:51Z",
+      "words": 192
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-17T09:38:42Z",
+      "seconds": 31.138,
+      "provider": "gemini"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-17T09:39:12Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-17T09:40:43Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-17T09:40:43Z",
+      "score": 93
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-17T09:40:44Z"
+    },
+    {
+      "from": "packaged",
+      "to": "held",
+      "ts": "2026-10-17T09:40:44Z"
+    }
+  ],
+  "artifacts": {
+    "angle": "Calculate the compound interest of spending $5 a day ($150/month) on lottery tickets over 40 years at an 8% market return.",
+    "title": "The $226,000 Lottery Ticket Math",
+    "style": "cinematic",
+    "video": "/home/user/quiet-money/production/output/2026-10-17/2026-10-17-s5-math-the-daily-5-lottery-ticket-oppor/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-17/2026-10-17-s5-math-the-daily-5-lottery-ticket-oppor/cover.jpg"
+  },
+  "scores": {
+    "gauntlet": 93,
+    "passed": false
+  },
+  "cost": {
+    "tts:gemini:chars": 1913
+  },
+  "notes": [
+    "held for review: word_count, duration"
+  ]
+}
