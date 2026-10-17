@@ -57,6 +57,7 @@ humans set strategy, connect accounts, and review held videos.
 | Is the operation healthy? Something failed, stalled or overspent | `/` | `OPERATIONS.md`, `.claude/skills/faceless-daily/references/failure-playbook.md` | `faceless-daily` |
 | Evaluate an outside tool, repo or list of links safely | `/repo-farm` | `.claude/skills/faceless-intake` | `faceless-intake` |
 | The call to action on every video, the link-in-bio hub page, UTM and the offer ledger | `/faceless/offer.py` | `.claude/skills/faceless-offer/references/link-rules.md` | `faceless-offer` |
+| Fix a finished video (cut bad shots, cover the generator's watermark, add a bed) | `/faceless/recut.py` | `python -m faceless recut inspect VIDEO` | n/a |
 | How a video reaches people: posting rails, profile links, email list, products, measurement, what the owner does next | `/faceless/distribute.py` | `channel/empire/DISTRIBUTION.md` | `faceless-offer` |
 
 ## Commands (run from this folder)
@@ -87,6 +88,7 @@ python -m faceless muapi find "product mockup"  # the Muapi desk: find, inspect,
 python -m faceless offer                       # coverage, mix, the three profile URLs; `offer --batch today` makes sure every passed video has its offer pack and row
 python -m faceless distribute                  # every distribution rail with its state and the owner's next step (`--live` checks the hub page)
 python -m faceless listing build all           # Etsy + Gumroad packs; `listing check` runs the listing gauntlet; `shop status|plan|push`
+python -m faceless recut inspect V          # shots, watermark box, contact sheet; `recut apply V --cover A-B --drop A-B --music escape`
 python -m faceless skills                      # lint every skill against Anthropic's guide
 python -m faceless ci                          # CI as GitHub sees it (clean export, no keys): run before every push of code
 python -m pytest -q tests                      # engine tests
