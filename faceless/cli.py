@@ -643,6 +643,53 @@ def cmd_songvideo(args) -> int:
     return 0
 
 
+def cmd_recut(args) -> int:
+    """Recut desk: `recut inspect VIDEO` | `recut apply VIDEO --cover A-B --drop A-B --music escape -o OUT.mp4`."""
+    from pathlib import Path
+
+    from faceless import recut
+    action, video = args.action, Path(args.video)
+    if action == "inspect":
+        r = recut.inspect(video, threshold=args.scene_threshold)
+        v, m = r["video"], r["watermark"]
+        print(f"{video.name}: {v['seconds']:.2f}s  {v['width']}x{v['height']}  {v['fps']}fps  "
+              f"{'sound' if v['has_audio'] else 'silent'}")
+        if m.get("found"):
+            print(f"watermark: {m['corner']} box "
+                  f"{m['box']['x']},{m['box']['y']},{m['box']['w']},{m['box']['h']} "
+                  f"(score {m['score']}, stillness {m['stillness']})")
+            for c in m.get("candidates", [])[1:]:
+                print(f"  also: {c['corner']} box {c['box']['x']},{c['box']['y']},{c['box']['w']},{c['box']['h']} "
+                      f"(score {c['score']})")
+            print("  wrong one? pass --watermark-box X,Y,W,H to apply")
+        else:
+            print(f"watermark: not found ({m.get('reason')})")
+        print(f"{len(r['shots'])} shots:")
+        for sh in r["shots"]:
+            print(f"  #{sh['i']:<3} {sh['start']:>7.2f} - {sh['end']:>7.2f}  ({sh['seconds']:.2f}s)")
+        print(f"contact sheet: {r['contact_sheet']}")
+        return 0
+
+    out = Path(args.out) if args.out else video.with_name(f"{video.stem}-recut.mp4")
+    box = None
+    if args.watermark_box:
+        try:
+            x, y, bw, bh = (int(v) for v in args.watermark_box.split(","))
+        except ValueError:
+            print("--watermark-box wants four whole numbers: X,Y,W,H")
+            return 2
+        box = {"x": x, "y": y, "w": bw, "h": bh}
+    r = recut.apply(video, out, drops=args.drop, covers=args.cover, music=args.music,
+                    music_volume=args.music_volume, logo=args.logo, watermark_box=box, crf=args.crf)
+    kept = sum(1 for s in r["segments"] if s["mode"] == "play")
+    held = sum(1 for s in r["segments"] if s["mode"] == "cover")
+    print(f"{r['output']}: {r['seconds']:.2f}s (was {r['source']['seconds']:.2f}s, "
+          f"{r['removed_seconds']:.2f}s removed); {kept} played, {held} held")
+    print("logo: " + (f"over the mark at {r['watermark']['box']}" if r["watermark"] else "not placed"))
+    print("music: " + (r["music"] or "none"))
+    return 0
+
+
 def cmd_songpost(args) -> int:
     """Song post: `songpost --day D` writes POST.md for every song of a day | `songpost PACK_DIR VIDEO [--at ISO] [--apply]` (dry run unless --apply)."""
     from pathlib import Path
@@ -964,6 +1011,19 @@ def main(argv: list[str] | None = None) -> int:
     sv.add_argument("--pan-from", type=float, default=0.0)
     sv.add_argument("--pan-to", type=float, default=1.0)
     sv.set_defaults(fn=cmd_songvideo)
+    rc = sub.add_parser("recut", help="recut desk: fix a finished video without making it again. `recut inspect VIDEO` lists shots, finds the watermark and writes a contact sheet; `recut apply VIDEO --cover A-B --drop A-B --music escape` cuts it, holds covered seconds under their own sound, puts the Q over the mark and lays a bed under the voice")
+    rc.add_argument("action", choices=["inspect", "apply"])
+    rc.add_argument("video")
+    rc.add_argument("--drop", action="append", metavar="START-END", help="seconds to remove entirely, picture and sound (repeatable)")
+    rc.add_argument("--cover", action="append", metavar="START-END", help="seconds whose picture is replaced by a held frame, keeping their sound (repeatable)")
+    rc.add_argument("--music", help="music bed: a series name (story, math, psychology, myth, playbook, escape), a file path, or none")
+    rc.add_argument("--music-volume", type=float, default=0.16)
+    rc.add_argument("--logo", default="auto", choices=["auto", "none"], help="auto puts the Q badge over the detected watermark")
+    rc.add_argument("--watermark-box", metavar="X,Y,W,H", help="where the mark really is, when detection picks the wrong thing")
+    rc.add_argument("--crf", type=int, default=18)
+    rc.add_argument("--scene-threshold", type=float, default=0.25, help="how different two frames must be to count as a cut (lower finds more shots)")
+    rc.add_argument("-o", "--out")
+    rc.set_defaults(fn=cmd_recut)
     cm = sub.add_parser("comics", help="the funny picture-post series (five a day, for the channel's Posts tab): `comics [--day D] [--n 5] [--reference IMG] [--theme T]`")
     cm.add_argument("--day"); cm.add_argument("--n", type=int, default=5); cm.add_argument("--reference"); cm.add_argument("--theme")
     cm.set_defaults(fn=cmd_comics)
