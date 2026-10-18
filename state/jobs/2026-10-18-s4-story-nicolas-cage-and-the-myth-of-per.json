@@ -1,0 +1,88 @@
+{
+  "id": "2026-10-18-s4-story-nicolas-cage-and-the-myth-of-per",
+  "pillar": "story",
+  "topic": "Nicolas Cage and the Myth of Permanent Cash Flow",
+  "day": "2026-10-18",
+  "slot": 4,
+  "status": "published",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-18T09:32:17Z",
+      "words": 188
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-18T09:32:44Z",
+      "seconds": 65.488,
+      "provider": "gemini"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-18T09:33:06Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-18T09:35:27Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-18T09:35:27Z",
+      "score": 99
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-18T09:35:28Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-10-18T09:35:34Z",
+      "local": "2026-10-18T21:00:00-04:00",
+      "youtube": "2026-10-18T21:00:00-04:00"
+    }
+  ],
+  "artifacts": {
+    "angle": "High income is not net worth; purchasing illiquid trophy assets with ongoing carrying costs creates fatal financial bottlenecks when income slows.",
+    "title": "How Nicolas Cage Blew $150 Million",
+    "style": "cinematic",
+    "video": "/home/user/quiet-money/production/output/2026-10-18/2026-10-18-s4-story-nicolas-cage-and-the-myth-of-per/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-18/2026-10-18-s4-story-nicolas-cage-and-the-myth-of-per/cover.jpg",
+    "youtube": {
+      "video_id": "ADhDOQ-Ui48",
+      "channel_id": "UC9B1QBr3_8Eulok8IdQbCqQ",
+      "privacy": "private",
+      "post_at": "2026-10-18T21:00:00-04:00",
+      "comment_posted": false,
+      "series": true
+    },
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-10-18/slot5-story",
+        "post_at": "2026-10-18T21:00:00-04:00"
+      },
+      "youtube": {
+        "mode": "youtube",
+        "post_at": "2026-10-18T21:00:00-04:00",
+        "video_id": "ADhDOQ-Ui48",
+        "channel_id": "UC9B1QBr3_8Eulok8IdQbCqQ",
+        "privacy": "private"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 99,
+    "passed": true
+  },
+  "cost": {
+    "tts:gemini:chars": 1178
+  },
+  "notes": []
+}

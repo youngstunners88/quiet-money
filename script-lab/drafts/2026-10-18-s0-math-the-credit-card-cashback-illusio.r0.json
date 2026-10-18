@@ -1,0 +1,98 @@
+{
+  "title": "The Credit Card Cashback Trap (Exact Math)",
+  "hook_text": "THE CASHBACK REWARD TRAP EXPOSED",
+  "beats": [
+    {
+      "say": "Your 2% cashback card is making the bank rich while paying you pennies.",
+      "callout": "",
+      "visual": "Overhead cinematic view of a sleek metallic credit card resting on a dark marble surface, dramatic side lighting."
+    },
+    {
+      "say": "Here's the exact math showing how a tiny $1,500 balance destroys an entire year of rewards.",
+      "callout": "",
+      "visual": "Close-up silhouette of hands holding a dark smartphone, subtle blue glow, soft bokeh background."
+    },
+    {
+      "say": "Imagine you spend $2,000 every single month on your card to max out cash rewards.",
+      "callout": "$2,000 SPEND",
+      "visual": "A sleek leather wallet lying open next to receipts on a dark wooden desk, dim mood lighting."
+    },
+    {
+      "say": "At 2% cashback, you earn $40 every month in reward points.",
+      "callout": "$40 REWARD",
+      "visual": "A single shiny silver coin sitting under a tight spotlight on a dark textured background."
+    },
+    {
+      "say": "Over 12 full months, that adds up to $480 of seemingly free cash.",
+      "callout": "$480 A YEAR",
+      "visual": "Cinematic shot of neatly stacked crisp dollar bills on a polished table, dramatic contrast."
+    },
+    {
+      "say": "But here's the part nobody mentions.",
+      "callout": "",
+      "visual": "Silhouette of a person sitting in a dimly lit room facing a tall foggy window, evening atmosphere."
+    },
+    {
+      "say": "If you carry a minor $1,500 balance past your monthly due date, interest kicks in.",
+      "callout": "$1,500 BALANCE",
+      "visual": "Moody shot of a brass hourglass with sand running down on a metallic counter, dim light."
+    },
+    {
+      "say": "At a standard 22% APR, that $1,500 balance charges you $330 in annual interest.",
+      "callout": "$330 INTEREST",
+      "visual": "Close-up of a pen leaning against an open leather ledger book in a shadowy office."
+    },
+    {
+      "say": "That single small balance instantly steals nearly 70% of your total yearly earnings.",
+      "callout": "$480 VS $330",
+      "visual": "Low angle shot of a massive modern bank building made of glass and steel under stormy clouds."
+    },
+    {
+      "say": "Carry just $2,200 at 22% APR, and interest hits $484, completely wiping out every reward dollar.",
+      "callout": "$480 VS $484",
+      "visual": "A single lit candle slowly extinguishing on a cold stone background, dark cinematic tone."
+    },
+    {
+      "say": "Cashback isn't a free bonus; it's bait engineered to keep you in high-interest debt.",
+      "callout": "",
+      "visual": "Close-up shot of heavy vintage keys resting on a dark oak desk, moody side lighting."
+    },
+    {
+      "say": "If you carry any balance at all, you aren't beating the system, you're funding it.",
+      "callout": "",
+      "visual": "Silhouette of a person standing at the end of a long dark hallway lit by a single distant doorway."
+    },
+    {
+      "say": "Follow for the money rules school never taught you, so cashback cards never trick you.",
+      "callout": "",
+      "visual": "Atmospheric shot of a quiet leather-bound notebook sitting closed under warm desk light."
+    }
+  ],
+  "caption": "Think 2% cashback is free money? Here is the hidden math banks don't highlight.\n\n#money #personalfinance #creditcards #personalfinancetips #financialliteracy",
+  "description": "A 2% cashback reward sounds great on paper, but carrying even a small balance wipes out your earnings instantly. Learn how credit card interest negates cashback rewards with exact numbers.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#creditcards",
+    "#financialliteracy",
+    "#moneytips"
+  ],
+  "first_comment": "Do you pay off your credit card balance in full every single month?",
+  "facts": [
+    {
+      "claim": "2% cashback on $2,000 monthly spend equals $480 per year",
+      "basis": "$2,000 * 0.02 = $40 per month; $40 * 12 months = $480 per year"
+    },
+    {
+      "claim": "$1,500 balance at 22% APR equals $330 annual interest",
+      "basis": "$1,500 * 0.22 = $330 per year"
+    },
+    {
+      "claim": "$2,200 balance at 22% APR equals $484 annual interest",
+      "basis": "$2,200 * 0.22 = $484 per year"
+    }
+  ],
+  "source": "llm",
+  "pillar": "math",
+  "look": ""
+}
