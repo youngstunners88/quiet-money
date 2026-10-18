@@ -60,7 +60,8 @@
       "privacy": "private",
       "post_at": "2026-10-18T15:00:00-04:00",
       "comment_posted": false,
-      "series": true
+      "series": true,
+      "comment_tries": 1
     },
     "publish": {
       "local": {
@@ -84,5 +85,7 @@
   "cost": {
     "tts:gemini:chars": 1130
   },
-  "notes": []
+  "notes": [
+    "first comment failed: YOUTUBE_POST_COMMENT: YouTube quota used up; it resets at midnight Pacific"
+  ]
 }

@@ -299,7 +299,7 @@ def run(job, script: dict, voice: dict, imgs: list[dict]) -> dict:
           f"[p]ass=filename='{ass}':fontsdir='{fonts}'[v]")
     af = (f"[1:a]aresample=48000,asplit=2[vo1][vo2];"
           f"[2:a]aresample=48000,volume={cfg['music_volume']}[mu];"
-          f"[mu][vo1]sidechaincompress=threshold=0.03:ratio=6:attack=15:release=350[duck];"
+          f"[mu][vo1]sidechaincompress=threshold=0.03:ratio=4:attack=15:release=350[duck];"
           f"[3:a]aresample=48000,volume={cfg['sfx_volume']}[fx];"
           f"[vo2][duck][fx]amix=inputs=3:duration=first:normalize=0,"
           f"loudnorm=I=-14:TP=-1.5:LRA=11,aresample=48000[a]")
