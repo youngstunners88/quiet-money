@@ -3733,3 +3733,5 @@
 {"day": "2026-10-19", "provider": "muapi", "unit": "desk_usd", "amount": 0.09, "usd": 0.09, "job": "vibe-2026-10-18-breathe-12"}
 {"day": "2026-10-19", "provider": "muapi", "unit": "desk_usd", "amount": 0.09, "usd": 0.09, "job": "vibe-2026-10-18-breathe-13"}
 {"day": "2026-10-19", "provider": "muapi", "unit": "desk_usd", "amount": 0.09, "usd": 0.09, "job": "vibe-2026-10-18-breathe-14"}
+{"day": "2026-10-19", "provider": "elevenlabs", "unit": "chars", "amount": 95, "usd": 0.0, "job": null}
+{"day": "2026-10-19", "provider": "elevenlabs", "unit": "chars", "amount": 116, "usd": 0.0, "job": null}
