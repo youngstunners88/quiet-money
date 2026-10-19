@@ -251,6 +251,9 @@ def page(path: str, title: str, description: str, body: str, *, jsonld: list | N
 </body></html>"""
 
 
+TIKTOK_VERIFY_NAME = "tiktokU0fxJODyiu9rM34RSekGr3RvbXUSuyKd.txt"
+TIKTOK_VERIFY_BODY = "tiktok-developers-site-verification=U0fxJODyiu9rM34RSekGr3RvbXUSuyKd"
+
 LEGAL_UPDATED = "2026-10-19"
 CONTACT_URL = "https://github.com/youngstunners88/quiet-money/issues"   # the public contact route; no personal email on a public page
 
@@ -566,6 +569,8 @@ def build() -> dict:
                                    encoding="utf-8")
     if c["indexnow_key"]:
         (SITE / f"{c['indexnow_key']}.txt").write_text(c["indexnow_key"], encoding="utf-8")
+    # TikTok's URL-prefix verification file (public token, served at the site root so TikTok can check the prefix)
+    (SITE / TIKTOK_VERIFY_NAME).write_text(TIKTOK_VERIFY_BODY, encoding="utf-8")
     (SITE / ".nojekyll").write_text("", encoding="utf-8")
     write_atomic(SITE / "urls.json", json.dumps(urls, indent=1))
     return {"pages": len(urls), "rules": len(rules), "dir": str(SITE)}
