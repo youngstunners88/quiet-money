@@ -6510,3 +6510,4 @@
 {"ts": "2026-10-19T11:17:49Z", "t": 1792408669.452, "actor": "engine", "type": "PROVIDER_OK", "capability": "llm", "provider": "gemini", "job": null, "ms": 13949}
 {"ts": "2026-10-19T11:17:59Z", "t": 1792408679.87, "actor": "engine", "type": "SCOUT_TOPUP", "pillar": "escape", "added": 6}
 {"ts": "2026-10-19T11:18:06Z", "t": 1792408686.793, "actor": "engine", "type": "COMPOSIO_SESSION", "user": "quiet-money-studio", "session_hash": "46c0af7b"}
+{"ts": "2026-10-19T19:28:19Z", "t": 1792438099.482, "actor": "engine", "type": "AEO_TRACK", "probes": 16, "ok": 0, "mentioned": 0}
