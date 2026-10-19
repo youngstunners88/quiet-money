@@ -1,0 +1,85 @@
+{
+  "title": "Assets vs Liabilities: The Cash Flow Split",
+  "hook_text": "YOUR HOUSE MIGHT BE DRAINING YOU",
+  "beats": [
+    {
+      "say": "Most people think their home is an asset. But the math says something else entirely.",
+      "callout": "",
+      "visual": "A cinematic shot of a modern suburban house at dusk, viewed from behind a dark fence, moody lighting."
+    },
+    {
+      "say": "Here's the definition that changes everything. An asset puts money in your pocket every month.",
+      "callout": "ASSET VS LIABILITY",
+      "visual": "Close-up of a brass key resting on a dark wooden table, soft dramatic window light."
+    },
+    {
+      "say": "A liability takes money out of your pocket every single month without fail.",
+      "callout": "",
+      "visual": "A stack of paper bills sliding into a dark shadow, macro lens, shallow depth of field."
+    },
+    {
+      "say": "By that rule, if you live in your house, it's a liability. Taxes, insurance, and interest eat cash.",
+      "callout": "",
+      "visual": "A dark silhouette of a person looking out a large glass window at night, rainy reflections."
+    },
+    {
+      "say": "The rat race traps you when your expenses rise right alongside your paycheck.",
+      "callout": "",
+      "visual": "A close-up of a spinning metallic gear mechanism in dim light, industrial aesthetic."
+    },
+    {
+      "say": "You earn more, you spend more, and you're stuck needing the next paycheck just to survive.",
+      "callout": "",
+      "visual": "Hands counting crisp paper currency on a dark desk, overhead macro shot."
+    },
+    {
+      "say": "But here's the part nobody mentions. Leverage cuts both ways when you buy things on debt.",
+      "callout": "",
+      "visual": "A minimalist scale balancing two abstract steel blocks, dramatic rim lighting."
+    },
+    {
+      "say": "A $100,000 property bought with a $20,000 down payment is 5x leverage.",
+      "callout": "5X LEVERAGE",
+      "visual": "An architectural model of a modern building viewed from a low angle, moody cinematic shadows."
+    },
+    {
+      "say": "A 20% price drop wipes out your entire down payment before you even notice.",
+      "callout": "",
+      "visual": "A hand slowly pulling a single wooden block from the bottom of a tumbling tower."
+    },
+    {
+      "say": "Real estate takes repairs, tenants, and time. It's not magic, it's management.",
+      "callout": "",
+      "visual": "A worn iron door handle being turned in a dimly lit hallway, cinematic grain."
+    },
+    {
+      "say": "You escape the rat race only when your passive income covers your monthly expenses.",
+      "callout": "PASSIVE INCOME",
+      "visual": "A sleek silver watch ticking on a dark stone surface, macro shot, soft light."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "A lone person walking down a quiet city sidewalk away from the camera at twilight."
+    }
+  ],
+  "caption": "Assets put cash in your pocket. Liabilities pull it out every single month. Know the difference before your next big purchase. #assetsvsliabilities #personalfinance #moneytips #financialfreedom #ratrace",
+  "description": "Learn the core difference between assets and liabilities, how leverage works, and what it truly takes to escape the rat race.",
+  "hashtags": [
+    "#assetsvsliabilities",
+    "#personalfinance",
+    "#moneytips",
+    "#financialfreedom",
+    "#ratrace"
+  ],
+  "first_comment": "Is your primary residence an asset or a liability in your eyes? Drop your thoughts below.",
+  "facts": [
+    {
+      "claim": "Leverage: a $100,000 property bought with $20,000 down is 5x leverage; a 20% price drop ($20,000) wipes out the whole down payment",
+      "basis": "Leverage: a $100,000 property bought with $20,000 down is 5x leverage; a 20% price drop ($20,000) wipes out the whole down payment, a 20% rise doubles it"
+    }
+  ],
+  "source": "llm",
+  "pillar": "escape",
+  "look": ""
+}

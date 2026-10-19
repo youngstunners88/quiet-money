@@ -1,0 +1,76 @@
+{
+  "id": "2026-10-19-s4-psychology-the-status-quo-bias",
+  "pillar": "psychology",
+  "topic": "The Status Quo Bias",
+  "day": "2026-10-19",
+  "slot": 4,
+  "status": "published",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-19T09:39:01Z",
+      "words": 178
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-19T09:39:37Z",
+      "seconds": 68.219,
+      "provider": "gemini"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-19T09:39:56Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-19T09:42:08Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-19T09:42:08Z",
+      "score": 99
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-19T09:42:09Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-10-19T09:42:10Z",
+      "local": "2026-10-19T21:00:00-04:00",
+      "youtube": null
+    }
+  ],
+  "artifacts": {
+    "angle": "How sticking with your bank, your insurance, and your subscriptions quietly costs you hundreds every single year.",
+    "title": "How Status Quo Bias Quietly Drains Your Bank Account",
+    "style": "cinematic",
+    "video": "/home/user/quiet-money/production/output/2026-10-19/2026-10-19-s4-psychology-the-status-quo-bias/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-19/2026-10-19-s4-psychology-the-status-quo-bias/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-10-19/slot5-psychology",
+        "post_at": "2026-10-19T21:00:00-04:00"
+      },
+      "youtube": {
+        "skipped": "YouTube refused the upload session (HTTP 429): quota or rate limit; it resets at midnight Pacific"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 99,
+    "passed": true
+  },
+  "cost": {
+    "tts:gemini:chars": 1127
+  },
+  "notes": []
+}

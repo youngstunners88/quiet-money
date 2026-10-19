@@ -1,0 +1,85 @@
+{
+  "title": "The 84-Month Car Loan Trap",
+  "hook_text": "EXTENDING YOUR CAR LOAN DOUBLES THE INTEREST",
+  "beats": [
+    {
+      "say": "Spreading a car loan across 84 months looks like a smart monthly discount. It isn't.",
+      "callout": "",
+      "visual": "A sleek modern car parked inside a dark empty concrete garage, cinematic dim lighting, low angle shot from behind"
+    },
+    {
+      "say": "Here is the exact math banks hide from you.",
+      "callout": "",
+      "visual": "A wooden office desk with a heavy brass desk lamp casting a warm circle of light, no papers visible"
+    },
+    {
+      "say": "When you double the length of the loan, you double the total interest paid on a depreciating asset.",
+      "callout": "ASSET VS LIABILITY",
+      "visual": "A pair of hands sliding a metal pen across a dark dark wooden surface, shallow depth of field"
+    },
+    {
+      "say": "The vehicle loses value the moment it leaves the lot. Meanwhile, your interest payments keep climbing.",
+      "callout": "",
+      "visual": "Tail lights of a car fading away into a rainy city street at dusk, cinematic blur"
+    },
+    {
+      "say": "You end up paying thousands extra for a machine that is rusting away.",
+      "callout": "",
+      "visual": "Close up of heavy rain drops hitting the dark hood of a parked vehicle, moody atmospheric lighting"
+    },
+    {
+      "say": "That extra cash could work for you instead.",
+      "callout": "",
+      "visual": "A person counting plain stacked coins on a simple oak table, top down view, deep shadows"
+    },
+    {
+      "say": "For example, $100 a month invested for 30 years at 8% annual return grows to $149,036.",
+      "callout": "$149,036",
+      "visual": "A digital clock glowing softly on a nightstand in a dark room, minimalist aesthetic"
+    },
+    {
+      "say": "You only put in $36,000 of your own money over that timeline.",
+      "callout": "$36,000",
+      "visual": "A leather wallet resting on a minimalist concrete block, dramatic side lighting"
+    },
+    {
+      "say": "Compound interest builds wealth when you let time do the work.",
+      "callout": "",
+      "visual": "A tall hourglass resting on a dark marble counter, sand slowly falling through the center"
+    },
+    {
+      "say": "A long car loan does the exact opposite. It steals your future buying power.",
+      "callout": "",
+      "visual": "Shadows of window blinds stretching across a bare white wall in the late afternoon sun"
+    },
+    {
+      "say": "Keep your loan terms short and keep your cash where it grows.",
+      "callout": "STEP ONE",
+      "visual": "A brass key resting on a clean wooden tabletop, dramatic overhead framing"
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "A dark hallway with a single bright warm light at the far end, cinematic perspective"
+    }
+  ],
+  "caption": "Long loans build bank accounts, not yours. Keep the term short and keep your cash. #money #personalfinance #financialliteracy #wealthbuilding #carloan",
+  "description": "Exposing how extending a car loan to 84 months doubles total interest paid on a depreciating asset while robbing you of compounding returns.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#financialliteracy",
+    "#wealthbuilding",
+    "#carloan"
+  ],
+  "first_comment": "What is the longest car loan term you have ever been offered?",
+  "facts": [
+    {
+      "claim": "$100/month invested for 30 years at 8%/yr equals $149,036 with $36,000 principal",
+      "basis": "Money Fact Sheet: $100/month invested for 30 years at 8%/yr (monthly compounding) = $149,036 (you put in $36,000)"
+    }
+  ],
+  "source": "llm",
+  "pillar": "math",
+  "look": ""
+}

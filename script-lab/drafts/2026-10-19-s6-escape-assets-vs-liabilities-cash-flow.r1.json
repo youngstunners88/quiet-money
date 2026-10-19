@@ -1,0 +1,93 @@
+{
+  "title": "The Math of Monthly Cash Flow Mechanics",
+  "hook_text": "HOW CASH FLOW TRAPS YOU",
+  "beats": [
+    {
+      "say": "A $3,000 credit card balance can quietly drain $4,887 from your pocket in pure interest.",
+      "callout": "",
+      "visual": "Cinematic close-up of a dark leather wallet lying closed on a worn wooden table in heavy shadow."
+    },
+    {
+      "say": "That's cash leaking out every single month. Here's how reversing that direction builds freedom.",
+      "callout": "OUT VS IN",
+      "visual": "Silhouette of a person standing quietly near a rain-streaked window at dusk, atmospheric lighting."
+    },
+    {
+      "say": "An asset puts cash into your bank account each month. A liability extracts it automatically.",
+      "callout": "ASSET VS LIABILITY",
+      "visual": "Close-up of vintage brass mechanical scales balanced under a sharp spotlight in a dark gallery."
+    },
+    {
+      "say": "When you pay minimums on a $3,000 balance at 24% APR, you stay trapped for 15 years.",
+      "callout": "15 YEARS DRAIN",
+      "visual": "Overhead moody shot of an open dark checkbook with a sleek metal fountain pen beside it."
+    },
+    {
+      "say": "But here's the part nobody mentions about making cash flow work for you.",
+      "callout": "",
+      "visual": "Low-angle view looking down an empty quiet office corridor with long geometric cast shadows."
+    },
+    {
+      "say": "When you flip that direction and invest $500 a month at 8% interest, you contribute $180,000 total.",
+      "callout": "",
+      "visual": "Atmospheric shot of a minimalist granite desk with a single dark ceramic cup at dawn."
+    },
+    {
+      "say": "Over 30 years, compounding expands that balance into $745,180 paying you every month.",
+      "callout": "$745,180 CREATED",
+      "visual": "Wide cinematic shot of a modern architectural home surrounded by tall pine trees in morning mist."
+    },
+    {
+      "say": "To replace your paycheck with $2,000 a month in passive income, you need $600,000 invested.",
+      "callout": "",
+      "visual": "Close-up shot of hands working on a dark mechanical keyboard in soft warm desk lighting."
+    },
+    {
+      "say": "At $500 invested monthly at 8%, reaching that $600,000 milestone takes exactly 27.6 years.",
+      "callout": "",
+      "visual": "Cinematic macro shot of an antique pocket watch resting quietly on dark slate."
+    },
+    {
+      "say": "The honest catch is time and risk. Building passive cash flow takes patience, and market downturns will happen.",
+      "callout": "",
+      "visual": "Silhouette of a person standing at the edge of a concrete balcony looking over a misty valley."
+    },
+    {
+      "say": "This week, audit your monthly bank statement and eliminate one liability to start buying assets instead.",
+      "callout": "STEP ONE",
+      "visual": "Close-up view of a hand holding a sleek black marker over a blank document on a wooden desk."
+    },
+    {
+      "say": "Rebuilding your cash flow takes daily discipline, so follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "Quiet atmospheric scene of a calm foggy lake at early sunrise with distant trees."
+    }
+  ],
+  "caption": "Assets buy freedom. Liabilities buy subscriptions to the rat race. Here is how cash flow direction changes everything.\n\n#money #personalfinance #wealth #cashflow #investing",
+  "description": "Understanding the core cash flow mechanics between assets and liabilities. See how reversing your monthly cash flow direction compounds wealth over time.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#wealth",
+    "#cashflow",
+    "#investing"
+  ],
+  "first_comment": "What is one recurring expense you can cut this week to buy assets instead?",
+  "facts": [
+    {
+      "claim": "Paying minimums on a $3,000 credit card at 24% APR costs $4,887 in interest across 15 years.",
+      "basis": "$3,000 credit card at 24% APR paying only the minimum (1% + interest, min $25): 183 months (~15 years), $4,887 interest"
+    },
+    {
+      "claim": "Investing $500 per month for 30 years at 8% turns $180,000 into $745,180.",
+      "basis": "$500/month invested for 30 years at 8%/yr (monthly compounding) = $745,180 (you put in $180,000)"
+    },
+    {
+      "claim": "Generating $2,000 a month in passive income requires $600,000 invested, reached in 27.6 years at $500/month at 8%.",
+      "basis": "$2,000/month of passive income needs about $600,000 invested; investing $500/month at 8%/yr reaches $600,000 in 27.6 years"
+    }
+  ],
+  "source": "llm",
+  "pillar": "escape",
+  "look": ""
+}

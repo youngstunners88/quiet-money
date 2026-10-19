@@ -1,0 +1,80 @@
+{
+  "title": "Cancel Your Hidden Amazon Prime Video Add-Ons",
+  "hook_text": "YOUR PRIME ACCOUNT HIDES SECRET MONTHLY FEES",
+  "beats": [
+    {
+      "say": "Your Amazon account has a quiet leak draining your checking account every single month.",
+      "callout": "",
+      "visual": "A dark wooden desk with a single steaming mug, cinematic moody lighting, top-down shot."
+    },
+    {
+      "say": "Most people forget they signed up for premium channels and video add-ons through Prime.",
+      "callout": "",
+      "visual": "A pair of hands resting on a clean desk, no screens visible, warm lamplight."
+    },
+    {
+      "say": "That forgotten $15 monthly subscription quietly adds up to $1,800 over 10 years.",
+      "callout": "$1,800 LOSS",
+      "visual": "A close-up of a silver key resting on a dark marble surface, soft focus."
+    },
+    {
+      "say": "Let's hunt them down right now in under two minutes. Step one.",
+      "callout": "STEP ONE",
+      "visual": "A hand sliding a wooden chair back from a minimalist desk, side profile shadow."
+    },
+    {
+      "say": "Open your web browser and log into your primary Amazon account settings.",
+      "callout": "",
+      "visual": "A close-up of a hand turning a brass door knob in a dim hallway, cinematic shadows."
+    },
+    {
+      "say": "Step two. Navigate to your memberships and subscriptions tab under your account menu.",
+      "callout": "STEP TWO",
+      "visual": "Fingers flipping through the pages of a closed leather-bound notebook, overhead view."
+    },
+    {
+      "say": "Step three. Click on Prime Video Channels and check every single active subscription listed there.",
+      "callout": "STEP THREE",
+      "visual": "A hand placing a ceramic coffee cup down on a dark slate coaster."
+    },
+    {
+      "say": "But here's the part nobody mentions. Amazon buries these menus deep inside settings.",
+      "callout": "HIDDEN FEES",
+      "visual": "A dark room illuminated by a single warm desk lamp, moody shadows on the wall."
+    },
+    {
+      "say": "Cancel every channel you haven't watched in the last thirty days without hesitation.",
+      "callout": "",
+      "visual": "A hand closing a dark journal completely, sharp focus, minimalist aesthetic."
+    },
+    {
+      "say": "Redirect that recovered cash toward an index fund compounding at 8% a year.",
+      "callout": "8% YIELD",
+      "visual": "A brass desk lamp casting a warm glow on an empty wooden table."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "A silhouette of a person walking away down a dimly lit corridor, cinematic grade."
+    }
+  ],
+  "caption": "Stop letting Amazon quietly bleed your bank account dry every month. Hunt down those forgotten video add-ons and redirect your cash toward your future. #money #personalfinance #budgeting #finances #savingmoney",
+  "description": "Learn how to find and cancel hidden Amazon Prime video add-on subscriptions that drain your checking account every month. A quick 3-step audit you can do today.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#budgeting",
+    "#finances",
+    "#savingmoney"
+  ],
+  "first_comment": "How many hidden subscriptions did you find in your account?",
+  "facts": [
+    {
+      "claim": "A $15/month subscription for 10 years = $1,800",
+      "basis": "$15 times 12 months times 10 years equals $1,800."
+    }
+  ],
+  "source": "llm",
+  "pillar": "playbook",
+  "look": ""
+}

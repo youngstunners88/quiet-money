@@ -1,0 +1,85 @@
+{
+  "title": "The Status Quo Bias: Why Loyalty Costs You Hundreds",
+  "hook_text": "YOUR BANK IS QUIETLY ROBBING YOU",
+  "beats": [
+    {
+      "say": "You've stayed with the exact same bank for ten years. That loyalty costs you hundreds.",
+      "callout": "",
+      "visual": "A cinematic shot of a vintage metal bank vault door slightly ajar, warm directional light cutting through dark interior."
+    },
+    {
+      "say": "It's not bad luck. It's a glitch in human wiring called the status quo bias.",
+      "callout": "STATUS QUO BIAS",
+      "visual": "A person's hands holding an old leather checkbook, blurred background of a quiet minimalist living room."
+    },
+    {
+      "say": "Your brain picks the path of least resistance. So you auto-renew everything.",
+      "callout": "PATH OF LEAST RESISTANCE",
+      "visual": "A single finger resting on a worn wooden desk next to a ceramic cup of black coffee, moody morning light."
+    },
+    {
+      "say": "Auto-insurance rates creep up every six months. Most people just pay them.",
+      "callout": "INSURANCE CREEP",
+      "visual": "Raindrops sliding down a car windshield from inside the vehicle, blurred streetlights reflecting in the glass."
+    },
+    {
+      "say": "Old subscriptions bill your card for apps you haven't opened since 2021.",
+      "callout": "GHOST SUBSCRIPTIONS",
+      "visual": "A close-up of a smartphone screen glowing in a dark room, icons silhouetted against a soft blue light."
+    },
+    {
+      "say": "Even worse, your checking account pays zero percent interest while inflation runs wild.",
+      "callout": "0% INTEREST",
+      "visual": "A stack of US dollar bills resting on a dark marble table, sharp focus on the top bill's texture."
+    },
+    {
+      "say": "Companies rely on your laziness. They count on you never hitting cancel.",
+      "callout": "THE LAZINESS TAX",
+      "visual": "A closed laptop lid on a wooden dining table, dramatic side lighting casting long soft shadows."
+    },
+    {
+      "say": "But here's the counter-move. It takes ten minutes to audit your fixed costs.",
+      "callout": "AUDIT YOUR COSTS",
+      "visual": "A hand using a silver pen to check off items on a crisp white sheet of paper."
+    },
+    {
+      "say": "Call your insurer, drop the zombie apps, and move your cash to a high-yield account.",
+      "callout": "",
+      "visual": "An open window with sheer white curtains blowing softly in a gentle breeze, bright midday sun."
+    },
+    {
+      "say": "Stop paying a luxury tax for simply staying put.",
+      "callout": "",
+      "visual": "A minimalist white ceramic coffee mug sitting on a concrete countertop, clean geometric shadows."
+    },
+    {
+      "say": "Take back control of your money today.",
+      "callout": "",
+      "visual": "A pair of keys resting on a wooden entryway console table, warm ambient lighting."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "A dark silhouette of a person walking down a quiet hallway toward a warm doorway light."
+    }
+  ],
+  "caption": "Loyalty to a bank or insurance company is a voluntary tax. Stop paying it. #moneypsychology #personalfinance #financialliteracy #savingmoney #smartmoney",
+  "description": "The status quo bias makes you stick with old banks, insurance, and subscriptions, quietly draining hundreds every year. Here is how to break the habit.",
+  "hashtags": [
+    "#moneypsychology",
+    "#personalfinance",
+    "#financialliteracy",
+    "#savingmoney",
+    "#smartmoney"
+  ],
+  "first_comment": "When was the last time you actually checked your recurring monthly subscriptions?",
+  "facts": [
+    {
+      "claim": "Status quo bias makes people stick with existing financial products and pay more.",
+      "basis": "Standard behavioral economics principle regarding default choices and inertia."
+    }
+  ],
+  "source": "llm",
+  "pillar": "psychology",
+  "look": ""
+}

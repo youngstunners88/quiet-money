@@ -1,0 +1,80 @@
+{
+  "title": "The 84 Month Car Loan Calculation",
+  "hook_text": "THAT 84 MONTH CAR LOAN DOUBLES YOUR INTEREST",
+  "beats": [
+    {
+      "say": "Extending your car loan to 84 months feels smart because the monthly payment drops.",
+      "callout": "",
+      "visual": "A sleek modern car parked alone in a dimly lit concrete parking garage, moody shadows, cinematic wide shot."
+    },
+    {
+      "say": "But it's a trap built on simple math that banks love.",
+      "callout": "ASSET VS LIABILITY",
+      "visual": "Close-up of a fountain pen signing a stack of crisp white loan papers on a dark wooden desk."
+    },
+    {
+      "say": "You're stretching a short term asset over a very long timeline.",
+      "callout": "84 MONTHS",
+      "visual": "A mechanical desk calendar flipping pages rapidly in soft focus, warm interior lighting."
+    },
+    {
+      "say": "Let's look at the actual numbers behind that choice.",
+      "callout": "",
+      "visual": "A glowing desk lamp casting a sharp circle of light on an empty wooden table, moody atmosphere."
+    },
+    {
+      "say": "When you drag a loan out that long, the total interest doubles.",
+      "callout": "DOUBLED INTEREST",
+      "visual": "A heavy metal vault door slowly swinging shut in a dark, secure bank vault, dramatic side lighting."
+    },
+    {
+      "say": "Meanwhile, the car itself loses value every single day.",
+      "callout": "",
+      "visual": "A vintage pocket watch resting on a cold stone surface, macro lens, shallow depth of field."
+    },
+    {
+      "say": "You're paying top dollar for a depreciating metal box.",
+      "callout": "DEPRECIATING ASSET",
+      "visual": "Raindrops sliding down a large office window overlooking a blurred, distant city skyline at dusk."
+    },
+    {
+      "say": "That extra interest could have grown in an index fund instead.",
+      "callout": "",
+      "visual": "A single green sprout pushing up through dark, rich soil, morning sunlight, macro shot."
+    },
+    {
+      "say": "Remember, at 8% a year, money doubles over time if you let it work.",
+      "callout": "8% RETURN",
+      "visual": "A classic hourglass resting on a dark slate table, sand slowly falling through the center."
+    },
+    {
+      "say": "Don't trade your financial future for a slightly lower monthly bill.",
+      "callout": "",
+      "visual": "Silhouette of a person walking away down a long, empty corridor toward a bright exit, dramatic shadows."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "A glowing neon exit sign mounted on a dark brick wall, moody cinematic framing."
+    }
+  ],
+  "caption": "The math behind long car loans hurts your net worth. #personalfinance #moneytips #wealthbuilding #carloans #smartmoney",
+  "description": "Exposing how extending a car loan to 84 months doubles your total interest paid on a depreciating asset.",
+  "hashtags": [
+    "#personalfinance",
+    "#moneytips",
+    "#wealthbuilding",
+    "#carloans",
+    "#smartmoney"
+  ],
+  "first_comment": "What's the longest car loan term you've ever seen offered?",
+  "facts": [
+    {
+      "claim": "Rule of 72: at 8% money doubles every 9 years",
+      "basis": "Rule of 72 formula: 72 / 8 = 9 years."
+    }
+  ],
+  "source": "llm",
+  "pillar": "math",
+  "look": ""
+}
