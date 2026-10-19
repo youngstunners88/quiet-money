@@ -31,7 +31,12 @@ SALES = Paths.analytics / "sales.jsonl"
 
 
 def gumroad_cli() -> str | None:
-    return shutil.which("gumroad")
+    """The gumroad CLI on PATH, or where `go install` puts it (a routine's shell does not add ~/go/bin)."""
+    found = shutil.which("gumroad")
+    if found:
+        return found
+    home = os.path.join(os.path.expanduser("~"), "go", "bin", "gumroad")
+    return home if os.access(home, os.X_OK) else None
 
 
 TOKEN_NAMES = ("GUMROAD_ACCESS_TOKEN", "GUMROAD_TOKEN", "GUMROAD")
@@ -163,30 +168,46 @@ def push(only: str | None = None, run: bool = False) -> list[dict]:
     return results
 
 
-def sales(days: int = 30) -> list[dict]:
-    """Recent Gumroad sales through Composio (needs the owner's Connect Link), appended once each to analytics/sales.jsonl."""
-    from datetime import datetime, timedelta, timezone
+def _sale_row(s: dict) -> dict | None:
+    """One sale as stored: ids, time, product, dollars, refunded and the source tag the buyer arrived with. No buyer details: the repo is public."""
+    sid = s.get("id") or s.get("sale_id")
+    if not sid:
+        return None
+    cents = s.get("price")
+    usd = float(cents) / 100 if isinstance(cents, (int, float)) else float(str(s.get("formatted_total_price") or "0").replace("$", "").replace(",", "") or 0)
+    params = s.get("url_params") if isinstance(s.get("url_params"), dict) else {}
+    return {"id": sid, "at": s.get("created_at") or s.get("timestamp"), "product": s.get("product_name") or s.get("product_id"), "usd": usd,
+            "refunded": bool(s.get("refunded")), "src": params.get("src") or params.get("utm_source") or "", "discover": bool(s.get("discover_fee_charged"))}
 
+
+def _record_sales(rows: list) -> list[dict]:
+    seen = {r.get("id") for r in read_jsonl(SALES)} if SALES.exists() else set()
+    fresh = []
+    for s in rows if isinstance(rows, list) else []:
+        row = _sale_row(s) if isinstance(s, dict) else None
+        if row and row["id"] not in seen:
+            fresh.append(row)
+            seen.add(row["id"])
+    if fresh:
+        SALES.parent.mkdir(parents=True, exist_ok=True)
+        with open(SALES, "a", encoding="utf-8") as f:
+            f.writelines(json.dumps(r) + "\n" for r in fresh)
+    return fresh
+
+
+def sales(days: int = 30) -> list[dict]:
+    """Recent Gumroad sales appended once each to analytics/sales.jsonl: through the gumroad CLI when the token and CLI exist, else through Composio (needs the owner's Connect Link)."""
+    from datetime import datetime, timedelta, timezone
+    if token_present() and gumroad_cli():
+        after = (datetime.now(timezone.utc) - timedelta(days=days)).strftime("%Y-%m-%d")
+        return _record_sales(_run(["sales", "list", "--all", "--after", after, "--json", "--no-input"]).get("sales", []))
     from faceless.providers import composio_tools as ct
     after = (datetime.now(timezone.utc) - timedelta(days=days)).strftime("%Y-%m-%dT%H:%M:%SZ")
     res = ct.execute("GUMROAD_GET_SALES", {"after": after})
     data = res.get("data", res)
     rows = (data.get("data", data) if isinstance(data, dict) else data) or {}
     rows = rows.get("sales", rows) if isinstance(rows, dict) else rows
-    seen = set()
-    if SALES.exists():
-        seen = {r.get("id") for r in read_jsonl(SALES)}
-    fresh = []
-    for s in rows if isinstance(rows, list) else []:
-        sid = s.get("id")
-        if sid and sid not in seen:
-            fresh.append({"id": sid, "at": s.get("created_at"), "product": s.get("product_name") or s.get("product_id"), "usd": (s.get("price") or 0) / 100,
-                          "refunded": bool(s.get("refunded"))})
-    if fresh:
-        SALES.parent.mkdir(parents=True, exist_ok=True)
-        with open(SALES, "a", encoding="utf-8") as f:
-            f.writelines(json.dumps(r) + "\n" for r in fresh)          # no buyer details are stored: the repo is public
-    return fresh
+    return _record_sales(rows)
 
 
 # ---------------------------------------------------------------- going live (the owner's yes)

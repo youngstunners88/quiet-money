@@ -26,3 +26,9 @@ command -v ffmpeg >/dev/null || echo "warning: ffmpeg not found; renders will fa
 if command -v npx >/dev/null 2>&1; then
   npx --yes hyperframes@0.8.136 telemetry disable >/dev/null 2>&1 || true
 fi
+# The Gumroad CLI (github.com/antiwork/gumroad-cli), from a reviewed release tag with go install (no install script is piped into a shell). Optional: the shop
+# commands report it missing if it cannot be built, and nothing else depends on it.
+if [ -x /usr/local/go/bin/go ] && [ ! -x "$HOME/go/bin/gumroad" ]; then
+  (cd /tmp && PATH="$PATH:/usr/local/go/bin" GOBIN="$HOME/go/bin" timeout 300 go install github.com/antiwork/gumroad-cli/cmd/gumroad@v0.20261002.0) >/dev/null 2>&1 \
+    || echo "warning: could not build the gumroad CLI" >&2
+fi
