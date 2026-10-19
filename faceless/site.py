@@ -246,8 +246,48 @@ def page(path: str, title: str, description: str, body: str, *, jsonld: list | N
 <p><a class="pref" href="https://www.google.com/preferences/source?q={e(domain)}" rel="nofollow">★ Add Quiet Money as a preferred source on Google</a></p>
 <p>{e(ch['name'])}: {e(ch['tagline'])} Educational content, not financial advice. Narration and visuals in our videos are AI-assisted; every number is computed and every story is sourced.</p>
 <p>{social_links(c["socials"])}</p>
+<p class="legal"><a href="{root}terms/">Terms</a> · <a href="{root}privacy/">Privacy</a> · <a href="{root}about/">About</a></p>
 </div></footer>
 </body></html>"""
+
+
+LEGAL_UPDATED = "2026-10-19"
+CONTACT_URL = "https://github.com/youngstunners88/quiet-money/issues"   # the public contact route; no personal email on a public page
+
+
+def terms_page() -> str:
+    c = cfg()
+    ch = c["channel"]
+    body = f"""<article><h1>Terms of Service</h1>
+<p class="summary">Last updated {LEGAL_UPDATED}. These terms cover this website and the short videos, written explainers and free tools published by {e(ch['name'])}.</p>
+<h2>What this is</h2><p>{e(ch['name'])} publishes educational content about money psychology and personal finance: short videos, written explainers, free checklists and calculators. It is educational content, not financial advice. Nothing here is a recommendation to buy, sell or hold any product or asset, and nothing here is tailored to your situation.</p>
+<h2>Using the site</h2><p>You may read, share and link to our pages. Please do not copy our videos, scripts or checklists for resale, do not scrape the site at a rate that slows it down, and do not use it to mislead anyone. We may change or remove content at any time.</p>
+<h2>Accuracy</h2><p>Every number on this site is computed and every story is sourced where possible. Still, financial rules change and examples are simplified. Check important decisions with a qualified professional.</p>
+<h2>AI-assisted content</h2><p>Narration and visuals in our videos are AI-assisted and the host is a virtual presenter. We label this on the videos and in their descriptions.</p>
+<h2>Products and links</h2><p>Some pages link to paid digital products sold through third-party platforms, and some links may be affiliate links. Purchases are governed by the seller's own terms. We may earn a commission on an affiliate purchase at no cost to you.</p>
+<h2>Liability</h2><p>The content is provided as is, without warranty. To the extent the law allows, {e(ch['name'])} is not liable for losses that come from relying on it.</p>
+<h2>Privacy</h2><p>How we handle personal information is described in our <a href="../privacy/">Privacy Policy</a>.</p>
+<h2>Contact</h2><p>Questions about these terms: <a href="{CONTACT_URL}" rel="noopener">open an issue on our public repository</a>.</p></article>"""
+    return page("terms", f"Terms of Service | {ch['name']}", f"The terms for using {ch['name']}'s website, videos and free tools.", body)
+
+
+def privacy_page() -> str:
+    c = cfg()
+    ch = c["channel"]
+    body = f"""<article><h1>Privacy Policy</h1>
+<p class="summary">Last updated {LEGAL_UPDATED}. This explains what information {e(ch['name'])} collects through this website, and what it does not.</p>
+<h2>What we collect</h2>
+<ul><li><strong>Website visits.</strong> Our site is hosted on GitHub Pages, which keeps standard server logs (such as IP address, browser type and the pages requested) under its own privacy policy. We do not run an analytics tag or advertising tracker on this site.</li>
+<li><strong>Fonts.</strong> Pages load fonts from Google Fonts, which means your browser contacts Google when you open a page.</li>
+<li><strong>Videos.</strong> Embedded videos come from YouTube's privacy-enhanced embed, which does not set cookies until you press play.</li>
+<li><strong>Email (when offered).</strong> If we open an email list, you will give your email address on a sign-up form. We will use it only to send the newsletter you asked for and you can unsubscribe at any time. This form is not active on the site yet.</li>
+<li><strong>Purchases.</strong> Paid products are sold through third-party platforms. Those platforms collect the payment and purchase details under their own privacy policies. We do not receive or store your card details.</li></ul>
+<h2>What we do not do</h2><p>We do not sell personal information, do not have user accounts on this site, and do not ask for passwords or payment details here.</p>
+<h2>Social platforms</h2><p>When you follow or comment on our videos on TikTok, YouTube or Instagram, that platform handles your data under its own policy. We see only the public comments and counts those platforms show us.</p>
+<h2>Children</h2><p>This site is for adults. We do not knowingly collect information from anyone under 16.</p>
+<h2>Your choices</h2><p>You can block cookies and third-party requests in your browser, unsubscribe from any future email, and ask us to delete any personal information we hold about you.</p>
+<h2>Contact</h2><p>To ask about your data or this policy, <a href="{CONTACT_URL}" rel="noopener">open an issue on our public repository</a>.</p></article>"""
+    return page("privacy", f"Privacy Policy | {ch['name']}", f"What {ch['name']} collects through its website, and what it does not.", body)
 
 
 def card(r: dict, root: str) -> str:
@@ -486,7 +526,7 @@ def build() -> dict:
         (d / "index.html").write_text(page(f"series/{pid}", f"{p.name} | Quiet Money", p.format[:155], body), encoding="utf-8")
         urls.append(f"{c['base']}/series/{pid}/")
 
-    for path, html_text in (("tools", tools_page()), ("about", about_page(rules))):
+    for path, html_text in (("tools", tools_page()), ("about", about_page(rules)), ("terms", terms_page()), ("privacy", privacy_page())):
         (SITE / path).mkdir(exist_ok=True)
         (SITE / path / "index.html").write_text(html_text, encoding="utf-8")
         urls.append(f"{c['base']}/{path}/")
