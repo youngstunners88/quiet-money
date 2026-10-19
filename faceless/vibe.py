@@ -247,6 +247,33 @@ def clips(shots: list[dict], images: list[Path], work: Path) -> dict[int, Path]:
     return got
 
 
+# ---------------------------------------------------------------- VOICEOVER
+
+VO_VOICE = "pFZP5JQG7iQjIQuC4Bku"                 # Lily: velvety, warm, human (ElevenLabs premium voice, not the free robotic fallback)
+VO_MODEL = "eleven_multilingual_v2"
+VO_SETTINGS = {"stability": 0.38, "similarity_boost": 0.82, "style": 0.42, "use_speaker_boost": True}   # looser stability = more natural variation
+
+
+def voiceover(lines: list[tuple[str, float]], work: Path) -> list[tuple[Path, float]]:
+    """A short spoken welcome in the quiet opening and a short invitation in the quiet ending, by a premium female voice. Returns (file, start seconds)."""
+    key = config.env("ELEVENLABS_API_KEY")
+    if not key:
+        raise ProviderUnavailable("ELEVENLABS_API_KEY not set")
+    out = []
+    for i, (text, start) in enumerate(lines):
+        dest = work / f"vo{i + 1}.mp3"
+        if not dest.is_file():
+            safety.guard("vibe voiceover", 0.05)
+            r = http().post(f"https://api.elevenlabs.io/v1/text-to-speech/{VO_VOICE}?output_format=mp3_44100_128", timeout=120,
+                            headers={"xi-api-key": key}, json={"text": text, "model_id": VO_MODEL, "voice_settings": VO_SETTINGS})
+            if r.status_code != 200:
+                raise ProviderError(f"elevenlabs {r.status_code}")
+            dest.write_bytes(r.content)
+            ledger.spend("elevenlabs", "chars", len(text))
+        out.append((dest, start))
+    return out
+
+
 # ---------------------------------------------------------------- RENDER
 
 def ease(u: float) -> float:
@@ -326,7 +353,7 @@ class ClipReader:
 
 
 def render(images: list[Path], shots: list[dict], ranges: list[tuple[float, float, str]], clip_files: dict[int, Path], audio: Path, title: str, out: Path, *, draft: bool = False,
-           seconds: float | None = None) -> dict:
+           seconds: float | None = None, vo: list[tuple[Path, float]] | None = None) -> dict:
     out = Path(out)
     dur = seconds or songvideo.probe_seconds(audio)
     sc = 0.5 if draft else 1.0
@@ -344,13 +371,21 @@ def render(images: list[Path], shots: list[dict], ranges: list[tuple[float, floa
     songvideo.particles(pt, (w, h))
     u = h / 1080
     wave_w, wave_h, wave_y = round(720 * u), round(64 * u), round(990 * u)
+    vo = vo or []
+    if vo:
+        legs = "".join(f"[{4 + k}:a]aresample=48000,volume=1.35,adelay={round(st * 1000)}|{round(st * 1000)}[vo{k}];" for k, (_, st) in enumerate(vo))
+        ins = "".join(f"[vo{k}]" for k in range(len(vo)))
+        audio_mix = f"{legs}[ma]{ins}amix=inputs={1 + len(vo)}:normalize=0:duration=first,alimiter=limit=0.97[a]"
+    else:
+        audio_mix = "[ma]anull[a]"
     fc = (f"[0:v]format=gbrp[bg];[1:v]scale={w}:{h}:flags=bicubic,format=gbrp[pt];[bg][pt]blend=all_mode=screen:all_opacity=0.55[b2];"
           f"[2:v]format=rgba,fade=t=in:st=0.6:d=1.6:alpha=1[ov];[b2]format=rgba[b3];[b3][ov]overlay=0:0,noise=alls=5:allf=t,format=gbrp[b4];"
           f"[3:a]asplit[wa][ma];[wa]aformat=channel_layouts=mono,showwaves=s={wave_w}x{wave_h}:mode=cline:rate={fps}:colors=white:scale=sqrt,format=gray[wm];"
           f"color=c=0xFFD23F:s={wave_w}x{wave_h}:r={fps},format=rgba[gold];[gold][wm]alphamerge,colorchannelmixer=aa=0.85,fade=t=in:st=1.2:d=1.6:alpha=1[wv];"
-          f"[b4][wv]overlay=x=(W-w)/2:y={wave_y}:format=gbrp,format=yuv420p[v];[ma]anull[a]")
+          f"[b4][wv]overlay=x=(W-w)/2:y={wave_y}:format=gbrp,format=yuv420p[v];{audio_mix}")
     cmd = ["ffmpeg", "-v", "error", "-y", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{w}x{h}", "-r", str(fps), "-i", "-",
            "-stream_loop", "-1", "-i", str(pt), "-loop", "1", "-framerate", str(fps), "-i", str(ov), "-i", str(audio),
+           *[x for f, _ in vo for x in ("-i", str(f))],
            "-filter_complex", fc, "-map", "[v]", "-map", "[a]", "-r", str(fps), "-c:v", "libx264", "-preset", "ultrafast" if draft else "medium",
            "-crf", "30" if draft else "19", *([] if draft else ["-maxrate", "18M", "-bufsize", "36M"]), "-pix_fmt", "yuv420p",
            "-c:a", "aac", "-b:a", "256k", "-movflags", "+faststart", "-t", f"{dur:.3f}", str(out)]
@@ -425,7 +460,8 @@ def pick_clip_shots(ana: dict, ranges: list[tuple[float, float, str]], k: int) -
     return sorted(chosen)
 
 
-def make(audio: Path, title: str, day: str | None = None, *, clip_n: int = 3, draft: bool = False, seconds: float | None = None, out_dir: Path | None = None) -> dict:
+def make(audio: Path, title: str, day: str | None = None, *, clip_n: int = 3, draft: bool = False, seconds: float | None = None, out_dir: Path | None = None,
+         vo_lines: list[tuple[str, float]] | None = None) -> dict:
     """Listen, plan, make the pictures, render. Everything before the render is cached, so a re-run only pays for what is missing."""
     audio = Path(audio)
     day = day or config.today_utc().isoformat()
@@ -441,7 +477,8 @@ def make(audio: Path, title: str, day: str | None = None, *, clip_n: int = 3, dr
     images = stills(shots, work)
     clip_files = clips(shots, images, work) if clip_n else {}
     out = (out_dir or Paths.root / "music" / "videos" / day) / f"vibe-{slug}{'-draft' if draft else ''}.mp4"
-    res = render(images, shots, ranges, clip_files, audio, title, out, draft=draft, seconds=seconds)
+    vo = voiceover(vo_lines, work) if vo_lines else []
+    res = render(images, shots, ranges, clip_files, audio, title, out, draft=draft, seconds=seconds, vo=vo)
     res["listen"] = {k: info.get(k) for k in ("vocalist", "genre", "mood", "summary", "seo_topic", "has_lyrics")}
     STATE.mkdir(parents=True, exist_ok=True)
     write_atomic(STATE / f"{day}-{slug}.json", json.dumps({"title": title, "audio": audio.name, "video": str(out), "shots": len(shots), "clips": res["clips"], **res["listen"]}, indent=1, ensure_ascii=False))
