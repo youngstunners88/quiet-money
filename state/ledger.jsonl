@@ -3726,3 +3726,10 @@
 {"day": "2026-10-18", "provider": "composio", "unit": "calls", "amount": 1, "usd": 0.0, "job": "2026-10-17-s7-playbook-wipe-out-paypal-recurring-mercha"}
 {"day": "2026-10-19", "provider": "openrouter-panel", "unit": "microusd", "amount": 731.1, "usd": 0.000731, "job": null}
 {"day": "2026-10-19", "provider": "muapi", "unit": "desk_usd", "amount": 0.09, "usd": 0.09, "job": "vibe-2026-10-18-breathe-8"}
+{"day": "2026-10-19", "provider": "muapi", "unit": "desk_usd", "amount": 0.09, "usd": 0.09, "job": "vibe-2026-10-18-breathe-8"}
+{"day": "2026-10-19", "provider": "muapi", "unit": "desk_usd", "amount": 0.09, "usd": 0.09, "job": "vibe-2026-10-18-breathe-9"}
+{"day": "2026-10-19", "provider": "muapi", "unit": "desk_usd", "amount": 0.09, "usd": 0.09, "job": "vibe-2026-10-18-breathe-10"}
+{"day": "2026-10-19", "provider": "muapi", "unit": "desk_usd", "amount": 0.09, "usd": 0.09, "job": "vibe-2026-10-18-breathe-11"}
+{"day": "2026-10-19", "provider": "muapi", "unit": "desk_usd", "amount": 0.09, "usd": 0.09, "job": "vibe-2026-10-18-breathe-12"}
+{"day": "2026-10-19", "provider": "muapi", "unit": "desk_usd", "amount": 0.09, "usd": 0.09, "job": "vibe-2026-10-18-breathe-13"}
+{"day": "2026-10-19", "provider": "muapi", "unit": "desk_usd", "amount": 0.09, "usd": 0.09, "job": "vibe-2026-10-18-breathe-14"}
