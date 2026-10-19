@@ -202,11 +202,19 @@ Each row was read from the project's own README, manifest, licence file or regis
 
 Each row was read from the project's own README, manifest, licence file or registry entry; nothing was installed or run. Stars and dates were unavailable where the GitHub API is closed to this machine.
 
+### Active or adopted
+
+| Tool | Stage | Why |
+|---|---|---|
+| Photopea (photopea.com, live-messaging API) | visuals | The owner's own cropper. |
+| TypeSafe Jev Router on OpenRouter (typesafe/jev-router) | package | On OpenRouter with the existing OPENROUTER_API_KEY (no TypeSafe key needed): a router that picks the model and effort per request, multimodal, variable price. |
+
 ### On trial
 
 | Tool | Stage | Why |
 |---|---|---|
 | HyperFrames Motion Reel skill (Sunwood-ai-labs/hyperframes-motion-reel-skill) | render | MIT. |
+| FreeConvert (freeconvert.com, API v1) | visuals | A hosted file-conversion API (convert, compress, resize 200+ formats; job of import, convert, export/url). |
 
 ### Parked (named condition)
 
@@ -219,6 +227,27 @@ Each row was read from the project's own README, manifest, licence file or regis
 | claude-motion (whaleyxbt/claude-motion) | render | MIT. |
 | Remotion (remotion-dev/remotion) | render | The code is MIT and it is the best-known React video renderer, with a large agent-facing skill set. |
 | Awesome Motion Design Agent Skills (frankxai/awesome-motion-design-agent-skills) | render | A curated list of motion-design skills and resources (GSAP, Motion, Remotion, Lottie, Rive), which the intake read as a directory. |
+| firecrawl-cli (npm) | ideate | Three HIGH flags (install hook, pipe-to-shell in its docs, asks for secrets) and the exact line the owner pasted, `init --all --browser`, installs skills into every detected coding agent globally and opens a browser login: that… |
+| icm-architect (RinDig, MIT) | package | A Claude skill that scaffolds 'folder structure as agent architecture'. |
+
+## Intake 2026-10-13 (verified from dossiers in `repo-farm/intake/2026-10-13/`)
+
+Each row was read from the project's own README, manifest, licence file or registry entry; nothing was installed or run. Stars and dates were unavailable where the GitHub API is closed to this machine.
+
+### Active or adopted
+
+| Tool | Stage | Why |
+|---|---|---|
+| GitHub MCP server (github/github-mcp-server) | package | MIT. |
+| Monid CLI and SKILL (monid-ai/monid) | ideate | Owner said yes on 2026-10-13: it is needed to find winning solutions and marketing angles. |
+| tinyfish (PyPI) | ideate | Official SDK for the TinyFish service we already use through the connected MCP; key works. |
+
+### On trial
+
+| Tool | Stage | Why |
+|---|---|---|
+| Etsy official MCP (mcp.api.etsycloud.com/mcp) | sell | Hosted by Etsy (etsycloud.com is Etsy's). |
+
 
 ## Intake 2026-10-14 (verified from dossiers in `repo-farm/intake/2026-10-14/`)
 
@@ -228,6 +257,25 @@ Each row was read from the project's own README, manifest, licence file or regis
 
 | Tool | Stage | Why |
 |---|---|---|
+| GitHub Copilot SDK | none | MIT, but it embeds Copilot's agent runtime and needs a Copilot seat. |
+| Browser Use SDK (npm, PyPI, GitHub) | post | MIT, cloud browser agent. |
+| Tripo C# SDK (tryAGI/Tripo) | visuals | MIT, wrong language, and the studio's `TRIPO_API` key is rejected (code 1002). |
+| Tripo Python SDK | visuals | MIT, official. |
+| v0 SDK (vercel/v0-sdk) | package | Apache-2.0. |
+| Monid plugins | ideate | MIT, unpinned run lines. |
+| AgentQL MCP (tinyfish-io/agentql-mcp) | ideate | HIGH flag: install hook. |
+| muapi-python (SamurAIGPT) | visuals | MIT. |
+| firecrawl/cli | ideate | Same verdict as 2026-10-12: HIGH flags (install hook, pipe-to-shell, secrets). |
+| Vercel MCP (mcp.vercel.com) | package | Hosted, OAuth, for managing Vercel projects. |
+| Vercel AI SDK (ai-sdk.dev) | package | TypeScript library. |
+
+### Rejected (recorded so nobody re-evaluates)
+
+| Tool | Stage | Why |
+|---|---|---|
+| cli-anything-tinyfish | none | Third-party wrapper over a vendor we already reach through its official MCP and key. |
+| opencode-firecrawl | none | Plugin for the OpenCode agent, which we do not run. |
+| LiquidAI system-one-arcade (HuggingFace space) | none | A demo space. |
 | SLM Agent (scaledown-team/SLM_Agent, npm @scaledown/migration-agent) | none | It is not a Claude Code token saver. |
 
 ## Intake 2026-10-16 (verified from dossiers in `repo-farm/intake/2026-10-16/`)

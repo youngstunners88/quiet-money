@@ -1,0 +1,105 @@
+{
+ "note": "The owner's queue from channel/empire/MARKETING.md, in order of value. The weekly brief shows at most three open items (rule G10); seven days of silence means status quo, never approval. Mark one done with: python -m faceless marketing done U01",
+ "items": [
+  {
+   "id": "U01",
+   "ask": "By Oct 14 (Gumroad Terms bind existing accounts that day): read clauses (xiv)-(xviii), add a payout method and finish identity verification. Without it the planner cannot be published (gum:F17, cmp:F11). Also decide how payouts and records are held (personal or business; an owner and accountant question, not advice). About 1.5 hours.",
+   "status": "done"
+  },
+  {
+   "id": "U02",
+   "ask": "Read the 18 flagged wellness posters, approve the listing copy, the one-time copy bank for hub variants and the hub diff, decide the cover (D11), and say go so the agent publishes the planner at the approved $17. The agent writes the platform-returned URL to state; never hand-copy a URL. About 2.5 hours.",
+   "status": "open"
+  },
+  {
+   "id": "U03",
+   "ask": "Send the 60 warm messages one to one from your own accounts (10 a day for 6 days, starting the day after the planner is live), each with the tagged direct link, an opt-out line and the review-disclosure line; no bulk texts or email blasts; decide on a FIRST14 code with a real end date. About 15 minutes a day.",
+   "status": "open"
+  },
+  {
+   "id": "U04",
+   "ask": "Decide D9, the recorded exemption for the opted-in email sequence (the 7-day course and one planner-offer email), plus the consent text and privacy page. Nothing automated is sent without it.",
+   "status": "open"
+  },
+  {
+   "id": "U05",
+   "ask": "Create the ESP account only after the agent has read Brevo's and Kit's content and approval rules (default Brevo Free, provisional), add DNS for a sending subdomain you control, paste the form action into studio.toml [newsletter], and supply a postal address (USPS PO box or CMRA mailbox; a CMRA may need a notarised Form 1583). Price both the domain and the address: neither is researched. This is the Days 3-14 track, not Days 0-2. About 2.5-3 hours.",
+   "status": "open"
+  },
+  {
+   "id": "U06",
+   "ask": "Upload the Gumroad sales CSV to the ESP suppression list weekly and whenever a sale arrives (about 10 minutes), so buyers do not get the offer email.",
+   "status": "open"
+  },
+  {
+   "id": "U07",
+   "ask": "In YouTube Studio check feature eligibility (verify identity only if advanced features are not on) and put the hub first in the channel links; check Partner Program status. About 20 minutes.",
+   "status": "open"
+  },
+  {
+   "id": "U08",
+   "ask": "If the first routine preflight reports OPENROUTER_API_KEY missing, put it into the secret store of the environment that runs the scheduled routines (never a file). For the weekly AEO probe, either let the agent move it into the routine or add a GitHub Actions secret. About 5 minutes.",
+   "status": "open"
+  },
+  {
+   "id": "U09",
+   "ask": "Open the Composio Gumroad Connect Link so sales can be read; answer yes or no on a cookieless hub visit counter (without it hub conversion cannot be measured); open the tagged hub link once from the YouTube, TikTok and Instagram in-app browsers (test clicks only). About 15 minutes.",
+   "status": "open"
+  },
+  {
+   "id": "U10",
+   "ask": "Each week paste Gumroad's Analytics > Links table (unique clicks and conversion per UTM link) into the metrics importer, because the API gives sales, not page views. About 2 minutes.",
+   "status": "open"
+  },
+  {
+   "id": "U11",
+   "ask": "Open the Etsy shop and approve the $17 price, the AI disclosure and the link-free edition (live between Days 10 and 16); read Etsy's listing-image requirements first; use the coin cover there.",
+   "status": "open"
+  },
+  {
+   "id": "U12",
+   "ask": "Approve the 40% affiliate terms in Gumroad, send 10 individual creator pitches a week for 3 weeks from Day 8 (each with an opt-out line), and check every live partner post within 48 hours for disclosure and claims. About 45 minutes per batch.",
+   "status": "open"
+  },
+  {
+   "id": "U13",
+   "ask": "Approve the Start Here long-form format once and each of the first four videos; post the pinned comment and attach Related Video to the top 20% of Shorts in a 10-minute weekly Studio batch from Day 22.",
+   "status": "open"
+  },
+  {
+   "id": "U14",
+   "ask": "Wave 2 only (Days 15-28): post one cross-pack a day on TikTok and Reels with the AI toggle ON and confirm the toggle on each pack; check the owner TikTok's follower count and whether the profile link field is available.",
+   "status": "open"
+  },
+  {
+   "id": "U15",
+   "ask": "Set up a support routine: Gumroad support mail to your address, reply within 2 business days, decide refund handling (refunds are owner-only), and accept that the agent drafts replies for your approval.",
+   "status": "open"
+  },
+  {
+   "id": "U16",
+   "ask": "Do not ask relatives or anyone with a material connection to rate the planner publicly; if a friend rates, they mention the connection.",
+   "status": "open"
+  },
+  {
+   "id": "U17",
+   "ask": "Approve or reject the Debt planner price and listing (Day 15+, earlier if X11 asks), any Black Friday discount (real, dated codes only), the ESP upgrade against its trigger, and whether to switch on Gumroad workflows once email unlocks after the first payout (expected Days 37-60).",
+   "status": "open"
+  },
+  {
+   "id": "U18",
+   "ask": "At the Day-30 review decide the global-affiliate opt-out (D10) and any GBP, CAD or AUD pricing.",
+   "status": "open"
+  },
+  {
+   "id": "U19",
+   "ask": "Optional: open Pinterest with an approved partner scheduler and approve one weekly pin batch (15 minutes a week); verify Search Console and Bing (10 minutes); approve each weekly site page from Day 31. Cut these first if hours run short.",
+   "status": "open"
+  },
+  {
+   "id": "U20",
+   "ask": "Decide the framing of the weekly AI host (stays off until you do), whether Quinton appears anywhere beyond the cover, and whether his face derives from a real person's photo (rule 3).",
+   "status": "open"
+  }
+ ]
+}

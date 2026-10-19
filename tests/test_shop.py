@@ -67,6 +67,8 @@ def test_create_arguments_are_a_draft_with_every_file_and_picture(pack):
 
 def test_push_needs_the_token_the_cli_and_an_unpaused_studio(pack, monkeypatch):
     monkeypatch.delenv("GUMROAD_ACCESS_TOKEN", raising=False)
+    monkeypatch.delenv("GUMROAD", raising=False)
+    monkeypatch.delenv("GUMROAD_TOKEN", raising=False)
     with pytest.raises(ProviderUnavailable, match="GUMROAD_ACCESS_TOKEN"):
         shop.push("rat-race-escape-planner", run=True)
     monkeypatch.setenv("GUMROAD_ACCESS_TOKEN", "not-a-real-token")
@@ -102,7 +104,42 @@ def test_markdown_becomes_the_html_gumroad_takes():
 
 def test_status_tells_the_owner_the_next_step(monkeypatch):
     monkeypatch.delenv("GUMROAD_ACCESS_TOKEN", raising=False)
+    monkeypatch.delenv("GUMROAD", raising=False)
+    monkeypatch.delenv("GUMROAD_TOKEN", raising=False)
     monkeypatch.setattr(shop, "gumroad_cli", lambda: None)
     rows = {r["rail"]: r for r in shop.status()}
     assert rows["gumroad draft products"]["state"] == "needs owner" and "GUMROAD_ACCESS_TOKEN" in rows["gumroad draft products"]["next"]
-    assert rows["etsy"]["state"] == "manual" and "CHECKLIST" in rows["etsy"]["next"]
+    monkeypatch.delenv("ETSY_API_KEY", raising=False)
+    monkeypatch.setenv("ETSY_SECRETS_DIR", "/nonexistent-secrets")
+    monkeypatch.delenv("ETSY_REFRESH_TOKEN", raising=False)
+    rows = {r["rail"]: r for r in shop.status()}
+    assert rows["etsy draft + publish"]["state"] == "needs owner" and "ETSY_API_KEY" in rows["etsy draft + publish"]["next"]
+
+
+def test_token_accepts_the_owners_variable_name(monkeypatch):
+    for n in shop.TOKEN_NAMES:
+        monkeypatch.delenv(n, raising=False)
+    assert not shop.token_present()
+    monkeypatch.setenv("GUMROAD", "not-a-real-token")
+    assert shop.token_present() and shop.token() == "not-a-real-token"
+
+
+def test_sale_rows_keep_money_and_source_but_no_buyer(tmp_path, monkeypatch):
+    monkeypatch.setattr(shop, "SALES", tmp_path / "sales.jsonl")
+    raw = [{"id": "s1", "email": "buyer@example.com", "price": 1700, "product_name": "Planner", "created_at": "2026-10-20T10:00:00Z", "url_params": {"src": "dm"}},
+           {"id": "s2", "price": 1700, "product_name": "Planner", "refunded": True, "discover_fee_charged": True}, {"no": "id"}, "junk"]
+    fresh = shop._record_sales(raw)
+    assert [r["id"] for r in fresh] == ["s1", "s2"] and fresh[0]["usd"] == 17.0 and fresh[0]["src"] == "dm" and fresh[1]["refunded"] and fresh[1]["discover"]
+    assert "email" not in (tmp_path / "sales.jsonl").read_text(encoding="utf-8")
+    assert shop._record_sales(raw) == []                     # each sale is recorded once
+
+
+def test_the_cli_is_found_in_go_bin_when_path_lacks_it(tmp_path, monkeypatch):
+    monkeypatch.setenv("PATH", "/nonexistent")
+    bindir = tmp_path / "go" / "bin"
+    bindir.mkdir(parents=True)
+    exe = bindir / "gumroad"
+    exe.write_text("#!/bin/sh\n", encoding="utf-8")
+    exe.chmod(0o755)
+    monkeypatch.setenv("HOME", str(tmp_path))
+    assert shop.gumroad_cli() == str(exe)

@@ -19,3 +19,4 @@
 | Sunwood-ai-labs/hyperframes-motion-reel-skill | github |  | MIT (read from LICENSE) |  | none | unpinned-run, partial | sunwood-ai-labs-hyperframes-motion-reel-skill.md |
 | remotion-dev/remotion | github |  | MIT (read from LICENSE.md) |  | install-hook | unpinned-run, partial | remotion-dev-remotion.md |
 | frankxai/awesome-motion-design-agent-skills | github |  | unrecognised text in LICENSE |  | none | unpinned-run, binary-download, partial | frankxai-awesome-motion-design-agent-skills.md |
+| firecrawl-cli | npm | 17630 | ISC | 2026-10-06 | install-hook, pipe-to-shell, asks-for-secrets | unpinned-run, telemetry, needs-keys | firecrawl-cli.md |

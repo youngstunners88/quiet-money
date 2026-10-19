@@ -1,0 +1,114 @@
+[
+ {
+  "id": "D1",
+  "question": "What public price should the Daily Planner carry for the first 30 days?",
+  "options": [
+   "Hold $17",
+   "Step down to $14",
+   "Step up to $24"
+  ],
+  "context": "$17 is the only owner-approved price (rep:F7); the catalog price_test band is [12, 17, 24]. Net per direct sale is $14.01 at $17, $11.39 at $14 and $20.10 at $24 (gum:F01, arithmetic). At $14 the $100 gate needs 9 sales instead of 8. Nearby anchors: Rootlyn $14.99 for 24 pages (win:f9), Liliane 365-day calendar $17 with 0 reviews (win:f10 weakened), Etsy volume shops $1-$10 (win:f1, win:f2, win:f3). A handful of sales cannot separate prices (aut:F05, aut:F06), so this is a judgment call. The audience skews UK, Australia and Canada (mkt:F04 weakened), so a USD price is itself an open question. Any change is owner-gated."
+ },
+ {
+  "id": "D2",
+  "question": "What is the first thing cold viewers are asked to take?",
+  "options": [
+   "Free checklist first, planner 1 in 3",
+   "Planner first on matching pillars",
+   "Free Sample Week of the planner"
+  ],
+  "context": "Current engine default is paid_every = 3 with the free 7-day checklist first (rep:F1). Opt-in pages convert about 4% on mixed traffic (fun:F13) and confirmed opt-in cuts that by roughly 74% in the one study (em:own-12), while sales pages from social converted 1-2% in the only first-party data, which is from 2014 (fun:F15 weakened). A list is the only way to re-reach a viewer, and Gumroad email is locked until a payout (gum:F09). A Sample Week of 7 real lesson pages (none of the 18 flagged posters) is a candidate magnet that doubles as a product-fit signal; it was not the day-one default because it needs a build and a second compliance read while the checklist already exists. Rat Race content stays on the free checklist regardless."
+ },
+ {
+  "id": "D3",
+  "question": "Which product should lead, and what is the second ask if the warm launch is weak?",
+  "options": [
+   "Daily Planner alone at $17",
+   "Planner plus Debt planner as two listings",
+   "Printables at $9 as entry product"
+  ],
+  "context": "Planner is approved at $17 and nets $14.01. Debt planner is a $19 spreadsheet, nets $15.75, no owner approval yet. Printables $9 nets $7.04 and fits the $1-$10 Etsy volume band (win:f1, win:f2, win:f3). Format evidence points toward Sheets, Notion and GoodNotes files (win:f1 to win:f3; the one TikTok template-tail winner sells Google Sheets, mkt:F13 weakened), so a printable PDF planner is the less proven format. The 2026-10-12 decision keeps Daily and Debt as separate listings and builds no bundle without buyer evidence. Recommended: lead with the planner (the only built, approved product), have the Debt draft and 7-day sample ready from Day 8, and reopen this decision early (Day 10-14) if X11 triggers, instead of waiting for two failed page reads the plan's traffic cannot deliver. A second listing adds hours and a second compliance review (credit and debt wording, cmp:F9, gum:F16)."
+ },
+ {
+  "id": "D4",
+  "question": "After the warm launch, which stranger channel gets the owner's scarce hours first (Days 8-30)?",
+  "options": [
+   "Creators on commission",
+   "Etsy edition",
+   "Owner TikTok/Reels cross-posts",
+   "YouTube bridge with Start Here"
+  ],
+  "context": "Owner time is about 6 hours in Days 8-14 and 4-5 hours a week after that (assumed); opening everything at once would cost 6-7 hours in week 2. Recommended default: wave 1 (Days 8-14) is the Etsy edition plus creator pitches while the ESP finishes; wave 2 (Days 15-28) is the YouTube bridge and the 14-post TikTok/Reels trial. Creators: 10 pitches a week, 40% commission nets us $8.41 per sale, acceptance unmeasured (own:podcast weakened). Etsy: the only place strangers search to buy, but zero reviews against incumbents with thousands, files must be recompressed, and a link-free edition is needed (win:f1, win:f14, win:f15, win:f17). TikTok/Reels: 350 average views for 1-5K accounts (fun:F8) and no profile link below 1,000 followers (fun:F1). YouTube bridge: needs advanced features, Related Video is a manual batch, click-through has no benchmark (fun:F5, fun:F6)."
+ },
+ {
+  "id": "D5",
+  "question": "Which email service runs the 7-day sequence?",
+  "options": [
+   "Brevo Free",
+   "Kit Creator $33/month billed yearly",
+   "MailerLite Free",
+   "Sender Free (unverified)"
+  ],
+  "context": "Kit Free has no sequences (em:own-05). MailerLite Free is 250 subscribers with a 5-automation-step cap, so 8 emails do not fit, and it bans get-rich-quick content (em:own-07, em:own-18). Brevo Free allows 300 sends a day, only 2,000 contacts ever enter automations, adds a 'Sent with Brevo' sticker and has no landing pages (em:own-08). Brevo is the provisional default only: the panel run has not happened, and Brevo's and Kit's acceptable-use and account-approval rules for finance education have not been read (the agent reads them in Days 0-2). One seed test put Brevo Free at about 14.2% inbox on the four main consumer inboxes and consumer Outlook at 0 of 140 seeds (hypothesis; em:own-09 weakened), so the checklist is also linked directly on the thank-you page. Sender Free's limits come from a pricing-page summary, not a verified finding. The owner needs a controlled sending domain either way (github.io cannot be authenticated)."
+ },
+ {
+  "id": "D6",
+  "question": "What launch mechanic goes in the warm personal messages?",
+  "options": [
+   "No discount",
+   "FIRST14 code, real end date",
+   "Free Sample Week, no discount"
+  ],
+  "context": "FIRST14 would be a $14 code shared only in personal messages with a real end date (for example Oct 22), no timer, and a public price that stays $17; allowed under Gumroad's Terms only if the deadline is real (cmp:F11). It nets $11.39 and makes the $100 gate take 9 sales (gum:F01 arithmetic). Codes can ride in the URL (gum:F12). It is a price change, so it needs the owner's yes. A handful of sales cannot tell us whether $14 beats $17 (aut:F05, aut:F06), so this is a launch mechanic, not a price test."
+ },
+ {
+  "id": "D7",
+  "question": "How should the Escape the Rat Race series be handled for the next 90 days?",
+  "options": [
+   "Free checklist only, 1 slot a day, under the written rule",
+   "Pause until a copy gate clears",
+   "Run with planner offer attached"
+  ],
+  "context": "Gumroad's prohibited list names get-rich-quick schemes, investment opportunities and credit repair, and its Terms (binding 2026-10-14) ban unsubstantiated earnings claims on any channel the seller controls (gum:F16, cmp:F10, cmp:F11). YouTube's spam page also lists promoting get-rich-quick schemes (hypothesis; compliance-lens conflict note). TikTok bans get-rich-quick schemes (cmp:F7 weakened); MailerLite bans it (em:own-18). The series is built on passive-income frameworks and named figures (Hormozi, Kiyosaki, Pe\u00f1a), so facts need a research brief (CLAUDE.md rule 8) and names may not imply endorsement. Recommended: option 1 under the written rule: at most 1 of 5 slots; free-checklist CTA only; no passive-income, side-income-amount, quit-your-job, financial-freedom or get-rich language; real people only as sourced subjects in our own words with a not-affiliated line; a script that fails the phrase gate is held, not softened; any platform notice or flag pauses the series only. The Kit contains the Rat Race Escape Planner. The channel wants variety to avoid templated sameness (cmp:F2)."
+ },
+ {
+  "id": "D8",
+  "question": "How much long-form should the YouTube channel carry?",
+  "options": [
+   "One Start Here video, then decide",
+   "Weekly long-form from Day 22",
+   "No long-form; channel links only"
+  ],
+  "context": "Shorts descriptions and comments are not clickable; a long-form's description link is (fun:F4, fun:F5). Related Video must point to the same channel (fun:F6). Long-form is outside the Shorts standing order and needs the owner's yes (rule 9). Render capability for 4-6 minutes is unverified, a weekly stitch of the week's Shorts risks the templated-content rule (cmp:F2), and X6 will measure whether the bridge works at all. The sampled TikTok winner with long tutorials (7.4-10.1% saves, mkt:F13 weakened) and the 'Budget with me' search gap suggest a second, Budget With Me long-form as the next candidate: ask again at Day 30 with the first video's data. The Partner Program change on 2027-02-01 makes ad revenue unlikely either way (cmp:F4)."
+ },
+ {
+  "id": "D9",
+  "question": "Does the owner approve a recorded exemption for the opted-in email sequence (the 7-day course and one planner-offer email, sent to confirmed opt-ins only)?",
+  "options": [
+   "Approve the sequence as written, with buyer exclusion and the reminder off",
+   "Approve each email individually before it is sent",
+   "No automated email; the checklist stays a direct download"
+  ],
+  "context": "The strategy's rule is that every message to a person is owner-sent. An automated sequence sends daily emails to individuals, so it needs an explicit, recorded exemption in channel/empire/decisions/. Recommended: option 1, covering the 8 course emails, the one planner-offer email, the consent text and the privacy page, sent only to confirmed opt-ins with unticked consent, one-click unsubscribe, a postal address and 48-hour opt-out handling (em:own-14, em:own-17, cmp:F17). The clicker-only reminder to non-buyers stays off until buyer exclusion is verified on the first real sale and the owner adds it in writing. Buyer exclusion is a weekly owner upload of the Gumroad sales CSV to the ESP suppression list (buyer emails never enter the public repo). Gumroad's own purchase workflows are locked until a payout (gum:F09) and are separate owner decisions."
+ },
+ {
+  "id": "D10",
+  "question": "Should the owner opt the product out of Gumroad's global affiliate program (10%) once it is Discover-eligible?",
+  "options": [
+   "Opt out for the first 90 days",
+   "Stay opted in",
+   "Decide at the Day-30 review with the first sales data"
+  ],
+  "context": "Discover-listed products are auto-enrolled in Gumroad Affiliates at a fixed 10% with a 7-day cookie (gum:F03, gum:F15). Those promoters are uncontrolled endorsers and the advertiser is liable for their claims (cmp:F13), while our own partners are monitored within 48 hours of each post. Opting out costs some reach but is reversible. Discover eligibility itself needs $100, a risk review of about 3 weeks and one sale (gum:F03), so this cannot matter before about Day 30. Recommended: opt out for the first 90 days."
+ },
+ {
+  "id": "D11",
+  "question": "Which cover goes on the Gumroad listing, the Etsy listing and pins?",
+  "options": [
+   "Quinton cover with a conspicuous 'AI-generated person' mark on Gumroad only; coin cover on Etsy and pins",
+   "Coin cover (no AI human) on every surface",
+   "Quinton cover everywhere with the mark"
+  ],
+  "context": "The planner cover already features Quinton, the AI host, disclosed (HANDOFF-PROMPT.md line 14). An AI person on an ad or listing image should carry a conspicuous disclosure; New York's synthetic-performer ad law (in effect 2026-06-09) may reach product covers, which is unsettled (hypothesis; cmp:F15 weakened); Instagram limits recommendation of profiles that repeatedly feature an unlabelled AI person (hypothesis; cmp:F8 weakened); Etsy's seller policy asks for the seller's own photographs, not renderings, with limited exceptions (hypothesis; conflict noted); Pinterest labels AI imagery. Rule 3 says real people are never shown by face; whether Quinton's face derives from a real person's photo is unknown to this plan, and if it does the owner must decide that explicitly. Recommended: option 1 or 2, with the coin cover on Etsy and pins at minimum. A cover A/B is a later test (faceless-cover skill)."
+ }
+]

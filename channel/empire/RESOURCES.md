@@ -204,6 +204,62 @@ Read with `python -m faceless intake` (dossiers in `repo-farm/intake/2026-10-12/
 - **claude-motion (whaleyxbt/claude-motion):** A person reads the repo's hidden comment and the sound engine's code (text only). Then decide whether a trial is worth the time.
 - **Remotion (remotion-dev/remotion):** Check Remotion's company-licence terms on its site by hand, and say whether the business is above the free size limit. Revisit only if HyperFrames cannot do a scene we need.
 - **Awesome Motion Design Agent Skills (frankxai/awesome-motion-design-agent-skills):** None now. If a lead from this list looks right, send that one repo through intake on its own.
+## Planner tool stack: firecrawl-cli, icm-architect, FreeConvert (2026-10-12)
+
+Read with `python -m faceless intake` (dossiers in `repo-farm/intake/2026-10-12/`). Dossiers made by `python -m faceless intake` (GitHub's API answered 403 for icm-architect, so facts come from raw files); FreeConvert read with Exa. Nothing was installed or run: the `npx -y firecrawl-cli@latest init --all --browser` line was read, not executed.
+
+| resource | verdict | stage | why | worth taking |
+|---|---|---|---|---|
+| firecrawl-cli (npm) | **park** | ideate | Three HIGH flags (install hook, pipe-to-shell in its docs, asks for secrets) and the exact line the owner pasted, `init --all --browser`, installs skills into every detected coding agent globally and opens a browser login: that rewrites the agent environment, which intake rule 1 forbids and nothing about the planner needs. We already hold FIRECRAWL_API_KEY, so a scrape or search is one reviewed REST call from our own provider code if research ever needs it. Not needed for artwork, lessons or the PDFs. | Call Firecrawl's REST API directly from faceless/providers behind a cap when a research brief needs a page read; never run init. |
+| icm-architect (RinDig, MIT) | **park** | package | A Claude skill that scaffolds 'folder structure as agent architecture'. This studio already works that way (CLAUDE.md routes, a CONTEXT.md per workspace, the filesystem is the state). Installing it adds nothing; reading it did: its ten invariants match ours and name two gaps worth closing. | Each stage folder's CONTEXT.md states inputs, process, outputs and what a human checks before the next stage; keep reference material apart from per-run products; generated indexes are rebuilt by script, never hand-edited (the planner's INVENTORY.md already is). |
+| FreeConvert (freeconvert.com, API v1) | **trial** | visuals | A hosted file-conversion API (convert, compress, resize 200+ formats; job of import, convert, export/url). It has no watermark or handle removal, so it is not the cleaner: that stays local (OpenCV). Its real use here is turning picture formats Pillow cannot open (HEIC, TIFF, PSD, AVIF) into PNG before ingest. Free accounts get 20 conversion minutes a day, 5 minutes per file, API use needs a free account token; files are uploaded to FreeConvert and deleted after a few hours. Written as an optional provider, off until the owner creates the token and sets FREECONVERT_API_KEY; never used for anything that must stay private. | The job shape (import, convert, export/url, poll) and per-task refunds on failure. |
+| Photopea (photopea.com, live-messaging API) | **use** | visuals | The owner's own cropper. Photopea runs in the browser on our machine (its docs say files are not uploaded; the editor's code and ads load from photopea.com) and has an official, free messaging API: send the picture, run `app.activeDocument.crop([l,t,r,b])`, `saveToOE`. Driven headlessly in the pre-installed Chromium through Playwright (Apache-2.0, USE 2026-10-11). Measured: starts in about 3 s, a crop takes under a second, and every result is checked against a plain Pillow crop; Pillow is the fallback if the site is slow or blocked. Used on 14 of the owner's 44 wellness posters. | Its scripting API (crop, resize, layers, export) for any later batch edit the owner would do by hand. |
+| TypeSafe Jev Router on OpenRouter (typesafe/jev-router) | **use** | package | On OpenRouter with the existing OPENROUTER_API_KEY (no TypeSafe key needed): a router that picks the model and effort per request, multimodal, variable price. USE as the typed-question gate (decide backend `jev-openrouter`, opt-in, capped, dry-run): live, it answered a clean case `accepted` and a smudged one `needs_human`, both at 0.99. NOT used to find the handle on posters: measured on 44 posters it routed to small models, flagged 10 handle-free posters and found 9 of 15 real handles ($0.029), while Claude Haiku 5.5 found 15 of 15 with none wrong ($0.007). It stays a drop-in `[planner] locate_model` to re-test later. | Ask typed questions as JSON through chat completions; measure any model on hand-checked ground truth before it decides anything. |
+
+### Decisions only the owner can make
+
+- **firecrawl-cli (npm):** Say whether the Firecrawl key should be used for research briefs; do not run `init --all` on any machine that holds other agents' skills.
+- **icm-architect (RinDig, MIT):** none
+- **FreeConvert (freeconvert.com, API v1):** Create a free FreeConvert account and put the API token in the environment as FREECONVERT_API_KEY (intake never signs up for anyone).
+- **Photopea (photopea.com, live-messaging API):** none
+- **TypeSafe Jev Router on OpenRouter (typesafe/jev-router):** Say if TYPESAFE_API_KEY is meant to be in this environment: it is not set in this container (only OPENROUTER_API_KEY, OPENROUTER_2, MUAPI_API_KEY, FIRECRAWL_API_KEY are), so the direct TypeSafe backend stays off.
+
+## Setup Doc and tools doc (two Google Docs) (2026-10-13)
+
+Read with `python -m faceless intake` (dossiers in `repo-farm/intake/2026-10-13/`). Dossiers by `python -m faceless intake`; Etsy MCP read with Exa. Nothing installed or run. Entries already decided on 2026-10-08 to 2026-10-12 were not repeated.
+
+| resource | verdict | stage | why | worth taking |
+|---|---|---|---|---|
+| GitHub MCP server (github/github-mcp-server) | **use** | package | MIT. This session already runs GitHub through the hosted GitHub MCP, scoped to this repo; the studio's own `GITHUB_TOKEN` works. Nothing to install in the engine. | Toolset scoping (only the tools a job needs). |
+| GitHub Copilot SDK | **park** | none | MIT, but it embeds Copilot's agent runtime and needs a Copilot seat. We run Claude; a second agent runtime adds cost and a key with no stage it improves. |  |
+| Browser Use SDK (npm, PyPI, GitHub) | **park** | post | MIT, cloud browser agent. Key `BROWSER_USE_API_KEY` works but holds $0.0 credit, and the studio already has TinyFish (works) and Photopea headless for browser jobs. Revisit if a task needs a logged-in browser nothing else can drive. | Task-as-prompt API shape. |
+| Tripo C# SDK (tryAGI/Tripo) | **park** | visuals | MIT, wrong language, and the studio's `TRIPO_API` key is rejected (code 1002). No 3D in the money-education look. |  |
+| Tripo Python SDK | **park** | visuals | MIT, official. Parked with the Tripo MCP: key `TRIPO_API` fails authentication and no pillar needs 3D assets. |  |
+| v0 SDK (vercel/v0-sdk) | **park** | package | Apache-2.0. `V0DEV_API` works. Useful for generating site UI, but the Money Rules Library is generated by `site.py` in code we review, so a model-built UI would add unreviewed markup (rule 14). Could draft a hub-page design once. | One-off hub page mock. |
+| Monid CLI and SKILL (monid-ai/monid) | **use** | ideate | Owner said yes on 2026-10-13: it is needed to find winning solutions and marketing angles. Wired as a capped desk (faceless/monid.py, [monid] $1/day, $0.25/call) that calls the HTTP API directly; the npm CLI is not installed. First live run: mrscraper /tiktok/hashtag for $0.01 returned #moneytok (43.6B views). Key works, wallet $9.71. | Endpoint catalogue for search-volume and social-search data. |
+| Monid plugins | **park** | ideate | MIT, unpinned run lines. Nothing beyond the CLI. |  |
+| AgentQL MCP (tinyfish-io/agentql-mcp) | **park** | ideate | HIGH flag: install hook. Last change 2026-02. TinyFish's own MCP is already connected and works, so this adds nothing. |  |
+| cli-anything-tinyfish | **kill** | none | Third-party wrapper over a vendor we already reach through its official MCP and key. No reason to trust a stranger's wrapper. |  |
+| tinyfish (PyPI) | **use** | ideate | Official SDK for the TinyFish service we already use through the connected MCP; key works. Use the MCP in sessions. No engine code needed until a routine needs it headless. |  |
+| muapi-python (SamurAIGPT) | **park** | visuals | MIT. The Muapi desk already calls the API directly under a cap and the muapi-cli npm package was killed for a postinstall binary. Same vendor wrapper adds nothing. |  |
+| opencode-firecrawl | **kill** | none | Plugin for the OpenCode agent, which we do not run. |  |
+| firecrawl/cli | **park** | ideate | Same verdict as 2026-10-12: HIGH flags (install hook, pipe-to-shell, secrets). Firecrawl is reachable through the connected tools and Exa instead. |  |
+| Etsy official MCP (mcp.api.etsycloud.com/mcp) | **trial** | sell | Hosted by Etsy (etsycloud.com is Etsy's). It needs no key but only serves the Open API v3 endpoint and schema details; it does not call the API or touch a shop. Use it as a read-only reference while we write the Etsy rail against the spec. Nothing to install: add the URL as an http MCP in a session if wanted. Listing creation still needs ETSY_API_KEY plus the one-time login. | The schema lookup, so request bodies are right the first time. |
+| Vercel MCP (mcp.vercel.com) | **park** | package | Hosted, OAuth, for managing Vercel projects. The site deploys from GitHub Actions; `VERCEL` key works if needed. No job today. |  |
+| Vercel AI SDK (ai-sdk.dev) | **park** | package | TypeScript library. Engine is Python and calls providers through its own interface, so it adds a second runtime for nothing. |  |
+| LiquidAI system-one-arcade (HuggingFace space) | **kill** | none | A demo space. Not a tool, no API, nothing for money education. |  |
+
+### Decisions only the owner can make
+
+- **GitHub MCP server (github/github-mcp-server):** None.
+- **GitHub Copilot SDK:** None.
+- **Browser Use SDK (npm, PyPI, GitHub):** Top up credit only if a job needs it.
+- **Tripo C# SDK (tryAGI/Tripo):** Replace the Tripo key if 3D is wanted later.
+- **Tripo Python SDK:** Replace the Tripo key if 3D is wanted later.
+- **v0 SDK (vercel/v0-sdk):** None.
+- **Monid CLI and SKILL (monid-ai/monid):** None. Top up the wallet when it runs low.
+- **tinyfish (PyPI):** None.
+- **Etsy official MCP (mcp.api.etsycloud.com/mcp):** Create the Etsy app and run `python -m faceless etsy auth`.
 
 ## ScaleDown SLM_Agent and DietCode, from the owner's message (2026-10-14)
 

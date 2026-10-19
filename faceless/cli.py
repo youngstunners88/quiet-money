@@ -334,6 +334,60 @@ def cmd_products(_args) -> int:
     return 1 if bad else 0
 
 
+def cmd_planner(args) -> int:
+    from faceless import planner_art, planner_clean, product_planner as pp
+    if args.action == "build":
+        sizes = ("Letter", "A4") if args.size == "both" else (args.size,)
+        res = pp.build(sizes, limit=args.days)
+        for size, f in res["files"].items():
+            print(f"{size}: {f['path']} ({f['mb']} MB)")
+        print(f"{res['days']} days in {res['seconds']} s. Next: python -m faceless planner check")
+        return 0
+    if args.action == "check":
+        bad = 0
+        for name, ok, detail, hard in pp.check():
+            print(f"{'ok  ' if ok else ('FAIL' if hard else 'warn')} {name}: {detail}")
+            bad += 0 if ok or not hard else 1
+        return 1 if bad else 0
+    if args.action == "ingest":
+        if not args.folder:
+            raise SystemExit("usage: planner ingest <folder> [--start N]")
+        done = planner_clean.ingest(Path(args.folder), args.start)
+        print(f"{len(done)} pictures copied to assets/planner/source (days {done[0][0]} to {done[-1][0]})" if done else "no pictures found")
+        return 0
+    if args.action == "clean":
+        box = tuple(float(v) for v in args.box.split(",")) if args.box else None
+        rep = planner_clean.run_clean(box)
+        hit = {k: v for k, v in rep.items() if v["removed"]}
+        print(f"{len(rep)} pictures checked, {len(hit)} had a handle removed (report: assets/planner/clean-report.json). Look at assets/planner/clean-before-after.jpg before you trust it.")
+        return 0
+    if args.action == "inventory":
+        print(json.dumps(planner_clean.inventory(), indent=2))
+        return 0
+    if args.action == "posters-make":
+        from faceless import planner_poster_make
+        print(f"typeset wellness posters {planner_poster_make.make()}")
+        return 0
+    from faceless import planner_cover
+    folder = Path(config.STUDIO) / "channel" / "products" / pp.PRODUCT
+    planner_cover.cover(1700, 2200).save(folder / "cover.png")
+    print(folder / "cover.png")
+    for name, style in (("cover-desk.png", "desk"), ("cover-coin.png", None)):                       # the alternates for A/B (skill faceless-cover)
+        (planner_cover.cover(1700, 2200, style=style) if style else planner_cover.cover_coin(1700, 2200)).save(folder / name)
+        print(folder / name)
+    return 0
+
+
+def cmd_panel(args) -> int:
+    from faceless import panel
+    brief = Path(args.brief).read_text(encoding="utf-8")
+    res = panel.run(brief, [m.strip() for m in args.models.split(",") if m.strip()], args.runs, label=args.label or Path(args.brief).stem)
+    for m, r in res["models"].items():
+        print(f"{m}: votes {r['votes'] or 'none'}, failed {r['failed']}, mean confidence {r['mean_confidence']}, ${r['usd']}")
+    print("tally:", res["tally"], "| saved:", panel.save(res))
+    return 0
+
+
 def cmd_autoresponder(_args) -> int:
     from faceless import autoresponder
     for path in autoresponder.write():
@@ -547,6 +601,80 @@ def cmd_skills(args) -> int:
     return 1 if bad else 0
 
 
+def cmd_context(args) -> int:
+    """Is the Markdown map (CLAUDE.md routing, workspace CONTEXT.md files, skills) still true? Reads only; never edits."""
+    from faceless import contextlint
+    res = contextlint.check()
+    print(contextlint.report(res))
+    return 1 if any(l == "fail" for l, _ in res) else 0
+
+
+def cmd_monid(args) -> int:
+    """The Monid desk: discover, inspect, price and run pay-per-use data endpoints under the studio's spend limits (dry run unless --yes)."""
+    from faceless import monid, safety
+    act, rest = args.action, args.rest
+    if act == "find" and rest:
+        for r in monid.discover(" ".join(rest), args.limit):
+            p = r.get("price") or {}
+            print(f"{r['provider']}{r['endpoint']}  {p.get('type')} ${monid._num(p.get('amount', p.get('value')))}\n    {str(r.get('description'))[:110]}")
+        return 0
+    if act == "inspect" and len(rest) == 2:
+        i = monid.inspect(rest[0], rest[1])
+        print(json.dumps({k: i.get(k) for k in ("id", "description", "price", "inputSchema", "notes")}, indent=1)[:4000])
+        return 0
+    if act == "run" and len(rest) == 2:
+        payload = json.loads(args.input or "{}")
+        est = monid.estimate(monid.inspect(rest[0], rest[1]), args.results)
+        print(f"{rest[0]}{rest[1]}: worst case {'unknown (pass --results N)' if est is None else f'${est:.4f}'}; spent today ${ledger.usd_total():.2f} of the ${safety.ceiling():.2f} ceiling")
+        if not args.yes:
+            print("dry run: nothing was spent. Add --yes to run it.")
+            return 0
+        out = monid.run(rest[0], rest[1], payload, results=args.results, max_usd=args.max_usd, label=args.label)
+        print(f"done: ${out['usd']:.4f}, wallet {out['balance']}\n  file: {out['file']}\n  output: {json.dumps(out['output'])[:1200]}")
+        return 0
+    if act == "result" and rest:
+        print(json.dumps(monid.result(rest[0]), indent=1, default=str)[:3000])
+        return 0
+    if act == "balance":
+        bal = monid.balance()
+        print("no key or unreachable" if bal is None else f"wallet ${bal:.2f}")
+        print(f"desk used ${ledger.used('monid', monid.UNIT):.2f} of ${float(monid.cfg()['daily_usd']):.2f} today")
+        return 0
+    print("usage: monid find <words> | inspect <provider> <endpoint> | run <provider> <endpoint> --input '{...}' [--results N] [--yes] | result <id> | balance")
+    return 1
+
+
+def cmd_marketing(args) -> int:
+    """The weekly marketing brief (reads only), or move an experiment / close an owner-queue item."""
+    from faceless import marketing
+    a, rest = args.action, args.rest
+    if a == "done" and rest:
+        print("closed:", marketing.mark_done(rest[0])["ask"][:120])
+    elif a == "start" and rest:
+        print("running:", marketing.set_experiment(rest[0], "running")["id"])
+    elif a == "result" and len(rest) >= 2:
+        print(marketing.set_experiment(rest[0], rest[1], " ".join(rest[2:]))["id"], rest[1])
+    else:
+        print(marketing.write_brief())
+    return 0
+
+
+def cmd_metrics(args) -> int:
+    """Read back what the last 14 days of videos earned (48-hour and 7-day snapshots) and record it for the scorer and the weekly brief."""
+    from faceless import metrics
+    if args.csv:
+        print(metrics.to_csv(), end="")
+        return 0
+    if not args.pull:
+        print(json.dumps(metrics.summary(), indent=1))
+        return 0
+    res = metrics.pull()
+    print(f"{res['checked']} video(s) read, {res['snapshots']} snapshot(s) recorded, {res['rows']} scorer row(s) written")
+    for p in res["problems"]:
+        print("PROBLEM:", p)
+    return 2 if res["problems"] else 0
+
+
 def cmd_listing(args) -> int:
     """Etsy and Gumroad listing packs: build (images, video, copy, checklist) or check (the gauntlet only)."""
     from faceless import listing
@@ -582,12 +710,51 @@ def cmd_shop(args) -> int:
         if args.action == "push" and not args.yes:
             print("dry run: nothing was created. Add --yes to create DRAFT products (they are never published).")
         return 0
+    if args.action in ("draft", "publish"):
+        pid = args.product if args.product != "all" else "daily-quiet-money-planner"
+        if args.action == "draft":
+            if not args.yes:
+                print("dry run. Add --yes to create DRAFT listings on every rail that is ready (nothing goes live).")
+                return 0
+            for r in shop.draft_all(pid):
+                print(f"{r.get('rail', ''):8} {r.get('product', pid)}  {r['action']}  {r.get('why', '')}")
+            return 0
+        rail = args.rail
+        if not rail:
+            raise SystemExit("usage: shop publish <product> --rail gumroad|etsy --yes")
+        ok, why = shop.approval(pid, rail)
+        if not ok or not args.yes:
+            print(("refused: " + why) if not ok else "approved. Add --yes to set it live.")
+            return 1 if not ok else 0
+        print(shop.publish(pid, rail))
+        return 0
     if args.action == "sales":
         fresh = shop.sales(args.days)
         print(f"{len(fresh)} new sale(s) recorded in analytics/sales.jsonl")
         return 0
-    print("usage: shop status|plan|push|sales [product] [--yes] [--days N]")
+    print("usage: shop status|plan|push|draft|publish|sales [product] [--rail gumroad|etsy] [--yes] [--days N]")
     return 2
+
+
+def cmd_etsy(args) -> int:
+    """Etsy rail: status | auth [--code CODE] | plan PRODUCT | draft PRODUCT --yes."""
+    from faceless import etsy
+    pid = args.product or "daily-quiet-money-planner"
+    if args.action == "status":
+        print(json.dumps(etsy.status(), indent=1))
+    elif args.action == "auth":
+        if args.code:
+            print(json.dumps(etsy.finish_auth(args.code, args.state), indent=1))
+        else:
+            print("Open this link signed in to the Etsy shop, approve, then copy the `code` from the address bar and run `python -m faceless etsy auth --code <code>`:\n" + etsy.auth_url())
+    elif args.action == "plan":
+        print(json.dumps(etsy.plan(pid), indent=1))
+    else:
+        if not args.yes:
+            print("dry run. Add --yes to create an inactive DRAFT listing (nothing goes live).")
+            return 0
+        print(json.dumps(etsy.create_draft(pid), indent=1, default=str))
+    return 0
 
 
 def cmd_keys(args) -> int:
@@ -884,6 +1051,20 @@ def main(argv: list[str] | None = None) -> int:
     fl.add_argument("--day", help="YYYY-MM-DD (default today)")
     fl.set_defaults(fn=cmd_flow)
     sub.add_parser("products", help="build the spreadsheet products, recalculate them in LibreOffice, check against Python math, write listings").set_defaults(fn=cmd_products)
+    pl = sub.add_parser("planner", help="the Daily Planner product: `build` the PDFs, `check` the gauntlet, `ingest <folder>` the owner's pictures, `clean` the handle off them, `inventory`, `cover`, `posters-make` (typeset the studio's twelve wellness posters)")
+    pl.add_argument("action", choices=["build", "check", "ingest", "clean", "inventory", "cover", "posters-make"])
+    pl.add_argument("folder", nargs="?", help="ingest: the folder with the owner's pictures")
+    pl.add_argument("--size", choices=["Letter", "A4", "both"], default="both")
+    pl.add_argument("--days", type=int, help="build only the first N days (a quick test)")
+    pl.add_argument("--start", type=int, default=1, help="ingest: the day number of the first picture")
+    pl.add_argument("--box", help="clean: x0,y0,x1,y1 as fractions of the picture, when the handle is somewhere unusual")
+    pl.set_defaults(fn=cmd_planner)
+    pn = sub.add_parser("panel", help="put one decision brief to several models through OpenRouter, several runs each, and tally their answers (a person adjudicates)")
+    pn.add_argument("brief", help="a text file that tells the models to answer in JSON with a choice")
+    pn.add_argument("--models", required=True, help="comma-separated OpenRouter model ids")
+    pn.add_argument("--runs", type=int, default=3)
+    pn.add_argument("--label")
+    pn.set_defaults(fn=cmd_panel)
     sub.add_parser("autoresponder", help="write the 7-day Money Reset email sequence (numbers computed, ready to import)").set_defaults(fn=cmd_autoresponder)
     bk = sub.add_parser("brandkit", help="build a client brand kit (avatar, banner, watermark, share image, favicons, logo, BRAND.md) for the Fiverr service")
     bk.add_argument("name", nargs="?", help="channel name (1-24 characters)")
@@ -908,6 +1089,24 @@ def main(argv: list[str] | None = None) -> int:
     va = sub.add_parser("variety", help="sameness audit of the last N videos (YouTube's inauthentic-content risk); writes analytics/variety.md")
     va.add_argument("-n", type=int, default=20)
     va.set_defaults(fn=cmd_variety)
+    mk = sub.add_parser("marketing", help="the weekly marketing brief (reads only; writes analytics/brief-<day>.md) | done <U01> | start <X1> | result <X1> won|killed [note]")
+    mk.add_argument("action", nargs="?", default="brief", choices=["brief", "done", "start", "result"])
+    mk.add_argument("rest", nargs="*")
+    mk.set_defaults(fn=cmd_marketing)
+    me = sub.add_parser("metrics", help="--pull reads back what the last 14 days of videos earned (48-hour and 7-day snapshots, read-only); --csv exports the snapshots; bare shows median 48-hour views by pillar")
+    me.add_argument("--pull", action="store_true")
+    me.add_argument("--csv", action="store_true")
+    me.set_defaults(fn=cmd_metrics)
+    mo = sub.add_parser("monid", help="Monid desk (pay-per-use data endpoints): find <words> | inspect <provider> <endpoint> | run <provider> <endpoint> --input JSON [--yes] | result <id> | balance")
+    mo.add_argument("action", choices=["find", "inspect", "run", "result", "balance"])
+    mo.add_argument("rest", nargs="*")
+    mo.add_argument("--input", help="JSON body for run")
+    mo.add_argument("--results", type=int, help="how many results a per-result endpoint may return (sets the worst-case price)")
+    mo.add_argument("--max-usd", type=float, dest="max_usd", help="raise the per-call limit for this call")
+    mo.add_argument("--limit", type=int, default=8)
+    mo.add_argument("--label", help="name for the saved result")
+    mo.add_argument("--yes", action="store_true", help="actually run and spend")
+    mo.set_defaults(fn=cmd_monid)
     mp = sub.add_parser("muapi", help="Muapi desk: catalog | find <words> | inspect <model> | estimate <model> | run <model> [--yes] | result <id> | balance | snapshot | doctor")
     mp.add_argument("action")
     mp.add_argument("rest", nargs="*")
@@ -926,14 +1125,23 @@ def main(argv: list[str] | None = None) -> int:
     pz.add_argument("reason", nargs="*")
     pz.add_argument("--resume", action="store_true")
     pz.set_defaults(fn=cmd_pause)
+    sub.add_parser("context", help="check CLAUDE.md routing, the workspace CONTEXT.md files and the skills still agree (reads only)").set_defaults(fn=cmd_context)
     sub.add_parser("skills", help="lint every skill (format rules from Anthropic's skill guide, plus: every command and file a skill names must exist)").set_defaults(fn=cmd_skills)
     ls = sub.add_parser("listing", help="Etsy and Gumroad listing packs: `listing build [product|all]` makes images, video, copy and a checklist; `listing check` runs the listing gauntlet")
     ls.add_argument("action", choices=["build", "check"])
     ls.add_argument("product", nargs="?", default="all")
     ls.add_argument("--no-video", action="store_true")
     ls.set_defaults(fn=cmd_listing)
+    et = sub.add_parser("etsy", help="the Etsy rail: `etsy status`, `etsy auth` (one-time login), `etsy plan`, `etsy draft --yes` (inactive draft, never live)")
+    et.add_argument("action", choices=["status", "auth", "plan", "draft"])
+    et.add_argument("product", nargs="?")
+    et.add_argument("--code")
+    et.add_argument("--state")
+    et.add_argument("--yes", action="store_true")
+    et.set_defaults(fn=cmd_etsy)
     sh = sub.add_parser("shop", help="storefronts: `shop status` (what is connected, the owner's next step), `shop plan`, `shop push --yes` (DRAFT products on Gumroad, never published), `shop sales`")
-    sh.add_argument("action", choices=["status", "plan", "push", "sales"])
+    sh.add_argument("action", choices=["status", "plan", "push", "draft", "publish", "sales"])
+    sh.add_argument("--rail", choices=["gumroad", "etsy"])
     sh.add_argument("product", nargs="?", default="all")
     sh.add_argument("--yes", action="store_true")
     sh.add_argument("--days", type=int, default=30)

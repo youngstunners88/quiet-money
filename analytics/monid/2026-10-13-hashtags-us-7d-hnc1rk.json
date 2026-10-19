@@ -1,0 +1,1438 @@
+{
+ "runId": "01M4T4P24X9ERG0GSF5XHNC1RK",
+ "usd": 0.001,
+ "balance": 9.69725,
+ "httpStatus": 200,
+ "output": {
+  "BaseResp": {
+   "StatusCode": 0,
+   "StatusMessage": ""
+  },
+  "items": [
+   {
+    "hashtagID": "1673592901673989",
+    "hashtagName": "hurricaneisaias",
+    "industryIDs": [],
+    "popularityCurve": [
+     {
+      "timestamp": "1791072000",
+      "value": 0
+     },
+     {
+      "timestamp": "1791158400",
+      "value": 22.401269367908043
+     },
+     {
+      "timestamp": "1791244800",
+      "value": 45.7246139069664
+     },
+     {
+      "timestamp": "1791331200",
+      "value": 76.38230545654459
+     },
+     {
+      "timestamp": "1791417600",
+      "value": 90.12348443384772
+     },
+     {
+      "timestamp": "1791504000",
+      "value": 98.51561728539757
+     },
+     {
+      "timestamp": "1791590400",
+      "value": 100
+     }
+    ],
+    "publishCnt": 24199,
+    "rankIndex": 1,
+    "topCreators": [
+     {
+      "aioCreatorID": "7502676712371650602",
+      "avatarURL": "https://p16-common-sign.tiktokcdn.com/tos-maliva-avt-0068/f761414320a2804e07f63d553e7dfc2c~tplv-tiktokx-cropcenter:300:300.jpeg",
+      "countryCode": "US",
+      "creatorRank": 1,
+      "followedCnt": 197782,
+      "handleName": "patrickinvests",
+      "nickname": "patrickinvests",
+      "ttUID": "7002747894555116550"
+     },
+     {
+      "aioCreatorID": "",
+      "avatarURL": "https://p16-common-sign.tiktokcdn.com/tos-maliva-avt-0068/988ff339763c2c8bcf3ae92dd58c6636~tplv-tiktokx-cropcenter:300:300.jpeg",
+      "countryCode": "US",
+      "creatorRank": 2,
+      "followedCnt": 1532,
+      "handleName": "abbybrianao",
+      "nickname": "Abby",
+      "ttUID": "6772414764355339269"
+     },
+     {
+      "aioCreatorID": "7504156380610412587",
+      "avatarURL": "https://p16-common-sign.tiktokcdn.com/tos-maliva-avt-0068/a99830d1163d48c3232cf0d48fc77653~tplv-tiktokx-cropcenter:300:300.jpeg",
+      "countryCode": "US",
+      "creatorRank": 3,
+      "followedCnt": 1164830,
+      "handleName": "superlady333",
+      "nickname": "Lady \ud83c\uddfa\ud83c\uddf8\ud83d\udc36\ud83e\uddfd",
+      "ttUID": "6944443048961688581"
+     }
+    ],
+    "vv": 180889732
+   },
+   {
+    "hashtagID": "2185089",
+    "hashtagName": "fgteev",
+    "industryIDs": [
+     25000000000,
+     23000000000
+    ],
+    "popularityCurve": [
+     {
+      "timestamp": "1791072000",
+      "value": 8.526278240952484
+     },
+     {
+      "timestamp": "1791158400",
+      "value": 0
+     },
+     {
+      "timestamp": "1791244800",
+      "value": 22.225745802627934
+     },
+     {
+      "timestamp": "1791331200",
+      "value": 100
+     },
+     {
+      "timestamp": "1791417600",
+      "value": 72.73702852349825
+     },
+     {
+      "timestamp": "1791504000",
+      "value": 46.84061499598121
+     },
+     {
+      "timestamp": "1791590400",
+      "value": 37.7637087072407
+     }
+    ],
+    "publishCnt": 19822,
+    "rankIndex": 2,
+    "topCreators": [
+     {
+      "aioCreatorID": "",
+      "avatarURL": "https://p16-common-sign.tiktokcdn.com/musically-maliva-obj/1594805258216454~tplv-tiktokx-cropcenter:300:300.jpeg",
+      "countryCode": "US",
+      "creatorRank": 1,
+      "followedCnt": 457082,
+      "handleName": "mikesecretspam",
+      "nickname": "\ud83e\udd2b",
+      "ttUID": "7693762012903605262"
+     },
+     {
+      "aioCreatorID": "7559127278597816333",
+      "avatarURL": "https://p16-common-sign.tiktokcdn.com/tos-maliva-avt-0068/96b2072369262c7195b94e8c9f09ce47~tplv-tiktokx-cropcenter:300:300.jpeg",
+      "countryCode": "US",
+      "creatorRank": 2,
+      "followedCnt": 235832,
+      "handleName": "rezlebronrayjames",
+      "nickname": "rezlebronrayjames",
+      "ttUID": "7129556720498246702"
+     },
+     {
+      "aioCreatorID": "7468727180261113902",
+      "avatarURL": "https://p19-common-sign.tiktokcdn.com/tos-maliva-avt-0068/e84365f98208ced9df1a91c5f8c9dfa0~tplv-tiktokx-cropcenter:300:300.jpeg",
+      "countryCode": "US",
+      "creatorRank": 3,
+      "followedCnt": 4098799,
+      "handleName": "ykklips",
+      "nickname": "Mike Carter",
+      "ttUID": "7353818386751521838"
+     }
+    ],
+    "vv": 368791828
+   },
+   {
+    "hashtagID": "1689546928071686",
+    "hashtagName": "justgolive",
+    "industryIDs": [
+     23000000000
+    ],
+    "popularityCurve": [
+     {
+      "timestamp": "1791072000",
+      "value": 0
+     },
+     {
+      "timestamp": "1791158400",
+      "value": 77.05440424792634
+     },
+     {
+      "timestamp": "1791244800",
+      "value": 99.42058704383291
+     },
+     {
+      "timestamp": "1791331200",
+      "value": 99.31841106405453
+     },
+     {
+      "timestamp": "1791417600",
+      "value": 100
+     },
+     {
+      "timestamp": "1791504000",
+      "value": 99.67003693726727
+     },
+     {
+      "timestamp": "1791590400",
+      "value": 98.48029680037179
+     }
+    ],
+    "publishCnt": 20148,
+    "rankIndex": 3,
+    "topCreators": [
+     {
+      "aioCreatorID": "7548285887080153143",
+      "avatarURL": "https://p16-common-sign.tiktokcdn.com/tos-maliva-avt-0068/5b933514418c10fa3e210a898c7e37e3~tplv-tiktokx-cropcenter:300:300.jpeg",
+      "countryCode": "US",
+      "creatorRank": 1,
+      "followedCnt": 66499,
+      "handleName": "kendr_33",
+      "nickname": "Kendra navarro",
+      "ttUID": "7062200198498321455"
+     },
+     {
+      "aioCreatorID": "",
+      "avatarURL": "https://p16-common-sign.tiktokcdn.com/tos-maliva-avt-0068/84407a5261f970e1d6c009c6b0432010~tplv-tiktokx-cropcenter:300:300.jpeg",
+      "countryCode": "US",
+      "creatorRank": 2,
+      "followedCnt": 32388,
+      "handleName": "bilalgujjaronline",
+      "nickname": "Bilal Gujjar online",
+      "ttUID": "7444875652216816683"
+     },
+     {
+      "aioCreatorID": "",
+      "avatarURL": "https://p19-common-sign.tiktokcdn.com/tos-maliva-avt-0068/10f4bdee691f985f91c3dcf9120fea1b~tplv-tiktokx-cropcenter:300:300.jpeg",
+      "countryCode": "US",
+      "creatorRank": 3,
+      "followedCnt": 67293,
+      "handleName": ".king.star92",
+      "nickname": "\ud83d\udc51\ud83d\udc51 king star\u2b50\u2b50",
+      "ttUID": "7625276463353218061"
+     }
+    ],
+    "vv": 25828242
+   },
+   {
+    "hashtagID": "7072049608385363974",
+    "hashtagName": "sidehustlelive",
+    "industryIDs": [
+     23000000000
+    ],
+    "popularityCurve": [
+     {
+      "timestamp": "1791072000",
+      "value": 0
+     },
+     {
+      "timestamp": "1791158400",
+      "value": 81.9621273630643
+     },
+     {
+      "timestamp": "1791244800",
+      "value": 100
+     },
+     {
+      "timestamp": "1791331200",
+      "value": 99.7157410864402
+     },
+     {
+      "timestamp": "1791417600",
+      "value": 97.97077654938738
+     },
+     {
+      "timestamp": "1791504000",
+      "value": 96.9391629355879
+     },
+     {
+      "timestamp": "1791590400",
+      "value": 96.84284692190556
+     }
+    ],
+    "publishCnt": 10261,
+    "rankIndex": 4,
+    "topCreators": [
+     {
+      "aioCreatorID": "",
+      "avatarURL": "https://p16-common-sign.tiktokcdn.com/tos-maliva-avt-0068/afa285451f5d709bca75c8294af5df3a~tplv-tiktokx-cropcenter:300:300.jpeg",
+      "countryCode": "US",
+      "creatorRank": 1,
+      "followedCnt": 23703,
+      "handleName": "usa.funny792",
+      "nickname": "usa funny",
+      "ttUID": "7692087583929566222"
+     },
+     {
+      "aioCreatorID": "",
+      "avatarURL": "https://p16-common-sign.tiktokcdn.com/tos-maliva-avt-0068/5e5451b2662aa27cf4f9118e7b3484fc~tplv-tiktokx-cropcenter:300:300.jpeg",
+      "countryCode": "US",
+      "creatorRank": 2,
+      "followedCnt": 10691,
+      "handleName": "el.barbero.novato",
+      "nickname": "el barbero novato",
+      "ttUID": "7624635233471595551"
+     },
+     {
+      "aioCreatorID": "",
+      "avatarURL": "https://p16-common-sign.tiktokcdn.com/tos-maliva-avt-0068/5a48ea74406bdf0294052b5d94eaa9ef~tplv-tiktokx-cropcenter:300:300.jpeg",
+      "countryCode": "US",
+      "creatorRank": 3,
+      "followedCnt": 12784,
+      "handleName": "siu8319",
+      "nickname": "SIU",
+      "ttUID": "7543081437907584055"
+     }
+    ],
+    "vv": 26306223
+   },
+   {
+    "hashtagID": "291298",
+    "hashtagName": "isaias",
+    "industryIDs": [
+     23000000000
+    ],
+    "popularityCurve": [
+     {
+      "timestamp": "1791072000",
+      "value": 0
+     },
+     {
+      "timestamp": "1791158400",
+      "value": 29.245584079790536
+     },
+     {
+      "timestamp": "1791244800",
+      "value": 46.26626599809464
+     },
+     {
+      "timestamp": "1791331200",
+      "value": 74.67702117023451
+     },
+     {
+      "timestamp": "1791417600",
+      "value": 89.38323098477309
+     },
+     {
+      "timestamp": "1791504000",
+      "value": 100
+     },
+     {
+      "timestamp": "1791590400",
+      "value": 99.30527117855938
+     }
+    ],
+    "publishCnt": 10177,
+    "rankIndex": 5,
+    "topCreators": [
+     {
+      "aioCreatorID": "7510054017838432298",
+      "avatarURL": "https://p16-common-sign.tiktokcdn.com/tos-maliva-avt-0068/95e297bf2591d67b5c5bf8e0764c337e~tplv-tiktokx-cropcenter:300:300.jpeg",
+      "countryCode": "US",
+      "creatorRank": 1,
+      "followedCnt": 2741195,
+      "handleName": "foxweather",
+      "nickname": "FOX Weather",
+      "ttUID": "7013901159623590918"
+     },
+     {
+      "aioCreatorID": "7379791634273140779",
+      "avatarURL": "https://p16-common-sign.tiktokcdn.com/tos-maliva-avt-0068/479ffb58bbe2483c28bd58b84a66fbf5~tplv-tiktokx-cropcenter:300:300.jpeg",
+      "countryCode": "US",
+      "creatorRank": 2,
+      "followedCnt": 467371,
+      "handleName": "tsagana24",
+      "nickname": "Tsagana",
+      "ttUID": "6968891904080643077"
+     },
+     {
+      "aioCreatorID": "7502676712371650602",
+      "avatarURL": "https://p16-common-sign.tiktokcdn.com/tos-maliva-avt-0068/f761414320a2804e07f63d553e7dfc2c~tplv-tiktokx-cropcenter:300:300.jpeg",
+      "countryCode": "US",
+      "creatorRank": 3,
+      "followedCnt": 197782,
+      "handleName": "patrickinvests",
+      "nickname": "patrickinvests",
+      "ttUID": "7002747894555116550"
+     }
+    ],
+    "vv": 119834705
+   },
+   {
+    "hashtagID": "7522232118684942391",
+    "hashtagName": "golivegrowfast",
+    "industryIDs": [
+     23000000000
+    ],
+    "popularityCurve": [
+     {
+      "timestamp": "1791072000",
+      "value": 0
+     },
+     {
+      "timestamp": "1791158400",
+      "value": 75.0650774528097
+     },
+     {
+      "timestamp": "1791244800",
+      "value": 95.10808635684138
+     },
+     {
+      "timestamp": "1791331200",
+      "value": 96.48238473804716
+     },
+     {
+      "timestamp": "1791417600",
+      "value": 96.40767002138826
+     },
+     {
+      "timestamp": "1791504000",
+      "value": 99.92093159566524
+     },
+     {
+      "timestamp": "1791590400",
+      "value": 100
+     }
+    ],
+    "publishCnt": 15335,
+    "rankIndex": 6,
+    "topCreators": [
+     {
+      "aioCreatorID": "",
+      "avatarURL": "https://p16-common-sign.tiktokcdn.com/tos-maliva-avt-0068/9013f90d2b37e3aa33f87bc6d66fecd1~tplv-tiktokx-cropcenter:300:300.jpeg",
+      "countryCode": "US",
+      "creatorRank": 1,
+      "followedCnt": 30471,
+      "handleName": "rosylv79",
+      "nickname": "ROSYLV79",
+      "ttUID": "6822403039762318342"
+     },
+     {
+      "aioCreatorID": "",
+      "avatarURL": "https://p16-common-sign.tiktokcdn.com/tos-maliva-avt-0068/dd287d8d321447a3fed762a7a5bac6aa~tplv-tiktokx-cropcenter:300:300.jpeg",
+      "countryCode": "US",
+      "creatorRank": 2,
+      "followedCnt": 7448,
+      "handleName": "jc.enduro",
+      "nickname": "jc.enduro",
+      "ttUID": "7597914654942397495"
+     },
+     {
+      "aioCreatorID": "",
+      "avatarURL": "https://p16-common-sign.tiktokcdn.com/tos-maliva-avt-0068/c131e9eb8263e9447b9e0e03ae1b5587~tplv-tiktokx-cropcenter:300:300.jpeg",
+      "countryCode": "US",
+      "creatorRank": 3,
+      "followedCnt": 12987,
+      "handleName": "marvincosigua20",
+      "nickname": "\ud83d\udc33\u2663  \u03fb\ud835\udcea\u1587\uff56\ud835\udcf2\ud835\udcf7 \u1d9c\uff2f\ud835\udd64\uff49\u0642\ud835\udcfe\ud835\udd52  \ud83d\ude02\u266a",
+      "ttUID": "7219467570188583982"
+     }
+    ],
+    "vv": 25489652
+   },
+   {
+    "hashtagID": "41248095",
+    "hashtagName": "complexcon",
+    "industryIDs": [
+     23000000000
+    ],
+    "popularityCurve": [
+     {
+      "timestamp": "1791072000",
+      "value": 100
+     },
+     {
+      "timestamp": "1791158400",
+      "value": 87.29160124381546
+     },
+     {
+      "timestamp": "1791244800",
+      "value": 60.68926214945925
+     },
+     {
+      "timestamp": "1791331200",
+      "value": 38.43784351631875
+     },
+     {
+      "timestamp": "1791417600",
+      "value": 25.760521398289228
+     },
+     {
+      "timestamp": "1791504000",
+      "value": 12.897193205090204
+     },
+     {
+      "timestamp": "1791590400",
+      "value": 0
+     }
+    ],
+    "publishCnt": 13135,
+    "rankIndex": 7,
+    "topCreators": [
+     {
+      "aioCreatorID": "",
+      "avatarURL": "https://p16-common-sign.tiktokcdn.com/tos-maliva-avt-0068/058e3e7d5fd29e1f5eaa11127b69a065~tplv-tiktokx-cropcenter:300:300.jpeg",
+      "countryCode": "US",
+      "creatorRank": 1,
+      "followedCnt": 22282,
+      "handleName": "ricosofly",
+      "nickname": "flacko",
+      "ttUID": "7372808943850783786"
+     },
+     {
+      "aioCreatorID": "",
+      "avatarURL": "https://p19-common-sign.tiktokcdn.com/tos-maliva-avt-0068/ff5dd476b0f0a9b5ee7dd5b5d59c35aa~tplv-tiktokx-cropcenter:300:300.jpeg",
+      "countryCode": "US",
+      "creatorRank": 2,
+      "followedCnt": 35747,
+      "handleName": "downinnadesert",
+      "nickname": "Down In The Desert\ud83c\udf35",
+      "ttUID": "7300266970620331050"
+     },
+     {
+      "aioCreatorID": "7506426319392079918",
+      "avatarURL": "https://p16-common-sign.tiktokcdn.com/tos-maliva-avt-0068/7311502840369692677~tplv-tiktokx-cropcenter:300:300.jpeg",
+      "countryCode": "US",
+      "creatorRank": 3,
+      "followedCnt": 6383314,
+      "handleName": "complex",
+      "nickname": "COMPLEX",
+      "ttUID": "6701650339290334213"
+     }
+    ],
+    "vv": 170542937
+   },
+   {
+    "hashtagID": "7691443554018656263",
+    "hashtagName": "tiktokscaryhorrorcontest",
+    "industryIDs": [],
+    "popularityCurve": [
+     {
+      "timestamp": "1791504000",
+      "value": 0
+     },
+     {
+      "timestamp": "1791590400",
+      "value": 100
+     }
+    ],
+    "publishCnt": 8501,
+    "rankIndex": 8,
+    "topCreators": [
+     {
+      "aioCreatorID": "7691915328009519134",
+      "avatarURL": "https://p16-common-sign.tiktokcdn.com/tos-maliva-avt-0068/858c41d33e77a5ce88e49a31c0d497db~tplv-tiktokx-cropcenter:300:300.jpeg",
+      "countryCode": "US",
+      "creatorRank": 1,
+      "followedCnt": 85535,
+      "handleName": "vsdvasdv4",
+      "nickname": "vsdvasdv4",
+      "ttUID": "7493156685755712558"
+     },
+     {
+      "aioCreatorID": "",
+      "avatarURL": "https://p19-common-sign.tiktokcdn.com/tos-maliva-avt-0068/75a21c813b949d33617643cb36ff396f~tplv-tiktokx-cropcenter:300:300.jpeg",
+      "countryCode": "US",
+      "creatorRank": 2,
+      "followedCnt": 76779,
+      "handleName": "xenvor5",
+      "nickname": "Xenvor",
+      "ttUID": "7657964444082144270"
+     },
+     {
+      "aioCreatorID": "",
+      "avatarURL": "https://p19-common-sign.tiktokcdn.com/tos-maliva-avt-0068/552ac114c6ec71a734eae8607206b858~tplv-tiktokx-cropcenter:300:300.jpeg",
+      "countryCode": "US",
+      "creatorRank": 3,
+      "followedCnt": 12545,
+      "handleName": "popcornfiles8",
+      "nickname": "popcornfiles8",
+      "ttUID": "7533482232746837005"
+     }
+    ],
+    "vv": 20208495
+   },
+   {
+    "hashtagID": "35576",
+    "hashtagName": "freddiejackson",
+    "industryIDs": [],
+    "popularityCurve": [
+     {
+      "timestamp": "1791072000",
+      "value": 0
+     },
+     {
+      "timestamp": "1791158400",
+      "value": 1.9913478939595137
+     },
+     {
+      "timestamp": "1791244800",
+      "value": 98.69706760998199
+     },
+     {
+      "timestamp": "1791331200",
+      "value": 100
+     },
+     {
+      "timestamp": "1791417600",
+      "value": 77.95004765582205
+     },
+     {
+      "timestamp": "1791504000",
+      "value": 65.85856707686037
+     },
+     {
+      "timestamp": "1791590400",
+      "value": 58.39791830613209
+     }
+    ],
+    "publishCnt": 5040,
+    "rankIndex": 9,
+    "topCreators": [
+     {
+      "aioCreatorID": "7286592931916415019",
+      "avatarURL": "https://p16-common-sign.tiktokcdn.com/tos-maliva-avt-0068/7329817443349168133~tplv-tiktokx-cropcenter:300:300.jpeg",
+      "countryCode": "US",
+      "creatorRank": 1,
+      "followedCnt": 233104,
+      "handleName": "iammelissabethea",
+      "nickname": "Melissa Bethea",
+      "ttUID": "6918811350379987973"
+     },
+     {
+      "aioCreatorID": "",
+      "avatarURL": "https://p19-common-sign.tiktokcdn.com/tos-maliva-avt-0068/e5847dd2cd0e275923f8dfc405b46b24~tplv-tiktokx-cropcenter:300:300.jpeg",
+      "countryCode": "US",
+      "creatorRank": 2,
+      "followedCnt": 19750,
+      "handleName": "brandondrayt",
+      "nickname": "brandondrayt",
+      "ttUID": "6754738862793016326"
+     },
+     {
+      "aioCreatorID": "7222674038919806977",
+      "avatarURL": "https://p16-common-sign.tiktokcdn.com/tos-maliva-avt-0068/e11e63cc65514643341bf9e5696da912~tplv-tiktokx-cropcenter:300:300.jpeg",
+      "countryCode": "US",
+      "creatorRank": 3,
+      "followedCnt": 635800,
+      "handleName": "garthchocolate",
+      "nickname": "garthchocolate",
+      "ttUID": "6772776631884514310"
+     }
+    ],
+    "vv": 9736470
+   },
+   {
+    "hashtagID": "30802729",
+    "hashtagName": "bulin47",
+    "industryIDs": [
+     28000000000,
+     23000000000
+    ],
+    "popularityCurve": [
+     {
+      "timestamp": "1791072000",
+      "value": 0
+     },
+     {
+      "timestamp": "1791158400",
+      "value": 5.169120946227597
+     },
+     {
+      "timestamp": "1791244800",
+      "value": 32.65558570691654
+     },
+     {
+      "timestamp": "1791331200",
+      "value": 90.96221938386513
+     },
+     {
+      "timestamp": "1791417600",
+      "value": 100
+     },
+     {
+      "timestamp": "1791504000",
+      "value": 94.42154770668071
+     },
+     {
+      "timestamp": "1791590400",
+      "value": 94.45331990043528
+     }
+    ],
+    "publishCnt": 6177,
+    "rankIndex": 10,
+    "topCreators": [
+     {
+      "aioCreatorID": "",
+      "avatarURL": "https://p16-common-sign.tiktokcdn.com/tos-maliva-avt-0068/f0e8b7ab6d3fe47040ccfe8eab898e99~tplv-tiktokx-cropcenter:300:300.jpeg",
+      "countryCode": "US",
+      "creatorRank": 1,
+      "followedCnt": 31711,
+      "handleName": "lemonglow83",
+      "nickname": "LemonGlow",
+      "ttUID": "7520849609833563149"
+     },
+     {
+      "aioCreatorID": "",
+      "avatarURL": "https://p16-common-sign.tiktokcdn.com/tos-maliva-avt-0068/37474f36192dc5e0f8b74c498b9351cd~tplv-tiktokx-cropcenter:300:300.jpeg",
+      "countryCode": "US",
+      "creatorRank": 2,
+      "followedCnt": 1859,
+      "handleName": "flyn_777",
+      "nickname": "flyn_777",
+      "ttUID": "7377161249933444142"
+     },
+     {
+      "aioCreatorID": "",
+      "avatarURL": "https://p19-common-sign.tiktokcdn.com/tos-maliva-avt-0068/276e12f0de73a0c20c005e3d0e479c56~tplv-tiktokx-cropcenter:300:300.jpeg",
+      "countryCode": "US",
+      "creatorRank": 3,
+      "followedCnt": 12714,
+      "handleName": "wilsonserru",
+      "nickname": "Elwilson\ud83c\uddfa\ud83c\uddf8\ud83c\uddfa\ud83c\uddf8",
+      "ttUID": "6922180142220674054"
+     }
+    ],
+    "vv": 29245423
+   },
+   {
+    "hashtagID": "7666211587493101589",
+    "hashtagName": "careertipstiktokcontest",
+    "industryIDs": [],
+    "popularityCurve": [
+     {
+      "timestamp": "1791072000",
+      "value": 0
+     },
+     {
+      "timestamp": "1791158400",
+      "value": 0.6919375479769172
+     },
+     {
+      "timestamp": "1791244800",
+      "value": 33.522607995969366
+     },
+     {
+      "timestamp": "1791331200",
+      "value": 90.48228176530024
+     },
+     {
+      "timestamp": "1791417600",
+      "value": 93.88401761731402
+     },
+     {
+      "timestamp": "1791504000",
+      "value": 100
+     },
+     {
+      "timestamp": "1791590400",
+      "value": 96.95999008925953
+     }
+    ],
+    "publishCnt": 5688,
+    "rankIndex": 11,
+    "topCreators": [
+     {
+      "aioCreatorID": "",
+      "avatarURL": "https://p16-common-sign.tiktokcdn.com/tos-maliva-avt-0068/a6d6ae23dfc4a68dec0214d20e2db60a~tplv-tiktokx-cropcenter:300:300.jpeg",
+      "countryCode": "US",
+      "creatorRank": 1,
+      "followedCnt": 30745,
+      "handleName": "agrndk",
+      "nickname": "Satisfying Cuts ASMR",
+      "ttUID": "7583240331090478135"
+     },
+     {
+      "aioCreatorID": "",
+      "avatarURL": "https://p16-common-sign.tiktokcdn.com/tos-maliva-avt-0068/07cd8fcda630bb29e5a1464938959f14~tplv-tiktokx-cropcenter:300:300.jpeg",
+      "countryCode": "US",
+      "creatorRank": 2,
+      "followedCnt": 29439,
+      "handleName": "top_funny133",
+      "nickname": "Top_Funny",
+      "ttUID": "7679102861963559950"
+     },
+     {
+      "aioCreatorID": "7351230578718408746",
+      "avatarURL": "https://p16-common-sign.tiktokcdn.com/tos-maliva-avt-0068/a4935685edfa3cd80b7aae490465bf05~tplv-tiktokx-cropcenter:300:300.jpeg",
+      "countryCode": "US",
+      "creatorRank": 3,
+      "followedCnt": 1901305,
+      "handleName": "anna..papalia",
+      "nickname": "Anna Papalia",
+      "ttUID": "7015010520479007749"
+     }
+    ],
+    "vv": 16829338
+   },
+   {
+    "hashtagID": "20944135",
+    "hashtagName": "amazonprimeday",
+    "industryIDs": [
+     14000000000
+    ],
+    "popularityCurve": [
+     {
+      "timestamp": "1791072000",
+      "value": 19.883152173074162
+     },
+     {
+      "timestamp": "1791158400",
+      "value": 45.45736512980211
+     },
+     {
+      "timestamp": "1791244800",
+      "value": 98.26626916754807
+     },
+     {
+      "timestamp": "1791331200",
+      "value": 100
+     },
+     {
+      "timestamp": "1791417600",
+      "value": 59.10208609216545
+     },
+     {
+      "timestamp": "1791504000",
+      "value": 11.627178828310726
+     },
+     {
+      "timestamp": "1791590400",
+      "value": 0
+     }
+    ],
+    "publishCnt": 4994,
+    "rankIndex": 12,
+    "topCreators": [
+     {
+      "aioCreatorID": "7067280890031767558",
+      "avatarURL": "https://p19-common-sign.tiktokcdn.com/tos-maliva-avt-0068/67de1c1a92c1ab9a2849969ace3cf54a~tplv-tiktokx-cropcenter:300:300.jpeg",
+      "countryCode": "US",
+      "creatorRank": 1,
+      "followedCnt": 142776,
+      "handleName": "kayymrose",
+      "nickname": "KAY ROSE \ud83c\udf39",
+      "ttUID": "6722206211402368005"
+     },
+     {
+      "aioCreatorID": "7232849955780558850",
+      "avatarURL": "https://p16-common-sign.tiktokcdn.com/tos-maliva-avt-0068/0173cddff0f9dc542b4e87205ebcf810~tplv-tiktokx-cropcenter:300:300.jpeg",
+      "countryCode": "US",
+      "creatorRank": 2,
+      "followedCnt": 124637,
+      "handleName": "emmyypetit",
+      "nickname": "emmyypetit | midsize fashion \u2728",
+      "ttUID": "6777038473477440517"
+     },
+     {
+      "aioCreatorID": "7206024530534334465",
+      "avatarURL": "https://p16-common-sign.tiktokcdn.com/tos-maliva-avt-0068/79d0f585d274284725ba5a869b3918b9~tplv-tiktokx-cropcenter:300:300.jpeg",
+      "countryCode": "US",
+      "creatorRank": 3,
+      "followedCnt": 261445,
+      "handleName": "claireastev",
+      "nickname": "Claire Stevenson",
+      "ttUID": "6807552727112418310"
+     }
+    ],
+    "vv": 41206831
+   },
+   {
+    "hashtagID": "1709588026878981",
+    "hashtagName": "ashdykes",
+    "industryIDs": [],
+    "popularityCurve": [
+     {
+      "timestamp": "1791072000",
+      "value": 22.962953544352246
+     },
+     {
+      "timestamp": "1791158400",
+      "value": 49.75132401434975
+     },
+     {
+      "timestamp": "1791244800",
+      "value": 85.65820176065938
+     },
+     {
+      "timestamp": "1791331200",
+      "value": 97.96346483670834
+     },
+     {
+      "timestamp": "1791417600",
+      "value": 100
+     },
+     {
+      "timestamp": "1791504000",
+      "value": 52.86233678499066
+     },
+     {
+      "timestamp": "1791590400",
+      "value": 0
+     }
+    ],
+    "publishCnt": 4361,
+    "rankIndex": 13,
+    "topCreators": [
+     {
+      "aioCreatorID": "7370494623271092267",
+      "avatarURL": "https://p16-common-sign.tiktokcdn.com/tos-maliva-avt-0068/e28e0d5652cb7158cd17ada2ee0ea4c4~tplv-tiktokx-cropcenter:300:300.jpeg",
+      "countryCode": "US",
+      "creatorRank": 1,
+      "followedCnt": 110639,
+      "handleName": "queenmymy649",
+      "nickname": "QueenMyMy | Commentary",
+      "ttUID": "7029159658868196358"
+     },
+     {
+      "aioCreatorID": "",
+      "avatarURL": "https://p16-common-sign.tiktokcdn.com/tos-maliva-avt-0068/e545c8a73c63386cf00d4e304a173c5e~tplv-tiktokx-cropcenter:300:300.jpeg",
+      "countryCode": "US",
+      "creatorRank": 2,
+      "followedCnt": 1107,
+      "handleName": "secretasf06",
+      "nickname": "secretasf06",
+      "ttUID": "7646209651478496270"
+     },
+     {
+      "aioCreatorID": "",
+      "avatarURL": "https://p16-common-sign.tiktokcdn.com/tos-maliva-avt-0068/481793b3fce81e5646d0455fd76f009e~tplv-tiktokx-cropcenter:300:300.jpeg",
+      "countryCode": "US",
+      "creatorRank": 3,
+      "followedCnt": 43885,
+      "handleName": "1jaxblax",
+      "nickname": "Jax Blax",
+      "ttUID": "7275404921745998894"
+     }
+    ],
+    "vv": 162109147
+   },
+   {
+    "hashtagID": "40953",
+    "hashtagName": "blackbarbie",
+    "industryIDs": [
+     23000000000
+    ],
+    "popularityCurve": [
+     {
+      "timestamp": "1791072000",
+      "value": 0
+     },
+     {
+      "timestamp": "1791158400",
+      "value": 81.35301606786533
+     },
+     {
+      "timestamp": "1791244800",
+      "value": 100
+     },
+     {
+      "timestamp": "1791331200",
+      "value": 87.00022959060256
+     },
+     {
+      "timestamp": "1791417600",
+      "value": 33.08640091005645
+     },
+     {
+      "timestamp": "1791504000",
+      "value": 22.848296776917106
+     },
+     {
+      "timestamp": "1791590400",
+      "value": 64.70636915015267
+     }
+    ],
+    "publishCnt": 4004,
+    "rankIndex": 14,
+    "topCreators": [
+     {
+      "aioCreatorID": "",
+      "avatarURL": "https://p16-common-sign.tiktokcdn.com/tos-maliva-avt-0068/7a8617319ecbfc6e159c7efa7395d39d~tplv-tiktokx-cropcenter:300:300.jpeg",
+      "countryCode": "US",
+      "creatorRank": 1,
+      "followedCnt": 3886,
+      "handleName": "swahili_papi",
+      "nickname": "Swahili Papi \ud83e\udd70\ud83c\uddf9\ud83c\uddff",
+      "ttUID": "7002866237249553414"
+     },
+     {
+      "aioCreatorID": "",
+      "avatarURL": "https://p16-common-sign.tiktokcdn.com/tos-maliva-avt-0068/fbac8ae242830b11a8fa349e700c728a~tplv-tiktokx-cropcenter:300:300.jpeg",
+      "countryCode": "US",
+      "creatorRank": 2,
+      "followedCnt": 86,
+      "handleName": "amaiapapaya67",
+      "nickname": "amaiapapaya67",
+      "ttUID": "7333356824130946091"
+     },
+     {
+      "aioCreatorID": "",
+      "avatarURL": "https://p16-common-sign.tiktokcdn.com/tos-maliva-avt-0068/16c4baff943cd6236ab99ee4ec63a347~tplv-tiktokx-cropcenter:300:300.jpeg",
+      "countryCode": "US",
+      "creatorRank": 3,
+      "followedCnt": 560,
+      "handleName": "marisoicarly_",
+      "nickname": "marisoicarly_",
+      "ttUID": "7458055448044110894"
+     }
+    ],
+    "vv": 4523803
+   },
+   {
+    "hashtagID": "20918",
+    "hashtagName": "tiptoeinginmyjordans",
+    "industryIDs": [],
+    "popularityCurve": [
+     {
+      "timestamp": "1791072000",
+      "value": 0
+     },
+     {
+      "timestamp": "1791158400",
+      "value": 34.58366532316966
+     },
+     {
+      "timestamp": "1791244800",
+      "value": 96.8351610890797
+     },
+     {
+      "timestamp": "1791331200",
+      "value": 100
+     },
+     {
+      "timestamp": "1791417600",
+      "value": 99.61604182042687
+     },
+     {
+      "timestamp": "1791504000",
+      "value": 98.5608628175006
+     },
+     {
+      "timestamp": "1791590400",
+      "value": 95.08925293544958
+     }
+    ],
+    "publishCnt": 3714,
+    "rankIndex": 15,
+    "topCreators": [
+     {
+      "aioCreatorID": "7593392527925608503",
+      "avatarURL": "https://p16-common-sign.tiktokcdn.com/tos-maliva-avt-0068/8705ba800318ad676ec55b3134816619~tplv-tiktokx-cropcenter:300:300.jpeg",
+      "countryCode": "US",
+      "creatorRank": 1,
+      "followedCnt": 79904,
+      "handleName": "tip.toe.n.my.jordans",
+      "nickname": "Tiptoe",
+      "ttUID": "7585297133122356237"
+     },
+     {
+      "aioCreatorID": "",
+      "avatarURL": "https://p16-common-sign.tiktokcdn.com/tos-maliva-avt-0068/d09d4548a054bc95eb601bf9a5b798d7~tplv-tiktokx-cropcenter:300:300.jpeg",
+      "countryCode": "US",
+      "creatorRank": 2,
+      "followedCnt": 6742,
+      "handleName": "rainbowsyrupp",
+      "nickname": "RAINBOWSYRUP",
+      "ttUID": "6803060278801875973"
+     },
+     {
+      "aioCreatorID": "",
+      "avatarURL": "https://p16-common-sign.tiktokcdn.com/tos-maliva-avt-0068/596d2a2d8b02b70f7dc3ae4be1a11d6f~tplv-tiktokx-cropcenter:300:300.jpeg",
+      "countryCode": "US",
+      "creatorRank": 3,
+      "followedCnt": 3530,
+      "handleName": "amber_hoglin",
+      "nickname": "Amber \u2606",
+      "ttUID": "6763953765218370566"
+     }
+    ],
+    "vv": 38139200
+   },
+   {
+    "hashtagID": "666981",
+    "hashtagName": "duddy",
+    "industryIDs": [
+     23000000000
+    ],
+    "popularityCurve": [
+     {
+      "timestamp": "1791072000",
+      "value": 3.4278946073608965
+     },
+     {
+      "timestamp": "1791158400",
+      "value": 0
+     },
+     {
+      "timestamp": "1791244800",
+      "value": 48.49478241497337
+     },
+     {
+      "timestamp": "1791331200",
+      "value": 100
+     },
+     {
+      "timestamp": "1791417600",
+      "value": 83.22559487130322
+     },
+     {
+      "timestamp": "1791504000",
+      "value": 61.487487077327216
+     },
+     {
+      "timestamp": "1791590400",
+      "value": 49.8590233526102
+     }
+    ],
+    "publishCnt": 3108,
+    "rankIndex": 16,
+    "topCreators": [
+     {
+      "aioCreatorID": "",
+      "avatarURL": "https://p16-common-sign.tiktokcdn.com/tos-maliva-avt-0068/2563ed7d653eff974d445bbe7ddedfef~tplv-tiktokx-cropcenter:300:300.jpeg",
+      "countryCode": "US",
+      "creatorRank": 1,
+      "followedCnt": 32650,
+      "handleName": ".copyrightcam",
+      "nickname": "\ud835\udcec\ud835\udcea\ud835\udcf6\u2730",
+      "ttUID": "7438241169616389166"
+     },
+     {
+      "aioCreatorID": "",
+      "avatarURL": "https://p16-common-sign.tiktokcdn.com/tos-maliva-avt-0068/ede3cf94aac210a7d5a827987a9f8aed~tplv-tiktokx-cropcenter:300:300.jpeg",
+      "countryCode": "US",
+      "creatorRank": 2,
+      "followedCnt": 37772,
+      "handleName": "vex8749",
+      "nickname": "\ud835\udc15\ud835\udc04\ud835\udc17",
+      "ttUID": "7538251623816463373"
+     },
+     {
+      "aioCreatorID": "",
+      "avatarURL": "https://p16-common-sign.tiktokcdn.com/tos-maliva-avt-0068/da244a1a68a97fdc43d6823469692b5a~tplv-tiktokx-cropcenter:300:300.jpeg",
+      "countryCode": "US",
+      "creatorRank": 3,
+      "followedCnt": 622,
+      "handleName": "cotcz",
+      "nickname": "cotcz",
+      "ttUID": "7635792970424665102"
+     }
+    ],
+    "vv": 43054891
+   },
+   {
+    "hashtagID": "100680",
+    "hashtagName": "carrie",
+    "industryIDs": [
+     23000000000
+    ],
+    "popularityCurve": [
+     {
+      "timestamp": "1791072000",
+      "value": 3.529313916380801
+     },
+     {
+      "timestamp": "1791158400",
+      "value": 0
+     },
+     {
+      "timestamp": "1791244800",
+      "value": 17.418592957475546
+     },
+     {
+      "timestamp": "1791331200",
+      "value": 67.5486427643402
+     },
+     {
+      "timestamp": "1791417600",
+      "value": 95.64148487167711
+     },
+     {
+      "timestamp": "1791504000",
+      "value": 99.16632604273522
+     },
+     {
+      "timestamp": "1791590400",
+      "value": 100
+     }
+    ],
+    "publishCnt": 5432,
+    "rankIndex": 17,
+    "topCreators": [
+     {
+      "aioCreatorID": "7075598772452982790",
+      "avatarURL": "https://p16-common-sign.tiktokcdn.com/tos-maliva-avt-0068/dddc30e4d68ac8a4eecc71ce88a321ea~tplv-tiktokx-cropcenter:300:300.jpeg",
+      "countryCode": "US",
+      "creatorRank": 1,
+      "followedCnt": 467065,
+      "handleName": "bbkiyoshi",
+      "nickname": "brandonkiyoshi",
+      "ttUID": "7047209024699581486"
+     },
+     {
+      "aioCreatorID": "6986737640858976262",
+      "avatarURL": "https://p16-common-sign.tiktokcdn.com/tos-maliva-avt-0068/4fbc809a205d5897c7799ea2c55de398~tplv-tiktokx-cropcenter:300:300.jpeg",
+      "countryCode": "US",
+      "creatorRank": 2,
+      "followedCnt": 869415,
+      "handleName": "thecinematicuniverse",
+      "nickname": "TCU",
+      "ttUID": "6756794747917091845"
+     },
+     {
+      "aioCreatorID": "",
+      "avatarURL": "https://p16-common-sign.tiktokcdn.com/tos-maliva-avt-0068/e516b872a6f2e61d60ca390a2744e059~tplv-tiktokx-cropcenter:300:300.jpeg",
+      "countryCode": "US",
+      "creatorRank": 3,
+      "followedCnt": 42013,
+      "handleName": "xvoeid",
+      "nickname": "Paris \ud83d\udd77\ufe0f",
+      "ttUID": "7119894750081254446"
+     }
+    ],
+    "vv": 118951222
+   },
+   {
+    "hashtagID": "40817",
+    "hashtagName": "argentina",
+    "industryIDs": [
+     28000000000
+    ],
+    "popularityCurve": [
+     {
+      "timestamp": "1791072000",
+      "value": 0
+     },
+     {
+      "timestamp": "1791158400",
+      "value": 10.708955586261638
+     },
+     {
+      "timestamp": "1791244800",
+      "value": 69.36199958163766
+     },
+     {
+      "timestamp": "1791331200",
+      "value": 100
+     },
+     {
+      "timestamp": "1791417600",
+      "value": 34.32651590882804
+     },
+     {
+      "timestamp": "1791504000",
+      "value": 15.427118094804527
+     },
+     {
+      "timestamp": "1791590400",
+      "value": 4.676869393524422
+     }
+    ],
+    "publishCnt": 27001,
+    "rankIndex": 18,
+    "topCreators": [
+     {
+      "aioCreatorID": "7650725328603611150",
+      "avatarURL": "https://p16-common-sign.tiktokcdn.com/tos-maliva-avt-0068/ee60cc06a30b5e04a0317cfeaac7ea27~tplv-tiktokx-cropcenter:300:300.jpeg",
+      "countryCode": "US",
+      "creatorRank": 1,
+      "followedCnt": 551022,
+      "handleName": "alexpts3",
+      "nickname": "\ud83c\udd50.\ud83c\udd5b.\ud83c\udd54.\ud83c\udd67.\ud835\udfcf\ud835\udfce",
+      "ttUID": "7566379883201233934"
+     },
+     {
+      "aioCreatorID": "7519006670630961165",
+      "avatarURL": "https://p16-common-sign.tiktokcdn.com/tos-maliva-avt-0068/1dc5565e6cbdcee2e3dfb70d5710410e~tplv-tiktokx-cropcenter:300:300.jpeg",
+      "countryCode": "US",
+      "creatorRank": 2,
+      "followedCnt": 78462,
+      "handleName": "skyz.x",
+      "nickname": "\ud835\udc12\ud835\udc0a\ud835\udc18\ud835\udc19.\ud835\udc17 \u2122\ufe0f",
+      "ttUID": "6879971436866782214"
+     },
+     {
+      "aioCreatorID": "7506211716700094510",
+      "avatarURL": "https://p16-common-sign.tiktokcdn.com/tos-maliva-avt-0068/165e05aab2b69de0bccd979e681fc0b0~tplv-tiktokx-cropcenter:300:300.jpeg",
+      "countryCode": "US",
+      "creatorRank": 3,
+      "followedCnt": 19330149,
+      "handleName": "espnfc",
+      "nickname": "ESPN FC",
+      "ttUID": "6936635792309076997"
+     }
+    ],
+    "vv": 257746543
+   },
+   {
+    "hashtagID": "7717",
+    "hashtagName": "messi",
+    "industryIDs": [
+     28000000000
+    ],
+    "popularityCurve": [
+     {
+      "timestamp": "1791072000",
+      "value": 0
+     },
+     {
+      "timestamp": "1791158400",
+      "value": 11.541725345594141
+     },
+     {
+      "timestamp": "1791244800",
+      "value": 69.06878618861455
+     },
+     {
+      "timestamp": "1791331200",
+      "value": 100
+     },
+     {
+      "timestamp": "1791417600",
+      "value": 44.886619437284175
+     },
+     {
+      "timestamp": "1791504000",
+      "value": 25.99349374975103
+     },
+     {
+      "timestamp": "1791590400",
+      "value": 15.111120893322457
+     }
+    ],
+    "publishCnt": 64721,
+    "rankIndex": 19,
+    "topCreators": [
+     {
+      "aioCreatorID": "7506211716700094510",
+      "avatarURL": "https://p16-common-sign.tiktokcdn.com/tos-maliva-avt-0068/165e05aab2b69de0bccd979e681fc0b0~tplv-tiktokx-cropcenter:300:300.jpeg",
+      "countryCode": "US",
+      "creatorRank": 1,
+      "followedCnt": 19330149,
+      "handleName": "espnfc",
+      "nickname": "ESPN FC",
+      "ttUID": "6936635792309076997"
+     },
+     {
+      "aioCreatorID": "7650725328603611150",
+      "avatarURL": "https://p16-common-sign.tiktokcdn.com/tos-maliva-avt-0068/ee60cc06a30b5e04a0317cfeaac7ea27~tplv-tiktokx-cropcenter:300:300.jpeg",
+      "countryCode": "US",
+      "creatorRank": 2,
+      "followedCnt": 551022,
+      "handleName": "alexpts3",
+      "nickname": "\ud83c\udd50.\ud83c\udd5b.\ud83c\udd54.\ud83c\udd67.\ud835\udfcf\ud835\udfce",
+      "ttUID": "7566379883201233934"
+     },
+     {
+      "aioCreatorID": "7519006670630961165",
+      "avatarURL": "https://p16-common-sign.tiktokcdn.com/tos-maliva-avt-0068/1dc5565e6cbdcee2e3dfb70d5710410e~tplv-tiktokx-cropcenter:300:300.jpeg",
+      "countryCode": "US",
+      "creatorRank": 3,
+      "followedCnt": 78462,
+      "handleName": "skyz.x",
+      "nickname": "\ud835\udc12\ud835\udc0a\ud835\udc18\ud835\udc19.\ud835\udc17 \u2122\ufe0f",
+      "ttUID": "6879971436866782214"
+     }
+    ],
+    "vv": 436661530
+   },
+   {
+    "hashtagID": "1093970",
+    "hashtagName": "nycc",
+    "industryIDs": [
+     23000000000
+    ],
+    "popularityCurve": [
+     {
+      "timestamp": "1791072000",
+      "value": 0
+     },
+     {
+      "timestamp": "1791158400",
+      "value": 0.3082109678765796
+     },
+     {
+      "timestamp": "1791244800",
+      "value": 4.24974491741151
+     },
+     {
+      "timestamp": "1791331200",
+      "value": 16.442250728987705
+     },
+     {
+      "timestamp": "1791417600",
+      "value": 67.64845233974765
+     },
+     {
+      "timestamp": "1791504000",
+      "value": 99.34657224278128
+     },
+     {
+      "timestamp": "1791590400",
+      "value": 100
+     }
+    ],
+    "publishCnt": 5416,
+    "rankIndex": 20,
+    "topCreators": [
+     {
+      "aioCreatorID": "7521831736695799821",
+      "avatarURL": "https://p16-common-sign.tiktokcdn.com/tos-maliva-avt-0068/4c92acdde3a320da3406a90246a27980~tplv-tiktokx-cropcenter:300:300.jpeg",
+      "countryCode": "US",
+      "creatorRank": 1,
+      "followedCnt": 3955305,
+      "handleName": "crunchyroll",
+      "nickname": "Crunchyroll",
+      "ttUID": "6696537242087261190"
+     },
+     {
+      "aioCreatorID": "",
+      "avatarURL": "https://p16-common-sign.tiktokcdn.com/tos-maliva-avt-0068/6a9926034c4db2669470aeba6af58895~tplv-tiktokx-cropcenter:300:300.jpeg",
+      "countryCode": "US",
+      "creatorRank": 2,
+      "followedCnt": 3740,
+      "handleName": "lazylazylane",
+      "nickname": "Husk | Big Cat | Lane",
+      "ttUID": "7061102595734455342"
+     },
+     {
+      "aioCreatorID": "7512681106886541358",
+      "avatarURL": "https://p16-common-sign.tiktokcdn.com/tos-maliva-avt-0068/18268f8156ffef4e261566ba8fbd9516~tplv-tiktokx-cropcenter:300:300.jpeg",
+      "countryCode": "US",
+      "creatorRank": 3,
+      "followedCnt": 17275034,
+      "handleName": "marvel",
+      "nickname": "Marvel Entertainment",
+      "ttUID": "6857582733233931270"
+     }
+    ],
+    "vv": 30154885
+   }
+  ],
+  "pagination": {
+   "hasMore": true,
+   "limit": 20,
+   "page": 1,
+   "totalCount": 100
+  }
+ },
+ "input": {
+  "country_code": "US",
+  "period": 7,
+  "page": 1,
+  "limit": 20
+ },
+ "provider": "tikhub",
+ "endpoint": "/api/v1/tiktok/ads/get_trends_hashtag_list"
+}

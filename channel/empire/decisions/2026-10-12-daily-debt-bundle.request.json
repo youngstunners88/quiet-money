@@ -1,0 +1,19 @@
+{
+ "state": {
+  "business": "Quiet Money: personal finance education for 18-40 year olds; one-person digital products brand; Gumroad first, Etsy second; educational only, never advice; 30-day refund; no income claims",
+  "shop": "new: no sales, no reviews, no audience data yet",
+  "daily_planner": "printable PDF, 415 pages, Letter and A4, undated; one lesson per day; weeks 14 to 16 teach debt payoff; habit product; test price 17 USD",
+  "debt_payoff_planner": "Excel/Google Sheets spreadsheet, 5 tabs, checked against independent math; calculation product; test price 19 USD",
+  "existing_bundle": "Money Reset Kit = Rat Race Escape Planner (19) + Debt Payoff Planner (19) + Money Reset Printables (9), sold apart 47, bundle test price 28. The Debt Payoff Planner is already inside this kit.",
+  "rules": "a bundle discount may only be advertised if its parts are also listed separately at those prices; a price test needs about 20 views per step; Etsy allows 5 files per listing, 20 MB each, and charges a listing fee per listing",
+  "market_notes_partly_unverified": "top Etsy digital-planner bestsellers are large bundles with hundreds to thousands of reviews at sale prices of about 1 to 3.50 USD; finance is usually one tab inside a general planner; the owner's prices are 5 to 17 times those; a shop with no reviews sells little regardless of cover",
+  "options": {"A": "sell the Daily Planner and the Debt Payoff Planner as two separate products only", "B": "sell one bundle only (Daily Planner + Debt Payoff Planner)", "C": "sell both separately AND list a Daily + Debt bundle next to them"}
+ },
+ "questions": {
+  "structure": {"type": "choice", "instructions": "Which packaging should this brand use for the Daily Planner and the Debt Payoff Planner right now?",
+    "criteria": {"A": "Two separate products only.", "B": "One bundle only.", "C": "Both separately plus a Daily + Debt bundle."}},
+  "overlap": {"type": "noul", "instructions": "Would a new Daily + Debt bundle contain a product that is already inside another existing bundle?"},
+  "has_data": {"type": "noul", "instructions": "Does the shop already have enough sales or audience data to learn something from testing a bundle listing?"},
+  "third_listing_justified": {"type": "noul", "instructions": "Is adding a third listing (a new bundle) justified right now for this shop?"}
+ }
+}

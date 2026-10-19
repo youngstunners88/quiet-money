@@ -68,6 +68,11 @@ CLAIMS = [
     ("debt relief promise", r"\b(?:erase|eliminate|wipe out|get out of|clear|fix)\s+(?:your\s+)?debt\b|\bdebt[- ]free\s+(?:in|by)\b"),
     ("advice claim", r"(?<!not )(?<!no )\bfinancial advice\b"),          # "not financial advice" is the required disclaimer
     ("buy call", r"\byou should (?:buy|invest|sell)\b|\bbuy this\b"),
+    # Added 2026-10-13 from the marketing strategy's compliance lens (Gumroad Terms on unsubstantiated claims and false urgency, FTC on testimonials):
+    ("testimonial", r"\btestimonials?\b|\bcustomers? (?:say|love|rave)\b|\b(?:five|5)[- ]stars?\b|\bas seen (?:on|in)\b|\bthousands of (?:happy )?(?:customers|people|users)\b"),
+    ("false urgency", r"\b(?:only|just)\s+\d+\s+(?:left|spots?|copies)\b|\b(?:ends?|expires?)\s+(?:tonight|soon|at midnight)\b|\blast chance\b|\bhurry\b|\bact now\b|\blimited[- ]time\b|\bcountdown\b|\b\d+\s*(?:hours?|minutes?)\s+left\b"),
+    ("financial freedom", r"\bfinancial(?:ly)?[- ]free(?:dom)?\b"),
+    ("credit score promise", r"\b(?:raise|boost|increase|improve|fix|repair)\s+your\s+credit(?:\s+score)?\b|\b\d{2,3}\s*points?\s+(?:higher|more)\b"),
 ]
 
 

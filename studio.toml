@@ -112,6 +112,10 @@ paused = false                               # or create state/PAUSE ("python -m
 daily_usd = 2.0                              # all desk runs together per UTC day
 per_call_usd = 0.5                           # one run above this is refused unless the caller raises it for that call
 
+[monid]                                      # the data desk (faceless/monid.py): social, search and product data to find what wins; owner approved 2026-10-13
+daily_usd = 1.0                              # all desk runs together per UTC day
+per_call_usd = 0.25                          # one run whose worst case is above this is refused unless the caller raises it for that call
+
 [host]                                       # the recurring front man (faceless/host.py): one face, one voice, once a week
 enabled = true                               # ON since 2026-10-16: the owner asked for the weekly drop from Quinton; one clip a week, Monday
 weekday = 0                                  # Monday
@@ -125,6 +129,8 @@ per_clip_usd = 2.5                           # one clip may cost up to this (See
 backend = "auto"
 jev_model = "jev-latest"
 dry_run = true                               # log Jev answers but act on heuristics until you flip this
+decisions_model = "typesafe/jev-1.13"          # OpenRouter Decisions API (POST /api/alpha/decisions): Jev; pin a build, never an alias. microsoft/microsoft-decision-1 and 17 others work too (faceless-panel)
+decisions_daily_usd = 0.05                   # backend = "openrouter-decisions" opts in (auto never picks it)
 confidence_floor = 0.85
 
 [qa]
@@ -189,10 +195,10 @@ paid_every = 3                               # at most one paid offer in this ma
 shop_urls = {}
 # shop_urls = { "debt-payoff-planner" = "https://youngstunners.gumroad.com/l/debt-payoff-planner" }
 [offer.match]                                # which product follows which series (the first live one that was not the previous paid offer)
-story = ["money-reset-kit"]
+story = ["daily-quiet-money-planner", "money-reset-kit"]   # the planner leads (marketing decision D3, 2026-10-13); it is offered only once its live URL is in shop_urls
 math = ["debt-payoff-planner"]
-psychology = ["money-reset-printables"]
-myth = ["money-reset-kit"]
+psychology = ["daily-quiet-money-planner", "money-reset-printables"]
+myth = ["daily-quiet-money-planner", "money-reset-kit"]
 escape = ["rat-race-escape-planner"]
 playbook = []                                # a how-to always points at the free checklist
 
@@ -349,3 +355,36 @@ description = "Penny the gold coin and the Fee Gremlin act out one calculation o
 pillar = "escape"
 title = "Escape the Rat Race: Passive Income and Financial Freedom Frameworks"
 description = "Proven frameworks for building income beyond a paycheck, with the real numbers and the honest catch for each. No promised income. Educational content, not financial advice."
+
+[planner]                                    # the Daily Planner's picture review (faceless/planner_review.py); a vision model looks at before | after crops of a cleaned picture
+review_model = "anthropic/claude-haiku-5.5"  # through OpenRouter, the same small model the sketch scenes use (about $0.0002 a look); needs OPENROUTER_API_KEY
+daily_usd = 0.10                             # its own cap, below the studio ceiling (a test enforces it)
+per_call_usd = 0.01
+gate_backend = "openrouter-decisions"       # the review gate asks Jev through the OpenRouter Decisions API (only OPENROUTER_API_KEY needed); "" uses [decide] backend
+locate_model = "anthropic/claude-haiku-5.5"  # finds the @handle on a poster (planner_locate.py); the chat router typesafe/jev-router measured worse on this job (see planner_locate.py)
+
+[freeconvert]                                # optional picture-format normaliser for HEIC, TIFF, PSD, AVIF (faceless/freeconvert.py); OFF until FREECONVERT_API_KEY is set
+daily_minutes = 15                           # FreeConvert's free tier is 20 conversion minutes a day and 5 minutes per file; one picture costs about one minute
+per_file_mb = 10
+timeout = 180
+
+[panel]                                      # model panels for decisions (faceless/panel.py): several models answer one brief, a person adjudicates
+daily_usd = 0.10                             # below the studio ceiling (a test enforces it)
+per_call_usd = 0.01
+max_runs = 5
+
+[etsy]                                       # the Etsy rail (faceless/etsy.py); credentials live in the environment and under ~/.config/quiet-money, never here
+redirect_uri = "https://localhost/callback"  # must match the redirect added to the owner's Etsy app
+taxonomy_id = 0                              # the Planners category; 0 = look it up by name on the first draft
+
+[shop]                                       # going live is the owner's yes (CLAUDE.md rule 9). A product is published only when an entry below names its CURRENT catalog price
+# and the rail is true. The owner (or the agent, on the owner's explicit message giving the price) writes it; nothing writes it by itself:
+#   [shop.approved."daily-quiet-money-planner"]
+#   price = 17.0
+#   gumroad = true
+#   etsy = true
+
+# Owner's message of 2026-10-13: "Set the price at $17 ... Lets go with Gumroad." Gumroad only; Etsy stays unapproved.
+[shop.approved."daily-quiet-money-planner"]
+price = 17.0
+gumroad = true
