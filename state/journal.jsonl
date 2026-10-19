@@ -6188,3 +6188,5 @@
 {"ts": "2026-10-19T05:48:42Z", "t": 1792388922.646, "actor": "engine", "type": "MUAPI_RUN", "job": "vibe-2026-10-18-breathe-12", "model": "bytedance-seedream-5.0-pro", "usd": 0.09, "request": "5e94931f-077", "balance": "3.8704"}
 {"ts": "2026-10-19T05:52:10Z", "t": 1792389130.661, "actor": "engine", "type": "MUAPI_RUN", "job": "vibe-2026-10-18-breathe-13", "model": "bytedance-seedream-5.0-pro", "usd": 0.09, "request": "c836c41a-2a5", "balance": "3.7804"}
 {"ts": "2026-10-19T05:55:23Z", "t": 1792389323.161, "actor": "engine", "type": "MUAPI_RUN", "job": "vibe-2026-10-18-breathe-14", "model": "bytedance-seedream-5.0-pro", "usd": 0.09, "request": "17a4d495-fc4", "balance": "3.6904"}
+{"ts": "2026-10-19T09:19:44Z", "t": 1792401584.834, "actor": "engine", "type": "COMPOSIO_SESSION", "user": "quiet-money-studio", "session_hash": "1d1b7ea5"}
+{"ts": "2026-10-19T09:19:49Z", "t": 1792401589.236, "actor": "engine", "type": "DAILY_PLAN", "slots": ["2026-10-19#3", "2026-10-19#4", "2026-10-19#5", "2026-10-20#1", "2026-10-20#2"], "extra": 5, "weights": {"story": 1.0, "math": 1.0, "psychology": 1.0, "myth": 1.0, "playbook": 1.0, "ledger": 1.0, "escape": 1.5}}
