@@ -6495,3 +6495,18 @@
 {"ts": "2026-10-19T10:03:36Z", "t": 1792404216.114, "actor": "engine", "type": "COMPOSIO_SESSION", "user": "quiet-money-studio", "session_hash": "c99b8366"}
 {"ts": "2026-10-19T10:03:36Z", "t": 1792404216.742, "actor": "engine", "type": "COMPOSIO_EXECUTE", "tool": "YOUTUBE_LIST_CHANNELS", "ok": true, "log_id": "log_RoiD84PtQtJ1", "job": "2026-10-09-s7-story-the-mississippi-bubble-and-john"}
 {"ts": "2026-10-19T10:03:38Z", "t": 1792404218.094, "actor": "engine", "type": "COMPOSIO_EXECUTE", "tool": "YOUTUBE_LIST_CHANNELS", "ok": true, "log_id": "log_r5TiW23RP37h", "job": "2026-10-10-s6-math-the-minimum-payment-trap"}
+{"ts": "2026-10-19T11:15:42Z", "t": 1792408542.056, "actor": "engine", "type": "PROVIDER_OK", "capability": "llm", "provider": "gemini", "job": null, "ms": 24039}
+{"ts": "2026-10-19T11:15:53Z", "t": 1792408553.083, "actor": "engine", "type": "SCOUT_TOPUP", "pillar": "story", "added": 5}
+{"ts": "2026-10-19T11:15:59Z", "t": 1792408559.315, "actor": "engine", "type": "PROVIDER_OK", "capability": "llm", "provider": "gemini", "job": null, "ms": 4371}
+{"ts": "2026-10-19T11:16:08Z", "t": 1792408568.505, "actor": "engine", "type": "SCOUT_TOPUP", "pillar": "math", "added": 6}
+{"ts": "2026-10-19T11:16:28Z", "t": 1792408588.675, "actor": "engine", "type": "PROVIDER_OK", "capability": "llm", "provider": "gemini", "job": null, "ms": 18414}
+{"ts": "2026-10-19T11:16:39Z", "t": 1792408599.159, "actor": "engine", "type": "SCOUT_TOPUP", "pillar": "psychology", "added": 6}
+{"ts": "2026-10-19T11:16:55Z", "t": 1792408615.753, "actor": "engine", "type": "PROVIDER_OK", "capability": "llm", "provider": "gemini", "job": null, "ms": 15183}
+{"ts": "2026-10-19T11:17:04Z", "t": 1792408624.71, "actor": "engine", "type": "SCOUT_TOPUP", "pillar": "myth", "added": 5}
+{"ts": "2026-10-19T11:17:12Z", "t": 1792408632.26, "actor": "engine", "type": "PROVIDER_OK", "capability": "llm", "provider": "gemini", "job": null, "ms": 5864}
+{"ts": "2026-10-19T11:17:21Z", "t": 1792408641.739, "actor": "engine", "type": "SCOUT_TOPUP", "pillar": "playbook", "added": 6}
+{"ts": "2026-10-19T11:17:25Z", "t": 1792408645.52, "actor": "engine", "type": "PROVIDER_OK", "capability": "llm", "provider": "gemini", "job": null, "ms": 3774}
+{"ts": "2026-10-19T11:17:33Z", "t": 1792408653.46, "actor": "engine", "type": "SCOUT_TOPUP", "pillar": "ledger", "added": 5}
+{"ts": "2026-10-19T11:17:49Z", "t": 1792408669.452, "actor": "engine", "type": "PROVIDER_OK", "capability": "llm", "provider": "gemini", "job": null, "ms": 13949}
+{"ts": "2026-10-19T11:17:59Z", "t": 1792408679.87, "actor": "engine", "type": "SCOUT_TOPUP", "pillar": "escape", "added": 6}
+{"ts": "2026-10-19T11:18:06Z", "t": 1792408686.793, "actor": "engine", "type": "COMPOSIO_SESSION", "user": "quiet-money-studio", "session_hash": "46c0af7b"}

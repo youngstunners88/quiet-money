@@ -1,4 +1,4 @@
-# Policy watch, 2026-10-12
+# Policy watch, 2026-10-19
 
 Rule sentences saved per page; a change below means a rule moved. Review the diff before the next listing, post run or send.
 
@@ -15,5 +15,5 @@ Rule sentences saved per page; a change below means a rule moved. Review the dif
 | [Fiverr Community Standards](https://help.fiverr.com/hc/en-us/articles/32242973123985-Our-Community-Standards) | unfetchable | 6 | re-fetch another way (last read 2026-10-12) |
 | [FTC CAN-SPAM compliance guide](https://www.ftc.gov/business-guidance/resources/can-spam-act-compliance-guide-business) | unfetchable | 34 | re-fetch another way (last read 2026-10-08) |
 | [Cloudflare Workers AI pricing](https://developers.cloudflare.com/workers-ai/platform/pricing/) | unchanged | 17 |  |
-| [Gemini API pricing](https://ai.google.dev/gemini-api/docs/pricing) | unchanged | 56 |  |
+| [Gemini API pricing](https://ai.google.dev/gemini-api/docs/pricing) | unchanged | 59 |  |
 | [Muapi pricing](https://muapi.ai/docs/pricing) | unchanged | 19 |  |
