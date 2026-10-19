@@ -1,0 +1,94 @@
+{
+  "title": "The Decoy Effect: Why You Buy the Most Expensive Option",
+  "hook_text": "YOU DIDN'T WANT THE LARGE SIZE",
+  "beats": [
+    {
+      "say": "You didn't want the large size until you saw the medium.",
+      "callout": "",
+      "visual": "Cinematic close-up of three dark matte ceramic coffee cups arranged in a row against a moody slate counter, soft dramatic overhead lighting, no people."
+    },
+    {
+      "say": "That middle option wasn't built to sell. It's an engineered trap designed to steal your cash.",
+      "callout": "",
+      "visual": "A silhouette of a person standing at a dimly lit ordering counter, viewed from behind, cinematic shadows and deep depth of field."
+    },
+    {
+      "say": "Psychologists call this the decoy effect, and retailers use it everywhere to quietly dictate your choices.",
+      "callout": "",
+      "visual": "Slow panning shot across an elegant glass restaurant display case illuminated by warm amber accent lighting, mysterious and sleek atmosphere."
+    },
+    {
+      "say": "Imagine a small coffee costs $3, and a large costs $7. Most people pick the $3 cup.",
+      "callout": "$3 VS $7",
+      "visual": "Two paper cups placed apart on a dark rustic wooden table, overhead top-down shot with minimalist composition and dark shadows."
+    },
+    {
+      "say": "Now, the menu adds a medium for $6.50. Suddenly, the $7 large feels like an absolute bargain.",
+      "callout": "THE DECOY",
+      "visual": "A hand places a third cup precisely between the two original cups, cinematic side angle with dramatic rim lighting."
+    },
+    {
+      "say": "But here's the part nobody mentions.",
+      "callout": "",
+      "visual": "Cinematic low-angle shot of an empty polished marble floor in a luxury cafe, deep shadows stretching across the frame."
+    },
+    {
+      "say": "The company never expected anyone to buy that $6.50 medium. It exists purely to frame the large.",
+      "callout": "",
+      "visual": "Extreme close-up of a barista's hands adjusting cups on a dark stainless steel tray, steam rising slowly into ambient light."
+    },
+    {
+      "say": "By comparing $6.50 to $7, your brain forgets you just spent $4 more than you needed.",
+      "callout": "$4 EXTRA DRAIN",
+      "visual": "Cinematic macro shot of dark roasted coffee beans scattering across a black slate surface under moody studio lighting."
+    },
+    {
+      "say": "Small leaks add up fast. A $5/day habit totals $1,825 a year out of your pocket.",
+      "callout": "$1,825 PER YEAR",
+      "visual": "Top-down view of crisp dollar bills stacked neatly beside an empty glass mug on dark walnut wood, moody dramatic lighting."
+    },
+    {
+      "say": "Invested monthly at 8% for 30 years, that money grows to $226,659 instead of vanishing.",
+      "callout": "$226,659 LOST",
+      "visual": "Cinematic wide shot of an empty modern vault door interior with soft golden backlight casting long shadows."
+    },
+    {
+      "say": "STEP ONE to beat it: ignore the middle price entirely and decide your purchase before you order.",
+      "callout": "STEP ONE",
+      "visual": "A person seen from behind sitting calmly at a dark cafe table with just a single small cup, peaceful minimalist aesthetic."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "Cinematic shot of a single dark leather notebook and metallic fountain pen resting on an empty desk in morning light."
+    },
+    {
+      "say": "Because you never really wanted the large size until you saw the medium.",
+      "callout": "",
+      "visual": "Wide cinematic shot of three cups standing together in fading twilight light on an empty counter, echoing the opening shot."
+    }
+  ],
+  "caption": "The middle choice isn't there for you to buy. It's there to make the most expensive option feel cheap.\n\nProtect your money from everyday pricing psychology.",
+  "description": "Learn how the decoy effect manipulates your spending decisions at cafes, restaurants, and online stores. By placing an overpriced middle option, companies trick you into buying the most expensive tier. See how small daily spending traps compound over time and how to avoid them.",
+  "hashtags": [
+    "#moneypsychology",
+    "#quietmoney",
+    "#financialhabits",
+    "#decoyeffect",
+    "#personalfinance"
+  ],
+  "first_comment": "Have you ever upgraded to the large just because the medium was only 50 cents less?",
+  "facts": [
+    {
+      "claim": "A $5/day habit = $1,825/year",
+      "basis": "Standard arithmetic: $5 * 365 = $1,825 per year."
+    },
+    {
+      "claim": "$5/day invested monthly at 8% for 30 years = $226,659",
+      "basis": "Money Fact Sheet calculation: $152.08 monthly equivalent at 8% compounded monthly over 30 years yields $226,659."
+    }
+  ],
+  "source": "llm",
+  "pillar": "psychology",
+  "look": ""
+}

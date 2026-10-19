@@ -1,0 +1,65 @@
+{
+  "id": "2026-10-15-s0-math-the-rule-of-72-time-is-the-hidde",
+  "pillar": "math",
+  "topic": "The Rule of 72: Time Is the Hidden Multiplier",
+  "day": "2026-10-15",
+  "slot": 0,
+  "status": "held",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-15T01:54:47Z",
+      "words": 143
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-15T01:55:57Z",
+      "seconds": 62.84,
+      "provider": "gemini"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-15T01:56:31Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-15T01:58:25Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-15T01:58:25Z",
+      "score": 96
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-15T01:58:25Z"
+    },
+    {
+      "from": "packaged",
+      "to": "held",
+      "ts": "2026-10-15T01:58:25Z"
+    }
+  ],
+  "artifacts": {
+    "title": "The Rule of 72: How Time Multiplies Your Money",
+    "style": "cinematic",
+    "video": "/home/user/quiet-money/production/output/2026-10-15/2026-10-15-s0-math-the-rule-of-72-time-is-the-hidde/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-15/2026-10-15-s0-math-the-rule-of-72-time-is-the-hidde/cover.jpg"
+  },
+  "scores": {
+    "gauntlet": 96,
+    "passed": false
+  },
+  "cost": {
+    "tts:gemini:chars": 778
+  },
+  "notes": [
+    "held for review: first_frame_visible"
+  ]
+}

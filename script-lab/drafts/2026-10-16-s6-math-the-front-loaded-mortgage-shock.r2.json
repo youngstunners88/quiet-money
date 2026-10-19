@@ -1,0 +1,98 @@
+{
+  "title": "The $151,000 Mortgage Shock Explained",
+  "hook_text": "YOU PAY $151K BUT ONLY LOWER DEBT $25K",
+  "beats": [
+    {
+      "say": "You pay $151,000 on a $400,000 home loan, but your debt drops by just $25,500.",
+      "callout": "",
+      "visual": "A cinematic overhead shot of a dark wooden desk with house keys sitting beside a calculator and a fountain pen, moody dramatic side lighting."
+    },
+    {
+      "say": "Here's the exact math behind where your hard earned money actually goes in the first 5 years.",
+      "callout": "",
+      "visual": "A silhouette of a person standing at a high-rise floor-to-ceiling glass window looking out at a dimly lit city skyline at dusk."
+    },
+    {
+      "say": "Imagine buying a $400,000 house with a 30-year fixed mortgage at 6.5% interest.",
+      "callout": "",
+      "visual": "A cinematic low-angle shot of a newly built modern residential suburban house exterior during golden hour, long shadows across the front yard."
+    },
+    {
+      "say": "Your monthly payment for principal and interest comes out to exactly $2,528.",
+      "callout": "$2,528/MONTH",
+      "visual": "Extreme close-up of a hand stamping a dark blue ink stamp onto a thick blank beige paper document on a mahogany desk."
+    },
+    {
+      "say": "You make every payment on time for 5 straight years, totaling $151,000 paid.",
+      "callout": "$151,000 PAID",
+      "visual": "A macro shot of a sleek brass physical calendar flip-desk clock shifting through days, moody shadow cast across dark leather surface."
+    },
+    {
+      "say": "You check your balance expecting a huge dent, but you still owe $374,500.",
+      "callout": "",
+      "visual": "Close-up from behind of a person holding a plain off-white paper statement in hand, sitting in a dimly lit library chair."
+    },
+    {
+      "say": "Out of that $151,000, roughly $25,500 went to principal, while over $126,000 went to interest.",
+      "callout": "$25.5K VS $126K",
+      "visual": "A cinematic split-composition of two stacks of clean dark metal coins on a dark marble table, one tall stack and one very small stack."
+    },
+    {
+      "say": "This isn't an artificial scheme—it's simple mathematics based on your outstanding loan balance.",
+      "callout": "",
+      "visual": "An architect's desk with blueprint rolls, brass compasses, and a vintage magnifying glass under warm desk lamp illumination."
+    },
+    {
+      "say": "Interest is charged on your remaining balance, which is naturally highest at the very start.",
+      "callout": "",
+      "visual": "A moody close-up shot of a balance scale resting on a wooden tabletop, tilting heavily to one side in deep shadows."
+    },
+    {
+      "say": "Because your balance is highest early on, over 83% of your early payments cover interest.",
+      "callout": "83% INTEREST",
+      "visual": "A dark glass hour-glass filled with metallic sand slowly trickling through the narrow middle section in slow motion."
+    },
+    {
+      "say": "Adding small extra principal payments early reduces that base balance, saving tens of thousands later.",
+      "callout": "STEP ONE",
+      "visual": "A person's hands writing with a gold pen on a clean, blank leather journal next to a cup of dark coffee."
+    },
+    {
+      "say": "Knowing how debt works gives you total control over building real property equity.",
+      "callout": "",
+      "visual": "A wide cinematic shot of a person standing atop a stone ridge overlooking a quiet foggy valley at sunrise, shot from behind."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "A slow push-in shot of an elegant dark leather-bound book lying closed on a dark wooden table in a quiet study."
+    }
+  ],
+  "caption": "Where does your mortgage money actually go? Here is the exact 5-year math breakdown.",
+  "description": "Analyzing a $400,000 30-year fixed mortgage at 6.5% interest reveals that early payments primarily cover interest because the starting principal balance is at its highest. Understanding how interest calculations work allows homeowners to strategically pay down principal faster.",
+  "hashtags": [
+    "#mortgage",
+    "#personalfinance",
+    "#realestate",
+    "#moneytips",
+    "#quietmoney"
+  ],
+  "first_comment": "Did you know how much of your early mortgage payment actually goes to interest?",
+  "facts": [
+    {
+      "claim": "On a $400,000 30-year fixed mortgage at 6.5%, monthly payment is $2,528 and total paid over 5 years is roughly $151,000.",
+      "basis": "Standard amortization math: 360 monthly payments of $2,528.27; 60 payments equal $151,696."
+    },
+    {
+      "claim": "After 5 years, roughly $25,500 goes to principal and over $126,000 goes to interest.",
+      "basis": "Standard amortization breakdown: total principal paid in months 1-60 is $25,525; interest paid is $126,171."
+    },
+    {
+      "claim": "Interest is charged on the remaining balance, which is naturally highest at the start of the loan.",
+      "basis": "Standard interest compounding math where monthly interest = (remaining principal * annual rate) / 12."
+    }
+  ],
+  "source": "llm",
+  "pillar": "math",
+  "look": ""
+}

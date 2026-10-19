@@ -1,0 +1,93 @@
+{
+  "title": "Why You Keep Paying for Things You Don't Use",
+  "hook_text": "WHY YOU KEEP WASTING MONEY",
+  "beats": [
+    {
+      "say": "You're quietly paying for an expensive gym you haven't visited in six months.",
+      "callout": "",
+      "visual": "A wide cinematic shot of a dark, empty gym at night, bathed in dramatic overhead spotlighting, bench press and dumbbells casting long shadows."
+    },
+    {
+      "say": "Your brain aggressively defends that wasted monthly charge, but a simple mental shift stops the bleeding today.",
+      "callout": "",
+      "visual": "Back view of a silhouette sitting in a minimalist modern study, looking out across a dimly lit city skyline at dusk."
+    },
+    {
+      "say": "Economists call this behavioral trap the sunk cost fallacy.",
+      "callout": "SUNK COST FALLACY",
+      "visual": "Overhead top-down still of an antique brass balance scale heavily tilted to one side on a dark slate surface, moody museum lighting."
+    },
+    {
+      "say": "A forgotten $15 monthly charge bleeds $1,800 over a decade without adding a cent of value.",
+      "callout": "$1,800 IN 10 YEARS",
+      "visual": "Close-up of a pair of hands holding a dark unbranded debit card at a steep angle over a reclaimed dark oak desk."
+    },
+    {
+      "say": "You keep paying because admitting you won't use it feels like admitting you wasted your signup fee.",
+      "callout": "",
+      "visual": "A silhouette of a figure standing motionless before a large industrial window streaked with heavy rain, cool blue tones."
+    },
+    {
+      "say": "But here's the part nobody mentions about how your brain calculates loss.",
+      "callout": "",
+      "visual": "Macro shot of a lone polished obsidian chess piece standing isolated on a dark marble slab, shallow depth of field."
+    },
+    {
+      "say": "That cash you spent yesterday is already gone, whether you keep paying or cancel the contract right now.",
+      "callout": "PAST VS FUTURE",
+      "visual": "Extreme close-up of a glass hourglass lying horizontally on fine dark basalt sand, its movement halted."
+    },
+    {
+      "say": "People hold tanking investments and untouched gym memberships just to avoid the quiet sting of being wrong.",
+      "callout": "",
+      "visual": "Low-angle shot from behind of an anonymous traveler walking down an empty brutalist concrete corridor into soft morning light."
+    },
+    {
+      "say": "The counter-move is simple: treat every past transaction as entirely dead capital.",
+      "callout": "",
+      "visual": "Close-up of a wooden match glowing with a crisp flame inside a dark room, warm illumination on shadowy hands."
+    },
+    {
+      "say": "Ask only one question: would you buy this service today at full price?",
+      "callout": "STEP ONE",
+      "visual": "A fountain pen uncapped beside a blank, textured linen page on an austere walnut workspace, cinematic side lighting."
+    },
+    {
+      "say": "Redirecting just $100 a month into an index fund at 8% a year builds $58,902 in 20 years.",
+      "callout": "$58,902 IN 20 YEARS",
+      "visual": "Geometric concrete pedestals rising in a clean stair-step pattern, illuminated by warm raking dawn sunlight."
+    },
+    {
+      "say": "Audit your bank statement tonight.",
+      "callout": "STEP TWO",
+      "visual": "A pair of hands neatly closing a dark leather folder on a clean stone desk under a single warm reading lamp."
+    },
+    {
+      "say": "Follow to stop leaking cash on things you don't use, especially that gym you still haven't visited.",
+      "callout": "",
+      "visual": "A calm, wide shot of an empty minimalist room with architectural shadows stretching across polished concrete floors."
+    }
+  ],
+  "caption": "The money you spent yesterday is gone forever. Stop letting dead subscriptions bleed your future. #money #personalfinance #psychology #investing #wealthhabits",
+  "description": "The sunk cost fallacy tricks us into paying for unused subscriptions, empty gym memberships, and losing investments just to avoid admitting a loss. Treating past dollars as dead capital allows you to redirect leaked cash into long-term compounding assets. Audit your recurring expenses and cut what doesn't serve tomorrow.",
+  "hashtags": [
+    "#personalfinance",
+    "#moneytips",
+    "#psychologyofmoney",
+    "#financialfreedom",
+    "#smartmoney"
+  ],
+  "first_comment": "What's one subscription or service you're paying for right now that you haven't touched in months?",
+  "facts": [
+    {
+      "claim": "A forgotten $15 monthly charge costs $1,800 over 10 years.",
+      "basis": "Fact Sheet: A $15/month subscription for 10 years = $1,800."
+    },
+    {
+      "claim": "Investing $100 a month at 8% a year compounds to $58,902 in 20 years.",
+      "basis": "Fact Sheet: $100/month invested for 20 years at 8%/yr (monthly compounding) = $58,902."
+    }
+  ],
+  "source": "llm",
+  "pillar": "psychology"
+}

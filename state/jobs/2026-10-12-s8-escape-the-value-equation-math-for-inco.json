@@ -74,8 +74,9 @@
       "channel_id": "UC9B1QBr3_8Eulok8IdQbCqQ",
       "privacy": "private",
       "post_at": "2026-10-13T18:30:00-04:00",
-      "comment_posted": false,
-      "series": true
+      "comment_posted": true,
+      "series": true,
+      "comment_tries": 1
     }
   },
   "scores": {
@@ -85,5 +86,7 @@
   "cost": {
     "tts:gemini:chars": 1714
   },
-  "notes": []
+  "notes": [
+    "first comment failed: YOUTUBE_POST_COMMENT failed (log log_PN0-Td3TfvT_): \"{\\n  \\\"error\\\": {\\n    \\\"code\\\": 403,\\n    \\\"message\\\": \\\"The reque"
+  ]
 }

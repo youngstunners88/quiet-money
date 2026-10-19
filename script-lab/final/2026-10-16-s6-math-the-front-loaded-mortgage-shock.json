@@ -1,0 +1,84 @@
+{
+  "title": "The Front-Loaded Mortgage Shock",
+  "hook_text": "YOU'RE PAYING THE BANK FIRST",
+  "beats": [
+    {
+      "say": "You just bought a $400,000 home with a 30-year mortgage at 6.5%.",
+      "callout": "",
+      "visual": "A sleek modern house key resting on a dark wood table under warm pendant light, macro shot."
+    },
+    {
+      "say": "It feels like a milestone. But wait until you see where your first payments actually go.",
+      "callout": "THE MATH",
+      "visual": "A black fountain pen resting beside a heavy closed ledger, moody side lighting."
+    },
+    {
+      "say": "Over the first 5 years, you will hand over roughly $150,000 in total monthly payments.",
+      "callout": "$150,000 PAID",
+      "visual": "A stack of hundred-dollar bills tied with a paper band, low key studio lighting."
+    },
+    {
+      "say": "You assume that money builds equity. You assume you own a chunk of your house now.",
+      "callout": "EQUITY ILLUSION",
+      "visual": "A modern architectural model of a house casting a long shadow across a concrete desk."
+    },
+    {
+      "say": "Here's the part nobody mentions. Out of that $150,000, most of it vanishes.",
+      "callout": "THE SHOCK",
+      "visual": "A close-up of a vintage brass desk clock ticking softly in a dimly lit room."
+    },
+    {
+      "say": "After 5 full years of payments, your actual principal balance has barely moved.",
+      "callout": "BARELY MOVED",
+      "visual": "A person's hand in a dark sleeve sliding a heavy metal calculator across a dark desk."
+    },
+    {
+      "say": "You have paid down just $17,000 of the original $400,000 balance.",
+      "callout": "$17,000 VS $400,000",
+      "visual": "A minimalist white ceramic cup of black coffee steaming faintly in a shaft of morning light."
+    },
+    {
+      "say": "Where did the remaining $133,000 go? Straight to bank interest.",
+      "callout": "BANK INTEREST",
+      "visual": "A sleek brass doorknob reflecting a dark hallway, cinematic depth of field."
+    },
+    {
+      "say": "Banks front-load mortgages so they collect their profit before you build any real ownership.",
+      "callout": "",
+      "visual": "An hourglass with fine black sand pouring rapidly through the narrow glass neck."
+    },
+    {
+      "say": "That is the hidden cost of traditional financing that most buyers completely ignore.",
+      "callout": "",
+      "visual": "A closed heavy wooden front door viewed from the inside with light creeping underneath."
+    },
+    {
+      "say": "Now you know how the system works. Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "A silhouette of a person walking down a quiet hallway toward a warm light source."
+    }
+  ],
+  "caption": "Most homeowners have no idea where their early payments actually go. #mortgage #moneytips #personalfinance #housingmarket #debtfree",
+  "description": "Analyzing a $400,000 mortgage at 6.5% reveals the brutal reality of front-loaded interest payments over the first five years.",
+  "hashtags": [
+    "#mortgage",
+    "#moneytips",
+    "#personalfinance",
+    "#housingmarket",
+    "#debtfree"
+  ],
+  "first_comment": "Did you know your principal paydown was this low in the first five years?",
+  "facts": [
+    {
+      "claim": "$400,000 30-year mortgage at 6.5%",
+      "basis": "Standard amortization math for a 30-year fixed loan at 6.5% interest"
+    },
+    {
+      "claim": "First 5 years payments total roughly $150,000 with only $17,000 to principal",
+      "basis": "Standard amortization schedule for a $400k loan at 6.5% results in ~$2,530/month payment where early months are mostly interest"
+    }
+  ],
+  "source": "llm",
+  "pillar": "math",
+  "look": ""
+}

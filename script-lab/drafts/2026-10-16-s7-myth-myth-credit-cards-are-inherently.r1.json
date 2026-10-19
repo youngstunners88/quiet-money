@@ -1,0 +1,80 @@
+{
+  "title": "Why Avoiding Credit Cards Costs You More",
+  "hook_text": "CREDIT CARDS AREN'T WEALTH TRAPS",
+  "beats": [
+    {
+      "say": "Credit cards aren't wealth traps. They're tools designed for people who understand the rules.",
+      "callout": "",
+      "visual": "A sleek dark metal card resting on a clean wooden desk, cinematic overhead lighting, shadows."
+    },
+    {
+      "say": "Most people avoid credit entirely because they fear debt. But that fear comes with a hidden price.",
+      "callout": "THE HIDDEN COST",
+      "visual": "A close-up of a hand sliding a leather wallet into a dark pocket, moody atmospheric lighting."
+    },
+    {
+      "say": "When you pay cash for everything, you lose built-in fraud protection and cash flow float.",
+      "callout": "CASH VS CREDIT",
+      "visual": "A stack of crisp paper currency resting beside a blurred modern terminal, low angle shot."
+    },
+    {
+      "say": "At 24% APR, a $3,000 balance left unpaid drains your cash fast. The math is brutal.",
+      "callout": "$3,000 AT 24%",
+      "visual": "A vintage calculator glowing on a dark office desk, moody shadows, side profile view."
+    },
+    {
+      "say": "Pay only the minimum, and that $3,000 balance takes 183 months to clear. You'll hand over $4,887 in interest.",
+      "callout": "183 MONTHS",
+      "visual": "A close-up of a hand turning the pages of an old ledger book in dim light."
+    },
+    {
+      "say": "That's why banks win when you carry a balance. They rely on your panic and your procrastination.",
+      "callout": "THE BANK WINS",
+      "visual": "A tall glass skyscraper exterior viewed from street level looking straight up into gray clouds."
+    },
+    {
+      "say": "But here's the part nobody mentions. You don't have to play their borrowing game.",
+      "callout": "THE SHIFT",
+      "visual": "A person silhouetted against a tall window, looking out over a quiet city skyline at dusk."
+    },
+    {
+      "say": "Treat every swipe like cash. Pay the full statement balance every single month without fail.",
+      "callout": "STEP ONE",
+      "visual": "A finger tapping a smartphone screen showing a zero balance, warm indoor lamp lighting."
+    },
+    {
+      "say": "That habit flips the system. You collect rewards and fraud protection while paying zero interest.",
+      "callout": "",
+      "visual": "A hand closing a minimalist leather cardholder, crisp shadows, dark minimalist background."
+    },
+    {
+      "say": "Discipline turns a bank's favorite weapon into your personal shield. Master the system.",
+      "callout": "",
+      "visual": "A metal key resting on a dark slate surface, dramatic single-source lighting from the side."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "A calm silhouette walking down a quiet hallway toward a warm light source at the far end."
+    }
+  ],
+  "caption": "The banks want you terrified of credit so they can keep all the upside. Master the tool instead. #creditcards #personalfinance #moneytips #wealthbuilding",
+  "description": "Many avoid credit entirely due to fear of debt, missing out on fraud protection, cash flow float, and structural benefits that reward disciplined users.",
+  "hashtags": [
+    "#creditcards",
+    "#personalfinance",
+    "#moneytips",
+    "#wealthbuilding",
+    "#financialliteracy"
+  ],
+  "first_comment": "Do you pay your credit cards off in full every month?",
+  "facts": [
+    {
+      "claim": "A $3,000 balance at 24% APR paying only the minimum takes 183 months and costs $4,887 in interest.",
+      "basis": "Fact Sheet: $3,000 credit card at 24% APR paying only the minimum (1% + interest, min $25): 183 months (~15 years), $4,887 interest."
+    }
+  ],
+  "source": "llm",
+  "pillar": "myth",
+  "look": ""
+}

@@ -1,0 +1,66 @@
+{
+  "id": "2026-10-18-s0-math-the-credit-card-cashback-illusio",
+  "pillar": "math",
+  "topic": "The Credit Card Cashback Illusion",
+  "day": "2026-10-18",
+  "slot": 0,
+  "status": "held",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-18T09:22:20Z",
+      "words": 180
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-18T09:22:55Z",
+      "seconds": 70.261,
+      "provider": "gemini"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-18T09:23:50Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-18T09:26:29Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-18T09:26:29Z",
+      "score": 97
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-18T09:26:30Z"
+    },
+    {
+      "from": "packaged",
+      "to": "held",
+      "ts": "2026-10-18T09:26:30Z"
+    }
+  ],
+  "artifacts": {
+    "angle": "Compare a 2% cashback reward on a $2,000 monthly spend against carrying a minor $1,500 balance at 22% APR to show how fast interest wipes out rewards.",
+    "title": "The Credit Card Cashback Illusion",
+    "style": "cinematic",
+    "video": "/home/user/quiet-money/production/output/2026-10-18/2026-10-18-s0-math-the-credit-card-cashback-illusio/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-18/2026-10-18-s0-math-the-credit-card-cashback-illusio/cover.jpg"
+  },
+  "scores": {
+    "gauntlet": 97,
+    "passed": false
+  },
+  "cost": {
+    "tts:gemini:chars": 1093
+  },
+  "notes": [
+    "held for review: first_frame_visible"
+  ]
+}

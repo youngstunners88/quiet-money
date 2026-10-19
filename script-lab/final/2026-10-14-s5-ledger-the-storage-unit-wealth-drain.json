@@ -1,0 +1,93 @@
+{
+  "title": "The $18,000 Storage Unit Wealth Drain",
+  "hook_text": "THE $18,000 STORAGE UNIT TRAP",
+  "beats": [
+    {
+      "say": "You're spending $18,000 to store furniture that isn't even worth $1,000.",
+      "callout": "",
+      "visual": "Cinematic low-angle shot of a padlocked roll-up corrugated metal storage door in a dimly lit, long concrete hallway. Harsh overhead fluorescent lighting, atmospheric dust motes."
+    },
+    {
+      "say": "Here's the brutal ledger math that storage companies pray you never sit down and calculate.",
+      "callout": "",
+      "visual": "Overhead close-up shot of hands resting a fountain pen across a blank open grid-lined ledger notebook on a dark rustic wooden desk. Moody directional desk lamp glow."
+    },
+    {
+      "say": "A standard 10-by-10 storage locker costs an average of $150 every single month.",
+      "callout": "$150 / MONTH",
+      "visual": "Close-up macro shot of a heavy brass padlock hanging on a galvanized metal latch of a storage locker. Shallow depth of field, cool industrial shadows."
+    },
+    {
+      "say": "On autopay, it feels invisible, but that's exactly $1,800 leaving your pocket every year.",
+      "callout": "$1,800 / YEAR",
+      "visual": "Side angle view of crisp paper banknotes being set into an open leather wallet. Warm amber desk lighting, deep shadows, cinematic rim light."
+    },
+    {
+      "say": "Leave that metal locker locked for 10 years, and you've burned $18,000 in rent.",
+      "callout": "$18,000 IN RENT",
+      "visual": "A long perspective shot down an endless corridor of identical orange and blue roll-up storage doors under sterile white fluorescent tubes."
+    },
+    {
+      "say": "But here's the part nobody mentions: what are you actually keeping safe inside?",
+      "callout": "",
+      "visual": "A silhouette of a person standing in the entrance of an opened dark storage unit, backlit by harsh corridor light, looking into dusty shadows."
+    },
+    {
+      "say": "An old mattress, holiday decorations, and dated furniture you couldn't sell for $1,000 on Marketplace.",
+      "callout": "$18,000 VS $1,000",
+      "visual": "Interior of a dimly lit storage unit crowded with stacked cardboard boxes, a taped-up mattress, and an old wooden chair draped in plastic sheeting."
+    },
+    {
+      "say": "You're paying an ongoing emotional tax just to avoid making decisions about yesterday's clutter.",
+      "callout": "EMOTIONAL TAX",
+      "visual": "Close-up of a person's hands holding a rusted metal key ring, standing in a dim concrete hallway. Moody film noir lighting, soft focus background."
+    },
+    {
+      "say": "Now consider the opportunity cost of that monthly payment over your working life.",
+      "callout": "",
+      "visual": "Cinematic top-down shot of a fountain pen resting beside neat stacks of brass coins on a vintage wooden tabletop. Dramatic side lighting."
+    },
+    {
+      "say": "If you cut the unit and invested just $100 a month at 8% a year...",
+      "callout": "",
+      "visual": "Close-up of hands drawing a rising line with a black pen on textured off-white grid ledger paper. Warm golden hour light spilling across the desk."
+    },
+    {
+      "say": "...that money compounds to $58,902 over 20 years instead of vanishing into thin air.",
+      "callout": "$58,902 AT 8%",
+      "visual": "Extreme close-up of a fountain pen finishing a line on ledger paper beside crisp stacks of currency. Moody atmospheric desk lighting."
+    },
+    {
+      "say": "Step one is brutal but simple: clean out the unit this weekend and sell the contents.",
+      "callout": "STEP ONE",
+      "visual": "A silhouette of a person loading sealed cardboard boxes into the open trunk of a vehicle in an asphalt parking lot at sunset. Warm golden backlight."
+    },
+    {
+      "say": "Never pay $18,000 to store $1,000 of clutter. Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "A clean, completely empty concrete storage locker with an open door, flooded with clean morning sunlight spilling across the bare floor."
+    }
+  ],
+  "caption": "A $150/month storage unit costs $18,000 over a decade to protect stuff worth $1,000. Do the ledger math.",
+  "description": "Paying $150 a month for a storage unit drains $1,800 a year and $18,000 over ten years, usually to hold depreciating items worth a fraction of the cost. Redirecting that money into compounding assets builds real net worth instead of funding a storage facility.",
+  "hashtags": [
+    "#personalfinance",
+    "#quietmoney",
+    "#financialliteracy",
+    "#moneymindset",
+    "#compoundinterest"
+  ],
+  "first_comment": "How long have you held onto items you haven't opened in over a year?",
+  "facts": [
+    {
+      "claim": "A $150/month storage unit totals $1,800 per year and $18,000 over 10 years.",
+      "basis": "$150 multiplied by 12 months equals $1,800 per year; $1,800 multiplied by 10 years equals $18,000 in rental fees."
+    },
+    {
+      "claim": "Investing $100/month for 20 years at 8%/yr compounded monthly yields $58,902.",
+      "basis": "Standard compound interest formula on monthly deposits of $100 at 8% annual return over 240 months as documented on the Money Fact Sheet."
+    }
+  ],
+  "source": "llm",
+  "pillar": "ledger"
+}

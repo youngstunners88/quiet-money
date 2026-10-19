@@ -1,0 +1,88 @@
+{
+  "id": "2026-10-18-s5-myth-myth-buying-brand-new-items-guar",
+  "pillar": "myth",
+  "topic": "Myth: Buying brand new items guarantees better reliability and value",
+  "day": "2026-10-18",
+  "slot": 5,
+  "status": "published",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-18T09:36:57Z",
+      "words": 194
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-18T09:37:28Z",
+      "seconds": 71.593,
+      "provider": "gemini"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-18T09:37:51Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-18T09:39:45Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-18T09:39:45Z",
+      "score": 95
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-18T09:39:46Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-10-18T09:39:51Z",
+      "local": "2026-10-19T07:30:00-04:00",
+      "youtube": "2026-10-19T07:30:00-04:00"
+    }
+  ],
+  "artifacts": {
+    "angle": "The psychological craving for pristine condition masks the immediate depreciation cliff, whereas buying slightly used assets captures maximum utility with zero upfront loss.",
+    "title": "The Brand-New Trap Nobody Realizes",
+    "style": "cinematic",
+    "video": "/home/user/quiet-money/production/output/2026-10-18/2026-10-18-s5-myth-myth-buying-brand-new-items-guar/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-18/2026-10-18-s5-myth-myth-buying-brand-new-items-guar/cover.jpg",
+    "youtube": {
+      "video_id": "tcgY4ftlF4Y",
+      "channel_id": "UC9B1QBr3_8Eulok8IdQbCqQ",
+      "privacy": "private",
+      "post_at": "2026-10-19T07:30:00-04:00",
+      "comment_posted": false,
+      "series": true
+    },
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-10-19/slot1-myth",
+        "post_at": "2026-10-19T07:30:00-04:00"
+      },
+      "youtube": {
+        "mode": "youtube",
+        "post_at": "2026-10-19T07:30:00-04:00",
+        "video_id": "tcgY4ftlF4Y",
+        "channel_id": "UC9B1QBr3_8Eulok8IdQbCqQ",
+        "privacy": "private"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 95,
+    "passed": true
+  },
+  "cost": {
+    "tts:gemini:chars": 1182
+  },
+  "notes": []
+}

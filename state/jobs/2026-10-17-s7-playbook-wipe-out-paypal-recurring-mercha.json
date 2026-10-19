@@ -1,0 +1,91 @@
+{
+  "id": "2026-10-17-s7-playbook-wipe-out-paypal-recurring-mercha",
+  "pillar": "playbook",
+  "topic": "Wipe Out PayPal Recurring Merchant Billing Authorizations",
+  "day": "2026-10-17",
+  "slot": 7,
+  "status": "published",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-17T09:48:17Z",
+      "words": 186
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-17T09:48:47Z",
+      "seconds": 64.046,
+      "provider": "gemini"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-17T09:49:03Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-17T09:51:31Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-17T09:51:31Z",
+      "score": 98
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-17T09:51:33Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-10-17T09:51:38Z",
+      "local": "2026-10-18T15:00:00-04:00",
+      "youtube": "2026-10-18T15:00:00-04:00"
+    }
+  ],
+  "artifacts": {
+    "angle": "Navigate the hidden PayPal settings menu to revoke automatic vendor permissions.",
+    "title": "How to Kill Hidden PayPal Billing Authorizations",
+    "style": "cinematic",
+    "video": "/home/user/quiet-money/production/output/2026-10-17/2026-10-17-s7-playbook-wipe-out-paypal-recurring-mercha/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-17/2026-10-17-s7-playbook-wipe-out-paypal-recurring-mercha/cover.jpg",
+    "youtube": {
+      "video_id": "NKtw220Fmc8",
+      "channel_id": "UC9B1QBr3_8Eulok8IdQbCqQ",
+      "privacy": "private",
+      "post_at": "2026-10-18T15:00:00-04:00",
+      "comment_posted": false,
+      "series": true,
+      "comment_tries": 1
+    },
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-10-18/slot3-playbook",
+        "post_at": "2026-10-18T15:00:00-04:00"
+      },
+      "youtube": {
+        "mode": "youtube",
+        "post_at": "2026-10-18T15:00:00-04:00",
+        "video_id": "NKtw220Fmc8",
+        "channel_id": "UC9B1QBr3_8Eulok8IdQbCqQ",
+        "privacy": "private"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 98,
+    "passed": true
+  },
+  "cost": {
+    "tts:gemini:chars": 1130
+  },
+  "notes": [
+    "first comment failed: YOUTUBE_POST_COMMENT: YouTube quota used up; it resets at midnight Pacific"
+  ]
+}

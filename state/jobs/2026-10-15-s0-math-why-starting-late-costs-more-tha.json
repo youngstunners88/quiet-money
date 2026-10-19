@@ -1,0 +1,75 @@
+{
+  "id": "2026-10-15-s0-math-why-starting-late-costs-more-tha",
+  "pillar": "math",
+  "topic": "Why Starting Late Costs More Than Starting Small",
+  "day": "2026-10-15",
+  "slot": 0,
+  "status": "published",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-15T02:36:45Z",
+      "words": 170
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-15T02:37:09Z",
+      "seconds": 63.24,
+      "provider": "gemini"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-15T02:37:57Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-15T02:39:55Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-15T02:39:55Z",
+      "score": 99
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-15T02:39:56Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-10-15T02:48:41Z",
+      "manual": true,
+      "forced": false
+    }
+  ],
+  "artifacts": {
+    "title": "Why Starting Late Costs More Than Starting Small",
+    "style": "cinematic",
+    "video": "/home/user/quiet-money/production/output/2026-10-15/2026-10-15-s0-math-why-starting-late-costs-more-tha/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-15/2026-10-15-s0-math-why-starting-late-costs-more-tha/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-10-15/slot1-math",
+        "post_at": "2026-10-15T07:30:00-04:00"
+      },
+      "youtube": {
+        "skipped": "YOUTUBE_LIST_CHANNELS: YouTube quota used up; it resets at midnight Pacific"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 99,
+    "passed": true
+  },
+  "cost": {
+    "tts:gemini:chars": 959
+  },
+  "notes": []
+}

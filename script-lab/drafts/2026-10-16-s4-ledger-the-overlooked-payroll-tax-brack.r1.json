@@ -1,0 +1,84 @@
+{
+  "title": "The Raise Math Nobody Teaches You",
+  "hook_text": "WHY A RAISE FEELS SMALLER",
+  "beats": [
+    {
+      "say": "A bonus can make your paycheck feel surprisingly small, but it's not because you moved into a higher tax bracket.",
+      "callout": "",
+      "visual": "Cinematic shot of a single pen resting on a blank desk, moody low-key studio lighting, shallow depth of field."
+    },
+    {
+      "say": "People think crossing into a higher tax bracket means losing money on your entire salary.",
+      "callout": "TAX BRACKET MYTH",
+      "visual": "Close up of an abstract tax document viewed from a steep angle, blurred out text, cool blue cinematic tones."
+    },
+    {
+      "say": "That is completely false. Marginal brackets only apply to the dollars sitting above that specific income line.",
+      "callout": "STEP ONE",
+      "visual": "Close up of hands shuffling through blank index cards on a dark wooden surface, warm side lighting."
+    },
+    {
+      "say": "Marginal tax brackets mean you always take home more when you earn more, but supplemental withholding on bonuses can temporarily take a bigger bite upfront.",
+      "callout": "SUPPLEMENTAL TAX",
+      "visual": "A sleek modern desk lamp casting a sharp shadow over a blank ledger notebook, cinematic shadows."
+    },
+    {
+      "say": "When your employer pays a bonus, federal rules often mandate a flat twenty-two percent withholding rate.",
+      "callout": "22% FLAT RATE",
+      "visual": "Close up of a calculator screen showing blurred numbers, backlit by soft ambient room light."
+    },
+    {
+      "say": "If that flat rate sits higher than your normal tax bracket, your net payout looks noticeably lighter than expected.",
+      "callout": "WITHHOLDING SHOCK",
+      "visual": "An open calendar book on a dark table, soft morning light filtering through window blinds, quiet mood."
+    },
+    {
+      "say": "You don't lose that money permanently—any over-withholding comes back as a tax refund when you file.",
+      "callout": "STEP TWO",
+      "visual": "Close up of a metal paperclip resting on a clean white sheet of paper, moody overhead lighting."
+    },
+    {
+      "say": "Understanding this cash flow dip stops you from panicking when your annual bonus hits your account.",
+      "callout": "CASH FLOW",
+      "visual": "A dark ceramic coffee cup sitting on a minimalist wooden coaster, steam rising slowly in soft window light."
+    },
+    {
+      "say": "Always check your yearly tax return to ensure your total withholding matches your actual liability.",
+      "callout": "",
+      "visual": "An overhead shot of a closed leather notebook resting on a stark concrete tabletop, dramatic shadows."
+    },
+    {
+      "say": "Mastering the mechanics of your paycheck keeps you in control of your financial growth.",
+      "callout": "",
+      "visual": "A sleek mechanical pencil lying diagonally across a blank sheet of paper, dark moody aesthetic."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "A minimalist dark hallway with a single beam of warm light hitting the polished floor, cinematic framing."
+    }
+  ],
+  "caption": "Ever wonder why your bonus check has way more taxes taken out than your normal salary? It's all about withholding rules, not tax brackets. \n\n#paycheck #taxes #personalfinance #moneymindset #financiallit",
+  "description": "Learn the exact mechanics behind payroll tax withholding on bonuses and raises. Understand why net pay drops temporarily and how tax refunds fix the gap.",
+  "hashtags": [
+    "#paycheck",
+    "#taxes",
+    "#personalfinance",
+    "#moneymindset",
+    "#financiallit"
+  ],
+  "first_comment": "Did your last bonus surprise you with how much was withheld?",
+  "facts": [
+    {
+      "claim": "Marginal tax brackets apply only to dollars crossing the threshold",
+      "basis": "Standard progressive tax system mechanics"
+    },
+    {
+      "claim": "Supplemental withholding on bonuses uses a flat rate",
+      "basis": "IRS payroll withholding guidelines for supplemental wages"
+    }
+  ],
+  "source": "llm",
+  "pillar": "ledger",
+  "look": ""
+}

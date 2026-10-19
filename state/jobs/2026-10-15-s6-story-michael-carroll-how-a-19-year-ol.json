@@ -1,0 +1,76 @@
+{
+  "id": "2026-10-15-s6-story-michael-carroll-how-a-19-year-ol",
+  "pillar": "story",
+  "topic": "Michael Carroll: How a 19-Year-Old Blew £9.7 Million in Under a Decade",
+  "day": "2026-10-15",
+  "slot": 6,
+  "status": "published",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-15T09:35:49Z",
+      "words": 185
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-15T09:36:12Z",
+      "seconds": 68.645,
+      "provider": "gemini"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-15T09:37:32Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-15T09:39:38Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-15T09:39:38Z",
+      "score": 98
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-15T09:39:38Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-10-15T09:39:40Z",
+      "local": "2026-10-16T11:30:00-04:00",
+      "youtube": null
+    }
+  ],
+  "artifacts": {
+    "angle": "The velocity of money works in reverse when capital arrives before financial discipline, social boundaries, and emotional maturity are built.",
+    "title": "How a 19-Year-Old Blew £9.7 Million in 8 Years",
+    "style": "cinematic",
+    "video": "/home/user/quiet-money/production/output/2026-10-15/2026-10-15-s6-story-michael-carroll-how-a-19-year-ol/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-15/2026-10-15-s6-story-michael-carroll-how-a-19-year-ol/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-10-16/slot2-story",
+        "post_at": "2026-10-16T11:30:00-04:00"
+      },
+      "youtube": {
+        "skipped": "YouTube refused the upload session (HTTP 429): quota or rate limit; it resets at midnight Pacific"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 98,
+    "passed": true
+  },
+  "cost": {
+    "tts:gemini:chars": 1158
+  },
+  "notes": []
+}

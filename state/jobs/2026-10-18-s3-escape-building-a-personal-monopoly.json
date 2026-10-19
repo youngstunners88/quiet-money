@@ -1,0 +1,88 @@
+{
+  "id": "2026-10-18-s3-escape-building-a-personal-monopoly",
+  "pillar": "escape",
+  "topic": "Building a Personal Monopoly",
+  "day": "2026-10-18",
+  "slot": 3,
+  "status": "published",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-18T09:27:11Z",
+      "words": 180
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-18T09:27:38Z",
+      "seconds": 66.715,
+      "provider": "gemini"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-18T09:28:30Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-18T09:31:06Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-18T09:31:06Z",
+      "score": 99
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-18T09:31:07Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-10-18T09:31:14Z",
+      "local": "2026-10-18T18:30:00-04:00",
+      "youtube": "2026-10-18T18:30:00-04:00"
+    }
+  ],
+  "artifacts": {
+    "angle": "Combining distinct skills to eliminate competition and dictate your own economic terms.",
+    "title": "How to Build a Personal Monopoly",
+    "style": "cinematic",
+    "video": "/home/user/quiet-money/production/output/2026-10-18/2026-10-18-s3-escape-building-a-personal-monopoly/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-18/2026-10-18-s3-escape-building-a-personal-monopoly/cover.jpg",
+    "youtube": {
+      "video_id": "4PpabKYLxy8",
+      "channel_id": "UC9B1QBr3_8Eulok8IdQbCqQ",
+      "privacy": "private",
+      "post_at": "2026-10-18T18:30:00-04:00",
+      "comment_posted": false,
+      "series": true
+    },
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-10-18/slot4-escape",
+        "post_at": "2026-10-18T18:30:00-04:00"
+      },
+      "youtube": {
+        "mode": "youtube",
+        "post_at": "2026-10-18T18:30:00-04:00",
+        "video_id": "4PpabKYLxy8",
+        "channel_id": "UC9B1QBr3_8Eulok8IdQbCqQ",
+        "privacy": "private"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 99,
+    "passed": true
+  },
+  "cost": {
+    "tts:gemini:chars": 1111
+  },
+  "notes": []
+}

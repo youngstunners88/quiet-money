@@ -1,0 +1,84 @@
+{
+  "title": "The $180 Stock That Became $7 Million",
+  "hook_text": "$180 BECAME $7 MILLION WITHOUT SELLING",
+  "beats": [
+    {
+      "say": "She bought 3 shares of stock for $180 in 1935 and never sold a single one.",
+      "callout": "",
+      "visual": "Vintage 1930s paper stock certificate lying on a polished wooden desk, warm cinematic side lighting, shallow depth of field."
+    },
+    {
+      "say": "Her name was Grace Groner. She worked as a quiet secretary for decades.",
+      "callout": "",
+      "visual": "A silhouette of a woman sitting at a mid-century wooden office desk with a classic typewriter, moody dramatic backlighting."
+    },
+    {
+      "say": "She didn't time the market or chase hot trends. She just stayed put.",
+      "callout": "TIME VS TIMING",
+      "visual": "A vintage mechanical desk clock ticking against a dark, moody background, cinematic shadows, slow motion close up."
+    },
+    {
+      "say": "Every time the company paid dividends, she didn't cash them out to spend.",
+      "callout": "",
+      "visual": "A stack of traditional paper envelopes on a clean wooden table, soft morning window light, high contrast."
+    },
+    {
+      "say": "She rolled every single payment right back into buying more shares of stock.",
+      "callout": "STEP ONE",
+      "visual": "Close up of hands pouring coins into a heavy glass jar, dark moody lighting, sharp focus."
+    },
+    {
+      "say": "Decades passed. Markets crashed and recovered. Grace just kept doing the exact same thing.",
+      "callout": "",
+      "visual": "A tall glass skyscraper viewed from street level looking straight up against a dramatic overcast sky, cinematic wide shot."
+    },
+    {
+      "say": "But here's the part nobody mentions about how her tiny account exploded.",
+      "callout": "",
+      "visual": "A vintage brass desk lamp illuminating a blank leather-bound ledger, moody shadows, cinematic macro shot."
+    },
+    {
+      "say": "She didn't need a Wall Street degree or complicated trades to build a fortune.",
+      "callout": "",
+      "visual": "An old brass fountain pen resting on a dark wooden table, dramatic overhead lighting, no text visible."
+    },
+    {
+      "say": "By the time she passed away, those 3 shares had multiplied into $7 million.",
+      "callout": "$180 VS $7M",
+      "visual": "A sleek modern metal safe door slightly ajar with warm golden light spilling out onto a dark floor, cinematic."
+    },
+    {
+      "say": "Extreme patience beats hyperactive trading every single time you invest your money.",
+      "callout": "",
+      "visual": "A single green plant stem growing through a crack in aged concrete, dramatic natural sunlight, slow pan."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "A calm, dark minimalist room with a single sliver of warm light cutting across the wall, cinematic ending shot."
+    }
+  ],
+  "caption": "Grace Groner turned a tiny $180 investment into $7 million by doing absolutely nothing except letting dividends compound for decades. Extreme patience always beats constant trading. Follow for the money rules school never taught you. #moneypsychology #investing101 #wealthbuilding #personalfinance #smartmoney",
+  "description": "The true story of Grace Groner, who turned $180 into $7 million through decades of dividend reinvestment and radical patience.",
+  "hashtags": [
+    "#moneypsychology",
+    "#investing101",
+    "#wealthbuilding",
+    "#personalfinance",
+    "#smartmoney"
+  ],
+  "first_comment": "What's the longest you've ever held an investment without selling?",
+  "facts": [
+    {
+      "claim": "Grace Groner bought 3 shares of Abbott Laboratories for $180 in 1935.",
+      "basis": "Well-documented historical biography of Grace Groner's estate donation to Lake Forest College."
+    },
+    {
+      "claim": "Her estate was worth approximately $7 million when she passed away.",
+      "basis": "Public probate and college endowment records following her death in 2010."
+    }
+  ],
+  "source": "llm",
+  "pillar": "story",
+  "look": ""
+}

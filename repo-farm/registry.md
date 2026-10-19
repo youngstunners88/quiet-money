@@ -248,6 +248,11 @@ Each row was read from the project's own README, manifest, licence file or regis
 |---|---|---|
 | Etsy official MCP (mcp.api.etsycloud.com/mcp) | sell | Hosted by Etsy (etsycloud.com is Etsy's). |
 
+
+## Intake 2026-10-14 (verified from dossiers in `repo-farm/intake/2026-10-14/`)
+
+Each row was read from the project's own README, manifest, licence file or registry entry; nothing was installed or run. Stars and dates were unavailable where the GitHub API is closed to this machine.
+
 ### Parked (named condition)
 
 | Tool | Stage | Why |
@@ -271,3 +276,16 @@ Each row was read from the project's own README, manifest, licence file or regis
 | cli-anything-tinyfish | none | Third-party wrapper over a vendor we already reach through its official MCP and key. |
 | opencode-firecrawl | none | Plugin for the OpenCode agent, which we do not run. |
 | LiquidAI system-one-arcade (HuggingFace space) | none | A demo space. |
+| SLM Agent (scaledown-team/SLM_Agent, npm @scaledown/migration-agent) | none | It is not a Claude Code token saver. |
+
+## Intake 2026-10-16 (verified from dossiers in `repo-farm/intake/2026-10-16/`)
+
+Each row was read from the project's own README, manifest, licence file or registry entry; nothing was installed or run. Stars and dates were unavailable where the GitHub API is closed to this machine.
+
+### Parked (named condition)
+
+| Tool | Stage | Why |
+|---|---|---|
+| Podcastfy (souzatharsis/podcastfy) | script | Apache-2.0. |
+| Local Deep Research (LearningCircuit/local-deep-research) | ideate | MIT. |
+| OpenCreator, formerly KrillinAI (krillinai/OpenCreator) | render | Apache-2.0. |

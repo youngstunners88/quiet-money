@@ -1,0 +1,90 @@
+{
+  "title": "Drop Your Grocery Bill by 20% Today",
+  "hook_text": "SUPERMARKETS TRICK YOU ON EVERY TAG",
+  "beats": [
+    {
+      "say": "Supermarkets design price tags so you accidentally buy the more expensive item every week.",
+      "callout": "",
+      "visual": "Cinematic macro shot of grocery store shelf labels receding into soft shadow, moody lighting, shallow depth of field."
+    },
+    {
+      "say": "Here's how three quick checks can drop your grocery total by 20% starting today.",
+      "callout": "",
+      "visual": "Overhead tracking shot of a matte black shopping cart rolling down an empty supermarket aisle, dramatic side lighting."
+    },
+    {
+      "say": "Step one. Ignore the big bold price printed in the center of the tag completely.",
+      "callout": "STEP ONE",
+      "visual": "A person's hand reaching past a shelf label toward a plain cardboard box, dim atmospheric retail lighting."
+    },
+    {
+      "say": "That number tells you what you pay, but it doesn't reveal the real value.",
+      "callout": "",
+      "visual": "Low-angle shot looking up at tall metal supermarket shelving towers vanishing into ambient haze."
+    },
+    {
+      "say": "Step two. Look directly at the bottom left corner for the tiny unit price.",
+      "callout": "STEP TWO",
+      "visual": "Extreme close-up of a shelf bracket edge at a sharp tilt with blurred printing, soft rim light."
+    },
+    {
+      "say": "That shows the exact cost per ounce, pound, or count across every competing brand.",
+      "callout": "",
+      "visual": "Two unbranded packaging containers placed side by side on a clean counter under focused spotlight."
+    },
+    {
+      "say": "But here's the trap nobody mentions about large bulk packaging.",
+      "callout": "",
+      "visual": "Silhouette of a shopper seen from behind standing motionless in front of towering warehouse pallets, backlit."
+    },
+    {
+      "say": "The family size box isn't always cheaper than two smaller boxes sitting beside it.",
+      "callout": "BULK VS SMALL",
+      "visual": "Top-down view of one large kraft box sitting next to two smaller identical boxes on a dark slate surface."
+    },
+    {
+      "say": "Step three. Pull out your phone calculator whenever two brands use mismatched measurement units.",
+      "callout": "STEP THREE",
+      "visual": "Over-the-shoulder shot of hands holding a dark smartphone angled away from the camera, soft indoor lighting."
+    },
+    {
+      "say": "Divide total cost by ounces so you're comparing identical numbers before items hit your cart.",
+      "callout": "",
+      "visual": "Hands placing paper-wrapped grocery goods into a wire shopping basket, cinematic film grain."
+    },
+    {
+      "say": "Trimming $100 a month invested for 30 years at 8% a year becomes $149,036.",
+      "callout": "$149,036",
+      "visual": "A clean glass jar filled with silver coins on a dark wooden table, single shaft of sunlight across the surface."
+    },
+    {
+      "say": "That single habit ensures you don't leak quiet cash every single time you buy groceries.",
+      "callout": "",
+      "visual": "Sleek modern pantry shelf with neatly arranged minimalist glass jars, calm documentary tone."
+    },
+    {
+      "say": "Follow for the money rules school never taught you, and stop letting stores overcharge you.",
+      "callout": "",
+      "visual": "A lone silhouette walking down a quiet architectural hallway, deep contrast and soft cinematic glow."
+    }
+  ],
+  "caption": "The biggest price on the shelf is designed to fool you. Look at the corner instead.\n\n#money #personalfinance #savingmoney #groceries #quietmoney",
+  "description": "Learn how supermarkets disguise higher prices and how reading unit price tags cuts your grocery bill by 20%. A simple three-step check turns small shelf savings into long-term compounding wealth.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#savingmoney",
+    "#groceries",
+    "#quietmoney"
+  ],
+  "first_comment": "Do you check the unit price or just grab the brand you know?",
+  "facts": [
+    {
+      "claim": "Trimming $100 a month invested for 30 years at 8% a year becomes $149,036.",
+      "basis": "From fact sheet: $100/month invested for 30 years at 8%/yr (monthly compounding) = $149,036 (you put in $36,000)."
+    }
+  ],
+  "source": "llm",
+  "pillar": "playbook",
+  "look": ""
+}

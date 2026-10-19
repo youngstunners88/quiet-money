@@ -1,0 +1,88 @@
+{
+  "id": "2026-10-14-s7-math-the-real-hysa-yield-after-taxes",
+  "pillar": "math",
+  "topic": "The Real HYSA Yield After Taxes and Inflation",
+  "day": "2026-10-14",
+  "slot": 7,
+  "status": "published",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-14T09:38:58Z",
+      "words": 143
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-14T09:39:30Z",
+      "seconds": 63.18,
+      "provider": "gemini"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-14T09:39:44Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-14T09:41:35Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-14T09:41:35Z",
+      "score": 96
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-14T09:41:36Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-10-14T09:41:41Z",
+      "local": "2026-10-15T15:00:00-04:00",
+      "youtube": "2026-10-15T15:00:00-04:00"
+    }
+  ],
+  "artifacts": {
+    "angle": "Calculate the true purchasing power of a $10,000 balance in a 4.5% HYSA after factoring in a 22% income tax rate and 3% inflation.",
+    "title": "The Real HYSA Yield After Taxes and Inflation",
+    "style": "cinematic",
+    "video": "/home/user/quiet-money/production/output/2026-10-14/2026-10-14-s7-math-the-real-hysa-yield-after-taxes/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-14/2026-10-14-s7-math-the-real-hysa-yield-after-taxes/cover.jpg",
+    "youtube": {
+      "video_id": "t82nM8o95wQ",
+      "channel_id": "UC9B1QBr3_8Eulok8IdQbCqQ",
+      "privacy": "private",
+      "post_at": "2026-10-15T15:00:00-04:00",
+      "comment_posted": true,
+      "series": true
+    },
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-10-15/slot3-math",
+        "post_at": "2026-10-15T15:00:00-04:00"
+      },
+      "youtube": {
+        "mode": "youtube",
+        "post_at": "2026-10-15T15:00:00-04:00",
+        "video_id": "t82nM8o95wQ",
+        "channel_id": "UC9B1QBr3_8Eulok8IdQbCqQ",
+        "privacy": "private"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 96,
+    "passed": true
+  },
+  "cost": {
+    "tts:gemini:chars": 825
+  },
+  "notes": []
+}

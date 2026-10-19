@@ -1,0 +1,88 @@
+{
+  "id": "2026-10-14-s4-psychology-sunk-cost-fallacy-why-people-kee",
+  "pillar": "psychology",
+  "topic": "Sunk cost fallacy: why people keep paying for things they don't use",
+  "day": "2026-10-14",
+  "slot": 4,
+  "status": "published",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-14T09:26:19Z",
+      "words": 184
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-14T09:26:31Z",
+      "seconds": 64.595,
+      "provider": "elevenlabs"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-14T09:27:29Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-14T09:29:26Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-14T09:29:26Z",
+      "score": 97
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-14T09:29:26Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-10-14T09:29:32Z",
+      "local": "2026-10-14T21:00:00-04:00",
+      "youtube": "2026-10-14T21:00:00-04:00"
+    }
+  ],
+  "artifacts": {
+    "angle": "gyms, subscriptions, bad investments",
+    "title": "Why You Keep Paying for Things You Don't Use",
+    "style": "cinematic",
+    "video": "/home/user/quiet-money/production/output/2026-10-14/2026-10-14-s4-psychology-sunk-cost-fallacy-why-people-kee/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-14/2026-10-14-s4-psychology-sunk-cost-fallacy-why-people-kee/cover.jpg",
+    "youtube": {
+      "video_id": "C93Ji89b1qk",
+      "channel_id": "UC9B1QBr3_8Eulok8IdQbCqQ",
+      "privacy": "private",
+      "post_at": "2026-10-14T21:00:00-04:00",
+      "comment_posted": true,
+      "series": true
+    },
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-10-14/slot5-psychology",
+        "post_at": "2026-10-14T21:00:00-04:00"
+      },
+      "youtube": {
+        "mode": "youtube",
+        "post_at": "2026-10-14T21:00:00-04:00",
+        "video_id": "C93Ji89b1qk",
+        "channel_id": "UC9B1QBr3_8Eulok8IdQbCqQ",
+        "privacy": "private"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 97,
+    "passed": true
+  },
+  "cost": {
+    "tts:elevenlabs:chars": 1106
+  },
+  "notes": []
+}

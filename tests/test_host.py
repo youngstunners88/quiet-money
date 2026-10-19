@@ -73,8 +73,11 @@ def test_due_is_once_a_week_on_the_weekday_and_only_when_enabled(monkeypatch, tm
     assert not host.due(date(2026, 10, 19))
 
 
-def test_the_shipped_host_is_off_until_the_owner_approves():
-    assert host.config.load()["host"]["enabled"] is False
+def test_the_shipped_host_is_on_only_because_the_owner_asked_for_the_weekly_drop():
+    # the owner switched the weekly drop on 2026-10-16 ("we need the weekly drop from Quinton"); every clip is still registered unapproved
+    # until it has been looked at (next test), and the weekly routine's skill says so
+    cfg = host.config.load()["host"]
+    assert cfg["enabled"] is True and int(cfg["weekday"]) == 0 and float(cfg["per_clip_usd"]) <= 2.5
 
 
 def test_a_registered_host_clip_cannot_be_posted_until_the_owner_approves(monkeypatch, tmp_path):

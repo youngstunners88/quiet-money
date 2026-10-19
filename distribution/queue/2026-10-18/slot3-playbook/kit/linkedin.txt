@@ -1,0 +1,23 @@
+How to Kill Hidden PayPal Billing Authorizations
+
+Audit your paypal recurring charges right now.
+
+When you bought that one-off trial years ago, you likely granted permanent automatic billing authorization. Step one.
+
+Log into PayPal on a web browser, click the gear icon, and choose Account Settings. The phone app hides this menu, so a desktop browser or mobile web view works best.
+
+Step two. Click Money, Banks and Cards on the left, then scroll down to Automatic Payments.
+
+But here's the part nobody mentions. Every vendor you authorized over the years is still active.
+
+You'll likely spot at least one or two recurring charges you forgot about years ago. A $15/month subscription forgotten for 10 years drains $1,800 straight out of your pocket.
+
+Try this: Take 5 minutes to audit this list twice a year to protect your hard-earned cash.
+
+How many active automatic payments did you find sitting in your account?
+
+Free checklist and calculators: https://youngstunners88.github.io/quiet-money/links/?utm_source=linkedin&utm_medium=post&utm_campaign=checklist&utm_content=2026-10-17-s7-playbook-wipe-out-paypal-recurring-mercha&o=checklist
+
+Educational content, not financial advice. Narration and visuals are AI-assisted.
+
+#money #personalfinance #financialtips

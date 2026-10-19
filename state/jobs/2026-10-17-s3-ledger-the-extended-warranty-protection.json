@@ -1,0 +1,66 @@
+{
+  "id": "2026-10-17-s3-ledger-the-extended-warranty-protection",
+  "pillar": "ledger",
+  "topic": "The Extended Warranty Protection Fallacy",
+  "day": "2026-10-17",
+  "slot": 3,
+  "status": "held",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-17T09:20:26Z",
+      "words": 184
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-17T09:20:57Z",
+      "seconds": 70.919,
+      "provider": "gemini"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-17T09:20:57Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-17T09:24:49Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-17T09:24:49Z",
+      "score": 97
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-17T09:24:50Z"
+    },
+    {
+      "from": "packaged",
+      "to": "held",
+      "ts": "2026-10-17T09:24:50Z"
+    }
+  ],
+  "artifacts": {
+    "angle": "Comparing the cumulative cost of store warranties on electronics versus setting that same cash aside in a self-insurance fund.",
+    "title": "The Extended Warranty Protection Fallacy",
+    "style": "ledger",
+    "video": "/home/user/quiet-money/production/output/2026-10-17/2026-10-17-s3-ledger-the-extended-warranty-protection/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-17/2026-10-17-s3-ledger-the-extended-warranty-protection/cover.jpg"
+  },
+  "scores": {
+    "gauntlet": 97,
+    "passed": false
+  },
+  "cost": {
+    "tts:gemini:chars": 1205
+  },
+  "notes": [
+    "held for review: first_frame_visible"
+  ]
+}

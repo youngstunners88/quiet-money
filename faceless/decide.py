@@ -47,6 +47,27 @@ class Decision:
     jev_confidence: float | None = None
 
 
+IMG_MIN, IMG_MAX, IMG_PIXELS = 256, 1568, (78_400, 2_458_624)       # TypeSafe image limits (docs.typesafe.ai/images): never resized for you
+IMAGES_HEADER = {"TypeSafe-Danger-Zone-Images": "true"}              # images and box questions are off by default, per request
+
+
+def prepare_image(path) -> bytes:
+    """PNG bytes of a picture that fits Jev's limits: longest side at most 1568, shortest at least 256, pixels in range."""
+    import io
+
+    from PIL import Image
+    im = Image.open(path).convert("RGB")
+    sc = min(1.0, IMG_MAX / max(im.size))
+    if min(im.size) * sc < IMG_MIN:
+        sc = IMG_MIN / min(im.size)
+    im = im.resize((max(IMG_MIN, round(im.width * sc)), max(IMG_MIN, round(im.height * sc))))
+    while im.width * im.height > IMG_PIXELS[1]:
+        im = im.resize((round(im.width * 0.9), round(im.height * 0.9)))
+    buf = io.BytesIO()
+    im.save(buf, "PNG")
+    return buf.getvalue()
+
+
 def _backend() -> str:
     cfg = config.load()["decide"]
     b = cfg.get("backend", "auto")
@@ -60,7 +81,7 @@ def _backend() -> str:
     return b
 
 
-def _ask_clef(questions: dict[str, Q], state: dict) -> dict:
+def _ask_clef(questions: dict[str, Q], state: dict, images: dict | None = None) -> dict:
     """Cloudflare Clef (open weights, Jev-API compatible) on Workers AI. Counts against the free neuron budget; skipped when it is spent."""
     from faceless.providers import clef
     qs = {}
@@ -72,7 +93,7 @@ def _ask_clef(questions: dict[str, Q], state: dict) -> dict:
         else:
             qs[name] = {"type": "noul", "instructions": q.instructions}
     out = {}
-    for name, a in clef.run(json.dumps(state, default=str), qs).items():
+    for name, a in clef.run(json.dumps(state, default=str), qs, images=list((images or {}).values()) or None).items():
         if "choice" in a:
             out[name] = (a["choice"], a.get("confidence", 0.0))
         elif "score" in a:
@@ -82,7 +103,7 @@ def _ask_clef(questions: dict[str, Q], state: dict) -> dict:
     return out
 
 
-def _ask_laya(questions: dict[str, Q], state: dict) -> dict:
+def _ask_laya(questions: dict[str, Q], state: dict, images: dict | None = None) -> dict:
     """Same questions over HTTP to a self-hosted Laya server. Returns {name: (value, confidence)}."""
     import random
 
@@ -99,7 +120,13 @@ def _ask_laya(questions: dict[str, Q], state: dict) -> dict:
         else:
             qs[name] = {"type": "noul", "instructions": q.instructions}
     headers = {"Authorization": f"Bearer {config.env('LAYA_API_KEY')}"} if config.env("LAYA_API_KEY") else {}
-    r = http().post(url, json={"state": state, "questions": qs}, headers=headers, timeout=30)
+    body = {"state": state, "questions": qs}
+    if images:       # composable images: each is listed once in `assets`, and the state names it by reference
+        import base64
+        body["assets"] = {f"img-{n}": {"type": "image", "format": "png", "data_base64": base64.b64encode(prepare_image(p)).decode()} for n, p in images.items()}
+        body["state"] = {**state, **{n: f"img-{n}" for n in images}}
+        headers = {**headers, **IMAGES_HEADER}
+    r = http().post(url, json=body, headers=headers, timeout=60)
     if r.status_code != 200:
         raise RuntimeError(f"laya {r.status_code}")
     body = r.json()
@@ -152,7 +179,7 @@ def openrouter_decide(model: str, state, questions: dict[str, Q], *, cap_provide
     return {"answers": d.get("answers") or {}, "model": d.get("model", model), "usd": cost}
 
 
-def _ask_openrouter_decisions(questions: dict[str, Q], state: dict) -> dict:
+def _ask_openrouter_decisions(questions: dict[str, Q], state: dict, images: dict | None = None) -> dict:
     """Backend `openrouter-decisions` (alias `jev-openrouter`): Jev, or whichever decision model `[decide] decisions_model` pins, through OpenRouter with only OPENROUTER_API_KEY.
     Returns {name: (value, confidence)}; the confidence is the model's own probability for the answer it picked. Opt in with `backend = "openrouter-decisions"` (auto never picks it)."""
     cfg = config.load()["decide"]
@@ -176,7 +203,16 @@ def _ask_openrouter_decisions(questions: dict[str, Q], state: dict) -> dict:
     return out
 
 
-def _ask_jev(questions: dict[str, Q], state: dict) -> dict:
+def _png_path(path):
+    """A resized copy in the scratch cache (the SDK takes a file path); never overwrites the original."""
+    from pathlib import Path
+    out = Paths.cache / "decide-images" / (Path(path).stem + ".png")
+    out.parent.mkdir(parents=True, exist_ok=True)
+    out.write_bytes(prepare_image(path))
+    return out
+
+
+def _ask_jev(questions: dict[str, Q], state: dict, images: dict | None = None) -> dict:
     from typesafe_sdk import Choice, Noul, Score, TypeSafeClient  # optional dependency
 
     cfg = config.load()["decide"]
@@ -188,8 +224,13 @@ def _ask_jev(questions: dict[str, Q], state: dict) -> dict:
             qs[name] = Score(instructions=q.instructions, criteria=q.levels)
         else:
             qs[name] = Noul(instructions=q.instructions)
+    kw = {}
+    if images:       # the SDK uploads each Image and writes the reference itself; the header turns the feature on
+        from typesafe_sdk import Image
+        state = {**state, **{n: Image(_png_path(p)) for n, p in images.items()}}
+        kw["extra_headers"] = IMAGES_HEADER
     with TypeSafeClient(model=cfg.get("jev_model", "jev-latest")) as client:
-        res = client.system_one(state=state, questions=qs)
+        res = client.system_one(state=state, questions=qs, **kw)
     out = {}
     for name, a in res.answers.items():
         if a.type == "choice":
@@ -203,8 +244,10 @@ def _ask_jev(questions: dict[str, Q], state: dict) -> dict:
     return out
 
 
-def ask(questions: dict[str, Q], state: dict, job: str | None = None, backend: str | None = None) -> dict[str, Decision]:
-    """Ask all questions that share this moment in one call; return validated decisions. `backend` overrides studio.toml for one call (the planner review uses it)."""
+def ask(questions: dict[str, Q], state: dict, job: str | None = None, images: dict | None = None, backend: str | None = None) -> dict[str, Decision]:
+    """Ask all questions that share this moment in one call; return validated decisions. `backend` overrides studio.toml for one call (the planner review uses it).
+    `images` ({name: file path}) puts pictures in the state for the model to look at; the state text names them. Jev 1.14 multimodal is weaker than its text
+    skill, so ask simple yes/no or choice questions about one picture each."""
     cfg = config.load()["decide"]
     backend = backend or _backend()
     floor = cfg.get("confidence_floor", 0.85)
@@ -214,7 +257,7 @@ def ask(questions: dict[str, Q], state: dict, job: str | None = None, backend: s
     if backend in ("jev", "laya", "clef", "openrouter-decisions"):
         t0 = time.time()
         try:
-            answers = {"laya": _ask_laya, "jev": _ask_jev, "clef": _ask_clef, "openrouter-decisions": _ask_openrouter_decisions}[backend](questions, state)
+            answers = {"laya": _ask_laya, "jev": _ask_jev, "clef": _ask_clef, "openrouter-decisions": _ask_openrouter_decisions}[backend](questions, state, images)
         except Exception as e:  # noqa: BLE001 - on any Jev error keep the ordinary route
             events.emit("JEV_ERROR", job=job, backend=backend, error=str(e)[:300])
             answers = {}

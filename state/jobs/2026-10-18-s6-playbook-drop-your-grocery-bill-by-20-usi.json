@@ -1,0 +1,88 @@
+{
+  "id": "2026-10-18-s6-playbook-drop-your-grocery-bill-by-20-usi",
+  "pillar": "playbook",
+  "topic": "Drop Your Grocery Bill by 20% Using the Unit Price Rule",
+  "day": "2026-10-18",
+  "slot": 6,
+  "status": "published",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-18T09:41:03Z",
+      "words": 182
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-18T09:41:28Z",
+      "seconds": 63.205,
+      "provider": "gemini"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-18T09:41:47Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-18T09:43:39Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-18T09:43:39Z",
+      "score": 99
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-18T09:43:40Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-10-18T09:43:45Z",
+      "local": "2026-10-19T11:30:00-04:00",
+      "youtube": "2026-10-19T11:30:00-04:00"
+    }
+  ],
+  "artifacts": {
+    "angle": "Expose the trick on supermarket price tags and how to use unit pricing instantly.",
+    "title": "Drop Your Grocery Bill by 20% Today",
+    "style": "cinematic",
+    "video": "/home/user/quiet-money/production/output/2026-10-18/2026-10-18-s6-playbook-drop-your-grocery-bill-by-20-usi/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-18/2026-10-18-s6-playbook-drop-your-grocery-bill-by-20-usi/cover.jpg",
+    "youtube": {
+      "video_id": "mjhY8lxRJwA",
+      "channel_id": "UC9B1QBr3_8Eulok8IdQbCqQ",
+      "privacy": "private",
+      "post_at": "2026-10-19T11:30:00-04:00",
+      "comment_posted": false,
+      "series": true
+    },
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-10-19/slot2-playbook",
+        "post_at": "2026-10-19T11:30:00-04:00"
+      },
+      "youtube": {
+        "mode": "youtube",
+        "post_at": "2026-10-19T11:30:00-04:00",
+        "video_id": "mjhY8lxRJwA",
+        "channel_id": "UC9B1QBr3_8Eulok8IdQbCqQ",
+        "privacy": "private"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 99,
+    "passed": true
+  },
+  "cost": {
+    "tts:gemini:chars": 1078
+  },
+  "notes": []
+}

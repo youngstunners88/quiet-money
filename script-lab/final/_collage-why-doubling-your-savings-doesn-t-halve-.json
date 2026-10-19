@@ -1,0 +1,112 @@
+{
+ "title": "Why Doubling Your Savings Doesn't Halve the Wait",
+ "hook_text": "DOUBLE MONEY, NOT HALF TIME",
+ "beats": [
+  {
+   "say": "You can invest double the money and still not reach $500,000 in half the time.",
+   "callout": "DOUBLE ≠ HALF",
+   "visual": "Two paper runners stand at a starting line, and a torn-paper finish banner reading $500,000 hangs far ahead."
+  },
+  {
+   "say": "Saver A invests $500 a month, Saver B invests $1,000, both earning 7%.",
+   "callout": "$500 VS $1,000",
+   "visual": "Two paper jars sit side by side. One gets a single coin dropped in, and the other gets two coins."
+  },
+  {
+   "say": "You'd expect B to arrive in half the time, because that's how effort usually works.",
+   "callout": "HALF THE TIME?",
+   "visual": "A paper clock splits neatly down the middle, and a question mark flutters above it."
+  },
+  {
+   "say": "But Saver A reaches $500,000 in 27.6 years, slow, steady, and honestly boring.",
+   "callout": "27.6 YEARS",
+   "visual": "A long strip of torn calendar pages unrolls across the frame toward a small paper flag."
+  },
+  {
+   "say": "Saver B, with double the money, still needs 19.6 years, nowhere near half.",
+   "callout": "19.6 YEARS",
+   "visual": "A second, shorter calendar strip unrolls beside the first and stops well past its halfway mark."
+  },
+  {
+   "say": "Twice the sacrifice, and the finish line barely moves, so what's actually doing the work?",
+   "callout": "WHAT WORKS?",
+   "visual": "A paper magnifying glass slides over the two calendar strips and searches the gap between them."
+  },
+  {
+   "say": "Time is, because growth earns growth, and that snowball only gets heavy late.",
+   "callout": "TIME",
+   "visual": "A paper snowball rolls down a hill, staying small at first and then swelling fast near the bottom."
+  },
+  {
+   "say": "Look at $200 a month at 7% for 30 years, you only pay in $72,000.",
+   "callout": "$72,000 IN",
+   "visual": "Paper bills stack up one by one into a modest, even pile on a paper table."
+  },
+  {
+   "say": "But the account grows to $243,994, and most of it is money you never earned yourself.",
+   "callout": "$243,994",
+   "visual": "The modest pile of bills sprouts paper vines that branch into a towering stack of new coins."
+  },
+  {
+   "say": "Even a $10,000 lump sum at 7% for 30 years only becomes $76,123.",
+   "callout": "$76,123",
+   "visual": "A single fat paper envelope grows slowly into a medium stack beside the much taller vine tower."
+  },
+  {
+   "say": "So the small monthly habit, kept for decades, outgrows the big one-time windfall without luck.",
+   "callout": "HABIT WINS",
+   "visual": "Tiny paper coins drip steadily from a faucet and fill a large paper bucket to the brim."
+  },
+  {
+   "say": "The lesson is not to squeeze harder, it's to give your money more years.",
+   "callout": "MORE YEARS",
+   "visual": "A paper hand gently stretches a calendar strip longer instead of squeezing a paper wallet."
+  },
+  {
+   "say": "Today, pick an amount you can keep forever, even small, and automate it now.",
+   "callout": "AUTOMATE IT",
+   "visual": "A small paper gear clicks into place, and a slow conveyor starts carrying coins into a jar."
+  }
+ ],
+ "caption": "Doubling what you save didn't cut the wait in half. Here's what's really doing the heavy lifting. 🧩",
+ "description": "Two savers aim for $500,000 at 7%. One invests $500 a month and the other invests $1,000. Double the money doesn't mean half the time: 27.6 years vs 19.6 years. Compounding rewards time more than intensity. This is educational content only, not financial advice.",
+ "hashtags": [
+  "#quietmoney",
+  "#compoundinterest",
+  "#moneypsychology",
+  "#personalfinance",
+  "#savingmoney"
+ ],
+ "first_comment": "What's one amount you could automate and never touch for years? Even small counts. 👇",
+ "facts": [
+  {
+   "claim": "$500 a month at 7% reaches $500,000 in 27.6 years",
+   "basis": "$500 a month at 7% reaches $500,000 in 27.6 years"
+  },
+  {
+   "claim": "$1,000 a month at 7% reaches $500,000 in 19.6 years",
+   "basis": "$1,000 a month at 7% reaches $500,000 in 19.6 years"
+  },
+  {
+   "claim": "$200 a month at 7% for 30 years means paying in $72,000",
+   "basis": "$200 a month at 7% for 30 years grows to $243,994; the same $200 a month paid in only totals $72,000"
+  },
+  {
+   "claim": "$200 a month at 7% for 30 years grows to $243,994",
+   "basis": "$200 a month at 7% for 30 years grows to $243,994; the same $200 a month paid in only totals $72,000"
+  },
+  {
+   "claim": "A $10,000 lump sum at 7% for 30 years becomes $76,123",
+   "basis": "$10,000 lump sum at 7% for 30 years grows to $76,123"
+  }
+ ],
+ "source": "opus-collage",
+ "look": "torn-paper collage, hand-cut paper cutouts with drop shadows, visible paper fibre and torn white edges, warm off-white background, black ink, one burnt-orange accent and one teal accent, flat editorial illustration, no photorealism, no text, no letters, no faces",
+ "_gates_failing": [],
+ "_check": {
+  "words": 184,
+  "numbers_not_in_fact_sheet": [],
+  "gates_failing": [],
+  "usd": 0.1337
+ }
+}

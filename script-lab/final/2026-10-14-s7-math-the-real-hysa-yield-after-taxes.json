@@ -1,0 +1,92 @@
+{
+  "title": "The Real HYSA Yield After Taxes and Inflation",
+  "hook_text": "YOUR HIGH-YIELD SAVINGS IS LOSING POWER",
+  "beats": [
+    {
+      "say": "You put $10,000 into a 4.5% high-yield savings account. It feels safe.",
+      "callout": "",
+      "visual": "A crisp $10,000 stack of cash resting on a dark walnut desk under a single overhead spotlight, shallow depth of field."
+    },
+    {
+      "say": "You expect $450 in interest after 1 year. But the math hides a trap.",
+      "callout": "$450 YIELD",
+      "visual": "A sleek digital calculator displaying numbers on a brushed metal surface, shot from a macro perspective with moody shadows."
+    },
+    {
+      "say": "First, the IRS takes its cut. At a 22% tax bracket, you lose $99.",
+      "callout": "22% TAX",
+      "visual": "A fountain pen signing a crisp tax document on a minimalist oak table, side profile, soft evening light."
+    },
+    {
+      "say": "That leaves you with $351 in actual cash gain. Your balance is now $10,351.",
+      "callout": "$10,351 TOTAL",
+      "visual": "A sleek stainless steel bank vault door slightly ajar, casting a long diagonal beam across a dark concrete floor."
+    },
+    {
+      "say": "But here is the part nobody mentions. Inflation is eating your baseline.",
+      "callout": "INFLATION",
+      "visual": "A solitary vintage hourglass sitting on a raw concrete block, fine sand trickling down, high contrast noir style."
+    },
+    {
+      "say": "At 3% inflation, the cost of everything you buy goes up.",
+      "callout": "3% RATE",
+      "visual": "A closed storefront window reflecting a quiet city street at dusk, blurred lights and cool blue color grading."
+    },
+    {
+      "say": "That $10,351 needs significantly more purchasing power just to stay even.",
+      "callout": "",
+      "visual": "A pair of hands wearing a dark wool coat sliding a heavy metal ledger across a dark wooden table."
+    },
+    {
+      "say": "Adjusted for inflation, your real buying power drops below where you started.",
+      "callout": "REAL VALUE",
+      "visual": "A single drop of water landing on a still, dark pool, creating faint concentric ripples under dim lighting."
+    },
+    {
+      "say": "You earned interest on paper, but your actual purchasing power shrank.",
+      "callout": "PAPER GAIN",
+      "visual": "A close-up of a mechanical desk clock ticking, gears in motion, warm amber lighting with deep background blur."
+    },
+    {
+      "say": "Cash in a savings account keeps you safe from drops, not from loss.",
+      "callout": "",
+      "visual": "A heavy steel padlock fastened on a thick chain against a charcoal gray background, cinematic side lighting."
+    },
+    {
+      "say": "Use savings for short-term cash only. Grow long-term wealth elsewhere.",
+      "callout": "",
+      "visual": "A clean architectural blueprint unrolling on a drafting table, minimalist aesthetic, sharp focus on the grid lines."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "A dark silhouette of a person walking away down a narrow urban alleyway, streetlamp glowing softly in the fog."
+    }
+  ],
+  "caption": "The math behind your savings account is harsher than you think. Taxes and inflation take their toll.\n\n#personalfinance #moneytips #savings #inflation #wealthbuilding",
+  "description": "Calculate the true purchasing power of a $10,000 balance in a 4.5% HYSA after factoring in a 22% income tax rate and 3% inflation.",
+  "hashtags": [
+    "#personalfinance",
+    "#moneytips",
+    "#savings",
+    "#inflation",
+    "#wealthbuilding"
+  ],
+  "first_comment": "Did you factor taxes into your savings yield this year?",
+  "facts": [
+    {
+      "claim": "$10,000 at 4.5% yields $450 interest",
+      "basis": "Basic percentage calculation: 10,000 * 0.045 = 450"
+    },
+    {
+      "claim": "22% tax on $450 yields $99 in taxes",
+      "basis": "Basic tax calculation: 450 * 0.22 = 99"
+    },
+    {
+      "claim": "$100 today is worth $55 in buying power after 20 years of 3% inflation",
+      "basis": "Fact sheet benchmark for inflation impact on purchasing power"
+    }
+  ],
+  "source": "llm",
+  "pillar": "math"
+}

@@ -1,0 +1,98 @@
+{
+  "title": "The $180 Stock That Grew to $7 Million",
+  "hook_text": "FROM $180 TO $7 MILLION",
+  "beats": [
+    {
+      "say": "In 1935, an orphaned secretary invested exactly $180 into a single healthcare company.",
+      "callout": "",
+      "visual": "Cinematic close-up of vintage leather gloves placing three folded paper certificates into a dark wooden safe, dramatic low-key lighting."
+    },
+    {
+      "say": "She never added another dollar of principal, yet she passed away with over $7,000,000.",
+      "callout": "$180 TO $7,000,000",
+      "visual": "Overhead birds-eye view of an antique fountain pen resting on a blank desk calendar, harsh shadows across dark mahogany wood."
+    },
+    {
+      "say": "Her name was Grace Groner, and her hands-off strategy quietly outperformed professional Wall Street money managers.",
+      "callout": "",
+      "visual": "Silhouette of a woman standing at a high skyscraper window looking down at a foggy city street below, cool blue morning light."
+    },
+    {
+      "say": "Grace worked at Abbott Laboratories for 43 years, earning an ordinary secretary salary without bonuses.",
+      "callout": "43 YEARS",
+      "visual": "A vintage 1940s manual typewriter on a quiet wooden office desk beside an unlit brass banker lamp, soft dust motes floating in warm light."
+    },
+    {
+      "say": "She lived in a modest one-bedroom cottage, bought secondhand clothes, and walked everywhere instead of owning a car.",
+      "callout": "",
+      "visual": "A small weathered white cottage surrounded by tall trees during autumn, late afternoon amber sunlight reflecting on the window panes."
+    },
+    {
+      "say": "Most people assume she built her fortune solely by living like an extreme penny-pincher.",
+      "callout": "",
+      "visual": "Close-up of a weathered pair of walking shoes sitting neatly on polished wooden floorboards by a closed front door, quiet dramatic lighting."
+    },
+    {
+      "say": "But here's what actually happened: Grace understood the hidden math of automated compounding.",
+      "callout": "DIVIDEND REINVESTMENT",
+      "visual": "A mechanical brass clock mechanism with interlocking gears turning in slow motion, macro lens, dramatic golden rim light."
+    },
+    {
+      "say": "Every single quarter, she took her dividend checks and used them to buy more shares.",
+      "callout": "",
+      "visual": "Hands in soft focus sliding a stack of blank paper slips into a small tin lockbox, muted vintage warm tones."
+    },
+    {
+      "say": "Through deep recessions, market crashes, and wartime panics, she never sold a single share.",
+      "callout": "NEVER SOLD",
+      "visual": "Rain streaming down a dark window pane overlooking a stormy cityscape, reflections of stormy grey clouds and moody cinematic shadows."
+    },
+    {
+      "say": "Over 75 years, regular stock splits and dividend reinvestment grew three shares into more than 100,000.",
+      "callout": "100,000 SHARES",
+      "visual": "A massive ancient oak tree with deep roots spreading through rich dark soil, early morning golden light filtering through heavy green leaves."
+    },
+    {
+      "say": "Hyperactive traders burned fortunes trying to time the market, while her quiet patience beat them all.",
+      "callout": "PATIENCE VS TIMING",
+      "visual": "Blur of busy legs and trench coats rushing through a grand train station concourse, captured with long exposure motion blur."
+    },
+    {
+      "say": "When Grace died at 100, she donated all $7,000,000 to fund scholarships for local students.",
+      "callout": "",
+      "visual": "An empty grand stone collegiate library with rows of long empty wooden study tables under arched gothic windows, soft dust motes in sunbeams."
+    },
+    {
+      "say": "Real wealth doesn't require outsmarting the market. Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "A lone antique brass pocket compass resting on a worn leather journal beside an unlit candle, calm documentary composition, warm cinematic glow."
+    }
+  ],
+  "caption": "Grace Groner turned $180 into $7M by doing almost nothing. Patience always beats hyperactivity.",
+  "description": "In 1935, Grace Groner purchased three shares of Abbott stock for $180 and simply reinvested the dividends for 75 years. Without ever timing the market or buying additional principal, her holding compounded into $7,000,000. True wealth building often comes from extreme patience rather than hyperactive trading.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#compoundinterest",
+    "#investingrules",
+    "#wealthmindset"
+  ],
+  "first_comment": "Could you hold a single investment for 75 years without touching it?",
+  "facts": [
+    {
+      "claim": "Grace Groner purchased 3 shares of Abbott Laboratories stock in 1935 for $180.",
+      "basis": "Historical reporting by Lake Forest College and the Chicago Tribune covering Groner's life and bequest."
+    },
+    {
+      "claim": "The shares grew to over 100,000 shares worth $7 million through dividend reinvestment and stock splits.",
+      "basis": "Official estate records and foundation reports upon her passing in 2010 at age 100."
+    },
+    {
+      "claim": "Grace Groner worked for 43 years as an Abbott secretary and donated her entire $7 million fortune to charity.",
+      "basis": "The Grace Elizabeth Groner Foundation and Lake Forest College scholarship endowment records."
+    }
+  ],
+  "source": "llm",
+  "pillar": "story",
+  "look": ""
+}

@@ -1,0 +1,84 @@
+{
+  "title": "The $226,000 Lottery Ticket Math",
+  "hook_text": "A $5 DAILY SCRATCH-OFF IS A $226,000 MISTAKE",
+  "beats": [
+    {
+      "say": "A $5 daily scratch-off isn't a small habit. It's a massive wealth drain.",
+      "callout": "",
+      "visual": "Close-up of coins dropping onto a dark wooden table, dim moody cinematic lighting."
+    },
+    {
+      "say": "You hand over cash at the counter every single day without thinking twice.",
+      "callout": "",
+      "visual": "A person's hands sliding a wrinkled banknote across a worn counter, viewed from behind."
+    },
+    {
+      "say": "That small daily habit adds up to $1,825 every single year.",
+      "callout": "$1,825/YEAR",
+      "visual": "A stack of cash tied with a dark rubber band resting on concrete, top-down view."
+    },
+    {
+      "say": "But here's the part nobody mentions. You're losing much more than cash.",
+      "callout": "",
+      "visual": "A silhouette of a person standing alone against a vast gray city skyline at dusk."
+    },
+    {
+      "say": "What if you took that exact same amount and invested it instead?",
+      "callout": "",
+      "visual": "A clean empty brokerage app interface glowing faintly on a dark smartphone screen."
+    },
+    {
+      "say": "At an 8% return, that money compounds faster than you think.",
+      "callout": "8% RETURN",
+      "visual": "Macro shot of a vintage mechanical clock gear turning slowly in warm amber light."
+    },
+    {
+      "say": "In 10 years, that routine equals over $26,000 sitting in your account.",
+      "callout": "$26,000",
+      "visual": "A calendar page flipping rapidly in soft focus, minimalist dark studio setting."
+    },
+    {
+      "say": "Push that timeline to 20 years, and the total climbs to $83,000.",
+      "callout": "$83,000",
+      "visual": "An open leather notebook on a dark desk with a pen resting beside blank paper."
+    },
+    {
+      "say": "Let it run for 30 years, and it turns into $226,659.",
+      "callout": "$226,659",
+      "visual": "A digital counter ticking upward on a dark screen, blurred background bokeh."
+    },
+    {
+      "say": "The house always wins the lottery. Make sure you win instead.",
+      "callout": "HOUSE VS YOU",
+      "visual": "A sleek modern metal door slowly closing in a dark hallway, sharp side lighting."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "FOLLOW",
+      "visual": "A glowing minimalist neon arrow pointing downward on a dark textured wall."
+    }
+  ],
+  "caption": "The real cost of a daily lottery habit isn't $5. It's six figures. #money #personalfinance #wealth #investing #math",
+  "description": "Calculate the true opportunity cost of spending $5 a day on lottery tickets over 30 years using compound interest at an 8% market return.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#wealth",
+    "#investing",
+    "#math"
+  ],
+  "first_comment": "How much do you think you spend on small daily habits without realizing it?",
+  "facts": [
+    {
+      "claim": "$5/day habit equals $1,825/year",
+      "basis": "$5 multiplied by 365 days"
+    },
+    {
+      "claim": "$1,825 invested annually at 8% for 30 years equals $226,659",
+      "basis": "Compound interest monthly calculation from the money fact sheet"
+    }
+  ],
+  "source": "llm",
+  "pillar": "math",
+  "look": ""
+}

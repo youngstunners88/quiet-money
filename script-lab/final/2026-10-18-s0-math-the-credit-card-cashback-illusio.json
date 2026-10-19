@@ -1,0 +1,107 @@
+{
+  "title": "The Credit Card Cashback Illusion",
+  "hook_text": "CASHBACK CARDS ARE COSTING YOU",
+  "beats": [
+    {
+      "say": "A 2% cashback credit card can easily cost you hundreds every year.",
+      "callout": "",
+      "visual": "A sleek matte-black payment card lying flat on a dark polished granite surface, bathed in dramatic side lighting with subtle metallic reflections, cinematic moody atmosphere."
+    },
+    {
+      "say": "Here's the exact step-by-step math credit card companies rely on you completely ignoring.",
+      "callout": "",
+      "visual": "Close-up of hands typing numbers into a vintage mechanical calculator on a dark wooden executive desk, soft warm lamp overhead, shot from behind the person."
+    },
+    {
+      "say": "Imagine you put $2,000 every month on a standard 2% cashback card.",
+      "callout": "$2,000/MONTH",
+      "visual": "An elegant leather wallet resting on a marble countertop next to an expensive cup of espresso, shallow depth of field, warm morning light through high windows."
+    },
+    {
+      "say": "You earn $40 back every single month, totaling $480 in annual rewards.",
+      "callout": "+$480 REWARDS",
+      "visual": "Crisp $100 bills neatly stacked inside an open dark leather drawer, rich golden directional light casting deep shadows."
+    },
+    {
+      "say": "That feels like free money landing right back into your bank account.",
+      "callout": "",
+      "visual": "Silhouette of a person looking out of a penthouse window at a foggy city skyline at sunrise, serene and quiet atmosphere."
+    },
+    {
+      "say": "But here's the part nobody mentions about keeping even a small balance.",
+      "callout": "",
+      "visual": "A pair of silver balance scale trays tipping dramatically to one side, dark minimalist backdrop, crisp accent spot lighting."
+    },
+    {
+      "say": "Suppose you carry a minor $1,500 unpaid balance at a normal 22% APR.",
+      "callout": "$1,500 BALANCE",
+      "visual": "Overhead cinematic shot of a dark oak desk with a pen, a glass of water, and an unlit lamp, heavy mood and deep contrast."
+    },
+    {
+      "say": "That $1,500 alone generates $330 in annual interest charges straight to the bank.",
+      "callout": "-$330 INTEREST",
+      "visual": "Close-up of an hourglass with glowing sand slowly falling through the narrow glass center, dark slate background."
+    },
+    {
+      "say": "Worse yet, carrying that balance instantly wipes out your interest-free grace period.",
+      "callout": "",
+      "visual": "A thick vault door looming in the background inside a dim, polished stone hallway, moody cinematic shadows."
+    },
+    {
+      "say": "Now your new $2,000 monthly spending accrues immediate interest, adding $440 more per year.",
+      "callout": "",
+      "visual": "A slow pan down a long corridor in a modern glass office tower at twilight, interior lights casting cold blue patterns."
+    },
+    {
+      "say": "Your total interest bill hits $770, completely destroying your $480 in cash back rewards.",
+      "callout": "$480 VS $770",
+      "visual": "A glowing sparkler fading into smoke against a pitch-black background, slow motion capture, moody high contrast."
+    },
+    {
+      "say": "You didn't make $480, you actually paid the bank $290 for spending your own money.",
+      "callout": "-$290 NET LOSS",
+      "visual": "A single empty leather chair positioned in the middle of a dimly lit high-rise office at night, dramatic rim lighting."
+    },
+    {
+      "say": "Always clear your statement balance in full every month, or don't play their rewards game.",
+      "callout": "",
+      "visual": "Hands closing a dark hardbound notebook on a clean minimalist desk, warm ambient desk light."
+    },
+    {
+      "say": "Follow Quiet Money for the money rules school never taught you.",
+      "callout": "",
+      "visual": "Cinematic low-angle shot of skyscraper glass facades reflecting the morning sun, clean, sharp, aspirational aesthetics."
+    }
+  ],
+  "caption": "The math behind 2% cashback cards isn't what they advertise. Carry a minor balance, and the bank wins every single time.\n\n#money #personalfinance #creditcards #financialliteracy #cashback",
+  "description": "A breakdown of how credit card grace periods work and why carrying a small balance wipes out cashback rewards. Learn the exact math credit card companies use to make money off points.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#creditcards",
+    "#financialliteracy",
+    "#moneymath"
+  ],
+  "first_comment": "Do you pay off your card balance in full every month or keep a balance?",
+  "facts": [
+    {
+      "claim": "2% cashback on $2,000 monthly spend generates $480 per year ($40/month).",
+      "basis": "$2,000 * 0.02 = $40 per month. $40 * 12 months = $480 per year."
+    },
+    {
+      "claim": "Carrying a $1,500 balance at 22% APR costs $330 in annual interest.",
+      "basis": "$1,500 * 0.22 APR = $330 annual interest cost."
+    },
+    {
+      "claim": "Losing the grace period adds $440 in interest on $2,000 monthly spend at 22% APR.",
+      "basis": "Carrying a balance eliminates the grace period, subjecting new average daily spend of $2,000 to 22% APR ($2,000 * 0.22 = $440 annual interest)."
+    },
+    {
+      "claim": "Total interest paid ($770) minus rewards earned ($480) results in a net loss of $290 to the cardholder.",
+      "basis": "$330 + $440 = $770 total interest. $770 interest - $480 rewards = $290 net cost to cardholder."
+    }
+  ],
+  "source": "llm",
+  "pillar": "math",
+  "look": ""
+}

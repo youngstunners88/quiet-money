@@ -1,0 +1,80 @@
+{
+  "title": "Stop the Ghost Subscriptions Draining Your Phone",
+  "hook_text": "YOUR PHONE IS HIDING GHOST CHARGES",
+  "beats": [
+    {
+      "say": "Your phone is quietly bleeding cash every single month on apps you forgot you downloaded.",
+      "callout": "",
+      "visual": "A dark, moody wooden desk with a modern smartphone lying face down under dramatic side lighting."
+    },
+    {
+      "say": "A $15 a month subscription drains $1,800 over 10 years without you noticing a single charge.",
+      "callout": "$1,800 DRAIN",
+      "visual": "Macro shot of a glowing phone screen reflecting abstract blue light in a dark room."
+    },
+    {
+      "say": "That dead weight destroys your cash flow. But here's the fix you can run in under 3 minutes today.",
+      "callout": "THE FIX",
+      "visual": "Close-up of a person's thumb tapping the edge of a sleek black smartphone."
+    },
+    {
+      "say": "Step one. Open your settings app and tap your Apple ID profile at the very top of the screen.",
+      "callout": "STEP ONE",
+      "visual": "A blurred hand holding a phone against a minimalist gray concrete background."
+    },
+    {
+      "say": "If you're on Android, open the Google Play Store and tap your profile icon instead.",
+      "callout": "ANDROID",
+      "visual": "A finger scrolling past blurred app icons on a brightly lit phone screen."
+    },
+    {
+      "say": "Step two. Find the tab labeled subscriptions and tap it to load your active list.",
+      "callout": "STEP TWO",
+      "visual": "An overhead shot of a person sitting at a minimalist desk with a blank notepad and pen."
+    },
+    {
+      "say": "Watch how many dead charges show up right there that you haven't used in months.",
+      "callout": "GHOST SUBS",
+      "visual": "A close-up of a blurred phone screen showing long scrolling lists of text."
+    },
+    {
+      "say": "Step three. Tap any forgotten app and hit cancel subscription immediately to stop the bleed.",
+      "callout": "STEP THREE",
+      "visual": "A thumb pressing firmly against the bottom edge of a minimalist smartphone."
+    },
+    {
+      "say": "That's instant margin recovered in your checking account with zero extra effort.",
+      "callout": "",
+      "visual": "A clean, empty wooden table surface lit by soft natural morning light."
+    },
+    {
+      "say": "Keep that money in your pocket instead of funding developer accounts.",
+      "callout": "",
+      "visual": "A person walking down a quiet concrete hallway with long dramatic shadows."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "A dark screen with a single sharp beam of light cutting across the frame."
+    }
+  ],
+  "caption": "Your phone is hiding ghost charges you forgot about. Wipe them out in three clicks today. #personalfinance #moneymindset #budgeting #wealthbuilding #smartmoney",
+  "description": "Learn how to find and cancel forgotten App Store and Google Play subscriptions in three simple steps to stop invisible drains on your monthly cash flow.",
+  "hashtags": [
+    "#personalfinance",
+    "#moneymindset",
+    "#budgeting",
+    "#wealthbuilding",
+    "#smartmoney"
+  ],
+  "first_comment": "What's the most expensive subscription you accidentally kept paying for?",
+  "facts": [
+    {
+      "claim": "A $15/month subscription for 10 years = $1,800",
+      "basis": "$15 times 12 months times 10 years equals $1,800 total cost."
+    }
+  ],
+  "source": "llm",
+  "pillar": "playbook",
+  "look": ""
+}

@@ -1,0 +1,84 @@
+{
+  "title": "The Raise That Actually Lowered Your Take-Home",
+  "hook_text": "THAT SMALL RAISE JUST COST YOU MONEY",
+  "beats": [
+    {
+      "say": "A minor raise can actually shrink your paycheck if it pushes you past a tax bracket cliff.",
+      "callout": "",
+      "visual": "A cinematic shot of a glowing desk lamp over a dark wooden table in a quiet room, moody shadows."
+    },
+    {
+      "say": "Most people think earning more always means keeping more. But tax mechanics work differently.",
+      "callout": "TAX BRACKET JUMP",
+      "visual": "Close-up of a metallic pen resting beside a blank white ledger sheet, overhead perspective."
+    },
+    {
+      "say": "Here's the part nobody mentions about marginal tax brackets and gross pay bumps.",
+      "callout": "",
+      "visual": "A sleek dark calculator sitting alone on a minimalist concrete countertop, soft morning light."
+    },
+    {
+      "say": "Only the dollars crossing the threshold face the higher rate, not your entire salary.",
+      "callout": "MARGINAL RATES",
+      "visual": "A cup of black coffee casting a long shadow across a dark oak desk, warm tungsten light."
+    },
+    {
+      "say": "Yet performance bonuses often trigger flat withholding spikes that shock your monthly cash flow.",
+      "callout": "",
+      "visual": "A stack of crisp white envelopes on a polished mahogany surface, cinematic depth of field."
+    },
+    {
+      "say": "For instance, a sudden $2,000 cash bonus gets hit with a steep supplemental tax rate right away.",
+      "callout": "$2,000 BONUS",
+      "visual": "A single brass key lying on a textured gray slate tile, minimalist composition, dramatic side light."
+    },
+    {
+      "say": "That means your net take-home from the extra effort drops lower than you expected.",
+      "callout": "",
+      "visual": "A dark hallway with a single overhead light casting a bright circle on the hardwood floor."
+    },
+    {
+      "say": "Smart workers route those extra dollars straight into pre-tax accounts before taxes apply.",
+      "callout": "STEP ONE",
+      "visual": "A heavy glass paperweight holding down the corner of a dark blueprint, low-key lighting."
+    },
+    {
+      "say": "Maxing a traditional 401(k) or health savings account shields that income entirely from the bracket shock.",
+      "callout": "STEP TWO",
+      "visual": "A minimalist black metal desk organizer with clean geometric lines, soft rim lighting."
+    },
+    {
+      "say": "You keep your hard-earned cash working for your future instead of losing it to sudden withholding.",
+      "callout": "",
+      "visual": "A closed leather-bound journal resting on a quiet library table, evening atmosphere."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "A cinematic shot of a dark city skyline at dusk through a clean glass window."
+    }
+  ],
+  "caption": "A small raise or bonus can trigger unexpected payroll tax pain if you don't route it correctly. Take control of your gross pay. #MoneyPsychology #PersonalFinance #TaxTips #SmartMoney #QuietMoney",
+  "description": "Learn how marginal tax rates and supplemental withholding can shrink a minor raise, and how to use pre-tax accounts to shield your income.",
+  "hashtags": [
+    "#MoneyPsychology",
+    "#PersonalFinance",
+    "#TaxTips",
+    "#SmartMoney",
+    "#QuietMoney"
+  ],
+  "first_comment": "Have you ever checked your stub after a bonus to see the actual tax hit?",
+  "facts": [
+    {
+      "claim": "Bonuses are subject to supplemental tax withholding rates.",
+      "basis": "Standard IRS payroll withholding rules for supplemental wages."
+    },
+    {
+      "claim": "Pre-tax accounts lower taxable income.",
+      "basis": "Standard tax mechanics for traditional retirement and health accounts."
+    }
+  ],
+  "source": "llm",
+  "pillar": "ledger",
+  "look": ""
+}

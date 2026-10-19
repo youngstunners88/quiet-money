@@ -1,0 +1,94 @@
+{
+  "title": "The Brand-New Trap Nobody Realizes",
+  "hook_text": "BUYING BRAND NEW IS A TRAP",
+  "beats": [
+    {
+      "say": "Buy anything brand new, and you instantly burn twenty percent of its value.",
+      "callout": "",
+      "visual": "Cinematic macro shot of hands slicing through clear plastic packaging on a matte black box, dim studio lighting, shallow depth of field."
+    },
+    {
+      "say": "Most people call that the price of reliability, but the real math tells a completely different story.",
+      "callout": "",
+      "visual": "Overhead view of mechanical watch gears ticking slowly on dark slate, moody rim lighting, documentary tone."
+    },
+    {
+      "say": "We crave pristine condition because our psychology mistakes untouched packaging for long-term safety and superior value.",
+      "callout": "",
+      "visual": "Silhouette of a customer standing in front of an illuminated glass display pedestal in an empty modern showroom."
+    },
+    {
+      "say": "In reality, that shiny factory seal only gives you a dopamine rush for five minutes.",
+      "callout": "",
+      "visual": "Discarded protective clear film dropping onto a polished concrete floor, dramatic single spotlight, deep shadows."
+    },
+    {
+      "say": "It's the depreciation cliff. The steepest loss always hits between the showroom floor and owner one.",
+      "callout": "DEPRECIATION CLIFF",
+      "visual": "High-angle drone shot of an empty asphalt road plunging sharply downhill into morning fog, desaturated cinematic palette."
+    },
+    {
+      "say": "Here's the part that nobody ever mentions.",
+      "callout": "",
+      "visual": "Close-up of an antique brass balance scale tilting dramatically under moody tungsten rim light."
+    },
+    {
+      "say": "A two-year-old certified item delivers ninety-nine percent of the utility, after someone else ate the massive loss.",
+      "callout": "99% UTILITY",
+      "visual": "Hands in dark sleeves polishing the sleek metallic door panel of a pristine luxury vehicle in a dim garage."
+    },
+    {
+      "say": "Avoiding that brand new markup easily frees up an extra $200 a month in your budget.",
+      "callout": "+$200 / MONTH",
+      "visual": "Top-down shot of an anonymous hand sliding a clean stack of folded currency across a dark wood table."
+    },
+    {
+      "say": "That $200 a month invested for 20 years at 8% a year compounds into $117,804.",
+      "callout": "$117,804 AT 20 YRS",
+      "visual": "Macro view of an old brass compass needle settling steadily on aged parchment, dark academia aesthetic."
+    },
+    {
+      "say": "Keep going for 30 years at 8%: you put in $72,000, and it reaches $298,072.",
+      "callout": "$298,072 AT 30 YRS",
+      "visual": "Backlit silhouette of a classic hourglass with sand steadily flowing through the glass neck against a dark background."
+    },
+    {
+      "say": "The replacement rule's simple: pay strictly for utility, never pay for the temporary thrill of unboxing.",
+      "callout": "UTILITY VS UNBOXING",
+      "visual": "Side profile silhouette of a solitary figure standing calmly before monumental stone architecture at sunrise."
+    },
+    {
+      "say": "Let other people absorb the depreciation hit while you direct that difference into compounding assets.",
+      "callout": "",
+      "visual": "Macro shot of vibrant green moss growing patiently over cracked stone blocks, soft cinematic side light."
+    },
+    {
+      "say": "Follow for the money rules school never taught you, before buying your next brand new item.",
+      "callout": "",
+      "visual": "Rear view silhouette of a solitary person walking down an empty urban boulevard at dusk under glowing streetlights."
+    }
+  ],
+  "caption": "Stop paying a premium just to be the first owner. Let someone else take the depreciation hit.\n#money #personalfinance #wealthbuilding #quietmoney #financialliteracy",
+  "description": "Buying brand-new items gives you a temporary dopamine hit but triggers an immediate depreciation cliff. Here is why buying slightly used captures peak utility while freeing up hundreds to invest.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#wealthbuilding",
+    "#quietmoney",
+    "#financialliteracy"
+  ],
+  "first_comment": "What was the last item you bought brand new that you wish you bought used?",
+  "facts": [
+    {
+      "claim": "$200 a month invested for 20 years at 8% a year compounds into $117,804",
+      "basis": "Fact sheet: $200/month invested for 20 years at 8%/yr (monthly compounding) = $117,804 (you put in $48,000)"
+    },
+    {
+      "claim": "Keep going for 30 years at 8%: you put in $72,000, and it reaches $298,072",
+      "basis": "Fact sheet: $200/month invested for 30 years at 8%/yr (monthly compounding) = $298,072 (you put in $72,000)"
+    }
+  ],
+  "source": "llm",
+  "pillar": "myth",
+  "look": ""
+}

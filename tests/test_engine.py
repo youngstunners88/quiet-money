@@ -1631,3 +1631,75 @@ def test_songpost_uses_sung_lyrics_and_drops_cues():
     ly = songpost.sung_lyrics(pack)
     assert "sung line" in ly and "written line" not in ly and "tape hiss" not in ly and "```" not in ly
     assert "sung line" in songpost.build(pack)["description"]
+
+
+def test_yt_verify_reports_a_spent_quota_plainly(monkeypatch, capsys):
+    import argparse
+
+    from faceless import cli, ytchannel
+    from faceless.providers import ProviderUnavailable
+
+    def spent(videos):
+        raise ProviderUnavailable("YouTube quota used up; it resets at midnight Pacific")
+    monkeypatch.setattr(ytchannel, "verify", spent)
+    assert cli.cmd_yt_verify(argparse.Namespace()) == 1
+    assert "could not run" in capsys.readouterr().out
+
+
+def test_script_look_replaces_the_pillar_style():
+    from faceless.pipeline import script as sc, visuals
+    assert "cinematic" in visuals.build_prompt("a coin", "dark gold")
+    p = visuals.build_prompt("a coin", "dark gold", "torn-paper collage")
+    assert "torn-paper collage" in p and "cinematic" not in p and "dark gold" not in p
+    assert sc.normalize({"beats": [{"say": "x"}], "look": " paper "})["look"] == "paper"
+
+
+def test_decide_images_fit_jev_limits_and_reach_the_sdk(monkeypatch, tmp_path):
+    import sys
+    import types
+
+    from PIL import Image
+
+    from faceless import decide
+    big, small = tmp_path / "big.jpg", tmp_path / "small.png"
+    Image.new("RGB", (4000, 3000), "white").save(big)
+    Image.new("RGB", (100, 80), "white").save(small)
+    for p in (big, small):
+        import io
+        w, h = Image.open(io.BytesIO(decide.prepare_image(p))).size
+        assert decide.IMG_MIN <= min(w, h) and max(w, h) <= decide.IMG_MAX and w * h <= decide.IMG_PIXELS[1] and w * h >= decide.IMG_PIXELS[0]
+    seen = {}
+
+    class Ans:
+        type, choice, confidence = "choice", "yes", 0.99
+
+    class Res:
+        answers = {"q": Ans()}
+        usage = types.SimpleNamespace(input_tokens=1)
+
+    class Client:
+        def __init__(self, **kw): pass
+        def __enter__(self): return self
+        def __exit__(self, *a): return False
+        def system_one(self, state, questions, **kw):
+            seen["state"], seen["kw"] = state, kw
+            return Res()
+    sdk = types.SimpleNamespace(Choice=lambda **k: k, Noul=lambda **k: k, Score=lambda **k: k, TypeSafeClient=Client, Image=lambda p: ("image", str(p)))
+    monkeypatch.setitem(sys.modules, "typesafe_sdk", types.ModuleType("typesafe_sdk"))
+    for k, v in vars(sdk).items():
+        setattr(sys.modules["typesafe_sdk"], k, v)
+    out = decide._ask_jev({"q": decide.Q("choice", "x", "yes", options={"yes": "a", "no": "b"})}, {"t": 1}, {"still": big})
+    assert out["q"] == ("yes", 0.99)
+    assert seen["kw"]["extra_headers"] == {"TypeSafe-Danger-Zone-Images": "true"} and seen["state"]["still"][0] == "image"
+
+
+def test_comics_svg_and_caption_checks():
+    from faceless import comics
+    assert "line" in comics.clean_svg('<g><line x1="0" y1="0" x2="5" y2="5" stroke="#000"/></g>')
+    assert "http" not in comics.clean_svg('<text x="1" y="2" href="http://x">hi</text>')          # unknown attributes are dropped
+    for bad in ('<script>alert(1)</script>', '<rect fill="url(#a)" width="1" height="1"/>'):
+        with pytest.raises(ValueError):
+            comics.clean_svg(bad)
+    assert not comics.caption_problems({"caption": "A funny line about rent that reads well after the picture. Which one are you?"})
+    assert comics.caption_problems({"caption": "short"})
+    assert comics.caption_problems({"caption": "Click https://example.com to get rich guaranteed returns " * 2})

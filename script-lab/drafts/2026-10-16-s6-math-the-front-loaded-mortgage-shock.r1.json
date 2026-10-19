@@ -1,0 +1,85 @@
+{
+  "title": "The Front-Loaded Mortgage Shock",
+  "hook_text": "$150,000 PAID. $17,000 GONE TO PRINCIPAL",
+  "beats": [
+    {
+      "say": "You sign a 30-year mortgage for $400,000 at 6.5%.",
+      "callout": "",
+      "visual": "A person holding a fountain pen over thick white paper on a dark wooden desk, close-up on hands only, moody cinematic lighting."
+    },
+    {
+      "say": "You think your monthly payment splits evenly between the loan and the bank's fee.",
+      "callout": "",
+      "visual": "A sleek silver calculator resting on a minimalist marble kitchen counter, natural side light casting long shadows."
+    },
+    {
+      "say": "It doesn't. Here's the brutal math they hide from you.",
+      "callout": "",
+      "visual": "An empty modern hallway with concrete walls, illuminated by a single overhead pendant light, dramatic perspective lines."
+    },
+    {
+      "say": "After 5 full years of making on-time payments, you've handed over roughly $150,000.",
+      "callout": "$150,000 PAID",
+      "visual": "A stack of thick manila envelopes resting on a dark slate table, shot from a high angle with shallow depth of field."
+    },
+    {
+      "say": "You assume a massive chunk of that cash now belongs to you.",
+      "callout": "",
+      "visual": "A close-up of a brass door key resting on a rustic oak tabletop, soft ambient evening light."
+    },
+    {
+      "say": "You'd be wrong. But here's the part nobody mentions.",
+      "callout": "",
+      "visual": "A glowing digital clock on a bedside table showing late night hours, blurred background in deep shadow."
+    },
+    {
+      "say": "Out of that $150,000, only $17,000 actually paid down the principal balance.",
+      "callout": "$150,000 VS $17,000",
+      "visual": "A digital screen showing a steep downward red line on a dark grid, shot from behind at a sharp angle."
+    },
+    {
+      "say": "The remaining $133,000 vanished straight into bank interest and escrow fees.",
+      "callout": "",
+      "visual": "A brass vault door slightly ajar in a dimly lit concrete room, heavy shadows, cold industrial aesthetic."
+    },
+    {
+      "say": "Banks front-load your amortization schedule so they collect their profits first.",
+      "callout": "",
+      "visual": "A tall glass hourglass with black sand draining rapidly into the bottom bulb, macro lens, dark background."
+    },
+    {
+      "say": "For the first decade, you are basically renting your own home from the lender.",
+      "callout": "",
+      "visual": "A large suburban house seen from the street at dusk, warm interior lights glowing behind drawn blinds."
+    },
+    {
+      "say": "Know the math before you sign the contract.",
+      "callout": "",
+      "visual": "A clean wooden desk with a black coffee mug and a blank leather notebook, top-down minimalist composition."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "A person walking away down a long concrete sidewalk at sunset, long silhouette, calm cinematic mood."
+    }
+  ],
+  "caption": "The brutal math behind a 30-year mortgage that banks never explain. #mortgageloan #personalfinance #moneytips #financialliteracy #debtfree",
+  "description": "An analysis of a $400,000 mortgage at 6.5% reveals how front-loaded interest steals your equity in the first five years.",
+  "hashtags": [
+    "#mortgageloan",
+    "#personalfinance",
+    "#moneytips",
+    "#financialliteracy",
+    "#debtfree"
+  ],
+  "first_comment": "Did you know how little principal you actually pay in the first five years?",
+  "facts": [
+    {
+      "claim": "A 30-year mortgage of $400,000 at 6.5% front-loads interest so that after 5 years and roughly $150,000 in total payments, only about $17,000 goes to principal.",
+      "basis": "Standard loan amortization math for a $400,000 loan at 6.5% interest over 30 years (monthly payment approx $2,528; total 5-year payments approx $151,680, principal paid approx $17,450)."
+    }
+  ],
+  "source": "llm",
+  "pillar": "math",
+  "look": ""
+}
