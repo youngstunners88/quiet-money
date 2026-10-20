@@ -1,0 +1,90 @@
+{
+  "title": "The Silent Wealth Killer of Subscription Bundles",
+  "hook_text": "$50 A MONTH DESTROYS FORTUNES",
+  "beats": [
+    {
+      "say": "That $50 a month you spend on forgotten software and streaming services isn't harmless.",
+      "callout": "",
+      "visual": "A dark wooden desk with a single steaming mug, cinematic side light, shallow depth of field."
+    },
+    {
+      "say": "It's quietly draining thousands of dollars from your future.",
+      "callout": "THE MATH",
+      "visual": "A sleek modern desk clock ticking against a blurred neutral wall, soft morning light."
+    },
+    {
+      "say": "Most people think small recurring charges don't matter at all.",
+      "callout": "",
+      "visual": "A hand sliding a minimalist metal credit card across a smooth marble countertop."
+    },
+    {
+      "say": "They assume a few apps here and there won't change their net worth.",
+      "callout": "ASSET VS LIABILITY",
+      "visual": "A close-up of a closed leather notebook resting on a dark walnut table, dramatic shadows."
+    },
+    {
+      "say": "But here's the part nobody mentions about automatic billing.",
+      "callout": "PATTERN INTERRUPT",
+      "visual": "A close-up of a brass desk lamp casting a warm pool of light on an empty notepad."
+    },
+    {
+      "say": "It bypasses your brain's pain receptors completely.",
+      "callout": "",
+      "visual": "A minimalist ceramic coffee cup resting on a dark concrete surface, moody ambient lighting."
+    },
+    {
+      "say": "You don't feel the sting of handing over cash for value you never use.",
+      "callout": "",
+      "visual": "A pair of hands folding a crisp blank sheet of paper, soft overhead studio lighting."
+    },
+    {
+      "say": "Let's run the exact math on that modest $50 monthly habit.",
+      "callout": "STEP ONE",
+      "visual": "A sleek metal pen resting beside a blank white ledger on a dark oak desk."
+    },
+    {
+      "say": "If you invested that exact $50 a month instead at 8% a year for 20 years...",
+      "callout": "STEP TWO",
+      "visual": "A glass of water reflecting soft window light on a polished wooden dining table."
+    },
+    {
+      "say": "You wouldn't just save a little spare change.",
+      "callout": "",
+      "visual": "A minimalist ceramic planter with a single green leaf against a plain grey concrete wall."
+    },
+    {
+      "say": "That recurring cash drain turns into $42,000 missing from your account.",
+      "callout": "$42,000 TOTAL",
+      "visual": "A warm overhead view of a clean wooden desk with a silver fountain pen."
+    },
+    {
+      "say": "Cut the digital weight today.",
+      "callout": "",
+      "visual": "A close-up of a locked brass front door deadbolt, moody cinematic lighting."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "FOLLOW",
+      "visual": "A quiet minimalist hallway with soft natural light fading into deep shadows at the end."
+    }
+  ],
+  "caption": "Small monthly charges hide a massive cost. Check your subscriptions today. #money #personalfinance #wealth #budgeting #investing",
+  "description": "Discover how forgotten monthly subscriptions quietly drain tens of thousands of dollars over time instead of growing in your investments.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#wealth",
+    "#budgeting",
+    "#investing"
+  ],
+  "first_comment": "How many active subscriptions do you currently have on your bank statement?",
+  "facts": [
+    {
+      "claim": "$50 a month invested at 8% over 20 years equals roughly $42,000",
+      "basis": "Extrapolated proportionally from the fact sheet value of $100/month for 20 years at 8% monthly compounding ($58,902)."
+    }
+  ],
+  "source": "llm",
+  "pillar": "math",
+  "look": ""
+}

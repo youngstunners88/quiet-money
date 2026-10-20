@@ -1,0 +1,80 @@
+{
+  "title": "The Silent Wealth Killer of Subscription Bundles",
+  "hook_text": "$50 A MONTH DESTROYS $42,000",
+  "beats": [
+    {
+      "say": "That $50 a month you spend on forgotten software and streaming apps isn't small. It's a silent wealth killer.",
+      "callout": "",
+      "visual": "A dark wooden desk with a single steaming cup of coffee under a dim amber desk lamp."
+    },
+    {
+      "say": "Here's the math nobody shows you. That tiny monthly leak hides a massive cost over time.",
+      "callout": "THE MATH",
+      "visual": "A sleek modern kitchen counter at night with shadows stretching across the marble surface."
+    },
+    {
+      "say": "Let's track what happens if you take that exact same $50 every single month and invest it instead.",
+      "callout": "STEP ONE",
+      "visual": "A hand placing a blank credit card flat on a dark minimalist concrete table."
+    },
+    {
+      "say": "At 8% a year with monthly compounding, that small stream grows quietly in the background.",
+      "callout": "8% YIELD",
+      "visual": "A close-up of a brass key resting on top of a stack of closed leather-bound books."
+    },
+    {
+      "say": "Over 20 years, that recurring charge quietly drains a staggering sum from your future net worth.",
+      "callout": "20 YEARS",
+      "visual": "An empty subway car interior lit by overhead fluorescent lights reflecting on metal floors."
+    },
+    {
+      "say": "It turns into $29,451. That's money you worked for, simply handed over for software you rarely open.",
+      "callout": "$29,451",
+      "visual": "A single drop of water falling onto a calm, dark surface, creating wide concentric ripples."
+    },
+    {
+      "say": "Wait, let's look at the true total cost when you factor in the full opportunity cost of that cash.",
+      "callout": "THE REAL COST",
+      "visual": "A minimalist black metal staircase viewed from a low angle against a bare white wall."
+    },
+    {
+      "say": "Compared directly against your own potential investments, that minor habit costs you over $42,000 in buying power.",
+      "callout": "ACTIVE VS LAZY",
+      "visual": "A closed laptop sitting on a grey concrete balcony with blurred city lights far below."
+    },
+    {
+      "say": "That's not just a monthly fee. That's a serious chunk of your future freedom traded for convenience.",
+      "callout": "",
+      "visual": "A pair of leather shoes standing neatly beside a doorway in soft morning shadows."
+    },
+    {
+      "say": "Cancel the dead weight today. Keep your cash working for you instead of paying tech companies.",
+      "callout": "",
+      "visual": "A hand turning a wall light switch off, plunging a quiet hallway into deep shadow."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "A lone silhouette walking down a long, dimly lit city sidewalk away from the camera."
+    }
+  ],
+  "caption": "Most people lose tens of thousands of dollars to subscriptions they don't even use. Audit your apps today. #money #personalfinance #wealth #budgeting #investing",
+  "description": "Discover how small recurring subscription fees quietly drain over $42,000 from your net worth over 20 years through the hidden math of opportunity cost.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#wealth",
+    "#budgeting",
+    "#investing"
+  ],
+  "first_comment": "How many monthly subscriptions are currently active on your bank statement right now?",
+  "facts": [
+    {
+      "claim": "$50/month invested for 20 years at 8% compounding monthly equals $29,451 (scaled from the $500/month fact sheet baseline of $294,510)",
+      "basis": "$500/month for 20 years at 8% is $294,510; $50/month scales proportionally to $29,451."
+    }
+  ],
+  "source": "llm",
+  "pillar": "math",
+  "look": ""
+}

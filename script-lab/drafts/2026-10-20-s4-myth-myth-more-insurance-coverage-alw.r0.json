@@ -1,0 +1,85 @@
+{
+  "title": "The Insurance Trap That Leaves You Vulnerable",
+  "hook_text": "YOU'RE INSURING THE WRONG THINGS",
+  "beats": [
+    {
+      "say": "You pay monthly to insure your phone, your shoes, and your appliance warranties.",
+      "callout": "",
+      "visual": "Close-up of hands placing a cracked smartphone on a dark wooden table, cinematic side lighting, moody atmosphere."
+    },
+    {
+      "say": "It feels smart. But here's the part nobody mentions.",
+      "callout": "",
+      "visual": "A person's silhouette walking past a brightly lit storefront window at dusk, shot from behind."
+    },
+    {
+      "say": "You're spending cash on low-risk, low-impact items that won't break your life.",
+      "callout": "LOW RISK",
+      "visual": "A minimalist stack of plastic store warranty cards on a grey concrete surface, top-down view."
+    },
+    {
+      "say": "While completely ignoring the catastrophic risks that actually bankrupt households.",
+      "callout": "HIGH RISK",
+      "visual": "A dark, empty highway stretching into heavy fog under a muted, overcast sky, wide shot."
+    },
+    {
+      "say": "Think about it. If your phone breaks, it's annoying.",
+      "callout": "",
+      "visual": "A close-up of fingers tapping a blank, turned-off glass screen reflecting faint streetlights."
+    },
+    {
+      "say": "It doesn't cost hundreds of thousands of dollars.",
+      "callout": "",
+      "visual": "An old brass calculator sitting on a dark oak desk, dim amber desk lamp illumination."
+    },
+    {
+      "say": "Insurance isn't meant to cover every minor inconvenience you face.",
+      "callout": "",
+      "visual": "A single dark umbrella resting against a rain-streaked window pane inside a quiet room."
+    },
+    {
+      "say": "It's designed to protect you from total financial ruin.",
+      "callout": "",
+      "visual": "A heavy metal vault door half-open in a dark, secure room, dramatic cinematic shadows."
+    },
+    {
+      "say": "Shift your protection to the big risks. Max out liability and health.",
+      "callout": "SHIFT FOCUS",
+      "visual": "A hand sliding a thick leather-bound folder across a polished mahogany table, low angle."
+    },
+    {
+      "say": "Stop paying premiums for minor losses you can easily absorb yourself.",
+      "callout": "",
+      "visual": "A person's hands tossing a small handful of coins into a ceramic bowl on a dark table."
+    },
+    {
+      "say": "That's how you keep your wealth safe from real disaster.",
+      "callout": "",
+      "visual": "A lone silhouette standing on a high balcony overlooking a quiet city skyline at night."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "FOLLOW US",
+      "visual": "A close-up of a vintage brass key turning a deadbolt in a heavy wooden door, warm glow."
+    }
+  ],
+  "caption": "Most people insure the wrong things out of fear. Protect against ruin, not minor inconveniences. #MoneyRules #PersonalFinance #Insurance #SmartMoney #Wealth",
+  "description": "People often over-insure low-risk items while ignoring true catastrophic risks. Learn how to allocate your protection where it actually matters.",
+  "hashtags": [
+    "#MoneyRules",
+    "#PersonalFinance",
+    "#Insurance",
+    "#SmartMoney",
+    "#Wealth"
+  ],
+  "first_comment": "What's one insurance policy you realized you didn't actually need?",
+  "facts": [
+    {
+      "claim": "Insurance protects against total financial ruin rather than minor inconveniences.",
+      "basis": "Standard financial risk management principles."
+    }
+  ],
+  "source": "llm",
+  "pillar": "myth",
+  "look": ""
+}

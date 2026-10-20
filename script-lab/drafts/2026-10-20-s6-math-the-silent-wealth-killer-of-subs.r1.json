@@ -1,0 +1,94 @@
+{
+  "title": "The True Cost of Your Monthly Subscriptions",
+  "hook_text": "YOUR $100 SUBSCRIPTION COSTS $58,000",
+  "beats": [
+    {
+      "say": "A forgotten $100 monthly subscription bundle quietly drains $58,902 from your net worth.",
+      "callout": "",
+      "visual": "A moody overhead cinematic shot of an empty desk at night, illuminated only by the soft glow of a dimly lit tablet screen lying flat."
+    },
+    {
+      "say": "You think you're only spending $1,200 a year, but the real cost hides inside compounding math.",
+      "callout": "",
+      "visual": "Macro close-up of a fountain pen hovering over an open leather ledger with neatly aligned blank columns under warm desk lamp lighting."
+    },
+    {
+      "say": "Check your statements: streaming tiers, gym apps, cloud storage, and productivity software you never touch.",
+      "callout": "",
+      "visual": "Low-angle shot from behind a person sitting in a dark room, looking at blurred glowing rectangular panels reflecting on a glass wall."
+    },
+    {
+      "say": "Recurring auto-billing is built to feel painless, which is why software companies rely on customer inertia.",
+      "callout": "",
+      "visual": "Cinematic shot of heavy brass gears turning slowly inside an intricate antique clock mechanism in deep shadows."
+    },
+    {
+      "say": "Over 20 years, paying $100 every month extracts exactly $24,000 in cash from your account.",
+      "callout": "$24,000 SPENT",
+      "visual": "Close-up of a man's hands stacking thin neat piles of crisp paper currency onto a polished dark wooden table."
+    },
+    {
+      "say": "But here's the part nobody mentions: spending that cash destroys every dollar it could've earned.",
+      "callout": "",
+      "visual": "Silhouette of a person standing motionless before a floor-to-ceiling office window overlooking a foggy city skyline at dusk."
+    },
+    {
+      "say": "If you invest that $100 every month at 8% a year with monthly compounding instead...",
+      "callout": "",
+      "visual": "A slow cinematic tracking shot along the edge of a minimalist dark oak boardroom table toward soft natural morning light."
+    },
+    {
+      "say": "You keep your $24,000, while compound growth creates an extra $34,902 of pure wealth.",
+      "callout": "+$34,902 GAINS",
+      "visual": "An architect's drafting table with precision metal compasses and clean geometric blueprints under focused directional warm lighting."
+    },
+    {
+      "say": "That abandoned digital bundle doesn't cost pocket change; it costs you a full $58,902.",
+      "callout": "$58,902 TOTAL",
+      "visual": "Extreme close-up of a single silver balance scale tilting gently in a dimly lit studio against a textured charcoal backdrop."
+    },
+    {
+      "say": "Let that same $100 compound for 30 years at 8%, and the total hits $149,036.",
+      "callout": "$149,036 AT 30 YRS",
+      "visual": "A wide cinematic shot of a vast modern stone library corridor with towering shelves stretching into soft vanishing perspective."
+    },
+    {
+      "say": "You only put in $36,000, but compound growth builds the remaining $113,036 for you.",
+      "callout": "",
+      "visual": "Top-down view of an hourglass lying on dark slate, with fine golden sand completely settled into one glass bulb."
+    },
+    {
+      "say": "Audit your recurring charges tonight, cancel what you don't use, and invest the difference automatically.",
+      "callout": "AUDIT AND INVEST",
+      "visual": "Close-up of hands firmly closing a sleek black notebook on a clean concrete table in soft directional spotlight."
+    },
+    {
+      "say": "Follow for the money rules school never taught you, before another bundle drains your net worth.",
+      "callout": "",
+      "visual": "Cinematic wide shot of a solitary person walking forward down a clean architectural concrete hallway toward open natural daylight."
+    }
+  ],
+  "caption": "A $100 monthly subscription bundle costs far more than pocket change over time.\nAudit your recurring charges today.",
+  "description": "Small monthly subscriptions seem harmless, but recurring charges carry massive opportunity costs. Investing $100 a month at an 8% annual return grows to $58,902 in 20 years and $149,036 in 30 years.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#compoundinterest",
+    "#subscriptions",
+    "#financialhabits"
+  ],
+  "first_comment": "How many recurring subscriptions are running on your card right now?",
+  "facts": [
+    {
+      "claim": "$100/month invested for 20 years at 8%/yr with monthly compounding equals $58,902, with $24,000 contributed and $34,902 in compound growth.",
+      "basis": "Standard future value annuity calculation: FV = 100 * [((1 + 0.08/12)^240 - 1) / (0.08/12)] = $58,902.04; total contributions = $100 * 240 = $24,000; interest = $34,902.04."
+    },
+    {
+      "claim": "$100/month invested for 30 years at 8%/yr with monthly compounding equals $149,036, with $36,000 contributed and $113,036 in compound growth.",
+      "basis": "Standard future value annuity calculation: FV = 100 * [((1 + 0.08/12)^360 - 1) / (0.08/12)] = $149,035.94; total contributions = $100 * 360 = $36,000; interest = $113,035.94."
+    }
+  ],
+  "source": "llm",
+  "pillar": "math",
+  "look": ""
+}

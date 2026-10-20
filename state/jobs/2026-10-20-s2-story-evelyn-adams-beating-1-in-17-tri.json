@@ -4,12 +4,73 @@
   "topic": "Evelyn Adams: Beating 1-in-17-Trillion Odds Twice and Ending Up in a Trailer Park",
   "day": "2026-10-20",
   "slot": 2,
-  "status": "planned",
-  "history": [],
+  "status": "published",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-20T09:26:58Z",
+      "words": 163
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-20T09:27:22Z",
+      "seconds": 63.188,
+      "provider": "gemini"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-20T09:28:33Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-20T09:30:46Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-20T09:30:46Z",
+      "score": 95
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-20T09:30:46Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-10-20T09:30:48Z",
+      "local": "2026-10-20T15:00:00-04:00",
+      "youtube": null
+    }
+  ],
   "artifacts": {
-    "angle": "More money cannot fix a broken relationship with risk; if your default behavior is speculative, additional capital only increases your rate of loss."
+    "angle": "More money cannot fix a broken relationship with risk; if your default behavior is speculative, additional capital only increases your rate of loss.",
+    "title": "The $5.4 Million Lottery Curse That Left a Winner Broke",
+    "style": "cinematic",
+    "video": "/home/user/quiet-money/production/output/2026-10-20/2026-10-20-s2-story-evelyn-adams-beating-1-in-17-tri/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-20/2026-10-20-s2-story-evelyn-adams-beating-1-in-17-tri/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-10-20/slot3-story",
+        "post_at": "2026-10-20T15:00:00-04:00"
+      },
+      "youtube": {
+        "skipped": "YouTube refused the upload session (HTTP 429): quota or rate limit; it resets at midnight Pacific"
+      }
+    }
   },
-  "scores": {},
-  "cost": {},
+  "scores": {
+    "gauntlet": 95,
+    "passed": true
+  },
+  "cost": {
+    "tts:gemini:chars": 980
+  },
   "notes": []
 }

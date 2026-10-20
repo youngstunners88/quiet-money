@@ -1,0 +1,90 @@
+{
+  "title": "The Insurance Trap That Leaves You Broke",
+  "hook_text": "YOU OVER-INSURE THE WRONG THINGS",
+  "beats": [
+    {
+      "say": "You pay monthly to insure your phone, laptop, and extended appliance warranties.",
+      "callout": "",
+      "visual": "A close-up of hands placing a cracked smartphone on a dark wooden table, dim moody lighting, cinematic."
+    },
+    {
+      "say": "It feels safe, but it quietly bleeds your cash flow on minor risks.",
+      "callout": "MINOR RISKS",
+      "visual": "A sleek modern kitchen with a coffee maker glowing in the dark, macro lens, shallow depth of field."
+    },
+    {
+      "say": "Insurance companies love when you fear small losses.",
+      "callout": "THE MYTH",
+      "visual": "An abstract shot of a heavy vault door closing slowly, dramatic shadows, cool blue tones."
+    },
+    {
+      "say": "They price those policies with huge profit margins.",
+      "callout": "HIGH MARGINS",
+      "visual": "A stack of paperwork on a desk viewed from behind a silhouette of a person looking out a rain-streaked window."
+    },
+    {
+      "say": "Because statistically, you can easily pay for a broken screen out of pocket.",
+      "callout": "OUT OF POCKET",
+      "visual": "A close-up of a leather wallet opening on a dark surface, no visible brand logos or cash amounts."
+    },
+    {
+      "say": "Meanwhile, you leave your actual financial life completely exposed.",
+      "callout": "EXPOSED",
+      "visual": "An empty highway stretching into a foggy horizon at dusk, moody atmosphere, wide angle."
+    },
+    {
+      "say": "That is the core flaw of modern personal finance.",
+      "callout": "CORE FLAW",
+      "visual": "A vintage brass scale sitting on a marble countertop, perfectly balanced under a single spotlight."
+    },
+    {
+      "say": "People obsess over low-impact items while ignoring catastrophic disasters.",
+      "callout": "SMALL VS BIG",
+      "visual": "A tall skyscraper viewed from street level looking straight up into gray clouds, cinematic contrast."
+    },
+    {
+      "say": "Shift that protection to major risks: raise your auto liability limits and get an umbrella policy.",
+      "callout": "",
+      "visual": "A set of heavy metal keys resting on a smooth concrete block, minimalist composition, soft morning light."
+    },
+    {
+      "say": "Protect against lawsuits or medical bills that actually bankrupt households.",
+      "callout": "",
+      "visual": "A stormy ocean crashing against dark jagged rocks, motion blur, dramatic deep blue color grade."
+    },
+    {
+      "say": "Self-insure the small stuff with your emergency fund.",
+      "callout": "",
+      "visual": "A hand sliding a plain ceramic mug across a rustic wooden table, warm cozy lighting."
+    },
+    {
+      "say": "Stop paying premiums for problems you can comfortably solve yourself.",
+      "callout": "",
+      "visual": "A closed leather journal resting under a desk lamp, cozy shadows, minimalist aesthetic."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "A single glowing bulb hanging from a dark ceiling, warm amber light against a deep black background."
+    }
+  ],
+  "caption": "Most people insure the wrong things out of fear. Protect against catastrophe, not minor inconveniences. #moneyrules #personalfinance #wealthbuilding #insurance #financialliteracy",
+  "description": "Discover why over-insuring low-risk items drains your cash flow while leaving you vulnerable to catastrophic financial ruin. Learn how to properly structure your protection.",
+  "hashtags": [
+    "#moneyrules",
+    "#personalfinance",
+    "#wealthbuilding",
+    "#insurance",
+    "#financialliteracy"
+  ],
+  "first_comment": "What is the most useless insurance policy you have ever bought?",
+  "facts": [
+    {
+      "claim": "People over-insure low-risk, low-impact items while ignoring high-impact catastrophic risks",
+      "basis": "Standard personal finance risk management principles regarding deductibles and liability limits"
+    }
+  ],
+  "source": "llm",
+  "pillar": "myth",
+  "look": ""
+}

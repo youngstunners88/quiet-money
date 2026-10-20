@@ -1,0 +1,84 @@
+{
+  "title": "The Scarcity Trap That Keeps You Broke",
+  "hook_text": "WHY BEING BROKE COSTS YOU MORE",
+  "beats": [
+    {
+      "say": "Being broke doesn't just drain your bank account. It costs you a fortune in hidden time taxes.",
+      "callout": "",
+      "visual": "A lone silhouette walking down a dark city sidewalk at dusk, cinematic low angle, moody blue lighting."
+    },
+    {
+      "say": "When you're constantly stressed about cash, your brain makes expensive survival choices.",
+      "callout": "THE COST OF STRESS",
+      "visual": "A close-up of hands nervously shuffling a stack of crumpled paper bills on a wooden table, warm lamp light."
+    },
+    {
+      "say": "You pay massive convenience fees just to survive the week. Delivery apps, rush fees, and quick fixes.",
+      "callout": "CONVENIENCE FEES",
+      "visual": "A smartphone resting face down on a kitchen counter next to a takeaway paper bag, moody lighting, shallow depth of field."
+    },
+    {
+      "say": "Psychologists call this scarcity vision. You focus so hard on today's fire that you burn tomorrow's cash.",
+      "callout": "SCARCITY VISION",
+      "visual": "An overhead shot of a cluttered desk with a single red warning light reflecting off a glass of water."
+    },
+    {
+      "say": "Take credit cards. A $3,000 balance at 24% APR paid only by the minimum takes 183 months to clear.",
+      "callout": "$3,000 VS 183 MONTHS",
+      "visual": "A sleek dark metal credit card resting on a slate surface, macro lens, dramatic side lighting."
+    },
+    {
+      "say": "That minimum trap racks up $4,887 in interest alone. You pay for the time you don't have.",
+      "callout": "$4,887 INTEREST",
+      "visual": "A hand sliding a silver pen across a dark blank notebook page, soft shadows, slow motion."
+    },
+    {
+      "say": "But here's the part nobody mentions. You can break the cycle by changing how you buy back hours.",
+      "callout": "STEP ONE",
+      "visual": "A minimalist hourglass sitting on a concrete ledge, golden hour light filtering through tall windows."
+    },
+    {
+      "say": "Instead of paying high fees for instant relief, automate one fixed transfer every single payday.",
+      "callout": "",
+      "visual": "A finger pressing a sleek silver button on a mechanical device, sharp focus, cinematic vignette."
+    },
+    {
+      "say": "A $100 monthly investment at 8% a year compounds to $58,902 over 20 years. That's real leverage.",
+      "callout": "$58,902 VS 20 YEARS",
+      "visual": "A stack of smooth river stones balanced precariously on a dark wooden plank, natural side lighting."
+    },
+    {
+      "say": "Stop paying the scarcity tax on your survival. Free up your future self today.",
+      "callout": "",
+      "visual": "A wide shot of an empty highway stretching toward a bright horizon at dawn, crisp cold air."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "A closed minimalist wooden door with a single streak of warm sunlight underneath, cinematic framing."
+    }
+  ],
+  "caption": "Being broke is expensive. Here is how scarcity vision quietly drains your bank account every single week. #moneppsychology #personalfinance #financialfreedom #smartmoney #wealth",
+  "description": "Discover how the scarcity trap of time forces you into expensive convenience fees and how to break the cycle using basic money psychology.",
+  "hashtags": [
+    "#moneypsychology",
+    "#personalfinance",
+    "#financialfreedom",
+    "#smartmoney",
+    "#wealth"
+  ],
+  "first_comment": "What's one 'convenience fee' you cut out this month?",
+  "facts": [
+    {
+      "claim": "$3,000 credit card at 24% APR paying only the minimum takes 183 months and costs $4,887 in interest",
+      "basis": "Provided money fact sheet"
+    },
+    {
+      "claim": "$100/month invested for 20 years at 8%/yr equals $58,902",
+      "basis": "Provided money fact sheet"
+    }
+  ],
+  "source": "llm",
+  "pillar": "psychology",
+  "look": ""
+}

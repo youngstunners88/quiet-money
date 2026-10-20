@@ -1,0 +1,94 @@
+{
+  "title": "The Insurance Myth Bleeding Your Bank Account",
+  "hook_text": "THE INSURANCE TRAP YOU'RE BUYING INTO",
+  "beats": [
+    {
+      "say": "Buying insurance for your $1,000 phone doesn't protect your wealth, it quietly bleeds it.",
+      "callout": "",
+      "visual": "Cinematic moody close-up of a modern damaged smartphone lying on a dark polished wooden table under soft spotlighting."
+    },
+    {
+      "say": "Most people over-insure tiny everyday items while leaving their biggest financial exposure completely unprotected.",
+      "callout": "",
+      "visual": "Shadowy silhouette of a person standing before a massive glass skyscraper reflecting glowing city lights at dusk."
+    },
+    {
+      "say": "You're told more insurance equals safety, but stacking micro-policies guarantees lost wealth over time.",
+      "callout": "MORE IS NOT BETTER",
+      "visual": "A towering stack of dark blue policy documents bound with thick twine resting on an old wooden desk."
+    },
+    {
+      "say": "A $15/month gadget protection plan adds up to $1,800 over 10 years.",
+      "callout": "$1,800 LOST",
+      "visual": "A sleek modern laptop resting beside a dark ceramic coffee mug on a clean slate surface in low lighting."
+    },
+    {
+      "say": "Investing $100/month instead at 8% a year builds $149,036 over 30 years.",
+      "callout": "$149,036 GAINED",
+      "visual": "Cinematic wide shot of a bank vault door slightly open with warm golden light spilling out onto the floor."
+    },
+    {
+      "say": "People happily pay extra fees on laptops, appliances, and furniture out of emotional fear.",
+      "callout": "",
+      "visual": "A person seen from behind sitting in front of a computer monitor in a dimly lit home office."
+    },
+    {
+      "say": "But here's the part nobody mentions about true financial disaster.",
+      "callout": "THE HIDDEN RISK",
+      "visual": "High contrast overhead shot of an empty mahogany desk illuminated by a single overhead spotlight."
+    },
+    {
+      "say": "A cracked screen won't bankrupt your household, but an unpaid medical emergency or disability will.",
+      "callout": "MICRO VS CATASTROPHIC",
+      "visual": "Silhouette of a person standing outside an emergency room entrance at night in atmospheric fog."
+    },
+    {
+      "say": "The smart money rule is simple: self-insure small, high-probability losses with an emergency savings fund.",
+      "callout": "SELF-INSURE SMALL",
+      "visual": "Close-up of hands neatly placing a stack of crisp currency into a heavy steel safe."
+    },
+    {
+      "say": "Only transfer risk to an insurer when a disaster would wipe out your entire net worth.",
+      "callout": "",
+      "visual": "A solitary modern house sitting safely beneath a dark stormy sky on a high cliff edge."
+    },
+    {
+      "say": "Cancel gadget warranties, raise your deductibles, and redirect those saved monthly premiums straight into investments.",
+      "callout": "STEP ONE",
+      "visual": "Overhead view of hands organizing clean financial folders on a minimalist stone table."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "Cinematic shot of a person walking away down a quiet city avenue at twilight."
+    },
+    {
+      "say": "Because true financial protection isn't buying every policy, it's knowing which ones to ignore.",
+      "callout": "",
+      "visual": "Moody close-up of a single sleek key lying on a dark polished marble surface."
+    }
+  ],
+  "caption": "Stop wasting cash on low-impact protection plans. Build a real cushion instead. #money #personalfinance #financialfreedom #wealthbuilding",
+  "description": "Over-insuring small items transfers wealth to insurance companies while leaving catastrophic risks ignored. Learn how to self-insure small losses and protect your household against true financial ruin.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#financialfreedom",
+    "#wealthbuilding",
+    "#moneyrules"
+  ],
+  "first_comment": "How many monthly protection plans are you paying for right now?",
+  "facts": [
+    {
+      "claim": "A $15/month subscription for 10 years equals $1,800.",
+      "basis": "Fact Sheet: A $15/month subscription for 10 years = $1,800"
+    },
+    {
+      "claim": "Investing $100/month for 30 years at 8%/yr builds $149,036.",
+      "basis": "Fact Sheet: $100/month invested for 30 years at 8%/yr (monthly compounding) = $149,036"
+    }
+  ],
+  "source": "llm",
+  "pillar": "myth",
+  "look": ""
+}
