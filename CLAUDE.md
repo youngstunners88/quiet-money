@@ -75,6 +75,7 @@ humans set strategy, connect accounts, and review held videos.
 | Keep CLAUDE.md, the workspace CONTEXT.md files and the skills true after a build or decision (the coach's structure) | `/` | `python -m faceless context` | `faceless-context` |
 | Marketing: the weekly brief, funnel, measurement, experiments, what to tell the owner (the plan is `channel/empire/MARKETING.md`) | `/faceless/marketing.py`, `metrics.py` | `channel/empire/MARKETING.md` (section 8), `channel/empire/experiments.json` | `faceless-marketing` |
 | Learn from a video, post or channel; search what the Brain knows (transcripts in, notes out) | `/brain` | `brain/CONTEXT.md` | `faceless-brain` |
+| Run the business as CEO: sprints, lanes as Claude Code workers (MCP `claude-code-orchestrator`), the sprint report | `/brain/PROMPTS` | `brain/PROMPTS/ORCHESTRATOR.md` | `faceless-ceo` |
 | Comics series: hand-drawn stick-figure picture posts (YouTube Posts tab), five a day | `/faceless/comics.py` | `.claude/skills/faceless-comics` | `faceless-comics` |
 | A Vox-style paper-collage explainer for a special video | `/faceless/collage.py` | `.claude/skills/faceless-paper-collage` | `faceless-paper-collage` |
 | Quinton's weekly Monday drop (the host clip) | `/faceless/host.py` | `.claude/skills/faceless-quinton-weekly` | `faceless-quinton-weekly` |
@@ -118,6 +119,7 @@ python -m faceless distribute                  # every distribution rail with it
 python -m faceless listing build all           # Etsy + Gumroad packs; `listing check` runs the listing gauntlet; `shop status|plan|push`
 python -m faceless skills                      # lint every skill against Anthropic's guide
 python -m faceless context                     # do CLAUDE.md routing, the workspace CONTEXT.md files and the skills still agree? (reads only)
+node claude-code-orchestrator/dist/run-plan.js PLAN.json --out DIR   # the CEO's lanes as Claude Code workers (faceless-ceo); read-only unless WORKER_PERMISSION_MODE is raised
 python -m faceless ci                          # CI as GitHub sees it (clean export, no keys): run before every push of code
 python -m pytest -q tests                      # engine tests
 ```

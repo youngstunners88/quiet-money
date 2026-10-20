@@ -18,7 +18,8 @@
     "Bash(git diff*)",
     "Bash(python -m faceless.moneymath *)",
     "Bash(python -m faceless.moneymath)"
-   ]
+   ],
+   "model": "sonnet"
   },
   {
    "label": "lane-B-content-brain",
@@ -42,7 +43,8 @@
     "Bash(git diff*)",
     "Bash(python -m faceless.moneymath *)",
     "Bash(python -m faceless.moneymath)"
-   ]
+   ],
+   "model": "sonnet"
   }
  ]
 }
