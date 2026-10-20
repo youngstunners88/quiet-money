@@ -72,10 +72,11 @@ POSTERS: dict[int, tuple[str, str]] = {
 }
 MADE = tuple(range(45, 57))                           # posters typeset by the studio; the other 40 are the owner's artwork
 DUPLICATES = {8: 3, 25: 19, 30: 18, 31: 9}            # dropped position -> the poster it repeats (kept)
-REVIEW = {2: "growth hormone rise stated as a percentage", 4: "claim about copper and bacteria", 5: "grip strength and testosterone", 9: "performance claims for baking soda and creatine",
-          10: "grounding", 12: "dementia percentages", 13: "cacao and blood pressure figures", 14: "hormone claims (estrogen, aromatase)", 17: "beef liver, nutrient and toxicity claims",
-          19: "moringa versus green tea", 20: "watercress and carcinogens", 21: "humming and nasal nitric oxide", 23: "cayenne and metabolism", 33: "neck training and androgen receptors",
-          38: "wall sits and blood pressure figures", 40: "forest bathing and immune cells", 41: "myostatin and follistatin", 42: "bicarbonate in water"}
+# Eight of the owner's posters (2, 4, 12, 14, 17, 20, 38, 41) were softened on 2026-10-20 at the owner's decision (planner_poster_make.SOFTENED). These ten remain as the owner made
+# them; the owner chose to keep them with the not-medical-advice note on every page.
+REVIEW = {5: "grip strength and testosterone", 9: "performance claims for baking soda and creatine", 10: "grounding", 13: "cacao and blood pressure figures",
+          19: "moringa versus green tea", 21: "humming and nasal nitric oxide", 23: "cayenne and metabolism", 33: "neck training and androgen receptors",
+          40: "forest bathing and immune cells", 42: "bicarbonate in water"}
 
 
 def kept() -> list[int]:

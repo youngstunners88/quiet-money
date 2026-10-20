@@ -52,6 +52,28 @@ TEXT: dict[int, tuple[str, str]] = {
          "Taking time to rest helps you think clearly and avoid burnout. A calm mind tends to make better money decisions than a rushed one."),
 }
 
+# Softened on 2026-10-20 at the owner's decision (marketing review of the claims the studio could not check): these eight of the owner's posters made specific
+# figures, disease or hormone claims. They are re-typeset here with hedged, general wording on the same topic, so the planner makes no clinical or quantified claim.
+SOFTENED: dict[int, tuple[str, str]] = {
+    2: ("SHORT BURSTS OF EFFORT CAN FEEL ENERGISING!",
+        "A few seconds of hard effort followed by rest is a popular way to train because it takes little time and needs no equipment. Check with a health professional before starting new exercise."),
+    4: ("COPPER JARS ARE A TRADITIONAL WAY TO STORE WATER!",
+        "In some cultures, drinking water is kept in copper vessels overnight. It costs very little, and people have their own reasons for liking it. Treat it as a habit, not a treatment."),
+    12: ("SLEEP IS WORTH PROTECTING!",
+         "Sleep is an active process, and researchers are still studying how it affects memory and long-term brain health. Regular, sufficient sleep is widely recommended, and it is free."),
+    14: ("HORMONES WORK TOGETHER IN THE BODY!",
+         "Hormones are chemical messengers made in several parts of the body, and they work together rather than alone. Scientists are still learning how they interact, so be wary of simple claims about any single one."),
+    17: ("ORGAN MEATS ARE ONE WAY TO ADD VARIETY!",
+         "Foods like liver are rich in several nutrients, and many food guides suggest eating them only now and then. A varied diet is a simple, low-cost way to get a range of nutrients."),
+    20: ("LEAFY GREENS ARE AN AFFORDABLE PART OF A VARIED DIET!",
+         "Watercress is a leafy green that contains vitamins such as K, A and C. Everyday vegetables are often among the best-value foods in the shop."),
+    38: ("WALL SITS NEED NO EQUIPMENT!",
+         "A wall sit is a simple exercise you can do at home with no gym membership. If you have a health condition, ask a health professional which exercise suits you."),
+    41: ("MUSCLES RESPOND TO USE, REST AND FOOD!",
+         "Muscles grow and recover through regular use, rest and good food. Scientists study many proteins to understand how muscle is regulated, and there are no shortcuts."),
+}
+TEXT.update(SOFTENED)
+
 
 def _font(name: str, size: int) -> ImageFont.FreeTypeFont:
     return ImageFont.truetype(str(brand.Paths.fonts / name), size)
