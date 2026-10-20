@@ -453,7 +453,7 @@ def last_back(p: Pen, n: int, total: int) -> None:
     y = p.title(H - M - 24, "About this planner")
     for head, body in (
         ("Education, not advice", "The Quiet Money Daily Planner is an educational tool. It is not financial, tax, legal or investment advice and it never recommends a particular product. Examples use made-up numbers and stated assumptions. Returns are never guaranteed and past results do not predict the future. Talk to a qualified professional about your own situation."),
-        ("Made with AI assistance", f"{AI_LINE} The lessons were written and fact-checked with the Quiet Money studio's tools, and every computed figure comes from one shared set of math functions that is tested. The pictures are original artwork drawn in code or made with AI tools. The man on the cover is Quinton, the Quiet Money host: a virtual, AI-generated character, not a real person. Forty of the wellness posters are the owner's own artwork; the last twelve were made in the same style with AI tools, with every word typeset in code."),
+        ("Made with AI assistance", f"{AI_LINE} The lessons were written and fact-checked with the Quiet Money studio's tools, and every computed figure comes from one shared set of math functions that is tested. The pictures are original artwork drawn in code or made with AI tools. The man on the cover is Quinton, the Quiet Money host: a virtual, AI-generated character, not a real person. Thirty-two of the wellness posters are the owner's own artwork; the other twenty were made in the same style with AI tools, with every word typeset in code."),
         ("Licence", f"{LICENSE} One purchase covers printing as many copies as you need for yourself and your household."),
         ("Questions or mistakes", "If you find an error, reply to the message where you bought this. It gets fixed and you get the update."),
     ):
@@ -618,7 +618,7 @@ def check(build_first: bool = False) -> list[tuple[str, bool, str, bool]]:
         gates.append((f"pdf_{size.lower()}_disclosures", "not financial" in text2.lower() and "AI assistance" in text2, "not-advice and AI lines on the welcome and last pages", True))
         gates.append((f"pdf_{size.lower()}_etsy_size", f.stat().st_size <= MAX_BYTES, f"{f.stat().st_size / 2**20:.1f} MB (Etsy: 20 MB per file)", True))
     wb = planner_wellness.check()
-    gates.append(("wellness_manifest", not wb, "52 posters (40 the owner's, 12 typeset by the studio), 4 duplicates dropped, every file present" if not wb else "; ".join(wb), True))
+    gates.append(("wellness_manifest", not wb, "52 posters (32 the owner's, 20 typeset by the studio), 4 duplicates dropped, every file present" if not wb else "; ".join(wb), True))
     gates.append(("wellness_claims_for_owner_review", False, f"{len(planner_wellness.REVIEW)} posters make quantified or clinical claims the studio has not checked: {sorted(planner_wellness.REVIEW)}", False))
     gen = sorted(planner_art.GENERATED.glob("day-*.jpg"))
     if gen:

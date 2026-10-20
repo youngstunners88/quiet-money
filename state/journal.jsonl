@@ -6181,3 +6181,13 @@
 {"ts": "2026-10-19T05:21:53Z", "t": 1792387313.119, "actor": "engine", "type": "COMPOSIO_SESSION", "user": "quiet-money-studio", "session_hash": "0d07b1a6"}
 {"ts": "2026-10-19T05:25:11Z", "t": 1792387511.134, "actor": "engine", "type": "COMPOSIO_SESSION", "user": "quiet-money-studio", "session_hash": "58e4ca08"}
 {"ts": "2026-10-19T05:37:10Z", "t": 1792388230.269, "actor": "engine", "type": "MUAPI_RUN", "job": "vibe-2026-10-18-breathe-8", "model": "bytedance-seedream-5.0-pro", "usd": 0.09, "request": "af43548d-596", "balance": "4.3204"}
+{"ts": "2026-10-20T07:43:38Z", "t": 1792482218.473, "actor": "engine", "type": "MUAPI_RUN", "job": null, "model": "flux-2-klein-4b-turbo", "usd": 0.0052, "request": "3b1dec50-c42", "balance": "3.5240"}
+{"ts": "2026-10-20T07:43:44Z", "t": 1792482224.416, "actor": "engine", "type": "MUAPI_RUN", "job": null, "model": "flux-2-klein-4b-turbo", "usd": 0.0052, "request": "6775a512-e68", "balance": "3.5188"}
+{"ts": "2026-10-20T07:43:50Z", "t": 1792482230.116, "actor": "engine", "type": "MUAPI_RUN", "job": null, "model": "flux-2-klein-4b-turbo", "usd": 0.0052, "request": "c00f62eb-ac1", "balance": "3.5136"}
+{"ts": "2026-10-20T07:43:56Z", "t": 1792482236.007, "actor": "engine", "type": "MUAPI_RUN", "job": null, "model": "flux-2-klein-4b-turbo", "usd": 0.0052, "request": "301a166e-595", "balance": "3.5084"}
+{"ts": "2026-10-20T07:44:01Z", "t": 1792482241.671, "actor": "engine", "type": "MUAPI_RUN", "job": null, "model": "flux-2-klein-4b-turbo", "usd": 0.0052, "request": "452b11ab-2d2", "balance": "3.5032"}
+{"ts": "2026-10-20T07:44:07Z", "t": 1792482247.291, "actor": "engine", "type": "MUAPI_RUN", "job": null, "model": "flux-2-klein-4b-turbo", "usd": 0.0052, "request": "a39cf201-b72", "balance": "3.4980"}
+{"ts": "2026-10-20T07:44:13Z", "t": 1792482253.622, "actor": "engine", "type": "MUAPI_RUN", "job": null, "model": "flux-2-klein-4b-turbo", "usd": 0.0052, "request": "177f096c-17b", "balance": "3.4928"}
+{"ts": "2026-10-20T07:44:23Z", "t": 1792482263.803, "actor": "engine", "type": "MUAPI_RUN", "job": null, "model": "flux-2-klein-4b-turbo", "usd": 0.0052, "request": "3830cf8d-620", "balance": "3.4876"}
+{"ts": "2026-10-20T07:48:51Z", "t": 1792482531.155, "actor": "engine", "type": "SHOP_DRAFT_CREATED", "product": "daily-quiet-money-planner", "gumroad_id": "h0yV6hi0-grj--Y7a7ThnQ==", "published": false}
+{"ts": "2026-10-20T07:49:16Z", "t": 1792482556.625, "actor": "engine", "type": "SHOP_PUBLISHED", "product": "daily-quiet-money-planner", "rail": "gumroad", "gumroad_id": "h0yV6hi0-grj--Y7a7ThnQ=="}

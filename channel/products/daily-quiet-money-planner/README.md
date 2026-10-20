@@ -51,7 +51,7 @@ Typical run for an agent: `planner_status` -> `planner_normalize` (if phone pict
 
 ## The wellness posters (supporting pages) and the Photopea crop
 The owner's 44 "DID YOU KNOW" posters are the planner's supporting pages: wellness that goes hand in hand with money (a calm, rested, moving body makes steadier money
-decisions), framed that way on the page. Forty are the owner's artwork; twelve more (weeks 41 to 52) are typeset by `python -m faceless planner posters-make` in the same style. They live in `assets/planner/wellness/`:
+decisions), framed that way on the page. Thirty-two are the owner's artwork (eight of the owner's were re-typeset with softened wording on 2026-10-20); twenty more are typeset by `python -m faceless planner posters-make` in the same style. They live in `assets/planner/wellness/`:
 `original/` (as made, never changed), `cropped/` (handle removed), `report.json` (what was done to each, by which engine). The owner's logo and wordmark are in `assets/planner/brand/`.
 - `planner_crop` (MCP) or `planner_posters.process()` finds the @handle (pixels first, then a vision model through OpenRouter as the second opinion), **crops it off in Photopea**
   (photopea.com driven headlessly through its official messaging API, the same crop the owner makes by hand), and checks the result against a plain Pillow crop (Pillow is the fallback).

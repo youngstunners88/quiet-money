@@ -59,7 +59,8 @@ def test_every_built_in_line_for_every_product_passes_the_check_and_fits_a_comme
 
 # ---------------------------------------------------------------- what is offered
 
-def test_with_no_live_listing_every_video_gets_the_free_checklist():
+def test_with_no_live_listing_every_video_gets_the_free_checklist(monkeypatch):
+    monkeypatch.setitem(config.load()["offer"], "shop_urls", {})         # the studio's own config now holds the live planner URL
     for pillar in ("story", "math", "psychology", "myth", "playbook", "escape"):
         o = offer.build(f"v-{pillar}", pillar, "Title", history=[row("a"), row("b"), row("c")])
         assert o["slug"] == "checklist" and o["status"] == "draft" and o["problems"] == []
@@ -255,7 +256,8 @@ def test_unoffered_lists_a_passed_video_with_no_row_and_a_held_one_is_ignored(tm
 
 # ---------------------------------------------------------------- the hub page and the signup form
 
-def test_the_hub_lists_the_free_checklist_first_and_no_product_that_is_not_live():
+def test_the_hub_lists_the_free_checklist_first_and_no_product_that_is_not_live(monkeypatch):
+    monkeypatch.setitem(config.load()["offer"], "shop_urls", {})
     html = site.hub_page()
     assert html.index('data-o="checklist"') < html.index('data-o="tools"') < html.index('data-o="rules"')
     assert "Paid" not in html and "noindex" in html and "utm_source=hub" in html and "not financial advice" in html
