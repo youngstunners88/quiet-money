@@ -11,6 +11,8 @@ without anyone sitting through them, and without copying them. The skill is `fac
 | `topics/<topic>.md` | running synthesis: storytelling, product-and-pricing, demand-research, paid-traffic, organic-traffic, tools |
 | `topics/never.md` | every tactic we refuse, where we saw it, which rule it breaks |
 | `watchlist.toml` | channels the weekly routine follows: handle, channel_id, why, max per week |
+| `PROMPTS/ORCHESTRATOR.md` | the CEO's operating manual: lanes, the worker contract, the sprint, the report format |
+| `PROMPTS/sprint-NN/` | each sprint's plan and the lanes' manifests |
 
 Raw transcripts are never committed (the repo is public; they are other people's words). They live in
 `state/brain/raw/` (gitignored, 30 days). Each note keeps the URL and sha256, so the text can be fetched again.

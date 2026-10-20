@@ -1,3 +1,5 @@
+> **Status 2026-10-20: parked.** The owner is withholding ad spend until further notice. Nothing here runs until the owner names a budget; the research below is kept for that day.
+
 **Lane: the $10 marketing budget (research only, nothing edited, nothing spent)**
 
 **Bottom line.** None of the options gets close to paying back $10. Breaking even takes 0.71 sales ($10 ÷ $14.01 net per sale). The best paid option is expected to bring about 0.14 sales. The free warm launch in MARKETING.md is expected to bring about 3, so $10 cannot replace it. What $10 can buy is a first measurement of what a click costs. I recommend one Pinterest promoted-pin test with a bid cap. Buying the domain is worth doing too, but it should come from the plan's separate fixed-cost line.

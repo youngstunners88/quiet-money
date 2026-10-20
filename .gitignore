@@ -50,3 +50,8 @@ channel/products/**/*.xlsx
 # The Brain keeps raw transcripts out of git (other people's words; the repo is public)
 state/brain/raw/
 state/brain/paid/
+
+# claude-code-orchestrator MCP: dependencies, build output and worker logs stay local
+claude-code-orchestrator/node_modules/
+claude-code-orchestrator/dist/
+claude-code-orchestrator/logs/
