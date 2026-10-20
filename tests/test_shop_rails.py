@@ -63,6 +63,15 @@ def pack(tmp_path, monkeypatch):
     (folder / "etsy" / "video.mp4").write_bytes(b"\x00\x00\x00\x18ftypmp42")
     monkeypatch.setattr(listing, "OUT", tmp_path / "shop")
     monkeypatch.setattr(etsy.listing, "OUT", tmp_path / "shop")
+    # The paid files are not in the public repo (anyone could download them), so tests use small stand-ins under the same names.
+    prod = listing.products(PID)[0]
+    for rel in [prod["file"], *prod.get("extra_files", [])]:
+        f = tmp_path / rel
+        f.parent.mkdir(parents=True, exist_ok=True)
+        f.write_bytes(b"%PDF-1.4\n%stand-in\n")
+    for mod in (etsy, shop, listing):
+        if hasattr(mod, "STUDIO"):
+            monkeypatch.setattr(mod, "STUDIO", tmp_path)
 
 
 @pytest.fixture()

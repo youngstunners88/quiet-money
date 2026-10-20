@@ -15,6 +15,7 @@ humans set strategy, connect accounts, and review held videos.
 - `/analytics`: metrics in, pillar weights out (the scoreboard)
 - `/gauntlet`: quality gates and reports (the QA desk)
 - `/repo-farm`: which external repos/tools we use, park, or reject
+- `/brain`: what we learned from outside videos and posts, one note per source (the knowledge base)
 - `/faceless`: the engine (Python). `/state`: journal, jobs, ledger, decisions
 
 ## Routing
@@ -73,6 +74,10 @@ humans set strategy, connect accounts, and review held videos.
 | What is winning on a platform, hashtag size, competitor and market data, marketing angles (Monid, capped) | `/faceless/monid.py` | `python -m faceless monid find "<words>"` | `faceless-monid` |
 | Keep CLAUDE.md, the workspace CONTEXT.md files and the skills true after a build or decision (the coach's structure) | `/` | `python -m faceless context` | `faceless-context` |
 | Marketing: the weekly brief, funnel, measurement, experiments, what to tell the owner (the plan is `channel/empire/MARKETING.md`) | `/faceless/marketing.py`, `metrics.py` | `channel/empire/MARKETING.md` (section 8), `channel/empire/experiments.json` | `faceless-marketing` |
+| Learn from a video, post or channel; search what the Brain knows (transcripts in, notes out) | `/brain` | `brain/CONTEXT.md` | `faceless-brain` |
+| Comics series: hand-drawn stick-figure picture posts (YouTube Posts tab), five a day | `/faceless/comics.py` | `.claude/skills/faceless-comics` | `faceless-comics` |
+| A Vox-style paper-collage explainer for a special video | `/faceless/collage.py` | `.claude/skills/faceless-paper-collage` | `faceless-paper-collage` |
+| Quinton's weekly Monday drop (the host clip) | `/faceless/host.py` | `.claude/skills/faceless-quinton-weekly` | `faceless-quinton-weekly` |
 | Is the operation healthy? Something failed, stalled or overspent | `/` | `OPERATIONS.md`, `.claude/skills/faceless-daily/references/failure-playbook.md` | `faceless-daily` |
 | Evaluate an outside tool, repo or list of links safely | `/repo-farm` | `.claude/skills/faceless-intake` | `faceless-intake` |
 | The call to action on every video, the link-in-bio hub page, UTM and the offer ledger | `/faceless/offer.py` | `.claude/skills/faceless-offer/references/link-rules.md` | `faceless-offer` |
@@ -104,6 +109,7 @@ python -m faceless brandkit "<Name>" --palette mint   # Fiverr brand-kit order (
 python -m faceless preflight                   # can today's run succeed? traffic lights + the fix for each (run first)
 python -m faceless watchdog                    # is the operation alive? (also runs every 6 h on GitHub and opens an Ops alert issue)
 python -m faceless pause "reason"               # kill switch: stops paid calls, posting, daily and make (--resume to undo)
+python -m faceless brain search "words"         # the Brain: ingest, check, index, search, watch (skill faceless-brain)
 python -m faceless marketing                    # the weekly marketing brief: guards, funnel, experiments, owner queue (reads only); `metrics --pull` first records what videos earned
 python -m faceless monid find "hashtag"             # the Monid data desk: find, inspect, run (price first), balance; $1/day cap, results in analytics/monid/
 python -m faceless muapi find "product mockup"  # the Muapi desk: find, inspect, estimate, run (price first), balance, doctor

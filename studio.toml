@@ -112,6 +112,13 @@ paused = false                               # or create state/PAUSE ("python -m
 daily_usd = 2.0                              # all desk runs together per UTC day
 per_call_usd = 0.5                           # one run above this is refused unless the caller raises it for that call
 
+[brain]                                      # the Brain (faceless/brain.py): transcripts in, notes out; proposals only
+weekly_new_max = 6
+max_words = 8000
+paid_weekly_usd = 0.10                       # Muapi subtitles only after Exa failed twice
+per_call_usd = 0.02
+quote_max_words = 25
+
 [monid]                                      # the data desk (faceless/monid.py): social, search and product data to find what wins; owner approved 2026-10-13
 daily_usd = 1.0                              # all desk runs together per UTC day
 per_call_usd = 0.25                          # one run whose worst case is above this is refused unless the caller raises it for that call

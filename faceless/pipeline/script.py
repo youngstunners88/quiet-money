@@ -98,6 +98,7 @@ def normalize(script: dict) -> dict:
         "source": script.get("source", "llm"),
         "pillar": script.get("pillar", ""),
         "look": str(script.get("look") or "").strip(),        # an optional picture style of its own (paper collage); empty keeps the pillar's look
+        "loop_map": script["loop_map"] if isinstance(script.get("loop_map"), dict) else {},   # the writer's addiction-loop plan (gauntlet.check_loop)
     }
 
 

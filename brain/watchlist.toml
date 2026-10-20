@@ -1,0 +1,8 @@
+# Channels the weekly Brain routine follows (python -m faceless brain watch). Public RSS feeds only, no key.
+# channel_id is the UC... id (find it on the channel page's "Share channel" > "Copy channel ID"). The owner picks the channels.
+
+[[channel]]
+name = "Quiet Money (our own channel: what our viewers saw)"
+channel_id = "UC9B1QBr3_8Eulok8IdQbCqQ"
+why = "Read our own captions back: what the voice said and where the music covers speech"
+max_per_week = 2

@@ -300,6 +300,26 @@ def _bundle_images(p: dict, shots: dict[str, list[Image.Image]]) -> list[tuple[s
     return imgs
 
 
+def web_copies(folder: Path) -> list[Path]:
+    """Small copies of the listing pictures for the website's product page (web/ is committed; the full-size pack is git-ignored, and the
+    GitHub site build starts from a clean checkout). 800 and 1400 px wide, plus a 1200x675 social preview of the cover."""
+    out = folder / "web"
+    out.mkdir(parents=True, exist_ok=True)
+    made = []
+    for src in sorted((folder / "etsy" / "images").glob("*.jpg")):
+        im = Image.open(src).convert("RGB")
+        for w in (800, 1400):
+            dst = out / f"{src.stem}-{w}.jpg"
+            im.resize((w, round(im.height * w / im.width)), Image.LANCZOS).save(dst, "JPEG", quality=82, optimize=True, progressive=True)
+            made.append(dst)
+    cover = folder / "gumroad" / "cover.jpg"
+    if cover.exists():
+        dst = out / "cover-1200.jpg"
+        Image.open(cover).convert("RGB").resize((1200, 675), Image.LANCZOS).save(dst, "JPEG", quality=82, optimize=True, progressive=True)
+        made.append(dst)
+    return made
+
+
 def build(only: str | None = None, video: bool = True) -> dict[str, dict]:
     """Build every pack (or one). Returns {product: {"gates": [...], "passed": bool, "folder": path, "images": n, "video": bool}}."""
     results = {}
@@ -333,6 +353,7 @@ def build(only: str | None = None, video: bool = True) -> dict[str, dict]:
         else:
             thumb_im = mockup.square_thumb(hero_shot, p["name"])
         thumb = _save(thumb_im, folder / "gumroad" / "thumbnail.jpg", 88)
+        web_copies(folder)
         vid = folder / "etsy" / "video.mp4"
         made_video = False
         vid.unlink(missing_ok=True)

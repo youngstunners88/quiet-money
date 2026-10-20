@@ -9,7 +9,8 @@ from faceless import config, moneymath
 
 BANNED = ["in today's world", "let's dive in", "delve", "game-changer", "game changer", "unlock",
           "buckle up", "smash that", "hey guys", "welcome back", "did you know", "in this video",
-          "testament", "tapestry", "navigate the", "realm"]
+          "testament", "tapestry", "navigate the", "realm",
+          "part nobody mentions", "part nobody talks about"]      # the old stock re-hook: in 78 of 129 scripts by 2026-10-20
 
 COMPLIANCE_BANNED = ["guaranteed return", "guaranteed returns", "risk-free", "risk free", "get rich quick",
                      "you should buy", "buy this stock", "100% safe", "can't lose", "cannot lose"]
@@ -37,16 +38,31 @@ def script_prompt(pillar, topic: str, angle: str = "", feedback: list[str] | Non
         f"Pillar format: {pillar.format}",
         "The video is narrated by a voiceover over cinematic still images that slowly move, with bold "
         "word-by-word captions. Each beat = one image on screen for ~4-6 seconds.",
-        "Retention mechanics that must be present:",
-        "1. HOOK (beat 1, under 15 words): open on the single most surprising fact, number, or contradiction. "
-        "No greeting, no setup, no question that can be answered with 'no'.",
-        "2. Open loop: by beat 2 promise a payoff the viewer only gets by staying.",
-        "3. Pattern interrupt around the middle (e.g. 'But here's the part nobody mentions.').",
-        "4. Specific numbers, names, and years beat vague claims.",
-        "5. COMPLETE ENDING: the final beat is a complete sentence that finishes its thought and lands the follow CTA. "
+        "Retention structure: the addiction loop (stakes, big question, head fake, re-hook), repeated as cascading loops. "
+        "Every step must be TRUE: the twist comes from a documented fact or a fact-sheet number, never from invented drama, "
+        "and every question you raise gets answered in this video.",
+        "1. STAKES (beat 1, under 15 words): open on something the viewer owns, pays, believes or recognizes (a paycheck, a card, "
+        "a car payment, a degree, savings, a company everyone knows) and what it costs them or someone they can root for. "
+        "Put one concrete thing in it: an object, a name, a year, or a dollar amount. No greeting, no setup, no question that "
+        "can be answered with 'no'. On our own Shorts (small sample) the best openers flipped a belief about the viewer's own "
+        "money or put an odd true detail on a familiar thing; abstract bias names, chores and strings of numbers did worst. "
+        "A flip must rest on a fact-sheet number or a research brief; never use absolutes such as 'any', 'always', 'designed to' "
+        "or 'harder than any' unless the fact sheet says so.",
+        "2. BIG QUESTION (beat 2 or 3): give just enough context that ONE specific question forms in the viewer's head (how did "
+        "..., why does ..., where does the money go ...). Say it out loud or make it unmistakable. Hold the full answer back "
+        "for the payoff.",
+        "3. HEAD FAKE (by beat 4): say what most people would assume (A), then snap to what is actually true (B). B must be "
+        "documented or computed. If the honest answer is the obvious one, choose a different angle; never fake a twist.",
+        "4. RE-HOOK, CASCADING (every 3-4 beats, about every 15-20 seconds): the moment one answer lands, open the next, "
+        "narrower question, or move the stakes onto the viewer (their paycheck, their card, this year). Each re-hook names "
+        "something specific that is still unanswered and is worded fresh for this topic; never a generic teaser. Plan at least 2.",
+        "5. PAYOFF (one of the last 3 beats): answer the big question in plain words, with the viewer in it. Close every loop "
+        "you opened.",
+        "6. Specific numbers, names, and years beat vague claims.",
+        "7. COMPLETE ENDING: the final beat is a complete sentence that finishes its thought and lands the follow CTA. "
         "NEVER trail off, never end on '...' or mid-sentence (the owner hears a cut-off video as a broken one). "
         "Its closing words may echo the opening line so a replay feels continuous.",
-        f"6. One follow CTA woven into the last 2 beats, in this spirit: \"{ch['cta_follow']}\"",
+        f"8. One follow CTA woven into the last 2 beats, after the payoff, in this spirit: \"{ch['cta_follow']}\"",
         "",
         moneymath.fact_sheet() if pillar.id in ("math", "playbook", "myth", "psychology", "escape", "ledger") else "",
         *(["", "# RESEARCH BRIEF (verified background. Teach the frameworks in your own words and use one item from "
@@ -78,6 +94,10 @@ def script_prompt(pillar, topic: str, angle: str = "", feedback: list[str] | Non
         "- 'caption': 1-2 punchy lines + 4-5 hashtags (mix broad #money #personalfinance with niche tags).",
         "- 'description': 2-3 sentences summarizing the lesson.",
         "- 'first_comment': a question that invites replies (comments boost reach).",
+        "- 'loop_map': the plan the beats follow (beat numbers start at 1): 'stakes' (who or what is at risk, one line), "
+        "'big_question' (the one question, ending in '?'), 'assume' (what most people think) and 'reveal' (what is true), "
+        "'rehook_beats' (the beat numbers that open the next question, at least 2, between beat 3 and the payoff), "
+        "'payoff_beat' (the beat that answers the big question, one of the last 3).",
     ]
     if recent_titles:
         parts += ["", "Recent videos (do NOT repeat their angle or hook):", *[f"- {t}" for t in recent_titles[-25:]]]
@@ -89,7 +109,8 @@ def script_prompt(pillar, topic: str, angle: str = "", feedback: list[str] | Non
         "Return ONLY valid JSON with this exact shape:",
         '{"title": str, "hook_text": str, "word_count": int, "beats": [{"say": str, "callout": str, "visual": str}], '
         '"caption": str, "description": str, "hashtags": [str], "first_comment": str, '
-        '"facts": [{"claim": str, "basis": str}]}',
+        '"facts": [{"claim": str, "basis": str}], "loop_map": {"stakes": str, "big_question": str, "assume": str, '
+        '"reveal": str, "rehook_beats": [int], "payoff_beat": int}}',
     ]
     return "\n".join(p for p in parts if p is not None)
 
@@ -106,6 +127,11 @@ def ideas_prompt(pillar, n: int, avoid: list[str], briefs: list[str] | None = No
         f"Pillar format: {pillar.format}",
         "Topics that go viral in this niche: surprising true money stories, hidden costs, habits of people who "
         "quietly got rich, psychological traps, myths everyone repeats, simple actions with big payoffs.",
+        "On our own Shorts (small sample) the strongest topics flipped a belief about the viewer's own money (a paycheck, a "
+        "degree, a car payment, a savings account) or put an odd true detail on something familiar (a household-name company, "
+        "a 1930s habit that still works); bank-fee chores and abstract bias explainers did worst. Each 'hook' carries a stake "
+        "the viewer cares about and leaves one question open. Never name a real person or company unless a research brief "
+        "for them exists (CLAUDE.md rule 8).",
         "# CONSTRAINTS",
         "- Evergreen, globally understandable, factually checkable. No specific stock/crypto picks.",
         "- Each must support a 61-72 second script with a strong number or story.",

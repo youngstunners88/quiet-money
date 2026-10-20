@@ -194,6 +194,22 @@
    "started": null,
    "blocked_by": null,
    "result": null
+  },
+  {
+   "id": "X12",
+   "channel": "YouTube Shorts",
+   "hypothesis": "Scripts written to the addiction loop (stakes, big question, head fake, cascading re-hooks; writer prompt and loop_plan gate of 2026-10-20) earn higher median 48-hour views and a lower swipe-away rate than the 32 Shorts before it (median 16 views by 2026-10-20).",
+   "metric": "Median views at the 48-hour snapshot (metrics --pull) for videos made from 2026-10-21, against the 16-view baseline; swipe-away rate when the owner pastes it from YouTube Studio",
+   "min_sample": "20 uploaded videos after the change",
+   "duration_days": 21,
+   "success_threshold": "median 48-hour views at least 1.5x the baseline (24 or more) on 20 videos",
+   "kill_rule": "median at or below the baseline after 20 videos: revert the prompt section and keep the loop_plan gate only as advice",
+   "autonomy": "auto",
+   "cost_cap_usd": 0,
+   "status": "running",
+   "started": "2026-10-20",
+   "blocked_by": "uploads must reach YouTube (the shared Composio quota blocks them; the owner's own OAuth app fixes it)",
+   "result": null
   }
  ]
 }

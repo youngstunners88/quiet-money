@@ -1703,3 +1703,63 @@ def test_comics_svg_and_caption_checks():
     assert not comics.caption_problems({"caption": "A funny line about rent that reads well after the picture. Which one are you?"})
     assert comics.caption_problems({"caption": "short"})
     assert comics.caption_problems({"caption": "Click https://example.com to get rich guaranteed returns " * 2})
+
+
+# ---- the addiction loop (stakes, big question, head fake, re-hook) -----------------------------------
+
+def _loop_script(**lm):
+    says = ["He flew coach and drove an old Volvo while worth billions.",
+            "So how does a man that rich end up in an old Volvo?",
+            "Most people assume he was simply cheap.",
+            "But the frugality was a pricing weapon, not a habit.",
+            "Every cost he cut went into lower prices.",
+            "Lower prices brought more buyers. But why did that matter so much?",
+            "More buyers meant bigger orders and cheaper wood.",
+            "Cheaper wood meant even lower prices.",
+            "So what does that mean for a normal paycheck?",
+            "The same loop works on a budget: cut what nobody sees, fund what compounds.",
+            "That's how a man that rich ends up in an old Volvo: every saved dollar went back to work.",
+            "Follow for the money rules school never taught you."]
+    plan = {"stakes": "a billionaire's money habits", "big_question": "How does a man that rich end up in an old Volvo?",
+            "assume": "he was just cheap", "reveal": "frugality funded lower prices", "rehook_beats": [6, 9], "payoff_beat": 11}
+    plan.update(lm)
+    return {"title": "The Billionaire in a 1993 Volvo", "hook_text": "A BILLIONAIRE IN AN OLD VOLVO", "pillar": "story",
+            "source": "llm", "beats": [{"say": s, "callout": "", "visual": "a quiet parking lot at dusk, wide shot"} for s in says],
+            "loop_map": plan}
+
+
+def test_loop_plan_passes_a_kept_plan_and_names_what_is_missing():
+    from faceless.gauntlet import check_loop
+    assert check_loop(_loop_script())[0].passed
+    assert "at least 2 re-hooks" in check_loop(_loop_script(rehook_beats=[6]))[0].detail
+    assert "pass without a new open question" in check_loop(_loop_script(rehook_beats=[3, 4]))[0].detail
+    assert "open nothing" in check_loop(_loop_script(rehook_beats=[5, 7]))[0].detail
+    assert "last 3 beats" in check_loop(_loop_script(payoff_beat=6, rehook_beats=[3, 4]))[0].detail
+    assert "shares no words" in check_loop(_loop_script(big_question="Why do pigeons migrate?"))[0].detail
+    assert "ending in '?'" in check_loop(_loop_script(big_question="The car"))[0].detail
+    assert check_loop(_loop_script(rehook_beats=[40, "x"]))[0].passed is False      # junk never raises
+
+
+def test_loop_plan_skips_hand_written_scripts_and_asks_drafts_for_a_plan():
+    from faceless.gauntlet import check_loop
+    assert check_loop({**seed_script(), "loop_map": {}}) == []                      # source human
+    assert check_loop({**_loop_script(), "source": "opus-collage", "loop_map": {}}) == []   # the collage writer has its own structure
+    draft = {**_loop_script(), "loop_map": {}}
+    assert not check_loop(draft)[0].passed and "no loop_map" in check_loop(draft)[0].detail
+    assert normalize(_loop_script())["loop_map"]["payoff_beat"] == 11
+    assert normalize({"beats": [{"say": "x"}], "loop_map": "junk"})["loop_map"] == {}
+
+
+def test_hook_trigger_accepts_a_named_thing():
+    """Our most-viewed Short (176 views by 2026-10-20) opened on 'drove a beat-up Volvo' and failed the old regex."""
+    scr = seed_script()
+    scr["beats"][0]["say"] = "He flew coach and drove a beat-up Volvo for years."
+    assert next(g for g in check_script(scr, history=[]) if g.name == "hook_trigger").passed
+
+
+def test_writer_prompt_carries_the_loop_without_the_stock_teaser():
+    from faceless import config
+    from faceless.prompts import script_prompt
+    p = script_prompt(config.pillar("story"), "a topic")
+    assert "BIG QUESTION" in p and "HEAD FAKE" in p and "RE-HOOK" in p and '"loop_map"' in p
+    assert "e.g. 'But here's the part nobody mentions.'" not in p

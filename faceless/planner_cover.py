@@ -21,7 +21,7 @@ TITLE_1, TITLE_2 = "THE QUIET MONEY", "DAILY PLANNER"
 SUB = "365 days of basic money lessons.\nOne picture. One lesson. One small action."
 SCENES = {"steeple": "quinton-steeple.jpg", "desk": "quinton-desk.jpg"}      # Quinton, the channel's virtual host, generated from his reference photo (assets/planner/cover)
 DEFAULT_STYLE = "steeple"
-CHIPS = ("365 PAGES", "LETTER + A4", "UNDATED")
+CHIPS = ("365 DAYS", "LETTER + A4", "UNDATED")
 TAGLINE = "The money rules nobody taught you."
 
 

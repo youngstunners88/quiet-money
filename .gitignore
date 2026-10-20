@@ -42,3 +42,11 @@ production/cache/songvideo/
 # planner: the drawn pictures are rebuilt by `python -m faceless planner build`; the owner pictures in assets/planner/source and the PDFs are committed
 assets/planner/generated/
 assets/planner/clean-before-after.jpg
+# Paid product files never go in the public repo (anyone could download them free). Rebuild them with
+# `python -m faceless products` and `python -m faceless planner build`; Gumroad holds the copies buyers get.
+channel/products/**/*.pdf
+channel/products/**/*.xlsx
+
+# The Brain keeps raw transcripts out of git (other people's words; the repo is public)
+state/brain/raw/
+state/brain/paid/

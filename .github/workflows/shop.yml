@@ -38,6 +38,8 @@ jobs:
       - run: pip install -r <(grep -vE "composio" requirements.txt)
       - name: Build the spreadsheets and PDFs, verify them against independent math
         run: python -m faceless products
+      - name: Build the Daily Planner PDFs (not in git: paid files never go in the public repo)
+        run: python -m faceless planner build
       - name: Build the listing packs (pictures, video, copy, checklist) and run the listing gauntlet
         run: python -m faceless listing build all
       - name: Gauntlet again, from the files on disk
@@ -47,9 +49,7 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
           name: shop-packs
+          # Listing pictures and copy only. The product files are not uploaded: artifacts of a public repo can be downloaded by any GitHub user.
           path: |
             channel/shop/
-            channel/products/**/*.xlsx
-            channel/products/**/*.pdf
-            channel/products/**/*.zip
           retention-days: 14
