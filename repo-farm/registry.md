@@ -3,6 +3,7 @@
 ## ACTIVE (in use now)
 | Repo / tool | Job in the studio | How it is used |
 |---|---|---|
+| **claude-code-orchestrator** (ours, built 2026-10-20 from the owner's spec) on the official MCP TypeScript SDK `@modelcontextprotocol/sdk` 1.32.1 + `zod` 4.6.5 | The CEO's lanes | `claude-code-orchestrator/`: starts Claude Code workers (`claude -p`), read-only by default; write access needs `WORKER_PERMISSION_MODE` and a confirmation per worker; dependencies pinned, all published on or before 2026-10-05 |
 | TypeSafe **Jev** (`typesafe-ai/skills`, `typesafe-sdk`) | Decision layer | `faceless/decide.py`: publish/hold and safe-to-publish questions; dry-run until `TYPESAFE_API_KEY` is set and records are reviewed |
 | **keel** (codejunkie99/keel) | Design pattern only (macOS app) | Borrowed rules: host validates every choice; invalid or stale choice falls back to the ordinary route; decision records as JSONL |
 | Edge neural TTS (`edge-tts`) | Voice (free) | Primary voice with word timings |

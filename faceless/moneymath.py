@@ -103,3 +103,24 @@ def fact_sheet() -> str:
     lines.append(f"- An extra $1,000/month from a side income, invested at 8% for 10 years = "
                  f"{money(future_value_monthly(1000, 0.08, 10))} (you put in {money(120000)})")
     return "\n".join(lines)
+
+
+CALLABLE = ("future_value_monthly", "capital_for_income", "months_to_target", "lump_sum_growth", "card_payoff",
+            "card_minimum_payoff", "inflation_value", "rule_of_72")
+
+
+def main(argv: list[str]) -> int:
+    """`python -m faceless.moneymath` prints the fact sheet; `python -m faceless.moneymath card_payoff 6000 0.24 200` runs one function."""
+    if not argv:
+        print(fact_sheet())
+        return 0
+    if argv[0] not in CALLABLE:
+        print("usage: python -m faceless.moneymath [" + " | ".join(CALLABLE) + "] NUMBERS...")
+        return 2
+    print(globals()[argv[0]](*(float(a) for a in argv[1:])))
+    return 0
+
+
+if __name__ == "__main__":
+    import sys
+    raise SystemExit(main(sys.argv[1:]))

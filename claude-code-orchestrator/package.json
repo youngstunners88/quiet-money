@@ -1,0 +1,30 @@
+{
+  "name": "claude-code-orchestrator",
+  "version": "0.1.0",
+  "description": "Local MCP server that lets one Claude Code instance start, prompt, monitor and collect output from Claude Code worker processes.",
+  "private": true,
+  "type": "module",
+  "main": "dist/src/client.js",
+  "bin": {
+    "claude-code-orchestrator": "dist/index.js",
+    "claude-code-orchestrator-run-plan": "dist/run-plan.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "clean": "node -e \"require('node:fs').rmSync('dist',{recursive:true,force:true})\"",
+    "build": "npm run clean && tsc -p tsconfig.json && node scripts/postbuild.mjs",
+    "test": "npm run build && node --test dist/test/*.test.js",
+    "start": "node dist/index.js",
+    "run-plan": "node dist/run-plan.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.32.1",
+    "zod": "4.6.5"
+  },
+  "devDependencies": {
+    "@types/node": "22.20.5",
+    "typescript": "5.9.3"
+  }
+}

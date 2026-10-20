@@ -1763,3 +1763,10 @@ def test_writer_prompt_carries_the_loop_without_the_stock_teaser():
     p = script_prompt(config.pillar("story"), "a topic")
     assert "BIG QUESTION" in p and "HEAD FAKE" in p and "RE-HOOK" in p and '"loop_map"' in p
     assert "e.g. 'But here's the part nobody mentions.'" not in p
+
+
+def test_moneymath_runs_one_function_from_the_command_line(capsys):
+    from faceless import moneymath
+    assert moneymath.main(["lump_sum_growth", "1000", "0.08", "10"]) == 0
+    assert capsys.readouterr().out.strip() == str(moneymath.lump_sum_growth(1000, 0.08, 10))
+    assert moneymath.main(["fact_sheet_typo"]) == 2 and "usage" in capsys.readouterr().out

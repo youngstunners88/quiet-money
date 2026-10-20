@@ -59,7 +59,7 @@ Two lanes never own the same path. The CEO alone edits `CLAUDE.md`, `studio.toml
 ## 6. The worker contract (every lane prompt says this)
 1. Read CLAUDE.md, this file's section for your lane, and the files it names. Read before you write.
 2. Write only inside your lane's paths. Never run git commit, push, publish, post, shop, daily or make.
-3. Every claim checked: numbers from `faceless/moneymath.py` or a cited file; copy through `offer check`.
+3. Every claim checked: numbers from `python -m faceless.moneymath FUNCTION NUMBERS...` or a cited file; copy through `offer check`.
 4. Finish with a manifest at `brain/PROMPTS/sprint-NN/lane-X.md`: every file written, every gate run with
    its result, open questions, and what you would do next. Then stop.
 
