@@ -36,6 +36,8 @@ def _topic(theme: str) -> str:
 
 def title_for(pack: dict) -> str:
     """Song first, then the subject a person would type into search, then the channel; the longest form that fits 100 characters."""
+    if pack.get("title_override"):                       # vibe videos name their own search title
+        return str(pack["title_override"])[:TITLE_MAX]
     song, topic = pack["title"].strip(), pack.get("seo_topic") or "Money and Emotions"
     topic = topic.title()
     for form in (f"{song} | A Song About {topic} | Quiet Money", f"{song} | A Song About {topic}", f"{song} (Original Song) | Quiet Money", song):
@@ -73,37 +75,35 @@ def link_for(pack: dict) -> str:
 
 
 def description_for(pack: dict) -> str:
-    song, topic, hook = pack["title"].strip(), _topic(pack["theme"]), pack["hook_line"].strip().rstrip(".")
+    song, topic, hook = pack["title"].strip(), _topic(pack["theme"]), (pack.get("hook_line") or "").strip().rstrip(".")
     url = link_for(pack)
     about = pack["description"].strip()
     lines = [
-        f"“{song}” is an original song by Quiet Money about {topic[:1].lower() + topic[1:]}.",
-        "If it sounded like your life, send it to one friend who wants to exit the rat race.",
+        pack.get("opening_line") or f"“{song}” is an original song by Quiet Money about {topic[:1].lower() + topic[1:]}.",
+        pack.get("cta_line") or "If it sounded like your life, send it to one friend who wants to exit the rat race.",
         "",
-        f"The line people keep: “{hook}.”",
-        "",
+        *([f"The line people keep: “{hook}.”", ""] if hook else []),
         "ABOUT THIS SONG",
         about,
         "",
         "QUICK ANSWERS",
         f"What is “{song}” about? It is about {topic[:1].lower() + topic[1:]}, told as a song rather than a lecture.",
-        "Who is it for? People between 18 and 40 who earn a paycheck, feel behind with money, and want to feel understood before they are told what to do.",
+        pack.get("who_for") or "Who is it for? People between 18 and 40 who earn a paycheck, feel behind with money, and want to feel understood before they are told what to do.",
         "Who is Quiet Money? Quiet Money is a channel about money psychology and personal finance education, built around one idea: the money rules nobody taught you.",
         "Not financial advice: it is a song and a story about feelings and habits, shared for education and reflection only.",
         "",
     ]
     if url:
         lines += [f"Free 7-day Money Reset checklist from Quiet Money: {url}", ""]
+    has_words = bool((pack.get("sung_lyrics") or pack.get("lyrics") or "").strip())
     lines += [
-        "LYRICS",
-        sung_lyrics(pack),
-        "",
-        "AI disclosure: the lyrics were written with AI assistance and the audio was made with an AI music tool. Not financial advice.",
+        *(["LYRICS", sung_lyrics(pack), ""] if has_words else []),
+        pack.get("disclosure") or "AI disclosure: the lyrics were written with AI assistance and the audio was made with an AI music tool. Not financial advice.",
         "",
         hashtags(),
     ]
     text = "\n".join(lines)
-    if len(text) > DESC_MAX:                                   # YouTube allows 5000 characters; the lyrics are what gives way
+    if len(text) > DESC_MAX and has_words:                     # YouTube allows 5000 characters; the lyrics are what gives way
         ly = sung_lyrics(pack)
         keep = DESC_MAX - len(text) + len(ly) - 40
         text = text.replace(ly, ly[:max(0, keep)].rsplit("\n", 1)[0] + "\n...")
@@ -111,6 +111,8 @@ def description_for(pack: dict) -> str:
 
 
 def first_comment(pack: dict) -> str:
+    if pack.get("comment_line"):
+        return pack["comment_line"]
     return (f"Which line of “{pack['title']}” hit you hardest? Tell us below, and send it to one friend who wants to exit the rat race. "
             f"We read every comment.")
 

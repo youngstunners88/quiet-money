@@ -1,0 +1,89 @@
+{
+  "title": "The Lottery Winner Who Lost Everything Twice",
+  "hook_text": "BEATING 1 IN 17 TRILLION ODDS TWICE",
+  "beats": [
+    {
+      "say": "She beat odds of 1 in 17 trillion and won the lottery twice.",
+      "callout": "",
+      "visual": "Cinematic wide shot of a glowing convenience store counter at night under dim amber streetlights"
+    },
+    {
+      "say": "In 1985 and 1986, Evelyn Adams stacked up $5.4 million total.",
+      "callout": "1 IN 17 TRILLION",
+      "visual": "Macro shot of old stacks of hundred-dollar bills tied with paper bands on a dark wooden table"
+    },
+    {
+      "say": "That's millions in cash. Most people think it solves every money problem forever.",
+      "callout": "$5.4 MILLION",
+      "visual": "Close-up of hands counting crisp green currency notes in a dim room with moody side lighting"
+    },
+    {
+      "say": "Instead, she lost every single cent. By 2001, she lived in a trailer park.",
+      "callout": "FORTUNE VS RUIN",
+      "visual": "Cinematic shot of a weathered aluminum trailer home resting on dry gravel under a gray overcast sky"
+    },
+    {
+      "say": "More money can't fix a broken relationship with risk.",
+      "callout": "",
+      "visual": "Close-up of a roulette wheel spinning rapidly with a small white ball bouncing over red and black slots"
+    },
+    {
+      "say": "Here's the part nobody mentions about windfall cash.",
+      "callout": "",
+      "visual": "Low-angle shot of a hand tossing plastic casino chips across a green felt gaming table"
+    },
+    {
+      "say": "If your default behavior is speculative, extra capital just speeds up your losses.",
+      "callout": "ASSET VS SPECULATION",
+      "visual": "Cinematic shot of neon casino lights blurred in the background behind a lonely empty wooden chair"
+    },
+    {
+      "say": "She didn't invest in steady assets. She gambled it away in Atlantic City.",
+      "callout": "SAVINGS VS LOSS",
+      "visual": "Close-up of a person's silhouette standing near a foggy window overlooking a dark coastal city at dusk"
+    },
+    {
+      "say": "Risk isn't just about the size of your bet. It's about how you think.",
+      "callout": "",
+      "visual": "Side profile of a person staring blankly at a blank wall illuminated by a single warm bulb"
+    },
+    {
+      "say": "Your habits follow your money wherever it goes.",
+      "callout": "",
+      "visual": "Macro shot of a mechanical hourglass with fine white sand draining into the lower glass bulb"
+    },
+    {
+      "say": "Build calm systems now, because cash alone won't save you.",
+      "callout": "",
+      "visual": "Close-up of a minimalist metal combination lock turning slowly on a dark leather briefcase"
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "RULE OF MONEY",
+      "visual": "Cinematic shot of a single glowing brass key resting on a dark slate table with soft rim lighting"
+    }
+  ],
+  "caption": "More money won't fix a broken relationship with risk. Evelyn Adams won millions twice and lost it all because her habits stayed the same. #MoneyRules #PersonalFinance #FinancialLiteracy #WealthMindset #MoneyPsychology",
+  "description": "The true story of Evelyn Adams reveals why winning the lottery or getting a massive raise won't save you if your default financial behavior is built on speculation. Quiet Money shares the money rules nobody taught you.",
+  "hashtags": [
+    "#MoneyRules",
+    "#PersonalFinance",
+    "#FinancialLiteracy",
+    "#WealthMindset",
+    "#MoneyPsychology"
+  ],
+  "first_comment": "What's the biggest financial trap people fall into when they get extra cash? Drop your thoughts below.",
+  "facts": [
+    {
+      "claim": "Evelyn Adams won the New Jersey lottery twice in the 1980s, totaling $5.4 million.",
+      "basis": "Documented lottery records and news archives from 1985 and 1986."
+    },
+    {
+      "claim": "She lost all her winnings and was living in a trailer park by the early 2000s due to heavy gambling.",
+      "basis": "Interviews and retrospective profiles published by major news outlets like the New York Times."
+    }
+  ],
+  "source": "llm",
+  "pillar": "story",
+  "look": ""
+}

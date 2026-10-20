@@ -3940,3 +3940,10 @@
 {"day": "2026-10-19", "provider": "gemini", "unit": "tokens", "amount": 1757, "usd": 0.0, "job": null}
 {"day": "2026-10-19", "provider": "gemini", "unit": "tokens", "amount": 1807, "usd": 0.0, "job": null}
 {"day": "2026-10-19", "provider": "gemini", "unit": "tokens", "amount": 4168, "usd": 0.0, "job": null}
+{"day": "2026-10-19", "provider": "composio", "unit": "calls", "amount": 1, "usd": 0.0, "job": "song-breathe"}
+{"day": "2026-10-20", "provider": "composio", "unit": "calls", "amount": 1, "usd": 0.0, "job": "song-breathe"}
+{"day": "2026-10-20", "provider": "composio", "unit": "calls", "amount": 1, "usd": 0.0, "job": "2026-10-19-s2-escape-asset-vs-liability-cash-flow-rea"}
+{"day": "2026-10-20", "provider": "gemini", "unit": "tokens", "amount": 2437, "usd": 0.0, "job": null}
+{"day": "2026-10-20", "provider": "gemini", "unit": "tokens", "amount": 738, "usd": 0.0, "job": null}
+{"day": "2026-10-20", "provider": "cloudflare", "unit": "neurons", "amount": 11.1273, "usd": 0.0, "job": null}
+{"day": "2026-10-20", "provider": "cloudflare", "unit": "neurons", "amount": 11.4109, "usd": 0.0, "job": "2026-10-20-s2-story-evelyn-adams-beating-1-in-17-tri"}
