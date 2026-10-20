@@ -1,0 +1,76 @@
+{
+  "id": "2026-10-19-s3-math-the-30-year-car-loan-calculation",
+  "pillar": "math",
+  "topic": "The 30-Year Car Loan Calculation",
+  "day": "2026-10-19",
+  "slot": 3,
+  "status": "published",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-19T09:33:25Z",
+      "words": 153
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-19T09:33:45Z",
+      "seconds": 62.902,
+      "provider": "gemini"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-19T09:34:24Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-19T09:36:29Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-19T09:36:29Z",
+      "score": 92
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-19T09:36:30Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-10-19T09:36:32Z",
+      "local": "2026-10-19T18:30:00-04:00",
+      "youtube": null
+    }
+  ],
+  "artifacts": {
+    "angle": "Exposing how extending a car loan to 84 months doubles the total interest paid on a depreciating asset.",
+    "title": "The 84-Month Car Loan Trap",
+    "style": "cinematic",
+    "video": "/home/user/quiet-money/production/output/2026-10-19/2026-10-19-s3-math-the-30-year-car-loan-calculation/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-19/2026-10-19-s3-math-the-30-year-car-loan-calculation/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-10-19/slot4-math",
+        "post_at": "2026-10-19T18:30:00-04:00"
+      },
+      "youtube": {
+        "skipped": "YouTube refused the upload session (HTTP 429): quota or rate limit; it resets at midnight Pacific"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 92,
+    "passed": true
+  },
+  "cost": {
+    "tts:gemini:chars": 848
+  },
+  "notes": []
+}

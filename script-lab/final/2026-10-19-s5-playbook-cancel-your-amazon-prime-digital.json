@@ -1,0 +1,85 @@
+{
+  "title": "The Hidden Amazon Prime Charges Draining Your Account",
+  "hook_text": "YOU ARE PAYING AMAZON FOR SECRET CHANNELS",
+  "beats": [
+    {
+      "say": "You're likely paying Amazon $15 a month for channels you haven't watched in over a year.",
+      "callout": "",
+      "visual": "Cinematic low-angle shot of a dark living room, a solitary TV glowing faintly in the distance."
+    },
+    {
+      "say": "Amazon buries these video add-on subscriptions deep inside menus where you'll never see them.",
+      "callout": "",
+      "visual": "Close-up of a human hand resting on a sleek wooden coffee table next to a dark smartphone."
+    },
+    {
+      "say": "Most people completely forget they signed up for free trials that quietly turned into paid monthly fees.",
+      "callout": "",
+      "visual": "A dark, moody home office desk with an open laptop showing only blurred shapes on screen."
+    },
+    {
+      "say": "Let's hunt them down right now in under 2 minutes.",
+      "callout": "",
+      "visual": "Macro shot of a finger tapping a sleek dark remote control in dim lighting."
+    },
+    {
+      "say": "Step one. Open the Amazon app on your phone or log into the desktop site right now.",
+      "callout": "STEP ONE",
+      "visual": "Side profile of a person holding a modern smartphone, screen turned away from the camera."
+    },
+    {
+      "say": "Step two. Tap your profile icon at the bottom, then tap your account settings.",
+      "callout": "STEP TWO",
+      "visual": "Close-up of fingers scrolling past a dark, blurred interface on a handheld device."
+    },
+    {
+      "say": "Step three. Scroll down to memberships and subscriptions, then open your Prime video channels list.",
+      "callout": "STEP THREE",
+      "visual": "A person pressing a button on a minimalist remote control in a softly lit room."
+    },
+    {
+      "say": "Look closely at that list. You'll probably find 2 or 3 streaming add-ons you completely forgot about.",
+      "callout": "",
+      "visual": "Overhead shot of a coffee cup and a closed notebook resting on a dark walnut desk."
+    },
+    {
+      "say": "Cancel every single one of them today. You don't need them and you certainly aren't watching them.",
+      "callout": "",
+      "visual": "A hand clicking a computer mouse firmly on a dark office desk."
+    },
+    {
+      "say": "A $15 a month subscription for 10 years equals $1,800 straight out of your pocket.",
+      "callout": "$1,800",
+      "visual": "Cinematic shot of a minimalist wallet resting on a dark slate surface."
+    },
+    {
+      "say": "If you invested that $15 a month instead, historical average market returns could turn it into a solid chunk of cash.",
+      "callout": "",
+      "visual": "A silhouette of a person looking out a large window at a rainy city skyline at dusk."
+    },
+    {
+      "say": "Stop letting hidden corporate fees rob your future. Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "Slow fade to a dark, clean slate background with no text or distractions."
+    }
+  ],
+  "caption": "Amazon has been quietly billing you for channels you forgot existed. Follow for the money rules school never taught you. #personalfinance #moneytips #amazonprime #budgeting #savemoney",
+  "description": "Hunt down forgotten video add-on subscriptions buried inside Amazon's video settings and stop wasting your paycheck.",
+  "hashtags": [
+    "#personalfinance",
+    "#moneytips",
+    "#amazonprime",
+    "#budgeting",
+    "#savemoney"
+  ],
+  "first_comment": "What's the most ridiculous hidden subscription you've ever found on your bank statement?",
+  "facts": [
+    {
+      "claim": "A $15/month subscription for 10 years = $1,800",
+      "basis": "$15 times 12 months times 10 years equals $1,800"
+    }
+  ],
+  "source": "llm",
+  "pillar": "playbook",
+  "look": ""
+}

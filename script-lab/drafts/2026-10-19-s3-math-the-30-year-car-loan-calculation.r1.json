@@ -1,0 +1,99 @@
+{
+  "title": "The 84-Month Car Loan Trap",
+  "hook_text": "THE 84-MONTH CAR LOAN SCAM",
+  "beats": [
+    {
+      "say": "An 84-month car loan drops your payment, but hands banks $4,000 in pure profit.",
+      "callout": "",
+      "visual": "A sleek dark sedan parked alone under harsh showroom spotlights, viewed from a low rear angle with dramatic shadows across the polished concrete floor."
+    },
+    {
+      "say": "Dealerships love this trick because it makes you feel wealthy while quietly draining your future net worth.",
+      "callout": "",
+      "visual": "A silhouette of a buyer sitting across a heavy wooden desk from a car salesman, shot from behind the buyer in cold cinematic lighting."
+    },
+    {
+      "say": "Here's the exact calculation on a standard $35,000 vehicle financed at 7% annual interest.",
+      "callout": "$35,000 AT 7%",
+      "visual": "Close-up of a silver pen resting beside a blank luxury leather key fob on a minimalist dark marble table, shallow depth of field."
+    },
+    {
+      "say": "On a standard 48-month term, you pay $838 each month and $5,200 in total loan interest.",
+      "callout": "$838 / MONTH",
+      "visual": "A driver's hand gripping a leather steering wheel at dusk, headlights illuminating an empty winding road ahead, filmed through rain-streaked glass."
+    },
+    {
+      "say": "Stretch that same debt to 84 months, and your required monthly payment drops down to $528.",
+      "callout": "$528 / MONTH",
+      "visual": "An overhead top-down shot of a metallic luxury car key resting on an empty matte black tray, sharp sidelight casting long shadows."
+    },
+    {
+      "say": "On paper, it looks like you just freed up $310 of breathing room in your monthly budget.",
+      "callout": "$838 VS $528",
+      "visual": "A quiet suburban driveway at sunset with a new vehicle parked in front of a garage, captured from a distant cinematic street view."
+    },
+    {
+      "say": "But here's the dangerous calculation dealerships never write on the window sticker.",
+      "callout": "",
+      "visual": "A close-up of a side mirror reflecting an empty glass showroom in cold monochrome tones, slow dolly out."
+    },
+    {
+      "say": "Stretching that loan out to seven years nearly doubles your total interest bill to $9,400.",
+      "callout": "$5,200 VS $9,400",
+      "visual": "A dimly lit bank vault door slightly ajar with a sliver of golden light spilling across polished granite flooring."
+    },
+    {
+      "say": "That's an extra $4,200 handed straight to the lender for an asset losing value every single day.",
+      "callout": "+$4,200 INTEREST",
+      "visual": "A silhouette of a person standing beside an open car trunk at a desolate concrete parking deck during twilight."
+    },
+    {
+      "say": "Now consider the hidden opportunity cost eating away at your retirement.",
+      "callout": "",
+      "visual": "An antique bronze hourglass on a dark walnut shelf, sand running down steadily in dramatic rim lighting."
+    },
+    {
+      "say": "Investing $200 a month at an assumed 8% return grows into $298,072 after 30 years.",
+      "callout": "$298,072 AT 8%",
+      "visual": "A minimalist architectural glass staircase rising upward toward a skylight in a modern museum, wide angle shot."
+    },
+    {
+      "say": "Instead, you're locking that cash into a depreciating machine that might be worthless by year seven.",
+      "callout": "",
+      "visual": "An older car parked under an industrial bridge with rust forming along the wheel well, moody atmospheric haze."
+    },
+    {
+      "say": "Always negotiate the total out-the-door price rather than the monthly payment.",
+      "callout": "",
+      "visual": "Hands in silhouette firmly closing a dark leather portfolio folder on an empty table under a single overhead downlight."
+    },
+    {
+      "say": "Follow for the money rules school never taught you, and stop letting lenders take your future profit.",
+      "callout": "",
+      "visual": "A solo figure viewed from behind walking into a sunlit open courtyard between clean concrete modern structures."
+    }
+  ],
+  "caption": "Lower monthly payments don't mean a cheaper car. Here's what 84-month financing actually costs you. #carloan #moneyrules #personalfinance #wealthbuilding #quietmoney",
+  "description": "Extending a vehicle loan from 48 to 84 months drops the monthly payment, but nearly doubles the total interest paid. Learn why car dealerships push long-term financing and how it silently drains your long-term wealth.",
+  "hashtags": [
+    "#carloan",
+    "#personalfinance",
+    "#moneytips",
+    "#wealthmindset",
+    "#quietmoney"
+  ],
+  "first_comment": "How many months was your last car loan, and did you check the total interest first?",
+  "facts": [
+    {
+      "claim": "On a $35,000 loan at 7%, 48 months costs ~$5,200 interest ($838/mo) while 84 months costs ~$9,400 interest ($528/mo).",
+      "basis": "Standard amortization math: 48 mo at 7% = $837.75/mo ($5,212 interest); 84 mo at 7% = $527.91/mo ($9,344 interest), yielding ~$4,132 extra interest."
+    },
+    {
+      "claim": "Investing $200/month for 30 years at 8%/yr compounded monthly reaches $298,072.",
+      "basis": "Fact Sheet: $200/month invested for 30 years at 8%/yr (monthly compounding) = $298,072 (you put in $72,000)."
+    }
+  ],
+  "source": "llm",
+  "pillar": "math",
+  "look": ""
+}

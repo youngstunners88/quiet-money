@@ -1,0 +1,89 @@
+{
+  "id": "2026-10-19-s2-escape-asset-vs-liability-cash-flow-rea",
+  "pillar": "escape",
+  "topic": "Asset vs Liability Cash Flow Reality",
+  "day": "2026-10-19",
+  "slot": 2,
+  "status": "published",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-19T09:22:10Z",
+      "words": 165
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-19T09:22:40Z",
+      "seconds": 63.216,
+      "provider": "gemini"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-19T09:23:33Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-19T09:25:56Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-19T09:25:56Z",
+      "score": 97
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-19T09:25:56Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-10-19T09:26:08Z",
+      "local": "2026-10-19T15:00:00-04:00",
+      "youtube": "2026-10-19T15:00:00-04:00"
+    }
+  ],
+  "artifacts": {
+    "angle": "Examine how buying things that require continuous maintenance drains potential investing capital.",
+    "brief": "kiyosaki",
+    "title": "The Asset vs Liability Cash Flow Trap",
+    "style": "cinematic",
+    "video": "/home/user/quiet-money/production/output/2026-10-19/2026-10-19-s2-escape-asset-vs-liability-cash-flow-rea/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-19/2026-10-19-s2-escape-asset-vs-liability-cash-flow-rea/cover.jpg",
+    "youtube": {
+      "video_id": "vJ3mt0MLS28",
+      "channel_id": "UC9B1QBr3_8Eulok8IdQbCqQ",
+      "privacy": "private",
+      "post_at": "2026-10-19T15:00:00-04:00",
+      "comment_posted": false,
+      "series": true
+    },
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-10-19/slot3-escape",
+        "post_at": "2026-10-19T15:00:00-04:00"
+      },
+      "youtube": {
+        "mode": "youtube",
+        "post_at": "2026-10-19T15:00:00-04:00",
+        "video_id": "vJ3mt0MLS28",
+        "channel_id": "UC9B1QBr3_8Eulok8IdQbCqQ",
+        "privacy": "private"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 97,
+    "passed": true
+  },
+  "cost": {
+    "tts:gemini:chars": 1005
+  },
+  "notes": []
+}

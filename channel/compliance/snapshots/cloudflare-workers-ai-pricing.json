@@ -1,6 +1,6 @@
 {
  "id": "cloudflare-workers-ai-pricing",
- "fetched": "2026-10-12",
+ "fetched": "2026-10-19",
  "sha": "f115ea60bb92abb3",
  "snippets": [
   "Fetch the complete documentation index at: https://developers.cloudflare.com/workers-ai/llms.txt",

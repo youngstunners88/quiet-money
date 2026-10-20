@@ -1,0 +1,77 @@
+{
+  "id": "2026-10-19-s6-escape-assets-vs-liabilities-cash-flow",
+  "pillar": "escape",
+  "topic": "Assets vs Liabilities Cash Flow Mechanics",
+  "day": "2026-10-19",
+  "slot": 6,
+  "status": "published",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-19T09:56:42Z",
+      "words": 99
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-19T10:00:15Z",
+      "seconds": 66.158,
+      "provider": "gemini"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-19T10:00:37Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-19T10:02:43Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-19T10:02:43Z",
+      "score": 99
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-19T10:02:44Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-10-19T10:02:46Z",
+      "local": "2026-10-20T11:30:00-04:00",
+      "youtube": null
+    }
+  ],
+  "artifacts": {
+    "angle": "Examine how assets put money in your pocket while liabilities extract it every single month.",
+    "brief": "kiyosaki",
+    "title": "The Hidden Direction of Your Cash Flow",
+    "style": "cinematic",
+    "video": "/home/user/quiet-money/production/output/2026-10-19/2026-10-19-s6-escape-assets-vs-liabilities-cash-flow/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-19/2026-10-19-s6-escape-assets-vs-liabilities-cash-flow/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-10-20/slot2-escape",
+        "post_at": "2026-10-20T11:30:00-04:00"
+      },
+      "youtube": {
+        "skipped": "YouTube refused the upload session (HTTP 429): quota or rate limit; it resets at midnight Pacific"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 99,
+    "passed": true
+  },
+  "cost": {
+    "tts:gemini:chars": 1725
+  },
+  "notes": []
+}

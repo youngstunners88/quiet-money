@@ -1,0 +1,89 @@
+{
+  "title": "How Status Quo Bias Quietly Drains Your Bank Account",
+  "hook_text": "YOUR BANK IS BETTING ON THIS",
+  "beats": [
+    {
+      "say": "Your bank is betting you're too lazy to switch.",
+      "callout": "",
+      "visual": "A cinematic shot from behind a person sitting at a dark wooden desk in a dimly lit minimalist office, looking toward a sleek glass window overlooking city lights."
+    },
+    {
+      "say": "Loyalty isn't rewarded with money, but breaking one hidden psychological trap flips the script completely.",
+      "callout": "THE LOYALTY TRAP",
+      "visual": "A close-up shot of hands resting on a cold marble countertop next to an architectural modern keycard, atmospheric moody lighting."
+    },
+    {
+      "say": "It's called the Status Quo Bias, your brain's natural impulse to prefer familiar comfort over extra cash.",
+      "callout": "",
+      "visual": "A silhouette of a person standing quietly in a vast concrete hallway with geometric shadows and dramatic top lighting."
+    },
+    {
+      "say": "Look closely at your bank statement. One forgotten $15/month subscription quietly burns $1,800 over 10 years.",
+      "callout": "$15/MO = $1,800",
+      "visual": "An extreme close-up of a dark leather wallet lying closed on a glass surface with warm warm side lighting."
+    },
+    {
+      "say": "It gets far worse in long-term investing. A 1% fee on $100,000 over 30 years costs $176,277 compared to 0.05%.",
+      "callout": "1.00% VS 0.05%",
+      "visual": "A wide angle shot of an empty brutalist boardroom with a long polished wooden table under low ambient spotlighting."
+    },
+    {
+      "say": "But here's the part nobody mentions.",
+      "callout": "",
+      "visual": "A dramatic close-up of an hourglass sitting on a dark oak shelf, camera slightly tilted up, selective focus."
+    },
+    {
+      "say": "Modern subscription models are engineered so staying passive feels like you aren't spending money at all.",
+      "callout": "",
+      "visual": "A side angle view of a sleek coffee cup resting next to an unbranded smartphone lying screen down on a granite desk."
+    },
+    {
+      "say": "Large financial institutions depend on your silence, turning your default settings into their steady annual profit.",
+      "callout": "",
+      "visual": "A majestic high-angle view of skyscraper tops shrouded in low morning mist, cold blue mood lighting."
+    },
+    {
+      "say": "Step one: Audit every single recurring payment across all your accounts from the past 90 days.",
+      "callout": "STEP ONE",
+      "visual": "Over-the-shoulder shot of hands holding a plain paper notebook with a sleek pen on a wooden table."
+    },
+    {
+      "say": "Step two: Call your car insurance provider and compare high-yield savings rates every single year.",
+      "callout": "STEP TWO",
+      "visual": "A dark, moody shot of a luxury sports car parked inside a concrete garage under soft vertical neon light bars."
+    },
+    {
+      "say": "Re-routing those quiet leaks lets you build real momentum instead of funding someone else's growth.",
+      "callout": "STOP THE LEAK",
+      "visual": "A low-angle shot of a silhouette walking purposefully through a sunlit concrete plaza."
+    },
+    {
+      "say": "Follow for the money rules school never taught you, so your bank doesn't win that bet again.",
+      "callout": "",
+      "visual": "A moody silhouette of a person standing quietly near a floor-to-ceiling glass window watching sunrise over a skyline."
+    }
+  ],
+  "caption": "Your bank profits off your quiet habits. Here is how to stop the leak.\n\n#money #personalfinance #behavioraleconomics #statusquobias #financialliteracy",
+  "description": "The Status Quo Bias is a psychological habit where we prefer familiar defaults over making changes. Financial institutions count on this bias to charge higher fees and lower yields, costing consumers thousands over time.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#behavioraleconomics",
+    "#statusquobias",
+    "#quietmoney"
+  ],
+  "first_comment": "When was the last time you switched bank accounts or audited your subscriptions?",
+  "facts": [
+    {
+      "claim": "A $15/month subscription costs $1,800 over 10 years.",
+      "basis": "$15 * 12 months * 10 years = $1,800."
+    },
+    {
+      "claim": "A 1.00% annual fee on $100,000 over 30 years at 7% costs $176,277 more than a 0.05% fee.",
+      "basis": "Fact sheet: $100,000 at 7% minus 1.00% fee = $574,349 vs minus 0.05% fee = $750,626 ($750,626 - $574,349 = $176,277)."
+    }
+  ],
+  "source": "llm",
+  "pillar": "psychology",
+  "look": ""
+}

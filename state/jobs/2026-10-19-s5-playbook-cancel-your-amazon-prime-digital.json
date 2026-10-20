@@ -1,0 +1,76 @@
+{
+  "id": "2026-10-19-s5-playbook-cancel-your-amazon-prime-digital",
+  "pillar": "playbook",
+  "topic": "Cancel Your Amazon Prime Digital Channels and Video Add-ons",
+  "day": "2026-10-19",
+  "slot": 5,
+  "status": "published",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-19T09:47:51Z",
+      "words": 190
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-19T09:48:24Z",
+      "seconds": 64.506,
+      "provider": "gemini"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-19T09:48:45Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-19T09:50:35Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-19T09:50:35Z",
+      "score": 98
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-19T09:50:35Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-10-19T09:50:37Z",
+      "local": "2026-10-20T07:30:00-04:00",
+      "youtube": null
+    }
+  ],
+  "artifacts": {
+    "angle": "Hunt down forgotten streaming add-on subscriptions buried inside Amazon's video settings.",
+    "title": "The Hidden Amazon Prime Charges Draining Your Account",
+    "style": "cinematic",
+    "video": "/home/user/quiet-money/production/output/2026-10-19/2026-10-19-s5-playbook-cancel-your-amazon-prime-digital/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-19/2026-10-19-s5-playbook-cancel-your-amazon-prime-digital/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-10-20/slot1-playbook",
+        "post_at": "2026-10-20T07:30:00-04:00"
+      },
+      "youtube": {
+        "skipped": "YouTube refused the upload session (HTTP 429): quota or rate limit; it resets at midnight Pacific"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 98,
+    "passed": true
+  },
+  "cost": {
+    "tts:gemini:chars": 1107
+  },
+  "notes": []
+}
