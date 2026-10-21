@@ -76,6 +76,9 @@ humans set strategy, connect accounts, and review held videos.
 | Marketing: the weekly brief, funnel, measurement, experiments, what to tell the owner (the plan is `channel/empire/MARKETING.md`) | `/faceless/marketing.py`, `metrics.py` | `channel/empire/MARKETING.md` (section 8), `channel/empire/experiments.json` | `faceless-marketing` |
 | Learn from a video, post or channel; search what the Brain knows (transcripts in, notes out) | `/brain` | `brain/CONTEXT.md` | `faceless-brain` |
 | Run the business as CEO: sprints, lanes as Claude Code workers (MCP `claude-code-orchestrator`), the sprint report | `/brain/PROMPTS` | `brain/PROMPTS/ORCHESTRATOR.md` | `faceless-ceo` |
+| What to sell next: proof-first demand research, scored on a rubric (never a fake door) | `/analytics/product-hunt` | `analytics/product-hunt/README.md` | `faceless-product-hunter` |
+| A free lead magnet that leads to one paid product (checklist, sample, tracker) | `/channel/offers/lead-magnets` | `channel/offers/sprint-01/` | `faceless-lead-magnet` |
+| Score a listing page and draft a v2 (never changes the live page) | `/channel/offers` | `channel/offers/sprint-01/CONVERSION-REVIEW.md` | `faceless-conversion-review` |
 | Comics series: hand-drawn stick-figure picture posts (YouTube Posts tab), five a day | `/faceless/comics.py` | `.claude/skills/faceless-comics` | `faceless-comics` |
 | A Vox-style paper-collage explainer for a special video | `/faceless/collage.py` | `.claude/skills/faceless-paper-collage` | `faceless-paper-collage` |
 | Quinton's weekly Monday drop (the host clip) | `/faceless/host.py` | `.claude/skills/faceless-quinton-weekly` | `faceless-quinton-weekly` |

@@ -60,7 +60,7 @@ COPY = {
 
 # What a call to action must never say. Each is a promise about money, which the video gauntlet already refuses in scripts.
 CLAIMS = [
-    ("guarantee", r"\bguarantee[sd]?\b"),
+    ("guarantee", r"(?<!never )(?<!not )(?<!n't )\bguarantee[sd]?\b"),   # "returns are never guaranteed" is the required disclaimer
     ("risk-free", r"\brisk[- ]free\b|\bno[- ]risk\b|\b100% safe\b|\bcan(?:'|’)?t lose\b|\bcannot lose\b"),
     ("income promise", r"\byou(?:'ll| will)\s+(?:make|earn|get|save|be|retire)\b|\bmake\s+\$?\d[\d,.]*\s*[km]?\s*(?:a|per|/|each)\s*(?:day|week|month|year)\b|\bpassive income\b"),
     ("get rich", r"\bget[- ]rich\b|\bmillionaire\b|\bquit your job\b|\bdouble your money\b|\bfinancial freedom in\b"),

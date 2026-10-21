@@ -47,3 +47,5 @@ and the report format (11). Read it whole before a sprint. Decisions go to `chan
   client can ask).
 - **A worker ends in seconds with is_error:** read `result_preview` in its log; a usage limit names its reset.
 - **A lane wrote outside its paths:** revert those files, tighten the prompt, re-run that lane alone.
+- **A lane could not write a skill:** expected; `.claude/` is protected from workers. The lane drafts in
+  `state/brain/skill-drafts/`, the CEO copies the reviewed drafts into `.claude/skills/` and runs `python -m faceless skills`.

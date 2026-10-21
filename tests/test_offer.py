@@ -346,3 +346,14 @@ def test_offer_check_reads_a_whole_draft_file_when_given_a_path(tmp_path, capsys
     assert cli.main(["offer", "check", str(draft)]) == 1 and "refused" in capsys.readouterr().out
     draft.write_text("A calm planner with one lesson a day.\n", encoding="utf-8")
     assert cli.main(["offer", "check", str(draft)]) == 0 and "clean" in capsys.readouterr().out
+
+
+@pytest.mark.parametrize("text", ["Examples use assumed returns that are never guaranteed.", "Returns are not guaranteed.",
+                                  "We don't guarantee any result.", "We never guarantee returns."])
+def test_the_negated_disclaimer_passes_the_guarantee_rule(text):
+    assert not [v for v in offer.violations(text) if v.startswith("guarantee")]
+
+
+@pytest.mark.parametrize("text", ["Guaranteed returns.", "We guarantee results.", "A guarantee you will save.", "It is guaranteed to work."])
+def test_a_real_guarantee_is_still_refused(text):
+    assert [v for v in offer.violations(text) if v.startswith("guarantee")]
