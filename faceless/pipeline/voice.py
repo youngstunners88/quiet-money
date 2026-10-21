@@ -6,10 +6,12 @@ import json
 import re
 import subprocess
 
-from faceless import config, events
+from faceless import align, config, events
 from faceless.pipeline.script import narration
 from faceless.providers import tts
 from faceless.fsutil import write_atomic
+
+ALIGN_MIN_COVERAGE = 0.6      # below this share of script words heard, the transcript is not trusted and the estimate stays
 
 
 def _norm(s: str) -> str:
@@ -98,6 +100,17 @@ def _pad_tail(wav, speech_end: float, tail: float) -> float:
     return tts.duration(wav)
 
 
+def timed_words(provider: str, text: str, wav, total: float, words: list[dict], job_id: str = "") -> tuple[list[dict], str, float]:
+    """Caption timings and where they came from. Edge and ElevenLabs return real timings; for any other voice the finished audio is
+    transcribed and the script's words take the heard timing (faceless/align.py). If that fails the estimate stays and is labelled."""
+    if provider in ("edge", "elevenlabs"):
+        return words, "native", 1.0
+    got = align.align(text, wav, total)
+    ok = bool(got and got[1] >= ALIGN_MIN_COVERAGE)
+    events.emit("VOICE_ALIGNED" if ok else "VOICE_TIMING_ESTIMATED", job=job_id, provider=provider, coverage=round(got[1], 3) if got else None)
+    return (got[0], "aligned", got[1]) if ok else (words, "estimated", 0.0)
+
+
 def run(job, script: dict, prefer: str | None = None) -> dict:
     cfg = config.load()
     lo, hi = cfg["production"]["target_seconds"]
@@ -125,9 +138,10 @@ def run(job, script: dict, prefer: str | None = None) -> dict:
         events.emit("VOICE_REFIT", job=job.id, speed=round(speed, 3), seconds=round(speech_end, 2))
     dur = _pad_tail(wav, speech_end, 0.65)       # the synthesizer stops on the last word's last sound: give it a breath of room, never a clipped ending
     total = round(min(dur, speech_end + 0.6), 3)
+    words, timing, coverage = timed_words(provider, text, wav, total, words, job.id)
     words = attach_display(words, text)
     spans = align_beats([b["say"] for b in script["beats"]], words, total)
-    data = {"provider": provider, "duration": total, "words": words, "beats": spans}
+    data = {"provider": provider, "duration": total, "words": words, "beats": spans, "timing": timing, "timing_coverage": round(coverage, 3)}
     write_atomic(job.dir / "voice.json", json.dumps(data, indent=1))
     job.add_cost(f"tts:{provider}:chars", len(text))
     return data

@@ -159,6 +159,7 @@ dup_hard = 0.72                              # ...and hold (same topic again)
 pass_score = 80
 max_fix_rounds = 2
 similarity_max = 0.55
+topic_dup = 0.5                              # a backlog topic whose meaning (embedding) is this close to a recent video or a topic taken today is skipped
 vision_check = false
 
 [publish]

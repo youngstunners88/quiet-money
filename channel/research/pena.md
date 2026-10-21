@@ -22,14 +22,26 @@ How to use: teach the FRAMEWORKS in our own words. No quotes. The video is about
 - Dream team: surround yourself with people better than you (lawyers, accountants, operators).
 - Execution over learning: stop collecting courses; act, measure, and do what you said you'd do.
 
+- (added 2026-10-21) His 7 Steps to Super Success, as his own site lists them: face reality about where you are; make the vision
+  specific and measurable; build perception (credibility and positioning); create a dream team; build an action plan (growth,
+  working capital, financing); pay yourself first; plan the exit (sell, franchise, go public or repeat) from day one.
+- (added 2026-10-21) "Bodacious" goals: goals big enough to change how you act day to day, not just what you hope for.
+- (added 2026-10-21) Speed of decision: high performers act quickly and change their minds slowly (his site's phrasing, paraphrased).
+- (added 2026-10-21) Buying instead of starting: his method centres on acquiring existing cash-flowing businesses, often with
+  borrowing and seller financing, instead of building from zero. Teach the idea (owning cash flow), never the deal mechanics as advice.
+
 ## The honest catch (every video names one)
 - OPM is debt or someone else's equity: you owe it back, or you give away ownership, and deals can fail.
 - His style is extreme (very long hours, brutal honesty); his figures are self-reported and unverified.
+- Buying a business with borrowed money means the debt is owed even when the business has a bad year; lenders often want a
+  personal guarantee. Third-party summaries of his buyout method (multiples, coverage ratios) are unverified: never quote them as rules.
 
 ## Never
 - State his self-reported numbers as facts. Quote him. Show his face. Promise outcomes.
 
 ## Sources
+- https://www.danpena.co.uk/seminar/ (the 7 Steps to Super Success, read 2026-10-21)
+- https://trilliondollarman.co.uk/ (act quickly, change your mind slowly; OPM, other people's experience and relationships)
 - https://en.wikipedia.org/wiki/Dan_Pe%C3%B1a (birth, degree, ouster, $3.3M award, Guthrie Castle 1984)
 - https://www.danpena.co.uk/qla/ (QLA concepts: OPM, OPR, deal flow, dream teams)
 - https://medium.com/@davidol/how-an-ex-military-officer-turned-820-into-450-million-in-8-years-29c902a26e44 ($820, $450M claims)

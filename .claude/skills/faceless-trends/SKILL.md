@@ -32,6 +32,14 @@ The engine picks topics with a higher `demand.score` (0 to 100, your judgment fr
    `python -m faceless memory "<topic words>"` (add `--pillar x`, `--status held`; `--rebuild` to re-index). The same search
    answers "why were videos held for X?" (`memory --status held word_count`) and "how did our best scripts open?".
 
+## Not already covered (meaning, not words)
+A topic that says what a recent video said feels like a repeat even with new words. Before adding rows, check them the way the
+engine picks them (`faceless/pipeline/ideate.py first_distinct`, `[gauntlet] topic_dup = 0.5`): centered embedding similarity of
+topic + angle + hook against the latest titles and hooks, the existing backlog and each other must stay under 0.5 (unrelated pairs
+sit under about 0.35). Drop what fails; do not reword it until it passes. Vary the numbers too: the fact sheet's favourite figures
+($400,130, $226,659, the $3,000 card) are already used many times, so compute new ones with `python -m faceless.moneymath FUNCTION NUMBERS`.
+The `hook` field now reaches the writer as a suggested opening line, so write it as carefully as the topic.
+
 ## Add
 Append lines to `script-lab/ideas/backlog.jsonl`:
 `{"pillar": "math", "topic": "...", "angle": "...", "hook": "..."}`

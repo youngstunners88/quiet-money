@@ -229,14 +229,19 @@ def judge_script(script: dict, job_id: str | None = None, brief: str = "") -> tu
     return g, j
 
 
+def caption_timing(voice: dict) -> str:
+    """Where the caption timings came from: native (the voice returned them), aligned (transcribed from the audio) or estimated (guessed)."""
+    return voice.get("timing") or ("native" if voice["provider"] in ("edge", "elevenlabs") else "estimated")
+
+
 def check_voice(voice: dict) -> list[Gate]:
     lo, hi = config.load()["production"]["target_seconds"]
     d = voice["duration"]
     return [
         Gate("duration", lo <= d <= hi + 1.5, 10, True, f"{d:.1f}s; need {lo:.0f}-{hi:.0f}s (TikTok rewards need >60s).", "script"),
         Gate("word_timings", len(voice["words"]) > 50, 8, True, "missing word timings for captions", "voice"),
-        Gate("voice_provider", voice["provider"] in ("edge", "elevenlabs"), 2, False,
-             f"voice came from fallback {voice['provider']} (estimated caption timing)", "voice"),
+        Gate("caption_sync", caption_timing(voice) in ("native", "aligned"), 8, False,
+             f"captions use {caption_timing(voice)} word timings (voice {voice['provider']}): they drift from the speech", "voice"),
     ]
 
 

@@ -126,6 +126,11 @@ def script_object(value) -> dict | None:
     return value if isinstance(value, dict) and value.get("beats") else None
 
 
+def with_hook(angle: str, hook: str) -> str:
+    """The backlog's hook reaches the writer as a suggestion (it was dropped before 2026-10-21, so distinct hooks never shipped)."""
+    return f"{angle} Suggested opening line (use it or beat it, keep it true): {hook}".strip() if hook else angle
+
+
 def write(job, angle: str = "", feedback: list[str] | None = None) -> dict:
     """Return the job's script, drafting one if no final script exists yet."""
     fp = final_path(job)
@@ -135,7 +140,7 @@ def write(job, angle: str = "", feedback: list[str] | None = None) -> dict:
         return script
     from faceless import research
     pillar = config.pillar(job.pillar)
-    prompt = script_prompt(pillar, job.topic, angle or job.artifacts.get("angle", ""), feedback, recent_titles(),
+    prompt = script_prompt(pillar, job.topic, with_hook(angle or job.artifacts.get("angle", ""), job.artifacts.get("hook", "")), feedback, recent_titles(),
                            brief=research.brief(job.artifacts.get("brief")))
     from faceless.prompts import identity
     raw = None

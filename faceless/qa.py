@@ -168,7 +168,8 @@ def duplicate_gates(script: dict, job: str | None = None) -> list:
     if not near:
         return []
     top, who = near[0]
-    detail = f"closest earlier script {who[-48:]} at {top:.2f} (soft {c['dup_soft']}, hard {c['dup_hard']})"
+    from faceless import embed
+    detail = f"closest earlier script {who[-48:]} at {top:.2f} (soft {c['dup_soft']}, hard {c['dup_hard']}; {embed.LAST_MODEL})"
     return [Gate("not_semantic_duplicate", top < c["dup_hard"], 6, True, detail, "script"),
             Gate("distinct_topic", top < c["dup_soft"], 3, False, detail, "script")]
 
