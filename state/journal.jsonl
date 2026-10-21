@@ -6800,3 +6800,5 @@
 {"ts": "2026-10-20T13:06:19Z", "t": 1792501579.977, "actor": "engine", "type": "COMPOSIO_SESSION", "user": "quiet-money-studio", "session_hash": "bfde2f84"}
 {"ts": "2026-10-20T18:35:25Z", "t": 1792521325.736, "actor": "engine", "type": "COMPOSIO_SESSION", "user": "quiet-money-studio", "session_hash": "76f70f35"}
 {"ts": "2026-10-20T18:35:27Z", "t": 1792521327.065, "actor": "engine", "type": "YOUTUBE_API", "path": "videos", "method": "GET", "status": 200}
+{"ts": "2026-10-21T02:18:20Z", "t": 1792549100.75, "actor": "engine", "type": "COMPOSIO_SESSION", "user": "quiet-money-studio", "session_hash": "f1d228f0"}
+{"ts": "2026-10-21T02:18:22Z", "t": 1792549102.06, "actor": "engine", "type": "YOUTUBE_API", "path": "videos", "method": "GET", "status": 403}
