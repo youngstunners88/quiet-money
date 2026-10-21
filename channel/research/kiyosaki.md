@@ -23,16 +23,34 @@ How to use: teach the FRAMEWORKS in our own words. No quotes. The video is about
 - Pay yourself first: move money to savings and investments before paying bills.
 - Good debt buys things that pay you (like a rental that cash-flows); bad debt buys things that cost you.
 
+- (added 2026-10-21) The book's six lessons, as Rich Dad's own FAQ lists them: the rich don't work for money; why teach
+  financial literacy; mind your own business; the history of taxes and the power of corporations; the rich invent money;
+  work to learn, don't work for money.
+- (added 2026-10-21) Mind your own business: your profession is not your business; your business is your asset column. A job
+  can fund it, but the point is what the pay buys next.
+- (added 2026-10-21) It's not how much you make, it's how much you keep (and what it buys): a raise spent on liabilities leaves you
+  where you were.
+- (added 2026-10-21) Work to learn: choose work partly for the skills it teaches (sales, communication, management), not only the
+  salary. In the book he took a sales job to learn to sell.
+- (added 2026-10-21) Fear and desire: fear of not having money keeps people in jobs they dislike; desire spends the raise. The
+  question he asks instead is "is there another way?"
+
 ## The honest catch (every video names one)
 - Leverage cuts both ways: debt that buys assets also magnifies losses, and his own company went bankrupt.
 - "Passive" income takes capital or years of work to build; real estate needs repairs, tenants, and vacancies.
 - His story's accuracy is disputed; teach the idea, not the legend.
+- The taxes-and-corporations lesson is the riskiest to teach: rules differ by country and by situation. Never say a company
+  structure saves tax; say the rules are worth learning and send people to a qualified tax professional.
+- "Asset vs liability" is a teaching shorthand, not accounting: an asset bought at the wrong price can still lose money.
 
 ## Never
 - Present his market predictions as facts or tell viewers to buy gold, silver, or bitcoin because he does.
 - Quote him. Show his face. Promise that following him makes anyone rich.
 
 ## Sources
+- https://richdad.com/faqs/ (the six lessons, house-as-liability, pay yourself first, read 2026-10-21)
+- https://richdad.com/books/rich-dad-poor-dad (chapter summary: mind your own business, work to learn)
+- https://michaelryanmoney.com/rich-dad-poor-dad-summary-review/ (critical review: asset shorthand, entity caveats)
 - https://en.wikipedia.org/wiki/Robert_Kiyosaki (birth, sales, Rich Global bankruptcy, $23.7M, $1B debt statement)
 - https://richdad.com/cashflow-quadrant-fundamentals/ (CASHFLOW Quadrant)
 - https://store.richdad.com/products/cashflow-board-game (rat race game)

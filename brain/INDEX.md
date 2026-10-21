@@ -11,6 +11,8 @@
 | sources/2026-10-20-unknown-if-i-started-gumroad-from-zero-today-i-d.md | https://docs.google.com/document/d/1RjVFjdWA0y25nvaly9ht2EfAxpmJJHS3g75mLRznArQ#video-1 | demand-research, paid-traffic, organic-traffic, product-and-pricing, tools, never | full |
 | sources/2026-10-20-unknown-starknet-repo-dive-starnet-skills-recipe.md | https://docs.google.com/document/d/1RgGZxN1XOZSDse-25ZV0O_xekvGSeFu3FCtRgeW7wvo | tools, organic-traffic, product-and-pricing, never | full |
 | sources/2026-10-20-unknown-this-new-claude-ai-method-makes-10k-a-mo.md | https://docs.google.com/document/d/1RjVFjdWA0y25nvaly9ht2EfAxpmJJHS3g75mLRznArQ#video-2 | demand-research, paid-traffic, product-and-pricing, tools, never | full |
+| sources/2026-10-21-acquisition-com-the-100m-scaling-roadmap-stage-1-monetiz.md | https://drive.google.com/file/d/1Ocb1Z9D1bXVWj7x9W9_Dvs_zH36kaXYT | business-stages, first-sale, marketing-habits | full (owner's PDF read in full; the raw file is a digest) |
+| sources/2026-10-21-acquisition-com-the-new-secret-chapter-free-discount-and.md | https://drive.google.com/file/d/1hJ_O_Lza-W8Yffe41Mrp-6M4YFEFjSAU | offers, pricing, lead-magnets, funnel | full (owner's PDF read in full; the raw file is a digest) |
 
 ## This week (proposals, owners)
 1. Do not spend the $10 on Meta ads now. A $20 cost per sale beats our $17 price (about $14 net). Owner: faceless-marketing.

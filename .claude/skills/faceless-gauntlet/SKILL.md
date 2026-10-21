@@ -34,6 +34,16 @@ The gauntlet has two levels:
 | image ignores the subject | put the key object first in `visual`; make it concrete |
 | provider failures | check keys and quotas (`python -m faceless status`), chain order in `studio.toml` |
 
+## Caption sync (captions must land on the spoken word)
+- `voice.json` records `timing`: `native` (Edge and ElevenLabs return word timings), `aligned` (Gemini audio transcribed by
+  Cloudflare Whisper, `faceless/align.py`, the script's words take the heard times), or `estimated` (a guess from pauses).
+- The `caption_sync` gate (weight 8, fix stage `voice`) fails `estimated`. Measured on 2026-10-21: estimated captions were off by
+  a median 185-508 ms and up to 2.2 s; aligned ones follow the speech.
+- If many videos come back `estimated` or the voice is always `gemini`: Edge is failing. `python -c` a one-line `tts.edge` test; a
+  403 from speech.platform.bing.com means `edge-tts` is behind Microsoft's token change (7.3.1 fixed the 2026-10-15 break); upgrade
+  the pin in `requirements.txt`. A Whisper failure leaves the estimate and logs `VOICE_TIMING_ESTIMATED`.
+- Look at frames, not only numbers: a caption should change on the word you hear.
+
 ## Semantic gates (decision model + embeddings)
 Added 2026-10-08. A decision model (Cloudflare Clef, see `faceless/qa.py`) answers typed yes/no questions with probabilities; thresholds live in `studio.toml [qa]`.
 When Clef cannot answer (free neuron budget spent, an outage, no Cloudflare key), a second judge answers the same questions: Gemini through the Muapi desk, about $0.0002 a call (`faceless/providers/judge.py`, `QA_FALLBACK` in the journal, once per video). Only when neither can answer is there no opinion (no gate, no failure), recorded as `QA_UNAVAILABLE`: report a run of those days to the owner, because the stills went out unchecked.
@@ -46,4 +56,5 @@ When Clef cannot answer (free neuron budget spent, an outage, no Cloudflare key)
 | `not_semantic_duplicate` (hard), `distinct_topic` (soft) | the script means nearly the same as an earlier one (centered embedding similarity, `dup_hard` / `dup_soft`) | pick a different angle or topic; the closest earlier script is named in the gate detail |
 Tune thresholds from data, not from a failing video: `python -m faceless qa --images 40 --scripts 30` prints the distribution and what it flagged.
 `python -m faceless variety` scores how interchangeable the last 20 videos look (YouTube's inauthentic-content rule).
-
+- Embeddings: one answer always comes from one model (`faceless/embed.py`); before 2026-10-21 a provider failing mid-run mixed
+  Gemini and Cloudflare vectors and near-duplicates passed the 0.72 hold. The gate detail now names the model.

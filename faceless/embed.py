@@ -20,6 +20,7 @@ from faceless.providers import ProviderUnavailable, http
 
 DB = Paths.state / "embeddings.db"       # derived data: gitignored, rebuilt on demand
 DIM = 256
+LAST_MODEL = ""                         # the model that answered the last embed() call (shown in gate details)
 
 
 def cfg() -> dict:
@@ -64,35 +65,50 @@ def _db() -> sqlite3.Connection:
 
 
 def embed(texts: list[str]) -> list[list[float]] | None:
-    """Unit vectors for each text, or None when no provider can serve (callers fall back to lexical checks)."""
+    """Unit vectors for each text, or None when no provider can serve (callers fall back to lexical checks).
+    Every vector in one answer comes from the same model: two models' vectors are not comparable, so a provider that fails partway
+    hands the WHOLE list to the next one instead of filling the gaps (mixing them let near-duplicates through, 2026-10-19)."""
     c = cfg()
     texts = [t[:6000] for t in texts]
     con = _db()
-    out: list[list[float] | None] = [None] * len(texts)
-    keys = [hashlib.sha1(f"{DIM}:{t}".encode(), usedforsecurity=False).hexdigest() for t in texts]
-    for i, k in enumerate(keys):
-        row = con.execute("select v from vec where k=?", (k,)).fetchone()
-        if row:
-            out[i] = list(struct.unpack(f"{DIM}e", row[0]))
-    todo = [i for i, v in enumerate(out) if v is None]
-    for start in range(0, len(todo), 50):
-        part = todo[start:start + 50]
-        vecs = None
+
+    def cached(model: str) -> tuple[list[str], list[list[float] | None]]:
+        keys = [hashlib.sha1(f"{model}:{DIM}:{t}".encode(), usedforsecurity=False).hexdigest() for t in texts]
+        out: list[list[float] | None] = [None] * len(texts)
+        for i, k in enumerate(keys):
+            row = con.execute("select v from vec where k=?", (k,)).fetchone()
+            if row:
+                out[i] = list(struct.unpack(f"{DIM}e", row[0]))
+        return keys, out
+
+    global LAST_MODEL
+    try:
+        for name in c["chain"]:                      # a model that already holds every vector answers without a call
+            model = c[f"{name}_model"]
+            _, out = cached(model)
+            if all(v is not None for v in out):
+                LAST_MODEL = model
+                return out  # type: ignore[return-value]
         for name in c["chain"]:
+            model = c[f"{name}_model"]
+            keys, out = cached(model)
+            todo = [i for i, v in enumerate(out) if v is None]
             try:
-                vecs = (_gemini if name == "gemini" else _cloudflare)([texts[i] for i in part], c[f"{name}_model"])
-                break
-            except Exception:  # noqa: BLE001 - any provider failure falls through to the next
+                for start in range(0, len(todo), 50):
+                    part = todo[start:start + 50]
+                    vecs = (_gemini if name == "gemini" else _cloudflare)([texts[i] for i in part], model)
+                    for i, v in zip(part, vecs):
+                        out[i] = v
+                        con.execute("insert or replace into vec values (?,?)", (keys[i], struct.pack(f"{DIM}e", *v)))
+            except Exception:  # noqa: BLE001 - this provider cannot serve the whole list: the next one does all of it
+                con.commit()
                 continue
-        if vecs is None:
-            con.close()
-            return None
-        for i, v in zip(part, vecs):
-            out[i] = v
-            con.execute("insert or replace into vec values (?,?)", (keys[i], struct.pack(f"{DIM}e", *v)))
-    con.commit()
-    con.close()
-    return out  # type: ignore[return-value]
+            con.commit()
+            LAST_MODEL = model
+            return out  # type: ignore[return-value]
+        return None
+    finally:
+        con.close()
 
 
 def cosine(a: list[float], b: list[float]) -> float:

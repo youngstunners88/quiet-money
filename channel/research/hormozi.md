@@ -22,17 +22,31 @@ How to use: teach the FRAMEWORKS in our own words. No quotes. The video is about
 - Rule of 100: 100 "primary actions" a day for 100 days: 100 reach-outs, 100 minutes making content, or $100 of ads.
 - More, Better, New: do more of what already works, then make it better, and only then try something new.
 
+- (added 2026-10-21, from Acquisition.com's free downloads the owner shared) Get flow, monetize flow, then add friction: start
+  with a free or deeply discounted front end to get people in, earn on what follows, and only then add hoops that raise quality.
+- (added 2026-10-21) Three promotions around one core offer: premium (the offer alone, few buyers, highest margin), free (most
+  responses, cheapest per lead) and discount (big cuts only; small 5-25% discounts rarely change behaviour, he says).
+- (added 2026-10-21) Friction dials lead quality: qualifications, more questions, more steps, required viewing, longer ads. Each
+  cuts volume and raises quality; the skill is finding the sweet spot.
+- (added 2026-10-21) The $100M Scaling Roadmap stages: 0 Improvise (get people to try it free), 1 Monetize (make the first sales),
+  2 Advertise (consistent new customers; 100 minutes of marketing a day), then Stabilize, Prioritize, Productize, Optimize,
+  Categorize, Specialize, Capitalize.
+
 ## The honest catch (every video names one)
 - These are business frameworks: they build ACTIVE income first. Passive income comes later, if ever.
 - Most new businesses do not last: about 1 in 5 US businesses close in their first year and close to half by year
   five (US Bureau of Labor Statistics, Business Employment Dynamics).
 - His results came after years of 80-hour weeks and failures; nobody can promise yours.
+- His free-offer split tests (equal close rates, about 5x cheaper leads) and the 'penny gap' figure he cites are his own reports:
+  say "he says" or "he reports".
 
 ## Never
 - Imply he endorses, sponsors, or knows this channel. Quote him.
 - Show his face or likeness. Promise income, or say "you'll make $X with this".
 
 ## Sources
+- Acquisition.com free PDFs shared by the owner (2026-10-21): "The New Secret Chapter" (free, discount and premium promotions; friction)
+  and "$100M Scaling Roadmap, Stage 01" (stages 0-2). Not in the repo; paraphrase only.
 - https://www.threads.com/@hormozi/post/DMaaOoMgjBs (66% stake, $46.2M valuation)
 - https://www.threads.com/@hormozi/post/DIcfSMtSORM ($1,036 in December 2016)
 - https://www.businesswire.com/news/home/20220119005369/en/ (Gym Launch and Prestige Labs, American Pacific Group)

@@ -4108,3 +4108,6 @@
 {"day": "2026-10-21", "provider": "muapi", "unit": "desk_usd", "amount": 1.5, "usd": 1.5, "job": null}
 {"day": "2026-10-21", "provider": "gemini-tts", "unit": "chars", "amount": 391, "usd": 0.0, "job": null}
 {"day": "2026-10-21", "provider": "gemini-tts", "unit": "chars", "amount": 181, "usd": 0.0, "job": null}
+{"day": "2026-10-21", "provider": "edge", "unit": "chars", "amount": 46, "usd": 0.0, "job": null}
+{"day": "2026-10-21", "provider": "cloudflare", "unit": "neurons", "amount": 25.5, "usd": 0.0, "job": null}
+{"day": "2026-10-21", "provider": "cloudflare", "unit": "neurons", "amount": 10.8, "usd": 0.0, "job": null}

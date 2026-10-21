@@ -156,9 +156,9 @@ def _kit(job: Job) -> None:
 
 
 def start_job(pillar: str, item: dict, slot: int) -> Job:
-    """New job from a backlog item; its angle and research brief travel with it to the writer and judge."""
+    """New job from a backlog item; its angle, research brief and suggested hook travel with it to the writer and judge."""
     job = new_job(pillar, item["topic"], slot=slot)
-    job.artifacts.update({k: item[k] for k in ("angle", "brief") if item.get(k)})
+    job.artifacts.update({k: item[k] for k in ("angle", "brief", "hook") if item.get(k)})
     job.save()
     return job
 
