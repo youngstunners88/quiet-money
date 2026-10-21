@@ -4104,3 +4104,7 @@
 {"day": "2026-10-20", "provider": "cloudflare", "unit": "neurons", "amount": 4.1236, "usd": 0.0, "job": null}
 {"day": "2026-10-20", "provider": "composio", "unit": "calls", "amount": 1, "usd": 0.0, "job": "2026-10-20-s6-math-the-silent-wealth-killer-of-subs"}
 {"day": "2026-10-20", "provider": "composio", "unit": "calls", "amount": 1, "usd": 0.0, "job": "song-breathe"}
+{"day": "2026-10-21", "provider": "muapi", "unit": "desk_usd", "amount": 0.04, "usd": 0.04, "job": null}
+{"day": "2026-10-21", "provider": "muapi", "unit": "desk_usd", "amount": 1.5, "usd": 1.5, "job": null}
+{"day": "2026-10-21", "provider": "gemini-tts", "unit": "chars", "amount": 391, "usd": 0.0, "job": null}
+{"day": "2026-10-21", "provider": "gemini-tts", "unit": "chars", "amount": 181, "usd": 0.0, "job": null}
