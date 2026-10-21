@@ -40,3 +40,9 @@ def test_the_page_numbers_match_the_book():
     from faceless import planner_wellness, product_planner
     assert site.PLANNER_FACTS["pages"] == product_planner.FRONT + 365 + len(planner_wellness.kept()) + product_planner.BACK
     assert site.PLANNER_FACTS["wellness"] == len(planner_wellness.kept())
+
+
+def test_the_free_sample_week_links_once_to_the_live_planner_with_tags():
+    from faceless import lead_magnet_sample as s
+    u = s.bridge_url()
+    assert u.startswith("https://chrisclassroom4.gumroad.com/l/utwsfs?") and "utm_source=magnet" in u and "utm_campaign=first_quiet_week" in u
