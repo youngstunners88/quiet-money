@@ -7,7 +7,7 @@ face of "a place to build a community, grow, practise, and eventually escape the
 the human one. He is a virtual (AI-generated) host and says so in every description.
 
 ## Locks (never change these between videos)
-- **Face:** `channel/host/reference.png`, the owner's picture. Pass it as `@image1` to every image-to-video model. Never describe a different face.
+- **Face:** `channel/host/reference.png`, a character the owner made in Google Flow (AI-generated, not a real person; owner, 2026-10-20). Pass it as `@image1` to every image-to-video model. Never describe a different face.
 - **Look:** early thirties, short dark swept-up hair, light stubble, calm direct eyes; black tailored blazer over a charcoal roll-neck; a small round
   gold enamel pin with a black Q on the **left lapel** (it is the brand mark: keep it visible and unchanged); a plain wedding ring.
 - **Room:** a warm, dimly lit hotel lounge with soft golden bokeh. Other rooms and other characters are allowed (the owner wants variety), but the

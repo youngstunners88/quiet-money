@@ -337,3 +337,23 @@ def test_a_failure_while_recording_an_offer_never_costs_the_video_its_slot(tmp_p
     monkeypatch.setattr(offer, "record", lambda *a, **k: (_ for _ in ()).throw(OSError("disk full")))
     orchestrator._offer(job, meta)
     assert any("offer skipped" in n for n in job.notes) and any(e["type"] == "OFFER_FAILED" for e in events.read())
+
+
+def test_offer_check_reads_a_whole_draft_file_when_given_a_path(tmp_path, capsys):
+    from faceless import cli
+    draft = tmp_path / "draft.md"
+    draft.write_text("A calm planner.\n\nGuaranteed returns in 30 days!\n", encoding="utf-8")
+    assert cli.main(["offer", "check", str(draft)]) == 1 and "refused" in capsys.readouterr().out
+    draft.write_text("A calm planner with one lesson a day.\n", encoding="utf-8")
+    assert cli.main(["offer", "check", str(draft)]) == 0 and "clean" in capsys.readouterr().out
+
+
+@pytest.mark.parametrize("text", ["Examples use assumed returns that are never guaranteed.", "Returns are not guaranteed.",
+                                  "We don't guarantee any result.", "We never guarantee returns."])
+def test_the_negated_disclaimer_passes_the_guarantee_rule(text):
+    assert not [v for v in offer.violations(text) if v.startswith("guarantee")]
+
+
+@pytest.mark.parametrize("text", ["Guaranteed returns.", "We guarantee results.", "A guarantee you will save.", "It is guaranteed to work."])
+def test_a_real_guarantee_is_still_refused(text):
+    assert [v for v in offer.violations(text) if v.startswith("guarantee")]

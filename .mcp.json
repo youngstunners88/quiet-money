@@ -13,6 +13,15 @@
         "-m",
         "faceless.shop_mcp"
       ]
+    },
+    "claude-code-orchestrator": {
+      "command": "node",
+      "args": [
+        "claude-code-orchestrator/dist/index.js"
+      ],
+      "env": {
+        "WORKER_PERMISSION_MODE": "read_only"
+      }
     }
   }
 }

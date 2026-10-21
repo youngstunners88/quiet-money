@@ -1,6 +1,6 @@
 ---
 name: faceless-host
-description: Create and keep consistent the Quiet Money host, the recurring human front man who appears once a week to welcome and update the community. Designs a brand-new voice with Muapi (a custom voice profile nobody has heard), keeps his face and voice identical across videos, writes and checks his lines, prices and generates ten-second Seedance 2 clips from the owner's reference photo, and schedules one a week. Use when asked for the host, the front man, the channel introduction, a weekly announcement, a new voice, or to put the same character in a new scene.
+description: Create and keep consistent the Quiet Money host, the recurring human front man who appears once a week to welcome and update the community. Designs a brand-new voice with Muapi (a custom voice profile nobody has heard), keeps his face and voice identical across videos, writes and checks his lines, prices and generates ten-second Seedance 2 clips from the owner's Google Flow reference image, and schedules one a week. Use when asked for the host, the front man, the channel introduction, a weekly announcement, a new voice, or to put the same character in a new scene.
 metadata:
   author: quiet-money
   version: 1.0.0
@@ -12,7 +12,7 @@ metadata:
 Code `faceless/host.py`, CLI `python -m faceless host ...`, state and bible in `channel/host/`. Read `channel/host/BIBLE.md` first: it holds the locks.
 
 ## The four locks that keep him the same man
-1. **Face:** the owner's reference photo `channel/host/reference.png`, passed as `@image1` to every image-to-video model. Image-to-video keeps identity far better than
+1. **Face:** the owner's reference image `channel/host/reference.png` (Quinton was made in Google Flow: AI-generated, not a real person, so rule 3 does not apply to him), passed as `@image1` to every image-to-video model. Image-to-video keeps identity far better than
    text-to-video; never regenerate his face from a description. Put him in other rooms by changing the room sentence only.
 2. **Voice:** `python -m faceless host voice` makes a custom profile with `gemini-omni-audio` (a base voice reshaped by a written description; free; the id goes in
    `host.json`). Honest limit: it starts from one of Google's 30 base voices, so it is a new voice built on a base, not a recording of a person.

@@ -52,8 +52,10 @@ def check_script(script: dict, history: list[str]) -> list[Gate]:
     hook = beats[0]["say"] if beats else ""
     hook_words = len(hook.split())
     g.append(Gate("hook_length", hook_words <= 22, 6, False, f"hook is {hook_words} words; keep under 18."))
-    hooky = bool(re.search(r"\d|\$|you|your|never|nobody|secret|why|most|richest|died|lost|million|billion", hook.lower()))
-    g.append(Gate("hook_trigger", hooky, 6, False, "hook needs a number, a 'you', or a contradiction in the first line."))
+    hooky = bool(re.search(r"\d|\$|you|your|never|nobody|secret|why|most|richest|died|lost|million|billion", hook.lower())
+                 or re.search(r"[^.!?\s]\s+[A-Z][a-z]{2,}", hook))     # a name, brand or place mid-sentence ("drove a beat-up Volvo")
+    g.append(Gate("hook_trigger", hooky, 6, False,
+                  "hook needs a number, a 'you', a named thing, or a contradiction in the first line."))
     ht = script.get("hook_text", "")
     g.append(Gate("hook_text", 1 <= len(ht.split()) <= 8, 4, False, f"on-screen hook '{ht}' should be 2-7 words."))
     long_beats = [i + 1 for i, b in enumerate(beats) if len(b["say"].split()) > 26]
@@ -80,6 +82,7 @@ def check_script(script: dict, history: list[str]) -> list[Gate]:
     g.append(Gate("originality", top < cfg["gauntlet"]["similarity_max"], 8, True,
                   f"too close to an earlier video (similarity {top:.2f}); change the angle and hook."))
     g += check_structure(script, low)
+    g += check_loop(script)
     from faceless import quality
     label, margin, _ = quality.classify(text)
     g.append(Gate("voice_quality", label != "slop", 5, False,
@@ -89,6 +92,64 @@ def check_script(script: dict, history: list[str]) -> list[Gate]:
     avg = sum(len(s.split()) for s in sentences) / max(1, len(sentences))
     g.append(Gate("readability", avg <= 16, 3, False, f"average sentence is {avg:.1f} words; aim for 8-14."))
     return g
+
+
+REHOOK = re.compile(r"\?|\b(but|yet|except|until|still|instead|so (?:how|why|what|where)|which means|that's not|isn't|wasn't|"
+                    r"doesn't|didn't|the catch|the real|the twist|then)\b")
+_STOP = set("that this with from your what when where which their there they them have will would could should into about "
+            "than then just only does doesn't didn't isn't it's here's you're".split())
+
+
+def _content(text: str) -> set[str]:
+    return {w for w in re.findall(r"[a-z0-9$%']{4,}", text.lower()) if w not in _STOP}
+
+
+def check_loop(script: dict) -> list[Gate]:
+    """The addiction loop (stakes, big question, head fake, re-hook) as a plan the text must keep. Free: no model call.
+    The writer fills loop_map; code checks that a question is asked, a head fake is stated, no stretch of more than 4 beats
+    (about 20 s) passes without a new open question, and the payoff near the end answers the question (an unanswered question
+    is clickbait). Hand-written scripts without a plan are not judged here."""
+    if script.get("source", "llm") != "llm":         # hand-written seeds and the collage writer have their own structure (no loop_map asked)
+        return []
+    lm = script.get("loop_map") or {}
+    if not lm:
+        return [Gate("loop_plan", False, 5, False, "no loop_map: plan stakes, big_question, assume, reveal, rehook_beats and "
+                     "payoff_beat, then write the beats to that plan.")]
+    says = [b["say"] for b in script.get("beats", [])]
+    n = len(says)
+    problems = []
+    q = str(lm.get("big_question", "")).strip()
+    if not q.endswith("?"):
+        problems.append("big_question must be one specific question ending in '?'")
+    if not str(lm.get("assume", "")).strip() or _content(str(lm.get("assume", ""))) == _content(str(lm.get("reveal", ""))):
+        problems.append("state the head fake: what most people assume (assume) and what is actually true (reveal)")
+    try:
+        pay = int(lm.get("payoff_beat") or 0)
+    except (TypeError, ValueError):
+        pay = 0
+    hooks = []
+    for i in lm.get("rehook_beats") or []:
+        try:
+            hooks.append(int(i))
+        except (TypeError, ValueError):
+            continue
+    hooks = sorted(set(hooks))
+    hooks = [i for i in hooks if 3 <= i <= n and i < (pay or n + 1)]
+    if len(hooks) < 2:
+        problems.append("plan at least 2 re-hooks between beat 3 and the payoff")
+    else:
+        marks = [2, *hooks, pay or n]
+        gap = max(b - a for a, b in zip(marks, marks[1:]))
+        if gap > 4:
+            problems.append(f"{gap} beats (about {gap * 5} s) pass without a new open question; re-hook every 3-4 beats")
+        flat = [i for i in hooks if not REHOOK.search(" ".join(says[i - 1].lower().split()[-12:]))]       # the turn or question sits in the beat's closing words
+        if flat:
+            problems.append(f"beats {flat} are marked as re-hooks but open nothing: end them on a question or a turn")
+    if not n - 2 <= pay <= n:
+        problems.append("the payoff (the answer to the big question) belongs in one of the last 3 beats")
+    elif _content(q) and not _content(q) & _content(" ".join(says[pay - 1:])):
+        problems.append("the payoff shares no words with the big question: answer it plainly or change the question")
+    return [Gate("loop_plan", not problems, 5, False, "; ".join(problems))]
 
 
 STEP_MARKERS = [r"\bstep (one|1)\b|\bfirst\b|^one\b", r"\bstep (two|2)\b|\bsecond\b|^two\b",

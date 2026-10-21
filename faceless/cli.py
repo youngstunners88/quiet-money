@@ -644,6 +644,44 @@ def cmd_monid(args) -> int:
     return 1
 
 
+def cmd_brain(args) -> int:
+    """The Brain: transcripts in, notes out (skill faceless-brain)."""
+    from faceless import brain
+    a, rest = args.action, args.rest
+    if a == "ingest" and rest and args.file:
+        print(brain.ingest(rest[0], Path(args.file).read_text(encoding="utf-8"), args.method, args.speaker or "", args.title or ""))
+        return 0
+    if a == "check":
+        bad = brain.check()
+        for k, v in bad.items():
+            print(k, "->", "; ".join(v))
+        print(f"{len(brain.notes())} note(s), {len(bad)} with problems")
+        return 1 if bad else 0
+    if a == "index":
+        print(f"{brain.index()} note(s) indexed in brain/INDEX.md")
+        return 0
+    if a == "search" and rest:
+        for h in brain.search(" ".join(rest)):
+            print(f"{h['score']:>3}  {h['note']}  {h['line'][:100]}")
+        return 0
+    if a == "watch":
+        for v in brain.watch():
+            print(v["url"], v["channel"], v["title"][:80])
+        return 0
+    if a == "fetch" and rest and args.paid:
+        text = brain.fetch_paid(rest[0])
+        out = Path(config.STUDIO) / "state" / "brain" / "raw" / f"{rest[0]}.txt"
+        out.parent.mkdir(parents=True, exist_ok=True)
+        out.write_text(text, encoding="utf-8")
+        print(out)
+        return 0
+    if a == "status":
+        print(json.dumps(brain.status(), indent=1))
+        return 0
+    print("usage: brain ingest URL --file PATH --method exa|owner|tokconnect|transcriptx|muapi | check | index | search WORDS | watch | fetch VIDEO_ID --paid | status")
+    return 1
+
+
 def cmd_marketing(args) -> int:
     """The weekly marketing brief (reads only), or move an experiment / close an owner-queue item."""
     from faceless import marketing
@@ -845,7 +883,10 @@ def cmd_offer(args) -> int:
             print("  problem:", p)
         return 0 if not res["problems"] and res["with_offer"] == res["videos"] else 1
     if args.action == "check":
-        bad = offer.violations(" ".join(args.args))
+        text = " ".join(args.args)
+        if len(args.args) == 1 and Path(args.args[0]).is_file():       # a whole draft file: offer check path/to/draft.md
+            text = Path(args.args[0]).read_text(encoding="utf-8")
+        bad = offer.violations(text)
         print("clean" if not bad else "refused:\n  " + "\n  ".join(bad))
         return 0 if not bad else 1
     if args.action == "mark":
@@ -1089,6 +1130,15 @@ def main(argv: list[str] | None = None) -> int:
     va = sub.add_parser("variety", help="sameness audit of the last N videos (YouTube's inauthentic-content risk); writes analytics/variety.md")
     va.add_argument("-n", type=int, default=20)
     va.set_defaults(fn=cmd_variety)
+    br = sub.add_parser("brain", help="the Brain: ingest URL --file PATH --method M | check | index | search WORDS | watch | fetch VIDEO_ID --paid | status")
+    br.add_argument("action", choices=["ingest", "check", "index", "search", "watch", "fetch", "status"])
+    br.add_argument("rest", nargs="*")
+    br.add_argument("--file")
+    br.add_argument("--method", default="owner", choices=["exa", "owner", "tokconnect", "transcriptx", "muapi"])
+    br.add_argument("--speaker")
+    br.add_argument("--title")
+    br.add_argument("--paid", action="store_true")
+    br.set_defaults(fn=cmd_brain)
     mk = sub.add_parser("marketing", help="the weekly marketing brief (reads only; writes analytics/brief-<day>.md) | done <U01> | start <X1> | result <X1> won|killed [note]")
     mk.add_argument("action", nargs="?", default="brief", choices=["brief", "done", "start", "result"])
     mk.add_argument("rest", nargs="*")

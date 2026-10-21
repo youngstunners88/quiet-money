@@ -193,6 +193,11 @@ article .summary{font-size:20px;color:var(--muted)}
 .fine{color:var(--muted);font-size:14px}
 footer{border-top:1px solid var(--line);margin-top:60px;padding:26px 0 40px;color:var(--muted);font-size:14px}
 .pref{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:999px;padding:8px 14px;color:var(--cream);font-size:14px}
+.shots{display:grid;gap:18px;margin:18px 0 8px}.shots figure{margin:0;background:var(--ink2);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.shots img{display:block;width:100%;height:auto}.shots figcaption{padding:10px 16px 14px;color:var(--muted);font-size:15px}
+.inside{padding-left:20px}.inside li{margin:8px 0}
+.buy{background:var(--ink2);border:1px solid var(--gold);border-radius:16px;padding:16px 18px;margin:28px 0}
+.buy .price{font:900 34px Montserrat,sans-serif;color:var(--gold);margin-right:12px;vertical-align:middle}
 @media print{header.top,footer,.btn{display:none}body{background:#fff;color:#000}}
 """
 
@@ -468,6 +473,145 @@ def hub_page() -> str:
     return page("links", f"Start here | {ch['name']}", f"The free 7-day Money Reset, calculators and every money rule from {ch['name']}.", body, noindex=True)
 
 
+# ---------------------------------------------------------------- the Daily Planner's product page (only while its listing is live, rule 13)
+
+PLANNER_SLUG = "daily-quiet-money-planner"
+PLANNER_FACTS = {"pages": 427, "days": 365, "weeks": 52, "wellness": 52}      # kept as numbers so the site build needs no PDF tools; a test ties them to the book
+PLANNER_WEB = Paths.root / "channel" / "shop" / PLANNER_SLUG / "web"
+PLANNER_SHOTS = [
+    ("02-inside", "The planner's cover, welcome page, net worth snapshot, debt map, year map and a daily page laid out side by side",
+     "The front of the book: cover, welcome, net worth snapshot, debt map, year at a glance, and a daily page."),
+    ("03-feature-1", "A daily page with a picture, a short lesson, a Try this action and a small tracker", "A daily page: one picture, one short lesson, one small action."),
+    ("04-feature-2", "A By the numbers daily page with a gold coin picture and a worked example",
+     "By the numbers days: every figure is a worked example computed with tested math, its assumptions stated."),
+    ("07-feature-5", "The Year at a Glance page listing all 52 weekly themes in four quarters with tick boxes",
+     "The year at a glance: 52 weekly themes in four quarters. Tick each week off as you finish it."),
+    ("05-feature-3", "The Net Worth Snapshot page with columns for Days 1, 91, 182, 273 and 365",
+     "The net worth snapshot: fill in a column on Days 1, 91, 182, 273 and 365."),
+    ("06-feature-4", "A Weekly Check-in page with boxes for money in, spent, saved and debt paid",
+     "The weekly check-in: money in, spent, saved, debt paid, three wins and one thing to fix."),
+]
+PLANNER_FAQ = [
+    ("What exactly do I get?", f"Two PDF files, US Letter and A4, {PLANNER_FACTS['pages']} pages each: the same book in two paper sizes. They download the moment you pay. Nothing is shipped."),
+    ("Is it dated?", "No. The planner is undated. Open Day 1 whenever you begin, and if you miss days, skip ahead to today's page."),
+    ("Do I have to print it?", "It is made for printing: the whole book or a week at a time, one side or two, in colour or black and white. It is not a fillable form, "
+     "but you can write on it in any PDF app that lets you annotate."),
+    ("Does it tell me what to buy or invest in?", "No. It is an educational tool, not financial advice. It never tells you to buy a particular stock, coin or product. "
+     "Every number in it is a worked example with its assumptions stated, and nothing in it promises a result."),
+    ("Which country is it for?", "The examples use US-style dollar figures. Where a lesson depends on your country, such as credit scores, retirement accounts or tax, it says so."),
+    ("Was AI used to make it?", "Yes, and we say so. It was designed by Quiet Money with AI assistance. Every computed figure comes from one shared set of math functions. "
+     "The pictures are drawn in code or made with AI tools. Thirty-two of the wellness posters are the owner's own artwork; the other twenty were made in the same "
+     "style with AI tools. The man on the cover is Quinton, the Quiet Money host, an AI-generated character."),
+    ("What if it is not for me?", "Ask for a refund through your Gumroad receipt within 30 days of buying."),
+    ("Can I share it?", "One purchase covers as many printed copies as you and your household need. Please do not resell or share the files."),
+    ("I found a mistake. What now?", "Reply to the message where you bought it. The mistake gets fixed and you get the updated file."),
+]
+# Carries the visitor's own source tag (?utm_source=youtube) into the buy link as utm_content, cleaned like HUB_JS.
+PLANNER_JS = ("(function(){try{var s=new URLSearchParams(location.search).get('utm_source');if(!s)return;"
+              "s=s.toLowerCase().replace(/[^a-z0-9._-]/g,'').slice(0,40);if(!s)return;"
+              "document.querySelectorAll('a[data-buy]').forEach(function(a){var u=new URL(a.href);"
+              "if(u.protocol!=='https:')return;u.searchParams.set('utm_content','from-'+s);a.href=u.toString();});}catch(e){}})();")
+
+
+def planner_listing() -> str:
+    """The planner's live listing URL, or "" while it is not live (then no page and no links are made)."""
+    from faceless import offer
+    live = {d["slug"]: d["url"] for d in offer.destinations() if d["kind"] == "paid"}
+    return safe_url(live.get(PLANNER_SLUG, ""))
+
+
+def planner_line(root: str) -> str:
+    if not planner_listing():
+        return ""
+    return (f'<p class="fine">Want one lesson a day, in order, on paper? <a href="{root}planner/">The Quiet Money Daily Planner</a> '
+            f'is a {PLANNER_FACTS["days"]}-day printable.</p>')
+
+
+def _figure(stem: str, alt: str, caption: str, eager: bool = False) -> str:
+    load = 'fetchpriority="high"' if eager else 'loading="lazy" decoding="async"'
+    cap = f"<figcaption>{e(caption)}</figcaption>" if caption else ""
+    return (f'<figure><img src="img/{stem}-1400.jpg" srcset="img/{stem}-800.jpg 800w, img/{stem}-1400.jpg 1400w" '
+            f'sizes="(max-width: 860px) 100vw, 824px" width="1400" height="1050" alt="{e(alt)}" {load}>{cap}</figure>')
+
+
+def planner_page() -> str:
+    """A product page on our own site for search and AI answers: what is inside, real pages, honest notes, an FAQ, a buy button to the live listing.
+    No ratings or reviews in the markup until real ones exist and show on the page."""
+    from faceless import offer
+    listing_url = planner_listing()
+    if not listing_url:
+        return ""
+    c, F = cfg(), PLANNER_FACTS
+    price = offer.catalog().get(PLANNER_SLUG, {}).get("price") or 17
+    p = f"${price:g}"
+    buy = e(offer.tracked(listing_url, "site", "planner_page", PLANNER_SLUG))
+    have = {f.name for f in PLANNER_WEB.glob("*.jpg")} if PLANNER_WEB.exists() else set()
+    hero = _figure("01-hero", "The Quiet Money Daily Planner: the printed cover in front of two open daily pages", "", eager=True) if "01-hero-1400.jpg" in have else ""
+    shots = "".join(_figure(*s) for s in PLANNER_SHOTS if f"{s[0]}-1400.jpg" in have)
+    body = f"""<p class="crumbs"><a href="../">Home</a> › Daily Planner</p>
+<section class="hero"><span class="tag">Printable money planner · {p}</span>
+<h1>One money lesson a day, <span>for a whole year.</span></h1>
+<p class="lead">The Quiet Money Daily Planner is a {F['days']}-day printable that teaches basic personal finance one page at a time. Every day is one picture, one short lesson and one small action.</p>
+<a class="btn" data-buy href="{buy}" rel="noopener">Get the planner for {p}</a><a class="btn ghost" href="#inside">See what is inside</a>
+<p class="fine">Instant PDF download through Gumroad. US Letter and A4 included. 30-day refund. Educational tool, not financial advice.</p></section>
+{f'<div class="shots">{hero}</div>' if hero else ''}
+<h2>Who it is for</h2>
+<p>Anyone who earns a paycheck, feels behind with money and wants the basics without jargon. You do not need to know anything to start. The daily actions are small: write down your net worth, find a forgotten account, pick one weekly time for money.</p>
+<h2 id="inside">What is inside</h2>
+<ul class="nums"><li>{F['pages']} pages</li><li>{F['days']} daily pages</li><li>{F['weeks']} weekly themes</li><li>Letter + A4</li><li>Undated</li></ul>
+<ul class="inside">
+<li><strong>Two PDFs</strong>, US Letter and A4, {F['pages']} pages each.</li>
+<li><strong>{F['days']} daily pages.</strong> Each has a black-and-gold picture, a short plain-English lesson, a Try this action, space for notes and a small tracker: spent today, saved or paid down, and how you feel about money from 1 to 5.</li>
+<li><strong>A weekly rhythm:</strong> Learn, By the numbers, Do it, Mindset, Action, a weekly check-in, then a reflect-and-reset page.</li>
+<li><strong>Front pages:</strong> a welcome page, a net worth snapshot you fill in on Days 1, 91, 182, 273 and 365, a debt map, and the year at a glance.</li>
+<li><strong>{F['wellness']} wellness break pages</strong>, one after each week, each tying a simple everyday habit to a money habit. General information, not medical advice.</li>
+<li><strong>At the back:</strong> a summary and goals page, a plain-English money words glossary, two notes pages and an about page.</li>
+</ul>
+<h2>A real page: Day 1</h2>
+<div class="rule"><span class="tag">Learn</span><br><strong>Start with the truth.</strong> Net worth is what you own minus what you owe. It can be negative, and that is a starting line, not a verdict. Writing it down once already puts you ahead of yesterday.<br><br><strong>Try this:</strong> Fill in the Net Worth Snapshot at the front of this book. Round every number to the nearest $10 and do not judge any of it.</div>
+<h2>How the year is laid out</h2>
+<ul class="inside">
+<li><strong>Quarter 1, foundations (weeks 1 to 13):</strong> where you stand, where it goes, the paycheck split, spending leaks, pay yourself first, the first $1,000, sinking funds, lifestyle creep.</li>
+<li><strong>Quarter 2, debt, credit and compounding (weeks 14 to 26):</strong> the debt map, interest math, snowball or avalanche, credit cards, credit scores, compound interest, the rule of 72, inflation.</li>
+<li><strong>Quarter 3, investing and income (weeks 27 to 39):</strong> investing basics, funds and costs, retirement accounts, risk, raises and negotiation, side income, assets and liabilities, taxes in brief.</li>
+<li><strong>Quarter 4, life, protection and freedom (weeks 40 to 52):</strong> housing, insurance, planning big purchases, money and other people, scams and fraud, goals and your freedom number, money myths, quiet wealth.</li>
+</ul>
+{f'<h2>Look inside</h2><div class="shots">{shots}</div>' if shots else ''}
+<h2>How it works</h2>
+<ol class="inside"><li><strong>Buy and download.</strong> Two PDFs arrive the moment you pay: US Letter and A4.</li>
+<li><strong>Print it your way.</strong> The whole book or a week at a time, one side or two.</li>
+<li><strong>Start on any day.</strong> Fill in the net worth snapshot and the debt map, then open Day 1.</li></ol>
+<h2>Honest notes</h2>
+<ul class="inside"><li>Education, not financial advice. It never tells you to buy a particular stock, coin or product.</li>
+<li>Every number is a worked example with its assumptions stated. Your own numbers are the ones that matter.</li>
+<li>Designed by Quiet Money with AI assistance. The man on the cover is Quinton, the Quiet Money host, an AI-generated character.</li>
+<li>The planner is new, so there are no customer reviews yet. The pictures on this page are made from the real pages.</li></ul>
+<div class="buy"><span class="price">{p}</span><span class="fine">One payment. Instant PDF download. Letter + A4. 30-day refund.</span><br>
+<a class="btn" data-buy href="{buy}" rel="noopener">Get the planner on Gumroad</a></div>
+<h2>Questions</h2>
+<dl class="faq">{"".join(f"<dt>{e(q)}</dt><dd>{e(a)}</dd>" for q, a in PLANNER_FAQ)}</dl>
+<p class="fine">Not ready to buy? Start with the free <a href="../money-reset/">7-day Money Reset</a>, try the <a href="../tools/">calculators</a>, or read the <a href="../rules/">Money Rules Library</a>.</p>
+<script>{PLANNER_JS}</script>"""
+    base, url = c["base"], f"{c['base']}/planner/"
+    imgs = [f"{base}/planner/img/{n}" for n in ("01-hero-1400.jpg", "02-inside-1400.jpg") if n in have]
+    product = {"@context": "https://schema.org", "@type": "Product", "name": "The Quiet Money Daily Planner",
+               "description": f"A {F['days']}-day printable money planner: one picture, one short lesson and one small action for every day of the year. "
+                              f"Two undated PDFs, US Letter and A4, {F['pages']} pages each. Educational, not financial advice.",
+               "url": url, "sku": PLANNER_SLUG, "brand": {"@type": "Brand", "name": c["channel"]["name"]},
+               "offers": {"@type": "Offer", "price": f"{price:.2f}", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "url": listing_url}}
+    if imgs:
+        product["image"] = imgs
+    crumbs = {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": f"{base}/"},
+        {"@type": "ListItem", "position": 2, "name": "The Quiet Money Daily Planner", "item": url}]}
+    faq = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
+        {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in PLANNER_FAQ]}
+    image = f"{base}/planner/img/cover-1200.jpg" if "cover-1200.jpg" in have else None
+    return page("planner", "Daily Money Planner: 365 printable lessons | Quiet Money",
+                f"A {F['days']}-day printable money planner: one picture, one short lesson and one small action a day. Undated PDF, US Letter and A4, "
+                f"{F['pages']} pages. {p}, 30-day refund.", body, jsonld=[product, crumbs, faq], og_type="product", image=image)
+
+
 def md_checklist(md: str) -> str:
     out = []
     for line in md.splitlines():
@@ -507,7 +651,7 @@ def build() -> dict:
     (SITE / "index.html").write_text(page("", f"{ch['name']}: {ch['tagline']}", f"{ch['tagline']} Money psychology and personal finance in 60 seconds, with real numbers and sources.",
                                           hero, jsonld=[org_ld(), site_ld]), encoding="utf-8")
 
-    lib = f"""<section class="hero"><h1>The Money Rules <span>Library</span></h1><p class="lead">Every Quiet Money video, written out with the math and the sources.</p></section>
+    lib = f"""<section class="hero"><h1>The Money Rules <span>Library</span></h1><p class="lead">Every Quiet Money video, written out with the math and the sources.</p>{planner_line('../')}</section>
 <div class="grid">{''.join(card(r, '../') for r in rules)}</div>"""
     (SITE / "rules").mkdir()
     (SITE / "rules" / "index.html").write_text(page("rules", "Money Rules Library | Quiet Money", "Every Quiet Money video written out: the rule, the story, the math, and the sources.", lib), encoding="utf-8")
@@ -537,6 +681,14 @@ def build() -> dict:
     (SITE / "links").mkdir()
     (SITE / "links" / "index.html").write_text(hub_page(), encoding="utf-8")        # the profile link: no sitemap entry, noindex
 
+    planner_html = planner_page()
+    if planner_html:
+        (SITE / "planner" / "img").mkdir(parents=True)
+        for f in sorted(PLANNER_WEB.glob("*.jpg")) if PLANNER_WEB.exists() else []:
+            shutil.copy2(f, SITE / "planner" / "img" / f.name)
+        (SITE / "planner" / "index.html").write_text(planner_html, encoding="utf-8")
+        urls.append(c["base"] + "/planner/")
+
     (SITE / "money-reset").mkdir()
     body = signup_form() + md_checklist(CHECKLIST.read_text(encoding="utf-8")) + '<p><a class="btn" href="javascript:window.print()">Print it</a></p>'
     (SITE / "money-reset" / "index.html").write_text(page("money-reset", "The free 7-day Money Reset checklist | Quiet Money",
@@ -558,6 +710,7 @@ def build() -> dict:
             "## Pages", f"- [Money Rules Library]({c['base']}/rules/): every video as a written page",
             f"- [Calculators]({c['base']}/tools/): compound growth, credit card payoff, inflation",
             f"- [Free 7-day Money Reset]({c['base']}/money-reset/): printable checklist",
+            *([f"- [The Quiet Money Daily Planner]({c['base']}/planner/): a 365-day printable money planner (paid): what is inside and honest notes"] if planner_html else []),
             f"- [About]({c['base']}/about/): what Quiet Money is and how videos are made", "", "## Money rules"]
     llms += [f"- [{plain(r['title'])}]({c['base']}/rules/{r['slug']}/): {plain(r['description'])}" for r in rules]
     (SITE / "llms.txt").write_text("\n".join(llms) + "\n", encoding="utf-8")

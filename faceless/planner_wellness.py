@@ -80,7 +80,7 @@ REVIEW = {5: "grip strength and testosterone", 9: "performance claims for baking
 
 
 def kept() -> list[int]:
-    """Poster positions in the order they appear: the 40 unique ones."""
+    """Poster positions in the order they appear: 52 (40 unique ones of the owner's, 12 typeset by the studio)."""
     return sorted(POSTERS)
 
 

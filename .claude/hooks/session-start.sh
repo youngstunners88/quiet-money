@@ -32,3 +32,9 @@ if [ -x /usr/local/go/bin/go ] && [ ! -x "$HOME/go/bin/gumroad" ]; then
   (cd /tmp && PATH="$PATH:/usr/local/go/bin" GOBIN="$HOME/go/bin" timeout 300 go install github.com/antiwork/gumroad-cli/cmd/gumroad@v0.20261002.0) >/dev/null 2>&1 \
     || echo "warning: could not build the gumroad CLI" >&2
 fi
+# The claude-code-orchestrator MCP server (claude-code-orchestrator/, the CEO's lanes): install from the lockfile and build. Optional: only the CEO
+# session uses it, and everything else runs without it.
+if command -v npm >/dev/null 2>&1 && [ -f claude-code-orchestrator/package-lock.json ] && [ ! -f claude-code-orchestrator/dist/index.js ]; then
+  (cd claude-code-orchestrator && timeout 300 npm ci --no-audit --no-fund >/dev/null 2>&1 && timeout 120 npm run build >/dev/null 2>&1) \
+    || echo "warning: could not build claude-code-orchestrator" >&2
+fi
