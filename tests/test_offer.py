@@ -357,3 +357,8 @@ def test_the_negated_disclaimer_passes_the_guarantee_rule(text):
 @pytest.mark.parametrize("text", ["Guaranteed returns.", "We guarantee results.", "A guarantee you will save.", "It is guaranteed to work."])
 def test_a_real_guarantee_is_still_refused(text):
     assert [v for v in offer.violations(text) if v.startswith("guarantee")]
+
+
+def test_offer_check_takes_long_text_that_cannot_be_a_file_name(capsys):
+    from faceless import cli
+    assert cli.main(["offer", "check", "A calm planner. " * 40]) == 0 and "clean" in capsys.readouterr().out

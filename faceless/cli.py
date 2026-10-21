@@ -884,7 +884,11 @@ def cmd_offer(args) -> int:
         return 0 if not res["problems"] and res["with_offer"] == res["videos"] else 1
     if args.action == "check":
         text = " ".join(args.args)
-        if len(args.args) == 1 and Path(args.args[0]).is_file():       # a whole draft file: offer check path/to/draft.md
+        try:                                                          # a whole draft file: offer check path/to/draft.md
+            is_file = len(args.args) == 1 and Path(args.args[0]).is_file()
+        except OSError:                                               # long text is not a path
+            is_file = False
+        if is_file:
             text = Path(args.args[0]).read_text(encoding="utf-8")
         bad = offer.violations(text)
         print("clean" if not bad else "refused:\n  " + "\n  ".join(bad))
