@@ -478,6 +478,7 @@ def hub_page() -> str:
 PLANNER_SLUG = "daily-quiet-money-planner"
 PLANNER_FACTS = {"pages": 427, "days": 365, "weeks": 52, "wellness": 52}      # kept as numbers so the site build needs no PDF tools; a test ties them to the book
 PLANNER_WEB = Paths.root / "channel" / "shop" / PLANNER_SLUG / "web"
+PLANNER_SAMPLE = Paths.root / "channel" / "offers" / "lead-magnets" / "first-quiet-week" / "The-First-Quiet-Week.pdf"   # the free sample week (faceless/lead_magnet_sample.py)
 PLANNER_SHOTS = [
     ("02-inside", "The planner's cover, welcome page, net worth snapshot, debt map, year map and a daily page laid out side by side",
      "The front of the book: cover, welcome, net worth snapshot, debt map, year at a glance, and a daily page."),
@@ -541,6 +542,8 @@ def planner_page() -> str:
     listing_url = planner_listing()
     if not listing_url:
         return ""
+    sample_line = ('<p><a class="btn ghost" href="' + PLANNER_SAMPLE.name + '" download>Try week 1 free (PDF, 9 pages)</a></p>'
+                   if PLANNER_SAMPLE.exists() else "")
     c, F = cfg(), PLANNER_FACTS
     price = offer.catalog().get(PLANNER_SLUG, {}).get("price") or 17
     p = f"${price:g}"
@@ -590,7 +593,7 @@ def planner_page() -> str:
 <a class="btn" data-buy href="{buy}" rel="noopener">Get the planner on Gumroad</a></div>
 <h2>Questions</h2>
 <dl class="faq">{"".join(f"<dt>{e(q)}</dt><dd>{e(a)}</dd>" for q, a in PLANNER_FAQ)}</dl>
-<p class="fine">Not ready to buy? Start with the free <a href="../money-reset/">7-day Money Reset</a>, try the <a href="../tools/">calculators</a>, or read the <a href="../rules/">Money Rules Library</a>.</p>
+{sample_line}<p class="fine">Not ready to buy? Start with the free <a href="../money-reset/">7-day Money Reset</a>, try the <a href="../tools/">calculators</a>, or read the <a href="../rules/">Money Rules Library</a>.</p>
 <script>{PLANNER_JS}</script>"""
     base, url = c["base"], f"{c['base']}/planner/"
     imgs = [f"{base}/planner/img/{n}" for n in ("01-hero-1400.jpg", "02-inside-1400.jpg") if n in have]
@@ -686,6 +689,8 @@ def build() -> dict:
         (SITE / "planner" / "img").mkdir(parents=True)
         for f in sorted(PLANNER_WEB.glob("*.jpg")) if PLANNER_WEB.exists() else []:
             shutil.copy2(f, SITE / "planner" / "img" / f.name)
+        if PLANNER_SAMPLE.exists():
+            shutil.copy2(PLANNER_SAMPLE, SITE / "planner" / PLANNER_SAMPLE.name)
         (SITE / "planner" / "index.html").write_text(planner_html, encoding="utf-8")
         urls.append(c["base"] + "/planner/")
 
