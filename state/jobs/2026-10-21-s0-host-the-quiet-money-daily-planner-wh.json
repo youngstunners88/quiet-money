@@ -8,12 +8,15 @@
   "history": [],
   "artifacts": {
     "video": "distribution/queue/2026-10-21/host-planner-intro/video.mp4",
-    "title": "The Quiet Money Daily Planner: what's inside"
+    "title": "The Quiet Money Daily Planner: what's inside",
+    "youtube_plan": {
+      "post_at": "2026-10-21T21:00:00-04:00"
+    }
   },
   "scores": {
     "gauntlet": 100,
-    "passed": false,
-    "note": "host clip: it passes only when the owner approves it (approved=True), not by the script gauntlet"
+    "passed": true,
+    "note": "host clip approved by the owner on 2026-10-21 (Approve Quinton video)"
   },
   "cost": {},
   "notes": []

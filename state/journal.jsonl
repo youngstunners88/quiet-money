@@ -6807,3 +6807,7 @@
 {"ts": "2026-10-21T05:50:22Z", "t": 1792561822.718, "actor": "engine", "type": "JOB_CREATED", "job": "2026-10-21-s0-host-the-quiet-money-daily-planner-wh", "pillar": "host", "topic": "The Quiet Money Daily Planner: what's inside", "slot": 0}
 {"ts": "2026-10-21T09:19:26Z", "t": 1792574366.604, "actor": "engine", "type": "DAILY_PLAN", "slots": ["2026-10-21#3", "2026-10-21#4", "2026-10-21#5", "2026-10-22#1", "2026-10-22#2"], "extra": 5, "weights": {"story": 0.989, "math": 0.873, "psychology": 0.784, "myth": 1.0, "playbook": 0.618, "ledger": 0.35, "escape": 1.481}}
 {"ts": "2026-10-21T09:19:26Z", "t": 1792574366.753, "actor": "engine", "type": "JOB_CREATED", "job": "2026-10-21-s2-story-the-secretive-frugality-of-chuck", "pillar": "story", "topic": "The Secretive Frugality of Chuck Feeney, the Billionaire Who Wanted to Die Broke", "slot": 2}
+{"ts": "2026-10-21T23:59:18Z", "t": 1792627158.769, "actor": "engine", "type": "COMPOSIO_SESSION", "user": "quiet-money-studio", "session_hash": "b197d080"}
+{"ts": "2026-10-21T23:59:19Z", "t": 1792627159.899, "actor": "engine", "type": "YOUTUBE_API", "path": "videos", "method": "GET", "status": 200}
+{"ts": "2026-10-21T23:59:33Z", "t": 1792627173.278, "actor": "engine", "type": "COMPOSIO_SESSION", "user": "quiet-money-studio", "session_hash": "ce02fef5"}
+{"ts": "2026-10-21T23:59:34Z", "t": 1792627174.21, "actor": "engine", "type": "COMPOSIO_EXECUTE", "tool": "YOUTUBE_LIST_CHANNELS", "ok": true, "log_id": "log_1LEAHLSVdPW1", "job": "2026-10-21-s0-host-the-quiet-money-daily-planner-wh"}
