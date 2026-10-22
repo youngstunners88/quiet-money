@@ -34,13 +34,14 @@ GRADE_NIGHT = ("curves=all='0/0.015 0.15/0.13 0.5/0.56 1/1',"
                "eq=contrast=1.16:saturation=1.32:gamma=1.06,"
                "colorbalance=rs=-0.03:bs=0.05:rh=0.08:bh=-0.03")
 NIGHT_LUMA, DAY_LUMA = 70.0, 92.0
+ENCODE_TIMEOUT, PROBE_TIMEOUT = 900, 120      # no ffmpeg call may hang the run (tests/test_audit.py)
 GRAIN = "noise=alls=5:allf=t+u"
 VIGNETTE = "vignette=PI/4.2"
 BUILD_SECONDS = 3.0        # the skill's pacing: establish 0.8-1.5s, build 1-3s, then the peak
 
 
 def _run(cmd: list[str]) -> None:
-    r = subprocess.run(cmd, capture_output=True, text=True)
+    r = subprocess.run(cmd, capture_output=True, text=True, timeout=ENCODE_TIMEOUT)
     if r.returncode != 0:
         raise RuntimeError(f"ffmpeg failed: {' '.join(cmd[:8])}...\n{r.stderr[-1500:]}")
 
@@ -49,7 +50,7 @@ def mean_luma(path: Path) -> float:
     """Average brightness of the clip, 0-255. Decides how hard the grade may crush the blacks."""
     r = subprocess.run(["ffmpeg", "-hide_banner", "-i", str(path), "-vf",
                         "fps=4,signalstats,metadata=print:key=lavfi.signalstats.YAVG", "-f", "null", "/dev/null"],
-                       capture_output=True, text=True)
+                       capture_output=True, text=True, timeout=PROBE_TIMEOUT)
     vals = [float(x.split("=")[1]) for x in r.stderr.split() if x.startswith("lavfi.signalstats.YAVG=")]
     return sum(vals) / len(vals) if vals else 100.0
 
@@ -65,7 +66,7 @@ def grade_for(luma: float) -> tuple[str, str, float]:
 
 def probe_duration(path: Path) -> float:
     r = subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", str(path)],
-                       capture_output=True, text=True)
+                       capture_output=True, text=True, timeout=PROBE_TIMEOUT)
     return float(r.stdout.strip())
 
 
