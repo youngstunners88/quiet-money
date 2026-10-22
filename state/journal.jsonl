@@ -7414,3 +7414,5 @@
 {"ts": "2026-10-22T16:46:26Z", "t": 1792687586.734, "actor": "engine", "type": "PROVIDER_OK", "capability": "tts", "provider": "edge", "job": "podcast-2026-10-21", "ms": 12636}
 {"ts": "2026-10-22T16:48:03Z", "t": 1792687683.253, "actor": "engine", "type": "PROVIDER_OK", "capability": "tts", "provider": "edge", "job": "podcast-2026-10-21", "ms": 96381}
 {"ts": "2026-10-22T16:49:04Z", "t": 1792687744.788, "actor": "engine", "type": "PROVIDER_OK", "capability": "tts", "provider": "edge", "job": "podcast-2026-10-21", "ms": 61239}
+{"ts": "2026-10-22T16:50:55Z", "t": 1792687855.965, "actor": "engine", "type": "PROVIDER_OK", "capability": "tts", "provider": "edge", "job": "podcast-2026-10-21", "ms": 110901}
+{"ts": "2026-10-22T16:51:55Z", "t": 1792687915.125, "actor": "engine", "type": "PROVIDER_OK", "capability": "tts", "provider": "edge", "job": "podcast-2026-10-21", "ms": 58942}

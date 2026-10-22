@@ -24,6 +24,7 @@ from faceless.fsutil import write_atomic
 
 OUT = Paths.root / "distribution" / "podcast"
 GAP_S = 0.8
+WORKERS = 6                                    # segments voiced at once; order is kept by position
 DISCLAIMER = "Quiet Money is education, not financial advice. Do your own research before any money decision."
 AI_NOTE = "This episode is narrated with an AI voice and made with AI tools."
 
@@ -93,11 +94,17 @@ def build(end: str | None = None, *, music: bool = True, synth=None) -> dict:
         tmp = Path(tmp)
         gap = tmp / "gap.wav"
         _ff("-f", "lavfi", "-i", f"anullsrc=r=24000:cl=mono", "-t", str(GAP_S), "-ar", "24000", "-ac", "1", str(gap))
-        parts, at = [], 0.0
-        for i, seg in enumerate(segs):
+        def voice(i: int) -> Path:
             raw, wav = tmp / f"s{i}.raw.wav", tmp / f"s{i}.wav"
-            synth(seg["text"], raw)
+            synth(segs[i]["text"], raw)
             _ff("-i", str(raw), "-ar", "24000", "-ac", "1", str(wav))          # one format, so the concat is clean
+            return wav
+
+        from concurrent.futures import ThreadPoolExecutor
+        with ThreadPoolExecutor(max_workers=WORKERS) as pool:                # one voice call takes up to ~90 s; a week is ~37 segments
+            wavs = list(pool.map(voice, range(len(segs))))
+        parts, at = [], 0.0
+        for seg, wav in zip(segs, wavs):
             seg["start"] = at
             at += tts.duration(wav) + GAP_S
             parts += [wav, gap]
