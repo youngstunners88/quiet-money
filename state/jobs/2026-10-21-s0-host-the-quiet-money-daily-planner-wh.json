@@ -1,23 +1,23 @@
 {
-  "id": "2026-10-21-s0-host-the-quiet-money-daily-planner-wh",
-  "pillar": "host",
-  "topic": "The Quiet Money Daily Planner: what's inside",
-  "day": "2026-10-21",
-  "slot": 0,
-  "status": "packaged",
-  "history": [],
-  "artifacts": {
-    "video": "distribution/queue/2026-10-21/host-planner-intro/video.mp4",
-    "title": "The Quiet Money Daily Planner: what's inside",
-    "youtube_plan": {
-      "post_at": "2026-10-21T21:00:00-04:00"
-    }
-  },
-  "scores": {
-    "gauntlet": 100,
-    "passed": true,
-    "note": "host clip approved by the owner on 2026-10-21 (Approve Quinton video)"
-  },
-  "cost": {},
-  "notes": []
+ "id": "2026-10-21-s0-host-the-quiet-money-daily-planner-wh",
+ "pillar": "host",
+ "topic": "The Quiet Money Daily Planner: what's inside",
+ "day": "2026-10-21",
+ "slot": 0,
+ "status": "held",
+ "history": [],
+ "artifacts": {
+  "video": "distribution/queue/2026-10-21/host-planner-intro/video.mp4",
+  "title": "The Quiet Money Daily Planner: what's inside",
+  "youtube_plan": {
+   "post_at": "2026-10-21T21:00:00-04:00"
+  }
+ },
+ "scores": {
+  "gauntlet": 0,
+  "passed": false,
+  "note": "v2 REJECTED by the owner 2026-10-22: caption timing estimated, voice not Quinton's, not like the first video. Do not post."
+ },
+ "cost": {},
+ "notes": []
 }

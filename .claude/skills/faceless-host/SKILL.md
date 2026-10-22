@@ -36,6 +36,12 @@ Rules: lines are 20 to 26 words, complete sentences, no advice or promises (`che
 (`[muapi]` $2/day, studio ceiling $3/day); a single clip needs `--max-usd` above $0.50 (the CLI default is $2.50). **Look at the clip before anything else happens
 with it:** face, pin, voice, lip-sync, ending. A clip is not posted until the owner approves it.
 
+## Voice and captions (non-negotiable)
+Every spoken line of Quinton comes from a Seedance/talking-head clip that uses `voice-anchor.wav`; never narrate over him with another
+TTS voice (Gemini Orus was rejected by the owner on 2026-10-22: "not the same voice"). A product video must open and feel like the
+approved first clip. Captions come from `faceless.align` timings and must pass `python -m faceless caption-check` (see faceless-gauntlet).
+Do not spend on a new clip until the script is read aloud against the first clip's voice and the owner has seen the plan.
+
 ## Weekly
 `[host] enabled` stays false until the owner approves the intro. Then `host.due()` is true on the host's weekday once a week; `host.weekly_line()` writes the message
 (checked like any line), `make_clip` renders it, `register` packages it as a job that the normal publisher and `post-backlog` can post.

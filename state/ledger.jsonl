@@ -4121,3 +4121,6 @@
 {"day": "2026-10-22", "provider": "flint", "unit": "calls", "amount": 1, "usd": 0.0, "job": null}
 {"day": "2026-10-22", "provider": "flint", "unit": "calls", "amount": 1, "usd": 0.0, "job": null}
 {"day": "2026-10-22", "provider": "muapi", "unit": "desk_usd", "amount": 0.78, "usd": 0.78, "job": null}
+{"day": "2026-10-22", "provider": "cloudflare", "unit": "neurons", "amount": 7.9, "usd": 0.0, "job": null}
+{"day": "2026-10-22", "provider": "cloudflare", "unit": "neurons", "amount": 25.5, "usd": 0.0, "job": null}
+{"day": "2026-10-22", "provider": "cloudflare", "unit": "neurons", "amount": 10.8, "usd": 0.0, "job": null}
