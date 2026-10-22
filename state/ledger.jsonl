@@ -4131,3 +4131,4 @@
 {"day": "2026-10-22", "provider": "cloudflare", "unit": "neurons", "amount": 7.9, "usd": 0.0, "job": null}
 {"day": "2026-10-22", "provider": "cloudflare", "unit": "neurons", "amount": 25.5, "usd": 0.0, "job": null}
 {"day": "2026-10-22", "provider": "cloudflare", "unit": "neurons", "amount": 6.3, "usd": 0.0, "job": null}
+{"day": "2026-10-22", "provider": "composio", "unit": "calls", "amount": 1, "usd": 0.0, "job": "2026-10-21-s0-host-the-quiet-money-daily-planner-wh"}
