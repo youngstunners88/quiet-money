@@ -25,10 +25,14 @@ reel.build(
 - **No claim a number has to back.** The offer claim rules apply here as everywhere (`faceless-offer`): no income promises, no returns.
 - The voice is the channel's configured narrator (`[voice] elevenlabs_voice`, currently a deep calm read), kept deliberately low in the mix.
 
+## The ending is an act (lessons L3, L4)
+The card has no clip sound, so it lands on a sting (whoosh into the cut, low impact, coin ping as the coin appears), the music bed swells under it, and the closing line is levelled like every other line and lifted 1.6 dB. The card lasts the lead-in, the whole line and a 1.3 s hold (`card_seconds_for`), then picture and sound fade out together. Never let the file end on a live sound.
+
 ## The mix
 Clip sound keeps the hits at `CLIP_GAIN`, the music bed fills the gaps at `BED_GAIN`, and both duck to let the narration through only while it speaks (`sidechaincompress`). A limiter catches the peaks. Raise `BED_GAIN` before raising the voice: if the voice has to be loud to be heard, the bed is too busy.
 
 ## Rules
-- **Watch the finished reel before it ships**, not just the exit code: check that each line lands after its cut and not on it, and that the CTA card is readable.
+- **Run the craft loop before it ships** (`faceless-craft`): `python -m faceless craftcheck <reel> --report <build.json>` must show nothing blocking, then look at a contact sheet and listen to the ending.
+- **Size the narration from the act lengths** with `craftcheck.word_budget` (`faceless-rhythm`).
 - **Never stretch an act to fit the narration.** Cut the words instead.
 - The clips are AI output: the post's disclosure covers them.
