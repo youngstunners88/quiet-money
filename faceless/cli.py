@@ -1123,6 +1123,18 @@ def cmd_podcast(args) -> int:
     return 0
 
 
+def cmd_longform(args) -> int:
+    """The weekly long-form: the week's most viewed Shorts re-cut into one 16:9 episode with chapters, or show the latest."""
+    from faceless import longform
+    if args.action == "build":
+        r = longform.build(args.week, most=args.max, music=not args.no_music)
+        print(f"{r['items']} stories" + (f", {r['seconds']:.0f} s: {r['file']}\nnotes: {r['notes']}" if r.get("file") else f": {r.get('reason')}"))
+        return 0
+    weeks = sorted(p.name for p in longform.OUT.glob("*") if (p / "EPISODE.md").exists()) if longform.OUT.exists() else []
+    print("episodes: " + (", ".join(weeks) or "none built yet"))
+    return 0
+
+
 def cmd_hq(args) -> int:
     """One snapshot of the whole business for the owner's HQ dashboard; reads only."""
     from faceless import hq
@@ -1295,6 +1307,12 @@ def main(argv: list[str] | None = None) -> int:
     pc.add_argument("--week", help="the last day of the week to build (default: yesterday)")
     pc.add_argument("--no-music", action="store_true")
     pc.set_defaults(fn=cmd_podcast)
+    lf = sub.add_parser("longform", help="the weekly 16:9 episode (Money Rules Weekly): build [--week YYYY-MM-DD] [--max 7] [--no-music] | status")
+    lf.add_argument("action", nargs="?", default="status", choices=["build", "status"])
+    lf.add_argument("--week", help="the last day of the week to build (default: yesterday)")
+    lf.add_argument("--max", type=int, default=7, help="most stories in the episode")
+    lf.add_argument("--no-music", action="store_true")
+    lf.set_defaults(fn=cmd_longform)
     hqp = sub.add_parser("hq", help="one snapshot of the whole business for the HQ dashboard (reads only); --json for the document it reads")
     hqp.add_argument("--json", action="store_true")
     hqp.add_argument("--out", help="also write the JSON snapshot to this path")

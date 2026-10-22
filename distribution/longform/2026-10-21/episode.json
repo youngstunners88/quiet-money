@@ -1,0 +1,79 @@
+{
+ "week": "2026-10-21",
+ "seconds": 514.8,
+ "chapters": [
+  {
+   "title": "Intro",
+   "start": 0.0
+  },
+  {
+   "title": "Why Your Paycheck Carries the Highest Tax",
+   "start": 9.7,
+   "job": "2026-10-17-s4-escape-the-trap-of-earned-income-taxati"
+  },
+  {
+   "title": "The $180 Move That Crushed Wall Street",
+   "start": 86.9,
+   "job": "2026-10-16-s5-story-grace-groner-turning-180-into-7"
+  },
+  {
+   "title": "Why Avoiding Credit Cards Costs You More",
+   "start": 164.2,
+   "job": "2026-10-16-s7-myth-myth-credit-cards-are-inherently"
+  },
+  {
+   "title": "The Front-Loaded Mortgage Shock",
+   "start": 229.0,
+   "job": "2026-10-16-s6-math-the-front-loaded-mortgage-shock"
+  },
+  {
+   "title": "The Raise Math Nobody Teaches You",
+   "start": 285.3,
+   "job": "2026-10-16-s4-ledger-the-overlooked-payroll-tax-brack"
+  },
+  {
+   "title": "Why Starting Late Costs More Than Starting Small",
+   "start": 348.6,
+   "job": "2026-10-15-s0-math-why-starting-late-costs-more-tha"
+  },
+  {
+   "title": "Why Holding Cash Guarantees You Lose Money",
+   "start": 420.9,
+   "job": "2026-10-15-s3-myth-myth-cash-is-a-safe-asset-to-hol"
+  },
+  {
+   "title": "Outro",
+   "start": 496.1
+  }
+ ],
+ "stories": [
+  {
+   "job": "2026-10-17-s4-escape-the-trap-of-earned-income-taxati",
+   "views": 53
+  },
+  {
+   "job": "2026-10-16-s5-story-grace-groner-turning-180-into-7",
+   "views": 16
+  },
+  {
+   "job": "2026-10-16-s7-myth-myth-credit-cards-are-inherently",
+   "views": 16
+  },
+  {
+   "job": "2026-10-16-s6-math-the-front-loaded-mortgage-shock",
+   "views": 14
+  },
+  {
+   "job": "2026-10-16-s4-ledger-the-overlooked-payroll-tax-brack",
+   "views": 2
+  },
+  {
+   "job": "2026-10-15-s0-math-why-starting-late-costs-more-tha",
+   "views": 0
+  },
+  {
+   "job": "2026-10-15-s3-myth-myth-cash-is-a-safe-asset-to-hol",
+   "views": 0
+  }
+ ]
+}

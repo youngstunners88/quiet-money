@@ -30,6 +30,7 @@ GATES = {   # owner-only steps: money, accounts, legal, face. Codes keep the ask
     "flow": "Generate the day's 3 Flow clips (about 10 minutes) and drop them in the inbox",
     "fiverr": "List the gig on your Fiverr account and handle client messages",
     "podcast": "Open a free podcast host account",
+    "longform": "Say yes to one long-form upload a week on the YouTube channel (the weekly 16:9 episode; rule 9 covers Shorts only)",
     "pod": "Open Etsy + Printify accounts",
     "adobe": "Open an Adobe Stock contributor account and confirm the image model's terms allow resale",
     "affiliate": "Sign affiliate programs, after a compliance review of each offer",

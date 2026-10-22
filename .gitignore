@@ -66,3 +66,5 @@ channel/services/web3-video/reviews/
 
 # the weekly audio edition: the mp3 is rebuilt by `python -m faceless podcast build`; EPISODE.md and episode.json are committed
 distribution/podcast/**/*.mp3
+# the weekly long-form: episode.mp4 is rebuilt by `python -m faceless longform build`; EPISODE.md, episode.json and thumbnail.jpg are committed
+distribution/longform/**/*.mp4

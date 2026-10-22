@@ -15,6 +15,7 @@ from __future__ import annotations
 import json
 import subprocess
 import tempfile
+import time
 from datetime import date, timedelta
 from pathlib import Path
 
@@ -24,6 +25,7 @@ from faceless.fsutil import write_atomic
 
 OUT = Paths.root / "distribution" / "podcast"
 GAP_S = 0.8
+RETRY_S = 20                                   # the pause before the one retry of a failed voice call
 WORKERS = 6                                    # segments voiced at once; order is kept by position
 DISCLAIMER = "Quiet Money is education, not financial advice. Do your own research before any money decision."
 AI_NOTE = "This episode is narrated with an AI voice and made with AI tools."
@@ -79,6 +81,27 @@ def _clock(s: float) -> str:
     return f"{s // 3600:d}:{s % 3600 // 60:02d}:{s % 60:02d}" if s >= 3600 else f"{s // 60:d}:{s % 60:02d}"
 
 
+def voice_all(texts: list[str], tmp: Path, synth, words: dict | None = None) -> list[Path]:
+    """Voice every text at once (one call takes up to ~90 s), each as a 24 kHz mono wav in `tmp`, in the order given.
+    When `words` is a dict, the word timings the voice returned (if any) land in it by position."""
+    from concurrent.futures import ThreadPoolExecutor
+
+    def voice(i: int) -> Path:
+        raw, wav = tmp / f"s{i}.raw.wav", tmp / f"s{i}.wav"
+        try:
+            got = synth(texts[i], raw)
+        except Exception:  # noqa: BLE001 - one dropped call (the free voice under load) must not throw away a whole week's voicing
+            time.sleep(RETRY_S)
+            got = synth(texts[i], raw)
+        if words is not None:
+            words[i] = got[1] if isinstance(got, tuple) and len(got) == 2 and isinstance(got[1], list) else []
+        _ff("-i", str(raw), "-ar", "24000", "-ac", "1", str(wav))              # one format, so the concat is clean
+        return wav
+
+    with ThreadPoolExecutor(max_workers=WORKERS) as pool:
+        return list(pool.map(voice, range(len(texts))))
+
+
 def build(end: str | None = None, *, music: bool = True, synth=None) -> dict:
     """Voice, join and encode the episode. `synth(text, wav_path)` is the voice chain; a test passes its own."""
     from faceless.providers import tts
@@ -94,15 +117,7 @@ def build(end: str | None = None, *, music: bool = True, synth=None) -> dict:
         tmp = Path(tmp)
         gap = tmp / "gap.wav"
         _ff("-f", "lavfi", "-i", f"anullsrc=r=24000:cl=mono", "-t", str(GAP_S), "-ar", "24000", "-ac", "1", str(gap))
-        def voice(i: int) -> Path:
-            raw, wav = tmp / f"s{i}.raw.wav", tmp / f"s{i}.wav"
-            synth(segs[i]["text"], raw)
-            _ff("-i", str(raw), "-ar", "24000", "-ac", "1", str(wav))          # one format, so the concat is clean
-            return wav
-
-        from concurrent.futures import ThreadPoolExecutor
-        with ThreadPoolExecutor(max_workers=WORKERS) as pool:                # one voice call takes up to ~90 s; a week is ~37 segments
-            wavs = list(pool.map(voice, range(len(segs))))
+        wavs = voice_all([s["text"] for s in segs], tmp, synth)
         parts, at = [], 0.0
         for seg, wav in zip(segs, wavs):
             seg["start"] = at
