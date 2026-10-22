@@ -25,35 +25,40 @@ from faceless.config import Paths
 
 DIR = Paths.root / "channel" / "flow"
 INBOX, USED, LISTS = DIR / "inbox", DIR / "used", DIR / "shotlists"
-RULES = ("vertical 9:16, 10 seconds, slow cinematic camera, no people's faces, no text or numbers anywhere, no logos or brands, "
-         "no dialogue or music")
-SUBJECTS = {   # per series: 10-second scenes with a hook in the first second and a reveal by the last; rotated by date
-    "story": ["a dusty leather wallet bursts open and a river of gold coins spills across a black desk in slow motion, the camera racing alongside",
-              "a vintage car crashes through a garage wall and rockets into a sky full of falling gold coins, low angle, wind and dust",
-              "a pocket watch shatters into a swarm of glowing gears that reassemble into a golden hourglass floating in a dark void",
-              "a lunch box cracks open and a bright sunrise erupts out of it, flooding a workshop with light, push-in"],
-    "math": ["a stack of gold coins grows into a skyscraper of coins in one fast crane up, each coin clicking into place, dark studio",
-             "a single seed explodes into a giant golden tree in time-lapse, roots tearing through the floor, fast push-in",
-             "a line of dominoes topples at lightning speed, the last domino becomes a glowing gold staircase climbing into the clouds",
-             "a snowball the size of a planet rolls down a mountain, growing with every turn, the camera racing ahead of it"],
-    "psychology": ["a glowing phone screen shatters and a shopping cart rockets out of the shards down a neon aisle, fast whip pan",
-                   "a candy jar bursts open, candy freezes mid-air and turns into golden coins, slow motion, sharp backlight",
-                   "a savings jar and a bank vault face off, the vault splits open and a golden tidal wave of coins rushes the camera",
-                   "a cosmic crossroad splits the sky in two, one path erupting in fire, the other in gold light, the camera spins between them"],
-    "myth": ["a cracked glass sphere explodes outward in slow motion, golden light bursting through every shard, extreme close-up",
-             "a rusty padlock snaps open with a shock wave that ripples through a dark sea, fast push-in, sparks flying",
-             "a chalk drawing on a blackboard comes to life, the chalk lines tear off the board and swirl into a golden tornado",
-             "a house of cards stands in a storm, a single card flips and the whole tower erupts into a flock of golden birds"],
-    "playbook": ["piles of receipts fly up and form a neat golden staircase, camera tilts up as the last receipt snaps into place",
-                 "a calendar's pages flip at high speed, one date blazes gold and lifts off the page toward the camera",
-                 "a notebook page tears itself out and transforms into a golden map, pen strokes racing across it, overhead",
-                 "a piggy bank cracks open and a sunrise launches out of it into a dark sky, fast push-in"],
-    "escape": ["a massive steel door blasts open in slow motion, a tidal wave of golden daylight pours through, camera pulled back by the blast",
-               "a commuter train bursts off its rails into the sky and flies over a glowing city at dawn, low angle, speed lines",
-               "a hamster wheel spins faster and faster until it tears free and rolls out the door into a golden sunrise",
-               "a rope bridge snaps and a rocket launches from the canyon below, racing up through clouds into the stars"],
+RULES = ("vertical 9:16, 10 seconds, cinematic 4K, photoreal, no people's faces (silhouettes or visors only), no text or numbers anywhere, "
+         "no logos or brands, no dialogue, no music")
+SUBJECTS = {   # per series: one self-contained prompt per scene, with timed beats (0-3s, 3-7s, 7-10s), a named subject, an action, a payoff
+    "story": [
+        "A rusted pocket watch on a frozen lake at dusk. 0-3s: a crack runs across the ice beneath it and it sinks into a black hole. 3-7s: the camera drops under the ice as the watch hands spin backward and a shaft of gold light climbs up through the crack. 7-10s: the shaft widens into a golden door that swings open onto a sunrise, and the camera passes through it. Locked-off low angle, then a fast push-in.",
+        "A vintage pickup truck bursts out of a dusty barn at dawn, driven by a silhouetted figure in a leather jacket and a worn helmet. 0-3s: it smashes through a barbed-wire fence. 3-7s: it races along a canyon road toward a giant golden toll barrier. 7-10s: it hits the barrier at full speed, the barrier shatters into gold coins that rain over the truck, and it leaps into open sky. Chase camera from behind, then a wide aerial.",
+        "A wooden lunch box on a workbench in a dark garage. 0-3s: the lid pops open and a bright sunrise erupts out of it, flooding the room with light. 3-7s: tools lift off the bench and spin in orbit around the sunlight as it grows into a hot golden disc. 7-10s: the disc tears free and rolls across the garage floor toward the camera like a wheel of fire, sparks flying. Low dolly push-in, then handheld shake on impact.",
+    ],
+    "math": [
+        "A single gold seed in cracked dry earth at night. 0-3s: the seed splits with a flash and a golden root shoots down into the soil. 3-7s: time-lapse as the root spreads through the ground, lifting stones, and a trunk bursts up and grows into a giant golden tree in seconds, its branches blooming into coins. 7-10s: the camera rises above the canopy as the roots glow through the desert floor like a city grid. Crane up under moonlight.",
+        "A line of three hundred black dominoes on a black glass floor in a huge empty hall. 0-3s: the first domino tips and sparks race down the line. 3-7s: the dominoes topple in a curve, each one turning gold as it falls and the whole line arcing toward the camera. 7-10s: the last domino lands and the gold line rises into a glowing staircase climbing into the clouds. Overhead tracking shot, then a low angle on the staircase.",
+        "A snowball the size of a mountain starts rolling down a steep alpine slope under a blue dusk sky. 0-3s: it breaks loose with a crack and the camera races ahead of it. 3-7s: it picks up trees, boulders and a frozen lake, growing bigger with every turn. 7-10s: it crests a ridge and blasts into a valley of glowing gold snow, filling the whole frame. Fast drone shot that pulls back wide.",
+    ],
+    "psychology": [
+        "A glass phone screen glowing in a dark bedroom, with a shopping cart on the other side of the glass. 0-3s: the screen cracks and the cart bursts out and rolls down a neon aisle toward the camera. 3-7s: its wheels spark as it races past endless shelves, the price tags melting into fire. 7-10s: the cart tips over a cliff edge into a silent void, and a single gold coin floats in its place. Fast whip pan, then a slow push-in onto the coin.",
+        "A candy jar and a steel savings vault stand on a kitchen counter at night. 0-3s: the candy jar cracks open and candy flies into the air, freezing mid-flight in slow motion. 3-7s: each candy turns into a gold coin and the coins fly into the open vault. 7-10s: the vault door slams shut and a golden tidal wave of coins rushes out from under it toward the camera. Slow motion with a sharp backlight, then a fast dolly back.",
+        "A stone crossroad at the edge of a foggy canyon at dusk, with two glowing paths ahead. 0-3s: the left path erupts in orange fire. 3-7s: the right path ignites in gold light, and a silhouetted figure stands between them with its arms spread. 7-10s: the fire and the gold merge into one white beam that shoots up through the clouds. Overhead orbit around the figure, then a crane up.",
+    ],
+    "myth": [
+        "A cracked glass sphere on a black pedestal in a dark studio. 0-3s: the sphere splits from the inside and gold light pours through every crack. 3-7s: the shards lift off the pedestal and orbit the camera, each reflecting a different city at night. 7-10s: the shards snap back together into one perfect golden sphere that rises out of frame. Extreme close-up in slow motion, then a fast crane up.",
+        "A rusty padlock on a steel vault door at the end of a dark tunnel. 0-3s: a golden wire spider the size of a hand crawls down the door toward the lock. 3-7s: it reaches the shackle and snaps it open in a burst of sparks. 7-10s: the vault door swings out and a river of gold coins rolls toward the camera. Locked-off wide shot, then a fast push-in onto the coins.",
+        "A chalk drawing of a mountain on a blackboard in an empty classroom at night. 0-3s: a single chalk line starts to move on its own across the board. 3-7s: the lines tear off the board and spin into a golden tornado that fills the room and lifts the desks. 7-10s: the tornado collapses into a sunrise drawn in light on the back wall. Dolly through the room, then a locked-off wide.",
+    ],
+    "playbook": [
+        "A stack of paper receipts on a clean desk in a bright office at dawn. 0-3s: the receipts lift off and fly into a neat formation. 3-7s: they stack into a golden staircase, each step snapping into place with a sharp sound. 7-10s: the top receipt flips to reveal a single gold line leading up into the light. Overhead shot, then a slow crane up along the staircase.",
+        "A paper calendar on a wall in a dark room. 0-3s: its pages flip at high speed and one date blazes gold. 3-7s: the gold date peels off the wall and flies toward the camera, leaving a trail of light. 7-10s: it lands on a wooden desk and opens like a map that spreads to fill the frame. Close push-in, then an overhead view.",
+        "A ceramic piggy bank on a windowsill in a dark bedroom at night. 0-3s: the piggy bank cracks open along its seam with a bright flash. 3-7s: a sunrise erupts out of it and climbs over the windowsill, turning the room gold. 7-10s: the sun rolls out of the window and across the rooftops of a sleeping city. Locked-off wide, then a fast push-out through the window.",
+    ],
+    "escape": [
+        "A massive steel door at the end of a dark tunnel, sealed with heavy chains. 0-3s: the chains snap in a blast of white light. 3-7s: the door bursts open and a tidal wave of golden daylight pours down the tunnel toward the camera, dragging dust and paper in its path. 7-10s: the light fills the frame and a silhouetted figure steps out into an endless sunrise. Camera pulled back by the blast, then a slow push-in onto the figure.",
+        "A commuter train speeds along a rail line over a dark glowing city at night. 0-3s: the train jumps its rails in a shower of sparks. 3-7s: it flies up into the sky above the skyline, speed lines streaking past its windows. 7-10s: it curves upward through the clouds toward a full moon. Low-angle chase, then a wide aerial as it climbs.",
+        "A rocket on a cliff launch pad under a red sky, with a visored astronaut silhouette at the foot of the ladder. 0-3s: the astronaut climbs the ladder two rungs at a time. 3-7s: the countdown lights flicker on in sequence and the engines ignite in a roaring white flame. 7-10s: the rocket lifts off and its flame stretches across the frame into a sky full of stars. Tracking shot from ground level, then a crane up.",
+    ],
 }
-CAMERAS = ["slow push-in", "slow dolly left to right", "slow orbit", "slow crane up", "static with subtle handheld drift"]
 
 
 def enabled() -> bool:
@@ -72,8 +77,7 @@ def shotlist(day: str | None = None, n: int = 3) -> Path:
         if not pool:
             continue
         subject = pool[(ordinal + k) % len(pool)]
-        camera = CAMERAS[(ordinal + 2 * k) % len(CAMERAS)]
-        rows.append((pillar, f"{subject[0].upper()}{subject[1:]}. {camera}. {RULES}.", f"{pillar}-{day.replace('-', '')}-{k + 1}.mp4"))
+        rows.append((pillar, f"{subject} {RULES}.", f"{pillar}-{day.replace('-', '')}-{k + 1}.mp4"))
     LISTS.mkdir(parents=True, exist_ok=True)
     out = LISTS / f"{day}.md"
     L = [f"# Flow shot list for {day}", "",
