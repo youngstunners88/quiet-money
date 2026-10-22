@@ -327,6 +327,17 @@ def cmd_flow(args) -> int:
     return 0
 
 
+def cmd_flowcine(args) -> int:
+    from datetime import date
+    from faceless import flowcine
+    if args.action == "status":
+        print(json.dumps(flowcine.status(), indent=2))
+        return 0
+    day = date.fromisoformat(args.day) if args.day else None
+    print(flowcine.shotlist(day).read_text(encoding="utf-8"))
+    return 0
+
+
 def cmd_products(_args) -> int:
     from faceless import products
     res = products.build_all()
@@ -1125,6 +1136,10 @@ def main(argv: list[str] | None = None) -> int:
     fl.add_argument("action", nargs="?", choices=["shotlist", "status"], default="shotlist")
     fl.add_argument("--day", help="YYYY-MM-DD (default today)")
     fl.set_defaults(fn=cmd_flow)
+    fc = sub.add_parser("flowcine", help="Cinematic Flow lane: today's three 10-second captionless prompts for the owner's Google Flow, or inbox status")
+    fc.add_argument("action", nargs="?", choices=["shotlist", "status"], default="shotlist")
+    fc.add_argument("--day", help="YYYY-MM-DD (default today)")
+    fc.set_defaults(fn=cmd_flowcine)
     sub.add_parser("products", help="build the spreadsheet products, recalculate them in LibreOffice, check against Python math, write listings").set_defaults(fn=cmd_products)
     pl = sub.add_parser("planner", help="the Daily Planner product: `build` the PDFs, `check` the gauntlet, `ingest <folder>` the owner's pictures, `clean` the handle off them, `inventory`, `cover`, `posters-make` (typeset the studio's twelve wellness posters)")
     pl.add_argument("action", choices=["build", "check", "ingest", "clean", "inventory", "cover", "posters-make"])
