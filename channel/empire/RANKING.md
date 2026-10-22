@@ -7,8 +7,8 @@ and the owner is the board for money, accounts, legal and face. Scores are judgm
 Unblocked and buildable without the owner; only the launch needs them.
 | id | opportunity | rail | stage | score | next |
 |---|---|---|---|---|---|
-| C3 | Weekly long-form: 'Money Rules Weekly' (8-10 min, 16:9, chapters) | content | vetted | 36.0 | agent builds it now. Launch needs the owner: Create the TikTok and Instagram accounts (@quietmoneyrule) and connect them for auto-posting (YouTube is live and posting) |
 | S2 | Fiverr studio mode: concept sheets in minutes for logo/art/character gigs | service | vetted | 16.2 | agent builds it now. Launch needs the owner: List the gig on your Fiverr account and handle client messages |
+| R1 | YouTube Partner Program + TikTok Creator Rewards | partnership | vetted | 13.5 | agent builds it now. Launch needs the owner: Create the TikTok and Instagram accounts (@quietmoneyrule) and connect them for auto-posting (YouTube is live and posting) |
 | O19 | Outreach drafts: collaborators, newsletters and podcasts in the niche, drafted for the owner to send | growth | vetted | 9.72 | agent builds it now. Launch needs the owner: Send the drafted collaboration notes yourself (the studio never sends a message in your name); Create the TikTok and Instagram accounts (@quietmoneyrule) and connect them for auto-posting (YouTube is live and posting) |
 
 ## Built: waiting for the owner to launch
@@ -28,6 +28,7 @@ Finished and checked; one owner step turns each on.
 | S1 | Fiverr: productized faceless-channel brand kit | service | built | 48.0 | built and verified. Launch needs the owner: List the gig on your Fiverr account and handle client messages |
 | C9 | Motion scenes designed by Claude Haiku 5.5: data in, HyperFrames out, a frame review before a scene replaces a still | content | built | 45.0 | built and verified. Launch needs the owner: Look at a sample video with model-designed motion scenes and say go (studio.toml [production.sketch] mode = "on", plus the approval constant in tests/test_hygiene.py) |
 | C4 | Audio edition: daily 60 s + weekly podcast episode | content | built | 40.5 | built and verified. Launch needs the owner: Open a free podcast host account |
+| C3 | Weekly long-form: 'Money Rules Weekly' (8-10 min, 16:9, chapters) | content | built | 36.0 | built and verified. Launch needs the owner: Say yes to one long-form upload a week on the YouTube channel (the weekly 16:9 episode; rule 9 covers Shorts only) |
 | P6 | Fillable PDF versions of the printable pack | product | built | 36.0 | built and verified. Launch needs the owner: Approve the prices and listings of the built products (the Gumroad shop is open; Etsy for printables) |
 | P3 | Printable budget pack (50/30/20, sinking funds, subscription audit, net worth) | product | built | 31.5 | built and verified. Launch needs the owner: Approve the prices and listings of the built products (the Gumroad shop is open; Etsy for printables) |
 
@@ -58,7 +59,6 @@ The owner's act is the work.
 | id | opportunity | rail | stage | score | next |
 |---|---|---|---|---|---|
 | O15 | Site analytics with PostHog: visits, calculator use and clicks to the shop | ops | vetted | 30.0 | waits for O3 |
-| R1 | YouTube Partner Program + TikTok Creator Rewards | partnership | vetted | 13.5 | waits for C3 |
 
 ## Ideas to validate cheaply
 | id | opportunity | rail | stage | score | next |
@@ -72,7 +72,7 @@ The owner's act is the work.
 
 ## What the owner unlocks, biggest first
 
-- **Create the TikTok and Instagram accounts (@quietmoneyrule) and connect them for auto-posting (YouTube is live and posting)**: 446.7 points (O18, C5, O3, C3, O5, R1, O19)
+- **Create the TikTok and Instagram accounts (@quietmoneyrule) and connect them for auto-posting (YouTube is live and posting)**: 410.7 points (O18, C5, O3, O5, R1, O19)
 - **Pick an email service, a domain and a postal address, and connect them**: 375.5 points (O18, A2, A1)
 - **Approve the prices and listings of the built products (the Gumroad shop is open; Etsy for printables)**: 346.5 points (P4, P1, P2, P6, P3)
 - **Pick a cookieless visit counter and save its tag as the file named in studio.toml [site] head_snippet**: 200.0 points (O18)
@@ -83,6 +83,7 @@ The owner's act is the work.
 - **List the gig on your Fiverr account and handle client messages**: 64.2 points (S1, S2)
 - **Look at a sample video with model-designed motion scenes and say go (studio.toml [production.sketch] mode = "on", plus the approval constant in tests/test_hygiene.py)**: 45.0 points (C9)
 - **Open a free podcast host account**: 40.5 points (C4)
+- **Say yes to one long-form upload a week on the YouTube channel (the weekly 16:9 episode; rule 9 covers Shorts only)**: 36.0 points (C3)
 - **Create a free FRED API key (fred.stlouisfed.org) and add FRED_API_KEY to the environment**: 21.6 points (O17)
 - **Open a second-language channel per platform (Spanish first) and approve machine translation with a native-speaker spot check**: 15.4 points (C7)
 - **Send the drafted collaboration notes yourself (the studio never sends a message in your name)**: 9.7 points (O19)
