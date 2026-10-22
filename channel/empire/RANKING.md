@@ -8,7 +8,6 @@ Unblocked and buildable without the owner; only the launch needs them.
 | id | opportunity | rail | stage | score | next |
 |---|---|---|---|---|---|
 | C3 | Weekly long-form: 'Money Rules Weekly' (8-10 min, 16:9, chapters) | content | vetted | 36.0 | agent builds it now. Launch needs the owner: Create the TikTok and Instagram accounts (@quietmoneyrule) and connect them for auto-posting (YouTube is live and posting) |
-| P6 | Fillable PDF versions of the printable pack | product | vetted | 36.0 | agent builds it now. Launch needs the owner: Approve the prices and listings of the built products (the Gumroad shop is open; Etsy for printables) |
 | S2 | Fiverr studio mode: concept sheets in minutes for logo/art/character gigs | service | vetted | 16.2 | agent builds it now. Launch needs the owner: List the gig on your Fiverr account and handle client messages |
 | O19 | Outreach drafts: collaborators, newsletters and podcasts in the niche, drafted for the owner to send | growth | vetted | 9.72 | agent builds it now. Launch needs the owner: Send the drafted collaboration notes yourself (the studio never sends a message in your name); Create the TikTok and Instagram accounts (@quietmoneyrule) and connect them for auto-posting (YouTube is live and posting) |
 
@@ -29,6 +28,7 @@ Finished and checked; one owner step turns each on.
 | S1 | Fiverr: productized faceless-channel brand kit | service | built | 48.0 | built and verified. Launch needs the owner: List the gig on your Fiverr account and handle client messages |
 | C9 | Motion scenes designed by Claude Haiku 5.5: data in, HyperFrames out, a frame review before a scene replaces a still | content | built | 45.0 | built and verified. Launch needs the owner: Look at a sample video with model-designed motion scenes and say go (studio.toml [production.sketch] mode = "on", plus the approval constant in tests/test_hygiene.py) |
 | C4 | Audio edition: daily 60 s + weekly podcast episode | content | built | 40.5 | built and verified. Launch needs the owner: Open a free podcast host account |
+| P6 | Fillable PDF versions of the printable pack | product | built | 36.0 | built and verified. Launch needs the owner: Approve the prices and listings of the built products (the Gumroad shop is open; Etsy for printables) |
 | P3 | Printable budget pack (50/30/20, sinking funds, subscription audit, net worth) | product | built | 31.5 | built and verified. Launch needs the owner: Approve the prices and listings of the built products (the Gumroad shop is open; Etsy for printables) |
 
 ## Needs the owner first
