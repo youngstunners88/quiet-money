@@ -65,14 +65,21 @@ def cta_card(out: Path, headline: str, sub: str) -> Path:
     return out
 
 
-def _voice(text: str, out: Path) -> float:
-    """One narration line, levelled to VO_LUFS so every line sits at the same height in the mix. Returns its length."""
+# Silence around a read is cut before timing anything: each voice provider pads its files differently, and padding
+# counted as speech made every hold and every "line ends before its cut" measurement wrong (lesson L10).
+TRIM = ("silenceremove=start_periods=1:start_threshold=-45dB:start_silence=0.02,areverse,"
+        "silenceremove=start_periods=1:start_threshold=-45dB:start_silence=0.06,areverse,apad=pad_dur=0.08")
+
+
+def _voice(text: str, out: Path) -> tuple[float, str]:
+    """One narration line: trimmed to the speech, levelled to VO_LUFS so every line sits at the same height in the mix.
+    Returns (spoken length, the provider that voiced it)."""
     from faceless.providers import tts
     raw = out.with_name(out.stem + "-raw.wav")
-    tts.synthesize(text, raw)
+    provider, _timings = tts.synthesize(text, raw)
     _run(["ffmpeg", "-hide_banner", "-loglevel", "error", "-y", "-i", str(raw),
-          "-af", f"loudnorm=I={VO_LUFS}:TP=-2:LRA=7,aresample=48000", "-ac", "2", str(out)])
-    return cineedit.probe_duration(out)
+          "-af", f"{TRIM},loudnorm=I={VO_LUFS}:TP=-2:LRA=7,aresample=48000", "-ac", "2", str(out)])
+    return cineedit.probe_duration(out), provider
 
 
 def _dip(src: Path, out: Path, seconds: float = DIP) -> None:
@@ -155,7 +162,7 @@ def build(acts: list[dict], out: Path, *, cta_line: str, cta_headline: str = "ON
 
         # The closing line is voiced first, because its length decides how long the card stays up.
         cta_wav = work / "vo-cta.wav"
-        cta_len = _voice(cta_line, cta_wav)
+        cta_len, cta_voice = _voice(cta_line, cta_wav)
         card_len = card_seconds_for(cta_len, cta_seconds)
         card_png = cta_card(work / "cta.png", cta_headline, cta_sub)
         card = work / "cta.mp4"
@@ -183,15 +190,16 @@ def build(acts: list[dict], out: Path, *, cta_line: str, cta_headline: str = "ON
             if not a.get("line"):
                 continue
             wav = work / f"vo{i}.wav"
-            length = _voice(a["line"], wav)
+            length, voice = _voice(a["line"], wav)
             at = starts[i] + VO_DELAY
             vo.append((at, wav, VO_GAIN))
             spoken.append({"at": round(at, 2), "seconds": round(length, 2), "ends": round(at + length, 2),
-                           "act_ends": round(starts[i + 1] if i + 1 < len(starts) else card_start, 2), "line": a["line"]})
+                           "act_ends": round(starts[i + 1] if i + 1 < len(starts) else card_start, 2), "line": a["line"],
+                           "voice": voice})
         cta_at = card_start + CTA_LEAD
         vo.append((cta_at, cta_wav, VO_GAIN * CTA_VO_GAIN))
         spoken.append({"at": round(cta_at, 2), "seconds": round(cta_len, 2), "ends": round(cta_at + cta_len, 2),
-                       "act_ends": round(total, 2), "line": cta_line, "cta": True})
+                       "act_ends": round(total, 2), "line": cta_line, "cta": True, "voice": cta_voice})
 
         inputs, chain, vo_labels = ["-i", str(joined)], [], []
         for n, (at, wav, gain) in enumerate(vo, start=1):

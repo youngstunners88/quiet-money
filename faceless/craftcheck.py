@@ -107,6 +107,10 @@ def check_reel(video: Path, report: dict) -> list[dict]:
         wps = len(line["line"].split()) / max(0.1, line["seconds"])
         add(f"line is at a calm pace ({line['line'][:32]}...)", "L5", wps <= 3.2, f"{wps:.1f} words/s", gate=False)
 
+    voices = sorted({l.get("voice") for l in report.get("narration", []) if l.get("voice")})
+    if voices:
+        add("one narrator voices the whole piece", "L10", len(voices) == 1, ", ".join(voices))
+
     tail = [m for t, m in rows if t >= total - 0.15]
     peak_end = max((m for t, m in rows if total - 2.0 <= t < total - 0.8), default=-70.0)
     add("the sound fades out, it does not stop dead", "L4", bool(tail) and max(tail) <= peak_end - 10.0,

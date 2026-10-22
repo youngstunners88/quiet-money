@@ -55,3 +55,11 @@ in `faceless/craftcheck.py` must exist here (a test checks this).
 - **Owner said:** faces are allowed, every time (2026-10-22).
 - **Rule:** write real characters with expression and bearing; a face carries the reaction that makes a 10-second beat land.
 - **Enforced in:** `faceless-flow` skill.
+
+## L10: measure the speech, not the file; one narrator per piece
+- **Owner said:** (caught in the review of the third render) the card held 5.5 s and every line ran about a second longer than in the first reel.
+- **Measured cause:** the ElevenLabs quota was spent (28 of 10,000 credits left) and the Edge voice returned 403, so the voice chain fell back to Gemini without anyone deciding to (seen in the journal): a different narrator from the first reel, and a slower read, so every line ran about a second longer and the card held 5.5 s.
+- **Not verified:** whether the fallback voice's files also carry padding around the speech. The trim below is a safeguard against that, not a measured fix.
+- **Rule:** each line is trimmed to its speech before it is timed or placed, the build report records which provider voiced every line, and a piece voiced by more than one narrator does not ship. When the channel's narrator is unavailable, say so to the owner instead of shipping a different voice quietly.
+- **Then:** the next render failed outright: Gemini hit its quota too (429), so no narrator was available at all. A voice outage stops the reel and the daily batch alike, and it is the owner's to fix (top up ElevenLabs).
+- **Enforced in:** `faceless/reel.py` (`TRIM`, `_voice` returns the provider); craftcheck L10.
