@@ -130,6 +130,39 @@ def longcat(prompt: str, *, system: str | None, want_json: bool, temperature: fl
         raise ProviderError("longcat: empty response") from e
 
 
+def mistral(prompt: str, *, system: str | None, want_json: bool, temperature: float) -> str:
+    """Mistral (OpenAI-compatible) as the fourth script voice, using the keys already in the environment (O14; approved by
+    CLAUDE.md rule 16, 2026-10-22). The keys hit rate limits independently, so each is tried in turn; all limited means skipped."""
+    keys = [k for k in (config.env("MINSTRAL_API_KEY"), config.env("MINSTRAL_API_KEY2"), config.env("MISTRAL_API_KEY")) if k]
+    if not keys:
+        raise ProviderUnavailable("no Mistral key set")
+    safety.guard("mistral llm", 0.002)
+    cfg = config.load()["llm"]
+    msgs = ([{"role": "system", "content": system}] if system else []) + [{"role": "user", "content": prompt}]
+    body = {"model": cfg.get("mistral_model", "mistral-medium-latest"), "messages": msgs, "temperature": temperature}
+    if want_json:
+        body["response_format"] = {"type": "json_object"}
+    errs = []
+    for key in dict.fromkeys(keys):
+        try:
+            r = http().post("https://api.mistral.ai/v1/chat/completions", json=body, timeout=180, headers={"Authorization": f"Bearer {key}"})
+        except requests.RequestException as e:
+            errs.append(type(e).__name__)
+            continue
+        if r.status_code in (401, 403, 429):              # this key is limited or refused: the next one may not be
+            errs.append(str(r.status_code))
+            continue
+        if r.status_code != 200:
+            raise ProviderError(f"mistral {r.status_code}")
+        d = r.json()
+        ledger.spend("mistral", "tokens", (d.get("usage") or {}).get("total_tokens", 0))
+        try:
+            return d["choices"][0]["message"]["content"]
+        except (KeyError, IndexError) as e:
+            raise ProviderError("mistral: empty response") from e
+    raise ProviderUnavailable("mistral: every key limited or refused (" + ",".join(errs) + ")")
+
+
 def pollinations(prompt: str, *, system: str | None, want_json: bool, temperature: float) -> str:
     msgs = ([{"role": "system", "content": system}] if system else []) + [{"role": "user", "content": prompt}]
     r = http().post("https://text.pollinations.ai/openai", json={"model": "openai", "messages": msgs,
@@ -139,7 +172,7 @@ def pollinations(prompt: str, *, system: str | None, want_json: bool, temperatur
     return r.json()["choices"][0]["message"]["content"]
 
 
-PROVIDERS = {"gemini": gemini, "longcat": longcat, "openrouter": openrouter, "pollinations": pollinations}
+PROVIDERS = {"gemini": gemini, "longcat": longcat, "mistral": mistral, "openrouter": openrouter, "pollinations": pollinations}
 
 
 def complete(prompt: str, *, system: str | None = None, want_json: bool = False,

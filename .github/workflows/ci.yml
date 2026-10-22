@@ -18,7 +18,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: System tools (ffmpeg renders the smoke-test video, poppler reads PDFs)
-        run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg poppler-utils
+        timeout-minutes: 8                       # a stalled package mirror hung this step for the whole job once (PR #42, 2026-10-22): fail fast instead
+        run: sudo apt-get -o Acquire::Retries=3 update -qq && sudo apt-get -o Acquire::Retries=3 install -y -qq ffmpeg poppler-utils
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"

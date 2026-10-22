@@ -7411,3 +7411,33 @@
 {"ts": "2026-10-22T10:02:02Z", "t": 1792663322.403, "actor": "engine", "type": "YOUTUBE_API", "path": "videos", "method": "GET", "status": 200}
 {"ts": "2026-10-22T10:02:08Z", "t": 1792663328.964, "actor": "engine", "type": "COMPOSIO_SESSION", "user": "quiet-money-studio", "session_hash": "85b1693a"}
 {"ts": "2026-10-22T10:02:09Z", "t": 1792663329.65, "actor": "engine", "type": "COMPOSIO_EXECUTE", "tool": "YOUTUBE_LIST_CHANNELS", "ok": true, "log_id": "log_YL8U_IhKM6ZQ", "job": "song-breathe"}
+{"ts": "2026-10-22T16:46:26Z", "t": 1792687586.734, "actor": "engine", "type": "PROVIDER_OK", "capability": "tts", "provider": "edge", "job": "podcast-2026-10-21", "ms": 12636}
+{"ts": "2026-10-22T16:48:03Z", "t": 1792687683.253, "actor": "engine", "type": "PROVIDER_OK", "capability": "tts", "provider": "edge", "job": "podcast-2026-10-21", "ms": 96381}
+{"ts": "2026-10-22T16:49:04Z", "t": 1792687744.788, "actor": "engine", "type": "PROVIDER_OK", "capability": "tts", "provider": "edge", "job": "podcast-2026-10-21", "ms": 61239}
+{"ts": "2026-10-22T16:50:55Z", "t": 1792687855.965, "actor": "engine", "type": "PROVIDER_OK", "capability": "tts", "provider": "edge", "job": "podcast-2026-10-21", "ms": 110901}
+{"ts": "2026-10-22T16:51:55Z", "t": 1792687915.125, "actor": "engine", "type": "PROVIDER_OK", "capability": "tts", "provider": "edge", "job": "podcast-2026-10-21", "ms": 58942}
+{"ts": "2026-10-22T16:52:36Z", "t": 1792687956.383, "actor": "engine", "type": "PROVIDER_OK", "capability": "tts", "provider": "edge", "job": "podcast-2026-10-21", "ms": 1159}
+{"ts": "2026-10-22T16:52:37Z", "t": 1792687957.075, "actor": "engine", "type": "PROVIDER_OK", "capability": "tts", "provider": "edge", "job": "podcast-2026-10-21", "ms": 1850}
+{"ts": "2026-10-22T16:52:37Z", "t": 1792687957.235, "actor": "engine", "type": "PROVIDER_OK", "capability": "tts", "provider": "edge", "job": "podcast-2026-10-21", "ms": 2009}
+{"ts": "2026-10-22T16:53:31Z", "t": 1792688011.7, "actor": "engine", "type": "PROVIDER_OK", "capability": "tts", "provider": "edge", "job": "podcast-2026-10-21", "ms": 54195}
+{"ts": "2026-10-22T16:53:33Z", "t": 1792688013.933, "actor": "engine", "type": "PROVIDER_OK", "capability": "tts", "provider": "edge", "job": "podcast-2026-10-21", "ms": 57434}
+{"ts": "2026-10-22T16:53:36Z", "t": 1792688016.355, "actor": "engine", "type": "PROVIDER_OK", "capability": "tts", "provider": "edge", "job": "podcast-2026-10-21", "ms": 61128}
+{"ts": "2026-10-22T16:53:44Z", "t": 1792688024.944, "actor": "engine", "type": "PROVIDER_OK", "capability": "tts", "provider": "edge", "job": "podcast-2026-10-21", "ms": 69717}
+{"ts": "2026-10-22T16:53:49Z", "t": 1792688029.916, "actor": "engine", "type": "PROVIDER_FAIL", "capability": "tts", "provider": "edge", "job": "podcast-2026-10-21", "error": "No audio was received. Please verify that your parameters are correct."}
+{"ts": "2026-10-22T16:53:51Z", "t": 1792688031.601, "actor": "engine", "type": "PROVIDER_FAIL", "capability": "tts", "provider": "elevenlabs", "job": "podcast-2026-10-21", "error": "elevenlabs 401: {\"detail\":{\"type\":\"invalid_request\",\"code\":\"quota_exceeded\",\"message\":\"This request exceeds your quota of 10000. You have 28 credits remaining, while 1191 credits are required for this request.\",\"stat"}
+{"ts": "2026-10-22T16:53:58Z", "t": 1792688038.524, "actor": "engine", "type": "PROVIDER_OK", "capability": "tts", "provider": "edge", "job": "podcast-2026-10-21", "ms": 83298}
+{"ts": "2026-10-22T16:54:16Z", "t": 1792688056.321, "actor": "engine", "type": "PROVIDER_OK", "capability": "tts", "provider": "edge", "job": "podcast-2026-10-21", "ms": 99030}
+{"ts": "2026-10-22T16:54:23Z", "t": 1792688063.506, "actor": "engine", "type": "PROVIDER_OK", "capability": "tts", "provider": "gemini", "job": "podcast-2026-10-21", "ms": 31902}
+{"ts": "2026-10-22T16:54:37Z", "t": 1792688077.78, "actor": "engine", "type": "PROVIDER_OK", "capability": "tts", "provider": "edge", "job": "podcast-2026-10-21", "ms": 63625}
+{"ts": "2026-10-22T16:54:42Z", "t": 1792688082.532, "actor": "engine", "type": "PROVIDER_OK", "capability": "tts", "provider": "edge", "job": "podcast-2026-10-21", "ms": 70666}
+{"ts": "2026-10-22T16:54:51Z", "t": 1792688091.403, "actor": "engine", "type": "PROVIDER_OK", "capability": "tts", "provider": "edge", "job": "podcast-2026-10-21", "ms": 74882}
+{"ts": "2026-10-22T16:55:04Z", "t": 1792688104.849, "actor": "engine", "type": "PROVIDER_OK", "capability": "tts", "provider": "edge", "job": "podcast-2026-10-21", "ms": 66102}
+{"ts": "2026-10-22T16:55:09Z", "t": 1792688109.599, "actor": "engine", "type": "PROVIDER_FAIL", "capability": "tts", "provider": "edge", "job": "podcast-2026-10-21", "error": "No audio was received. Please verify that your parameters are correct."}
+{"ts": "2026-10-22T16:55:10Z", "t": 1792688110.014, "actor": "engine", "type": "PROVIDER_FAIL", "capability": "tts", "provider": "elevenlabs", "job": "podcast-2026-10-21", "error": "elevenlabs 401: {\"detail\":{\"type\":\"invalid_request\",\"code\":\"quota_exceeded\",\"message\":\"This request exceeds your quota of 10000. You have 28 credits remaining, while 1192 credits are required for this request.\",\"stat"}
+{"ts": "2026-10-22T16:55:48Z", "t": 1792688148.928, "actor": "engine", "type": "PROVIDER_OK", "capability": "tts", "provider": "gemini", "job": "podcast-2026-10-21", "ms": 38912}
+{"ts": "2026-10-22T16:55:51Z", "t": 1792688151.627, "actor": "engine", "type": "PROVIDER_OK", "capability": "tts", "provider": "edge", "job": "podcast-2026-10-21", "ms": 68878}
+{"ts": "2026-10-22T16:56:06Z", "t": 1792688166.873, "actor": "engine", "type": "PROVIDER_OK", "capability": "tts", "provider": "edge", "job": "podcast-2026-10-21", "ms": 110285}
+{"ts": "2026-10-22T16:56:07Z", "t": 1792688167.681, "actor": "engine", "type": "PROVIDER_OK", "capability": "tts", "provider": "edge", "job": "podcast-2026-10-21", "ms": 104005}
+{"ts": "2026-10-22T16:56:11Z", "t": 1792688171.622, "actor": "engine", "type": "PROVIDER_OK", "capability": "tts", "provider": "edge", "job": "podcast-2026-10-21", "ms": 80003}
+{"ts": "2026-10-22T16:56:33Z", "t": 1792688193.39, "actor": "engine", "type": "PROVIDER_OK", "capability": "tts", "provider": "edge", "job": "podcast-2026-10-21", "ms": 44246}
+{"ts": "2026-10-22T16:56:44Z", "t": 1792688204.261, "actor": "engine", "type": "PROVIDER_OK", "capability": "tts", "provider": "edge", "job": "podcast-2026-10-21", "ms": 126163}

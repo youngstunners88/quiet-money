@@ -8,37 +8,36 @@ Unblocked and buildable without the owner; only the launch needs them.
 | id | opportunity | rail | stage | score | next |
 |---|---|---|---|---|---|
 | C4 | Audio edition: daily 60 s + weekly podcast episode | content | vetted | 40.5 | agent builds it now. Launch needs the owner: Open a free podcast host account |
-| O14 | Mistral as a fourth script provider (resilience) | ops | vetted | 37.5 | agent builds it now. |
-| C3 | Weekly long-form: 'Money Rules Weekly' (8-10 min, 16:9, chapters) | content | vetted | 36.0 | agent builds it now. Launch needs the owner: Create the YouTube, TikTok and Instagram accounts (@quietmoneyrule), connect them, and turn on auto-posting |
-| P6 | Fillable PDF versions of the printable pack | product | vetted | 36.0 | agent builds it now. Launch needs the owner: Open a Gumroad shop (and Etsy for printables); approve prices and listings |
+| C3 | Weekly long-form: 'Money Rules Weekly' (8-10 min, 16:9, chapters) | content | vetted | 36.0 | agent builds it now. Launch needs the owner: Create the TikTok and Instagram accounts (@quietmoneyrule) and connect them for auto-posting (YouTube is live and posting) |
+| P6 | Fillable PDF versions of the printable pack | product | vetted | 36.0 | agent builds it now. Launch needs the owner: Approve the prices and listings of the built products (the Gumroad shop is open; Etsy for printables) |
 | S2 | Fiverr studio mode: concept sheets in minutes for logo/art/character gigs | service | vetted | 16.2 | agent builds it now. Launch needs the owner: List the gig on your Fiverr account and handle client messages |
-| O19 | Outreach drafts: collaborators, newsletters and podcasts in the niche, drafted for the owner to send | growth | vetted | 9.72 | agent builds it now. Launch needs the owner: Send the drafted collaboration notes yourself (the studio never sends a message in your name); Create the YouTube, TikTok and Instagram accounts (@quietmoneyrule), connect them, and turn on auto-posting |
+| O19 | Outreach drafts: collaborators, newsletters and podcasts in the niche, drafted for the owner to send | growth | vetted | 9.72 | agent builds it now. Launch needs the owner: Send the drafted collaboration notes yourself (the studio never sends a message in your name); Create the TikTok and Instagram accounts (@quietmoneyrule) and connect them for auto-posting (YouTube is live and posting) |
 
 ## Built: waiting for the owner to launch
 Finished and checked; one owner step turns each on.
 | id | opportunity | rail | stage | score | next |
 |---|---|---|---|---|---|
-| O18 | Offer layer: one tracked offer per video, the link-in-bio hub page, the distribution rails report | ops | built | 200.0 | built and verified. Launch needs the owner: Create the YouTube, TikTok and Instagram accounts (@quietmoneyrule), connect them, and turn on auto-posting; Pick an email service, a domain and a postal address, and connect them; Pick a cookieless visit counter and save its tag as the file named in studio.toml [site] head_snippet |
-| P4 | Money Reset Kit bundle (P1+P2+P3) | product | built | 135.0 | built and verified. Launch needs the owner: Open a Gumroad shop (and Etsy for printables); approve prices and listings |
+| O18 | Offer layer: one tracked offer per video, the link-in-bio hub page, the distribution rails report | ops | built | 200.0 | built and verified. Launch needs the owner: Create the TikTok and Instagram accounts (@quietmoneyrule) and connect them for auto-posting (YouTube is live and posting); Pick an email service, a domain and a postal address, and connect them; Pick a cookieless visit counter and save its tag as the file named in studio.toml [site] head_snippet |
+| P4 | Money Reset Kit bundle (P1+P2+P3) | product | built | 135.0 | built and verified. Launch needs the owner: Approve the prices and listings of the built products (the Gumroad shop is open; Etsy for printables) |
 | O10 | LongCat as a third script provider (free daily allowance) | ops | built | 112.5 | built and verified. Launch needs the owner: Create a free LongCat API account (longcat.chat/platform) and add LONGCAT_API_KEY to the environment |
 | A2 | Money Reset 7-day challenge as an autoresponder | owned-audience | built | 108.0 | built and verified. Launch needs the owner: Pick an email service, a domain and a postal address, and connect them |
 | O12 | Animated hook clips from the hook still (Muapi image-to-video) | content | built | 106.67 | built and verified. Launch needs the owner: Approve about $0.30 a day for animated hook clips (set [production.hookclip] enabled = true) |
-| C5 | Repurposing kit per video (thread, carousel, pin, newsletter item, LinkedIn post, audio) | content | built | 90.0 | built and verified. Launch needs the owner: Create the YouTube, TikTok and Instagram accounts (@quietmoneyrule), connect them, and turn on auto-posting |
-| P1 | Debt Payoff & Compound Interest Planner (spreadsheet) | product | built | 72.0 | built and verified. Launch needs the owner: Open a Gumroad shop (and Etsy for printables); approve prices and listings |
-| P2 | Rat Race Escape Planner (passive-income calculator + side-income tracker) | product | built | 72.0 | built and verified. Launch needs the owner: Open a Gumroad shop (and Etsy for printables); approve prices and listings |
+| C5 | Repurposing kit per video (thread, carousel, pin, newsletter item, LinkedIn post, audio) | content | built | 90.0 | built and verified. Launch needs the owner: Create the TikTok and Instagram accounts (@quietmoneyrule) and connect them for auto-posting (YouTube is live and posting) |
+| P1 | Debt Payoff & Compound Interest Planner (spreadsheet) | product | built | 72.0 | built and verified. Launch needs the owner: Approve the prices and listings of the built products (the Gumroad shop is open; Etsy for printables) |
+| P2 | Rat Race Escape Planner (passive-income calculator + side-income tracker) | product | built | 72.0 | built and verified. Launch needs the owner: Approve the prices and listings of the built products (the Gumroad shop is open; Etsy for printables) |
 | A1 | Newsletter: Quiet Money Weekly (auto-compiled issue) | owned-audience | built | 67.5 | built and verified. Launch needs the owner: Pick an email service, a domain and a postal address, and connect them |
 | O4 | Flow lane: daily shot list in, owner's clips back, renderer uses them | ops | built | 57.6 | built and verified. Launch needs the owner: Generate the day's 3 Flow clips (about 10 minutes) and drop them in the inbox |
 | S1 | Fiverr: productized faceless-channel brand kit | service | built | 48.0 | built and verified. Launch needs the owner: List the gig on your Fiverr account and handle client messages |
 | C9 | Motion scenes designed by Claude Haiku 5.5: data in, HyperFrames out, a frame review before a scene replaces a still | content | built | 45.0 | built and verified. Launch needs the owner: Look at a sample video with model-designed motion scenes and say go (studio.toml [production.sketch] mode = "on", plus the approval constant in tests/test_hygiene.py) |
-| P3 | Printable budget pack (50/30/20, sinking funds, subscription audit, net worth) | product | built | 31.5 | built and verified. Launch needs the owner: Open a Gumroad shop (and Etsy for printables); approve prices and listings |
+| P3 | Printable budget pack (50/30/20, sinking funds, subscription audit, net worth) | product | built | 31.5 | built and verified. Launch needs the owner: Approve the prices and listings of the built products (the Gumroad shop is open; Etsy for printables) |
 
 ## Needs the owner first
 The owner's act is the work.
 | id | opportunity | rail | stage | score | next |
 |---|---|---|---|---|---|
 | O2 | Identity layer: one owner-controlled domain mailbox with plus-addresses per platform | ops | vetted | 86.4 | owner: Register a domain with one mailbox (the identity layer) |
-| O3 | Metrics loop: YouTube via Composio, others pasted weekly | ops | vetted | 67.5 | owner: Create the YouTube, TikTok and Instagram accounts (@quietmoneyrule), connect them, and turn on auto-posting |
-| O5 | Go live: channel accounts + auto-posting (Upload-Post) | ops | vetted | 30.0 | owner: Create the YouTube, TikTok and Instagram accounts (@quietmoneyrule), connect them, and turn on auto-posting |
+| O3 | Metrics loop: YouTube via Composio, others pasted weekly | ops | vetted | 67.5 | owner: Create the TikTok and Instagram accounts (@quietmoneyrule) and connect them for auto-posting (YouTube is live and posting) |
+| O5 | Go live: channel accounts + auto-posting (Upload-Post) | ops | vetted | 30.0 | owner: Create the TikTok and Instagram accounts (@quietmoneyrule) and connect them for auto-posting (YouTube is live and posting) |
 | O16 | Etsy draft rail: create DRAFT listings through the Etsy API, never publish | ops | idea | 2.56 | owner: After the first listings are live, create an Etsy developer app and give the studio its keystring and a draft-only token |
 
 ## Running: measure against the kill rule
@@ -53,6 +52,7 @@ The owner's act is the work.
 | O7 | Music library: real instrumental beds per series (Lyria RealTime, free tier) | content | built | 80.0 | measure; kill if: any copyright or Content ID claim on a bed, or no retention lift after 30 videos. |
 | C2 | Variety layer: motion cards + Flow/Veo hook clips | content | pilot | 72.0 | measure; kill if: no retention lift after 30 videos. Launch needs the owner: Generate the day's 3 Flow clips (about 10 minutes) and drop them in the inbox |
 | C6 | Money Rules Library website + calculators (SEO/AEO) | content | scaled | 54.0 | measure; kill if: 0 impressions after 90 days. |
+| O14 | Mistral as a fourth script provider (resilience) | ops | built | 37.5 | measure; kill if: never used in 60 days. |
 
 ## Waiting on another item
 | id | opportunity | rail | stage | score | next |
@@ -72,9 +72,9 @@ The owner's act is the work.
 
 ## What the owner unlocks, biggest first
 
-- **Create the YouTube, TikTok and Instagram accounts (@quietmoneyrule), connect them, and turn on auto-posting**: 446.7 points (O18, C5, O3, C3, O5, R1, O19)
+- **Create the TikTok and Instagram accounts (@quietmoneyrule) and connect them for auto-posting (YouTube is live and posting)**: 446.7 points (O18, C5, O3, C3, O5, R1, O19)
 - **Pick an email service, a domain and a postal address, and connect them**: 375.5 points (O18, A2, A1)
-- **Open a Gumroad shop (and Etsy for printables); approve prices and listings**: 346.5 points (P4, P1, P2, P6, P3)
+- **Approve the prices and listings of the built products (the Gumroad shop is open; Etsy for printables)**: 346.5 points (P4, P1, P2, P6, P3)
 - **Pick a cookieless visit counter and save its tag as the file named in studio.toml [site] head_snippet**: 200.0 points (O18)
 - **Generate the day's 3 Flow clips (about 10 minutes) and drop them in the inbox**: 129.6 points (C2, O4)
 - **Create a free LongCat API account (longcat.chat/platform) and add LONGCAT_API_KEY to the environment**: 112.5 points (O10)
