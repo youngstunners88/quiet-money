@@ -5,6 +5,13 @@ description: Quiet Money's Google Flow lane: the owner makes 10-second clips in 
 
 # Faceless Flow
 
+## The three prompts are one film
+The day's three clips are compiled into a single video (`faceless-reel`), so write them as three acts of one story, not three unrelated scenes:
+- **Act 1 sets the loss.** Something is taken, drained, or closing in.
+- **Act 2 is the wrong fight.** The character defends, and it costs them.
+- **Act 3 is the turn.** They act on what they learned, and the frame opens up.
+Each act still has to stand alone for ten seconds, but the three should escalate in scale and end brighter than they started: the last frame of act 3 is what the call to action sits on. Keep one visual thread across all three (gold light is the channel's) so the cuts between them read as one piece.
+
 ## Daily steps
 1. `python -m faceless flow` writes today's three prompts (one per series, the strongest series first) to `channel/flow/shotlists/<day>.md`.
 2. The owner pastes each prompt into Flow, generates it, and saves the clip to `channel/flow/inbox/` under the file name shown.
@@ -17,9 +24,7 @@ Each prompt is one self-contained scene that a generator can film without guessi
 - **Camera language.** Name the move per beat (locked-off, push-in, whip pan, crane up, drone, chase).
 - **Photoreal and cinematic.** Name the light and the lens feel (sunrise, backlight, fog, anamorphic flare).
 - **No dialogue, no music, no text, no numbers, no logos or brands.** The branding is added later.
-- **No people's faces.** Use silhouettes, visors, helmets, creatures, or objects. This is the lane's rule; it keeps the channel faceless.
-
-The stereotype and ethnicity-based characters in the owner's example document are not used here: they mock groups of people and the channel does not publish that.
+- **Faces are allowed** (the owner lifted the faceless rule on 2026-10-22). Write real characters: a face carries a reaction, and a reaction is what makes a ten-second beat land. Describe build, clothing, expression and bearing. Do not build a character out of an ethnic or disability stereotype, which is what the examples in the owner's reference doc do; write a specific person instead of a type.
 
 ## Where the prompts live
 `faceless/flow.py`: `SUBJECTS` holds the scenes per series; `RULES` is appended to every prompt. Add scenes there when the pool runs thin, and keep them to this standard. A test checks the shot list format, not the scene quality, so review new scenes by reading them.
