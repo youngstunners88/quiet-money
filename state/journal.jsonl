@@ -7102,3 +7102,9 @@
 {"ts": "2026-10-21T10:02:16Z", "t": 1792576936.007, "actor": "engine", "type": "YOUTUBE_API", "path": "videos", "method": "GET", "status": 200}
 {"ts": "2026-10-21T10:02:23Z", "t": 1792576943.913, "actor": "engine", "type": "COMPOSIO_SESSION", "user": "quiet-money-studio", "session_hash": "aba249c4"}
 {"ts": "2026-10-21T10:02:24Z", "t": 1792576944.544, "actor": "engine", "type": "COMPOSIO_EXECUTE", "tool": "YOUTUBE_LIST_CHANNELS", "ok": true, "log_id": "log_LETJ7T1a2TEo", "job": "song-breathe"}
+{"ts": "2026-10-22T07:11:49Z", "t": 1792653109.536, "actor": "engine", "type": "COMPOSIO_SESSION", "user": "quiet-money-studio", "session_hash": "c3b0e240"}
+{"ts": "2026-10-22T07:11:50Z", "t": 1792653110.471, "actor": "engine", "type": "COMPOSIO_EXECUTE", "tool": "YOUTUBE_LIST_CHANNELS", "ok": true, "log_id": "log_zZ1LpJ-gqqjL", "job": "2026-10-21-s0-host-the-quiet-money-daily-planner-wh"}
+{"ts": "2026-10-22T07:11:54Z", "t": 1792653114.497, "actor": "engine", "type": "YOUTUBE_UPLOAD", "video_id": "7SK7CkzZ7Ng", "channel": "UC9B1QBr3_8Eulok8IdQbCqQ", "bytes": 14199221, "job": "2026-10-21-s0-host-the-quiet-money-daily-planner-wh"}
+{"ts": "2026-10-22T07:11:54Z", "t": 1792653114.5, "actor": "engine", "type": "PUBLISH_SCHEDULED", "job": "2026-10-21-s0-host-the-quiet-money-daily-planner-wh", "provider": "youtube", "when": "2026-10-22T07:30:00-04:00", "video_id": "7SK7CkzZ7Ng"}
+{"ts": "2026-10-22T07:12:03Z", "t": 1792653123.197, "actor": "engine", "type": "COMPOSIO_SESSION", "user": "quiet-money-studio", "session_hash": "5b0e9bb7"}
+{"ts": "2026-10-22T07:12:04Z", "t": 1792653124.238, "actor": "engine", "type": "YOUTUBE_API", "path": "videos", "method": "GET", "status": 200}

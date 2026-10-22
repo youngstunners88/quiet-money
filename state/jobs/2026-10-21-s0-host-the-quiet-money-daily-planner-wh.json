@@ -10,7 +10,15 @@
     "video": "distribution/queue/2026-10-21/host-planner-intro/video.mp4",
     "title": "The Quiet Money Daily Planner: what's inside",
     "youtube_plan": {
-      "post_at": "2026-10-21T23:30:00-04:00"
+      "post_at": "2026-10-22T07:30:00-04:00"
+    },
+    "youtube": {
+      "video_id": "7SK7CkzZ7Ng",
+      "channel_id": "UC9B1QBr3_8Eulok8IdQbCqQ",
+      "privacy": "private",
+      "post_at": "2026-10-22T07:30:00-04:00",
+      "comment_posted": false,
+      "series": false
     }
   },
   "scores": {
