@@ -84,11 +84,19 @@ def _firecrawl(url: str) -> str | None:
         return None
 
 
-def fetch_text(url: str) -> str | None:
-    """Readable text of a public page: plain HTTP first (free), the capped renderer only when that comes back with nothing."""
+def fetch_text(url: str, prefer_render: bool = False) -> str | None:
+    """Readable text of a public page. Plain HTTP first, because it is free and enough for a project's own site and docs. With
+    `prefer_render` the renderer goes first, for the X profile: it returns the bio, the follower count and the verified flag as clean text,
+    where the plain read gives login markup. **Neither gets the posts**: X does not serve a timeline to a logged-out reader, and we do not
+    log in (rule: public sources only). So the content gap is judged from the profile and the project's own pages, never from the timeline,
+    and `posts_video` means "nothing we can see says they post video"."""
     from faceless.policy import to_text
     if not url or not url.startswith(("http://", "https://")):
         return None
+    if prefer_render:
+        rendered = _firecrawl(url)
+        if rendered:
+            return rendered
     try:
         body, ctype = fetch_bytes(url, timeout=25, limit=4 * 2**20, headers=UA)
         text = to_text(body.decode("utf-8", "ignore")) if "html" in ctype or not ctype else body.decode("utf-8", "ignore")
@@ -169,15 +177,16 @@ def _known() -> set[str]:
 
 # ------------------------------------------------------------------ 2. research
 
-RESEARCH_KEYS = ("what_it_is", "posts_video", "cadence", "last_posts", "content_gap", "dated_event", "budget_signal", "contact", "unknown")
+RESEARCH_KEYS = ("what_it_is", "posts_video", "cadence", "last_posts", "followers", "content_gap", "dated_event", "budget_signal", "contact", "unknown")
 
 
 def research(cand: dict, ask=None) -> dict:
     """One lead card: the public dataset's facts plus what a free model can read off the project's own pages. Nothing is invented - a field the
     pages do not support stays null and is named in `unknown`, which is what makes the card either pitchable or a skip."""
     pages, sources = [], [cand["source"]]
-    for url in (cand["url"], cand["url"].rstrip("/") + "/docs", f"https://x.com/{cand['x_handle'].lstrip('@')}"):
-        text = fetch_text(url)
+    feed = f"https://x.com/{cand['x_handle'].lstrip('@')}"
+    for url in (cand["url"], cand["url"].rstrip("/") + "/docs", feed):
+        text = fetch_text(url, prefer_render=(url == feed))
         if text:
             pages.append(f"--- {url}\n{text}")
             sources.append(url)
@@ -191,6 +200,7 @@ def research(cand: dict, ask=None) -> dict:
                                      "tvl_usd": cand["tvl_usd"], "source": cand["source"]}},
         "social": {"x": {"handle": cand["x_handle"], "url": f"https://x.com/{cand['x_handle'].lstrip('@')}",
                          "posts_video": bool(found.get("posts_video")), "cadence": found.get("cadence"),
+                         "followers": found.get("followers") if isinstance(found.get("followers"), int) else None,
                          "last_posts": [str(x)[:200] for x in (found.get("last_posts") or [])][:6]},
                    "instagram": {"handle": None, "url": None, "active": False}},
         "signals": {"content_gap": found.get("content_gap"), "dated_event": found.get("dated_event"),
@@ -226,7 +236,7 @@ def _research_model(cand: dict, pages: str, ask=None) -> dict:
     brief = (
         "You are a research assistant. Below is text fetched from public pages about one Web3 project.\n"
         'Return ONLY a JSON object with exactly these keys: {"what_it_is": str, "posts_video": bool, "cadence": str, '
-        '"last_posts": [str], "content_gap": str, "dated_event": {"what": str, "when": "YYYY-MM-DD or null", "source": str}, '
+        '"last_posts": [str], "followers": int, "content_gap": str, "dated_event": {"what": str, "when": "YYYY-MM-DD or null", "source": str}, '
         '"budget_signal": {"what": "raise|grants|paid-KOLs|ads|none", "source": str}, '
         '"contact": {"route": str, "value": str, "source": str, "public": bool}, "unknown": [str]}\n\n'
         "Rules: every fact must come from the text. If the text does not say it, use null and name that key in \"unknown\". "

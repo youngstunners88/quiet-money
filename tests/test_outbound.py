@@ -67,7 +67,7 @@ def test_a_freshly_listed_project_is_screened_before_a_bigger_quiet_one(desk):
 
 def test_with_no_published_address_the_route_is_the_project_s_own_public_account(desk, monkeypatch):
     """A crypto project is approached on the account it published itself. That is public and theirs - unlike a guessed address."""
-    monkeypatch.setattr(outbound, "fetch_text", lambda url: "a page about the project" * 30)
+    monkeypatch.setattr(outbound, "fetch_text", lambda url, prefer_render=False: "a page about the project" * 30)
     cand = outbound.candidates(1, protocols=PROTOCOLS)[0]
     card = outbound.research(cand, ask=_ask({**CARD_FIELDS, "contact": {"route": None, "value": None}}))
     assert card["status"] == "researched"
@@ -76,7 +76,7 @@ def test_with_no_published_address_the_route_is_the_project_s_own_public_account
 
 
 def test_an_invented_address_is_dropped_for_the_public_account(desk, monkeypatch):
-    monkeypatch.setattr(outbound, "fetch_text", lambda url: "a page" * 100)
+    monkeypatch.setattr(outbound, "fetch_text", lambda url, prefer_render=False: "a page" * 100)
     cand = outbound.candidates(1, protocols=PROTOCOLS)[0]
     for guess in ({"route": "partnerships email", "value": "partnerships@example.com"},
                   {"route": "guessed", "value": "team"}):
@@ -85,21 +85,21 @@ def test_an_invented_address_is_dropped_for_the_public_account(desk, monkeypatch
 
 
 def test_a_project_with_nothing_specific_to_say_about_it_is_a_skip(desk, monkeypatch):
-    monkeypatch.setattr(outbound, "fetch_text", lambda url: "a page" * 100)
+    monkeypatch.setattr(outbound, "fetch_text", lambda url, prefer_render=False: "a page" * 100)
     cand = outbound.candidates(1, protocols=PROTOCOLS)[0]
     card = outbound.research(cand, ask=_ask({**CARD_FIELDS, "last_posts": [], "dated_event": None}))
     assert card["status"] == "skip" and card["skip_reason"] == "nothing_specific_to_say"
 
 
 def test_a_card_with_no_content_gap_is_a_skip(desk, monkeypatch):
-    monkeypatch.setattr(outbound, "fetch_text", lambda url: "a page" * 100)
+    monkeypatch.setattr(outbound, "fetch_text", lambda url, prefer_render=False: "a page" * 100)
     cand = outbound.candidates(1, protocols=PROTOCOLS)[0]
     card = outbound.research(cand, ask=_ask({**CARD_FIELDS, "content_gap": None}))
     assert card["status"] == "skip" and card["skip_reason"] == "no_content_gap"
 
 
 def test_a_project_whose_pages_cannot_be_read_is_a_skip_not_a_guess(desk, monkeypatch):
-    monkeypatch.setattr(outbound, "fetch_text", lambda url: None)
+    monkeypatch.setattr(outbound, "fetch_text", lambda url, prefer_render=False: None)
     cand = outbound.candidates(1, protocols=PROTOCOLS)[0]
     card = outbound.research(cand, ask=_ask(CARD_FIELDS))
     assert card["status"] == "skip" and card["skip_reason"] == "pages_unreadable"
@@ -107,7 +107,7 @@ def test_a_project_whose_pages_cannot_be_read_is_a_skip_not_a_guess(desk, monkey
 
 
 def test_a_good_card_keeps_its_sources_and_the_sized_signal(desk, monkeypatch):
-    monkeypatch.setattr(outbound, "fetch_text", lambda url: "a page" * 100)
+    monkeypatch.setattr(outbound, "fetch_text", lambda url, prefer_render=False: "a page" * 100)
     card = outbound.research(outbound.candidates(1, protocols=PROTOCOLS)[0], ask=_ask(CARD_FIELDS))
     assert card["status"] == "researched"
     assert card["identity"]["size_signal"]["source"] == outbound.PROTOCOLS
@@ -176,7 +176,7 @@ def test_a_clean_specific_draft_passes(desk, monkeypatch):
 # ------------------------------------------------------------------ the loop and its limits
 
 def test_the_run_queues_a_package_and_sends_nothing(desk, monkeypatch):
-    monkeypatch.setattr(outbound, "fetch_text", lambda url: "a page" * 100)
+    monkeypatch.setattr(outbound, "fetch_text", lambda url, prefer_render=False: "a page" * 100)
     monkeypatch.setattr(decide, "ask", lambda *a, **k: {})
     body = ("Your last two posts were the v3 fee change and the audit, both text. One 20-second cut of the fee change would travel. "
             "38 Web3 projects, 130 posts, 123 live X links as of 1 Oct 2026. Worth sending two examples closest to your niche?")
@@ -194,7 +194,7 @@ def test_the_run_queues_a_package_and_sends_nothing(desk, monkeypatch):
 
 
 def test_a_batch_that_produces_nothing_is_reported_as_nothing(desk, monkeypatch):
-    monkeypatch.setattr(outbound, "fetch_text", lambda url: None)
+    monkeypatch.setattr(outbound, "fetch_text", lambda url, prefer_render=False: None)
     monkeypatch.setattr(decide, "ask", lambda *a, **k: {})
     r = outbound.run(protocols=PROTOCOLS, ask=_ask(CARD_FIELDS))
     assert r["queued"] == [] and r["skipped"] == {"pages_unreadable": 1}
@@ -302,7 +302,7 @@ def test_a_lead_with_nothing_sourced_to_say_is_not_pursued_by_the_code_either(de
 
 def test_a_rewrite_tells_the_model_which_check_failed(desk, monkeypatch):
     """One rewrite, and it is told what to fix. Asking the same question again and hoping for a different answer is not a rewrite."""
-    monkeypatch.setattr(outbound, "fetch_text", lambda url: "a page" * 100)
+    monkeypatch.setattr(outbound, "fetch_text", lambda url, prefer_render=False: "a page" * 100)
     monkeypatch.setattr(decide, "ask", lambda *a, **k: {})
     seen = []
 
@@ -332,7 +332,7 @@ def test_nothing_committed_ever_names_a_project(desk, monkeypatch):
     labels, emitted = [], []
     monkeypatch.setattr(decide, "ask", lambda qs, state, job=None, images=None, backend=None: labels.append(job) or {})
     monkeypatch.setattr(outbound.events, "emit", lambda kind, **kw: emitted.append((kind, kw)))
-    monkeypatch.setattr(outbound, "fetch_text", lambda url: "a page" * 100)
+    monkeypatch.setattr(outbound, "fetch_text", lambda url, prefer_render=False: "a page" * 100)
     card = outbound.research(outbound.candidates(1, protocols=PROTOCOLS)[0], ask=_ask(CARD_FIELDS))
     outbound.score(card)
     outbound.gate(_pkg("Your v3 fee change deserves video."))
@@ -344,3 +344,23 @@ def test_nothing_committed_ever_names_a_project(desk, monkeypatch):
         + " " + (desk / "durable.jsonl").read_text(encoding="utf-8")
     assert "right-size" not in published and "Right Size" not in published
     assert outbound.fingerprint("right-size") in published
+
+
+def test_the_x_feed_is_rendered_rather_than_read_as_a_js_shell(desk, monkeypatch):
+    """The rendered X profile gives the bio, follower count and verified flag as clean text where the plain read gives login markup. Neither
+    gets the timeline - X does not serve one to a logged-out reader - so the feed is rendered first and the project's own pages stay free."""
+    rendered, plain = [], []
+    monkeypatch.setattr(outbound, "_firecrawl", lambda url: rendered.append(url) or "the last posts: the v3 fee change, the audit")
+    monkeypatch.setattr(outbound, "fetch_bytes",
+                        lambda url, **kw: (plain.append(url) or (b"<html>" + b"a page " * 100 + b"</html>"), "text/html"))
+    card = outbound.research(outbound.candidates(1, protocols=PROTOCOLS)[0], ask=_ask(CARD_FIELDS))
+    assert rendered == ["https://x.com/rightsize"]                        # the feed went to the renderer
+    assert "https://rightsize.example" in plain[0]                        # their own site stayed on free plain HTTP
+    assert card["status"] == "researched"
+
+
+def test_firecrawl_is_capped_in_pages_and_recorded(desk, monkeypatch):
+    """Its credits are prepaid, so the cap is in pages, not dollars. At the cap the renderer declines and the plain read still stands."""
+    monkeypatch.setenv("FIRECRAWL", "not-a-real-key")
+    monkeypatch.setattr(outbound, "cfg", lambda: {**base_cfg(), "firecrawl_pages_per_day": 0})
+    assert outbound._firecrawl("https://x.com/rightsize") is None

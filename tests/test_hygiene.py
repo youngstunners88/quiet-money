@@ -113,7 +113,7 @@ def test_the_ai_labels_are_still_sent_with_every_upload():
 WORKFLOWS = sorted((STUDIO / ".github" / "workflows").glob("*.yml"))
 # Keys the optional, owner-triggered runners may read if the owner ever stores them as Actions secrets (the studio itself runs with none).
 OPTIONAL_RUNNER_SECRETS = {"GITHUB_TOKEN", "GEMINI_API_KEY", "OPENROUTER_API_KEY", "CLOUDFLARE_API_KEY", "CLOUDFLARE_ACCOUNT_ID", "COMPOSIO_API_KEY",
-                           "ELEVENLABS_API_KEY", "TYPESAFE_API_KEY", "UPLOAD_POST_API_KEY", "UPLOAD_POST_USER"}
+                           "ELEVENLABS_API_KEY", "TYPESAFE_API_KEY", "UPLOAD_POST_API_KEY", "UPLOAD_POST_USER", "FIRECRAWL"}
 
 
 def _triggers(text: str) -> set[str]:

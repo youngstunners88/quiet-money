@@ -5,8 +5,8 @@ name: Outbound hunt
 # GitHub (see README "Where the keys live"). This workflow is manual-only; it needs OPENROUTER_API_KEY as an Actions
 # secret if you ever use it. To make it the scheduler instead, add back:  schedule: [{cron: "41 7 * * *"}]
 #
-# No Firecrawl key here: pages are read over plain HTTP on this runner. The capped JS-rendered fallback only runs where
-# that key already lives (the Claude Code environment), because the owner has not yet said it may be used for research.
+# Firecrawl renders the pages plain HTTP cannot (an X profile is a JS shell), capped in pages per day by
+# [outbound].firecrawl_pages_per_day and recorded in the ledger.
 #
 # It sends nothing. The loop researches, scores, drafts and gates; the owner sends. The lead cards and drafts are
 # gitignored, so this runner commits only the privacy-safe memory (hashed project index and outcome log) and uploads
@@ -34,6 +34,7 @@ jobs:
     timeout-minutes: 45
     env:
       OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+      FIRECRAWL: ${{ secrets.FIRECRAWL }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
