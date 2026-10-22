@@ -11,37 +11,45 @@ python -m faceless status          # the daily machine's state; this desk must n
 If `OPENROUTER_API_KEY` is missing, the loop still runs: the session itself does the research and drafting
 (the `fallback: "agent"` in `W/models.json`) at lower volume. Say so in the report.
 
-## 1-2. Discover and research -> `service-leads`
-Target: the step's candidate count from the SKILL table. Each candidate becomes `W/leads/<slug>.json` on the
-`W/schema/lead-card.json` shape. A card with no sourced content-gap signal and no public business contact is written
-with `status: "skip"` and its `skip_reason`, so the next run does not re-research it.
-
-## 3. Score -> `service-scoring`
-One `decide.ask` call per lead carrying all the questions for that lead. Fill the card's `decisions` block.
-Leads scoring below the pursue threshold get `status: "skip"` with the score left in place.
-
-## 4. Draft -> `service-outreach`
-Only for `pursue` leads. One `W/outbound/<slug>.json` per lead, on the `W/schema/outreach-package.json` shape.
-
-## 5. Gate -> `service-scoring`
-The gate questions run on the drafted text. `verdict: "pass"` goes to the backlog; `"rewrite"` goes back to step 4
-once; `"hold"` is reported to the owner with the reason and never queued.
-
-## 6. Batch report (paste this in the reply, nothing else goes to the owner)
+## 1-5. The loop itself
+```bash
+python -m faceless outbound run                              # the whole thing, with the caps from studio.toml [outbound]
+python -m faceless outbound run --candidates 60 --packages 12   # a bigger screen when the backlog is empty
 ```
-Outbound batch <date>
-Screened <n> - cards <n> - scored <n> - pursue <n> - queued <n> - held <n>
-Queued, strongest first:
-  1. <Project> (<category>, <chain>) - fit <x>, <angle> - <channel> - <contact route>
-  ...
-Held: <Project> - <gate that failed and why>
-Skipped (and why): <n> no public business route, <n> below fit, <n> no content gap
-Owner action: review W/outbound/*.json, send the ones you like, tell me what came back.
-Models used: <job: model slug> ... | Jev calls <n>, spend $<x> | Free-model spend $0
-```
+What it does, and which skill covers the judgement in each step:
 
-## 7. Outcomes -> `service-pipeline`
-After the owner reports back, append one line per event to `W/outcomes.jsonl` and run the weekly review.
+| Step | What the engine does | Skill |
+|---|---|---|
+| 1 Discover | DeFiLlama's public protocol list (no key), filtered to the size band, needing a public X handle and a site; freshly listed first | `service-leads` |
+| 2 Research | fetches the project's own site, docs and public X page, and a free model turns them into a sourced lead card | `service-leads` |
+| 3 Score | Jev answers fit, budget, gap, timing, pursue; thresholds in code; a thin or unconfident answer falls back to the heuristics | `service-scoring` |
+| 4 Draft | a free model writes the first touch and a three-step sequence from the card and `PROOF.md` | `service-outreach` |
+| 5 Gate | banned language and price in code, then Jev on personalization and spam; one rewrite, then a hold | `service-scoring` |
+
+Leads that cannot be pitched are written as skips with a reason, so the next run does not look at them again:
+`pages_unreadable`, `no_content_gap`, `no_public_contact`, `below_fit`.
+
+The engine makes no judgement calls a person would disagree with silently: it never invents a fact (an unsupported
+field stays null and the card becomes a skip), never pads a batch, and never sends.
+
+## 6. Batch report
+`outbound run` writes it to `W/reviews/batch-<day>.md` and prints it: counts, the queue strongest first with each
+one's angle, channel and contact route, what was held and why, what was skipped and why, and the owner's one action.
+Relay that report to the owner as it is - do not paste draft bodies into the reply; they are in the package files and
+`python -m faceless outbound package <slug>` prints one.
+
+When a run was heuristic-only (no key, or Jev below the confidence floor), say so in the relay: the scores came from
+code, not from a model.
+
+## 7. Outcomes
+```bash
+python -m faceless outbound outcome <slug> sent
+python -m faceless outbound outcome <slug> reply-positive "asked for examples"
+python -m faceless outbound review
+```
+Events: `sent`, `no-reply-14d`, `reply-positive`, `reply-negative`, `reply-question`, `call-booked`, `quoted`,
+`closed`, `lost`, `unsubscribe`, `complaint`. Record them as the owner reports them - the loop learns from nothing
+else. The weekly read is `service-pipeline`.
 
 ## When a step comes back thin
 | Symptom | Do this |
@@ -54,6 +62,15 @@ After the owner reports back, append one line per event to `W/outcomes.jsonl` an
 | Jev cap reached | Stop scoring, queue what passed, report. Never raise `decisions_daily_usd`. |
 
 ## Scheduling it
-The loop is a prompt, so it schedules like any other: ask the owner to add a scheduled task that says
-"run the service-outbound loop and report the batch". Keep it off the hour the daily video run uses. A run that dies
-halfway is safe to repeat: lead cards and packages are written per slug and overwritten, and nothing has been sent.
+It runs **daily** as a scheduled routine on the owner's account (set 2026-10-22): one session a day runs
+`python -m faceless outbound run`, relays the batch report, and ends. `.github/workflows/outbound.yml` is an
+optional manual runner for the same thing (it needs `OPENROUTER_API_KEY` as an Actions secret; the normal path uses
+the keys already in the Claude Code environment).
+
+A run that died halfway is safe to repeat: lead cards and packages are written per slug, the hashed index in
+`state/outbound-seen.json` means nothing is researched twice, and nothing has been sent.
+
+**The memory that survives a container** is `state/outbound-seen.json` (hashed project index) and
+`state/outbound-outcomes.jsonl` (hashed outcome log). Both are committed and hold no company names. The lead cards,
+packages and reports are gitignored, so a queued draft reaches the owner through the session's report or the
+workflow artifact - not through the repo.

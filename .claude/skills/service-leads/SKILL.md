@@ -16,7 +16,15 @@ tokens, exchanges, wallets. **Not** micro-caps, week-old tokens, or anything who
 Breadth is the point: never build a batch out of one ecosystem, and never let TitanX projects be more than a small
 part of a batch (they are proof, not the market).
 
-## Find candidates (in this order, stop when the batch is full)
+## How the engine finds them (and where you come in)
+`python -m faceless outbound candidates` screens DeFiLlama's public protocol list (no key): the configured TVL band
+(`[outbound].tvl_min_usd` to `tvl_max_usd`), a public X handle and a site of their own, freshly listed projects first.
+`outbound run` then researches each one. That is the daily backbone and it needs no help.
+
+Use the sources below when the engine's screen is not enough: a category it does not cover (gaming tokens, NFT, infra
+with no TVL), a dated-event sweep, or a batch that came back thin. Anything you find by hand becomes a lead card the
+same way, with every field sourced.
+
 1. **Dated events first.** Public launch, listing and mainnet calendars, ecosystem announcement pages, conference
    agendas. A project with a dated moment in the next 6 weeks is the highest-converting candidate there is.
 2. **Funding news.** `WebSearch` with `mode: "extended"` for recent raises in the categories above. A raise is the
@@ -38,6 +46,10 @@ A slug that already exists is only re-researched when something new happened (ne
 then update the card and note what changed. Never create a second card for the same project.
 
 ## Research each candidate
+`outbound run` does this automatically: it fetches the project's site, docs and public X page, and a free model turns
+them into a card. Do it by hand when the pages are JS-only, when a project matters enough to read properly, or when
+the engine marked a card `pages_unreadable`.
+
 Fill the card from pages you actually fetched. The rule for every field: **a claim with no `source` URL is dropped,
 not guessed.** The three things that matter most, because the message depends on them:
 - `signals.content_gap` - what their short-form is missing, in one sentence, from the posts you saw.

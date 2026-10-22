@@ -8,19 +8,22 @@ description: The backlog and feedback loop for Quiet Money's Web3 video and KOL 
 Without this step the engine never gets better: free models would write the same draft forever. The loop's only
 training signal is what the owner reports back, recorded as outcomes.
 
-Files, all in `channel/services/web3-video/` and all gitignored (the repo is public):
-`leads/<slug>.json` (one card per project), `outbound/<slug>.json` (one package per pursued lead),
-`outcomes.jsonl` (one line per event, on `schema/outcome.json`), `reviews/<week>.md` (the weekly review).
+Files in `channel/services/web3-video/`, all gitignored because the repo is public: `leads/<slug>.json` (one card per
+project), `outbound/<slug>.json` (one package per pursued lead), `outcomes.jsonl` (readable events, with the words a
+person wrote), `reviews/` (batch reports and the weekly review).
+
+Two files are **committed**, because the loop's memory has to survive a fresh checkout, and they hold no company
+names: `state/outbound-seen.json` (hashed project index - what has already been looked at) and
+`state/outbound-outcomes.jsonl` (hashed outcome log - the signal `review` reads). Never put a name or a prospect's
+words in either.
 
 ## Lead states
 `researched -> scored -> drafted -> queued -> sent -> replied -> call -> closed`, with `skip` (never pursued) and
 `dead` (sequence over, 90-day cool-off) as ends. The state lives in the card's `status`; nothing else tracks it.
 
 ```bash
-W=channel/services/web3-video
-grep -h '"status"' $W/leads/*.json | sort | uniq -c           # the pipeline at a glance
-ls $W/outbound/ | wc -l                                       # packages waiting on the owner
-python3 -I -c 'import json;print(sum(1 for l in open("'$W'/outcomes.jsonl") if json.loads(l)["event"]=="sent"))'
+python -m faceless outbound status     # leads per state, packages waiting on the owner, outcomes so far, resolved models
+python -m faceless outbound review     # the aggregate per angle, proof block, channel and tier
 ```
 
 ## The batch report (what the owner actually reads)
@@ -29,7 +32,7 @@ first with their angle and contact route, what was held and why, what was skippe
 (review, send, report back). Never paste draft bodies into the report - they are in the package files.
 
 ## Recording outcomes
-Append one line per event, as it happens, on the `schema/outcome.json` shape: `sent`, `no-reply-14d`,
+`python -m faceless outbound outcome <slug> <event> [note]` writes the line and moves the lead's status. The events: `sent`, `no-reply-14d`,
 `reply-positive`, `reply-negative`, `reply-question`, `call-booked`, `quoted`, `closed`, `lost`, `unsubscribe`,
 `complaint`. Carry the scores and the choices that produced the message (`fit`, `angle`, `tier_pitched`,
 `proof_block`, `channel`, `step`) on the line - **an outcome without them teaches nothing**, because the review works

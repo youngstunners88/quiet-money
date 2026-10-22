@@ -13,6 +13,25 @@ never touch the ledger, so volume here is bounded by time, not budget.
 | Case-study and proof packaging | Flint, North Mini Code | short case-study blurbs from the real portfolio |
 | Offer and packaging refinement | Nemotron 3 Ultra | tiers and angles for larger brands |
 
+## What was measured (2026-10-22, one real research brief of 4,458 characters per slug)
+Half the named models do not work for this job. Measured, not assumed:
+
+| Slug | Result |
+|---|---|
+| `minimax/minimax-m3.1-flash:free` | JSON at a 2,000-token budget, 20 s. **First choice.** |
+| `nvidia/nemotron-3-ultra-550b-a55b:free` | JSON at 2,000 tokens, 24 s |
+| `nvidia/nemotron-3.5-super-vl:free` | empty text at 2,000; JSON at 6,000, 33 s |
+| `nvidia/nemotron-3.5-lightning:free` | needs 6,000 tokens, 59 s - slow, last choice |
+| `recursive/flint-v1.0:free` | **dead:** no text at 2,000 or 6,000; the whole budget goes to reasoning |
+| `cohere/north-mini-code:free` | **dead:** same, no text at either budget |
+| `nvidia/nemotron-3-super-120b-a12b:free` | **dead:** the provider returns HTTP 404 |
+| `thinkingmachines/inkling:free` | **dead:** HTTP 403, "only available on agentic endpoints" |
+
+Two lessons that outlive these slugs: a reasoning model given a page of text and a small answer budget returns
+**empty text**, which reads as a broken model rather than a budget problem (`outbound._first_json` asks for 6,000
+tokens, via the `max_tokens` argument added to `panel.ask`); and a slug being in the catalog does not mean this key
+can call it. Re-bench before putting a dead one back, and never leave a model in `slug` that has not answered.
+
 ## Resolve the slugs (do this before the first run, and whenever a call 404s)
 The names above are product names, not OpenRouter slugs, and a guessed slug fails or silently bills. Resolve them
 against the live catalog:

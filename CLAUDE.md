@@ -87,7 +87,7 @@ humans set strategy, connect accounts, and review held videos.
 | Evaluate an outside tool, repo or list of links safely | `/repo-farm` | `.claude/skills/faceless-intake` | `faceless-intake` |
 | The call to action on every video, the link-in-bio hub page, UTM and the offer ledger | `/faceless/offer.py` | `.claude/skills/faceless-offer/references/link-rules.md` | `faceless-offer` |
 | How a video reaches people: posting rails, profile links, email list, products, measurement, what the owner does next | `/faceless/distribute.py` | `channel/empire/DISTRIBUTION.md` | `faceless-offer` |
-| Sell the Web3 video / KOL service: run the outbound loop, find clients | `/channel/services/web3-video` | `channel/services/web3-video/CONTEXT.md` | `service-outbound` |
+| Sell the Web3 video / KOL service: run the outbound loop, hunt clients | `/faceless/outbound.py` | `channel/services/web3-video/CONTEXT.md` | `service-outbound` |
 | Find and research target Web3 projects (public sources only) | `/channel/services/web3-video/leads` | `channel/services/web3-video/SOURCES.md` | `service-leads` |
 | Score a lead, gate an outreach draft, pick the model for a service job | `/faceless/decide.py`, `panel.py` | `channel/services/web3-video/models.json` | `service-scoring` |
 | Write a first touch, a follow-up sequence or a reply for the service | `/channel/services/web3-video/templates` | `channel/services/web3-video/templates/first-touch.md` | `service-outreach` |
@@ -130,6 +130,8 @@ python -m faceless listing build all           # Etsy + Gumroad packs; `listing 
 python -m faceless skills                      # lint every skill against Anthropic's guide
 python -m faceless context                     # do CLAUDE.md routing, the workspace CONTEXT.md files and the skills still agree? (reads only)
 node claude-code-orchestrator/dist/run-plan.js PLAN.json --out DIR   # the CEO's lanes as Claude Code workers (faceless-ceo); read-only unless WORKER_PERMISSION_MODE is raised
+python -m faceless outbound run                 # the service desk's daily client hunt: discover, research, score (Jev), draft, gate, queue; sends nothing
+python -m faceless outbound status|review|package <slug>|outcome <slug> <event>   # the pipeline, the aggregate, a queued draft, what came back
 python -m faceless ci                          # CI as GitHub sees it (clean export, no keys): run before every push of code
 python -m pytest -q tests                      # engine tests
 ```

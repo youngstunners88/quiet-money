@@ -140,6 +140,22 @@ decisions_model = "typesafe/jev-1.13"          # OpenRouter Decisions API (POST 
 decisions_daily_usd = 0.05                   # backend = "openrouter-decisions" opts in (auto never picks it)
 confidence_floor = 0.85
 
+[outbound]                                   # the service desk's client hunt (faceless/outbound.py): free models + Jev, public sources, owner sends
+send = "owner"                               # the only mode: this engine never contacts anyone (CLAUDE.md rule 9). Never change it.
+daily_candidates = 40                        # projects screened per run from DeFiLlama's public list (no key)
+daily_cards = 16                             # lead cards researched per run
+daily_packages = 8                           # outreach packages queued per run
+tvl_min_usd = 5000000                        # the size band we sell to: big enough for a marketing line...
+tvl_max_usd = 5000000000                     # ...and not a mega-cap with an in-house studio
+fit_strong_usd = 25000000                    # at or above this the code's own fit is 0.8; inside the band but below it, 0.65
+fit_floor = 0.6                              # a pursue needs this fit as well as Jev's confident yes
+personalization_floor = 0.7                  # a draft that names nothing specific is held
+spam_ceiling = 0.4
+promise_floor = 0.9                          # a hard gate: results, prices and token talk hold a draft (rule 2)
+firecrawl_pages_per_day = 40                 # JS-rendered reads only when plain HTTP returns nothing; credits are prepaid, so the cap is in pages
+page_chars = 6000
+dead_days = 90                               # cool-off before a dead lead could be looked at again
+
 [qa]
 # Semantic gates answered by Cloudflare Clef (a decision model on Workers AI; about 28 neurons per still, about 6 per script).
 # A still over a threshold becomes a designed motion card (the hook beat is regenerated once); a script that promises returns is held.

@@ -1058,6 +1058,59 @@ def cmd_brand(_args) -> int:
     return 0
 
 
+def cmd_outbound(args) -> int:
+    """The service desk's outbound engine: the daily hunt for clients of the Web3 video + KOL service. It never contacts anyone."""
+    from faceless import outbound
+    act, rest = args.action, args.rest
+    if act == "run":
+        r = outbound.run(candidate_limit=args.candidates, card_limit=args.cards, package_limit=args.packages)
+        print(outbound.report_md(r))
+        print(f"report: channel/services/web3-video/reviews/batch-{r['day']}.md")
+        return 0
+    if act == "status":
+        p = outbound.pipeline()
+        print("leads:     " + (", ".join(f"{k} {v}" for k, v in sorted(p["leads"].items())) or "none yet"))
+        print("waiting on the owner: " + (", ".join(p["packages_waiting"]) or "nothing"))
+        print("outcomes:  " + (", ".join(f"{k} {v}" for k, v in sorted(p["outcomes"].items())) or "none recorded"))
+        for job, slugs in p["models"].items():
+            print(f"models {job}: " + (", ".join(slugs) or "UNRESOLVED (see service-scoring)"))
+        return 0
+    if act == "candidates":
+        for c in outbound.candidates(args.candidates):
+            print(f"{c['name'][:34]:34} {c['category'][:14]:14} ${c['tvl_usd']:>14,}  {c['x_handle']}")
+        return 0
+    if act == "lead" and rest:
+        card = outbound.load_lead(rest[0])
+        print(json.dumps(card, indent=1)[:6000] if card else f"no lead card for {rest[0]}")
+        return 0
+    if act == "package" and rest:
+        pkg = outbound.load_package(rest[0])
+        if not pkg:
+            print(f"no package for {rest[0]}")
+            return 1
+        print(f"{pkg['name'] if 'name' in pkg else pkg['slug']} - {pkg['channel']} via {pkg['contact']['route']}  (gates: {pkg['gates']['verdict']})")
+        if pkg["first_touch"].get("subject"):
+            print(f"Subject: {pkg['first_touch']['subject']}")
+        print("\n" + pkg["first_touch"]["body"] + "\n")
+        for f in pkg["followups"]:
+            print(f"--- step {f['step']}, +{f['days_after']}d\n{f['body']}\n")
+        return 0
+    if act == "outcome" and len(rest) >= 2:
+        row = outbound.record(rest[0], rest[1], note=" ".join(rest[2:]) or None)
+        print(f"recorded: {row['slug']} {row['event']}")
+        return 0
+    if act == "review":
+        r = outbound.review()
+        print(f"sent {r['sent']} - {r['note']}")
+        print("events: " + (", ".join(f"{k} {v}" for k, v in r["counts"].items()) or "none"))
+        for key, cells in r["per"].items():
+            if cells:
+                print(f"{key}: " + ", ".join(f"{k} {c['positive']}/{c['sent']}" for k, c in sorted(cells.items())))
+        return 0
+    print("usage: faceless outbound run|status|candidates|review|lead <slug>|package <slug>|outcome <slug> <event> [note]")
+    return 2
+
+
 def main(argv: list[str] | None = None) -> int:
     config.load_dotenv()
     p = argparse.ArgumentParser(prog="faceless", description="Faceless Studio engine")
@@ -1143,6 +1196,13 @@ def main(argv: list[str] | None = None) -> int:
     br.add_argument("--title")
     br.add_argument("--paid", action="store_true")
     br.set_defaults(fn=cmd_brain)
+    ob = sub.add_parser("outbound", help="service desk: run (the daily client hunt) | status | candidates | review | lead <slug> | package <slug> | outcome <slug> <event>")
+    ob.add_argument("action", choices=["run", "status", "candidates", "review", "lead", "package", "outcome"])
+    ob.add_argument("rest", nargs="*")
+    ob.add_argument("--candidates", type=int, help="how many projects to screen")
+    ob.add_argument("--cards", type=int, help="how many lead cards to research")
+    ob.add_argument("--packages", type=int, help="how many outreach packages to queue")
+    ob.set_defaults(fn=cmd_outbound)
     mk = sub.add_parser("marketing", help="the weekly marketing brief (reads only; writes analytics/brief-<day>.md) | done <U01> | start <X1> | result <X1> won|killed [note]")
     mk.add_argument("action", nargs="?", default="brief", choices=["brief", "done", "start", "result"])
     mk.add_argument("rest", nargs="*")

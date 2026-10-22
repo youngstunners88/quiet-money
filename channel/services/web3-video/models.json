@@ -1,12 +1,98 @@
 {
-  "note": "Job -> free-model assignment for the service desk. The owner named the models; `slug` must be resolved against OpenRouter's live model list before first use (see service-scoring, 'Resolve the slugs') and left empty until it is verified. Empty slug = that job falls back to `fallback`. Nothing here is read by the daily video engine.",
-  "resolved_on": null,
+  "note": "Job -> free-model assignment for the service desk, resolved against OpenRouter's live catalog on the date above. Only ':free' slugs belong here: faceless/outbound.py refuses any other, because this desk raises no cap. Nothing here is read by the daily video engine.",
+  "resolved_on": "2026-10-22",
   "jobs": {
-    "research": {"models": ["Nemotron 3 Ultra", "Nemotron 3.5 Super VL", "Inkling"], "slug": [], "fallback": "agent", "output": "lead card"},
-    "scoring": {"models": ["Jev"], "slug": ["typesafe/jev-1.13"], "fallback": "heuristic", "output": "typed decisions"},
-    "first_touch": {"models": ["Nemotron 3.5 Lightning", "MiniMax M3.1 Flash", "Flint"], "slug": [], "fallback": "agent", "output": "first message"},
-    "followups": {"models": ["Nemotron 3.5 Lightning", "MiniMax M3.1 Flash"], "slug": [], "fallback": "agent", "output": "3-5 step sequence"},
-    "case_study": {"models": ["Flint", "North Mini Code"], "slug": [], "fallback": "agent", "output": "case-study blurb"},
-    "packaging": {"models": ["Nemotron 3 Ultra"], "slug": [], "fallback": "agent", "output": "tier + angle suggestion"}
+    "research": {
+      "models": [
+        "Nemotron 3 Ultra",
+        "Nemotron 3.5 Super VL",
+        "Inkling"
+      ],
+      "slug": [
+        "minimax/minimax-m3.1-flash:free",
+        "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "nvidia/nemotron-3.5-super-vl:free"
+      ],
+      "fallback": "agent",
+      "output": "lead card"
+    },
+    "scoring": {
+      "models": [
+        "Jev"
+      ],
+      "slug": [
+        "typesafe/jev-1.13"
+      ],
+      "fallback": "heuristic",
+      "output": "typed decisions",
+      "note": "Not a chat model: Jev is called through OpenRouter's Decisions API (faceless/decide.py, backend openrouter-decisions), so it is not in the :free chat catalog and is not subject to the :free rule."
+    },
+    "first_touch": {
+      "models": [
+        "Nemotron 3.5 Lightning",
+        "MiniMax M3.1 Flash",
+        "Flint"
+      ],
+      "slug": [
+        "minimax/minimax-m3.1-flash:free",
+        "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "nvidia/nemotron-3.5-super-vl:free",
+        "nvidia/nemotron-3.5-lightning:free"
+      ],
+      "fallback": "agent",
+      "output": "first message"
+    },
+    "followups": {
+      "models": [
+        "Nemotron 3.5 Lightning",
+        "MiniMax M3.1 Flash"
+      ],
+      "slug": [
+        "minimax/minimax-m3.1-flash:free",
+        "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "nvidia/nemotron-3.5-super-vl:free"
+      ],
+      "fallback": "agent",
+      "output": "3-5 step sequence"
+    },
+    "case_study": {
+      "models": [
+        "Flint",
+        "North Mini Code"
+      ],
+      "slug": [
+        "minimax/minimax-m3.1-flash:free",
+        "nvidia/nemotron-3-ultra-550b-a55b:free"
+      ],
+      "fallback": "agent",
+      "output": "case-study blurb"
+    },
+    "packaging": {
+      "models": [
+        "Nemotron 3 Ultra"
+      ],
+      "slug": [
+        "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "minimax/minimax-m3.1-flash:free"
+      ],
+      "fallback": "agent",
+      "output": "tier + angle suggestion"
+    }
+  },
+  "measured": {
+    "method": "one real research brief (4,458 chars) per slug through OpenRouter, answer budgets 2000 and 6000, 2026-10-22",
+    "works": {
+      "minimax/minimax-m3.1-flash:free": "JSON at 2000 tokens, 20s - fastest and cheapest, first choice",
+      "nvidia/nemotron-3-ultra-550b-a55b:free": "JSON at 2000 tokens, 24s",
+      "nvidia/nemotron-3.5-super-vl:free": "needs 6000 tokens (empty text at 2000), 33s",
+      "nvidia/nemotron-3.5-lightning:free": "needs 6000 tokens, 59s - slow, last choice"
+    },
+    "dead": {
+      "recursive/flint-v1.0:free": "no text at 2000 or 6000 tokens; the whole budget goes to reasoning",
+      "cohere/north-mini-code:free": "same: no text at either budget",
+      "nvidia/nemotron-3-super-120b-a12b:free": "provider returns HTTP 404",
+      "thinkingmachines/inkling:free": "HTTP 403: only available on agentic endpoints, not plain chat completions"
+    },
+    "note": "The owner named Flint, North Mini Code, Nemotron 3 Super and Inkling; they are kept in `models` as the assignment but are out of `slug` until they answer. Re-bench before putting one back."
   }
 }

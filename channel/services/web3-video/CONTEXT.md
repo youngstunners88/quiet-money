@@ -28,6 +28,17 @@ researched signals and unsent outreach copy do not belong in it.
 | Positioning, packages, proof blocks | `service-offer` |
 | Backlog, outcomes, weekly feedback loop | `service-pipeline` |
 
+## The engine
+
+`faceless/outbound.py` runs the whole loop; `python -m faceless outbound run` is one day's hunt. It discovers from
+DeFiLlama's public protocol list (no key), researches each project from its own pages with free OpenRouter models,
+lets Jev score fit and decide pursue/skip, drafts the first touch and the follow-ups, gates them, and queues what
+passes. It sends nothing. `outbound status`, `review`, `package <slug>` and `outcome <slug> <event>` are the rest.
+
+Memory that survives a fresh container, both committed and both free of company names:
+`state/outbound-seen.json` (hashed index of projects already looked at) and `state/outbound-outcomes.jsonl` (hashed
+outcome log, which the weekly review reads).
+
 ## Rules that bind this desk
 
 1. Public sources only. No logged-in scraping, no private data, no tool that risks an account (CLAUDE.md rule 11:

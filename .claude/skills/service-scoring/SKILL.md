@@ -10,7 +10,8 @@ returns a typed answer plus its own probability, so the loop can route without r
 content, and it never releases anything past the owner's send gate.
 
 ## How to call it
-`faceless/decide.py` already does this. One call per lead (or per draft) carrying every question for that moment:
+`faceless/outbound.py` does this on every run (`outbound.score`, `outbound.gate`), so a normal day needs no code from
+you. The call, for a one-off or a new question:
 
 ```python
 from faceless import decide
@@ -20,6 +21,10 @@ d = decide.ask(qs, state=lead_card, job=f"outbound:{slug}", backend="openrouter-
 fit = d["fit"].jev_value          # Jev's answer and its probability
 conf = d["fit"].jev_confidence
 ```
+
+**A `score` answer comes back as the level index, not 0-1.** Jev answered `fit` 3.09 of 4 in the first live call
+(2026-10-22), so `outbound._norm` scales every score answer by `len(levels) - 1` before a threshold sees it. A
+threshold in this skill is on the 0-1 scale; never compare one against a raw answer.
 
 **Read `jev_value` / `jev_confidence`, not `.value`.** `studio.toml [decide].dry_run` is `true` so that Jev cannot act
 on the daily video path, and `.value` therefore holds the heuristic fallback. This desk acts on Jev's own answer and
@@ -58,6 +63,11 @@ gate questions on the drafted text. The full bank, with exact wording, levels an
 
 A low-confidence answer (below `[decide].confidence_floor`, 0.85) is **not** a pursue: it goes to review. Confidence
 decides how much autonomy Jev gets, which is the only dial that raises the autonomy level (`service-outbound`).
+
+**What the first live calls actually returned (2026-10-22):** confidences of 0.55 to 0.88, mostly under the 0.85
+floor - so Jev abstains and the code heuristics decide most leads today. That is the design working, not a fault, and
+it is the honest state to report: the desk is heuristic-first until the outcomes justify a calibrated floor. Measure
+before lowering it (`faceless-bench`), and never lower it to make a batch look decided.
 
 `promise_free` is a **hard gate**: a draft that promises results, names a price or talks about a token is held
 whatever else it scored. Compliance is never a probability call (CLAUDE.md rules 2 and 9, and `faceless-decide`'s

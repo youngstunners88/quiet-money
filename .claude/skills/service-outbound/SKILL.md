@@ -57,10 +57,19 @@ no connector call that posts. The owner sends, or approves a send, every time (C
 6. One project is contacted once per channel per week, and a negative reply ends it permanently.
 
 ## Running it
-There is no `python -m faceless` command for this desk: the loop is this skill plus the five it routes to, run by a
-session. The pieces it calls are engine functions that already exist - `faceless.panel.ask` for a free-model call and
-`faceless.decide` for Jev - so nothing new has to be installed. See `references/run-loop.md` for the exact sequence,
-the batch report format, and what to do when a step comes back thin.
+```bash
+python -m faceless outbound run              # the whole loop: discover, research, score, draft, gate, queue, report
+python -m faceless outbound status           # the pipeline, what waits on the owner, which models are resolved
+python -m faceless outbound candidates       # what today's screen would look at, without researching anything
+python -m faceless outbound package <slug>   # read a queued package: the first touch and its follow-ups
+python -m faceless outbound outcome <slug> <event> [note]   # record what came back (this is the only training signal)
+python -m faceless outbound review           # the aggregate: what angle and proof block actually gets replies
+```
+`faceless/outbound.py` is the engine; this skill and the five it routes to are its written form, for the judgement a
+command cannot make. Use the skills when a batch comes back thin, when a draft needs rewriting by hand, when a reply
+needs answering, or when a threshold or a model should change. `references/run-loop.md` has the daily sequence, the
+report format, and what to do when a step comes back thin.
 
-A scheduled run is the same thing on a timer: `references/run-loop.md` has the schedule setup and the recovery steps
-for a run that failed halfway.
+It runs daily as a scheduled routine. If a run was missed, run it by hand: the loop is resumable by design - every
+lead card and package is written per slug, the hashed project index means nothing is researched twice, and nothing
+has been sent.
