@@ -41,3 +41,6 @@ never text/numbers in the image. The pillar style is appended automatically.
 
 ## Not Flint
 Scripts are written by the normal chain only. The free Flint model (`faceless-flint`) may suggest seeds for the backlog, never a script.
+
+## Write for the edit
+A script is written knowing how it will be cut (`faceless-rhythm`): each line fits its slot (`craftcheck.word_budget`), the last line is short and strong enough to be held after it ends, and anything the edit had to fight on a past video is a rule here (`faceless-craft/LESSONS.md`).

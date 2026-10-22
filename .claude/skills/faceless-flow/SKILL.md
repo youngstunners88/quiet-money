@@ -10,7 +10,7 @@ The day's three clips are compiled into a single video (`faceless-reel`), so wri
 - **Act 1 sets the loss.** Something is taken, drained, or closing in.
 - **Act 2 is the wrong fight.** The character defends, and it costs them.
 - **Act 3 is the turn.** They act on what they learned, and the frame opens up.
-Each act still has to stand alone for ten seconds, but the three should escalate in scale and end brighter than they started: the last frame of act 3 is what the call to action sits on. Keep one visual thread across all three (gold light is the channel's) so the cuts between them read as one piece.
+Each act still has to stand alone for ten seconds, but the three should escalate in scale and end brighter than they started: the last frame of act 3 is what the call to action sits on. Keep one visual thread across all three (gold light is the channel's) so the cuts between them read as one piece. Ask for each clip's peak between 7 and 9 seconds so the edit has room to build into it and release after it, and make each act's peak bigger than the last (`faceless-rhythm`).
 
 ## Daily steps
 1. `python -m faceless flow` writes today's three prompts (one per series, the strongest series first) to `channel/flow/shotlists/<day>.md`.

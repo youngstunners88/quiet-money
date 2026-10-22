@@ -337,6 +337,19 @@ def cmd_cineedit(args) -> int:
     return 0
 
 
+def cmd_craftcheck(args) -> int:
+    from pathlib import Path
+    from faceless import craftcheck
+    report = json.loads(Path(args.report).read_text(encoding="utf-8")) if args.report else {}
+    findings = craftcheck.check_reel(Path(args.video), report)
+    for f in findings:
+        tag = "PASS " if f["ok"] else ("BLOCK" if f.get("gate", True) else "WATCH")
+        print(f"{tag} {f['lesson']:<3} {f['rule']} | {f['detail']}")
+    row = craftcheck.record(Path(args.video).name, findings)
+    print(f"\n{row['passed']} passed, {len(row['failed'])} blocking, {len(row['watch'])} to watch (state/craft.jsonl)")
+    return 1 if row["failed"] else 0
+
+
 def cmd_products(_args) -> int:
     from faceless import products
     res = products.build_all()
@@ -1141,6 +1154,10 @@ def main(argv: list[str] | None = None) -> int:
     ce.add_argument("--out", help="output path (default <clip>-edit.mp4)")
     ce.add_argument("--card", default="QUIET MONEY", help="end-card line")
     ce.set_defaults(fn=cmd_cineedit)
+    cc = sub.add_parser("craftcheck", help="assess a finished reel against every craft lesson so far; exits 1 when a confirmed rule fails")
+    cc.add_argument("video")
+    cc.add_argument("--report", help="the build report JSON from faceless.reel.build (act starts, CTA, narration timings)")
+    cc.set_defaults(fn=cmd_craftcheck)
     sub.add_parser("products", help="build the spreadsheet products, recalculate them in LibreOffice, check against Python math, write listings").set_defaults(fn=cmd_products)
     pl = sub.add_parser("planner", help="the Daily Planner product: `build` the PDFs, `check` the gauntlet, `ingest <folder>` the owner's pictures, `clean` the handle off them, `inventory`, `cover`, `posters-make` (typeset the studio's twelve wellness posters)")
     pl.add_argument("action", choices=["build", "check", "ingest", "clean", "inventory", "cover", "posters-make"])

@@ -32,4 +32,5 @@ def test_the_reel_is_mastered_to_the_same_loudness_as_every_other_post():
     """It plays in the same feed as the daily videos; -21 LUFS next to -14 LUFS just sounds broken."""
     assert "I=-14" in reel.LOUDNESS and "TP=-1.5" in reel.LOUDNESS
     import inspect
-    assert "LOUDNESS" in inspect.getsource(reel.build)
+    assert "_master" in inspect.getsource(reel.build)
+    assert "linear=true" in inspect.getsource(reel._master), "two passes, so the gain does not ride the ending"
