@@ -1770,3 +1770,39 @@ def test_moneymath_runs_one_function_from_the_command_line(capsys):
     assert moneymath.main(["lump_sum_growth", "1000", "0.08", "10"]) == 0
     assert capsys.readouterr().out.strip() == str(moneymath.lump_sum_growth(1000, 0.08, 10))
     assert moneymath.main(["fact_sheet_typo"]) == 2 and "usage" in capsys.readouterr().out
+
+
+def test_mistral_provider_tries_each_key_and_is_skipped_when_all_are_limited(monkeypatch):
+    """O14: the environment holds two Mistral keys that hit rate limits independently (seen live 2026-10-22: the first 429,
+    the second answered). A limited key moves on to the next; all limited means the chain moves on, never a crash."""
+    from faceless.providers import ProviderUnavailable, llm
+    for v in ("MINSTRAL_API_KEY", "MINSTRAL_API_KEY2", "MISTRAL_API_KEY"):
+        monkeypatch.delenv(v, raising=False)
+    with pytest.raises(ProviderUnavailable):
+        llm.mistral("hi", system=None, want_json=False, temperature=0.5)
+    monkeypatch.setenv("MINSTRAL_API_KEY", "k1")
+    monkeypatch.setenv("MINSTRAL_API_KEY2", "k2")
+    seen = []
+
+    class R:
+        def __init__(self, code, body=None):
+            self.status_code, self._b = code, body or {}
+
+        def json(self):
+            return self._b
+
+    answers = {"Bearer k1": R(429), "Bearer k2": R(200, {"choices": [{"message": {"content": "hello"}}], "usage": {"total_tokens": 5}})}
+
+    class S:
+        def post(self, url, json=None, timeout=None, headers=None):
+            seen.append((headers["Authorization"], json["model"], json.get("response_format"), timeout))
+            return answers[headers["Authorization"]]
+
+    monkeypatch.setattr(llm, "http", lambda: S())
+    assert llm.mistral("hi", system="s", want_json=True, temperature=0.5) == "hello"
+    assert [s[0] for s in seen] == ["Bearer k1", "Bearer k2"]
+    assert seen[1][1] == config.load()["llm"]["mistral_model"] and seen[1][2] == {"type": "json_object"} and seen[1][3]
+    answers["Bearer k2"] = R(429)
+    with pytest.raises(ProviderUnavailable):
+        llm.mistral("hi", system=None, want_json=False, temperature=0.5)
+    assert config.load()["llm"]["chain"].index("mistral") < config.load()["llm"]["chain"].index("openrouter")   # free before paid
