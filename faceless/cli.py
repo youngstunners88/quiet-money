@@ -138,6 +138,13 @@ def cmd_ideas(args) -> int:
     return 0
 
 
+def cmd_caption_check(args) -> int:
+    from faceless import capcheck
+    res = capcheck.check(Path(args.media), Path(args.ass), args.max)
+    print(json.dumps(res, indent=1))
+    return 0 if res["ok"] else 1
+
+
 def cmd_gauntlet(args) -> int:
     from faceless import gauntlet
     from faceless.pipeline import ideate, package
@@ -1279,6 +1286,11 @@ def main(argv: list[str] | None = None) -> int:
     i.add_argument("--pillar", required=True)
     i.add_argument("--n", type=int, default=1)
     i.set_defaults(fn=cmd_ideas)
+    cc = sub.add_parser("caption-check", help="measure caption drift against the speech in a finished video (hand-built ones too)")
+    cc.add_argument("media")
+    cc.add_argument("ass")
+    cc.add_argument("--max", type=float, default=0.35)
+    cc.set_defaults(fn=cmd_caption_check)
     g = sub.add_parser("gauntlet", help="re-run all gates on a finished job")
     g.add_argument("job")
     g.add_argument("--no-judge", action="store_true")

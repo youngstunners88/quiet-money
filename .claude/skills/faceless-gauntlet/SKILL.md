@@ -44,6 +44,12 @@ The gauntlet has two levels:
   the pin in `requirements.txt`. A Whisper failure leaves the estimate and logs `VOICE_TIMING_ESTIMATED`.
 - Look at frames, not only numbers: a caption should change on the word you hear.
 
+### Hand-built videos (the rule that was missed on 2026-10-22)
+Any video assembled outside `daily`/`make` (host clips, collages, one-off builds) takes its caption times from
+`faceless.align.align(text, wav)` or Whisper on the final audio, never from `estimate_timings`. Before it is shown to the owner
+or approved, run `python -m faceless caption-check final.mp4 captions.ass` (exit 1 when p90 drift > 0.35 s or median > 0.17 s).
+On 2026-10-22 an estimated track measured 0.98 s median drift and the owner rejected the video. A fail means rebuild, not ship.
+
 ## Semantic gates (decision model + embeddings)
 Added 2026-10-08. A decision model (Cloudflare Clef, see `faceless/qa.py`) answers typed yes/no questions with probabilities; thresholds live in `studio.toml [qa]`.
 When Clef cannot answer (free neuron budget spent, an outage, no Cloudflare key), a second judge answers the same questions: Gemini through the Muapi desk, about $0.0002 a call (`faceless/providers/judge.py`, `QA_FALLBACK` in the journal, once per video). Only when neither can answer is there no opinion (no gate, no failure), recorded as `QA_UNAVAILABLE`: report a run of those days to the owner, because the stills went out unchecked.
