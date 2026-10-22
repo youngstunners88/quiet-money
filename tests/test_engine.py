@@ -1808,3 +1808,22 @@ def test_mistral_provider_tries_each_key_and_is_skipped_when_all_are_limited(mon
     with pytest.raises(ProviderUnavailable):
         llm.mistral("hi", system=None, want_json=False, temperature=0.5)
     assert config.load()["llm"]["chain"].index("mistral") < config.load()["llm"]["chain"].index("openrouter")   # free before paid
+
+
+def test_the_fillable_printables_have_a_field_on_every_line_and_cell_and_none_in_the_margins(tmp_path):
+    """P6: the same six pages with type-in fields. Page 1 is instructions only; the rest get a field per writing line, table cell
+    and blank, and no field strays into the printer-unsafe margin or off the page."""
+    from pypdf import PdfReader
+    from faceless import product_print as pp
+    out = pp.build_fillable(tmp_path)
+    assert set(out) == {"Letter-fillable", "A4-fillable"}
+    for name, size in pp.SIZES.items():
+        r = PdfReader(str(out[f"{name}-fillable"]))
+        names = list(r.get_fields() or {})
+        per = [sum(n.startswith(f"p{i}_") for n in names) for i in range(1, 7)]
+        assert len(r.pages) == 6 and per[0] == 0 and per[2] == 17 * 6 + 2 and per[4] == 12 * 6 + 1, (name, per)
+        assert len(set(names)) == len(names)
+        for _im, fields in pp.pages_with_fields(size):
+            for x0, y0, x1, y1 in fields:
+                assert pp.MARGIN - 40 <= x0 < x1 <= size[0] - pp.MARGIN + 40 and 0 < y0 < y1 < size[1] - pp.MARGIN, (name, x0, y0, x1, y1)
+    assert [pp.unsafe(im) for im in pp.pages(pp.SIZES["Letter"])] == [0] * 6       # the printed pages are unchanged

@@ -31,6 +31,7 @@ class Page:
         self.d = ImageDraw.Draw(self.im)
         self.x0, self.x1 = MARGIN, self.W - MARGIN
         self.y = MARGIN
+        self.fields: list[tuple[int, int, int, int]] = []     # (x0, y0, x1, y1) in pixels: where a person writes, for the fillable PDF
         self.d.text((self.x0, self.y), title.upper(), font=brand.font("Anton-Regular.ttf", 84), fill=INK)
         self.y += 100
         self.d.rectangle([self.x0, self.y, self.x0 + 220, self.y + 10], fill=GOLD)
@@ -44,7 +45,12 @@ class Page:
         self.d.text((self.x1 - self.d.textlength(tail, font=f), self.H - MARGIN - 22), tail, font=f, fill=GREY)
 
     def text(self, x: int, y: int, s: str, size: int = 30, color=INK, bold: bool = True) -> None:
-        self.d.text((x, y), s, font=brand.font("Montserrat-ExtraBold.ttf", size), fill=color)
+        f = brand.font("Montserrat-ExtraBold.ttf", size)
+        self.d.text((x, y), s, font=f, fill=color)
+        import re
+        for m in re.finditer(r"_{4,}", s):                    # "$__________" is a blank to fill in
+            a = x + int(self.d.textlength(s[:m.start()], font=f))
+            self.fields.append((a, y - 8, a + int(self.d.textlength(m.group(), font=f)), y + size + 4))
 
     def para(self, s: str, size: int = 30, color=INK, gap: int = 14, width: int | None = None) -> None:
         f = brand.font("Montserrat-ExtraBold.ttf", size)
@@ -62,9 +68,12 @@ class Page:
             self.d.text((self.x0, self.y), line, font=f, fill=color)
             self.y += size + gap
 
-    def rule(self, y: int | None = None, x0: int | None = None, x1: int | None = None, w: int = 2, color=LINE) -> None:
+    def rule(self, y: int | None = None, x0: int | None = None, x1: int | None = None, w: int = 2, color=LINE,
+             field: tuple[int, int] | None = None) -> None:
         y = self.y if y is None else y
         self.d.line([(x0 or self.x0, y), (x1 or self.x1, y)], fill=color, width=w)
+        a, b = field or (x0 or self.x0, x1 or self.x1)        # every rule is a line to write on; `field` narrows it past a printed label
+        self.fields.append((a, y - 46, b, y - 4))
 
     def box(self, x: int, y: int, w: int, h: int) -> None:
         self.d.rectangle([x, y, x + w, y + h], outline=INK, width=3)
@@ -85,6 +94,8 @@ class Page:
         self.d.line([(self.x0, self.y), (self.x0, self.y + 64 + rows * row_h)], fill=INK, width=3)
         y = self.y + 64
         for _ in range(rows):
+            for a, b in zip(xs, xs[1:]):                       # every body cell is a field
+                self.fields.append((a + 6, y + 6, b - 6, y + row_h - 6))
             y += row_h
             self.d.line([(self.x0, y), (self.x1, y)], fill=LINE, width=2)
         self.d.line([(self.x0, y), (self.x1, y)], fill=INK, width=3)
@@ -92,6 +103,10 @@ class Page:
 
 
 def pages(size: tuple[int, int]) -> list[Image.Image]:
+    return [im for im, _f in pages_with_fields(size)]
+
+
+def pages_with_fields(size: tuple[int, int]) -> list[tuple[Image.Image, list[tuple[int, int, int, int]]]]:
     total = 6
     ps = []
     p = Page(size, "Money Reset Printables", "Six pages. A pen. Thirty minutes.", 1, total)
@@ -177,17 +192,18 @@ def pages(size: tuple[int, int]) -> list[Image.Image]:
         p.text(x + 18, top + 16, head, 32)
         for j, lab in enumerate(rows):
             yy = top + 70 + j * 84
-            p.rule(yy + 70, x + 18, x + half - 18)
+            p.rule(yy + 70, x + 18, x + half - 18, field=(x + int(half * .56), x + half - 70) if lab else (x + 18, x + half - 70))
             p.text(x + 18, yy + 28, lab, 22, GREY)
             p.text(x + half - 60, yy + 28, "$", 24, GREY)
         p.text(x + 18, top + 70 + 8 * 84 + 24, "TOTAL  $", 32)
+        p.fields.append((x + 200, top + 70 + 8 * 84 + 16, x + half - 18, top + 70 + 8 * 84 + 64))
     p.y = top + 70 + 8 * 84 + 90 + 50
     p.text(p.x0, p.y, "NET WORTH  =  assets  -  liabilities  =  $", 40)
-    p.rule(p.y + 62, p.x0 + 780, p.x1, 3, INK)
+    p.rule(p.y + 62, p.x0 + 780, p.x1, 3, INK, field=(p.x0 + 820, p.x1))
     p.y += 110
     p.text(p.x0, p.y, "Change since last quarter:  $____________", 30)
     ps.append(p)
-    return [q.im for q in ps]
+    return [(q.im, q.fields) for q in ps]
 
 
 def unsafe(im: Image.Image, margin: int = MARGIN - 40) -> int:
@@ -211,17 +227,47 @@ def build_printables(dest: Path) -> dict[str, Path]:
     return out
 
 
+def build_fillable(dest: Path) -> dict[str, Path]:
+    """The same six pages with type-in fields (P6): each page is the printed image, with a transparent text field over every
+    line, table cell and blank, so the pack works on a tablet or a screen. Field names are page and position, so a reader's
+    PDF app keeps them apart."""
+    from reportlab.lib.colors import Color
+    from reportlab.lib.utils import ImageReader
+    from reportlab.pdfgen import canvas
+    dest.mkdir(parents=True, exist_ok=True)
+    out, k = {}, 72 / DPI
+    clear = Color(1, 1, 1, alpha=0)
+    for name, size in SIZES.items():
+        W, H = size
+        path = dest / f"Money-Reset-Printables-Fillable-{name}.pdf"
+        c = canvas.Canvas(str(path), pagesize=(W * k, H * k))
+        c.setTitle("Money Reset Printables (fillable)")
+        c.setAuthor("Quiet Money")
+        for n, (im, fields) in enumerate(pages_with_fields(size), 1):
+            c.drawImage(ImageReader(im), 0, 0, W * k, H * k)
+            for i, (x0, y0, x1, y1) in enumerate(fields):
+                h = (y1 - y0) * k
+                c.acroForm.textfield(name=f"p{n}_f{i:03d}", x=x0 * k, y=(H - y1) * k, width=(x1 - x0) * k, height=h,
+                                     borderWidth=0, borderColor=clear, fillColor=clear, textColor=Color(.08, .08, .09),
+                                     fontName="Helvetica", fontSize=max(7, min(11, h * .62)), forceBorder=False)
+            c.showPage()
+        c.save()
+        out[f"{name}-fillable"] = path
+    return out
+
+
 README = """MONEY RESET KIT
 ===============
 What is inside
 - Rat-Race-Escape-Planner.xlsx          your freedom number, income streams, 40-year projection (Excel / Google Sheets)
 - Debt-Payoff-and-Compound-Interest-Planner.xlsx   avalanche or snowball payoff plan with interest saved, compound growth
 - Money-Reset-Printables-Letter.pdf and -A4.pdf    six pen-and-paper pages
+- Money-Reset-Printables-Fillable-Letter.pdf and -A4.pdf   the same pages to type into on a tablet or screen
 
 How to start
 1. Open the Rat Race Escape Planner and replace the blue cells with your numbers.
 2. Open the Debt Payoff planner and list your debts.
-3. Print the pages and do the 50 / 30 / 20 split and the subscription audit.
+3. Print the pages (or open the Fillable PDFs and type) and do the 50 / 30 / 20 split and the subscription audit.
 
 Honest notes
 Educational tools, not financial advice. Results depend on the assumptions you enter; returns are never guaranteed.
@@ -250,6 +296,10 @@ def assemble_kit(root: Path | None = None) -> Path:
              "debt": root / "debt-payoff-planner" / "Debt-Payoff-and-Compound-Interest-Planner.xlsx"}
     printables = {"Letter": root / "money-reset-printables" / "Money-Reset-Printables-Letter.pdf",
                   "A4": root / "money-reset-printables" / "Money-Reset-Printables-A4.pdf"}
+    for name in SIZES:                                         # the fillable versions ride along when they have been built
+        f = root / "money-reset-printables" / f"Money-Reset-Printables-Fillable-{name}.pdf"
+        if f.is_file():
+            printables[f"{name}-fillable"] = f
     missing = [p.name for p in [*parts.values(), *printables.values()] if not p.is_file()]
     if missing:
         raise FileNotFoundError(f"cannot assemble the kit, missing: {missing} (run `python -m faceless products`)")
@@ -265,12 +315,12 @@ The owner approves price, copy and the account before anything goes live.
 ## Gumroad / Etsy
 - **Name:** Money Reset Printables: budget, subscriptions, sinking funds, debt and net worth (Letter + A4 PDF)
 - **Price:** ${price:.0f} to test (assumed; try $7 / $9 / $12)
-- **Files:** `Money-Reset-Printables-Letter.pdf`, `Money-Reset-Printables-A4.pdf`
+- **Files:** `Money-Reset-Printables-Letter.pdf`, `Money-Reset-Printables-A4.pdf`, and the fillable versions `Money-Reset-Printables-Fillable-Letter.pdf`, `Money-Reset-Printables-Fillable-A4.pdf`
 - **Images:** render the PDF pages to PNG for the gallery (page 2 and page 3 sell best)
 
 ### Description
 Six clean pages that make you look at your money once, on paper: a how-to page, a 50/30/20 paycheck split, a subscription audit,
-sinking funds, a debt list and a net worth snapshot. Thin lines print cheaply on any printer. Letter and A4 included.
+sinking funds, a debt list and a net worth snapshot. Thin lines print cheaply on any printer, or type straight into the fillable PDFs on a tablet or screen. Letter and A4 included.
 
 **Honest notes:** educational tool, not financial advice; 50/30/20 is a guideline. Instant PDF download, nothing ships.
 *Designed by Quiet Money with AI assistance.* (Etsy: keep this disclosure line and check Etsy's current Creativity Standards.)
@@ -310,7 +360,7 @@ No income or savings guarantees; no fake testimonials or scarcity; 30-day refund
 
 def build_all(escape: Path, debt: Path) -> dict:
     dest = OUT / "money-reset-printables"
-    pdfs = build_printables(dest)
+    pdfs = {**build_printables(dest), **build_fillable(dest)}
     clean = {}
     for name, size in SIZES.items():
         ims = pages(size)
