@@ -1,0 +1,100 @@
+{
+  "title": "The True Cost of Buying a House",
+  "hook_text": "THE RENT VS BUY MYTH",
+  "beats": [
+    {
+      "say": "That 20% down payment on a home locks up tens of thousands of dollars in a single wall.",
+      "callout": "",
+      "visual": "A cinematic shot of house keys resting on a dark wooden table, dim morning light, shallow depth of field."
+    },
+    {
+      "say": "Why do we assume owning a house always beats renting an apartment over the long run?",
+      "callout": "HOME VS APARTMENT",
+      "visual": "Low-angle shot of a brick apartment building exterior against a cloudy grey sky, static camera."
+    },
+    {
+      "say": "Most people think property value gains cover every hidden cost of homeownership.",
+      "callout": "PROPERTY GAINS",
+      "visual": "Close-up of a hand flipping through old home maintenance receipts on a desk, warm lamp light."
+    },
+    {
+      "say": "Property taxes, roof repairs, and interest eat up massive chunks of your cash flow quietly.",
+      "callout": "HIDDEN COSTS",
+      "visual": "A silver wrench resting beside a stack of coins on a concrete floor, cool industrial lighting."
+    },
+    {
+      "say": "What happens when you invest that down payment difference into the stock market instead?",
+      "callout": "MARKET RETURNS",
+      "visual": "A glowing financial chart line moving steadily upward on a dark glass monitor, side view."
+    },
+    {
+      "say": "Investing $500 a month at 8% a year for 30 years grows to $745,180.",
+      "callout": "$745,180",
+      "visual": "Close-up of a vintage pocket watch ticking on a worn leather surface, natural afternoon light."
+    },
+    {
+      "say": "That same $500 monthly investment over 40 years reaches $1,745,504.",
+      "callout": "40 YEARS",
+      "visual": "A tall glass hourglass with fine white sand draining slowly on a dark marble slab."
+    },
+    {
+      "say": "How does maintenance drain your wealth compared to a simple index portfolio?",
+      "callout": "WEALTH DRAIN",
+      "visual": "A hand sliding a blank white ceramic tile across a wooden floor, overhead shot."
+    },
+    {
+      "say": "An apartment keeps your capital liquid and free from unexpected repair bills.",
+      "callout": "",
+      "visual": "A minimalist white ceramic coffee cup sitting on a clean glass table, soft window reflection."
+    },
+    {
+      "say": "Flexibility lets your money compound faster without being tied to one zip code.",
+      "callout": "",
+      "visual": "A heavy wooden door slightly ajar with a streak of bright sunlight cutting across the floor."
+    },
+    {
+      "say": "Stop trapping your cash in walls that demand constant upkeep.",
+      "callout": "",
+      "visual": "A person's hands typing on a sleek metallic laptop keyboard in a dimly lit room."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "A closed minimalist dark door with a single vertical strip of warm light on the side."
+    }
+  ],
+  "caption": "Buying a house isn't always the wealth builder you think it is. The maintenance and down payment lock up cash that could compound elsewhere. #money #personalfinance #investing #realestate #wealth",
+  "description": "Unpack the hidden opportunity cost of property down payments and maintenance versus market returns.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#investing",
+    "#realestate",
+    "#wealth"
+  ],
+  "first_comment": "Would you rather rent and invest the difference, or buy a house?",
+  "facts": [
+    {
+      "claim": "Investing $500/month at 8% for 30 years reaches $745,180",
+      "basis": "$500/month for 30 years at 8%/yr = $745,180"
+    },
+    {
+      "claim": "Investing $500/month at 8% for 40 years reaches $1,745,504",
+      "basis": "$500/month for 40 years at 8%/yr = $1,745,504"
+    }
+  ],
+  "source": "llm",
+  "pillar": "myth",
+  "look": "",
+  "loop_map": {
+    "stakes": "The cash locked in a property down payment and its hidden ongoing maintenance costs.",
+    "big_question": "Why do we assume owning a house always beats renting an apartment over the long run?",
+    "assume": "Property value gains cover every hidden cost of homeownership.",
+    "reveal": "Investing that capital yields higher returns without maintenance drains.",
+    "rehook_beats": [
+      5,
+      8
+    ],
+    "payoff_beat": 7
+  }
+}

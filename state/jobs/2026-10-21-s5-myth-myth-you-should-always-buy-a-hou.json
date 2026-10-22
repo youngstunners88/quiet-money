@@ -1,0 +1,76 @@
+{
+  "id": "2026-10-21-s5-myth-myth-you-should-always-buy-a-hou",
+  "pillar": "myth",
+  "topic": "Myth: You should always buy a house instead of an apartment",
+  "day": "2026-10-21",
+  "slot": 5,
+  "status": "published",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-21T09:49:56Z",
+      "words": 155
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-21T09:50:21Z",
+      "seconds": 63.223,
+      "provider": "gemini"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-21T09:50:45Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-21T09:52:59Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-21T09:52:59Z",
+      "score": 89
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-21T09:53:00Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-10-21T09:53:01Z",
+      "local": "2026-10-22T07:30:00-04:00",
+      "youtube": null
+    }
+  ],
+  "artifacts": {
+    "angle": "Unpack the opportunity cost of property down payments and maintenance versus market returns.",
+    "title": "The True Cost of Buying a House",
+    "style": "cinematic",
+    "video": "/home/user/quiet-money/production/output/2026-10-21/2026-10-21-s5-myth-myth-you-should-always-buy-a-hou/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-21/2026-10-21-s5-myth-myth-you-should-always-buy-a-hou/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-10-22/slot1-myth",
+        "post_at": "2026-10-22T07:30:00-04:00"
+      },
+      "youtube": {
+        "skipped": "YouTube refused the upload session (HTTP 429): quota or rate limit; it resets at midnight Pacific"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 89,
+    "passed": true
+  },
+  "cost": {
+    "tts:gemini:chars": 919
+  },
+  "notes": []
+}

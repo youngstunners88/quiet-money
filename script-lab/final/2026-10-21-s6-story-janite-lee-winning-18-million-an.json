@@ -1,0 +1,90 @@
+{
+  "title": "The $18 Million Lottery Winner Who Gave It All Away",
+  "hook_text": "SHE WON $18 MILLION AND GAVE IT ALL AWAY",
+  "beats": [
+    {
+      "say": "Imagine holding an $18 million lottery check in your hands. Most people would buy a mansion. Janite Lee did something very different.",
+      "callout": "",
+      "visual": "A person's hands holding a large paper check inside a dimly lit room, cinematic lighting."
+    },
+    {
+      "say": "In 1993, she won the Illinois State Lottery. That's a massive windfall that changes a life overnight. How do you burn through a fortune that big so fast?",
+      "callout": "$18,000,000",
+      "visual": "A vintage lottery ticket resting on a dark wooden table, macro shot, shallow depth of field."
+    },
+    {
+      "say": "Most people assume she spent it all on luxury cars, designer clothes, and private jets. But the reality is much more surprising.",
+      "callout": "LUXURY VS CHARITY",
+      "visual": "An expensive sports car parked in front of an empty suburban driveway at dusk, soft shadows."
+    },
+    {
+      "say": "She didn't buy yachts. She gave millions away. Political campaigns, community groups, and endless charities lined up for a piece of her check.",
+      "callout": "STEP ONE",
+      "visual": "A stack of signed checks sitting next to a pen on a mahogany desk, side profile view."
+    },
+    {
+      "say": "She handed out $277,000 to politicians in a single year. She funded community centers and paid off debts for strangers who asked.",
+      "callout": "$277,000",
+      "visual": "A person writing notes on a clipboard with a fountain pen, warm lamplight, close up."
+    },
+    {
+      "say": "Why did she keep giving when her bank balance started dropping fast? Because her generosity had no financial perimeter to protect her.",
+      "callout": "STEP TWO",
+      "visual": "An empty coffee cup sitting on a glass table next to a calculator displaying a negative number."
+    },
+    {
+      "say": "By 2001, just 8 years after hitting the jackpot, she filed for bankruptcy with less than $700 left to her name.",
+      "callout": "$700 VS $18M",
+      "visual": "A close up of a person's hands flipping through an empty leather wallet, dark moody atmosphere."
+    },
+    {
+      "say": "Generosity without boundaries isn't kindness. It's a slow financial suicide that leaves you with nothing to give.",
+      "callout": "STEP THREE",
+      "visual": "A single street light glowing through a foggy window at night, lonely and cinematic."
+    },
+    {
+      "say": "Build a clear perimeter around your wealth today. Protect your future first, so you can give sustainably tomorrow.",
+      "callout": "",
+      "visual": "A metal lock resting securely on a thick chain, metallic texture, sharp focus."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "A silhouette of a person walking forward down a quiet urban street toward a bright dawn."
+    }
+  ],
+  "caption": "Winning the lottery is easy. Keeping it requires rules. #money #personalfinance #wealth #moneypolicy #finances",
+  "description": "Janite Lee won $18 million in 1993 and lost it all to endless giving within a decade. Here is the hidden danger of a zero-perimeter financial life.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#wealth",
+    "#moneypolicy",
+    "#finances"
+  ],
+  "first_comment": "What is the hardest part about saying no when people ask you for money?",
+  "facts": [
+    {
+      "claim": "Janite Lee won an $18 million Illinois State Lottery jackpot in 1993.",
+      "basis": "Documented lottery winner history and public records."
+    },
+    {
+      "claim": "She filed for bankruptcy in 2001 with less than $700 left.",
+      "basis": "Public bankruptcy court filings from 2001."
+    }
+  ],
+  "source": "llm",
+  "pillar": "story",
+  "look": "",
+  "loop_map": {
+    "stakes": "An $18 million lottery win that vanishes in a few short years.",
+    "big_question": "How do you burn through a fortune that big so fast?",
+    "assume": "Most people assume she spent it all on luxury cars and private jets.",
+    "reveal": "She gave millions away to political causes and charities without any financial perimeter.",
+    "rehook_beats": [
+      3,
+      6
+    ],
+    "payoff_beat": 8
+  }
+}

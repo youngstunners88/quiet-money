@@ -1,0 +1,86 @@
+{
+  "title": "How to Slash Your Medical Bill With the Itemized Audit",
+  "hook_text": "YOUR HOSPITAL BILL IS FULL OF ERRORS",
+  "beats": [
+    {
+      "say": "That hospital bill sitting on your kitchen counter has a secret. Most people just pay the total.",
+      "callout": "",
+      "visual": "A crisp white envelope resting on a dark wooden kitchen table, warm side lighting, shallow depth of field."
+    },
+    {
+      "say": "Why do hospitals routinely charge eighty dollars for a single basic pill? Where does the extra money go?",
+      "callout": "",
+      "visual": "A stack of papers with graphs blurred in the background, dimly lit room, moody cinematic shadows."
+    },
+    {
+      "say": "You assume the charges are fixed by law and non-negotiable. That is completely false.",
+      "callout": "",
+      "visual": "Close up of a hand holding a red pen over a paper document, cinematic contrast, moody tones."
+    },
+    {
+      "say": "Step one. Call the billing office today and request an itemized statement of your charges.",
+      "callout": "",
+      "visual": "A modern landline phone resting on a clean desk, moody corporate office background, soft bokeh."
+    },
+    {
+      "say": "Step two. Compare every single line item against your actual insurance explanation of benefits.",
+      "callout": "",
+      "visual": "Fingers pointing at columns of numbers on a blurred document, dramatic natural light from a window."
+    },
+    {
+      "say": "What happens when you find phantom charges or duplicate fees hiding in plain sight?",
+      "callout": "",
+      "visual": "A magnifying glass hovering over a crisp white paper, high contrast, moody editorial style."
+    },
+    {
+      "say": "Step three. Call them back and quote this exact script. Say you want the billing errors removed.",
+      "callout": "",
+      "visual": "A person speaking into a smartphone headset, silhouette against a softly lit evening city window."
+    },
+    {
+      "say": "Hospitals drop disputed line items rather than justify inflated prices to auditors.",
+      "callout": "",
+      "visual": "A fountain pen signing a document on a dark mahogany desk, dramatic rim lighting."
+    },
+    {
+      "say": "You just saved hundreds of dollars by asking for the paperwork they hoped you would ignore.",
+      "callout": "",
+      "visual": "A neatly folded medical bill being placed inside a drawer, clean minimalist aesthetic."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "A sleek dark room with a single glowing desk lamp, minimalist calm cinematic framing."
+    }
+  ],
+  "caption": "Most hospital bills contain billing errors. Here is how to audit yours and drop the balance today. #personalfinance #moneytips #budgeting #debtfree #financetips",
+  "description": "Stop paying inflated medical bills without checking the math. Use the itemized audit method to dispute overcharges in under fifteen minutes.",
+  "hashtags": [
+    "#personalfinance",
+    "#moneytips",
+    "#budgeting",
+    "#debtfree",
+    "#financetips"
+  ],
+  "first_comment": "What is the weirdest charge you have ever seen on a hospital bill?",
+  "facts": [
+    {
+      "claim": "Hospital bills frequently contain line-item errors and phantom charges that can be disputed.",
+      "basis": "Documented medical billing industry practice and consumer advocacy research."
+    }
+  ],
+  "source": "llm",
+  "pillar": "playbook",
+  "look": "",
+  "loop_map": {
+    "stakes": "A hospital bill sitting on the kitchen counter costing hundreds or thousands of dollars.",
+    "big_question": "Why do hospitals charge inflated prices for basic items and how do you fix it?",
+    "assume": "Most people assume hospital charges are fixed and non-negotiable.",
+    "reveal": "Hospitals frequently drop disputed line items when asked for an itemized audit.",
+    "rehook_beats": [
+      3,
+      6
+    ],
+    "payoff_beat": 8
+  }
+}

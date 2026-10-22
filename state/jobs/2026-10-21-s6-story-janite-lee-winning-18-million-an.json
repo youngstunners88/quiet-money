@@ -1,0 +1,88 @@
+{
+  "id": "2026-10-21-s6-story-janite-lee-winning-18-million-an",
+  "pillar": "story",
+  "topic": "Janite Lee: Winning $18 Million and Losing It All to Generosity",
+  "day": "2026-10-21",
+  "slot": 6,
+  "status": "published",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-21T09:57:34Z",
+      "words": 204
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-21T09:58:13Z",
+      "seconds": 70.261,
+      "provider": "gemini"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-21T09:58:29Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-21T10:01:17Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-21T10:01:17Z",
+      "score": 90
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-21T10:01:18Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-10-21T10:01:25Z",
+      "local": "2026-10-22T11:30:00-04:00",
+      "youtube": "2026-10-22T11:30:00-04:00"
+    }
+  ],
+  "artifacts": {
+    "angle": "A lottery winner who gave away millions to political causes and community charities within a decade, demonstrating the dangerous psychological trap of unlimited giving without a financial perimeter.",
+    "title": "The $18 Million Lottery Winner Who Gave It All Away",
+    "style": "cinematic",
+    "video": "/home/user/quiet-money/production/output/2026-10-21/2026-10-21-s6-story-janite-lee-winning-18-million-an/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-21/2026-10-21-s6-story-janite-lee-winning-18-million-an/cover.jpg",
+    "youtube": {
+      "video_id": "CnbY5Y4O6LQ",
+      "channel_id": "UC9B1QBr3_8Eulok8IdQbCqQ",
+      "privacy": "private",
+      "post_at": "2026-10-22T11:30:00-04:00",
+      "comment_posted": false,
+      "series": true
+    },
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-10-22/slot2-story",
+        "post_at": "2026-10-22T11:30:00-04:00"
+      },
+      "youtube": {
+        "mode": "youtube",
+        "post_at": "2026-10-22T11:30:00-04:00",
+        "video_id": "CnbY5Y4O6LQ",
+        "channel_id": "UC9B1QBr3_8Eulok8IdQbCqQ",
+        "privacy": "private"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 90,
+    "passed": true
+  },
+  "cost": {
+    "tts:gemini:chars": 1217
+  },
+  "notes": []
+}
