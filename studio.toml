@@ -104,6 +104,11 @@ openrouter_models = ["google/gemini-3.8-flash", "deepseek/deepseek-v4.1-flash", 
 temperature = 0.9
 longcat_model = "LongCat-2.5-Preview"
 
+[flint]                                      # extra hands (faceless/flint.py): a FREE model for side work only, never the daily critical path (skill faceless-flint)
+enabled = true                               # false switches it off; nothing else changes (it is not in [llm].chain)
+model = "recursive/flint-v1.0:free"          # only ':free' ids are accepted by the code
+daily_calls = 60                             # its own allowance, in calls; the free pool is shared and rate-limited (HTTP 429 is retried, then reported)
+
 [safety]                                     # see faceless/safety.py
 daily_usd_ceiling = 3.0                      # every paid call refuses once the ledger shows this much spent today (all providers together)
 paused = false                               # or create state/PAUSE ("python -m faceless pause <reason>"): stops paid calls, posting, daily and make
