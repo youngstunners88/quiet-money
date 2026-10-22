@@ -44,3 +44,6 @@ The `hook` field now reaches the writer as a suggested opening line, so write it
 Append lines to `script-lab/ideas/backlog.jsonl`:
 `{"pillar": "math", "topic": "...", "angle": "...", "hook": "..."}`
 Keep at least 10 unused topics per pillar.
+
+## Extra hands
+`python -m faceless flint seeds -n 8 --pillar <p>` asks the free Flint model for seeds and filters them for meaning-distinctness before writing (skill `faceless-flint`). Read and prune its output; it is a draft source, not a researcher.

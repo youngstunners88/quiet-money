@@ -1,0 +1,105 @@
+{
+  "title": "The Fake Original Price Trap That Drains Your Wallet",
+  "hook_text": "THE FAKE ORIGINAL PRICE TRAP",
+  "beats": [
+    {
+      "say": "You walk past a rack of shirts marked down from $100 to $40.",
+      "callout": "",
+      "visual": "A row of clothes hanging on a rack in a dim retail store, shot from behind with shallow depth of field."
+    },
+    {
+      "say": "It feels like a massive steal.",
+      "callout": "",
+      "visual": "A close-up of hands sliding a clothes hanger along a metal bar in a boutique."
+    },
+    {
+      "say": "Why does that crossed-out number make you instantly reach for your wallet?",
+      "callout": "",
+      "visual": "A leather wallet resting on a dark wooden counter under a warm spotlight."
+    },
+    {
+      "say": "Most people assume they are saving $60 on a good shirt.",
+      "callout": "ASSUME VS REALITY",
+      "visual": "A price tag dangling from a garment, blurred in the background."
+    },
+    {
+      "say": "That is anchoring bias at work.",
+      "callout": "",
+      "visual": "A dark storefront window reflecting streetlights at dusk."
+    },
+    {
+      "say": "Retailers set a high fake reference point so the real price looks cheap by comparison.",
+      "callout": "THE ANCHOR",
+      "visual": "A close-up of a cash register screen showing a glowing digital readout in a dark room."
+    },
+    {
+      "say": "How much does that habit actually cost you over a single year?",
+      "callout": "RE-HOOK",
+      "visual": "A person counting paper bills on a minimalist wooden desk."
+    },
+    {
+      "say": "If you buy three unnecessary items because they look marked down, you burn $1,825 a year.",
+      "callout": "$1,825 A YEAR",
+      "visual": "A shopping bag sitting alone on a polished concrete floor."
+    },
+    {
+      "say": "That is a $5 a day leak.",
+      "callout": "",
+      "visual": "A single coin dropping onto a dark surface, captured in macro."
+    },
+    {
+      "say": "That same $5 a day invested monthly at 8% for 30 years turns into $226,659.",
+      "callout": "$226,659 PAYOFF",
+      "visual": "A growth chart sketched in chalk on a dark chalkboard, softly lit from the side."
+    },
+    {
+      "say": "Break the anchor by asking one simple question before you buy.",
+      "callout": "STEP ONE",
+      "visual": "A hand closing a leather notebook with a brass pen resting beside it."
+    },
+    {
+      "say": "Would you pay the sale price if it had no original tag?",
+      "callout": "",
+      "visual": "A blank white price tag hanging against a neutral gray wall."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "FOLLOW",
+      "visual": "A person walking down a quiet city sidewalk away from the camera at twilight."
+    }
+  ],
+  "caption": "That crossed-out price tag is doing math on your brain. #moneypsychology #personalfinance #spendinghabits #smartmoney #financialliteracy",
+  "description": "Anchoring bias tricks your brain into buying useless items just because they look marked down. Here is how to spot the trap and keep your cash.",
+  "hashtags": [
+    "#moneypsychology",
+    "#personalfinance",
+    "#spendinghabits",
+    "#smartmoney",
+    "#financialliteracy"
+  ],
+  "first_comment": "What is the last item you bought just because it was on sale?",
+  "facts": [
+    {
+      "claim": "$5 a day habit equals $1,825 a year",
+      "basis": "$5/day habit = $1,825/year"
+    },
+    {
+      "claim": "$100/month invested at 8% for 30 years is $149,036; $5/day at 8% for 30 years is $226,659",
+      "basis": "$5/day habit = $1,825/year; invested monthly at 8% for 30 years = $226,659"
+    }
+  ],
+  "source": "llm",
+  "pillar": "psychology",
+  "look": "",
+  "loop_map": {
+    "stakes": "You walk past a rack of shirts marked down from $100 to $40.",
+    "big_question": "Why does that crossed-out number make you instantly reach for your wallet?",
+    "assume": "Most people assume they are saving $60 on a good shirt.",
+    "reveal": "Retailers set a high fake reference point so the real price looks cheap by comparison.",
+    "rehook_beats": [
+      7,
+      11
+    ],
+    "payoff_beat": 10
+  }
+}

@@ -138,6 +138,13 @@ def cmd_ideas(args) -> int:
     return 0
 
 
+def cmd_caption_check(args) -> int:
+    from faceless import capcheck
+    res = capcheck.check(Path(args.media), Path(args.ass), args.max)
+    print(json.dumps(res, indent=1))
+    return 0 if res["ok"] else 1
+
+
 def cmd_gauntlet(args) -> int:
     from faceless import gauntlet
     from faceless.pipeline import ideate, package
@@ -317,6 +324,16 @@ def cmd_flow(args) -> int:
         return 0
     path = flow.shotlist(args.day)
     print(path.read_text(encoding="utf-8"))
+    return 0
+
+
+def cmd_cineedit(args) -> int:
+    from pathlib import Path
+    from faceless import cineedit
+    src = Path(args.clip)
+    out = Path(args.out) if args.out else src.parent / f"{src.stem}-edit.mp4"
+    res = cineedit.edit(src, out, impact=args.impact, card_line=args.card)
+    print(json.dumps(res, indent=2))
     return 0
 
 
@@ -680,6 +697,29 @@ def cmd_brain(args) -> int:
         return 0
     print("usage: brain ingest URL --file PATH --method exa|owner|tokconnect|transcriptx|muapi | check | index | search WORDS | watch | fetch VIDEO_ID --paid | status")
     return 1
+
+
+def cmd_flint(args) -> int:
+    """Flint, the free extra hands: status (measured success rates) | ask TEXT | seeds [-n N] [--pillar P] [--dry-run]. Never on the critical path."""
+    from faceless import flint
+    from faceless.providers import ProviderError, ProviderUnavailable
+    try:
+        if args.action == "status":
+            print(json.dumps(flint.status(), indent=1))
+        elif args.action == "ask" and args.rest:
+            print(flint.ask(" ".join(args.rest), task="cli-ask"))
+        elif args.action == "seeds":
+            res = flint.seeds(args.n, args.pillar, dry_run=args.dry_run)
+            for r in res["rows"]:
+                print(f"- [{r['pillar']}] {r['topic']}  | {r['hook']}")
+            print(f"asked {res['asked']}, returned {res['returned']}, phrase-clean {res['phrase_clean']}, kept {res['kept']}, written {res['written']}")
+        else:
+            print("usage: flint status | ask TEXT | seeds [-n N] [--pillar P] [--dry-run]")
+            return 2
+    except (ProviderError, ProviderUnavailable) as e:
+        print(f"flint: {e}")
+        return 1
+    return 0
 
 
 def cmd_marketing(args) -> int:
@@ -1148,6 +1188,12 @@ def main(argv: list[str] | None = None) -> int:
     fl.add_argument("action", nargs="?", choices=["shotlist", "status"], default="shotlist")
     fl.add_argument("--day", help="YYYY-MM-DD (default today)")
     fl.set_defaults(fn=cmd_flow)
+    ce = sub.add_parser("cineedit", help="cinematic edit of a Flow clip: speed ramps into the hit, adaptive grade, grain, brand, end card")
+    ce.add_argument("clip")
+    ce.add_argument("--impact", type=float, required=True, help="seconds into the SOURCE clip where the peak lands")
+    ce.add_argument("--out", help="output path (default <clip>-edit.mp4)")
+    ce.add_argument("--card", default="QUIET MONEY", help="end-card line")
+    ce.set_defaults(fn=cmd_cineedit)
     sub.add_parser("products", help="build the spreadsheet products, recalculate them in LibreOffice, check against Python math, write listings").set_defaults(fn=cmd_products)
     pl = sub.add_parser("planner", help="the Daily Planner product: `build` the PDFs, `check` the gauntlet, `ingest <folder>` the owner's pictures, `clean` the handle off them, `inventory`, `cover`, `posters-make` (typeset the studio's twelve wellness posters)")
     pl.add_argument("action", choices=["build", "check", "ingest", "clean", "inventory", "cover", "posters-make"])
@@ -1187,6 +1233,13 @@ def main(argv: list[str] | None = None) -> int:
     va = sub.add_parser("variety", help="sameness audit of the last N videos (YouTube's inauthentic-content risk); writes analytics/variety.md")
     va.add_argument("-n", type=int, default=20)
     va.set_defaults(fn=cmd_variety)
+    fl = sub.add_parser("flint", help="Flint, the free extra hands (side work only, never the daily path): status | ask TEXT | seeds [-n N] [--pillar P] [--dry-run]")
+    fl.add_argument("action", choices=["status", "ask", "seeds"])
+    fl.add_argument("rest", nargs="*")
+    fl.add_argument("-n", type=int, default=12)
+    fl.add_argument("--pillar", default="escape")
+    fl.add_argument("--dry-run", action="store_true")
+    fl.set_defaults(fn=cmd_flint)
     br = sub.add_parser("brain", help="the Brain: ingest URL --file PATH --method M | check | index | search WORDS | watch | fetch VIDEO_ID --paid | status")
     br.add_argument("action", choices=["ingest", "check", "index", "search", "watch", "fetch", "status"])
     br.add_argument("rest", nargs="*")
@@ -1339,6 +1392,11 @@ def main(argv: list[str] | None = None) -> int:
     i.add_argument("--pillar", required=True)
     i.add_argument("--n", type=int, default=1)
     i.set_defaults(fn=cmd_ideas)
+    cc = sub.add_parser("caption-check", help="measure caption drift against the speech in a finished video (hand-built ones too)")
+    cc.add_argument("media")
+    cc.add_argument("ass")
+    cc.add_argument("--max", type=float, default=0.35)
+    cc.set_defaults(fn=cmd_caption_check)
     g = sub.add_parser("gauntlet", help="re-run all gates on a finished job")
     g.add_argument("job")
     g.add_argument("--no-judge", action="store_true")

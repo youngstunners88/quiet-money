@@ -63,3 +63,6 @@ Before writing a script, offer, listing or plan: `python -m faceless brain searc
 - TranscriptX 401 "no bearer token": not connected. The owner adds `https://transcriptx.ai/mcp` as a custom connector in claude.ai.
 - Gaps mid-sentence: music over speech. Mark the note partial.
 - `brain check` flags a quote: shorten it to 25 words or paraphrase.
+
+## Extra hands
+Flint (`faceless-flint`) may draft a note skeleton from a transcript to save tokens: `flint.ask(prompt, task="brain-draft")`. You still read every word of the source, verify each claim label, and run `brain check`.

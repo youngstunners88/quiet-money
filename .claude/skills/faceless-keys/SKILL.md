@@ -25,3 +25,4 @@ written, and a key's value is never printed. States: `works`, `rejected` (bad or
 - OpenRouter below $5 or Muapi below $5: say so in the report; the studio's paid fallbacks are what run out first.
 
 `references/tools.md` lists each tool, what it is for here, which variable is live (as of the last check), what it costs, and its known gotchas.
+- Flint (`recursive/flint-v1.0:free`) uses the same `OPENROUTER_API_KEY` but is extra capacity only: `python -m faceless flint status`, skill `faceless-flint`. It is never in `[llm].chain`.

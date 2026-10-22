@@ -1,0 +1,76 @@
+{
+  "id": "2026-10-21-s3-psychology-anchoring-bias",
+  "pillar": "psychology",
+  "topic": "Anchoring Bias",
+  "day": "2026-10-21",
+  "slot": 3,
+  "status": "published",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-21T09:33:57Z",
+      "words": 145
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-21T09:34:18Z",
+      "seconds": 61.335,
+      "provider": "gemini"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-21T09:34:53Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-21T09:37:39Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-21T09:37:39Z",
+      "score": 94
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-21T09:37:40Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-10-21T09:37:43Z",
+      "local": "2026-10-21T18:30:00-04:00",
+      "youtube": null
+    }
+  ],
+  "artifacts": {
+    "angle": "How seeing a fake original price crossed out makes your brain buy useless items on sale.",
+    "title": "The Fake Original Price Trap That Drains Your Wallet",
+    "style": "cinematic",
+    "video": "/home/user/quiet-money/production/output/2026-10-21/2026-10-21-s3-psychology-anchoring-bias/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-21/2026-10-21-s3-psychology-anchoring-bias/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-10-21/slot4-psychology",
+        "post_at": "2026-10-21T18:30:00-04:00"
+      },
+      "youtube": {
+        "skipped": "YouTube refused the upload session (HTTP 429): quota or rate limit; it resets at midnight Pacific"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 94,
+    "passed": true
+  },
+  "cost": {
+    "tts:gemini:chars": 766
+  },
+  "notes": []
+}

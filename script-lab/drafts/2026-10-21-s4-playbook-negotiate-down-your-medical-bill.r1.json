@@ -1,0 +1,96 @@
+{
+  "title": "How to Lower Your Medical Bill in 3 Steps",
+  "hook_text": "DON'T PAY YOUR HOSPITAL BILL YET",
+  "beats": [
+    {
+      "say": "A $3,000 hospital bill often hides plain errors you're expected to pay without asking.",
+      "callout": "",
+      "visual": "Cinematic close-up of a blurred paper medical bill sitting on a dark wooden desk in low warm light."
+    },
+    {
+      "say": "So why do most patients blindly pay the full summary amount on the first page?",
+      "callout": "SUMMARY TOTAL",
+      "visual": "Silhouette of a person sitting quietly at a desk, looking down at a document in late afternoon shadow."
+    },
+    {
+      "say": "You assume medical bills are fixed fees, but summary bills obscure duplicate charges and unreceived care.",
+      "callout": "FIXED OR FLEXIBLE",
+      "visual": "Macro shot of a fountain pen resting over a folded paper invoice under soft warm lighting."
+    },
+    {
+      "say": "How do you uncover these hidden errors before they wreck your bank account?",
+      "callout": "",
+      "visual": "Low angle shot of an office desk phone receiver resting on a dark polished counter."
+    },
+    {
+      "say": "Step one. Call the billing department today and ask for an itemized bill with CPT codes.",
+      "callout": "STEP ONE",
+      "visual": "Hand holding a dark smartphone from behind, showing a phone call screen from a steep angle."
+    },
+    {
+      "say": "Step two. Compare every code online to check for inflated charges or duplicate line items.",
+      "callout": "STEP TWO",
+      "visual": "Side profile silhouette of someone sitting before a laptop screen glowing in a dim room."
+    },
+    {
+      "say": "What exact words force the hospital to review and lower your balance immediately?",
+      "callout": "",
+      "visual": "Cinematic shot of a quiet hospital hallway with soft ambient sunlight spilling across the polished floor."
+    },
+    {
+      "say": "Step three. Say, I'm auditing this bill and need you to justify these specific codes.",
+      "callout": "STEP THREE",
+      "visual": "Close-up of a hand holding a pen, poised above a notepad beside a sleek calculator."
+    },
+    {
+      "say": "Auditing works because hospitals often drop unprovable charges rather than defend inflated line items.",
+      "callout": "",
+      "visual": "A clean desk with a calculator and folded document illuminated by soft morning sunlight."
+    },
+    {
+      "say": "Putting a $3,000 balance on a card at 24% APR costs $4,887 in interest on minimum payments.",
+      "callout": "$4,887 INTEREST",
+      "visual": "A black credit card sitting alone on a dark polished stone tabletop."
+    },
+    {
+      "say": "Auditing your bill keeps your money in your pocket instead of funding hospital billing mistakes.",
+      "callout": "",
+      "visual": "Warm backlit silhouette of a person standing quietly by a window overlooking a city street."
+    },
+    {
+      "say": "Never pay a summary bill blindly. Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "Cinematic dark background with subtle warm light reflections across clean wooden desk textures."
+    }
+  ],
+  "caption": "Never pay a medical summary bill without asking for the itemized breakdown first. Here is how to audit it in 3 steps.\n\n#personalfinance #moneytips #financialliteracy #medicalbills #quietmoney",
+  "description": "Learn how to reduce your hospital bill using the Itemized Audit Method. Requesting CPT codes and questioning specific line items can prevent overpaying or taking on high-interest credit card debt.",
+  "hashtags": [
+    "#personalfinance",
+    "#moneytips",
+    "#financialliteracy",
+    "#medicalbills",
+    "#quietmoney"
+  ],
+  "first_comment": "Have you ever requested an itemized bill from a hospital?",
+  "facts": [
+    {
+      "claim": "A $3,000 credit card balance at 24% APR paying minimums costs $4,887 in interest.",
+      "basis": "$3,000 credit card at 24% APR paying only the minimum (1% + interest, min $25): 183 months (~15 years), $4,887 interest"
+    }
+  ],
+  "source": "llm",
+  "pillar": "playbook",
+  "look": "",
+  "loop_map": {
+    "stakes": "A $3,000 medical bill containing unverified summary charges.",
+    "big_question": "Why do patients blindly pay summary bills, and how do you reduce them?",
+    "assume": "Medical summary bills are accurate and non-negotiable.",
+    "reveal": "Itemized auditing reveals duplicate or unprovided charges that hospitals quickly drop.",
+    "rehook_beats": [
+      4,
+      7
+    ],
+    "payoff_beat": 11
+  }
+}

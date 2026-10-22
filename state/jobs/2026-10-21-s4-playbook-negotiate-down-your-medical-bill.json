@@ -1,0 +1,76 @@
+{
+  "id": "2026-10-21-s4-playbook-negotiate-down-your-medical-bill",
+  "pillar": "playbook",
+  "topic": "Negotiate Down Your Medical Bill Using the Itemized Audit Method",
+  "day": "2026-10-21",
+  "slot": 4,
+  "status": "published",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-21T09:43:41Z",
+      "words": 178
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-21T09:44:08Z",
+      "seconds": 62.096,
+      "provider": "gemini"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-21T09:44:30Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-21T09:46:47Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-21T09:46:47Z",
+      "score": 98
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-21T09:46:48Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-10-21T09:46:50Z",
+      "local": "2026-10-21T21:00:00-04:00",
+      "youtube": null
+    }
+  ],
+  "artifacts": {
+    "angle": "Request an itemized hospital bill and dispute line-item overcharges using a specific script.",
+    "title": "How to Lower Your Medical Bill in 3 Steps",
+    "style": "cinematic",
+    "video": "/home/user/quiet-money/production/output/2026-10-21/2026-10-21-s4-playbook-negotiate-down-your-medical-bill/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-21/2026-10-21-s4-playbook-negotiate-down-your-medical-bill/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-10-21/slot5-playbook",
+        "post_at": "2026-10-21T21:00:00-04:00"
+      },
+      "youtube": {
+        "skipped": "YouTube refused the upload session (HTTP 429): quota or rate limit; it resets at midnight Pacific"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 98,
+    "passed": true
+  },
+  "cost": {
+    "tts:gemini:chars": 1073
+  },
+  "notes": []
+}
