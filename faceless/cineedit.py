@@ -38,6 +38,10 @@ ENCODE_TIMEOUT, PROBE_TIMEOUT = 900, 120      # no ffmpeg call may hang the run 
 GRAIN = "noise=alls=5:allf=t+u"
 VIGNETTE = "vignette=PI/4.2"
 BUILD_SECONDS = 3.0        # the skill's pacing: establish 0.8-1.5s, build 1-3s, then the peak
+SLOW = 0.65                # the slow-motion depth into the hit. Deeper than this and the judder shows.
+# Slowing 24fps footage just repeats frames: every second frame comes out identical and the motion stutters.
+# Optical flow invents the in-between frames instead, which is what makes a ramp look filmed rather than stretched.
+SMOOTH = "minterpolate=fps={fps}:mi_mode=mci:mc_mode=aobmc:me_mode=bidir:vsbmc=1" 
 
 
 def _run(cmd: list[str]) -> None:
@@ -82,7 +86,7 @@ def ramp_plan(duration: float, impact: float) -> list[tuple[float, float, float]
         segs.append((1.4, pre, round(speed, 3)))
     elif pre > 0:
         segs.append((0.0, pre, 1.0))
-    segs.append((pre, impact, 0.5))                 # slow-mo into the hit
+    segs.append((pre, impact, SLOW))                # slow-mo into the hit
     segs.append((impact, strike, 2.0))              # the strike snaps past
     if after > strike:
         segs.append((strike, after, 0.6))           # aftermath, slightly slow
@@ -94,9 +98,11 @@ def _segments(src: Path, segs: list[tuple[float, float, float]], work: Path) -> 
     parts = []
     for i, (a, b, speed) in enumerate(segs):
         out = work / f"seg{i:02d}.mp4"
+        # Only a slowed segment needs the interpolation, and it is the expensive filter, so the rest skip it.
+        vf = f"setpts=PTS/{speed}," + (SMOOTH.format(fps=FPS) if speed < 1.0 else f"fps={FPS}")
         _run(["ffmpeg", "-hide_banner", "-loglevel", "error", "-y", "-ss", f"{a:.3f}", "-to", f"{b:.3f}", "-i", str(src),
               "-filter_complex",
-              f"[0:v]setpts=PTS/{speed},fps={FPS}[v];[0:a]atempo={speed},asetpts=N/SR/TB[a]",
+              f"[0:v]{vf}[v];[0:a]atempo={speed},asetpts=N/SR/TB[a]",
               "-map", "[v]", "-map", "[a]", "-c:v", "libx264", "-crf", "16", "-preset", "medium",
               "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "192k", str(out)])
         parts.append(out)
@@ -168,6 +174,12 @@ def edit(src: Path, out: Path, *, impact: float, card_line: str = "QUIET MONEY",
               "-filter_complex", ";".join(chain), "-map", last, "-map", "0:a",
               "-c:v", "libx264", "-crf", "17", "-preset", "medium", "-pix_fmt", "yuv420p",
               "-c:a", "aac", "-b:a", "192k", str(body)])
+        if card_seconds <= 0:
+            shutil.copy2(body, out)
+            return {"source": str(src), "out": str(out), "source_seconds": round(duration, 2),
+                    "edited_seconds": round(probe_duration(out), 2), "impact_at": impact,
+                    "impact_after_ramp": round(hit, 2), "mean_luma": round(luma, 1), "grade": grade_name,
+                    "flash_alpha": flash_alpha, "segments": [[round(a, 2), round(b, 2), s] for a, b, s in segs]}
         card = work / "card.mp4"
         _run(["ffmpeg", "-hide_banner", "-loglevel", "error", "-y", "-loop", "1", "-t", f"{card_seconds}",
               "-i", str(card_png), "-f", "lavfi", "-t", f"{card_seconds}", "-i", "anullsrc=r=48000:cl=stereo",

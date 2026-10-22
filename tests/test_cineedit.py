@@ -4,8 +4,16 @@ from faceless import cineedit
 def test_ramp_slows_into_the_hit_then_snaps_through_it():
     segs = cineedit.ramp_plan(10.0, 8.9)
     speeds = {round(a, 2): s for a, b, s in segs}
-    assert speeds[7.9] == 0.5, "the second before the hit runs in slow motion"
+    assert speeds[7.9] == cineedit.SLOW < 1.0, "the second before the hit runs in slow motion"
     assert speeds[8.9] == 2.0, "the strike itself snaps past"
+
+
+def test_slow_motion_is_interpolated_not_frame_doubled():
+    """Repeating frames is what made the first batch judder; a slowed segment is rebuilt with optical flow."""
+    import inspect
+    seg_src = inspect.getsource(cineedit._segments)
+    assert "SMOOTH" in seg_src and "speed < 1.0" in seg_src
+    assert cineedit.SLOW > 0.5, "too deep a slow shows its seams even interpolated"
 
 
 def test_every_speed_is_usable_by_atempo():
