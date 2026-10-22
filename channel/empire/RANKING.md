@@ -8,6 +8,7 @@ Unblocked and buildable without the owner; only the launch needs them.
 | id | opportunity | rail | stage | score | next |
 |---|---|---|---|---|---|
 | C4 | Audio edition: daily 60 s + weekly podcast episode | content | vetted | 40.5 | agent builds it now. Launch needs the owner: Open a free podcast host account |
+| O14 | Mistral as a fourth script provider (resilience) | ops | vetted | 37.5 | agent builds it now. |
 | C3 | Weekly long-form: 'Money Rules Weekly' (8-10 min, 16:9, chapters) | content | vetted | 36.0 | agent builds it now. Launch needs the owner: Create the YouTube, TikTok and Instagram accounts (@quietmoneyrule), connect them, and turn on auto-posting |
 | P6 | Fillable PDF versions of the printable pack | product | vetted | 36.0 | agent builds it now. Launch needs the owner: Open a Gumroad shop (and Etsy for printables); approve prices and listings |
 | S2 | Fiverr studio mode: concept sheets in minutes for logo/art/character gigs | service | vetted | 16.2 | agent builds it now. Launch needs the owner: List the gig on your Fiverr account and handle client messages |
@@ -37,8 +38,6 @@ The owner's act is the work.
 |---|---|---|---|---|---|
 | O2 | Identity layer: one owner-controlled domain mailbox with plus-addresses per platform | ops | vetted | 86.4 | owner: Register a domain with one mailbox (the identity layer) |
 | O3 | Metrics loop: YouTube via Composio, others pasted weekly | ops | vetted | 67.5 | owner: Create the YouTube, TikTok and Instagram accounts (@quietmoneyrule), connect them, and turn on auto-posting |
-| O14 | Mistral as a fourth script provider (resilience) | ops | vetted | 37.5 | owner: Say yes to using the Mistral key already in the environment (MINSTRAL_API_KEY) as a fallback script provider |
-| O15 | Site analytics with PostHog: visits, calculator use and clicks to the shop | ops | vetted | 30.0 | owner: Say yes to using the PostHog key already in the environment, and add its snippet id to studio.toml [site] |
 | O5 | Go live: channel accounts + auto-posting (Upload-Post) | ops | vetted | 30.0 | owner: Create the YouTube, TikTok and Instagram accounts (@quietmoneyrule), connect them, and turn on auto-posting |
 | O16 | Etsy draft rail: create DRAFT listings through the Etsy API, never publish | ops | idea | 2.56 | owner: After the first listings are live, create an Etsy developer app and give the studio its keystring and a draft-only token |
 
@@ -58,6 +57,7 @@ The owner's act is the work.
 ## Waiting on another item
 | id | opportunity | rail | stage | score | next |
 |---|---|---|---|---|---|
+| O15 | Site analytics with PostHog: visits, calculator use and clicks to the shop | ops | vetted | 30.0 | waits for O3 |
 | R1 | YouTube Partner Program + TikTok Creator Rewards | partnership | vetted | 13.5 | waits for C3 |
 
 ## Ideas to validate cheaply
@@ -83,8 +83,6 @@ The owner's act is the work.
 - **List the gig on your Fiverr account and handle client messages**: 64.2 points (S1, S2)
 - **Look at a sample video with model-designed motion scenes and say go (studio.toml [production.sketch] mode = "on", plus the approval constant in tests/test_hygiene.py)**: 45.0 points (C9)
 - **Open a free podcast host account**: 40.5 points (C4)
-- **Say yes to using the Mistral key already in the environment (MINSTRAL_API_KEY) as a fallback script provider**: 37.5 points (O14)
-- **Say yes to using the PostHog key already in the environment, and add its snippet id to studio.toml [site]**: 30.0 points (O15)
 - **Create a free FRED API key (fred.stlouisfed.org) and add FRED_API_KEY to the environment**: 21.6 points (O17)
 - **Open a second-language channel per platform (Spanish first) and approve machine translation with a native-speaker spot check**: 15.4 points (C7)
 - **Send the drafted collaboration notes yourself (the studio never sends a message in your name)**: 9.7 points (O19)

@@ -1111,6 +1111,18 @@ def cmd_brand(_args) -> int:
     return 0
 
 
+def cmd_hq(args) -> int:
+    """One snapshot of the whole business for the owner's HQ dashboard; reads only."""
+    from faceless import hq
+    s = hq.snapshot()
+    if args.out:
+        from faceless.fsutil import write_atomic
+        write_atomic(Path(args.out), json.dumps(s, indent=1, ensure_ascii=False))
+        print(f"wrote {args.out}")
+    print(json.dumps(s, indent=1, ensure_ascii=False) if args.json else hq.summary(s))
+    return 0
+
+
 def cmd_outbound(args) -> int:
     """The service desk's outbound engine: the daily hunt for clients of the Web3 video + KOL service. It never contacts anyone."""
     from faceless import outbound
@@ -1266,6 +1278,10 @@ def main(argv: list[str] | None = None) -> int:
     br.add_argument("--title")
     br.add_argument("--paid", action="store_true")
     br.set_defaults(fn=cmd_brain)
+    hqp = sub.add_parser("hq", help="one snapshot of the whole business for the HQ dashboard (reads only); --json for the document it reads")
+    hqp.add_argument("--json", action="store_true")
+    hqp.add_argument("--out", help="also write the JSON snapshot to this path")
+    hqp.set_defaults(fn=cmd_hq)
     ob = sub.add_parser("outbound", help="service desk: run (the daily client hunt) | status | candidates | review | lead <slug> | package <slug> | outcome <slug> <event>")
     ob.add_argument("action", choices=["run", "status", "candidates", "review", "lead", "package", "outcome"])
     ob.add_argument("rest", nargs="*")
