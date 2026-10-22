@@ -27,15 +27,17 @@ def settings() -> dict:
     return {"daily_usd": 0.10, "per_call_usd": 0.01, "max_runs": 5, "temperature": 0.4, "max_tokens": 2000, **config.load().get("panel", {})}
 
 
-def ask(model: str, brief: str) -> dict:
-    """One answer: {out (parsed JSON or {"error": ...}), usd, model_used}."""
+def ask(model: str, brief: str, max_tokens: int | None = None) -> dict:
+    """One answer: {out (parsed JSON or {"error": ...}), usd, model_used}. `max_tokens` raises the answer budget for one call: a reasoning
+    model given a long brief and a small budget spends it all on reasoning and returns empty text (seen on the service desk's research
+    briefs, 2026-10-22), which reads as an unreadable answer."""
     s, key = settings(), config.env("OPENROUTER_API_KEY")
     if not key:
         raise ProviderUnavailable("OPENROUTER_API_KEY not set")
     safety.guard("panel", s["per_call_usd"])
     if not ledger.allow_usd(PROVIDER, s["per_call_usd"], s["daily_usd"]):
         raise ProviderUnavailable(f"panel daily cap ${s['daily_usd']} reached")
-    body = {"model": model, "max_tokens": s["max_tokens"], "temperature": s["temperature"], "reasoning": {"effort": "low"},      # a reasoning model with a small budget returns empty text
+    body = {"model": model, "max_tokens": max_tokens or s["max_tokens"], "temperature": s["temperature"], "reasoning": {"effort": "low"},      # a reasoning model with a small budget returns empty text
             "messages": [{"role": "user", "content": brief}]}
     r = http().post("https://openrouter.ai/api/v1/chat/completions", json=body, timeout=120, headers={"Authorization": f"Bearer {key}"})
     if r.status_code != 200:

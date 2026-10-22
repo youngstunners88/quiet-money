@@ -218,7 +218,7 @@ Read with `python -m faceless intake` (dossiers in `repo-farm/intake/2026-10-12/
 
 ### Decisions only the owner can make
 
-- **firecrawl-cli (npm):** Say whether the Firecrawl key should be used for research briefs; do not run `init --all` on any machine that holds other agents' skills.
+- **firecrawl-cli (npm):** ANSWERED 2026-10-22: the Firecrawl key is approved for research and page reads, as is every other tool and key in the environment (CLAUDE.md rule 16). The CLI itself stays parked - we call the REST API from our own provider code behind a cap (`faceless/outbound.py`), and `init --all` is still never run on a machine that holds other agents' skills.
 - **icm-architect (RinDig, MIT):** none
 - **FreeConvert (freeconvert.com, API v1):** Create a free FreeConvert account and put the API token in the environment as FREECONVERT_API_KEY (intake never signs up for anyone).
 - **Photopea (photopea.com, live-messaging API):** none

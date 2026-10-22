@@ -56,3 +56,10 @@ claude-code-orchestrator/node_modules/
 claude-code-orchestrator/dist/
 claude-code-orchestrator/logs/
 state/brain/skill-drafts/
+
+# The service desk's working data: real company names, researched signals and unsent outreach copy
+# do not belong in a public repo. The schema, templates, positioning and proof files ARE committed.
+channel/services/web3-video/leads/*.json
+channel/services/web3-video/outbound/*.json
+channel/services/web3-video/outcomes.jsonl
+channel/services/web3-video/reviews/

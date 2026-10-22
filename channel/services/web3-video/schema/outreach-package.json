@@ -1,0 +1,21 @@
+{
+  "$comment": "One package = one file at outbound/<slug>.json, written only for leads the scoring step marked pursue. Nothing here is sent by the engine; the owner sends.",
+  "slug": "project-name",
+  "lead": "../leads/project-name.json",
+  "written": "2026-10-22",
+  "channel": "x-dm | email | business-form",
+  "contact": {"route": "...", "value": "..."},
+  "angle": "which PACKAGES.md angle this uses",
+  "tier_pitched": "test drop | launch pack | monthly retainer | campaign",
+  "proof_block": "volume | range | receipts | named | control",
+  "personalization": [
+    {"claim": "the specific thing we noticed about them", "source": "https://..."}
+  ],
+  "first_touch": {"subject": "email only", "body": "..."},
+  "followups": [
+    {"step": 1, "days_after": 3, "body": "..."},
+    {"step": 2, "days_after": 7, "body": "..."}
+  ],
+  "gates": {"personalization": null, "spam_risk": null, "promise_free": null, "confidence": null, "verdict": "pass | hold | rewrite"},
+  "approval": {"owner_approved": false, "approved_on": null, "sent_on": null, "edited_by_owner": null}
+}

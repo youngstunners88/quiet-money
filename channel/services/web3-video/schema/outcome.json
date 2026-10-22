@@ -1,0 +1,14 @@
+{
+  "$comment": "One line appended to outcomes.jsonl per event. This is the only training signal the loop has; an unrecorded reply teaches nothing.",
+  "day": "2026-10-22",
+  "slug": "project-name",
+  "event": "sent | no-reply-14d | reply-positive | reply-negative | reply-question | call-booked | quoted | closed | lost | unsubscribe | complaint",
+  "step": 0,
+  "channel": "x-dm | email | business-form",
+  "angle": "...",
+  "tier_pitched": "...",
+  "proof_block": "...",
+  "scores": {"fit": 0.0, "budget": 0.0, "gap": 0.0, "pursue": "...", "confidence": 0.0},
+  "value_usd": null,
+  "note": "what they actually said, in one line, their words"
+}
