@@ -446,6 +446,7 @@ def test_failed_slot_never_fails_the_previous_finished_job(tmp_path, monkeypatch
     def produce(job, **kw):
         job.status = "packaged"
     monkeypatch.setattr(orchestrator, "produce", produce)
+    monkeypatch.setattr(orchestrator.publisher, "post_due_comments", lambda: [])   # daily() posts due first comments over the REAL jobs: never from a test
     orchestrator.daily(5)
 
 
@@ -569,6 +570,7 @@ def test_topic_error_does_not_fail_previous_slot(monkeypatch):
     monkeypatch.setattr(orchestrator, "write_daily_report", lambda jobs: None)
     monkeypatch.setattr(orchestrator.Paths, "ensure", classmethod(lambda cls: None))
     monkeypatch.setattr("faceless.events.JOURNAL", Path("/dev/null"))
+    monkeypatch.setattr(orchestrator.publisher, "post_due_comments", lambda: [])   # see above: it walks the real jobs
     jobs = orchestrator.daily(2)
     assert [j.status for j in jobs] == ["packaged"]
 
