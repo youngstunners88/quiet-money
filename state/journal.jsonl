@@ -7411,3 +7411,4 @@
 {"ts": "2026-10-22T10:02:02Z", "t": 1792663322.403, "actor": "engine", "type": "YOUTUBE_API", "path": "videos", "method": "GET", "status": 200}
 {"ts": "2026-10-22T10:02:08Z", "t": 1792663328.964, "actor": "engine", "type": "COMPOSIO_SESSION", "user": "quiet-money-studio", "session_hash": "85b1693a"}
 {"ts": "2026-10-22T10:02:09Z", "t": 1792663329.65, "actor": "engine", "type": "COMPOSIO_EXECUTE", "tool": "YOUTUBE_LIST_CHANNELS", "ok": true, "log_id": "log_YL8U_IhKM6ZQ", "job": "song-breathe"}
+{"ts": "2026-10-22T16:46:26Z", "t": 1792687586.734, "actor": "engine", "type": "PROVIDER_OK", "capability": "tts", "provider": "edge", "job": "podcast-2026-10-21", "ms": 12636}
