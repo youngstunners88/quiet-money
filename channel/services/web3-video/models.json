@@ -1,0 +1,12 @@
+{
+  "note": "Job -> free-model assignment for the service desk. The owner named the models; `slug` must be resolved against OpenRouter's live model list before first use (see service-scoring, 'Resolve the slugs') and left empty until it is verified. Empty slug = that job falls back to `fallback`. Nothing here is read by the daily video engine.",
+  "resolved_on": null,
+  "jobs": {
+    "research": {"models": ["Nemotron 3 Ultra", "Nemotron 3.5 Super VL", "Inkling"], "slug": [], "fallback": "agent", "output": "lead card"},
+    "scoring": {"models": ["Jev"], "slug": ["typesafe/jev-1.13"], "fallback": "heuristic", "output": "typed decisions"},
+    "first_touch": {"models": ["Nemotron 3.5 Lightning", "MiniMax M3.1 Flash", "Flint"], "slug": [], "fallback": "agent", "output": "first message"},
+    "followups": {"models": ["Nemotron 3.5 Lightning", "MiniMax M3.1 Flash"], "slug": [], "fallback": "agent", "output": "3-5 step sequence"},
+    "case_study": {"models": ["Flint", "North Mini Code"], "slug": [], "fallback": "agent", "output": "case-study blurb"},
+    "packaging": {"models": ["Nemotron 3 Ultra"], "slug": [], "fallback": "agent", "output": "tier + angle suggestion"}
+  }
+}

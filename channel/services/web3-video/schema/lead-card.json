@@ -1,0 +1,28 @@
+{
+  "$comment": "One lead = one file at leads/<slug>.json. Every field a model fills must carry its source URL; a field without a source is dropped, not guessed.",
+  "slug": "project-name",
+  "name": "Project Name",
+  "discovered": "2026-10-22",
+  "sources": ["https://..."],
+  "identity": {
+    "what_it_is": "one sentence",
+    "category": "defi | gaming | infra | l1-l2 | nft | exchange | wallet | other",
+    "chains": ["ethereum"],
+    "stage": "pre-launch | launched | established",
+    "size_signal": {"value": "TVL / mcap / holders as published", "source": "https://..."}
+  },
+  "social": {
+    "x": {"handle": "@...", "url": "https://...", "posts_video": false, "cadence": "posts per week, observed", "last_posts": ["what the last few were about"]},
+    "instagram": {"handle": "@...", "url": "https://...", "active": false}
+  },
+  "signals": {
+    "content_gap": "what is missing or weak, in one sentence, from what was actually seen",
+    "dated_event": {"what": "mainnet | listing | season | conference", "when": "2026-11-xx", "source": "https://..."},
+    "budget_signal": {"what": "raise | grants program | paid KOLs observed | none", "source": "https://..."},
+    "competitor_doing_video": "who in their niche already posts short-form, if seen"
+  },
+  "contact": {"route": "partnerships email | business form | DM-open X account", "value": "...", "source": "https://...", "public": true},
+  "decisions": {"fit": null, "budget": null, "gap": null, "pursue": null, "confidence": null, "asked_on": null},
+  "status": "researched | scored | drafted | queued | sent | replied | call | closed | skip | dead",
+  "skip_reason": null
+}

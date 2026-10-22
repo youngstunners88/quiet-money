@@ -14,6 +14,7 @@ humans set strategy, connect accounts, and review held videos.
 - `/distribution`: posting packs, platforms, schedule (the shipping dock)
 - `/analytics`: metrics in, pillar weights out (the scoreboard)
 - `/gauntlet`: quality gates and reports (the QA desk)
+- `/channel/services/web3-video`: the Web3 video + KOL service desk, a parallel engine to the daily machine
 - `/repo-farm`: which external repos/tools we use, park, or reject
 - `/brain`: what we learned from outside videos and posts, one note per source (the knowledge base)
 - `/faceless`: the engine (Python). `/state`: journal, jobs, ledger, decisions
@@ -86,6 +87,12 @@ humans set strategy, connect accounts, and review held videos.
 | Evaluate an outside tool, repo or list of links safely | `/repo-farm` | `.claude/skills/faceless-intake` | `faceless-intake` |
 | The call to action on every video, the link-in-bio hub page, UTM and the offer ledger | `/faceless/offer.py` | `.claude/skills/faceless-offer/references/link-rules.md` | `faceless-offer` |
 | How a video reaches people: posting rails, profile links, email list, products, measurement, what the owner does next | `/faceless/distribute.py` | `channel/empire/DISTRIBUTION.md` | `faceless-offer` |
+| Sell the Web3 video / KOL service: run the outbound loop, find clients | `/channel/services/web3-video` | `channel/services/web3-video/CONTEXT.md` | `service-outbound` |
+| Find and research target Web3 projects (public sources only) | `/channel/services/web3-video/leads` | `channel/services/web3-video/SOURCES.md` | `service-leads` |
+| Score a lead, gate an outreach draft, pick the model for a service job | `/faceless/decide.py`, `panel.py` | `channel/services/web3-video/models.json` | `service-scoring` |
+| Write a first touch, a follow-up sequence or a reply for the service | `/channel/services/web3-video/templates` | `channel/services/web3-video/templates/first-touch.md` | `service-outreach` |
+| Service positioning, packages, proof, case studies, a proposal | `/channel/services/web3-video` | `channel/services/web3-video/PROOF.md` | `service-offer` |
+| Outbound pipeline, what a lead's status is, outcomes, the weekly outbound review | `/channel/services/web3-video/schema/outcome.json` | `channel/services/web3-video/CONTEXT.md` | `service-pipeline` |
 
 ## Commands (run from this folder)
 
