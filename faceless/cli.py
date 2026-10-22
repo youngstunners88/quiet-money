@@ -1111,6 +1111,18 @@ def cmd_brand(_args) -> int:
     return 0
 
 
+def cmd_podcast(args) -> int:
+    """The weekly audio edition: build the episode for the week ending on --week (default yesterday), or show the latest."""
+    from faceless import podcast
+    if args.action == "build":
+        r = podcast.build(args.week, music=not args.no_music)
+        print(f"{r['items']} stories" + (f", {r['seconds']:.0f} s: {r['file']}\nnotes: {r['notes']}" if r.get("file") else f": {r.get('reason')}"))
+        return 0
+    weeks = sorted(p.name for p in podcast.OUT.glob("*") if (p / "EPISODE.md").exists()) if podcast.OUT.exists() else []
+    print("episodes: " + (", ".join(weeks) or "none built yet"))
+    return 0
+
+
 def cmd_hq(args) -> int:
     """One snapshot of the whole business for the owner's HQ dashboard; reads only."""
     from faceless import hq
@@ -1278,6 +1290,11 @@ def main(argv: list[str] | None = None) -> int:
     br.add_argument("--title")
     br.add_argument("--paid", action="store_true")
     br.set_defaults(fn=cmd_brain)
+    pc = sub.add_parser("podcast", help="the weekly audio edition: build [--week YYYY-MM-DD] [--no-music] | status")
+    pc.add_argument("action", nargs="?", default="status", choices=["build", "status"])
+    pc.add_argument("--week", help="the last day of the week to build (default: yesterday)")
+    pc.add_argument("--no-music", action="store_true")
+    pc.set_defaults(fn=cmd_podcast)
     hqp = sub.add_parser("hq", help="one snapshot of the whole business for the HQ dashboard (reads only); --json for the document it reads")
     hqp.add_argument("--json", action="store_true")
     hqp.add_argument("--out", help="also write the JSON snapshot to this path")
