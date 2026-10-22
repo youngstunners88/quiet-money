@@ -682,6 +682,29 @@ def cmd_brain(args) -> int:
     return 1
 
 
+def cmd_flint(args) -> int:
+    """Flint, the free extra hands: status (measured success rates) | ask TEXT | seeds [-n N] [--pillar P] [--dry-run]. Never on the critical path."""
+    from faceless import flint
+    from faceless.providers import ProviderError, ProviderUnavailable
+    try:
+        if args.action == "status":
+            print(json.dumps(flint.status(), indent=1))
+        elif args.action == "ask" and args.rest:
+            print(flint.ask(" ".join(args.rest), task="cli-ask"))
+        elif args.action == "seeds":
+            res = flint.seeds(args.n, args.pillar, dry_run=args.dry_run)
+            for r in res["rows"]:
+                print(f"- [{r['pillar']}] {r['topic']}  | {r['hook']}")
+            print(f"asked {res['asked']}, returned {res['returned']}, phrase-clean {res['phrase_clean']}, kept {res['kept']}, written {res['written']}")
+        else:
+            print("usage: flint status | ask TEXT | seeds [-n N] [--pillar P] [--dry-run]")
+            return 2
+    except (ProviderError, ProviderUnavailable) as e:
+        print(f"flint: {e}")
+        return 1
+    return 0
+
+
 def cmd_marketing(args) -> int:
     """The weekly marketing brief (reads only), or move an experiment / close an owner-queue item."""
     from faceless import marketing
@@ -1134,6 +1157,13 @@ def main(argv: list[str] | None = None) -> int:
     va = sub.add_parser("variety", help="sameness audit of the last N videos (YouTube's inauthentic-content risk); writes analytics/variety.md")
     va.add_argument("-n", type=int, default=20)
     va.set_defaults(fn=cmd_variety)
+    fl = sub.add_parser("flint", help="Flint, the free extra hands (side work only, never the daily path): status | ask TEXT | seeds [-n N] [--pillar P] [--dry-run]")
+    fl.add_argument("action", choices=["status", "ask", "seeds"])
+    fl.add_argument("rest", nargs="*")
+    fl.add_argument("-n", type=int, default=12)
+    fl.add_argument("--pillar", default="escape")
+    fl.add_argument("--dry-run", action="store_true")
+    fl.set_defaults(fn=cmd_flint)
     br = sub.add_parser("brain", help="the Brain: ingest URL --file PATH --method M | check | index | search WORDS | watch | fetch VIDEO_ID --paid | status")
     br.add_argument("action", choices=["ingest", "check", "index", "search", "watch", "fetch", "status"])
     br.add_argument("rest", nargs="*")

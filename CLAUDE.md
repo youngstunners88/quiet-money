@@ -75,6 +75,7 @@ humans set strategy, connect accounts, and review held videos.
 | Keep CLAUDE.md, the workspace CONTEXT.md files and the skills true after a build or decision (the coach's structure) | `/` | `python -m faceless context` | `faceless-context` |
 | Marketing: the weekly brief, funnel, measurement, experiments, what to tell the owner (the plan is `channel/empire/MARKETING.md`) | `/faceless/marketing.py`, `metrics.py` | `channel/empire/MARKETING.md` (section 8), `channel/empire/experiments.json` | `faceless-marketing` |
 | Learn from a video, post or channel; search what the Brain knows (transcripts in, notes out) | `/brain` | `brain/CONTEXT.md` | `faceless-brain` |
+| Free extra hands for side work (topic and script seeds, drafts); never the daily critical path | `/faceless/flint.py` | `python -m faceless flint status` | `faceless-flint` |
 | Run the business as CEO: sprints, lanes as Claude Code workers (MCP `claude-code-orchestrator`), the sprint report | `/brain/PROMPTS` | `brain/PROMPTS/ORCHESTRATOR.md` | `faceless-ceo` |
 | What to sell next: proof-first demand research, scored on a rubric (never a fake door) | `/analytics/product-hunt` | `analytics/product-hunt/README.md` | `faceless-product-hunter` |
 | A free lead magnet that leads to one paid product (checklist, sample, tracker) | `/channel/offers/lead-magnets` | `channel/offers/sprint-01/` | `faceless-lead-magnet` |

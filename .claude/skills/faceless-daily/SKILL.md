@@ -72,3 +72,6 @@ Python dependencies when the session starts. In a routine session:
 - Never delete a channel, playlist or someone else's video, replace or revoke the Composio connection, or work around a verification or policy check.
 - Never publish a `held` video without fixing its hard gates.
 - Never commit media (mp4/wav/jpg); state, scripts, and reports are what get committed.
+
+## Flint is not part of this run
+The free Flint model (`faceless-flint`) is for side work only. It is never used for scripts, the gauntlet, offers or posting; `tests/test_flint.py` fails if the pipeline imports it. If a daily run seems to use it, stop and report.

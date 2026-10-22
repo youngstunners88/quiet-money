@@ -6812,3 +6812,12 @@
 {"ts": "2026-10-21T23:59:33Z", "t": 1792627173.278, "actor": "engine", "type": "COMPOSIO_SESSION", "user": "quiet-money-studio", "session_hash": "ce02fef5"}
 {"ts": "2026-10-21T23:59:34Z", "t": 1792627174.21, "actor": "engine", "type": "COMPOSIO_EXECUTE", "tool": "YOUTUBE_LIST_CHANNELS", "ok": true, "log_id": "log_1LEAHLSVdPW1", "job": "2026-10-21-s0-host-the-quiet-money-daily-planner-wh"}
 {"ts": "2026-10-22T00:01:57Z", "t": 1792627317.077, "actor": "engine", "type": "COMPOSIO_SESSION", "user": "quiet-money-studio", "session_hash": "73c9bfb3"}
+{"ts": "2026-10-22T00:04:13Z", "t": 1792627453.221, "actor": "engine", "type": "TOPIC_TOO_CLOSE", "topic": "The Leverage Risk Multiplier", "similarity": 0.597}
+{"ts": "2026-10-22T00:05:36Z", "t": 1792627536.382, "actor": "engine", "type": "TOPIC_TOO_CLOSE", "topic": "The Collection Is Not the Workout", "similarity": 0.505}
+{"ts": "2026-10-22T00:06:33Z", "t": 1792627593.712, "actor": "engine", "type": "TOPIC_TOO_CLOSE", "topic": "Why You Start Justifying the Purchase Afterward", "similarity": 0.526}
+{"ts": "2026-10-22T00:06:36Z", "t": 1792627596.515, "actor": "engine", "type": "TOPIC_TOO_CLOSE", "topic": "Why the New Purchase Stops Feeling New", "similarity": 0.645}
+{"ts": "2026-10-22T00:09:33Z", "t": 1792627773.542, "actor": "engine", "type": "TOPIC_TOO_CLOSE", "topic": "The Buying Over Building", "similarity": 0.567}
+{"ts": "2026-10-22T00:09:35Z", "t": 1792627775.587, "actor": "engine", "type": "TOPIC_TOO_CLOSE", "topic": "The Decision Lag", "similarity": 0.624}
+{"ts": "2026-10-22T00:11:10Z", "t": 1792627870.225, "actor": "engine", "type": "TOPIC_TOO_CLOSE", "topic": "Check Your Calendar for Recurring Charges", "similarity": 0.545}
+{"ts": "2026-10-22T00:11:14Z", "t": 1792627874.267, "actor": "engine", "type": "TOPIC_TOO_CLOSE", "topic": "Check Card Benefit Windows Before Buying", "similarity": 0.619}
+{"ts": "2026-10-22T00:11:14Z", "t": 1792627874.963, "actor": "engine", "type": "TOPIC_TOO_CLOSE", "topic": "Check Recurring Transfer Schedules", "similarity": 0.625}

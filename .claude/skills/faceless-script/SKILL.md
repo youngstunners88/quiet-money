@@ -38,3 +38,6 @@ never text/numbers in the image. The pillar style is appended automatically.
 ## Constraints
 - Educational only. No tickers, no "buy", no "guaranteed", no promised returns.
 - No filler phrases (see `BANNED` in `faceless/prompts.py`).
+
+## Not Flint
+Scripts are written by the normal chain only. The free Flint model (`faceless-flint`) may suggest seeds for the backlog, never a script.
