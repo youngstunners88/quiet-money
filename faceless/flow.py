@@ -25,7 +25,7 @@ from faceless.config import Paths
 
 DIR = Paths.root / "channel" / "flow"
 INBOX, USED, LISTS = DIR / "inbox", DIR / "used", DIR / "shotlists"
-RULES = ("vertical 9:16, 8 seconds, slow cinematic camera, no people's faces, no text or numbers anywhere, no logos or brands, "
+RULES = ("vertical 9:16, 10 seconds, slow cinematic camera, no people's faces, no text or numbers anywhere, no logos or brands, "
          "no dialogue or music")
 SUBJECTS = {   # per series: scenes that read as the idea without a face or a word; rotated by date so no two days repeat
     "story": ["a worn leather wallet and one old coin on a dark wooden desk, dust drifting through a window beam",
