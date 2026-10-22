@@ -327,6 +327,16 @@ def cmd_flow(args) -> int:
     return 0
 
 
+def cmd_cineedit(args) -> int:
+    from pathlib import Path
+    from faceless import cineedit
+    src = Path(args.clip)
+    out = Path(args.out) if args.out else src.parent / f"{src.stem}-edit.mp4"
+    res = cineedit.edit(src, out, impact=args.impact, card_line=args.card)
+    print(json.dumps(res, indent=2))
+    return 0
+
+
 def cmd_products(_args) -> int:
     from faceless import products
     res = products.build_all()
@@ -1125,6 +1135,12 @@ def main(argv: list[str] | None = None) -> int:
     fl.add_argument("action", nargs="?", choices=["shotlist", "status"], default="shotlist")
     fl.add_argument("--day", help="YYYY-MM-DD (default today)")
     fl.set_defaults(fn=cmd_flow)
+    ce = sub.add_parser("cineedit", help="cinematic edit of a Flow clip: speed ramps into the hit, adaptive grade, grain, brand, end card")
+    ce.add_argument("clip")
+    ce.add_argument("--impact", type=float, required=True, help="seconds into the SOURCE clip where the peak lands")
+    ce.add_argument("--out", help="output path (default <clip>-edit.mp4)")
+    ce.add_argument("--card", default="QUIET MONEY", help="end-card line")
+    ce.set_defaults(fn=cmd_cineedit)
     sub.add_parser("products", help="build the spreadsheet products, recalculate them in LibreOffice, check against Python math, write listings").set_defaults(fn=cmd_products)
     pl = sub.add_parser("planner", help="the Daily Planner product: `build` the PDFs, `check` the gauntlet, `ingest <folder>` the owner's pictures, `clean` the handle off them, `inventory`, `cover`, `posters-make` (typeset the studio's twelve wellness posters)")
     pl.add_argument("action", choices=["build", "check", "ingest", "clean", "inventory", "cover", "posters-make"])
