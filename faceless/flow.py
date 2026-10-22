@@ -25,33 +25,33 @@ from faceless.config import Paths
 
 DIR = Paths.root / "channel" / "flow"
 INBOX, USED, LISTS = DIR / "inbox", DIR / "used", DIR / "shotlists"
-RULES = ("vertical 9:16, 8 seconds, slow cinematic camera, no people's faces, no text or numbers anywhere, no logos or brands, "
+RULES = ("vertical 9:16, 10 seconds, slow cinematic camera, no people's faces, no text or numbers anywhere, no logos or brands, "
          "no dialogue or music")
-SUBJECTS = {   # per series: scenes that read as the idea without a face or a word; rotated by date so no two days repeat
-    "story": ["a worn leather wallet and one old coin on a dark wooden desk, dust drifting through a window beam",
-              "a vintage car parked alone in a quiet garage, one bulb overhead",
-              "an old pocket watch ticking beside a stack of faded letters",
-              "an empty lunch box and a thermos on a workbench at dawn"],
-    "math": ["gold coins stacking one at a time on a dark surface, macro, warm rim light",
-             "a single seed sprouting into a small tree in time-lapse on dark soil, soft side light",
-             "dominoes toppling in a long curve, shallow depth of field, dark studio",
-             "a snowball rolling down a slope and growing, wide, blue hour"],
-    "psychology": ["a hand hesitating over a glowing phone on a nightstand, screen unreadable, dim room",
-                   "a shopping cart rolling slowly down an empty aisle under cold light",
-                   "a candy jar and a savings jar side by side on a kitchen counter, light shifting between them",
-                   "a person's silhouette at a crossroads of two glowing paths, fog, wide"],
-    "myth": ["a cracked glass sphere slowly filling with golden light in a dark studio",
-             "a rusty padlock opening itself, macro, dramatic side light",
-             "a chalk drawing on a blackboard being wiped away by a hand, slow",
-             "a house of cards in warm light, one card sliding out slowly"],
-    "playbook": ["hands sorting receipts into neat stacks on a clean desk, overhead, soft morning light",
-                 "a calendar page turning to a highlighted date, close, shallow focus",
-                 "a notebook with a pen checking off a list, overhead, warm lamp",
-                 "a piggy bank on a windowsill as morning light slowly rises"],
-    "escape": ["a heavy steel door swinging open to bright daylight, dust in the light beam, slow push-in",
-               "a commuter train leaving an empty platform at dawn, wide, cold tones",
-               "a hamster wheel slowing to a stop in a dim room, macro",
-               "a rope bridge over a misty canyon, a gate opening at the far end"],
+SUBJECTS = {   # per series: 10-second scenes with a hook in the first second and a reveal by the last; rotated by date
+    "story": ["a dusty leather wallet bursts open and a river of gold coins spills across a black desk in slow motion, the camera racing alongside",
+              "a vintage car crashes through a garage wall and rockets into a sky full of falling gold coins, low angle, wind and dust",
+              "a pocket watch shatters into a swarm of glowing gears that reassemble into a golden hourglass floating in a dark void",
+              "a lunch box cracks open and a bright sunrise erupts out of it, flooding a workshop with light, push-in"],
+    "math": ["a stack of gold coins grows into a skyscraper of coins in one fast crane up, each coin clicking into place, dark studio",
+             "a single seed explodes into a giant golden tree in time-lapse, roots tearing through the floor, fast push-in",
+             "a line of dominoes topples at lightning speed, the last domino becomes a glowing gold staircase climbing into the clouds",
+             "a snowball the size of a planet rolls down a mountain, growing with every turn, the camera racing ahead of it"],
+    "psychology": ["a glowing phone screen shatters and a shopping cart rockets out of the shards down a neon aisle, fast whip pan",
+                   "a candy jar bursts open, candy freezes mid-air and turns into golden coins, slow motion, sharp backlight",
+                   "a savings jar and a bank vault face off, the vault splits open and a golden tidal wave of coins rushes the camera",
+                   "a cosmic crossroad splits the sky in two, one path erupting in fire, the other in gold light, the camera spins between them"],
+    "myth": ["a cracked glass sphere explodes outward in slow motion, golden light bursting through every shard, extreme close-up",
+             "a rusty padlock snaps open with a shock wave that ripples through a dark sea, fast push-in, sparks flying",
+             "a chalk drawing on a blackboard comes to life, the chalk lines tear off the board and swirl into a golden tornado",
+             "a house of cards stands in a storm, a single card flips and the whole tower erupts into a flock of golden birds"],
+    "playbook": ["piles of receipts fly up and form a neat golden staircase, camera tilts up as the last receipt snaps into place",
+                 "a calendar's pages flip at high speed, one date blazes gold and lifts off the page toward the camera",
+                 "a notebook page tears itself out and transforms into a golden map, pen strokes racing across it, overhead",
+                 "a piggy bank cracks open and a sunrise launches out of it into a dark sky, fast push-in"],
+    "escape": ["a massive steel door blasts open in slow motion, a tidal wave of golden daylight pours through, camera pulled back by the blast",
+               "a commuter train bursts off its rails into the sky and flies over a glowing city at dawn, low angle, speed lines",
+               "a hamster wheel spins faster and faster until it tears free and rolls out the door into a golden sunrise",
+               "a rope bridge snaps and a rocket launches from the canyon below, racing up through clouds into the stars"],
 }
 CAMERAS = ["slow push-in", "slow dolly left to right", "slow orbit", "slow crane up", "static with subtle handheld drift"]
 
