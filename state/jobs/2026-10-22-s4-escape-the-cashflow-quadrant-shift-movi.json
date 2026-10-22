@@ -1,0 +1,78 @@
+{
+  "id": "2026-10-22-s4-escape-the-cashflow-quadrant-shift-movi",
+  "pillar": "escape",
+  "topic": "The Cashflow Quadrant Shift: Moving from Earned to Passive Income",
+  "day": "2026-10-22",
+  "slot": 4,
+  "status": "published",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-22T09:45:53Z",
+      "words": 159
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-22T09:47:40Z",
+      "seconds": 62.593,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-22T09:48:06Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-22T09:50:28Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-22T09:50:28Z",
+      "score": 95
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-22T09:50:28Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-10-22T09:50:30Z",
+      "local": "2026-10-22T21:00:00-04:00",
+      "youtube": null
+    }
+  ],
+  "artifacts": {
+    "angle": "Explains how shifting from active quadrants (Employee/Self-Employed) to passive quadrants (Business/Investor) drastically lowers tax drag and unlocks scale.",
+    "brief": "kiyosaki",
+    "hook": "Trading hours for dollars guarantees you work until you die—here is the exact mathematical shift to cross the quadrant.",
+    "title": "The Cashflow Quadrant Shift: Moving to Passive Income",
+    "style": "cinematic",
+    "video": "/home/user/quiet-money/production/output/2026-10-22/2026-10-22-s4-escape-the-cashflow-quadrant-shift-movi/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-22/2026-10-22-s4-escape-the-cashflow-quadrant-shift-movi/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-10-22/slot5-escape",
+        "post_at": "2026-10-22T21:00:00-04:00"
+      },
+      "youtube": {
+        "skipped": "YouTube refused the upload session (HTTP 429): quota or rate limit; it resets at midnight Pacific"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 95,
+    "passed": true
+  },
+  "cost": {
+    "tts:edge:chars": 934
+  },
+  "notes": []
+}

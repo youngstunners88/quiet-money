@@ -1,0 +1,101 @@
+{
+  "title": "The Overtime Tax Math That Shrinks Your Paycheck",
+  "hook_text": "THE OVERTIME TAX ILLUSION EXPOSED",
+  "beats": [
+    {
+      "say": "That extra 10 hour shift feels like free money until you see your net paycheck.",
+      "callout": "",
+      "visual": "Cinematic close-up of a worker's hands holding a dark leather wallet under moody office lighting."
+    },
+    {
+      "say": "You worked 50 hours, but your take-home pay barely budged. Where'd that cash actually go?",
+      "callout": "",
+      "visual": "Moody shot from behind a person sitting at a desk late at night looking out a city office window."
+    },
+    {
+      "say": "Most workers assume they bumped into a higher tax bracket that eats their entire income.",
+      "callout": "BRACKETS VS WITHHOLDING",
+      "visual": "Close-up silhouette of someone reviewing documents under a desk lamp, shadow cast on the wall."
+    },
+    {
+      "say": "But that's not how tax brackets work. The real culprit is sitting in your HR payroll software.",
+      "callout": "",
+      "visual": "Close-up shot of hands typing on an elegant laptop keyboard in a darkened study."
+    },
+    {
+      "say": "Payroll systems don't know you only worked overtime once. They treat that check like your new weekly salary.",
+      "callout": "ANNUALIZED MATH",
+      "visual": "Wide shot of a quiet, empty corporate office corridor with sleek minimalist design and ambient blue lighting."
+    },
+    {
+      "say": "By multiplying your temporary pay bump across 52 weeks, the software forces high upfront tax withholding.",
+      "callout": "",
+      "visual": "Dramatic low-angle shot of calendar pages flipping slowly on a wooden desk."
+    },
+    {
+      "say": "Some employers even hold back a flat 22% federal tax right off the top for supplemental pay.",
+      "callout": "22% FLAT RATE",
+      "visual": "Close-up of hands signing official paperwork with a sleek fountain pen under focused warm light."
+    },
+    {
+      "say": "So if your immediate cash take-home drops, are you simply working those extra hours for minimum wage?",
+      "callout": "NET VS GROSS PAY",
+      "visual": "Moody shot of a person walking alone on a dimly lit city sidewalk after a long night shift."
+    },
+    {
+      "say": "You do get that over-withheld cash back at tax time, but upfront, your immediate liquidity shrinks fast.",
+      "callout": "",
+      "visual": "Cinematic close-up of paper bank statements on a dark oak desk, atmospheric side lighting."
+    },
+    {
+      "say": "That means your extra weekend hours are giving the government an interest-free loan until April.",
+      "callout": "0% INTEREST LOAN",
+      "visual": "Silhouette of a person standing at a window in a high-rise office at dawn."
+    },
+    {
+      "say": "Knowing payroll withholding math helps you manage your W-4 and protect your real hourly rate.",
+      "callout": "",
+      "visual": "Close-up of a person neatly placing a pen next to organized documents on a desk."
+    },
+    {
+      "say": "Follow for the money rules school never taught you, so every extra shift actually pays off.",
+      "callout": "",
+      "visual": "Overhead cinematic shot of a clean, organized desk with a desk lamp casting warm light."
+    }
+  ],
+  "caption": "Working overtime doesn't permanently change your tax bracket, but payroll math can temporarily crush your take-home pay.\n\n#money #personalfinance #taxes #paycheck #overtime",
+  "description": "Working extra hours doesn't push you into a higher tax bracket permanently, but payroll software annualizes your overtime pay check by check. Here's why your immediate take-home pay drops on heavy work weeks and where that cash actually goes.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#taxes",
+    "#paycheck",
+    "#overtime"
+  ],
+  "first_comment": "Have you ever noticed your overtime check paying out way less take-home cash than you calculated?",
+  "facts": [
+    {
+      "claim": "Payroll software annualizes individual paychecks to calculate withholding tax rates.",
+      "basis": "IRS Publication 15-T (Federal Income Tax Withholding Methods)."
+    },
+    {
+      "claim": "Supplemental or lump-sum wages can be withheld at a flat 22% federal rate.",
+      "basis": "IRS tax guidelines for supplemental wages."
+    }
+  ],
+  "source": "llm",
+  "pillar": "math",
+  "look": "",
+  "loop_map": {
+    "stakes": "A 10-hour overtime shift yields far less immediate take-home pay than expected.",
+    "big_question": "Where does the extra money from an overtime paycheck actually go?",
+    "assume": "Working overtime pushes all your earnings into a higher permanent tax bracket.",
+    "reveal": "Payroll software annualizes single paychecks, spiking temporary tax withholding up front.",
+    "rehook_beats": [
+      5,
+      8,
+      10
+    ],
+    "payoff_beat": 11
+  }
+}

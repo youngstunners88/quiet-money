@@ -1,0 +1,92 @@
+{
+  "title": "Why Your Student Loan Balance Keeps Growing",
+  "hook_text": "WHY YOUR LOAN BALANCE IS GROWING",
+  "beats": [
+    {
+      "say": "You've been making your student loan payments for 5 years, so why is your total balance higher than the day you graduated?",
+      "callout": "",
+      "visual": "A close-up of a person's hands holding a heavy wooden graduation diploma frame in a dimly lit room with side light."
+    },
+    {
+      "say": "You chose an income-driven repayment plan to keep your monthly bills affordable on an entry-level salary.",
+      "callout": "STEP ONE",
+      "visual": "A dark wooden desk with a vintage metal pen resting beside a blank white paper pad under warm desk lamp light."
+    },
+    {
+      "say": "How does a monthly payment leave your principal higher year after year?",
+      "callout": "",
+      "visual": "A macro shot of a brass desk clock ticking softly against a blurred background with soft ambient shadows."
+    },
+    {
+      "say": "Most people assume every dollar you send covers your interest first and chips away at your original debt.",
+      "callout": "ASSUMPTION VS REALITY",
+      "visual": "A person's hands sorting through a stack of unopened envelopes on a dark kitchen counter with morning light."
+    },
+    {
+      "say": "That is false. On income-driven plans, your monthly payment often only covers a fraction of the interest.",
+      "callout": "",
+      "visual": "A close-up of a calculator on a wooden table with fingers resting quietly beside the plastic keypad."
+    },
+    {
+      "say": "Where does all the leftover unpaid interest go every single month?",
+      "callout": "STEP TWO",
+      "visual": "A stack of thick hardcover books resting on a dark shelf with dust motes drifting in a single beam of light."
+    },
+    {
+      "say": "It doesn't vanish. It piles on top of your starting balance in a hidden loop called negative amortization.",
+      "callout": "",
+      "visual": "An overhead shot of a person sketching lines on a grid notebook with a simple graphite pencil."
+    },
+    {
+      "say": "Why does your total debt balloon even when you never miss a single due date?",
+      "callout": "STEP THREE",
+      "visual": "A silhouette of a person standing by a large glass window looking out at a quiet city street at dusk."
+    },
+    {
+      "say": "Because your interest compounds faster than your payment reduces it. The math works against your favor.",
+      "callout": "",
+      "visual": "A slow pan across an empty leather chair in a quiet corner of a study lit by a floor lamp."
+    },
+    {
+      "say": "Your student loan balance grows every month because your minimum payment is smaller than the monthly interest charge.",
+      "callout": "THE PAYOFF",
+      "visual": "A close-up of a hand turning off a brass desk lamp, leaving the workspace in deep shadow."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "A dark minimalist hallway with a single overhead light casting a clean line down the center floor."
+    }
+  ],
+  "caption": "Why your student loan balance grows every month even when you make every payment on time. #studentloans #debtfree #moneyhacks #personalfinance #budgeting",
+  "description": "Learn the math behind negative amortization in student loan income-driven repayment plans and why low minimum payments cause your total debt to balloon.",
+  "hashtags": [
+    "#studentloans",
+    "#debtfree",
+    "#moneyhacks",
+    "#personalfinance",
+    "#budgeting"
+  ],
+  "first_comment": "Did your student loan balance surprise you this year? Drop your thoughts below.",
+  "facts": [
+    {
+      "claim": "Income-driven repayment plans can result in negative amortization where unpaid interest adds to the principal balance.",
+      "basis": "Standard federal student loan repayment rules for income-driven plans."
+    }
+  ],
+  "source": "llm",
+  "pillar": "math",
+  "look": "",
+  "loop_map": {
+    "stakes": "Student loan borrowers making payments for five years facing a growing total balance.",
+    "big_question": "Why is your total balance higher than the day you graduated?",
+    "assume": "Most people assume every dollar sent covers interest and reduces the debt.",
+    "reveal": "Low minimum payments leave unpaid interest that adds to the principal every month.",
+    "rehook_beats": [
+      3,
+      6,
+      8
+    ],
+    "payoff_beat": 10
+  }
+}

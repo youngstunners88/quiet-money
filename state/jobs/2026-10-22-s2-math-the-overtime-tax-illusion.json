@@ -1,0 +1,67 @@
+{
+  "id": "2026-10-22-s2-math-the-overtime-tax-illusion",
+  "pillar": "math",
+  "topic": "The Overtime Tax Illusion",
+  "day": "2026-10-22",
+  "slot": 2,
+  "status": "held",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-22T09:28:34Z",
+      "words": 193
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-22T09:30:00Z",
+      "seconds": 64.339,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-22T09:33:09Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-22T09:35:44Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-22T09:35:44Z",
+      "score": 96
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-22T09:35:52Z"
+    },
+    {
+      "from": "packaged",
+      "to": "held",
+      "ts": "2026-10-22T09:35:52Z"
+    }
+  ],
+  "artifacts": {
+    "angle": "Breaking down marginal tax brackets to show when working extra hours yields less than minimum wage take-home pay.",
+    "hook": "Working that extra 10-hour shift feels like a win, until you run the actual tax math and see your real hourly rate.",
+    "title": "The Overtime Tax Math That Shrinks Your Paycheck",
+    "style": "cinematic",
+    "video": "/home/user/quiet-money/production/output/2026-10-22/2026-10-22-s2-math-the-overtime-tax-illusion/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-22/2026-10-22-s2-math-the-overtime-tax-illusion/cover.jpg"
+  },
+  "scores": {
+    "gauntlet": 96,
+    "passed": false
+  },
+  "cost": {
+    "tts:edge:chars": 1151
+  },
+  "notes": [
+    "held for review: originality"
+  ]
+}

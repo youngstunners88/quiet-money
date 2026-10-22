@@ -1,0 +1,91 @@
+{
+  "title": "Why Your Student Loan Balance Keeps Growing",
+  "hook_text": "WHY IS YOUR LOAN GROWING?",
+  "beats": [
+    {
+      "say": "You've been making your student loan payments for five years, so why is your total balance higher than the day you graduated?",
+      "callout": "",
+      "visual": "A close-up of hands holding a plain blue pen over a dark wooden desk, dim moody lighting."
+    },
+    {
+      "say": "How can your balance go up when you never missed a single payment?",
+      "callout": "BALANCE UP?",
+      "visual": "A wide cinematic shot of a laptop glowing in a dark room, seen from behind the closed lid."
+    },
+    {
+      "say": "Most people assume a monthly payment always chips away at the principal debt.",
+      "callout": "PAYMENT VS DEBT",
+      "visual": "A low-angle shot of a classic desk lamp casting a warm circle of light on empty paper."
+    },
+    {
+      "say": "That is false. On income-driven plans, your monthly check often only covers a fraction of the interest.",
+      "callout": "INTEREST ONLY",
+      "visual": "A macro shot of a metal paperclip resting on a stack of blank white sheets."
+    },
+    {
+      "say": "So where does the rest of the monthly interest go?",
+      "callout": "WHERE DOES IT GO?",
+      "visual": "A side profile of a coffee mug sitting on a dark kitchen counter at night."
+    },
+    {
+      "say": "It doesn't vanish. It adds directly to your principal balance every single month.",
+      "callout": "MONTHLY ADDITION",
+      "visual": "A close-up of rain droplets sliding down a window pane with blurred city lights outside."
+    },
+    {
+      "say": "Why does the system let unpaid interest stack up like that?",
+      "callout": "UNPAID INTEREST",
+      "visual": "An overhead shot of an open leather notebook with no text inside, lit by soft window light."
+    },
+    {
+      "say": "Because negative amortization is built into the math of low minimum payments.",
+      "callout": "NEGATIVE AMORTIZATION",
+      "visual": "A silhouette of a person standing by a large window looking out at a quiet street."
+    },
+    {
+      "say": "Your balance balloons even though you pay on time.",
+      "callout": "",
+      "visual": "A close-up of a wall calendar with blank squares, shot with a shallow depth of field."
+    },
+    {
+      "say": "The rule is simple. If the payment doesn't beat the interest, the debt wins.",
+      "callout": "",
+      "visual": "A dark hallway with a single bright lightbulb hanging from the ceiling."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "A cinematic shot of a dark wooden staircase leading up into soft shadows."
+    }
+  ],
+  "caption": "Your loan balance shouldn't grow when you're paying every month. Here is the math behind negative amortization. #personalfinance #money #studentloans #debt #financialliteracy",
+  "description": "Discover why low income-driven student loan payments cause negative amortization and make your total balance grow every month.",
+  "hashtags": [
+    "#personalfinance",
+    "#money",
+    "#studentloans",
+    "#debt",
+    "#financialliteracy"
+  ],
+  "first_comment": "Did you know your payment could be lower than the monthly interest? Let us know in the comments.",
+  "facts": [
+    {
+      "claim": "Income-driven repayment plans can result in negative amortization where unpaid interest adds to the principal balance.",
+      "basis": "Standard federal student loan repayment rules for income-driven plans."
+    }
+  ],
+  "source": "llm",
+  "pillar": "math",
+  "look": "",
+  "loop_map": {
+    "stakes": "Making student loan payments for five years while the total balance increases.",
+    "big_question": "Why is your total balance higher than the day you graduated?",
+    "assume": "Most people assume a monthly payment always chips away at the principal debt.",
+    "reveal": "Low income-driven payments often fail to cover the monthly interest, causing negative amortization.",
+    "rehook_beats": [
+      5,
+      7
+    ],
+    "payoff_beat": 10
+  }
+}

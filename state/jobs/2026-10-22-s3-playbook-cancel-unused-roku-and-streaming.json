@@ -1,0 +1,77 @@
+{
+  "id": "2026-10-22-s3-playbook-cancel-unused-roku-and-streaming",
+  "pillar": "playbook",
+  "topic": "Cancel Unused Roku and Streaming Add-On Channels",
+  "day": "2026-10-22",
+  "slot": 3,
+  "status": "published",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-22T09:39:20Z",
+      "words": 177
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-22T09:40:34Z",
+      "seconds": 66.982,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-22T09:41:45Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-22T09:43:34Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-22T09:43:34Z",
+      "score": 93
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-22T09:43:37Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-10-22T09:43:39Z",
+      "local": "2026-10-22T18:30:00-04:00",
+      "youtube": null
+    }
+  ],
+  "artifacts": {
+    "angle": "Eliminate overlooked video service add-ons billed through streaming devices.",
+    "hook": "You are paying for three streaming services you haven't opened since last year.",
+    "title": "Cancel Hidden Roku Add-On Channels in 3 Steps",
+    "style": "cinematic",
+    "video": "/home/user/quiet-money/production/output/2026-10-22/2026-10-22-s3-playbook-cancel-unused-roku-and-streaming/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-22/2026-10-22-s3-playbook-cancel-unused-roku-and-streaming/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-10-22/slot4-playbook",
+        "post_at": "2026-10-22T18:30:00-04:00"
+      },
+      "youtube": {
+        "skipped": "YouTube refused the upload session (HTTP 429): quota or rate limit; it resets at midnight Pacific"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 93,
+    "passed": true
+  },
+  "cost": {
+    "tts:edge:chars": 1168
+  },
+  "notes": []
+}

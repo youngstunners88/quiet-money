@@ -1,0 +1,100 @@
+{
+  "title": "The Artist Who Paid Expensive Restaurant Bills With Art",
+  "hook_text": "PAID A $200 DINNER WITH ART",
+  "beats": [
+    {
+      "say": "In 1946, sculptor Alexander Calder racked up a $200 dinner tab at a French bistro he couldn't cover.",
+      "callout": "",
+      "visual": "Cinematic shot of a vintage brass cash register on a dark wooden restaurant counter, dim warm lighting, shallow depth of field."
+    },
+    {
+      "say": "Instead of washing dishes, he reached into his pocket and grabbed a pen.",
+      "callout": "",
+      "visual": "A person's hands in a shadow, holding an old ink pen over a blank white surface, moody lighting."
+    },
+    {
+      "say": "He sketched a tiny wire animal right on the paper tablecloth and handed it to the owner.",
+      "callout": "",
+      "visual": "Close-up of ink lines forming abstract metal shapes on crumpled white cotton fabric, top-down angle."
+    },
+    {
+      "say": "How did a quick doodle instantly erase a luxury meal?",
+      "callout": "",
+      "visual": "A waiter's hands carefully folding a paper napkin with a black ink drawing, filmed from above in soft restaurant light."
+    },
+    {
+      "say": "Most people assume art's value comes from the raw materials or the hours spent drawing it.",
+      "callout": "INK VS TIME",
+      "visual": "An open sketchbook with blank pages sitting next to a dark metal inkwell on an old oak desk, dramatic side light."
+    },
+    {
+      "say": "That napkin sketch took him under 5 minutes to create.",
+      "callout": "",
+      "visual": "A ticking pocket watch lying beside a blank sheet of paper, soft focus background, cinematic shadows."
+    },
+    {
+      "say": "So why did that hotel keep the drawing in a safe instead of throwing it out?",
+      "callout": "",
+      "visual": "A heavy metal safety deposit box door swinging open in a dimly lit vault, cinematic shadows."
+    },
+    {
+      "say": "Here is what skill really does to your earning power.",
+      "callout": "RE-HOOK",
+      "visual": "A person's hands reviewing old financial ledger pages under a single desk lamp, tight framing."
+    },
+    {
+      "say": "Calder wasn't charging for 5 minutes of sketching.",
+      "callout": "",
+      "visual": "An artist's hands using pliers to shape thin black iron wire on a dark workbench, moody lighting."
+    },
+    {
+      "say": "He was charging for the 40 years he spent mastering his craft.",
+      "callout": "40 YEARS",
+      "visual": "A row of vintage sculptor tools neatly arranged on a wooden workbench, cinematic side lighting, low key."
+    },
+    {
+      "say": "That napkin traded for a luxury dinner later sold at auction for over $200,000.",
+      "callout": "$200 VS $200,000",
+      "visual": "An auction paddle resting on a polished wooden podium under a spotlight, dark atmospheric room."
+    },
+    {
+      "say": "Build high-leverage skills that compound over decades, and your time becomes your most valuable asset. Follow for the money rules school never taught you.",
+      "callout": "HIGH LEVERAGE",
+      "visual": "A person walking down a stone street away from the camera at sunset, cinematic wide shot, warm glow."
+    }
+  ],
+  "caption": "How Alexander Calder turned a 5-minute sketch into a fortune. Stop trading time for dollars and start building compounding skills. #moneypolicy #wealthbuilding #financialfreedom #smartmoney #personalfinance",
+  "description": "The true story of Alexander Calder paying for dinner with art reveals the massive financial power of lifelong skill over hourly wages.",
+  "hashtags": [
+    "#moneypolicy",
+    "#wealthbuilding",
+    "#financialfreedom",
+    "#smartmoney",
+    "#personalfinance"
+  ],
+  "first_comment": "What high-leverage skill are you spending your time building this year?",
+  "facts": [
+    {
+      "claim": "Alexander Calder used artwork to pay for meals and hospitality at establishments like La Colombe d'Or.",
+      "basis": "Well-documented historical practice of Calder trading sketches, gouaches, and small sculptures for services."
+    },
+    {
+      "claim": "Calder's small works and wire sculptures regularly command six-figure sums at modern art auctions.",
+      "basis": "Sotheby's and Christie's auction records for Calder works on paper and wire pieces."
+    }
+  ],
+  "source": "llm",
+  "pillar": "story",
+  "look": "",
+  "loop_map": {
+    "stakes": "Alexander Calder owing a $200 dinner tab at a restaurant in 1946.",
+    "big_question": "How did a quick doodle instantly erase a luxury meal?",
+    "assume": "Art value comes from raw materials and hours spent.",
+    "reveal": "Value comes from decades of mastery behind the execution.",
+    "rehook_beats": [
+      8,
+      10
+    ],
+    "payoff_beat": 11
+  }
+}

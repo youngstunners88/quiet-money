@@ -1,0 +1,101 @@
+{
+  "title": "The Cashflow Quadrant: Earned vs Passive Income Math",
+  "hook_text": "TRADING HOURS FOR DOLLARS GUARANTEES YOU WORK UNTIL YOU DIE",
+  "beats": [
+    {
+      "say": "Trading hours for dollars guarantees you work until you die.",
+      "callout": "",
+      "visual": "Cinematic shot of a desk clock ticking in a dim office, macro lens, moody lighting."
+    },
+    {
+      "say": "Here is the exact mathematical shift to cross the quadrant.",
+      "callout": "QUADRANT SHIFT",
+      "visual": "Overhead shot of a blank notepad on a wooden table with a fountain pen resting beside it."
+    },
+    {
+      "say": "Most people stay stuck on the left side as employees or self-employed.",
+      "callout": "LEFT SIDE",
+      "visual": "A silhouette of a worker walking down a long concrete hallway toward a single door."
+    },
+    {
+      "say": "You trade time for money, and your taxes take the heaviest drag.",
+      "callout": "TIME VS MONEY",
+      "visual": "Close-up of hands counting a stack of cash on a dark surface."
+    },
+    {
+      "say": "Why does wealth build on the right side instead?",
+      "callout": "RIGHT SIDE?",
+      "visual": "Cinematic wide shot of a modern glass office building exterior at dusk, soft blur."
+    },
+    {
+      "say": "People assume you need millions to own a business or invest in assets.",
+      "callout": "ASSET VS LIABILITY",
+      "visual": "A person looking out a large window at a city skyline, backlight, silhouette."
+    },
+    {
+      "say": "The truth is you can start by making your money buy things that pay you back.",
+      "callout": "STEP ONE",
+      "visual": "Close-up of a hand flipping a metal coin on a wooden desk."
+    },
+    {
+      "say": "Investing $500 a month at 8% reaches $600,000 in 27 years.",
+      "callout": "$500 VS $600,000",
+      "visual": "Macro shot of a calculator screen reflecting warm ambient light."
+    },
+    {
+      "say": "That is how passive income covers your life expenses.",
+      "callout": "",
+      "visual": "A steaming ceramic mug sitting on a wooden windowsill with morning light filtering through."
+    },
+    {
+      "say": "The honest catch is that building this takes years of work and capital.",
+      "callout": "",
+      "visual": "Close-up of a worn leather notebook resting on a desk next to a pair of glasses."
+    },
+    {
+      "say": "Leverage cuts both ways, and real estate needs repairs and tenants.",
+      "callout": "",
+      "visual": "Cinematic slow pan across an empty room with soft shadows on the wall."
+    },
+    {
+      "say": "Learn the rules, build your assets, and shift your cash flow.",
+      "callout": "",
+      "visual": "A person walking out into bright daylight, silhouette from behind."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "Close-up of a wooden front door opening to warm morning light."
+    }
+  ],
+  "caption": "The math behind moving from active trading to passive systems. #money #personalfinance #passiveincome #wealth #cashflow",
+  "description": "Learn the exact mathematical shift from earned income to passive income using the cashflow framework.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#passiveincome",
+    "#wealth",
+    "#cashflow"
+  ],
+  "first_comment": "Which quadrant are you currently spending most of your time in?",
+  "facts": [
+    {
+      "claim": "$500/month invested at 8% reaches $600,000 in 27.6 years",
+      "basis": "Money Fact Sheet passive income section"
+    }
+  ],
+  "source": "llm",
+  "pillar": "escape",
+  "look": "",
+  "loop_map": {
+    "stakes": "Trading hours for dollars guarantees you work until you die.",
+    "big_question": "Why does wealth build on the right side instead?",
+    "assume": "People assume you need millions to own a business or invest in assets.",
+    "reveal": "The truth is you can start by making your money buy things that pay you back.",
+    "rehook_beats": [
+      5,
+      8
+    ],
+    "payoff_beat": 9
+  }
+}

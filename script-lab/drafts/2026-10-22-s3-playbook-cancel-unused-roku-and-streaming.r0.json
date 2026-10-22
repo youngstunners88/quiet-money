@@ -1,0 +1,95 @@
+{
+  "title": "Cancel Hidden Roku and Streaming Add-ons",
+  "hook_text": "YOU ARE PAYING FOR GHOST SUBSCRIPTIONS",
+  "beats": [
+    {
+      "say": "You are paying for three streaming services you haven't opened since last year.",
+      "callout": "",
+      "visual": "Cinematic shot of a dark living room lit only by the cold blue glow of a television screen showing a static menu."
+    },
+    {
+      "say": "Most people think their monthly streaming costs match their bank statements.",
+      "callout": "ASSUME VS FACT",
+      "visual": "Close-up of hands holding a smartphone, scrolling past rows of tiny app icons in dim light."
+    },
+    {
+      "say": "Where does that extra ten dollars a month actually vanish to?",
+      "callout": "THE BIG QUESTION",
+      "visual": "Overhead shot of a coffee table with a remote control, a half-empty mug, and loose keys."
+    },
+    {
+      "say": "You didn't sign up on their website. You clicked one button inside your streaming device.",
+      "callout": "STEP ONE",
+      "visual": "Macro shot of a black thumb pressing a plastic button on a streaming remote."
+    },
+    {
+      "say": "That single click linked your device account to invisible monthly billing.",
+      "callout": "",
+      "visual": "Extreme close-up of a dark credit card resting on a wooden TV console."
+    },
+    {
+      "say": "Let's find those hidden add-ons right now.",
+      "callout": "RE-HOOK",
+      "visual": "A person's silhouette standing near a glowing window at dusk, looking down at a phone."
+    },
+    {
+      "say": "Step one. Grab your remote and open your Roku or streaming device settings.",
+      "callout": "STEP ONE",
+      "visual": "Close-up of a finger tapping settings gear icon on a blurred TV interface."
+    },
+    {
+      "say": "Step two. Go to user accounts and select subscriptions or billing history.",
+      "callout": "STEP TWO",
+      "visual": "Side profile of a hand sliding down a smooth couch armrest holding a remote."
+    },
+    {
+      "say": "Step three. Look past your main apps to find third-party channel add-ons.",
+      "callout": "",
+      "visual": "Macro shot of a television screen showing a list of forgotten digital channels, softly blurred."
+    },
+    {
+      "say": "A $15 a month forgotten subscription adds up to $1,800 over 10 years.",
+      "callout": "$1,800 COST",
+      "visual": "Close-up of a ceramic piggy bank sitting on a dark shelf, lit from the side."
+    },
+    {
+      "say": "Cancel those ghost channels today and keep that cash in your actual pocket.",
+      "callout": "",
+      "visual": "Slow panning shot across an empty wooden desk with clean, sharp architectural lighting."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "Cinematic low-angle shot of a minimalist doorway leading into a warm, brightly lit room."
+    }
+  ],
+  "caption": "Stop letting forgotten device add-ons quietly drain your bank account. Check your streaming device settings today. Follow for the money rules school never taught you. #PersonalFinance #MoneyTips #Budgeting #Streaming #SmartMoney",
+  "description": "Eliminate overlooked video service add-ons billed through streaming devices in 3 simple steps. A 10-year subscription costs $1,800.",
+  "hashtags": [
+    "#PersonalFinance",
+    "#MoneyTips",
+    "#Budgeting",
+    "#Streaming",
+    "#SmartMoney"
+  ],
+  "first_comment": "How many ghost subscriptions did you find hiding in your device settings?",
+  "facts": [
+    {
+      "claim": "A $15/month subscription for 10 years equals $1,800.",
+      "basis": "A $15/month subscription for 10 years = $1,800 from fact sheet."
+    }
+  ],
+  "source": "llm",
+  "pillar": "playbook",
+  "look": "",
+  "loop_map": {
+    "stakes": "You are paying for three streaming services you haven't opened since last year.",
+    "big_question": "Where does that extra money vanish to every single month?",
+    "assume": "Most people think streaming costs only come from main app websites.",
+    "reveal": "Device stores bill add-ons directly through hidden one-click menus.",
+    "rehook_beats": [
+      6
+    ],
+    "payoff_beat": 11
+  }
+}

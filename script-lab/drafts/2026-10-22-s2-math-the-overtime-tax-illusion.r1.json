@@ -1,0 +1,86 @@
+{
+  "title": "The Overtime Tax Math Nobody Explains",
+  "hook_text": "WORKING OVERTIME MIGHT PAY LESS THAN YOU THINK",
+  "beats": [
+    {
+      "say": "Working that extra 10-hour shift feels like a win, until you run the actual tax math.",
+      "callout": "",
+      "visual": "A person sitting at a wooden desk under a warm desk lamp, holding a red pen over a blank white notepad."
+    },
+    {
+      "say": "You see that plump paycheck arrive with extra hours logged, and you assume it's pure profit.",
+      "callout": "10 EXTRA HOURS",
+      "visual": "Close-up of a hand tapping a smartphone screen displaying a banking app graph."
+    },
+    {
+      "say": "Most workers think bumping up into a higher marginal tax bracket means all their money gets taxed more.",
+      "callout": "THE ASSUMPTION",
+      "visual": "A calculator resting on a dark glass table next to a spilled cup of black coffee."
+    },
+    {
+      "say": "That is the head fake. Only the dollars crossing the bracket threshold face the higher rate.",
+      "callout": "THE REVEAL",
+      "visual": "A pair of reading glasses resting on top of printed financial ledger pages."
+    },
+    {
+      "say": "But why does your net take-home pay on those extra hours still feel surprisingly small?",
+      "callout": "WHERE DOES IT GO",
+      "visual": "A close-up shot of hands thumbing through a stack of crisp white tax documents."
+    },
+    {
+      "say": "Here's the math hiding in your payroll stub. Supplemental wages face a flat withholding rate.",
+      "callout": "STEP ONE",
+      "visual": "A computer keyboard shot from a low angle with soft window light casting long shadows."
+    },
+    {
+      "say": "Employers often withhold 22% federally for bonuses or overtime chunks right off the top.",
+      "callout": "STEP TWO",
+      "visual": "A silver fountain pen resting beside a blank checkbook on a dark oak table."
+    },
+    {
+      "say": "Add state taxes and payroll deductions, and that bonus hour yields a noticeably lower effective bonus.",
+      "callout": "STEP THREE",
+      "visual": "A person's silhouette standing by a tall glass window looking out at a rainy evening city."
+    },
+    {
+      "say": "You didn't take a pay cut, but your hourly yield shrank because of upfront withholding rules.",
+      "callout": "",
+      "visual": "An overhead shot of coins scattered next to a heavy brass desk stapler."
+    },
+    {
+      "say": "Now you know how the brackets work. Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "A hand closing a leather-bound journal against a dark textured background."
+    }
+  ],
+  "caption": "The math behind overtime withholding often surprises your bank account. #Overtime #Taxes #PersonalFinance #MoneyTips #Paycheck",
+  "description": "Breaking down marginal tax brackets and supplemental wage withholding to show why extra hours sometimes yield a smaller effective bonus than expected.",
+  "hashtags": [
+    "#Overtime",
+    "#Taxes",
+    "#PersonalFinance",
+    "#MoneyTips",
+    "#Paycheck"
+  ],
+  "first_comment": "Did your last overtime check feel smaller than you expected?",
+  "facts": [
+    {
+      "claim": "Supplemental wages like bonuses and certain overtime amounts have a flat federal withholding rate of 22% in the US.",
+      "basis": "IRS Publication 15 (Circular E), Employer's Tax Guide."
+    }
+  ],
+  "source": "llm",
+  "pillar": "math",
+  "look": "",
+  "loop_map": {
+    "stakes": "A paycheck with extra overtime hours logged.",
+    "big_question": "Why does your net take-home pay on extra hours feel surprisingly small?",
+    "assume": "People assume entering a higher tax bracket means all their money gets taxed at the higher rate.",
+    "reveal": "Only the dollars crossing the bracket threshold face the higher rate, but supplemental withholding rates can make extra hours feel smaller.",
+    "rehook_beats": [
+      5,
+      8
+    ],
+    "payoff_beat": 9
+  }
+}

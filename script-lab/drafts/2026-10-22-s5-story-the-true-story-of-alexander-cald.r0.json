@@ -1,0 +1,105 @@
+{
+  "title": "How a Napkin Sketch Paid for Dinner",
+  "hook_text": "HE PAID DINNER WITH A NAPKIN",
+  "beats": [
+    {
+      "say": "Instead of paying his dinner tab with cash, he drew on a paper napkin.",
+      "callout": "",
+      "visual": "Extreme close-up of a vintage fountain pen tip drawing a clean spiral line onto a textured cloth-paper napkin on a dark mahogany bistro table, warm mood lighting."
+    },
+    {
+      "say": "In the 1960s, renowned sculptor Alexander Calder routinely ate at Michelin-star restaurants across France.",
+      "callout": "",
+      "visual": "Over-the-shoulder wide shot of an elderly man with broad shoulders sitting alone at an elegant Paris restaurant table at dusk, cobblestone street blurred in the window."
+    },
+    {
+      "say": "When the check arrived, he simply sketched a quick design, signed it, and handed it over.",
+      "callout": "SKETCH VS CASH",
+      "visual": "A server's white-gloved hand picking up a folded napkin bearing an abstract ink sketch from a small silver bill tray, brass restaurant ambiance."
+    },
+    {
+      "say": "Why did luxury restaurant owners gladly accept a piece of discarded paper instead of real money?",
+      "callout": "",
+      "visual": "Close-up of a restaurant owner viewed from behind, standing beside a dimly lit bar, carefully holding the drawn napkin under a warm hanging lamp."
+    },
+    {
+      "say": "You might think the owners felt pressured, or pitied an eccentric older man.",
+      "callout": "",
+      "visual": "Medium shot of an empty bistro chair and a table scattered with empty wine glasses and fine cutlery, shadows stretching across the room."
+    },
+    {
+      "say": "The truth is, they were thrilled. They immediately framed those napkins and hung them behind the bar.",
+      "callout": "WORTH MORE",
+      "visual": "Cinematic low-angle shot of a framed drawing hanging on a dark wood-paneled wall behind a glowing cocktail bar, glasses reflecting amber light."
+    },
+    {
+      "say": "How does five minutes of casual sketching buy a meal worth hundreds of dollars?",
+      "callout": "",
+      "visual": "Macro shot of black ink soaking into fibrous paper fibers, abstract geometric curves forming under dramatic studio side-lighting."
+    },
+    {
+      "say": "Calder didn't charge for the five minutes. He charged for 40 years of relentless mastery.",
+      "callout": "40 YEARS",
+      "visual": "Silhouette of a sculptor working in a dusty mid-century art studio, large mobile sculptures hanging from the high ceiling, late afternoon sunlight."
+    },
+    {
+      "say": "He'd spent decades creating kinetic wire sculptures that completely redefined 20th-century art.",
+      "callout": "",
+      "visual": "Slow panning shot of delicate steel wires and balanced colored metal shapes suspended in air, casting sharp shadows on a gallery wall."
+    },
+    {
+      "say": "Today, Calder drawings routinely sell for upwards of $50,000 to $100,000 at premier auction houses.",
+      "callout": "$100,000 NAPKIN",
+      "visual": "Wide angle view from the back of a dimly lit high-end auction room, an abstract piece displayed under bright spotlights on the far stage."
+    },
+    {
+      "say": "Paper money loses purchasing power every day, but rare, proven human skill only compounds over time.",
+      "callout": "SKILL VS CASH",
+      "visual": "Split cinematic scene: on the left, stacks of paper currency fading into shadow; on the right, artisan metalworking tools arranged neatly on a workbench."
+    },
+    {
+      "say": "When you master a specialized craft, your value disconnects from time and creates true personal leverage.",
+      "callout": "",
+      "visual": "Close-up of weathered hands precisely shaping a thin piece of metal with pliers, warm directional light emphasizing focus and precision."
+    },
+    {
+      "say": "Follow for the money rules school never taught you, and start building skills that outlive cash.",
+      "callout": "",
+      "visual": "A lone fountain pen resting beside an empty leather notebook on a tidy wooden desk, soft dawn light filtering across the surface."
+    }
+  ],
+  "caption": "Paper cash depreciates, but rare personal skill compounds forever. Here's why Alexander Calder could buy dinner with a napkin.",
+  "description": "Sculptor Alexander Calder frequently paid restaurant bills by drawing sketches on paper napkins. Restaurant owners eagerly traded expensive meals for them because Calder's 40 years of mastered skill made the art instantly valuable. True leverage comes from compounding rare skills, not just collecting paper cash.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#wealthmindset",
+    "#moneyrules",
+    "#financialeducation"
+  ],
+  "first_comment": "If you could trade your primary skill directly for food and rent tomorrow, could you?",
+  "facts": [
+    {
+      "claim": "Alexander Calder often paid restaurant tabs with drawings on napkins.",
+      "basis": "Documented historical accounts of Alexander Calder living in France and trading sketches and miniature gouaches for meals at restaurants like La Colombe d'Or."
+    },
+    {
+      "claim": "Calder works on paper regularly sell for $50,000 to $100,000+ at major auction houses.",
+      "basis": "Public auction records from Sotheby's and Christie's showing Calder works on paper and sketches consistently trading between $40,000 and well over $100,000."
+    }
+  ],
+  "source": "llm",
+  "pillar": "story",
+  "look": "",
+  "loop_map": {
+    "stakes": "Paying for luxury restaurant meals with a scrap napkin instead of real money.",
+    "big_question": "Why did luxury restaurant owners gladly accept a piece of discarded paper instead of real money?",
+    "assume": "Owners felt awkward, pressured, or were just being generous to an eccentric artist.",
+    "reveal": "The owners knew Calder's decades of mastery made the signed napkin worth far more than the bill.",
+    "rehook_beats": [
+      7,
+      10
+    ],
+    "payoff_beat": 12
+  }
+}

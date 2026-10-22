@@ -1,0 +1,96 @@
+{
+  "title": "Cancel Hidden Roku and Streaming Add-Ons",
+  "hook_text": "GHOST STREAMING SUBSCRIPTIONS DRAIN YOUR WALLET",
+  "beats": [
+    {
+      "say": "You're likely paying for ghost streaming add-ons you haven't opened in months.",
+      "callout": "",
+      "visual": "Cinematic low-angle shot of a dark living room with a glowing TV screen reflecting on a wooden coffee table."
+    },
+    {
+      "say": "Most people don't realize single-click add-ons bypass their main app receipts.",
+      "callout": "GHOST BILLS",
+      "visual": "Close-up of a hand holding a black streaming remote in a dimly lit room."
+    },
+    {
+      "say": "How do these hidden charges quietly drain your bank account every month?",
+      "callout": "",
+      "visual": "Macro shot of a credit card resting on a dark glass surface with moody window light."
+    },
+    {
+      "say": "You'd assume they show up on your credit card as clear monthly bills.",
+      "callout": "ASSUME VS FACT",
+      "visual": "A pile of unopened paper bills sitting on a dark oak desk under a single desk lamp."
+    },
+    {
+      "say": "They actually get bundled into your device account, hidden behind one generic line item.",
+      "callout": "HIDDEN FEES",
+      "visual": "A close-up of a thumb pressing a button on a dark remote control."
+    },
+    {
+      "say": "Where does that extra money actually go while you're not watching?",
+      "callout": "",
+      "visual": "A slow pan across an empty, modern apartment lit by dusk streetlights outside."
+    },
+    {
+      "say": "Step one. Grab your remote and open your Roku account settings on the TV.",
+      "callout": "STEP ONE",
+      "visual": "A person pointing a remote at a blank television screen in a moody room."
+    },
+    {
+      "say": "Step two. Highlight any app, press the Star button on your remote, and click Manage Subscription.",
+      "callout": "STEP TWO",
+      "visual": "Close-up of fingers pressing a star button on a dark remote control."
+    },
+    {
+      "say": "Step three. Cancel every channel you haven't actively watched in the last thirty days.",
+      "callout": "STEP THREE",
+      "visual": "A hand tapping a minimalist digital toggle switch on a dark screen."
+    },
+    {
+      "say": "A fifteen dollar monthly subscription for ten years wastes one thousand eight hundred dollars.",
+      "callout": "$1,800 LOST",
+      "visual": "A neat stack of polymer currency bills sitting on a dark concrete tabletop."
+    },
+    {
+      "say": "Stop letting forgotten video add-ons quietly rob your future savings.",
+      "callout": "",
+      "visual": "A wide shot of a solitary chair by a large window looking out at a rainy city."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "A dark hallway with a warm, single light source glowing at the far end."
+    }
+  ],
+  "caption": "Stop paying for apps you forgot existed. Here is how to kill hidden streaming add-ons today. #personalfinance #moneytips #budgeting #savingmoney #quietmoney",
+  "description": "Eliminate overlooked video service add-ons billed through streaming devices in under 15 minutes. Take control of your recurring expenses today.",
+  "hashtags": [
+    "#personalfinance",
+    "#moneytips",
+    "#budgeting",
+    "#savingmoney",
+    "#quietmoney"
+  ],
+  "first_comment": "Which forgotten subscription did you finally cancel today?",
+  "facts": [
+    {
+      "claim": "A $15/month subscription for 10 years = $1,800",
+      "basis": "MONEY FACT SHEET: A $15/month subscription for 10 years = $1,800"
+    }
+  ],
+  "source": "llm",
+  "pillar": "playbook",
+  "look": "",
+  "loop_map": {
+    "stakes": "Overlooked streaming add-ons billed through devices drain cash.",
+    "big_question": "How do these hidden charges quietly drain your bank account every month?",
+    "assume": "They show up on your credit card as clear monthly bills.",
+    "reveal": "They get bundled into your device account behind one generic line item.",
+    "rehook_beats": [
+      3,
+      6
+    ],
+    "payoff_beat": 10
+  }
+}

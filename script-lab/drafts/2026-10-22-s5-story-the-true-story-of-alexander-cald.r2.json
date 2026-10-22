@@ -1,0 +1,95 @@
+{
+  "title": "The Artist Who Paid Expensive Meals With Simple Doodles",
+  "hook_text": "HE PAID A $300 MEAL WITH A NAPKIN SKETCH",
+  "beats": [
+    {
+      "say": "In 1968, sculptor Alexander Calder finished an expensive dinner in a crowded Parisian restaurant.",
+      "callout": "",
+      "visual": "Cinematic low-angle shot of a dimly lit Parisian bistro interior, empty wooden table, vintage silverware, warm amber lighting."
+    },
+    {
+      "say": "Instead of opening his wallet for cash, he pulled out his pen and drew on a paper napkin.",
+      "callout": "CASH VS NAPKIN",
+      "visual": "Close-up of a human hand holding a black fountain pen over a crisp white paper napkin on a dark wooden table."
+    },
+    {
+      "say": "He handed the scribbled napkin to the waiter to cover the whole bill.",
+      "callout": "",
+      "visual": "Close-up of hands sliding a folded paper napkin across a white tablecloth next to empty wine glasses."
+    },
+    {
+      "say": "Why did the restaurant owner happily accept a cheap piece of paper for a luxury meal?",
+      "callout": "THE BIG QUESTION",
+      "visual": "Medium shot of a vintage metal cash register on a dark wooden counter, soft cinematic sidelight, shallow depth of field."
+    },
+    {
+      "say": "Most people assume art's value comes from the expensive materials used to build it.",
+      "callout": "MATERIAL VS SKILL",
+      "visual": "Macro shot of artist paints and brushes resting on a rough wooden studio floor, dust motes floating in a beam of light."
+    },
+    {
+      "say": "So how did a worthless napkin instantly wipe out a massive dining debt?",
+      "callout": "HOW IT WORKED",
+      "visual": "Overhead shot of a blank paper napkin sitting alone on a dark marble tabletop, dramatic side shadows."
+    },
+    {
+      "say": "Calder didn't sell materials. He sold forty years of mastered personal skill.",
+      "callout": "40 YEARS",
+      "visual": "Close-up of an artist's hands working with brass wire in a dimly lit studio, sharp focus on metal and fingers."
+    },
+    {
+      "say": "That single five-minute sketch later sold at a public auction for over $20,000.",
+      "callout": "$300 VS $20,000",
+      "visual": "Cinematic shot of a heavy brass auction gavel resting on a polished wooden podium, dark moody atmosphere."
+    },
+    {
+      "say": "Real leverage isn't saved cash. It's an irreplaceable skill that compounds every single year.",
+      "callout": "THE LEVERAGE",
+      "visual": "Close-up of a person's hands typing on a vintage mechanical typewriter, warm key light, deep shadows."
+    },
+    {
+      "say": "Build a rare skill set today so you never trade hours for dollars again.",
+      "callout": "",
+      "visual": "Silhouette of a person looking out a large industrial loft window at a glowing city skyline at dusk."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "Cinematic shot of a closed leather-bound notebook lying flat on a dark mahogany desk under a single warm spotlight."
+    }
+  ],
+  "caption": "The true story of Alexander Calder shows why rare skills beat cash every time. #moneysense #personalfinance #wealthmindset #financialfreedom #moneyrules",
+  "description": "Discover how sculptor Alexander Calder used personal skill instead of cash to pay for meals, and the money lesson behind it.",
+  "hashtags": [
+    "#moneysense",
+    "#personalfinance",
+    "#wealthmindset",
+    "#financialfreedom",
+    "#moneyrules"
+  ],
+  "first_comment": "What rare skill are you currently building to increase your own personal leverage?",
+  "facts": [
+    {
+      "claim": "Alexander Calder used sketches to pay restaurant bills.",
+      "basis": "Well-documented historical anecdotes of Calder's lifestyle and payment habits in Paris."
+    },
+    {
+      "claim": "Calder's napkin sketches and small works fetch thousands at modern auctions.",
+      "basis": "Art market records for Calder's works on paper."
+    }
+  ],
+  "source": "llm",
+  "pillar": "story",
+  "look": "",
+  "loop_map": {
+    "stakes": "Alexander Calder faces an expensive restaurant bill in Paris in 1968.",
+    "big_question": "Why did the restaurant owner happily accept a cheap piece of paper for a luxury meal?",
+    "assume": "Art's value comes from expensive materials.",
+    "reveal": "Value comes from decades of mastered personal skill.",
+    "rehook_beats": [
+      4,
+      7
+    ],
+    "payoff_beat": 10
+  }
+}

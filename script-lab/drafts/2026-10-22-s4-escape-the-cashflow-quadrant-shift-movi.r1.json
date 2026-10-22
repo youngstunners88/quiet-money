@@ -1,0 +1,101 @@
+{
+  "title": "The Cashflow Quadrant Shift: Moving to Passive Income",
+  "hook_text": "TRADING HOURS KILLS WEALTH",
+  "beats": [
+    {
+      "say": "Trading hours for dollars guarantees you work until you die.",
+      "callout": "",
+      "visual": "Cinematic wide shot of an empty desk under a harsh single desk lamp in a dark office."
+    },
+    {
+      "say": "Here is the exact mathematical shift to cross the quadrant.",
+      "callout": "STEP ONE",
+      "visual": "Close-up of a hand drawing a four-quadrant grid on a blank notepad with a black pen."
+    },
+    {
+      "say": "Most people stay trapped on the left side as employees and self-employed workers.",
+      "callout": "EMPLOYEE VS OWNER",
+      "visual": "Back view of a person standing at a large floor-to-ceiling office window looking out at a gray city."
+    },
+    {
+      "say": "That side forces you to trade every single hour of your life for a paycheck.",
+      "callout": "",
+      "visual": "Close-up of fingers typing rapidly on a mechanical keyboard in dim light."
+    },
+    {
+      "say": "Why do incomes rise while people still feel completely broke?",
+      "callout": "THE BIG QUESTION",
+      "visual": "A classic hourglass resting on a dark wooden table with sand pouring slowly through the center."
+    },
+    {
+      "say": "Because expenses climb right alongside earnings, keeping your net cash flow flat.",
+      "callout": "EARNINGS VS EXPENSES",
+      "visual": "Close-up of a digital calculator showing numbers changing rapidly under warm overhead lighting."
+    },
+    {
+      "say": "The right side of the quadrant belongs to business owners and investors who own systems.",
+      "callout": "STEP TWO",
+      "visual": "A high-angle view of a chessboard on a dark oak table with pieces arranged in a defensive formation."
+    },
+    {
+      "say": "Assets put money in your pocket every month while liabilities take money out.",
+      "callout": "ASSET VS LIABILITY",
+      "visual": "A heavy metal key resting on top of a stack of crisp white paper documents."
+    },
+    {
+      "say": "How do you actually build enough passive income to cover your life?",
+      "callout": "",
+      "visual": "A cinematic shot of a brass pocket watch ticking on a dark textured leather surface."
+    },
+    {
+      "say": "Investing $500 a month at 8% per year reaches $600,000 in 27.6 years.",
+      "callout": "$600,000 TARGET",
+      "visual": "A clear glass jar being slowly filled with small silver coins under soft morning light."
+    },
+    {
+      "say": "The honest catch is that building passive income takes years of capital and steady effort.",
+      "callout": "",
+      "visual": "A person using a wrench to tighten a bolt on old machinery in a quiet, sunlit workshop."
+    },
+    {
+      "say": "This week, audit your budget and move $100 into an index fund.",
+      "callout": "",
+      "visual": "A close-up of hands opening a clean financial ledger on a dark wooden desk."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "Cinematic shot of a single glowing bulb hanging against a dark concrete wall."
+    }
+  ],
+  "caption": "The math behind moving from active income to passive income systems. #money #personalfinance #passiveincome #wealth",
+  "description": "Learn the math and strategy behind the Cashflow Quadrant. Discover how shifting from earned income to passive income assets changes your financial future.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#passiveincome",
+    "#wealth",
+    "#investing"
+  ],
+  "first_comment": "Which quadrant are you currently spending most of your time in?",
+  "facts": [
+    {
+      "claim": "$500/month invested at 8%/yr reaches $600,000 in 27.6 years",
+      "basis": "PASSIVE INCOME ('4% rule': withdraw 4% a year... investing $500/month at 8%/yr reaches $600,000 in 27.6 years)"
+    }
+  ],
+  "source": "llm",
+  "pillar": "escape",
+  "look": "",
+  "loop_map": {
+    "stakes": "Trading hours for dollars leaves you working until you die.",
+    "big_question": "Why do incomes rise while people still feel completely broke?",
+    "assume": "Most people assume working harder in a job builds lasting wealth.",
+    "reveal": "True wealth comes from owning assets on the right side of the cashflow quadrant.",
+    "rehook_beats": [
+      5,
+      9
+    ],
+    "payoff_beat": 10
+  }
+}

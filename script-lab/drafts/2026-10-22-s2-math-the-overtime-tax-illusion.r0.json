@@ -1,0 +1,92 @@
+{
+  "title": "The Overtime Tax Illusion",
+  "hook_text": "WORKING OVERTIME JUST COST YOU MONEY",
+  "beats": [
+    {
+      "say": "Working that extra 10-hour shift feels like a win, until you run the actual tax math.",
+      "callout": "",
+      "visual": "A close-up of hands reviewing a glowing pay stub on a dark wooden desk under a single desk lamp."
+    },
+    {
+      "say": "That bonus cash pushes your total earnings right into a higher marginal tax bracket.",
+      "callout": "TAX BRACKET",
+      "visual": "A silhouette of a worker staring out a rainy office window at night."
+    },
+    {
+      "say": "So why does working more hours suddenly yield less than minimum wage take-home pay?",
+      "callout": "",
+      "visual": "A stack of coins sitting beside a calculator in dim morning light."
+    },
+    {
+      "say": "Most people assume every extra dollar earned keeps the exact same tax rate.",
+      "callout": "ASSUMPTION VS FACT",
+      "visual": "A close-up of a pen tapping slowly on a blank notepad."
+    },
+    {
+      "say": "The truth is, federal and state withholdings jump the second you cross the threshold.",
+      "callout": "",
+      "visual": "A blurred shot of a city skyline at dusk through a car windshield."
+    },
+    {
+      "say": "When payroll taxes and higher brackets combine, what happens to your hourly bonus?",
+      "callout": "THE REAL RATE",
+      "visual": "A person counting cash bills at a kitchen table, shot from overhead."
+    },
+    {
+      "say": "Your net take-home pay on those extra hours plummets below your base rate.",
+      "callout": "",
+      "visual": "A close-up of a digital clock ticking past midnight in a quiet room."
+    },
+    {
+      "say": "How much of your hard work actually ends up in your bank account?",
+      "callout": "BANK VS IRS",
+      "visual": "An open leather wallet resting on a cold concrete surface."
+    },
+    {
+      "say": "After all deductions, you might bring home less than $5 an hour for that shift.",
+      "callout": "",
+      "visual": "A single coin resting on top of a stack of tax forms."
+    },
+    {
+      "say": "That is the hidden tax math behind every extra shift you pick up.",
+      "callout": "THE MATH",
+      "visual": "A hand closing a laptop lid in a dark room."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "FOLLOW US",
+      "visual": "A silhouette walking down a quiet hallway toward an open door with warm light."
+    }
+  ],
+  "caption": "Working overtime doesn't always pay like you think. Check the tax math before your next extra shift. #Overtime #TaxMath #PersonalFinance #MoneyTips #QuietMoney",
+  "description": "Discover how marginal tax brackets turn extra work hours into lower take-home pay than you expect.",
+  "hashtags": [
+    "#Overtime",
+    "#TaxMath",
+    "#PersonalFinance",
+    "#MoneyTips",
+    "#QuietMoney"
+  ],
+  "first_comment": "Have you ever checked your effective hourly rate after tax on an overtime shift?",
+  "facts": [
+    {
+      "claim": "Marginal tax brackets can reduce the effective take-home pay of overtime hours significantly due to combined federal, state, and payroll withholdings.",
+      "basis": "Standard progressive tax bracket mechanics in payroll systems."
+    }
+  ],
+  "source": "llm",
+  "pillar": "math",
+  "look": "",
+  "loop_map": {
+    "stakes": "Working extra overtime shifts for more take-home pay.",
+    "big_question": "Why does working more hours yield less than minimum wage take-home pay?",
+    "assume": "Every extra dollar earned keeps the exact same tax rate.",
+    "reveal": "Higher tax brackets and withholdings slash the net hourly rate below minimum wage.",
+    "rehook_beats": [
+      3,
+      6,
+      8
+    ],
+    "payoff_beat": 9
+  }
+}

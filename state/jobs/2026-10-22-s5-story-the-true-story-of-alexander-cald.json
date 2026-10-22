@@ -1,0 +1,77 @@
+{
+  "id": "2026-10-22-s5-story-the-true-story-of-alexander-cald",
+  "pillar": "story",
+  "topic": "The True Story of Alexander Calder and the Restaurant Bill Paid with Art",
+  "day": "2026-10-22",
+  "slot": 5,
+  "status": "published",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-22T09:52:19Z",
+      "words": 150
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-22T09:54:02Z",
+      "seconds": 62.745,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-22T09:54:21Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-22T09:56:34Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-22T09:56:34Z",
+      "score": 94
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-22T09:56:35Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-10-22T09:56:38Z",
+      "local": "2026-10-23T07:30:00-04:00",
+      "youtube": null
+    }
+  ],
+  "artifacts": {
+    "angle": "The famous sculptor who frequently paid for expensive restaurant meals by simply drawing a masterpiece on a napkin, revealing the immense power of compounding personal skill over cash.",
+    "hook": "Instead of paying his expensive restaurant tab with cash, he pulled out a pen, sketched on a napkin, and handed it to the waiter—making that piece worth millions today.",
+    "title": "The Artist Who Paid Expensive Meals With Simple Doodles",
+    "style": "cinematic",
+    "video": "/home/user/quiet-money/production/output/2026-10-22/2026-10-22-s5-story-the-true-story-of-alexander-cald/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-22/2026-10-22-s5-story-the-true-story-of-alexander-cald/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-10-23/slot1-story",
+        "post_at": "2026-10-23T07:30:00-04:00"
+      },
+      "youtube": {
+        "skipped": "YouTube refused the upload session (HTTP 429): quota or rate limit; it resets at midnight Pacific"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 94,
+    "passed": true
+  },
+  "cost": {
+    "tts:edge:chars": 876
+  },
+  "notes": []
+}

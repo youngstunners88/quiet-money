@@ -1,0 +1,89 @@
+{
+  "id": "2026-10-22-s6-math-the-student-loan-income-driven-r",
+  "pillar": "math",
+  "topic": "The Student Loan Income-Driven Repayment Balance Balloon",
+  "day": "2026-10-22",
+  "slot": 6,
+  "status": "published",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-22T09:57:20Z",
+      "words": 172
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-22T09:58:42Z",
+      "seconds": 62.932,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-22T09:58:57Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-22T10:01:02Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-22T10:01:02Z",
+      "score": 97
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-22T10:01:03Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-10-22T10:01:12Z",
+      "local": "2026-10-23T11:30:00-04:00",
+      "youtube": "2026-10-23T11:30:00-04:00"
+    }
+  ],
+  "artifacts": {
+    "angle": "Showing step-by-step how low minimum payments cause negative amortization where your total loan grows every single month.",
+    "hook": "You've been making your student loan payments for five years, so why is your total balance higher than the day you graduated?",
+    "title": "Why Your Student Loan Balance Keeps Growing",
+    "style": "cinematic",
+    "video": "/home/user/quiet-money/production/output/2026-10-22/2026-10-22-s6-math-the-student-loan-income-driven-r/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-22/2026-10-22-s6-math-the-student-loan-income-driven-r/cover.jpg",
+    "youtube": {
+      "video_id": "8gDlEKTiWEg",
+      "channel_id": "UC9B1QBr3_8Eulok8IdQbCqQ",
+      "privacy": "private",
+      "post_at": "2026-10-23T11:30:00-04:00",
+      "comment_posted": false,
+      "series": true
+    },
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-10-23/slot2-math",
+        "post_at": "2026-10-23T11:30:00-04:00"
+      },
+      "youtube": {
+        "mode": "youtube",
+        "post_at": "2026-10-23T11:30:00-04:00",
+        "video_id": "8gDlEKTiWEg",
+        "channel_id": "UC9B1QBr3_8Eulok8IdQbCqQ",
+        "privacy": "private"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 97,
+    "passed": true
+  },
+  "cost": {
+    "tts:edge:chars": 1037
+  },
+  "notes": []
+}

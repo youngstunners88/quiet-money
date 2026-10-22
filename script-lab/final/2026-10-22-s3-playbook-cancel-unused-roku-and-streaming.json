@@ -1,0 +1,96 @@
+{
+  "title": "Cancel Hidden Roku Add-On Channels in 3 Steps",
+  "hook_text": "STOP PAYING FOR HIDDEN STREAMING CHANNELS",
+  "beats": [
+    {
+      "say": "You're paying for streaming add-on channels that you haven't opened since last year.",
+      "callout": "",
+      "visual": "A dark, moody living room with a glowing flat-screen television mounted above a clean wooden credenza, casting cold blue ambient light onto an empty sofa."
+    },
+    {
+      "say": "Where is that invisible cash leak quietly draining your checking account every single month?",
+      "callout": "",
+      "visual": "A close-up shot from behind of a person sitting in shadows, holding a black remote control pointed toward a dark screen."
+    },
+    {
+      "say": "Most people assume every single entertainment charge shows up inside their phone's app store.",
+      "callout": "",
+      "visual": "A sleek smartphone resting face down on a dark granite nightstand next to a glass of water, illuminated by soft moonlight."
+    },
+    {
+      "say": "That's the trap. Hardware platforms like Roku quietly bill secondary channel add-ons directly behind the scenes.",
+      "callout": "HIDDEN DEVICE BILLING",
+      "visual": "Macro lens view of a small black streaming box connected by HDMI cable behind a modern television set, dust motes floating in dim lighting."
+    },
+    {
+      "say": "According to the math, a single $15/month subscription silently wastes $1,800 over 10 years.",
+      "callout": "$1,800 IN 10 YEARS",
+      "visual": "A neat stack of paper bank statements sitting beside an unbranded ceramic coffee cup on an oak desk under a warm spotlight."
+    },
+    {
+      "say": "What forgotten recurring charges are tied to your living room hardware right now?",
+      "callout": "",
+      "visual": "A silhouette of hands typing deliberately on a slim laptop keyboard in a quiet, shadowy home office."
+    },
+    {
+      "say": "Step one. Open an internet browser on your computer and log into your primary Roku account.",
+      "callout": "STEP ONE",
+      "visual": "An over-the-shoulder view of a dimly lit desk, showing a person logging into a web portal on a laptop screen from a distance, screen blurred."
+    },
+    {
+      "say": "Skip your television remote entirely, because physical TV menus often bury secondary third-party add-on billing.",
+      "callout": "",
+      "visual": "A black plastic streaming remote resting abandoned on the edge of a modern coffee table, out of focus in the foreground."
+    },
+    {
+      "say": "Step two. Click your user profile, select manage your subscriptions, and inspect the active list carefully.",
+      "callout": "STEP TWO",
+      "visual": "Extreme close-up of a person's index finger clicking a metal trackpad in a calm, dimly lit workspace."
+    },
+    {
+      "say": "Look for forgotten trial channels, standalone sports tiers, and movie add-ons you abandoned months ago.",
+      "callout": "",
+      "visual": "A low-angle cinematic shot of a modern living room interior, quiet and still, with warm accent lights highlighting architectural details."
+    },
+    {
+      "say": "Step three. Click turn off auto-renew on every inactive channel to stop the monthly leak immediately.",
+      "callout": "STEP THREE",
+      "visual": "A neat, organized desktop workspace with a closed laptop, a brass pen, and a warm desk lamp casting clean geometric shadows."
+    },
+    {
+      "say": "That simple audit saves you hundreds. Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "A calm, wide shot of an elegant modern apartment interior with floor-to-ceiling windows overlooking a city skyline at dusk."
+    }
+  ],
+  "caption": "Streaming hardware platforms bill hidden add-ons you probably forgot existed. Here is how to cancel them in 3 steps. #money #personalfinance #streaming #subscriptions #financialfreedom",
+  "description": "Overlooked streaming add-ons billed through TV hardware like Roku silently drain your bank balance. Follow this 3-step audit on your web browser to eliminate unused channel subscriptions today.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#streaming",
+    "#subscriptions",
+    "#budgeting"
+  ],
+  "first_comment": "How many streaming subscriptions are you currently paying for across all devices?",
+  "facts": [
+    {
+      "claim": "A $15/month subscription wastes $1,800 over 10 years.",
+      "basis": "Money fact sheet calculation: $15/month * 12 months * 10 years = $1,800."
+    }
+  ],
+  "source": "llm",
+  "pillar": "playbook",
+  "look": "",
+  "loop_map": {
+    "stakes": "Overlooked streaming add-on channels leaking cash every month",
+    "big_question": "Where is that invisible cash leak quietly draining your checking account every single month?",
+    "assume": "Every entertainment charge shows up in your phone's app store",
+    "reveal": "Streaming hardware platforms quietly bill secondary add-ons directly on their web portals",
+    "rehook_beats": [
+      6,
+      10
+    ],
+    "payoff_beat": 11
+  }
+}
