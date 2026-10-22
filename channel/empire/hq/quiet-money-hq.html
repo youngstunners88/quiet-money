@@ -1,0 +1,865 @@
+<title>Quiet Money HQ</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=IBM+Plex+Mono:wght@400;500&family=Montserrat:wght@500;600;700;800&display=swap">
+<style>
+/* Layout: an operator's ledger. The ruled sheet on the left keeps the books (freedom line, engines, moves, horizon, goals);
+   the desk docked on the right is the line to Claude: ask, plan, and send work to a build session. */
+:root {
+  --paper: #EBF1E9;      /* green ledger paper */
+  --sheet: #F7FAF5;
+  --ink: #16201A;
+  --ink-2: #536158;
+  --rule: #C9D7CB;
+  --margin: #D9827A;     /* the ledger's red margin rule */
+  --gold: #FFD23F;       /* brand accent: the marker */
+  --gold-ink: #7A5E00;   /* gold that can carry text on paper */
+  --good: #0E7F57;
+  --warn: #8F5600;
+  --bad: #B3261E;
+  --chip: #E1EAE0;
+  --shadow: 0 1px 0 rgba(22, 32, 26, .06), 0 8px 24px -16px rgba(22, 32, 26, .35);
+  --f-display: "Anton", "Impact", "Arial Narrow", sans-serif;
+  --f-ui: "Montserrat", "Segoe UI", system-ui, sans-serif;
+  --f-num: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  --r: 10px;
+  --gap: 16px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #0D1310; --sheet: #141C17; --ink: #E8EEE6; --ink-2: #98A69D; --rule: #25322A; --margin: #6E3A35;
+    --gold: #FFD23F; --gold-ink: #FFD23F; --good: #2EE59D; --warn: #FFB547; --bad: #FF7A6E; --chip: #1C2620;
+    --shadow: 0 1px 0 rgba(0, 0, 0, .3), 0 10px 28px -18px rgba(0, 0, 0, .8); color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #0D1310; --sheet: #141C17; --ink: #E8EEE6; --ink-2: #98A69D; --rule: #25322A; --margin: #6E3A35;
+  --gold: #FFD23F; --gold-ink: #FFD23F; --good: #2EE59D; --warn: #FFB547; --bad: #FF7A6E; --chip: #1C2620;
+  --shadow: 0 1px 0 rgba(0, 0, 0, .3), 0 10px 28px -18px rgba(0, 0, 0, .8); color-scheme: dark;
+}
+body { background: var(--paper); color: var(--ink); font-family: var(--f-ui); font-size: 14px; line-height: 1.5; }
+.wrap { max-width: 1440px; margin-inline: auto; padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 20px 48px; }
+.app { display: grid; grid-template-columns: minmax(0, 1fr) 380px; gap: 24px; align-items: start; }
+@media (max-width: 1080px) { .app { grid-template-columns: minmax(0, 1fr); } }
+
+/* the ruled sheet */
+.sheet { min-width: 0; display: grid; gap: 28px; }
+.ledger { position: relative; background: var(--sheet); border: 1px solid var(--rule); border-radius: var(--r); box-shadow: var(--shadow);
+  background-image: repeating-linear-gradient(to bottom, transparent 0 27px, color-mix(in srgb, var(--rule) 55%, transparent) 27px 28px); background-position: 0 14px; }
+.ledger::before { content: ""; position: absolute; top: 0; bottom: 0; left: 30px; width: 4px;
+  border-left: 1px solid var(--margin); border-right: 1px solid var(--margin); opacity: .55; pointer-events: none; }
+.ledger > .in { position: relative; padding: 20px 22px 22px 52px; }
+@media (max-width: 560px) { .ledger::before { left: 14px; } .ledger > .in { padding: 16px 14px 18px 30px; } }
+
+/* type */
+h1, h2, h3 { margin: 0; text-wrap: balance; }
+.eyebrow { font: 700 11px/1.2 var(--f-ui); letter-spacing: .14em; text-transform: uppercase; color: var(--ink-2); }
+h1 { font: 400 clamp(30px, 4.4vw, 46px)/1 var(--f-display); letter-spacing: .01em; text-transform: uppercase; }
+h2 { font: 800 15px/1.25 var(--f-ui); letter-spacing: .02em; }
+.sec-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-bottom: 12px; }
+.sec-head p { margin: 0; color: var(--ink-2); font-size: 13px; }
+.num { font-family: var(--f-num); font-variant-numeric: tabular-nums; }
+.big { font: 400 clamp(38px, 5.6vw, 64px)/.95 var(--f-display); letter-spacing: .01em; font-variant-numeric: tabular-nums; }
+.mid { font: 400 30px/1 var(--f-display); font-variant-numeric: tabular-nums; }
+.muted { color: var(--ink-2); }
+.src { font: 500 11px/1.3 var(--f-num); color: var(--ink-2); }
+mark { background: linear-gradient(to top, var(--gold) 0 46%, transparent 46%); color: inherit; padding: 0 .08em; }
+
+/* header */
+.top { display: grid; gap: 10px; margin-bottom: 22px; }
+.top-row { display: flex; align-items: flex-end; justify-content: space-between; gap: 12px 20px; flex-wrap: wrap; }
+.takeaway { margin: 0; font-size: 15px; max-width: 72ch; }
+.status { display: flex; gap: 8px; flex-wrap: wrap; }
+.chip { display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px; border-radius: 999px; background: var(--chip);
+  font: 600 12px/1.3 var(--f-ui); white-space: nowrap; }
+.dot { width: 7px; height: 7px; border-radius: 50%; background: var(--ink-2); flex: none; }
+.dot.good { background: var(--good); } .dot.warn { background: var(--warn); } .dot.bad { background: var(--bad); } .dot.gold { background: var(--gold); }
+
+/* freedom line */
+.freedom { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 24px; align-items: end; }
+@media (max-width: 760px) { .freedom { grid-template-columns: minmax(0, 1fr); } }
+.meter { height: 10px; border-radius: 999px; background: var(--chip); overflow: hidden; margin-top: 14px; }
+.meter > i { display: block; height: 100%; width: 0; background: var(--gold); border-radius: 999px; }
+.freedom-facts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.fact .v { font: 500 18px/1.2 var(--f-num); font-variant-numeric: tabular-nums; }
+.fact .k { font-size: 12px; color: var(--ink-2); }
+
+/* engines */
+.engines { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr)); gap: var(--gap); }
+.tile { background: var(--sheet); border: 1px solid var(--rule); border-radius: var(--r); padding: 16px; display: grid; gap: 10px;
+  align-content: start; min-width: 0; box-shadow: var(--shadow); }
+.tile .row { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; }
+.kv { display: grid; grid-template-columns: 1fr auto; gap: 4px 12px; font-size: 13px; }
+.kv dt { color: var(--ink-2); } .kv dd { margin: 0; text-align: right; font-family: var(--f-num); font-variant-numeric: tabular-nums; }
+.spark { display: flex; align-items: flex-end; gap: 3px; height: 44px; }
+.spark i { flex: 1; min-width: 3px; background: var(--rule); border-radius: 2px 2px 0 0; position: relative; }
+.spark i.hit { background: var(--gold); }
+.spark i.held::after { content: ""; position: absolute; left: 0; right: 0; top: -3px; height: 2px; background: var(--bad); border-radius: 1px; }
+.bars { display: grid; gap: 5px; }
+.bar { display: grid; grid-template-columns: 74px 1fr 34px; align-items: center; gap: 8px; font-size: 12px; }
+.bar b { font-weight: 600; } .bar .t { height: 7px; background: var(--chip); border-radius: 4px; overflow: hidden; }
+.bar .t i { display: block; height: 100%; background: var(--ink); opacity: .7; border-radius: 4px; }
+.bar .n { text-align: right; font-family: var(--f-num); }
+
+/* lists */
+.cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 20px; }
+.list { list-style: none; margin: 0; padding: 0; display: grid; }
+.item { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; gap: 4px 12px; align-items: start; padding: 10px 0;
+  border-top: 1px solid var(--rule); }
+.item:first-child { border-top: 0; }
+.item .id { font: 500 12px/1.6 var(--f-num); color: var(--ink-2); }
+.item .title { font-weight: 700; } .item .sub { grid-column: 2; font-size: 12.5px; color: var(--ink-2); }
+.score { font: 500 12px/1.6 var(--f-num); color: var(--gold-ink); }
+.needs { display: grid; gap: 10px; }
+.need { display: grid; grid-template-columns: 4px minmax(0, 1fr); gap: 12px; }
+.need::before { content: ""; background: var(--gold); border-radius: 2px; }
+.need .t { font-weight: 600; } .need .s { font-size: 12.5px; color: var(--ink-2); }
+
+/* buttons and inputs */
+button, .btn { font: 700 12.5px/1 var(--f-ui); border-radius: 8px; border: 1px solid var(--ink); background: transparent; color: var(--ink);
+  padding: 8px 12px; cursor: pointer; white-space: nowrap; }
+button.primary { background: var(--ink); color: var(--sheet); }
+button.gold { background: var(--gold); border-color: var(--gold); color: #1A1400; }
+button.ghost { border-color: transparent; padding-inline: 8px; color: var(--ink-2); }
+button.tiny { padding: 5px 9px; font-size: 11.5px; }
+button:disabled { opacity: .45; cursor: not-allowed; }
+button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible, .tl-bar:focus-visible {
+  outline: 2px solid var(--gold); outline-offset: 2px; }
+input, select, textarea { font: 500 13.5px/1.35 var(--f-ui); color: var(--ink); background: var(--sheet); border: 1px solid var(--rule);
+  border-radius: 8px; padding: 8px 10px; width: 100%; min-width: 0; }
+textarea { resize: vertical; min-height: 44px; }
+label { display: grid; gap: 4px; font-size: 12px; font-weight: 600; color: var(--ink-2); }
+.form { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 150px), 1fr)); gap: 10px; align-items: end; }
+.form .wide { grid-column: 1 / -1; }
+.actions { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+.seg { display: inline-flex; border: 1px solid var(--rule); border-radius: 8px; overflow: hidden; }
+.seg button { border: 0; border-radius: 0; padding: 6px 10px; color: var(--ink-2); }
+.seg button[aria-pressed="true"] { background: var(--ink); color: var(--sheet); }
+
+/* timeline */
+.tl { --label: 120px; display: grid; gap: 6px; }
+.tl-axis { display: grid; grid-template-columns: var(--label) 1fr; }
+.tl-months { position: relative; height: 20px; }
+.tl-months span { position: absolute; top: 0; font: 500 11px/20px var(--f-num); color: var(--ink-2); padding-left: 4px;
+  border-left: 1px solid var(--rule); white-space: nowrap; }
+.tl-lane { display: grid; grid-template-columns: var(--label) 1fr; align-items: stretch; min-height: 34px; }
+.tl-lane > .lab { font: 700 12px/1.2 var(--f-ui); color: var(--ink-2); padding: 9px 8px 0 0; }
+.tl-track { position: relative; border-top: 1px dashed var(--rule); }
+.tl-track .today { position: absolute; top: -6px; bottom: 0; width: 0; border-left: 2px solid var(--bad); z-index: 1; }
+.tl-bar { position: absolute; height: 24px; border-radius: 6px; padding: 0 8px; display: flex; align-items: center; gap: 6px;
+  font: 600 11.5px/1 var(--f-ui); cursor: pointer; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;
+  border: 1px solid var(--ink); background: var(--sheet); color: var(--ink); min-width: 10px; }
+.tl-bar.owner { background: var(--gold); border-color: var(--gold); color: #1A1400; }
+.tl-bar.both { background: repeating-linear-gradient(135deg, var(--gold) 0 6px, var(--sheet) 6px 12px); border-color: var(--gold-ink); }
+.tl-bar.done { opacity: .5; text-decoration: line-through; }
+.tl-bar.late { border-color: var(--bad); box-shadow: inset 3px 0 0 var(--bad); }
+.tl-bar[aria-pressed="true"] { outline: 2px solid var(--ink); outline-offset: 1px; }
+.tl-key { display: flex; gap: 14px; flex-wrap: wrap; font-size: 12px; color: var(--ink-2); }
+.tl-key i { display: inline-block; width: 14px; height: 10px; border-radius: 3px; vertical-align: -1px; margin-right: 5px; border: 1px solid var(--ink); }
+.tl-key i.owner { background: var(--gold); border-color: var(--gold); }
+.tl-key i.both { background: repeating-linear-gradient(135deg, var(--gold) 0 3px, var(--sheet) 3px 6px); border-color: var(--gold-ink); }
+.agenda { display: none; }
+@media (max-width: 680px) { .tl-wide { display: none; } .agenda { display: grid; gap: 14px; } }
+.agenda h3 { font: 700 12px/1.2 var(--f-ui); letter-spacing: .1em; text-transform: uppercase; color: var(--ink-2); margin-bottom: 4px; }
+.detail { border: 1px solid var(--rule); border-radius: var(--r); padding: 14px; display: grid; gap: 8px; background: var(--paper); }
+
+/* goals */
+.goal { display: grid; gap: 6px; padding: 12px 0; border-top: 1px solid var(--rule); }
+.goal:first-child { border-top: 0; }
+.goal .row { display: flex; justify-content: space-between; gap: 12px; align-items: baseline; flex-wrap: wrap; }
+.goal .title { font-weight: 700; }
+.goal .meter { margin-top: 0; height: 7px; }
+.goal.done .title { text-decoration: line-through; color: var(--ink-2); }
+
+/* the desk */
+.desk { position: sticky; top: calc(env(safe-area-inset-top, 0px) + 16px); display: grid; gap: 16px; min-width: 0; }
+@media (max-width: 1080px) { .desk { position: static; } }
+.panel { background: var(--sheet); border: 1px solid var(--rule); border-radius: var(--r); box-shadow: var(--shadow); padding: 16px; min-width: 0;
+  display: grid; gap: 12px; }
+.chat { display: grid; gap: 10px; max-height: 46vh; overflow-y: auto; padding-right: 2px; }
+.msg { padding: 10px 12px; border-radius: 10px; font-size: 13.5px; white-space: pre-wrap; overflow-wrap: anywhere; }
+.msg.you { background: var(--chip); justify-self: end; max-width: 88%; }
+.msg.hq { border: 1px solid var(--rule); }
+.msg.note { font-size: 12px; color: var(--ink-2); padding: 0 2px; }
+.prompts { display: flex; gap: 6px; flex-wrap: wrap; }
+.prompts button { font-weight: 600; border-color: var(--rule); font-size: 12px; white-space: normal; text-align: left; }
+.req { border-top: 1px solid var(--rule); padding-top: 10px; display: grid; gap: 6px; }
+.req:first-child { border-top: 0; padding-top: 0; }
+.req .brief { font-size: 12.5px; color: var(--ink-2); white-space: pre-wrap; overflow-wrap: anywhere; max-height: 7.5em; overflow: hidden; }
+.req.open .brief { max-height: none; }
+.pill { font: 700 10.5px/1 var(--f-ui); letter-spacing: .06em; text-transform: uppercase; padding: 4px 7px; border-radius: 999px; background: var(--chip); }
+.pill.started { background: var(--gold); color: #1A1400; } .pill.done { background: transparent; border: 1px solid var(--good); color: var(--good); }
+.copyable { font: 500 12px/1.4 var(--f-num); overflow-wrap: anywhere; user-select: all; }
+.empty { color: var(--ink-2); font-size: 13px; border: 1px dashed var(--rule); border-radius: 8px; padding: 12px; }
+.toast { position: fixed; left: 50%; transform: translateX(-50%); bottom: calc(env(safe-area-inset-bottom, 0px) + 18px); z-index: 20;
+  background: var(--ink); color: var(--sheet); padding: 10px 14px; border-radius: 10px; font-weight: 600; font-size: 13px; max-width: min(92vw, 520px); }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+@media (prefers-reduced-motion: no-preference) {
+  .meter > i { transition: width .6s cubic-bezier(.2, .7, .2, 1); }
+  .msg.hq.typing::after { content: "▍"; animation: blink 1s steps(2) infinite; color: var(--gold-ink); }
+  @keyframes blink { 50% { opacity: 0; } }
+}
+</style>
+
+<div class="wrap">
+  <header class="top">
+    <div class="top-row">
+      <div>
+        <div class="eyebrow">Quiet Money · the books</div>
+        <h1>Quiet Money HQ</h1>
+      </div>
+      <div class="status" id="status"></div>
+    </div>
+    <p class="takeaway" id="takeaway">Loading the books…</p>
+  </header>
+
+  <div class="app">
+    <main class="sheet">
+
+      <section class="ledger" id="freedom" aria-labelledby="freedom-h">
+        <div class="in">
+          <div class="sec-head">
+            <h2 id="freedom-h">The freedom line</h2>
+            <p>What the business pays you each month, against the number that lets you leave the paycheck.</p>
+          </div>
+          <div id="freedom-body"></div>
+        </div>
+      </section>
+
+      <section id="needs" aria-labelledby="needs-h">
+        <div class="sec-head"><h2 id="needs-h">Needs you</h2><p>Steps only you can take, highest value first.</p></div>
+        <div class="cols">
+          <div class="panel"><div class="eyebrow">Your queue this week</div><div class="needs" id="needs-queue"></div></div>
+          <div class="panel"><div class="eyebrow">Unlocks, by what they open up</div><ol class="list" id="needs-unlocks"></ol></div>
+        </div>
+      </section>
+
+      <section id="engines" aria-labelledby="engines-h">
+        <div class="sec-head"><h2 id="engines-h">The engines</h2><p id="engines-asof"></p></div>
+        <div class="engines" id="engines-grid"></div>
+      </section>
+
+      <section id="moves" aria-labelledby="moves-h">
+        <div class="sec-head"><h2 id="moves-h">Next moves</h2><p>Ranked by the empire score: upside, leverage and speed over effort and risk.</p></div>
+        <div class="cols">
+          <div class="panel"><div class="eyebrow">I can build these now</div><ol class="list" id="moves-agent"></ol></div>
+          <div class="panel"><div class="eyebrow">Built, waiting on one step from you</div><ol class="list" id="moves-launch"></ol></div>
+        </div>
+      </section>
+
+      <section class="ledger" id="horizon" aria-labelledby="horizon-h">
+        <div class="in">
+          <div class="sec-head">
+            <h2 id="horizon-h">The horizon</h2>
+            <div class="seg" role="group" aria-label="How far ahead" id="horizon-seg"></div>
+          </div>
+          <div class="tl-key" id="tl-key"></div>
+          <div class="tl tl-wide" id="tl" style="margin-top:12px"></div>
+          <div class="agenda" id="agenda"></div>
+          <div id="tl-detail" style="margin-top:14px"></div>
+          <details style="margin-top:14px" id="tl-add-wrap">
+            <summary style="cursor:pointer;font-weight:700;font-size:13px">Add a milestone</summary>
+            <form class="form" id="tl-add" style="margin-top:10px" autocomplete="off">
+              <label class="wide">What happens<input id="tl-title" required maxlength="140" placeholder="First 10 sales of the planner"></label>
+              <label>Track<select id="tl-track"></select></label>
+              <label>Who moves it<select id="tl-lane"><option value="agent">Claude builds it</option><option value="owner">You do it</option><option value="both">Both</option></select></label>
+              <label>Starts<input id="tl-start" type="date" required></label>
+              <label>Lands<input id="tl-end" type="date"></label>
+              <label class="wide">Note<input id="tl-note" maxlength="300" placeholder="Why it matters, or what it depends on"></label>
+              <div class="actions wide"><button class="primary" type="submit">Add to the horizon</button></div>
+            </form>
+          </details>
+        </div>
+      </section>
+
+      <section id="goals" aria-labelledby="goals-h">
+        <div class="sec-head"><h2 id="goals-h">Goals</h2><p>Goals measured by a live number update themselves.</p></div>
+        <div class="panel">
+          <div id="goals-list"></div>
+          <details id="goal-add-wrap">
+            <summary style="cursor:pointer;font-weight:700;font-size:13px">Set a goal</summary>
+            <form class="form" id="goal-add" style="margin-top:10px" autocomplete="off">
+              <label class="wide">Goal<input id="g-title" required maxlength="140" placeholder="Planner pays for itself"></label>
+              <label>Measured by<select id="g-metric"></select></label>
+              <label>Target<input id="g-target" type="number" min="0" step="any" required inputmode="decimal"></label>
+              <label>Now (set by hand)<input id="g-current" type="number" min="0" step="any" inputmode="decimal"></label>
+              <label>By<input id="g-due" type="date"></label>
+              <div class="actions wide"><button class="primary" type="submit">Save goal</button></div>
+            </form>
+          </details>
+        </div>
+      </section>
+    </main>
+
+    <aside class="desk" aria-label="The desk">
+      <section class="panel" aria-labelledby="ask-h">
+        <div class="row" style="display:flex;justify-content:space-between;align-items:baseline;gap:8px">
+          <h2 id="ask-h">Ask HQ</h2><button class="ghost tiny" id="chat-clear" type="button">Clear</button>
+        </div>
+        <p class="muted" style="margin:0;font-size:12.5px" id="ask-note">Claude reads these books before it answers. It can set goals, add milestones and queue builds for you.</p>
+        <div class="prompts" id="prompts"></div>
+        <div class="chat" id="chat" aria-live="polite"></div>
+        <form id="ask" class="actions" autocomplete="off" style="align-items:stretch">
+          <label class="sr" for="ask-input">Message</label>
+          <textarea id="ask-input" rows="2" placeholder="What should I work on this week?" style="flex:1 1 200px"></textarea>
+          <div style="display:grid;gap:6px">
+            <button class="primary" type="submit" id="ask-send">Ask</button>
+            <button type="button" id="ask-stop" hidden>Stop</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="panel" aria-labelledby="build-h">
+        <h2 id="build-h">Build queue</h2>
+        <p class="muted" style="margin:0;font-size:12.5px" id="build-note">Work you send to Claude Code. Start a session here, or leave it queued and the daily HQ run picks it up.</p>
+        <form id="req-add" class="form" autocomplete="off">
+          <label class="wide">Ask for something to be built<textarea id="req-text" rows="2" maxlength="4000" placeholder="Add a 'Budget With Me' Short format and test it for two weeks"></textarea></label>
+          <div class="actions wide"><button class="primary" type="submit">Queue it</button></div>
+        </form>
+        <div id="reqs"></div>
+      </section>
+    </aside>
+  </div>
+</div>
+<div class="toast" id="toast" hidden role="status"></div>
+
+<script>
+(() => {
+  const REPO = "https://github.com/youngstunners88/quiet-money";
+  const CCR = "Claude Code Remote";
+  const TRACKS = [["freedom", "Freedom"], ["products", "Products & shop"], ["services", "Service desk"], ["content", "Content"], ["audience", "Audience & list"]];
+  const METRICS = {
+    income30: { label: "Net income, last 30 days ($)", money: true, get: (s) => s?.money?.netLast30Usd },
+    sales: { label: "Sales, all time", get: (s) => s?.money?.sales },
+    net: { label: "Net income, all time ($)", money: true, get: (s) => s?.money?.netUsd },
+    shorts7: { label: "Shorts passed, last 7 days", get: (s) => s?.shorts?.passedLast7 },
+    views: { label: "YouTube views, measured", get: (s) => s?.audience?.views },
+    live: { label: "Products live", get: (s) => (s?.products || []).filter((p) => p.live).length },
+    replies: { label: "Service desk replies", get: (s) => s?.service?.replies },
+    manual: { label: "Set by hand", get: () => null },
+  };
+  const S = { state: null, north: null, settings: null, goals: [], timeline: [], requests: [], canWrite: true, db: null, sample: null,
+    mcp: null, tools: false, horizon: 12, selected: null, turns: [], busy: false, confirmFor: null, envs: null };
+
+  // ---------- helpers
+  const $ = (s, r = document) => r.querySelector(s);
+  function h(tag, props, ...kids) {
+    const el = document.createElement(tag);
+    for (const [k, v] of Object.entries(props || {})) {
+      if (v == null || v === false) continue;
+      if (k === "class") el.className = v;
+      else if (k === "text") el.textContent = v;
+      else if (k === "style") el.setAttribute("style", v);
+      else if (k.startsWith("on") && typeof v === "function") el.addEventListener(k.slice(2), v);
+      else el.setAttribute(k, v === true ? "" : String(v));
+    }
+    for (const c of kids.flat()) if (c != null && c !== false) el.append(c instanceof Node ? c : document.createTextNode(String(c)));
+    return el;
+  }
+  const usd = (n, d = 0) => n == null || isNaN(n) ? "—" : new Intl.NumberFormat("en-US", { style: "currency", currency: "USD",
+    minimumFractionDigits: d, maximumFractionDigits: d }).format(Number(n));
+  const int = (n) => n == null || isNaN(n) ? "—" : new Intl.NumberFormat("en-US").format(Number(n));
+  const pct = (n) => n == null || isNaN(n) ? "—" : `${Math.round(Number(n) * 100)}%`;
+  const day = (s) => { const d = new Date(String(s).slice(0, 10) + "T00:00:00Z"); return isNaN(d) ? null : d; };
+  const fmtDay = (s) => { const d = day(s); return d ? d.toLocaleDateString("en-US", { month: "short", day: "numeric", timeZone: "UTC" }) : "—"; };
+  const fmtMonth = (d) => `${d.toLocaleDateString("en-US", { month: "short", timeZone: "UTC" })} ’${String(d.getUTCFullYear()).slice(2)}`;
+  const todayISO = () => new Date().toISOString().slice(0, 10);
+  const ago = (iso) => {
+    const t = Date.parse(iso); if (isNaN(t)) return "—";
+    const m = Math.round((Date.now() - t) / 60000);
+    return m < 2 ? "just now" : m < 90 ? `${m} min ago` : m < 2880 ? `${Math.round(m / 60)} h ago` : `${Math.round(m / 1440)} days ago`;
+  };
+  const addMonths = (d, n) => new Date(Date.UTC(d.getUTCFullYear(), d.getUTCMonth() + n, 1));
+  let toastTimer;
+  function toast(msg) { const t = $("#toast"); t.textContent = msg; t.hidden = false; clearTimeout(toastTimer); toastTimer = setTimeout(() => (t.hidden = true), 4200); }
+  const use = (name) => (window.claude && typeof window.claude.use === "function") ? window.claude.use(name).catch(() => null) : Promise.resolve(null);
+
+  async function write(fn, okMsg) {
+    if (!S.db) { toast("Saving needs the dashboard open in Claude."); return false; }
+    try { await fn(); if (okMsg) toast(okMsg); return true; }
+    catch (e) {
+      if (e && e.code === "invalid_argument") { S.canWrite = false; renderAll(); toast("This view can read the books but not change them."); }
+      else if (e && e.code === "quota_exceeded") toast("The store is full. Delete a few old items, then try again.");
+      else toast("That did not save. Try again in a moment.");
+      return false;
+    }
+  }
+
+  // ---------- header
+  function renderTop() {
+    const s = S.state, st = $("#status");
+    st.replaceChildren();
+    if (s) {
+      st.append(h("span", { class: "chip" }, h("span", { class: "dot gold" }), `Books as of ${ago(s.asOf)}`));
+      const m = s.money || {};
+      const share = m.ceilingUsd ? m.spendTodayUsd / m.ceilingUsd : 0;
+      st.append(h("span", { class: "chip" }, h("span", { class: `dot ${share > .9 ? "bad" : share > .66 ? "warn" : "good"}` }),
+        `Spend today ${usd(m.spendTodayUsd, 2)} of ${usd(m.ceilingUsd, 2)}`));
+    }
+    const t = $("#takeaway");
+    if (!s) { t.textContent = "The books fill in once the daily HQ run has written them. Until then the goals, horizon and desk all work."; return; }
+    const sh = s.shorts || {}, m = s.money || {}, n = s.next || {};
+    const top = (n.unlocks || [])[0];
+    const parts = [];
+    parts.push(`Shorts hit five a day on ${sh.daysOnTargetLast7 ?? "—"} of the last 7 days`);
+    parts.push(m.sales ? `${int(m.sales)} sale${m.sales === 1 ? "" : "s"}, ${usd(m.netUsd, 2)} net so far` : "no sale yet");
+    const goal = S.north?.targetMonthlyUsd;
+    if (goal) parts.push(`${usd(m.netLast30Usd)} of your ${usd(goal)} a month`);
+    t.replaceChildren(parts.join(", ") + ". ");
+    if (top) t.append("The step that opens the most: ", h("mark", { text: shorten(top.ask, 90) }), ".");
+  }
+  const shorten = (s, n) => (s = String(s || "")).length > n ? s.slice(0, n - 1).replace(/\s+\S*$/, "") + "…" : s;
+
+  // ---------- freedom line
+  function renderFreedom() {
+    const box = $("#freedom-body"); box.replaceChildren();
+    const m = S.state?.money || {}, north = S.north || {};
+    const now = m.netLast30Usd ?? 0, goal = Number(north.targetMonthlyUsd) || 0;
+    const left = h("div", {},
+      h("div", { class: "eyebrow" }, "Business income, last 30 days"),
+      h("div", { class: "row", style: "display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-top:6px" },
+        h("span", { class: "big" }, S.state ? usd(now) : "—"),
+        h("span", { class: "mid muted" }, goal ? `/ ${usd(goal)} a month` : "/ your number")),
+      h("div", { class: "meter", role: "img", "aria-label": goal ? `${pct(Math.min(1, now / goal))} of the monthly target` : "No target set" },
+        h("i", { style: `width:${goal ? Math.min(100, (now / goal) * 100).toFixed(1) : 0}%` })));
+    let right;
+    if (!goal) {
+      right = h("div", { class: "empty" }, h("b", {}, "Set your freedom number. "),
+        "It is the monthly income from this business that lets you leave the paycheck: your real monthly costs, plus a cushion. ",
+        "The horizon below then plans backwards from it.");
+    } else {
+      const due = day(north.targetDate);
+      const months = due ? Math.max(0, (due.getUTCFullYear() - new Date().getUTCFullYear()) * 12 + due.getUTCMonth() - new Date().getUTCMonth()) : null;
+      right = h("div", { class: "freedom-facts" },
+        fact(usd(Math.max(0, goal - now)), "a month still to find"),
+        fact(due ? fmtDay(north.targetDate) : "—", "target date"),
+        fact(months == null ? "—" : `${months} mo`, "on the horizon"));
+    }
+    box.append(h("div", { class: "freedom" }, left, right));
+    if (north.why) box.append(h("p", { class: "muted", style: "margin:14px 0 0;max-width:70ch" }, "Why: ", north.why));
+    if (S.canWrite) box.append(northForm(north));
+    box.append(h("p", { class: "src", style: "margin:12px 0 0" }, "Income is what sold, net of the platform fee (analytics/sales.jsonl). No other income line exists yet."));
+  }
+  const fact = (v, k) => h("div", { class: "fact" }, h("div", { class: "v" }, v), h("div", { class: "k" }, k));
+  function northForm(n) {
+    const f = h("form", { class: "form", style: "margin-top:16px", autocomplete: "off" },
+      h("label", {}, "Monthly number ($)", h("input", { id: "n-target", type: "number", min: "0", step: "50", inputmode: "decimal", value: n.targetMonthlyUsd ?? "" })),
+      h("label", {}, "By", h("input", { id: "n-date", type: "date", value: n.targetDate ?? "" })),
+      h("label", { class: "wide" }, "Why it is this number", h("input", { id: "n-why", maxlength: "240", value: n.why ?? "", placeholder: "Rent, food, transport, insurance, debt payments, a cushion" })),
+      h("div", { class: "actions wide" }, h("button", { class: "primary", type: "submit" }, n.targetMonthlyUsd ? "Update the number" : "Set the number")));
+    const wrap = h("details", { style: "margin-top:14px", open: !n.targetMonthlyUsd }, h("summary", { style: "cursor:pointer;font-weight:700;font-size:13px" }, "Edit the freedom number"), f);
+    f.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const target = Number($("#n-target", f).value);
+      if (!(target > 0)) { toast("Enter the monthly number in dollars."); return; }
+      await write(() => S.db.doc("hq/northstar").set({ targetMonthlyUsd: target, targetDate: $("#n-date", f).value || null,
+        why: $("#n-why", f).value.trim() || null, updatedAt: new Date().toISOString() }), "Freedom number saved.");
+    });
+    return wrap;
+  }
+
+  // ---------- needs you
+  function renderNeeds() {
+    const q = $("#needs-queue"), u = $("#needs-unlocks");
+    q.replaceChildren(); u.replaceChildren();
+    const n = S.state?.next;
+    if (!n) { q.append(h("div", { class: "empty" }, "Your queue appears with the first daily HQ run.")); u.append(h("li", { class: "empty" }, "—")); return; }
+    if (!(n.ownerQueue || []).length) q.append(h("div", { class: "empty" }, "Nothing waiting on you this week."));
+    for (const it of n.ownerQueue || []) q.append(h("div", { class: "need" }, h("div", {}, h("div", { class: "t" }, it.id),
+      h("div", { class: "s" }, shorten(it.text, 300)))));
+    (n.unlocks || []).forEach((it, i) => u.append(h("li", { class: "item" },
+      h("span", { class: "id" }, String(i + 1).padStart(2, "0")),
+      h("span", {}, h("div", { class: "title" }, shorten(it.ask, 110)), h("div", { class: "sub" }, `Opens ${it.items.join(", ")}`)),
+      h("span", { class: "score", title: "Total empire score this unlocks" }, int(Math.round(it.unlocksScore))))));
+  }
+
+  // ---------- engines
+  function renderEngines() {
+    const g = $("#engines-grid"); g.replaceChildren();
+    const s = S.state;
+    $("#engines-asof").textContent = s ? `Counted from the repo, ${ago(s.asOf)}.` : "";
+    if (!s) { for (const t of ["Shorts factory", "Audience", "Shop", "Service desk"]) g.append(h("div", { class: "tile" }, h("div", { class: "eyebrow" }, t), h("div", { class: "mid muted" }, "—"))); return; }
+    const sh = s.shorts, au = s.audience, m = s.money, sv = s.service, prods = s.products || [];
+    const max = Math.max(sh.targetPerDay, ...sh.days.map((d) => d.passed));
+    const spark = h("div", { class: "spark", role: "img", "aria-label": `Shorts passed per day, last ${sh.days.length} days` },
+      sh.days.map((d) => h("i", { class: `${d.passed >= sh.targetPerDay ? "hit" : ""} ${d.held ? "held" : ""}`,
+        style: `height:${Math.max(4, (d.passed / max) * 100)}%`, title: `${fmtDay(d.day)}: ${d.passed} passed, ${d.held} held` })));
+    g.append(tile("Shorts factory", `${int(sh.passedLast7)}`, `of ${sh.targetPerDay * 7} this week`, spark,
+      kv([["Days at five", `${sh.daysOnTargetLast7}/7`], ["Hold rate", pct(sh.holdRateLast7)], ["Avg gauntlet", sh.avgScoreLast7 ?? "—"],
+        ["On YouTube", int(sh.onYouTube)], ["All time", int(sh.passedAllTime)]]), sh.source));
+    const top = (au.byPillar || []).slice(0, 4), mx = Math.max(1, ...top.map((p) => p.medianViews));
+    g.append(tile("Audience", int(au.views), `views on ${au.measured} measured`,
+      au.best ? h("div", { style: "font-size:12.5px" }, h("span", { class: "muted" }, "Best: "), h("b", {}, int(au.best.views)), " · ", shorten(au.best.title, 70)) : null,
+      h("div", { class: "bars", role: "img", "aria-label": "Median views by series" }, top.map((p) => h("div", { class: "bar" },
+        h("b", {}, p.pillar), h("span", { class: "t" }, h("i", { style: `width:${(p.medianViews / mx) * 100}%` })), h("span", { class: "n" }, int(p.medianViews))))),
+      `${au.source}${au.pulledOn ? ", pulled " + fmtDay(au.pulledOn) : ""}`));
+    const live = prods.filter((p) => p.live);
+    g.append(tile("Shop", usd(m.netUsd, 2), `net from ${int(m.sales)} sale${m.sales === 1 ? "" : "s"}`,
+      h("div", { class: "meter", style: "margin-top:2px", role: "img", "aria-label": `To the ${usd(m.balanceGateUsd)} payout gate` },
+        h("i", { style: `width:${Math.min(100, ((m.balanceGateUsd - m.toGateUsd) / m.balanceGateUsd) * 100)}%` })),
+      kv([["To the payout gate", usd(m.toGateUsd, 2)], ["Products live", `${live.length} of ${prods.length}`],
+        ...prods.map((p) => [p.name, p.live ? `${usd(p.priceUsd)} · live` : `${usd(p.priceUsd)} · not listed`])]), m.source));
+    g.append(tile("Service desk", int(sv.projectsSeen), "Web3 projects screened",
+      kv([["Drafts waiting to send", int(sv.packagesWaiting)], ["Replies", int(sv.replies)], ["Calls", int(sv.calls)], ["Clients", int(sv.closed)]]),
+      h("div", { class: "muted", style: "font-size:12px" }, "A hunt runs every day at 07:47 UTC and sends you the drafts."), sv.source));
+  }
+  function tile(name, big, sub, ...rest) {
+    const source = rest.pop();
+    return h("div", { class: "tile" }, h("div", { class: "eyebrow" }, name),
+      h("div", {}, h("div", { class: "mid" }, big), h("div", { class: "muted", style: "font-size:12.5px;margin-top:4px" }, sub)),
+      ...rest, h("div", { class: "src" }, source));
+  }
+  const kv = (rows) => h("dl", { class: "kv" }, rows.flatMap(([k, v]) => [h("dt", {}, k), h("dd", {}, v)]));
+
+  // ---------- next moves
+  function renderMoves() {
+    const a = $("#moves-agent"), l = $("#moves-launch");
+    a.replaceChildren(); l.replaceChildren();
+    const n = S.state?.next;
+    if (!n) { a.append(h("li", { class: "empty" }, "Suggestions arrive with the first daily HQ run.")); l.append(h("li", { class: "empty" }, "Built work waiting on you appears here.")); return; }
+    for (const it of n.agent || []) a.append(h("li", { class: "item" },
+      h("span", { class: "id" }, it.id),
+      h("span", {}, h("div", { class: "title" }, it.title), h("div", { class: "sub" }, shorten(it.next.replace(/^agent builds it now\.\s*/, ""), 140) || "Nothing needed from you to build it.")),
+      h("span", { style: "display:grid;gap:6px;justify-items:end" }, h("span", { class: "score" }, it.score),
+        S.canWrite ? h("button", { class: "tiny gold", type: "button", onclick: () => queueBuild(`${it.id}: ${it.title}`, it.brief, it.id) }, "Build") : null)));
+    if (!(n.launch || []).length) l.append(h("li", { class: "empty" }, "Nothing built is waiting on you."));
+    for (const it of n.launch || []) l.append(h("li", { class: "item" },
+      h("span", { class: "id" }, it.id),
+      h("span", {}, h("div", { class: "title" }, it.title), h("div", { class: "sub" }, shorten(it.next.replace(/^built and verified\.\s*Launch needs the owner:\s*/i, ""), 150))),
+      h("span", { class: "score" }, it.score)));
+  }
+
+  // ---------- horizon
+  function renderHorizonControls() {
+    const seg = $("#horizon-seg"); seg.replaceChildren();
+    for (const m of [3, 6, 12, 24]) seg.append(h("button", { type: "button", "aria-pressed": String(S.horizon === m),
+      onclick: () => { S.horizon = m; try { localStorage.setItem("hq.horizon", m); } catch (e) {} renderHorizonControls(); renderTimeline(); } }, m < 12 ? `${m} mo` : `${m / 12} yr`));
+    $("#tl-key").replaceChildren(h("span", {}, h("i", {}), "Claude builds it"), h("span", {}, h("i", { class: "owner" }), "You do it"),
+      h("span", {}, h("i", { class: "both" }), "Both"), h("span", {}, h("i", { style: "border-color:var(--bad);border-width:0 0 0 2px;border-radius:0" }), "Today"));
+  }
+  function renderTimeline() {
+    const tl = $("#tl"), ag = $("#agenda");
+    tl.replaceChildren(); ag.replaceChildren();
+    const items = S.timeline.slice().sort((a, b) => String(a.start).localeCompare(String(b.start)));
+    const now = new Date(), start = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), 1)), end = addMonths(start, S.horizon);
+    const span = end - start, x = (d) => ((d - start) / span) * 100;
+    const months = h("div", { class: "tl-months" });
+    const step = S.horizon > 12 ? 3 : S.horizon > 6 ? 2 : 1;
+    for (let i = 0; i < S.horizon; i += step) { const d = addMonths(start, i); months.append(h("span", { style: `left:${x(d)}%` }, fmtMonth(d))); }
+    tl.append(h("div", { class: "tl-axis" }, h("span"), months));
+    if (!items.length) {
+      tl.append(h("div", { class: "empty" }, "No milestones yet. Ask HQ to plan your path to the freedom number, or add one below."));
+      ag.append(h("div", { class: "empty" }, "No milestones yet. Ask HQ to plan your path, or add one below."));
+    }
+    const today = todayISO();
+    for (const [key, label] of TRACKS) {
+      const mine = items.filter((it) => (it.track || "content") === key);
+      const track = h("div", { class: "tl-track" }, h("span", { class: "today", style: `left:${x(now)}%` }));
+      const rows = [];
+      for (const it of mine) {
+        const s = day(it.start), e = day(it.end) || s;
+        if (!s || e < start || s > end) continue;
+        const l = Math.max(0, x(s)), r = Math.min(100, x(new Date(+e + 86400000)));
+        let row = rows.findIndex((endAt) => endAt <= l - .5); if (row < 0) { row = rows.length; rows.push(0); } rows[row] = r;
+        const late = !it.done && (it.end || it.start) < today;
+        track.append(h("button", { type: "button", class: `tl-bar ${it.lane || "agent"} ${it.done ? "done" : ""} ${late ? "late" : ""}`,
+          style: `left:${l}%;width:max(10px, ${Math.max(0, r - l)}%);top:${5 + row * 28}px`, "aria-pressed": String(S.selected === it.id),
+          title: `${it.title} · ${fmtDay(it.start)}${it.end ? " to " + fmtDay(it.end) : ""}`,
+          onclick: () => { S.selected = S.selected === it.id ? null : it.id; renderTimeline(); } }, it.title));
+      }
+      track.style.minHeight = `${Math.max(1, rows.length) * 28 + 8}px`;
+      tl.append(h("div", { class: "tl-lane" }, h("div", { class: "lab" }, label), track));
+    }
+    const byMonth = new Map();
+    for (const it of items) { const d = day(it.start); if (!d) continue; const k = fmtMonth(d); if (!byMonth.has(k)) byMonth.set(k, []); byMonth.get(k).push(it); }
+    for (const [k, list] of byMonth) ag.append(h("div", {}, h("h3", {}, k), h("ol", { class: "list" }, list.map((it) => h("li", { class: "item" },
+      h("span", { class: "id" }, fmtDay(it.start)),
+      h("span", {}, h("div", { class: "title", style: it.done ? "text-decoration:line-through" : "" }, it.title),
+        h("div", { class: "sub" }, `${(TRACKS.find((t) => t[0] === it.track) || [0, "Content"])[1]} · ${it.lane === "owner" ? "you" : it.lane === "both" ? "both" : "Claude"}`)),
+      h("button", { class: "tiny ghost", type: "button", onclick: () => { S.selected = it.id; renderTimeline(); $("#tl-detail").scrollIntoView({ block: "nearest" }); } }, "Open"))))));
+    renderDetail();
+  }
+  function renderDetail() {
+    const box = $("#tl-detail"); box.replaceChildren();
+    const it = S.timeline.find((t) => t.id === S.selected); if (!it) return;
+    const goal = S.goals.find((g) => g.id === it.goalId);
+    box.append(h("div", { class: "detail" },
+      h("div", { class: "row", style: "display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap" },
+        h("b", {}, it.title), h("span", { class: "pill" }, it.done ? "Done" : it.lane === "owner" ? "Yours" : it.lane === "both" ? "Both" : "Claude")),
+      h("div", { class: "muted", style: "font-size:12.5px" }, `${fmtDay(it.start)}${it.end ? " to " + fmtDay(it.end) : ""} · ${(TRACKS.find((t) => t[0] === it.track) || [0, "Content"])[1]}`,
+        goal ? ` · toward "${goal.title}"` : ""),
+      it.note ? h("div", { style: "font-size:13px" }, it.note) : null,
+      S.canWrite ? h("div", { class: "actions" },
+        h("button", { class: "tiny primary", type: "button", onclick: () => write(() => S.db.doc(`timeline/${it.id}`).update({ done: !it.done }), it.done ? "Reopened." : "Marked done.") }, it.done ? "Reopen" : "Mark done"),
+        it.lane !== "owner" && !it.done ? h("button", { class: "tiny gold", type: "button", onclick: () => queueBuild(it.title, `${it.title}.\n\n${it.note || ""}\n\nThis is a milestone on the Quiet Money HQ horizon (${it.start}${it.end ? " to " + it.end : ""}). Read CLAUDE.md first, build it fully, run python -m faceless ci, open a pull request and merge it when green.`) }, "Send to Claude Code") : null,
+        confirmDelete("Delete", () => write(() => S.db.doc(`timeline/${it.id}`).delete(), "Milestone deleted.").then(() => { S.selected = null; renderTimeline(); }))) : null));
+  }
+  function confirmDelete(label, fn) {
+    const b = h("button", { class: "tiny ghost", type: "button" }, label);
+    b.addEventListener("click", () => {
+      if (b.dataset.armed) { fn(); return; }
+      b.dataset.armed = "1"; b.textContent = "Delete for good?"; b.style.color = "var(--bad)";
+      setTimeout(() => { if (b.isConnected) { delete b.dataset.armed; b.textContent = label; b.style.color = ""; } }, 3500);
+    });
+    return b;
+  }
+
+  // ---------- goals
+  function goalNow(g) { const m = METRICS[g.metric] || METRICS.manual; const live = m.get(S.state); return live == null ? (g.current ?? null) : live; }
+  function renderGoals() {
+    const box = $("#goals-list"); box.replaceChildren();
+    const list = S.goals.slice().sort((a, b) => (Number(!!a.done) - Number(!!b.done)) || String(a.due || "9").localeCompare(String(b.due || "9")));
+    if (!list.length) box.append(h("div", { class: "empty", style: "margin-bottom:12px" }, "No goals yet. Set one below, or ask HQ to set goals that lead to your freedom number."));
+    for (const g of list) {
+      const m = METRICS[g.metric] || METRICS.manual, now = goalNow(g), tgt = Number(g.target) || 0;
+      const share = tgt && now != null ? Math.min(1, now / tgt) : 0;
+      const fmt = (v) => m.money ? usd(v, v % 1 ? 2 : 0) : int(v);
+      const links = S.timeline.filter((t) => t.goalId === g.id);
+      box.append(h("div", { class: `goal ${g.done ? "done" : ""}` },
+        h("div", { class: "row" }, h("span", { class: "title" }, g.title),
+          h("span", { class: "num", style: "font-size:13px" }, `${now == null ? "—" : fmt(now)} / ${fmt(tgt)}`)),
+        h("div", { class: "meter" }, h("i", { style: `width:${(share * 100).toFixed(1)}%;${share >= 1 ? "background:var(--good)" : ""}` })),
+        h("div", { class: "row muted", style: "font-size:12px" },
+          h("span", {}, `${m.label}${g.due ? " · by " + fmtDay(g.due) : ""}${links.length ? ` · ${links.length} milestone${links.length > 1 ? "s" : ""}` : ""}${g.suggested ? " · suggested" : ""}`),
+          S.canWrite ? h("span", { class: "actions" },
+            h("button", { class: "tiny ghost", type: "button", onclick: () => write(() => S.db.doc(`goals/${g.id}`).update({ done: !g.done, suggested: false }), g.done ? "Goal reopened." : "Goal done.") }, g.done ? "Reopen" : "Done"),
+            confirmDelete("Delete", () => write(() => S.db.doc(`goals/${g.id}`).delete(), "Goal deleted."))) : null)));
+    }
+    $("#goal-add-wrap").hidden = !S.canWrite;
+  }
+
+  // ---------- desk: ask HQ
+  const PROMPTS = ["What should I work on this week?", "Plan my path to the freedom number", "What is blocking the first sale?", "Which engine is weakest, and what fixes it?"];
+  function books() {
+    const s = S.state || {};
+    return JSON.stringify({
+      today: todayISO(), asOf: s.asOf || null, freedomNumber: S.north || null,
+      shorts: s.shorts ? { ...s.shorts, days: s.shorts.days?.slice(-7) } : null, audience: s.audience || null, money: s.money || null,
+      products: s.products || null, service: s.service || null, next: s.next ? { agent: (s.next.agent || []).map(({ brief, ...r }) => r),
+        launch: s.next.launch, unlocks: s.next.unlocks, ownerQueue: s.next.ownerQueue } : null,
+      goals: S.goals.map((g) => ({ id: g.id, title: g.title, metric: g.metric, target: g.target, now: goalNow(g), due: g.due || null, done: !!g.done })),
+      horizon: S.timeline.map((t) => ({ title: t.title, track: t.track, lane: t.lane, start: t.start, end: t.end || null, done: !!t.done })),
+      buildQueue: S.requests.slice(0, 10).map((r) => ({ title: r.title, status: r.status })),
+    });
+  }
+  const RULES = () => `You are the operating partner inside Quiet Money HQ, the owner's dashboard for a faceless personal-finance media studio (5 YouTube Shorts a day, printable money products on Gumroad, a Web3 video and KOL service, an email list being set up). The owner's goal is to leave the rat race: the business must pay their monthly number.
+
+The books, as JSON (counted from the studio's repo; null means not measured yet):
+${books()}
+
+How to answer:
+- Use only numbers from the books. Anything about the future is a plan or an assumption: say so in words, never as a promise of income.
+- Be concrete and short: what to do, who does it (Claude builds, or the owner acts), by when. Prefer the next 7 to 30 days.
+- The owner's own steps are money, accounts, prices, listings, and messages to real people. Claude builds everything else.
+- Education, not financial advice. Never suggest buying a stock or coin.
+- When the owner asks you to set goals, plan a path, or build something, use the tools to put it straight into HQ, then say in one line what you added.
+- Dates are YYYY-MM-DD. Tracks: freedom, products, services, content, audience. Lanes: agent (Claude builds), owner, both.`;
+  const TOOLS = () => [
+    { name: "add_goal", description: "Add a goal to HQ. Returns {ok, id}. metric is how it is measured: income30, sales, net, shorts7, views, live, replies or manual.",
+      inputSchema: { type: "object", properties: { title: { type: "string" }, metric: { type: "string", enum: Object.keys(METRICS) },
+        target: { type: "number" }, due: { type: "string", description: "YYYY-MM-DD" } }, required: ["title", "metric", "target"] },
+      execute: async (i) => addGoal({ title: String(i.title || "").slice(0, 140), metric: METRICS[i.metric] ? String(i.metric) : "manual", target: Number(i.target) || 0, due: i.due ? String(i.due).slice(0, 10) : null }) },
+    { name: "add_milestone", description: "Add a milestone to the HQ horizon. Returns {ok, id}. Use one milestone per concrete step; give the owner's own steps lane owner.",
+      inputSchema: { type: "object", properties: { title: { type: "string" }, track: { type: "string", enum: TRACKS.map((t) => t[0]) },
+        lane: { type: "string", enum: ["agent", "owner", "both"] }, start: { type: "string" }, end: { type: "string" }, note: { type: "string" },
+        goal_title: { type: "string", description: "Title of the goal it serves, if any" } }, required: ["title", "track", "lane", "start"] },
+      execute: async (i) => addMilestone({ title: String(i.title || "").slice(0, 140), track: TRACKS.some((t) => t[0] === i.track) ? i.track : "content",
+        lane: ["agent", "owner", "both"].includes(i.lane) ? i.lane : "agent", start: String(i.start || todayISO()).slice(0, 10), end: i.end ? String(i.end).slice(0, 10) : null,
+        note: i.note ? String(i.note).slice(0, 300) : null, goalId: (S.goals.find((g) => g.title === i.goal_title) || {}).id || null }) },
+    { name: "queue_build", description: "Queue work for a Claude Code build session in HQ's build queue. The owner starts it. Returns {ok, id}. brief must be a complete, standalone instruction.",
+      inputSchema: { type: "object", properties: { title: { type: "string" }, brief: { type: "string" } }, required: ["title", "brief"] },
+      execute: async (i) => { const id = await queueBuild(String(i.title || "").slice(0, 140), String(i.brief || "").slice(0, 4000), null, true); return id ? { ok: true, id } : { ok: false }; } },
+  ];
+  let ctl = null;
+  function renderPrompts() {
+    const p = $("#prompts"); p.replaceChildren();
+    if (!S.sample) return;
+    for (const q of PROMPTS) p.append(h("button", { type: "button", onclick: () => ask(q) }, q));
+  }
+  function renderChat() {
+    const c = $("#chat"); c.replaceChildren();
+    for (const t of S.turns) c.append(h("div", { class: `msg ${t.role === "user" ? "you" : "hq"}${t.typing ? " typing" : ""}` }, t.content || (t.typing ? "Reading the books…" : "")));
+    c.scrollTop = c.scrollHeight;
+  }
+  async function ask(text) {
+    text = String(text || "").trim();
+    if (!text || S.busy || !S.sample) return;
+    S.busy = true; $("#ask-send").disabled = true; $("#ask-stop").hidden = false; $("#ask-input").value = "";
+    S.turns.push({ role: "user", content: text });
+    const reply = { role: "assistant", content: "", typing: true }; S.turns.push(reply); renderChat();
+    ctl = new AbortController();
+    const history = S.turns.filter((t) => t !== reply).slice(-12).map(({ role, content }) => ({ role, content }));
+    const input = [{ role: "user", content: RULES() }, ...history];
+    try {
+      const opts = { cache: false, signal: ctl.signal, onText: ({ text }) => { reply.content = text; renderChat(); } };
+      if (S.tools && S.canWrite && S.db) { delete opts.cache; opts.tools = TOOLS(); }
+      const r = await S.sample(input, opts);
+      reply.content = r.text + (r.truncated ? "\n\n(Cut short. Ask for less at a time.)" : "");
+    } catch (e) {
+      reply.content = e?.text || "";
+      const msg = { cancelled: "", not_granted: "Claude is off for this dashboard. Allow it from the dashboard's Permissions to use the desk.",
+        sampling_disabled: "Claude is not available on this account.", rate_limited: "Too many questions at once. Try again in a minute.",
+        session_expired: "Sign in again to keep using the desk.", refused: "Claude would not answer that. Try asking it another way.",
+        prompt_too_large: "The books got too big to send in one question. Clear the chat and try again." }[e?.code];
+      if (["not_granted", "sampling_disabled", "not_declared", "capability_disabled", "capability_removed"].includes(e?.code)) { S.sample = null; renderPrompts(); $("#ask-note").textContent = msg || "The desk is unavailable in this view."; }
+      if (msg !== "") reply.content = (reply.content ? reply.content + "\n\n" : "") + (msg || "That answer did not come through. Ask again.");
+      if (e?.code === "cancelled" && !reply.content) S.turns.pop();
+    } finally {
+      reply.typing = false; S.busy = false; ctl = null;
+      $("#ask-send").disabled = !S.sample; $("#ask-stop").hidden = true; renderChat();
+    }
+  }
+
+  // ---------- writers used by the page and by Claude's tools
+  async function addGoal(g) {
+    if (!S.db) return { ok: false, error: "no store" };
+    let id = null;
+    await write(async () => { const ref = S.db.collection("goals").doc(); id = ref.id; await ref.set({ ...g, done: false, createdAt: new Date().toISOString() }); }, `Goal added: ${g.title}`);
+    return id ? { ok: true, id } : { ok: false };
+  }
+  async function addMilestone(m) {
+    if (!S.db) return { ok: false, error: "no store" };
+    let id = null;
+    await write(async () => { const ref = S.db.collection("timeline").doc(); id = ref.id; await ref.set({ ...m, done: false, createdAt: new Date().toISOString() }); }, `On the horizon: ${m.title}`);
+    return id ? { ok: true, id } : { ok: false };
+  }
+  async function queueBuild(title, brief, itemId, quiet) {
+    if (!S.db) { toast("Queuing needs the dashboard open in Claude."); return null; }
+    let id = null;
+    await write(async () => { const ref = S.db.collection("requests").doc(); id = ref.id;
+      await ref.set({ title, brief, itemId: itemId || null, status: "queued", createdAt: new Date().toISOString() }); }, quiet ? null : "Queued in the build queue.");
+    if (id && !quiet) { S.confirmFor = id; renderReqs(); }
+    return id;
+  }
+
+  // ---------- desk: build queue
+  function renderReqs() {
+    const box = $("#reqs"); box.replaceChildren();
+    $("#req-add").hidden = !S.canWrite;
+    if (!S.requests.length) { box.append(h("div", { class: "empty" }, "Nothing queued. Press Build on a next move, or ask for something above.")); return; }
+    for (const r of S.requests.slice(0, 12)) {
+      const card = h("div", { class: "req" },
+        h("div", { class: "row", style: "display:flex;justify-content:space-between;gap:8px;align-items:baseline" },
+          h("b", {}, r.title || "Untitled"), h("span", { class: `pill ${r.status}` }, r.status === "started" ? "In session" : r.status === "done" ? "Done" : "Queued")),
+        h("div", { class: "brief" }, r.brief || ""),
+        r.sessionUrl ? h("div", {}, h("a", { href: r.sessionUrl, target: "_blank", rel: "noopener" }, "Open the session"), " ", h("span", { class: "copyable" }, r.sessionUrl)) : null);
+      card.querySelector(".brief").addEventListener("click", () => card.classList.toggle("open"));
+      if (S.canWrite) {
+        const acts = h("div", { class: "actions" });
+        if (r.status === "queued") acts.append(h("button", { class: "tiny gold", type: "button", onclick: () => { S.confirmFor = S.confirmFor === r.id ? null : r.id; renderReqs(); } }, "Start a session"));
+        if (r.status !== "done") acts.append(h("button", { class: "tiny ghost", type: "button", onclick: () => write(() => S.db.doc(`requests/${r.id}`).update({ status: "done" }), "Marked done.") }, "Mark done"));
+        acts.append(confirmDelete("Delete", () => write(() => S.db.doc(`requests/${r.id}`).delete(), "Removed from the queue.")));
+        card.append(acts);
+        if (S.confirmFor === r.id && r.status === "queued") card.append(startPanel(r));
+      }
+      box.append(card);
+    }
+  }
+  function startPanel(r) {
+    const p = h("div", { class: "detail" });
+    if (!S.mcp) {
+      p.append(h("div", { style: "font-size:13px" }, "Starting sessions from here needs the Claude Code connector, which this view cannot reach. It stays queued: the daily HQ run picks it up and builds it."));
+      return p;
+    }
+    const sel = h("select", { id: `env-${r.id}` }, h("option", { value: "" }, "Loading environments…"));
+    const go = h("button", { class: "primary tiny", type: "button", disabled: true }, "Start the session");
+    const msg = h("div", { class: "muted", style: "font-size:12px" });
+    p.append(h("div", { style: "font-size:13px" }, "This starts a Claude Code session on the quiet-money repository with the brief above. It runs on your account, follows CLAUDE.md, and opens a pull request."),
+      h("label", {}, "Environment", sel), h("div", { class: "actions" }, go, h("button", { class: "tiny ghost", type: "button", onclick: () => { S.confirmFor = null; renderReqs(); } }, "Cancel")), msg);
+    loadEnvs().then((envs) => {
+      sel.replaceChildren();
+      if (!envs.length) { sel.append(h("option", { value: "" }, "No environment found")); msg.textContent = mcpCopy(S.envError); return; }
+      for (const e of envs) sel.append(h("option", { value: e.environment_id }, `${e.name}${e.description ? " · " + e.description : ""}`));
+      if (S.settings?.environmentId && envs.some((e) => e.environment_id === S.settings.environmentId)) sel.value = S.settings.environmentId;
+      go.disabled = false;
+    });
+    go.addEventListener("click", async () => {
+      go.disabled = true; msg.textContent = "Starting…";
+      try {
+        const res = await S.mcp.callTool(CCR, "create_session", { prompt: r.brief, source_url: REPO, title: (r.title || "HQ build").slice(0, 120), environment_id: sel.value || undefined });
+        const p0 = res && typeof res.payload === "object" && res.payload ? res.payload : {};
+        const sid = p0.session_id || p0.id || p0.session?.id || p0.session?.session_id || null;
+        await write(() => S.db.doc(`requests/${r.id}`).update({ status: "started", sessionId: sid, sessionUrl: sid ? `https://claude.ai/code/${sid}` : null,
+          startedAt: new Date().toISOString() }), sid ? "Session started." : "Session started. Open Claude Code to find it.");
+        if (sel.value && sel.value !== S.settings?.environmentId) write(() => S.db.doc("hq/settings").set({ ...(S.settings || {}), environmentId: sel.value }));
+        S.confirmFor = null;
+      } catch (e) { msg.textContent = mcpCopy(e); go.disabled = false; }
+    });
+    return p;
+  }
+  async function loadEnvs() {
+    if (S.envs) return S.envs;
+    try {
+      const res = await S.mcp.callTool(CCR, "list_environments", { limit: 20 }, { cache: { staleTime: 300000 } });
+      const list = (res?.payload?.environments || []).filter((e) => e.state === "active");
+      S.envs = list; return list;
+    } catch (e) { S.envError = e; return []; }
+  }
+  function mcpCopy(e) {
+    const c = e?.code;
+    if (c === "needs_reauth") return "Reconnect Claude Code Remote in claude.ai Settings → Connectors, then try again.";
+    if (c === "server_not_connected") return "Add the Claude Code Remote connector in claude.ai Settings → Connectors. Until then the work stays queued for the daily run.";
+    if (c === "not_in_manifest" || c === "not_granted") return "Claude Code is off for this dashboard. Allow it in the dashboard's Permissions; the work stays queued meanwhile.";
+    if (c === "server_unavailable" || c === "upstream_error") return "Claude Code did not answer. Check Claude Code before trying again, in case the session did start.";
+    if (c === "tool_error") return `Claude Code refused: ${shorten(e.message, 160)}`;
+    return "That did not start. The work stays queued for the daily HQ run.";
+  }
+
+  // ---------- forms
+  function wireForms() {
+    const trackSel = $("#tl-track"); trackSel.replaceChildren(...TRACKS.map(([k, l]) => h("option", { value: k }, l)));
+    $("#tl-start").value = todayISO();
+    $("#tl-add").addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const r = await addMilestone({ title: $("#tl-title").value.trim(), track: $("#tl-track").value, lane: $("#tl-lane").value,
+        start: $("#tl-start").value, end: $("#tl-end").value || null, note: $("#tl-note").value.trim() || null, goalId: null });
+      if (r.ok) { e.target.reset(); $("#tl-start").value = todayISO(); }
+    });
+    $("#g-metric").replaceChildren(...Object.entries(METRICS).map(([k, m]) => h("option", { value: k }, m.label)));
+    $("#goal-add").addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const cur = $("#g-current").value;
+      const r = await addGoal({ title: $("#g-title").value.trim(), metric: $("#g-metric").value, target: Number($("#g-target").value),
+        current: cur === "" ? null : Number(cur), due: $("#g-due").value || null });
+      if (r.ok) e.target.reset();
+    });
+    $("#ask").addEventListener("submit", (e) => { e.preventDefault(); ask($("#ask-input").value); });
+    $("#ask-input").addEventListener("keydown", (e) => { if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); ask($("#ask-input").value); } });
+    $("#ask-stop").addEventListener("click", () => ctl?.abort());
+    $("#chat-clear").addEventListener("click", () => { if (S.busy) ctl?.abort(); S.turns = []; renderChat(); });
+    $("#req-add").addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const text = $("#req-text").value.trim(); if (!text) return;
+      const id = await queueBuild(shorten(text.split("\n")[0], 90), `${text}\n\nRead CLAUDE.md first. Build it fully, add tests where code changes, run python -m faceless ci until green, open a pull request and merge it when CI passes.`);
+      if (id) $("#req-text").value = "";
+    });
+  }
+
+  function renderAll() { renderTop(); renderFreedom(); renderNeeds(); renderEngines(); renderMoves(); renderHorizonControls(); renderTimeline(); renderGoals(); renderChat(); renderReqs(); }
+
+  // ---------- boot
+  try { const hz = Number(localStorage.getItem("hq.horizon")); if ([3, 6, 12, 24].includes(hz)) S.horizon = hz; } catch (e) {}
+  wireForms(); renderAll();
+  $("#ask-send").disabled = true;
+
+  (async () => {
+    const [db, user, sample, mcp] = await Promise.all([use("db"), use("user"), use("sample"), use("mcp")]);
+    S.sample = sample; S.mcp = mcp;
+    if (!sample) { $("#ask-note").textContent = "Asking Claude needs the dashboard open in Claude."; }
+    else { $("#ask-send").disabled = false; try { const lim = await sample.limits(); S.tools = !!lim?.tools; } catch (e) { S.tools = false; } }
+    if (user) { try { const w = await user.can("data.write"); if (w === false) S.canWrite = false; } catch (e) {} }
+    S.db = db;
+    if (!db) { S.canWrite = false; $("#takeaway").textContent = "The books live in this dashboard's store, which this view cannot reach. Open it in Claude."; renderAll(); return; }
+    const err = () => {};
+    db.doc("hq/state").onSnapshot((s) => { S.state = s.exists ? s.data() : null; renderAll(); }, err);
+    db.doc("hq/northstar").onSnapshot((s) => { S.north = s.exists ? s.data() : null; renderTop(); renderFreedom(); }, err);
+    db.doc("hq/settings").onSnapshot((s) => { S.settings = s.exists ? s.data() : null; }, err);
+    db.collection("goals").onSnapshot((q) => { S.goals = q.docs.map((d) => ({ id: d.id, ...d.data() })); renderGoals(); renderTimeline(); }, err);
+    db.collection("timeline").onSnapshot((q) => { S.timeline = q.docs.map((d) => ({ id: d.id, ...d.data() })); renderTimeline(); renderGoals(); }, err);
+    db.collection("requests").orderBy("createdAt", "desc").limit(50).onSnapshot((q) => { S.requests = q.docs.map((d) => ({ id: d.id, ...d.data() })); renderReqs(); }, err);
+    renderPrompts(); renderAll();
+  })();
+})();
+</script>
