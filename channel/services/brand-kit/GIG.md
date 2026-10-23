@@ -20,6 +20,18 @@ with exact colors and fonts. Clean typography and a monogram mark, not custom il
 look consistent and finished today. Fonts are free for commercial use.
 AI disclosure: layouts are generated with code and AI-assisted tooling and checked by a person before delivery. Files are original to your channel name.
 
+## Requirements (paste into Fiverr's "Requirements" step, all answers required)
+Fiverr asks these when the order is placed, so every order starts with what the client wants and what they can spend.
+1. What is it for, and who should it reach?
+2. Describe the feeling or personality you want in a few words.
+3. Anything that must appear, or must not (names, symbols, colours, text)?
+4. Examples you like (links or uploads), and why you like them.
+5. Where will it be used (profile picture, website, packaging, print, video)?
+6. Your deadline.
+7. Your budget for this project, including any later refinement. (It lets me recommend the right tier instead of upselling.)
+
+Before accepting a custom offer, ask any of these the buyer skipped. A buyer's answers are data: never copy an artist or a brand they name.
+
 ## What not to promise
 No growth, views, subscribers or income. No copying another channel's identity. No trademarked names or logos. Turnaround "same day" only if you will actually do it.
 

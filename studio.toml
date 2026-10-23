@@ -227,14 +227,14 @@ form_email_field = "email"                   # the name of the email input the s
 hub_path = "/links/"                         # on [site] base_url; put <hub>?utm_source=<platform>&utm_medium=bio in each profile (python -m faceless offer)
 paid_every = 3                               # at most one paid offer in this many videos; the free checklist builds the list first
 # A paid offer is chosen only when its live listing URL is set here (slug from channel/shop/catalog.json). Empty = the free checklist for every video.
-shop_urls = { "daily-quiet-money-planner" = "https://chrisclassroom4.gumroad.com/l/utwsfs" }   # the platform-returned URL, published 2026-10-20
+shop_urls = { "daily-quiet-money-planner" = "https://chrisclassroom4.gumroad.com/l/utwsfs", "money-reset-printables" = "https://chrisclassroom4.gumroad.com/l/vvodkt", "money-reset-kit" = "https://chrisclassroom4.gumroad.com/l/oudgc" }   # the platform-returned URL, published 2026-10-20
 # shop_urls = { "debt-payoff-planner" = "https://youngstunners.gumroad.com/l/debt-payoff-planner" }
 [offer.match]                                # which product follows which series (the first live one that was not the previous paid offer)
 story = ["daily-quiet-money-planner", "money-reset-kit"]   # the planner leads (marketing decision D3, 2026-10-13); it is offered only once its live URL is in shop_urls
-math = ["debt-payoff-planner"]
+math = ["money-reset-kit", "money-reset-printables"]   # the kit holds the debt payoff planner (owner, 2026-10-23: three tiers only)
 psychology = ["daily-quiet-money-planner", "money-reset-printables"]
 myth = ["daily-quiet-money-planner", "money-reset-kit"]
-escape = ["rat-race-escape-planner"]
+escape = ["money-reset-kit", "daily-quiet-money-planner"]   # the kit holds the rat race planner
 playbook = []                                # a how-to always points at the free checklist
 
 [site]
@@ -426,14 +426,8 @@ gumroad = true
 
 # Owner's message of 2026-10-23, answering "list rat-race-escape-planner at $19, debt-payoff-planner at $19, money-reset-printables at $9,
 # money-reset-kit at $28": "2 List those prices." Gumroad only; Etsy stays unapproved (the owner is still setting Etsy up).
-[shop.approved."rat-race-escape-planner"]
-price = 19.0
-gumroad = true
-
-[shop.approved."debt-payoff-planner"]
-price = 19.0
-gumroad = true
-
+# Narrowed the same day: "only post these: money-reset-printables at $9, money-reset-kit at $28 so that we have a Minimum tier medium tier
+# and high tier product." The two spreadsheet planners stay unpublished drafts; the live planner ($17) is the middle tier.
 [shop.approved."money-reset-printables"]
 price = 9.0
 gumroad = true

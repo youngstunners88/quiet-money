@@ -1,6 +1,6 @@
-# Quote (a reply to a lead who asked what it costs)
+# Quote (after discovery)
 
-Use only after the lead has replied. Prices are the owner's (`[outbound.prices]`, 2026-10-23); never invent a discount or a bundle price.
+Send `discovery.md` first: understand what the client wants and their budget, then quote. Use this once their answers are in. Prices are the owner's (`[outbound.prices]`, 2026-10-23); never invent a discount or a bundle price.
 
 ---
 

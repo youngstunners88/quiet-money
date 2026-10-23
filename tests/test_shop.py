@@ -34,7 +34,7 @@ import json, sys
 args = sys.argv[1:]
 open({str(log)!r}, "a").write(json.dumps(args) + "\\n")
 if args[:2] == ["products", "list"]:
-    print(json.dumps({{"success": True, "products": [{{"name": "Money Reset Kit: two spreadsheet planners + six printable pages"}}]}}))
+    print(json.dumps({{"success": True, "products": [{{"name": "Tier 3 · Complete | Money Reset Kit: two spreadsheet planners + six printable pages"}}]}}))
 elif args[:2] == ["products", "create"]:
     print(json.dumps({{"success": True, "product": {{"id": "abc123", "published": False}}}}))
 else:

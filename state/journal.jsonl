@@ -7583,3 +7583,5 @@
 {"ts": "2026-10-23T02:46:03Z", "t": 1792723563.339, "actor": "engine", "type": "SHOP_DRAFT_CREATED", "product": "debt-payoff-planner", "gumroad_id": "HEaNQ9i2IDZ6Of-DL_IIAg==", "published": false}
 {"ts": "2026-10-23T02:46:12Z", "t": 1792723572.651, "actor": "engine", "type": "SHOP_DRAFT_CREATED", "product": "money-reset-printables", "gumroad_id": "BblmL6e1T0kQno0e174vcA==", "published": false}
 {"ts": "2026-10-23T02:46:21Z", "t": 1792723581.61, "actor": "engine", "type": "SHOP_DRAFT_CREATED", "product": "money-reset-kit", "gumroad_id": "4zMZ8mC5eFGP-QAB7FimhQ==", "published": false}
+{"ts": "2026-10-23T11:14:41Z", "t": 1792754081.497, "actor": "engine", "type": "SHOP_PUBLISHED", "product": "money-reset-printables", "rail": "gumroad", "gumroad_id": "BblmL6e1T0kQno0e174vcA=="}
+{"ts": "2026-10-23T11:14:50Z", "t": 1792754090.38, "actor": "engine", "type": "SHOP_PUBLISHED", "product": "money-reset-kit", "rail": "gumroad", "gumroad_id": "4zMZ8mC5eFGP-QAB7FimhQ=="}
