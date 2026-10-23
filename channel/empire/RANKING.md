@@ -28,7 +28,6 @@ Finished and checked; one owner step turns each on.
 | S1 | Fiverr: productized faceless-channel brand kit | service | built | 48.0 | built and verified. Launch needs the owner: List the gig on your Fiverr account and handle client messages |
 | C9 | Motion scenes designed by Claude Haiku 5.5: data in, HyperFrames out, a frame review before a scene replaces a still | content | built | 45.0 | built and verified. Launch needs the owner: Look at a sample video with model-designed motion scenes and say go (studio.toml [production.sketch] mode = "on", plus the approval constant in tests/test_hygiene.py) |
 | C4 | Audio edition: daily 60 s + weekly podcast episode | content | built | 40.5 | built and verified. Launch needs the owner: Open a free podcast host account |
-| C3 | Weekly long-form: 'Money Rules Weekly' (8-10 min, 16:9, chapters) | content | built | 36.0 | built and verified. Launch needs the owner: Say yes to one long-form upload a week on the YouTube channel (the weekly 16:9 episode; rule 9 covers Shorts only) |
 | P6 | Fillable PDF versions of the printable pack | product | built | 36.0 | built and verified. Launch needs the owner: Approve the prices and listings of the built products (the Gumroad shop is open; Etsy for printables) |
 | P3 | Printable budget pack (50/30/20, sinking funds, subscription audit, net worth) | product | built | 31.5 | built and verified. Launch needs the owner: Approve the prices and listings of the built products (the Gumroad shop is open; Etsy for printables) |
 
@@ -54,6 +53,7 @@ The owner's act is the work.
 | C2 | Variety layer: motion cards + Flow/Veo hook clips | content | pilot | 72.0 | measure; kill if: no retention lift after 30 videos. Launch needs the owner: Generate the day's 3 Flow clips (about 10 minutes) and drop them in the inbox |
 | C6 | Money Rules Library website + calculators (SEO/AEO) | content | scaled | 54.0 | measure; kill if: 0 impressions after 90 days. |
 | O14 | Mistral as a fourth script provider (resilience) | ops | built | 37.5 | measure; kill if: never used in 60 days. |
+| C3 | Weekly long-form: 'Money Rules Weekly' (8-10 min, 16:9, chapters) | content | built | 36.0 | measure; kill if: < 30% avg view duration after 4 episodes. |
 
 ## Waiting on another item
 | id | opportunity | rail | stage | score | next |
@@ -83,7 +83,6 @@ The owner's act is the work.
 - **List the gig on your Fiverr account and handle client messages**: 64.2 points (S1, S2)
 - **Look at a sample video with model-designed motion scenes and say go (studio.toml [production.sketch] mode = "on", plus the approval constant in tests/test_hygiene.py)**: 45.0 points (C9)
 - **Open a free podcast host account**: 40.5 points (C4)
-- **Say yes to one long-form upload a week on the YouTube channel (the weekly 16:9 episode; rule 9 covers Shorts only)**: 36.0 points (C3)
 - **Create a free FRED API key (fred.stlouisfed.org) and add FRED_API_KEY to the environment**: 21.6 points (O17)
 - **Open a second-language channel per platform (Spanish first) and approve machine translation with a native-speaker spot check**: 15.4 points (C7)
 - **Send the drafted collaboration notes yourself (the studio never sends a message in your name)**: 9.7 points (O19)

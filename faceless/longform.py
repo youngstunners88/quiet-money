@@ -8,9 +8,10 @@ drawn as brand cards in code: an intro, a chapter card per story, one card per b
 disclaimer and the AI disclosure (rules 2 and 4). No generated pictures, so no image spend.
 
 Beside `episode.mp4` it writes `thumbnail.jpg` (1280x720), `EPISODE.md` (title, description with the chapters and the one
-tracked hub link, rule 13) and `episode.json`. Uploading is the owner's step until they say yes (rule 9 covers Shorts only).
+tracked hub link, rule 13) and `episode.json`. `post` uploads it: the owner's yes of 2026-10-23 covers one long-form a week on the
+channel, through the same channel-guarded upload as the Shorts, with the thumbnail and the series playlist. A weekly routine runs it.
 
-`python -m faceless longform build [--week YYYY-MM-DD] [--max 7]`, `longform status`.
+`python -m faceless longform build|post [--week YYYY-MM-DD] [--apply] [--at ISO]`, `longform status`.
 """
 
 from __future__ import annotations
@@ -35,6 +36,14 @@ MAX_STORIES = 7
 MIN_STORIES = 3                   # YouTube shows chapters only with at least three
 GAPS = {"intro": 0.9, "chapter": 0.5, "beat": 0.3, "last": 0.9, "outro": 1.5}
 SHOW = "Money Rules Weekly"
+TITLE_MAX = 100
+CHAPTER_MIN_S = 10.5
+CHAPTER_LINE = re.compile(r"^\d+:\d{2}(:\d{2})? ")
+CATEGORY_EDUCATION = "27"
+LEDGER = Paths.state / "longform-posts.jsonl"
+PLAYLIST = "Money Rules Weekly: The Week's Best Money Rules in One Episode"
+PLAYLIST_ABOUT = ("Every week, the money rules that landed hardest on Quiet Money's Shorts, in one chaptered episode. Personal finance and "
+                  "money psychology. Educational content, not financial advice.")
 
 
 # ---------------------------------------------------------------- which stories
@@ -250,6 +259,8 @@ def build(end: str | None = None, *, most: int = MAX_STORIES, music: bool = True
         for gi, (group, wav) in enumerate(zip(groups, wavs)):
             spoken = tts.duration(wav)
             pause = GAPS[group[-1]["kind"]]
+            if group[0]["kind"] in ("intro", "outro"):        # YouTube drops chapters when one runs under 10 s
+                pause = max(pause, CHAPTER_MIN_S - spoken)
             gap = tmp / f"gap{gi}.wav"
             podcast._ff("-f", "lavfi", "-i", "anullsrc=r=24000:cl=mono", "-t", str(pause), "-ar", "24000", "-ac", "1", str(gap))
             audio_parts += [wav, gap]
@@ -282,22 +293,102 @@ def build(end: str | None = None, *, most: int = MAX_STORIES, music: bool = True
     chapters.append({"title": "Outro", "start": round(segs[-1]["start"], 1)})
     write_atomic(folder / "EPISODE.md", episode_md(end, items, chapters, length))
     write_atomic(folder / "episode.json", json.dumps({"week": end, "seconds": round(length, 1), "chapters": chapters,
+                                                      "post": post_copy(end, items, chapters),
                                                       "stories": [{"job": i["job"], "views": i["views"]} for i in items]}, indent=1))
     return {"week": end, "items": len(items), "file": str(mp4), "seconds": round(length, 1), "notes": str(folder / "EPISODE.md")}
 
 
-def episode_md(end: str, items: list[dict], chapters: list[dict], seconds: float) -> str:
+def post_copy(end: str, items: list[dict], chapters: list[dict]) -> dict:
+    """The YouTube title, description (chapters, the one tracked hub link, the disclaimer and AI note) and tags."""
     from faceless import offer, podcast
     title = f"{len(items)} Money Rules Nobody Taught You: {items[0]['title']} | {SHOW}"
-    if len(title) > 100:                               # YouTube's title limit
+    if len(title) > TITLE_MAX:
         title = f"{len(items)} Money Rules Nobody Taught You | {SHOW} ({end})"
     link = offer.tracked(offer.hub_url(), "youtube", "longform", f"weekly-{end}")
-    lines = [f"# {title}", "", f"Week ending {end} · {podcast._clock(seconds)} · 1920x1080 · {len(items)} stories ranked by views", "",
-             "## Description (paste)", "",
-             f"The {len(items)} money rules that landed hardest on Quiet Money this week, in one sitting.", ""]
+    lines = [f"The {len(items)} money rules that landed hardest on Quiet Money this week, in one sitting. Personal finance and money "
+             "psychology for anyone who feels behind with money: the rules nobody taught you.", ""]
     lines += [f"{podcast._clock(c['start'])} {c['title']}" for c in chapters]
     lines += [""] + ([f"Free 7-day Money Reset checklist and every link: {link}", ""] if link else [])
-    lines += [podcast.DISCLAIMER, podcast.AI_NOTE, "", "## Upload", "",
-              "Upload `episode.mp4` as a normal (not Shorts) video with `thumbnail.jpg`, the title and the description above.",
-              "Turn on \"altered or synthetic content\" (rule 4). The chapters come from the timestamps in the description."]
+    lines += [podcast.DISCLAIMER, podcast.AI_NOTE, "", "#personalfinance #money #moneytips"]
+    tags, used = [], 0
+    for t in ["personal finance", "money rules", "money psychology", "financial literacy", "money tips", "Quiet Money", SHOW] + [i["title"] for i in items]:
+        if used + len(t) + 2 > 450:                    # YouTube allows 500 characters of tags
+            break
+        tags.append(t)
+        used += len(t) + 2
+    return {"title": title, "description": "\n".join(lines), "tags": tags}
+
+
+def problems(copy: dict, chapters: list[dict], seconds: float | None = None) -> list[str]:
+    """What must be fixed before the episode can go out. An empty list means clean."""
+    from faceless import offer
+    out = []
+    if len(copy["title"]) > TITLE_MAX:
+        out.append(f"title is {len(copy['title'])} characters")
+    if len(copy["description"]) > 5000:
+        out.append("description over 5000 characters")
+    if len(re.findall(r"https?://\S+", copy["description"])) > 1:
+        out.append("more than one link in the description (rule 13)")
+    ours = "\n".join(ln for ln in copy["description"].splitlines() if not CHAPTER_LINE.match(ln))   # each chapter title passed the gauntlet with its Short
+    out += [f"claim check: {v}" for v in offer.violations(ours)]
+    starts = [c["start"] for c in chapters] + ([seconds] if seconds else [])
+    if len(chapters) < MIN_STORIES or starts[0] != 0 or any(b - a < 10 for a, b in zip(starts, starts[1:])):
+        out.append("chapters must start at 0:00, number at least three and run 10 s or more each")
+    return out
+
+
+def episode_md(end: str, items: list[dict], chapters: list[dict], seconds: float) -> str:
+    from faceless import podcast
+    copy = post_copy(end, items, chapters)
+    lines = [f"# {copy['title']}", "", f"Week ending {end} · {podcast._clock(seconds)} · 1920x1080 · {len(items)} stories ranked by views", "",
+             "## Description", "", copy["description"], "", "## Tags", "", ", ".join(copy["tags"]), "", "## Upload", "",
+             "`python -m faceless longform post --apply` uploads it (category Education, altered or synthetic content declared, rule 4),",
+             "sets `thumbnail.jpg` and adds it to the Money Rules Weekly playlist. The chapters come from the timestamps in the description."]
     return "\n".join(lines) + "\n"
+
+
+# ---------------------------------------------------------------- posting
+
+def posted(week: str) -> dict | None:
+    return next((r for r in read_jsonl(LEDGER) if r.get("week") == week), None)
+
+
+def post(end: str | None = None, *, apply: bool = False, publish_at: str | None = None, synth=None) -> dict:
+    """Upload the week's episode to the channel (the owner's yes, 2026-10-23: one long-form a week). Builds it first when the video is
+    not on disk (renders are not kept between sessions). Dry run unless `apply`; refuses a pause, copy problems and a week already posted."""
+    from faceless import events, safety, ytchannel
+    from faceless.providers import ProviderError, ProviderUnavailable
+    from faceless.providers import composio_tools as ct
+    end = end or (config.today_utc() - timedelta(days=1)).isoformat()
+    if prev := posted(end):
+        return {"week": end, "applied": False, "already": prev.get("video_id")}
+    folder = OUT / end
+    if not (folder / "episode.mp4").exists() or not (folder / "episode.json").exists():
+        built = build(end, synth=synth)
+        if not built.get("file"):
+            return {"week": end, "applied": False, "reason": built.get("reason")}
+    meta = json.loads((folder / "episode.json").read_text(encoding="utf-8"))
+    copy = meta.get("post") or post_copy(end, [{"title": c["title"]} for c in meta["chapters"] if c.get("job")], meta["chapters"])
+    result = {"week": end, "applied": False, "title": copy.get("title"),
+              "problems": problems(copy, meta["chapters"], meta.get("seconds"))}
+    if result["problems"] or not apply:
+        return result
+    if why := safety.paused():
+        raise RuntimeError(f"paused: {why}")
+    channel = config.load()["publish"]["youtube"]["channel_id"]
+    out = ct.youtube_upload(str(folder / "episode.mp4"), copy["title"], copy["description"], copy["tags"], expected_channel_id=channel,
+                            category_id=CATEGORY_EDUCATION, synthetic=True, publish_at=publish_at, job=f"longform-{end}")
+    row = {"week": end, "video_id": out["video_id"], "privacy": out["privacy"], "publish_at": publish_at, "notes": []}
+    steps = (("thumbnail", lambda: ytchannel.set_thumbnail(out["video_id"], folder / "thumbnail.jpg")),
+             ("playlist", lambda: ytchannel.add_to_playlist(out["video_id"], ytchannel.ensure_playlist(PLAYLIST, PLAYLIST_ABOUT))))
+    for what, step in steps:
+        try:                                           # the upload stands even when a finishing touch is refused
+            step()
+        except (ProviderError, ProviderUnavailable) as e:
+            row["notes"].append(f"{what}: {str(e)[:160]}")
+    LEDGER.parent.mkdir(parents=True, exist_ok=True)
+    with open(LEDGER, "a", encoding="utf-8") as f:
+        f.write(json.dumps(row) + "\n")
+    events.emit("LONGFORM_POSTED", job=f"longform-{end}", video_id=out["video_id"])
+    result.update(applied=True, **row)
+    return result

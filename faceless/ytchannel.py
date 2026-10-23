@@ -68,6 +68,35 @@ def upload_banner(path: Path) -> str:
     return r.json()["url"]
 
 
+def set_thumbnail(video_id: str, path: Path) -> None:
+    """Give an uploaded video its custom thumbnail (a resumable session we finish ourselves, like the banner)."""
+    data = path.read_bytes()
+    started = _proxy(UPLOAD + "thumbnails/set", "POST", None, headers={"X-Upload-Content-Type": "image/jpeg", "X-Upload-Content-Length": len(data)},
+                     uploadType="resumable", videoId=video_id)
+    loc = (getattr(started, "headers", None) or {}).get("location", "")
+    if int(started.status or 0) >= 400 or not loc.startswith("https://www.googleapis.com/upload/youtube/"):
+        raise ProviderError(f"YouTube would not open a thumbnail upload (HTTP {started.status}); custom thumbnails need a verified channel")
+    r = requests.put(loc, data=data, headers={"Content-Type": "image/jpeg"}, timeout=120)
+    if r.status_code not in (200, 201):
+        raise ProviderError(f"thumbnail upload failed with HTTP {r.status_code}")
+
+
+def ensure_playlist(title: str, description: str) -> str:
+    """The id of the channel's playlist with this title, made (public) if it does not exist yet."""
+    if not _cache:
+        for p in api("playlists", part="snippet", mine="true", maxResults=50).get("items", []):
+            _cache[p["snippet"]["title"]] = p["id"]
+    if title not in _cache:
+        made = api("playlists", "POST", {"snippet": {"title": title, "description": description, "defaultLanguage": "en"},
+                                          "status": {"privacyStatus": "public"}}, part="snippet,status")
+        _cache[title] = made["id"]
+    return _cache[title]
+
+
+def add_to_playlist(video_id: str, playlist: str) -> None:
+    api("playlistItems", "POST", {"snippet": {"playlistId": playlist, "resourceId": {"kind": "youtube#video", "videoId": video_id}}}, part="snippet")
+
+
 def keywords_field(words: list[str]) -> str:
     """YouTube wants space-separated keywords with multi-word ones in quotes; the whole field is capped at 500 characters."""
     out, size = [], 0
@@ -186,7 +215,7 @@ def add_to_series(video_id: str, pillar: str) -> bool:
     pid = playlist_id(pillar)
     if not pid:
         return False
-    api("playlistItems", "POST", {"snippet": {"playlistId": pid, "resourceId": {"kind": "youtube#video", "videoId": video_id}}}, part="snippet")
+    add_to_playlist(video_id, pid)
     return True
 
 

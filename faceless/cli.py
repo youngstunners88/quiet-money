@@ -1130,6 +1130,14 @@ def cmd_longform(args) -> int:
         r = longform.build(args.week, most=args.max, music=not args.no_music)
         print(f"{r['items']} stories" + (f", {r['seconds']:.0f} s: {r['file']}\nnotes: {r['notes']}" if r.get("file") else f": {r.get('reason')}"))
         return 0
+    if args.action == "post":
+        try:
+            r = longform.post(args.week, apply=args.apply, publish_at=args.at)
+        except Exception as e:  # noqa: BLE001 - quota, pause and channel refusals are reported, not raised
+            print("longform post refused:", e)
+            return 1
+        print(json.dumps(r, indent=1))
+        return 1 if r.get("problems") or r.get("reason") else 0
     weeks = sorted(p.name for p in longform.OUT.glob("*") if (p / "EPISODE.md").exists()) if longform.OUT.exists() else []
     print("episodes: " + (", ".join(weeks) or "none built yet"))
     return 0
@@ -1307,8 +1315,11 @@ def main(argv: list[str] | None = None) -> int:
     pc.add_argument("--week", help="the last day of the week to build (default: yesterday)")
     pc.add_argument("--no-music", action="store_true")
     pc.set_defaults(fn=cmd_podcast)
-    lf = sub.add_parser("longform", help="the weekly 16:9 episode (Money Rules Weekly): build [--week YYYY-MM-DD] [--max 7] [--no-music] | status")
-    lf.add_argument("action", nargs="?", default="status", choices=["build", "status"])
+    lf = sub.add_parser("longform", help="the weekly 16:9 episode (Money Rules Weekly): build [--week YYYY-MM-DD] [--max 7] [--no-music] | "
+                                         "post [--week D] [--apply] [--at ISO] (builds if needed, uploads once per week) | status")
+    lf.add_argument("action", nargs="?", default="status", choices=["build", "post", "status"])
+    lf.add_argument("--apply", action="store_true", help="post: really upload (dry run without it)")
+    lf.add_argument("--at", help="post: schedule it public at this UTC time (2026-10-25T14:00:00Z); default public now")
     lf.add_argument("--week", help="the last day of the week to build (default: yesterday)")
     lf.add_argument("--max", type=int, default=7, help="most stories in the episode")
     lf.add_argument("--no-music", action="store_true")
