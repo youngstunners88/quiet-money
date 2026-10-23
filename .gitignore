@@ -74,3 +74,5 @@ channel/services/studio/orders/
 channel/collab/drafts/
 channel/services/studio/samples/*/*.jpg
 channel/services/studio/samples/*/sheet.pdf
+# second-language editions: the video is rebuilt from script.json; POST.md, meta.json and script.json are committed
+distribution/editions/**/*.mp4

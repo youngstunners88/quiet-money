@@ -47,6 +47,7 @@ humans set strategy, connect accounts, and review held videos.
 | Whole-business plan: products, services, newsletter, repurposing, what to build next | `/channel/empire` | `channel/empire/PLAN.md`, `RANKING.md` | `faceless-empire` |
 | Repurpose a video (thread, carousel, pin, newsletter item, audio) | `/faceless/repurpose.py` | `python -m faceless kit` | `faceless-empire` |
 | Weekly editions: the podcast episode and the 16:9 long-form "Money Rules Weekly" (best Shorts by views, chapters) | `/faceless/podcast.py`, `longform.py` | `python -m faceless longform` | `faceless-empire` |
+| Spanish and Portuguese editions of passed Shorts (numbers checked, local packs, never the English channel) | `/faceless/edition.py` | `python -m faceless edition status` | `faceless-empire` |
 | Flow clips (owner's daily Google Flow session) and hook motion | `/faceless/flow.py` | `python -m faceless flow` | `faceless-empire` |
 | Quality gates answered by a decision model, duplicate and variety checks | `/faceless/qa.py`, `variety.py`, `embed.py` | `.claude/skills/faceless-gauntlet` (Semantic gates) | `faceless-gauntlet` |
 | Platform rules, policy changes, what each marketplace allows | `/channel/compliance` | `channel/compliance/platform-rules.md` | `faceless-scout` |
@@ -119,6 +120,7 @@ python -m faceless kit [day]                   # repurposing kit per video; `kit
 python -m faceless podcast build               # the week's passed Shorts as one podcast episode (mp3 + chapters) -> distribution/podcast/<week>/
 python -m faceless longform build              # the week's most viewed Shorts as one 16:9 episode with chapters + thumbnail -> distribution/longform/<week>/
 python -m faceless longform post --apply       # upload the week's episode (once a week; Sundays at the 07:00 UTC quota reset by the scheduled task)
+python -m faceless edition --day D --lang es   # Spanish (or pt) editions of a day's passed Shorts -> distribution/editions/<lang>/ (posting waits on the owner's channel)
 python -m faceless flow                        # today's Flow shot list for the owner's session
 python -m faceless products                    # build + verify spreadsheet products, write listings
 python -m faceless panel brief.txt --models a,b --runs 3   # several models answer one brief; a person adjudicates (faceless-panel)

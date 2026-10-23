@@ -1,0 +1,105 @@
+{
+ "title": "La trampa del falso precio original que vacía tu cartera",
+ "hook_text": "LA TRAMPA DEL FALSO PRECIO ORIGINAL",
+ "beats": [
+  {
+   "say": "Pasas junto a un perchero de camisas rebajadas de $100 a $40.",
+   "callout": "",
+   "visual": "A row of clothes hanging on a rack in a dim retail store, shot from behind with shallow depth of field."
+  },
+  {
+   "say": "Se siente como una ganga enorme.",
+   "callout": "",
+   "visual": "A close-up of hands sliding a clothes hanger along a metal bar in a boutique."
+  },
+  {
+   "say": "¿Por qué ese número tachado hace que busques tu cartera al instante?",
+   "callout": "",
+   "visual": "A leather wallet resting on a dark wooden counter under a warm spotlight."
+  },
+  {
+   "say": "La mayoría asume que está ahorrando $60 en una buena camisa.",
+   "callout": "ASUNCIÓN VS REALIDAD",
+   "visual": "A price tag dangling from a garment, blurred in the background."
+  },
+  {
+   "say": "Eso es el sesgo de anclaje en acción.",
+   "callout": "",
+   "visual": "A dark storefront window reflecting streetlights at dusk."
+  },
+  {
+   "say": "Las tiendas ponen un punto de referencia falso y alto para que el precio real parezca barato en comparación.",
+   "callout": "EL ANCLA",
+   "visual": "A close-up of a cash register screen showing a glowing digital readout in a dark room."
+  },
+  {
+   "say": "¿Cuánto te cuesta realmente ese hábito en un solo año?",
+   "callout": "NUEVO GANCHO",
+   "visual": "A person counting paper bills on a minimalist wooden desk."
+  },
+  {
+   "say": "Si compras tres artículos innecesarios porque parecen rebajados, quemas $1,825 al año.",
+   "callout": "$1,825 AL AÑO",
+   "visual": "A shopping bag sitting alone on a polished concrete floor."
+  },
+  {
+   "say": "Eso es una fuga de $5 al día.",
+   "callout": "",
+   "visual": "A single coin dropping onto a dark surface, captured in macro."
+  },
+  {
+   "say": "Esos mismos $5 al día invertidos mensualmente al 8% durante 30 años se convierten en $226,659.",
+   "callout": "$226,659 DE GANANCIA",
+   "visual": "A growth chart sketched in chalk on a dark chalkboard, softly lit from the side."
+  },
+  {
+   "say": "Rompe el ancla haciendo una simple pregunta antes de comprar.",
+   "callout": "PASO UNO",
+   "visual": "A hand closing a leather notebook with a brass pen resting beside it."
+  },
+  {
+   "say": "¿Pagarías el precio de oferta si no tuviera la etiqueta original?",
+   "callout": "",
+   "visual": "A blank white price tag hanging against a neutral gray wall."
+  },
+  {
+   "say": "Sígueme para conocer las reglas del dinero que la escuela nunca te enseñó.",
+   "callout": "SÍGUEME",
+   "visual": "A person walking down a quiet city sidewalk away from the camera at twilight."
+  }
+ ],
+ "caption": "Esa etiqueta tachada le hace matemáticas a tu cerebro. #psicologíadeldinero #finanzaspersonales #hábitosdegasto #dinerointeligente #educaciónfinanciera",
+ "description": "El sesgo de anclaje engaña a tu mente para comprar cosas inútiles solo porque parecen rebajadas. Así es como puedes detectar la trampa y conservar tu dinero.",
+ "hashtags": [
+  "#finanzaspersonales",
+  "#dinero",
+  "#educacionfinanciera"
+ ],
+ "first_comment": "¿Cuál fue el último artículo que compraste solo porque estaba en oferta?",
+ "facts": [
+  {
+   "claim": "$5 a day habit equals $1,825 a year",
+   "basis": "$5/day habit = $1,825/year"
+  },
+  {
+   "claim": "$100/month invested at 8% for 30 years is $149,036; $5/day at 8% for 30 years is $226,659",
+   "basis": "$5/day habit = $1,825/year; invested monthly at 8% for 30 years = $226,659"
+  }
+ ],
+ "source": "llm",
+ "pillar": "psychology",
+ "look": "",
+ "loop_map": {
+  "stakes": "You walk past a rack of shirts marked down from $100 to $40.",
+  "big_question": "Why does that crossed-out number make you instantly reach for your wallet?",
+  "assume": "Most people assume they are saving $60 on a good shirt.",
+  "reveal": "Retailers set a high fake reference point so the real price looks cheap by comparison.",
+  "rehook_beats": [
+   7,
+   11
+  ],
+  "payoff_beat": 10
+ },
+ "language": "es",
+ "source_job": "2026-10-21-s3-psychology-anchoring-bias"
+}

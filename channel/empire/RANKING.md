@@ -23,6 +23,7 @@ Finished and checked; one owner step turns each on.
 | P6 | Fillable PDF versions of the printable pack | product | built | 36.0 | built and verified. Launch needs the owner: Approve the prices and listings of the built products (the Gumroad shop is open; Etsy for printables) |
 | P3 | Printable budget pack (50/30/20, sinking funds, subscription audit, net worth) | product | built | 31.5 | built and verified. Launch needs the owner: Approve the prices and listings of the built products (the Gumroad shop is open; Etsy for printables) |
 | S2 | Fiverr studio mode: concept sheets in minutes for logo/art/character gigs | service | built | 16.2 | built and verified. Launch needs the owner: List the gig on your Fiverr account and handle client messages |
+| C7 | Second-language editions: the same videos in Spanish and Portuguese | content | built | 15.36 | built and verified. Launch needs the owner: Open a second-language channel per platform (Spanish first) and approve machine translation with a native-speaker spot check |
 | R1 | YouTube Partner Program + TikTok Creator Rewards | partnership | built | 13.5 | built and verified. Launch needs the owner: Create the TikTok and Instagram accounts (@quietmoneyrule) and connect them for auto-posting (YouTube is live and posting) |
 | O19 | Outreach drafts: collaborators, newsletters and podcasts in the niche, drafted for the owner to send | growth | built | 9.72 | built and verified. Launch needs the owner: Send the drafted collaboration notes yourself (the studio never sends a message in your name) |
 
@@ -59,7 +60,6 @@ The owner's act is the work.
 | id | opportunity | rail | stage | score | next |
 |---|---|---|---|---|---|
 | O17 | Timely macro facts for scripts: US Treasury (keyless) and FRED | content | idea | 21.6 | validate cheaply (research, one test asset), then vet |
-| C7 | Second-language editions: the same videos in Spanish and Portuguese | content | idea | 15.36 | validate cheaply (research, one test asset), then vet |
 | C8 | Better sound effects: swap the synthesized cut hits for a one-time library of generated whooshes and pops | content | idea | 9.0 | validate cheaply (research, one test asset), then vet |
 | P5 | Original 'money rules' typography posters (print on demand) | product | idea | 3.73 | validate cheaply (research, one test asset), then vet |
 | M1 | Adobe Stock AI: abstract backgrounds, textures, objects (no people, brands, artist names) | marketplace | idea | 2.8 | validate cheaply (research, one test asset), then vet |

@@ -1123,6 +1123,25 @@ def cmd_podcast(args) -> int:
     return 0
 
 
+def cmd_edition(args) -> int:
+    """Second-language editions of passed Shorts (local packs; never posted to the English channel)."""
+    from faceless import edition
+    if args.job == "status":
+        print(json.dumps(edition.status(), indent=1))
+        return 0
+    ids = [args.job] if args.job else edition.day_jobs(args.day or config.today_utc().isoformat())[: args.max]
+    bad = 0
+    for jid in ids:
+        try:
+            r = edition.make(jid, args.lang)
+            print(f"{'PASS' if r['passed'] else 'HELD'} {r['lang']} {r['score']} {r['title']}  ->  {r['folder']}")
+            bad += not r["passed"]
+        except (ValueError, FileNotFoundError) as e:
+            print(f"SKIP {jid}: {e}")
+            bad += 1
+    return 1 if bad else 0
+
+
 def cmd_ypp(args) -> int:
     """The road to the YouTube Partner Program: --pull records today's snapshot (live subscribers), then the progress report."""
     from faceless import ypp
@@ -1360,6 +1379,13 @@ def main(argv: list[str] | None = None) -> int:
     pc.add_argument("--week", help="the last day of the week to build (default: yesterday)")
     pc.add_argument("--no-music", action="store_true")
     pc.set_defaults(fn=cmd_podcast)
+    ed = sub.add_parser("edition", help="second-language edition of a passed Short (same pictures and voice; local pack, never posted to the "
+                                        "English channel): edition JOB_ID --lang es|pt | edition --day D [--max 5] | edition status")
+    ed.add_argument("job", nargs="?", default="")
+    ed.add_argument("--lang", default="es", choices=["es", "pt"])
+    ed.add_argument("--day")
+    ed.add_argument("--max", type=int, default=5)
+    ed.set_defaults(fn=cmd_edition)
     yp = sub.add_parser("ypp", help="the road to the YouTube Partner Program: progress per tier, pace, estimated dates (--pull records a snapshot)")
     yp.add_argument("--pull", action="store_true")
     yp.add_argument("--json", action="store_true")
