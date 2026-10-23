@@ -1,0 +1,100 @@
+{
+  "title": "Why Low-Ticket Side Hustles Keep You Trapped",
+  "hook_text": "WHY LOW-TICKET SIDE HUSTLES KEEP YOU TRAPPED",
+  "beats": [
+    {
+      "say": "Most side hustles fail because they scale effort instead of value—here is how the Value Equation fixes that.",
+      "callout": "",
+      "visual": "A person sitting at a dimly lit wooden desk, staring at a laptop screen in a quiet room, cinematic lighting."
+    },
+    {
+      "say": "You work extra hours on a low-ticket side hustle, yet your bank account barely moves an inch.",
+      "callout": "EFFORT VS VALUE",
+      "visual": "A close-up of hands typing frantically on a keyboard, dark cinematic shadows, shallow depth of field."
+    },
+    {
+      "say": "Why does working twice as many hours never double your monthly take-home pay?",
+      "callout": "",
+      "visual": "A glowing desk lamp casting long shadows across stacks of unopened mail and bills."
+    },
+    {
+      "say": "Most people assume that making more money simply requires trading more of your free time.",
+      "callout": "TIME TRAP",
+      "visual": "A vintage wall clock ticking in a quiet hallway, low-angle shot, muted color palette."
+    },
+    {
+      "say": "Alex Hormozi maps out a stark truth in his business frameworks. Value is a strict mathematical equation.",
+      "callout": "VALUE EQUATION",
+      "visual": "A dark notebook resting on a wooden table, illuminated by a single warm overhead light."
+    },
+    {
+      "say": "Value equals dream outcome multiplied by perceived likelihood, divided by time, effort, and sacrifice.",
+      "callout": "STEP ONE",
+      "visual": "A fountain pen resting on blank cream paper, close-up shot, moody and focused."
+    },
+    {
+      "say": "Selling a cheap service keeps the denominator high. You're trading huge effort for tiny margins.",
+      "callout": "STEP TWO",
+      "visual": "A stack of small paper receipts scattered on a dark surface, cinematic macro photography."
+    },
+    {
+      "say": "How do you break that trap without burning out from eighty-hour work weeks?",
+      "callout": "",
+      "visual": "A silhouette of a person standing by a large frosted window, early morning blue light."
+    },
+    {
+      "say": "You stop scaling your effort and start shrinking the friction in the equation instead.",
+      "callout": "STEP THREE",
+      "visual": "A hand sliding a single crisp card across a clean wooden desk, minimalist aesthetic."
+    },
+    {
+      "say": "Raise your prices, guarantee the result, and solve a massive problem for fewer clients.",
+      "callout": "HIGH TICKET",
+      "visual": "A sleek modern desk setup in an empty room, moody shadows, soft cinematic lighting."
+    },
+    {
+      "say": "The honest catch is that building active income takes years of grit before any stability arrives.",
+      "callout": "",
+      "visual": "A heavy iron door slightly ajar, warm light spilling through the crack, cinematic depth."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "A clean wooden tabletop with a brass key resting in the center, soft natural sidelight."
+    }
+  ],
+  "caption": "Stop trading your limited hours for pocket change. Master the math behind high-ticket value. #MoneyPsychology #PersonalFinance #SideHustle #WealthBuilding #FinancialFreedom",
+  "description": "Learn why low-ticket side hustles trap you in endless effort and how the Value Equation fixes your pricing strategy.",
+  "hashtags": [
+    "#MoneyPsychology",
+    "#PersonalFinance",
+    "#SideHustle",
+    "#WealthBuilding",
+    "#FinancialFreedom"
+  ],
+  "first_comment": "What is the hardest part of raising your prices? Drop your thoughts below.",
+  "facts": [
+    {
+      "claim": "Value equals dream outcome multiplied by perceived likelihood, divided by time, effort, and sacrifice.",
+      "basis": "Alex Hormozi's Value Equation framework."
+    },
+    {
+      "claim": "Business frameworks build active income first, and passive income comes later if ever.",
+      "basis": "The honest catch regarding business frameworks from research."
+    }
+  ],
+  "source": "llm",
+  "pillar": "escape",
+  "look": "",
+  "loop_map": {
+    "stakes": "Working extra hours on a low-ticket side hustle while your bank account stays flat.",
+    "big_question": "Why does working twice as many hours never double your monthly take-home pay?",
+    "assume": "Most people assume making more money requires trading more of your free time.",
+    "reveal": "Value is a mathematical equation where you must shrink effort and time while raising outcomes.",
+    "rehook_beats": [
+      3,
+      8
+    ],
+    "payoff_beat": 10
+  }
+}

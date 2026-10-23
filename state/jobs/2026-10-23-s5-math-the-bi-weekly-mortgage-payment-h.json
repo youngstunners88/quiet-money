@@ -1,0 +1,77 @@
+{
+  "id": "2026-10-23-s5-math-the-bi-weekly-mortgage-payment-h",
+  "pillar": "math",
+  "topic": "The Bi-Weekly Mortgage Payment Hack",
+  "day": "2026-10-23",
+  "slot": 5,
+  "status": "published",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-23T09:47:21Z",
+      "words": 182
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-23T09:48:16Z",
+      "seconds": 62.321,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-23T09:48:31Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-23T09:50:45Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-23T09:50:45Z",
+      "score": 98
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-23T09:50:46Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-10-23T09:50:47Z",
+      "local": "2026-10-24T07:30:00-04:00",
+      "youtube": null
+    }
+  ],
+  "artifacts": {
+    "angle": "Calculating how paying half your mortgage every two weeks turns a 30-year loan into a 22-year loan and saves tens of thousands.",
+    "hook": "By changing one single payment date on your mortgage, you can completely erase 8 years of interest payments.",
+    "title": "The Bi-Weekly Mortgage Hack That Erases 8 Years",
+    "style": "cinematic",
+    "video": "/home/user/quiet-money/production/output/2026-10-23/2026-10-23-s5-math-the-bi-weekly-mortgage-payment-h/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-23/2026-10-23-s5-math-the-bi-weekly-mortgage-payment-h/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-10-24/slot1-math",
+        "post_at": "2026-10-24T07:30:00-04:00"
+      },
+      "youtube": {
+        "skipped": "YouTube refused the upload session (HTTP 429): quota or rate limit; it resets at midnight Pacific"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 98,
+    "passed": true
+  },
+  "cost": {
+    "tts:edge:chars": 1089
+  },
+  "notes": []
+}

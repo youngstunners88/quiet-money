@@ -1,0 +1,105 @@
+{
+  "title": "The Daily Coffee Myth That Keeps You Broke",
+  "hook_text": "STOP BLAMING YOUR DAILY COFFEE",
+  "beats": [
+    {
+      "say": "Stop blaming your daily coffee for why you cannot afford a house.",
+      "callout": "",
+      "visual": "A ceramic coffee mug sitting on a dark wooden table in morning light, shot from above, no text."
+    },
+    {
+      "say": "You skip a $5 daily habit and save $1,825 a year.",
+      "callout": "$5 VS $1,825",
+      "visual": "A person's hands sliding a metal coin across a clean kitchen counter, close-up, warm tones."
+    },
+    {
+      "say": "It feels like discipline.",
+      "callout": "DISCIPLINE",
+      "visual": "A calendar page showing the current month, shot from an extreme side angle with soft shadows."
+    },
+    {
+      "say": "Then why does your bank account still feel empty?",
+      "callout": "",
+      "visual": "A bank statement resting on a desk, blurred beyond recognition, dramatic shadows."
+    },
+    {
+      "say": "Most people think cutting small luxuries builds real wealth.",
+      "callout": "ASSUME",
+      "visual": "A shopping cart parked inside an empty minimalist apartment, moody lighting."
+    },
+    {
+      "say": "That is the trap.",
+      "callout": "THE TRAP",
+      "visual": "A close-up of a brass key resting on a heavy concrete block, stark lighting."
+    },
+    {
+      "say": "A $5/day habit invested monthly at 8% for 30 years yields $226,659.",
+      "callout": "$226,659",
+      "visual": "A calculator screen glowing in a dark room, numbers blurred and out of focus."
+    },
+    {
+      "say": "It sounds like a lot.",
+      "callout": "",
+      "visual": "A hand tapping a wooden desk twice, shot in slow motion, moody grey color grade."
+    },
+    {
+      "say": "Until you look at the math on housing and transport.",
+      "callout": "ASSET VS LIABILITY",
+      "visual": "A set of car keys resting on a leather car seat, viewed from the back seat, no logos."
+    },
+    {
+      "say": "Micro-expenses take your focus away from major cash leaks.",
+      "callout": "CASH LEAKS",
+      "visual": "Water droplets falling onto a dark slate surface, macro lens, high contrast."
+    },
+    {
+      "say": "Ignore the small stuff and fix the big leaks.",
+      "callout": "",
+      "visual": "A heavy metal door closing slowly in a concrete hallway, cinematic framing."
+    },
+    {
+      "say": "That is how you build quiet wealth.",
+      "callout": "",
+      "visual": "A single brass lamp lit on a dark desk at night, warm glow against deep shadows."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "A hand turning off a desk lamp, leaving the room in a calm, soft dusk."
+    }
+  ],
+  "caption": "The math behind micro-expenses vs major cash leaks. #personalfinance #moneytips #wealthbuilding #budgeting #money",
+  "description": "Stop stressing over daily luxuries while ignoring major cash leaks. Here is the real math on building wealth quietly.",
+  "hashtags": [
+    "#personalfinance",
+    "#moneytips",
+    "#wealthbuilding",
+    "#budgeting",
+    "#money"
+  ],
+  "first_comment": "What is one major expense you finally audited this year?",
+  "facts": [
+    {
+      "claim": "$5/day habit equals $1,825 a year",
+      "basis": "$5/day habit = $1,825/year; invested monthly at 8% for 30 years = $226,659"
+    },
+    {
+      "claim": "$5/day invested at 8% for 30 years is $226,659",
+      "basis": "$5/day habit = $1,825/year; invested monthly at 8% for 30 years = $226,659"
+    }
+  ],
+  "source": "llm",
+  "pillar": "myth",
+  "look": "",
+  "loop_map": {
+    "stakes": "A $5 daily coffee habit and the yearly total it creates.",
+    "big_question": "Why does your bank account still feel empty after cutting small luxuries?",
+    "assume": "Cutting out small daily luxuries builds wealth.",
+    "reveal": "Micro-expenses distract from major cash leaks like housing and transport.",
+    "rehook_beats": [
+      4,
+      8
+    ],
+    "payoff_beat": 10
+  }
+}

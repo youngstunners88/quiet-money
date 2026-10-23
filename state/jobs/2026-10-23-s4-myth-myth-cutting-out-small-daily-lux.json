@@ -1,0 +1,77 @@
+{
+  "id": "2026-10-23-s4-myth-myth-cutting-out-small-daily-lux",
+  "pillar": "myth",
+  "topic": "Myth: Cutting out small daily luxuries builds wealth",
+  "day": "2026-10-23",
+  "slot": 4,
+  "status": "published",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-23T09:37:28Z",
+      "words": 193
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-23T09:39:52Z",
+      "seconds": 71.013,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-23T09:40:24Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-23T09:42:14Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-23T09:42:14Z",
+      "score": 97
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-23T09:42:14Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-10-23T09:42:16Z",
+      "local": "2026-10-23T21:00:00-04:00",
+      "youtube": null
+    }
+  ],
+  "artifacts": {
+    "angle": "Show why focusing on micro-expenses while ignoring major cash leaks like housing and transport is a psychological trap.",
+    "hook": "Stop blaming your daily coffee for why you cannot afford a house.",
+    "title": "The $5 Coffee Myth Trapping Your Paycheck",
+    "style": "cinematic",
+    "video": "/home/user/quiet-money/production/output/2026-10-23/2026-10-23-s4-myth-myth-cutting-out-small-daily-lux/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-23/2026-10-23-s4-myth-myth-cutting-out-small-daily-lux/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-10-23/slot5-myth",
+        "post_at": "2026-10-23T21:00:00-04:00"
+      },
+      "youtube": {
+        "skipped": "YouTube refused the upload session (HTTP 429): quota or rate limit; it resets at midnight Pacific"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 97,
+    "passed": true
+  },
+  "cost": {
+    "tts:edge:chars": 1208
+  },
+  "notes": []
+}

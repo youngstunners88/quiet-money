@@ -1,0 +1,110 @@
+{
+  "title": "The Bi-Weekly Mortgage Hack That Erases 8 Years",
+  "hook_text": "ERASE 8 YEARS OF MORTGAGE DEBT",
+  "beats": [
+    {
+      "say": "Changing one payment date on your mortgage can erase 8 years of debt.",
+      "callout": "",
+      "visual": "Extreme close-up of a silver house key resting on a dark polished wooden table, dramatic Moody lighting, macro shot."
+    },
+    {
+      "say": "Most homeowners pay their bill once a month, right on the first.",
+      "callout": "",
+      "visual": "Overhead view of hands writing a check at a minimalist oak desk, moody side lighting, cinematic atmosphere."
+    },
+    {
+      "say": "How does splitting that exact same paycheck in half cut your loan down fast?",
+      "callout": "",
+      "visual": "A physical paper calendar resting on a dark stone countertop with red pen ink circling dates, shallow depth of field."
+    },
+    {
+      "say": "You assume paying bi-weekly just spreads your normal bill evenly throughout the year.",
+      "callout": "12 PAYMENTS VS 26 HALF",
+      "visual": "A vintage mechanical calculator resting on a leather-bound ledger, warm cinematic lighting, close-up shot."
+    },
+    {
+      "say": "But calendar math hides a powerful twist most homeowners never calculate for themselves.",
+      "callout": "",
+      "visual": "Silhouetted figure standing in front of a modern glass office window at twilight, urban skyline in background."
+    },
+    {
+      "say": "There are 52 weeks in a year, giving you 26 half-payments every two weeks.",
+      "callout": "52 WEEKS = 26 PAYS",
+      "visual": "Close-up of a person flipping pages of a sleek leather planner on a desk, soft moody sunlight."
+    },
+    {
+      "say": "26 half-payments equal 13 full monthly payments every year, instead of just 12.",
+      "callout": "13 FULL PAYMENTS",
+      "visual": "Stack of crisp bank documents bound with a subtle brass clip on a dark slate background, warm accent light."
+    },
+    {
+      "say": "But where does that sudden 13th payment go, and how does it help you?",
+      "callout": "",
+      "visual": "An empty architectural interior of a contemporary home with large sunlit windows, cinematic wide angle."
+    },
+    {
+      "say": "That extra payment hits your principal directly, skipping interest costs that normally compound against you.",
+      "callout": "PRINCIPAL VS INTEREST",
+      "visual": "An hourglass sitting on a dark wooden surface with golden sand flowing downward, low key lighting."
+    },
+    {
+      "say": "That single adjustment turns a 30-year loan into a 22-year loan automatically.",
+      "callout": "30 YEARS VS 22 YEARS",
+      "visual": "A minimalist home miniature model sitting in soft fog on a dark reflective surface, high contrast studio lighting."
+    },
+    {
+      "say": "Call your loan provider today and ask for an automated bi-weekly payment schedule.",
+      "callout": "STEP ONE",
+      "visual": "Hands holding a sleek modern smartphone from the back, blur background in an elegant room, dark tones."
+    },
+    {
+      "say": "You spend the exact same monthly budget, but save tens of thousands in interest.",
+      "callout": "",
+      "visual": "A quiet modern kitchen with morning sun rays coming through tall windows, warm home aesthetic."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "Cinematic shot from behind a person looking out over a peaceful calm lake at sunrise, quiet tones."
+    },
+    {
+      "say": "Changing one payment date on your mortgage really erases 8 years of debt.",
+      "callout": "",
+      "visual": "Extreme close-up of a silver house key resting on a dark polished wooden table, dramatic Moody lighting, macro shot."
+    }
+  ],
+  "caption": "How 26 half-payments equal 13 full payments and shave 8 years off your mortgage balance.\n\n#money #personalfinance #mortgage #mortgagehacks #wealthbuilding",
+  "description": "Learn how switching to a bi-weekly mortgage payment schedule creates 13 full monthly payments every year instead of 12. This extra principal-only payment turns a 30-year mortgage into a 22-year loan without changing your overall budget.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#mortgage",
+    "#mortgagehacks",
+    "#wealthbuilding"
+  ],
+  "first_comment": "Have you ever switched your mortgage or loans to bi-weekly payments?",
+  "facts": [
+    {
+      "claim": "Paying bi-weekly results in 26 half-payments, which equals 13 full monthly payments per year.",
+      "basis": "52 weeks divided by 2 = 26 half-payments = 13 full payments."
+    },
+    {
+      "claim": "Paying one extra full payment toward mortgage principal per year reduces a standard 30-year loan to approximately 22 years.",
+      "basis": "Standard amortization calculations for a 30-year fixed rate mortgage."
+    }
+  ],
+  "source": "llm",
+  "pillar": "math",
+  "look": "",
+  "loop_map": {
+    "stakes": "A standard 30-year mortgage costing homeowners extra years of interest payments.",
+    "big_question": "How does splitting your monthly mortgage payment in half cut 8 years off your loan?",
+    "assume": "Bi-weekly payments just divide your standard 12 monthly payments evenly across the year.",
+    "reveal": "26 bi-weekly payments yield 13 full monthly payments per year, applying one full extra payment directly to the principal.",
+    "rehook_beats": [
+      5,
+      8
+    ],
+    "payoff_beat": 10
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "id": "2026-10-23-s6-psychology-confirmation-bias-in-spending",
+  "pillar": "psychology",
+  "topic": "Confirmation Bias in Spending",
+  "day": "2026-10-23",
+  "slot": 6,
+  "status": "published",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-23T09:55:38Z",
+      "words": 198
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-23T09:58:00Z",
+      "seconds": 69.858,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-23T09:58:17Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-23T10:00:47Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-23T10:00:47Z",
+      "score": 100
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-23T10:00:48Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-10-23T10:00:51Z",
+      "local": "2026-10-24T11:30:00-04:00",
+      "youtube": null
+    }
+  ],
+  "artifacts": {
+    "angle": "How we subconsciously hunt for reviews and excuses to justify an expensive purchase we already decided to make.",
+    "hook": "You didn't 'research' that $1,200 gadget for weeks; you just spent two weeks looking for someone on the internet to validate your impulse.",
+    "title": "Why You Research Expensive Things Before Buying Them",
+    "style": "cinematic",
+    "video": "/home/user/quiet-money/production/output/2026-10-23/2026-10-23-s6-psychology-confirmation-bias-in-spending/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-23/2026-10-23-s6-psychology-confirmation-bias-in-spending/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-10-24/slot2-psychology",
+        "post_at": "2026-10-24T11:30:00-04:00"
+      },
+      "youtube": {
+        "skipped": "YouTube refused the upload session (HTTP 429): quota or rate limit; it resets at midnight Pacific"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 100,
+    "passed": true
+  },
+  "cost": {
+    "tts:edge:chars": 1210
+  },
+  "notes": []
+}
