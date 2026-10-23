@@ -92,7 +92,7 @@ def catalog() -> dict[str, dict]:
         data = json.loads(path.read_text(encoding="utf-8"))
     except (OSError, json.JSONDecodeError):
         return {}
-    return {p["id"]: {"name": p.get("name", p["id"]), "price": p.get("price"), "kind": p.get("kind", "")} for p in data.get("products", []) if "id" in p}
+    return {p["id"]: {"name": p.get("name", p["id"]), "price": p.get("price"), "kind": p.get("kind", ""), "tier": p.get("tier", "")} for p in data.get("products", []) if "id" in p}
 
 
 def base() -> str:
@@ -139,8 +139,8 @@ def destinations() -> list[dict]:
         p = cat.get(slug)
         if p and str(url).startswith("https://"):
             out.append({"slug": slug, "kind": "paid", "name": p["name"], "short": f"The {p['name']}" if not p["name"].lower().startswith("the ") else p["name"],
-                        "price": p["price"], "url": str(url)})
-    return out
+                        "price": p["price"], "url": str(url), "tier": p.get("tier", "")})
+    return out[:1] + sorted(out[1:], key=lambda d: (not d["tier"], d["tier"]))      # the tier ladder in order: Starter, Core, Complete
 
 
 # ---------------------------------------------------------------- the ledger

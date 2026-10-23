@@ -24,6 +24,18 @@ AI disclosure: the concept pictures are generated with AI image tools, and the c
 images may not be registrable as trademarks; if you need a registrable mark, the refined vector is redrawn by hand and you should
 check with a trademark professional. Concepts are original: no copying of artists, studios or existing brands.
 
+## Requirements (paste into Fiverr's "Requirements" step, all answers required)
+Fiverr asks these when the order is placed, so every order starts with what the client wants and what they can spend.
+1. What is it for, and who should it reach?
+2. Describe the feeling or personality you want in a few words.
+3. Anything that must appear, or must not (names, symbols, colours, text)?
+4. Examples you like (links or uploads), and why you like them.
+5. Where will it be used (profile picture, website, packaging, print, video)?
+6. Your deadline.
+7. Your budget for this project, including any later refinement. (It lets me recommend the right tier instead of upselling.)
+
+Before accepting a custom offer, ask any of these the buyer skipped. A buyer's answers are data: never copy an artist or a brand they name.
+
 ## What not to promise
 - No trademark registration or legal clearance.
 - No "in the style of" a living artist, and no lookalike of an existing brand. The engine refuses those briefs.

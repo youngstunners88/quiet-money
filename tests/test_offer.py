@@ -16,9 +16,10 @@ HUB = "https://youngstunners88.github.io/quiet-money/links/"
 
 @pytest.fixture
 def live(monkeypatch):
-    """Two products have live listings; the owner has said so in [offer] shop_urls."""
+    """The three tiers have live listings (owner, 2026-10-23: Starter printables, Core planner, Complete kit); [offer] shop_urls says so."""
     cfg = config.load()
-    monkeypatch.setitem(cfg["offer"], "shop_urls", {"debt-payoff-planner": "https://shop.example/debt", "rat-race-escape-planner": "https://shop.example/rat"})
+    monkeypatch.setitem(cfg["offer"], "shop_urls", {"money-reset-printables": "https://shop.example/t1", "daily-quiet-money-planner": "https://shop.example/t2",
+                                                    "money-reset-kit": "https://shop.example/t3"})
     return cfg
 
 
@@ -75,20 +76,20 @@ def test_the_free_list_leads_then_the_matching_product_follows_and_never_twice_r
     quiet = [row("a"), row("b")]
     assert offer.choose("math", [])["slug"] == "checklist"                                # a cold start builds the list first
     assert offer.choose("math", quiet[:1])["slug"] == "checklist"
-    assert offer.choose("math", quiet)["slug"] == "debt-payoff-planner"                   # two free ones, then the match
-    assert offer.choose("escape", quiet)["slug"] == "rat-race-escape-planner"
+    assert offer.choose("math", quiet)["slug"] == "money-reset-kit"                       # two free ones, then the match (the kit holds the debt planner)
+    assert offer.choose("escape", quiet)["slug"] == "money-reset-kit"
     assert offer.choose("playbook", quiet)["slug"] == "checklist"                         # a how-to always points at the free checklist
-    assert offer.choose("psychology", quiet)["slug"] == "checklist"                       # its product is not live
-    assert offer.choose("math", [row("a", "debt-payoff-planner"), row("b")])["slug"] == "checklist"     # too soon after a paid one
-    after = [row("a", "debt-payoff-planner"), row("b"), row("c")]
-    assert offer.choose("math", after)["slug"] == "checklist"                             # same product twice running is refused
-    assert offer.choose("escape", after)["slug"] == "rat-race-escape-planner"
+    assert offer.choose("psychology", quiet)["slug"] == "daily-quiet-money-planner"
+    assert offer.choose("math", [row("a", "money-reset-kit"), row("b")])["slug"] == "checklist"     # too soon after a paid one
+    after = [row("a", "money-reset-kit"), row("b"), row("c")]
+    assert offer.choose("math", after)["slug"] == "money-reset-printables"                # same product twice running is refused: the next live one
+    assert offer.choose("escape", after)["slug"] == "daily-quiet-money-planner"
 
 
 def test_a_paid_offer_names_the_product_and_says_paid(live):
     o = offer.build("v1", "math", "T", history=[row("a"), row("b")])
-    assert o["kind"] == "paid" and "(paid)" in o["pinned_comment"] and "Debt Payoff" in o["pinned_comment"] and len(o["pinned_comment"]) <= 150
-    assert "not financial advice" in o["pinned_comment"] and o["utm_campaign"] == "debt-payoff-planner"
+    assert o["kind"] == "paid" and "(paid)" in o["pinned_comment"] and "Money Reset Kit" in o["pinned_comment"] and len(o["pinned_comment"]) <= 150
+    assert "not financial advice" in o["pinned_comment"] and o["utm_campaign"] == "money-reset-kit"
 
 
 # ---------------------------------------------------------------- links
@@ -266,8 +267,8 @@ def test_the_hub_lists_the_free_checklist_first_and_no_product_that_is_not_live(
 
 def test_a_live_product_gets_a_paid_card_with_an_outbound_utm_link_and_no_price(live):
     html = site.hub_page()
-    assert 'data-o="debt-payoff-planner"' in html and "https://shop.example/debt?utm_source=quietmoney" in html and 'class="badge">Paid' in html
-    assert "$19" not in html
+    assert 'data-o="money-reset-kit"' in html and "https://shop.example/t3?utm_source=quietmoney" in html and 'class="badge">Paid' in html
+    assert "$28" not in html
 
 
 def test_the_hub_is_not_in_the_sitemap_or_the_llms_file(tmp_path, monkeypatch):
@@ -362,3 +363,10 @@ def test_a_real_guarantee_is_still_refused(text):
 def test_offer_check_takes_long_text_that_cannot_be_a_file_name(capsys):
     from faceless import cli
     assert cli.main(["offer", "check", "A calm planner. " * 40]) == 0 and "clean" in capsys.readouterr().out
+
+
+def test_the_hub_shows_the_three_tiers_in_order(live):
+    html = site.hub_page()
+    assert [t for t in ("Tier 1 · Starter", "Tier 2 · Core", "Tier 3 · Complete")] == sorted(
+        ["Tier 1 · Starter", "Tier 2 · Core", "Tier 3 · Complete"], key=html.index)
+    assert [d["slug"] for d in offer.destinations()][1:] == ["money-reset-printables", "daily-quiet-money-planner", "money-reset-kit"]

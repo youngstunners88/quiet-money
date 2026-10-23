@@ -14,7 +14,7 @@ already did, and the owner's next 30 minutes. HQ shows the same top three steps.
 
 ## The order money comes in (judgment until a rail has sold once)
 1. **Web3 video and KOL service.** Highest ticket. The 07:47 UTC hunt queues three gated drafts a day (`service-outbound`). The
-   owner sends them; a reply is a project. Prices are set (2026-10-23): $65 for a 30-second video, $120 for a 75-second one; replies quote them from `templates/quote.md`.
+   owner sends them; a reply is a project. Prices are set (2026-10-23): $65 for a 30-second video, $120 for a 75-second one; the first reply asks the discovery questions (`templates/discovery.md`: goal, audience, platform, length, must-haves, look, timing, **budget**), then quotes from `templates/quote.md`.
 2. **Gumroad products.** Built and verified; only the price yes is missing. One owner line ("list X at $N") is enough. Then follow
    `faceless-ship`: write `[shop.approved."<id>"]` quoting the owner's message, `shop publish`, add the live URL to `[offer] shop_urls`.
    From that moment the offer layer points the matching series at it (`faceless-offer`).

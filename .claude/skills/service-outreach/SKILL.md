@@ -57,7 +57,7 @@ owner with the reason. `promise_free` failing is a hold immediately - never a re
 
 ## Replies and the send gate
 The owner sends, and the owner forwards what came back. When a reply arrives: answer it in the owner's voice as a
-**draft for them**, keep the same rules (no price without their number, no promises), and record the outcome through
+**draft for them**. The first reply to any interested lead asks the discovery questions (`templates/discovery.md`), so we know what the client wants and their budget before quoting; prices come only from `[outbound.prices]` ($65 for 30 s, $120 for 75 s). Keep the same rules (no promises), and record the outcome through
 `service-pipeline`. Nothing in this desk ever contacts anyone directly, and the gate does not move without the
 owner's explicit yes (`service-outbound`, autonomy levels). `references/reply-playbook.md` has the common replies -
 "send examples", "what does it cost", "not now", "do you guarantee views" - and how each is answered honestly.

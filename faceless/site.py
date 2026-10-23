@@ -185,6 +185,7 @@ article .summary{font-size:20px;color:var(--muted)}
 .hubcard b{display:block;font:900 19px/1.25 Montserrat,sans-serif}
 .hubcard span{display:block;color:var(--muted);font-size:15px;margin-top:2px}
 .hubcard.primary,.hubcard.feat{border-color:var(--gold)}
+.hubcard .tier{display:block;font-size:13px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--gold);margin-top:4px}
 .badge{display:inline-block;font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--ink);background:var(--gold);border-radius:999px;padding:1px 9px;margin-left:8px;vertical-align:middle}
 .signup{background:var(--ink2);border:1px solid var(--gold);border-radius:16px;padding:16px 18px;margin:12px 0}
 .signup label{display:block;font-weight:800;margin-bottom:8px}
@@ -494,7 +495,8 @@ def hub_page() -> str:
         else:
             href = offer.tracked(d["url"], "quietmoney", "hub", d["slug"])
             cards.append(f'<a class="hubcard" data-o="{e(d["slug"])}" href="{e(href)}" rel="noopener"><b>{e(d["name"])}<span class="badge">Paid</span></b>'
-                         f'<span>See the listing for what is included. Educational tools, no promised results.</span></a>')
+                         + (f'<span class="tier">{e(d["tier"])}</span>' if d.get("tier") else "")
+                         + '<span>See the listing for what is included. Educational tools, no promised results.</span></a>')
     cards.append(f'<a class="hubcard" data-o="tools" href="{e(offer.tracked("../tools/", "hub", "link", "tools"))}"><b>Calculators</b>'
                  f'<span>Compound growth, credit card payoff, inflation: put your own numbers in.</span></a>')
     cards.append(f'<a class="hubcard" data-o="rules" href="{e(offer.tracked("../rules/", "hub", "link", "rules"))}"><b>Every money rule, written out</b>'
