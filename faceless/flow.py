@@ -25,7 +25,7 @@ from faceless.config import Paths
 
 DIR = Paths.root / "channel" / "flow"
 INBOX, USED, LISTS = DIR / "inbox", DIR / "used", DIR / "shotlists"
-RULES = ("vertical 9:16, 10 seconds, cinematic 4K, photoreal, no people's faces (silhouettes or visors only), no text or numbers anywhere, "
+RULES = ("vertical 9:16, 10 seconds, cinematic 4K, photoreal, expressive human faces welcome, no text or numbers anywhere, "
          "no logos or brands, no dialogue, no music")
 SUBJECTS = {   # per series: one self-contained prompt per scene, with timed beats (0-3s, 3-7s, 7-10s), a named subject, an action, a payoff
     "story": [
