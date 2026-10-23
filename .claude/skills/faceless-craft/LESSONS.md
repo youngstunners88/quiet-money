@@ -32,7 +32,7 @@ in `faceless/craftcheck.py` must exist here (a test checks this).
 - **Owner said:** nothing yet.
 - **Measured cause:** the first reel's lines ran 3.1 to 4.1 words a second.
 - **Rule:** a calm read is at most about 3.2 words a second; `craftcheck.word_budget` sizes lines at 2.6 a second.
-- **Enforced in:** craftcheck L5 as WATCH only. Promote to a gate if the owner says the voice is rushed.
+- **Enforced in:** craftcheck L5 as WATCH only. Promote to confirmed if the owner says the voice is rushed.
 
 ## L6: grade by brightness
 - **Owner said:** (caught in frames before shipping) a night clip crushed to black and the impact flash blew it out.
@@ -60,6 +60,11 @@ in `faceless/craftcheck.py` must exist here (a test checks this).
 - **Owner said:** (caught in the review of the third render) the card held 5.5 s and every line ran about a second longer than in the first reel.
 - **Measured cause:** the ElevenLabs quota was spent (28 of 10,000 credits left) and the Edge voice returned 403, so the voice chain fell back to Gemini without anyone deciding to (seen in the journal): a different narrator from the first reel, and a slower read, so every line ran about a second longer and the card held 5.5 s.
 - **Not verified:** whether the fallback voice's files also carry padding around the speech. The trim below is a safeguard against that, not a measured fix.
-- **Rule:** each line is trimmed to its speech before it is timed or placed, the build report records which provider voiced every line, and a piece voiced by more than one narrator does not ship. When the channel's narrator is unavailable, say so to the owner instead of shipping a different voice quietly.
+- **Rule:** each line is trimmed to its speech before it is timed or placed, the build report records which provider voiced every line, and a piece voiced by more than one narrator is flagged for a re-voice. When the channel's narrator is unavailable, the piece still ships with the fallback voice and the owner is told which voice read it.
 - **Then:** the next render failed outright: Gemini hit its quota too (429), so no narrator was available at all. A voice outage stops the reel and the daily batch alike, and it is the owner's to fix (top up ElevenLabs).
 - **Enforced in:** `faceless/reel.py` (`TRIM`, `_voice` returns the provider); craftcheck L10.
+
+## L11: the engine ships; checks advise
+- **Owner said:** revoke the rule that blocks a reel from shipping; this is an autonomous engine (2026-10-23).
+- **Rule:** craftcheck never stops a piece and always exits 0. A broken confirmed rule is a work order for the code or skill before the next render, recorded in `state/craft.jsonl`, and reported to the owner after the fact.
+- **Enforced in:** `faceless/craftcheck.py` (`to_fix`), `faceless/cli.py` (`cmd_craftcheck`); `tests/test_craftcheck.py`.
