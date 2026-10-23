@@ -7493,3 +7493,93 @@
 {"ts": "2026-10-23T01:29:14Z", "t": 1792718954.306, "actor": "engine", "type": "PROVIDER_OK", "capability": "tts", "provider": "edge", "job": "longform-2026-10-21", "ms": 1781}
 {"ts": "2026-10-23T01:29:14Z", "t": 1792718954.65, "actor": "engine", "type": "PROVIDER_OK", "capability": "tts", "provider": "edge", "job": "longform-2026-10-21", "ms": 1041}
 {"ts": "2026-10-23T01:29:15Z", "t": 1792718955.272, "actor": "engine", "type": "PROVIDER_OK", "capability": "tts", "provider": "edge", "job": "longform-2026-10-21", "ms": 1712}
+{"ts": "2026-10-23T01:47:05Z", "t": 1792720025.76, "actor": "engine", "type": "PROVIDER_OK", "capability": "llm", "provider": "gemini", "job": "concepts", "ms": 13620}
+{"ts": "2026-10-23T01:47:13Z", "t": 1792720033.09, "actor": "engine", "type": "PROVIDER_OK", "capability": "image", "provider": "pollinations", "job": "concepts", "ms": 7110}
+{"ts": "2026-10-23T01:47:18Z", "t": 1792720038.759, "actor": "engine", "type": "PROVIDER_OK", "capability": "image", "provider": "pollinations", "job": "concepts", "ms": 5668}
+{"ts": "2026-10-23T01:47:24Z", "t": 1792720044.447, "actor": "engine", "type": "PROVIDER_OK", "capability": "image", "provider": "pollinations", "job": "concepts", "ms": 5686}
+{"ts": "2026-10-23T01:47:29Z", "t": 1792720049.497, "actor": "engine", "type": "PROVIDER_OK", "capability": "image", "provider": "pollinations", "job": "concepts", "ms": 5049}
+{"ts": "2026-10-23T01:47:35Z", "t": 1792720055.536, "actor": "engine", "type": "PROVIDER_OK", "capability": "image", "provider": "pollinations", "job": "concepts", "ms": 6038}
+{"ts": "2026-10-23T01:47:41Z", "t": 1792720061.171, "actor": "engine", "type": "PROVIDER_OK", "capability": "image", "provider": "pollinations", "job": "concepts", "ms": 5634}
+{"ts": "2026-10-23T01:49:08Z", "t": 1792720148.231, "actor": "engine", "type": "PROVIDER_OK", "capability": "llm", "provider": "gemini", "job": "concepts", "ms": 86029}
+{"ts": "2026-10-23T01:49:14Z", "t": 1792720154.813, "actor": "engine", "type": "PROVIDER_OK", "capability": "image", "provider": "pollinations", "job": "concepts", "ms": 6580}
+{"ts": "2026-10-23T01:49:20Z", "t": 1792720160.144, "actor": "engine", "type": "PROVIDER_OK", "capability": "image", "provider": "pollinations", "job": "concepts", "ms": 5329}
+{"ts": "2026-10-23T01:49:27Z", "t": 1792720167.727, "actor": "engine", "type": "PROVIDER_OK", "capability": "image", "provider": "pollinations", "job": "concepts", "ms": 7582}
+{"ts": "2026-10-23T01:49:32Z", "t": 1792720172.743, "actor": "engine", "type": "PROVIDER_OK", "capability": "image", "provider": "pollinations", "job": "concepts", "ms": 5015}
+{"ts": "2026-10-23T01:49:38Z", "t": 1792720178.714, "actor": "engine", "type": "PROVIDER_OK", "capability": "image", "provider": "pollinations", "job": "concepts", "ms": 5970}
+{"ts": "2026-10-23T01:49:44Z", "t": 1792720184.133, "actor": "engine", "type": "PROVIDER_OK", "capability": "image", "provider": "pollinations", "job": "concepts", "ms": 5417}
+{"ts": "2026-10-23T01:50:11Z", "t": 1792720211.969, "actor": "engine", "type": "COLLAB_SEARCH_FAIL", "term": "financial independence", "status": 403}
+{"ts": "2026-10-23T01:50:22Z", "t": 1792720222.526, "actor": "engine", "type": "JEV_CALL", "questions": ["personalization", "spam_risk"], "via": "openrouter-decisions", "model": "typesafe/jev-1.13-20260917"}
+{"ts": "2026-10-23T01:50:22Z", "t": 1792720222.527, "actor": "engine", "type": "DECISIONS", "job": "collab-gate:527320f6f1e665a2", "backend": "openrouter-decisions", "ms": 470, "dry_run": true}
+{"ts": "2026-10-23T01:50:30Z", "t": 1792720230.295, "actor": "engine", "type": "JEV_CALL", "questions": ["personalization", "spam_risk"], "via": "openrouter-decisions", "model": "typesafe/jev-1.13-20260917"}
+{"ts": "2026-10-23T01:50:30Z", "t": 1792720230.296, "actor": "engine", "type": "DECISIONS", "job": "collab-gate:f6316314b3b37c0d", "backend": "openrouter-decisions", "ms": 289, "dry_run": true}
+{"ts": "2026-10-23T01:50:30Z", "t": 1792720230.885, "actor": "engine", "type": "COLLAB_FEED_FAIL", "show": "970a360129b27c65", "error": "no element found: line 22855, column 112"}
+{"ts": "2026-10-23T01:50:31Z", "t": 1792720231.465, "actor": "engine", "type": "COLLAB_FEED_FAIL", "show": "90bac91c5ee1829b", "error": "unclosed CDATA section: line 7355, column 1090"}
+{"ts": "2026-10-23T01:50:38Z", "t": 1792720238.13, "actor": "engine", "type": "JEV_CALL", "questions": ["personalization", "spam_risk"], "via": "openrouter-decisions", "model": "typesafe/jev-1.13-20260917"}
+{"ts": "2026-10-23T01:50:38Z", "t": 1792720238.131, "actor": "engine", "type": "DECISIONS", "job": "collab-gate:6bb2f30033a56d46", "backend": "openrouter-decisions", "ms": 256, "dry_run": true}
+{"ts": "2026-10-23T01:50:38Z", "t": 1792720238.133, "actor": "engine", "type": "COLLAB_RUN", "found": 69, "drafted": 3, "verdicts": {"pass": 0, "review": 3, "hold": 0}}
+{"ts": "2026-10-23T01:50:50Z", "t": 1792720250.34, "actor": "engine", "type": "JEV_CALL", "questions": ["personalization", "spam_risk"], "via": "openrouter-decisions", "model": "typesafe/jev-1.13-20260917"}
+{"ts": "2026-10-23T01:50:50Z", "t": 1792720250.341, "actor": "engine", "type": "DECISIONS", "job": "probe", "backend": "openrouter-decisions", "ms": 620, "dry_run": true}
+{"ts": "2026-10-23T01:51:18Z", "t": 1792720278.265, "actor": "engine", "type": "JEV_CALL", "questions": ["personalization", "spam_risk"], "via": "openrouter-decisions", "model": "typesafe/jev-1.13-20260917"}
+{"ts": "2026-10-23T01:51:18Z", "t": 1792720278.266, "actor": "engine", "type": "DECISIONS", "job": "collab-gate:f6316314b3b37c0d", "backend": "openrouter-decisions", "ms": 562, "dry_run": true}
+{"ts": "2026-10-23T01:51:18Z", "t": 1792720278.777, "actor": "engine", "type": "JEV_CALL", "questions": ["personalization", "spam_risk"], "via": "openrouter-decisions", "model": "typesafe/jev-1.13-20260917"}
+{"ts": "2026-10-23T01:51:18Z", "t": 1792720278.778, "actor": "engine", "type": "DECISIONS", "job": "collab-gate:6bb2f30033a56d46", "backend": "openrouter-decisions", "ms": 509, "dry_run": true}
+{"ts": "2026-10-23T01:51:20Z", "t": 1792720280.123, "actor": "engine", "type": "COLLAB_SEARCH_FAIL", "term": "money mindset", "status": 403}
+{"ts": "2026-10-23T01:51:28Z", "t": 1792720288.803, "actor": "engine", "type": "JEV_CALL", "questions": ["personalization", "spam_risk"], "via": "openrouter-decisions", "model": "typesafe/jev-1.13-20260917"}
+{"ts": "2026-10-23T01:51:28Z", "t": 1792720288.804, "actor": "engine", "type": "DECISIONS", "job": "collab-gate:75858042c660b88f", "backend": "openrouter-decisions", "ms": 676, "dry_run": true}
+{"ts": "2026-10-23T01:51:29Z", "t": 1792720289.313, "actor": "engine", "type": "COLLAB_FEED_FAIL", "show": "b9e44ee5ffda2138", "error": "unclosed CDATA section: line 31820, column 309"}
+{"ts": "2026-10-23T01:51:35Z", "t": 1792720295.253, "actor": "engine", "type": "JEV_CALL", "questions": ["personalization", "spam_risk"], "via": "openrouter-decisions", "model": "typesafe/jev-1.13-20260917"}
+{"ts": "2026-10-23T01:51:35Z", "t": 1792720295.253, "actor": "engine", "type": "DECISIONS", "job": "collab-gate:5562050c0cbb896e", "backend": "openrouter-decisions", "ms": 400, "dry_run": true}
+{"ts": "2026-10-23T01:51:36Z", "t": 1792720296.627, "actor": "engine", "type": "COLLAB_FEED_FAIL", "show": "fbf57381d68b7fb4", "error": "unclosed CDATA section: line 7736, column 1547"}
+{"ts": "2026-10-23T01:51:43Z", "t": 1792720303.73, "actor": "engine", "type": "JEV_CALL", "questions": ["personalization", "spam_risk"], "via": "openrouter-decisions", "model": "typesafe/jev-1.13-20260917"}
+{"ts": "2026-10-23T01:51:43Z", "t": 1792720303.731, "actor": "engine", "type": "DECISIONS", "job": "collab-gate:2069f6732a9dcead", "backend": "openrouter-decisions", "ms": 353, "dry_run": true}
+{"ts": "2026-10-23T01:51:43Z", "t": 1792720303.733, "actor": "engine", "type": "COLLAB_RUN", "found": 66, "drafted": 3, "verdicts": {"pass": 3, "review": 0, "hold": 0}}
+{"ts": "2026-10-23T01:56:51Z", "t": 1792720611.832, "actor": "engine", "type": "COLLAB_SEARCH_FAIL", "term": "money mindset", "status": 403}
+{"ts": "2026-10-23T01:56:59Z", "t": 1792720619.791, "actor": "engine", "type": "JEV_CALL", "questions": ["personalization", "spam_risk"], "via": "openrouter-decisions", "model": "typesafe/jev-1.13-20260917"}
+{"ts": "2026-10-23T01:56:59Z", "t": 1792720619.792, "actor": "engine", "type": "DECISIONS", "job": "collab-gate:c8526529306e9124", "backend": "openrouter-decisions", "ms": 522, "dry_run": true}
+{"ts": "2026-10-23T01:57:06Z", "t": 1792720626.805, "actor": "engine", "type": "JEV_CALL", "questions": ["personalization", "spam_risk"], "via": "openrouter-decisions", "model": "typesafe/jev-1.13-20260917"}
+{"ts": "2026-10-23T01:57:06Z", "t": 1792720626.805, "actor": "engine", "type": "DECISIONS", "job": "collab-gate:c63f2025daa21cd9", "backend": "openrouter-decisions", "ms": 541, "dry_run": true}
+{"ts": "2026-10-23T01:57:07Z", "t": 1792720627.301, "actor": "engine", "type": "COLLAB_FEED_FAIL", "show": "001a91aaad39f41c", "error": "unclosed CDATA section: line 2547, column 2758"}
+{"ts": "2026-10-23T01:57:13Z", "t": 1792720633.06, "actor": "engine", "type": "JEV_CALL", "questions": ["personalization", "spam_risk"], "via": "openrouter-decisions", "model": "typesafe/jev-1.13-20260917"}
+{"ts": "2026-10-23T01:57:13Z", "t": 1792720633.062, "actor": "engine", "type": "DECISIONS", "job": "collab-gate:53dc056fa60b7850", "backend": "openrouter-decisions", "ms": 413, "dry_run": true}
+{"ts": "2026-10-23T01:57:13Z", "t": 1792720633.064, "actor": "engine", "type": "COLLAB_RUN", "found": 61, "drafted": 3, "verdicts": {"pass": 3, "review": 0, "hold": 0}}
+{"ts": "2026-10-23T02:02:51Z", "t": 1792720971.635, "actor": "engine", "type": "COMPOSIO_SESSION", "user": "quiet-money-studio", "session_hash": "95f0a806"}
+{"ts": "2026-10-23T02:02:52Z", "t": 1792720972.821, "actor": "engine", "type": "YOUTUBE_API", "path": "channels", "method": "GET", "status": 403}
+{"ts": "2026-10-23T02:03:05Z", "t": 1792720985.416, "actor": "engine", "type": "COMPOSIO_SESSION", "user": "quiet-money-studio", "session_hash": "fb39e3fa"}
+{"ts": "2026-10-23T02:03:06Z", "t": 1792720986.38, "actor": "engine", "type": "YOUTUBE_API", "path": "channels", "method": "GET", "status": 403}
+{"ts": "2026-10-23T02:15:24Z", "t": 1792721724.471, "actor": "engine", "type": "PROVIDER_OK", "capability": "llm", "provider": "gemini", "job": "edition-es", "ms": 7881}
+{"ts": "2026-10-23T02:16:27Z", "t": 1792721787.246, "actor": "engine", "type": "PROVIDER_OK", "capability": "tts", "provider": "edge", "job": "2026-10-21-s3-psychology-anchoring-bias", "ms": 62769}
+{"ts": "2026-10-23T02:18:01Z", "t": 1792721881.335, "actor": "engine", "type": "PROVIDER_OK", "capability": "tts", "provider": "edge", "job": "2026-10-21-s3-psychology-anchoring-bias", "ms": 94019}
+{"ts": "2026-10-23T02:18:01Z", "t": 1792721881.404, "actor": "engine", "type": "VOICE_REFIT", "job": "2026-10-21-s3-psychology-anchoring-bias", "speed": 0.927, "seconds": 62.37}
+{"ts": "2026-10-23T02:18:12Z", "t": 1792721892.534, "actor": "engine", "type": "PROVIDER_OK", "capability": "image", "provider": "cloudflare", "job": "2026-10-21-s3-psychology-anchoring-bias", "ms": 10752}
+{"ts": "2026-10-23T02:18:13Z", "t": 1792721893.439, "actor": "engine", "type": "CLEF_CALL", "job": "2026-10-21-s3-psychology-anchoring-bias", "model": "clef", "questions": ["text", "face", "logo"], "images": 1, "input_tokens": 1403}
+{"ts": "2026-10-23T02:18:16Z", "t": 1792721896.106, "actor": "engine", "type": "PROVIDER_OK", "capability": "image", "provider": "cloudflare", "job": "2026-10-21-s3-psychology-anchoring-bias", "ms": 14325}
+{"ts": "2026-10-23T02:18:16Z", "t": 1792721896.857, "actor": "engine", "type": "PROVIDER_OK", "capability": "image", "provider": "cloudflare", "job": "2026-10-21-s3-psychology-anchoring-bias", "ms": 15077}
+{"ts": "2026-10-23T02:18:17Z", "t": 1792721897.159, "actor": "engine", "type": "CLEF_CALL", "job": "2026-10-21-s3-psychology-anchoring-bias", "model": "clef", "questions": ["text", "face", "logo"], "images": 1, "input_tokens": 1388}
+{"ts": "2026-10-23T02:18:18Z", "t": 1792721898.323, "actor": "engine", "type": "CLEF_CALL", "job": "2026-10-21-s3-psychology-anchoring-bias", "model": "clef", "questions": ["text", "face", "logo"], "images": 1, "input_tokens": 1396}
+{"ts": "2026-10-23T02:18:23Z", "t": 1792721903.841, "actor": "engine", "type": "PROVIDER_OK", "capability": "image", "provider": "cloudflare", "job": "2026-10-21-s3-psychology-anchoring-bias", "ms": 21953}
+{"ts": "2026-10-23T02:18:25Z", "t": 1792721905.129, "actor": "engine", "type": "CLEF_CALL", "job": "2026-10-21-s3-psychology-anchoring-bias", "model": "clef", "questions": ["text", "face", "logo"], "images": 1, "input_tokens": 1392}
+{"ts": "2026-10-23T02:18:27Z", "t": 1792721907.863, "actor": "engine", "type": "PROVIDER_OK", "capability": "image", "provider": "cloudflare", "job": "2026-10-21-s3-psychology-anchoring-bias", "ms": 14420}
+{"ts": "2026-10-23T02:18:28Z", "t": 1792721908.823, "actor": "engine", "type": "PROVIDER_OK", "capability": "image", "provider": "cloudflare", "job": "2026-10-21-s3-psychology-anchoring-bias", "ms": 10496}
+{"ts": "2026-10-23T02:18:28Z", "t": 1792721908.941, "actor": "engine", "type": "CLEF_CALL", "job": "2026-10-21-s3-psychology-anchoring-bias", "model": "clef", "questions": ["text", "face", "logo"], "images": 1, "input_tokens": 1401}
+{"ts": "2026-10-23T02:18:29Z", "t": 1792721909.99, "actor": "engine", "type": "CLEF_CALL", "job": "2026-10-21-s3-psychology-anchoring-bias", "model": "clef", "questions": ["text", "face", "logo"], "images": 1, "input_tokens": 1404}
+{"ts": "2026-10-23T02:18:32Z", "t": 1792721912.522, "actor": "engine", "type": "PROVIDER_OK", "capability": "image", "provider": "cloudflare", "job": "2026-10-21-s3-psychology-anchoring-bias", "ms": 15359}
+{"ts": "2026-10-23T02:18:33Z", "t": 1792721913.795, "actor": "engine", "type": "CLEF_CALL", "job": "2026-10-21-s3-psychology-anchoring-bias", "model": "clef", "questions": ["text", "face", "logo"], "images": 1, "input_tokens": 1395}
+{"ts": "2026-10-23T02:18:40Z", "t": 1792721920.711, "actor": "engine", "type": "PROVIDER_OK", "capability": "image", "provider": "cloudflare", "job": "2026-10-21-s3-psychology-anchoring-bias", "ms": 11765}
+{"ts": "2026-10-23T02:18:41Z", "t": 1792721921.286, "actor": "engine", "type": "PROVIDER_OK", "capability": "image", "provider": "cloudflare", "job": "2026-10-21-s3-psychology-anchoring-bias", "ms": 11291}
+{"ts": "2026-10-23T02:18:41Z", "t": 1792721921.834, "actor": "engine", "type": "CLEF_CALL", "job": "2026-10-21-s3-psychology-anchoring-bias", "model": "clef", "questions": ["text", "face", "logo"], "images": 1, "input_tokens": 1413}
+{"ts": "2026-10-23T02:18:42Z", "t": 1792721922.348, "actor": "engine", "type": "CLEF_CALL", "job": "2026-10-21-s3-psychology-anchoring-bias", "model": "clef", "questions": ["text", "face", "logo"], "images": 1, "input_tokens": 1393}
+{"ts": "2026-10-23T02:18:42Z", "t": 1792721922.587, "actor": "engine", "type": "PROVIDER_OK", "capability": "image", "provider": "cloudflare", "job": "2026-10-21-s3-psychology-anchoring-bias", "ms": 8789}
+{"ts": "2026-10-23T02:18:43Z", "t": 1792721923.681, "actor": "engine", "type": "CLEF_CALL", "job": "2026-10-21-s3-psychology-anchoring-bias", "model": "clef", "questions": ["text", "face", "logo"], "images": 1, "input_tokens": 1396}
+{"ts": "2026-10-23T02:18:47Z", "t": 1792721927.436, "actor": "engine", "type": "PROVIDER_OK", "capability": "image", "provider": "cloudflare", "job": "2026-10-21-s3-psychology-anchoring-bias", "ms": 22305}
+{"ts": "2026-10-23T02:18:48Z", "t": 1792721928.745, "actor": "engine", "type": "CLEF_CALL", "job": "2026-10-21-s3-psychology-anchoring-bias", "model": "clef", "questions": ["text", "face", "logo"], "images": 1, "input_tokens": 1390}
+{"ts": "2026-10-23T02:19:07Z", "t": 1792721947.112, "actor": "engine", "type": "PROVIDER_OK", "capability": "image", "provider": "cloudflare", "job": "2026-10-21-s3-psychology-anchoring-bias", "ms": 25274}
+{"ts": "2026-10-23T02:19:08Z", "t": 1792721948.263, "actor": "engine", "type": "CLEF_CALL", "job": "2026-10-21-s3-psychology-anchoring-bias", "model": "clef", "questions": ["text", "face", "logo"], "images": 1, "input_tokens": 1397}
+{"ts": "2026-10-23T02:19:08Z", "t": 1792721948.287, "actor": "engine", "type": "VISUALS_DONE", "job": "2026-10-21-s3-psychology-anchoring-bias", "providers": {"cloudflare": 12, "card": 1}, "qa_flagged": 1, "qa_swapped": 1}
+{"ts": "2026-10-23T02:19:44Z", "t": 1792721984.917, "actor": "engine", "type": "CARDS_RENDERED", "job": "2026-10-21-s3-psychology-anchoring-bias", "cards": 2, "seconds": 11.5}
+{"ts": "2026-10-23T02:21:51Z", "t": 1792722111.244, "actor": "engine", "type": "RENDERED", "job": "2026-10-21-s3-psychology-anchoring-bias", "video": "/home/user/quiet-money/production/output/editions/es/2026-10-21/2026-10-21-s3-psychology-anchoring-bias/final.mp4", "cover": "/home/user/quiet-money/production/output/editions/es/2026-10-21/2026-10-21-s3-psychology-anchoring-bias/cover.jpg", "shots": 23, "captioned_words": 147, "avg_shot": 2.74, "cards": 2, "clips": 0, "music": "psychology-2.mp3"}
+{"ts": "2026-10-23T02:21:51Z", "t": 1792722111.499, "actor": "engine", "type": "EDITION_MADE", "job": "2026-10-21-s3-psychology-anchoring-bias", "lang": "es", "score": 100, "passed": true}
+{"ts": "2026-10-23T02:36:33Z", "t": 1792722993.664, "actor": "engine", "type": "COMPOSIO_SESSION", "user": "quiet-money-studio", "session_hash": "fc835c4b"}
+{"ts": "2026-10-23T02:45:48Z", "t": 1792723548.903, "actor": "engine", "type": "SHOP_DRAFT_CREATED", "product": "rat-race-escape-planner", "gumroad_id": "pOnQFwdP26-rXo_U0HvMKA==", "published": false}
+{"ts": "2026-10-23T02:46:03Z", "t": 1792723563.339, "actor": "engine", "type": "SHOP_DRAFT_CREATED", "product": "debt-payoff-planner", "gumroad_id": "HEaNQ9i2IDZ6Of-DL_IIAg==", "published": false}
+{"ts": "2026-10-23T02:46:12Z", "t": 1792723572.651, "actor": "engine", "type": "SHOP_DRAFT_CREATED", "product": "money-reset-printables", "gumroad_id": "BblmL6e1T0kQno0e174vcA==", "published": false}
+{"ts": "2026-10-23T02:46:21Z", "t": 1792723581.61, "actor": "engine", "type": "SHOP_DRAFT_CREATED", "product": "money-reset-kit", "gumroad_id": "4zMZ8mC5eFGP-QAB7FimhQ==", "published": false}

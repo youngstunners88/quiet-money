@@ -217,3 +217,28 @@ def test_openrouter_is_never_an_image_provider():
     from faceless.providers import images
     assert "openrouter" not in config.load()["images"]["chain"] and "openrouter" not in images.PROVIDERS
     assert not any(k.startswith("openrouter") for k in config.load()["images"])
+
+
+def test_every_third_party_import_is_a_declared_dependency():
+    """The CI runner installs requirements.txt and nothing else; a module that is only on a developer's machine passes locally and fails there
+    (defusedxml, 2026-10-23). Optional extras are imported inside a function that copes without them, and are listed here by name."""
+    import ast
+    import re
+    import sys
+    from pathlib import Path
+    root = Path(__file__).resolve().parents[1]
+    declared = {re.split(r"[<>=\[ ]", line.strip())[0].lower() for line in (root / "requirements.txt").read_text().splitlines()
+                if line.strip() and not line.startswith("#")}
+    dist = {"PIL": "pillow", "cv2": "opencv-python-headless", "edge_tts": "edge-tts"}
+    optional = {"composio", "google", "playwright", "typesafe_sdk",  # optional extras, see the comments in requirements.txt
+                "certifi"}                                          # always present with requests
+    mods = set()
+    for p in (root / "faceless").rglob("*.py"):
+        for n in ast.walk(ast.parse(p.read_text(encoding="utf-8"))):
+            if isinstance(n, ast.Import):
+                mods |= {a.name.split(".")[0] for a in n.names}
+            elif isinstance(n, ast.ImportFrom) and n.level == 0 and n.module:
+                mods.add(n.module.split(".")[0])
+    third = {m for m in mods if m not in sys.stdlib_module_names and m != "faceless"} - optional
+    missing = sorted(m for m in third if dist.get(m, m).lower() not in declared)
+    assert not missing, f"imported but not in requirements.txt: {missing}"

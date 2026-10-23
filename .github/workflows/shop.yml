@@ -30,7 +30,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: System tools (LibreOffice recalculates the spreadsheets, ffmpeg makes the listing video, poppler reads PDF pages)
-        run: sudo apt-get update -qq && sudo apt-get install -y -qq --no-install-recommends libreoffice-calc ffmpeg poppler-utils fonts-dejavu-core
+        run: sudo rm -f /var/lib/man-db/auto-update && sudo apt-get update -qq && sudo apt-get install -y -qq --no-install-recommends libreoffice-calc ffmpeg poppler-utils fonts-dejavu-core
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"

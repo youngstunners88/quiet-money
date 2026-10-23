@@ -1,6 +1,6 @@
 # Listing: Rat Race Escape Planner
 
-Prepared 2026-10-08. The owner approves price, copy and the account before anything goes live.
+Prepared 2026-10-23. The owner approves price, copy and the account before anything goes live.
 
 ## Gumroad (first: 10% fee, no AI rule)
 - **Name:** Rat Race Escape Planner (Excel + Google Sheets)
@@ -27,7 +27,7 @@ Know your freedom number, how many years it is away, and what one boring monthly
 financial freedom, budget planner, retirement calculator, FIRE calculator, passive income tracker, spreadsheet template, rat race, income streams
 
 ### After-purchase message
-Thanks for grabbing the planner. Start on tab 1 and change one number at a time. If something looks wrong, reply to this message and it gets fixed. More free tools: https://youngstunners88.github.io/quiet-money/money-reset/
+Thanks for grabbing the planner. Start on tab 1 and change one number at a time. If something looks wrong, reply to this message and it gets fixed. More free tools: https://youngstunners88.github.io/quiet-money/links/
 
 ## Etsy (second: needs the owner's Etsy shop)
 - Category: Digital downloads > Templates/Planners. Instant download, no shipping.

@@ -15,7 +15,7 @@ and fill in six printable pages (paycheck split, subscription audit, sinking fun
 Educational tools, not financial advice. Results depend on your assumptions. Designed by Quiet Money with AI assistance; spreadsheets were recalculated and checked against independent math.
 
 ### After-purchase message
-Thanks for grabbing the kit. Start with the Rat Race Escape Planner. Free 7-day Money Reset emails: https://youngstunners88.github.io/quiet-money/money-reset/
+Thanks for grabbing the kit. Start with the Rat Race Escape Planner. Free 7-day Money Reset emails: https://youngstunners88.github.io/quiet-money/links/
 
 ## Rules we keep
 No income or savings guarantees; no fake testimonials or scarcity; 30-day refund promise.

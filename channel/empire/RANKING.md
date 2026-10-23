@@ -3,14 +3,6 @@
 One agent (Claude Code) is the operator; skills are departments, scheduled routines are shifts, deterministic code is the factory,
 and the owner is the board for money, accounts, legal and face. Scores are judgment until metrics exist (see `faceless forecast`).
 
-## The agent builds these now
-Unblocked and buildable without the owner; only the launch needs them.
-| id | opportunity | rail | stage | score | next |
-|---|---|---|---|---|---|
-| S2 | Fiverr studio mode: concept sheets in minutes for logo/art/character gigs | service | vetted | 16.2 | agent builds it now. Launch needs the owner: List the gig on your Fiverr account and handle client messages |
-| R1 | YouTube Partner Program + TikTok Creator Rewards | partnership | vetted | 13.5 | agent builds it now. Launch needs the owner: Create the TikTok and Instagram accounts (@quietmoneyrule) and connect them for auto-posting (YouTube is live and posting) |
-| O19 | Outreach drafts: collaborators, newsletters and podcasts in the niche, drafted for the owner to send | growth | vetted | 9.72 | agent builds it now. Launch needs the owner: Send the drafted collaboration notes yourself (the studio never sends a message in your name); Create the TikTok and Instagram accounts (@quietmoneyrule) and connect them for auto-posting (YouTube is live and posting) |
-
 ## Built: waiting for the owner to launch
 Finished and checked; one owner step turns each on.
 | id | opportunity | rail | stage | score | next |
@@ -30,6 +22,10 @@ Finished and checked; one owner step turns each on.
 | C4 | Audio edition: daily 60 s + weekly podcast episode | content | built | 40.5 | built and verified. Launch needs the owner: Open a free podcast host account |
 | P6 | Fillable PDF versions of the printable pack | product | built | 36.0 | built and verified. Launch needs the owner: Approve the prices and listings of the built products (the Gumroad shop is open; Etsy for printables) |
 | P3 | Printable budget pack (50/30/20, sinking funds, subscription audit, net worth) | product | built | 31.5 | built and verified. Launch needs the owner: Approve the prices and listings of the built products (the Gumroad shop is open; Etsy for printables) |
+| O15 | Site analytics with PostHog: visits, calculator use and clicks to the shop | ops | built | 30.0 | built and verified. Launch needs the owner: Add one GitHub Actions variable: Settings > Secrets and variables > Actions > Variables > New, name POSTHOG_TOKEN, value your PostHog project token (phc_..., public by design) |
+| S2 | Fiverr studio mode: concept sheets in minutes for logo/art/character gigs | service | built | 16.2 | built and verified. Launch needs the owner: List the gig on your Fiverr account and handle client messages |
+| R1 | YouTube Partner Program + TikTok Creator Rewards | partnership | built | 13.5 | built and verified. Launch needs the owner: Create the TikTok and Instagram accounts (@quietmoneyrule) and connect them for auto-posting (YouTube is live and posting) |
+| O19 | Outreach drafts: collaborators, newsletters and podcasts in the niche, drafted for the owner to send | growth | built | 9.72 | built and verified. Launch needs the owner: Send the drafted collaboration notes yourself (the studio never sends a message in your name) |
 
 ## Needs the owner first
 The owner's act is the work.
@@ -55,24 +51,24 @@ The owner's act is the work.
 | O14 | Mistral as a fourth script provider (resilience) | ops | built | 37.5 | measure; kill if: never used in 60 days. |
 | C3 | Weekly long-form: 'Money Rules Weekly' (8-10 min, 16:9, chapters) | content | built | 36.0 | measure; kill if: < 30% avg view duration after 4 episodes. |
 
-## Waiting on another item
-| id | opportunity | rail | stage | score | next |
-|---|---|---|---|---|---|
-| O15 | Site analytics with PostHog: visits, calculator use and clicks to the shop | ops | vetted | 30.0 | waits for O3 |
-
 ## Ideas to validate cheaply
 | id | opportunity | rail | stage | score | next |
 |---|---|---|---|---|---|
 | O17 | Timely macro facts for scripts: US Treasury (keyless) and FRED | content | idea | 21.6 | validate cheaply (research, one test asset), then vet |
-| C7 | Second-language editions: the same videos in Spanish and Portuguese | content | idea | 15.36 | validate cheaply (research, one test asset), then vet |
 | C8 | Better sound effects: swap the synthesized cut hits for a one-time library of generated whooshes and pops | content | idea | 9.0 | validate cheaply (research, one test asset), then vet |
 | P5 | Original 'money rules' typography posters (print on demand) | product | idea | 3.73 | validate cheaply (research, one test asset), then vet |
 | M1 | Adobe Stock AI: abstract backgrounds, textures, objects (no people, brands, artist names) | marketplace | idea | 2.8 | validate cheaply (research, one test asset), then vet |
 | R2 | Finance affiliates + sponsors (with disclosure) | partnership | idea | 1.73 | validate cheaply (research, one test asset), then vet |
 
+## Parked by the owner
+Kept as built; nothing more is spent on these until the owner says so.
+| id | opportunity | rail | stage | score | next |
+|---|---|---|---|---|---|
+| C7 | Second-language editions: the same videos in Spanish and Portuguese | content | built | 15.36 | parked by the owner: not multilingual yet (2026-10-23) |
+
 ## What the owner unlocks, biggest first
 
-- **Create the TikTok and Instagram accounts (@quietmoneyrule) and connect them for auto-posting (YouTube is live and posting)**: 410.7 points (O18, C5, O3, O5, R1, O19)
+- **Create the TikTok and Instagram accounts (@quietmoneyrule) and connect them for auto-posting (YouTube is live and posting)**: 401.0 points (O18, C5, O3, O5, R1)
 - **Pick an email service, a domain and a postal address, and connect them**: 375.5 points (O18, A2, A1)
 - **Approve the prices and listings of the built products (the Gumroad shop is open; Etsy for printables)**: 346.5 points (P4, P1, P2, P6, P3)
 - **Pick a cookieless visit counter and save its tag as the file named in studio.toml [site] head_snippet**: 200.0 points (O18)
@@ -83,8 +79,8 @@ The owner's act is the work.
 - **List the gig on your Fiverr account and handle client messages**: 64.2 points (S1, S2)
 - **Look at a sample video with model-designed motion scenes and say go (studio.toml [production.sketch] mode = "on", plus the approval constant in tests/test_hygiene.py)**: 45.0 points (C9)
 - **Open a free podcast host account**: 40.5 points (C4)
+- **Add one GitHub Actions variable: Settings > Secrets and variables > Actions > Variables > New, name POSTHOG_TOKEN, value your PostHog project token (phc_..., public by design)**: 30.0 points (O15)
 - **Create a free FRED API key (fred.stlouisfed.org) and add FRED_API_KEY to the environment**: 21.6 points (O17)
-- **Open a second-language channel per platform (Spanish first) and approve machine translation with a native-speaker spot check**: 15.4 points (C7)
 - **Send the drafted collaboration notes yourself (the studio never sends a message in your name)**: 9.7 points (O19)
 - **Open Etsy + Printify accounts**: 3.7 points (P5)
 - **Open an Adobe Stock contributor account and confirm the image model's terms allow resale**: 2.8 points (M1)
