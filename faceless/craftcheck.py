@@ -2,7 +2,8 @@
 
 Taste cannot be fully measured, but the defects the owner has caught can be, and each one becomes a check here so it is
 never shipped twice. Every rule below cites the lesson that produced it (.claude/skills/faceless-craft/LESSONS.md).
-A check that fails stops the piece; the fix goes into the code or the skill that caused it, and this file gains the rule.
+Nothing here stops a piece from shipping: the engine is autonomous (owner, 2026-10-23). A failed check is a
+work order: the next render must fix it, in the code or the skill that caused it, and this file gains the rule.
 
 Run: python -m faceless craftcheck <video> [--report build.json]
 """
@@ -68,9 +69,9 @@ def check_reel(video: Path, report: dict) -> list[dict]:
     starts, cta_at = report["act_starts"], report["cta_at"]
     found = []
 
-    def add(rule, lesson, ok, detail, gate=True):
-        """gate=False is a provisional rule: reported, never blocking, until the owner confirms it."""
-        found.append({"rule": rule, "lesson": lesson, "ok": bool(ok), "detail": detail, "gate": gate})
+    def add(rule, lesson, ok, detail, confirmed=True):
+        """confirmed=False is a provisional rule the owner has not validated: reported, never acted on."""
+        found.append({"rule": rule, "lesson": lesson, "ok": bool(ok), "detail": detail, "confirmed": confirmed})
 
     i = integrated(video)
     add("integrated loudness is the channel standard (-14 LUFS, +-1)", "L2", abs(i - TARGET_I) <= 1.0, f"{i:.1f} LUFS")
@@ -105,7 +106,7 @@ def check_reel(video: Path, report: dict) -> list[dict]:
         else:
             add(f"line finishes before its cut ({line['line'][:32]}...)", "L4", room >= 0.2, f"{room:.2f}s to spare")
         wps = len(line["line"].split()) / max(0.1, line["seconds"])
-        add(f"line is at a calm pace ({line['line'][:32]}...)", "L5", wps <= 3.2, f"{wps:.1f} words/s", gate=False)
+        add(f"line is at a calm pace ({line['line'][:32]}...)", "L5", wps <= 3.2, f"{wps:.1f} words/s", confirmed=False)
 
     voices = sorted({l.get("voice") for l in report.get("narration", []) if l.get("voice")})
     if voices:
@@ -124,14 +125,14 @@ def record(piece: str, findings: list[dict]) -> dict:
     """Append the run to the ledger: what was checked, what failed. The ledger is how improvement is measured."""
     row = {"at": datetime.now(timezone.utc).isoformat(timespec="seconds"), "piece": piece,
            "passed": sum(f["ok"] for f in findings),
-           "failed": [f["rule"] for f in findings if not f["ok"] and f.get("gate", True)],
-           "watch": [f["rule"] for f in findings if not f["ok"] and not f.get("gate", True)]}
+           "to_fix": [f["rule"] for f in findings if not f["ok"] and f.get("confirmed", True)],
+           "watch": [f["rule"] for f in findings if not f["ok"] and not f.get("confirmed", True)]}
     LEDGER.parent.mkdir(parents=True, exist_ok=True)
     with open(LEDGER, "a", encoding="utf-8") as f:
         f.write(json.dumps(row) + "\n")
     return row
 
 
-def blocking(findings: list[dict]) -> list[dict]:
-    """The failures that stop a piece from shipping: confirmed rules only."""
-    return [f for f in findings if not f["ok"] and f.get("gate", True)]
+def to_fix(findings: list[dict]) -> list[dict]:
+    """Confirmed rules this piece broke: the piece still ships, and these are what the next render must fix."""
+    return [f for f in findings if not f["ok"] and f.get("confirmed", True)]

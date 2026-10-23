@@ -9,11 +9,11 @@ description: The learning loop for Quiet Money's creative work: assess every fin
 Nothing here retrains a model. The improvement lives in two places that persist between sessions: the **checks** in `faceless/craftcheck.py` and the **skills** that write prompts, scripts and edits. So the loop only works if every lesson lands in one of them. A lesson kept in a chat reply is lost; a lesson written into a skill or a check is kept for every future piece.
 
 ## The loop (run it on every creative deliverable)
-1. **Measure.** `python -m faceless craftcheck <video> --report <build.json>`. Every confirmed rule is a gate; provisional rules are reported as `WATCH` and never block.
+1. **Measure.** `python -m faceless craftcheck <video> --report <build.json>`. It is advisory and always exits 0: a broken confirmed rule is reported as `FIX`, a provisional one as `WATCH`. Nothing it finds stops a piece from shipping.
 2. **Look and listen.** A number is not taste. Read a contact sheet (`ffmpeg -i v.mp4 -vf "fps=1,scale=200:-1,tile=14x2" -frames:v 1 sheet.png`) and the loudness curve over the ending. Ask what the owner would say first, using `LESSONS.md`: if a past lesson would have caught it, it is a regression.
 3. **Fix the cause, not the instance.** A defect goes back to the code or the skill that produced it. Re-rendering with a hand tweak teaches nothing.
 4. **Record.** Append the lesson to `LESSONS.md` (format below), add a check to `craftcheck.py` when it can be measured, and update the skill that owns the decision. All three go in the same commit as the fix.
-5. **Ship only when nothing blocks.** Then tell the owner what the checks caught that they would otherwise have heard.
+5. **Ship, then close the loop.** The engine is autonomous (owner, 2026-10-23): a piece ships whatever the checks say. Every `FIX` becomes a change to the code or skill that caused it before the next render, and the owner is told what was found and what was changed.
 
 ## Turning owner feedback into a rule
 The owner speaks in effects ("the end is low", "it feels cut off", "the slow-mo isn't clean"). The job is to find the measurable cause behind the effect before changing anything:
@@ -22,8 +22,8 @@ The owner speaks in effects ("the end is low", "it feels cut off", "the slow-mo 
 - **Check the checker.** Run the new check on the piece the owner complained about: it must fail. Then on the fixed piece: it must pass. A check that passes the bad version is miscalibrated (this happened with the first hole-at-the-cut threshold).
 
 ## Confirmed and provisional rules
-- **Confirmed** = the owner said it, or it is a platform fact (loudness standard). These are gates.
-- **Provisional** = a rule inferred from a measurement the owner has not reacted to. Report it as `WATCH`; promote it only when the owner confirms or a later complaint traces back to it. Never block a piece on a rule the owner has not validated.
+- **Confirmed** = the owner said it, or it is a platform fact (loudness standard). A broken one is a work order for the next render, not a stop.
+- **Provisional** = a rule inferred from a measurement the owner has not reacted to. Report it as `WATCH`; promote it only when the owner confirms or a later complaint traces back to it. Do not change code for a rule the owner has not validated.
 - Never weaken or delete a confirmed rule without the owner. Tighten freely when a check proves too lenient.
 
 ## Updating skills autonomously
@@ -33,4 +33,4 @@ When a lesson is confirmed, update the owning skill without asking: `faceless-fl
 `## Ln: short name` then four lines: **Owner said** (the words or the effect), **Measured cause**, **Rule**, **Enforced in** (file and check, or the skill line). Keep the newest at the bottom; never rewrite history, add a later lesson that supersedes it instead.
 
 ## The ledger
-Every craftcheck run appends to `state/craft.jsonl` (piece, passed, blocking failures, watch items). Fewer blocking failures per piece over time is the measure of whether this loop is working.
+Every craftcheck run appends to `state/craft.jsonl` (piece, passed, rules to fix, watch items). Fewer rules to fix per piece over time is the measure of whether this loop is working; the same rule failing twice means the earlier fix did not reach the cause.

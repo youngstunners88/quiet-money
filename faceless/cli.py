@@ -343,11 +343,11 @@ def cmd_craftcheck(args) -> int:
     report = json.loads(Path(args.report).read_text(encoding="utf-8")) if args.report else {}
     findings = craftcheck.check_reel(Path(args.video), report)
     for f in findings:
-        tag = "PASS " if f["ok"] else ("BLOCK" if f.get("gate", True) else "WATCH")
+        tag = "PASS " if f["ok"] else ("FIX  " if f.get("confirmed", True) else "WATCH")
         print(f"{tag} {f['lesson']:<3} {f['rule']} | {f['detail']}")
     row = craftcheck.record(Path(args.video).name, findings)
-    print(f"\n{row['passed']} passed, {len(row['failed'])} blocking, {len(row['watch'])} to watch (state/craft.jsonl)")
-    return 1 if row["failed"] else 0
+    print(f"\n{row['passed']} passed, {len(row['to_fix'])} to fix next render, {len(row['watch'])} to watch (state/craft.jsonl)")
+    return 0   # advisory: the engine is autonomous and never stops on a craft finding (owner, 2026-10-23)
 
 
 def cmd_products(_args) -> int:
@@ -1335,7 +1335,7 @@ def main(argv: list[str] | None = None) -> int:
     ce.add_argument("--out", help="output path (default <clip>-edit.mp4)")
     ce.add_argument("--card", default="QUIET MONEY", help="end-card line")
     ce.set_defaults(fn=cmd_cineedit)
-    cc = sub.add_parser("craftcheck", help="assess a finished reel against every craft lesson so far; exits 1 when a confirmed rule fails")
+    cc = sub.add_parser("craftcheck", help="assess a finished reel against every craft lesson so far; advisory, never blocks, records what to fix next")
     cc.add_argument("video")
     cc.add_argument("--report", help="the build report JSON from faceless.reel.build (act starts, CTA, narration timings)")
     cc.set_defaults(fn=cmd_craftcheck)

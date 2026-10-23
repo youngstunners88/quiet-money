@@ -32,7 +32,7 @@ The card has no clip sound, so it lands on a sting (whoosh into the cut, low imp
 Clip sound keeps the hits at `CLIP_GAIN`, the music bed fills the gaps at `BED_GAIN`, and both duck to let the narration through only while it speaks (`sidechaincompress`). A limiter catches the peaks. Raise `BED_GAIN` before raising the voice: if the voice has to be loud to be heard, the bed is too busy.
 
 ## Rules
-- **Run the craft loop before it ships** (`faceless-craft`): `python -m faceless craftcheck <reel> --report <build.json>` must show nothing blocking, then look at a contact sheet and listen to the ending.
+- **Run the craft loop on every reel** (`faceless-craft`): `python -m faceless craftcheck <reel> --report <build.json>`, look at a contact sheet and listen to the ending. The reel ships regardless; every `FIX` goes into the code or skill before the next one.
 - **Size the narration from the act lengths** with `craftcheck.word_budget` (`faceless-rhythm`).
 - **Never stretch an act to fit the narration.** Cut the words instead.
 - The clips are AI output: the post's disclosure covers them.

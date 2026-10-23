@@ -14,11 +14,23 @@ def test_every_lesson_a_check_cites_is_written_down():
     assert cited <= written, f"checks cite lessons that are not recorded: {sorted(cited - written)}"
 
 
-def test_a_provisional_rule_never_blocks_a_piece():
-    findings = [{"rule": "a", "lesson": "L4", "ok": False, "detail": "", "gate": True},
-                {"rule": "b", "lesson": "L5", "ok": False, "detail": "", "gate": False},
-                {"rule": "c", "lesson": "L2", "ok": True, "detail": "", "gate": True}]
-    assert [f["rule"] for f in craftcheck.blocking(findings)] == ["a"]
+def test_only_a_confirmed_rule_becomes_work_for_the_next_render():
+    findings = [{"rule": "a", "lesson": "L4", "ok": False, "detail": "", "confirmed": True},
+                {"rule": "b", "lesson": "L5", "ok": False, "detail": "", "confirmed": False},
+                {"rule": "c", "lesson": "L2", "ok": True, "detail": "", "confirmed": True}]
+    assert [f["rule"] for f in craftcheck.to_fix(findings)] == ["a"]
+
+
+def test_the_craft_check_never_stops_the_engine(monkeypatch, tmp_path, capsys):
+    """Lesson L11: the engine is autonomous. A failed check is reported and recorded, and the command still exits 0."""
+    from types import SimpleNamespace
+    from faceless import cli
+    monkeypatch.setattr(craftcheck, "LEDGER", tmp_path / "craft.jsonl")
+    monkeypatch.setattr(craftcheck, "check_reel", lambda video, report: [
+        {"rule": "the sound fades out", "lesson": "L4", "ok": False, "detail": "", "confirmed": True}])
+    assert cli.cmd_craftcheck(SimpleNamespace(video="reel.mp4", report=None)) == 0
+    assert "FIX" in capsys.readouterr().out
+    assert (tmp_path / "craft.jsonl").exists()
 
 
 def test_a_line_is_budgeted_by_its_slot():
