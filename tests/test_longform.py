@@ -18,6 +18,10 @@ def _tone(text, wav):
     subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-f", "lavfi", "-i", f"sine=frequency=330:duration={secs}", str(wav)], check=True, timeout=60)
 
 
+def _long(text, wav):
+    subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-f", "lavfi", "-i", "sine=frequency=330:duration=11", str(wav)], check=True, timeout=60)
+
+
 @pytest.fixture
 def week(tmp_path, monkeypatch):
     monkeypatch.setattr(Paths, "final", tmp_path / "final")
@@ -88,3 +92,55 @@ def test_cards_follow_the_voice_s_word_timings_and_skip_words_spoken_differently
 def test_a_story_is_one_voice_call():
     segs = longform.segments([{"job": "j", "title": "T", "beats": [{"say": "a", "callout": ""}, {"say": "b", "callout": ""}]}] * 3, "2026-10-21")
     assert [len(g) for g in longform.units(segs)] == [1, 3, 3, 3, 1]
+
+
+def test_posting_is_a_dry_run_until_applied_then_once_per_week(week, monkeypatch):
+    from faceless import safety, ytchannel
+    from faceless.providers import ProviderError
+    from faceless.providers import composio_tools as ct
+    monkeypatch.setattr(longform, "LEDGER", week / "posts.jsonl")
+    monkeypatch.setattr(longform, "SIZE", (480, 270))                     # posting is under test, not the picture: keep the encode fast
+    monkeypatch.setattr(safety, "paused", lambda: None)
+    uploads, thumbs = [], []
+    monkeypatch.setattr(ct, "youtube_upload", lambda *a, **k: uploads.append((a, k)) or {"video_id": "v1", "channel_id": "c", "privacy": "public"})
+    monkeypatch.setattr(ytchannel, "set_thumbnail", lambda vid, path: thumbs.append(path.name))
+    monkeypatch.setattr(ytchannel, "ensure_playlist", lambda *a: (_ for _ in ()).throw(ProviderError("quota")))
+    dry = longform.post("2026-10-21", synth=_long)                          # builds the episode, uploads nothing
+    assert dry["applied"] is False and dry["problems"] == [] and not uploads
+    done = longform.post("2026-10-21", apply=True)
+    assert done["applied"] and done["video_id"] == "v1" and thumbs == ["thumbnail.jpg"]
+    assert done["notes"] and done["notes"][0].startswith("playlist")         # a refused finishing touch never costs the upload
+    args, kw = uploads[0]
+    assert kw["synthetic"] is True and kw["category_id"] == "27" and args[0].endswith("episode.mp4")
+    assert longform.post("2026-10-21", apply=True)["already"] == "v1" and len(uploads) == 1
+
+
+def test_a_paused_studio_uploads_nothing(week, monkeypatch):
+    from faceless import safety
+    from faceless.providers import composio_tools as ct
+    monkeypatch.setattr(longform, "LEDGER", week / "posts.jsonl")
+    monkeypatch.setattr(longform, "SIZE", (480, 270))
+    monkeypatch.setattr(safety, "paused", lambda: "owner pause")
+    monkeypatch.setattr(ct, "youtube_upload", lambda *a, **k: pytest.fail("uploaded while paused"))
+    longform.build("2026-10-21", music=False, synth=_long)
+    with pytest.raises(RuntimeError, match="paused"):
+        longform.post("2026-10-21", apply=True)
+
+
+def test_copy_problems_block_the_upload():
+    chapters = [{"title": "Intro", "start": 0.0}, {"title": "A", "start": 12.0}, {"title": "B", "start": 30.0}]
+    good = {"title": "t", "description": "one https://a.example link", "tags": []}
+    assert longform.problems(good, chapters) == []
+    assert longform.problems({**good, "description": "https://a.example https://b.example"}, chapters)
+    assert longform.problems({**good, "title": "x" * 101}, chapters)
+    assert longform.problems(good, chapters[:2])
+    assert longform.problems(good, [{"title": "Intro", "start": 0.0}, {"title": "A", "start": 5.0}, {"title": "B", "start": 30.0}])
+
+
+def test_claim_check_reads_our_words_not_the_chapter_titles_and_the_last_chapter_counts():
+    chapters = [{"title": "Intro", "start": 0.0}, {"title": "A", "start": 12.0}, {"title": "B", "start": 30.0}]
+    titled = {"title": "t", "description": "Our words.\n0:30 Why Holding Cash Guarantees You Lose Money", "tags": []}
+    assert longform.problems(titled, chapters) == []
+    assert longform.problems({**titled, "description": "This guarantees returns."}, chapters)
+    assert longform.problems(titled, chapters, seconds=35.0)                   # the outro would run 5 s
+    assert longform.problems(titled, chapters, seconds=45.0) == []

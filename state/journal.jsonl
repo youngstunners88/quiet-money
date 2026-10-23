@@ -7484,3 +7484,12 @@
 {"ts": "2026-10-22T17:17:34Z", "t": 1792689454.158, "actor": "engine", "type": "PROVIDER_OK", "capability": "tts", "provider": "edge", "job": "longform-2026-10-21", "ms": 92587}
 {"ts": "2026-10-22T17:17:41Z", "t": 1792689461.352, "actor": "engine", "type": "PROVIDER_OK", "capability": "tts", "provider": "edge", "job": "longform-2026-10-21", "ms": 99728}
 {"ts": "2026-10-22T17:18:37Z", "t": 1792689517.656, "actor": "engine", "type": "PROVIDER_OK", "capability": "tts", "provider": "edge", "job": "longform-2026-10-21", "ms": 132861}
+{"ts": "2026-10-23T01:29:12Z", "t": 1792718952.35, "actor": "engine", "type": "PROVIDER_OK", "capability": "tts", "provider": "edge", "job": "longform-2026-10-21", "ms": 1667}
+{"ts": "2026-10-23T01:29:13Z", "t": 1792718953.089, "actor": "engine", "type": "PROVIDER_OK", "capability": "tts", "provider": "edge", "job": "longform-2026-10-21", "ms": 2404}
+{"ts": "2026-10-23T01:29:13Z", "t": 1792718953.339, "actor": "engine", "type": "PROVIDER_OK", "capability": "tts", "provider": "edge", "job": "longform-2026-10-21", "ms": 2653}
+{"ts": "2026-10-23T01:29:13Z", "t": 1792718953.427, "actor": "engine", "type": "PROVIDER_OK", "capability": "tts", "provider": "edge", "job": "longform-2026-10-21", "ms": 2743}
+{"ts": "2026-10-23T01:29:13Z", "t": 1792718953.512, "actor": "engine", "type": "PROVIDER_OK", "capability": "tts", "provider": "edge", "job": "longform-2026-10-21", "ms": 2828}
+{"ts": "2026-10-23T01:29:13Z", "t": 1792718953.714, "actor": "engine", "type": "PROVIDER_OK", "capability": "tts", "provider": "edge", "job": "longform-2026-10-21", "ms": 3029}
+{"ts": "2026-10-23T01:29:14Z", "t": 1792718954.306, "actor": "engine", "type": "PROVIDER_OK", "capability": "tts", "provider": "edge", "job": "longform-2026-10-21", "ms": 1781}
+{"ts": "2026-10-23T01:29:14Z", "t": 1792718954.65, "actor": "engine", "type": "PROVIDER_OK", "capability": "tts", "provider": "edge", "job": "longform-2026-10-21", "ms": 1041}
+{"ts": "2026-10-23T01:29:15Z", "t": 1792718955.272, "actor": "engine", "type": "PROVIDER_OK", "capability": "tts", "provider": "edge", "job": "longform-2026-10-21", "ms": 1712}
