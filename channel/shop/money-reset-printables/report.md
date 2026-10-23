@@ -4,7 +4,7 @@ PASSED (27 of 27 gates; soft gates do not block)
 
 | gate | result | detail |
 |---|---|---|
-| etsy_title_length | pass | 126 of 140 characters |
+| etsy_title_length | pass | 136 of 140 characters |
 | etsy_tags_valid | pass | 13 tags (13 allowed, all used), each 20 characters or fewer; bad: none |
 | no_income_claims | pass | none |
 | no_credit_repair_language | pass | none (Gumroad bans credit-repair products and talk) |

@@ -24,11 +24,11 @@ PASSED (28 of 28 gates; soft gates do not block)
 | etsy_images_2000px | pass | 8 images, smallest side 2100 px (Etsy asks for 2000+); too small: none |
 | etsy_image_count (soft) | pass | 8 images (Etsy allows 20; 5 or more sells better) |
 | etsy_main_image_landscape_or_square | pass | 2800x2100 |
-| etsy_main_image_not_dark | pass | mean brightness 99 of 255 (Etsy ranks dark main images lower) |
-| etsy_main_image_sharp | pass | edge energy 2428 (blurry main images rank lower) |
+| etsy_main_image_not_dark | pass | mean brightness 106 of 255 (Etsy ranks dark main images lower) |
+| etsy_main_image_sharp | pass | edge energy 2619 (blurry main images rank lower) |
 | gumroad_cover_16x9 | pass | 1920x1080 |
 | gumroad_thumbnail_square | pass | 1200x1200, 101 KB (square, 600+, under 5 MB) |
 | etsy_video_length | pass | 13.7 s (Etsy: 3 to 15) |
-| etsy_video_size | pass | 1080x1080, 5.6 MB (limit 100 MB, 500 px minimum, 1080 ideal) |
+| etsy_video_size | pass | 1080x1080, 5.4 MB (limit 100 MB, 500 px minimum, 1080 ideal) |
 | etsy_video_silent (soft) | pass | no audio track (Etsy drops audio anyway) |
 | independent_math_verified | pass | 13 figures compared with independent math, errors: none |

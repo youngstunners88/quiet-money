@@ -26,7 +26,7 @@ See your debt-free date, and how much interest the right plan saves, before you 
 debt payoff, debt snowball, debt avalanche, compound interest calculator, budget planner, spreadsheet template, get out of debt, financial freedom
 
 ### After-purchase message
-Thanks for grabbing the planner. Start on tab 1 and replace the example debts with yours. If a number looks wrong, reply and it gets fixed. More free tools: https://youngstunners88.github.io/quiet-money/money-reset/
+Thanks for grabbing the planner. Start on tab 1 and replace the example debts with yours. If a number looks wrong, reply and it gets fixed. More free tools: https://youngstunners88.github.io/quiet-money/links/
 
 ## Etsy
 Same copy and previews. Use the disclosure line "Designed by Quiet Money with AI assistance" and check Etsy's current Creativity Standards wording before publishing. Digital download, no shipping.

@@ -1123,6 +1123,14 @@ def cmd_podcast(args) -> int:
     return 0
 
 
+def cmd_cash(args) -> int:
+    """The money desk: every rail, its state, what the agent did, and the owner's next steps ranked by how soon they can pay (reads only)."""
+    from faceless import cash
+    d = cash.write()
+    print(json.dumps(d, indent=1) if args.json else cash.markdown(d))
+    return 0
+
+
 def cmd_site_stats(args) -> int:
     """What the website did (O15): pageviews, calculator uses and shop clicks from PostHog; appends analytics/site.jsonl."""
     from faceless import sitestats
@@ -1391,6 +1399,9 @@ def main(argv: list[str] | None = None) -> int:
     pc.add_argument("--week", help="the last day of the week to build (default: yesterday)")
     pc.add_argument("--no-music", action="store_true")
     pc.set_defaults(fn=cmd_podcast)
+    ca = sub.add_parser("cash", help="the money desk: every revenue rail, its state, and your next 30 minutes ranked by how soon it pays (reads only)")
+    ca.add_argument("--json", action="store_true")
+    ca.set_defaults(fn=cmd_cash)
     ss = sub.add_parser("site-stats", help="what the website did (PostHog, cookieless): pageviews, calculator uses, shop clicks [--days 7]")
     ss.add_argument("--days", type=int, default=7)
     ss.set_defaults(fn=cmd_site_stats)

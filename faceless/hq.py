@@ -161,7 +161,13 @@ def next_moves(limit: int = 6) -> dict:
 
 def snapshot() -> dict:
     return {"asOf": _now(), "shorts": shorts(), "audience": audience(), "money": money(), "products": products(),
-            "service": service(), "ypp": partner(), "site": site(), "next": next_moves()}
+            "service": service(), "ypp": partner(), "site": site(), "cash": cash_steps(), "next": next_moves()}
+
+
+def cash_steps() -> list[dict]:
+    """The money desk's next steps for the owner (faceless/cash.py)."""
+    from faceless import cash
+    return cash.desk()["next30"]
 
 
 def site() -> dict | None:

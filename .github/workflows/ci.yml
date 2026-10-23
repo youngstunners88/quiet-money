@@ -18,8 +18,14 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: System tools (ffmpeg renders the smoke-test video, poppler reads PDFs)
-        timeout-minutes: 8                       # a stalled package mirror hung this step for the whole job once (PR #42, 2026-10-22): fail fast instead
-        run: sudo apt-get -o Acquire::Retries=3 update -qq && sudo apt-get -o Acquire::Retries=3 install -y -qq ffmpeg poppler-utils
+        timeout-minutes: 9                       # a stalled step hung whole jobs (PR #42, #45, #47): each attempt is bounded and retried once instead
+        run: |
+          sudo rm -f /var/lib/man-db/auto-update   # man-db re-indexes every manual page after each install; on Ubuntu 24.04 runners that alone can take minutes
+          for attempt in 1 2; do
+            sudo timeout 200 apt-get -o Acquire::Retries=3 -o Acquire::http::Timeout=20 update -qq &&
+            sudo timeout 200 apt-get -o Acquire::Retries=3 install -y -qq --no-install-recommends ffmpeg poppler-utils && break
+          done
+          command -v ffmpeg && command -v pdftoppm
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"

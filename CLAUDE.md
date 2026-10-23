@@ -46,7 +46,7 @@ humans set strategy, connect accounts, and review held videos.
 | Grow reach, "go viral", weekly growth review | `/analytics` | `analytics/CONTEXT.md` | `faceless-growth` |
 | Whole-business plan: products, services, newsletter, repurposing, what to build next | `/channel/empire` | `channel/empire/PLAN.md`, `RANKING.md` | `faceless-empire` |
 | Repurpose a video (thread, carousel, pin, newsletter item, audio) | `/faceless/repurpose.py` | `python -m faceless kit` | `faceless-empire` |
-| Weekly editions: the podcast episode and the 16:9 long-form "Money Rules Weekly" (best Shorts by views, chapters) | `/faceless/podcast.py`, `longform.py` | `python -m faceless longform` | `faceless-empire` |
+| Weekly editions: the podcast episode and the 16:9 long-form "Money Rules Weekly" (best Shorts by views, chapters, Sunday upload) | `/faceless/podcast.py`, `longform.py` | `python -m faceless longform` | `faceless-longform` |
 | Spanish and Portuguese editions of passed Shorts (PARKED by the owner 2026-10-23: run only when asked) | `/faceless/edition.py` | `python -m faceless edition status` | `faceless-empire` |
 | Flow clips (owner's daily Google Flow session) and hook motion | `/faceless/flow.py` | `python -m faceless flow` | `faceless-empire` |
 | Quality gates answered by a decision model, duplicate and variety checks | `/faceless/qa.py`, `variety.py`, `embed.py` | `.claude/skills/faceless-gauntlet` (Semantic gates) | `faceless-gauntlet` |
@@ -64,8 +64,8 @@ humans set strategy, connect accounts, and review held videos.
 | Front covers, hero images, thumbnails, Quinton on a product, cover A/B | `/faceless/planner_cover.py`, `mockup.py` | `.claude/skills/faceless-cover/references/haiku-cover-research.md` | `faceless-cover` |
 | Email sequence (autoresponder) and the weekly issue | `/faceless/autoresponder.py`, `repurpose.py` | `channel/offers/autoresponder/README.md` | `faceless-empire` |
 | Fiverr brand-kit service | `/faceless/brandkit.py` | `channel/services/brand-kit/GIG.md` | `faceless-empire` |
-| Fiverr studio mode: a client brief becomes a sheet of 6-12 concept directions (logo, character, art) | `/faceless/concepts.py` | `channel/services/studio/GIG.md` | `faceless-empire` |
-| Collaboration notes for small finance podcasts (drafted, gated, the owner sends) | `/faceless/collab.py` | `python -m faceless collab status` | `faceless-empire` |
+| Fiverr studio mode: a client brief becomes a sheet of 6-12 concept directions (logo, character, art) | `/faceless/concepts.py` | `channel/services/studio/GIG.md` | `faceless-studio-gig` |
+| Collaboration notes for small finance podcasts (drafted, gated, the owner sends) | `/faceless/collab.py` | `python -m faceless collab status` | `faceless-collab` |
 | Connect an app (YouTube, TikTok, Drive...), pull channel stats | `/faceless/providers` | `composio_tools.py` | `faceless-composio` (+ `composio`) |
 | Any media or data job beyond the engine's own (mockups, upscales, voice samples, OCR, search volume, 750+ models) | `/faceless/muapi.py` | `.claude/skills/muapi` | `muapi` |
 | Etsy and Gumroad listings (pictures, video, copy, checklist, drafts) | `/faceless/listing.py`, `shop.py` | `channel/shop/CHECKLIST` per product | `faceless-empire` |
@@ -98,6 +98,8 @@ humans set strategy, connect accounts, and review held videos.
 | Write a first touch, a follow-up sequence or a reply for the service | `/channel/services/web3-video/templates` | `channel/services/web3-video/templates/first-touch.md` | `service-outreach` |
 | Service positioning, packages, proof, case studies, a proposal | `/channel/services/web3-video` | `channel/services/web3-video/PROOF.md` | `service-offer` |
 | Outbound pipeline, what a lead's status is, outcomes, the weekly outbound review | `/channel/services/web3-video/schema/outcome.json` | `channel/services/web3-video/CONTEXT.md` | `service-pipeline` |
+| Money now: every revenue rail's state and the owner's next 30 minutes, ranked by how soon it pays | `/faceless/cash.py` | `python -m faceless cash` | `faceless-cash` |
+| Partner Program progress and the website funnel (PostHog, cookieless) | `/faceless/ypp.py`, `sitestats.py` | `python -m faceless ypp` | `faceless-measure` |
 | HQ: the owner's dashboard (freedom number, engines, next moves, horizon, goals, build queue), its daily refresh | `/faceless/hq.py` | `python -m faceless hq` | `faceless-hq` |
 
 ## Commands (run from this folder)
@@ -147,6 +149,7 @@ python -m faceless outbound run                 # the service desk's daily clien
 python -m faceless outbound status|review|package <slug>|outcome <slug> <event>   # the pipeline, the aggregate, a queued draft, what came back
 python -m faceless site-stats --days 7          # what the website did (PostHog, cookieless): pageviews, calculator uses, shop clicks -> analytics/site.jsonl
 python -m faceless ypp [--pull]                # the road to the YouTube Partner Program: progress per tier, pace, estimated dates (07:02 UTC task pulls daily)
+python -m faceless cash                        # the money desk: every rail's state and your next 30 minutes -> channel/empire/CASH.md
 python -m faceless hq                          # one snapshot of the whole business for HQ (reads only); `--json` is the document HQ shows
 python -m faceless ci                          # CI as GitHub sees it (clean export, no keys): run before every push of code
 python -m pytest -q tests                      # engine tests
