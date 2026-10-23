@@ -7542,3 +7542,7 @@
 {"ts": "2026-10-23T01:57:13Z", "t": 1792720633.06, "actor": "engine", "type": "JEV_CALL", "questions": ["personalization", "spam_risk"], "via": "openrouter-decisions", "model": "typesafe/jev-1.13-20260917"}
 {"ts": "2026-10-23T01:57:13Z", "t": 1792720633.062, "actor": "engine", "type": "DECISIONS", "job": "collab-gate:53dc056fa60b7850", "backend": "openrouter-decisions", "ms": 413, "dry_run": true}
 {"ts": "2026-10-23T01:57:13Z", "t": 1792720633.064, "actor": "engine", "type": "COLLAB_RUN", "found": 61, "drafted": 3, "verdicts": {"pass": 3, "review": 0, "hold": 0}}
+{"ts": "2026-10-23T02:02:51Z", "t": 1792720971.635, "actor": "engine", "type": "COMPOSIO_SESSION", "user": "quiet-money-studio", "session_hash": "95f0a806"}
+{"ts": "2026-10-23T02:02:52Z", "t": 1792720972.821, "actor": "engine", "type": "YOUTUBE_API", "path": "channels", "method": "GET", "status": 403}
+{"ts": "2026-10-23T02:03:05Z", "t": 1792720985.416, "actor": "engine", "type": "COMPOSIO_SESSION", "user": "quiet-money-studio", "session_hash": "fb39e3fa"}
+{"ts": "2026-10-23T02:03:06Z", "t": 1792720986.38, "actor": "engine", "type": "YOUTUBE_API", "path": "channels", "method": "GET", "status": 403}

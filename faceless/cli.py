@@ -1123,6 +1123,16 @@ def cmd_podcast(args) -> int:
     return 0
 
 
+def cmd_ypp(args) -> int:
+    """The road to the YouTube Partner Program: --pull records today's snapshot (live subscribers), then the progress report."""
+    from faceless import ypp
+    if args.pull:
+        ypp.pull()
+    r = ypp.report()
+    print(json.dumps(r, indent=1) if args.json else ypp.text(r))
+    return 0
+
+
 def cmd_collab(args) -> int:
     """Collaboration notes for small finance podcasts: run (find, research, draft, gate; sends nothing) | status | show SLUG | outcome SLUG EVENT."""
     from faceless import collab
@@ -1350,6 +1360,10 @@ def main(argv: list[str] | None = None) -> int:
     pc.add_argument("--week", help="the last day of the week to build (default: yesterday)")
     pc.add_argument("--no-music", action="store_true")
     pc.set_defaults(fn=cmd_podcast)
+    yp = sub.add_parser("ypp", help="the road to the YouTube Partner Program: progress per tier, pace, estimated dates (--pull records a snapshot)")
+    yp.add_argument("--pull", action="store_true")
+    yp.add_argument("--json", action="store_true")
+    yp.set_defaults(fn=cmd_ypp)
     co = sub.add_parser("collab", help="collaboration notes for small finance podcasts, drafted for the owner to send: "
                                        "run [--limit 5] | status | show SLUG | outcome SLUG sent|replied|declined|collab|no_reply")
     co.add_argument("action", nargs="?", default="status", choices=["run", "status", "show", "outcome"])

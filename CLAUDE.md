@@ -143,6 +143,7 @@ python -m faceless context                     # do CLAUDE.md routing, the works
 node claude-code-orchestrator/dist/run-plan.js PLAN.json --out DIR   # the CEO's lanes as Claude Code workers (faceless-ceo); read-only unless WORKER_PERMISSION_MODE is raised
 python -m faceless outbound run                 # the service desk's daily client hunt: discover, research, score (Jev), draft, gate, queue; sends nothing
 python -m faceless outbound status|review|package <slug>|outcome <slug> <event>   # the pipeline, the aggregate, a queued draft, what came back
+python -m faceless ypp [--pull]                # the road to the YouTube Partner Program: progress per tier, pace, estimated dates (07:02 UTC task pulls daily)
 python -m faceless hq                          # one snapshot of the whole business for HQ (reads only); `--json` is the document HQ shows
 python -m faceless ci                          # CI as GitHub sees it (clean export, no keys): run before every push of code
 python -m pytest -q tests                      # engine tests

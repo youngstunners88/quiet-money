@@ -148,13 +148,26 @@ def next_moves(limit: int = 6) -> dict:
 
     unlocks = [{"ask": ask, "unlocksScore": score, "items": ids} for ask, score, ids in empire.asks(rows)[:limit]]
     queue = [{"id": i.get("id"), "text": i.get("ask") or i.get("text") or i.get("title") or ""} for i in marketing.owner_queue(3)]
-    return {"agent": pick("agent"), "launch": pick("launch"), "unlocks": unlocks, "ownerQueue": queue,
+    agent = pick("agent")
+    if not agent:     # everything buildable is built: the agent's move is to find and vet the next thing, never to idle
+        scout = {"id": "SCOUT", "name": "find, vet and build the next portfolio item",
+                 "what": "Nothing in the portfolio is left for the agent to build without the owner. Run the faceless-empire loop and the "
+                         "faceless-scout skill: research and add at least two new agent-buildable ideas to channel/empire/portfolio.jsonl "
+                         "(stage vetted, honest scores, a kill rule and evidence each), then build the best one."}
+        agent = [{"id": "SCOUT", "title": scout["name"], "rail": "ops", "score": None, "next": "agent scouts and builds", "brief": brief(scout)}]
+    return {"agent": agent, "launch": pick("launch"), "unlocks": unlocks, "ownerQueue": queue,
             "source": "faceless/empire.py (channel/empire/portfolio.jsonl), channel/empire/owner_queue.json"}
 
 
 def snapshot() -> dict:
     return {"asOf": _now(), "shorts": shorts(), "audience": audience(), "money": money(), "products": products(),
-            "service": service(), "next": next_moves()}
+            "service": service(), "ypp": partner(), "next": next_moves()}
+
+
+def partner() -> dict:
+    """The road to the Partner Program (R1), from the last `ypp --pull` snapshot; reads only."""
+    from faceless import ypp
+    return ypp.report()
 
 
 def summary(s: dict | None = None) -> str:
@@ -170,6 +183,8 @@ def summary(s: dict | None = None) -> str:
         f"Money: {mo['sales']} sales, ${mo['netUsd']:.2f} net; spent ${mo['spendTodayUsd']:.2f} of ${mo['ceilingUsd']:.2f} today",
         f"Products: {len(s['products'])} built, live: {', '.join(live) or 'none'}",
         f"Service desk: {s['service']['projectsSeen']} projects screened, {s['service']['replies']} replies",
+        "Partner Program: " + "; ".join(f"{t['label']} " + ("met" if t["met"] else ", ".join(f"{x['what']} {x['pct'] if x['pct'] is not None else '?'}%" for x in t["needs"]))
+                                        for t in s["ypp"]["tiers"]),
         "Build next: " + ", ".join(f"{a['id']} {a['title']}" for a in s["next"]["agent"][:3]),
     ]
     return "\n".join(lines)
