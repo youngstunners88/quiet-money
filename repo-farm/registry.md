@@ -290,3 +290,13 @@ Each row was read from the project's own README, manifest, licence file or regis
 | Podcastfy (souzatharsis/podcastfy) | script | Apache-2.0. |
 | Local Deep Research (LearningCircuit/local-deep-research) | ideate | MIT. |
 | OpenCreator, formerly KrillinAI (krillinai/OpenCreator) | render | Apache-2.0. |
+
+## Intake 2026-10-23 (verified from dossiers in `repo-farm/intake/2026-10-23/`)
+
+Each row was read from the project's own README, manifest, licence file or registry entry; nothing was installed or run. Stars and dates were unavailable where the GitHub API is closed to this machine.
+
+### On trial
+
+| Tool | Stage | Why |
+|---|---|---|
+| CozyClay (NomaDamas/CozyClay) | visuals | A free browser previs studio: block a 3D set, move capsule or rigged cast, cut the camera on a timeline, and export a first frame, a greybox clip, a camera and a prompt for an AI video model, or a storyboard animatic and contact… |

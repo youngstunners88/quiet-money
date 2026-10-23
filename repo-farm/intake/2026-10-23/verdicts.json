@@ -1,0 +1,17 @@
+{
+ "date": "2026-10-23",
+ "title": "CozyClay (NomaDamas/CozyClay)",
+ "source": "The owner's message 2026-10-23: 'I believe we can leverage this ... for variations in our videos.' The README was read in full (6,157 bytes); the linked docs (INSTALL_FOR_AGENTS.md, motion3-agent-guide, agent-cli, mcp/README, privacy) were NOT read. A pinned sandbox trial was run: cozyclay@3.1.2 installed with --ignore-scripts into a scratch folder, telemetry turned off, started with `npx cozyclay`; the studio page answered HTTP 200 at 127.0.0.1:5180/app/. Its live MCP tools failed to load in this container (a missing module in its runtime cache), so no scene was built.",
+ "items": [
+  {
+   "id": "nomadamas-cozyclay",
+   "name": "CozyClay (NomaDamas/CozyClay)",
+   "verdict": "TRIAL",
+   "stage": "visuals",
+   "why": "A free browser previs studio: block a 3D set, move capsule or rigged cast, cut the camera on a timeline, and export a first frame, a greybox clip, a camera and a prompt for an AI video model, or a storyboard animatic and contact sheet. Node 22 only, no GPU, no model download. It fits the Flow lane (the owner makes clips in Google Flow): a greybox reference gives the same camera and timing every take, so fewer re-rolls, and it is a source of a new look for a variations series (3D-blocked scenes, storyboard animatics). Licence AGPL-3.0-or-later: using it as a tool and using its exports is fine; copying or hosting modified code is not, so never vendor it into our engine. Flags: MED unpinned npx (pin 3.1.2), LOW telemetry (turn off with `cclay telemetry off`, done in the trial). Live tools did not load here, so the MCP route is unproven.",
+   "steal": "The method, in our own code: block the shot first, then generate, with a greybox reference clip and the real framing in the prompt (adds to faceless-flow prompts); storyboard-first stills with captions and an animatic for any long-form vibe.",
+   "owner": "Run it on your own computer where a Chromium browser exists: `npx -y cozyclay@3.1.2`, then `cclay telemetry off`; build one greybox for a Flow clip and compare the Flow result with and without the reference. If the first clip looks better, tell me and I write the faceless-flow greybox step."
+  }
+ ],
+ "web": []
+}
