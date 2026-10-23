@@ -801,6 +801,16 @@ def cmd_shop(args) -> int:
         if args.action == "push" and not args.yes:
             print("dry run: nothing was created. Add --yes to create DRAFT products (they are never published).")
         return 0
+    if args.action == "sync-urls":
+        r = shop.sync_urls(apply=bool(args.yes))
+        for pid, (old, new) in r["changed"].items():
+            print(f"{pid}: {old} -> {new}")
+        print(("updated studio.toml" if args.yes else "dry run; add --yes to write studio.toml") if r["changed"] else "shop_urls already match Gumroad")
+        for pid in r["not_live"]:
+            print(f"not live on Gumroad: {pid}")
+        for pid in r["live_not_offered"]:
+            print(f"live on Gumroad but not in shop_urls (going live in the offers is the owner's yes): {pid}")
+        return 0
     if args.action in ("draft", "publish"):
         pid = args.product if args.product != "all" else "daily-quiet-money-planner"
         if args.action == "draft":
@@ -1123,6 +1133,22 @@ def cmd_podcast(args) -> int:
     return 0
 
 
+def cmd_client(args) -> int:
+    """Draft the owner's reply to a client (Fiverr gig or the Web3 service): discovery first, the owner's prices only, nothing sent."""
+    from pathlib import Path
+
+    from faceless import clientdesk
+    msg = Path(args.file).read_text(encoding="utf-8") if args.file else args.message
+    if not msg.strip():
+        raise SystemExit('usage: client reply --channel fiverr|web3 [--gig studio|brand-kit] "message" (or --file thread.txt)')
+    r = clientdesk.reply(msg, args.channel, args.gig if args.channel == "fiverr" else None)
+    print(r["reply"] or "(no draft)")
+    print("\nstill to learn: " + (", ".join(r["missing"]) or "nothing"))
+    if r["problems"]:
+        print("HELD, fix before sending: " + "; ".join(r["problems"]))
+    return 0 if r["ready"] else 1
+
+
 def cmd_cash(args) -> int:
     """The money desk: every rail, its state, what the agent did, and the owner's next steps ranked by how soon they can pay (reads only)."""
     from faceless import cash
@@ -1399,6 +1425,13 @@ def main(argv: list[str] | None = None) -> int:
     pc.add_argument("--week", help="the last day of the week to build (default: yesterday)")
     pc.add_argument("--no-music", action="store_true")
     pc.set_defaults(fn=cmd_podcast)
+    cl = sub.add_parser("client", help="draft your reply to a client: client reply --channel fiverr|web3 [--gig studio|brand-kit] \"message\" | --file thread.txt")
+    cl.add_argument("action", choices=["reply"])
+    cl.add_argument("message", nargs="?", default="")
+    cl.add_argument("--channel", default="fiverr", choices=["fiverr", "web3"])
+    cl.add_argument("--gig", default="studio", choices=["studio", "brand-kit"])
+    cl.add_argument("--file")
+    cl.set_defaults(fn=cmd_client)
     ca = sub.add_parser("cash", help="the money desk: every revenue rail, its state, and your next 30 minutes ranked by how soon it pays (reads only)")
     ca.add_argument("--json", action="store_true")
     ca.set_defaults(fn=cmd_cash)
@@ -1503,7 +1536,7 @@ def main(argv: list[str] | None = None) -> int:
     et.add_argument("--yes", action="store_true")
     et.set_defaults(fn=cmd_etsy)
     sh = sub.add_parser("shop", help="storefronts: `shop status` (what is connected, the owner's next step), `shop plan`, `shop push --yes` (DRAFT products on Gumroad, never published), `shop sales`")
-    sh.add_argument("action", choices=["status", "plan", "push", "draft", "publish", "sales"])
+    sh.add_argument("action", choices=["status", "plan", "push", "draft", "publish", "sales", "sync-urls"])
     sh.add_argument("--rail", choices=["gumroad", "etsy"])
     sh.add_argument("product", nargs="?", default="all")
     sh.add_argument("--yes", action="store_true")
