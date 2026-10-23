@@ -1,7 +1,8 @@
 # Packages and angles (for mid-to-large brands)
 
-Prices are **unset**. The showcase quotes per project and the owner sets every number (CLAUDE.md rule 9: a price is
-the owner's yes). A draft never states a price; it offers a quote. The tiers below exist so the models pitch a
+**Prices (the owner, 2026-10-23):** a 30-second video is **$65**, a 75-second video is **$120** (`[outbound.prices]` in
+studio.toml). They go in replies, quotes and proposals only: a first touch never states a price, it offers a quote, and the outbound
+gate holds any draft that does. Bundles and retainers are priced from these per video until the owner sets them (rule 9). The tiers below exist so the models pitch a
 *shape* instead of inventing one, and so the owner has something to price.
 
 | Tier | Shape | Fits |

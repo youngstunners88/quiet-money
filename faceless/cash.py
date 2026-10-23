@@ -76,7 +76,7 @@ def service() -> dict:
         "sent": sent, "replies": replies, "waiting_here": len(p["packages_waiting"]),
         "agent_did": "the 07:47 UTC hunt finds, researches, scores, drafts and gates three notes a day and puts them in its reply to you",
         "owner_step": ("Send today's three drafts from the outbound report (each names its channel and contact route), then record each: "
-                       "`python -m faceless outbound outcome <slug> sent`. Decide a test-drop price before the first reply so you can quote the same day."),
+                       "`python -m faceless outbound outcome <slug> sent`. When one replies, quote from channel/services/web3-video/templates/quote.md: $65 for 30 s, $120 for 75 s (your prices, 2026-10-23)."),
         "minutes": 15,
     }
 
