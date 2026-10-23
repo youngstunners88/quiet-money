@@ -159,8 +159,13 @@ personalization_floor = 0.7                  # a draft that names nothing specif
 spam_ceiling = 0.4
 promise_floor = 0.9                          # a hard gate: results, prices and token talk hold a draft (rule 2)
 firecrawl_pages_per_day = 40                 # JS-rendered reads only when plain HTTP returns nothing; credits are prepaid, so the cap is in pages
+
 page_chars = 6000
 dead_days = 90                               # cool-off before a dead lead could be looked at again
+
+[outbound.prices]                            # the owner's prices (message of 2026-10-23: "$65 for a 30 second video and $120 for a 75 second video").
+video_30s_usd = 65                           # quoted in replies and proposals only; a first touch never names a price (the outbound gate holds it)
+video_75s_usd = 120
 
 [qa]
 # Semantic gates answered by Cloudflare Clef (a decision model on Workers AI; about 28 neurons per still, about 6 per script).
@@ -417,4 +422,22 @@ taxonomy_id = 0                              # the Planners category; 0 = look i
 # Owner's message of 2026-10-13: "Set the price at $17 ... Lets go with Gumroad." Gumroad only; Etsy stays unapproved.
 [shop.approved."daily-quiet-money-planner"]
 price = 17.0
+gumroad = true
+
+# Owner's message of 2026-10-23, answering "list rat-race-escape-planner at $19, debt-payoff-planner at $19, money-reset-printables at $9,
+# money-reset-kit at $28": "2 List those prices." Gumroad only; Etsy stays unapproved (the owner is still setting Etsy up).
+[shop.approved."rat-race-escape-planner"]
+price = 19.0
+gumroad = true
+
+[shop.approved."debt-payoff-planner"]
+price = 19.0
+gumroad = true
+
+[shop.approved."money-reset-printables"]
+price = 9.0
+gumroad = true
+
+[shop.approved."money-reset-kit"]
+price = 28.0
 gumroad = true
