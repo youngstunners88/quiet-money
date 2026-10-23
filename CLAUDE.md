@@ -84,6 +84,12 @@ humans set strategy, connect accounts, and review held videos.
 | Score a listing page and draft a v2 (never changes the live page) | `/channel/offers` | `channel/offers/sprint-01/CONVERSION-REVIEW.md` | `faceless-conversion-review` |
 | Comics series: hand-drawn stick-figure picture posts (YouTube Posts tab), five a day | `/faceless/comics.py` | `.claude/skills/faceless-comics` | `faceless-comics` |
 | A Vox-style paper-collage explainer for a special video | `/faceless/collage.py` | `.claude/skills/faceless-paper-collage` | `faceless-paper-collage` |
+| Plan, review or fix the cut of any video (continuity, montage, speed ramps, impact, AI-clip faults; theory from the owner's film folder) | `/faceless/cineedit.py`, `vibe.py` | `.claude/skills/faceless-film-editing/references/theory.md` | `faceless-film-editing` |
+| Cinematic edit of the owner's Flow clips (ramp, grade, flash, brand mark) | `/faceless/cineedit.py` | `python -m faceless cineedit` | `faceless-cineedit` |
+| The owner's Google Flow lane: prompts, inbox, hook shots | `/faceless/flow.py` | `channel/flow/inbox/` | `faceless-flow` |
+| Compile the day's three Flow clips into one reel with a voiceover and a CTA | `/faceless/reel.py` | `.claude/skills/faceless-reel` | `faceless-reel` |
+| Rhythm of a video: line, hold, act length; the link between writing and editing | `/faceless/pipeline` | `.claude/skills/faceless-rhythm` | `faceless-rhythm` |
+| Learning loop: assess every finished creative piece, turn owner feedback into a measured rule | `/` | `.claude/skills/faceless-craft/LESSONS.md` | `faceless-craft` |
 | Quinton's weekly Monday drop (the host clip) | `/faceless/host.py` | `.claude/skills/faceless-quinton-weekly` | `faceless-quinton-weekly` |
 | Is the operation healthy? Something failed, stalled or overspent | `/` | `OPERATIONS.md`, `.claude/skills/faceless-daily/references/failure-playbook.md` | `faceless-daily` |
 | Evaluate an outside tool, repo or list of links safely | `/repo-farm` | `.claude/skills/faceless-intake` | `faceless-intake` |
