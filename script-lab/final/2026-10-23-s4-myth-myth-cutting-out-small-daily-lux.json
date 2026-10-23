@@ -1,0 +1,105 @@
+{
+  "title": "The $5 Coffee Myth Trapping Your Paycheck",
+  "hook_text": "STOP BLAMING YOUR DAILY COFFEE",
+  "beats": [
+    {
+      "say": "Stop blaming your daily $5 coffee for why you can't afford a house.",
+      "callout": "",
+      "visual": "A steaming paper coffee cup sitting alone on a polished dark concrete table, dramatic side lighting, macro cinematic close-up."
+    },
+    {
+      "say": "Old financial advice insists that cutting out small daily pleasures is the secret to building wealth.",
+      "callout": "",
+      "visual": "A vintage rotary desk phone next to an antique ledger on a dusty oak desk, soft cinematic lighting, wide shot."
+    },
+    {
+      "say": "It sounds responsible, but where does the bulk of your paycheck actually end up going?",
+      "callout": "",
+      "visual": "Hands resting flat on an empty modern kitchen counter under dim pendant lights, over-the-shoulder angle."
+    },
+    {
+      "say": "Most people assume skipping minor indulgences will magically fix their struggling bank accounts every month.",
+      "callout": "THE LATTE MYTH",
+      "visual": "A silver ceramic coin bank sitting empty on a dark wood shelf, moody spotlight, shallow depth of field."
+    },
+    {
+      "say": "A $5 daily habit equals $1,825 a year. But does saving that amount create real freedom?",
+      "callout": "$1,825 A YEAR",
+      "visual": "A stack of paper receipts tied with twine resting beside an old leather wallet, soft studio lighting."
+    },
+    {
+      "say": "Invested monthly at 8% for 30 years, that exact $5 daily habit grows into $226,659.",
+      "callout": "$226,659 AT 8%",
+      "visual": "A small glass terrarium on a minimalist windowsill with morning sunlight filtering through mist, slow camera dolly."
+    },
+    {
+      "say": "That sounds huge until you look at the real math draining your paycheck every month.",
+      "callout": "",
+      "visual": "The silhouette of a person standing before a massive floor-to-ceiling window overlooking rain-slicked city streets at night."
+    },
+    {
+      "say": "People obsess over $5 lattes while quietly overpaying hundreds every month on rent and car loans.",
+      "callout": "PENNIES VS THOUSANDS",
+      "visual": "A sleek dark sedan parked in a shadow-filled underground parking garage, low dramatic angle, cold overhead neon light."
+    },
+    {
+      "say": "Psychologists call this micro-budget fatigue, but why do we obsess over tiny expenses instead?",
+      "callout": "",
+      "visual": "A lone chess pawn isolated in the center of an empty dark chessboard, narrow beam of spotlight, high-angle shot."
+    },
+    {
+      "say": "Denying yourself a small treat feels like discipline, while confronting massive monthly bills feels exhausting.",
+      "callout": "",
+      "visual": "A worn leather armchair bathed in solitary lamplight inside a quiet, dimly lit personal study."
+    },
+    {
+      "say": "Wealth isn't built by suffering over coffee, it's created by controlling your largest monthly expenses.",
+      "callout": "FIX THE BIG BILLS",
+      "visual": "Architectural blueprints spread across a clean oak table with morning sun casting crisp geometric shadows."
+    },
+    {
+      "say": "Optimize your housing and transport, and your daily comforts won't break your financial future.",
+      "callout": "HOUSING AND AUTOS",
+      "visual": "A minimalist modern apartment living room with expansive clean lines, soft natural daylight, wide architectural view."
+    },
+    {
+      "say": "Follow for the money rules school never taught you, and enjoy your daily coffee.",
+      "callout": "",
+      "visual": "Fresh espresso pouring slowly into a ceramic mug from an espresso machine, warm morning backlight, macro focus."
+    }
+  ],
+  "caption": "Cutting out coffee won't make you rich if your housing and car loans are draining your paycheck. Focus on the big numbers.\n\n#money #personalfinance #wealthbuilding #financialfreedom #moneymindset",
+  "description": "Skipping small daily luxuries won't solve systemic money problems. Learn why obsessing over micro-expenses creates budget fatigue while major expenses like housing and transportation quietly dictate your net worth.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#wealthbuilding",
+    "#financialfreedom",
+    "#moneymindset"
+  ],
+  "first_comment": "What's the single biggest expense on your bank statement right now?",
+  "facts": [
+    {
+      "claim": "A $5/day habit equals $1,825 a year.",
+      "basis": "Fact sheet: $5/day habit = $1,825/year."
+    },
+    {
+      "claim": "Invested monthly at 8% for 30 years, $5 a day reaches $226,659.",
+      "basis": "Fact sheet: $5/day habit invested monthly at 8% for 30 years = $226,659."
+    }
+  ],
+  "source": "llm",
+  "pillar": "myth",
+  "look": "",
+  "loop_map": {
+    "stakes": "Wasting mental discipline feeling guilty over small daily treats while missing massive cash drains.",
+    "big_question": "Where does the bulk of your paycheck actually end up going?",
+    "assume": "Cutting small daily treats like coffee will build substantial wealth.",
+    "reveal": "Micro-expenses pale in comparison to major overhead costs like rent, mortgages, and car loans.",
+    "rehook_beats": [
+      5,
+      9
+    ],
+    "payoff_beat": 11
+  }
+}

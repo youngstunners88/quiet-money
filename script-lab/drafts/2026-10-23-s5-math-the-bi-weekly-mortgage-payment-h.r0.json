@@ -1,0 +1,91 @@
+{
+  "title": "The Mortgage Hack That Erases 8 Years",
+  "hook_text": "ERASE 8 YEARS OF MORTGAGE PAYMENTS",
+  "beats": [
+    {
+      "say": "By changing one single payment date on your mortgage, you can completely erase 8 years of interest payments.",
+      "callout": "",
+      "visual": "A brass front door key resting on a dark walnut kitchen table under warm pendant light."
+    },
+    {
+      "say": "That 30 year loan sitting in your drawer doesn't actually have to take 30 years to pay off.",
+      "callout": "",
+      "visual": "A close up of a heavy house deed document blurred out in the background."
+    },
+    {
+      "say": "How do you shorten a 30 year timeline without increasing your monthly budget?",
+      "callout": "30 VS 22",
+      "visual": "A metal desk calendar with crisp white pages flipped backward by a hand in shadow."
+    },
+    {
+      "say": "Most people assume you must send one large lump sum every single month to make a dent.",
+      "callout": "MONTHLY VS BI-WEEKLY",
+      "visual": "A sleek silver calculator resting next to a stack of dark envelopes."
+    },
+    {
+      "say": "Instead, you pay half your monthly mortgage amount every two weeks.",
+      "callout": "STEP ONE",
+      "visual": "A finger pointing to a date square on a minimalist monthly wall calendar."
+    },
+    {
+      "say": "Because there are 52 weeks in a year, you end up making 26 half payments.",
+      "callout": "STEP TWO",
+      "visual": "A close up of a digital clock ticking down minutes on a dark nightstand."
+    },
+    {
+      "say": "That equals 13 full monthly payments every year instead of the usual 12.",
+      "callout": "STEP THREE",
+      "visual": "Thirteen identical silver coins lined up in a neat straight row on a dark wood grain."
+    },
+    {
+      "say": "Where does that extra payment actually go when it hits the bank?",
+      "callout": "PRINCIPAL ONLY",
+      "visual": "A fountain pen signing a blank white paper with soft side lighting."
+    },
+    {
+      "say": "It goes straight toward knocking down your principal balance early.",
+      "callout": "",
+      "visual": "A heavy glass paperweight holding down a crisp stack of blank currency notes."
+    },
+    {
+      "say": "That single extra payment turns your 30 year debt into a 22 year finish line.",
+      "callout": "30 YEARS VS 22 YEARS",
+      "visual": "A digital timer stopping abruptly on a dark wooden desktop."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "A calm empty hallway with a single warm light bulb glowing overhead."
+    }
+  ],
+  "caption": "The math behind the bi-weekly mortgage payment hack. #money #personalfinance #mortgage #wealth #finance",
+  "description": "Discover how paying half your mortgage every two weeks turns a 30-year loan into a 22-year loan and saves tens of thousands in interest.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#mortgage",
+    "#wealth",
+    "#finance"
+  ],
+  "first_comment": "Did you know about the 13th payment effect? Let me know below.",
+  "facts": [
+    {
+      "claim": "Paying half your mortgage every two weeks turns a 30-year loan into a 22-year loan",
+      "basis": "Standard amortization math for bi-weekly payments resulting in 26 half-payments (13 full payments) per year."
+    }
+  ],
+  "source": "llm",
+  "pillar": "math",
+  "look": "",
+  "loop_map": {
+    "stakes": "A 30-year mortgage costing decades of interest.",
+    "big_question": "How do you shorten a 30 year timeline without increasing your monthly budget?",
+    "assume": "You must send one large lump sum every single month to make a dent.",
+    "reveal": "Paying half your mortgage every two weeks results in 13 full payments a year.",
+    "rehook_beats": [
+      4,
+      8
+    ],
+    "payoff_beat": 10
+  }
+}

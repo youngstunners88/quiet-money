@@ -1,0 +1,96 @@
+{
+  "title": "The Hot-Hand Fallacy: Why One Win Triggers Ruin",
+  "hook_text": "ONE LUCKY WIN FEELS LIKE SKILL",
+  "beats": [
+    {
+      "say": "Winning once makes your brain feel invincible, setting you up to lose everything on the very next roll of the dice.",
+      "callout": "",
+      "visual": "Cinematic close-up of a pair of dice resting on a dark wooden table, dramatic overhead lighting, shallow depth of field."
+    },
+    {
+      "say": "That single lucky win in business or trading triggers a cognitive glitch known as the hot-hand fallacy.",
+      "callout": "",
+      "visual": "A person's hands sliding a stack of poker chips across a green felt surface in a dimly lit room."
+    },
+    {
+      "say": "Why does a random streak of luck convince smart people to risk their entire net worth on the next gamble?",
+      "callout": "",
+      "visual": "A close-up of a calculator screen reflecting warm amber light in a quiet, modern office at night."
+    },
+    {
+      "say": "Most people assume a hot streak means your odds of winning keep getting better with every single wager.",
+      "callout": "MYTH VS FACT",
+      "visual": "A sleek digital tablet lying flat on a dark marble countertop, displaying blurred charts with no readable text."
+    },
+    {
+      "say": "That assumption is entirely false. Independent events never remember what happened on the turn before.",
+      "callout": "",
+      "visual": "A single metallic coin spinning fast on a concrete floor, captured from a low angle with motion blur."
+    },
+    {
+      "say": "When you double down after a win, the mathematical house edge hasn't changed at all.",
+      "callout": "50% VS 50%",
+      "visual": "An empty leather wallet resting on a polished wooden desk next to a modern brass lamp."
+    },
+    {
+      "say": "How does that overconfidence quietly drain an entire savings account in a single afternoon?",
+      "callout": "",
+      "visual": "A hand holding a stainless steel pen over a blank cream paper notebook on a dark desk."
+    },
+    {
+      "say": "The brain treats dopamine from a random win the same way it treats proven skill.",
+      "callout": "",
+      "visual": "A dark room illuminated only by the soft glow of a laptop screen viewed from behind."
+    },
+    {
+      "say": "Instead of cashing out, you take on massive leverage, treating your luck as a permanent asset.",
+      "callout": "ASSET VS LIABILITY",
+      "visual": "A stack of old paper documents bound with a thick rubber band, shot from a high angle."
+    },
+    {
+      "say": "Real wealth isn't built on hot streaks. It's built on boring consistency like a $200 monthly investment compounding at 8% a year.",
+      "callout": "$298,000 IN 30 YRS",
+      "visual": "A minimalist glass jar filled with small metal coins sitting on a sunlit windowsill."
+    },
+    {
+      "say": "Ignore the illusion of the hot hand. Protect your cash flow and build real staying power.",
+      "callout": "",
+      "visual": "A lone ceramic coffee mug on a dark wooden table with morning light streaming across the room."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "A sharp, modern metal door handle reflecting a dim hallway light, shot in extreme close-up."
+    }
+  ],
+  "caption": "One lucky win tricks your brain into betting the farm. Here is the math behind the hot-hand fallacy. #moneypsychology #personalfinance #investing #wealthmindset #smartmoney",
+  "description": "Discover why a single lucky win in business or trading makes people risk their entire net worth on the next gamble, and how the hot-hand fallacy drains accounts.",
+  "hashtags": [
+    "#moneypsychology",
+    "#personalfinance",
+    "#investing",
+    "#wealthmindset",
+    "#smartmoney"
+  ],
+  "first_comment": "What is the biggest financial gamble you have ever seen someone take after a lucky win?",
+  "facts": [
+    {
+      "claim": "200 dollars a month invested at 8 percent per year reaches 298072 dollars in 30 years",
+      "basis": "$200/month invested for 30 years at 8%/yr (monthly compounding) = $298,072"
+    }
+  ],
+  "source": "llm",
+  "pillar": "psychology",
+  "look": "",
+  "loop_map": {
+    "stakes": "A single lucky win and the risk of losing an entire net worth.",
+    "big_question": "Why does a random streak of luck convince smart people to risk everything on the next gamble?",
+    "assume": "A hot streak means your odds of winning keep getting better.",
+    "reveal": "Independent events have no memory and the odds never change.",
+    "rehook_beats": [
+      3,
+      7
+    ],
+    "payoff_beat": 10
+  }
+}

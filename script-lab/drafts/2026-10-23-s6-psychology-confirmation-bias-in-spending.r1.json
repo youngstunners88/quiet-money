@@ -1,0 +1,101 @@
+{
+  "title": "Why You Research Expensive Things Before Buying Them",
+  "hook_text": "THE IMPULSE RESEARCH TRAP",
+  "beats": [
+    {
+      "say": "You didn't research that $1,200 gadget for weeks. You just spent two weeks looking for validation.",
+      "callout": "",
+      "visual": "Hands typing on a sleek laptop in a dimly lit room, glowing screen light reflecting on a dark marble desk."
+    },
+    {
+      "say": "Your brain quietly made the decision to buy it in the first 5 seconds of seeing it.",
+      "callout": "5 SECONDS",
+      "visual": "Overhead view of a minimalist black smartphone resting on a cold slate table beside a metallic pen."
+    },
+    {
+      "say": "Why do we spend 14 days reading reviews for a purchase we've already mentally locked in?",
+      "callout": "",
+      "visual": "A wall calendar resting on dark mahogany wood, illuminated by dramatic side lighting and soft shadows."
+    },
+    {
+      "say": "Most people assume they're being rational, smart consumers by carefully comparing product features and specifications.",
+      "callout": "RATIONAL BUYER?",
+      "visual": "A clean wooden desk with open leather notebooks, metal tools, and an open empty wallet."
+    },
+    {
+      "say": "In reality, it's confirmation bias. You're subconsciously filtering out bad reviews and hunting for excuses.",
+      "callout": "CONFIRMATION BIAS",
+      "visual": "A dark silhouette of a person standing before soft glowing panels in an atmospheric, foggy room."
+    },
+    {
+      "say": "So what's this quiet mental trap actually costing your bank account over your working life?",
+      "callout": "",
+      "visual": "A dark metal bank card resting on a rough concrete pillar under warm moody lighting."
+    },
+    {
+      "say": "A single $1,200 annual impulse buy doesn't feel dangerous, but that's $100 leaving your wallet monthly.",
+      "callout": "",
+      "visual": "A black luxury shopping bag sitting alone on a wet park bench under a streetlamp at night."
+    },
+    {
+      "say": "If you put that $100 a month into investments at 8% a year instead...",
+      "callout": "",
+      "visual": "An elegant glass hourglass with fine gold sand standing on a polished dark wood table."
+    },
+    {
+      "say": "It grows to $149,036 over 30 years, even though you only put in $36,000.",
+      "callout": "$36,000 VS $149,036",
+      "visual": "A small green seedling growing inside a glass sphere filled with soil under bright natural sunlight."
+    },
+    {
+      "say": "So how do you stop your own brain from weaponizing fake research against your savings?",
+      "callout": "",
+      "visual": "An antique brass mechanical clock with brass gears lying open on dark velvet."
+    },
+    {
+      "say": "STEP ONE: force a strict 72-hour cooling period before buying any non-essential item over $100.",
+      "callout": "STEP ONE: 72 HOURS",
+      "visual": "A stainless steel wristwatch resting open on a granite surface beside a dim desk lamp."
+    },
+    {
+      "say": "You're rarely researching to save money. You're just searching for an excuse to spend it.",
+      "callout": "",
+      "visual": "Hands closing a leather notebook calmly on a dark oak desk in low ambient room light."
+    },
+    {
+      "say": "Stop validating your expensive impulses today. Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "A quiet sunrise over a misty city skyline with dark skyscraper silhouettes in blue and gold light."
+    }
+  ],
+  "caption": "Why you spend weeks 'researching' an impulse buy you already decided to make. 🧠💰 #moneypsychology #personalfinance #confirmationbias #smartspending #wealthmindset",
+  "description": "Confirmation bias leads us to hunt for positive reviews to justify purchases we emotionally made in seconds. Breaking this cycle and investing small amounts compounding over decades turns impulse spending into real wealth.",
+  "hashtags": [
+    "#moneypsychology",
+    "#personalfinance",
+    "#confirmationbias",
+    "#smartspending",
+    "#wealthmindset"
+  ],
+  "first_comment": "What's an expensive purchase you spent weeks researching just to justify buying it?",
+  "facts": [
+    {
+      "claim": "$100/month invested for 30 years at 8%/yr (monthly compounding) equals $149,036 from $36,000 contributed.",
+      "basis": "Money Fact Sheet exact compound interest calculation."
+    }
+  ],
+  "source": "llm",
+  "pillar": "psychology",
+  "look": "",
+  "loop_map": {
+    "stakes": "A $1,200 annual impulse buy drains $149,036 of potential wealth over 30 years.",
+    "big_question": "Why do we spend 14 days reading reviews for a purchase we've already mentally locked in?",
+    "assume": "We assume we are being rational, analytical buyers comparing specs.",
+    "reveal": "It's confirmation bias; we ignore red flags and look for permission to spend.",
+    "rehook_beats": [
+      6,
+      10
+    ],
+    "payoff_beat": 12
+  }
+}

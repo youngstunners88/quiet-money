@@ -1,0 +1,96 @@
+{
+  "title": "The Impulse Purchase Review Trap",
+  "hook_text": "YOU DIDN'T RESEARCH THAT $1,200 GADGET",
+  "beats": [
+    {
+      "say": "You didn't research that $1,200 gadget for weeks.",
+      "callout": "",
+      "visual": "Close-up of a sleek gadget box resting on a dark wooden desk under soft warm lamplight."
+    },
+    {
+      "say": "You just spent two weeks looking for someone on the internet to validate your impulse.",
+      "callout": "CONFIRMATION BIAS",
+      "visual": "Overhead shot of hands scrolling fast through online product reviews on a dark tablet screen."
+    },
+    {
+      "say": "Why do our brains crave proof that buying a luxury item is a smart move?",
+      "callout": "THE BIG QUESTION",
+      "visual": "A person sitting at a minimalist kitchen counter holding a glowing smartphone in a dim room."
+    },
+    {
+      "say": "Most buyers think they use cold logic to compare specs and prices.",
+      "callout": "LOGIC VS EMOTION",
+      "visual": "A physical spreadsheet and a pen lying untouched on a messy desk."
+    },
+    {
+      "say": "In reality, the decision happened the second you saw the ad.",
+      "callout": "THE REAL TRIGGER",
+      "visual": "A close-up of a finger hovering over a glowing \"buy now\" button in shadow."
+    },
+    {
+      "say": "Your brain hates cognitive dissonance, so it hires your search history as a defense attorney.",
+      "callout": "BRAIN TRICK",
+      "visual": "A blurry silhouette of a person staring out a rainy apartment window at night."
+    },
+    {
+      "say": "If a review mentions a flaw, you skip it.",
+      "callout": "",
+      "visual": "Fingers quickly swiping away a negative online forum comment on a phone screen."
+    },
+    {
+      "say": "If a stranger says it's life-changing, you bookmark it instantly.",
+      "callout": "10 STAR REVIEWS",
+      "visual": "A glowing smartphone screen reflecting in a pair of dark eyeglasses."
+    },
+    {
+      "say": "What happens when you let confirmation bias pick your tech?",
+      "callout": "",
+      "visual": "A bank statement resting on a kitchen table with the total highlighted in red."
+    },
+    {
+      "say": "That $100 a month you spent instead could grow to $58,902 in 20 years at 8% a year.",
+      "callout": "$58,902 IN 20 YEARS",
+      "visual": "A simple line graph drawn on a notepad pointing steadily upward in black ink."
+    },
+    {
+      "say": "Stop hunting for excuses to spend.",
+      "callout": "",
+      "visual": "A hand closing a laptop lid firmly on a wooden desk."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "A minimalist black card resting on a clean white surface with sharp shadows."
+    }
+  ],
+  "caption": "Your brain isn't researching. It's building a defense case for purchases you already made. #moneypsychology #personalfinance #smartspending #wealthbuilding #moneyrules",
+  "description": "Discover how confirmation bias tricks you into validating impulse purchases, and how to spot the mental trap before it drains your savings.",
+  "hashtags": [
+    "#moneypsychology",
+    "#personalfinance",
+    "#smartspending",
+    "#wealthbuilding",
+    "#moneyrules"
+  ],
+  "first_comment": "What is the last expensive item you spent days \"researching\" before buying?",
+  "facts": [
+    {
+      "claim": "$100/month invested for 20 years at 8%/yr (monthly compounding) = $58,902",
+      "basis": "Money Fact Sheet"
+    }
+  ],
+  "source": "llm",
+  "pillar": "psychology",
+  "look": "",
+  "loop_map": {
+    "stakes": "You didn't research that $1,200 gadget for weeks.",
+    "big_question": "Why do our brains crave proof that buying a luxury item is a smart move?",
+    "assume": "Most buyers think they use cold logic to compare specs and prices.",
+    "reveal": "In reality, the decision happened the second you saw the ad.",
+    "rehook_beats": [
+      6,
+      9
+    ],
+    "payoff_beat": 10
+  }
+}
