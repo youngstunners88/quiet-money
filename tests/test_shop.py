@@ -143,3 +143,22 @@ def test_the_cli_is_found_in_go_bin_when_path_lacks_it(tmp_path, monkeypatch):
     exe.chmod(0o755)
     monkeypatch.setenv("HOME", str(tmp_path))
     assert shop.gumroad_cli() == str(exe)
+
+
+def test_sync_urls_follows_a_username_change_and_never_adds_a_product(tmp_path, monkeypatch):
+    from faceless import config
+    toml = tmp_path / "studio.toml"
+    toml.write_text('[offer]\nshop_urls = { "money-reset-kit" = "https://old.gumroad.com/l/k" }   # comment stays\n')
+    real = config.load()
+    monkeypatch.setattr(config, "load", lambda: {**real, "offer": {"shop_urls": {"money-reset-kit": "https://old.gumroad.com/l/k"}}})
+    name = {p["id"]: p["gumroad"]["name"] for p in listing.catalog()["products"]}
+    prods = [{"name": name["money-reset-kit"], "published": True, "short_url": "https://quietmoney.gumroad.com/l/k"},
+             {"name": name["money-reset-printables"], "published": True, "short_url": "https://quietmoney.gumroad.com/l/p"},
+             {"name": name["rat-race-escape-planner"], "published": False, "short_url": "https://quietmoney.gumroad.com/l/r"}]
+    dry = shop.sync_urls(prods=prods, path=toml)
+    assert dry["changed"] == {"money-reset-kit": ("https://old.gumroad.com/l/k", "https://quietmoney.gumroad.com/l/k")}
+    assert "old.gumroad" in toml.read_text()                                    # a dry run writes nothing
+    r = shop.sync_urls(apply=True, prods=prods, path=toml)
+    text = toml.read_text()
+    assert "quietmoney.gumroad.com/l/k" in text and "# comment stays" in text and "money-reset-printables" not in text
+    assert r["live_not_offered"] == ["money-reset-printables"]

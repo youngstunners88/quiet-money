@@ -65,6 +65,7 @@ humans set strategy, connect accounts, and review held videos.
 | Email sequence (autoresponder) and the weekly issue | `/faceless/autoresponder.py`, `repurpose.py` | `channel/offers/autoresponder/README.md` | `faceless-empire` |
 | Fiverr brand-kit service | `/faceless/brandkit.py` | `channel/services/brand-kit/GIG.md` | `faceless-empire` |
 | Fiverr studio mode: a client brief becomes a sheet of 6-12 concept directions (logo, character, art) | `/faceless/concepts.py` | `channel/services/studio/GIG.md` | `faceless-studio-gig` |
+| A client wrote (Fiverr or the Web3 service): draft the reply, discovery and budget first, owner's prices only | `/faceless/clientdesk.py` | `python -m faceless client reply` | `faceless-client-desk` |
 | Collaboration notes for small finance podcasts (drafted, gated, the owner sends) | `/faceless/collab.py` | `python -m faceless collab status` | `faceless-collab` |
 | Connect an app (YouTube, TikTok, Drive...), pull channel stats | `/faceless/providers` | `composio_tools.py` | `faceless-composio` (+ `composio`) |
 | Any media or data job beyond the engine's own (mockups, upscales, voice samples, OCR, search volume, 750+ models) | `/faceless/muapi.py` | `.claude/skills/muapi` | `muapi` |
@@ -137,6 +138,7 @@ python -m faceless qa                          # calibrate semantic QA gates (Cl
 python -m faceless autoresponder               # 7-day Money Reset email sequence for the email service
 python -m faceless brandkit "<Name>" --palette mint   # Fiverr brand-kit order (--samples rebuilds the gig gallery)
 python -m faceless concepts "<brief>" --kind logo --n 8 --client NAME   # Fiverr studio-mode order: concept sheet + delivery note (orders are gitignored)
+python -m faceless client reply --channel fiverr --gig studio "<message>"   # draft your reply to a client (discovery + budget first; nothing sent)
 python -m faceless collab run --limit 5         # collaboration notes for small finance podcasts; sends nothing (`collab outcome <slug> sent` after you send)
 python -m faceless preflight                   # can today's run succeed? traffic lights + the fix for each (run first)
 python -m faceless watchdog                    # is the operation alive? (also runs every 6 h on GitHub and opens an Ops alert issue)
@@ -147,6 +149,7 @@ python -m faceless monid find "hashtag"             # the Monid data desk: find,
 python -m faceless muapi find "product mockup"  # the Muapi desk: find, inspect, estimate, run (price first), balance, doctor
 python -m faceless offer                       # coverage, mix, the three profile URLs; `offer --batch today` makes sure every passed video has its offer pack and row
 python -m faceless distribute                  # every distribution rail with its state and the owner's next step (`--live` checks the hub page)
+python -m faceless shop sync-urls --yes        # after a Gumroad username change: rewrite [offer] shop_urls from the live product links
 python -m faceless listing build all           # Etsy + Gumroad packs; `listing check` runs the listing gauntlet; `shop status|plan|push`
 python -m faceless skills                      # lint every skill against Anthropic's guide
 python -m faceless context                     # do CLAUDE.md routing, the workspace CONTEXT.md files and the skills still agree? (reads only)

@@ -24,7 +24,7 @@ import subprocess
 
 from faceless import config, events, listing, safety
 from faceless.config import STUDIO, Paths
-from faceless.fsutil import read_jsonl
+from faceless.fsutil import read_jsonl, write_atomic
 from faceless.providers import ProviderError, ProviderUnavailable
 
 SALES = Paths.analytics / "sales.jsonl"
@@ -270,3 +270,37 @@ def publish(pid: str, rail: str, listing_id: str | None = None) -> dict:
         prod = res.get("product", found)
         return {"rail": "gumroad", "id": found["id"], "published": bool(prod.get("published", True)), "url": prod.get("short_url") or prod.get("url", "")}
     raise ProviderError(f"unknown rail {rail!r}")
+
+
+def live_urls(prods: list[dict] | None = None) -> dict[str, str]:
+    """{catalog id: the live Gumroad URL Gumroad reports now}, for every published product whose name matches the catalog.
+    Gumroad builds the URL from the seller's username, so a username change moves every link; this reads them back."""
+    prods = prods if prods is not None else _run(["products", "list", "--all", "--json", "--no-input"]).get("products", [])
+    by_name = {x.get("name"): x for x in prods if x.get("published")}
+    out = {}
+    for p in listing.products():
+        x = by_name.get(p["gumroad"]["name"])
+        url = str((x or {}).get("short_url") or "")
+        if url.startswith("https://"):
+            out[p["id"]] = url
+    return out
+
+
+def sync_urls(apply: bool = False, prods: list[dict] | None = None, path=None) -> dict:
+    """Compare [offer] shop_urls with what Gumroad reports and, with `apply`, rewrite that one line of studio.toml. Only products already
+    in shop_urls are updated (going live stays the owner's yes); a product Gumroad shows live but shop_urls lacks is reported, not added."""
+    path = path or STUDIO / "studio.toml"
+    now = (config.load().get("offer") or {}).get("shop_urls") or {}
+    live = live_urls(prods)
+    changed = {pid: (old, live[pid]) for pid, old in now.items() if pid in live and live[pid] != old}
+    report = {"changed": changed, "not_live": sorted(set(now) - set(live)), "live_not_offered": sorted(set(live) - set(now))}
+    if apply and changed:
+        new = {pid: live.get(pid, url) for pid, url in now.items()}
+        line = "shop_urls = { " + ", ".join(f'"{k}" = "{v}"' for k, v in new.items()) + " }"
+        text = path.read_text(encoding="utf-8")
+        text, n = re.subn(r"(?m)^shop_urls = \{[^\n]*\}", lambda _m: line, text, count=1)
+        if n != 1:
+            raise ProviderError("could not find the shop_urls line in studio.toml")
+        write_atomic(path, text)
+        events.emit("SHOP_URLS_SYNCED", changed=sorted(changed))
+    return report
