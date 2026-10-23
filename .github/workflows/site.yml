@@ -32,6 +32,8 @@ jobs:
       - run: pip install -r <(grep -vE "composio|edge-tts|opencv" requirements.txt)
       - name: Build site
         run: python -m faceless site build
+        env:
+          POSTHOG_TOKEN: ${{ vars.POSTHOG_TOKEN }}   # an Actions variable, not a secret: the project token (phc_) is public in every page by design
       - name: Publish to gh-pages
         run: |
           cd site

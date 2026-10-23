@@ -30,6 +30,7 @@ GATES = {   # owner-only steps: money, accounts, legal, face. Codes keep the ask
     "flow": "Generate the day's 3 Flow clips (about 10 minutes) and drop them in the inbox",
     "fiverr": "List the gig on your Fiverr account and handle client messages",
     "podcast": "Open a free podcast host account",
+    "posthogvar": "Add one GitHub Actions variable: Settings > Secrets and variables > Actions > Variables > New, name POSTHOG_TOKEN, value your PostHog project token (phc_..., public by design)",
     "longform": "Say yes to one long-form upload a week on the YouTube channel (the weekly 16:9 episode; rule 9 covers Shorts only)",
     "pod": "Open Etsy + Printify accounts",
     "adobe": "Open an Adobe Stock contributor account and confirm the image model's terms allow resale",
@@ -77,6 +78,8 @@ def lane(o: dict, by_id: dict) -> str:
     | waiting | validate | running."""
     if attack(o)["killed"]:
         return "dead"
+    if o.get("parked"):                     # the owner's call: keep what is built, spend nothing more on it, ask nothing for it
+        return "parked"
     if o["stage"] == "scaled" or (o["stage"] == "pilot" and not o.get("build_gates")):
         return "running"
     if o.get("build_gates"):
@@ -92,6 +95,8 @@ def next_action(o: dict, by_id: dict) -> str:
     ln = lane(o, by_id)
     if ln == "dead":
         return "dead: do not build"
+    if ln == "parked":
+        return f"parked by the owner: {o['parked']}"
     if ln == "owner":
         return "owner: " + "; ".join(GATES[g] for g in o["build_gates"])
     if ln == "launch":
@@ -122,7 +127,7 @@ def asks(rows: list[dict]) -> list[tuple[str, float, list[str]]]:
     """Owner gates ranked by the total score they unlock (items not yet scaled and not dead)."""
     g: dict = defaultdict(lambda: [0.0, []])
     for r in rows:
-        if r["killed"] or r["stage"] == "scaled":
+        if r["killed"] or r["stage"] == "scaled" or r["lane"] == "parked":
             continue
         for gate in dict.fromkeys(r["gates"] + r.get("build_gates", [])):   # one item counts once per gate
             g[gate][0] += r["score"]
@@ -150,6 +155,7 @@ def report() -> str:
     table("Running: measure against the kill rule", ("running",))
     table("Waiting on another item", ("waiting",))
     table("Ideas to validate cheaply", ("validate",))
+    table("Parked by the owner", ("parked",), "Kept as built; nothing more is spent on these until the owner says so.")
     L += ["## What the owner unlocks, biggest first", ""]
     L += [f"- **{gate}**: {total} points ({', '.join(ids)})" for gate, total, ids in asks(rows)]
     L += ["", "## Killed by the attack round", ""]

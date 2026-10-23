@@ -161,7 +161,13 @@ def next_moves(limit: int = 6) -> dict:
 
 def snapshot() -> dict:
     return {"asOf": _now(), "shorts": shorts(), "audience": audience(), "money": money(), "products": products(),
-            "service": service(), "ypp": partner(), "next": next_moves()}
+            "service": service(), "ypp": partner(), "site": site(), "next": next_moves()}
+
+
+def site() -> dict | None:
+    """The website's last measured week (O15, `site-stats`), or None before the first pull."""
+    from faceless import sitestats
+    return sitestats.latest()
 
 
 def partner() -> dict:

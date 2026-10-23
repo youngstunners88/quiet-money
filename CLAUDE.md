@@ -47,7 +47,7 @@ humans set strategy, connect accounts, and review held videos.
 | Whole-business plan: products, services, newsletter, repurposing, what to build next | `/channel/empire` | `channel/empire/PLAN.md`, `RANKING.md` | `faceless-empire` |
 | Repurpose a video (thread, carousel, pin, newsletter item, audio) | `/faceless/repurpose.py` | `python -m faceless kit` | `faceless-empire` |
 | Weekly editions: the podcast episode and the 16:9 long-form "Money Rules Weekly" (best Shorts by views, chapters) | `/faceless/podcast.py`, `longform.py` | `python -m faceless longform` | `faceless-empire` |
-| Spanish and Portuguese editions of passed Shorts (numbers checked, local packs, never the English channel) | `/faceless/edition.py` | `python -m faceless edition status` | `faceless-empire` |
+| Spanish and Portuguese editions of passed Shorts (PARKED by the owner 2026-10-23: run only when asked) | `/faceless/edition.py` | `python -m faceless edition status` | `faceless-empire` |
 | Flow clips (owner's daily Google Flow session) and hook motion | `/faceless/flow.py` | `python -m faceless flow` | `faceless-empire` |
 | Quality gates answered by a decision model, duplicate and variety checks | `/faceless/qa.py`, `variety.py`, `embed.py` | `.claude/skills/faceless-gauntlet` (Semantic gates) | `faceless-gauntlet` |
 | Platform rules, policy changes, what each marketplace allows | `/channel/compliance` | `channel/compliance/platform-rules.md` | `faceless-scout` |
@@ -145,6 +145,7 @@ python -m faceless context                     # do CLAUDE.md routing, the works
 node claude-code-orchestrator/dist/run-plan.js PLAN.json --out DIR   # the CEO's lanes as Claude Code workers (faceless-ceo); read-only unless WORKER_PERMISSION_MODE is raised
 python -m faceless outbound run                 # the service desk's daily client hunt: discover, research, score (Jev), draft, gate, queue; sends nothing
 python -m faceless outbound status|review|package <slug>|outcome <slug> <event>   # the pipeline, the aggregate, a queued draft, what came back
+python -m faceless site-stats --days 7          # what the website did (PostHog, cookieless): pageviews, calculator uses, shop clicks -> analytics/site.jsonl
 python -m faceless ypp [--pull]                # the road to the YouTube Partner Program: progress per tier, pace, estimated dates (07:02 UTC task pulls daily)
 python -m faceless hq                          # one snapshot of the whole business for HQ (reads only); `--json` is the document HQ shows
 python -m faceless ci                          # CI as GitHub sees it (clean export, no keys): run before every push of code

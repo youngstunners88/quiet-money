@@ -22,8 +22,8 @@ Finished and checked; one owner step turns each on.
 | C4 | Audio edition: daily 60 s + weekly podcast episode | content | built | 40.5 | built and verified. Launch needs the owner: Open a free podcast host account |
 | P6 | Fillable PDF versions of the printable pack | product | built | 36.0 | built and verified. Launch needs the owner: Approve the prices and listings of the built products (the Gumroad shop is open; Etsy for printables) |
 | P3 | Printable budget pack (50/30/20, sinking funds, subscription audit, net worth) | product | built | 31.5 | built and verified. Launch needs the owner: Approve the prices and listings of the built products (the Gumroad shop is open; Etsy for printables) |
+| O15 | Site analytics with PostHog: visits, calculator use and clicks to the shop | ops | built | 30.0 | built and verified. Launch needs the owner: Add one GitHub Actions variable: Settings > Secrets and variables > Actions > Variables > New, name POSTHOG_TOKEN, value your PostHog project token (phc_..., public by design) |
 | S2 | Fiverr studio mode: concept sheets in minutes for logo/art/character gigs | service | built | 16.2 | built and verified. Launch needs the owner: List the gig on your Fiverr account and handle client messages |
-| C7 | Second-language editions: the same videos in Spanish and Portuguese | content | built | 15.36 | built and verified. Launch needs the owner: Open a second-language channel per platform (Spanish first) and approve machine translation with a native-speaker spot check |
 | R1 | YouTube Partner Program + TikTok Creator Rewards | partnership | built | 13.5 | built and verified. Launch needs the owner: Create the TikTok and Instagram accounts (@quietmoneyrule) and connect them for auto-posting (YouTube is live and posting) |
 | O19 | Outreach drafts: collaborators, newsletters and podcasts in the niche, drafted for the owner to send | growth | built | 9.72 | built and verified. Launch needs the owner: Send the drafted collaboration notes yourself (the studio never sends a message in your name) |
 
@@ -51,11 +51,6 @@ The owner's act is the work.
 | O14 | Mistral as a fourth script provider (resilience) | ops | built | 37.5 | measure; kill if: never used in 60 days. |
 | C3 | Weekly long-form: 'Money Rules Weekly' (8-10 min, 16:9, chapters) | content | built | 36.0 | measure; kill if: < 30% avg view duration after 4 episodes. |
 
-## Waiting on another item
-| id | opportunity | rail | stage | score | next |
-|---|---|---|---|---|---|
-| O15 | Site analytics with PostHog: visits, calculator use and clicks to the shop | ops | vetted | 30.0 | waits for O3 |
-
 ## Ideas to validate cheaply
 | id | opportunity | rail | stage | score | next |
 |---|---|---|---|---|---|
@@ -64,6 +59,12 @@ The owner's act is the work.
 | P5 | Original 'money rules' typography posters (print on demand) | product | idea | 3.73 | validate cheaply (research, one test asset), then vet |
 | M1 | Adobe Stock AI: abstract backgrounds, textures, objects (no people, brands, artist names) | marketplace | idea | 2.8 | validate cheaply (research, one test asset), then vet |
 | R2 | Finance affiliates + sponsors (with disclosure) | partnership | idea | 1.73 | validate cheaply (research, one test asset), then vet |
+
+## Parked by the owner
+Kept as built; nothing more is spent on these until the owner says so.
+| id | opportunity | rail | stage | score | next |
+|---|---|---|---|---|---|
+| C7 | Second-language editions: the same videos in Spanish and Portuguese | content | built | 15.36 | parked by the owner: not multilingual yet (2026-10-23) |
 
 ## What the owner unlocks, biggest first
 
@@ -78,8 +79,8 @@ The owner's act is the work.
 - **List the gig on your Fiverr account and handle client messages**: 64.2 points (S1, S2)
 - **Look at a sample video with model-designed motion scenes and say go (studio.toml [production.sketch] mode = "on", plus the approval constant in tests/test_hygiene.py)**: 45.0 points (C9)
 - **Open a free podcast host account**: 40.5 points (C4)
+- **Add one GitHub Actions variable: Settings > Secrets and variables > Actions > Variables > New, name POSTHOG_TOKEN, value your PostHog project token (phc_..., public by design)**: 30.0 points (O15)
 - **Create a free FRED API key (fred.stlouisfed.org) and add FRED_API_KEY to the environment**: 21.6 points (O17)
-- **Open a second-language channel per platform (Spanish first) and approve machine translation with a native-speaker spot check**: 15.4 points (C7)
 - **Send the drafted collaboration notes yourself (the studio never sends a message in your name)**: 9.7 points (O19)
 - **Open Etsy + Printify accounts**: 3.7 points (P5)
 - **Open an Adobe Stock contributor account and confirm the image model's terms allow resale**: 2.8 points (M1)

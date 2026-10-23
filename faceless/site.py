@@ -213,6 +213,42 @@ def head_snippet() -> str:
         return ""
 
 
+POSTHOG_HOST = "https://us.i.posthog.com"
+POSTHOG_TOKEN_SHAPE = re.compile(r"^phc_[A-Za-z0-9]{20,64}$")
+VISITS_ANALYTICS = ("We count visits with PostHog in a cookieless mode: nothing is stored on your device, no advertising profile is built, "
+                    "and session recording is off. We record which pages are viewed, whether a calculator was used, and clicks to our shop, "
+                    "so we know which pages help people.")
+
+
+def posthog_token() -> str:
+    """The PostHog project token from the environment at build time (never from a file, rule 11). Project tokens are sent by every
+    visitor's browser by design; the personal API key is a secret and never reaches a page. Anything not shaped like a token is ignored."""
+    t = config.env("POSTHOG_TOKEN") or ""
+    return t if POSTHOG_TOKEN_SHAPE.match(t) else ""
+
+
+def analytics_snippet() -> str:
+    """Cookieless page analytics (O15): pageviews, the first calculator input on a page, and clicks to the shop. Empty without a token."""
+    token = posthog_token()
+    if not token:
+        return ""
+    init = json.dumps({"api_host": POSTHOG_HOST, "persistence": "memory", "autocapture": False, "capture_pageview": True,
+                       "disable_session_recording": True, "disable_surveys": True,
+                       "capture_dead_clicks": False, "capture_heatmaps": False, "capture_performance": False, "advanced_disable_flags": True})
+    return ("<script>!function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split('.');"
+            "2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}"
+            "(p=t.createElement('script')).type='text/javascript',p.crossOrigin='anonymous',p.async=!0,p.src=s.api_host.replace('.i.posthog.com',"
+            "'-assets.i.posthog.com')+'/static/array.js',(r=t.getElementsByTagName('script')[0]).parentNode.insertBefore(p,r);var u=e;"
+            "for(void 0!==a?u=e[a]=[]:a='posthog',u.people=u.people||[],n='capture register reset opt_out_capturing'.split(' '),o=0;o<n.length;o++)"
+            "g(u,n[o]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);"
+            f"posthog.init({json.dumps(token)},{init});"
+            "(function(){var used=false;document.addEventListener('input',function(){if(!used){used=true;"
+            "posthog.capture('calculator_used',{page:location.pathname})}},true);"
+            "document.addEventListener('click',function(ev){var a=ev.target.closest&&ev.target.closest('a');"
+            "if(a&&/gumroad\\.com|etsy\\.com/.test(a.href)){posthog.capture('shop_click',{href:a.href,page:location.pathname})}},true)})();"
+            "</script>")
+
+
 def page(path: str, title: str, description: str, body: str, *, jsonld: list | None = None,
          og_type: str = "website", image: str | None = None, noindex: bool = False) -> str:
     c = cfg()
@@ -242,7 +278,7 @@ def page(path: str, title: str, description: str, body: str, *, jsonld: list | N
 <link rel="alternate" type="application/rss+xml" title="{e(ch['name'])}" href="{root}feed.xml">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Montserrat:wght@900&display=swap" rel="stylesheet">
-<style>{CSS}</style>{verify}{'<meta name="robots" content="noindex,follow">' if noindex else ""}{ld}{head_snippet()}
+<style>{CSS}</style>{verify}{'<meta name="robots" content="noindex,follow">' if noindex else ""}{ld}{head_snippet()}{analytics_snippet()}
 </head><body>
 <header class="top"><div class="wrap"><a class="brand" href="{root}"><img src="{root}favicon-180.png" alt="">QUIET MONEY</a>
 <nav><a href="{root}rules/">Rules</a><a href="{root}tools/">Tools</a><a href="{root}money-reset/">Checklist</a><a href="{root}about/">About</a></nav></div></header>
@@ -259,7 +295,7 @@ def page(path: str, title: str, description: str, body: str, *, jsonld: list | N
 TIKTOK_VERIFY_NAME = "tiktokU0fxJODyiu9rM34RSekGr3RvbXUSuyKd.txt"
 TIKTOK_VERIFY_BODY = "tiktok-developers-site-verification=U0fxJODyiu9rM34RSekGr3RvbXUSuyKd"
 
-LEGAL_UPDATED = "2026-10-19"
+LEGAL_UPDATED = "2026-10-23"
 CONTACT_URL = "https://github.com/youngstunners88/quiet-money/issues"   # the public contact route; no personal email on a public page
 
 
@@ -285,7 +321,7 @@ def privacy_page() -> str:
     body = f"""<article><h1>Privacy Policy</h1>
 <p class="summary">Last updated {LEGAL_UPDATED}. This explains what information {e(ch['name'])} collects through this website, and what it does not.</p>
 <h2>What we collect</h2>
-<ul><li><strong>Website visits.</strong> Our site is hosted on GitHub Pages, which keeps standard server logs (such as IP address, browser type and the pages requested) under its own privacy policy. We do not run an analytics tag or advertising tracker on this site.</li>
+<ul><li><strong>Website visits.</strong> Our site is hosted on GitHub Pages, which keeps standard server logs (such as IP address, browser type and the pages requested) under its own privacy policy. {VISITS_ANALYTICS if posthog_token() else "We do not run an analytics tag or advertising tracker on this site."}</li>
 <li><strong>Fonts.</strong> Pages load fonts from Google Fonts, which means your browser contacts Google when you open a page.</li>
 <li><strong>Videos.</strong> Embedded videos come from YouTube's privacy-enhanced embed, which does not set cookies until you press play.</li>
 <li><strong>Email (when offered).</strong> If we open an email list, you will give your email address on a sign-up form. We will use it only to send the newsletter you asked for and you can unsubscribe at any time. This form is not active on the site yet.</li>

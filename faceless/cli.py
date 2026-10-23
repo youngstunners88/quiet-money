@@ -1123,6 +1123,18 @@ def cmd_podcast(args) -> int:
     return 0
 
 
+def cmd_site_stats(args) -> int:
+    """What the website did (O15): pageviews, calculator uses and shop clicks from PostHog; appends analytics/site.jsonl."""
+    from faceless import sitestats
+    from faceless.providers import ProviderUnavailable
+    try:
+        print(json.dumps(sitestats.pull(args.days), indent=1))
+    except ProviderUnavailable as e:
+        print("site-stats:", e)
+        return 1
+    return 0
+
+
 def cmd_edition(args) -> int:
     """Second-language editions of passed Shorts (local packs; never posted to the English channel)."""
     from faceless import edition
@@ -1379,6 +1391,9 @@ def main(argv: list[str] | None = None) -> int:
     pc.add_argument("--week", help="the last day of the week to build (default: yesterday)")
     pc.add_argument("--no-music", action="store_true")
     pc.set_defaults(fn=cmd_podcast)
+    ss = sub.add_parser("site-stats", help="what the website did (PostHog, cookieless): pageviews, calculator uses, shop clicks [--days 7]")
+    ss.add_argument("--days", type=int, default=7)
+    ss.set_defaults(fn=cmd_site_stats)
     ed = sub.add_parser("edition", help="second-language edition of a passed Short (same pictures and voice; local pack, never posted to the "
                                         "English channel): edition JOB_ID --lang es|pt | edition --day D [--max 5] | edition status")
     ed.add_argument("job", nargs="?", default="")
