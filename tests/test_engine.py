@@ -952,7 +952,7 @@ def test_flow_shotlist_is_three_distinct_safe_prompts_and_rotates_by_day(tmp_pat
     a = flow.shotlist("2026-10-07").read_text()
     b = flow.shotlist("2026-10-08").read_text()
     assert a.count("## ") == 3 and a != b
-    assert a.count("no people's faces") == 3 and a.count("no text or numbers") == 3 and "nothing here logs in" in a
+    assert a.count("faces welcome") == 3 and a.count("no text or numbers") == 3 and "nothing here logs in" in a
     assert a == flow.shotlist("2026-10-07").read_text()      # deterministic
 
 
