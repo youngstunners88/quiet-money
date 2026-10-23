@@ -1,0 +1,81 @@
+{
+ "brief": "A small paper goods shop called Fern & Fold that sells handmade notebooks and planners. Calm, crafted, a little botanical. For people who love slow mornings.",
+ "kind": "logo",
+ "client": "Fern & Fold",
+ "directions": [
+  {
+   "name": "Pressed Meadow Line",
+   "idea": "A single continuous line forms a delicate fern leaf interwoven with folded paper pages.",
+   "style": "Minimalist continuous line art",
+   "palette": [
+    "#2D4A3E",
+    "#D8C8B8",
+    "#8B5A2B"
+   ],
+   "prompt": "A minimalist vector logo featuring a single line art fern frond tucked into a folded notebook corner, clean ivory background, elegant line work, flat vector graphic design, isolated."
+  },
+  {
+   "name": "Heritage Woodblock Stamp",
+   "idea": "A carved linocut emblem depicting a coiled fern frond framing an open hand-bound book.",
+   "style": "Rustic linocut print style",
+   "palette": [
+    "#3C2A21",
+    "#C5A880",
+    "#556B2F"
+   ],
+   "prompt": "A vintage woodcut emblem logo of an unfurling fern frond curving over an open planner, textured block print style, dark olive green on raw parchment background, craft aesthetic, vector."
+  },
+  {
+   "name": "Geometric Foliate Fold",
+   "idea": "Abstract angular paper folds create a stylized geometric fern leaf structure.",
+   "style": "Modern geometric papercraft",
+   "palette": [
+    "#708238",
+    "#E6D7C3",
+    "#4A6B6C"
+   ],
+   "prompt": "A modern geometric logo composed of folded paper triangles forming an abstract fern leaf, clean sharp lines, soft sage green and cream tones, minimal vector graphic, white background."
+  },
+  {
+   "name": "Morning Light Wash",
+   "idea": "A soft watercolor silhouette of a fern frond gently brushing against open journal pages.",
+   "style": "Subtle organic watercolor",
+   "palette": [
+    "#5C766D",
+    "#E8DCD1",
+    "#C99E82"
+   ],
+   "prompt": "An organic botanical logo featuring a soft watercolor fern frond shadow casting onto an open notebook page silhouette, gentle terracotta and sage palette, delicate atmospheric style, vector design."
+  },
+  {
+   "name": "Midcentury Leaf Motifs",
+   "idea": "Flat stylized botanical shapes and folded ribbon forms arranged in a retro badge.",
+   "style": "Retro mid-century graphic",
+   "palette": [
+    "#294034",
+    "#E0A96D",
+    "#F4F0EA"
+   ],
+   "prompt": "A mid-century modern logo badge with flat graphic fern leaves and folded paper ribbon motifs, muted mustard and forest green colors, simple iconic shapes, clean retro emblem, white background."
+  },
+  {
+   "name": "Serif Foliage Crest",
+   "idea": "Interlocking letters F and F encircled by delicate hand-drawn fern tendrils.",
+   "style": "Refined classic monogram",
+   "palette": [
+    "#1A362B",
+    "#D4AF37",
+    "#F7F5F0"
+   ],
+   "prompt": "An elegant serif monogram logo featuring intertwined letters F and F surrounded by a thin circular fern vine, refined dark green and gold metallic foil style, luxury paper craft brand emblem."
+  }
+ ],
+ "providers": [
+  "pollinations",
+  "pollinations",
+  "pollinations",
+  "pollinations",
+  "pollinations",
+  "pollinations"
+ ]
+}

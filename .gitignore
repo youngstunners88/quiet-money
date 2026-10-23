@@ -68,3 +68,9 @@ channel/services/web3-video/reviews/
 distribution/podcast/**/*.mp3
 # the weekly long-form: episode.mp4 is rebuilt by `python -m faceless longform build`; EPISODE.md, episode.json and thumbnail.jpg are committed
 distribution/longform/**/*.mp4
+# studio mode: client orders (briefs and concept sheets) stay private; the samples/ gallery is committed
+channel/services/studio/orders/
+# collaboration notes name real shows and hosts: drafts stay local; state/collab-*.json(l) holds hashes only
+channel/collab/drafts/
+channel/services/studio/samples/*/*.jpg
+channel/services/studio/samples/*/sheet.pdf

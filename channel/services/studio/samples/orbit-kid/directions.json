@@ -1,0 +1,81 @@
+{
+ "brief": "A friendly mascot for a kids' coding app: a small curious robot explorer who is brave but a bit clumsy. Bright, rounded, approachable.",
+ "kind": "character",
+ "client": "Orbit Kid",
+ "directions": [
+  {
+   "name": "Bubble Bot",
+   "idea": "An inflatable plastic sphere rolling around, constantly bumping into soft obstacles.",
+   "style": "Glossy 3D vinyl toy aesthetic",
+   "palette": [
+    "#FF6B6B",
+    "#4ECDC4",
+    "#FFE66D"
+   ],
+   "prompt": "A friendly glossy plastic spherical robot mascot with oversized digital eyes, bright rounded shapes, friendly expression, clumsy posture, clean studio lighting, colorful pastel background, 3D render art style."
+  },
+  {
+   "name": "Felt Gear",
+   "idea": "A stitched fabric automaton that wobbles on fuzzy wheels.",
+   "style": "Handmade felt stop-motion puppet",
+   "palette": [
+    "#88D498",
+    "#F06543",
+    "#3185FC"
+   ],
+   "prompt": "A cute clumsy robot mascot made of colorful felt fabric with visible stitching, plush textures, oversized googly plastic eyes, tiny metallic antennas, warm cozy studio lighting, macro photography."
+  },
+  {
+   "name": "Retro Pail",
+   "idea": "A midcentury tin wind-up toy that trips over its own key.",
+   "style": "Retro 1950s lithographed tin",
+   "palette": [
+    "#FF9F1C",
+    "#2EC4B6",
+    "#FFBF69"
+   ],
+   "prompt": "A vintage tinplate toy robot mascot with painted dials and a wind-up key on its back, rounded retro shape, slightly wobbly stance, cheerful expression, flat color illustration, midcentury design aesthetic."
+  },
+  {
+   "name": "Cloud Hopper",
+   "idea": "A puffy floating drone made of soft glowing pillows.",
+   "style": "Dreamy digital vector art",
+   "palette": [
+    "#B5B2FF",
+    "#FFC6FF",
+    "#FDFFB6"
+   ],
+   "prompt": "A whimsical floating robot mascot made of soft glowing cloud-like pillows, gentle pastel gradient, simple minimalist face, curious expression, dreamy digital art style, soft ambient lighting."
+  },
+  {
+   "name": "Clay Dynamo",
+   "idea": "A bumpy hand-molded earthenware figure with a lopsided antenna.",
+   "style": "Imperfect stop-motion claymation",
+   "palette": [
+    "#E07A5F",
+    "#81B29A",
+    "#F4F1DE"
+   ],
+   "prompt": "A hand-sculpted clay robot mascot with visible thumbprints, lopsided antenna, friendly asymmetric eyes, earthy warm tones, tactile stop-motion aesthetic, shallow depth of field, studio lighting."
+  },
+  {
+   "name": "Neon Block",
+   "idea": "A chunky translucent cube that trips and spills glowing pixels.",
+   "style": "Chunky modern voxel art",
+   "palette": [
+    "#7209B7",
+    "#4CC9F0",
+    "#F72585"
+   ],
+   "prompt": "A chunky translucent voxel robot mascot glowing with neon light, rounded smooth corners, blocky yet friendly proportions, playful clumsy pose, vibrant cyberpunk pastel palette, clean white background."
+  }
+ ],
+ "providers": [
+  "pollinations",
+  "pollinations",
+  "pollinations",
+  "pollinations",
+  "pollinations",
+  "pollinations"
+ ]
+}

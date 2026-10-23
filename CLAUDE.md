@@ -63,6 +63,8 @@ humans set strategy, connect accounts, and review held videos.
 | Front covers, hero images, thumbnails, Quinton on a product, cover A/B | `/faceless/planner_cover.py`, `mockup.py` | `.claude/skills/faceless-cover/references/haiku-cover-research.md` | `faceless-cover` |
 | Email sequence (autoresponder) and the weekly issue | `/faceless/autoresponder.py`, `repurpose.py` | `channel/offers/autoresponder/README.md` | `faceless-empire` |
 | Fiverr brand-kit service | `/faceless/brandkit.py` | `channel/services/brand-kit/GIG.md` | `faceless-empire` |
+| Fiverr studio mode: a client brief becomes a sheet of 6-12 concept directions (logo, character, art) | `/faceless/concepts.py` | `channel/services/studio/GIG.md` | `faceless-empire` |
+| Collaboration notes for small finance podcasts (drafted, gated, the owner sends) | `/faceless/collab.py` | `python -m faceless collab status` | `faceless-empire` |
 | Connect an app (YouTube, TikTok, Drive...), pull channel stats | `/faceless/providers` | `composio_tools.py` | `faceless-composio` (+ `composio`) |
 | Any media or data job beyond the engine's own (mockups, upscales, voice samples, OCR, search volume, 750+ models) | `/faceless/muapi.py` | `.claude/skills/muapi` | `muapi` |
 | Etsy and Gumroad listings (pictures, video, copy, checklist, drafts) | `/faceless/listing.py`, `shop.py` | `channel/shop/CHECKLIST` per product | `faceless-empire` |
@@ -116,6 +118,7 @@ python -m faceless forecast                    # the math: next batch, monthly c
 python -m faceless kit [day]                   # repurposing kit per video; `kit --issue` compiles the weekly newsletter
 python -m faceless podcast build               # the week's passed Shorts as one podcast episode (mp3 + chapters) -> distribution/podcast/<week>/
 python -m faceless longform build              # the week's most viewed Shorts as one 16:9 episode with chapters + thumbnail -> distribution/longform/<week>/
+python -m faceless longform post --apply       # upload the week's episode (once a week; Sundays at the 07:00 UTC quota reset by the scheduled task)
 python -m faceless flow                        # today's Flow shot list for the owner's session
 python -m faceless products                    # build + verify spreadsheet products, write listings
 python -m faceless panel brief.txt --models a,b --runs 3   # several models answer one brief; a person adjudicates (faceless-panel)
@@ -123,6 +126,8 @@ python -m faceless planner build|check|ingest|clean|inventory|cover   # the 365-
 python -m faceless qa                          # calibrate semantic QA gates (Clef); `variety`, `policy`, `music` live beside it
 python -m faceless autoresponder               # 7-day Money Reset email sequence for the email service
 python -m faceless brandkit "<Name>" --palette mint   # Fiverr brand-kit order (--samples rebuilds the gig gallery)
+python -m faceless concepts "<brief>" --kind logo --n 8 --client NAME   # Fiverr studio-mode order: concept sheet + delivery note (orders are gitignored)
+python -m faceless collab run --limit 5         # collaboration notes for small finance podcasts; sends nothing (`collab outcome <slug> sent` after you send)
 python -m faceless preflight                   # can today's run succeed? traffic lights + the fix for each (run first)
 python -m faceless watchdog                    # is the operation alive? (also runs every 6 h on GitHub and opens an Ops alert issue)
 python -m faceless pause "reason"               # kill switch: stops paid calls, posting, daily and make (--resume to undo)

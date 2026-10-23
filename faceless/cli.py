@@ -1123,6 +1123,41 @@ def cmd_podcast(args) -> int:
     return 0
 
 
+def cmd_collab(args) -> int:
+    """Collaboration notes for small finance podcasts: run (find, research, draft, gate; sends nothing) | status | show SLUG | outcome SLUG EVENT."""
+    from faceless import collab
+    if args.action == "run":
+        r = collab.run(args.limit)
+        print(json.dumps(r, indent=1))
+        print(f"drafts: {collab.DRAFTS} (send them yourself; record each with `collab outcome <slug> sent`)")
+        return 0
+    if args.action == "show":
+        path = collab.DRAFTS / f"{args.slug}.md"
+        print(path.read_text(encoding="utf-8") if path.exists() else f"no draft {args.slug} here (drafts are not kept between sessions)")
+        return 0 if path.exists() else 1
+    if args.action == "outcome":
+        print(json.dumps(collab.record(args.slug, args.event)))
+        return 0
+    print(json.dumps(collab.status(), indent=1))
+    return 0
+
+
+def cmd_concepts(args) -> int:
+    """Studio mode: one client brief becomes a labelled sheet of concept directions (the owner refines the pick)."""
+    from faceless import concepts
+    try:
+        if args.samples:
+            for r in concepts.samples():
+                print(f"{r['folder']}: {r['directions']} directions via {', '.join(r['providers'])}")
+            return 0
+        r = concepts.make(args.brief, args.kind, args.n, client=args.client, hq=args.hq)
+    except concepts.Refused as e:
+        print("refused:", e)
+        return 1
+    print(f"{r['directions']} directions via {', '.join(r['providers'])}\nsheet: {r['sheet']}\nfolder: {r['folder']} (DELIVERY.md is the note to send)")
+    return 0
+
+
 def cmd_longform(args) -> int:
     """The weekly long-form: the week's most viewed Shorts re-cut into one 16:9 episode with chapters, or show the latest."""
     from faceless import longform
@@ -1315,6 +1350,22 @@ def main(argv: list[str] | None = None) -> int:
     pc.add_argument("--week", help="the last day of the week to build (default: yesterday)")
     pc.add_argument("--no-music", action="store_true")
     pc.set_defaults(fn=cmd_podcast)
+    co = sub.add_parser("collab", help="collaboration notes for small finance podcasts, drafted for the owner to send: "
+                                       "run [--limit 5] | status | show SLUG | outcome SLUG sent|replied|declined|collab|no_reply")
+    co.add_argument("action", nargs="?", default="status", choices=["run", "status", "show", "outcome"])
+    co.add_argument("slug", nargs="?", default="")
+    co.add_argument("event", nargs="?", default="")
+    co.add_argument("--limit", type=int, default=None)
+    co.set_defaults(fn=cmd_collab)
+    cs = sub.add_parser("concepts", help="studio mode (Fiverr): a brief becomes a sheet of 6-12 concept directions: "
+                                         "concepts \"<brief>\" --kind logo|character|art [--n 8] [--client NAME] | --samples")
+    cs.add_argument("brief", nargs="?", default="")
+    cs.add_argument("--kind", default="logo", choices=["logo", "character", "art"])
+    cs.add_argument("--n", type=int, default=8)
+    cs.add_argument("--client", default="")
+    cs.add_argument("--samples", action="store_true", help="rebuild the gig gallery sheets")
+    cs.add_argument("--hq", action="store_true", help="paid tiers: draw with Muapi first (about half a cent a picture, under its daily cap)")
+    cs.set_defaults(fn=cmd_concepts)
     lf = sub.add_parser("longform", help="the weekly 16:9 episode (Money Rules Weekly): build [--week YYYY-MM-DD] [--max 7] [--no-music] | "
                                          "post [--week D] [--apply] [--at ISO] (builds if needed, uploads once per week) | status")
     lf.add_argument("action", nargs="?", default="status", choices=["build", "post", "status"])

@@ -1,0 +1,55 @@
+{
+ "note": "Hashes of the shows the collaboration desk has looked at (faceless/collab.py). No names.",
+ "shows": {
+  "527320f6f1e665a2": {
+   "first_seen": "2026-10-23",
+   "last_seen": "2026-10-23",
+   "status": "drafted-review"
+  },
+  "f6316314b3b37c0d": {
+   "first_seen": "2026-10-23",
+   "last_seen": "2026-10-23",
+   "status": "drafted-review"
+  },
+  "970a360129b27c65": {
+   "first_seen": "2026-10-23",
+   "last_seen": "2026-10-23",
+   "status": "unreadable"
+  },
+  "90bac91c5ee1829b": {
+   "first_seen": "2026-10-23",
+   "last_seen": "2026-10-23",
+   "status": "unreadable"
+  },
+  "6bb2f30033a56d46": {
+   "first_seen": "2026-10-23",
+   "last_seen": "2026-10-23",
+   "status": "drafted-review"
+  },
+  "75858042c660b88f": {
+   "first_seen": "2026-10-23",
+   "last_seen": "2026-10-23",
+   "status": "drafted-pass"
+  },
+  "b9e44ee5ffda2138": {
+   "first_seen": "2026-10-23",
+   "last_seen": "2026-10-23",
+   "status": "unreadable"
+  },
+  "5562050c0cbb896e": {
+   "first_seen": "2026-10-23",
+   "last_seen": "2026-10-23",
+   "status": "drafted-pass"
+  },
+  "fbf57381d68b7fb4": {
+   "first_seen": "2026-10-23",
+   "last_seen": "2026-10-23",
+   "status": "unreadable"
+  },
+  "2069f6732a9dcead": {
+   "first_seen": "2026-10-23",
+   "last_seen": "2026-10-23",
+   "status": "drafted-pass"
+  }
+ }
+}
