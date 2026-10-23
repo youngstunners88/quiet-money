@@ -28,7 +28,7 @@ def desk(tmp_path, monkeypatch):
 
 
 def _ask(body=None, episode="Why your raise disappears"):
-    words = body or ("Hi Sam, your episode Why your raise disappears made a sharp point about lifestyle creep eating the first raise. "
+    words = body or ("Hi Sam, your episode title Why your raise disappears caught our eye: lifestyle creep eating the first raise. "
                      "We run Quiet Money, a small Shorts channel on money psychology. We would like to make one free 60-second Short "
                      "built on that idea, crediting your show by name and pointing viewers to the episode. No cost and nothing needed "
                      "from you beyond a yes. May we make it? The Quiet Money team")
@@ -88,7 +88,8 @@ def test_code_gates_hold_before_jev_is_asked(desk, monkeypatch, body, episode, w
 def test_a_link_or_a_promise_is_held_and_an_unsure_jev_leaves_the_code_proof_standing(desk, monkeypatch):
     card = collab.research(collab.candidates([_result("Small Money Show")], NOW)[0], fetch=lambda url: FEED)
     base = _ask()("m", "b")["out"]["body"]
-    for bad in (base + " See https://x.example", base.replace("No cost", "This will go viral, no cost")):
+    for bad in (base + " See https://x.example", base.replace("No cost", "This will go viral, no cost"),
+                base.replace("caught our eye", "stuck with us")):
         assert collab.draft(card, _ask(bad))["gates"]["verdict"] == "hold"
     monkeypatch.setattr(decide, "ask", _jev(4, 0, conf=0.4))
     g = collab.draft(card, _ask())["gates"]

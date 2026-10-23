@@ -7533,3 +7533,12 @@
 {"ts": "2026-10-23T01:51:43Z", "t": 1792720303.73, "actor": "engine", "type": "JEV_CALL", "questions": ["personalization", "spam_risk"], "via": "openrouter-decisions", "model": "typesafe/jev-1.13-20260917"}
 {"ts": "2026-10-23T01:51:43Z", "t": 1792720303.731, "actor": "engine", "type": "DECISIONS", "job": "collab-gate:2069f6732a9dcead", "backend": "openrouter-decisions", "ms": 353, "dry_run": true}
 {"ts": "2026-10-23T01:51:43Z", "t": 1792720303.733, "actor": "engine", "type": "COLLAB_RUN", "found": 66, "drafted": 3, "verdicts": {"pass": 3, "review": 0, "hold": 0}}
+{"ts": "2026-10-23T01:56:51Z", "t": 1792720611.832, "actor": "engine", "type": "COLLAB_SEARCH_FAIL", "term": "money mindset", "status": 403}
+{"ts": "2026-10-23T01:56:59Z", "t": 1792720619.791, "actor": "engine", "type": "JEV_CALL", "questions": ["personalization", "spam_risk"], "via": "openrouter-decisions", "model": "typesafe/jev-1.13-20260917"}
+{"ts": "2026-10-23T01:56:59Z", "t": 1792720619.792, "actor": "engine", "type": "DECISIONS", "job": "collab-gate:c8526529306e9124", "backend": "openrouter-decisions", "ms": 522, "dry_run": true}
+{"ts": "2026-10-23T01:57:06Z", "t": 1792720626.805, "actor": "engine", "type": "JEV_CALL", "questions": ["personalization", "spam_risk"], "via": "openrouter-decisions", "model": "typesafe/jev-1.13-20260917"}
+{"ts": "2026-10-23T01:57:06Z", "t": 1792720626.805, "actor": "engine", "type": "DECISIONS", "job": "collab-gate:c63f2025daa21cd9", "backend": "openrouter-decisions", "ms": 541, "dry_run": true}
+{"ts": "2026-10-23T01:57:07Z", "t": 1792720627.301, "actor": "engine", "type": "COLLAB_FEED_FAIL", "show": "001a91aaad39f41c", "error": "unclosed CDATA section: line 2547, column 2758"}
+{"ts": "2026-10-23T01:57:13Z", "t": 1792720633.06, "actor": "engine", "type": "JEV_CALL", "questions": ["personalization", "spam_risk"], "via": "openrouter-decisions", "model": "typesafe/jev-1.13-20260917"}
+{"ts": "2026-10-23T01:57:13Z", "t": 1792720633.062, "actor": "engine", "type": "DECISIONS", "job": "collab-gate:53dc056fa60b7850", "backend": "openrouter-decisions", "ms": 413, "dry_run": true}
+{"ts": "2026-10-23T01:57:13Z", "t": 1792720633.064, "actor": "engine", "type": "COLLAB_RUN", "found": 61, "drafted": 3, "verdicts": {"pass": 3, "review": 0, "hold": 0}}

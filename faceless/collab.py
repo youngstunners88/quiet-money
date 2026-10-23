@@ -36,6 +36,7 @@ MODEL = "anthropic/claude-haiku-5.5"
 EMAIL = re.compile(r"[\w.+-]+@[\w-]+\.[\w.-]+")
 LINK = re.compile(r"https?://|www\.", re.I)
 BANNED = re.compile(r"\b(guarantee[ds]?|viral|blow up|explode|millions of views|grow your (show|audience) by|\d+x)\b", re.I)
+LISTENED = re.compile(r"\b(stuck with us|we (loved|listened|heard)|after listening|loved (your|the) (episode|show)|you (said|explained|shared))\b", re.I)
 PRICE = re.compile(r"(\$\s?\d|\b\d+\s?(usd|dollars)\b|\bfee\b|\bpaid\b)", re.I)
 EVENTS = ("sent", "replied", "declined", "collab", "no_reply")
 DEFAULTS = {"terms": ["personal finance", "money mindset", "budgeting", "debt free", "financial independence", "side hustle", "frugal living"],
@@ -153,7 +154,9 @@ def brief_for(card: dict) -> str:
             "for 18-40 year olds who feel behind with money, to the host of a small podcast. Return ONLY JSON: "
             '{"episode": "the exact title of the recent episode you build on", "angle": str, "subject": str, "body": str}\n\n'
             "HARD RULES (a draft that breaks one is thrown away):\n"
-            "- Name ONE real recent episode from the card by its title and one specific idea in it. Never flatter in general terms.\n"
+            "- Name ONE real recent episode from the card by its title and the idea its title points to. Never flatter in general terms.\n"
+            "- We have read only the titles and the show description, not listened. Never claim the episode 'stuck with us' or say what "
+            "was said in it; say the title caught our eye and what idea in it we would build on.\n"
             "- Offer one concrete thing: we make a free 60-second Short built on one idea from that episode, crediting the show by name "
             "and pointing viewers to it. Ask one question at the end: may we make it?\n"
             f"- {lo}-{hi} words. Plain, warm, specific. No links, no price, no fee, no promised views or growth, no financial advice.\n"
@@ -202,6 +205,8 @@ def code_problems(note: dict, card: dict) -> list[str]:
         out.append("a link or an address in the note")
     if BANNED.search(body) or PRICE.search(body):
         out.append("a promise or a price")
+    if LISTENED.search(body):
+        out.append("claims to have listened (we have read only the titles)")
     out += [f"claim check: {v}" for v in offer.violations(body)]
     titles = [t.lower() for t in card.get("recent", [])]
     if not note["episode"] or note["episode"].lower() not in titles:
