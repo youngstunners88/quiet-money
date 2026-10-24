@@ -48,3 +48,25 @@ outcome log, which the weekly review reads).
 3. No promised results: no view counts, no price impact, no "we will get you X". Claims come from `PROOF.md` only.
 4. Free OpenRouter models do the volume work; Jev decides. Neither goes near the daily video path.
 5. No cap is raised for this desk. Free models cost $0; Jev runs inside `[decide].decisions_daily_usd`.
+
+## The send desk (2026-10-24)
+
+Scale: the daily run now screens 160 projects, researches 100 lead cards and drafts up to 100 first-touch DMs (`[outbound]`). Only free models and Jev run, no cap is raised. Firecrawl stays at 40 JS-rendered pages a day, so most X profile reads are plain HTTP and a thin read becomes a skip: the count of drafts is whatever passes the gates, never padded.
+
+Every queued draft gets a tier when it passes the gates:
+
+| tier | rule (thresholds in `[outbound]`) |
+|---|---|
+| **ready** | Jev itself answered "pursue" with confidence at least 0.85 (not the heuristic), fit at least 0.75, personalization at least 0.85, spam risk at most 0.25, promise-free |
+| **review** | passed the gates but misses one of those; the queue says which |
+
+```bash
+python -m faceless outbound queue          # the approval queue: ready first, strongest fit first, and why a draft is only "review"
+python -m faceless outbound next           # the top draft, ready to copy
+python -m faceless outbound outcome <slug> sent     # after you send it (the audit trail; the weekly review reads this)
+python -m faceless outbound reject <slug> [why]     # drop it
+python -m faceless outbound promote <angle>         # trust an angle: its drafts skip the fit bar (never the Jev, personalization or spam bars)
+python -m faceless pause "reason"                    # kill switch for the whole desk, as for everything else
+```
+
+**The owner sends.** `[outbound].send` stays `"owner"`. The engine does not send direct messages on X, with or without pacing. Cold, automated, unsolicited DMs at scheduled intervals break X's automation rules, and spacing them to look manual is evasion; the realistic cost is a suspended @YoungStunnersss, the one account the whole channel and service rely on. The ready tier exists so the owner's 11 sends a day are the 11 best drafts, one `next` and one paste each, and the owner chooses the gaps. Follow-ups are never sent by the engine either.

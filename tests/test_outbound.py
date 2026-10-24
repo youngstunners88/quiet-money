@@ -364,3 +364,18 @@ def test_firecrawl_is_capped_in_pages_and_recorded(desk, monkeypatch):
     monkeypatch.setenv("FIRECRAWL", "not-a-real-key")
     monkeypatch.setattr(outbound, "cfg", lambda: {**base_cfg(), "firecrawl_pages_per_day": 0})
     assert outbound._firecrawl("https://x.com/rightsize") is None
+
+
+def test_ready_tier_needs_jev_confidence_and_a_specific_low_spam_draft(tmp_path, monkeypatch):
+    card = {"decisions": {"backend": "jev", "fit": 0.8, "pursue_confidence": 0.9}}
+    pkg = {"angle": "gap", "gates": {"personalization": 0.9, "spam_risk": 0.1, "verdict": "pass", "banned_language": False}}
+    assert outbound.tier(card, pkg)["tier"] == "ready"
+    heur = {"decisions": {"backend": "heuristic", "fit": 0.9, "pursue_confidence": None}}
+    t = outbound.tier(heur, pkg)
+    assert t["tier"] == "review" and "heuristic" in t["why"][0]
+    low = {"decisions": {"backend": "jev", "fit": 0.65, "pursue_confidence": 0.9}}
+    assert outbound.tier(low, pkg)["tier"] == "review"
+    monkeypatch.setattr(outbound, "PROMOTED", tmp_path / "p.json")
+    outbound.promote("gap")
+    assert outbound.tier(low, pkg)["tier"] == "ready"      # a promoted angle skips only the fit bar
+    assert outbound.tier(low, {**pkg, "gates": {**pkg["gates"], "personalization": 0.5}})["tier"] == "review"

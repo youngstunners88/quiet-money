@@ -45,7 +45,8 @@ PRICE = re.compile(r"(\$\s?\d|\b\d+\s?(usd|usdt|eth|sol)\b|\b\d+\s?%\s?off\b|lim
 
 def cfg() -> dict:
     """`[outbound]` with the defaults this desk runs on. Volume is bounded by time, not money: the models are free."""
-    return {"daily_candidates": 40, "daily_cards": 16, "daily_packages": 8, "tvl_min_usd": 5_000_000, "tvl_max_usd": 5_000_000_000,
+    return {"daily_candidates": 160, "daily_cards": 100, "daily_packages": 100, "ready_fit": 0.75, "ready_confidence": 0.85,
+            "ready_personalization": 0.85, "ready_spam_ceiling": 0.25, "ready_min_per_day": 11, "tvl_min_usd": 5_000_000, "tvl_max_usd": 5_000_000_000,
             "fit_floor": 0.6, "personalization_floor": 0.7, "spam_ceiling": 0.4, "promise_floor": 0.9, "firecrawl_pages_per_day": 40,
             "send": "owner", "page_chars": 6000, "dead_days": 90, **config.load().get("outbound", {})}
 
@@ -491,6 +492,67 @@ def gate(pkg: dict, card: dict | None = None) -> dict:
             "confidence": {"personalization": pconf, "spam_risk": sconf, "promise_free": mconf}, "verdict": verdict}
 
 
+# ------------------------------------------------------------------ the send desk (the owner sends; nothing here contacts anyone)
+
+PROMOTED = Paths.state / "outbound-promoted-angles.json"        # angles the owner trusts: committed, holds no company names
+
+
+def promoted_angles() -> list[str]:
+    try:
+        return list(json.loads(PROMOTED.read_text(encoding="utf-8")))
+    except (OSError, ValueError):
+        return []
+
+
+def tier(card: dict, pkg: dict) -> dict:
+    """`ready` (the owner's short list: Jev itself, not the heuristic, was confident on fit, and the draft is specific, low-spam and promise-free)
+    or `review` (everything else that passed the gates). Pure: it reads thresholds and moves nothing. A promoted angle skips only the fit bar."""
+    s, d, g = cfg(), card.get("decisions") or {}, pkg.get("gates") or {}
+    why = []
+    if d.get("backend") != "jev" or d.get("pursue_confidence") is None:
+        why.append("Jev did not answer with confidence (heuristic fallback)")
+    if d.get("pursue_confidence") is not None and d["pursue_confidence"] < s["ready_confidence"]:
+        why.append(f"Jev confidence {d['pursue_confidence']:.2f} < {s['ready_confidence']}")
+    if (d.get("fit") or 0) < s["ready_fit"] and pkg.get("angle") not in promoted_angles():
+        why.append(f"fit {d.get('fit')} < {s['ready_fit']}")
+    if (g.get("personalization") or 0) < s["ready_personalization"]:
+        why.append(f"personalization {g.get('personalization')} < {s['ready_personalization']}")
+    if (g.get("spam_risk") or 1) > s["ready_spam_ceiling"]:
+        why.append(f"spam risk {g.get('spam_risk')} > {s['ready_spam_ceiling']}")
+    if g.get("verdict") != "pass" or g.get("banned_language"):
+        why.append("gate did not pass")
+    return {"tier": "review" if why else "ready", "why": why}
+
+
+def _handled() -> set[str]:
+    rows = read_jsonl(OUTCOMES) if OUTCOMES.exists() else []
+    return {r["slug"] for r in rows if r.get("event") in ("sent", "rejected")}
+
+
+def desk() -> dict:
+    """The approval queue: every drafted DM not yet sent or rejected, the ready tier first, strongest fit first."""
+    done, rows = _handled(), []
+    for path in sorted(PACKAGES.glob("*.json")) if PACKAGES.exists() else []:
+        pkg, card = load_package(path.stem), load_lead(path.stem) or {}
+        if not pkg or path.stem in done:
+            continue
+        t = pkg.get("tier") or tier(card, pkg)
+        rows.append({"slug": path.stem, "name": card.get("name", path.stem), "fit": (card.get("decisions") or {}).get("fit"),
+                     "tier": t["tier"], "why": t.get("why", []), "angle": pkg.get("angle"), "channel": pkg.get("channel")})
+    rows.sort(key=lambda r: (r["tier"] != "ready", -(r["fit"] or 0)))
+    ready = [r for r in rows if r["tier"] == "ready"]
+    return {"queue": rows, "ready": len(ready), "review": len(rows) - len(ready),
+            "short_of_floor": max(0, cfg()["ready_min_per_day"] - len(ready))}
+
+
+def promote(angle: str) -> list[str]:
+    a = promoted_angles()
+    if angle not in a:
+        a.append(angle)
+        write_atomic(PROMOTED, json.dumps(sorted(a), indent=1) + "\n")
+    return sorted(a)
+
+
 # ------------------------------------------------------------------ files and outcomes
 
 def save_lead(card: dict) -> Path:
@@ -624,15 +686,17 @@ def run(candidate_limit: int | None = None, card_limit: int | None = None, packa
             pkg = draft(card, ask=ask, failed=pkg)                        # one rewrite, told what failed; then it is a hold
         if pkg["gates"]["verdict"] == "pass":
             card["status"] = "queued"
+            pkg["tier"] = tier(card, pkg)
             save_package(pkg)
-            report["queued"].append({"slug": card["slug"], "name": card["name"], "fit": card["decisions"].get("fit"),
+            report["queued"].append({"slug": card["slug"], "name": card["name"], "fit": card["decisions"].get("fit"), "tier": pkg["tier"]["tier"],
                                      "angle": pkg.get("angle"), "channel": pkg["channel"], "contact": pkg["contact"]["route"]})
         else:
             card["status"] = "drafted"
             report["held"].append({"slug": card["slug"], "name": card["name"], "why": pkg["gates"]["verdict"],
                                    "banned_language": pkg["gates"]["banned_language"]})
         save_lead(card)
-    report["queued"].sort(key=lambda r: -(r.get("fit") or 0))
+    report["queued"].sort(key=lambda r: (r.get("tier") != "ready", -(r.get("fit") or 0)))
+    report["ready"] = sum(1 for q in report["queued"] if q.get("tier") == "ready")
     events.emit("OUTBOUND_RUN_DONE", queued=len(report["queued"]), held=len(report["held"]), cards=report["cards"])
     write_report(report)
     return report
@@ -652,8 +716,8 @@ def report_md(r: dict) -> str:
     lines = [f"# Outbound batch {r['day']}", "",
              f"Screened {r['screened']} - cards {r['cards']} - queued {len(r['queued'])} - held {len(r['held'])} - for review {len(r.get('review') or [])}", ""]
     if r["queued"]:
-        lines += ["## Queued, strongest first (the owner sends these)", ""]
-        lines += [f"{i}. **{q['name']}** - fit {q['fit']}, {q.get('angle') or 'no angle'} - {q['channel']} via {q.get('contact') or 'route unknown'}"
+        lines += [f"## Queued: {r.get('ready', 0)} ready, {len(r['queued']) - r.get('ready', 0)} to review (ready first, the owner sends these)", ""]
+        lines += [f"{i}. [{q.get('tier', 'review')}] **{q['name']}** - fit {q['fit']}, {q.get('angle') or 'no angle'} - {q['channel']} via {q.get('contact') or 'route unknown'}"
                   f" - `channel/services/web3-video/outbound/{q['slug']}.json`" for i, q in enumerate(r["queued"], 1)] + [""]
     else:
         lines += ["## Queued", "", "Nothing passed the gates today. The counts below say why; no batch was padded to reach a target.", ""]
