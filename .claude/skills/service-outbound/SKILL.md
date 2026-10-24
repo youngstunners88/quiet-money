@@ -73,3 +73,8 @@ report format, and what to do when a step comes back thin.
 It runs daily as a scheduled routine. If a run was missed, run it by hand: the loop is resumable by design - every
 lead card and package is written per slug, the hashed project index means nothing is researched twice, and nothing
 has been sent.
+
+
+## The send desk (2026-10-24)
+
+The daily run drafts up to 100 first touches and tiers each one `ready` (Jev's own confident yes, fit, personalization and spam bars in `[outbound]`) or `review`. The owner works the queue: `outbound queue`, `outbound next`, then `outcome <slug> sent` or `reject <slug>`; `promote <angle>` trusts an angle. The engine never sends a DM, paced or not (see CONTEXT.md "The send desk"); `[outbound].send` stays `"owner"`. Never pad the ready tier to reach 11: report the shortfall.

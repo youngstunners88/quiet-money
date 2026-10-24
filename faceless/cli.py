@@ -1330,6 +1330,25 @@ def cmd_outbound(args) -> int:
         row = outbound.record(rest[0], rest[1], note=" ".join(rest[2:]) or None)
         print(f"recorded: {row['slug']} {row['event']}")
         return 0
+    if act == "queue":
+        d = outbound.desk()
+        print(f"{d['ready']} ready, {d['review']} to review" + (f" ({d['short_of_floor']} short of the daily {outbound.cfg()['ready_min_per_day']}: no message is padded in)" if d["short_of_floor"] else ""))
+        for r in d["queue"][: args.limit]:
+            print(f"[{r['tier']:6}] {r['slug'][:30]:30} fit {r['fit']}  {r['angle'] or '-'}  {r['channel']}" + (f"  ({'; '.join(r['why'])})" if r["why"] else ""))
+        return 0
+    if act == "next":
+        d = outbound.desk()
+        if not d["queue"]:
+            print("the queue is empty")
+            return 0
+        return cmd_outbound(argparse.Namespace(action="package", rest=[d["queue"][0]["slug"]], limit=0, candidates=None, cards=None, packages=None))
+    if act == "reject" and rest:
+        outbound.record(rest[0], "rejected", note=" ".join(rest[1:]) or None)
+        print(f"rejected: {rest[0]}")
+        return 0
+    if act == "promote" and rest:
+        print("promoted angles: " + ", ".join(outbound.promote(rest[0])))
+        return 0
     if act == "review":
         r = outbound.review()
         print(f"sent {r['sent']} - {r['note']}")
@@ -1507,11 +1526,12 @@ def main(argv: list[str] | None = None) -> int:
     hqp.add_argument("--out", help="also write the JSON snapshot to this path")
     hqp.set_defaults(fn=cmd_hq)
     ob = sub.add_parser("outbound", help="service desk: run (the daily client hunt) | status | candidates | review | lead <slug> | package <slug> | outcome <slug> <event>")
-    ob.add_argument("action", choices=["run", "status", "candidates", "review", "lead", "package", "outcome"])
+    ob.add_argument("action", choices=["run", "status", "candidates", "review", "lead", "package", "outcome", "queue", "next", "reject", "promote"])
     ob.add_argument("rest", nargs="*")
     ob.add_argument("--candidates", type=int, help="how many projects to screen")
     ob.add_argument("--cards", type=int, help="how many lead cards to research")
     ob.add_argument("--packages", type=int, help="how many outreach packages to queue")
+    ob.add_argument("--limit", type=int, default=40, help="queue: how many rows to show")
     ob.set_defaults(fn=cmd_outbound)
     mk = sub.add_parser("marketing", help="the weekly marketing brief (reads only; writes analytics/brief-<day>.md) | done <U01> | start <X1> | result <X1> won|killed [note]")
     mk.add_argument("action", nargs="?", default="brief", choices=["brief", "done", "start", "result"])
