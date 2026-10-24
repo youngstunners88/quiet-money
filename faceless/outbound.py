@@ -544,7 +544,7 @@ def desk() -> dict:
         pkg, card = load_package(path.stem), load_lead(path.stem) or {}
         if not pkg or path.stem in done:
             continue
-        t = pkg.get("tier") or tier(card, pkg)
+        t = tier(card, pkg)                 # live, so a changed threshold applies to drafts already in the queue
         rows.append({"slug": path.stem, "name": card.get("name", path.stem), "fit": (card.get("decisions") or {}).get("fit"),
                      "tier": t["tier"], "why": t.get("why", []), "angle": pkg.get("angle"), "channel": pkg.get("channel")})
     rows.sort(key=lambda r: (r["tier"] != "ready", -(r["fit"] or 0)))
