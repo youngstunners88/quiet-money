@@ -7838,3 +7838,8 @@
 {"ts": "2026-10-23T10:01:21Z", "t": 1792749681.12, "actor": "engine", "type": "YOUTUBE_API", "path": "videos", "method": "GET", "status": 200}
 {"ts": "2026-10-23T10:01:28Z", "t": 1792749688.416, "actor": "engine", "type": "COMPOSIO_SESSION", "user": "quiet-money-studio", "session_hash": "f955fcb3"}
 {"ts": "2026-10-23T10:01:29Z", "t": 1792749689.349, "actor": "engine", "type": "COMPOSIO_EXECUTE", "tool": "YOUTUBE_LIST_CHANNELS", "ok": true, "log_id": "log_W19wRY_h31oS", "job": "song-breathe"}
+{"ts": "2026-10-24T01:14:51Z", "t": 1792804491.403, "actor": "engine", "type": "SHOP_REFRESHED", "product": "debt-payoff-planner", "gumroad_id": "HEaNQ9i2IDZ6Of-DL_IIAg=="}
+{"ts": "2026-10-24T01:15:11Z", "t": 1792804511.082, "actor": "engine", "type": "SHOP_PUBLISHED", "product": "debt-payoff-planner", "rail": "gumroad", "gumroad_id": "HEaNQ9i2IDZ6Of-DL_IIAg=="}
+{"ts": "2026-10-24T01:15:26Z", "t": 1792804526.759, "actor": "engine", "type": "SHOP_REFRESHED", "product": "money-reset-printables", "gumroad_id": "BblmL6e1T0kQno0e174vcA=="}
+{"ts": "2026-10-24T01:15:41Z", "t": 1792804541.931, "actor": "engine", "type": "SHOP_REFRESHED", "product": "money-reset-kit", "gumroad_id": "4zMZ8mC5eFGP-QAB7FimhQ=="}
+{"ts": "2026-10-24T01:16:26Z", "t": 1792804586.739, "actor": "engine", "type": "SHOP_URLS_SYNCED", "changed": ["daily-quiet-money-planner", "money-reset-kit", "money-reset-printables"]}

@@ -145,21 +145,19 @@
       "id": "debt-payoff-planner",
       "kind": "spreadsheet",
       "name": "Debt Payoff & Compound Interest Planner",
-      "subtitle": "See your debt-free date and the interest the right plan saves",
+      "subtitle": "See your payoff date and the interest the right plan saves",
       "file": "channel/products/debt-payoff-planner/Debt-Payoff-and-Compound-Interest-Planner.xlsx",
       "verified_compat": [
         "Excel",
         "Google Sheets",
         "LibreOffice"
       ],
-      "price": 19,
+      "price": 0,
       "price_test": [
-        12,
-        19,
-        29
+        0
       ],
       "chips": [
-        "Instant download",
+        "Free download",
         "Excel + Google Sheets",
         "No macros"
       ],
@@ -253,8 +251,8 @@
         "type": "Digital download"
       },
       "gumroad": {
-        "name": "Debt Payoff & Compound Interest Planner (Excel + Google Sheets)",
-        "summary": "See your debt-free date, and how much interest the right plan saves, before you pay another dollar.",
+        "name": "Free Gift | Debt Payoff & Compound Interest Planner (Excel + Google Sheets)",
+        "summary": "A free planner: see your payoff date, and how much interest the right plan saves, before you pay another dollar.",
         "tags": [
           "debt payoff",
           "financial planner",
@@ -262,9 +260,11 @@
           "budget",
           "excel"
         ],
-        "description": "See your debt-free date, and how much interest the right plan saves, before you pay another dollar.\n\n**One spreadsheet, five tabs plus the math:**\n- **Your debts**: up to eight debts with balance, rate and minimum. Choose Avalanche (highest interest rate first, least interest) or Snowball (smallest balance first, quick wins).\n- **Payoff plan**: your debt-free month, total interest, and the interest and months saved against paying only minimums, plus the order each debt disappears.\n- **Compound growth**: a starting amount plus a monthly amount, 40 years, with a chart of what you put in vs what compounding added.\n- **Pay debt or invest?**: what paying a debt saves (its interest rate) against an assumed investment return, with a plain verdict.\n- **Engine (math)**: every month of the calculation in ordinary formulas, so you can check any number. No macros, no scripts, no login.\n\n**Honest notes:** the plan keeps the total monthly payment constant and rolls each paid-off debt's payment onto the next. Interest is calculated monthly with no rounding, so your lender's exact figures will differ slightly. The workbook was recalculated and compared against an independent simulation. It is a planning tool and education, not financial advice.\n\n*Designed by Quiet Money with AI assistance.*",
-        "after_purchase": "Thanks for grabbing the planner. Start on tab 1 and replace the example debts with yours. If a number looks wrong, reply and it gets fixed. More free tools: https://youngstunners88.github.io/quiet-money/money-reset/"
-      }
+        "description": "**Free gift from Quiet Money.** Download it, use it, keep it.\n\nSee your debt-free date, and how much interest the right plan saves, before you pay another dollar.\n\n**One spreadsheet, five tabs plus the math:**\n- **Your debts**: up to eight debts with balance, rate and minimum. Choose Avalanche (highest interest rate first, least interest) or Snowball (smallest balance first, quick wins).\n- **Payoff plan**: your debt-free month, total interest, and the interest and months saved against paying only minimums, plus the order each debt disappears.\n- **Compound growth**: a starting amount plus a monthly amount, 40 years, with a chart of what you put in vs what compounding added.\n- **Pay debt or invest?**: what paying a debt saves (its interest rate) against an assumed investment return, with a plain verdict.\n- **Engine (math)**: every month of the calculation in ordinary formulas, so you can check any number. No macros, no scripts, no login.\n\n**Honest notes:** the plan keeps the total monthly payment constant and rolls each paid-off debt's payment onto the next. Interest is calculated monthly with no rounding, so your lender's exact figures will differ slightly. The workbook was recalculated and compared against an independent simulation. It is a planning tool and education, not financial advice.\n\n*Designed by Quiet Money with AI assistance.*\n\n**The Quiet Money tiers**\n\n- **Free gift:** Debt Payoff & Compound Interest Planner\n- **Tier 1 · Starter, $9:** Money Reset Printables\n- **Tier 2 · Core, $17:** The Quiet Money Daily Planner\n- **Tier 3 · Complete, $28:** The Money Reset Kit",
+        "after_purchase": "Thanks for grabbing the free planner. Start on tab 1 and replace the example debts with yours. If a number looks wrong, reply and it gets fixed. When you want to go further, the Starter, Core and Complete tiers are all here: https://youngstunners88.github.io/quiet-money/links/"
+      },
+      "free": true,
+      "tier": "Free Gift"
     },
     {
       "id": "money-reset-printables",
@@ -398,7 +398,7 @@
           "finance",
           "pdf"
         ],
-        "description": "**Tier 1 · Starter.** Start here: the six printable pages, nothing to install.\n\nSix clean pages that make you look at your money once, on paper: a how-to page, a 50/30/20 paycheck split, a subscription audit, sinking funds, a debt list and a net worth snapshot. Thin lines print cheaply on any printer. Letter and A4 included.\n\n**Honest notes:** educational tool, not financial advice; 50/30/20 is a guideline. Instant PDF download, nothing ships.\n\n*Designed by Quiet Money with AI assistance.*\n\n**The Quiet Money tiers**\n\n- **Tier 1 · Starter, $9:** Money Reset Printables\n- **Tier 2 · Core, $17:** The Quiet Money Daily Planner\n- **Tier 3 · Complete, $28:** The Money Reset Kit",
+        "description": "**Tier 1 · Starter.** Start here: the six printable pages, nothing to install.\n\nSix clean pages that make you look at your money once, on paper: a how-to page, a 50/30/20 paycheck split, a subscription audit, sinking funds, a debt list and a net worth snapshot. Thin lines print cheaply on any printer. Letter and A4 included.\n\n**Honest notes:** educational tool, not financial advice; 50/30/20 is a guideline. Instant PDF download, nothing ships.\n\n*Designed by Quiet Money with AI assistance.*\n\n**The Quiet Money tiers**\n\n- **Free gift:** Debt Payoff & Compound Interest Planner\n- **Tier 1 · Starter, $9:** Money Reset Printables\n- **Tier 2 · Core, $17:** The Quiet Money Daily Planner\n- **Tier 3 · Complete, $28:** The Money Reset Kit",
         "after_purchase": "Thanks! Start with page 2. More free tools: https://youngstunners88.github.io/quiet-money/money-reset/"
       },
       "tier": "Tier 1 · Starter"
@@ -541,7 +541,7 @@
           "finance",
           "pdf"
         ],
-        "description": "**Tier 2 · Core.** The daily habit: one lesson and one action every day for a year.\n\nOne picture, one short lesson and one small action for every day of the year. A 365-day printable money planner that teaches basic personal finance one page at a time: tracking, the 50/30/20 split, emergency funds, sinking funds, debt payoff, credit basics, compound interest, inflation, index funds, income, taxes in brief, insurance, scams and your own freedom number.\n\n**What you get:** two PDFs (US Letter and A4, 427 pages each): a cover, a welcome page, a net worth snapshot, a debt map, a 52-week year map, 365 daily pages, a weekly check-in every Saturday, a reflect-and-reset page every Sunday, 52 wellness-break pages (wellness that goes hand in hand with money), a summary and goals page and a money words glossary. Undated: start on any day.\n\n**Honest notes:** educational tool, not financial advice; every number is an example with its assumptions stated; returns are never guaranteed. Instant PDF download, nothing ships. 30-day refund.\n\n*Designed by Quiet Money with AI assistance. The man on the cover is Quinton, the Quiet Money host, a virtual AI-generated character.*\n\n**The Quiet Money tiers**\n\n- **Tier 1 · Starter, $9:** Money Reset Printables\n- **Tier 2 · Core, $17:** The Quiet Money Daily Planner\n- **Tier 3 · Complete, $28:** The Money Reset Kit",
+        "description": "**Tier 2 · Core.** The daily habit: one lesson and one action every day for a year.\n\nOne picture, one short lesson and one small action for every day of the year. A 365-day printable money planner that teaches basic personal finance one page at a time: tracking, the 50/30/20 split, emergency funds, sinking funds, debt payoff, credit basics, compound interest, inflation, index funds, income, taxes in brief, insurance, scams and your own freedom number.\n\n**What you get:** two PDFs (US Letter and A4, 427 pages each): a cover, a welcome page, a net worth snapshot, a debt map, a 52-week year map, 365 daily pages, a weekly check-in every Saturday, a reflect-and-reset page every Sunday, 52 wellness-break pages (wellness that goes hand in hand with money), a summary and goals page and a money words glossary. Undated: start on any day.\n\n**Honest notes:** educational tool, not financial advice; every number is an example with its assumptions stated; returns are never guaranteed. Instant PDF download, nothing ships. 30-day refund.\n\n*Designed by Quiet Money with AI assistance. The man on the cover is Quinton, the Quiet Money host, a virtual AI-generated character.*\n\n**The Quiet Money tiers**\n\n- **Free gift:** Debt Payoff & Compound Interest Planner\n- **Tier 1 · Starter, $9:** Money Reset Printables\n- **Tier 2 · Core, $17:** The Quiet Money Daily Planner\n- **Tier 3 · Complete, $28:** The Money Reset Kit",
         "after_purchase": "Thanks for grabbing the planner. Open Day 1 and fill in your net worth first. Weeks 14 to 16 teach debt payoff; the matching spreadsheet, the Debt Payoff & Compound Interest Planner, does the interest math for you. If something looks wrong, reply to this message and it gets fixed. More free tools: https://youngstunners88.github.io/quiet-money/money-reset/"
       },
       "tier": "Tier 2 · Core"
@@ -628,7 +628,7 @@
           "spreadsheet",
           "printable"
         ],
-        "description": "**Tier 3 · Complete.** Everything: both spreadsheet planners plus all six printable pages.\n\nEverything to get a clear picture of your money in one weekend: find your freedom number, build your debt payoff plan with the interest it saves, and fill in six printable pages (paycheck split, subscription audit, sinking funds, debt list, net worth). Excel and Google Sheets plus Letter and A4 PDFs.\n\nEducational tools, not financial advice. Results depend on your assumptions. *Designed by Quiet Money with AI assistance;* spreadsheets were recalculated and checked against independent math.\n\n**The Quiet Money tiers**\n\n- **Tier 1 · Starter, $9:** Money Reset Printables\n- **Tier 2 · Core, $17:** The Quiet Money Daily Planner\n- **Tier 3 · Complete, $28:** The Money Reset Kit",
+        "description": "**Tier 3 · Complete.** Everything: both spreadsheet planners plus all six printable pages.\n\nEverything to get a clear picture of your money in one weekend: find your freedom number, build your debt payoff plan with the interest it saves, and fill in six printable pages (paycheck split, subscription audit, sinking funds, debt list, net worth). Excel and Google Sheets plus Letter and A4 PDFs.\n\nEducational tools, not financial advice. Results depend on your assumptions. *Designed by Quiet Money with AI assistance;* spreadsheets were recalculated and checked against independent math.\n\n**The Quiet Money tiers**\n\n- **Free gift:** Debt Payoff & Compound Interest Planner\n- **Tier 1 · Starter, $9:** Money Reset Printables\n- **Tier 2 · Core, $17:** The Quiet Money Daily Planner\n- **Tier 3 · Complete, $28:** The Money Reset Kit",
         "after_purchase": "Thanks for grabbing the kit. Start with the Rat Race Escape Planner. Free 7-day Money Reset emails: https://youngstunners88.github.io/quiet-money/money-reset/"
       },
       "parts_detail": {

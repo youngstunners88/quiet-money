@@ -61,6 +61,7 @@ humans set strategy, connect accounts, and review held videos.
 | Trust a model for judging, locating or gating (measure first) | `/faceless/decide.py` | `.claude/skills/faceless-bench` | `faceless-bench` |
 | Settle a decision between options with several models (Phi-4 vs Haiku and so on), then record it | `/faceless/panel.py` | `channel/empire/decisions/` | `faceless-panel` |
 | One product or a bundle, what to list and test first | `/faceless/listing.py`, `channel/shop/catalog.json` | `channel/empire/decisions/2026-10-12-daily-debt-bundle.md` | `faceless-product-structure` |
+| Striking front covers for the shop's printables, kit, debt planner (free gift) and rat race planner; build, check, put on Gumroad | `/faceless/frontcover.py` | `.claude/skills/faceless-cover-science` | `faceless-front-cover`, `faceless-cover-science` |
 | Front covers, hero images, thumbnails, Quinton on a product, cover A/B | `/faceless/planner_cover.py`, `mockup.py` | `.claude/skills/faceless-cover/references/haiku-cover-research.md` | `faceless-cover` |
 | Email sequence (autoresponder) and the weekly issue | `/faceless/autoresponder.py`, `repurpose.py` | `channel/offers/autoresponder/README.md` | `faceless-empire` |
 | Fiverr brand-kit service | `/faceless/brandkit.py` | `channel/services/brand-kit/GIG.md` | `faceless-empire` |
@@ -150,6 +151,8 @@ python -m faceless muapi find "product mockup"  # the Muapi desk: find, inspect,
 python -m faceless offer                       # coverage, mix, the three profile URLs; `offer --batch today` makes sure every passed video has its offer pack and row
 python -m faceless distribute                  # every distribution rail with its state and the owner's next step (`--live` checks the hub page)
 python -m faceless shop sync-urls --yes        # after a Gumroad username change: rewrite [offer] shop_urls from the live product links
+python -m faceless frontcover build|check|sheet  # the shop's front covers (1600x2560, drawn in code) and their squint and grid checks
+python -m faceless shop refresh <id> --yes     # update an existing Gumroad product's copy, covers and thumbnail (never publishes)
 python -m faceless listing build all           # Etsy + Gumroad packs; `listing check` runs the listing gauntlet; `shop status|plan|push`
 python -m faceless skills                      # lint every skill against Anthropic's guide
 python -m faceless context                     # do CLAUDE.md routing, the workspace CONTEXT.md files and the skills still agree? (reads only)

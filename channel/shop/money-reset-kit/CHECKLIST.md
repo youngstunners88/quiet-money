@@ -3,7 +3,7 @@
 Everything below is ready in this folder. Nothing was published; you press the buttons. About 15 minutes per shop.
 
 ## Etsy (Shop Manager > Listings > Add a listing)
-1. **Photos:** upload `etsy/images/` in file-name order (7 images; the first one is the main photo). Use "Adjust thumbnail" and keep the headline and device inside the middle.
+1. **Photos:** upload `etsy/images/` in file-name order (8 images; the first one is the main photo). Use "Adjust thumbnail" and keep the headline and device inside the middle.
 2. **Video:** upload `etsy/video.mp4` (silent, square, about 12 seconds).
 3. **Title:** paste `etsy/title.txt`. **Tags:** paste the 13 lines of `etsy/tags.txt` one by one.
 4. **About this listing:** I did / A finished product / 2020 - 2026. If the form asks about AI-generated content, answer truthfully (the pictures are drawn from the real product files; the copy and the product were made with AI assistance).

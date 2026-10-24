@@ -245,6 +245,49 @@ def draft_all(pid: str, rails: tuple[str, ...] = ("gumroad", "etsy")) -> list[di
     return out
 
 
+def _find_gumroad(pid: str, prods: list[dict]) -> dict | None:
+    """The product's Gumroad entry: by its catalog name, else by the draft id the journal recorded (a rename leaves the old name behind)."""
+    name = listing.products(pid)[0]["gumroad"]["name"]
+    found = next((x for x in prods if x.get("name") == name), None)
+    if found:
+        return found
+    ids = [str(r.get("gumroad_id", "")) for r in read_jsonl(Paths.state / "journal.jsonl") if r.get("type") == "SHOP_DRAFT_CREATED" and r.get("product") == pid]
+    return next((x for x in prods if any(i and str(x["id"]).startswith(i) for i in ids)), None)
+
+
+def refresh(pid: str) -> dict:
+    """Bring one existing Gumroad product up to the catalog: name, copy, price, front cover first, preview pictures, thumbnail.
+    Never publishes and never creates; a live product keeps its state (the price on a live product still needs the owner's approval)."""
+    safety.guard("shop refresh")
+    if not token_present():
+        raise ProviderUnavailable("GUMROAD_ACCESS_TOKEN is not set in the environment")
+    p = listing.products(pid)[0]
+    folder, g = listing.OUT / pid, p["gumroad"]
+    prods = _run(["products", "list", "--all", "--json", "--no-input"]).get("products", [])
+    found = _find_gumroad(pid, prods)
+    if not found:
+        raise ProviderError("no Gumroad product found for this id: run draft first")
+    needed = [folder / "gumroad" / "cover.jpg", folder / "gumroad" / "thumbnail.jpg", *sorted((folder / "etsy" / "images").glob("*.jpg"))[1:2]]
+    if not all(f.exists() for f in needed):     # covers are removed first, so every picture must exist before anything is touched
+        raise ProviderError(f"{pid}: build the pack first (`python -m faceless listing build {pid}`); nothing was changed")
+    if found.get("published") and int(found.get("price") or 0) != round(float(p["price"]) * 100):
+        ok, why = approval(pid, "gumroad")
+        if not ok:
+            raise ProviderError(f"refused: this product is live and its price would change: {why}")
+    gid = str(found["id"])
+    view = _run(["products", "view", gid, "--json", "--no-input"]).get("product", {})
+    for c in view.get("covers") or []:
+        if c.get("id"):
+            _run(["products", "covers", "remove", gid, str(c["id"]), "--yes", "--json", "--no-input"])
+    _run(["products", "update", gid, "--name", g["name"], "--price", f"{p['price']:.2f}", "--description", md_to_html(g["description"]),
+          "--custom-summary", g["summary"], "--cover-image", str(folder / "gumroad" / "cover.jpg"), "--json", "--no-input"], timeout=1800)
+    for im in sorted((folder / "etsy" / "images").glob("*.jpg"))[1:6]:
+        _run(["products", "covers", "add", gid, "--image", str(im), "--json", "--no-input"], timeout=900)
+    _run(["products", "thumbnail", "set", gid, "--image", str(folder / "gumroad" / "thumbnail.jpg"), "--json", "--no-input"], timeout=900)
+    events.emit("SHOP_REFRESHED", product=pid, gumroad_id=gid[:24])
+    return {"product": pid, "id": gid, "published": bool(found.get("published")), "name": g["name"], "price": p["price"]}
+
+
 def publish(pid: str, rail: str, listing_id: str | None = None) -> dict:
     """Set a DRAFT live on one rail, only with the owner's approval of this price. Returns what happened; raises ProviderError when refused."""
     safety.guard(f"publish {rail}")

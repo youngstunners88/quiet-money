@@ -811,6 +811,12 @@ def cmd_shop(args) -> int:
         for pid in r["live_not_offered"]:
             print(f"live on Gumroad but not in shop_urls (going live in the offers is the owner's yes): {pid}")
         return 0
+    if args.action == "refresh":
+        if not args.yes:
+            print("dry run. Add --yes to update the existing Gumroad product's name, copy, covers and thumbnail (never publishes).")
+            return 0
+        print(shop.refresh(args.product))
+        return 0
     if args.action in ("draft", "publish"):
         pid = args.product if args.product != "all" else "daily-quiet-money-planner"
         if args.action == "draft":
@@ -1149,6 +1155,24 @@ def cmd_client(args) -> int:
     return 0 if r["ready"] else 1
 
 
+def cmd_frontcover(args) -> int:
+    """Front covers for the products: build (all or one) | check | sheet (the series at three sizes: the squint and grid tests)."""
+    from faceless import frontcover
+    if args.action == "sheet":
+        print(frontcover.sheet())
+        return 0
+    res = frontcover.build(args.product or None)
+    bad = 0
+    for pid, r in res.items():
+        fails = [n for n, ok, _ in r["gates"] if not ok]
+        bad += bool(fails)
+        print(f"{'PASS' if not fails else 'FAIL'}  {pid}: {len(r['gates']) - len(fails)}/{len(r['gates'])} checks -> {r['folder']}" + (f"  failing: {fails}" if fails else ""))
+        if args.action == "check":
+            for n, ok, d in r["gates"]:
+                print(f"      {'ok  ' if ok else 'FAIL'} {n}: {d}")
+    return 1 if bad else 0
+
+
 def cmd_cash(args) -> int:
     """The money desk: every rail, its state, what the agent did, and the owner's next steps ranked by how soon they can pay (reads only)."""
     from faceless import cash
@@ -1432,6 +1456,10 @@ def main(argv: list[str] | None = None) -> int:
     cl.add_argument("--gig", default="studio", choices=["studio", "brand-kit"])
     cl.add_argument("--file")
     cl.set_defaults(fn=cmd_client)
+    fc = sub.add_parser("frontcover", help="portrait front covers (1600x2560) for the products, with the thumbnail, squint and grid checks: build|check|sheet [product]")
+    fc.add_argument("action", nargs="?", default="build", choices=["build", "check", "sheet"])
+    fc.add_argument("product", nargs="?", default="")
+    fc.set_defaults(fn=cmd_frontcover)
     ca = sub.add_parser("cash", help="the money desk: every revenue rail, its state, and your next 30 minutes ranked by how soon it pays (reads only)")
     ca.add_argument("--json", action="store_true")
     ca.set_defaults(fn=cmd_cash)
@@ -1536,7 +1564,7 @@ def main(argv: list[str] | None = None) -> int:
     et.add_argument("--yes", action="store_true")
     et.set_defaults(fn=cmd_etsy)
     sh = sub.add_parser("shop", help="storefronts: `shop status` (what is connected, the owner's next step), `shop plan`, `shop push --yes` (DRAFT products on Gumroad, never published), `shop sales`")
-    sh.add_argument("action", choices=["status", "plan", "push", "draft", "publish", "sales", "sync-urls"])
+    sh.add_argument("action", choices=["status", "plan", "push", "draft", "publish", "sales", "sync-urls", "refresh"])
     sh.add_argument("--rail", choices=["gumroad", "etsy"])
     sh.add_argument("product", nargs="?", default="all")
     sh.add_argument("--yes", action="store_true")

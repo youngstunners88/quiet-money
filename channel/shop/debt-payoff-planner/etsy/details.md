@@ -1,6 +1,6 @@
 # Etsy listing details: Debt Payoff & Compound Interest Planner
 
-- **Price:** $19 (test range $12, $19, $29; change only after about 20 views)
+- **Price:** $0 (test range $0; change only after about 20 views)
 - **Type:** Digital download (no shipping)
 - **Who made it:** I did
 - **What is it:** A finished product

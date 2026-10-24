@@ -494,9 +494,10 @@ def hub_page() -> str:
                          f'<span>Seven 10-minute steps, one a day. Find the leaks, automate savings, split every paycheck. Printable.</span></a>')
         else:
             href = offer.tracked(d["url"], "quietmoney", "hub", d["slug"])
-            cards.append(f'<a class="hubcard" data-o="{e(d["slug"])}" href="{e(href)}" rel="noopener"><b>{e(d["name"])}<span class="badge">Paid</span></b>'
+            cards.append(f'<a class="hubcard" data-o="{e(d["slug"])}" href="{e(href)}" rel="noopener"><b>{e(d["name"])}<span class="badge">{"Free" if d["kind"] == "gift" else "Paid"}</span></b>'
                          + (f'<span class="tier">{e(d["tier"])}</span>' if d.get("tier") else "")
-                         + '<span>See the listing for what is included. Educational tools, no promised results.</span></a>')
+                         + ('<span>A free spreadsheet: put your own debts in and see the order and the interest. Educational, no promised results.</span></a>' if d["kind"] == "gift"
+                            else '<span>See the listing for what is included. Educational tools, no promised results.</span></a>'))
     cards.append(f'<a class="hubcard" data-o="tools" href="{e(offer.tracked("../tools/", "hub", "link", "tools"))}"><b>Calculators</b>'
                  f'<span>Compound growth, credit card payoff, inflation: put your own numbers in.</span></a>')
     cards.append(f'<a class="hubcard" data-o="rules" href="{e(offer.tracked("../rules/", "hub", "link", "rules"))}"><b>Every money rule, written out</b>'
