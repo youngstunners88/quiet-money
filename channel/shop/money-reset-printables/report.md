@@ -21,13 +21,13 @@ PASSED (27 of 27 gates; soft gates do not block)
 | example_numbers_labelled (soft) | pass | the copy says the numbers shown are examples |
 | files_exist | pass | Money-Reset-Printables-Letter.pdf, Money-Reset-Printables-A4.pdf |
 | etsy_file_limits | pass | 2 file(s) of 5 allowed; over 20 MB: none; unsupported type: none |
-| etsy_images_2000px | pass | 9 images, smallest side 2100 px (Etsy asks for 2000+); too small: none |
-| etsy_image_count (soft) | pass | 9 images (Etsy allows 20; 5 or more sells better) |
+| etsy_images_2000px | pass | 10 images, smallest side 2100 px (Etsy asks for 2000+); too small: none |
+| etsy_image_count (soft) | pass | 10 images (Etsy allows 20; 5 or more sells better) |
 | etsy_main_image_landscape_or_square | pass | 2800x2100 |
-| etsy_main_image_not_dark | pass | mean brightness 118 of 255 (Etsy ranks dark main images lower) |
-| etsy_main_image_sharp | pass | edge energy 2086 (blurry main images rank lower) |
+| etsy_main_image_not_dark | pass | mean brightness 174 of 255 (Etsy ranks dark main images lower) |
+| etsy_main_image_sharp | pass | edge energy 2100 (blurry main images rank lower) |
 | gumroad_cover_16x9 | pass | 1920x1080 |
-| gumroad_thumbnail_square | pass | 1200x1200, 82 KB (square, 600+, under 5 MB) |
+| gumroad_thumbnail_square | pass | 1200x1200, 90 KB (square, 600+, under 5 MB) |
 | etsy_video_length | pass | 13.7 s (Etsy: 3 to 15) |
-| etsy_video_size | pass | 1080x1080, 4.0 MB (limit 100 MB, 500 px minimum, 1080 ideal) |
+| etsy_video_size | pass | 1080x1080, 4.1 MB (limit 100 MB, 500 px minimum, 1080 ideal) |
 | etsy_video_silent (soft) | pass | no audio track (Etsy drops audio anyway) |

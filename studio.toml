@@ -227,8 +227,7 @@ form_email_field = "email"                   # the name of the email input the s
 hub_path = "/links/"                         # on [site] base_url; put <hub>?utm_source=<platform>&utm_medium=bio in each profile (python -m faceless offer)
 paid_every = 3                               # at most one paid offer in this many videos; the free checklist builds the list first
 # A paid offer is chosen only when its live listing URL is set here (slug from channel/shop/catalog.json). Empty = the free checklist for every video.
-shop_urls = { "daily-quiet-money-planner" = "https://chrisclassroom4.gumroad.com/l/utwsfs", "money-reset-printables" = "https://chrisclassroom4.gumroad.com/l/vvodkt", "money-reset-kit" = "https://chrisclassroom4.gumroad.com/l/oudgc" }   # the platform-returned URL, published 2026-10-20
-# shop_urls = { "debt-payoff-planner" = "https://youngstunners.gumroad.com/l/debt-payoff-planner" }
+shop_urls = { "daily-quiet-money-planner" = "https://quietmoneyrules.gumroad.com/l/utwsfs", "money-reset-printables" = "https://quietmoneyrules.gumroad.com/l/vvodkt", "money-reset-kit" = "https://quietmoneyrules.gumroad.com/l/oudgc", "debt-payoff-planner" = "https://quietmoneyrules.gumroad.com/l/syvyjf" }   # the platform-returned URL, published 2026-10-20
 [offer.match]                                # which product follows which series (the first live one that was not the previous paid offer)
 story = ["daily-quiet-money-planner", "money-reset-kit"]   # the planner leads (marketing decision D3, 2026-10-13); it is offered only once its live URL is in shop_urls
 math = ["money-reset-kit", "money-reset-printables"]   # the kit holds the debt payoff planner (owner, 2026-10-23: three tiers only)
@@ -434,4 +433,9 @@ gumroad = true
 
 [shop.approved."money-reset-kit"]
 price = 28.0
+gumroad = true
+
+# Owner's message of 2026-10-24: "issue out the debt payoff planner free". Gumroad only, price 0 (a free gift that leads up the tiers).
+[shop.approved."debt-payoff-planner"]
+price = 0.0
 gumroad = true

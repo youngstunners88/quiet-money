@@ -24,7 +24,7 @@ from pathlib import Path
 import numpy as np
 from PIL import Image
 
-from faceless import mockup
+from faceless import frontcover, mockup
 from faceless.config import STUDIO, Paths
 
 CATALOG = STUDIO / "channel" / "shop" / "catalog.json"
@@ -105,7 +105,8 @@ def text_gates(p: dict) -> list[Gate]:
     claimed = [name for name, rx in APP_NAMES.items() if re.search(rx, everything)]
     unverified = [n for n in claimed if n not in p["verified_compat"]]
     out.append(Gate("compatibility_claims_verified", not unverified, f"claims {claimed}; not verified: {unverified or 'none'}"))
-    out.append(Gate("price_set", p["price"] > 0 and p["price"] in p["price_test"], f"${p['price']} within test range {p['price_test']}", hard=True))
+    free_ok = p["price"] == 0 and p.get("free") is True and p["price_test"] == [0]            # a free gift is a decision the catalog states, never a missing price
+    out.append(Gate("price_set", (p["price"] > 0 and p["price"] in p["price_test"]) or free_ok, f"${p['price']} within test range {p['price_test']}" + (" (free gift)" if free_ok else ""), hard=True))
     out.append(Gate("refund_promise_in_copy", bool(re.search(r"refund", e["description"], re.I)), "the Etsy description states the refund promise", hard=False))
     out.append(Gate("example_numbers_labelled", p["kind"] != "spreadsheet" or bool(re.search(r"example", e["description"], re.I)), "the copy says the numbers shown are examples", hard=False))
     return out
@@ -338,11 +339,19 @@ def build(only: str | None = None, video: bool = True) -> dict[str, dict]:
             pages = _page_images(p)
             named = _spreadsheet_images(p, pages) if p["kind"] == "spreadsheet" else _printable_images(p, pages)
             hero_shot = pages[(p["pages"].get("numbers") or p["pages"].get("debts") or 2) - 1] if p["kind"] == "spreadsheet" else pages[0 if p.get("layout") == "planner" else 1]
+        tabs = _tabs(p)
+        front = None
+        if p["id"] in frontcover.SPECS:                       # a real front cover leads the pack: the book first, then what is inside it
+            front = frontcover.render(p["id"])
+            _save(front, folder / "front" / "cover.jpg", 92)
+            named = [("front", frontcover.scene(front, hero_shot, p["chips"], (2800, 2100), spreadsheet=p["kind"] in ("spreadsheet", "bundle"),
+                                                tabs=tabs, file_name=Path(p["file"]).name))] + named
         for old in (folder / "etsy" / "images").glob("*.jpg"):
             old.unlink()
         files = [_save(mockup.deliver(im), folder / "etsy" / "images" / f"{i:02d}-{name}.jpg", 86) for i, (name, im) in enumerate(named, 1)]
-        tabs = _tabs(p)
-        if p["kind"] == "printable":
+        if front is not None:
+            cover_im = frontcover.scene(front, hero_shot, p["chips"], (1920, 1080), spreadsheet=p["kind"] in ("spreadsheet", "bundle"), tabs=tabs, file_name=Path(p["file"]).name)
+        elif p["kind"] == "printable":
             cover_im = mockup.cover_pages(p["name"], p["subtitle"], _planner_shots(p, pages) if p.get("layout") == "planner" else [pages[1], pages[2], pages[3]], p["chips"])
         else:
             cover_im = mockup.cover_wide(p["name"], p["subtitle"], hero_shot, p["chips"], tabs=tabs, active=1 if tabs else 0, file_name=Path(p["file"]).name)
@@ -350,6 +359,8 @@ def build(only: str | None = None, video: bool = True) -> dict[str, dict]:
         if p.get("layout") == "planner":
             from faceless import planner_cover
             thumb_im = planner_cover.thumbnail()
+        elif front is not None:
+            thumb_im = frontcover.thumb(front)
         else:
             thumb_im = mockup.square_thumb(hero_shot, p["name"])
         thumb = _save(thumb_im, folder / "gumroad" / "thumbnail.jpg", 88)

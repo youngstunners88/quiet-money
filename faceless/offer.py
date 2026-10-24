@@ -138,7 +138,7 @@ def destinations() -> list[dict]:
     for slug, url in (settings()["shop_urls"] or {}).items():
         p = cat.get(slug)
         if p and str(url).startswith("https://"):
-            out.append({"slug": slug, "kind": "paid", "name": p["name"], "short": f"The {p['name']}" if not p["name"].lower().startswith("the ") else p["name"],
+            out.append({"slug": slug, "kind": "gift" if not p["price"] else "paid", "name": p["name"], "short": f"The {p['name']}" if not p["name"].lower().startswith("the ") else p["name"],
                         "price": p["price"], "url": str(url), "tier": p.get("tier", "")})
     return out[:1] + sorted(out[1:], key=lambda d: (not d["tier"], d["tier"]))      # the tier ladder in order: Starter, Core, Complete
 

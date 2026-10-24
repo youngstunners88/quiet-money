@@ -66,7 +66,7 @@ def test_the_email_rail_lists_exactly_what_is_missing(monkeypatch):
 def test_a_paid_product_counts_only_with_a_live_url(monkeypatch):
     monkeypatch.setitem(config.load()["offer"], "shop_urls", {})          # the studio's own config now holds the live planner URL
     assert state_of(distribute.status(connected={}), "paid products")["state"] == "needs owner"
-    monkeypatch.setitem(config.load()["offer"], "shop_urls", {"debt-payoff-planner": "https://shop.example/debt"})
+    monkeypatch.setitem(config.load()["offer"], "shop_urls", {"money-reset-kit": "https://shop.example/kit"})
     row = state_of(distribute.status(connected={}), "paid products")
     assert row["state"] == "ready" and row["detail"].startswith("1 of ")
 

@@ -6,6 +6,7 @@ Educational tools, not financial advice. Results depend on your assumptions. *De
 
 **The Quiet Money tiers**
 
+- **Free gift:** Debt Payoff & Compound Interest Planner
 - **Tier 1 · Starter, $9:** Money Reset Printables
 - **Tier 2 · Core, $17:** The Quiet Money Daily Planner
 - **Tier 3 · Complete, $28:** The Money Reset Kit

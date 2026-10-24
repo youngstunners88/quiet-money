@@ -1,3 +1,5 @@
+**Free gift from Quiet Money.** Download it, use it, keep it.
+
 See your debt-free date, and how much interest the right plan saves, before you pay another dollar.
 
 **One spreadsheet, five tabs plus the math:**
@@ -10,3 +12,10 @@ See your debt-free date, and how much interest the right plan saves, before you 
 **Honest notes:** the plan keeps the total monthly payment constant and rolls each paid-off debt's payment onto the next. Interest is calculated monthly with no rounding, so your lender's exact figures will differ slightly. The workbook was recalculated and compared against an independent simulation. It is a planning tool and education, not financial advice.
 
 *Designed by Quiet Money with AI assistance.*
+
+**The Quiet Money tiers**
+
+- **Free gift:** Debt Payoff & Compound Interest Planner
+- **Tier 1 · Starter, $9:** Money Reset Printables
+- **Tier 2 · Core, $17:** The Quiet Money Daily Planner
+- **Tier 3 · Complete, $28:** The Money Reset Kit
