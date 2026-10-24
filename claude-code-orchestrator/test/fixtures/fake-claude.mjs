@@ -17,6 +17,7 @@
 //   ECHOENV      put the sorted names (never the values) of its environment variables in the result text
 //   PEMKEY       print a multi-line private key block in assistant text, result text, raw stdout and stderr
 //   STRADDLE <v> put <v> at character 3990 of the assistant and result lines (just across the 4000 cap)
+//   VERIFIER ROLE  (the verifier prompt) answer with a VERDICT line: FAIL when the prompt also holds VERIFYFAIL, no line when it holds NOVERDICT, else PASS
 //   SPAWNCHILD   start a detached `sleep 300` (own session, like Claude Code's Bash tool) and print its pid
 
 const argv = process.argv.slice(2);
@@ -111,6 +112,7 @@ async function main() {
     const fakeKey = ['sk-', 'ant-api03-', 'A'.repeat(36)].join('');
     text += `\nkey ${fakeKey} and ANTHROPIC_API_KEY=plainvalue123 and Bearer abcdefghijklmnop1234`;
   }
+  if (has('VERIFIER ROLE') && !has('NOVERDICT')) text += `\n1. PASS or FAIL per criterion\nVERDICT: ${has('VERIFYFAIL') ? 'FAIL' : 'PASS'}`;
   if (has('ECHOARGS')) text = JSON.stringify({ argv, cwd: process.cwd(), sessionEnv: process.env.CLAUDE_CODE_SESSION_ID ?? null });
   if (has('ECHOENV')) text = JSON.stringify({ envNames: Object.keys(process.env).sort() });
   if (has('PEMKEY')) text = ['here is a key', ...pemLines('TEXT'), 'after the key'].join('\n');

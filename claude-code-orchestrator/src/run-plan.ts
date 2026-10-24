@@ -2,8 +2,9 @@
 /**
  * Runs a plan of workers through ONE orchestrator server (workers live inside that server process):
  *   node dist/run-plan.js plan.json --out <dir> [--poll-seconds 15]
- * Exit code 0 only when every worker completed.
+ * Exit code 0 only when every worker completed and every lane with done_when was verified PASS by an independent read-only worker.
  */
+import { spawnSync } from 'node:child_process';
 import fs from 'node:fs';
 import path from 'node:path';
 import { z } from 'zod';
@@ -22,6 +23,11 @@ const PlanEntrySchema = z.strictObject({
   allowed_tools: z.array(z.string().min(1)).optional(),
   model: z.string().min(1).optional(),
   timeout_minutes: z.number().positive().optional(),
+  /** Checkable acceptance criteria. A write lane that has them is checked by an independent read-only verifier after it finishes. */
+  done_when: z.array(z.string().min(1).max(500)).min(1).max(12).optional(),
+}).refine((e) => !e.done_when || (e.permission_mode !== undefined && e.permission_mode !== 'read_only'), {
+  message: 'done_when needs a write lane (permission_mode other than read_only): the verifier judges the diff, and a read-only lane produces none',
+  path: ['done_when'],
 });
 const PlanSchema = z.strictObject({ workers: z.array(PlanEntrySchema).min(1) });
 
@@ -29,6 +35,15 @@ export type PlanEntry = z.infer<typeof PlanEntrySchema>;
 export type Plan = z.infer<typeof PlanSchema>;
 
 const TERMINAL = new Set(['completed', 'failed', 'terminated']);
+
+export type Verified = 'pass' | 'fail' | 'unverified' | 'not_required';
+
+interface Verification {
+  state: Verified;
+  evidence: string | null;
+  workerId: string | null;
+  logFile: string | null;
+}
 
 interface Slot {
   index: number;
@@ -39,6 +54,7 @@ interface Slot {
   last: WorkerStatusView | null;
   startError: ToolErrorPayload | null;
   logFile: string | null;
+  verification: Verification;
 }
 
 export interface CliOptions {
@@ -83,6 +99,51 @@ function safeName(text: string): string {
   return text.replace(/[^A-Za-z0-9._-]+/g, '-').replace(/^-+|-+$/g, '').slice(0, 80) || 'worker';
 }
 
+const DIFF_LIMIT = 60_000;
+
+/** What the lane changed, as the verifier will see it: tracked changes against HEAD plus the names of untracked files. Never the builder's own account. */
+export function captureDiff(projectPath: string): string {
+  const git = (args: string[]): string => {
+    const r = spawnSync('git', ['-C', projectPath, ...args], { encoding: 'utf8', timeout: 30_000, maxBuffer: 16 * 1024 * 1024 });
+    return r.status === 0 ? r.stdout : `(git ${args[0]} failed: ${(r.stderr || r.error?.message || 'no output').toString().slice(0, 200)})\n`;
+  };
+  const untracked = git(['ls-files', '--others', '--exclude-standard']).trim();
+  const diff = git(['diff', 'HEAD']);
+  const text = `${diff}${untracked ? `\n# untracked files (contents not shown; read them if a criterion needs it)\n${untracked}\n` : ''}`;
+  return text.length > DIFF_LIMIT ? `${text.slice(0, DIFF_LIMIT)}\n# diff truncated at ${DIFF_LIMIT} characters\n` : text || '(no changes were made to the project)\n';
+}
+
+/** The verifier sees only the contract (the task and its criteria) and the diff. It is never given the builder's summary or result. */
+export function verifierPrompt(entry: PlanEntry, diff: string): string {
+  const criteria = (entry.done_when ?? []).map((c, i) => `${i + 1}. ${c}`).join('\n');
+  return [
+    'VERIFIER ROLE. You are an independent, adversarial reviewer. You have read-only access to the project. Another worker was given the TASK below and says it is finished;',
+    'you have not been told what it claims. Your job is to find out whether each acceptance criterion is actually true, by reading the diff and, where needed, the files themselves.',
+    'Treat a criterion as failed unless you can point to evidence for it. Do not fix anything. Other lanes may have edited the same tree: judge only the criteria.',
+    '',
+    '# TASK GIVEN TO THE WORKER',
+    entry.prompt,
+    '',
+    '# ACCEPTANCE CRITERIA (every one must hold)',
+    criteria,
+    '',
+    '# DIFF OF WHAT CHANGED (git diff HEAD, plus untracked file names)',
+    diff,
+    '',
+    '# HOW TO ANSWER',
+    'For each criterion write one line: its number, PASS or FAIL, and the evidence (a file and line, a quoted diff line, or the missing thing).',
+    'Then end your answer with one final line that is exactly "VERDICT: PASS" (every criterion passed) or exactly "VERDICT: FAIL" (any criterion failed or could not be shown).',
+  ].join('\n');
+}
+
+/** The last "VERDICT: PASS|FAIL" in the verifier's output, or null when it gave none (which counts as unverified, never as a pass). */
+export function parseVerdict(output: string): 'pass' | 'fail' | null {
+  // the verdict must stand alone on its own line, so the instruction text quoted in an echo of the prompt never counts
+  const all = [...output.matchAll(/(?:^|\n)(?:\[\w+\]\s*)?(?:(?:assistant|result):\s*)?VERDICT:[ \t]*(PASS|FAIL)[ \t]*(?=\r?\n|$)/g)];
+  const last = all[all.length - 1];
+  return last ? (last[1] === 'PASS' ? 'pass' : 'fail') : null;
+}
+
 const sleep = (ms: number): Promise<void> => new Promise((resolve) => setTimeout(resolve, ms));
 const say = (text: string): void => {
   process.stdout.write(`${text}\n`);
@@ -104,6 +165,7 @@ export async function runPlan(options: CliOptions): Promise<number> {
     last: null,
     startError: null,
     logFile: null,
+    verification: { state: 'not_required', evidence: null, workerId: null, logFile: null },
   }));
 
   let interrupted = false;
@@ -205,12 +267,56 @@ export async function runPlan(options: CliOptions): Promise<number> {
       say(`run-plan: lost the orchestrator server: ${fatal}`);
     }
 
+    // Done is a claim; Verified is a state. Each finished write lane that carries done_when gets a fresh read-only worker that sees only the contract and the diff.
+    if (!fatal && !interrupted) {
+      const verifyLane = async (s: Slot): Promise<void> => {
+        const entry = s.entry;
+        if (!entry.done_when || s.status !== 'completed') return;
+        s.verification.state = 'unverified';
+        const prompt = verifierPrompt(entry, captureDiff(entry.project_path));
+        let started = await client.startWorker({ project_path: entry.project_path, initial_prompt: prompt, label: `verify-${s.name}`.slice(0, 80), permission_mode: 'read_only', ...(entry.model ? { model: entry.model } : {}) });
+        for (let tries = 0; !started.ok && started.error.error_code === 'TOO_MANY_WORKERS' && tries < 240; tries += 1) {
+          await sleep(options.pollSeconds * 1000);
+          started = await client.startWorker({ project_path: entry.project_path, initial_prompt: prompt, label: `verify-${s.name}`.slice(0, 80), permission_mode: 'read_only', ...(entry.model ? { model: entry.model } : {}) });
+        }
+        if (!started.ok) {
+          s.verification.evidence = `verifier could not start: ${started.error.error_code}: ${started.error.message}`;
+          return;
+        }
+        const id = started.data.worker_id;
+        s.verification.workerId = id;
+        let status = started.data.status;
+        while (!TERMINAL.has(status)) {
+          await sleep(options.pollSeconds * 1000);
+          const st = await client.getWorkerStatus(id);
+          if (st.ok) status = st.data.status;
+        }
+        const out = await client.getWorkerOutput(id, 2000);
+        const text = out.ok ? out.data.output : "";
+        const file = path.join(options.outDir, `verify-${s.name}.log`);
+        fs.writeFileSync(file, `# verifier for ${s.name} (${status})\n\n${text}\n`);
+        s.verification.logFile = file;
+        const verdict = status === 'completed' ? parseVerdict(text) : null;
+        s.verification.state = verdict ?? 'unverified';
+        s.verification.evidence = verdict ? `see ${path.basename(file)}` : `the verifier ended ${status} without a VERDICT line`;
+        say(`verify ${s.name}: ${s.verification.state}`);
+      };
+      try {
+        await Promise.all(slots.map(verifyLane));
+      } catch (err) {
+        fatal = err instanceof Error ? err.message : String(err);
+        say(`run-plan: lost the orchestrator server while verifying: ${fatal}`);
+      }
+    }
+
     const allCompleted = !fatal && slots.every((s) => s.status === 'completed');
+    const allVerified = allCompleted && slots.every((s) => s.verification.state === 'pass' || s.verification.state === 'not_required');
     const summary = {
       plan_file: options.planFile,
       started_at: startedAt,
       finished_at: new Date().toISOString(),
       all_completed: allCompleted,
+      all_verified: allVerified,
       interrupted,
       error: fatal,
       workers: slots.map((s) => ({
@@ -219,6 +325,10 @@ export async function runPlan(options: CliOptions): Promise<number> {
         project_path: s.entry.project_path,
         permission_mode: s.entry.permission_mode ?? 'read_only',
         status: s.status,
+        claimed_done: s.status === 'completed',
+        verified: s.verification.state,
+        verification_evidence: s.verification.evidence,
+        verifier_log: s.verification.logFile,
         reason: s.last?.reason ?? null,
         session_id: s.last?.session_id ?? null,
         cost_usd: s.last?.cost_usd ?? null,
@@ -231,8 +341,8 @@ export async function runPlan(options: CliOptions): Promise<number> {
     };
     fs.writeFileSync(path.join(options.outDir, 'summary.json'), `${JSON.stringify(summary, null, 2)}\n`);
     say(`summary: ${path.join(options.outDir, 'summary.json')}`);
-    for (const w of summary.workers) say(`  ${w.label}: ${w.status}${w.reason ? ` (${w.reason})` : ''} cost_usd=${w.cost_usd ?? '?'}`);
-    return allCompleted ? 0 : 1;
+    for (const w of summary.workers) say(`  ${w.label}: ${w.status}${w.verified !== 'not_required' ? ` verified=${w.verified}` : ''}${w.reason ? ` (${w.reason})` : ''} cost_usd=${w.cost_usd ?? '?'}`);
+    return allVerified ? 0 : 1;
   } finally {
     process.off('SIGINT', onSignal);
     process.off('SIGTERM', onSignal);
