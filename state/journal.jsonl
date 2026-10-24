@@ -8410,3 +8410,8 @@
 {"ts": "2026-10-24T16:42:39Z", "t": 1792860159.775, "actor": "engine", "type": "JEV_CALL", "questions": ["fit", "budget", "gap", "timing", "pursue"], "via": "openrouter-decisions", "model": "typesafe/jev-1.13-20260917"}
 {"ts": "2026-10-24T16:42:39Z", "t": 1792860159.776, "actor": "engine", "type": "DECISIONS", "job": "outbound:337a7088e312cb85", "backend": "openrouter-decisions", "ms": 575, "dry_run": true}
 {"ts": "2026-10-24T16:42:40Z", "t": 1792860160.093, "actor": "engine", "type": "OUTBOUND_MODEL_FAIL", "model": "minimax/minimax-m3.1-flash:free", "error": "http 404"}
+{"ts": "2026-10-24T16:43:00Z", "t": 1792860180.578, "actor": "engine", "type": "JEV_CALL", "questions": ["fit", "budget", "gap", "timing", "pursue"], "via": "openrouter-decisions", "model": "typesafe/jev-1.13-20260917"}
+{"ts": "2026-10-24T16:43:00Z", "t": 1792860180.579, "actor": "engine", "type": "DECISIONS", "job": "outbound:44dea50b167f82a4", "backend": "openrouter-decisions", "ms": 344, "dry_run": true}
+{"ts": "2026-10-24T16:43:02Z", "t": 1792860182.948, "actor": "engine", "type": "OUTBOUND_MODEL_FAIL", "model": "minimax/minimax-m3.1-flash:free", "error": "http 404"}
+{"ts": "2026-10-24T16:43:06Z", "t": 1792860186.457, "actor": "engine", "type": "JEV_CALL", "questions": ["fit", "budget", "gap", "timing", "pursue"], "via": "openrouter-decisions", "model": "typesafe/jev-1.13-20260917"}
+{"ts": "2026-10-24T16:43:06Z", "t": 1792860186.458, "actor": "engine", "type": "DECISIONS", "job": "outbound:8d6d8cb65265f69d", "backend": "openrouter-decisions", "ms": 572, "dry_run": true}
