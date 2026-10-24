@@ -379,3 +379,16 @@ def test_ready_tier_needs_jev_confidence_and_a_specific_low_spam_draft(tmp_path,
     outbound.promote("gap")
     assert outbound.tier(low, pkg)["tier"] == "ready"      # a promoted angle skips only the fit bar
     assert outbound.tier(low, {**pkg, "gates": {**pkg["gates"], "personalization": 0.5}})["tier"] == "review"
+
+
+def test_a_failing_worker_does_not_stop_the_batch_and_workers_run_in_parallel(desk, monkeypatch):
+    import threading
+    seen_threads = set()
+
+    def boom(cand, ask=None):
+        seen_threads.add(threading.get_ident())
+        raise RuntimeError("model outage")
+    monkeypatch.setattr(outbound, "research", boom)
+    r = outbound.run(protocols=PROTOCOLS)
+    assert r["skipped"] == {"error": 1} and r["queued"] == [] and r["cards"] == 0
+    assert threading.get_ident() not in seen_threads            # the work ran off the main thread; files are written on it

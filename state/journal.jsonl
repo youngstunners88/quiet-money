@@ -8203,3 +8203,59 @@
 {"ts": "2026-10-24T15:09:16Z", "t": 1792854556.032, "actor": "engine", "type": "DECISIONS", "job": "outbound-gate:5099a2e2d5093ec0", "backend": "openrouter-decisions", "ms": 564, "dry_run": true}
 {"ts": "2026-10-24T15:09:20Z", "t": 1792854560.257, "actor": "engine", "type": "OUTBOUND_FETCH_FAIL", "page": "5834c3a1e24a2668", "error": "download failed: HTTP 404"}
 {"ts": "2026-10-24T15:09:31Z", "t": 1792854571.416, "actor": "engine", "type": "OUTBOUND_MODEL_FAIL", "model": "minimax/minimax-m3.1-flash:free", "error": "http 404"}
+{"ts": "2026-10-24T16:21:33Z", "t": 1792858893.623, "actor": "engine", "type": "OUTBOUND_RUN_START", "day": "2026-10-24"}
+{"ts": "2026-10-24T16:21:35Z", "t": 1792858895.959, "actor": "engine", "type": "OUTBOUND_FETCH_FAIL", "page": "99c3c6275bfc6788", "error": "download failed: HTTP 404"}
+{"ts": "2026-10-24T16:21:36Z", "t": 1792858896.026, "actor": "engine", "type": "OUTBOUND_FETCH_FAIL", "page": "ddf59fef534426b0", "error": "download failed: HTTP 403"}
+{"ts": "2026-10-24T16:21:36Z", "t": 1792858896.06, "actor": "engine", "type": "OUTBOUND_FETCH_FAIL", "page": "e914f5da807d976b", "error": "download failed: HTTP 404"}
+{"ts": "2026-10-24T16:21:36Z", "t": 1792858896.89, "actor": "engine", "type": "OUTBOUND_FETCH_FAIL", "page": "9593a42f63f1a1c6", "error": "download failed: HTTP 404"}
+{"ts": "2026-10-24T16:21:37Z", "t": 1792858897.099, "actor": "engine", "type": "OUTBOUND_FETCH_FAIL", "page": "5834c3a1e24a2668", "error": "download failed: HTTP 404"}
+{"ts": "2026-10-24T16:21:37Z", "t": 1792858897.307, "actor": "engine", "type": "OUTBOUND_FETCH_FAIL", "page": "c540b1e8c26cd6e2", "error": "download failed: HTTP 404"}
+{"ts": "2026-10-24T16:21:38Z", "t": 1792858898.597, "actor": "engine", "type": "OUTBOUND_MODEL_FAIL", "model": "minimax/minimax-m3.1-flash:free", "error": "http 404"}
+{"ts": "2026-10-24T16:21:39Z", "t": 1792858899.605, "actor": "engine", "type": "OUTBOUND_MODEL_FAIL", "model": "minimax/minimax-m3.1-flash:free", "error": "http 404"}
+{"ts": "2026-10-24T16:21:39Z", "t": 1792858899.665, "actor": "engine", "type": "OUTBOUND_MODEL_FAIL", "model": "minimax/minimax-m3.1-flash:free", "error": "http 404"}
+{"ts": "2026-10-24T16:21:40Z", "t": 1792858900.239, "actor": "engine", "type": "OUTBOUND_MODEL_FAIL", "model": "minimax/minimax-m3.1-flash:free", "error": "http 404"}
+{"ts": "2026-10-24T16:21:42Z", "t": 1792858902.109, "actor": "engine", "type": "OUTBOUND_MODEL_FAIL", "model": "minimax/minimax-m3.1-flash:free", "error": "http 404"}
+{"ts": "2026-10-24T16:21:42Z", "t": 1792858902.303, "actor": "engine", "type": "OUTBOUND_MODEL_FAIL", "model": "minimax/minimax-m3.1-flash:free", "error": "http 404"}
+{"ts": "2026-10-24T16:21:42Z", "t": 1792858902.4, "actor": "engine", "type": "OUTBOUND_MODEL_FAIL", "model": "minimax/minimax-m3.1-flash:free", "error": "http 404"}
+{"ts": "2026-10-24T16:21:59Z", "t": 1792858919.888, "actor": "engine", "type": "OUTBOUND_FETCH_FAIL", "page": "50153179b5e6ecaa", "error": "download failed: HTTP 522"}
+{"ts": "2026-10-24T16:22:01Z", "t": 1792858921.077, "actor": "engine", "type": "OUTBOUND_MODEL_FAIL", "model": "minimax/minimax-m3.1-flash:free", "error": "http 404"}
+{"ts": "2026-10-24T16:23:04Z", "t": 1792858984.117, "actor": "engine", "type": "JEV_CALL", "questions": ["fit", "budget", "gap", "timing", "pursue"], "via": "openrouter-decisions", "model": "typesafe/jev-1.13-20260917"}
+{"ts": "2026-10-24T16:23:04Z", "t": 1792858984.118, "actor": "engine", "type": "DECISIONS", "job": "outbound:cb5ca80dbf510b3d", "backend": "openrouter-decisions", "ms": 561, "dry_run": true}
+{"ts": "2026-10-24T16:23:04Z", "t": 1792858984.545, "actor": "engine", "type": "OUTBOUND_FETCH_FAIL", "page": "3ed9856588bd40b6", "error": "download failed: HTTP 403"}
+{"ts": "2026-10-24T16:23:04Z", "t": 1792858984.99, "actor": "engine", "type": "OUTBOUND_FETCH_FAIL", "page": "2f01090fad62b1fc", "error": "download failed: HTTP 403"}
+{"ts": "2026-10-24T16:23:06Z", "t": 1792858986.305, "actor": "engine", "type": "OUTBOUND_MODEL_FAIL", "model": "minimax/minimax-m3.1-flash:free", "error": "http 404"}
+{"ts": "2026-10-24T16:23:24Z", "t": 1792859004.557, "actor": "engine", "type": "JEV_CALL", "questions": ["fit", "budget", "gap", "timing", "pursue"], "via": "openrouter-decisions", "model": "typesafe/jev-1.13-20260917"}
+{"ts": "2026-10-24T16:23:24Z", "t": 1792859004.557, "actor": "engine", "type": "DECISIONS", "job": "outbound:617809c35901769d", "backend": "openrouter-decisions", "ms": 483, "dry_run": true}
+{"ts": "2026-10-24T16:23:28Z", "t": 1792859008.113, "actor": "engine", "type": "OUTBOUND_FETCH_FAIL", "page": "37c5dd7649fd73a4", "error": "download failed: HTTP 404"}
+{"ts": "2026-10-24T16:23:29Z", "t": 1792859009.299, "actor": "engine", "type": "OUTBOUND_MODEL_FAIL", "model": "minimax/minimax-m3.1-flash:free", "error": "http 404"}
+{"ts": "2026-10-24T16:23:44Z", "t": 1792859024.692, "actor": "engine", "type": "JEV_CALL", "questions": ["fit", "budget", "gap", "timing", "pursue"], "via": "openrouter-decisions", "model": "typesafe/jev-1.13-20260917"}
+{"ts": "2026-10-24T16:23:44Z", "t": 1792859024.693, "actor": "engine", "type": "DECISIONS", "job": "outbound:4b0170ee8f2a13dd", "backend": "openrouter-decisions", "ms": 463, "dry_run": true}
+{"ts": "2026-10-24T16:23:45Z", "t": 1792859025.131, "actor": "engine", "type": "OUTBOUND_MODEL_FAIL", "model": "minimax/minimax-m3.1-flash:free", "error": "http 404"}
+{"ts": "2026-10-24T16:23:58Z", "t": 1792859038.583, "actor": "engine", "type": "JEV_CALL", "questions": ["fit", "budget", "gap", "timing", "pursue"], "via": "openrouter-decisions", "model": "typesafe/jev-1.13-20260917"}
+{"ts": "2026-10-24T16:23:58Z", "t": 1792859038.584, "actor": "engine", "type": "DECISIONS", "job": "outbound:600addd01b8da7ca", "backend": "openrouter-decisions", "ms": 497, "dry_run": true}
+{"ts": "2026-10-24T16:23:59Z", "t": 1792859039.269, "actor": "engine", "type": "OUTBOUND_MODEL_FAIL", "model": "minimax/minimax-m3.1-flash:free", "error": "http 404"}
+{"ts": "2026-10-24T16:24:04Z", "t": 1792859044.771, "actor": "engine", "type": "OUTBOUND_MODEL_FAIL", "model": "minimax/minimax-m3.1-flash:free", "error": "http 404"}
+{"ts": "2026-10-24T16:24:07Z", "t": 1792859047.013, "actor": "engine", "type": "JEV_CALL", "questions": ["fit", "budget", "gap", "timing", "pursue"], "via": "openrouter-decisions", "model": "typesafe/jev-1.13-20260917"}
+{"ts": "2026-10-24T16:24:07Z", "t": 1792859047.014, "actor": "engine", "type": "DECISIONS", "job": "outbound:a4ea4673b8b52b18", "backend": "openrouter-decisions", "ms": 488, "dry_run": true}
+{"ts": "2026-10-24T16:24:08Z", "t": 1792859048.261, "actor": "engine", "type": "OUTBOUND_FETCH_FAIL", "page": "630c4ce0245dd909", "error": "download failed: HTTP 404"}
+{"ts": "2026-10-24T16:24:09Z", "t": 1792859049.56, "actor": "engine", "type": "OUTBOUND_MODEL_FAIL", "model": "minimax/minimax-m3.1-flash:free", "error": "http 404"}
+{"ts": "2026-10-24T16:24:34Z", "t": 1792859074.429, "actor": "engine", "type": "OUTBOUND_FETCH_FAIL", "page": "064f13d4e7e90ac4", "error": "download failed: HTTP 404"}
+{"ts": "2026-10-24T16:24:35Z", "t": 1792859075.768, "actor": "engine", "type": "OUTBOUND_MODEL_FAIL", "model": "minimax/minimax-m3.1-flash:free", "error": "http 404"}
+{"ts": "2026-10-24T16:25:03Z", "t": 1792859103.4, "actor": "engine", "type": "JEV_CALL", "questions": ["fit", "budget", "gap", "timing", "pursue"], "via": "openrouter-decisions", "model": "typesafe/jev-1.13-20260917"}
+{"ts": "2026-10-24T16:25:03Z", "t": 1792859103.401, "actor": "engine", "type": "DECISIONS", "job": "outbound:9aeafdabd4c9ae9c", "backend": "openrouter-decisions", "ms": 546, "dry_run": true}
+{"ts": "2026-10-24T16:25:06Z", "t": 1792859106.392, "actor": "engine", "type": "OUTBOUND_MODEL_FAIL", "model": "minimax/minimax-m3.1-flash:free", "error": "http 404"}
+{"ts": "2026-10-24T16:25:08Z", "t": 1792859108.623, "actor": "engine", "type": "JEV_CALL", "questions": ["fit", "budget", "gap", "timing", "pursue"], "via": "openrouter-decisions", "model": "typesafe/jev-1.13-20260917"}
+{"ts": "2026-10-24T16:25:08Z", "t": 1792859108.623, "actor": "engine", "type": "DECISIONS", "job": "outbound:87e30a22b15757f7", "backend": "openrouter-decisions", "ms": 508, "dry_run": true}
+{"ts": "2026-10-24T16:25:09Z", "t": 1792859109.833, "actor": "engine", "type": "OUTBOUND_FETCH_FAIL", "page": "3c40aef7684dd715", "error": "download failed: HTTP 404"}
+{"ts": "2026-10-24T16:25:11Z", "t": 1792859111.109, "actor": "engine", "type": "OUTBOUND_MODEL_FAIL", "model": "minimax/minimax-m3.1-flash:free", "error": "http 404"}
+{"ts": "2026-10-24T16:25:24Z", "t": 1792859124.392, "actor": "engine", "type": "JEV_CALL", "questions": ["personalization", "spam_risk", "promise_free"], "via": "openrouter-decisions", "model": "typesafe/jev-1.13-20260917"}
+{"ts": "2026-10-24T16:25:24Z", "t": 1792859124.392, "actor": "engine", "type": "DECISIONS", "job": "outbound-gate:600addd01b8da7ca", "backend": "openrouter-decisions", "ms": 500, "dry_run": true}
+{"ts": "2026-10-24T16:25:26Z", "t": 1792859126.565, "actor": "engine", "type": "JEV_CALL", "questions": ["fit", "budget", "gap", "timing", "pursue"], "via": "openrouter-decisions", "model": "typesafe/jev-1.13-20260917"}
+{"ts": "2026-10-24T16:25:26Z", "t": 1792859126.566, "actor": "engine", "type": "DECISIONS", "job": "outbound:fc04977cf486d78a", "backend": "openrouter-decisions", "ms": 583, "dry_run": true}
+{"ts": "2026-10-24T16:25:26Z", "t": 1792859126.806, "actor": "engine", "type": "OUTBOUND_MODEL_FAIL", "model": "minimax/minimax-m3.1-flash:free", "error": "http 404"}
+{"ts": "2026-10-24T16:25:26Z", "t": 1792859126.996, "actor": "engine", "type": "OUTBOUND_MODEL_FAIL", "model": "minimax/minimax-m3.1-flash:free", "error": "http 404"}
+{"ts": "2026-10-24T16:25:33Z", "t": 1792859133.566, "actor": "engine", "type": "JEV_CALL", "questions": ["fit", "budget", "gap", "timing", "pursue"], "via": "openrouter-decisions", "model": "typesafe/jev-1.13-20260917"}
+{"ts": "2026-10-24T16:25:33Z", "t": 1792859133.567, "actor": "engine", "type": "DECISIONS", "job": "outbound:6ab68320df766cc8", "backend": "openrouter-decisions", "ms": 571, "dry_run": true}
+{"ts": "2026-10-24T16:25:40Z", "t": 1792859140.469, "actor": "engine", "type": "JEV_CALL", "questions": ["personalization", "spam_risk", "promise_free"], "via": "openrouter-decisions", "model": "typesafe/jev-1.13-20260917"}
+{"ts": "2026-10-24T16:25:40Z", "t": 1792859140.47, "actor": "engine", "type": "DECISIONS", "job": "outbound-gate:4b0170ee8f2a13dd", "backend": "openrouter-decisions", "ms": 545, "dry_run": true}
+{"ts": "2026-10-24T16:25:44Z", "t": 1792859144.616, "actor": "engine", "type": "OUTBOUND_MODEL_FAIL", "model": "nvidia/nemotron-3-ultra-550b-a55b:free", "error": "unreadable: ProviderError"}
