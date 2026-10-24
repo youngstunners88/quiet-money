@@ -1,0 +1,96 @@
+{
+  "title": "Lower Your Power Bill Using the Off-Peak Rule",
+  "hook_text": "RUNNING YOUR DRYER AT 2 PM COSTS DOUBLE",
+  "beats": [
+    {
+      "say": "Running your dryer at 2 PM is costing you double what it costs at midnight.",
+      "callout": "",
+      "visual": "A dark laundry room illuminated only by the faint orange glow of a digital clock on a washing machine."
+    },
+    {
+      "say": "Most homes bleed cash every afternoon without knowing why.",
+      "callout": "",
+      "visual": "Close-up of a modern electric meter spinning rapidly on the side of a suburban house."
+    },
+    {
+      "say": "How do utility companies hide peak pricing right inside your monthly bill?",
+      "callout": "",
+      "visual": "A person's hands holding a folded paper utility bill near a dim kitchen light."
+    },
+    {
+      "say": "You might assume electricity costs the same all day long.",
+      "callout": "ASSUME VS FACT",
+      "visual": "A glowing desk lamp sitting on a wooden table in an empty, quiet living room."
+    },
+    {
+      "say": "It doesn't. Power grids charge double during peak afternoon hours when demand spikes.",
+      "callout": "",
+      "visual": "A wide shot of power lines stretching across a sunset sky under heavy clouds."
+    },
+    {
+      "say": "Step one. Log into your power company portal and check your rate plan.",
+      "callout": "STEP ONE",
+      "visual": "Fingers typing on a laptop keyboard with the screen blurred in the background."
+    },
+    {
+      "say": "Find the exact hours when peak pricing starts and ends.",
+      "callout": "",
+      "visual": "Macro shot of a wall clock ticking past three o'clock in afternoon light."
+    },
+    {
+      "say": "Step two. Program your dishwasher and dryer to run after midnight.",
+      "callout": "STEP TWO",
+      "visual": "A hand pressing a start button on a stainless steel dishwasher panel."
+    },
+    {
+      "say": "Shift your heavy energy use outside the expensive peak window.",
+      "callout": "",
+      "visual": "A dark kitchen with a single overhead light casting long shadows on the counter."
+    },
+    {
+      "say": "Step three. Set your thermostat two degrees higher during afternoon peak hours.",
+      "callout": "STEP THREE",
+      "visual": "A close-up of a digital thermostat display glowing faintly on a painted wall."
+    },
+    {
+      "say": "That simple shift cuts your power bill instantly.",
+      "callout": "",
+      "visual": "A person sliding a closed laptop shut on a clean wooden desk."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "A closed front door with a sliver of bright moonlight cutting across the floor."
+    }
+  ],
+  "caption": "Stop paying double for power just because you're running appliances at the wrong hour. #personalfinance #savingmoney #budgetingtips #moneymindset #smartmoney",
+  "description": "Learn how utility companies charge peak pricing during the day and how shifting your heavy appliance usage to off-peak hours cuts your monthly power bill instantly.",
+  "hashtags": [
+    "#personalfinance",
+    "#savingmoney",
+    "#budgetingtips",
+    "#moneymindset",
+    "#smartmoney"
+  ],
+  "first_comment": "What time of day do you usually run your laundry?",
+  "facts": [
+    {
+      "claim": "Utility companies charge higher rates during peak afternoon hours",
+      "basis": "Standard time-of-use electricity pricing models used by power grids"
+    }
+  ],
+  "source": "llm",
+  "pillar": "playbook",
+  "look": "",
+  "loop_map": {
+    "stakes": "Running appliances during peak afternoon hours doubles electricity costs.",
+    "big_question": "How do utility companies hide peak pricing right inside your monthly bill?",
+    "assume": "Electricity costs the same flat rate all day long.",
+    "reveal": "Power grids charge double during high-demand afternoon hours.",
+    "rehook_beats": [
+      3,
+      7
+    ],
+    "payoff_beat": 11
+  }
+}

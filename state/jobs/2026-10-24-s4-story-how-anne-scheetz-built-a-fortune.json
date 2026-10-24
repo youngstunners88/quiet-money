@@ -1,0 +1,77 @@
+{
+  "id": "2026-10-24-s4-story-how-anne-scheetz-built-a-fortune",
+  "pillar": "story",
+  "topic": "How Anne Scheetz Built a Fortune on Secret Dividends as a Nurse",
+  "day": "2026-10-24",
+  "slot": 4,
+  "status": "published",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-24T09:43:19Z",
+      "words": 188
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-24T09:44:06Z",
+      "seconds": 63.472,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-24T09:44:24Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-24T09:46:29Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-24T09:46:29Z",
+      "score": 96
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-24T09:46:30Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-10-24T09:46:32Z",
+      "local": "2026-10-24T21:00:00-04:00",
+      "youtube": null
+    }
+  ],
+  "artifacts": {
+    "angle": "A lifelong nurse who never earned a high salary quietly amassed millions by strictly never selling a single share of stock she inherited, highlighting the wealth-destroying cost of unnecessary portfolio tinkering.",
+    "hook": "She worked a modest nursing job her entire life, never made over $30,000 a year, and somehow died worth over $9 million.",
+    "title": "The Nurse Who Died With $9 Million",
+    "style": "cinematic",
+    "video": "/home/user/quiet-money/production/output/2026-10-24/2026-10-24-s4-story-how-anne-scheetz-built-a-fortune/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-24/2026-10-24-s4-story-how-anne-scheetz-built-a-fortune/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-10-24/slot5-story",
+        "post_at": "2026-10-24T21:00:00-04:00"
+      },
+      "youtube": {
+        "skipped": "YouTube refused the upload session (HTTP 429): quota or rate limit; it resets at midnight Pacific"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 96,
+    "passed": true
+  },
+  "cost": {
+    "tts:edge:chars": 1107
+  },
+  "notes": []
+}

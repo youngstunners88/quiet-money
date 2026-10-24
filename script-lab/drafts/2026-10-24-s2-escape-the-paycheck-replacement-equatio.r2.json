@@ -1,0 +1,104 @@
+{
+  "title": "The Paycheck Replacement Equation: Yield vs Portfolio",
+  "hook_text": "REPLACE YOUR PAYCHECK FASTER",
+  "beats": [
+    {
+      "say": "Take a $3,000 monthly paycheck landing in your bank account.",
+      "callout": "",
+      "visual": "Close-up of a worker's hands holding a plain pay stub on a dark wooden desk, cinematic overhead lighting."
+    },
+    {
+      "say": "To replace that $3,000 a month using the traditional 4% rule, you'd need $900,000 invested.",
+      "callout": "",
+      "visual": "A dark moody office with stacks of pristine white ledger papers and a brass desk lamp."
+    },
+    {
+      "say": "At $1,000 a month invested at 8% a year, building $900,000 takes 24.4 years.",
+      "callout": "24.4 YEARS",
+      "visual": "Cinematic wide shot of an empty subway station platform at night, symbolizing a long daily commute."
+    },
+    {
+      "say": "Most people give up here, assuming the rat race is an unbreakable 25-year sentence.",
+      "callout": "",
+      "visual": "Silhouette of a person standing behind a glass window looking out at rainy city lights."
+    },
+    {
+      "say": "But what if you changed the math by shifting focus from portfolio size to cash-flow yield?",
+      "callout": "NET YIELD MATH",
+      "visual": "Hands writing sleek mathematical formulas with a silver pen on black paper."
+    },
+    {
+      "say": "If you build an extra $1,000 a month in side cash flow, your required investment drops dramatically.",
+      "callout": "",
+      "visual": "A clean modern workspace with a closed laptop and a ceramic mug, bathed in low ambient warm light."
+    },
+    {
+      "say": "Investing that extra $1,000 a month at 8% for 10 years creates $182,946 on top of your yield.",
+      "callout": "$182,946 IN 10 YRS",
+      "visual": "An hourglass sitting on an old polished wooden desk, golden light streaming from a side window."
+    },
+    {
+      "say": "What's the honest catch before you try replacing your entire salary with cash-flow assets?",
+      "callout": "",
+      "visual": "A subtle split visual showing a balancing mechanical scale floating over a dark background."
+    },
+    {
+      "say": "Higher cash-flow yields require real sweat equity, operational effort, and managing debt risks.",
+      "callout": "",
+      "visual": "A person seen from behind sitting at a desk late at night reviewing plans under a quiet spotlight."
+    },
+    {
+      "say": "STEP ONE: Calculate your target annual payout. Step two: divide it by your asset's net yield percentage.",
+      "callout": "STEP ONE & TWO",
+      "visual": "Close-up of hands typing numbers on an antique mechanical adding machine on dark marble."
+    },
+    {
+      "say": "You replace your paycheck by pairing higher cash-flow yields with targeted investing, cutting decades off your timeline.",
+      "callout": "",
+      "visual": "A person standing in silhouette at sunrise overlooking a calm forest landscape, quiet confidence."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "A simple cinematic shot of a heavy leather-bound book lying closed on a dark oak desk."
+    }
+  ],
+  "caption": "You don't always need a million dollars to exit the rat race. The yield math changes everything.\n\n#money #personalfinance #passiveincome #financialfreedom #cashflow",
+  "description": "Learn how targeting net yield and side cash flow reduces the portfolio needed to replace a monthly salary. Math breakdown using proven financial models.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#passiveincome",
+    "#financialfreedom",
+    "#cashflow"
+  ],
+  "first_comment": "Are you focusing on growing portfolio size or building direct monthly cash flow?",
+  "facts": [
+    {
+      "claim": "$3,000/month passive income requires $900,000 under the 4% rule",
+      "basis": "1998 Trinity Study 4% withdrawal rate rule of thumb ($36,000 / 0.04 = $900,000)"
+    },
+    {
+      "claim": "Investing $1,000/month at 8% per year reaches $900,000 in 24.4 years",
+      "basis": "Monthly compounding math at 8% annual return"
+    },
+    {
+      "claim": "Investing $1,000/month at 8% per year for 10 years yields $182,946",
+      "basis": "Monthly compounding math at 8% annual return ($120,000 contributed)"
+    }
+  ],
+  "source": "llm",
+  "pillar": "escape",
+  "look": "",
+  "loop_map": {
+    "stakes": "Replacing a $3,000 monthly paycheck.",
+    "big_question": "How do you replace your monthly paycheck without saving nearly a million dollars?",
+    "assume": "You must save $900,000 over 24.4 years to produce $3,000 a month.",
+    "reveal": "Targeting higher net yield and active side cash flow cuts decades off the required timeline.",
+    "rehook_beats": [
+      5,
+      8
+    ],
+    "payoff_beat": 11
+  }
+}

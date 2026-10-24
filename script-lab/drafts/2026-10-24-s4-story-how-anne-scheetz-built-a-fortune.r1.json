@@ -1,0 +1,100 @@
+{
+  "title": "How a Nurse Built $9M Without Trading Stocks",
+  "hook_text": "NURSE BUILDS $9M FORTUNE SECRETLY",
+  "beats": [
+    {
+      "say": "A modest nurse making under $30,000 a year died with a fortune over $9,000,000.",
+      "callout": "",
+      "visual": "A vintage medical stethoscope resting quietly on a dark polished wooden table, cinematic shadows, soft moody window lighting."
+    },
+    {
+      "say": "Her name was Anne Scheetz, and she didn't win the lottery or launch a business.",
+      "callout": "",
+      "visual": "Back of a woman in vintage clothing walking down a quiet hospital hallway, dim morning light, cinematic atmosphere."
+    },
+    {
+      "say": "So how did a simple hospital nurse build millions on an ordinary paycheck without trading stocks?",
+      "callout": "",
+      "visual": "Close-up of a hand holding a vintage fountain pen resting on an old leather ledger, dramatic side lighting."
+    },
+    {
+      "say": "Most people assume she lived on canned food and saved every cent she earned.",
+      "callout": "ASSUMPTION VS REALITY",
+      "visual": "A simple wooden dining table with a single glass of water in a dimly lit minimalist room, moody tone."
+    },
+    {
+      "say": "That's wrong. Her wealth grew because she inherited stock and strictly refused to sell.",
+      "callout": "INHERIT AND HOLD",
+      "visual": "Close-up of hands carefully placing a heavy brass key inside an old steel safety deposit box."
+    },
+    {
+      "say": "For over 50 years, she kept working her job, letting dividends automatically buy more shares.",
+      "callout": "50 YEARS",
+      "visual": "A mechanical clock ticking quietly on an old wooden desk, cinematic depth of field, warm candlelight."
+    },
+    {
+      "say": "She never checked daily stock charts or panicked. But what kept her account growing so fast?",
+      "callout": "",
+      "visual": "Silhouette of a person looking out a rain-streaked window at night, soft blue ambient light."
+    },
+    {
+      "say": "Every dividend bought extra stock, compounding quietly without triggering yearly capital gains tax bills.",
+      "callout": "",
+      "visual": "Close-up of dark green oak leaves wet with raindrops, glistening in soft golden sunlight."
+    },
+    {
+      "say": "Active investors trade constantly, yet Anne never sold once. Why did doing nothing work so well?",
+      "callout": "ACTIVE VS PASSIVE",
+      "visual": "An antique hourglass with golden sand running slowly, dark background, dramatic rim lighting."
+    },
+    {
+      "say": "She amassed millions because zero trading fees and deferred taxes let compounding work without interruption.",
+      "callout": "ZERO INTERRUPTIONS",
+      "visual": "A thick leather-bound book sitting closed on a heavy wooden desk, warm glow from a desk lamp."
+    },
+    {
+      "say": "When you constantly swap stocks, extra costs eat your return before interest can double it.",
+      "callout": "",
+      "visual": "Hands holding a pair of polished scissors over a thick hemp rope, sharp focus, atmospheric shadows."
+    },
+    {
+      "say": "Quiet patience often beats restless trading. Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "A tranquil calm lake reflecting blue sky and soft mountain silhouettes at dusk, serene cinematic visual."
+    }
+  ],
+  "caption": "Tinkering with your portfolio drains growth through taxes and fees. Buy quality and hold.\n\n#money #investing #wealth #compounding #quietmoney",
+  "description": "Discover how hospital nurse Anne Scheetz quietly grew millions. By never selling inherited stock and letting dividends automatically reinvest over decades, she avoided fees and taxes that destroy investor returns.",
+  "hashtags": [
+    "#money",
+    "#investing",
+    "#wealth",
+    "#compounding",
+    "#quietmoney"
+  ],
+  "first_comment": "Do you prefer passive dividend reinvestment or active trading?",
+  "facts": [
+    {
+      "claim": "Anne Scheetz accumulated over $9,000,000 on a nurse salary.",
+      "basis": "Historical estate filings and documented news accounts of secret wealth built via long-term buy-and-hold investing."
+    },
+    {
+      "claim": "Frequent trading triggers taxes and friction fees that reduce long-term compounding.",
+      "basis": "Standard tax code mechanics regarding capital gains realization and brokerage transaction costs."
+    }
+  ],
+  "source": "llm",
+  "pillar": "story",
+  "look": "",
+  "loop_map": {
+    "stakes": "A nurse earning under $30,000 left behind over $9,000,000.",
+    "big_question": "How did a nurse build millions on an ordinary paycheck without trading stocks?",
+    "assume": "She saved every penny of her small salary through extreme frugality.",
+    "reveal": "Her wealth came from inheriting stock and never selling a single share.",
+    "rehook_beats": [
+      7,
+      9
+    ],
+    "payoff_beat": 10
+  }
+}

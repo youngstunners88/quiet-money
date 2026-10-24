@@ -1,0 +1,96 @@
+{
+  "title": "Cut Your Energy Bill Using the Off-Peak Rule",
+  "hook_text": "RUNNING YOUR DRYER AT 2 PM COSTS DOUBLE",
+  "beats": [
+    {
+      "say": "Running your dryer at 2 PM is costing you double what it costs at midnight.",
+      "callout": "",
+      "visual": "Cinematic shot of a digital laundry timer glowing in a dark utility room, low angle, moody lighting."
+    },
+    {
+      "say": "Most power grids charge peak rates when the whole city turns on air conditioning.",
+      "callout": "PEAK VS OFF-PEAK",
+      "visual": "A silhouette of a person staring out a window at a twilight city skyline under amber streetlights."
+    },
+    {
+      "say": "That simple appliance habit quietly drains up to $50 extra from your monthly paycheck.",
+      "callout": "",
+      "visual": "Close up of a hand opening a standard household electric bill envelope on a dark wooden table."
+    },
+    {
+      "say": "How do you stop your utility company from taking money for power you use during the day?",
+      "callout": "THE BIG QUESTION",
+      "visual": "Macro shot of an electricity meter spinning rapidly behind glass, illuminated by a flashlight beam."
+    },
+    {
+      "say": "Most people assume every kilowatt hour costs the exact same flat rate around the clock.",
+      "callout": "FLAT RATE VS TIME-OF-USE",
+      "visual": "A hand typing on a laptop keyboard in a dim room, screen casting a soft blue glow on the wall."
+    },
+    {
+      "say": "That assumption is wrong. Utility companies publish strict hourly rate sheets that change by the hour.",
+      "callout": "",
+      "visual": "Close up of printed utility rate documents blurred in the background, sharp pen resting on the page."
+    },
+    {
+      "say": "Can you actually automate your heavy power usage without changing your daily schedule?",
+      "callout": "",
+      "visual": "A finger hovering over a smart plug button on a white wall outlet, dramatic side lighting."
+    },
+    {
+      "say": "Step one. Open your power provider online portal and download your current Time of Use rate schedule.",
+      "callout": "STEP ONE",
+      "visual": "A person scrolling a smartphone screen showing a graph, viewed from behind over their shoulder."
+    },
+    {
+      "say": "Step two. Find the exact hours when peak pricing ends, which is usually around 8 PM.",
+      "callout": "STEP TWO",
+      "visual": "A wall clock ticking in a dark kitchen, illuminated by the green glow of a microwave display."
+    },
+    {
+      "say": "Step three. Program your dishwasher and washing machine built-in delay timers to start after midnight.",
+      "callout": "STEP THREE",
+      "visual": "Close up of a washing machine digital control panel blinking with blue indicator lights."
+    },
+    {
+      "say": "Shifting those daily cycles cuts your energy bill instantly without sacrificing any comfort or time.",
+      "callout": "",
+      "visual": "A calm, tidy living room at night, lit only by a warm lamp casting long shadows."
+    },
+    {
+      "say": "Save that cash instead. Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "A minimalist black coffee mug sitting on a clean wooden desk, cinematic overhead shot."
+    }
+  ],
+  "caption": "Stop paying peak rates for your laundry. Shift your heavy appliances to off-peak hours and keep your cash. #money #personalfinance #finance #budgeting #savingmoney",
+  "description": "Learn how to lower your monthly utility bill instantly by shifting high-energy appliance usage to off-peak hours using your provider rate schedule.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#finance",
+    "#budgeting",
+    "#savingmoney"
+  ],
+  "first_comment": "What time of day do you usually run your dishwasher?",
+  "facts": [
+    {
+      "claim": "Running appliances during peak hours costs up to double off-peak rates on Time-of-Use plans.",
+      "basis": "Standard utility Time-of-Use rate structures charge higher multipliers during peak afternoon hours."
+    }
+  ],
+  "source": "llm",
+  "pillar": "playbook",
+  "look": "",
+  "loop_map": {
+    "stakes": "The viewer is paying double for daily appliance use during peak utility hours.",
+    "big_question": "How do you stop your utility company from taking money for power you use during the day?",
+    "assume": "Most people assume every kilowatt hour costs the exact same flat rate around the clock.",
+    "reveal": "Utility companies publish strict hourly rate sheets where off-peak power is significantly cheaper.",
+    "rehook_beats": [
+      4,
+      7
+    ],
+    "payoff_beat": 10
+  }
+}

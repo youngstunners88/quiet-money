@@ -1,0 +1,77 @@
+{
+  "id": "2026-10-24-s3-myth-myth-a-budget-is-a-restriction-o",
+  "pillar": "myth",
+  "topic": "Myth: A budget is a restriction on your freedom",
+  "day": "2026-10-24",
+  "slot": 3,
+  "status": "published",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-24T09:31:50Z",
+      "words": 176
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-24T09:32:16Z",
+      "seconds": 64.635,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-24T09:33:15Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-24T09:35:03Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-24T09:35:03Z",
+      "score": 99
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-24T09:35:03Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-10-24T09:35:05Z",
+      "local": "2026-10-24T18:30:00-04:00",
+      "youtube": null
+    }
+  ],
+  "artifacts": {
+    "angle": "Reframe budgeting as a permission system that eliminates financial guilt rather than a restrictive diet.",
+    "hook": "Budgets fail because you are using them like a diet instead of a permission slip.",
+    "title": "Why Your Budget Fails (And How to Fix It)",
+    "style": "cinematic",
+    "video": "/home/user/quiet-money/production/output/2026-10-24/2026-10-24-s3-myth-myth-a-budget-is-a-restriction-o/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-24/2026-10-24-s3-myth-myth-a-budget-is-a-restriction-o/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-10-24/slot4-myth",
+        "post_at": "2026-10-24T18:30:00-04:00"
+      },
+      "youtube": {
+        "skipped": "YouTube refused the upload session (HTTP 429): quota or rate limit; it resets at midnight Pacific"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 99,
+    "passed": true
+  },
+  "cost": {
+    "tts:edge:chars": 1053
+  },
+  "notes": []
+}

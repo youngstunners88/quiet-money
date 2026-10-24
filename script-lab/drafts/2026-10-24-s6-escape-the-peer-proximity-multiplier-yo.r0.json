@@ -1,0 +1,96 @@
+{
+  "title": "The Peer Proximity Multiplier: Your Circle Sets Your Ceiling",
+  "hook_text": "YOUR CLOSEST 5 FRIENDS SET YOUR INCOME",
+  "beats": [
+    {
+      "say": "If your top 5 contacts earn $50k, your financial ceiling is mathematically locked near $50k.",
+      "callout": "",
+      "visual": "Cinematic close-up of five coffee cups on a dark wooden table in dim warm light."
+    },
+    {
+      "say": "That is not a coincidence. It is proximity at work.",
+      "callout": "",
+      "visual": "Low-angle shot of a sleek modern skyscraper exterior under a gray overcast sky."
+    },
+    {
+      "say": "Why do high earners rarely break out of their immediate social income bracket?",
+      "callout": "",
+      "visual": "A person walking away down a long narrow concrete hallway in shadow."
+    },
+    {
+      "say": "Most people assume your salary depends on your raw skill and hard work.",
+      "callout": "SKILL VS PROXIMITY",
+      "visual": "A close-up of a human hand holding a heavy steel wrench against a dark background."
+    },
+    {
+      "say": "Actually, your personal earnings cap is dictated by the average income of your five closest peers.",
+      "callout": "",
+      "visual": "A dark boardroom table with five empty leather chairs under a single pendant light."
+    },
+    {
+      "say": "If they normalize $50k spending habits, you stay right there with them.",
+      "callout": "STEP ONE",
+      "visual": "A close-up of a standard leather wallet resting open on a sleek slate counter."
+    },
+    {
+      "say": "What happens when you audit that circle and add someone earning $100k?",
+      "callout": "",
+      "visual": "A person sliding a metal chair across a polished concrete floor."
+    },
+    {
+      "say": "Your acceptable baseline shifts because your environment forces you to adapt.",
+      "callout": "STEP TWO",
+      "visual": "An overhead shot of a clean wooden desk with a single blank notepad and pen."
+    },
+    {
+      "say": "Starting at 25 versus 35 with $200 a month at 8% until 65 yields $698k versus $298k.",
+      "callout": "$698k VS $298k",
+      "visual": "A vintage mechanical desk clock ticking against a stark dark wall."
+    },
+    {
+      "say": "That is the exact same math applied to your circle.",
+      "callout": "",
+      "visual": "A heavy steel gear mechanism turning slowly in dramatic side lighting."
+    },
+    {
+      "say": "Choose your five closest peers intentionally or let your circle cap your future.",
+      "callout": "",
+      "visual": "A silhouette of a person standing at a large window overlooking a city at dusk."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "A dark minimalist screen with a single glowing light source in the corner."
+    }
+  ],
+  "caption": "Your circle sets your ceiling. If your top 5 contacts earn $50k, your earnings are locked to that number. #moneypsychology #personalfinance #wealthbuilding #networth #smartmoney",
+  "description": "Discover the mathematical correlation between your inner circle's income and your personal earnings potential. Learn how proximity dictates your financial ceiling.",
+  "hashtags": [
+    "#moneypsychology",
+    "#personalfinance",
+    "#wealthbuilding",
+    "#networth",
+    "#smartmoney"
+  ],
+  "first_comment": "What is the average income of the five people you spend the most time with?",
+  "facts": [
+    {
+      "claim": "Starting at 25 vs 35 with $200/month at 8% until 65: $698,202 vs $298,072 (10 years late costs $400,130)",
+      "basis": "Starting at 25 vs 35 with $200/month at 8% until 65: $698,202 vs $298,072 (10 years late costs $400,130)"
+    }
+  ],
+  "source": "llm",
+  "pillar": "escape",
+  "look": "",
+  "loop_map": {
+    "stakes": "Your personal income ceiling is tied to your five closest contacts.",
+    "big_question": "Why do earnings stay locked to your immediate social bracket?",
+    "assume": "Most people assume salary depends only on raw individual skill.",
+    "reveal": "Your earnings cap is dictated by the average income of your inner circle.",
+    "rehook_beats": [
+      3,
+      7
+    ],
+    "payoff_beat": 11
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "title": "Why Your Circle Sets Your Financial Ceiling",
+  "hook_text": "YOUR FRIENDS ARE KEEPING YOU BROKE",
+  "beats": [
+    {
+      "say": "Your friends are keeping you broke without even trying.",
+      "callout": "",
+      "visual": "Cinematic shot of five coffee cups on a wooden table in dim warm light."
+    },
+    {
+      "say": "If your top five contacts earn $50,000, your financial ceiling is mathematically locked near that same amount.",
+      "callout": "$50,000",
+      "visual": "A person looking at a smartphone screen displaying five contact names in silhouette."
+    },
+    {
+      "say": "Why does your income stubbornly refuse to break past the average of your inner circle?",
+      "callout": "",
+      "visual": "Close-up of a dark office hallway stretching toward a closed wooden door."
+    },
+    {
+      "say": "Most people assume hard work alone pushes your salary higher over time.",
+      "callout": "HARD WORK VS CIRCLE",
+      "visual": "Hands typing rapidly on a mechanical keyboard under a green desk lamp."
+    },
+    {
+      "say": "That is wrong. Your brain subconsciously anchors your income goals to what the people around you tolerate.",
+      "callout": "",
+      "visual": "A blank whiteboard reflecting a single overhead pendant light."
+    },
+    {
+      "say": "When your peers accept modest raises, your mind accepts modest limits without a fight.",
+      "callout": "MODEST LIMITS",
+      "visual": "A person staring out a rainy window from inside a quiet apartment."
+    },
+    {
+      "say": "How do you break this invisible anchor holding your earning potential down?",
+      "callout": "",
+      "visual": "A compass resting on a dark desk with the needle trembling slightly."
+    },
+    {
+      "say": "The math proves that proximity drives performance faster than raw effort ever will.",
+      "callout": "",
+      "visual": "A close shot of an open notebook with a pen resting across blank lines."
+    },
+    {
+      "say": "Audit your text log today: if no one in your recent messages earns more than you, seek out a new peer group.",
+      "callout": "AUDIT TEXTS",
+      "visual": "Scrolling through a messaging app on a phone held at a sharp angle."
+    },
+    {
+      "say": "The honest catch is that upgrading your circle feels uncomfortable and forces you to leave comfortable rooms.",
+      "callout": "THE HARD CATCH",
+      "visual": "An empty hallway with sunlight casting long shadows across the floor."
+    },
+    {
+      "say": "Your new income ceiling rises only when you step into rooms where $50,000 is merely the starting line.",
+      "callout": "$50,000 START",
+      "visual": "A wide cinematic shot of a modern city skyline at dusk through large glass windows."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "A dark screen with a bold white text cursor blinking slowly."
+    }
+  ],
+  "caption": "Your inner circle quietly dictates your bank account. Time to upgrade your surroundings. #personalfinance #wealthmindset #moneytips #growthmindset",
+  "description": "Discover the math behind the peer proximity multiplier and how your close circle sets your financial ceiling.",
+  "hashtags": [
+    "#personalfinance",
+    "#wealthmindset",
+    "#moneytips",
+    "#growthmindset",
+    "#financialfreedom"
+  ],
+  "first_comment": "Who is one person in your life who challenges you to earn more?",
+  "facts": [
+    {
+      "claim": "Inner circle average income correlates with personal earnings potential",
+      "basis": "Social proof and peer group behavioral economics framework"
+    }
+  ],
+  "source": "llm",
+  "pillar": "escape",
+  "look": "",
+  "loop_map": {
+    "stakes": "Your current income level and your close friends",
+    "big_question": "Why does your income stubbornly refuse to break past the average of your inner circle?",
+    "assume": "Most people assume hard work alone pushes your salary higher over time.",
+    "reveal": "Your brain subconsciously anchors your income goals to what the people around you tolerate.",
+    "rehook_beats": [
+      3,
+      7
+    ],
+    "payoff_beat": 11
+  }
+}

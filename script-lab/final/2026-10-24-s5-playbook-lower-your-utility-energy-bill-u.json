@@ -1,0 +1,95 @@
+{
+  "title": "The Hidden Cost of Running Appliances at 2 PM",
+  "hook_text": "YOUR DRYER BILL IS LYING TO YOU",
+  "beats": [
+    {
+      "say": "If your utility company uses Time-of-Use rates, running your dryer at 2 PM costs double what it costs at midnight.",
+      "callout": "",
+      "visual": "A warm, sunlit laundry room with a modern dryer door slightly ajar, cinematic side lighting, shallow depth of field."
+    },
+    {
+      "say": "Most homes assume power costs the exact same flat rate twenty-four hours a day, seven days a week.",
+      "callout": "ASSUME VS FACT",
+      "visual": "A close-up shot of an analog wall clock ticking in a quiet, shadowy apartment, moody lighting."
+    },
+    {
+      "say": "That assumption quietly drains up to $20 extra every month on standard household electric bills.",
+      "callout": "$20/MONTH",
+      "visual": "A stack of paper utility bills resting on a dark wooden desk, lit by a single desk lamp."
+    },
+    {
+      "say": "Why does the exact same load of laundry cost twice as much during afternoon peak hours?",
+      "callout": "",
+      "visual": "A close-up of a hand resting on a closed circuit breaker box panel in a dim hallway."
+    },
+    {
+      "say": "Power grids charge premium rates when total neighborhood demand hits its highest daily peak.",
+      "callout": "STEP ONE",
+      "visual": "A sleek smartphone screen displaying a power utility app, shown from a steep, blurred angle."
+    },
+    {
+      "say": "Step one. Open your online utility account and check if your plan uses Time-of-Use pricing.",
+      "callout": "",
+      "visual": "A person's index finger tapping a blank digital screen, cinematic soft focus background."
+    },
+    {
+      "say": "Step two. Locate your local grid provider's exact off-peak hours, usually starting after 8 PM.",
+      "callout": "STEP TWO",
+      "visual": "A digital alarm clock glowing in a dark bedroom, showing late night hours."
+    },
+    {
+      "say": "Step three. Program your heavy appliances like washing machines and dishwashers to run during those off-peak windows.",
+      "callout": "STEP THREE",
+      "visual": "A dishwasher control panel glowing softly in a dark kitchen, low-key cinematic lighting."
+    },
+    {
+      "say": "Shifting those heavy appliance cycles cuts your monthly power costs instantly without using less electricity.",
+      "callout": "PEAK VS OFF-PEAK",
+      "visual": "A modern electric meter mounted on an exterior brick wall during dusk, moody ambient light."
+    },
+    {
+      "say": "That simple schedule adjustment keeps extra cash in your pocket instead of the utility company's bank account.",
+      "callout": "$200/YEAR",
+      "visual": "A neat stack of crisp paper currency resting on a minimalist concrete countertop."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "A minimalist home office desk at night, illuminated by a warm ambient desk lamp, clean framing."
+    }
+  ],
+  "caption": "Stop paying double for the exact same load of laundry. #PersonalFinance #MoneyTips #SmartMoney #UtilityBills #SaveMoney",
+  "description": "Shift your high-energy appliance usage to off-peak hours and cut your monthly power costs instantly with this simple 3-step rule.",
+  "hashtags": [
+    "#PersonalFinance",
+    "#MoneyTips",
+    "#SmartMoney",
+    "#UtilityBills",
+    "#SaveMoney"
+  ],
+  "first_comment": "What time of day do you usually run your laundry?",
+  "facts": [
+    {
+      "claim": "Running appliances during peak hours can cost double compared to off-peak rates under Time-of-Use pricing.",
+      "basis": "Standard utility Time-of-Use rate structures."
+    },
+    {
+      "claim": "Shifting heavy appliance loads to off-peak hours can save households $10 to $20 a month.",
+      "basis": "Average utility cost differentials for residential laundry and dishwasher loads."
+    }
+  ],
+  "source": "llm",
+  "pillar": "playbook",
+  "look": "",
+  "loop_map": {
+    "stakes": "Utility power costs under Time-of-Use rate structures.",
+    "big_question": "Why does the exact same load of laundry cost twice as much during the afternoon?",
+    "assume": "Power costs the exact same flat rate twenty-four hours a day.",
+    "reveal": "Utility grids charge peak rates when neighborhood demand is highest.",
+    "rehook_beats": [
+      4,
+      7
+    ],
+    "payoff_beat": 9
+  }
+}

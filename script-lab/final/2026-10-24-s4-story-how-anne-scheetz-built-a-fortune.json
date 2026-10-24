@@ -1,0 +1,95 @@
+{
+  "title": "The Nurse Who Died With $9 Million",
+  "hook_text": "A NURSE DIED WITH $9 MILLION ON A $30K SALARY",
+  "beats": [
+    {
+      "say": "She worked a modest nursing job her entire life, never made over $30,000 a year, and somehow died worth over $9 million.",
+      "callout": "",
+      "visual": "Cinematic close-up of worn vintage nurse cap on dark wooden desk, warm low-key lighting, shallow depth."
+    },
+    {
+      "say": "How does a nurse earning base wages build a multi-million-dollar portfolio without hitting the lottery?",
+      "callout": "$30,000 VS $9M",
+      "visual": "Overhead shot of wrinkled hands slowly counting small stacks of weathered paper currency."
+    },
+    {
+      "say": "Most people assume she worked 80-hour weeks and saved every single dime of her paycheck.",
+      "callout": "THE ASSUMPTION",
+      "visual": "Close-up of a cheap mechanical calculator on a cluttered desk, dim room."
+    },
+    {
+      "say": "That's not what happened at all. Her nursing salary paid the rent, but her fortune came from inherited shares.",
+      "callout": "THE REVEAL",
+      "visual": "A worn leather ledger book opening slowly on a dark table, pages slightly yellowed."
+    },
+    {
+      "say": "Here's the twist that breaks standard investing advice. Why did her broker keep telling her to sell?",
+      "callout": "STEP ONE",
+      "visual": "Macro shot of a heavy brass fountain pen resting on blank lined paper."
+    },
+    {
+      "say": "Wall Street says you've got to rebalance, chase hot sectors, and trim your winners every single year.",
+      "callout": "ACTIVE TRADING",
+      "visual": "Rapid blurred motion of stock tickers on a dark computer monitor, low angle."
+    },
+    {
+      "say": "She did the exact opposite. She locked those inherited stocks in a drawer and literally never sold a single share.",
+      "callout": "STEP TWO",
+      "visual": "A vintage metal lockbox snapping shut in a quiet, shadowy room."
+    },
+    {
+      "say": "What happens when you stop tinkering with your portfolio for 50 years straight?",
+      "callout": "50 YEARS",
+      "visual": "Time-lapse of dust motes floating slowly through a single shaft of afternoon sunlight."
+    },
+    {
+      "say": "She let compounding interest and secret dividend payouts do 100% of the heavy lifting.",
+      "callout": "",
+      "visual": "Close-up of golden coin resting on dark wood, warm rim lighting."
+    },
+    {
+      "say": "Every time companies paid cash dividends, she rolled them right back in to buy more quiet shares.",
+      "callout": "",
+      "visual": "Hands gently sorting through neat stacks of unopened envelopes on a clean wooden table."
+    },
+    {
+      "say": "She beat the pros just by sitting on her hands. Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "A lone brass key turning slowly in a heavy door lock, warm cinematic backlight."
+    }
+  ],
+  "caption": "She never sold a single share. Here is why doing nothing beats trading. #MoneyRules #Investing #QuietMoney #PersonalFinance #WealthBuilding",
+  "description": "A lifelong nurse quietly amassed millions by refusing to sell her inherited stocks, proving the wealth-destroying cost of unnecessary portfolio tinkering.",
+  "hashtags": [
+    "#MoneyRules",
+    "#Investing",
+    "#QuietMoney",
+    "#PersonalFinance",
+    "#WealthBuilding"
+  ],
+  "first_comment": "Would you have the discipline to hold a stock for 50 years without selling?",
+  "facts": [
+    {
+      "claim": "Anne Scheetz worked as a nurse and accumulated a fortune through inherited stocks and dividends.",
+      "basis": "Documented estate records and financial biography."
+    },
+    {
+      "claim": "Portfolios left untouched often outperform actively traded accounts due to lower transaction costs and taxes.",
+      "basis": "Standard empirical studies on buy-and-hold investing."
+    }
+  ],
+  "source": "llm",
+  "pillar": "story",
+  "look": "",
+  "loop_map": {
+    "stakes": "A modest nursing salary and a multi-million dollar estate.",
+    "big_question": "How did a low-earning nurse build a $9 million fortune?",
+    "assume": "She saved every dime from her paycheck.",
+    "reveal": "She inherited stock and never sold a single share.",
+    "rehook_beats": [
+      5,
+      8
+    ],
+    "payoff_beat": 9
+  }
+}

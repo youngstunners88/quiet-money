@@ -1,0 +1,77 @@
+{
+  "id": "2026-10-24-s2-escape-the-paycheck-replacement-equatio",
+  "pillar": "escape",
+  "topic": "The Paycheck Replacement Equation: Net Yield vs Portfolio Size",
+  "day": "2026-10-24",
+  "slot": 2,
+  "status": "published",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-24T09:24:41Z",
+      "words": 174
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-24T09:25:24Z",
+      "seconds": 68.703,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-24T09:26:35Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-24T09:29:27Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-24T09:29:27Z",
+      "score": 99
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-24T09:29:28Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-10-24T09:29:29Z",
+      "local": "2026-10-24T15:00:00-04:00",
+      "youtube": null
+    }
+  ],
+  "artifacts": {
+    "angle": "Breaks down the exact cash-flow yield needed to replace a monthly salary without relying on stock market liquidation.",
+    "hook": "To replace a $50,000 paycheck, you don't need a million dollars in cash—you need a targeted net yield calculation.",
+    "title": "The Paycheck Replacement Equation: Yield vs Portfolio",
+    "style": "cinematic",
+    "video": "/home/user/quiet-money/production/output/2026-10-24/2026-10-24-s2-escape-the-paycheck-replacement-equatio/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-24/2026-10-24-s2-escape-the-paycheck-replacement-equatio/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-10-24/slot3-escape",
+        "post_at": "2026-10-24T15:00:00-04:00"
+      },
+      "youtube": {
+        "skipped": "YouTube refused the upload session (HTTP 429): quota or rate limit; it resets at midnight Pacific"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 99,
+    "passed": true
+  },
+  "cost": {
+    "tts:edge:chars": 1064
+  },
+  "notes": []
+}

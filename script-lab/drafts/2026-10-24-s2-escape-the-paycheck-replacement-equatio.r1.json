@@ -1,0 +1,105 @@
+{
+  "title": "The Math to Quit Your Job Without Selling Stocks",
+  "hook_text": "YOUR PAYCHECK VS YOUR PORTFOLIO",
+  "beats": [
+    {
+      "say": "Your $50,000 paycheck. That’s $4,166 a month after taxes.",
+      "callout": "",
+      "visual": "A paycheck envelope on a wooden desk, soft side lighting, slight tilt"
+    },
+    {
+      "say": "To replace it with passive income, how much do you actually need?",
+      "callout": "HOW MUCH?",
+      "visual": "Close-up of a calculator screen showing $4,166, shallow depth of field"
+    },
+    {
+      "say": "Most people think they need $1,200,000 in cash. That’s the 4% rule talking.",
+      "callout": "$1,200,000 VS 4%",
+      "visual": "A stack of cash on a table, side angle, warm lighting"
+    },
+    {
+      "say": "But if you own assets that pay you directly, the math shifts.",
+      "callout": "ASSETS PAY DIRECTLY",
+      "visual": "A row of rental property mailboxes with keys, dusk light"
+    },
+    {
+      "say": "A 6% net yield portfolio throwing off $4,166 a month needs just $833,200.",
+      "callout": "$833,200",
+      "visual": "Humming server racks in a data center, cool blue light"
+    },
+    {
+      "say": "At 8%, it’s $624,900. At 10%, it’s $499,920. Same income, smaller pile.",
+      "callout": "$624,900 VS $499,920",
+      "visual": "Dividend check on a kitchen table, neutral light"
+    },
+    {
+      "say": "So why does everyone chase the bigger number?",
+      "callout": "WHY CHASE $1,200,000?",
+      "visual": "A city skyline with a single illuminated office window, night"
+    },
+    {
+      "say": "Because most assets don’t pay out that cleanly. Tenants vanish. Dividends get cut.",
+      "callout": "RISK VS REWARD",
+      "visual": "A vacated apartment door with a ‘For Rent’ sign, muted tones"
+    },
+    {
+      "say": "The real catch: you need assets that pay on time, every time, no excuses.",
+      "callout": "",
+      "visual": "A clock tower at 12:00 with sunlight hitting the face"
+    },
+    {
+      "say": "Start small. This week, list one asset class you can own that pays monthly.",
+      "callout": "",
+      "visual": "A notebook with a pen resting on a blank page, soft light"
+    },
+    {
+      "say": "Then crunch the yield. $4,166 divided by your target portfolio size. That’s your number.",
+      "callout": "",
+      "visual": "A calculator with a hand pressing the equals button, close-up"
+    },
+    {
+      "say": "The paycheck replacement equation: net yield beats portfolio size. Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "A quiet street at dawn with a single lit streetlamp"
+    }
+  ],
+  "caption": "You don’t need a mountain of cash to quit. You need the right yield. Math inside.",
+  "description": "Replacing a $50,000 paycheck isn’t about the pile—it’s about the payout. Here’s the net yield math to walk away from your job without selling assets.",
+  "hashtags": [
+    "#MoneyPsychology",
+    "#PassiveIncome",
+    "#EscapeTheRatRace",
+    "#PersonalFinance",
+    "#QuietMoney"
+  ],
+  "first_comment": "What’s one asset you’d add to this list?",
+  "facts": [
+    {
+      "claim": "A 6% net yield portfolio requires $833,200 to generate $4,166/month ($50,000/year pre-tax).",
+      "basis": "Rule of 100: $50,000 / 0.06 = $833,333.33"
+    },
+    {
+      "claim": "A 4% withdrawal rate requires $1,200,000 to generate $50,000/year.",
+      "basis": "4% rule guideline from the 1998 Trinity study"
+    },
+    {
+      "claim": "At 8% annual return, investing $1,000/month reaches $600,000 in 20.2 years.",
+      "basis": "Fact sheet calculation"
+    }
+  ],
+  "source": "llm",
+  "pillar": "escape",
+  "look": "",
+  "loop_map": {
+    "stakes": "A $50,000 paycheck after taxes is $4,166/month",
+    "big_question": "How much do you need to replace it with passive income?",
+    "assume": "$1,200,000 in cash",
+    "reveal": "$833,200 at 6% net yield",
+    "rehook_beats": [
+      4,
+      6,
+      8
+    ],
+    "payoff_beat": 12
+  }
+}

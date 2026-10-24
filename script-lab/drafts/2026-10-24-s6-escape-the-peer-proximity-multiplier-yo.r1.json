@@ -1,0 +1,95 @@
+{
+  "title": "The Peer Proximity Ceiling: Why Your Circle Limits Your Income",
+  "hook_text": "YOUR INNER CIRCLE SETS YOUR INCOME CEILING",
+  "beats": [
+    {
+      "say": "If your top 5 contacts earn $50k, your financial habits and expectations naturally anchor near $50k.",
+      "callout": "",
+      "visual": "Cinematic shot of five coffee mugs sitting on a dark wooden table in dim warm light."
+    },
+    {
+      "say": "Most people assume hard work alone breaks that ceiling, but it's rarely enough.",
+      "callout": "HARD WORK VS CIRCLE",
+      "visual": "Close-up of hands typing rapidly on a laptop keyboard in a quiet office space."
+    },
+    {
+      "say": "Why does your closest circle dictate your personal earnings potential so strongly?",
+      "callout": "",
+      "visual": "A lone silhouette walking down a long concrete hallway under fluorescent overhead lights."
+    },
+    {
+      "say": "While not a strict mathematical rule, psychological research shows your environment heavily anchors your earning expectations.",
+      "callout": "PSYCHOLOGY VS MATH",
+      "visual": "A stack of thick financial documents resting on a minimalist desk with soft shadows."
+    },
+    {
+      "say": "If everyone around you accepts $50k as normal, asking for a raise feels radical.",
+      "callout": "STEP ONE",
+      "visual": "A person looking out a rain-streaked office window at a distant city skyline."
+    },
+    {
+      "say": "How do you break past this invisible boundary without burning bridges?",
+      "callout": "",
+      "visual": "A close-up of a brass key turning slowly inside a heavy mechanical deadbolt lock."
+    },
+    {
+      "say": "The honest catch is the social friction; stepping out of your comfort zone requires difficult conversations.",
+      "callout": "STEP TWO",
+      "visual": "Two empty chairs facing each other across a stark white minimalist meeting table."
+    },
+    {
+      "say": "Upgrade your circle's baseline knowledge, and you upgrade the deals, jobs, and habits you get exposed to daily.",
+      "callout": "",
+      "visual": "A hand placing a thick leather-bound notebook beside a sleek modern desk lamp."
+    },
+    {
+      "say": "This week, audit your 5 closest contacts and deliberately add one person who challenges your financial baseline.",
+      "callout": "STEP THREE",
+      "visual": "A fountain pen signing a clean white sheet of paper on a dark desk."
+    },
+    {
+      "say": "That is how you quietly reset your ceiling.",
+      "callout": "",
+      "visual": "A wide cinematic shot of a city bridge at dusk with distant glowing headlights."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "A subtle neon sign glowing softly against a dark, textured brick wall."
+    }
+  ],
+  "caption": "Your inner circle quietly sets your financial ceiling. Here is how to upgrade your baseline. #money #personalfinance #wealth #ratrace",
+  "description": "Discover the hidden correlation between your inner circle and your earnings potential. Learn how to audit your closest contacts and reset your financial baseline this week.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#wealth",
+    "#ratrace",
+    "#mindset"
+  ],
+  "first_comment": "Who is one person you can add to your circle this month?",
+  "facts": [
+    {
+      "claim": "Your environment heavily anchors your earning expectations.",
+      "basis": "Behavioral psychology principles regarding social norms and peer influence."
+    },
+    {
+      "claim": "Auditing close contacts shifts baseline behaviors.",
+      "basis": "Standard personal finance and career development methodology."
+    }
+  ],
+  "source": "llm",
+  "pillar": "escape",
+  "look": "",
+  "loop_map": {
+    "stakes": "Your top five contacts and your $50k income ceiling",
+    "big_question": "Why does your closest circle dictate your personal earnings potential so strongly?",
+    "assume": "Most people assume hard work alone breaks that ceiling",
+    "reveal": "Psychological research shows your environment heavily anchors your earning expectations",
+    "rehook_beats": [
+      3,
+      6
+    ],
+    "payoff_beat": 10
+  }
+}

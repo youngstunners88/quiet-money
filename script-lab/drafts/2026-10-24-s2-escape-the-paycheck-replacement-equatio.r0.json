@@ -1,0 +1,104 @@
+{
+  "title": "The Paycheck Replacement Math Without Selling Stocks",
+  "hook_text": "REPLACE A $50,000 PAYCHECK WITHOUT SELLING STOCKS",
+  "beats": [
+    {
+      "say": "To replace a $50,000 paycheck, you don't need a million dollars in cash.",
+      "callout": "",
+      "visual": "A worn leather wallet sitting on a dark wooden table in soft morning light."
+    },
+    {
+      "say": "You need a targeted net yield calculation instead of blind saving.",
+      "callout": "NET YIELD",
+      "visual": "A hand placing a single heavy brass key next to an open notebook."
+    },
+    {
+      "say": "Most people assume you must liquidate your stock portfolio to cover monthly bills.",
+      "callout": "SELL VS HOLD",
+      "visual": "A digital stock ticker blurred in the background behind a stack of coins."
+    },
+    {
+      "say": "That strategy triggers heavy capital gains taxes and shrinks your capital fast.",
+      "callout": "TAX HIT",
+      "visual": "Red ink spreading slowly across a blank ledger page."
+    },
+    {
+      "say": "How do you generate steady cash flow without ever selling a single share?",
+      "callout": "",
+      "visual": "A close-up of a fountain pen hovering over a blank line."
+    },
+    {
+      "say": "Take $2,000 of passive income each month as a baseline target.",
+      "callout": "PASSIVE TARGET",
+      "visual": "A ceramic coffee cup steaming on a rustic oak desk."
+    },
+    {
+      "say": "That specific level needs about $600,000 invested under the 4% rule.",
+      "callout": "$600,000 INVESTED",
+      "visual": "A calculator screen glowing in a dimly lit home office."
+    },
+    {
+      "say": "Investing $500 a month at 8% a year reaches that target in 27.6 years.",
+      "callout": "27.6 YEARS",
+      "visual": "A wall calendar with pages slowly fluttering in a gentle breeze."
+    },
+    {
+      "say": "Or investing $2,000 a month at 8% a year hits it in 13.8 years.",
+      "callout": "13.8 YEARS",
+      "visual": "A modern wristwatch resting on a folded wool sweater."
+    },
+    {
+      "say": "The honest catch is the upfront discipline required to fund those accounts.",
+      "callout": "",
+      "visual": "A heavy metal door half open to a bright hallway."
+    },
+    {
+      "say": "Build your yield before you quit your job.",
+      "callout": "",
+      "visual": "A hand closing a heavy ledger book on a dark desk."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "A sharp minimalist logo centered on a textured dark background."
+    }
+  ],
+  "caption": "To replace a paycheck, focus on net yield instead of selling your stocks. #personalfinance #money #investing #passiveincome #wealth",
+  "description": "Break down the exact cash-flow yield needed to replace a monthly salary without relying on stock market liquidation.",
+  "hashtags": [
+    "#personalfinance",
+    "#money",
+    "#investing",
+    "#passiveincome",
+    "#wealth"
+  ],
+  "first_comment": "What is your current monthly passive income target?",
+  "facts": [
+    {
+      "claim": "$2,000/month of passive income needs about $600,000 invested",
+      "basis": "PASSIVE INCOME ('4% rule': withdraw 4% a year, a guideline from the 1998 Trinity study)"
+    },
+    {
+      "claim": "investing $500/month at 8%/yr reaches $600,000 in 27.6 years",
+      "basis": "PASSIVE INCOME math from fact sheet"
+    },
+    {
+      "claim": "investing $2,000/month at 8%/yr reaches $600,000 in 13.8 years",
+      "basis": "PASSIVE INCOME math from fact sheet"
+    }
+  ],
+  "source": "llm",
+  "pillar": "escape",
+  "look": "",
+  "loop_map": {
+    "stakes": "Replacing a $50,000 paycheck without a million dollars in cash.",
+    "big_question": "How do you generate steady cash flow without ever selling a single share?",
+    "assume": "Most people assume you must liquidate your stock portfolio to cover monthly bills.",
+    "reveal": "You need a targeted net yield calculation and a passive income asset base.",
+    "rehook_beats": [
+      5,
+      8
+    ],
+    "payoff_beat": 11
+  }
+}

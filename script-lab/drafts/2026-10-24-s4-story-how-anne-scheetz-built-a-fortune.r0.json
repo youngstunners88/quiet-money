@@ -1,0 +1,105 @@
+{
+  "title": "The Nurse Who Quietly Amassed $9 Million",
+  "hook_text": "SHE MADE $30,000 AND DIED A MILLIONAIRE",
+  "beats": [
+    {
+      "say": "She worked a modest nursing job her entire life, never made over $30,000 a year, and somehow died worth over $9 million.",
+      "callout": "",
+      "visual": "Cinematic shot of an old nurse's uniform hanging in a dim, quiet room with warm side lighting."
+    },
+    {
+      "say": "How does a paycheck that small turn into a multi-million dollar fortune without a single lottery win?",
+      "callout": "HOW?",
+      "visual": "Close-up of an old paper ledger sitting on a dark wooden desk, illuminated by a single lamp."
+    },
+    {
+      "say": "Most people assume she traded hot stocks every single day or chased risky crypto gains.",
+      "callout": "TRADING VS HOLDING",
+      "visual": "Blurry background of modern computer monitors glowing with red and green charts in a dark room."
+    },
+    {
+      "say": "That's completely false. Anne Scheetz didn't even have a computer.",
+      "callout": "FALSE",
+      "visual": "A pair of reading glasses resting on top of a closed, worn checkbook on a clean wooden table."
+    },
+    {
+      "say": "Instead, she inherited a handful of blue-chip utility and oil stocks in the 1950s.",
+      "callout": "STEP ONE",
+      "visual": "A person's hands wearing wool sleeves carefully turning the yellowed pages of an old stock certificate binder."
+    },
+    {
+      "say": "Then she did something most investors find physically impossible.",
+      "callout": "WHAT'S NEXT?",
+      "visual": "Macro shot of a heavy brass desk clock ticking slowly in soft focus."
+    },
+    {
+      "say": "She locked them in a drawer and strictly never sold a single share for 50 years.",
+      "callout": "STEP TWO",
+      "visual": "A wooden desk drawer sliding shut with a soft, solid thud, shot from a low angle."
+    },
+    {
+      "say": "Every quarter, dividend checks rolled in like clockwork, quietly stacking up in her account.",
+      "callout": "",
+      "visual": "A stack of crisp white envelopes sitting neatly beside a vintage fountain pen."
+    },
+    {
+      "say": "She simply reinvested every penny of those dividends back into the exact same companies.",
+      "callout": "",
+      "visual": "A person's hand using a red pencil to check off lines on a paper bank statement."
+    },
+    {
+      "say": "While day traders lost fortunes tinkering with their portfolios, Anne let compound interest do the heavy lifting.",
+      "callout": "",
+      "visual": "A time-lapse style shot of shadows stretching across a quiet suburban living room floor."
+    },
+    {
+      "say": "By refusing to touch her investments, she avoided every single market panic and unnecessary fee.",
+      "callout": "",
+      "visual": "An old brass key turning smoothly inside the lock of a heavy wooden safety box."
+    },
+    {
+      "say": "That's how quiet discipline beats flashy trades every single time.",
+      "callout": "$9,000,000",
+      "visual": "A warm morning light spilling across an empty wooden kitchen table with a hot ceramic mug."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "A clean, dark screen with a subtle pulsing white arrow pointing downward."
+    }
+  ],
+  "caption": "How a lifelong nurse quietly built a $9 million fortune by doing absolutely nothing with her stocks. #moneypsychology #wealthbuilding #investing #personalfinance #stocks",
+  "description": "Anne Scheetz worked as a nurse earning modest wages, yet died with over $9 million. Her secret? She inherited stocks, never sold a single share, and let dividends compound for decades.",
+  "hashtags": [
+    "#moneypsychology",
+    "#wealthbuilding",
+    "#investing",
+    "#personalfinance",
+    "#stocks"
+  ],
+  "first_comment": "What's the hardest part of leaving an investment alone for 50 years?",
+  "facts": [
+    {
+      "claim": "Anne Scheetz worked as a nurse and left an estate worth over $9 million from inherited stock.",
+      "basis": "Documented probate and estate records of Anne Scheetz."
+    },
+    {
+      "claim": "She held the stocks for decades without selling.",
+      "basis": "Biographical financial profiles detailing her buy-and-hold strategy."
+    }
+  ],
+  "source": "llm",
+  "pillar": "story",
+  "look": "",
+  "loop_map": {
+    "stakes": "A modest nursing paycheck versus a multi-million dollar estate.",
+    "big_question": "How did a nurse earning under $30,000 die worth $9 million?",
+    "assume": "She traded stocks actively or found high-risk winners.",
+    "reveal": "She inherited shares and strictly never sold them for decades.",
+    "rehook_beats": [
+      6,
+      9
+    ],
+    "payoff_beat": 12
+  }
+}

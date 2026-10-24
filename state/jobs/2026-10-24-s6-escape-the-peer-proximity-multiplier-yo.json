@@ -1,0 +1,67 @@
+{
+  "id": "2026-10-24-s6-escape-the-peer-proximity-multiplier-yo",
+  "pillar": "escape",
+  "topic": "The Peer Proximity Multiplier: Your Circle Sets Your Ceiling",
+  "day": "2026-10-24",
+  "slot": 6,
+  "status": "held",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-24T09:57:35Z",
+      "words": 175
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-24T09:58:42Z",
+      "seconds": 62.855,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-24T09:59:02Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-24T10:01:07Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-24T10:01:07Z",
+      "score": 91
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-24T10:01:08Z"
+    },
+    {
+      "from": "packaged",
+      "to": "held",
+      "ts": "2026-10-24T10:01:08Z"
+    }
+  ],
+  "artifacts": {
+    "angle": "Demonstrates the mathematical correlation between your close inner circle's average income and your personal earnings potential.",
+    "hook": "If your top five contacts earn $50k, your financial ceiling is mathematically locked near $50k.",
+    "title": "Why Your Circle Sets Your Financial Ceiling",
+    "style": "cinematic",
+    "video": "/home/user/quiet-money/production/output/2026-10-24/2026-10-24-s6-escape-the-peer-proximity-multiplier-yo/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-24/2026-10-24-s6-escape-the-peer-proximity-multiplier-yo/cover.jpg"
+  },
+  "scores": {
+    "gauntlet": 91,
+    "passed": false
+  },
+  "cost": {
+    "tts:edge:chars": 1053
+  },
+  "notes": [
+    "held for review: judge_facts"
+  ]
+}
