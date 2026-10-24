@@ -8,6 +8,7 @@ so swapping a vendor is a one-line config change, never a code change.
 
 from __future__ import annotations
 
+import re
 import time
 from typing import Any, Callable, Iterable
 
@@ -66,12 +67,48 @@ def http() -> requests.Session:
     return s
 
 
+# Circuit breaker (audit 2026-10-24: ElevenLabs returned 401 on 69 straight attempts, Edge 403 on 74). Stdlib only. A provider that fails
+# BREAKER_FAILS times in a row with a systemic error (401/402/403/429/5xx) is skipped for BREAKER_COOLDOWN seconds, then one probe goes
+# through. Per-input errors (a 400 flagged prompt, bad JSON, a timeout) never count: they say nothing about the provider's health.
+BREAKER_FAILS = 3
+BREAKER_COOLDOWN = 1800
+_SYSTEMIC = re.compile(r"\b(401|402|403|429|5\d\d)\b")
+_breaker: dict[tuple[str, str], dict] = {}
+
+
+def _breaker_open(key: tuple[str, str]) -> bool:
+    st = _breaker.get(key)
+    if not st or st["fails"] < BREAKER_FAILS:
+        return False
+    if time.time() - st["opened"] >= BREAKER_COOLDOWN:      # cooldown over: let one probe through; a failure re-opens it
+        st["opened"] = time.time()
+        return False
+    return True
+
+
+def _breaker_note(key: tuple[str, str], error: Exception | None) -> None:
+    st = _breaker.setdefault(key, {"fails": 0, "opened": 0.0})
+    if error is None:
+        st["fails"] = 0
+    elif _SYSTEMIC.search(str(error)):
+        st["fails"] += 1
+        if st["fails"] == BREAKER_FAILS:
+            st["opened"] = time.time()
+
+
 def run_chain(capability: str, providers: Iterable[tuple[str, Callable[[], Any]]], job: str | None = None) -> tuple[str, Any]:
     errors = []
-    for name, call in providers:
+    chain = list(providers)
+    for i, (name, call) in enumerate(chain):
+        key = (capability, name)
+        if i < len(chain) - 1 and _breaker_open(key):         # the last provider in a chain is always tried
+            errors.append(f"{name}: skipped (circuit open)")
+            events.emit("PROVIDER_SKIPPED", capability=capability, provider=name, job=job)
+            continue
         t0 = time.time()
         try:
             result = call()
+            _breaker_note(key, None)
             events.emit("PROVIDER_OK", capability=capability, provider=name, job=job,
                         ms=int((time.time() - t0) * 1000))
             return name, result
@@ -79,6 +116,7 @@ def run_chain(capability: str, providers: Iterable[tuple[str, Callable[[], Any]]
             errors.append(f"{name}: unavailable ({e})")
         except Exception as e:  # noqa: BLE001 - any provider failure falls through to the next
             errors.append(f"{name}: {type(e).__name__}: {str(e)[:200]}")
+            _breaker_note(key, e)
             events.emit("PROVIDER_FAIL", capability=capability, provider=name, job=job,
                         error=str(e)[:300])
     raise ProviderError(f"all {capability} providers failed: " + " | ".join(errors))

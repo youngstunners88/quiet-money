@@ -24,10 +24,18 @@ def identity() -> str:
             f"Audience: {ch['audience']}.")
 
 
+def aim_words() -> int:
+    """The first draft's word target: above the middle of the range (64% of first drafts ran short), never past the top."""
+    prod = config.load()["production"]
+    lo, hi = prod["words_range"]
+    return min(hi, (lo + hi) // 2 + int(prod.get("draft_word_bias", 0)))
+
+
 def script_prompt(pillar, topic: str, angle: str = "", feedback: list[str] | None = None,
                   recent_titles: list[str] | None = None, brief: str = "") -> str:
     cfg = config.load()
     lo, hi = cfg["production"]["words_range"]
+    aim = aim_words()
     ch = cfg["channel"]
     parts = [
         "# TASK",
@@ -71,7 +79,7 @@ def script_prompt(pillar, topic: str, angle: str = "", feedback: list[str] | Non
             brief] if brief else []),
         "",
         "# CONSTRAINTS",
-        f"- LENGTH IS CRITICAL: {lo}-{hi} words in total across all 'say' fields (aim for {(lo + hi) // 2}); the "
+        f"- LENGTH IS CRITICAL: {lo}-{hi} words in total across all 'say' fields (aim for {aim}); the "
         "video must run 61-72 seconds and shorter scripts are rejected. Count the words before answering and "
         "report the count in 'word_count'.",
         "- 11 to 14 beats. Each 'say' is 1-2 sentences, max 20 words. Write for the ear: ALWAYS use contractions "

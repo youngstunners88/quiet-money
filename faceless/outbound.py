@@ -47,7 +47,7 @@ PRICE = re.compile(r"(\$\s?\d|\b\d+\s?(usd|usdt|eth|sol)\b|\b\d+\s?%\s?off\b|lim
 
 def cfg() -> dict:
     """`[outbound]` with the defaults this desk runs on. Volume is bounded by time, not money: the models are free."""
-    return {"daily_candidates": 160, "daily_cards": 100, "daily_packages": 100, "ready_fit": 0.75, "ready_confidence": 0.85,
+    return {"daily_candidates": 160, "daily_cards": 100, "daily_packages": 100, "ready_fit": 0.75, "ready_confidence": 0.7, "jev_floor": 0.7,
             "ready_personalization": 0.85, "ready_spam_ceiling": 0.25, "ready_min_per_day": 11, "workers": 8, "tvl_min_usd": 5_000_000, "tvl_max_usd": 5_000_000_000,
             "fit_floor": 0.6, "personalization_floor": 0.7, "spam_ceiling": 0.4, "promise_floor": 0.9, "firecrawl_pages_per_day": 40,
             "send": "owner", "page_chars": 6000, "dead_days": 90, **config.load().get("outbound", {})}
@@ -325,7 +325,7 @@ def score(card: dict) -> dict:
     """Jev's own answers and probabilities, then this desk's thresholds in code. The global `[decide].dry_run` stays as it is: it guards the
     daily video path, so we read `jev_value`/`jev_confidence` here instead of flipping it."""
     s, qs = cfg(), lead_questions()
-    floor = config.load()["decide"].get("confidence_floor", 0.85)
+    floor = s["jev_floor"]
     state = {k: card[k] for k in ("name", "identity", "social", "signals", "contact") if k in card}
     try:
         d = decide.ask(qs, state=state, job=f"outbound:{fingerprint(card['slug'])}", backend="openrouter-decisions")
@@ -473,7 +473,7 @@ def gate(pkg: dict, card: dict | None = None) -> dict:
     except Exception as e:  # noqa: BLE001 - the code gates still apply; only the model's opinion is missing
         events.emit("OUTBOUND_GATE_FALLBACK", project=fingerprint(pkg["slug"]), error=str(e)[:200])
         d = {}
-    floor = config.load()["decide"].get("confidence_floor", 0.85)
+    floor = s["jev_floor"]
 
     qs = gate_questions()
 
