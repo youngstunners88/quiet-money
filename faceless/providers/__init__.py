@@ -9,6 +9,7 @@ so swapping a vendor is a one-line config change, never a code change.
 from __future__ import annotations
 
 import re
+import threading
 import time
 from typing import Any, Callable, Iterable
 
@@ -67,56 +68,81 @@ def http() -> requests.Session:
     return s
 
 
-# Circuit breaker (audit 2026-10-24: ElevenLabs returned 401 on 69 straight attempts, Edge 403 on 74). Stdlib only. A provider that fails
-# BREAKER_FAILS times in a row with a systemic error (401/402/403/429/5xx) is skipped for BREAKER_COOLDOWN seconds, then one probe goes
-# through. Per-input errors (a 400 flagged prompt, bad JSON, a timeout) never count: they say nothing about the provider's health.
-BREAKER_FAILS = 3
-BREAKER_COOLDOWN = 1800
-_SYSTEMIC = re.compile(r"\b(401|402|403|429|5\d\d)\b")
-_breaker: dict[tuple[str, str], dict] = {}
+# ---------------------------------------------------------------- circuit breaker
+# A provider that is down for a reason that will not fix itself in a minute (a revoked key: 401/403, no credit: 402, a spent
+# quota: 429, a vendor outage: 5xx) was retried on every video: ElevenLabs answered 401 sixty-three times in a row, Edge TTS 403
+# seventy-four times. The breaker skips such a provider after FAIL_MAX systemic failures in a row, for COOLDOWN seconds, then lets
+# ONE probe through (half-open). One success closes it. Per-input errors (a prompt the image model flagged, a malformed answer,
+# a timeout) never count, because they say nothing about the provider's health. State is per process; a new daily run starts closed.
+
+FAIL_MAX = 3
+COOLDOWN = 1800.0
+SYSTEMIC = re.compile(r"\b(401|402|403|429|500|502|503|504)\b")
+
+_lock = threading.Lock()
+_state: dict[tuple[str, str], dict] = {}
 
 
-def _breaker_open(key: tuple[str, str]) -> bool:
-    st = _breaker.get(key)
-    if not st or st["fails"] < BREAKER_FAILS:
+def _systemic(err: BaseException) -> bool:
+    return bool(SYSTEMIC.search(str(err)))
+
+
+def _allowed(key: tuple[str, str], now: float) -> bool:
+    """True when the provider may be called. An open breaker admits one probe once the cooldown has passed."""
+    with _lock:
+        st = _state.get(key)
+        if not st or st["fails"] < FAIL_MAX:
+            return True
+        if now - st["opened"] >= COOLDOWN and not st["probing"]:
+            st["probing"] = True
+            return True
         return False
-    if time.time() - st["opened"] >= BREAKER_COOLDOWN:      # cooldown over: let one probe through; a failure re-opens it
-        st["opened"] = time.time()
-        return False
-    return True
 
 
-def _breaker_note(key: tuple[str, str], error: Exception | None) -> None:
-    st = _breaker.setdefault(key, {"fails": 0, "opened": 0.0})
-    if error is None:
-        st["fails"] = 0
-    elif _SYSTEMIC.search(str(error)):
+def _record(key: tuple[str, str], ok: bool, err: BaseException | None, now: float) -> None:
+    with _lock:
+        st = _state.setdefault(key, {"fails": 0, "opened": 0.0, "probing": False})
+        if ok:
+            st.update(fails=0, opened=0.0, probing=False)
+            return
+        if err is not None and not _systemic(err):
+            st["probing"] = False                  # a per-input failure says nothing about health; free the probe slot
+            return
         st["fails"] += 1
-        if st["fails"] == BREAKER_FAILS:
-            st["opened"] = time.time()
+        st["probing"] = False
+        if st["fails"] >= FAIL_MAX:
+            st["opened"] = now                     # (re)open: a failed probe restarts the cooldown
+
+
+def reset_breakers() -> None:
+    """Close every breaker (tests, and a human who has just fixed a key)."""
+    with _lock:
+        _state.clear()
 
 
 def run_chain(capability: str, providers: Iterable[tuple[str, Callable[[], Any]]], job: str | None = None) -> tuple[str, Any]:
     errors = []
-    chain = list(providers)
-    for i, (name, call) in enumerate(chain):
-        key = (capability, name)
-        if i < len(chain) - 1 and _breaker_open(key):         # the last provider in a chain is always tried
-            errors.append(f"{name}: skipped (circuit open)")
-            events.emit("PROVIDER_SKIPPED", capability=capability, provider=name, job=job)
-            continue
+    providers = list(providers)
+    for idx, (name, call) in enumerate(providers):
         t0 = time.time()
+        key = (capability, name)
+        last = idx == len(providers) - 1
+        # an open breaker skips the provider, unless it is the last one left: a chain must try everything before it gives up
+        if not _allowed(key, t0) and not last:
+            errors.append(f"{name}: circuit open")
+            events.emit("PROVIDER_SKIPPED", capability=capability, provider=name, job=job, reason="circuit open")
+            continue
         try:
             result = call()
-            _breaker_note(key, None)
+            _record(key, True, None, t0)
             events.emit("PROVIDER_OK", capability=capability, provider=name, job=job,
                         ms=int((time.time() - t0) * 1000))
             return name, result
         except ProviderUnavailable as e:
             errors.append(f"{name}: unavailable ({e})")
         except Exception as e:  # noqa: BLE001 - any provider failure falls through to the next
+            _record(key, False, e, time.time())
             errors.append(f"{name}: {type(e).__name__}: {str(e)[:200]}")
-            _breaker_note(key, e)
             events.emit("PROVIDER_FAIL", capability=capability, provider=name, job=job,
                         error=str(e)[:300])
     raise ProviderError(f"all {capability} providers failed: " + " | ".join(errors))
