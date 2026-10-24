@@ -57,7 +57,10 @@ def length_brief(seconds: float, words: int) -> str:
     prod = config.load()["production"]
     lo, hi = prod["target_seconds"]
     # the configured word range is calibrated to the base voice pace; the measured pace may already be refit
+    lo_w, hi_w = prod["words_range"]
     target_w = sum(prod["words_range"]) // 2
+    if words:       # a rewrite delivers about 60% of the change it is asked for (audit, 2026-10-24), so ask for more, inside the written range
+        target_w = max(lo_w, min(hi_w, round(words + (target_w - words) * float(prod.get("rewrite_overshoot", 1.0)))))
     verb = "too short" if seconds < lo else "too long"
     return (f"The narration ran {seconds:.1f}s, {verb}; it must run {lo:.0f}-{hi:.0f}s. Rewrite to about "
             f"{target_w} words in total across all 'say' fields (currently {words}). Count them before answering.")

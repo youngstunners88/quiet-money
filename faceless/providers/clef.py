@@ -37,6 +37,9 @@ def _data_uri(img) -> str:
     return "data:image/jpeg;base64," + base64.b64encode(buf.getvalue()).decode("ascii")
 
 
+_CALLS: dict[str, int] = {}
+
+
 def run(state, questions: dict, images: list | None = None, model: str = "clef", job: str | None = None) -> dict:
     """Ask typed questions. Returns {name: answer dict}. Raises ProviderUnavailable when unconfigured or out of free budget."""
     key = config.env("CLOUDFLARE_API_KEY", "CLOUDFLARE_API_TOKEN")
@@ -47,6 +50,10 @@ def run(state, questions: dict, images: list | None = None, model: str = "clef",
         raise ValueError(f"model must be one of {sorted(MODELS)}")
     if not 1 <= len(questions) <= MAX_QUESTIONS or len(images or []) > MAX_IMAGES:
         raise ValueError("1-64 questions and at most 4 images")
+    per_job = int(config.load()["safety"].get("max_clef_calls_per_job", 0))
+    bucket = job or "process"
+    if per_job and _CALLS.get(bucket, 0) >= per_job:        # a runaway loop must not drain the shared free pool the quality gates depend on
+        raise ProviderUnavailable(f"Clef call cap reached for {bucket} ({per_job})")
     cap = config.load()["images"]["cloudflare_daily_neurons"]
     est = (300 + 1400 * len(images or [])) * NEURONS_PER_TOKEN
     if ledger.used("cloudflare", "blocked") or not ledger.allow("cloudflare", "neurons", est, cap):
@@ -67,6 +74,7 @@ def run(state, questions: dict, images: list | None = None, model: str = "clef",
     res = d.get("result", d)
     tokens = (res.get("usage") or {}).get("input_tokens", 0)
     ledger.spend("cloudflare", "neurons", tokens * NEURONS_PER_TOKEN, job=job)
+    _CALLS[bucket] = _CALLS.get(bucket, 0) + 1
     events.emit("CLEF_CALL", job=job, model=model, questions=list(questions), images=len(images or []), input_tokens=tokens)
     return res.get("answers", {})
 

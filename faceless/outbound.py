@@ -21,6 +21,8 @@ Protections, because this one talks to the outside world on its own:
 from __future__ import annotations
 
 import json
+import threading
+from concurrent.futures import ThreadPoolExecutor
 import re
 from pathlib import Path
 
@@ -45,8 +47,8 @@ PRICE = re.compile(r"(\$\s?\d|\b\d+\s?(usd|usdt|eth|sol)\b|\b\d+\s?%\s?off\b|lim
 
 def cfg() -> dict:
     """`[outbound]` with the defaults this desk runs on. Volume is bounded by time, not money: the models are free."""
-    return {"daily_candidates": 160, "daily_cards": 100, "daily_packages": 100, "ready_fit": 0.75, "ready_confidence": 0.85,
-            "ready_personalization": 0.85, "ready_spam_ceiling": 0.25, "ready_min_per_day": 11, "tvl_min_usd": 5_000_000, "tvl_max_usd": 5_000_000_000,
+    return {"daily_candidates": 160, "daily_cards": 100, "daily_packages": 100, "ready_fit": 0.75, "ready_confidence": 0.7, "jev_floor": 0.7,
+            "ready_personalization": 0.85, "ready_spam_ceiling": 0.25, "ready_min_per_day": 11, "workers": 8, "tvl_min_usd": 5_000_000, "tvl_max_usd": 5_000_000_000,
             "fit_floor": 0.6, "personalization_floor": 0.7, "spam_ceiling": 0.4, "promise_floor": 0.9, "firecrawl_pages_per_day": 40,
             "send": "owner", "page_chars": 6000, "dead_days": 90, **config.load().get("outbound", {})}
 
@@ -66,11 +68,18 @@ def models(job: str) -> list[str]:
 
 # ------------------------------------------------------------------ reading public pages
 
+_FC_LOCK = threading.Lock()
+
+
 def _firecrawl(url: str) -> str | None:
     """A JS-rendered read, for the pages plain HTTP returns empty (capped per day; credits are prepaid, so the cap is in pages)."""
     key = config.env("FIRECRAWL", "FIRECRAWL_API_KEY")
     cap = cfg()["firecrawl_pages_per_day"]
-    if not key or cap <= 0 or not ledger.allow("firecrawl", "pages", 1, cap):
+    with _FC_LOCK:
+        allowed = bool(key) and cap > 0 and ledger.allow("firecrawl", "pages", 1, cap)
+        if allowed:
+            ledger.spend("firecrawl", "pages", 1)      # reserved up front so parallel readers cannot overshoot the cap
+    if not allowed:
         return None
     safety.guard("firecrawl page")
     try:
@@ -78,7 +87,6 @@ def _firecrawl(url: str) -> str | None:
                         json={"url": url, "formats": ["markdown"], "onlyMainContent": True})
         if r.status_code != 200:
             return None
-        ledger.spend("firecrawl", "pages", 1)
         return ((r.json().get("data") or {}).get("markdown") or "")[: cfg()["page_chars"]] or None
     except Exception as e:  # noqa: BLE001 - a page we cannot read is a thinner card, never a failed run
         events.emit("OUTBOUND_FETCH_FAIL", page=fingerprint(url), error=str(e)[:200])
@@ -317,7 +325,7 @@ def score(card: dict) -> dict:
     """Jev's own answers and probabilities, then this desk's thresholds in code. The global `[decide].dry_run` stays as it is: it guards the
     daily video path, so we read `jev_value`/`jev_confidence` here instead of flipping it."""
     s, qs = cfg(), lead_questions()
-    floor = config.load()["decide"].get("confidence_floor", 0.85)
+    floor = s["jev_floor"]
     state = {k: card[k] for k in ("name", "identity", "social", "signals", "contact") if k in card}
     try:
         d = decide.ask(qs, state=state, job=f"outbound:{fingerprint(card['slug'])}", backend="openrouter-decisions")
@@ -465,7 +473,7 @@ def gate(pkg: dict, card: dict | None = None) -> dict:
     except Exception as e:  # noqa: BLE001 - the code gates still apply; only the model's opinion is missing
         events.emit("OUTBOUND_GATE_FALLBACK", project=fingerprint(pkg["slug"]), error=str(e)[:200])
         d = {}
-    floor = config.load()["decide"].get("confidence_floor", 0.85)
+    floor = s["jev_floor"]
 
     qs = gate_questions()
 
@@ -647,6 +655,58 @@ def review(min_sent: int = 30) -> dict:
 
 # ------------------------------------------------------------------ the loop
 
+def _work(cand: dict, ask=None) -> dict:
+    """Research, score, draft and gate ONE candidate. Pure with respect to files: it reads pages and calls models, and returns what to save."""
+    try:
+        card = research(cand, ask=ask)
+        if card["status"] == "skip":
+            return {"card": card}
+        card["decisions"] = score(card)
+        if card["decisions"]["verdict"] != "pursue":
+            return {"card": card}
+        pkg = draft(card, ask=ask)
+        if pkg["gates"]["verdict"] == "rewrite":
+            pkg = draft(card, ask=ask, failed=pkg)                        # one rewrite, told what failed; then it is a hold
+        return {"card": card, "pkg": pkg}
+    except Exception as e:  # noqa: BLE001 - one bad project never stops the other ninety-nine
+        events.emit("OUTBOUND_WORK_FAIL", project=fingerprint(cand["slug"]), error=str(e)[:200])
+        return {"failed": cand["slug"]}
+
+
+def _settle(result: dict, report: dict) -> None:
+    """Save one worker's result and count it. Runs on the main thread only."""
+    if "failed" in result:
+        report["skipped"]["error"] = report["skipped"].get("error", 0) + 1
+        return
+    card, pkg = result["card"], result.get("pkg")
+    report["cards"] += 1
+    if card["status"] == "skip":
+        report["skipped"][card["skip_reason"]] = report["skipped"].get(card["skip_reason"], 0) + 1
+        save_lead(card)
+        return
+    if pkg is None:
+        verdict = card["decisions"]["verdict"]
+        card["status"] = "skip" if verdict == "skip" else "scored"
+        card["skip_reason"] = "below_fit" if verdict == "skip" else None
+        save_lead(card)
+        if verdict == "skip":
+            report["skipped"]["below_fit"] = report["skipped"].get("below_fit", 0) + 1
+        else:
+            report["review"].append({"slug": card["slug"], "name": card["name"], "fit": card["decisions"].get("fit")})
+        return
+    if pkg["gates"]["verdict"] == "pass":
+        card["status"] = "queued"
+        pkg["tier"] = tier(card, pkg)
+        save_package(pkg)
+        report["queued"].append({"slug": card["slug"], "name": card["name"], "fit": card["decisions"].get("fit"), "tier": pkg["tier"]["tier"],
+                                 "angle": pkg.get("angle"), "channel": pkg["channel"], "contact": pkg["contact"]["route"]})
+    else:
+        card["status"] = "drafted"
+        report["held"].append({"slug": card["slug"], "name": card["name"], "why": pkg["gates"]["verdict"],
+                               "banned_language": pkg["gates"]["banned_language"]})
+    save_lead(card)
+
+
 def run(candidate_limit: int | None = None, card_limit: int | None = None, package_limit: int | None = None,
         protocols: list[dict] | None = None, ask=None) -> dict:
     """The daily hunt: discover, research, score, draft, gate, queue. Returns the batch report. It sends nothing."""
@@ -661,40 +721,16 @@ def run(candidate_limit: int | None = None, card_limit: int | None = None, packa
     report = {"day": config.today_utc().isoformat(), "screened": len(cands), "cards": 0, "queued": [], "held": [], "review": [],
               "skipped": {}, "paused": None, "models": {j: models(j) for j in ("research", "first_touch", "followups")}}
     cards_wanted, pkgs_wanted = card_limit or s["daily_cards"], package_limit or s["daily_packages"]
-    for cand in cands:
-        if report["cards"] >= cards_wanted or len(report["queued"]) >= pkgs_wanted:
-            break
-        card = research(cand, ask=ask)
-        report["cards"] += 1
-        if card["status"] == "skip":
-            report["skipped"][card["skip_reason"]] = report["skipped"].get(card["skip_reason"], 0) + 1
-            save_lead(card)
-            continue
-        card["decisions"] = score(card)
-        verdict = card["decisions"]["verdict"]
-        if verdict != "pursue":
-            card["status"] = "skip" if verdict == "skip" else "scored"
-            card["skip_reason"] = "below_fit" if verdict == "skip" else None
-            save_lead(card)
-            if verdict == "skip":
-                report["skipped"]["below_fit"] = report["skipped"].get("below_fit", 0) + 1
-            else:
-                report["review"].append({"slug": card["slug"], "name": card["name"], "fit": card["decisions"].get("fit")})
-            continue
-        pkg = draft(card, ask=ask)
-        if pkg["gates"]["verdict"] == "rewrite":
-            pkg = draft(card, ask=ask, failed=pkg)                        # one rewrite, told what failed; then it is a hold
-        if pkg["gates"]["verdict"] == "pass":
-            card["status"] = "queued"
-            pkg["tier"] = tier(card, pkg)
-            save_package(pkg)
-            report["queued"].append({"slug": card["slug"], "name": card["name"], "fit": card["decisions"].get("fit"), "tier": pkg["tier"]["tier"],
-                                     "angle": pkg.get("angle"), "channel": pkg["channel"], "contact": pkg["contact"]["route"]})
-        else:
-            card["status"] = "drafted"
-            report["held"].append({"slug": card["slug"], "name": card["name"], "why": pkg["gates"]["verdict"],
-                                   "banned_language": pkg["gates"]["banned_language"]})
-        save_lead(card)
+    workers = max(1, int(s["workers"]))
+    pending = list(cands)
+    with ThreadPoolExecutor(max_workers=workers) as pool:
+        while pending and report["cards"] < cards_wanted and len(report["queued"]) < pkgs_wanted:
+            wave = pending[: min(workers * 2, cards_wanted - report["cards"])]     # a wave never researches more cards than the day still wants
+            pending = pending[len(wave):]
+            for result in pool.map(lambda c: _work(c, ask), wave):                 # models and pages in parallel; every file write below stays on this thread
+                _settle(result, report)
+                if safety.paused():
+                    pending = []
     report["queued"].sort(key=lambda r: (r.get("tier") != "ready", -(r.get("fit") or 0)))
     report["ready"] = sum(1 for q in report["queued"] if q.get("tier") == "ready")
     events.emit("OUTBOUND_RUN_DONE", queued=len(report["queued"]), held=len(report["held"]), cards=report["cards"])
