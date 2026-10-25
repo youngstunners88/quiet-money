@@ -209,10 +209,12 @@ node dist/run-plan.js plan.json --out runs/today          # --poll-seconds 15 by
 }
 ```
 
+**Verifier lane.** A write lane may carry `done_when`, a list of 1-12 acceptance criteria (a read-only lane may not: it produces no diff). When the lane completes, `run-plan` captures `git diff HEAD` (plus untracked file names), starts a fresh read-only worker that is given only the task, the criteria and that diff (never the builder's summary or result), and parses the last standalone `VERDICT: PASS` or `VERDICT: FAIL` line from its output. `summary.json` gets `claimed_done`, `verified` (`pass`, `fail`, `unverified` when there was no verdict, `not_required` without `done_when`), `verification_evidence` and `verifier_log`, plus `all_verified`; the exit code is 0 only when every lane completed and every verified lane passed.
+
 It prints `list_workers`, starts every entry (in parallel up to the concurrency limit, queueing the rest), polls
 `get_worker_status` every 15 seconds until all are completed, failed or terminated, writes each worker's
 `get_worker_output` (tail 2000) to `<out>/<label or worker_id>.log` and a `summary.json`, and exits 0 only if every
-worker completed. Relative `project_path`s are read against the plan file's folder. Each worker's log is written as
+worker completed (and every lane with `done_when` was verified). Relative `project_path`s are read against the plan file's folder. Each worker's log is written as
 soon as it finishes. Ctrl-C stops the running workers first: run-plan starts its server with
 `ORCHESTRATOR_PARENT_HANDLES_SIGINT=1`, so the server ignores the terminal's SIGINT, and run-plan stops the workers,
 writes their logs and `summary.json` (stopped workers show `terminated`), then closes the server.

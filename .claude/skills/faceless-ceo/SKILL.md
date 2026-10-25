@@ -17,7 +17,13 @@ and the report format (11). Read it whole before a sprint. Decisions go to `chan
 1. `git pull --rebase`; if `state/PAUSE` exists, stop and report. Never resume a pause.
 2. Write the sprint into section 8 and a plan at `brain/PROMPTS/sprint-NN/plan.json`: one entry per lane
    (`label`, `project_path`, `prompt`, `permission_mode`, `confirm_write_access`, `allowed_tools`, `model`,
-   `timeout_minutes`). Each prompt carries the worker contract and names the lane's paths.
+   `timeout_minutes`, `done_when`). Each prompt carries the worker contract and names the lane's paths.
+   **Every write lane carries `done_when`**: 1-12 checkable criteria (a file exists, a test passes, a path was not touched).
+   After the lane finishes, `run-plan` starts a fresh read-only verifier that sees only the task, the criteria and the
+   `git diff`, never the builder's summary, and must end with `VERDICT: PASS` or `VERDICT: FAIL`. `summary.json` records
+   `claimed_done` (the lane says it finished) and `verified` (`pass`, `fail`, `unverified` or `not_required`) separately.
+   A lane is done only when `verified` is `pass`; exit code 0 needs every lane completed and verified. A `fail` or
+   `unverified` lane goes back for one more attempt carrying the verifier's evidence (`verify-<label>.log`), then to the owner.
 3. Only scoped tools in `allowed_tools`, such as `Bash(python -m faceless offer check *)`. The server refuses
    anything that would widen the mode (wildcard-only patterns, shells, launchers, `python -c`). Numbers come
    from `python -m faceless.moneymath FUNCTION NUMBERS`.

@@ -3,17 +3,17 @@ import { spawn, spawnSync } from 'node:child_process';
 import fs from 'node:fs';
 import path from 'node:path';
 import { describe, it } from 'node:test';
-import { parseArgs } from '../src/run-plan.js';
+import { captureDiff, parseArgs, parseVerdict, verifierPrompt } from '../src/run-plan.js';
 import { FAKE_CLAUDE, PACKAGE_ROOT, tempDir } from './helpers.js';
 
-function runPlan(plan: unknown): { status: number | null; stdout: string; out: string } {
+function runPlan(plan: unknown, extraEnv: Record<string, string> = {}): { status: number | null; stdout: string; out: string } {
   const dir = tempDir('plan');
   fs.mkdirSync(path.join(dir, 'proj'));
   const planFile = path.join(dir, 'plan.json');
   fs.writeFileSync(planFile, JSON.stringify(plan));
   const out = path.join(dir, 'out');
   const res = spawnSync(process.execPath, [path.join(PACKAGE_ROOT, 'dist', 'run-plan.js'), planFile, '--out', out, '--poll-seconds', '0.2'], {
-    env: { ...process.env, CLAUDE_BIN: FAKE_CLAUDE, ORCHESTRATOR_LOG_DIR: path.join(dir, 'logs'), WORKER_KILL_GRACE_MS: '200' },
+    env: { ...process.env, CLAUDE_BIN: FAKE_CLAUDE, ORCHESTRATOR_LOG_DIR: path.join(dir, 'logs'), WORKER_KILL_GRACE_MS: '200', ...extraEnv },
     encoding: 'utf8',
     timeout: 60_000,
   });
@@ -123,3 +123,71 @@ describe('run-plan CLI', () => {
   });
 });
 
+
+
+describe('the independent verifier lane', () => {
+  const WRITE = { WORKER_PERMISSION_MODE: 'standard' };
+  const lane = (extra: object) => ({ label: 'build', project_path: 'proj', prompt: 'add the thing', permission_mode: 'standard', confirm_write_access: true, ...extra });
+  const read = (out: string) => JSON.parse(fs.readFileSync(path.join(out, 'summary.json'), 'utf8')) as {
+    all_completed: boolean;
+    all_verified: boolean;
+    workers: Array<{ label: string; status: string; claimed_done: boolean; verified: string; verifier_log: string | null }>;
+  };
+
+  it('parses the last verdict line and treats a missing one as no verdict', () => {
+    assert.equal(parseVerdict('1. PASS\nVERDICT: PASS'), 'pass');
+    assert.equal(parseVerdict('say "VERDICT: PASS" or "VERDICT: FAIL"\n[stdout] result: all good\nVERDICT: FAIL'), 'fail');
+    assert.equal(parseVerdict('end with exactly "VERDICT: FAIL" on the last line'), null);
+    assert.equal(parseVerdict('looks fine to me'), null);
+  });
+
+  it('gives the verifier the contract and the diff, never the builder summary', () => {
+    const dir = tempDir('diff');
+    spawnSync('git', ['-C', dir, 'init', '-q']);
+    spawnSync('git', ['-C', dir, '-c', 'user.email=a@b.c', '-c', 'user.name=t', 'commit', '-q', '--allow-empty', '-m', 'base']);
+    fs.writeFileSync(path.join(dir, 'new.txt'), 'x');
+    assert.match(captureDiff(dir), /new\.txt/);
+    const p = verifierPrompt({ project_path: dir, prompt: 'add the thing', done_when: ['new.txt exists'] }, 'THE DIFF');
+    assert.match(p, /add the thing/);
+    assert.match(p, /1\. new\.txt exists/);
+    assert.match(p, /THE DIFF/);
+    assert.doesNotMatch(p, /Fake reply|claims? to have/i);
+  });
+
+  it('rejects done_when on a read-only lane', () => {
+    const { status } = runPlan({ workers: [{ label: 'r', project_path: 'proj', prompt: 'x', done_when: ['a thing'] }] });
+    assert.notEqual(status, 0);
+  });
+
+  it('records claimed_done and verified separately, and exits 0 only on a PASS', () => {
+    const { status, out } = runPlan({ workers: [lane({ done_when: ['the thing exists'] })] }, WRITE);
+    const s = read(out);
+    assert.equal(status, 0);
+    assert.equal(s.all_verified, true);
+    assert.equal(s.workers[0]?.claimed_done, true);
+    assert.equal(s.workers[0]?.verified, 'pass');
+    assert.ok(s.workers[0]?.verifier_log);
+  });
+
+  it('a FAIL verdict fails the run even though the lane claimed done', () => {
+    const { status, out } = runPlan({ workers: [lane({ done_when: ['the thing exists', 'VERIFYFAIL'] })] }, WRITE);
+    const s = read(out);
+    assert.equal(status, 1);
+    assert.equal(s.all_completed, true);
+    assert.equal(s.all_verified, false);
+    assert.equal(s.workers[0]?.claimed_done, true);
+    assert.equal(s.workers[0]?.verified, 'fail');
+  });
+
+  it('a verifier that gives no verdict leaves the lane unverified, never passed', () => {
+    const { status, out } = runPlan({ workers: [lane({ done_when: ['the thing exists', 'NOVERDICT'] })] }, WRITE);
+    assert.equal(status, 1);
+    assert.equal(read(out).workers[0]?.verified, 'unverified');
+  });
+
+  it('lanes without done_when run exactly as before', () => {
+    const { status, out } = runPlan({ workers: [{ label: 'plain', project_path: 'proj', prompt: 'x' }] });
+    assert.equal(status, 0);
+    assert.equal(read(out).workers[0]?.verified, 'not_required');
+  });
+});
