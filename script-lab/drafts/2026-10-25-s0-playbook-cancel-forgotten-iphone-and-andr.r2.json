@@ -1,0 +1,91 @@
+{
+  "title": "Cancel Hidden App Trials in 3 Steps",
+  "hook_text": "YOUR PHONE BILLED YOU $49",
+  "beats": [
+    {
+      "say": "That free app trial you downloaded for one weekend just billed you $49.",
+      "callout": "",
+      "visual": "A sleek modern smartphone resting face down on a dark wooden desk under soft cinematic lighting."
+    },
+    {
+      "say": "How did a zero dollar trial turn into a monthly charge on your card?",
+      "callout": "",
+      "visual": "A close up of hands typing quickly on a laptop keyboard in a dim room."
+    },
+    {
+      "say": "Most people assume app stores send a warning text before the trial ends.",
+      "callout": "ASSUME VS TRUTH",
+      "visual": "A blurred notification banner glowing softly on a dark glass surface."
+    },
+    {
+      "say": "They don't. The billing cycle starts the second the trial clock hits zero.",
+      "callout": "",
+      "visual": "A mechanical desk clock ticking in slow motion with shallow depth of field."
+    },
+    {
+      "say": "Where is that money hiding right now inside your mobile device settings?",
+      "callout": "",
+      "visual": "A finger scrolling through a blurry list of digital settings on a screen."
+    },
+    {
+      "say": "Step one. Open your settings app, tap your Apple ID or Google profile at the top.",
+      "callout": "STEP ONE",
+      "visual": "A hand holding a sleek smartphone against a neutral gray background."
+    },
+    {
+      "say": "Step two. Tap subscriptions to view every active and expired service linked to your card.",
+      "callout": "STEP TWO",
+      "visual": "Close up of fingers tapping a glowing glass screen in a dark room."
+    },
+    {
+      "say": "Step three. Tap the rogue trial and select cancel subscription before the next renewal date.",
+      "callout": "STEP THREE",
+      "visual": "A thumb pressing a red cancel button on a blurred digital interface."
+    },
+    {
+      "say": "That small $15 monthly subscription for 10 years equals $1,800 gone.",
+      "callout": "$1,500 VS $1,800",
+      "visual": "A stack of credit cards sitting beside a small potted plant on a minimalist desk."
+    },
+    {
+      "say": "Kill those forgotten trials today and keep that cash in your checking account.",
+      "callout": "",
+      "visual": "A person sliding a metal card back into a minimalist leather wallet."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "FOLLOW",
+      "visual": "A silhouette of a person walking past a sunlit office window."
+    }
+  ],
+  "caption": "Stop letting forgotten app trials drain your checking account. Here is the exact 3-step fix to cancel them today.\n\n#money #personalfinance #budgeting #savingmoney #finance",
+  "description": "Learn how to find and cancel forgotten mobile app trials before they hit your billing cycle with this quick 3-step guide.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#budgeting",
+    "#savingmoney",
+    "#finance"
+  ],
+  "first_comment": "How much money did you find hiding in your active subscriptions today?",
+  "facts": [
+    {
+      "claim": "A $15/month subscription for 10 years equals $1,800",
+      "basis": "$15/month subscription for 10 years = $1,800"
+    }
+  ],
+  "source": "llm",
+  "pillar": "playbook",
+  "look": "",
+  "loop_map": {
+    "stakes": "A forgotten mobile app trial silently charging $49 to your credit card",
+    "big_question": "How did a zero dollar trial turn into an automatic charge?",
+    "assume": "App stores send a warning text before trials end",
+    "reveal": "Billing starts instantly when the trial clock hits zero with no warning",
+    "rehook_beats": [
+      5,
+      9
+    ],
+    "payoff_beat": 10
+  }
+}

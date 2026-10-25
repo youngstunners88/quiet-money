@@ -1,0 +1,16 @@
+{
+  "id": "2026-10-25-s0-playbook-cancel-forgotten-iphone-and-andr",
+  "pillar": "playbook",
+  "topic": "Cancel Forgotten iPhone and Android App Trials",
+  "day": "2026-10-25",
+  "slot": 0,
+  "status": "planned",
+  "history": [],
+  "artifacts": {
+    "angle": "Intercept free trial conversions before they hit your mobile billing cycle.",
+    "hook": "That free app trial you downloaded for one weekend just billed you $49."
+  },
+  "scores": {},
+  "cost": {},
+  "notes": []
+}

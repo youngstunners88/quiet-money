@@ -1,0 +1,91 @@
+{
+  "title": "Cancel Forgotten App Trials in 3 Steps",
+  "hook_text": "THAT $49 FREE TRIAL CHARGE",
+  "beats": [
+    {
+      "say": "That free app trial you downloaded for one weekend just billed you $49.",
+      "callout": "",
+      "visual": "A smartphone resting face down on a dark wooden table in dim warm light, cinematic close-up."
+    },
+    {
+      "say": "How do these automatic charges slip past your bank account every single month?",
+      "callout": "",
+      "visual": "A bank statement resting blurred on a sleek desk, soft overhead shadows."
+    },
+    {
+      "say": "Most people assume app stores alert you before a trial ends.",
+      "callout": "ASSUME VS FACT",
+      "visual": "Hands holding a blank credit card near a modern laptop in a quiet room."
+    },
+    {
+      "say": "They don't. They count on you forgetting you even tapped it.",
+      "callout": "",
+      "visual": "A dark coffee shop table with a single glowing smartphone edge."
+    },
+    {
+      "say": "Step one. Open your phone's settings app right now.",
+      "callout": "STEP ONE",
+      "visual": "A close-up of a thumb scrolling down a sleek minimalist hallway wall, blurred motion."
+    },
+    {
+      "say": "Step two. Tap your Apple ID or Google account profile at the top.",
+      "callout": "STEP TWO",
+      "visual": "A close-up shot of a dark glass surface reflecting faint city lights at night."
+    },
+    {
+      "say": "Step three. Tap subscriptions and look at your active list.",
+      "callout": "STEP THREE",
+      "visual": "A finger pointing toward a blank white card resting on a dark marble counter."
+    },
+    {
+      "say": "That weekend photo editor is draining $15 a month for ten years, totaling $1,800.",
+      "callout": "$1,800 LOST",
+      "visual": "A stack of coins sitting under a single warm spotlight on a concrete desk."
+    },
+    {
+      "say": "Cancel it today before the mobile billing cycle hits your card.",
+      "callout": "",
+      "visual": "A hand sliding a sleek metallic phone away across a polished oak table."
+    },
+    {
+      "say": "Protect your cashflow today.",
+      "callout": "",
+      "visual": "A closed minimalist laptop resting on a clean wooden desk, morning sun."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "A quiet minimalist desk setup with a ceramic mug, soft window light."
+    }
+  ],
+  "caption": "That forgotten trial is quietly draining your paycheck. Clean up your mobile subscriptions in under 2 minutes. \n\n#personalfinance #moneytips #budgeting #savingmoney #finance",
+  "description": "Intercept free trial conversions before they hit your mobile billing cycle. Follow this 3-step guide to cancel forgotten iPhone and Android app trials today.",
+  "hashtags": [
+    "#personalfinance",
+    "#moneytips",
+    "#budgeting",
+    "#savingmoney",
+    "#finance"
+  ],
+  "first_comment": "What's the most expensive forgotten subscription you've ever found on your phone?",
+  "facts": [
+    {
+      "claim": "A $15/month subscription for 10 years equals $1,800",
+      "basis": "A $15/month subscription for 10 years = $1,800"
+    }
+  ],
+  "source": "llm",
+  "pillar": "playbook",
+  "look": "",
+  "loop_map": {
+    "stakes": "That free app trial you downloaded for one weekend just billed you $49.",
+    "big_question": "How do these automatic charges slip past your bank account every single month?",
+    "assume": "Most people assume app stores alert you before a trial ends.",
+    "reveal": "They don't. They count on you forgetting you even tapped it.",
+    "rehook_beats": [
+      4,
+      8
+    ],
+    "payoff_beat": 9
+  }
+}
