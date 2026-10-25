@@ -69,4 +69,4 @@ Before accepting a custom offer, ask any of these the buyer skipped. A buyer's a
 
 ## Gallery
 Use `samples/*/sheet.png` (made-up brands: Fern & Fold, Orbit Kid) and label them "sample". Check Fiverr's current rules on
-AI-assisted work and disclosure before publishing the gig.
+AI work and disclosure before publishing the gig.

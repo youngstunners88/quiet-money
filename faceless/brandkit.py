@@ -252,14 +252,14 @@ Starting a faceless channel? Get the whole identity in one delivery: a monogram 
 text stays inside YouTube's mobile-safe area, a watermark, a link-preview image, favicons, a vector logo and a one-page brand sheet
 with exact colors and fonts. Clean typography and a monogram mark, not custom illustration: it is meant for new channels that need to
 look consistent and finished today. Fonts are free for commercial use.
-AI disclosure: layouts are generated with code and AI-assisted tooling and checked by a person before delivery. Files are original to your channel name.
+AI disclosure: layouts are generated with code and AI tools and checked by a person before delivery. Files are original to your channel name.
 
 ## What not to promise
 No growth, views, subscribers or income. No copying another channel's identity. No trademarked names or logos. Turnaround "same day" only if you will actually do it.
 
 ## Gallery
 Use `samples/*/preview.png` (made-up brands: Calm Orbit, Iron Fork, Pixel Harbor, Night Ledger). Label them "sample" in the gallery.
-Check Fiverr's current rules on AI-assisted work and disclosure before publishing the gig.
+Check Fiverr's current rules on AI work and disclosure before publishing the gig.
 
 ## Fulfilment (agent, per order, about 2 minutes)
 `python -m faceless brandkit "<Channel Name>" --tagline "<tagline>" --palette <gold|mint|coral|sky|violet|lime> --niche "<niche>" --pills "A,B,C"`

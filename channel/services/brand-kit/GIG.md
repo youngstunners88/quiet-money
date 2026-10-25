@@ -29,7 +29,7 @@ HOW IT WORKS
 BEST FOR new faceless channels (finance, stories, tech, tutorials, gaming) that need a clean, consistent look fast.
 NOT FOR hand-drawn mascots or custom illustration. See my concept-directions gig for that.
 
-GOOD TO KNOW: layouts are made with code and AI-assisted tools and checked by a person before delivery. Files are original to your channel name; fonts are free for commercial use. I can't promise views, subscribers or income, and I won't copy another channel or use trademarked names.
+GOOD TO KNOW: layouts are made with code and AI tools and checked by a person before delivery. Files are original to your channel name; fonts are free for commercial use. I can't promise views, subscribers or income, and I won't copy another channel or use trademarked names.
 
 Not sure which tier fits? Message me first.
 
@@ -40,7 +40,7 @@ faceless channel, youtube banner, channel branding, brand kit, tiktok profile
 - **What do I send you to start?** Your channel name, niche and the mood you want. Colors and examples you like help but are optional.
 - **Can you match colors I already use?** Yes. Send the hex codes, or tell me the vibe and I'll pick a palette.
 - **Do I own the files?** Yes, you get the files made for your channel. Fonts used are free for commercial use.
-- **Is this AI?** Layouts are produced with code and AI-assisted tools, then checked by a person. Details are on the gig page.
+- **Is this AI?** Layouts are produced with code and AI tools, then checked by a person. Details are on the gig page.
 - **Will this grow my channel?** No. It gives you a consistent, finished look. I don't promise views, subscribers or income.
 
 ## Requirements (paste into Fiverr's "Requirements" step, all answers required)
@@ -60,7 +60,7 @@ No growth, views, subscribers or income. No copying another channel's identity. 
 
 ## Gallery
 Use `samples/*/preview.png` (made-up brands: Calm Orbit, Iron Fork, Pixel Harbor, Night Ledger). Label them "sample" in the gallery.
-Check Fiverr's current rules on AI-assisted work and disclosure before publishing the gig.
+Check Fiverr's current rules on AI work and disclosure before publishing the gig.
 
 ## Fulfilment (agent, per order, about 2 minutes)
 `python -m faceless brandkit "<Channel Name>" --tagline "<tagline>" --palette <gold|mint|coral|sky|violet|lime> --niche "<niche>" --pills "A,B,C"`

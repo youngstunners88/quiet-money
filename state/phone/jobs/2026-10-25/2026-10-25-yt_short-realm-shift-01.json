@@ -1,0 +1,26 @@
+{
+ "id": "2026-10-25-yt_short-realm-shift-01",
+ "kind": "yt_short",
+ "day": "2026-10-25",
+ "key": "realm-shift-01",
+ "status": "done",
+ "created": "2026-10-25T13:31:23+00:00",
+ "recipe": "YouTube Short upload",
+ "media": [
+  {
+   "source": "production/cache/realms/final/realm-shift-01-branded.mp4",
+   "name": "realm-shift-01-branded.mp4"
+  }
+ ],
+ "staged": false,
+ "title": "The Leak Cathedral | A small leak will sink a great ship",
+ "text": "A small leak will sink a great ship. (Benjamin Franklin, 1758)\n\nA realm shift: an impossible world, one idea about small money habits.\n\nEducation and humour, not financial advice.\n\n#moneymindset #personalfinance #quietmoney",
+ "ai_label": "altered or synthetic content: Yes",
+ "history": [
+  {
+   "at": "2026-10-25T13:44:36+00:00",
+   "result": "posted",
+   "note": "Shorts upload via phone; AI use = Yes; 'Uploaded to Your Channel' toast 22:44; link not shown"
+  }
+ ]
+}

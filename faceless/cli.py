@@ -331,6 +331,13 @@ def cmd_cineedit(args) -> int:
     from pathlib import Path
     from faceless import cineedit
     src = Path(args.clip)
+    if args.brand_only:
+        out = Path(args.out) if args.out else src.parent / f"{src.stem}-branded.mp4"
+        print(json.dumps(cineedit.brand_only(src, out, card_line=args.card), indent=2))
+        return 0
+    if args.impact is None:
+        print("--impact is required unless --brand-only")
+        return 2
     out = Path(args.out) if args.out else src.parent / f"{src.stem}-edit.mp4"
     res = cineedit.edit(src, out, impact=args.impact, card_line=args.card)
     print(json.dumps(res, indent=2))
@@ -1448,7 +1455,8 @@ def main(argv: list[str] | None = None) -> int:
     fl.set_defaults(fn=cmd_flow)
     ce = sub.add_parser("cineedit", help="cinematic edit of a Flow clip: speed ramps into the hit, adaptive grade, grain, brand, end card")
     ce.add_argument("clip")
-    ce.add_argument("--impact", type=float, required=True, help="seconds into the SOURCE clip where the peak lands")
+    ce.add_argument("--impact", type=float, default=None, help="seconds into the SOURCE clip where the peak lands (not needed with --brand-only)")
+    ce.add_argument("--brand-only", action="store_true", help="leave the cut as made and add only the Quiet Money mark and end card")
     ce.add_argument("--out", help="output path (default <clip>-edit.mp4)")
     ce.add_argument("--card", default="QUIET MONEY", help="end-card line")
     ce.set_defaults(fn=cmd_cineedit)

@@ -137,8 +137,7 @@ def problems(job: dict) -> list[str]:
             out.append("a link in the text (picture posts carry none)")
         if COMMUNITY_DISCLOSURE.lower() not in text.lower():
             out.append("the AI disclosure line is missing")
-    if kind == "yt_short" and VIDEO_DISCLOSURE.lower() not in text.lower():
-        out.append("the AI disclosure is missing from the description")
+    # owner, 2026-10-25: the words "AI-assisted" are never written into content; the platform's own AI toggle is the label.
     if kind == "yt_short" and not str(job.get("title", "")).strip():
         out.append("no title")
     if kind == "tiktok":

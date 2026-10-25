@@ -198,3 +198,50 @@ def edit(src: Path, out: Path, *, impact: float, card_line: str = "QUIET MONEY",
                 "flash_alpha": flash_alpha, "segments": [[round(a, 2), round(b, 2), s] for a, b, s in segs]}
     finally:
         shutil.rmtree(work, ignore_errors=True)
+
+
+def brand_only(src: Path, out: Path, *, card_line: str = "QUIET MONEY", card_seconds: float = 1.0) -> dict:
+    """Put only the Quiet Money brand on a finished edit (CapCut export, reel): the gold Q mark on the whole video, then the end card.
+    The cut, grade and effects are left exactly as made; size, frame rate and audio follow the source."""
+    src, out = Path(src), Path(out)
+    probe = subprocess.run(["ffprobe", "-v", "error", "-select_streams", "v:0", "-show_entries", "stream=width,height,r_frame_rate",
+                            "-of", "csv=p=0", str(src)], capture_output=True, text=True, timeout=60).stdout.strip().split(",")
+    sw, sh, rate = int(probe[0]), int(probe[1]), probe[2]
+    num, den = (int(x) for x in rate.split("/"))
+    fps = num / den if den else 30.0
+    work = Path(tempfile.mkdtemp(prefix="brand-"))
+    try:
+        mark = Paths.root / "channel" / "brand-kit" / "watermark.png"
+        card_png = endcard(work / "card.png", card_line)
+        scale = sw / W
+        inputs = ["-i", str(src)]
+        chain = [f"[0:v]format=yuv420p[base]"]
+        last = "[base]"
+        if mark.exists():
+            inputs += ["-i", str(mark)]
+            chain.append(f"[1:v]scale=iw*{scale:.4f}:-1[wm]")
+            chain.append(f"{last}[wm]overlay=W-w-{int(28 * scale)}:H-h-{int(40 * scale)}:format=auto[branded]")
+            last = "[branded]"
+        body = work / "body.mp4"
+        _run(["ffmpeg", "-hide_banner", "-loglevel", "error", "-y", *inputs, "-filter_complex", ";".join(chain),
+              "-map", last, "-map", "0:a?", "-r", f"{fps:g}", "-c:v", "libx264", "-crf", "12", "-preset", "slow", "-pix_fmt", "yuv420p",
+              "-c:a", "copy", str(body)])
+        if card_seconds <= 0:
+            shutil.copy2(body, out)
+        else:
+            card = work / "card.mp4"
+            _run(["ffmpeg", "-hide_banner", "-loglevel", "error", "-y", "-loop", "1", "-t", f"{card_seconds}", "-i", str(card_png),
+                  "-f", "lavfi", "-t", f"{card_seconds}", "-i", "anullsrc=r=48000:cl=stereo",
+                  "-filter_complex", f"[0:v]scale={sw}:{sh}:flags=lanczos,fps={fps:g},format=yuv420p,fade=t=in:st=0:d=0.2[v]",
+                  "-map", "[v]", "-map", "1:a", "-c:v", "libx264", "-crf", "12", "-preset", "slow",
+                  "-c:a", "aac", "-b:a", "192k", "-shortest", str(card)])
+            out.parent.mkdir(parents=True, exist_ok=True)
+            # concat by filter so the source audio (any codec/rate) and the silent card line up
+            _run(["ffmpeg", "-hide_banner", "-loglevel", "error", "-y", "-i", str(body), "-i", str(card),
+                  "-filter_complex", "[0:a]aresample=48000[a0];[1:a]aresample=48000[a1];[0:v][a0][1:v][a1]concat=n=2:v=1:a=1[v][a]",
+                  "-map", "[v]", "-map", "[a]", "-r", f"{fps:g}", "-c:v", "libx264", "-crf", "12", "-preset", "slow", "-pix_fmt", "yuv420p",
+                  "-c:a", "aac", "-b:a", "256k", "-movflags", "+faststart", str(out)])
+        return {"source": str(src), "out": str(out), "size": f"{sw}x{sh}", "fps": fps,
+                "seconds": round(probe_duration(out), 2), "mark": mark.exists(), "card_seconds": card_seconds}
+    finally:
+        shutil.rmtree(work, ignore_errors=True)
