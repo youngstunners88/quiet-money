@@ -3,7 +3,7 @@
  "kind": "yt_community",
  "day": "2026-10-16",
  "key": "2026-10-16/01-trenches-make-benches",
- "status": "queued",
+ "status": "done",
  "created": "2026-10-25T09:20:36+00:00",
  "recipe": "YouTube Posts tab (picture post)",
  "media": [
@@ -15,5 +15,12 @@
  "staged": true,
  "text": "Look at the guy on the left. He's all of us in a rough month.\nWhen you can't climb out of a hard season fast, small comforts help you keep moving forward.\nWhat's your bench when money feels heavy?\n\n#moneymindset #personalfinance #financialstress #quietmoney #moneyhumor\n\nIllustrated with AI. Education and humour, not financial advice.",
  "alt": "Two helmeted stick-figure soldiers stand in a trench under a quote sign while one happily hammers together wooden benches.",
- "title": "Trenches To Benches"
+ "title": "Trenches To Benches",
+ "history": [
+  {
+   "at": "2026-10-25T11:10:55+00:00",
+   "result": "posted",
+   "note": "Posts tab, published 20:09 local; link not shown by app"
+  }
+ ]
 }

@@ -3,7 +3,7 @@
  "kind": "yt_community",
  "day": "2026-10-16",
  "key": "2026-10-16/02-paying-for-the-dream",
- "status": "queued",
+ "status": "done",
  "created": "2026-10-25T09:20:36+00:00",
  "recipe": "YouTube Posts tab (picture post)",
  "media": [
@@ -15,5 +15,12 @@
  "staged": true,
  "text": "Check the dumbbell in the corner. It has its own spider now.\nSubscriptions we don't use often stay because cancelling feels like giving up on who we hoped to be.\nWhich subscription are you secretly keeping for the dream?\n\n#subscriptions #spendinghabits #budgeting #moneyhumor #quietmoney\n\nIllustrated with AI. Education and humour, not financial advice.",
  "alt": "A stick figure relaxes on a couch with a remote beside a sign about an unused gym pass and a cobwebbed dumbbell.",
- "title": "The Dream Subscription"
+ "title": "The Dream Subscription",
+ "history": [
+  {
+   "at": "2026-10-25T11:20:15+00:00",
+   "result": "posted",
+   "note": "Posts tab, 'Post created' toast 20:20 local"
+  }
+ ]
 }

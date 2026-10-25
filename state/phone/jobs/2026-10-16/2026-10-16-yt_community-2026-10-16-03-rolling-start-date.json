@@ -3,7 +3,7 @@
  "kind": "yt_community",
  "day": "2026-10-16",
  "key": "2026-10-16/03-rolling-start-date",
- "status": "queued",
+ "status": "done",
  "created": "2026-10-25T09:20:36+00:00",
  "recipe": "YouTube Posts tab (picture post)",
  "media": [
@@ -15,5 +15,12 @@
  "staged": true,
  "text": "Honestly, that calendar is the most consistent part of the plan.\nWaiting for a perfect fresh start keeps moving the line, while a messy start today actually counts.\nHow many next months has your budget had?\n\n#budgeting #procrastination #moneyhabits #personalfinance #quietmoney\n\nIllustrated with AI. Education and humour, not financial advice.",
  "alt": "A smiling stick figure points to a budget calendar where every month says next month while a friend looks puzzled.",
- "title": "Rolling Start Date"
+ "title": "Rolling Start Date",
+ "history": [
+  {
+   "at": "2026-10-25T11:22:18+00:00",
+   "result": "posted",
+   "note": "Posts tab, 'Post created' toast"
+  }
+ ]
 }

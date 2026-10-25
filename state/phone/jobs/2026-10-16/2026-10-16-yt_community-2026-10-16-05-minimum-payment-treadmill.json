@@ -3,7 +3,7 @@
  "kind": "yt_community",
  "day": "2026-10-16",
  "key": "2026-10-16/05-minimum-payment-treadmill",
- "status": "queued",
+ "status": "done",
  "created": "2026-10-25T09:20:36+00:00",
  "recipe": "YouTube Posts tab (picture post)",
  "media": [
@@ -15,5 +15,12 @@
  "staged": true,
  "text": "Notice where the sign is bolted on. That's the whole problem.\nWhen payments mostly cover interest, the balance barely moves, so the finish line moves with you.\nWhat finally got your balance moving?\n\n#debt #creditcards #interest #debtfreejourney #moneyhumor #quietmoney\n\nIllustrated with AI. Education and humour, not financial advice.",
  "alt": "A sweaty stick figure runs on a minimum payments treadmill toward a debt free sign attached to the treadmill.",
- "title": "So Close"
+ "title": "So Close",
+ "history": [
+  {
+   "at": "2026-10-25T11:26:26+00:00",
+   "result": "posted",
+   "note": "Posts tab, 'Post created' toast"
+  }
+ ]
 }

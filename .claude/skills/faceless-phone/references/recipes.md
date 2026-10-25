@@ -10,12 +10,16 @@ Common start for every job:
 Typing long text: `type_text` takes ASCII only, up to 2000 characters, and turns new lines into nothing. For a caption with line breaks or emoji, type it in pieces, using `press_key ENTER` for each new line, or leave out characters it cannot type, and say so in the receipt note.
 
 ## YouTube Posts tab (picture post)
-Package `com.google.android.youtube`. Job kind `yt_community`.
-1. Tap **Create** (the + at the bottom) → **Post**. If it asks which channel, choose Quiet Money (@quietmoneyrule). Any other channel: stop, `held`.
-2. Tap the image icon → **Download** or **QuietMoney** album → the job's `picture.png` → **Next**/**Done**.
-3. Tap the text box, type `job.text`.
-4. Leave visibility on Public, then tap **Post**. Wait until the post shows in the Posts tab, then take a screenshot.
-5. `python -m faceless phone done ID posted --ai-label yes --note "Posts tab"`. The disclosure is the caption's "Illustrated with AI." line, so `yes` is correct when that line is in the posted text.
+Package `com.google.android.youtube`. Job kind `yt_community`. Verified on a POCO M8 5G (HyperOS 2, YouTube 21.42) on 2026-10-25: five posts went out with this exact path.
+1. Tap **Create** (the + at the bottom). First time only, YouTube asks for camera and microphone: tap **Don't allow** (the post needs neither). The create screen has mode tabs **Video / Short / Live / Post**; tap **Post** (the tab at the bottom, not the grey Post button at the top). YouTube remembers the last mode, so check the title says **Create post** before tapping anything. The channel shown under the title must be **Quiet Money**; any other: stop, `held`.
+2. Tap **Add an image** (the picture icon at the bottom). Photo access: choose **Allow limited access**. Android only keeps that grant while YouTube stays open, so a new job needs it again: if the grid says **No photos yet**, tap **Settings** in the banner, then **App permissions → Photos and videos → Edit selected photos for this app**, tick the job's picture (newest first), **Done**, then Back three times to the grid.
+3. In YouTube's own grid, tap the picture's thumbnail (Next stays grey until you do), then **Next**.
+4. YouTube opens an editor and **adds a suggested sound** (for example "Coastline") and says the post will be shared to the Shorts feed. Tap the sound pill at the top, then **Delete sound** (the pill must read **Add sound**), then **Done** (top right).
+5. Tap the box that says **Write a message...**, type `job.text`, press Back once to hide the keyboard. Read the text field back and compare it with `job.text`; stop if it differs. Leave visibility on **Public**.
+6. Tap **Post** (top right). The feed shows a **Post created** toast for a few seconds. It has a **View** link, but the toast disappears fast and a tap lands on whatever video is under it, so do not rely on it: open **You -> View channel -> Posts** to see the post. The app does not show a link for the new post.
+7. `python -m faceless phone done ID posted --ai-label yes --note "Posts tab"`. There is **no "Altered or synthetic content" switch** on the Posts screen, so the disclosure is the caption's "Illustrated with AI." line.
+
+Typing: `adb shell input text` types ASCII, with `%s` for a space; send each line separately and press ENTER between lines. Apostrophes and `#` work when the string is single-quoted for the phone's shell. On Xiaomi, taps need Developer options -> **USB debugging (Security settings)**, which HyperOS only turns on with a SIM in the phone and a Mi account signed in; the SIM can come out afterwards.
 
 ## YouTube Short upload
 Package `com.google.android.youtube`. Job kind `yt_short`.
@@ -27,7 +31,7 @@ Package `com.google.android.youtube`. Job kind `yt_short`.
 6. `phone done ID posted --ai-label yes --url <link>`.
 
 ## TikTok upload
-Package `com.zhiliaoapp.musically` (the US app; `com.ss.android.ugc.trill` elsewhere). Job kind `tiktok`.
+Package `com.ss.android.ugc.trill` (this phone; `com.zhiliaoapp.musically` is the US app). Job kind `tiktok`.
 1. **+** → **Upload** → the job's `final.mp4` → **Next** (no filters, no added sound: the video has its own music).
 2. Caption box: `job.text` (hashtags included; there is no link, because the bio carries it).
 3. **More options** → turn **AI-generated content** on. Not found → `held`.
