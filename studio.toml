@@ -449,3 +449,11 @@ gumroad = true
 [shop.approved."debt-payoff-planner"]
 price = 0.0
 gumroad = true
+
+[phone]   # the owner's own Android phone, driven by Claude Code on the owner's computer through OpenDeviceMCP (skill faceless-phone)
+enabled = true
+post_community = true    # owner's yes, 2026-10-25: comics on the YouTube Posts tab through the phone
+post_youtube = true      # owner's yes, 2026-10-25: Shorts the API could not upload (shared quota) go up through the YouTube app
+post_tiktok = true       # owner's yes, 2026-10-25: every passed Short also goes to TikTok, AI-generated label on
+media_branch = "phone-media"
+max_per_day = { yt_community = 5, yt_short = 5, tiktok = 5, flow_image = 30, fiverr_inbox = 3, fiverr_reply = 10 }

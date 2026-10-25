@@ -891,6 +891,52 @@ def cmd_songs(args) -> int:
     return 0 if res["made"] >= res["wanted"] else 1
 
 
+def cmd_phone(args) -> int:
+    """Phone lane (skill faceless-phone): `phone status|queue|stage|next|done|pull|inbound|collect|approve|reply` (jobs for the owner's phone)."""
+    from faceless import phone
+    a, day = args.args, args.day
+    act = a[0] if a else "status"
+    if act == "status":
+        print(json.dumps(phone.status(day), indent=1))
+    elif act == "queue":
+        d = day or config.today_utc().isoformat()
+        flow = Path(args.flow) if args.flow else (phone.flow_from_vibe(args.vibe) if args.vibe else None)
+        print(json.dumps(phone.queue_day(d, flow, fiverr=not args.no_fiverr), indent=1))
+        if args.stage:
+            print(json.dumps(phone.stage(d, push=not args.no_push), indent=1))
+    elif act == "stage":
+        print(json.dumps(phone.stage(day or config.today_utc().isoformat(), push=not args.no_push), indent=1))
+    elif act == "next":
+        job = phone.next_job(day)
+        if not job:
+            print(json.dumps({"next": None, **phone.status(day)}, indent=1))
+            return 0
+        files = phone.fetch(job) if args.fetch or args.push else []
+        on_phone = phone.push(job, files) if args.push and files else []
+        if args.push and job["kind"] == "flow_image":
+            phone.snapshot(job)
+        print(json.dumps({"job": job, "local_files": [str(f) for f in files], "on_phone": on_phone, "device_dir": phone.DEVICE_DIR}, indent=1, ensure_ascii=False))
+    elif act == "done":
+        label = None if args.ai_label is None else args.ai_label == "yes"
+        print(json.dumps(phone.record(a[1], a[2], url=args.url or "", note=args.note or "", ai_label=label), indent=1))
+    elif act == "inbound":
+        print(json.dumps(phone.inbound(a[1], [Path(f) for f in a[2:]], push=not args.no_push), indent=1))
+    elif act == "pull":
+        print(json.dumps(phone.pull(a[1], push_branch=not args.no_push), indent=1))
+    elif act == "collect":
+        print(json.dumps(phone.collect(day), indent=1))
+    elif act == "approve":
+        print(f"approved: {phone.approve(a[1])}")
+    elif act == "reply":
+        d = day or config.today_utc().isoformat()
+        job = phone.add("fiverr_reply", d, a[1], {"thread": a[1], "draft": Path(args.draft).read_text(encoding="utf-8")})
+        print(f"queued {job['id']}; the owner reads it, then: python -m faceless phone approve {job['id']}" if job else "already queued or sent")
+    else:
+        print(cmd_phone.__doc__)
+        return 1
+    return 0
+
+
 def cmd_comics(args) -> int:
     """Comics: `comics [--day D] [--n 5] [--reference IMG] [--theme TEXT]` draws the day's picture posts into distribution/comics/<day>/."""
     from faceless import comics
@@ -1616,6 +1662,11 @@ def main(argv: list[str] | None = None) -> int:
     sv.add_argument("--pan-from", type=float, default=0.0)
     sv.add_argument("--pan-to", type=float, default=1.0)
     sv.set_defaults(fn=cmd_songvideo)
+    ph = sub.add_parser("phone", help="jobs for the owner's own phone (skill faceless-phone): `phone status|queue [--stage] [--flow F|--vibe SLUG]|stage|next [--fetch] [--push]|done ID posted|made|drafted|held|failed [--ai-label yes|no]|pull ID|inbound ID FILES|collect|approve ID|reply THREAD --draft F`")
+    ph.add_argument("args", nargs="*"); ph.add_argument("--day"); ph.add_argument("--flow"); ph.add_argument("--vibe"); ph.add_argument("--stage", action="store_true")
+    ph.add_argument("--no-push", action="store_true"); ph.add_argument("--no-fiverr", action="store_true"); ph.add_argument("--fetch", action="store_true"); ph.add_argument("--push", action="store_true")
+    ph.add_argument("--url"); ph.add_argument("--note"); ph.add_argument("--ai-label", choices=("yes", "no")); ph.add_argument("--draft")
+    ph.set_defaults(fn=cmd_phone)
     cm = sub.add_parser("comics", help="the funny picture-post series (five a day, for the channel's Posts tab): `comics [--day D] [--n 5] [--reference IMG] [--theme T]`")
     cm.add_argument("--day"); cm.add_argument("--n", type=int, default=5); cm.add_argument("--reference"); cm.add_argument("--theme")
     cm.set_defaults(fn=cmd_comics)
