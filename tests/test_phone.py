@@ -117,3 +117,13 @@ def test_a_vibe_plan_becomes_flow_jobs_for_the_missing_stills_only(lane, monkeyp
     (work / "shot01.png").write_bytes(b"x")
     rows = json.loads(phone.flow_from_vibe("d-song").read_text())
     assert [r["prompt"] for r in rows] == ["two"] and rows[0]["dest"].endswith("shot02.png")
+
+
+def test_the_host_heartbeat_commits_only_on_change_and_goes_stale(lane):
+    assert phone.host() == {"seen": False, "stale": True}
+    assert phone.heartbeat("192.168.1.5:4000", True, "ok")["commit"] is True
+    assert phone.heartbeat("192.168.1.5:4000", True, "ok")["commit"] is False      # same state within 3 h: no new commit
+    assert phone.host()["stale"] is False and phone.host()["reachable"] is True
+    assert phone.heartbeat("192.168.1.5:4000", False, "phone not reachable")["commit"] is True
+    assert phone.host()["stale"] is True
+    assert phone.status()["host"]["note"] == "phone not reachable"

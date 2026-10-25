@@ -1,0 +1,10 @@
+# Every 30 minutes from 08:00 to 21:30 local time (the phone works through the day, not overnight).
+[Unit]
+Description=Run the Quiet Money phone jobs every 30 minutes
+
+[Timer]
+OnCalendar=*-*-* 08..21:00,30:00
+Persistent=true
+
+[Install]
+WantedBy=timers.target

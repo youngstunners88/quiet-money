@@ -436,6 +436,37 @@ def pull(jid: str, push_branch: bool = True) -> dict:
     return {"pulled": [str(g) for g in got], **inbound(jid, got, push=push_branch)}
 
 
+# ------------------------------------------------------------------ the home host's heartbeat (skill faceless-phone-host)
+
+HOST_STALE_HOURS = 6
+HOST_COMMIT_HOURS = 3
+
+
+def heartbeat(device: str, reachable: bool, note: str = "") -> dict:
+    """The home host says it ran: when, whether the phone answered, and what it did. state/phone/host.json (committed) is rewritten
+    only when something changed or every HOST_COMMIT_HOURS, so the host does not add a commit every half hour; `commit` says which."""
+    row = {"at": now(), "device": device[:64], "reachable": reachable, "note": note[:200]}
+    path = home() / "host.json"
+    try:
+        prev = json.loads(path.read_text(encoding="utf-8"))
+        age = (datetime.now(timezone.utc) - datetime.fromisoformat(prev["at"])).total_seconds() / 3600
+        changed = (prev.get("reachable"), prev.get("note")) != (reachable, row["note"]) or age >= HOST_COMMIT_HOURS
+    except (OSError, ValueError, KeyError):
+        changed = True
+    write_atomic(path if changed else Paths.state / "tmp" / "host-last.json", json.dumps(row, indent=1))
+    return {**row, "commit": changed}
+
+
+def host() -> dict:
+    """The last heartbeat with its age; `stale` means the host has not run for HOST_STALE_HOURS (off, offline, or its schedule broke)."""
+    try:
+        row = json.loads((home() / "host.json").read_text(encoding="utf-8"))
+        age = (datetime.now(timezone.utc) - datetime.fromisoformat(row["at"])).total_seconds() / 3600
+    except (OSError, ValueError, KeyError):
+        return {"seen": False, "stale": True}
+    return {"seen": True, **row, "age_hours": round(age, 1), "stale": age > HOST_STALE_HOURS or not row.get("reachable")}
+
+
 # ------------------------------------------------------------------ the computer side: run and record
 
 def next_job(day: str | None = None) -> dict | None:
@@ -484,5 +515,5 @@ def status(day: str | None = None) -> dict:
         k = by.setdefault(j["kind"], {"queued": 0, "done": 0, "held": 0})
         k[j.get("status", "queued")] = k.get(j.get("status", "queued"), 0) + 1
     nxt = next_job(day)
-    return {"enabled": cfg()["enabled"], "paused": safety.paused(), "jobs": by, "next": nxt["id"] if nxt else None,
+    return {"enabled": cfg()["enabled"], "paused": safety.paused(), "host": host(), "jobs": by, "next": nxt["id"] if nxt else None,
             "blocked": [{"id": j["id"], "why": gate(j)} for j in rows if j.get("status") == "queued" and gate(j)][:10]}

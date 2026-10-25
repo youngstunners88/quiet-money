@@ -892,7 +892,7 @@ def cmd_songs(args) -> int:
 
 
 def cmd_phone(args) -> int:
-    """Phone lane (skill faceless-phone): `phone status|queue|stage|next|done|pull|inbound|collect|approve|reply` (jobs for the owner's phone)."""
+    """Phone lane (skill faceless-phone): `phone status|queue|stage|next|done|pull|inbound|collect|approve|reply|heartbeat` (jobs for the owner's phone)."""
     from faceless import phone
     a, day = args.args, args.day
     act = a[0] if a else "status"
@@ -927,6 +927,8 @@ def cmd_phone(args) -> int:
         print(json.dumps(phone.collect(day), indent=1))
     elif act == "approve":
         print(f"approved: {phone.approve(a[1])}")
+    elif act == "heartbeat":
+        print(json.dumps(phone.heartbeat(a[1] if len(a) > 1 else "", reachable=not args.unreachable, note=args.note or ""), indent=1))
     elif act == "reply":
         d = day or config.today_utc().isoformat()
         job = phone.add("fiverr_reply", d, a[1], {"thread": a[1], "draft": Path(args.draft).read_text(encoding="utf-8")})
@@ -1662,10 +1664,10 @@ def main(argv: list[str] | None = None) -> int:
     sv.add_argument("--pan-from", type=float, default=0.0)
     sv.add_argument("--pan-to", type=float, default=1.0)
     sv.set_defaults(fn=cmd_songvideo)
-    ph = sub.add_parser("phone", help="jobs for the owner's own phone (skill faceless-phone): `phone status|queue [--stage] [--flow F|--vibe SLUG]|stage|next [--fetch] [--push]|done ID posted|made|drafted|held|failed [--ai-label yes|no]|pull ID|inbound ID FILES|collect|approve ID|reply THREAD --draft F`")
+    ph = sub.add_parser("phone", help="jobs for the owner's own phone (skill faceless-phone): `phone status|queue [--stage] [--flow F|--vibe SLUG]|stage|next [--fetch] [--push]|done ID posted|made|drafted|held|failed [--ai-label yes|no]|pull ID|inbound ID FILES|collect|approve ID|reply THREAD --draft F|heartbeat DEVICE [--unreachable]`")
     ph.add_argument("args", nargs="*"); ph.add_argument("--day"); ph.add_argument("--flow"); ph.add_argument("--vibe"); ph.add_argument("--stage", action="store_true")
     ph.add_argument("--no-push", action="store_true"); ph.add_argument("--no-fiverr", action="store_true"); ph.add_argument("--fetch", action="store_true"); ph.add_argument("--push", action="store_true")
-    ph.add_argument("--url"); ph.add_argument("--note"); ph.add_argument("--ai-label", choices=("yes", "no")); ph.add_argument("--draft")
+    ph.add_argument("--url"); ph.add_argument("--note"); ph.add_argument("--ai-label", choices=("yes", "no")); ph.add_argument("--draft"); ph.add_argument("--unreachable", action="store_true")
     ph.set_defaults(fn=cmd_phone)
     cm = sub.add_parser("comics", help="the funny picture-post series (five a day, for the channel's Posts tab): `comics [--day D] [--n 5] [--reference IMG] [--theme T]`")
     cm.add_argument("--day"); cm.add_argument("--n", type=int, default=5); cm.add_argument("--reference"); cm.add_argument("--theme")

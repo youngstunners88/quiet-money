@@ -41,7 +41,7 @@ The engine runs in the cloud and the phone is on the owner's desk, so the two me
 2. `cd tools/open-device-mcp && npm ci && npm run build && npm link && open-device-mcp doctor` (shows the phone `[ok]`).
 3. `claude mcp add open-device -- open-device-mcp serve` (user scope; not in `.mcp.json`, because cloud sessions have no phone).
 4. On the phone, sign in by hand: YouTube (as @quietmoneyrule), TikTok, Chrome on labs.google/flow, Fiverr.
-5. Run it: `tools/phone-run.sh` (or ask Claude Code "run the phone jobs"). Schedule it with cron or Windows Task Scheduler after the cloud routines (09:17 UTC daily batch, 07:41 UTC comics): for example `30 10 * * * cd ~/quiet-money && tools/phone-run.sh`.
+5. Run it: `tools/phone-run.sh` once by hand (Claude Code on Opus 5.5). To keep the phone working while you are out, with your own computer off, set up the always-on home host: skill `faceless-phone-host`.
 
 ## What it saves
 - Comics on the Posts tab: no API exists, so this is the only automatic route.

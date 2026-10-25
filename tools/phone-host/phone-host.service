@@ -1,0 +1,9 @@
+# systemd user service for the home host. Install: copy to ~/.config/systemd/user/, then `systemctl --user enable --now phone-host.timer`.
+[Unit]
+Description=Quiet Money phone jobs (works through the owner's phone at home)
+
+[Service]
+Type=oneshot
+WorkingDirectory=%h/quiet-money
+EnvironmentFile=%h/.config/quiet-money/phone.env
+ExecStart=%h/quiet-money/tools/phone-host/run.sh
