@@ -3,7 +3,7 @@
  "kind": "yt_short",
  "day": "2026-10-26",
  "key": "2026-10-26-s3-psychology-relative-income-hypothesis",
- "status": "held",
+ "status": "done",
  "created": "2026-10-26T03:31:34+00:00",
  "recipe": "YouTube Short upload",
  "media": [
@@ -18,9 +18,9 @@
  "ai_label": "altered or synthetic content: Yes",
  "history": [
   {
-   "at": "2026-10-26T10:00:12+00:00",
-   "result": "held",
-   "note": "no video file in the container; render it again before posting"
+   "at": "2026-10-26T10:47:07+00:00",
+   "result": "posted",
+   "note": "YouTube app upload, public, AI use=Yes"
   }
  ]
 }

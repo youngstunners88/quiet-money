@@ -25,6 +25,9 @@ metadata:
 ## The 2026-10-26 look (v2)
 Drawn entirely in `faceless/gigart.py`: near-black gradient ground, volumetric light rays, bokeh, glowing glass cards in 3-D perspective (`glass_card`), a bloom pass and a vignette. Real kit output sits inside the cards, so the proof is genuine. Each gig has its own accent (violet and gold for the brand kit, warm orange on navy for the studio gig). Check every render for text overflow and for white cards blooming too hot; run it at 300 px wide before shipping.
 
+## The 2026-10-26 look (v3)
+The six images now sit on Flow key visuals made on the phone (`channel/services/gig-art/art00-07.jpg`, no lettering): floating glass cards, the creator desk, a macro of rings, the mascot burst, the gallery hall, the workshop table. `underlay()` puts one under each layout; the real kit output and the type are drawn on top.
+
 ## Rules
 - Samples are fictional brands; never a real client, person's face or other company's logo.
 - No claim you cannot deliver in the picture (no "#1", no fake review stars, no price slashes).

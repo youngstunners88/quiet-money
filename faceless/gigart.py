@@ -88,6 +88,24 @@ def bokeh(im: Image.Image, n=26, palette=((150, 105, 255), (255, 210, 63), (120,
     return out.convert("RGB")
 
 
+def underlay(im: Image.Image, name: str, dim: float = 0.8, left: float = 0.0) -> Image.Image:
+    """Put a Flow key visual (channel/services/gig-art/<name>.jpg, no lettering in it) under the card layer.
+    `left` darkens the left side so headline type stays readable."""
+    path = SVC / "gig-art" / f"{name}.jpg"
+    if not path.exists():
+        return im
+    art = Image.open(path).convert("RGB")
+    r = max(W / art.width, H / art.height)
+    art = art.resize((int(art.width * r) + 1, int(art.height * r) + 1), Image.LANCZOS)
+    x, y = (art.width - W) // 2, (art.height - H) // 2
+    a = np.asarray(art.crop((x, y, x + W, y + H)), float) * dim
+    if left:
+        g = np.linspace(1 - left, 1, W)[None, :, None] ** 1.2
+        a = a * g
+    base = np.asarray(im, float) * 0.35
+    return Image.fromarray(np.clip(a + base, 0, 255).astype("uint8"))
+
+
 def bloom(im: Image.Image, thresh=222, radius=20, gain=0.5) -> Image.Image:
     bright = im.point(lambda v: max(0, v - thresh) * 4)
     glow = bright.filter(ImageFilter.GaussianBlur(radius))
@@ -231,8 +249,7 @@ def kit_hero() -> Image.Image:
     ensure_kits()
     kit = KITS / "night-ledger"
     im = backdrop(glow=(120, 70, 230), gx=0.8, gy=0.4)
-    im = rays(im, 0.88, -0.05, (200, 160, 255), 0.17, 18)
-    im = bokeh(im, 30, seed=11, zone=(0.4, 0.0, 1.0, 0.9))
+    im = underlay(im, "art02", 0.95, 0.78)
     im = glass_card(im, Image.open(kit / "og-image.png"), (1135, 185), (300, 158), yaw=-0.5, glow=(120, 90, 255), alpha=0.92)
     im = glass_card(im, Image.open(kit / "banner-youtube.png"), (885, 352), (560, 315), yaw=0.5, glow=VIOLET)
     im = paste_disc(im, Image.open(kit / "avatar.png"), 770, 545, 210)
@@ -252,8 +269,7 @@ def kit_contents() -> Image.Image:
     ensure_kits()
     kit = KITS / "night-ledger"
     im = backdrop(top=(18, 14, 34), glow=(90, 60, 200), gx=0.5, gy=0.5)
-    im = rays(im, 0.5, -0.1, (190, 150, 255), 0.12, 14, 1.7, 5)
-    im = bokeh(im, 22, seed=5)
+    im = underlay(im, "art03", 0.7, 0.0)
     c = (640, 395)
     nodes = [("banner-youtube.png", "YouTube banner", "2560 x 1440, mobile-safe", (250, 255), (340, 191), 0.4),
              ("og-image.png", "Share image", "1200 x 630", (1030, 255), (310, 163), -0.4),
@@ -286,8 +302,7 @@ def kit_contents() -> Image.Image:
 def kit_proof() -> Image.Image:
     ensure_kits()
     im = backdrop(top=(16, 12, 30), glow=(70, 60, 190), gx=0.5, gy=0.55)
-    im = rays(im, 0.5, 1.1, (120, 170, 255), 0.1, 14, 1.4, 9)
-    im = bokeh(im, 20, seed=3)
+    im = underlay(im, "art01", 0.75, 0.0)
     glows = {"calm-orbit": (60, 230, 160), "iron-fork": (255, 110, 90), "pixel-harbor": (90, 170, 255), "night-ledger": VIOLET}
     layout = [("calm-orbit", 180, 380, 0.5, (310, 174)), ("night-ledger", 1100, 380, -0.5, (310, 174)),
               ("iron-fork", 470, 350, 0.28, (340, 191)), ("pixel-harbor", 810, 350, -0.28, (340, 191))]
@@ -311,8 +326,7 @@ def concepts() -> list[Image.Image]:
 def studio_hero() -> Image.Image:
     cons = concepts()
     im = backdrop(top=(10, 22, 40), mid=(6, 10, 22), glow=(255, 150, 60), gx=0.72, gy=0.5)
-    im = rays(im, 0.78, -0.1, (255, 190, 110), 0.2, 16, 1.5, 4)
-    im = bokeh(im, 28, palette=((255, 150, 60), (60, 200, 220), (240, 80, 160)), seed=21, zone=(0.4, 0, 1, 1))
+    im = underlay(im, "art06", 0.95, 0.85)
     for art, ctr, sz, yaw in [(cons[5], (705, 205), 220, 0.5), (cons[1], (1175, 215), 220, -0.5), (cons[8], (845, 520), 240, 0.3), (cons[6], (1085, 535), 240, -0.3),
                               (cons[3], (960, 350), 320, 0.0)]:
         im = glass_card(im, art, ctr, (sz, sz), yaw=yaw, glow=(255, 160, 80), radius=24)
@@ -329,8 +343,7 @@ def studio_hero() -> Image.Image:
 def studio_process() -> Image.Image:
     cons = concepts()
     im = backdrop(top=(10, 18, 36), mid=(6, 8, 18), glow=(60, 160, 200), gx=0.5, gy=0.4)
-    im = rays(im, 0.5, -0.12, (140, 220, 255), 0.11, 14, 1.7, 8)
-    im = bokeh(im, 20, palette=((60, 200, 220), (255, 150, 60), (240, 80, 160)), seed=2)
+    im = underlay(im, "art07", 0.36, 0.0)
     ImageDraw.Draw(im).line([(215, 285), (1065, 285)], fill=(255, 190, 110), width=3)
     steps = [("1", "SEND A BRIEF", "What it is for, who it is for, the feeling you want.", cons[6], -0.32),
              ("2", "GET YOUR OPTIONS", "6 to 12 different angles, each with a name, an idea and a palette.", cons[2], 0.0),
@@ -361,8 +374,7 @@ def studio_process() -> Image.Image:
 def studio_proof() -> Image.Image:
     cons = concepts()
     im = backdrop(top=(10, 16, 34), mid=(6, 8, 18), glow=(230, 120, 70), gx=0.5, gy=0.6)
-    im = rays(im, 0.5, 1.15, (255, 180, 110), 0.1, 16, 1.5, 6)
-    im = bokeh(im, 20, palette=((255, 150, 60), (60, 200, 220), (240, 80, 160)), seed=13)
+    im = underlay(im, "art04", 0.42, 0.0)
     names = ["A  Fox Astronaut", "B  Little Robot", "C  Moon Cadet", "D  Owl Pilot", "E  Rocket Badge", "F  Comet Grin"]
     cw = 235
     pos = [(235 + (i % 3) * 300, 215 + (i // 3) * 290) for i in range(6)]
