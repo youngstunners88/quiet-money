@@ -1,0 +1,109 @@
+{
+  "title": "Why the Rich Borrow Millions (And You Shouldn't)",
+  "hook_text": "THE TRUTH ABOUT WEALTHY DEBT",
+  "beats": [
+    {
+      "say": "That $3,000 credit card balance can drain $4,887 in pure interest from your paycheck.",
+      "callout": "",
+      "visual": "Cinematic close-up of a worn leather wallet resting on a dark walnut kitchen table, atmospheric morning light through blinds."
+    },
+    {
+      "say": "Paying only minimums at 24% APR keeps you trapped paying that balance for 15 years.",
+      "callout": "$4,887 INTEREST",
+      "visual": "A person's hands holding an unopened envelope at a kitchen counter, warm dim overhead spotlight, moody cinematic depth of field."
+    },
+    {
+      "say": "So why do the ultra-wealthy deliberately borrow millions instead of living completely debt-free?",
+      "callout": "",
+      "visual": "Silhouette of a person in a tailored overcoat viewed from behind, looking out a floor-to-ceiling glass window over a rainy city skyline at dusk."
+    },
+    {
+      "say": "Most people assume smart investors avoid debt entirely so they never risk going broke.",
+      "callout": "",
+      "visual": "A heavy vintage steel vault door slightly ajar in a dimly lit marble hallway, golden hour rim lighting."
+    },
+    {
+      "say": "That's backward. The wealthy don't avoid debt; they just never use it on lifestyle purchases.",
+      "callout": "ASSET VS LIFESTYLE",
+      "visual": "Split visual concept: one side shows luxury shopping bags on a damp pavement, the other side shows architectural blueprints on a rustic wood desk."
+    },
+    {
+      "say": "So what makes their debt build fortunes while your card bleeds your savings?",
+      "callout": "",
+      "visual": "Extreme close-up of brass balance scale pans settling into equilibrium against a dark textured studio backdrop."
+    },
+    {
+      "say": "It comes down to leverage. Buy a $100,000 property with $20,000 down. That's 5x leverage.",
+      "callout": "5X LEVERAGE",
+      "visual": "A solid granite model of a brownstone townhouse sitting quietly on a dark polished oak tabletop, low-key dramatic lighting."
+    },
+    {
+      "say": "A 20% rise in market value doubles your $20,000 down payment, before costs and interest.",
+      "callout": "",
+      "visual": "A pair of hands carefully placing a smooth white marble block on top of a stone pillar, sunlight beaming through tall studio windows."
+    },
+    {
+      "say": "Leverage cuts both ways: a 20% drop wipes out your whole $20,000 down payment.",
+      "callout": "GAIN VS RUIN",
+      "visual": "Close-up of a single stone domino standing on the edge of a clean glass table, sharp shadows, cinematic tension."
+    },
+    {
+      "say": "Consumer debt has no upside. At 24%, bad debt doubles every 3 years.",
+      "callout": "DOUBLES IN 3 YEARS",
+      "visual": "A vintage mechanical hourglass with dark sand falling steadily, resting on a matte black stone pedestal."
+    },
+    {
+      "say": "The wealthy borrow at low rates to own cash-flowing assets that pay the loan back.",
+      "callout": "ASSET VS LIABILITY",
+      "visual": "An antique bronze key resting beside a set of architectural floor plans on a sunlit studio drafting desk."
+    },
+    {
+      "say": "Debt isn't your enemy. Borrowing money to buy things that lose value is.",
+      "callout": "",
+      "visual": "Silhouette of a person walking calmly down a minimalist concrete gallery corridor toward an open sunlit doorway."
+    },
+    {
+      "say": "Make debt fund assets, and follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "A classic green banker's lamp glowing softly on a rich mahogany desk beside a clean closed notebook, wide cinematic shot."
+    }
+  ],
+  "caption": "Debt isn't the problem. What you buy with it is.\nStop funding liabilities and learn the leverage rule.",
+  "description": "We are taught that all debt destroys wealth, but the ultra-wealthy use leverage as a core tool. Discover the mathematical difference between 24% consumer debt and asset-backed borrowing.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#financialfreedom",
+    "#debtfree",
+    "#wealthbuilding"
+  ],
+  "first_comment": "Were you taught that all debt is bad, or did someone teach you the difference early?",
+  "facts": [
+    {
+      "claim": "A $3,000 balance at 24% APR paying only the minimum takes 183 months (~15 years) and costs $4,887 in interest.",
+      "basis": "Provided Money Fact Sheet calculation."
+    },
+    {
+      "claim": "A $100,000 property with $20,000 down is 5x leverage; a 20% rise doubles the down payment and a 20% drop wipes it out.",
+      "basis": "Provided Money Fact Sheet calculation."
+    },
+    {
+      "claim": "At 24% interest, debt doubles every 3 years under the Rule of 72.",
+      "basis": "Provided Money Fact Sheet calculation (72 / 24 = 3)."
+    }
+  ],
+  "source": "llm",
+  "pillar": "myth",
+  "look": "",
+  "loop_map": {
+    "stakes": "A $3,000 credit card balance quietly steals $4,887 in pure interest over 15 years.",
+    "big_question": "Why do the ultra-wealthy borrow millions instead of living completely debt-free?",
+    "assume": "Wealthy investors avoid borrowing money to protect their wealth.",
+    "reveal": "The wealthy use debt as productive leverage on cash-flowing assets rather than lifestyle consumption.",
+    "rehook_beats": [
+      6,
+      10
+    ],
+    "payoff_beat": 12
+  }
+}

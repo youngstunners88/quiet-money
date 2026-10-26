@@ -1,0 +1,110 @@
+{
+  "title": "Why Debt Makes the Wealthy Richer",
+  "hook_text": "DEBT IS NOT YOUR ENEMY",
+  "beats": [
+    {
+      "say": "You're told every dollar of debt is financial poison that keeps you broke.",
+      "callout": "",
+      "visual": "A moody, cinematic close-up of a person's hands cutting a blank plastic card in half with steel scissors on a dark mahogany table."
+    },
+    {
+      "say": "Yet the ultra-wealthy deliberately borrow millions of dollars to expand their net worth.",
+      "callout": "",
+      "visual": "A silhouette of a figure in a tailored suit standing in front of high-rise glass windows overlooking a sunlit metropolitan skyline."
+    },
+    {
+      "say": "Why would people who already have millions choose to take on debt?",
+      "callout": "",
+      "visual": "A classic brass balance scale resting on an executive desk under a focused warm beam of light, one pan tilted downward."
+    },
+    {
+      "say": "Most assume all borrowing traps you, but the danger isn't borrowing. It's what you buy.",
+      "callout": "CASH VS DEBT",
+      "visual": "Split perspective showing two paths: a sleek sports car covered in rain on the left, and modern architectural apartments on the right."
+    },
+    {
+      "say": "Consumer debt on depreciating stuff crushes you. At 24%, debt doubles every 3 years.",
+      "callout": "DOUBLES IN 3 YEARS",
+      "visual": "A solitary paper bill resting beside a fast-draining hourglass with white sand slipping through dark shadows."
+    },
+    {
+      "say": "So how do the rich turn that exact same math into an advantage?",
+      "callout": "",
+      "visual": "A low-angle cinematic shot of architectural stone columns rising into a vaulted banking ceiling with subtle ambient dust motes."
+    },
+    {
+      "say": "They use productive leverage. They borrow to acquire cash-flowing assets that outpace the interest cost.",
+      "callout": "PRODUCTIVE LEVERAGE",
+      "visual": "An overhead minimalist shot of a fountain pen resting beside miniature geometric architectural models of commercial buildings."
+    },
+    {
+      "say": "Consider a $100,000 property bought with $20,000 down. That's 5x leverage.",
+      "callout": "5X LEVERAGE",
+      "visual": "A clean shot of five identical wooden geometric blocks stacked vertically on a polished dark surface."
+    },
+    {
+      "say": "If that property's value rises 20%, you double your $20,000 down payment before costs and interest.",
+      "callout": "DOUBLES DOWN PAYMENT",
+      "visual": "A sharp upward tilt of sunlight reflecting off the glass facade of a newly constructed residential building."
+    },
+    {
+      "say": "What happens to that leverage if the market drops instead of rising?",
+      "callout": "",
+      "visual": "A solitary silver chess king standing near the edge of a polished marble chessboard surrounded by deep shadows."
+    },
+    {
+      "say": "A 20% price drop completely wipes out your entire $20,000 down payment.",
+      "callout": "DOWN PAYMENT WIPED",
+      "visual": "A single wooden block tumbling off a polished ledge into darkness, captured in crisp freeze-frame motion."
+    },
+    {
+      "say": "That's why the wealthy treat debt like fire: powerful fuel when controlled, fatal when reckless.",
+      "callout": "",
+      "visual": "A solitary glowing flame inside an antique brass lantern on a rain-slicked stone balustrade at twilight."
+    },
+    {
+      "say": "Bad debt buys things that lose value. Good debt finances assets that pay you back.",
+      "callout": "CONSUMPTION VS ASSETS",
+      "visual": "Two hands resting on a conference table: one holding the keys to real estate, the other leaving behind luxury packaging."
+    },
+    {
+      "say": "Debt isn't your enemy. Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "A confident silhouette walking down a long, dimly lit marble corridor toward a bright doorway."
+    }
+  ],
+  "caption": "Debt isn't financial evil. It's a multiplier. Here is how the wealthy treat borrowing differently. #money #personalfinance #wealthbuilding #financialfreedom #investing",
+  "description": "We are taught that all debt is evil, but the ultra-wealthy use leverage as a tool to accelerate wealth. Learn the math behind productive leverage versus destructive consumer debt.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#wealthbuilding",
+    "#financialliteracy",
+    "#investing"
+  ],
+  "first_comment": "Do you consider any debt 'good', or do you prefer being 100% debt-free?",
+  "facts": [
+    {
+      "claim": "At 24%, debt doubles every 3 years.",
+      "basis": "Rule of 72: 72 divided by 24% equals 3 years."
+    },
+    {
+      "claim": "A $100,000 property bought with $20,000 down is 5x leverage; a 20% rise doubles the down payment and a 20% drop wipes it out before costs and interest.",
+      "basis": "Fact sheet leverage math: $20,000 equity on $100,000 asset (5x leverage); 20% gain or loss is $20,000."
+    }
+  ],
+  "source": "llm",
+  "pillar": "myth",
+  "look": "",
+  "loop_map": {
+    "stakes": "Viewing all debt as poison keeps you fearful while the rich use leverage to build massive wealth.",
+    "big_question": "Why would someone rich borrow money instead of paying cash?",
+    "assume": "All borrowing is dangerous and drains your net worth through interest.",
+    "reveal": "Consumer debt drains you, but productive leverage buys assets that can multiply your capital.",
+    "rehook_beats": [
+      6,
+      10
+    ],
+    "payoff_beat": 13
+  }
+}

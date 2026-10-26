@@ -1,0 +1,16 @@
+{
+  "id": "2026-10-26-s4-playbook-lower-your-cell-phone-bill-with",
+  "pillar": "playbook",
+  "topic": "Lower Your Cell Phone Bill With a Carrier Loyalty Script",
+  "day": "2026-10-26",
+  "slot": 4,
+  "status": "planned",
+  "history": [],
+  "artifacts": {
+    "angle": "Negotiate a cheaper legacy plan using competitor pricing leverage.",
+    "hook": "Your mobile carrier is charging you a loyalty tax just for staying with them."
+  },
+  "scores": {},
+  "cost": {},
+  "notes": []
+}

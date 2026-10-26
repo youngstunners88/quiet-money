@@ -1,0 +1,105 @@
+{
+  "title": "Why Earning $100k Still Feels Like Poverty",
+  "hook_text": "WHY $100K NEVER FEELS LIKE ENOUGH",
+  "beats": [
+    {
+      "say": "Earning $100,000 still feels like poverty when your closest friends earn $150,000.",
+      "callout": "",
+      "visual": "Silhouette of a person standing alone by a rainy penthouse window looking down at city traffic below, moody cool tones, cinematic lighting"
+    },
+    {
+      "say": "Why does every single raise leave you feeling just as broke as before?",
+      "callout": "",
+      "visual": "Over-the-shoulder shot of hands resting on a dark wood desk next to a leather wallet, low key dramatic lighting"
+    },
+    {
+      "say": "Most people assume earning more cash will finally create real peace of mind.",
+      "callout": "",
+      "visual": "Hand sliding an embossed metal keycard across a dimly lit granite counter, cinematic shallow depth of field"
+    },
+    {
+      "say": "But in 1949, economist James Duesenberry proved financial satisfaction isn't based on your actual income.",
+      "callout": "JAMES DUESENBERRY 1949",
+      "visual": "Vintage archival leather-bound economic journals stacked on an oak library table, warm volumetric sunlight slicing through dust"
+    },
+    {
+      "say": "He called it the Relative Income Hypothesis, and it quietly controls how you spend.",
+      "callout": "",
+      "visual": "Wide cinematic shot of a sleek modern glass boardroom at dusk, empty chairs, silhouette of one figure in the distance"
+    },
+    {
+      "say": "You don't evaluate your net worth against national averages. You evaluate it against your peer group.",
+      "callout": "GROUP CHAT VS NATION",
+      "visual": "Back of three people dressed in sharp coats walking away into an upscale restaurant entrance, warm ambient street bokeh"
+    },
+    {
+      "say": "When someone in your circle leases a new car or books luxury travel, your subconscious reacts.",
+      "callout": "",
+      "visual": "Close-up of hands clinking crystal cocktail glasses across a dimly lit marble bar table, moody cinematic atmosphere"
+    },
+    {
+      "say": "You stretch your own budget to match their lifestyle, believing that's just normal living.",
+      "callout": "",
+      "visual": "Side angle of a person sitting in the driver seat of an expensive luxury vehicle, grip on the steering wheel, dark moody tones"
+    },
+    {
+      "say": "So what happens when keeping up with friends quietly lands on a credit card?",
+      "callout": "THE HIDDEN COST",
+      "visual": "Close-up of an anonymous dark credit card resting on an aged wooden table beside a stack of unopened envelopes"
+    },
+    {
+      "say": "That $3,000 balance at 24% APR paying minimums takes 15 years and $4,887 in interest.",
+      "callout": "$4,887 IN INTEREST",
+      "visual": "Macro focus on an hourglass with dark sand steadily running through, dramatic rim lighting in a dark room"
+    },
+    {
+      "say": "You aren't falling behind on income. You're bleeding cash buying validation from friends who aren't even looking.",
+      "callout": "",
+      "visual": "Silhouette of a person sitting alone on a leather sofa looking out over a glowing cityscape at night, contemplative atmosphere"
+    },
+    {
+      "say": "True wealth is what stays in your accounts, not what leaves to impress your circle.",
+      "callout": "RETENTION VS DISPLAY",
+      "visual": "Hands methodically organizing a clean stack of gold coins into a small vintage metal lockbox, soft warm key light"
+    },
+    {
+      "say": "Follow for the money rules school never taught you, and stop funding a race you never chose.",
+      "callout": "",
+      "visual": "Overhead slow dolly shot of an open, clutter-free minimalist workspace with a notebook, fountain pen, and morning light"
+    }
+  ],
+  "caption": "Making six figures won't feel like enough if your peer group makes six figures and one dollar more. Stop running their race.",
+  "description": "The Relative Income Hypothesis explains why earning more money rarely cures the feeling of being broke. When you evaluate your wealth against your peer group, social comparison drains your accounts through lifestyle competition and high-interest debt.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#moneypsychology",
+    "#financialfreedom",
+    "#wealthmindset"
+  ],
+  "first_comment": "Have you ever felt broke while making the highest income of your life?",
+  "facts": [
+    {
+      "claim": "James Duesenberry formulated the Relative Income Hypothesis in 1949.",
+      "basis": "Documented in 'Income, Saving and the Theory of Consumer Behavior' by James Duesenberry (Harvard University Press, 1949)."
+    },
+    {
+      "claim": "A $3,000 credit card balance at 24% APR paying minimums takes 15 years and costs $4,887 in interest.",
+      "basis": "Fact sheet calculation: $3,000 credit card at 24% APR paying minimum (1% + interest, min $25) takes 183 months (~15 years) and accumulates $4,887 interest."
+    }
+  ],
+  "source": "llm",
+  "pillar": "psychology",
+  "look": "",
+  "loop_map": {
+    "stakes": "Earning six figures still feels like financial strain when peers earn slightly more.",
+    "big_question": "Why does every single raise leave you feeling just as broke as before?",
+    "assume": "People assume higher salaries automatically create peace of mind and satisfaction.",
+    "reveal": "Financial satisfaction is relative to your reference group, driving unseen spending to match peers.",
+    "rehook_beats": [
+      5,
+      9
+    ],
+    "payoff_beat": 11
+  }
+}

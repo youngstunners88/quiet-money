@@ -1,0 +1,104 @@
+{
+  "title": "The Four Customer Channels (And The Ad Trap)",
+  "hook_text": "THE PAID AD TRAP BURNS CASH",
+  "beats": [
+    {
+      "say": "There are only four ways to get customers on earth, and the wrong one drains your savings.",
+      "callout": "",
+      "visual": "Cinematic close-up of a blank sleek metallic credit card resting on an empty wooden desk under dim moody office light."
+    },
+    {
+      "say": "Why do new side ventures burn through their launch money before landing a single paying buyer?",
+      "callout": "WHERE DOES IT GO?",
+      "visual": "Silhouette of a founder viewed from behind, staring out a rain-streaked high-rise window at dusk."
+    },
+    {
+      "say": "Most people assume paying for digital ads is the quickest shortcut to replace your monthly paycheck.",
+      "callout": "",
+      "visual": "Over-the-shoulder view of hands holding a dark smartphone showing an unreadable graph glowing in soft neon light."
+    },
+    {
+      "say": "That's a trap. Hormozi breaks every customer acquisition method down into the Core Four channels.",
+      "callout": "THE CORE FOUR",
+      "visual": "A vintage drafting table viewed from above with four blank stone paperweights arranged in a square grid."
+    },
+    {
+      "say": "They are warm outreach, cold outreach, free content, and paid advertising.",
+      "callout": "",
+      "visual": "Close-up of four distinct vintage fountain pens aligned neatly on dark slate stone."
+    },
+    {
+      "say": "Paid ads burn your cash immediately while you're still testing what offer actually converts.",
+      "callout": "ADS VS SAVINGS",
+      "visual": "A crisp paper currency note casting a long shadow on an empty concrete surface under a single harsh spotlight."
+    },
+    {
+      "say": "So which channel actually protects your bank account on day one without risking capital?",
+      "callout": "WHICH WORKS FIRST?",
+      "visual": "A person seen from the chest down, rolling up shirt sleeves under dramatic warm studio lighting."
+    },
+    {
+      "say": "It's warm outreach: contacting people who already know, like, and trust you.",
+      "callout": "",
+      "visual": "Hands in soft natural morning light typing deliberately on a sleek dark keyboard without visible screen text."
+    },
+    {
+      "say": "Apply the Rule of 100: one hundred direct reach-outs every single day for 100 days.",
+      "callout": "RULE OF 100",
+      "visual": "A heavy iron tally counter resting beside a cup of black coffee on raw oak wood."
+    },
+    {
+      "say": "That's 10,000 personal contacts; at an estimated 1% conversion, that yields 100 real customers.",
+      "callout": "10,000 TO 100",
+      "visual": "A minimalist stack of neat white cardboard shipping boxes stacked quietly in a clean warehouse corner."
+    },
+    {
+      "say": "Here's the catch: about one in five US businesses close within their very first year.",
+      "callout": "1 IN 5 FAIL",
+      "visual": "A dramatic low-angle shot of a padlocked glass storefront door reflecting passing streetlights at night."
+    },
+    {
+      "say": "Master free conversations before risking ad spend. Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "A quiet open leather notebook lying next to a metal pen on a sunlit marble table."
+    }
+  ],
+  "caption": "Don't burn your savings on paid ads before validating your offer. Master warm outreach first.\n#money #personalfinance #business #sidehustle #entrepreneur",
+  "description": "Before spending hard-earned savings on paid digital ads, every new venture must understand the Core Four channels. Starting with warm outreach validates your offer without burning capital. Learn the volume math that builds your client base before taking financial risks.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#business",
+    "#sidehustle",
+    "#entrepreneur"
+  ],
+  "first_comment": "Have you ever wasted money running ads for an unproven idea?",
+  "facts": [
+    {
+      "claim": "The Core Four customer acquisition channels are warm outreach, cold outreach, free content, and paid ads.",
+      "basis": "Alex Hormozi, $100M Leads (2023)."
+    },
+    {
+      "claim": "The Rule of 100 volume math: 100 reach-outs a day for 100 days = 10,000 contacts; at a 1% yes-rate that's 100 customers.",
+      "basis": "Fact Sheet: Rule of 100 volume math (hypothetical 1% conversion rate)."
+    },
+    {
+      "claim": "About 1 in 5 US businesses close in their first year.",
+      "basis": "Research Brief: US Bureau of Labor Statistics, Business Employment Dynamics."
+    }
+  ],
+  "source": "llm",
+  "pillar": "escape",
+  "look": "",
+  "loop_map": {
+    "stakes": "The wrong customer acquisition channel drains your savings before landing a buyer.",
+    "big_question": "Why do new side ventures burn through launch money before landing a single paying buyer?",
+    "assume": "Most people assume paying for digital ads is the quickest shortcut to replace your paycheck.",
+    "reveal": "Paid ads burn cash testing unproven offers; warm outreach validates sales with zero ad spend.",
+    "rehook_beats": [
+      7,
+      11
+    ],
+    "payoff_beat": 10
+  }
+}

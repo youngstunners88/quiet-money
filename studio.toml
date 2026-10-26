@@ -102,7 +102,7 @@ concurrency = 4
 [llm]
 chain = ["gemini", "longcat", "mistral", "openrouter", "pollinations"]   # longcat needs LONGCAT_API_KEY (free daily allowance); mistral uses the keys in the environment (O14); each is skipped without a key
 gemini_models = ["gemini-3.8-flash", "gemini-3.5-flash", "gemini-3.5-flash-lite"]
-openrouter_models = ["google/gemini-3.8-flash", "deepseek/deepseek-v4.1-flash", "google/gemma-4-31b-it:free"]   # paid ~$0.002/script, then cheaper/free
+openrouter_models = ["google/gemma-4-31b-it:free", "google/gemini-3.8-flash", "deepseek/deepseek-v4.1-flash"]   # owner 2026-10-25: free first, paid only when the free one fails
 temperature = 0.9
 longcat_model = "LongCat-2.5-Preview"
 mistral_model = "mistral-medium-latest"            # O14, 2026-10-22: answered JSON on the live key

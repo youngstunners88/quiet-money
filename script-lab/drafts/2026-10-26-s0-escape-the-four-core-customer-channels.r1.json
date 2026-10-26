@@ -1,0 +1,100 @@
+{
+  "title": "The Customer Channel Mistake That Burns Savings",
+  "hook_text": "THE PAID AD MONEY TRAP",
+  "beats": [
+    {
+      "say": "Picking the wrong customer channel can burn through your $3,000 savings in 30 days.",
+      "callout": "",
+      "visual": "A cinematic overhead shot of hands resting on a dark rustic wooden desk beside an open, empty leather wallet and a clean notebook."
+    },
+    {
+      "say": "Every dollar entering a business comes from four core channels: warm outreach, content, cold outreach, or paid ads.",
+      "callout": "THE 4 CHANNELS",
+      "visual": "A clean architectural workspace with four neatly aligned notebook sketches under dramatic morning light, casting long shadows across the table."
+    },
+    {
+      "say": "So why do most new founders rush straight into paid ads and lose every single dollar?",
+      "callout": "",
+      "visual": "A person viewed from behind standing before a massive dark window in a quiet office, looking out over a foggy skyline."
+    },
+    {
+      "say": "You assume ads buy instant customers because you don't have to talk to real people directly.",
+      "callout": "ADS VS OUTREACH",
+      "visual": "A glowing desk lamp casting warm light onto a sleek metal laptop screen turned away from the camera, reflecting off polished mahogany."
+    },
+    {
+      "say": "That's the trap. Ads won't fix an unproven offer; they only drain your bank account faster.",
+      "callout": "",
+      "visual": "An hourglass on a minimalist concrete table with fine dark sand quickly running down to the bottom bulb."
+    },
+    {
+      "say": "If people you know won't buy, paying tech platforms won't convince strangers to buy either.",
+      "callout": "",
+      "visual": "A close-up shot of a ceramic coffee cup beside an old fountain pen on a clean slate surface, perfectly still."
+    },
+    {
+      "say": "So which channel actually builds real cash flow before you risk your hard-earned paycheck?",
+      "callout": "",
+      "visual": "A silhouetted figure in a tailored coat walking deliberately down an empty, grand stone hallway bathed in soft sidelight."
+    },
+    {
+      "say": "It's warm outreach. Reaching out directly to people who already know and trust you costs zero dollars.",
+      "callout": "WARM OUTREACH",
+      "visual": "A close-up of hands typing a personal note on an elegant typewriter, soft warm backlight highlighting the paper."
+    },
+    {
+      "say": "Here's the honest catch: about 1 in 5 US businesses close in their first year.",
+      "callout": "1 IN 5 FAIL",
+      "visual": "A row of five vintage metal office keys on a dark marble counter, with four keys polished and one dull key set apart."
+    },
+    {
+      "say": "Selling to warm contacts proves your offer works before you ever risk burning cash on cold traffic.",
+      "callout": "TEST BEFORE ADS",
+      "visual": "A hand firmly stamping a blank thick card with dark black ink on a solid oak table."
+    },
+    {
+      "say": "This week, list 20 people you know and reach out directly to test your new offer.",
+      "callout": "STEP ONE",
+      "visual": "A hand writing numbered bullet points with a fountain pen on thick cream paper under warm desk lighting."
+    },
+    {
+      "say": "Master the free conversations first. Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "A cinematic low-angle view of a neat stack of dark hardcover books resting on a minimalist shelf beside a calm window."
+    }
+  ],
+  "caption": "Don't burn your savings on ad platforms before proving your offer works. Master the core channels first. #money #personalfinance #sidehustle #businessgrowth #financialfreedom",
+  "description": "Before running paid ads, every new venture must master warm outreach. Discover the four core customer channels and how to validate your offer without burning your savings.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#sidehustle",
+    "#businessstrategy",
+    "#financialeducation"
+  ],
+  "first_comment": "Have you ever tried running paid ads for a project, or did you start with direct outreach?",
+  "facts": [
+    {
+      "claim": "Every customer comes from warm outreach, free content, cold outreach, or paid ads.",
+      "basis": "Alex Hormozi's Core Four framework from $100M Leads (2023)."
+    },
+    {
+      "claim": "About 1 in 5 US businesses close in their first year.",
+      "basis": "US Bureau of Labor Statistics, Business Employment Dynamics."
+    }
+  ],
+  "source": "llm",
+  "pillar": "escape",
+  "look": "",
+  "loop_map": {
+    "stakes": "Risking a $3,000 savings cushion on paid ads can wipe out your cash in 30 days.",
+    "big_question": "Why do new founders rush into paid ads and lose every dollar?",
+    "assume": "Ads are an easy shortcut to sales without having to talk directly to anyone.",
+    "reveal": "Ads only amplify a weak offer; warm outreach validates your product at zero cost.",
+    "rehook_beats": [
+      5,
+      7
+    ],
+    "payoff_beat": 10
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "title": "Why Dollar-Cost Averaging Costs You Money",
+  "hook_text": "THE DOLLAR-COST AVERAGING TRAP",
+  "beats": [
+    {
+      "say": "Drip-feeding cash into the market feels safe, but historical math proves it's costing you.",
+      "callout": "",
+      "visual": "A person viewed from behind standing before a massive dark banking vault door slightly ajar with cool dramatic backlight."
+    },
+    {
+      "say": "Say you've got a $10,000 bonus sitting in your savings account right now.",
+      "callout": "",
+      "visual": "Close-up of hands resting on a dark walnut table next to an unbranded minimalist bank envelope under warm moody light."
+    },
+    {
+      "say": "Is it mathematically smarter to invest it all today, or spread it over 12 months?",
+      "callout": "$10,000 DECISION",
+      "visual": "A mechanical brass balance scale on a mahogany desk lit by an overhead lamp, shot at a low angle."
+    },
+    {
+      "say": "Most people assume spreading it out protects you from crashes, making dollar-cost averaging the winner.",
+      "callout": "SAFE VS SMART",
+      "visual": "Overhead cinematic shot of twelve identical glass vials aligned in a straight row on a dark matte surface."
+    },
+    {
+      "say": "Vanguard ran the historical numbers: lump sum beats dollar-cost averaging 68% of the time.",
+      "callout": "68% OF TIME",
+      "visual": "A heavy vintage ledger resting open on an oak table in a dim historic library, lit by soft window daylight."
+    },
+    {
+      "say": "Why does dumping all your cash at once beat spreading it out so consistently?",
+      "callout": "",
+      "visual": "A lone silhouette looking upward through the glass ceiling of a modern financial atrium at dusk."
+    },
+    {
+      "say": "Because historical data shows the broad stock market goes up in roughly 73% of years.",
+      "callout": "UP 73% OF YEARS",
+      "visual": "Cinematic low-angle shot of towering stone columns outside a national exchange building against an overcast sky."
+    },
+    {
+      "say": "Every month your cash sits on the sidelines waiting, you miss out on compounding gains.",
+      "callout": "",
+      "visual": "Close-up of an elegant brass hourglass with sand steadily falling through the narrow center glass."
+    },
+    {
+      "say": "So is dollar-cost averaging completely useless for everyday investors?",
+      "callout": "",
+      "visual": "A chess board on a dark table viewed from player perspective with a lone wooden king in sharp focus."
+    },
+    {
+      "say": "No, but it's an emotional strategy, not a mathematical one. It protects against regret, not losses.",
+      "callout": "",
+      "visual": "A person's hands clasped together in calm contemplation beside a rainy window with soft cinematic reflections."
+    },
+    {
+      "say": "DCA only wins during downward markets, which occur less than a third of the time historically.",
+      "callout": "MATH VS EMOTION",
+      "visual": "A sleek silver compass resting flat on a dark textured slate background under focused directional light."
+    },
+    {
+      "say": "You're paying an invisible mathematical premium just to soothe your anxiety.",
+      "callout": "",
+      "visual": "Cinematic shot from behind a commuter walking down the empty stone stairs of a quiet subway station."
+    },
+    {
+      "say": "Time in the market wins. Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "An elegant fountain pen resting on blank heavy-weight parchment on a dark wooden study desk."
+    }
+  ],
+  "caption": "Spreading out your investments feels safe, but historical data tells a different story. Here is the math behind lump sum versus dollar-cost averaging.",
+  "description": "Historical market research from Vanguard shows that lump-sum investing outperforms dollar-cost averaging across 68% of 12-month periods. Learn why holding cash on the sidelines carries a real mathematical cost.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#investingmath",
+    "#financialliteracy",
+    "#quietmoney"
+  ],
+  "first_comment": "If you received a $10,000 lump sum tomorrow, would you invest it all at once or spread it out?",
+  "facts": [
+    {
+      "claim": "Lump sum investing outperforms dollar-cost averaging across roughly 68% of 12-month rolling periods.",
+      "basis": "Vanguard research paper: 'Invest now or temporarily hold your cash? Dollar-cost averaging versus lump-sum investing'."
+    },
+    {
+      "claim": "The US stock market rises in roughly 73% of calendar years.",
+      "basis": "Historical S&P 500 calendar year returns from 1926 to 2023 show positive annual returns in approximately 73% of years."
+    }
+  ],
+  "source": "llm",
+  "pillar": "math",
+  "look": "",
+  "loop_map": {
+    "stakes": "Drip-feeding cash into the market feels safe but carries an invisible mathematical penalty.",
+    "big_question": "Is it mathematically smarter to invest a lump sum immediately or spread it over 12 months?",
+    "assume": "Drip-feeding cash reduces downside risk and yields better average outcomes.",
+    "reveal": "Lump sum beats dollar-cost averaging roughly 68% of the time because markets rise in 73% of years.",
+    "rehook_beats": [
+      6,
+      9
+    ],
+    "payoff_beat": 11
+  }
+}

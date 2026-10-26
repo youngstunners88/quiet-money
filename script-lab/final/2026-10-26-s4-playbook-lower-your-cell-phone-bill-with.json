@@ -1,0 +1,101 @@
+{
+  "title": "Lower Your Cell Phone Bill in 15 Minutes",
+  "hook_text": "YOUR CARRIER CHARGES A LOYALTY TAX",
+  "beats": [
+    {
+      "say": "Your mobile carrier is charging you a loyalty tax just for staying with them.",
+      "callout": "",
+      "visual": "A sleek dark smartphone resting on a slate gray surface under moody low lighting, screen face down with polished glass reflections."
+    },
+    {
+      "say": "New customers get $40 discounts, while your exact same plan quietly goes up.",
+      "callout": "NEW VS LOYAL",
+      "visual": "A solitary paper phone statement folded diagonally across a dark mahogany desk, dramatic side lighting casting long shadows."
+    },
+    {
+      "say": "How do you force them to match that lower price in under 15 minutes?",
+      "callout": "",
+      "visual": "Over-the-shoulder view of hands holding a modern cordless receiver in a dim, architectural study room."
+    },
+    {
+      "say": "Most people threaten to cancel right away, but frontline reps don't have discount authority.",
+      "callout": "THE COMMON MISTAKE",
+      "visual": "A silhouette of a person seated before an illuminated desk lamp, head tilted slightly, contemplative posture."
+    },
+    {
+      "say": "Instead, you need the retention department, where reps get paid specifically to keep you.",
+      "callout": "RETENTION DESK",
+      "visual": "A close macro shot of a sleek telephone keypad, subtle depth of field with warm brass accents."
+    },
+    {
+      "say": "Step one. Look up a competitor's unlimited rate today, like a $30 prepaid plan.",
+      "callout": "STEP ONE",
+      "visual": "A person viewed from behind jotting notes with a fountain pen in a leather ledger under warm tungsten light."
+    },
+    {
+      "say": "Take a quick screenshot of that offer so you have the exact number ready.",
+      "callout": "",
+      "visual": "A minimalist workspace with a blurred device screen held at a sharp tilt, soft shadows across concrete texture."
+    },
+    {
+      "say": "Now, how do you bypass the basic customer support agent who cannot help?",
+      "callout": "",
+      "visual": "A ticking vintage brass desk timer on an executive table, blurred bookshelf background in amber light."
+    },
+    {
+      "say": "Step two. Dial 611, ask for cancellations, and you'll get routed to retention.",
+      "callout": "STEP TWO",
+      "visual": "Hands in soft focus resting beside a telephone cradle on a dark oak desk, cinematic shallow focus."
+    },
+    {
+      "say": "Step three. Say: 'I found a $30 rate elsewhere. Can you match it to keep me?'",
+      "callout": "STEP THREE",
+      "visual": "A close cinematic framing of a glass water cup beside handwritten notes, tranquil atmospheric lighting."
+    },
+    {
+      "say": "They will usually apply unadvertised legacy loyalty credits or slash your data tier immediately.",
+      "callout": "",
+      "visual": "A neat stack of savings envelopes and an engraved fountain pen resting on walnut wood, soft warm rim light."
+    },
+    {
+      "say": "Investing an extra $100 a month at 8% a year compounds to $58,902 in 20 years.",
+      "callout": "$58,902 SAVED",
+      "visual": "Architectural columns reflecting sunlight in an empty financial institution atrium, wide angle, serene and calm."
+    },
+    {
+      "say": "Stop paying their loyalty tax. Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "A single fountain pen resting neatly on a closed dark leather notebook, slow pull-back under soft golden studio light."
+    }
+  ],
+  "caption": "Your cell carrier rewards switchers and penalizes loyalty. Here is the 3-step script to fix your bill today.\n\n#personalfinance #moneytips #savemoney #frugalliving #quietmoney",
+  "description": "Mobile carriers routinely charge existing customers more than new subscribers. This three-step negotiation script gets you transferred to the retention desk and secures promotional pricing in under 15 minutes.",
+  "hashtags": [
+    "#personalfinance",
+    "#moneytips",
+    "#savemoney",
+    "#budgeting",
+    "#financialfreedom"
+  ],
+  "first_comment": "When was the last time you negotiated your monthly phone bill?",
+  "facts": [
+    {
+      "claim": "Investing an extra $100 a month at 8% a year compounds to $58,902 in 20 years.",
+      "basis": "$100/month invested for 20 years at 8%/yr (monthly compounding) = $58,902 (you put in $24,000)"
+    }
+  ],
+  "source": "llm",
+  "pillar": "playbook",
+  "look": "",
+  "loop_map": {
+    "stakes": "Carriers quietly overcharge loyal customers while offering cheaper rates to new ones.",
+    "big_question": "How do you force your mobile carrier to match low competitor rates in under 15 minutes?",
+    "assume": "Threatening to cancel directly with the first customer service representative will yield an instant discount.",
+    "reveal": "Frontline agents lack discount authority, but asking for cancellations routes you to retention staff paid to retain you.",
+    "rehook_beats": [
+      5,
+      8
+    ],
+    "payoff_beat": 11
+  }
+}

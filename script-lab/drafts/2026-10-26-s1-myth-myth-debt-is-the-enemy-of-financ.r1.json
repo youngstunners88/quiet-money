@@ -1,0 +1,109 @@
+{
+  "title": "Why Debt Makes the Rich Richer",
+  "hook_text": "DEBT IS NOT ALWAYS EVIL",
+  "beats": [
+    {
+      "say": "Billionaires borrow to get richer, while a $3,000 credit card drains $4,887 in interest.",
+      "callout": "",
+      "visual": "Cinematic close-up of a luxury leather wallet resting on a polished mahogany desk, dramatic moody lighting, shallow depth of field."
+    },
+    {
+      "say": "We're taught all debt is financial poison. But why does borrowing destroy you while multiplying their wealth?",
+      "callout": "",
+      "visual": "A person seen from behind sitting at a minimalist wooden table, looking out a rainy high-rise window at city lights."
+    },
+    {
+      "say": "Most people assume borrowing always digs a deeper hole. That's only true for lifestyle purchases.",
+      "callout": "LIFESTYLE VS ASSETS",
+      "visual": "A pair of hands cutting an expired generic plastic card with heavy scissors on a dimly lit stone counter."
+    },
+    {
+      "say": "Credit cards run at 24% interest, doubling what you owe every 3 years under the Rule of 72.",
+      "callout": "24% APR",
+      "visual": "An antique brass hourglass on a dark background, fine sand slipping down rapidly, lit by a soft golden spotlight."
+    },
+    {
+      "say": "Minimum payments drag that small $3,000 balance across 15 painful years.",
+      "callout": "",
+      "visual": "A shadowy silhouette of a worker walking down an endless, dimly lit concrete hallway."
+    },
+    {
+      "say": "That's consumer debt feeding on your paycheck. But what happens when debt buys an actual asset?",
+      "callout": "CONSUMPTION VS LEVERAGE",
+      "visual": "Architectural blueprints spread out across an industrial concrete table under warm desk lamp illumination."
+    },
+    {
+      "say": "Imagine buying a $100,000 property with $20,000 down. That's 5x leverage.",
+      "callout": "5X LEVERAGE",
+      "visual": "Exterior low-angle shot of a classic brick apartment building at twilight, sharp clean architectural lines."
+    },
+    {
+      "say": "A 20% price gain doubles your original $20,000 down payment before costs.",
+      "callout": "+20% DOUBLES CASH",
+      "visual": "A pair of hands placing a heavy brass key onto a smooth marble table, elegant cinematic atmosphere."
+    },
+    {
+      "say": "But risk cuts both ways: a 20% drop wipes out your down payment completely.",
+      "callout": "",
+      "visual": "A balanced brass scale resting on an aged wood surface, slightly tipping under delicate directional light."
+    },
+    {
+      "say": "So how do the wealthy manage that danger while average earners stay stuck in debt?",
+      "callout": "",
+      "visual": "A silhouette of an investor standing in front of floor-to-ceiling glass looking over an urban financial district at dusk."
+    },
+    {
+      "say": "They prioritize debt to acquire cash-flowing assets rather than depreciating consumer goods.",
+      "callout": "ASSETS VS LIABILITIES",
+      "visual": "Rows of neat commercial real estate entryways in a quiet, affluent neighborhood during golden hour."
+    },
+    {
+      "say": "Wealthy borrowers let tenants and businesses service their loans instead of trading hours for payments.",
+      "callout": "",
+      "visual": "An overhead view of clean architectural models and financial ledgers without visible text, soft diffused studio light."
+    },
+    {
+      "say": "Use debt to build assets, not liabilities. Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "A quiet modern study with a solitary fountain pen resting next to an organized notebook on a dark oak desk."
+    }
+  ],
+  "caption": "Debt isn't the enemy—using it on the wrong things is. Here's how the wealthy view leverage differently. #personalfinance #moneytips #financialfreedom #wealthbuilding #quietmoney",
+  "description": "We are taught that all debt is bad, but ultra-wealthy investors use leverage to build wealth while consumer debt drains paychecks. Learn the mathematical difference between destructive consumption and productive leverage.",
+  "hashtags": [
+    "#personalfinance",
+    "#moneytips",
+    "#financialliteracy",
+    "#wealthmindset",
+    "#quietmoney"
+  ],
+  "first_comment": "Are you currently paying off consumer debt, or using debt to build assets?",
+  "facts": [
+    {
+      "claim": "A $3,000 balance at 24% APR paying minimums takes ~15 years and accrues $4,887 interest.",
+      "basis": "Money Fact Sheet calculation for $3,000 card at 24% APR with 1% + interest minimum payments (183 months)."
+    },
+    {
+      "claim": "At 24% interest, debt doubles every 3 years.",
+      "basis": "Rule of 72 from Fact Sheet (72 / 24 = 3 years)."
+    },
+    {
+      "claim": "A $100,000 property with $20,000 down is 5x leverage where a 20% rise doubles cash and a 20% drop wipes it out.",
+      "basis": "Leverage calculation from Money Fact Sheet."
+    }
+  ],
+  "source": "llm",
+  "pillar": "myth",
+  "look": "",
+  "loop_map": {
+    "stakes": "A $3,000 credit card balance costs $4,887 in interest while the wealthy leverage debt to grow wealth.",
+    "big_question": "Why does debt destroy everyday earners while multiplying wealth for the ultra-rich?",
+    "assume": "All debt is financial poison that should be avoided at all costs.",
+    "reveal": "Consumer debt destroys wealth by funding depreciating items, but productive leverage buys cash-flowing assets.",
+    "rehook_beats": [
+      6,
+      10
+    ],
+    "payoff_beat": 11
+  }
+}
