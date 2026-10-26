@@ -3,7 +3,7 @@
  "kind": "yt_short",
  "day": "2026-10-26",
  "key": "2026-10-26-s1-myth-myth-saving-money-means-keeping",
- "status": "queued",
+ "status": "held",
  "created": "2026-10-26T03:31:34+00:00",
  "recipe": "YouTube Short upload",
  "media": [
@@ -15,5 +15,12 @@
  "staged": false,
  "title": "The Silent Checking Account Trap",
  "text": "Keeping your entire emergency fund or savings in a standard checking account feels secure, but inflation silently destroys your purchasing power over time. Learn how idle cash bleeds value and the simple rule to protect what you earn.\n\nFree 7-day Money Reset checklist + calculators: https://youngstunners88.github.io/quiet-money/links/?utm_source=youtube&utm_medium=short&utm_campaign=checklist&utm_content=2026-10-26-s1-myth-myth-saving-money-means-keeping&o=checklist\n\nEducational content, not financial advice.\n\n#money #personalfinance #financialliteracy #inflation #investingforbeginners #shorts",
- "ai_label": "altered or synthetic content: Yes"
+ "ai_label": "altered or synthetic content: Yes",
+ "history": [
+  {
+   "at": "2026-10-26T10:00:12+00:00",
+   "result": "held",
+   "note": "no video file in the container; render it again before posting"
+  }
+ ]
 }

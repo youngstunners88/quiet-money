@@ -1,0 +1,99 @@
+{
+  "title": "How George Foreman Turned a Kitchen Appliance Into $138M",
+  "hook_text": "THE $138M GRILL BET",
+  "beats": [
+    {
+      "say": "In 1994, a retired boxer chose between upfront cash and a 45% profit share on a simple kitchen grill.",
+      "callout": "",
+      "visual": "High angle, dim retro kitchen in 1994, single overhead fluorescent light hitting a stainless steel countertop and vintage kitchenware, cinematic dark mood."
+    },
+    {
+      "say": "Most stars take the quick cash payout. So why'd George Foreman gamble on an unproven kitchen appliance?",
+      "callout": "CASH VS EQUITY",
+      "visual": "Extreme wide shot of an empty dimly lit boxing arena in thick fog, solitary heavy silhouette under a harsh overhead arena spotlight."
+    },
+    {
+      "say": "The manufacturer originally offered him a flat cash fee just to print his signature on the box.",
+      "callout": "",
+      "visual": "Extreme close-up on a thick paper contract lying on a dark wooden desk, single warm desk lamp casting long deep shadows."
+    },
+    {
+      "say": "You'd assume guaranteed cash is safer. But a fixed fee caps your lifetime upside right at the start.",
+      "callout": "CAPPED INCOME",
+      "visual": "Low angle, cold sodium lighting illuminating neat stacks of physical cash on a polished metallic table against dark shadows."
+    },
+    {
+      "say": "He took zero dollars upfront, demanding a 45% profit split instead. What happened next stunned corporate executive boardrooms.",
+      "callout": "45% PROFIT SHARE",
+      "visual": "Silhouette of a person standing before a massive floor-to-ceiling glass boardroom window at twilight, blue hour city skyline outside."
+    },
+    {
+      "say": "Sales exploded to over 100 million units globally because the product solved a real daily cooking problem.",
+      "callout": "",
+      "visual": "Extreme wide shot of a massive industrial warehouse floor, tall rows of dark shipping pallets lit by cold overhead industrial lights."
+    },
+    {
+      "say": "By 1999, his monthly royalty checks outpaced his entire boxing career. But how far could it really go?",
+      "callout": "100M+ UNITS",
+      "visual": "Close-up of hands in deep shadows sliding a single white paper check across a dark wet slate tabletop under subtle blue lighting."
+    },
+    {
+      "say": "The parent company was losing so much profit, they bought out his rights for $138 million cash.",
+      "callout": "$138 MILLION BUYOUT",
+      "visual": "Low angle shot of a massive concrete corporate skyscraper cutting through thick fog at dusk with flickering amber window lights."
+    },
+    {
+      "say": "In total, his royalty bet paid over $200 million. Uncapped equity always destroys a fixed endorsement check.",
+      "callout": "$200M+ TOTAL",
+      "visual": "Extreme close-up of a heavy bank vault door in dark shadows, a single practical light beam bouncing off brushed steel surfaces."
+    },
+    {
+      "say": "When you're trading time for a capped paycheck, you block yourself from scalable economic growth.",
+      "callout": "",
+      "visual": "Extreme wide silhouette of a single worker walking across a massive steel suspension bridge early morning, vast atmospheric mist."
+    },
+    {
+      "say": "When building wealth, always seek equity and upside. Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "Low angle shot of wet asphalt on an empty city avenue at night, colorful streetlights reflecting on rain-slicked pavement."
+    }
+  ],
+  "caption": "A fixed check caps your wealth. Equity gives you the upside. 🥊\n\n#money #personalfinance #wealth #equity #business",
+  "description": "In 1994, George Foreman passed on flat endorsement cash for a 45% profit share on a kitchen grill. Decades later, that uncapped equity deal generated over $200 million and a massive cash buyout. The lesson: trading time for capped checks limits your upside, but equity compounds.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#wealth",
+    "#business",
+    "#equity"
+  ],
+  "first_comment": "Would you take $10,000 guaranteed right now, or a 20% royalty on an unproven product?",
+  "facts": [
+    {
+      "claim": "George Foreman agreed to a 45% profit share instead of upfront endorsement cash in 1994.",
+      "basis": "Documented contractual terms between Salton Inc. and George Foreman for the George Foreman Grill."
+    },
+    {
+      "claim": "Salton Inc. bought out Foreman's name and royalty rights for $138 million in 1999.",
+      "basis": "Public SEC filings and corporate press releases from Salton Inc. in December 1999."
+    },
+    {
+      "claim": "The Foreman Grill sold over 100 million units globally.",
+      "basis": "Historical sales reports from Salton Inc. and Spectrum Brands."
+    }
+  ],
+  "source": "llm",
+  "pillar": "story",
+  "look": "",
+  "loop_map": {
+    "stakes": "George Foreman choosing between guaranteed endorsement cash and an unproven product's profit share in 1994.",
+    "big_question": "Why did George Foreman gamble on an unproven kitchen appliance over guaranteed cash?",
+    "assume": "Guaranteed upfront cash is safer and smarter than taking no upfront payment.",
+    "reveal": "Taking a 45% profit share paid him over $200M total, including a $138M buyout.",
+    "rehook_beats": [
+      5,
+      7
+    ],
+    "payoff_beat": 9
+  }
+}

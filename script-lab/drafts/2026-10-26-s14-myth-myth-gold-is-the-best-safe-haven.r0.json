@@ -1,0 +1,95 @@
+{
+  "title": "The Gold Safe-Haven Myth",
+  "hook_text": "GOLD CRUSHED BUYERS FOR 20 YEARS",
+  "beats": [
+    {
+      "say": "Holding gold for 20 years lost buyers nearly 80% against inflation between 1980 and 2000.",
+      "callout": "",
+      "visual": "Extreme close-up of a heavy gold bar resting on dark, wet slate under a single cold blue overhead light."
+    },
+    {
+      "say": "That's decades of purchasing power vanished into a shiny metal brick that sits in a vault.",
+      "callout": "80% LOSS",
+      "visual": "Low angle of a massive steel vault door half-open, casting a long shadow across a damp concrete floor."
+    },
+    {
+      "say": "So why do millions still treat gold as the ultimate safe-haven wealth builder?",
+      "callout": "BIG QUESTION",
+      "visual": "Silhouette of a person staring out a tall skyscraper window at a foggy, rain-slick city skyline at dusk."
+    },
+    {
+      "say": "Most people assume unyielding metal protects you best when markets turn brutal and uncertain.",
+      "callout": "ASSUME VS TRUTH",
+      "visual": "Extreme wide shot of a lone pedestrian walking under a sodium-lit underpass at night, heavy rain falling."
+    },
+    {
+      "say": "But gold is an unproductive asset. It doesn't produce cash flow, dividends, or goods.",
+      "callout": "0% YIELD",
+      "visual": "Extreme close-up of a tarnished coin resting on raw, cold steel, shot with a shallow depth of field."
+    },
+    {
+      "say": "While gold sat flat, what happens when you put that same cash into income-producing assets?",
+      "callout": "ASSET VS METAL",
+      "visual": "High angle shot of a massive container ship cutting through dark, choppy open water at twilight."
+    },
+    {
+      "say": "Investing $500 a month at 8% a year reaches $745,180 in 30 years.",
+      "callout": "$745,180",
+      "visual": "Extreme wide shot of a stark mountain ridge line cutting across a pale winter sky at dawn."
+    },
+    {
+      "say": "You only put in $180,000 of your own hard-earned cash.",
+      "callout": "$180,000 PRINCIPAL",
+      "visual": "Close-up of calloused hands sliding a plain metal box across a dark, scarred wooden table."
+    },
+    {
+      "say": "That is the power of compounding dividends and productive businesses driving real growth.",
+      "callout": "",
+      "visual": "Low angle of a towering concrete bridge pier stretching up into heavy, low-hanging gray fog."
+    },
+    {
+      "say": "Metals just store value. Businesses grow it.",
+      "callout": "",
+      "visual": "Extreme close-up of a heavy industrial gear slowly turning in dim, cold fluorescent light."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "Silhouette of a person walking away down the center of an empty highway at night under sodium lights."
+    }
+  ],
+  "caption": "Gold isn't building your wealth. Here's why productive assets win over decades. #personalfinance #moneytips #investing #wealthbuilding #finance",
+  "description": "Gold is often viewed as the ultimate safe haven, but history shows unproductive assets drag down long-term portfolio growth compared to income-producing investments.",
+  "hashtags": [
+    "#personalfinance",
+    "#moneytips",
+    "#investing",
+    "#wealthbuilding",
+    "#finance"
+  ],
+  "first_comment": "What asset do you rely on most for long-term growth?",
+  "facts": [
+    {
+      "claim": "Holding gold for 20 years lost buyers nearly 80% against inflation between 1980 and 2000",
+      "basis": "Historical gold price and CPI inflation data from 1980 to 2000"
+    },
+    {
+      "claim": "$500/month invested for 30 years at 8%/yr reaches $745,180 (principal $180,000)",
+      "basis": "Fact sheet calculation for $500/month at 8% for 30 years"
+    }
+  ],
+  "source": "llm",
+  "pillar": "myth",
+  "look": "",
+  "loop_map": {
+    "stakes": "Investors locking money in gold for decades while losing purchasing power.",
+    "big_question": "Why do millions still treat gold as the ultimate wealth builder when it fails against inflation?",
+    "assume": "Gold is a bulletproof safe haven that protects your wealth indefinitely.",
+    "reveal": "Gold is an unproductive asset that drags down growth compared to income-producing investments.",
+    "rehook_beats": [
+      6,
+      9
+    ],
+    "payoff_beat": 10
+  }
+}

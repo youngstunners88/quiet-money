@@ -1,77 +1,82 @@
 {
-  "id": "2026-10-25-s0-playbook-cancel-forgotten-iphone-and-andr",
-  "pillar": "playbook",
-  "topic": "Cancel Forgotten iPhone and Android App Trials",
-  "day": "2026-10-25",
-  "slot": 0,
-  "status": "published",
-  "history": [
-    {
-      "from": "planned",
-      "to": "scripted",
-      "ts": "2026-10-25T09:25:35Z",
-      "words": 144
-    },
-    {
-      "from": "scripted",
-      "to": "voiced",
-      "ts": "2026-10-25T09:27:08Z",
-      "seconds": 63.029,
-      "provider": "edge"
-    },
-    {
-      "from": "voiced",
-      "to": "visualized",
-      "ts": "2026-10-25T09:27:33Z"
-    },
-    {
-      "from": "visualized",
-      "to": "rendered",
-      "ts": "2026-10-25T09:29:27Z"
-    },
-    {
-      "from": "rendered",
-      "to": "gated",
-      "ts": "2026-10-25T09:29:27Z",
-      "score": 95
-    },
-    {
-      "from": "gated",
-      "to": "packaged",
-      "ts": "2026-10-25T09:29:28Z"
-    },
-    {
-      "from": "packaged",
-      "to": "published",
-      "ts": "2026-10-25T09:29:36Z",
-      "local": "2026-10-25T07:30:00-04:00",
-      "youtube": null
-    }
-  ],
-  "artifacts": {
-    "angle": "Intercept free trial conversions before they hit your mobile billing cycle.",
-    "hook": "That free app trial you downloaded for one weekend just billed you $49.",
-    "title": "Cancel Hidden App Trials in 3 Steps",
-    "style": "cinematic",
-    "video": "/home/user/quiet-money/production/output/2026-10-25/2026-10-25-s0-playbook-cancel-forgotten-iphone-and-andr/final.mp4",
-    "cover": "/home/user/quiet-money/production/output/2026-10-25/2026-10-25-s0-playbook-cancel-forgotten-iphone-and-andr/cover.jpg",
-    "publish": {
-      "local": {
-        "mode": "local",
-        "folder": "/home/user/quiet-money/distribution/queue/2026-10-25/slot1-playbook",
-        "post_at": "2026-10-25T07:30:00-04:00"
-      },
-      "youtube": {
-        "skipped": "YouTube refused the upload session (HTTP 429): quota or rate limit; it resets at midnight Pacific"
-      }
-    }
+ "id": "2026-10-25-s0-playbook-cancel-forgotten-iphone-and-andr",
+ "pillar": "playbook",
+ "topic": "Cancel Forgotten iPhone and Android App Trials",
+ "day": "2026-10-25",
+ "slot": 0,
+ "status": "packaged",
+ "history": [
+  {
+   "from": "planned",
+   "to": "scripted",
+   "ts": "2026-10-25T09:25:35Z",
+   "words": 144
   },
-  "scores": {
-    "gauntlet": 95,
-    "passed": true
+  {
+   "from": "scripted",
+   "to": "voiced",
+   "ts": "2026-10-25T09:27:08Z",
+   "seconds": 63.029,
+   "provider": "edge"
   },
-  "cost": {
-    "tts:edge:chars": 826
+  {
+   "from": "voiced",
+   "to": "visualized",
+   "ts": "2026-10-25T09:27:33Z"
   },
-  "notes": []
+  {
+   "from": "visualized",
+   "to": "rendered",
+   "ts": "2026-10-25T09:29:27Z"
+  },
+  {
+   "from": "rendered",
+   "to": "gated",
+   "ts": "2026-10-25T09:29:27Z",
+   "score": 95
+  },
+  {
+   "from": "gated",
+   "to": "packaged",
+   "ts": "2026-10-25T09:29:28Z"
+  },
+  {
+   "from": "packaged",
+   "to": "published",
+   "ts": "2026-10-25T09:29:36Z",
+   "local": "2026-10-25T07:30:00-04:00",
+   "youtube": null
+  },
+  {
+   "from": "published",
+   "to": "packaged",
+   "note": "status said published with no YouTube video ID; corrected 2026-10-26 to what is on disk"
+  }
+ ],
+ "artifacts": {
+  "angle": "Intercept free trial conversions before they hit your mobile billing cycle.",
+  "hook": "That free app trial you downloaded for one weekend just billed you $49.",
+  "title": "Cancel Hidden App Trials in 3 Steps",
+  "style": "cinematic",
+  "video": "/home/user/quiet-money/production/output/2026-10-25/2026-10-25-s0-playbook-cancel-forgotten-iphone-and-andr/final.mp4",
+  "cover": "/home/user/quiet-money/production/output/2026-10-25/2026-10-25-s0-playbook-cancel-forgotten-iphone-and-andr/cover.jpg",
+  "publish": {
+   "local": {
+    "mode": "local",
+    "folder": "/home/user/quiet-money/distribution/queue/2026-10-25/slot1-playbook",
+    "post_at": "2026-10-25T07:30:00-04:00"
+   },
+   "youtube": {
+    "skipped": "YouTube refused the upload session (HTTP 429): quota or rate limit; it resets at midnight Pacific"
+   }
+  }
+ },
+ "scores": {
+  "gauntlet": 95,
+  "passed": true
+ },
+ "cost": {
+  "tts:edge:chars": 826
+ },
+ "notes": []
 }

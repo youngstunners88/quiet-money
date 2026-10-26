@@ -1,0 +1,83 @@
+{
+ "id": "2026-10-26-s13-escape-dream-team-hire-people-better-th",
+ "pillar": "escape",
+ "topic": "Dream team: hire people better than you",
+ "day": "2026-10-26",
+ "slot": 13,
+ "status": "packaged",
+ "history": [
+  {
+   "from": "planned",
+   "to": "scripted",
+   "ts": "2026-10-26T09:55:17Z",
+   "words": 190
+  },
+  {
+   "from": "scripted",
+   "to": "voiced",
+   "ts": "2026-10-26T09:55:51Z",
+   "seconds": 65.83,
+   "provider": "edge"
+  },
+  {
+   "from": "voiced",
+   "to": "visualized",
+   "ts": "2026-10-26T09:56:13Z"
+  },
+  {
+   "from": "visualized",
+   "to": "rendered",
+   "ts": "2026-10-26T09:58:02Z"
+  },
+  {
+   "from": "rendered",
+   "to": "gated",
+   "ts": "2026-10-26T09:58:02Z",
+   "score": 98
+  },
+  {
+   "from": "gated",
+   "to": "packaged",
+   "ts": "2026-10-26T09:58:03Z"
+  },
+  {
+   "from": "packaged",
+   "to": "published",
+   "ts": "2026-10-26T09:58:05Z",
+   "local": "2026-10-28T18:30:00-04:00",
+   "youtube": null
+  },
+  {
+   "from": "published",
+   "to": "packaged",
+   "note": "status said published with no YouTube video ID; corrected 2026-10-26 to what is on disk"
+  }
+ ],
+ "artifacts": {
+  "angle": "credit Peña's dream-team idea in plain words: surround yourself with people better than you (lawyers, accountants, operators) instead of doing every job alone; the honest catch: good people cost money or a share of the business, and his own business figures are self-reported (brief)",
+  "brief": "pena",
+  "hook": "If you're the smartest person on your team, the team is too small.",
+  "title": "Why Being the Smartest Person in the Room Keeps You Broke",
+  "style": "cinematic",
+  "video": "/home/user/quiet-money/production/output/2026-10-26/2026-10-26-s13-escape-dream-team-hire-people-better-th/final.mp4",
+  "cover": "/home/user/quiet-money/production/output/2026-10-26/2026-10-26-s13-escape-dream-team-hire-people-better-th/cover.jpg",
+  "publish": {
+   "local": {
+    "mode": "local",
+    "folder": "/home/user/quiet-money/distribution/queue/2026-10-28/slot4-escape",
+    "post_at": "2026-10-28T18:30:00-04:00"
+   },
+   "youtube": {
+    "skipped": "YouTube refused the upload session (HTTP 429): quota or rate limit; it resets at midnight Pacific"
+   }
+  }
+ },
+ "scores": {
+  "gauntlet": 98,
+  "passed": true
+ },
+ "cost": {
+  "tts:edge:chars": 1138
+ },
+ "notes": []
+}

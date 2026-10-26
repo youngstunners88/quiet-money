@@ -1,0 +1,95 @@
+{
+  "title": "Why You Shouldn't Build a Business Alone",
+  "hook_text": "IF YOU'RE THE SMARTEST PERSON",
+  "beats": [
+    {
+      "say": "If you're the smartest person on your team, the team is too small.",
+      "callout": "",
+      "visual": "Low angle shot of a solitary silhouette standing on a massive concrete bridge at blue hour against a heavy gray fog."
+    },
+    {
+      "say": "Most solo founders try to play lawyer, accountant, and operator all at once.",
+      "callout": "SOLO VS TEAM",
+      "visual": "Extreme close-up of hands frantically moving papers on a dark wooden desk lit only by a single green banker's lamp."
+    },
+    {
+      "say": "Why do independent builders burn out before reaching any real scale?",
+      "callout": "",
+      "visual": "High angle shot of wet asphalt on an empty highway at night under the stark orange glare of sodium streetlights."
+    },
+    {
+      "say": "You might assume doing every job yourself saves cash and keeps control.",
+      "callout": "SAVE CASH",
+      "visual": "Extreme wide shot of a solitary figure walking past massive industrial shipping containers under cold fluorescent security lights."
+    },
+    {
+      "say": "Dan Peña argues you need a dream team of experts who are better than you.",
+      "callout": "STEP ONE",
+      "visual": "Low angle shot of a heavy steel warehouse door cracked open with a sliver of harsh white light cutting across the floor."
+    },
+    {
+      "say": "Instead of grinding alone, he teaches you must surround yourself with elite operators.",
+      "callout": "STEP TWO",
+      "visual": "Extreme close-up of a brass key turning slowly inside a heavy, dark iron deadbolt on an aged oak door."
+    },
+    {
+      "say": "How do you actually pay for top-tier legal and financial talent when cash is tight?",
+      "callout": "",
+      "visual": "Silhouette of a person leaning against a towering glass window pane while rain streaks down the outside in a sodium glow."
+    },
+    {
+      "say": "Here's the honest catch: good people cost money or a share of your business.",
+      "callout": "THE CATCH",
+      "visual": "Extreme wide shot of an empty concrete loading dock under a heavy gray sky with fog rolling across the tarmac."
+    },
+    {
+      "say": "And his own business figures are self-reported, with no guarantees attached.",
+      "callout": "",
+      "visual": "Low angle shot looking up at the sharp, brutalist edge of a concrete tower cutting into a cold dusk sky."
+    },
+    {
+      "say": "Trade a slice of ownership for elite execution instead of hoarding zero percent.",
+      "callout": "OWNERSHIP",
+      "visual": "Extreme close-up of water droplets sliding down a cold, dark metal pipe under a single practical overhead bulb."
+    },
+    {
+      "say": "Stop acting like a lone hero. Follow for the money rules school never taught you.",
+      "callout": "FOLLOW US",
+      "visual": "Extreme wide shot of a single car driving across an open concrete overpass into the dim morning fog."
+    }
+  ],
+  "caption": "If you try to do every job yourself, your business stays small. Trade equity for a real team. #money #personalfinance #businessmindset #wealthbuilding #entrepreneurship",
+  "description": "Surround yourself with people better than you instead of doing every job alone. Learn the reality of building a dream team.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#businessmindset",
+    "#wealthbuilding",
+    "#entrepreneurship"
+  ],
+  "first_comment": "What's the hardest part of delegating tasks in your work?",
+  "facts": [
+    {
+      "claim": "Dan Peña teaches building a dream team of lawyers, accountants, and operators.",
+      "basis": "Research brief: Dan Peña's 7 Steps to Super Success include creating a dream team."
+    },
+    {
+      "claim": "His own business figures are self-reported.",
+      "basis": "Research brief: Most of his business numbers are his own claims: always say 'he says' or 'by his account'."
+    }
+  ],
+  "source": "llm",
+  "pillar": "escape",
+  "look": "",
+  "loop_map": {
+    "stakes": "Trying to run a business entirely alone without expert help.",
+    "big_question": "How do you actually pay for top-tier legal and financial talent when cash is tight?",
+    "assume": "Doing every job yourself saves cash and keeps total control.",
+    "reveal": "Good people cost money or a share of the business, and solo builders burn out.",
+    "rehook_beats": [
+      3,
+      7
+    ],
+    "payoff_beat": 10
+  }
+}

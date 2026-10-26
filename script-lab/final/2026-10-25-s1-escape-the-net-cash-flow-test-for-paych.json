@@ -1,0 +1,96 @@
+{
+  "title": "The Net Cash Flow Test for Paycheck Independence",
+  "hook_text": "IF AN INVESTMENT DRAINS YOUR CASH, IT DELAYS RETIREMENT",
+  "beats": [
+    {
+      "say": "If an investment takes money out of your bank account every month, it's actively delaying your retirement.",
+      "callout": "",
+      "visual": "Cinematic low-angle shot of a lone car parked outside a dark suburban home at dusk, warm porch light reflecting on wet pavement."
+    },
+    {
+      "say": "Most people assume any asset that gains value on paper is building their path to freedom.",
+      "callout": "ASSET VS LIABILITY",
+      "visual": "Close-up of hands turning the heavy pages of a leather-bound ledger in dim library lighting, shot from over the shoulder."
+    },
+    {
+      "say": "That's a trap. A rental property or side project that drains cash flow each month is a liability in disguise.",
+      "callout": "",
+      "visual": "Close-up of a person sliding a dark metal key into a heavy deadbolt on a wooden front door, cool tones."
+    },
+    {
+      "say": "So how do you separate true yield-generating assets from high-maintenance financial burdens?",
+      "callout": "",
+      "visual": "A silhouette of a person standing at a large floor-to-ceiling office window at night, looking out at distant city lights."
+    },
+    {
+      "say": "Let's run the net cash flow test on your portfolio right now.",
+      "callout": "STEP ONE",
+      "visual": "Overhead cinematic shot of a sleek wooden desk with a black fountain pen resting next to a blank notepad."
+    },
+    {
+      "say": "Add up every dollar of monthly income an asset produces.",
+      "callout": "STEP TWO",
+      "visual": "A pair of hands typing on a mechanical keyboard with soft amber backlighting, shallow depth of field."
+    },
+    {
+      "say": "Now subtract every single dollar of maintenance, debt service, and management fees.",
+      "callout": "STEP THREE",
+      "visual": "A hand using a simple handheld calculator on a dark slate countertop, warm directional light."
+    },
+    {
+      "say": "If that final number is negative, it's not an asset. It's an expense draining your paycheck.",
+      "callout": "NEGATIVE VS POSITIVE",
+      "visual": "Close-up of a dark ceramic coffee cup resting on a wooden table, steam rising slowly against a dark background."
+    },
+    {
+      "say": "Real passive income requires assets that put cash in your pocket every month without extra effort.",
+      "callout": "$2,000/MONTH",
+      "visual": "Cinematic shot of empty railway tracks stretching into a foggy horizon at dawn, muted colors."
+    },
+    {
+      "say": "For instance, generating $2,000 a month of passive income needs about $600,000 invested.",
+      "callout": "$600,000 INVESTED",
+      "visual": "A close-up of a metal pocket watch ticking quietly on a dark surface, cinematic side lighting."
+    },
+    {
+      "say": "Run the net cash flow test on your holdings this week and cut the dead weight.",
+      "callout": "",
+      "visual": "A person walking down a quiet concrete staircase in a modern minimalist building, side profile in shadow."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "Wide cinematic shot of a calm ocean horizon at dusk with the last rays of sunlight fading out."
+    }
+  ],
+  "caption": "Run the net cash flow test to separate true assets from hidden liabilities. #MoneyPsychology #PersonalFinance #PassiveIncome #WealthBuilding #FinancialFreedom",
+  "description": "Apply a strict net cash flow test to separate true yield-generating assets from high-maintenance financial burdens.",
+  "hashtags": [
+    "#MoneyPsychology",
+    "#PersonalFinance",
+    "#PassiveIncome",
+    "#WealthBuilding",
+    "#FinancialFreedom"
+  ],
+  "first_comment": "Which of your assets actually costs you money every single month?",
+  "facts": [
+    {
+      "claim": "$2,000/month of passive income needs about $600,000 invested",
+      "basis": "PASSIVE INCOME ('4% rule': withdraw 4% a year, a guideline from the 1998 Trinity study, not a guarantee)"
+    }
+  ],
+  "source": "llm",
+  "pillar": "escape",
+  "look": "",
+  "loop_map": {
+    "stakes": "An investment that drains cash flow every month.",
+    "big_question": "How do you separate true yield-generating assets from financial burdens?",
+    "assume": "Most people assume any asset gaining value on paper builds freedom.",
+    "reveal": "If it takes cash out monthly, it is a liability delaying retirement.",
+    "rehook_beats": [
+      4,
+      8
+    ],
+    "payoff_beat": 10
+  }
+}

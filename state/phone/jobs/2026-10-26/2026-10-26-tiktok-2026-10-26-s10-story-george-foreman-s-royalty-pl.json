@@ -1,0 +1,18 @@
+{
+ "id": "2026-10-26-tiktok-2026-10-26-s10-story-george-foreman-s-royalty-pl",
+ "kind": "tiktok",
+ "day": "2026-10-26",
+ "key": "2026-10-26-s10-story-george-foreman-s-royalty-play-th",
+ "status": "queued",
+ "created": "2026-10-26T09:59:52+00:00",
+ "recipe": "TikTok upload",
+ "media": [
+  {
+   "source": "production/output/2026-10-26/2026-10-26-s10-story-george-foreman-s-royalty-play-th/final.mp4",
+   "name": "final.mp4"
+  }
+ ],
+ "staged": true,
+ "text": "A fixed check caps your wealth. Equity gives you the upside. 🥊\n\nFree money reset checklist: link in bio.\n\n#money #personalfinance #wealth #equity #business\n\nEducation, not financial advice.",
+ "ai_label": "AI-generated content: on"
+}

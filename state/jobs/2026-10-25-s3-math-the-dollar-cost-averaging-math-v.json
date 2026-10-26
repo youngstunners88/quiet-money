@@ -1,0 +1,25 @@
+{
+  "id": "2026-10-25-s3-math-the-dollar-cost-averaging-math-v",
+  "pillar": "math",
+  "topic": "The Dollar-Cost Averaging Math vs Lump Sum",
+  "day": "2026-10-25",
+  "slot": 3,
+  "status": "failed",
+  "history": [
+    {
+      "from": "planned",
+      "to": "failed",
+      "ts": "2026-10-25T09:37:51Z",
+      "error": "all llm providers failed: gemini: ProviderError: gemini: gemini-3.8-flash:ProxyError,gemini-3.5-flash:ProxyError,gemini-3.5-flash-lite:ProxyError | longcat: unavailable (LONGCAT_API_KEY not set) | mis"
+    }
+  ],
+  "artifacts": {
+    "angle": "Comparing the historical mathematical probabilities of deploying cash all at once versus spreading it over 12 months.",
+    "hook": "Everyone tells you to drip-feed your money into the market, but the actual historical math proves it's costing you."
+  },
+  "scores": {},
+  "cost": {},
+  "notes": [
+    "all llm providers failed: gemini: ProviderError: gemini: gemini-3.8-flash:ProxyError,gemini-3.5-flash:ProxyError,gemini-3.5-flash-lite:ProxyError | longcat: unavailable (LONGCAT_API_KEY not set) | mistral: unavailable (mistral: every key limited or refused (ProxyError,ProxyError)) | openrouter: Prov"
+  ]
+}

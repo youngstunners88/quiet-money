@@ -1,0 +1,104 @@
+{
+  "title": "The Hidden 1% Fee Drag Stealing $176,000 From You",
+  "hook_text": "YOUR APP IS STEALING SIX FIGURES",
+  "beats": [
+    {
+      "say": "Your investment app is quietly skimming six figures from your retirement account, and it's completely legal.",
+      "callout": "",
+      "visual": "High angle silhouette of a massive skyscraper rising into foggy blue hour light over wet asphalt."
+    },
+    {
+      "say": "Most investors think a 1% management fee is just a harmless tiny charge for holding their portfolio.",
+      "callout": "JUST 1% FEE?",
+      "visual": "Low angle shot of an empty highway at night under flickering sodium lamps."
+    },
+    {
+      "say": "But where does that small fee actually end up after 30 years of compounding market growth?",
+      "callout": "",
+      "visual": "Dark underpass with cold fluorescent light reflecting off damp concrete ground."
+    },
+    {
+      "say": "Here's the exact math financial firms hope you'll never take the time to calculate yourself.",
+      "callout": "",
+      "visual": "Extreme close up of a dark vintage clock face mechanism in heavy shadow."
+    },
+    {
+      "say": "Assume you put $100,000 into the stock market for 30 years at a 7% average return.",
+      "callout": "$100,000 FOR 30 YRS",
+      "visual": "Silhouette of a tiny human figure standing on a towering dam edge above deep water."
+    },
+    {
+      "say": "Choose a low-cost index fund with a 0.05% fee, and your balance grows to $750,626.",
+      "callout": "0.05% VS 1.00%",
+      "visual": "Fog cutting a massive city skyline at dusk, extreme wide angle."
+    },
+    {
+      "say": "Now keep the exact same market return, but pick a fund that charges a 1.00% fee.",
+      "callout": "$750,626 VS $574,349",
+      "visual": "High angle of a solitary barge moving across dark, misty open water."
+    },
+    {
+      "say": "Your total balance plummets down to $574,349 over that exact same 30 year timeframe.",
+      "callout": "",
+      "visual": "Extreme close up of heavy steel chains under tension in cold blue light."
+    },
+    {
+      "say": "That modest 1% fee didn't just cut your return by 1%; it devoured $176,277 in cash.",
+      "callout": "$176,277 LOST",
+      "visual": "Silhouette of a lone walker along a stark ridge line against a stormy horizon."
+    },
+    {
+      "say": "You surrendered nearly a quarter of your total lifetime wealth simply by ignoring one tiny percentage.",
+      "callout": "23% WEALTH GONE",
+      "visual": "High angle silhouette of an empty industrial terminal illuminated by a single practical light."
+    },
+    {
+      "say": "Always check the expense ratio before investing your hard-earned paycheck into any index fund.",
+      "callout": "",
+      "visual": "Low angle shot of towering stone columns in cold fluorescent ambient lighting."
+    },
+    {
+      "say": "Follow for the money rules school never taught you, and protect your long-term compounding growth.",
+      "callout": "",
+      "visual": "Extreme wide angle silhouette of a figure watching a distant neon skyline at blue hour."
+    }
+  ],
+  "caption": "A 1% management fee doesn't sound like much until you see the 30-year compounding math. Check your expense ratios today.\n\n#money #personalfinance #investing #wealth #indexfunds",
+  "description": "Understanding how management fees erode compounding interest over three decades. A simple 1% annual fee on a $100,000 portfolio reduces long-term wealth by over $176,000.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#investing",
+    "#wealth",
+    "#indexfunds"
+  ],
+  "first_comment": "What expense ratio are you currently paying on your primary index fund?",
+  "facts": [
+    {
+      "claim": "A $100,000 portfolio invested for 30 years at 7% return with a 0.05% annual fee grows to $750,626.",
+      "basis": "Standard compound interest calculation at 6.95% net annual return."
+    },
+    {
+      "claim": "A $100,000 portfolio invested for 30 years at 7% return with a 1.00% annual fee grows to $574,349.",
+      "basis": "Standard compound interest calculation at 6.00% net annual return."
+    },
+    {
+      "claim": "The difference between a 0.05% fee and a 1.00% fee over 30 years is $176,277.",
+      "basis": "$750,626 minus $574,349 equals $176,277."
+    }
+  ],
+  "source": "llm",
+  "pillar": "math",
+  "look": "",
+  "loop_map": {
+    "stakes": "A 1% management fee quietly devours over $176,000 from a $100,000 retirement portfolio over 30 years.",
+    "big_question": "How does a tiny 1% fee end up costing over six figures in actual wealth?",
+    "assume": "A 1% annual fee only takes away 1% of your final accumulated money.",
+    "reveal": "A 1% annual fee erodes over 23% of your total final balance ($176,277) due to lost compounding gains.",
+    "rehook_beats": [
+      3,
+      7
+    ],
+    "payoff_beat": 9
+  }
+}

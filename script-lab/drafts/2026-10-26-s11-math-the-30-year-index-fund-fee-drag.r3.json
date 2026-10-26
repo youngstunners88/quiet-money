@@ -1,0 +1,95 @@
+{
+  "title": "The 1% Fee Costing You Six Figures",
+  "hook_text": "YOUR INVESTMENT APP IS STEALING SIX FIGURES",
+  "beats": [
+    {
+      "say": "Your investment app is quietly stealing six figures from your retirement account, and they legally charge you for doing it.",
+      "callout": "",
+      "visual": "Extreme close-up of a dark, rain-slick smartphone screen reflecting cold sodium light on an empty asphalt street at night."
+    },
+    {
+      "say": "You put $100,000 into a fund for 30 years and assume a standard 7% return over three decades.",
+      "callout": "7% RETURN",
+      "visual": "Low angle shot of a massive concrete bridge pier cutting upward against a foggy blue hour sky."
+    },
+    {
+      "say": "Most people think a 1% annual management fee is just pocket change for professional portfolio handling.",
+      "callout": "1% FEE",
+      "visual": "Extreme wide shot of a lone commuter silhouette walking across an empty concrete parking deck in the rain."
+    },
+    {
+      "say": "That tiny 1% bite doesn't just skim your profits. It devours your compounding growth entirely.",
+      "callout": "A VS B",
+      "visual": "High angle shot of dark industrial water rushing under a heavy iron underpass at midnight."
+    },
+    {
+      "say": "When the math runs for 30 years, that 1% fee leaves you with $574,349 total.",
+      "callout": "$574,349",
+      "visual": "Single practical overhead light casting a harsh shadow over a worn wooden table in a vacant room."
+    },
+    {
+      "say": "Drop that fee down to 0.05%, and that exact same portfolio surges to $750,626.",
+      "callout": "$750,626",
+      "visual": "Close-up of a heavy steel door hinge glistening with moisture under a cold fluorescent tube."
+    },
+    {
+      "say": "Where does that massive difference of $176,277 actually vanish to over those decades?",
+      "callout": "WHERE DOES IT GO",
+      "visual": "Extreme wide shot of a solitary freight train disappearing into a dark mountain tunnel at dusk."
+    },
+    {
+      "say": "It doesn't buy better management. It feeds the firm while your money works alone.",
+      "callout": "",
+      "visual": "Low angle shot of a towering brick facade fading into deep evening shadows with no lights on."
+    },
+    {
+      "say": "A 1% fee steals over $176,000 in lost compounding gains over a 30-year span.",
+      "callout": "$176,277 LOST",
+      "visual": "Extreme close-up of dark water droplets sliding down a cold concrete wall under sodium light."
+    },
+    {
+      "say": "Check your expense ratios today before your hidden fees fund someone else's retirement.",
+      "callout": "",
+      "visual": "High angle shot of an empty highway at night with single red taillights fading into the distance."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "Silhouette of a lone person walking away down a dark urban alley under a single practical light."
+    }
+  ],
+  "caption": "That 1% fee isn't a tip. It's a six-figure tax on your future. #investing #personalfinance #wealth #money #retirement",
+  "description": "A 1% management fee on a $100k portfolio quietly devours over $150,000 in lost compounding gains over three decades.",
+  "hashtags": [
+    "#investing",
+    "#personalfinance",
+    "#wealth",
+    "#money",
+    "#retirement"
+  ],
+  "first_comment": "What is the expense ratio on your main investment fund right now?",
+  "facts": [
+    {
+      "claim": "$100,000 for 30 years at 7% minus a 1.00% annual fee = $574,349",
+      "basis": "MONEY FACT SHEET"
+    },
+    {
+      "claim": "$100,000 for 30 years at 7% minus a 0.05% annual fee = $750,626",
+      "basis": "MONEY FACT SHEET"
+    }
+  ],
+  "source": "llm",
+  "pillar": "math",
+  "look": "",
+  "loop_map": {
+    "stakes": "A $100,000 portfolio held over 30 years.",
+    "big_question": "Where does the missing $176,277 actually vanish to over three decades?",
+    "assume": "Most people think a 1% annual management fee is just pocket change for professional portfolio handling.",
+    "reveal": "That 1% fee destroys over $176,000 in compounding growth.",
+    "rehook_beats": [
+      3,
+      7
+    ],
+    "payoff_beat": 9
+  }
+}

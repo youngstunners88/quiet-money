@@ -1,0 +1,67 @@
+{
+  "id": "2026-10-26-s11-math-the-30-year-index-fund-fee-drag",
+  "pillar": "math",
+  "topic": "The 30-Year Index Fund Fee Drag",
+  "day": "2026-10-26",
+  "slot": 11,
+  "status": "held",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-26T09:34:03Z",
+      "words": 181
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-26T09:42:33Z",
+      "seconds": 71.156,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-26T09:43:10Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-26T09:45:12Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-26T09:45:12Z",
+      "score": 90
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-26T09:45:13Z"
+    },
+    {
+      "from": "packaged",
+      "to": "held",
+      "ts": "2026-10-26T09:45:13Z"
+    }
+  ],
+  "artifacts": {
+    "angle": "Showing how a 1% management fee on a $100k portfolio actually devours over $150,000 in lost compounding gains over three decades.",
+    "hook": "Your investment app is quietly stealing six figures from your retirement account, and they legally charge you for doing it.",
+    "title": "The Hidden 1% Fee Drag Stealing $176,000 From You",
+    "style": "cinematic",
+    "video": "/home/user/quiet-money/production/output/2026-10-26/2026-10-26-s11-math-the-30-year-index-fund-fee-drag/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-26/2026-10-26-s11-math-the-30-year-index-fund-fee-drag/cover.jpg"
+  },
+  "scores": {
+    "gauntlet": 90,
+    "passed": false
+  },
+  "cost": {
+    "tts:edge:chars": 2182
+  },
+  "notes": [
+    "held for review: originality, not_semantic_duplicate"
+  ]
+}

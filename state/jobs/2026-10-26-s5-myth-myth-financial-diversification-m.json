@@ -1,112 +1,117 @@
 {
-  "id": "2026-10-26-s5-myth-myth-financial-diversification-m",
-  "pillar": "myth",
-  "topic": "Myth: Financial diversification means owning lots of different things",
-  "day": "2026-10-26",
-  "slot": 5,
-  "status": "published",
-  "history": [
-    {
-      "from": "planned",
-      "to": "scripted",
-      "ts": "2026-10-26T02:59:55Z",
-      "words": 189
-    },
-    {
-      "from": "scripted",
-      "to": "voiced",
-      "ts": "2026-10-26T03:01:44Z",
-      "seconds": 75.039,
-      "provider": "edge"
-    },
-    {
-      "from": "voiced",
-      "to": "visualized",
-      "ts": "2026-10-26T03:01:44Z"
-    },
-    {
-      "from": "visualized",
-      "to": "rendered",
-      "ts": "2026-10-26T03:03:56Z"
-    },
-    {
-      "from": "rendered",
-      "to": "gated",
-      "ts": "2026-10-26T03:03:56Z",
-      "score": 88
-    },
-    {
-      "from": "gated",
-      "to": "packaged",
-      "ts": "2026-10-26T03:03:56Z"
-    },
-    {
-      "from": "packaged",
-      "to": "held",
-      "ts": "2026-10-26T03:03:56Z"
-    },
-    {
-      "from": "scripted",
-      "to": "voiced",
-      "ts": "2026-10-26T03:19:50Z",
-      "seconds": 69.456,
-      "provider": "edge"
-    },
-    {
-      "from": "voiced",
-      "to": "visualized",
-      "ts": "2026-10-26T03:19:50Z"
-    },
-    {
-      "from": "visualized",
-      "to": "rendered",
-      "ts": "2026-10-26T03:22:12Z"
-    },
-    {
-      "from": "rendered",
-      "to": "gated",
-      "ts": "2026-10-26T03:22:12Z",
-      "score": 96
-    },
-    {
-      "from": "gated",
-      "to": "packaged",
-      "ts": "2026-10-26T03:22:12Z"
-    },
-    {
-      "from": "packaged",
-      "to": "published",
-      "ts": "2026-10-26T03:27:02Z",
-      "manual": true,
-      "forced": false
-    }
-  ],
-  "artifacts": {
-    "angle": "Expose 'diworsification' where holding overlapping assets gives a false sense of security.",
-    "hook": "Owning twenty different stocks does not mean you are diversified.",
-    "style": "cinematic",
-    "video": "/home/kofibeatz/Documents/Quiet Money/quiet-money/production/output/2026-10-26/2026-10-26-s5-myth-myth-financial-diversification-m/final.mp4",
-    "cover": "/home/kofibeatz/Documents/Quiet Money/quiet-money/production/output/2026-10-26/2026-10-26-s5-myth-myth-financial-diversification-m/cover.jpg",
-    "publish": {
-      "local": {
-        "mode": "local",
-        "folder": "/home/kofibeatz/Documents/Quiet Money/quiet-money/distribution/queue/2026-10-27/slot1-myth",
-        "post_at": "2026-10-27T07:30:00-04:00"
-      },
-      "youtube": {
-        "skipped": "COMPOSIO_API_KEY not set"
-      }
-    }
+ "id": "2026-10-26-s5-myth-myth-financial-diversification-m",
+ "pillar": "myth",
+ "topic": "Myth: Financial diversification means owning lots of different things",
+ "day": "2026-10-26",
+ "slot": 5,
+ "status": "held",
+ "history": [
+  {
+   "from": "planned",
+   "to": "scripted",
+   "ts": "2026-10-26T02:59:55Z",
+   "words": 189
   },
-  "scores": {
-    "gauntlet": 96,
-    "passed": true
+  {
+   "from": "scripted",
+   "to": "voiced",
+   "ts": "2026-10-26T03:01:44Z",
+   "seconds": 75.039,
+   "provider": "edge"
   },
-  "cost": {
-    "tts:edge:chars": 2254
+  {
+   "from": "voiced",
+   "to": "visualized",
+   "ts": "2026-10-26T03:01:44Z"
   },
-  "notes": [
-    "held for review: duration",
-    "script trimmed by hand to fit 61-72 s; re-rendered"
-  ]
+  {
+   "from": "visualized",
+   "to": "rendered",
+   "ts": "2026-10-26T03:03:56Z"
+  },
+  {
+   "from": "rendered",
+   "to": "gated",
+   "ts": "2026-10-26T03:03:56Z",
+   "score": 88
+  },
+  {
+   "from": "gated",
+   "to": "packaged",
+   "ts": "2026-10-26T03:03:56Z"
+  },
+  {
+   "from": "packaged",
+   "to": "held",
+   "ts": "2026-10-26T03:03:56Z"
+  },
+  {
+   "from": "scripted",
+   "to": "voiced",
+   "ts": "2026-10-26T03:19:50Z",
+   "seconds": 69.456,
+   "provider": "edge"
+  },
+  {
+   "from": "voiced",
+   "to": "visualized",
+   "ts": "2026-10-26T03:19:50Z"
+  },
+  {
+   "from": "visualized",
+   "to": "rendered",
+   "ts": "2026-10-26T03:22:12Z"
+  },
+  {
+   "from": "rendered",
+   "to": "gated",
+   "ts": "2026-10-26T03:22:12Z",
+   "score": 96
+  },
+  {
+   "from": "gated",
+   "to": "packaged",
+   "ts": "2026-10-26T03:22:12Z"
+  },
+  {
+   "from": "packaged",
+   "to": "published",
+   "ts": "2026-10-26T03:27:02Z",
+   "manual": true,
+   "forced": false
+  },
+  {
+   "from": "published",
+   "to": "held",
+   "note": "status said published with no YouTube video ID; corrected 2026-10-26 to what is on disk"
+  }
+ ],
+ "artifacts": {
+  "angle": "Expose 'diworsification' where holding overlapping assets gives a false sense of security.",
+  "hook": "Owning twenty different stocks does not mean you are diversified.",
+  "style": "cinematic",
+  "video": "/home/kofibeatz/Documents/Quiet Money/quiet-money/production/output/2026-10-26/2026-10-26-s5-myth-myth-financial-diversification-m/final.mp4",
+  "cover": "/home/kofibeatz/Documents/Quiet Money/quiet-money/production/output/2026-10-26/2026-10-26-s5-myth-myth-financial-diversification-m/cover.jpg",
+  "publish": {
+   "local": {
+    "mode": "local",
+    "folder": "/home/kofibeatz/Documents/Quiet Money/quiet-money/distribution/queue/2026-10-27/slot1-myth",
+    "post_at": "2026-10-27T07:30:00-04:00"
+   },
+   "youtube": {
+    "skipped": "COMPOSIO_API_KEY not set"
+   }
+  }
+ },
+ "scores": {
+  "gauntlet": 96,
+  "passed": true
+ },
+ "cost": {
+  "tts:edge:chars": 2254
+ },
+ "notes": [
+  "held for review: duration",
+  "script trimmed by hand to fit 61-72 s; re-rendered"
+ ]
 }

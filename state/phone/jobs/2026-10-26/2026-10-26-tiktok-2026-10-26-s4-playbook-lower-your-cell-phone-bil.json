@@ -3,7 +3,7 @@
  "kind": "tiktok",
  "day": "2026-10-26",
  "key": "2026-10-26-s4-playbook-lower-your-cell-phone-bill-with",
- "status": "queued",
+ "status": "held",
  "created": "2026-10-26T03:31:34+00:00",
  "recipe": "TikTok upload",
  "media": [
@@ -14,5 +14,12 @@
  ],
  "staged": false,
  "text": "Your cell carrier rewards switchers and penalizes loyalty. Here is the 3-step script to fix your bill today.\n\nFree money reset checklist: link in bio.\n\n#personalfinance #moneytips #savemoney #frugalliving #quietmoney #budgeting #financialfreedom\n\nEducation, not financial advice.",
- "ai_label": "AI-generated content: on"
+ "ai_label": "AI-generated content: on",
+ "history": [
+  {
+   "at": "2026-10-26T10:00:12+00:00",
+   "result": "held",
+   "note": "no video file in the container; render it again before posting"
+  }
+ ]
 }

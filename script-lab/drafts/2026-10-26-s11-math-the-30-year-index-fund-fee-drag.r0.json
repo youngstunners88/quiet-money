@@ -1,0 +1,101 @@
+{
+  "title": "The 1% Index Fund Fee That Costs You $176,000",
+  "hook_text": "YOUR INVESTMENT APP IS STEALING SIX FIGURES",
+  "beats": [
+    {
+      "say": "Your investment app is quietly stealing six figures from your retirement account legally.",
+      "callout": "",
+      "visual": "Low angle silhouette of a massive glass skyscraper at night, cold fluorescent light cutting through heavy fog."
+    },
+    {
+      "say": "Most people think paying a 1% management fee on an index fund is a tiny price.",
+      "callout": "1% FEE",
+      "visual": "Extreme close-up of a finger hovering over a dark smartphone screen inside a rain-slicked vehicle at dusk."
+    },
+    {
+      "say": "But where does all that money actually vanish over 30 years of compounding returns?",
+      "callout": "",
+      "visual": "High angle extreme wide shot of a solitary figure walking across a dark concrete plaza illuminated by sodium lights."
+    },
+    {
+      "say": "You'd assume a 1% annual fee only takes away 1% of your final nest egg.",
+      "callout": "ASSUMED COST",
+      "visual": "Extreme close shot of a brass combination dial on a dark vintage vault wall in a shadowy alley."
+    },
+    {
+      "say": "That's dead wrong, because fees don't just take cash, they destroy compound growth.",
+      "callout": "",
+      "visual": "Low angle shot of massive rusted iron gears resting frozen inside an abandoned industrial building under a single light."
+    },
+    {
+      "say": "Let me show you the exact math on a $100,000 portfolio invested for 30 years.",
+      "callout": "",
+      "visual": "Extreme wide shot of a wet multi-lane highway stretching toward a misty skyline at blue hour."
+    },
+    {
+      "say": "At a 7% annual return with a low 0.05% fee, you'll reach $750,626.",
+      "callout": "$750,626",
+      "visual": "Cold fluorescent lighting illuminating an empty minimalist desk with a clean white notebook."
+    },
+    {
+      "say": "But if you pay a 1.00% fee instead, your total drops down to $574,349.",
+      "callout": "$750,626 VS $574,349",
+      "visual": "High angle view of a deep concrete canyon between towering financial buildings shrouded in night shadows."
+    },
+    {
+      "say": "So where did that missing $176,277 actually go from a tiny 1% difference?",
+      "callout": "$176,277 LOST",
+      "visual": "Extreme wide silhouette of a lone person standing on a concrete breakwater facing dark open ocean waves."
+    },
+    {
+      "say": "That fee compounded against you every year, devouring over 23% of your entire wealth.",
+      "callout": "23% LOSS",
+      "visual": "Low angle shot of massive granite stone pillars supporting a bank building against a foggy night sky."
+    },
+    {
+      "say": "Checking your investment app's expense ratio today is the single fastest fix you can make.",
+      "callout": "",
+      "visual": "Extreme close shot of water droplets slowly sliding down a dark window over distant streetlights."
+    },
+    {
+      "say": "It takes under two minutes to switch to a low-cost index fund and protect your money.",
+      "callout": "",
+      "visual": "Wide cinematic shot of an empty asphalt road at night cutting through a dense pine forest."
+    },
+    {
+      "say": "Follow for the money rules school never taught you so your investment app works for you.",
+      "callout": "",
+      "visual": "Silhouette of a person standing at the high rise edge overlooking a glowing city grid at dusk."
+    }
+  ],
+  "caption": "A 1% management fee sounds tiny until you look at 30 years of lost compounding gains. Here is the exact math they don't highlight.\n\n#money #personalfinance #investing #indexfunds #wealthbuilding",
+  "description": "Understanding how index fund expense ratios compound over decades. A 1% fee on a $100,000 portfolio over 30 years at 7% return reduces your final total from $750,626 to $574,349, costing over $176,000 in lost compounding growth.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#investing",
+    "#indexfunds",
+    "#wealthbuilding"
+  ],
+  "first_comment": "What expense ratio is your main index fund currently charging you?",
+  "facts": [
+    {
+      "claim": "$100,000 invested for 30 years at 7% minus a 0.05% fee equals $750,626, while a 1.00% fee leaves $574,349, costing $176,277.",
+      "basis": "Calculated compound growth at 7% annual return over 30 years with annual management fees subtracted."
+    }
+  ],
+  "source": "llm",
+  "pillar": "math",
+  "look": "",
+  "loop_map": {
+    "stakes": "A 1% expense fee quietly strips over $176,000 from a $100,000 retirement portfolio over 30 years.",
+    "big_question": "Where does all that money actually vanish over 30 years of compounding returns?",
+    "assume": "Most people assume a 1% annual fee only takes away 1% of their final wealth.",
+    "reveal": "A 1% annual fee devours $176,277 by compounding against the portfolio, stripping over 23% of total growth.",
+    "rehook_beats": [
+      6,
+      9
+    ],
+    "payoff_beat": 10
+  }
+}

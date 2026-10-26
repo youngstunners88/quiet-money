@@ -1,0 +1,18 @@
+{
+ "id": "2026-10-26-tiktok-2026-10-26-s12-playbook-remove-credit-card-prote",
+ "kind": "tiktok",
+ "day": "2026-10-26",
+ "key": "2026-10-26-s12-playbook-remove-credit-card-protection-pl",
+ "status": "queued",
+ "created": "2026-10-26T09:59:52+00:00",
+ "recipe": "TikTok upload",
+ "media": [
+  {
+   "source": "production/output/2026-10-26/2026-10-26-s12-playbook-remove-credit-card-protection-pl/final.mp4",
+   "name": "final.mp4"
+  }
+ ],
+ "staged": true,
+ "text": "Kill useless credit card protection fees today in 3 simple steps. Save your cash.\n\nFree money reset checklist: link in bio.\n\n#money #personalfinance #creditcard #financialfreedom #dothistoday\n\nEducation, not financial advice.",
+ "ai_label": "AI-generated content: on"
+}

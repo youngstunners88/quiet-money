@@ -1,0 +1,82 @@
+{
+ "id": "2026-10-25-s1-escape-the-net-cash-flow-test-for-paych",
+ "pillar": "escape",
+ "topic": "The Net Cash Flow Test for Paycheck Independence",
+ "day": "2026-10-25",
+ "slot": 1,
+ "status": "packaged",
+ "history": [
+  {
+   "from": "planned",
+   "to": "scripted",
+   "ts": "2026-10-25T09:32:52Z",
+   "words": 169
+  },
+  {
+   "from": "scripted",
+   "to": "voiced",
+   "ts": "2026-10-25T09:33:58Z",
+   "seconds": 62.475,
+   "provider": "edge"
+  },
+  {
+   "from": "voiced",
+   "to": "visualized",
+   "ts": "2026-10-25T09:34:33Z"
+  },
+  {
+   "from": "visualized",
+   "to": "rendered",
+   "ts": "2026-10-25T09:36:44Z"
+  },
+  {
+   "from": "rendered",
+   "to": "gated",
+   "ts": "2026-10-25T09:36:44Z",
+   "score": 92
+  },
+  {
+   "from": "gated",
+   "to": "packaged",
+   "ts": "2026-10-25T09:36:45Z"
+  },
+  {
+   "from": "packaged",
+   "to": "published",
+   "ts": "2026-10-25T09:36:47Z",
+   "local": "2026-10-25T11:30:00-04:00",
+   "youtube": null
+  },
+  {
+   "from": "published",
+   "to": "packaged",
+   "note": "status said published with no YouTube video ID; corrected 2026-10-26 to what is on disk"
+  }
+ ],
+ "artifacts": {
+  "angle": "Applies a strict net cash flow test to separate true yield-generating assets from high-maintenance financial burdens.",
+  "hook": "If an investment takes money out of your bank account every month, it is actively delaying your retirement.",
+  "title": "The Net Cash Flow Test for Paycheck Independence",
+  "style": "cinematic",
+  "video": "/home/user/quiet-money/production/output/2026-10-25/2026-10-25-s1-escape-the-net-cash-flow-test-for-paych/final.mp4",
+  "cover": "/home/user/quiet-money/production/output/2026-10-25/2026-10-25-s1-escape-the-net-cash-flow-test-for-paych/cover.jpg",
+  "publish": {
+   "local": {
+    "mode": "local",
+    "folder": "/home/user/quiet-money/distribution/queue/2026-10-25/slot2-escape",
+    "post_at": "2026-10-25T11:30:00-04:00"
+   },
+   "youtube": {
+    "skipped": "YouTube refused the upload session (HTTP 429): quota or rate limit; it resets at midnight Pacific"
+   }
+  }
+ },
+ "scores": {
+  "gauntlet": 92,
+  "passed": true
+ },
+ "cost": {
+  "tts:edge:chars": 1014
+ },
+ "notes": []
+}

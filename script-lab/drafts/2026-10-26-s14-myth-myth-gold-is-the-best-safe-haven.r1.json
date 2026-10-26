@@ -1,0 +1,99 @@
+{
+  "title": "The Gold Myth That Drains Your Wealth",
+  "hook_text": "GOLD DESTROYS YOUR WEALTH",
+  "beats": [
+    {
+      "say": "Holding gold for 20 years lost buyers nearly 80% against inflation between 1980 and 2000.",
+      "callout": "",
+      "visual": "Extreme close-up of a tarnished gold bar under cold sodium light, empty vault."
+    },
+    {
+      "say": "Most people assume a shiny heavy metal is the safest fortress for hard-earned money.",
+      "callout": "SAFE HAVEN?",
+      "visual": "Low angle of a heavy steel vault door half-closed against deep shadow."
+    },
+    {
+      "say": "Why does an asset everyone trusts end up dragging your portfolio into the dirt?",
+      "callout": "GOLD VS ASSETS",
+      "visual": "Silhouette of a person staring up at a massive concrete monolith in pouring rain."
+    },
+    {
+      "say": "Gold produces nothing. It just sits there collecting dust while businesses actually work.",
+      "callout": "UNPRODUCTIVE",
+      "visual": "Extreme wide shot of rusted industrial gears half-buried in wet mud."
+    },
+    {
+      "say": "Look at what happens when you put real cash to work instead of buying shiny rocks.",
+      "callout": "THE MATH",
+      "visual": "High angle shot of dark wet asphalt under a single flickering street lamp."
+    },
+    {
+      "say": "If you invest $500 a month at 8% a year, you hit $745,180 in 30 years.",
+      "callout": "$745,180 IN 30 YEARS",
+      "visual": "Close-up of a gloved hand flipping a page in a dark ledger by practical light."
+    },
+    {
+      "say": "Or look at a 40-year timeline with that same monthly amount.",
+      "callout": "40 YEARS",
+      "visual": "Extreme wide of a foggy highway cutting through a dark, empty mountain ridge."
+    },
+    {
+      "say": "That same $500 a month at 8% a year grows to $1,745,504 in 40 years.",
+      "callout": "$1,745,504 TOTAL",
+      "visual": "Low angle of a towering concrete bridge pier against a cold blue-hour sky."
+    },
+    {
+      "say": "Can gold ever match the compounding power of income-producing assets over decades?",
+      "callout": "",
+      "visual": "Extreme close-up of water droplets sliding down a cold metal pipe at night."
+    },
+    {
+      "say": "It cannot. Gold sits idle while businesses pump out profits and dividends year after year.",
+      "callout": "",
+      "visual": "Silhouette of a worker walking across a vast open-air shipping yard in fog."
+    },
+    {
+      "say": "Trade dead metal for assets that work. Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "Extreme wide of a single practical street lamp cutting through deep night fog."
+    }
+  ],
+  "caption": "Gold isn't the wealth builder you think it is. #money #personalfinance #investing #wealth",
+  "description": "Over long periods, unproductive commodities like gold drag down portfolio growth compared to income-producing assets.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#investing",
+    "#wealth",
+    "#finance"
+  ],
+  "first_comment": "What asset do you trust the most for the long haul?",
+  "facts": [
+    {
+      "claim": "Holding gold for 20 years lost buyers nearly 80% against inflation between 1980 and 2000",
+      "basis": "Historical gold price and CPI inflation data 1980-2000"
+    },
+    {
+      "claim": "$500/month invested for 30 years at 8%/yr reaches $745,180",
+      "basis": "Fact sheet calculation: $500/month invested for 30 years at 8% (monthly compounding)"
+    },
+    {
+      "claim": "$500/month invested for 40 years at 8%/yr reaches $1,745,504",
+      "basis": "Fact sheet calculation: $500/month invested for 40 years at 8% (monthly compounding)"
+    }
+  ],
+  "source": "llm",
+  "pillar": "myth",
+  "look": "",
+  "loop_map": {
+    "stakes": "Holding gold for 20 years lost buyers nearly 80% against inflation between 1980 and 2000.",
+    "big_question": "Why does an asset everyone trusts end up dragging your portfolio into the dirt?",
+    "assume": "Most people assume a shiny heavy metal is the safest fortress for hard-earned money.",
+    "reveal": "Gold produces nothing. It just sits there collecting dust while businesses actually work.",
+    "rehook_beats": [
+      3,
+      9
+    ],
+    "payoff_beat": 10
+  }
+}

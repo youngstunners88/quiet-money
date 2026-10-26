@@ -3,7 +3,7 @@
  "kind": "tiktok",
  "day": "2026-10-26",
  "key": "2026-10-26-s0-escape-the-four-core-customer-channels",
- "status": "queued",
+ "status": "held",
  "created": "2026-10-26T03:31:34+00:00",
  "recipe": "TikTok upload",
  "media": [
@@ -14,5 +14,12 @@
  ],
  "staged": false,
  "text": "Running ads before you have proven sales is the fastest way to drain your savings. Master warm outreach first.\n\nThe Quiet Money Daily Planner: link in bio (paid).\n\n#money #personalfinance #sidehustle #businessgrowth #entrepreneurship\n\nEducation, not financial advice.",
- "ai_label": "AI-generated content: on"
+ "ai_label": "AI-generated content: on",
+ "history": [
+  {
+   "at": "2026-10-26T10:00:12+00:00",
+   "result": "held",
+   "note": "no video file in the container; render it again before posting"
+  }
+ ]
 }

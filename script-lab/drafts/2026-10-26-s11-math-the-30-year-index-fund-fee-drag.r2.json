@@ -1,0 +1,109 @@
+{
+  "title": "The 1% Investment Fee Drag That Costs You $176,000",
+  "hook_text": "HOW A 1% FEE STEALS $176,000",
+  "beats": [
+    {
+      "say": "A tiny 1% investment fee quietly steals six figures from your retirement account.",
+      "callout": "",
+      "visual": "Low angle silhouette of a person standing on a wet asphalt underpass at night beneath a massive concrete bridge structure, single sodium light overhead."
+    },
+    {
+      "say": "Most investors assume a 1% management fee is harmless because they're keeping 99% of their returns.",
+      "callout": "1% FEE VS 99% RETURN",
+      "visual": "Extreme wide shot of a solitary billboard frame in heavy night fog beside an empty highway."
+    },
+    {
+      "say": "So where does that missing six-figure fortune actually go over 30 years of compounding?",
+      "callout": "",
+      "visual": "Extreme close up of a heavy vault door handle in a dark concrete basement, cold blue hour light."
+    },
+    {
+      "say": "The math is tricky. That fee isn't calculated once on your initial deposit; it's pulled every single year.",
+      "callout": "ANNUAL FEE DRAIN",
+      "visual": "High angle shot looking straight down a damp, empty spiral staircase lit by cold fluorescent overhead bulb."
+    },
+    {
+      "say": "Here's the proof. Imagine investing $100,000 for 30 years at 7% interest with a 0.05% fee.",
+      "callout": "",
+      "visual": "Silhouette of a solitary figure standing beside a dark, empty industrial dock under driving rain."
+    },
+    {
+      "say": "With that minimal fee, your portfolio quietly grows to $750,626.",
+      "callout": "$750,626",
+      "visual": "Extreme wide shot of a glass tower rising into low night fog, subtle orange street lamp reflections on dark asphalt."
+    },
+    {
+      "say": "So what happens to your money if your app quietly charges a 1.00% fee instead?",
+      "callout": "",
+      "visual": "Low angle shot looking up at a massive, dark brutalist concrete building facade under a stormy dusk sky."
+    },
+    {
+      "say": "With a 1.00% fee, that exact same account only reaches $574,349.",
+      "callout": "$574,349",
+      "visual": "Cold fluorescent light illuminating a long, empty dark hallway inside a quiet subterranean complex."
+    },
+    {
+      "say": "That tiny 0.95% fee gap erased $176,277 in total wealth over three decades.",
+      "callout": "$176,277 LOST",
+      "visual": "Extreme close up of massive rusty iron chain links wrapped tightly around an old metal gate."
+    },
+    {
+      "say": "You didn't just pay 1% for management; you handed over 23% of your final retirement wealth.",
+      "callout": "23% OF WEALTH",
+      "visual": "Silhouette of a person walking alone across a vast, wet concrete plaza illuminated by single floodlight."
+    },
+    {
+      "say": "That's because every dollar stolen in fees is a dollar that never gets to compound.",
+      "callout": "",
+      "visual": "High angle shot of a solitary wet bench under a single street lamp in midnight mist."
+    },
+    {
+      "say": "Checking your expense ratio today seals the leak and secures your financial future.",
+      "callout": "",
+      "visual": "Low angle shot of a towering water surge wall against a dark midnight horizon."
+    },
+    {
+      "say": "Follow Quiet Money for the money rules school never taught you.",
+      "callout": "",
+      "visual": "Extreme wide shot of a distant lighthouse beacon sweeping dark open water at blue hour."
+    }
+  ],
+  "caption": "A 1% investment fee sounds harmless until compounding turns it into a $176,000 loss.\n\n#money #personalfinance #investing #indexfunds #quietmoney",
+  "description": "Exposing the real cost of a 1% annual management fee over 30 years. Using true compound calculations, see how a 0.95% difference in fees strips over $176,000 from a $100,000 portfolio.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#investing",
+    "#indexfunds",
+    "#financialliteracy"
+  ],
+  "first_comment": "What is the expense ratio on your primary index fund?",
+  "facts": [
+    {
+      "claim": "$100,000 invested for 30 years at 7% minus 0.05% fee equals $750,626.",
+      "basis": "Quiet Money fact sheet calculation."
+    },
+    {
+      "claim": "$100,000 invested for 30 years at 7% minus 1.00% fee equals $574,349.",
+      "basis": "Quiet Money fact sheet calculation."
+    },
+    {
+      "claim": "A 1.00% fee versus a 0.05% fee reduces the final wealth by $176,277, or roughly 23.48% of the total potential balance.",
+      "basis": "$750,626 - $574,349 = $176,277. $176,277 / $750,626 = 23.48%."
+    }
+  ],
+  "source": "llm",
+  "pillar": "math",
+  "look": "",
+  "loop_map": {
+    "stakes": "Investors lose over $176,000 to seemingly small 1% management fees over 30 years.",
+    "big_question": "Where does that missing six-figure fortune actually go over 30 years of compounding?",
+    "assume": "A 1% management fee leaves you with 99% of your investment gains.",
+    "reveal": "Because fees are assessed annually on the entire portfolio, a 1% fee devours nearly 24% of your total 30-year ending wealth.",
+    "rehook_beats": [
+      4,
+      7
+    ],
+    "payoff_beat": 10
+  }
+}

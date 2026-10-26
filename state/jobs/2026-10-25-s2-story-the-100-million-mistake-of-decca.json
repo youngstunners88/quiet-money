@@ -1,0 +1,25 @@
+{
+  "id": "2026-10-25-s2-story-the-100-million-mistake-of-decca",
+  "pillar": "story",
+  "topic": "The $100 Million Mistake of Decca Records Passing on The Beatles",
+  "day": "2026-10-25",
+  "slot": 2,
+  "status": "failed",
+  "history": [
+    {
+      "from": "planned",
+      "to": "failed",
+      "ts": "2026-10-25T09:37:51Z",
+      "error": "all llm providers failed: gemini: ProviderError: gemini: gemini-3.8-flash:ProxyError,gemini-3.5-flash:ProxyError,gemini-3.5-flash-lite:ProxyError | longcat: unavailable (LONGCAT_API_KEY not set) | mis"
+    }
+  ],
+  "artifacts": {
+    "angle": "A record executive who rejected the most famous band in history because he thought guitar groups were on their way out, illustrating the high cost of cognitive bias in business decisions.",
+    "hook": "In 1962, a record executive turned down a young band from Liverpool because he confidently told them guitar groups were completely on their way out."
+  },
+  "scores": {},
+  "cost": {},
+  "notes": [
+    "all llm providers failed: gemini: ProviderError: gemini: gemini-3.8-flash:ProxyError,gemini-3.5-flash:ProxyError,gemini-3.5-flash-lite:ProxyError | longcat: unavailable (LONGCAT_API_KEY not set) | mistral: unavailable (mistral: every key limited or refused (ProxyError,ProxyError)) | openrouter: Prov"
+  ]
+}

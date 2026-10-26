@@ -1,0 +1,96 @@
+{
+  "title": "How to Kill Useless Credit Card Protection Fees",
+  "hook_text": "CHECK YOUR CREDIT CARD STATEMENT NOW",
+  "beats": [
+    {
+      "say": "Check your credit card statement today for a fee called protection you never asked for.",
+      "callout": "",
+      "visual": "Close up of hands holding a dark credit card on rain-slicked wet asphalt at night under sodium light."
+    },
+    {
+      "say": "Millions of cardholders pay $10 to $20 every single month for credit monitoring or payment insurance.",
+      "callout": "$10 TO $20 A MONTH",
+      "visual": "Silhouette of a person standing at a cold fluorescent payphone terminal in a fog-covered alleyway."
+    },
+    {
+      "say": "Why are financial institutions quietly adding these features, and where does that cash actually go?",
+      "callout": "",
+      "visual": "Low angle view of a massive glass skyscraper looming in dark misty blue hour light."
+    },
+    {
+      "say": "You'd think it safeguards your credit score, but it mostly protects the bank's own balance sheet.",
+      "callout": "PROTECTION VS BANK PROFIT",
+      "visual": "Extreme wide shot of a lone car parked under a single flickering streetlight on an empty highway."
+    },
+    {
+      "say": "So how much money are you quietly leaking over time without ever realizing it?",
+      "callout": "",
+      "visual": "High angle shot of a solitary figure walking past tall brutalist concrete pillars under dim sodium lighting."
+    },
+    {
+      "say": "A simple $15 monthly fee adds up to $1,800 stolen from your pocket over 10 years.",
+      "callout": "$15/MO = $1,800",
+      "visual": "Extreme close up of a hand holding a brass key near cold metallic safety deposit boxes."
+    },
+    {
+      "say": "Here's how you kill this useless fee today in less than 3 minutes.",
+      "callout": "",
+      "visual": "Silhouette standing at the edge of an empty wet parking deck overlooking a misty city skyline."
+    },
+    {
+      "say": "Step one. Log into your credit card app and click on account services or statement details.",
+      "callout": "STEP ONE",
+      "visual": "Hands holding a dark sleek mobile phone from behind in a dark room lit by cold blue light."
+    },
+    {
+      "say": "Step two. Search for payment protection, add-on products, or credit alert services under enrolled benefits.",
+      "callout": "STEP TWO",
+      "visual": "Extreme low angle shot of an empty concrete subway platform late at night in heavy fog."
+    },
+    {
+      "say": "Step three. Click cancel, or open live chat and type, opt me out of all add-on plans immediately.",
+      "callout": "STEP THREE",
+      "visual": "A lone figure standing inside a misty glass elevator ascending a dark building exterior."
+    },
+    {
+      "say": "That's a simple 3-minute opt-out that stops the hidden leak and puts $1,800 back where it belongs.",
+      "callout": "$1,800 SAVED",
+      "visual": "High angle shot of wet city asphalt reflecting gold lights in the deep blue dusk."
+    },
+    {
+      "say": "Follow for the money rules school never taught you, and check your statement every single month.",
+      "callout": "",
+      "visual": "Wide silhouette of a person standing on a foggy ridge line under stars at twilight."
+    }
+  ],
+  "caption": "Stop letting banks quietly slice off $15 a month for junk fees. Opt out today. #money #personalfinance #creditcard #financialtips #quietmoney",
+  "description": "Credit card protection plans and monitoring add-ons are often slipped onto statements without clear approval. This 3-step action shows you how to remove them in 3 minutes and save $1,800 over 10 years.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#creditcard",
+    "#financialtips",
+    "#quietmoney"
+  ],
+  "first_comment": "Have you ever found a random fee on your credit card statement? Let us know below.",
+  "facts": [
+    {
+      "claim": "A $15/month fee equals $1,800 over 10 years",
+      "basis": "Fact sheet math: $15/month subscription for 10 years = $1,800"
+    }
+  ],
+  "source": "llm",
+  "pillar": "playbook",
+  "look": "",
+  "loop_map": {
+    "stakes": "Check your credit card statement today for a fee called protection you never asked for.",
+    "big_question": "Why are financial institutions quietly adding these features, and where does that cash actually go?",
+    "assume": "You'd think payment protection safeguards your credit score.",
+    "reveal": "It mostly protects the bank's balance sheet while draining $1,800 from you over 10 years.",
+    "rehook_beats": [
+      5,
+      7
+    ],
+    "payoff_beat": 11
+  }
+}

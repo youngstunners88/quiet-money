@@ -1,76 +1,81 @@
 {
-  "id": "2026-10-26-s8-playbook-cancel-amazon-kindle-and-audible",
-  "pillar": "playbook",
-  "topic": "Cancel Amazon Kindle and Audible Subscriptions",
-  "day": "2026-10-26",
-  "slot": 8,
-  "status": "published",
-  "history": [
-    {
-      "from": "planned",
-      "to": "scripted",
-      "ts": "2026-10-26T03:12:03Z",
-      "words": 191
-    },
-    {
-      "from": "scripted",
-      "to": "voiced",
-      "ts": "2026-10-26T03:13:45Z",
-      "seconds": 71.723,
-      "provider": "edge"
-    },
-    {
-      "from": "voiced",
-      "to": "visualized",
-      "ts": "2026-10-26T03:13:46Z"
-    },
-    {
-      "from": "visualized",
-      "to": "rendered",
-      "ts": "2026-10-26T03:16:11Z"
-    },
-    {
-      "from": "rendered",
-      "to": "gated",
-      "ts": "2026-10-26T03:16:11Z",
-      "score": 98
-    },
-    {
-      "from": "gated",
-      "to": "packaged",
-      "ts": "2026-10-26T03:16:11Z"
-    },
-    {
-      "from": "packaged",
-      "to": "published",
-      "ts": "2026-10-26T03:27:03Z",
-      "manual": true,
-      "forced": false
-    }
-  ],
-  "artifacts": {
-    "angle": "Purge forgotten digital reading memberships draining your card monthly.",
-    "hook": "You've paid for ten digital audiobooks you never even downloaded.",
-    "style": "cinematic",
-    "video": "/home/kofibeatz/Documents/Quiet Money/quiet-money/production/output/2026-10-26/2026-10-26-s8-playbook-cancel-amazon-kindle-and-audible/final.mp4",
-    "cover": "/home/kofibeatz/Documents/Quiet Money/quiet-money/production/output/2026-10-26/2026-10-26-s8-playbook-cancel-amazon-kindle-and-audible/cover.jpg",
-    "publish": {
-      "local": {
-        "mode": "local",
-        "folder": "/home/kofibeatz/Documents/Quiet Money/quiet-money/distribution/queue/2026-10-27/slot4-playbook",
-        "post_at": "2026-10-27T18:30:00-04:00"
-      },
-      "youtube": {
-        "skipped": "COMPOSIO_API_KEY not set"
-      }
-    }
+ "id": "2026-10-26-s8-playbook-cancel-amazon-kindle-and-audible",
+ "pillar": "playbook",
+ "topic": "Cancel Amazon Kindle and Audible Subscriptions",
+ "day": "2026-10-26",
+ "slot": 8,
+ "status": "held",
+ "history": [
+  {
+   "from": "planned",
+   "to": "scripted",
+   "ts": "2026-10-26T03:12:03Z",
+   "words": 191
   },
-  "scores": {
-    "gauntlet": 98,
-    "passed": true
+  {
+   "from": "scripted",
+   "to": "voiced",
+   "ts": "2026-10-26T03:13:45Z",
+   "seconds": 71.723,
+   "provider": "edge"
   },
-  "cost": {
-    "tts:edge:chars": 1208
+  {
+   "from": "voiced",
+   "to": "visualized",
+   "ts": "2026-10-26T03:13:46Z"
   },
-  "notes": []
+  {
+   "from": "visualized",
+   "to": "rendered",
+   "ts": "2026-10-26T03:16:11Z"
+  },
+  {
+   "from": "rendered",
+   "to": "gated",
+   "ts": "2026-10-26T03:16:11Z",
+   "score": 98
+  },
+  {
+   "from": "gated",
+   "to": "packaged",
+   "ts": "2026-10-26T03:16:11Z"
+  },
+  {
+   "from": "packaged",
+   "to": "published",
+   "ts": "2026-10-26T03:27:03Z",
+   "manual": true,
+   "forced": false
+  },
+  {
+   "from": "published",
+   "to": "held",
+   "note": "status said published with no YouTube video ID; corrected 2026-10-26 to what is on disk"
+  }
+ ],
+ "artifacts": {
+  "angle": "Purge forgotten digital reading memberships draining your card monthly.",
+  "hook": "You've paid for ten digital audiobooks you never even downloaded.",
+  "style": "cinematic",
+  "video": "/home/kofibeatz/Documents/Quiet Money/quiet-money/production/output/2026-10-26/2026-10-26-s8-playbook-cancel-amazon-kindle-and-audible/final.mp4",
+  "cover": "/home/kofibeatz/Documents/Quiet Money/quiet-money/production/output/2026-10-26/2026-10-26-s8-playbook-cancel-amazon-kindle-and-audible/cover.jpg",
+  "publish": {
+   "local": {
+    "mode": "local",
+    "folder": "/home/kofibeatz/Documents/Quiet Money/quiet-money/distribution/queue/2026-10-27/slot4-playbook",
+    "post_at": "2026-10-27T18:30:00-04:00"
+   },
+   "youtube": {
+    "skipped": "COMPOSIO_API_KEY not set"
+   }
+  }
+ },
+ "scores": {
+  "gauntlet": 98,
+  "passed": true
+ },
+ "cost": {
+  "tts:edge:chars": 1208
+ },
+ "notes": []
 }

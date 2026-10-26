@@ -1,0 +1,18 @@
+{
+ "id": "2026-10-25-tiktok-2026-10-25-s1-escape-the-net-cash-flow-test-for-",
+ "kind": "tiktok",
+ "day": "2026-10-25",
+ "key": "2026-10-25-s1-escape-the-net-cash-flow-test-for-paych",
+ "status": "queued",
+ "created": "2026-10-26T10:00:02+00:00",
+ "recipe": "TikTok upload",
+ "media": [
+  {
+   "source": "production/output/2026-10-25/2026-10-25-s1-escape-the-net-cash-flow-test-for-paych/final.mp4",
+   "name": "final.mp4"
+  }
+ ],
+ "staged": false,
+ "text": "Run the net cash flow test to separate true assets from hidden liabilities.\n\nThe Quiet Money Daily Planner: link in bio (paid).\n\n#MoneyPsychology #PersonalFinance #PassiveIncome #WealthBuilding #FinancialFreedom\n\nEducation, not financial advice.",
+ "ai_label": "AI-generated content: on"
+}

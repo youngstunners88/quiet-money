@@ -1,0 +1,96 @@
+{
+  "title": "How to Cancel Credit Card Protection Fees in 15 Minutes",
+  "hook_text": "CHECK YOUR CREDIT CARD STATEMENT NOW",
+  "beats": [
+    {
+      "say": "Check your credit card statement right now for a hidden fee called Payment Protection.",
+      "callout": "",
+      "visual": "Extreme close-up of a hand holding a sleek black plastic credit card under harsh blue fluorescent light."
+    },
+    {
+      "say": "Most people assume their bank automatically added this safety feature to protect their credit for free.",
+      "callout": "FREE VS CHARGE",
+      "visual": "Low-angle shot of a tall glass bank skyscraper looming in heavy fog at dusk."
+    },
+    {
+      "say": "So where does that quiet recurring charge actually go every single billing cycle?",
+      "callout": "",
+      "visual": "Wet asphalt of a dark city street reflection under amber sodium light at night."
+    },
+    {
+      "say": "A $15/month subscription for 10 years quietly drains $1,800 out of your pocket for nothing.",
+      "callout": "$1,800 LOST",
+      "visual": "Silhouette of a person standing alone inside a stark, empty concrete parking garage with rain falling outside."
+    },
+    {
+      "say": "How do you permanently remove this automatic fee before your next bill arrives?",
+      "callout": "",
+      "visual": "Macro shot of fingers pressing a key on a dark mechanical keyboard in a dimly lit room."
+    },
+    {
+      "say": "Step one. Log into your online banking portal and download your latest PDF statement.",
+      "callout": "STEP ONE",
+      "visual": "High angle shot of a clean wooden desk illuminated by a single warm desk lamp at midnight."
+    },
+    {
+      "say": "Scan your monthly transactions for hidden line items like Payment Protector or Credit Shield.",
+      "callout": "",
+      "visual": "Silhouette of a person's hands holding a dark smartphone against a rain-slicked window at night."
+    },
+    {
+      "say": "What happens if your credit card portal hides the toggle to turn it off?",
+      "callout": "",
+      "visual": "Cold fluorescent light spilling across an empty corporate hallway lined with dark glass doors."
+    },
+    {
+      "say": "Step two. Open your bank's secure online messaging center or initiate a live chat.",
+      "callout": "STEP TWO",
+      "visual": "Extreme close-up of a hand typing on a laptop trackpad in a quiet room with moody shadows."
+    },
+    {
+      "say": "Step three. Send this exact message: 'I never requested this protection plan. Cancel it immediately and refund all past fees.'",
+      "callout": "STEP THREE",
+      "visual": "Low angle view of a towering concrete city wall bathed in cool mist and deep shadow."
+    },
+    {
+      "say": "That fee goes straight back into your account balance, shutting down the hidden drain for good.",
+      "callout": "FEE REMOVED",
+      "visual": "Single practical lamp casting a warm glow over a minimalist dark tabletop in a quiet room."
+    },
+    {
+      "say": "Check your credit card statement right now, and follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "Wide cinematic shot of a misty highway cutting through an empty landscape at blue hour."
+    }
+  ],
+  "caption": "Kill useless credit card protection fees today in 3 simple steps. Save your cash.\n\n#money #personalfinance #creditcard #financialfreedom #dothistoday",
+  "description": "Learn how to spot and eliminate hidden credit card payment protection and credit shield fees in under 15 minutes using a simple 3-step action plan.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#creditcard",
+    "#financialfreedom",
+    "#dothistoday"
+  ],
+  "first_comment": "Have you ever checked your statement and caught a monthly fee you never asked for?",
+  "facts": [
+    {
+      "claim": "A $15/month subscription for 10 years = $1,800",
+      "basis": "Fact sheet calculation: $15/month for 10 years = $1,800"
+    }
+  ],
+  "source": "llm",
+  "pillar": "playbook",
+  "look": "",
+  "loop_map": {
+    "stakes": "A hidden payment protection fee on your credit card statement.",
+    "big_question": "So where does that quiet recurring charge actually go every single billing cycle?",
+    "assume": "Most people assume their bank automatically added this safety feature to protect their credit for free.",
+    "reveal": "A $15/month subscription for 10 years quietly drains $1,800 out of your pocket for nothing.",
+    "rehook_beats": [
+      5,
+      8
+    ],
+    "payoff_beat": 11
+  }
+}

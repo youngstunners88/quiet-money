@@ -1,0 +1,82 @@
+{
+ "id": "2026-10-26-s12-playbook-remove-credit-card-protection-pl",
+ "pillar": "playbook",
+ "topic": "Remove Credit Card Protection Plan Add-Ons",
+ "day": "2026-10-26",
+ "slot": 12,
+ "status": "packaged",
+ "history": [
+  {
+   "from": "planned",
+   "to": "scripted",
+   "ts": "2026-10-26T09:50:16Z",
+   "words": 180
+  },
+  {
+   "from": "scripted",
+   "to": "voiced",
+   "ts": "2026-10-26T09:50:59Z",
+   "seconds": 62.442,
+   "provider": "edge"
+  },
+  {
+   "from": "voiced",
+   "to": "visualized",
+   "ts": "2026-10-26T09:51:16Z"
+  },
+  {
+   "from": "visualized",
+   "to": "rendered",
+   "ts": "2026-10-26T09:52:51Z"
+  },
+  {
+   "from": "rendered",
+   "to": "gated",
+   "ts": "2026-10-26T09:52:51Z",
+   "score": 97
+  },
+  {
+   "from": "gated",
+   "to": "packaged",
+   "ts": "2026-10-26T09:52:52Z"
+  },
+  {
+   "from": "packaged",
+   "to": "published",
+   "ts": "2026-10-26T09:52:54Z",
+   "local": "2026-10-28T15:00:00-04:00",
+   "youtube": null
+  },
+  {
+   "from": "published",
+   "to": "packaged",
+   "note": "status said published with no YouTube video ID; corrected 2026-10-26 to what is on disk"
+  }
+ ],
+ "artifacts": {
+  "angle": "Opt out of useless credit monitoring and payment protection fees.",
+  "hook": "Check your credit card statement right now for a fee called 'protection' you never asked for.",
+  "title": "How to Cancel Credit Card Protection Fees in 15 Minutes",
+  "style": "cinematic",
+  "video": "/home/user/quiet-money/production/output/2026-10-26/2026-10-26-s12-playbook-remove-credit-card-protection-pl/final.mp4",
+  "cover": "/home/user/quiet-money/production/output/2026-10-26/2026-10-26-s12-playbook-remove-credit-card-protection-pl/cover.jpg",
+  "publish": {
+   "local": {
+    "mode": "local",
+    "folder": "/home/user/quiet-money/distribution/queue/2026-10-28/slot3-playbook",
+    "post_at": "2026-10-28T15:00:00-04:00"
+   },
+   "youtube": {
+    "skipped": "YouTube refused the upload session (HTTP 429): quota or rate limit; it resets at midnight Pacific"
+   }
+  }
+ },
+ "scores": {
+  "gauntlet": 97,
+  "passed": true
+ },
+ "cost": {
+  "tts:edge:chars": 1103
+ },
+ "notes": []
+}

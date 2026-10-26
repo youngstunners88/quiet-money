@@ -1,0 +1,106 @@
+{
+  "title": "The Gold Myth That Drains Long-Term Wealth",
+  "hook_text": "HOLDING GOLD FOR 20 YEARS",
+  "beats": [
+    {
+      "say": "Holding gold for 20 years lost buyers nearly 80% against inflation between 1980 and 2000.",
+      "callout": "",
+      "visual": "Extreme close-up of a heavy gold bullion bar resting on cold, wet concrete under a single sodium light."
+    },
+    {
+      "say": "That shiny metal sits in a vault while everyday prices climb higher each year.",
+      "callout": "",
+      "visual": "Low angle shot of a massive steel bank vault door reflecting dim, flickering fluorescent light."
+    },
+    {
+      "say": "So why do millions still trust gold as the ultimate safe-haven wealth builder?",
+      "callout": "",
+      "visual": "Silhouette of a person standing alone on a foggy rooftop edge against a dark, industrial skyline."
+    },
+    {
+      "say": "Most assume precious metals protect your purchasing power better than anything else on earth.",
+      "callout": "MYTH VS FACT",
+      "visual": "Extreme wide shot of an empty highway cutting through a dark, rain-slick mountain pass at blue hour."
+    },
+    {
+      "say": "That is the head fake. Unproductive commodities actually drag down long-term portfolio growth.",
+      "callout": "GOLD VS ASSETS",
+      "visual": "Macro shot of rusty iron chains resting on damp asphalt under harsh overhead sodium lighting."
+    },
+    {
+      "say": "Because gold produces zero cash flow, dividends, or earnings to compound over time.",
+      "callout": "ZERO YIELD",
+      "visual": "High angle shot of a solitary metal storage locker in a vast, dark, empty warehouse."
+    },
+    {
+      "say": "How much does that missed compounding actually cost your future net worth?",
+      "callout": "",
+      "visual": "Extreme close-up of dark water droplets falling onto a cold, metallic surface in shadow."
+    },
+    {
+      "say": "If you invest $500 a month at 8% a year, it grows to $1,745,504 in 40 years.",
+      "callout": "$500/MO VS 40 YRS",
+      "visual": "Low angle shot of a heavy steel suspension bridge tower cutting through thick, cold fog."
+    },
+    {
+      "say": "Gold generates none of those compounding returns while sitting quietly in your safe.",
+      "callout": "NO COMPOUNDING",
+      "visual": "Macro shot of a heavy iron padlock hanging on a dark, weathered wooden door in deep shadow."
+    },
+    {
+      "say": "What happens when you swap dead metal for income-producing assets that work for you?",
+      "callout": "",
+      "visual": "Silhouette of a lone worker walking across a vast, wet industrial rail yard at twilight."
+    },
+    {
+      "say": "You replace a stagnant hedge with productive systems that compound your cash every single month.",
+      "callout": "PRODUCTIVE ASSETS",
+      "visual": "Extreme wide shot of a massive container port under cold, blue-hour security lighting."
+    },
+    {
+      "say": "Stop hiding cash in commodities that bleed purchasing power.",
+      "callout": "",
+      "visual": "Low angle shot of a towering concrete bridge pier slick with persistent evening rain."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "Single warm practical light cutting through absolute darkness on an empty rural road."
+    }
+  ],
+  "caption": "Gold looks safe, but it destroys your purchasing power over time. Here is the math that changes everything. #money #personalfinance #wealth #investing #gold",
+  "description": "Gold is often marketed as the ultimate safe-haven asset, but history shows it lags far behind productive, income-generating assets over long time horizons.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#wealth",
+    "#investing",
+    "#gold"
+  ],
+  "first_comment": "Would you rather hold gold or income-producing assets for the next 20 years?",
+  "facts": [
+    {
+      "claim": "Holding gold for 20 years lost buyers nearly 80% against inflation between 1980 and 2000",
+      "basis": "Historical gold price peak in Jan 1980 (~$850) and stagnation through 2000 adjusted for inflation."
+    },
+    {
+      "claim": "$500 a month invested at 8% a year grows to $1,745,504 in 40 years",
+      "basis": "Fact sheet: $500/month invested for 40 years at 8%/yr (monthly compounding) = $1,745,504"
+    }
+  ],
+  "source": "llm",
+  "pillar": "myth",
+  "look": "",
+  "loop_map": {
+    "stakes": "Holding gold for 20 years lost buyers nearly 80% against inflation between 1980 and 2000.",
+    "big_question": "How much does that missed compounding actually cost your future net worth?",
+    "assume": "Precious metals protect your purchasing power better than anything else.",
+    "reveal": "Unproductive commodities drag down long-term portfolio growth because they produce zero cash flow.",
+    "rehook_beats": [
+      3,
+      7,
+      10
+    ],
+    "payoff_beat": 11
+  }
+}

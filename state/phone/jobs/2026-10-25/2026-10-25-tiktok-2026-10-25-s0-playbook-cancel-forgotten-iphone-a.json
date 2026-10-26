@@ -1,0 +1,18 @@
+{
+ "id": "2026-10-25-tiktok-2026-10-25-s0-playbook-cancel-forgotten-iphone-a",
+ "kind": "tiktok",
+ "day": "2026-10-25",
+ "key": "2026-10-25-s0-playbook-cancel-forgotten-iphone-and-andr",
+ "status": "queued",
+ "created": "2026-10-26T10:00:02+00:00",
+ "recipe": "TikTok upload",
+ "media": [
+  {
+   "source": "production/output/2026-10-25/2026-10-25-s0-playbook-cancel-forgotten-iphone-and-andr/final.mp4",
+   "name": "final.mp4"
+  }
+ ],
+ "staged": false,
+ "text": "Stop letting forgotten app trials drain your checking account. Here is the exact 3-step fix to cancel them today.\n\nFree money reset checklist: link in bio.\n\n#money #personalfinance #budgeting #savingmoney #finance\n\nEducation, not financial advice.",
+ "ai_label": "AI-generated content: on"
+}

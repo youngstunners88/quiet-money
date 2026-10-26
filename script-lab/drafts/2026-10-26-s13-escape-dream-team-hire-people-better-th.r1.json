@@ -1,0 +1,100 @@
+{
+  "title": "Why Being the Smartest Person in the Room Keeps You Broke",
+  "hook_text": "SMARTEST PERSON IN THE ROOM?",
+  "beats": [
+    {
+      "say": "If you're the smartest person on your team, your team is too small.",
+      "callout": "",
+      "visual": "Silhouette of a lone figure sitting at a desk outside a glass skyscraper at blue hour, high angle, cold lighting."
+    },
+    {
+      "say": "Trying to do every job alone caps your income at your own physical hours.",
+      "callout": "SOLO CAPACITY",
+      "visual": "Extreme close-up of exhausted hands typing on a laptop keyboard under a single sodium light in a dark room."
+    },
+    {
+      "say": "How do top builders scale past a single paycheck without working 80 hours a week?",
+      "callout": "SCALING UP",
+      "visual": "Extreme wide shot of a glass boardroom high above a foggy city skyline at dusk."
+    },
+    {
+      "say": "Most people think they must master accounting, legal work, and sales before building real wealth.",
+      "callout": "THE DIY TRAP",
+      "visual": "Rain-slick asphalt reflecting distant streetlights outside a dark corporate tower, low angle."
+    },
+    {
+      "say": "Dan Peña teaches a dream team model: surround yourself with specialists who are far sharper than you.",
+      "callout": "DREAM TEAM",
+      "visual": "Silhouettes of four professionals sitting around a dark concrete conference table under a single hanging light."
+    },
+    {
+      "say": "Instead of wearing ten hats, you run the strategy and let veteran operators execute the daily operations.",
+      "callout": "DELEGATION",
+      "visual": "Deep perspective shot looking down a dark industrial hallway with cold fluorescent lights casting long shadows."
+    },
+    {
+      "say": "An extra $1,000 a month from a scaled business invested at 8% for 10 years becomes $182,946.",
+      "callout": "$182,946 IN 10 YRS",
+      "visual": "Extreme close-up of a dark leather folder and sleek pen resting on a dark polished oak table under warm lamp light."
+    },
+    {
+      "say": "But how do you pay world-class lawyers and accountants when you're starting from zero?",
+      "callout": "TALENT COST",
+      "visual": "Silhouette of a person looking out from high-floor floor-to-ceiling windows over a dark city during a downpour."
+    },
+    {
+      "say": "Here's the honest catch: good experts demand cash or company equity, and Peña's claimed figures are self-reported.",
+      "callout": "",
+      "visual": "Low angle shot of a wet stone courtyard outside a historic courthouse lit by amber lanterns at midnight."
+    },
+    {
+      "say": "Top builders scale past a single paycheck by offering equity or profit shares to talent smarter than themselves.",
+      "callout": "",
+      "visual": "Silhouette of two figures shaking hands against a massive glass skyscraper backdrop in blue hour."
+    },
+    {
+      "say": "This week, list your weakest business skill and outline a profit-share proposal to recruit a specialist.",
+      "callout": "",
+      "visual": "Extreme close-up of a dark pen outlining text on a paper notebook resting on dark granite."
+    },
+    {
+      "say": "Follow for the money rules school never taught you, because a smart team beats a lonely worker.",
+      "callout": "",
+      "visual": "Low angle wide shot of a person walking away down an empty, wet city street towards tall illuminated towers."
+    }
+  ],
+  "caption": "Stop trying to do every job yourself. Building a dream team is how real businesses scale past a salary.\n\n#money #personalfinance #business #wealth #quietmoney",
+  "description": "Doing every job yourself puts a hard ceiling on your income. By building a dream team of operators, lawyers, and accountants, you trade equity for scale. Here is how to escape the solo trap.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#business",
+    "#wealth",
+    "#quietmoney"
+  ],
+  "first_comment": "What's the one job in your business or side project you need to delegate first?",
+  "facts": [
+    {
+      "claim": "An extra $1,000/month invested at 8% for 10 years yields $182,946.",
+      "basis": "Fact sheet calculation: $1,000/month for 10 years at 8% compounded monthly equals $182,946."
+    },
+    {
+      "claim": "Dan Peña teaches the dream team concept and his figures are self-reported.",
+      "basis": "Research brief: Dan Peña teaches 'Dream team: surround yourself with people better than you' and his financial claims are unverified self-reported figures."
+    }
+  ],
+  "source": "llm",
+  "pillar": "escape",
+  "look": "",
+  "loop_map": {
+    "stakes": "Trying to do every job alone caps your income at your physical hours.",
+    "big_question": "How do top builders scale past a single paycheck without working 80 hours a week?",
+    "assume": "Most people think they must master every skill themselves.",
+    "reveal": "Scale comes from building a dream team of specialists smarter than you.",
+    "rehook_beats": [
+      7,
+      8
+    ],
+    "payoff_beat": 10
+  }
+}
