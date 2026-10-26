@@ -25,3 +25,6 @@ Worked end to end on 2026-10-26: 143 pictures, 0 credits. The pictures are Nano 
 - Never put the signed CDN URL in a file or a commit (it expires, but treat it as private).
 - Pane viewport emulation breaks Flow's layout; leave it at the pane's own size and drive it by structure, not coordinates (the send arrow stays at about (418, 653)).
 - Cookie banner: always the non-tracking choice.
+
+## Flow's bot detection (learned 2026-10-26)
+After about 320 scripted submissions in one session, Flow answered every new request with "Failed: We noticed some unusual activity. Note that browser extensions that modify the page may cause issues." (not charged). That is anti-automation: **stop, do not retry, do not switch clients to get around it, and tell the owner.** Keep volume low (a day's set is about 65 pictures; do not add art batches on top of it in the same session), pace the clicks (a few seconds between submissions, not back to back), and make anything that does not need photographic generation (gig art, layouts, cards) in code instead.

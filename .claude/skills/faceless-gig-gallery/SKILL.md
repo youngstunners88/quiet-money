@@ -22,6 +22,9 @@ metadata:
 - **Layout:** Pillow in `faceless/gigart.py` (fonts Anton and Montserrat through `brand.font(name, size)`; brand colours from `faceless/brand.py`). Every output is 1280x769 and goes to `channel/services/<gig>/gallery/`.
 - **Check:** open the contact sheet, shrink to 300 px wide, and ask: is the promise readable, is it different from the other thumbnails in search, is anything garbled or off-brand?
 
+## The 2026-10-26 look (v2)
+Drawn entirely in `faceless/gigart.py`: near-black gradient ground, volumetric light rays, bokeh, glowing glass cards in 3-D perspective (`glass_card`), a bloom pass and a vignette. Real kit output sits inside the cards, so the proof is genuine. Each gig has its own accent (violet and gold for the brand kit, warm orange on navy for the studio gig). Check every render for text overflow and for white cards blooming too hot; run it at 300 px wide before shipping.
+
 ## Rules
 - Samples are fictional brands; never a real client, person's face or other company's logo.
 - No claim you cannot deliver in the picture (no "#1", no fake review stars, no price slashes).

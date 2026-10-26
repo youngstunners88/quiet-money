@@ -3,7 +3,7 @@
 You create the listing, set the prices and handle messages. Nothing here is posted for you.
 
 ## Title
-I will create 6 to 12 logo or mascot concept directions for your brand
+I will design 6 to 12 logo and mascot concepts for your brand
 
 ## What the buyer gets (be exact; promise only this)
 | tier | price to test | includes |
@@ -15,33 +15,33 @@ I will create 6 to 12 logo or mascot concept directions for your brand
 These prices are guesses to test. Raise them as soon as orders arrive faster than you can fill them. The speed is the edge: the sheet takes minutes, so "first concepts within 24 hours" is safe to promise.
 
 ## Description (paste; Fiverr allows 1,200 characters)
-Not sure what your logo, mascot or cover art should look like? Get a sheet of distinct directions and compare them at a glance.
+Not sure what your logo, mascot or cover art should look like? Do not guess. See 6 to 12 clearly different directions on one sheet, then choose.
 
 WHAT YOU GET
-Each direction takes a different angle and comes with a name, a one-line idea and a three-colour palette. Pick one, or two to combine, and it is refined into your final.
-- Explore: 6 directions as PDF + PNG
-- Refine: 9 directions + your pick refined, transparent PNG
-- Studio: 12 directions + two picks refined, SVG where the design allows
+Each direction takes a different angle and comes with a name, a one-line idea and a 3-colour palette, so you can compare them at a glance.
+- Explore: 6 directions, PDF + PNG
+- Refine: 9 directions + your pick refined by hand, transparent PNG
+- Studio: 12 directions + 2 picks refined, SVG where the design allows
 
 HOW IT WORKS
-1. Send a short brief: what it's for, who it's for, the feeling you want.
+1. Send a short brief: what it is for, who it is for, the feeling you want.
 2. First concepts arrive within 24 hours.
 3. Tell me your pick. I refine it by hand.
 
-BEST FOR founders, creators and small brands who need to see options before committing.
+BEST FOR founders, creators and small brands who want to see options before committing.
 NOT FOR trademark registration, "in the style of" a living artist, or lookalikes of existing brands. I decline those briefs.
 
-GOOD TO KNOW: concept pictures are generated with AI image tools; the chosen direction is refined by hand. AI-generated images may not be registrable as trademarks. If you need a registrable mark, the vector is redrawn by hand and you should check with a trademark professional.
+GOOD TO KNOW: concept pictures are made with AI image tools and your chosen direction is refined by hand. AI images may not be registrable as trademarks; for a registrable mark I redraw the vector by hand and you should check with a trademark professional.
 
 ## Search tags (Fiverr allows 5)
-logo concepts, mascot design, brand identity, logo ideas, concept art
+logo concepts, mascot design, brand identity, logo ideas, character design
 
 ## FAQ (paste into Fiverr's FAQ section)
 - **What do I send you to start?** A short brief: what it is for, who it is for, and the feeling you want. Examples you like (with why) help.
 - **How fast are the first concepts?** Within 24 hours of your brief.
-- **Is the final really refined by hand?** Yes. The concept sheet is AI-generated; your chosen direction is refined by hand for Refine and Studio.
-- **Can I trademark the result?** I can't promise that. AI-generated images may not be registrable; ask a trademark professional, and I can redraw the vector by hand.
-- **Can you copy a style or brand I like?** No. I don't copy living artists, studios or existing brands, but I can use what you like as a mood reference.
+- **Is the final really refined by hand?** Yes. The concept sheet is made with AI tools; your chosen direction is refined by hand in Refine and Studio.
+- **Can I trademark the result?** I cannot promise that. AI images may not be registrable; ask a trademark professional, and I can redraw the vector by hand.
+- **Can you copy a style or brand I like?** No. I do not copy living artists, studios or existing brands, but I can use what you like as a mood reference.
 
 ## Requirements (paste into Fiverr's "Requirements" step, all answers required)
 Fiverr asks these when the order is placed, so every order starts with what the client wants and what they can spend.
