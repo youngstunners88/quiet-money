@@ -1,0 +1,76 @@
+{
+  "id": "2026-10-26-s7-psychology-optimism-bias",
+  "pillar": "psychology",
+  "topic": "Optimism Bias",
+  "day": "2026-10-26",
+  "slot": 7,
+  "status": "published",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-26T03:08:29Z",
+      "words": 184
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-26T03:09:33Z",
+      "seconds": 68.528,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-26T03:09:33Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-26T03:12:03Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-26T03:12:03Z",
+      "score": 98
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-26T03:12:03Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-10-26T03:27:03Z",
+      "manual": true,
+      "forced": false
+    }
+  ],
+  "artifacts": {
+    "angle": "Why we consistently underbudget for emergencies, car repairs, and medical bills because we assume nothing bad will happen.",
+    "hook": "You are budgeting like your car engine, your teeth, and your laptop screen have a lifetime warranty, and it's destroying your safety net.",
+    "style": "cinematic",
+    "video": "/home/kofibeatz/Documents/Quiet Money/quiet-money/production/output/2026-10-26/2026-10-26-s7-psychology-optimism-bias/final.mp4",
+    "cover": "/home/kofibeatz/Documents/Quiet Money/quiet-money/production/output/2026-10-26/2026-10-26-s7-psychology-optimism-bias/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/kofibeatz/Documents/Quiet Money/quiet-money/distribution/queue/2026-10-27/slot3-psychology",
+        "post_at": "2026-10-27T15:00:00-04:00"
+      },
+      "youtube": {
+        "skipped": "COMPOSIO_API_KEY not set"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 98,
+    "passed": true
+  },
+  "cost": {
+    "tts:edge:chars": 1115
+  },
+  "notes": []
+}

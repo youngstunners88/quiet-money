@@ -1,0 +1,105 @@
+{
+  "title": "The Net Cash Flow Test for Early Freedom",
+  "hook_text": "YOUR INVESTMENT IS DRAINING YOUR PAYCHECK",
+  "beats": [
+    {
+      "say": "If an investment takes $500 from your paycheck each month, it's actively delaying your freedom.",
+      "callout": "",
+      "visual": "Low angle, silhouette of a lone figure standing in heavy rain on wet asphalt under flickering amber sodium light, looking up at a towering dark apartment complex."
+    },
+    {
+      "say": "Most people call real estate or side businesses investments, even when they burn monthly cash.",
+      "callout": "",
+      "visual": "High angle, wet city intersection at blue hour, headlights streaking across rain-slick street between massive brutalist high-rises."
+    },
+    {
+      "say": "So why do financial gurus tell you that negative cash flow is totally normal?",
+      "callout": "",
+      "visual": "Cold fluorescent light spilling across an empty concrete underpass, a lone commuter walking away into deep shadow."
+    },
+    {
+      "say": "They assume future price appreciation will eventually rescue every single dollar you fed it.",
+      "callout": "",
+      "visual": "Extreme wide shot of fog cutting a skyline of corporate towers at dawn, silhouettes visible through upper glass windows."
+    },
+    {
+      "say": "Here's the truth: if it doesn't pay you today, it's just a subsidized speculation.",
+      "callout": "SPECULATION VS ASSET",
+      "visual": "Extreme close-up of a weathered vintage brass balance scale under a single practical light on dark wood, completely tilted to one side."
+    },
+    {
+      "say": "What does that monthly bleed actually cost your freedom timeline over thirty years?",
+      "callout": "",
+      "visual": "Extreme wide shot of an empty highway at night stretching into darkness under distant sodium lights."
+    },
+    {
+      "say": "Investing $500 a month at 8% a year builds $745,180 after thirty years.",
+      "callout": "$745,180",
+      "visual": "Low angle shot looking up at a massive concrete tower edge slicing into an overcast stormy sky."
+    },
+    {
+      "say": "According to the 4% rule, you need $600,000 invested to produce $2,000 a month passively.",
+      "callout": "$600,000 INVESTED",
+      "visual": "Blue hour over open water at an industrial harbor, cargo cranes silhouetted against cold fading light."
+    },
+    {
+      "say": "So how do you run the net cash flow test on your own money?",
+      "callout": "",
+      "visual": "Single practical light illuminating a weathered notebook and metal pen on an industrial steel workbench, dark surrounding room."
+    },
+    {
+      "say": "Step one: subtract every mortgage payment, tax, repair, and platform fee from total revenue.",
+      "callout": "STEP ONE",
+      "visual": "Extreme close-up of hands in silhouette operating a heavy manual calculator under cold fluorescent lighting."
+    },
+    {
+      "say": "If that number is negative, you didn't buy an asset; you bought a second mortgage.",
+      "callout": "NEGATIVE CASH FLOW",
+      "visual": "High angle of a solitary figure standing on a vast empty concrete pier over dark open water."
+    },
+    {
+      "say": "True assets feed your paycheck every thirty days, instead of asking to be fed.",
+      "callout": "CASH FLOW POSITIVE",
+      "visual": "Extreme wide shot, tiny human silhouette walking along a stark ridge line against a dramatic sunrise."
+    },
+    {
+      "say": "Stop subsidizing fake assets. Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "Low angle shot of a solitary figure walking down a rain-slick street illuminated by amber sodium streetlights into the night."
+    }
+  ],
+  "caption": "An asset should pay you, not drain you. Run the net cash flow test before you invest another dollar. #quietmoney #cashflow #financialfreedom #investingrules #realestateinvesting",
+  "description": "Negative cash flow isn't an investment strategy—it's an ongoing expense draining your paycheck. We run the net cash flow test and calculate what that monthly bleed really costs your retirement.",
+  "hashtags": [
+    "#quietmoney",
+    "#cashflow",
+    "#financialfreedom",
+    "#investingrules",
+    "#passiveincome"
+  ],
+  "first_comment": "Does your current side hustle or investment put money in your pocket each month, or take it out?",
+  "facts": [
+    {
+      "claim": "Investing $500 a month at 8% a year builds $745,180 after thirty years.",
+      "basis": "Money Fact Sheet: $500/month invested for 30 years at 8%/yr (monthly compounding) = $745,180."
+    },
+    {
+      "claim": "Under the 4% rule, producing $2,000 a month of passive income requires about $600,000 invested.",
+      "basis": "Money Fact Sheet: 4% rule guideline from the 1998 Trinity study ($2,000/month = $24,000/year / 0.04 = $600,000)."
+    }
+  ],
+  "source": "llm",
+  "pillar": "escape",
+  "look": "",
+  "loop_map": {
+    "stakes": "Losing $500 monthly from your paycheck into negative-cash-flow investments delays your retirement.",
+    "big_question": "Why do people accept negative monthly cash flow, and what does it actually cost your freedom timeline?",
+    "assume": "Future appreciation will easily offset monthly out-of-pocket losses.",
+    "reveal": "An investment requiring monthly subsidies is a speculative expense that siphons money away from proven compounding.",
+    "rehook_beats": [
+      6,
+      9
+    ],
+    "payoff_beat": 11
+  }
+}

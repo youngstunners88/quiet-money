@@ -91,6 +91,21 @@ def produce(job: Job, *, judge: bool = True, prefer_voice: str | None = None, do
     all_gates += gauntlet.check_visuals(imgs, len(scr["beats"]))
     job.advance("visualized")
 
+    return _finish(job, scr, vo, imgs, all_gates, judged, do_publish)
+
+
+def resume(job: Job, *, do_publish: bool = True) -> dict:
+    """Pick a job up again after its pictures exist (state 'visualized'): render, gate, package, publish, from the files already on disk."""
+    scr = json.loads((Paths.final / f"{job.id}.json").read_text(encoding="utf-8"))
+    vo = _load(job, "voice.json")
+    imgs = _load(job, "images.json")
+    own = script_stage.narration(scr)
+    history = [h for h in ideate.history_texts() if h != job.topic and h != own]     # the finished script is already in the history: never compare a video with itself
+    gates = gauntlet.check_script(scr, history) + gauntlet.check_voice(vo) + gauntlet.check_visuals(imgs, len(scr["beats"]))
+    return _finish(job, scr, vo, imgs, gates, {}, do_publish)
+
+
+def _finish(job: Job, scr: dict, vo: dict, imgs: list, all_gates: list, judged: dict, do_publish: bool) -> dict:
     # 4. render
     info = render.run(job, scr, vo, imgs)
     job.artifacts.update(video=info["video"], cover=info["cover"])

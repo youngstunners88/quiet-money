@@ -4,13 +4,81 @@
   "topic": "Lower Your Cell Phone Bill With a Carrier Loyalty Script",
   "day": "2026-10-26",
   "slot": 4,
-  "status": "planned",
-  "history": [],
+  "status": "published",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-26T02:27:59Z",
+      "words": 183
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-26T02:28:53Z",
+      "seconds": 62.409,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-26T02:28:53Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-26T02:41:52Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-26T02:41:52Z",
+      "score": 94
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-26T02:41:52Z"
+    },
+    {
+      "from": "packaged",
+      "to": "held",
+      "ts": "2026-10-26T02:41:52Z"
+    },
+    {
+      "from": "held",
+      "to": "published",
+      "ts": "2026-10-26T02:42:18Z",
+      "manual": true,
+      "forced": false
+    }
+  ],
   "artifacts": {
     "angle": "Negotiate a cheaper legacy plan using competitor pricing leverage.",
-    "hook": "Your mobile carrier is charging you a loyalty tax just for staying with them."
+    "hook": "Your mobile carrier is charging you a loyalty tax just for staying with them.",
+    "title": "Lower Your Cell Phone Bill in 15 Minutes",
+    "style": "cinematic",
+    "video": "/home/kofibeatz/Documents/Quiet Money/quiet-money/production/output/2026-10-26/2026-10-26-s4-playbook-lower-your-cell-phone-bill-with/final.mp4",
+    "cover": "/home/kofibeatz/Documents/Quiet Money/quiet-money/production/output/2026-10-26/2026-10-26-s4-playbook-lower-your-cell-phone-bill-with/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/kofibeatz/Documents/Quiet Money/quiet-money/distribution/queue/2026-10-26/slot5-playbook",
+        "post_at": "2026-10-26T21:00:00-04:00"
+      },
+      "youtube": {
+        "skipped": "COMPOSIO_API_KEY not set"
+      }
+    }
   },
-  "scores": {},
-  "cost": {},
-  "notes": []
+  "scores": {
+    "gauntlet": 98,
+    "passed": true
+  },
+  "cost": {
+    "tts:edge:chars": 1049
+  },
+  "notes": [
+    "held for review: originality"
+  ]
 }

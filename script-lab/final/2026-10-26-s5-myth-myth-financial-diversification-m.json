@@ -1,0 +1,101 @@
+{
+ "title": "The Diversification Lie Draining Your Money",
+ "hook_text": "THE DIVERSIFICATION TRAP",
+ "beats": [
+  {
+   "say": "Owning twenty different funds doesn't mean your hard-earned money is safe.",
+   "callout": "",
+   "visual": "Low angle, silhouette of a lone figure standing on the edge of a wet concrete rooftop overlooking an endless grid of dark skyscrapers during blue hour, dense fog cutting across the skyline."
+  },
+  {
+   "say": "Most investors buy five index funds, assuming they've spread their risk.",
+   "callout": "",
+   "visual": "Extreme wide, tiny human silhouette walking past massive concrete support pillars beneath a highway underpass, harsh sodium light casting sharp diagonal shadows on damp ground."
+  },
+  {
+   "say": "So why does a single market downturn still wipe out their entire portfolio?",
+   "callout": "",
+   "visual": "High angle, lone figure in a dark coat standing motionless on a rain-slick crosswalk at night, cold fluorescent reflections streaking across wet asphalt."
+  },
+  {
+   "say": "You assume you own hundreds of companies, but you bought the same ten giants five times.",
+   "callout": "SAME TEN NAMES",
+   "visual": "Extreme close-up from behind a person's shoulder, hands shuffling five identical plain matte grey ledger cards under a single practical desk lamp in a shadowy room."
+  },
+  {
+   "say": "Wall Street calls this diworsification: it concentrates your risk instead of spreading it.",
+   "callout": "",
+   "visual": "Low angle, looking up at cold steel and glass towers vanishing into thick low-hanging storm clouds at dusk, lone shadowy figure standing at the plaza base."
+  },
+  {
+   "say": "When your broad, tech and growth funds hold identical shares, you aren't hedged.",
+   "callout": "",
+   "visual": "Extreme wide shot of a vast empty container port terminal at night, rows of identical stacked steel shipping containers illuminated by towering sodium floodlights."
+  },
+  {
+   "say": "You haven't built a safety net; you've just bought multiple tickets on the same sinking ship.",
+   "callout": "FALSE SAFETY",
+   "visual": "High angle, solitary figure standing on a dark wooden pier looking out over vast, turbulent open water during a cold twilight drizzle."
+  },
+  {
+   "say": "Worse, overlapping funds add expensive management fees every year.",
+   "callout": "",
+   "visual": "Low angle, silhouette of hands untying a heavy weathered nautical rope under cold industrial fluorescent lights in an empty concrete corridor."
+  },
+  {
+   "say": "$100,000 for 30 years at 7% minus a 1.00% annual fee leaves you with $574,349.",
+   "callout": "1.00% FEE: $574,349",
+   "visual": "Extreme wide, lone person walking down an empty multi-lane highway at night, streetlights stretching into deep perspective under a starless sky."
+  },
+  {
+   "say": "With a 0.05% annual fee, that exact same $100,000 grows to $750,626.",
+   "callout": "$750,626 VS $574,349",
+   "visual": "High angle, single practical light beam piercing pitch-black darkness, illuminating a lone pair of hands sorting smooth dark river stones on weathered dark oak."
+  },
+  {
+   "say": "That overlap doesn't protect you; it just burns $176,277 in lost gains for fake safety.",
+   "callout": "LOST: $176,277",
+   "visual": "Low angle, massive towering concrete dam wall rising into the fog, a tiny human silhouette standing at the base on wet cracked bedrock."
+  },
+  {
+   "say": "Real diversification means different asset classes, not identical stocks in separate wrappers.",
+   "callout": "TRUE DIVERSIFICATION",
+   "visual": "Extreme wide, lone traveler standing on a high mountain ridge line at blue hour, looking down at layered mountain silhouettes fading into cold mist."
+  },
+  {
+   "say": "Cut the duplicates, lower your fees, and follow for the money rules school never taught you.",
+   "callout": "",
+   "visual": "Low angle, silhouette of a person standing at the edge of an empty wet asphalt road vanishing into morning fog, amber dawn horizon cutting through mist."
+  }
+ ],
+ "caption": "Owning twenty funds isn't diversification if they all hold the exact same stocks.\n\n#money #personalfinance #investing #wealth #financialliteracy",
+ "description": "More funds do not mean less risk. Discover why portfolio overlap creates diworsification, inflates hidden management fees, and leaves your paycheck exposed to identical crashes.",
+ "hashtags": [
+  "#money",
+  "#personalfinance",
+  "#investing",
+  "#indexfunds",
+  "#financialfreedom"
+ ],
+ "first_comment": "How many funds are you currently holding in your portfolio?",
+ "facts": [
+  {
+   "claim": "$100,000 invested for 30 years at 7% minus a 1.00% annual fee equals $574,349, while at a 0.05% annual fee it grows to $750,626.",
+   "basis": "Standard compound interest calculations provided in the channel Money Fact Sheet."
+  }
+ ],
+ "source": "llm",
+ "pillar": "myth",
+ "look": "",
+ "loop_map": {
+  "stakes": "Owning twenty different funds still leaves the viewer exposed to catastrophic losses.",
+  "big_question": "Why does a portfolio of multiple index funds still crash together?",
+  "assume": "Buying several index funds spreads risk across hundreds of independent companies.",
+  "reveal": "Most popular funds hold the same mega-cap stocks, compounding overlap and annual fees without reducing risk.",
+  "rehook_beats": [
+   5,
+   8
+  ],
+  "payoff_beat": 12
+ }
+}

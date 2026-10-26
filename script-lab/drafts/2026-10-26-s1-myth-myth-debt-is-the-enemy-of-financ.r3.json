@@ -1,0 +1,105 @@
+{
+  "title": "The Debt Myth That Keeps You Broke",
+  "hook_text": "WHY ALL DEBT ISN'T EVIL",
+  "beats": [
+    {
+      "say": "That $3,000 credit card balance makes debt look like your worst financial enemy.",
+      "callout": "",
+      "visual": "Extreme close-up of a dark matte plastic credit card resting on an aged wooden table, dramatic side lighting highlighting the embossed chip, shallow depth of field, cinematic 35mm."
+    },
+    {
+      "say": "At 24% APR, paying only the minimum burns $4,887 in interest across 15 painful years.",
+      "callout": "$4,887 IN INTEREST",
+      "visual": "A silhouette of hands slowly folding an envelope under a harsh desk lamp, dark moody room, atmospheric dust motes in the warm light beam."
+    },
+    {
+      "say": "Most people assume every type of borrowing destroys wealth, so they swear off debt completely.",
+      "callout": "",
+      "visual": "High-angle shot looking down at empty wooden desk with scattered generic paper receipts blurred and turned over, cold morning window light."
+    },
+    {
+      "say": "That's the trap. Consumer debt drains your paycheck, but productive leverage multiplies your equity.",
+      "callout": "CONSUMPTION VS LEVERAGE",
+      "visual": "Split cinematic frame, left side dark cool shadows showing an empty leather wallet, right side warm golden sunlight hitting an architectural model of a modern building."
+    },
+    {
+      "say": "Here's the mechanism: say you put $20,000 of your cash down on a $100,000 property.",
+      "callout": "",
+      "visual": "Close-up of a hand placing a single heavy brass key onto architectural blueprints on a dark walnut desk, soft directional spotlight."
+    },
+    {
+      "say": "That $80,000 bank loan isn't dragging you down; it creates 5x leverage on your investment.",
+      "callout": "5X LEVERAGE",
+      "visual": "Low-angle shot looking up at the glass facade of a quiet modern residential building reflecting dramatic twilight clouds, no visible signs or text."
+    },
+    {
+      "say": "When that property's price rises 20%, the total asset increases in value by $20,000.",
+      "callout": "",
+      "visual": "Cinematic aerial view over clean symmetrical townhome rooftops during golden hour, sharp long shadows, serene documentary aesthetic."
+    },
+    {
+      "say": "Before costs and interest, your initial $20,000 down payment didn't just grow 20%, it doubled.",
+      "callout": "DOUBLED EQUITY",
+      "visual": "Over-the-shoulder shot from behind an anonymous figure looking out of a tall loft window over a sunrise cityscape, warm rim lighting."
+    },
+    {
+      "say": "Without that bank loan, putting your $20,000 into an unleveraged asset earns only $4,000.",
+      "callout": "$4,000 VS $20,000",
+      "visual": "Close-up of an analog balance scale made of dark iron, one side slightly tipped, resting on a polished stone surface under soft ambient light."
+    },
+    {
+      "say": "Here's the critical catch: what happens when that leveraged asset suddenly turns against you?",
+      "callout": "",
+      "visual": "Dramatic low-angle shot of rain running down a dark panoramic window pane, blurred city lights forming cold blue bokeh in the background."
+    },
+    {
+      "say": "Because leverage magnifies both directions, a 20% drop wipes out your entire $20,000 down payment.",
+      "callout": "-100% DOWN PAYMENT",
+      "visual": "Close-up of an hourglass with dark sand falling rapidly into the bottom glass chamber, deep shadows, cinematic moody lighting."
+    },
+    {
+      "say": "The wealthy don't borrow to buy liabilities that rot; they use debt to multiply equity.",
+      "callout": "",
+      "visual": "Rear view silhouette of a tailored figure walking calmly through a spacious, minimalist concrete gallery hall bathed in soft diffused daylight."
+    },
+    {
+      "say": "Debt isn't your enemy; lack of cash flow is. Follow for smarter money moves.",
+      "callout": "",
+      "visual": "Cinematic macro shot of an antique compass resting on a dark slate desk, needle settling firmly into place under warm golden light."
+    }
+  ],
+  "caption": "Debt isn't your enemy—uncontrolled consumption is. Here's how the wealthy actually use leverage.",
+  "description": "Most people treat all debt as financial ruin, but the ultra-wealthy use leverage as an equity multiplier. Learn the mathematical difference between consumer debt and productive asset leverage.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#wealthbuilding",
+    "#financialfreedom",
+    "#moneymindset"
+  ],
+  "first_comment": "Were you taught to avoid all debt, or did anyone teach you about leverage?",
+  "facts": [
+    {
+      "claim": "A $3,000 credit card balance at 24% APR paying only the minimum takes 183 months (~15 years) and costs $4,887 in interest.",
+      "basis": "Money Fact Sheet calculation: $3,000 credit card at 24% APR paying minimum (1% + interest, min $25)."
+    },
+    {
+      "claim": "A $100,000 property purchased with $20,000 down is 5x leverage; a 20% rise doubles the down payment ($20,000 gain) before costs and interest, while a 20% drop wipes it out.",
+      "basis": "Money Fact Sheet leverage calculation: $100,000 property with $20,000 down (5x leverage)."
+    }
+  ],
+  "source": "llm",
+  "pillar": "myth",
+  "look": "",
+  "loop_map": {
+    "stakes": "A $3,000 credit card balance quietly drains $4,887 in interest, making all debt look lethal.",
+    "big_question": "How does debt bankrupt one earner while multiplying fortunes for another?",
+    "assume": "All debt is financial poison that guarantees poverty and should never be used.",
+    "reveal": "Consumer debt drains paychecks, while asset leverage amplifies equity returns.",
+    "rehook_beats": [
+      5,
+      10
+    ],
+    "payoff_beat": 12
+  }
+}

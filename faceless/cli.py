@@ -344,6 +344,13 @@ def cmd_cineedit(args) -> int:
     return 0
 
 
+def cmd_gigart(args) -> int:
+    from faceless import gigart
+    for p in gigart.build():
+        print(p)
+    return 0
+
+
 def cmd_craftcheck(args) -> int:
     from pathlib import Path
     from faceless import craftcheck
@@ -1460,6 +1467,8 @@ def main(argv: list[str] | None = None) -> int:
     ce.add_argument("--out", help="output path (default <clip>-edit.mp4)")
     ce.add_argument("--card", default="QUIET MONEY", help="end-card line")
     ce.set_defaults(fn=cmd_cineedit)
+    ga = sub.add_parser("gigart", help="Fiverr gig gallery images (1280x769 hero, what-you-get, proof) for the brand-kit and studio gigs")
+    ga.set_defaults(fn=cmd_gigart)
     cc = sub.add_parser("craftcheck", help="assess a finished reel against every craft lesson so far; advisory, never blocks, records what to fix next")
     cc.add_argument("video")
     cc.add_argument("--report", help="the build report JSON from faceless.reel.build (act starts, CTA, narration timings)")

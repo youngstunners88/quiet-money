@@ -4,14 +4,75 @@
   "topic": "The Four Core Customer Channels: Escaping the Paid Ad Trap",
   "day": "2026-10-26",
   "slot": 0,
-  "status": "planned",
-  "history": [],
+  "status": "published",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-26T02:19:35Z",
+      "words": 188
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-26T02:20:19Z",
+      "seconds": 62.321,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-26T02:20:20Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-26T02:27:06Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-26T02:27:06Z",
+      "score": 100
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-26T02:27:06Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-10-26T02:27:06Z",
+      "local": "2026-10-26T07:30:00-04:00",
+      "youtube": null
+    }
+  ],
   "artifacts": {
     "angle": "Teaches the four universal ways to get customers and why early-stage ventures must master warm outreach before risking ad spend.",
     "brief": "hormozi",
-    "hook": "There are only four ways to get customers on earth—and picking the wrong one burns through your savings in 30 days."
+    "hook": "There are only four ways to get customers on earth—and picking the wrong one burns through your savings in 30 days.",
+    "title": "The Customer Channel Mistake That Burns Savings",
+    "style": "cinematic",
+    "video": "/home/kofibeatz/Documents/Quiet Money/quiet-money/production/output/2026-10-26/2026-10-26-s0-escape-the-four-core-customer-channels/final.mp4",
+    "cover": "/home/kofibeatz/Documents/Quiet Money/quiet-money/production/output/2026-10-26/2026-10-26-s0-escape-the-four-core-customer-channels/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/kofibeatz/Documents/Quiet Money/quiet-money/distribution/queue/2026-10-26/slot1-escape",
+        "post_at": "2026-10-26T07:30:00-04:00"
+      },
+      "youtube": {
+        "skipped": "COMPOSIO_API_KEY not set"
+      }
+    }
   },
-  "scores": {},
-  "cost": {},
+  "scores": {
+    "gauntlet": 100,
+    "passed": true
+  },
+  "cost": {
+    "tts:edge:chars": 1106
+  },
   "notes": []
 }

@@ -4,13 +4,81 @@
   "topic": "Relative Income Hypothesis",
   "day": "2026-10-26",
   "slot": 3,
-  "status": "planned",
-  "history": [],
+  "status": "published",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-26T02:26:46Z",
+      "words": 191
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-26T02:27:19Z",
+      "seconds": 67.771,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-26T02:27:19Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-26T02:38:10Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-26T02:38:10Z",
+      "score": 94
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-26T02:38:10Z"
+    },
+    {
+      "from": "packaged",
+      "to": "held",
+      "ts": "2026-10-26T02:38:10Z"
+    },
+    {
+      "from": "held",
+      "to": "published",
+      "ts": "2026-10-26T02:39:35Z",
+      "manual": true,
+      "forced": false
+    }
+  ],
   "artifacts": {
     "angle": "Why earning $100k feels like poverty if your friends make $150k, and how social comparison drains accounts.",
-    "hook": "Making six figures won't feel like enough if your peer group makes six figures and one dollar more."
+    "hook": "Making six figures won't feel like enough if your peer group makes six figures and one dollar more.",
+    "title": "Why Earning $100k Still Feels Like Poverty",
+    "style": "cinematic",
+    "video": "/home/kofibeatz/Documents/Quiet Money/quiet-money/production/output/2026-10-26/2026-10-26-s3-psychology-relative-income-hypothesis/final.mp4",
+    "cover": "/home/kofibeatz/Documents/Quiet Money/quiet-money/production/output/2026-10-26/2026-10-26-s3-psychology-relative-income-hypothesis/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/kofibeatz/Documents/Quiet Money/quiet-money/distribution/queue/2026-10-26/slot4-psychology",
+        "post_at": "2026-10-26T18:30:00-04:00"
+      },
+      "youtube": {
+        "skipped": "COMPOSIO_API_KEY not set"
+      }
+    }
   },
-  "scores": {},
-  "cost": {},
-  "notes": []
+  "scores": {
+    "gauntlet": 98,
+    "passed": true
+  },
+  "cost": {
+    "tts:edge:chars": 1162
+  },
+  "notes": [
+    "held for review: originality"
+  ]
 }

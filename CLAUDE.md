@@ -65,6 +65,8 @@ humans set strategy, connect accounts, and review held videos.
 | Front covers, hero images, thumbnails, Quinton on a product, cover A/B | `/faceless/planner_cover.py`, `mockup.py` | `.claude/skills/faceless-cover/references/haiku-cover-research.md` | `faceless-cover` |
 | Email sequence (autoresponder) and the weekly issue | `/faceless/autoresponder.py`, `repurpose.py` | `channel/offers/autoresponder/README.md` | `faceless-empire` |
 | Fiverr brand-kit service | `/faceless/brandkit.py` | `channel/services/brand-kit/GIG.md` | `faceless-empire` |
+| Improve or audit a Fiverr gig: title, 1,200-character description, tiers, FAQ, tags, honesty rules (drafts; the owner pastes) | `/channel/services` | `channel/services/*/GIG.md` | `faceless-fiverr-gig` |
+| Fiverr gig display images (thumbnail + gallery, 1280x769) from real kit output and Flow concept art | `/faceless/gigart.py` | `python -m faceless gigart` | `faceless-gig-gallery` |
 | Fiverr studio mode: a client brief becomes a sheet of 6-12 concept directions (logo, character, art) | `/faceless/concepts.py` | `channel/services/studio/GIG.md` | `faceless-studio-gig` |
 | A client wrote (Fiverr or the Web3 service): draft the reply, discovery and budget first, owner's prices only | `/faceless/clientdesk.py` | `python -m faceless client reply` | `faceless-client-desk` |
 | Collaboration notes for small finance podcasts (drafted, gated, the owner sends) | `/faceless/collab.py` | `python -m faceless collab status` | `faceless-collab` |
@@ -92,6 +94,9 @@ humans set strategy, connect accounts, and review held videos.
 | Plan, review or fix the cut of any video (continuity, montage, speed ramps, impact, AI-clip faults; theory from the owner's film folder) | `/faceless/cineedit.py`, `vibe.py` | `.claude/skills/faceless-film-editing/references/theory.md` | `faceless-film-editing` |
 | Cinematic edit of the owner's Flow clips (ramp, grade, flash, brand mark) | `/faceless/cineedit.py` | `python -m faceless cineedit` | `faceless-cineedit` |
 | The owner's Google Flow lane: prompts, inbox, hook shots | `/faceless/flow.py` | `channel/flow/inbox/` | `faceless-flow` |
+| A day's beat pictures on Flow, made in the desktop app's browser pane (0 credits), filed so the render uses them | `/faceless/pipeline/visuals.py` | `production/cache/flow/<day>/<job>/` | `faceless-flow-browser` |
+| Make stills extreme, modern and on-brand (scale, weather, night, edge) instead of soft stock | `/faceless/prompts.py` | `.claude/skills/faceless-visual-charge` | `faceless-visual-charge` |
+| Realm-shift clips (impossible world + spoken line) on Flow Omni, and the CapCut phone edit that finishes them | `/` | `.claude/skills/faceless-realm-shift/references/realms-2026-10-25.json` | `faceless-realm-shift`, `faceless-capcut-phone` |
 | Compile the day's three Flow clips into one reel with a voiceover and a CTA | `/faceless/reel.py` | `.claude/skills/faceless-reel` | `faceless-reel` |
 | Rhythm of a video: line, hold, act length; the link between writing and editing | `/faceless/pipeline` | `.claude/skills/faceless-rhythm` | `faceless-rhythm` |
 | Learning loop: assess every finished creative piece, turn owner feedback into a measured rule | `/` | `.claude/skills/faceless-craft/LESSONS.md` | `faceless-craft` |

@@ -1,0 +1,100 @@
+{
+  "title": "The Silent Checking Account Trap",
+  "hook_text": "YOUR CHECKING ACCOUNT IS DRAINING YOU",
+  "beats": [
+    {
+      "say": "Your bank checking account is quietly draining your hard-earned savings every single day.",
+      "callout": "",
+      "visual": "Low-angle extreme close-up of a rusted metal night deposit drop-box on a rain-slick street under harsh sodium lighting."
+    },
+    {
+      "say": "You leave thousands sitting there because school taught you that safe money never moves.",
+      "callout": "",
+      "visual": "Silhouette of a figure standing before a massive brutalist concrete bank façade at blue hour, fog cutting the building roofline."
+    },
+    {
+      "say": "So where does your money actually disappear if the digital balance on screen never drops?",
+      "callout": "",
+      "visual": "Cold fluorescent light spilling across an empty bank teller counter at midnight, extreme wide shot of polished marble floor."
+    },
+    {
+      "say": "You assume that keeping $100 safe in the bank preserves that exact same $100 forever.",
+      "callout": "THE SAFE ILLUSION",
+      "visual": "Extreme close-up of a crisp paper banknote pinned under a heavy cast-iron paperweight on dark wet slate."
+    },
+    {
+      "say": "It doesn't. Inflation acts like a silent ledger tax, but how fast does that cash really bleed?",
+      "callout": "",
+      "visual": "High-angle view of a desolate urban intersection at night, wet asphalt reflecting amber street lamps with no cars."
+    },
+    {
+      "say": "At 3% inflation, $100 today is worth only $55 in buying power after 20 years.",
+      "callout": "$100 VS $55",
+      "visual": "Extreme close macro shot of water slowly dripping onto a corroded copper coin resting on rough stone."
+    },
+    {
+      "say": "The bank app still displays $100, yet nearly half of what it can buy is gone.",
+      "callout": "",
+      "visual": "Silhouette of a solitary commuter standing on an empty elevated railway platform under a single practical light in heavy mist."
+    },
+    {
+      "say": "The bank uses your deposits to make real money, so where should your savings actually live?",
+      "callout": "CASHFLOW VS WEALTH",
+      "visual": "Low-angle shot looking straight up at towering glass skyscrapers reflecting pale gray storm clouds at dawn."
+    },
+    {
+      "say": "Checking accounts are built solely for monthly cashflow, never for parking years of your labor.",
+      "callout": "",
+      "visual": "Extreme wide shot of an empty concrete underpass at blue hour, a single shaft of light cutting across cracked pavement."
+    },
+    {
+      "say": "Your money disappears into purchasing power decay, which only stops when your cash works as hard as you.",
+      "callout": "PURCHASING POWER DRAIN",
+      "visual": "Over-the-shoulder view of hands resting on a cold granite balcony railing overlooking a sprawling nocturnal city."
+    },
+    {
+      "say": "Investing just $100 a month at 8% a year builds $58,902 across 20 years.",
+      "callout": "$58,902",
+      "visual": "High-angle wide shot of a solitary freight train moving slowly across an open desert plain at twilight."
+    },
+    {
+      "say": "Stop letting idle deposits quietly erode. Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "Low-angle shot of a lone figure walking down an empty highway at night under distant sodium lamps."
+    }
+  ],
+  "caption": "Your checking account balance isn't dropping, but your buying power is quietly cut in half. Here's how the hidden tax of inflation works.",
+  "description": "Keeping your entire emergency fund or savings in a standard checking account feels secure, but inflation silently destroys your purchasing power over time. Learn how idle cash bleeds value and the simple rule to protect what you earn.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#financialliteracy",
+    "#inflation",
+    "#investingforbeginners"
+  ],
+  "first_comment": "How many months of living expenses do you keep in checking versus invested?",
+  "facts": [
+    {
+      "claim": "$100 today is worth $55 in buying power after 20 years of 3% inflation.",
+      "basis": "Money Fact Sheet calculation: $100 today is worth $55 in buying power after 20 years of 3% inflation."
+    },
+    {
+      "claim": "$100 a month invested at 8% a year builds $58,902 across 20 years.",
+      "basis": "Money Fact Sheet calculation: $100/month invested for 20 years at 8%/yr (monthly compounding) = $58,902 (you put in $24,000)."
+    }
+  ],
+  "source": "llm",
+  "pillar": "myth",
+  "look": "",
+  "loop_map": {
+    "stakes": "Idle cash in bank checking accounts loses purchasing power every single day.",
+    "big_question": "Where does your money actually disappear if the digital balance on screen never drops?",
+    "assume": "Leaving cash untouched in a bank checking account keeps it 100% safe.",
+    "reveal": "3% inflation quietly strips 45% of your cash's real buying power over 20 years.",
+    "rehook_beats": [
+      5,
+      8
+    ],
+    "payoff_beat": 10
+  }
+}

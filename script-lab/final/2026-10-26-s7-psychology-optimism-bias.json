@@ -1,0 +1,111 @@
+{
+  "title": "Why Optimism Bias Destroys Your Savings",
+  "hook_text": "YOUR BUDGET IS BUILT ON LIES",
+  "beats": [
+    {
+      "say": "You budget like your transmission, your teeth, and your roof have lifetime warranties.",
+      "callout": "",
+      "visual": "Low angle of a silhouette standing beside a steaming, broken-down sedan on wet asphalt under flickering amber sodium streetlights at night."
+    },
+    {
+      "say": "Psychologists call this optimism bias: the conviction that bad luck only strikes other people.",
+      "callout": "",
+      "visual": "Extreme wide shot of a lone figure in silhouette walking along an elevated concrete underpass cutting through dense city fog."
+    },
+    {
+      "say": "Why do we treat routine wear and tear like shocking acts of God?",
+      "callout": "",
+      "visual": "Macro close-up of worn brake rotors and cracked metallic machinery under harsh, cold fluorescent inspection lighting."
+    },
+    {
+      "say": "Most people assume a budget only covers predictable rent, groceries, and monthly subscriptions.",
+      "callout": "ASSUMED BUDGET",
+      "visual": "High angle shot of a clean, minimalist wooden tabletop illuminated by a single practical lamp, showing a blank dark leather ledger."
+    },
+    {
+      "say": "In reality, brake pads thin out, pipes burst, and molars crack on a predictable timeline.",
+      "callout": "REALITY",
+      "visual": "Extreme close-up of cold raindrops streaking down a dark window pane, with blurred taillights glowing red in the background."
+    },
+    {
+      "say": "So what happens when an ignored $3,000 car repair hits an empty savings account?",
+      "callout": "",
+      "visual": "Low angle shot from the wet pavement looking up at an ominous, towering garage lift in an empty industrial bay."
+    },
+    {
+      "say": "It gets dumped onto a credit card charging a brutal 24% interest rate.",
+      "callout": "24% APR",
+      "visual": "Close-up of a dark matte card held by a hand in deep shadow, backlit by harsh cold blue light."
+    },
+    {
+      "say": "Paying only the minimum payment keeps you trapped for 183 long months.",
+      "callout": "183 MONTHS",
+      "visual": "Extreme wide shot of an empty, rain-slick highway stretching toward the horizon during blue hour with distant sodium lights."
+    },
+    {
+      "say": "That single $3,000 surprise ends up costing you $4,887 in interest alone.",
+      "callout": "$4,887 INTEREST",
+      "visual": "High angle shot looking down a steep, brutalist concrete stairwell plunged in heavy shadows with a single overhead bare bulb."
+    },
+    {
+      "say": "By the Rule of 72, at 24%, unmanaged debt doubles every 3 years.",
+      "callout": "DOUBLES IN 3 YRS",
+      "visual": "Silhouette of a person standing on the edge of an empty parking garage roof overlooking a sprawling city skyline at dusk."
+    },
+    {
+      "say": "How do you break this cycle before your emergency fund gets wiped out?",
+      "callout": "",
+      "visual": "Moody low angle shot of an industrial vault door made of weathered steel, bathed in deep blue and gold shadows."
+    },
+    {
+      "say": "The counter-move is simple: stop calling routine maintenance an unexpected emergency.",
+      "callout": "",
+      "visual": "Close-up of hands organizing plain metallic tokens into separate brass trays under warm directional desk light."
+    },
+    {
+      "say": "Build monthly sinking funds for future repairs so you never borrow to fix them.",
+      "callout": "SINKING FUNDS",
+      "visual": "Extreme close-up of a solid steel padlock locking firmly around a heavy chain link fence in soft rain."
+    },
+    {
+      "say": "Expect the breakdown early, and follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "Cinematic wide shot of a lone figure walking forward along a clean, reflective wet pavement toward distant golden city lights."
+    }
+  ],
+  "caption": "Your car will break down. Your teeth will need work. Stop letting optimism bias drain your wealth. 🧠💸 #moneypsychology #emergencyfund #debtfreejourney #budgeting #quietmoney",
+  "description": "Optimism bias tricks us into believing predictable maintenance costs are rare emergencies. Here is how that mistake forces thousands into high-interest debt and how sinking funds solve it.",
+  "hashtags": [
+    "#moneypsychology",
+    "#personalfinance",
+    "#emergencyfund",
+    "#debtfreejourney",
+    "#financialliteracy"
+  ],
+  "first_comment": "What predictable expense wrecked your budget last year because you assumed it wouldn't happen?",
+  "facts": [
+    {
+      "claim": "A $3,000 credit card balance at 24% APR paying only the minimum takes 183 months and costs $4,887 in interest.",
+      "basis": "Fact sheet calculation: $3,000 credit card at 24% APR paying only the minimum (1% + interest, min $25) equals 183 months (~15 years) and $4,887 interest."
+    },
+    {
+      "claim": "At 24% interest, debt doubles every 3 years according to the Rule of 72.",
+      "basis": "Fact sheet calculation: Rule of 72: at 8% money doubles every 9 years; at 24% debt doubles every 3 years."
+    }
+  ],
+  "source": "llm",
+  "pillar": "psychology",
+  "look": "",
+  "loop_map": {
+    "stakes": "Budgeting without planning for wear and tear leaves savings defenseless against predictable repairs.",
+    "big_question": "Why do we treat routine, inevitable wear and tear like shocking acts of God?",
+    "assume": "People assume their monthly budget only needs to cover fixed bills and groceries.",
+    "reveal": "Mechanical wear and medical needs follow a predictable timeline and trigger high-interest card debt when ignored.",
+    "rehook_beats": [
+      6,
+      10,
+      11
+    ],
+    "payoff_beat": 12
+  }
+}

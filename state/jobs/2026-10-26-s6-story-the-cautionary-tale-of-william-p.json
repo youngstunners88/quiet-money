@@ -1,0 +1,76 @@
+{
+  "id": "2026-10-26-s6-story-the-cautionary-tale-of-william-p",
+  "pillar": "story",
+  "topic": "The Cautionary Tale of William Post and the Curse of the $16 Million Jackpot",
+  "day": "2026-10-26",
+  "slot": 6,
+  "status": "published",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-26T03:03:56Z",
+      "words": 210
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-26T03:05:22Z",
+      "seconds": 73.174,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-26T03:05:22Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-26T03:08:29Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-26T03:08:29Z",
+      "score": 98
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-26T03:08:29Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-10-26T03:27:02Z",
+      "manual": true,
+      "forced": false
+    }
+  ],
+  "artifacts": {
+    "angle": "A former carnival worker who won the lottery, faced immediate lawsuits from family, death threats from a brother, and ended up broke in less than a year due to the psychology of sudden wealth.",
+    "hook": "Twenty-four hours after winning a $16 million lottery jackpot, a former carnival worker said winning ruined his life and wished he had never bought the ticket.",
+    "style": "cinematic",
+    "video": "/home/kofibeatz/Documents/Quiet Money/quiet-money/production/output/2026-10-26/2026-10-26-s6-story-the-cautionary-tale-of-william-p/final.mp4",
+    "cover": "/home/kofibeatz/Documents/Quiet Money/quiet-money/production/output/2026-10-26/2026-10-26-s6-story-the-cautionary-tale-of-william-p/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/kofibeatz/Documents/Quiet Money/quiet-money/distribution/queue/2026-10-27/slot2-story",
+        "post_at": "2026-10-27T11:30:00-04:00"
+      },
+      "youtube": {
+        "skipped": "COMPOSIO_API_KEY not set"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 98,
+    "passed": true
+  },
+  "cost": {
+    "tts:edge:chars": 1276
+  },
+  "notes": []
+}

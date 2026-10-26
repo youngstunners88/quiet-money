@@ -97,6 +97,11 @@ def script_prompt(pillar, topic: str, angle: str = "", feedback: list[str] | Non
         "lighting, camera angle). Real people must NOT be depicted by face: use hands, silhouettes, backs, objects, "
         "places. No text, numbers, logos, or screens with writing in the image: prefer objects without writing; if a "
         "card, phone, receipt, or document is essential, show it from behind, at a steep angle, or blurred.",
+        "- VISUAL CHARGE (skill faceless-visual-charge): every 'visual' carries at least one of: extreme wide, extreme close, low angle, "
+        "high angle, silhouette against weather, rain-slick street, sodium light, blue hour, fog cutting a skyline, empty highway at night, "
+        "tower edge, underpass, open water, ridge line, wet asphalt, cold fluorescent, single practical light, or a tiny human against a huge "
+        "structure. The hook beat gets the strongest charge; the last beat must not go soft. Avoid soft desk setups, generic coffee, "
+        "bright offices, floating money symbols and glowing charts. Gold is an accent only; never a face.",
         "- 'hook_text' is the on-screen headline for the first 3 seconds: max 7 words, ALL CAPS energy.",
         "- 'title': max 60 characters, curiosity + specificity, no clickbait lies.",
         "- 'caption': 1-2 punchy lines + 4-5 hashtags (mix broad #money #personalfinance with niche tags).",

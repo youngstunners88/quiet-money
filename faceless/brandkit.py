@@ -270,5 +270,6 @@ then review the preview, send `<slug>-brand-kit.zip`. Revisions: change inputs a
 def write_gig() -> Path:
     OUT.mkdir(parents=True, exist_ok=True)
     p = OUT / "GIG.md"
-    p.write_text(GIG, encoding="utf-8")
+    if not p.exists():     # the gig text is edited by hand and by `faceless-fiverr-gig`; rebuilding samples must never revert it
+        p.write_text(GIG, encoding="utf-8")
     return p

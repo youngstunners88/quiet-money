@@ -39,7 +39,7 @@ KINDS = {
     "art": "a finished illustration concept, strong composition, centered subject, no text, no watermark",
 }
 N_MIN, N_MAX = 6, 12
-AI_NOTE = ("AI-assisted concepts: every direction was generated with AI image tools and is a starting point. The chosen direction is "
+AI_NOTE = ("Concepts: every direction was generated with AI image tools and is a starting point. The chosen direction is "
            "refined by hand. AI-generated images may not be registrable as trademarks.")
 COPYING = re.compile(r"\b(in the style of|style of|like the (logo|brand) of|copy (of|the)|knock-?off|dupe of)\b", re.I)
 HEX = re.compile(r"^#[0-9A-Fa-f]{6}$")

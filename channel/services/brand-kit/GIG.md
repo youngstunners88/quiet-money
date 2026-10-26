@@ -59,7 +59,7 @@ Before accepting a custom offer, ask any of these the buyer skipped. A buyer's a
 No growth, views, subscribers or income. No copying another channel's identity. No trademarked names or logos. Turnaround "same day" only if you will actually do it.
 
 ## Gallery
-Use `samples/*/preview.png` (made-up brands: Calm Orbit, Iron Fork, Pixel Harbor, Night Ledger). Label them "sample" in the gallery.
+Upload `gallery/1-hero.jpg` (thumbnail), `gallery/2-contents.jpg`, `gallery/3-proof.jpg` (1280x769, drawn by `python -m faceless gigart` from real kit output; all samples are fictional brands and labelled so). The old `samples/*/preview.png` are for fulfilment checks, not for the listing.
 Check Fiverr's current rules on AI work and disclosure before publishing the gig.
 
 ## Fulfilment (agent, per order, about 2 minutes)

@@ -4,13 +4,81 @@
   "topic": "The Dollar-Cost Averaging Math vs Lump Sum",
   "day": "2026-10-26",
   "slot": 2,
-  "status": "planned",
-  "history": [],
+  "status": "published",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-26T02:24:25Z",
+      "words": 181
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-26T02:24:51Z",
+      "seconds": 66.071,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-26T02:24:51Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-26T02:34:29Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-26T02:34:29Z",
+      "score": 94
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-26T02:34:29Z"
+    },
+    {
+      "from": "packaged",
+      "to": "held",
+      "ts": "2026-10-26T02:34:29Z"
+    },
+    {
+      "from": "held",
+      "to": "published",
+      "ts": "2026-10-26T02:39:34Z",
+      "manual": true,
+      "forced": false
+    }
+  ],
   "artifacts": {
     "angle": "Comparing the historical mathematical probabilities of deploying cash all at once versus spreading it over 12 months.",
-    "hook": "Everyone tells you to drip-feed your money into the market, but the actual historical math proves it's costing you."
+    "hook": "Everyone tells you to drip-feed your money into the market, but the actual historical math proves it's costing you.",
+    "title": "Why Dollar-Cost Averaging Costs You Money",
+    "style": "cinematic",
+    "video": "/home/kofibeatz/Documents/Quiet Money/quiet-money/production/output/2026-10-26/2026-10-26-s2-math-the-dollar-cost-averaging-math-v/final.mp4",
+    "cover": "/home/kofibeatz/Documents/Quiet Money/quiet-money/production/output/2026-10-26/2026-10-26-s2-math-the-dollar-cost-averaging-math-v/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/kofibeatz/Documents/Quiet Money/quiet-money/distribution/queue/2026-10-26/slot3-math",
+        "post_at": "2026-10-26T15:00:00-04:00"
+      },
+      "youtube": {
+        "skipped": "COMPOSIO_API_KEY not set"
+      }
+    }
   },
-  "scores": {},
-  "cost": {},
-  "notes": []
+  "scores": {
+    "gauntlet": 98,
+    "passed": true
+  },
+  "cost": {
+    "tts:edge:chars": 1113
+  },
+  "notes": [
+    "held for review: originality"
+  ]
 }

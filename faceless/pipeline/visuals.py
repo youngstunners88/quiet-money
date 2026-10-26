@@ -7,6 +7,7 @@ import json
 from concurrent.futures import ThreadPoolExecutor
 
 from faceless import config, events, flow, hookclip, qa
+from faceless.config import Paths
 from faceless.pipeline import cards, sketch
 from faceless.providers import ProviderUnavailable, images
 from faceless.fsutil import write_atomic
@@ -72,6 +73,9 @@ def run(job, script: dict) -> list[dict]:
             return {"beat": i, "provider": "card", "path": None, "prompt": "", "card": planned[i]}
         if i == 0 and hook_clip:
             return {"beat": 0, "provider": "clip", "path": hook_clip["frame"], "prompt": "", "clip": hook_clip["clip"]}
+        made = Paths.cache / "flow" / job.id[:10] / job.id / f"beat{i + 1:02d}.jpg"     # the owner's Flow pictures (free credits) come first; nothing is generated for a beat that has one
+        if made.is_file():
+            return {"beat": i, "provider": "flow", "path": str(made), "prompt": ""}
         seed = int(hashlib.sha1(f"{job.id}:{i}".encode(), usedforsecurity=False).hexdigest()[:8], 16) % 2_000_000_000
         prompt = build_prompt(beat["visual"] or beat["say"], pillar.style, script.get("look", ""))
         provider, path = images.generate(prompt, seed=seed, hero=(i == 0), job=job.id)

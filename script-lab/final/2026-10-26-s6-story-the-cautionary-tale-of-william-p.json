@@ -1,0 +1,122 @@
+{
+  "title": "The $16 Million Lottery Trap That Ruined William Post",
+  "hook_text": "THE $16M JACKPOT THAT RUINED HIM",
+  "beats": [
+    {
+      "say": "In 1988, a penniless carnival worker holding just $2 won a $16 million lottery jackpot.",
+      "callout": "",
+      "visual": "Low angle shot of a solitary silhouette standing on rain-slick asphalt beside an abandoned carnival Ferris wheel under amber sodium light."
+    },
+    {
+      "say": "Within three months, he wasn't wealthy. He was already drowning in $500,000 of fresh debt.",
+      "callout": "",
+      "visual": "Extreme close up on trembling weathered hands holding an unrolled slip of paper beneath cold fluorescent light in a dark room."
+    },
+    {
+      "say": "His name was William Post. How does someone burn through eight figures in under a year?",
+      "callout": "EIGHT FIGURES GONE",
+      "visual": "High angle view of an empty highway at night stretching into dense fog cutting a distant skyline."
+    },
+    {
+      "say": "Most people assume he blew every dime on luxury vacations, wild parties, and gold watches.",
+      "callout": "",
+      "visual": "Extreme wide shot of a luxury sports car parked alone on wet asphalt outside a shut-down roadside motel under blue hour mist."
+    },
+    {
+      "say": "That wasn't what ruined him. The instant his check cleared, everyone in his life turned hostile.",
+      "callout": "",
+      "visual": "Low angle silhouette of a person standing at a tower edge looking down over a rain-soaked industrial yard under sodium light."
+    },
+    {
+      "say": "His own brother hired a contract killer to murder him and steal the remaining payouts.",
+      "callout": "FAMILY TURNED DEADLY",
+      "visual": "Extreme wide shot of two dark silhouettes meeting beneath a concrete highway underpass lit by a single practical light in heavy fog."
+    },
+    {
+      "say": "Then an ex-landlord sued him for a third of the fortune, successfully freezing his bank accounts.",
+      "callout": "",
+      "visual": "Extreme close up on legal documents stamped on a wooden desk, illuminated by a single practical light in deep shadow."
+    },
+    {
+      "say": "Panicked and isolated, Post bought failing restaurants, used-car lots, and an airplane he couldn't fly.",
+      "callout": "",
+      "visual": "Low angle shot of a small twin-engine propeller airplane sitting abandoned on a cracked tarmac runway under blue hour drizzle."
+    },
+    {
+      "say": "Within twelve months, he owed over $1 million, facing bankruptcy and a prison sentence over gunfire.",
+      "callout": "$1 MILLION IN DEBT",
+      "visual": "High angle shot of a foreclosure notice pinned to a wooden door on an empty porch in cold fluorescent evening light."
+    },
+    {
+      "say": "Sudden wealth doesn't cure poor financial discipline. It acts as an amplifier for every personal weakness.",
+      "callout": "",
+      "visual": "Extreme close up on a broken hourglass lying horizontally on wet asphalt, reflecting amber sodium streetlights."
+    },
+    {
+      "say": "Post spent his final years surviving on a modest $450 monthly disability check in rural seclusion.",
+      "callout": "$450 A MONTH",
+      "visual": "Tiny human silhouette walking down a desolate rural gravel road toward a misty ridge line at blue hour."
+    },
+    {
+      "say": "Before he died, he insisted he was vastly happier back when he was completely broke.",
+      "callout": "",
+      "visual": "Low angle shot of an empty rocking chair on a dilapidated wooden porch lit by a single practical light in the dark."
+    },
+    {
+      "say": "If you don't build money systems when you're small, millions will only crush you faster.",
+      "callout": "HABITS VS WEALTH",
+      "visual": "Extreme close up of rough calloused hands counting crumpled dollar bills over a rain-slick metal tabletop."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "Extreme wide shot of an empty two-lane highway at night under flickering sodium light vanishing into the dark horizon."
+    }
+  ],
+  "caption": "Winning $16 million destroyed William Post in less than a year. Here's why sudden wealth magnifies your flaws.",
+  "description": "In 1988, William Post went from $2 to $16 million overnight, only to end up $1 million in debt twelve months later. Sudden wealth amplifies existing weaknesses and ruins lives without financial discipline.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#lottery",
+    "#moneymindset",
+    "#wealth"
+  ],
+  "first_comment": "If you won $16 million tomorrow, who is the first person you would tell?",
+  "facts": [
+    {
+      "claim": "William Post had approximately $2.46 in his bank account when he won the $16.2 million Pennsylvania lottery in 1988.",
+      "basis": "Documented historical accounts of William 'Bud' Post III and Pennsylvania Lottery records."
+    },
+    {
+      "claim": "Within three months of receiving his initial installment, Post was $500,000 in debt.",
+      "basis": "Contemporary legal records and Associated Press coverage."
+    },
+    {
+      "claim": "His brother hired a contract killer to murder him and his wife to inherit money.",
+      "basis": "Court records resulting in the arrest and conviction of Post's brother."
+    },
+    {
+      "claim": "A former landlord and girlfriend sued for one-third of the jackpot and won, freezing his payouts.",
+      "basis": "1992 Allegheny County Common Pleas Court ruling awarding Ann McGovern a third of the prize."
+    },
+    {
+      "claim": "Post eventually lived on a $450 monthly disability payment and died broke in 2006.",
+      "basis": "Associated Press obituary for William 'Bud' Post III (January 2006)."
+    }
+  ],
+  "source": "llm",
+  "pillar": "story",
+  "look": "",
+  "loop_map": {
+    "stakes": "A penniless carnival worker risks total ruin after suddenly winning $16 million.",
+    "big_question": "How does someone burn through eight figures in under a year?",
+    "assume": "He blew all his money on wild luxury parties and expensive cars.",
+    "reveal": "Predatory lawsuits, family betrayal, and panic-buying bankrupt businesses destroyed him.",
+    "rehook_beats": [
+      5,
+      8
+    ],
+    "payoff_beat": 10
+  }
+}

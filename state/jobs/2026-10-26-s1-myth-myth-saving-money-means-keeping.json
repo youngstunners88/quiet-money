@@ -1,0 +1,76 @@
+{
+  "id": "2026-10-26-s1-myth-myth-saving-money-means-keeping",
+  "pillar": "myth",
+  "topic": "Myth: Saving money means keeping it in a bank checking account",
+  "day": "2026-10-26",
+  "slot": 1,
+  "status": "published",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-26T02:46:16Z",
+      "words": 183
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-26T02:46:36Z",
+      "seconds": 65.348,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-26T02:46:37Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-26T02:48:37Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-26T02:48:37Z",
+      "score": 100
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-26T02:48:37Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-10-26T02:48:52Z",
+      "manual": true,
+      "forced": false
+    }
+  ],
+  "artifacts": {
+    "angle": "Highlight the hidden tax of inflation on idle cash and how quietly it erodes purchasing power.",
+    "hook": "Keeping your savings in a traditional bank account is actually losing you money every single day.",
+    "style": "cinematic",
+    "video": "/home/kofibeatz/Documents/Quiet Money/quiet-money/production/output/2026-10-26/2026-10-26-s1-myth-myth-saving-money-means-keeping/final.mp4",
+    "cover": "/home/kofibeatz/Documents/Quiet Money/quiet-money/production/output/2026-10-26/2026-10-26-s1-myth-myth-saving-money-means-keeping/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/kofibeatz/Documents/Quiet Money/quiet-money/distribution/queue/2026-10-26/slot2-myth",
+        "post_at": "2026-10-26T11:30:00-04:00"
+      },
+      "youtube": {
+        "skipped": "COMPOSIO_API_KEY not set"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 100,
+    "passed": true
+  },
+  "cost": {
+    "tts:edge:chars": 1065
+  },
+  "notes": []
+}

@@ -39,7 +39,8 @@ RECIPES = {   # section of .claude/skills/faceless-phone/references/recipes.md t
 DEVICE_DIR = "/sdcard/Download/QuietMoney"           # where the agent pushes media; the gallery pickers of every app list it
 COMMUNITY_DISCLOSURE = "Illustrated with AI."
 VIDEO_DISCLOSURE = "AI-assisted"
-TIKTOK_DISCLOSURE = "Narration and visuals are AI-assisted. Education, not financial advice."
+TIKTOK_DISCLOSURE = "Education, not financial advice."
+BANNED = re.compile(r"\s*Narration and visuals are AI-assisted\.?|\s*AI-assisted\.?", re.I)    # owner, 2026-10-25: those words are never written into content; the platform AI toggle is the label
 TEXT_MAX = {"yt_community": 1500, "yt_short": 5000, "tiktok": 2200}
 COLLECT_ROOTS = ("production/cache", "channel/flow/inbox", "assets/flowbank")   # where an inbound picture may land
 
@@ -143,8 +144,6 @@ def problems(job: dict) -> list[str]:
     if kind == "tiktok":
         if re.search(r"https?://", text):
             out.append("a link in the caption (not tappable on TikTok; the bio carries it)")
-        if "ai-" not in text.lower() and " ai " not in f" {text.lower()} ":
-            out.append("the AI disclosure is missing from the caption")
     if kind == "flow_image" and not str(job.get("prompt", "")).strip():
         out.append("no prompt")
     if kind == "flow_image" and not _collect_ok(str(job.get("dest", ""))):
@@ -193,7 +192,7 @@ def short_texts(post_md: str) -> dict:
     tk = _section(post_md, "TikTok / Instagram caption")
     if tk and TIKTOK_DISCLOSURE.lower() not in tk.lower():
         tk = f"{tk}\n\n{TIKTOK_DISCLOSURE}"
-    return {"title": title.group(1).strip() if title else "", "description": desc, "tiktok": tk}
+    return {"title": title.group(1).strip() if title else "", "description": BANNED.sub("", desc).strip(), "tiktok": BANNED.sub("", tk).strip()}
 
 
 def queue_comics(day: str) -> list[dict]:

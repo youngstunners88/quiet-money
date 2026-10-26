@@ -4,13 +4,64 @@
   "topic": "Myth: Debt is the enemy of financial freedom",
   "day": "2026-10-26",
   "slot": 1,
-  "status": "planned",
-  "history": [],
+  "status": "held",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-26T02:34:08Z",
+      "words": 182
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-26T02:35:24Z",
+      "seconds": 68.714,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-26T02:35:24Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-26T02:38:45Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-26T02:38:45Z",
+      "score": 91
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-26T02:38:45Z"
+    },
+    {
+      "from": "packaged",
+      "to": "held",
+      "ts": "2026-10-26T02:38:45Z"
+    }
+  ],
   "artifacts": {
     "angle": "Distinguish between destructive consumption debt and productive leverage used by the wealthy.",
-    "hook": "We are taught that all debt is evil, but the ultra-wealthy use it completely differently."
+    "hook": "We are taught that all debt is evil, but the ultra-wealthy use it completely differently.",
+    "title": "The Math Behind Good Debt vs Bad Debt",
+    "style": "cinematic",
+    "video": "/home/kofibeatz/Documents/Quiet Money/quiet-money/production/output/2026-10-26/2026-10-26-s1-myth-myth-debt-is-the-enemy-of-financ/final.mp4",
+    "cover": "/home/kofibeatz/Documents/Quiet Money/quiet-money/production/output/2026-10-26/2026-10-26-s1-myth-myth-debt-is-the-enemy-of-financ/cover.jpg"
   },
-  "scores": {},
-  "cost": {},
-  "notes": []
+  "scores": {
+    "gauntlet": 91,
+    "passed": false
+  },
+  "cost": {
+    "tts:edge:chars": 1065
+  },
+  "notes": [
+    "held for review: originality"
+  ]
 }

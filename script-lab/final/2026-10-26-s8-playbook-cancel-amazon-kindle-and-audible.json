@@ -1,0 +1,100 @@
+{
+  "title": "Cancel Kindle and Audible in 3 Steps",
+  "hook_text": "YOU'RE PAYING FOR UNREAD AUDIOBOOKS",
+  "beats": [
+    {
+      "say": "You've paid for ten digital audiobooks you never even downloaded.",
+      "callout": "",
+      "visual": "Extreme close on a black smartphone resting face-down on rain-slick asphalt under a yellow sodium streetlamp."
+    },
+    {
+      "say": "A single forgotten $15 subscription drains $1,800 every ten years. Where's that silent leak actually leading?",
+      "callout": "$1,800 LOST",
+      "visual": "Low angle shot looking up at a monolithic corporate glass skyscraper at blue hour, cold fluorescent interior lights cutting through fog."
+    },
+    {
+      "say": "Most people assume deleting the app stops the monthly billing, but Amazon keeps quietly charging your card.",
+      "callout": "APP VS BILLING",
+      "visual": "Extreme wide shot of a faceless silhouette sitting inside a parked car at night, viewed through a wet windshield under a buzzing neon light."
+    },
+    {
+      "say": "You can plug this leak in under ten minutes. Step one. Open Amazon in a mobile browser, not the app.",
+      "callout": "STEP ONE",
+      "visual": "Extreme close-up of hands holding a dark metallic phone, illuminated solely by a single warm practical desk lamp cutting through shadow."
+    },
+    {
+      "say": "Tap your profile icon, scroll down to 'Memberships and Subscriptions', and review every active reading service.",
+      "callout": "",
+      "visual": "Silhouette of a person standing outside a locked modern glass storefront at blue hour, reflections shimmering on cold wet concrete."
+    },
+    {
+      "say": "Step two. Select Kindle Unlimited, tap 'Cancel Membership', and click through their fake retention discount offer.",
+      "callout": "STEP TWO",
+      "visual": "Low angle shot of a lone traveler walking through a desolate concrete pedestrian underpass bathed in harsh sodium lighting."
+    },
+    {
+      "say": "That saves you $12 every month. But your Audible account hides an even sneakier financial trap.",
+      "callout": "",
+      "visual": "Extreme wide shot of massive electrical transmission towers receding into dense fog across an empty dark landscape at dusk."
+    },
+    {
+      "say": "If you cancel Audible immediately, you lose all unspent credits forever. Amazon keeps that cash for free.",
+      "callout": "UNSPENT CREDITS",
+      "visual": "Extreme close-up of a blank dark bank card sitting on a scratched steel counter under a solitary downward white spotlight."
+    },
+    {
+      "say": "Step three. Switch your browser to desktop view, spend your banked credits, and then confirm full cancellation.",
+      "callout": "STEP THREE",
+      "visual": "Silhouette of a person seated on a wet concrete dock edge looking across dark open water toward a quiet container port at night."
+    },
+    {
+      "say": "You'll keep the audiobooks permanently, without paying Amazon another single dime every month.",
+      "callout": "",
+      "visual": "Low angle shot of a solitary figure standing on a rain-washed bridge overlook, distant vehicle taillights streaking across wet asphalt."
+    },
+    {
+      "say": "Investing an extra $100 a month at 8% compounding grows into $149,036 over 30 years.",
+      "callout": "$149,036 GAIN",
+      "visual": "Extreme wide cinematic shot of a tiny human figure walking down the center stripe of an empty highway into blue hour dawn."
+    },
+    {
+      "say": "Stop paying monthly fees for books you don't read. Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "High angle shot from the perimeter edge of a brutalist concrete parking tower looking down at empty streets veiled in nocturnal mist."
+    }
+  ],
+  "caption": "Deleting the app doesn't cancel the billing. Here's how to kill your forgotten Kindle and Audible subscriptions in under ten minutes.",
+  "description": "Silent digital subscriptions leak hundreds of dollars every year if you leave them on autopay. Learn the exact 3-step browser sequence to cancel Kindle Unlimited and Audible without forfeiting your credits.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#subscriptions",
+    "#savingmoney",
+    "#quietmoney"
+  ],
+  "first_comment": "How many monthly subscriptions do you currently have running that you haven't opened in 60 days?",
+  "facts": [
+    {
+      "claim": "A $15/month subscription for 10 years equals $1,800.",
+      "basis": "Money Fact Sheet: 'A $15/month subscription for 10 years = $1,800'"
+    },
+    {
+      "claim": "$100/month invested for 30 years at 8%/yr reaches $149,036.",
+      "basis": "Money Fact Sheet: '$100/month invested for 30 years at 8%/yr (monthly compounding) = $149,036 (you put in $36,000)'"
+    }
+  ],
+  "source": "llm",
+  "pillar": "playbook",
+  "look": "",
+  "loop_map": {
+    "stakes": "Leaking $1,800 over a decade on unused digital book subscriptions.",
+    "big_question": "Where's that silent leak actually leading?",
+    "assume": "Deleting reading apps off your phone stops the monthly charges.",
+    "reveal": "Amazon continues billing your credit card until canceled via browser, and Audible cancels unspent credits if you quit early.",
+    "rehook_beats": [
+      4,
+      7
+    ],
+    "payoff_beat": 10
+  }
+}

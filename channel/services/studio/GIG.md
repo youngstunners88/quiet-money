@@ -68,5 +68,5 @@ Before accepting a custom offer, ask any of these the buyer skipped. A buyer's a
 4. Refining the pick is your hand work, and it is what the higher tiers pay for.
 
 ## Gallery
-Use `samples/*/sheet.png` (made-up brands: Fern & Fold, Orbit Kid) and label them "sample". Check Fiverr's current rules on
-AI work and disclosure before publishing the gig.
+Upload `gallery/1-hero.jpg` (thumbnail), `gallery/2-process.jpg`, `gallery/3-proof.jpg` (1280x769, drawn by `python -m faceless gigart`; concept art from Flow in `gallery-src/`, all fictional brands and labelled so). The old `samples/*/sheet.png` are for fulfilment checks, not for the listing.
+Check Fiverr's current rules on AI work and disclosure before publishing the gig.

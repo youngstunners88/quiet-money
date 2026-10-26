@@ -1,0 +1,18 @@
+{
+ "id": "2026-10-26-tiktok-2026-10-26-s0-escape-the-four-core-customer-chan",
+ "kind": "tiktok",
+ "day": "2026-10-26",
+ "key": "2026-10-26-s0-escape-the-four-core-customer-channels",
+ "status": "queued",
+ "created": "2026-10-26T03:31:34+00:00",
+ "recipe": "TikTok upload",
+ "media": [
+  {
+   "source": "production/output/2026-10-26/2026-10-26-s0-escape-the-four-core-customer-channels/final.mp4",
+   "name": "final.mp4"
+  }
+ ],
+ "staged": false,
+ "text": "Running ads before you have proven sales is the fastest way to drain your savings. Master warm outreach first.\n\nThe Quiet Money Daily Planner: link in bio (paid).\n\n#money #personalfinance #sidehustle #businessgrowth #entrepreneurship\n\nEducation, not financial advice.",
+ "ai_label": "AI-generated content: on"
+}

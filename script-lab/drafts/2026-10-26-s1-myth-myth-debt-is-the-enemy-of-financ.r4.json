@@ -1,0 +1,104 @@
+{
+  "title": "The Math Behind Good Debt vs Bad Debt",
+  "hook_text": "HOW 5X LEVERAGE ACTUALLY WORKS",
+  "beats": [
+    {
+      "say": "A $3,000 credit card balance can quietly trap your paycheck for 15 years.",
+      "callout": "",
+      "visual": "Cinematic close-up of a worn leather wallet resting on a dark wooden table beside a pair of metal keys, moody dramatic lighting from a single lamp."
+    },
+    {
+      "say": "At 24% APR, paying only the minimum burns $4,887 in interest over 183 months.",
+      "callout": "$4,887 INTEREST",
+      "visual": "A hand holding an unbranded dark credit card over a dim mahogany desk, shallow depth of field, cool shadows."
+    },
+    {
+      "say": "We're taught that all debt is financial suicide, so why do the wealthy borrow millions?",
+      "callout": "",
+      "visual": "Silhouette of a person in a tailored coat looking out of a high-rise window at a sprawling metropolitan skyline at dusk."
+    },
+    {
+      "say": "Most people assume the rich avoid borrowing, but they actually use debt as an acceleration engine.",
+      "callout": "",
+      "visual": "Low-angle architectural shot of a massive stone financial institution with towering pillars, overcast gray sky."
+    },
+    {
+      "say": "At 24% APR, bad debt doubles every 3 years. But how does 5x leverage actually work?",
+      "callout": "DOUBLES EVERY 3 YEARS",
+      "visual": "Close-up of an antique brass mechanical stopwatch ticking on a dark surface, cinematic side lighting."
+    },
+    {
+      "say": "Put $20,000 down on a $100,000 property, and you control that entire asset with 5x leverage.",
+      "callout": "5X LEVERAGE",
+      "visual": "Cinematic wide exterior shot of a classic brick residential townhouse on a quiet street in late afternoon sun."
+    },
+    {
+      "say": "A 20% rise in market value doubles your $20,000 down payment, before costs and interest.",
+      "callout": "$20,000 TO $40,000",
+      "visual": "Overhead cinematic shot of stacked architectural blueprints and brass measuring calipers on an oak drafting table."
+    },
+    {
+      "say": "A 20% drop wipes out your $20,000 equity, and mortgage payments don't stop. So how do they survive?",
+      "callout": "EQUITY WIPED OUT",
+      "visual": "A person viewed from behind standing under an umbrella in the pouring rain, watching mist roll over city rooftops."
+    },
+    {
+      "say": "The wealthy only borrow when the asset's monthly cash flow covers both interest and principal payments.",
+      "callout": "",
+      "visual": "Cinematic close-up of hands turning a heavy brass key in the solid lock of an apartment door."
+    },
+    {
+      "say": "Consumer debt drains your own paycheck, while productive leverage forces an asset to build your wealth.",
+      "callout": "CONSUMPTION VS LEVERAGE",
+      "visual": "A pair of hands neatly aligning smooth wooden blocks on a minimalist concrete table, warm focused downlight."
+    },
+    {
+      "say": "Never borrow for things that lose value. Use debt only when an asset repays the balance.",
+      "callout": "",
+      "visual": "Cinematic side profile of a fountain pen resting on a heavy ledger book beside a cup of black coffee."
+    },
+    {
+      "say": "Follow Quiet Money for the money rules school never taught you.",
+      "callout": "",
+      "visual": "A silhouette walking calmly down an empty, grand hallway lined with tall windows and morning sunlight."
+    }
+  ],
+  "caption": "Debt isn't inherently evil—it's a tool. Here is the exact math separating toxic consumer debt from productive leverage.",
+  "description": "Most people view all debt as a financial trap, but the wealthy treat leverage as an acceleration tool. This video breaks down the mathematical difference between 24% revolving credit and 5x asset leverage.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#leverage",
+    "#debtsmart",
+    "#financialeducation"
+  ],
+  "first_comment": "Are you currently carrying consumption debt or asset debt?",
+  "facts": [
+    {
+      "claim": "A $3,000 credit card at 24% APR paying only the minimum burns $4,887 in interest across 183 months.",
+      "basis": "Fact Sheet: $3,000 credit card at 24% APR paying only the minimum (1% + interest, min $25) takes 183 months and costs $4,887 in interest."
+    },
+    {
+      "claim": "At 24% APR, debt doubles every 3 years under the Rule of 72.",
+      "basis": "Fact Sheet: Rule of 72: at 24% debt doubles every 3 years."
+    },
+    {
+      "claim": "A $100,000 property bought with $20,000 down is 5x leverage; a 20% gain doubles equity while a 20% drop wipes it out before costs and interest.",
+      "basis": "Fact Sheet: Leverage math for a $100,000 property with $20,000 down."
+    }
+  ],
+  "source": "llm",
+  "pillar": "myth",
+  "look": "",
+  "loop_map": {
+    "stakes": "A $3,000 card balance can trap a paycheck in $4,887 of interest over 15 years.",
+    "big_question": "Why do the ultra-wealthy borrow millions if debt is supposed to be financial suicide?",
+    "assume": "All debt is dangerous and drains personal wealth.",
+    "reveal": "Productive leverage uses asset cash flow to repay the loan, while consumer debt drains personal paychecks.",
+    "rehook_beats": [
+      5,
+      8
+    ],
+    "payoff_beat": 9
+  }
+}

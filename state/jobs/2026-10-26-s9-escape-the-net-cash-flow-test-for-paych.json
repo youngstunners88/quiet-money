@@ -1,0 +1,76 @@
+{
+  "id": "2026-10-26-s9-escape-the-net-cash-flow-test-for-paych",
+  "pillar": "escape",
+  "topic": "The Net Cash Flow Test for Paycheck Independence",
+  "day": "2026-10-26",
+  "slot": 9,
+  "status": "published",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-26T03:16:11Z",
+      "words": 183
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-26T03:23:08Z",
+      "seconds": 65.764,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-26T03:23:08Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-26T03:25:56Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-26T03:25:56Z",
+      "score": 97
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-26T03:25:56Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-10-26T03:27:04Z",
+      "manual": true,
+      "forced": false
+    }
+  ],
+  "artifacts": {
+    "angle": "Applies a strict net cash flow test to separate true yield-generating assets from high-maintenance financial burdens.",
+    "hook": "If an investment takes money out of your bank account every month, it is actively delaying your retirement.",
+    "style": "cinematic",
+    "video": "/home/kofibeatz/Documents/Quiet Money/quiet-money/production/output/2026-10-26/2026-10-26-s9-escape-the-net-cash-flow-test-for-paych/final.mp4",
+    "cover": "/home/kofibeatz/Documents/Quiet Money/quiet-money/production/output/2026-10-26/2026-10-26-s9-escape-the-net-cash-flow-test-for-paych/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/kofibeatz/Documents/Quiet Money/quiet-money/distribution/queue/2026-10-27/slot5-escape",
+        "post_at": "2026-10-27T21:00:00-04:00"
+      },
+      "youtube": {
+        "skipped": "COMPOSIO_API_KEY not set"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 97,
+    "passed": true
+  },
+  "cost": {
+    "tts:edge:chars": 1087
+  },
+  "notes": []
+}

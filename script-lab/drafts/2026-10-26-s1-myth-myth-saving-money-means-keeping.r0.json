@@ -1,0 +1,100 @@
+{
+  "title": "Why Bank Savings Silently Bleed Your Money",
+  "hook_text": "YOUR BANK SAVINGS ARE SHRINKING DAILY",
+  "beats": [
+    {
+      "say": "Leaving $10,000 sitting inside a standard checking account quietly drains your wealth every day.",
+      "callout": "",
+      "visual": "Low angle shot of a massive concrete brutalist bank vault facade looming over wet asphalt under cold sodium vapor streetlights at night."
+    },
+    {
+      "say": "Your bank statement doesn't show an obvious fee, but what your paycheck buys quietly vanishes.",
+      "callout": "",
+      "visual": "Extreme close-up of a hand holding a dull brass safety deposit key over a dark stainless steel surface illuminated by a single harsh fluorescent tube."
+    },
+    {
+      "say": "Where does that missing value actually go when nobody has taken a single dollar out?",
+      "callout": "",
+      "visual": "Blue hour extreme wide shot of an empty concrete underpass, wet road reflecting streetlamps, dense fog swallowing the distant skyline."
+    },
+    {
+      "say": "Most people assume money in the bank is safe because their digital balance stays unchanged.",
+      "callout": "SAFE VS ERODING",
+      "visual": "High angle shot of a solitary figure in silhouette standing motionless in the center of an enormous granite bank atrium under cold fluorescent grid lights."
+    },
+    {
+      "say": "That's the illusion. Inflation is a silent tax that erodes cash without printing a receipt.",
+      "callout": "",
+      "visual": "Extreme close-up of dry autumn leaves disintegrating into gray ash on rain-slick asphalt beneath an amber sodium light."
+    },
+    {
+      "say": "At 3% inflation, $100 today is worth just $55 in buying power after 20 years.",
+      "callout": "$100 VS $55",
+      "visual": "Low angle shot of an old iron balance scale tilting heavily in a dark room lit by a single warm practical lamp cutting through dust motes."
+    },
+    {
+      "say": "The physical dollar in your wallet never changed, but almost half its value was erased.",
+      "callout": "-45% BUYING POWER",
+      "visual": "Silhouette of a person standing at the edge of a wet concrete rooftop overlooking a stormy horizon during blue hour, heavy wind whipping their coat."
+    },
+    {
+      "say": "How do you stop your hard-earned paycheck from rotting without taking reckless gambles with it?",
+      "callout": "",
+      "visual": "Low angle perspective of a solitary figure walking down the center line of an empty highway at night into rolling fog."
+    },
+    {
+      "say": "You keep an emergency cushion in liquid cash, but put long-term money where it actually grows.",
+      "callout": "CASH VS ASSETS",
+      "visual": "Extreme close-up of hands arranging two solid geometric stones of contrasting obsidian and marble on a wet slate table under directional tungsten light."
+    },
+    {
+      "say": "Investing $100 a month for 20 years at 8% a year builds $58,902 from $24,000.",
+      "callout": "$24,000 VS $58,902",
+      "visual": "Extreme wide shot of a tiny human silhouette standing at the base of a towering concrete dam structure under dark overcast skies."
+    },
+    {
+      "say": "A standard account protects your paper balance, but smart investing protects what that balance can buy.",
+      "callout": "",
+      "visual": "High angle view of a dark quiet harbor with calm open water reflecting distant navigation beacons at blue hour."
+    },
+    {
+      "say": "Don't let your savings silently bleed out. Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "Low angle tracking shot behind a solitary silhouette walking away toward a massive illuminated bridge tower across rain-slick asphalt at dusk."
+    }
+  ],
+  "caption": "Leaving cash idle in a checking account is a slow bleed to inflation. Here is the math that changes how you save. #money #personalfinance #wealthbuilding #quietmoney #financialliteracy",
+  "description": "Keeping all your savings in a traditional checking account exposes your cash to the silent tax of inflation. Over twenty years, moderate inflation cuts purchasing power nearly in half. Here is the replacement rule to protect your purchasing power.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#wealthbuilding",
+    "#quietmoney",
+    "#financialliteracy"
+  ],
+  "first_comment": "How much of your savings are you currently keeping in cash?",
+  "facts": [
+    {
+      "claim": "At 3% inflation, $100 today is worth just $55 in buying power after 20 years.",
+      "basis": "Money Fact Sheet: $100 today is worth $55 in buying power after 20 years of 3% inflation"
+    },
+    {
+      "claim": "Investing $100 a month for 20 years at 8% a year builds $58,902 from $24,000.",
+      "basis": "Money Fact Sheet: $100/month invested for 20 years at 8%/yr (monthly compounding) = $58,902 (you put in $24,000)"
+    }
+  ],
+  "source": "llm",
+  "pillar": "myth",
+  "look": "",
+  "loop_map": {
+    "stakes": "Leaving $10,000 in a checking account silently drains purchasing power.",
+    "big_question": "Where does that missing value actually go when nobody has taken a single dollar out?",
+    "assume": "Money in a bank checking account is completely safe because nominal numbers do not fall.",
+    "reveal": "Inflation quietly cuts buying power by 45% over 20 years at 3%.",
+    "rehook_beats": [
+      5,
+      8
+    ],
+    "payoff_beat": 11
+  }
+}

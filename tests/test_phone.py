@@ -94,7 +94,7 @@ def test_a_fiverr_reply_waits_for_the_owner(lane):
 def test_shorts_texts_come_from_the_pack_and_tiktok_gets_its_disclosure():
     t = phone.short_texts(POST_MD)
     assert t["title"] == "The Bi-Weekly Mortgage Hack"
-    assert "AI-assisted" in t["description"] and not t["description"].startswith("Title")
+    assert "AI-assisted" not in t["description"] and "AI-assisted" not in t["tiktok"] and not t["description"].startswith("Title")
     assert phone.TIKTOK_DISCLOSURE in t["tiktok"] and "#money" in t["tiktok"] and "Checklist" not in t["tiktok"]
     job = {"kind": "tiktok", "text": t["tiktok"], "media": [{"source": "v.mp4"}]}
     assert phone.problems(job) == []
