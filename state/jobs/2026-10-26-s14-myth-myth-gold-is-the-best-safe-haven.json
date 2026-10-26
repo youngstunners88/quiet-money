@@ -4,21 +4,75 @@
   "topic": "Myth: Gold is the Best Safe-Haven Wealth Builder",
   "day": "2026-10-26",
   "slot": 14,
-  "status": "scripted",
+  "status": "published",
   "history": [
     {
       "from": "planned",
       "to": "scripted",
       "ts": "2026-10-26T09:58:36Z",
       "words": 157
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-26T10:00:55Z",
+      "seconds": 63.725,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-26T10:01:19Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-26T10:02:48Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-26T10:02:48Z",
+      "score": 97
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-26T10:02:48Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-10-26T10:02:50Z",
+      "local": "2026-10-28T21:00:00-04:00",
+      "youtube": null
     }
   ],
   "artifacts": {
     "angle": "Over long periods, unproductive commodities like gold drag down portfolio growth compared to income-producing assets.",
     "hook": "Holding gold for 20 years lost buyers nearly 80% against inflation between 1980 and 2000. Here is what actually builds wealth.",
-    "title": "The Gold Myth That Drains Your Wealth"
+    "title": "The Gold Myth That Drains Long-Term Wealth",
+    "style": "cinematic",
+    "video": "/home/user/quiet-money/production/output/2026-10-26/2026-10-26-s14-myth-myth-gold-is-the-best-safe-haven/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-26/2026-10-26-s14-myth-myth-gold-is-the-best-safe-haven/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-10-28/slot5-myth",
+        "post_at": "2026-10-28T21:00:00-04:00"
+      },
+      "youtube": {
+        "skipped": "YouTube refused the upload session (HTTP 429): quota or rate limit; it resets at midnight Pacific"
+      }
+    }
   },
-  "scores": {},
-  "cost": {},
+  "scores": {
+    "gauntlet": 97,
+    "passed": true
+  },
+  "cost": {
+    "tts:gemini:chars": 893,
+    "tts:edge:chars": 1052
+  },
   "notes": []
 }

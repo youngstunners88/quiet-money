@@ -1,7 +1,7 @@
 {
  "id": "gemini-pricing",
- "fetched": "2026-10-19",
- "sha": "9482eb02745c23d1",
+ "fetched": "2026-10-26",
+ "sha": "523fde1e69f39ee9",
  "snippets": [
   "Agents in AI Studio Playground",
   "Gemini Developer API pricing",
@@ -25,8 +25,6 @@
   "Our next-generation video generation and editing model, now generally available",
   "Under Standard pricing, this",
   "equates to an effective price of approximately $0.10 per second.",
-  "Our next-generation video generation and editing model.",
-  "Under Standard pricing, this equates to an effective price of approximately $0.10 per second.",
   "Our 3rd generation Pro model, built for multimodal understanding,",
   "$4.50 / 1,000,000 tokens per hour (storage price)",
   "$8.10 / 1,000,000 tokens per hour (storage price)",
@@ -45,12 +43,6 @@
   "A native image generation model, optimized for speed, flexibility, and",
   "Our 2.5 Flash text-to-speech audio model optimized for price-performant,",
   "speech generation for more natural outputs and easier to steer prompts.",
-  "veo-3.1-generate-preview, veo-3.1-fast-generate-preview, veo-3.1-lite-generate-preview",
-  "A fast video generation model.",
-  "Veo 3.1 Standard video with audio price (default)",
-  "Veo 3.1 Fast video with audio price (default)",
-  "Veo 3.1 Lite video with audio price (default)",
-  "You will only be charged if your video is successfully generated.",
   "Google's music generation model.",
   "Google's family of legacy music generation models.",
   "The generated code and execution results are billed as",
@@ -63,5 +55,5 @@
   "Google AI Studio usage is free of charge in all available regions.",
   "For Gemini Enterprise Agent Platform prices, see the Gemini Enterprise Agent Platform pricing page."
  ],
- "changed": "2026-10-19"
+ "changed": "2026-10-26"
 }
