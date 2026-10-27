@@ -9447,3 +9447,29 @@
 {"ts": "2026-10-26T11:12:14Z", "t": 1793013134.493, "actor": "engine", "type": "SCOUT_TOPUP", "pillar": "story", "added": 6}
 {"ts": "2026-10-26T11:12:26Z", "t": 1793013146.678, "actor": "engine", "type": "COMPOSIO_SESSION", "user": "quiet-money-studio", "session_hash": "67c8157f"}
 {"ts": "2026-10-26T19:33:16Z", "t": 1793043196.225, "actor": "engine", "type": "AEO_TRACK", "probes": 16, "ok": 0, "mentioned": 0}
+{"ts": "2026-10-27T07:08:47Z", "t": 1793084927.991, "actor": "engine", "type": "COMPOSIO_SESSION", "user": "quiet-money-studio", "session_hash": "9fc452af"}
+{"ts": "2026-10-27T07:08:49Z", "t": 1793084929.923, "actor": "engine", "type": "YOUTUBE_API", "path": "videos", "method": "GET", "status": 200}
+{"ts": "2026-10-27T07:09:03Z", "t": 1793084943.356, "actor": "engine", "type": "COMPOSIO_SESSION", "user": "quiet-money-studio", "session_hash": "3f50cc21"}
+{"ts": "2026-10-27T07:09:04Z", "t": 1793084944.574, "actor": "engine", "type": "COMPOSIO_EXECUTE", "tool": "YOUTUBE_LIST_CHANNELS", "ok": true, "log_id": "log_5591WgW83Sv1", "job": "2026-10-09-s6-escape-leverage-how-debt-builds-wealth"}
+{"ts": "2026-10-27T07:09:08Z", "t": 1793084948.686, "actor": "engine", "type": "YOUTUBE_UPLOAD", "video_id": "_4YmseW51Po", "channel": "UC9B1QBr3_8Eulok8IdQbCqQ", "bytes": 14247961, "job": "2026-10-09-s6-escape-leverage-how-debt-builds-wealth"}
+{"ts": "2026-10-27T07:09:10Z", "t": 1793084950.252, "actor": "engine", "type": "YOUTUBE_API", "path": "playlists", "method": "GET", "status": 200}
+{"ts": "2026-10-27T07:09:11Z", "t": 1793084951.612, "actor": "engine", "type": "YOUTUBE_API", "path": "playlistItems", "method": "POST", "status": 200}
+{"ts": "2026-10-27T07:09:11Z", "t": 1793084951.613, "actor": "engine", "type": "PUBLISH_SCHEDULED", "job": "2026-10-09-s6-escape-leverage-how-debt-builds-wealth", "provider": "youtube", "when": "2026-10-27T11:30:00-04:00", "video_id": "_4YmseW51Po"}
+{"ts": "2026-10-27T07:09:12Z", "t": 1793084952.355, "actor": "engine", "type": "COMPOSIO_EXECUTE", "tool": "YOUTUBE_LIST_CHANNELS", "ok": true, "log_id": "log_wpbJOSEqKb_p", "job": "2026-10-26-s10-story-george-foreman-s-royalty-play-th"}
+{"ts": "2026-10-27T07:09:18Z", "t": 1793084958.239, "actor": "engine", "type": "YOUTUBE_UPLOAD", "video_id": "f-E48crWlYg", "channel": "UC9B1QBr3_8Eulok8IdQbCqQ", "bytes": 25147474, "job": "2026-10-26-s10-story-george-foreman-s-royalty-play-th"}
+{"ts": "2026-10-27T07:09:19Z", "t": 1793084959.726, "actor": "engine", "type": "YOUTUBE_API", "path": "playlistItems", "method": "POST", "status": 200}
+{"ts": "2026-10-27T07:09:19Z", "t": 1793084959.729, "actor": "engine", "type": "PUBLISH_SCHEDULED", "job": "2026-10-26-s10-story-george-foreman-s-royalty-play-th", "provider": "youtube", "when": "2026-10-27T18:30:00-04:00", "video_id": "f-E48crWlYg"}
+{"ts": "2026-10-27T07:09:20Z", "t": 1793084960.902, "actor": "engine", "type": "COMPOSIO_EXECUTE", "tool": "YOUTUBE_LIST_CHANNELS", "ok": true, "log_id": "log_aaHduz_iiMlH", "job": "2026-10-10-s6-math-the-minimum-payment-trap"}
+{"ts": "2026-10-27T07:09:24Z", "t": 1793084964.717, "actor": "engine", "type": "YOUTUBE_UPLOAD", "video_id": "MY1Lq5ZmkAA", "channel": "UC9B1QBr3_8Eulok8IdQbCqQ", "bytes": 9086832, "job": "2026-10-10-s6-math-the-minimum-payment-trap"}
+{"ts": "2026-10-27T07:09:26Z", "t": 1793084966.045, "actor": "engine", "type": "YOUTUBE_API", "path": "playlistItems", "method": "POST", "status": 200}
+{"ts": "2026-10-27T07:09:26Z", "t": 1793084966.047, "actor": "engine", "type": "PUBLISH_SCHEDULED", "job": "2026-10-10-s6-math-the-minimum-payment-trap", "provider": "youtube", "when": "2026-10-27T21:00:00-04:00", "video_id": "MY1Lq5ZmkAA"}
+{"ts": "2026-10-27T07:09:26Z", "t": 1793084966.88, "actor": "engine", "type": "COMPOSIO_EXECUTE", "tool": "YOUTUBE_LIST_CHANNELS", "ok": true, "log_id": "log_nj3e0TiTK8EN", "job": "2026-10-23-s6-psychology-confirmation-bias-in-spending"}
+{"ts": "2026-10-27T07:09:31Z", "t": 1793084971.183, "actor": "engine", "type": "YOUTUBE_UPLOAD", "video_id": "GdISte_fWFE", "channel": "UC9B1QBr3_8Eulok8IdQbCqQ", "bytes": 16297069, "job": "2026-10-23-s6-psychology-confirmation-bias-in-spending"}
+{"ts": "2026-10-27T07:09:34Z", "t": 1793084974.681, "actor": "engine", "type": "YOUTUBE_API", "path": "playlistItems", "method": "POST", "status": 200}
+{"ts": "2026-10-27T07:09:34Z", "t": 1793084974.684, "actor": "engine", "type": "PUBLISH_SCHEDULED", "job": "2026-10-23-s6-psychology-confirmation-bias-in-spending", "provider": "youtube", "when": "2026-10-27T15:00:00-04:00", "video_id": "GdISte_fWFE"}
+{"ts": "2026-10-27T07:09:35Z", "t": 1793084975.441, "actor": "engine", "type": "COMPOSIO_EXECUTE", "tool": "YOUTUBE_LIST_CHANNELS", "ok": true, "log_id": "log_yN28wIzZPm6E", "job": "2026-10-11-s7-myth-myth-paying-off-your-mortgage-ea"}
+{"ts": "2026-10-27T07:09:40Z", "t": 1793084980.965, "actor": "engine", "type": "YOUTUBE_UPLOAD", "video_id": "3yddLAYvISo", "channel": "UC9B1QBr3_8Eulok8IdQbCqQ", "bytes": 14462974, "job": "2026-10-11-s7-myth-myth-paying-off-your-mortgage-ea"}
+{"ts": "2026-10-27T07:09:42Z", "t": 1793084982.329, "actor": "engine", "type": "YOUTUBE_API", "path": "playlistItems", "method": "POST", "status": 200}
+{"ts": "2026-10-27T07:09:42Z", "t": 1793084982.33, "actor": "engine", "type": "PUBLISH_SCHEDULED", "job": "2026-10-11-s7-myth-myth-paying-off-your-mortgage-ea", "provider": "youtube", "when": "2026-10-27T07:30:00-04:00", "video_id": "3yddLAYvISo"}
+{"ts": "2026-10-27T07:09:55Z", "t": 1793084995.388, "actor": "engine", "type": "COMPOSIO_SESSION", "user": "quiet-money-studio", "session_hash": "4489f407"}
+{"ts": "2026-10-27T07:09:56Z", "t": 1793084996.521, "actor": "engine", "type": "YOUTUBE_API", "path": "videos", "method": "GET", "status": 200}
