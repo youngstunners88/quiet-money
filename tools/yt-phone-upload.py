@@ -112,16 +112,31 @@ for _ in range(3):
     adb("input keyevent 4"); time.sleep(2)
 def settle(pred,wait=8):
     return find(pred,wait)
-sl=find(lambda t:t=="Show less",3)
-if not sl:
-    adb("input swipe 540 1700 540 600 400"); time.sleep(2.5); sl=find(lambda t:t=="Show less",5)
-if not sl: die("show less anchor missing")
-time.sleep(1.5); sl=find(lambda t:t=="Show less",3)            # re-read after the scroll settles
-adb(f"input tap 480 {sl[2]-152}"); time.sleep(3)                # Attributes sits 152 px above Show less
-if not settle(lambda t:t=="Add tags"): die("attributes page did not open")
-adb("input tap 480 328"); time.sleep(3)                         # AI use
-if not settle(lambda t:t.startswith("Was AI used")): die("AI use page did not open")
-adb("input tap 102 1026"); time.sleep(1.5)                      # Yes
+def ensure_title():
+    """the keyboard sometimes appends one stray character to the title: delete it, then close the keyboard"""
+    t=[x for x,_,_ in tree() if x.startswith(title[:14])]
+    if t and t[0]==title+"t" or (t and len(t[0])==len(title)+1 and t[0].startswith(title)):
+        adb("input keyevent 123"); adb("input keyevent 67"); time.sleep(1.2)
+        t=[x for x,_,_ in tree() if x.startswith(title[:14])]
+    return bool(t) and t[0]==title
+ok_ai=False
+for attempt in range(3):
+    if not ensure_title(): adb("input keyevent 4"); time.sleep(2); ensure_title()
+    for _ in range(3):
+        if find(lambda t:t in("Show more","Show less","Upload Short"),2) and not find(lambda t:t=="Add description",1): break
+        adb("input keyevent 4"); time.sleep(2)
+    adb("input swipe 540 600 540 1700 400"); time.sleep(2)
+    sm=find(lambda t:t=="Show more",3)
+    if sm: tap(sm); time.sleep(2.5)
+    adb("input swipe 540 1700 540 600 400"); time.sleep(3)
+    sl=find(lambda t:t=="Show less",4)
+    if not sl: continue
+    adb(f"input tap 480 {sl[2]-152}"); time.sleep(3)
+    if not settle(lambda t:t=="Add tags",5): adb("input keyevent 4"); time.sleep(2); continue
+    adb("input tap 480 328"); time.sleep(3)
+    if not settle(lambda t:t.startswith("Was AI used") or t=="AI use",5): adb("input keyevent 4"); time.sleep(2); continue
+    adb("input tap 102 1026"); time.sleep(1.5); ok_ai=True; break
+if not ok_ai: die("could not set AI use")
 shot("ai_use")
 adb("input keyevent 4"); time.sleep(2); adb("input keyevent 4"); time.sleep(2)
 up=find(lambda t:t=="Upload Short",6)
