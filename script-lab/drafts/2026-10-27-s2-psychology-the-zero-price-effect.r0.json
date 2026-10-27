@@ -1,0 +1,100 @@
+{
+  "title": "Why 'Free' Makes You Spend $50 Extra",
+  "hook_text": "THE FREE SHIPPING TRAP",
+  "beats": [
+    {
+      "say": "Add a $5 shipping fee and you'll abandon your cart instantly.",
+      "callout": "",
+      "visual": "Extreme close-up of a computer cursor hovering over an abandon checkout button, illuminated by cold blue screen light in a pitch black room."
+    },
+    {
+      "say": "Slap on free shipping for a $70 item you don't need, and you buy it immediately.",
+      "callout": "$5 VS $70",
+      "visual": "High angle shot of a single brown cardboard box sitting on rain-slicked dark asphalt beneath a harsh sodium streetlight."
+    },
+    {
+      "say": "Most people think they're just saving $5 and getting a smart deal.",
+      "callout": "",
+      "visual": "Low angle shot of a sleek smartphone resting on a dark granite countertop in an empty modern apartment at twilight."
+    },
+    {
+      "say": "But researchers call this the Zero-Price Effect, where zero turns off your brain's fear of loss.",
+      "callout": "ZERO-PRICE EFFECT",
+      "visual": "Cold fluorescent lighting illuminating a dimly lit, empty glass research corridor with deep shadows."
+    },
+    {
+      "say": "In a famous MIT experiment, people picked cheap free chocolate over a luxury truffle at a massive discount.",
+      "callout": "",
+      "visual": "Extreme close-up of gourmet chocolates on a dark polished slate slab under a single sharp overhead spotlight."
+    },
+    {
+      "say": "When something costs zero, your brain overvalues the item and ignores the hidden trade-off.",
+      "callout": "",
+      "visual": "Silhouette of a person standing motionless in a dark room facing a tall glowing window looking out over a foggy skyline."
+    },
+    {
+      "say": "Online stores exploit this by forcing you to spend $50 extra just to dodge a $5 delivery charge.",
+      "callout": "$50 EXTRA",
+      "visual": "Wide angle shot looking down a vast, silent warehouse aisle flanked by towering dark metal shelves."
+    },
+    {
+      "say": "What does wasting $5 a day on useless impulse add-ons actually cost your wealth?",
+      "callout": "",
+      "visual": "High angle shot of a single metal coin spinning slowly on wet concrete under blue hour streetlights."
+    },
+    {
+      "say": "A $5 a day habit equals $1,825 a year leaving your wallet.",
+      "callout": "$1,825 / YEAR",
+      "visual": "Extreme close-up of hands folding crisp paper banknotes under a solitary warm desk light."
+    },
+    {
+      "say": "Invested monthly at 8% a year for 30 years, that money becomes $226,659.",
+      "callout": "$226,659",
+      "visual": "Low angle shot of heavy concrete bank vault walls framed by cold industrial lighting."
+    },
+    {
+      "say": "Next time you see free shipping, ask if you're saving $5 or wasting $50.",
+      "callout": "$5 VS $50",
+      "visual": "Extreme wide shot of an empty wet urban street at night with mist reflecting red tail lights in the distance."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "Silhouette of a figure walking down a long underpass toward a bright misty exit at dusk."
+    }
+  ],
+  "caption": "The word 'free' triggers an emotional response that shuts down rational math. Here is what it costs you long term. #money #personalfinance #behavioraleconomics #smartmoney #wealthbuilding",
+  "description": "Explaining the Zero-Price Effect and why free shipping prompts consumers to overspend on items they do not need. Includes compounding math showing the long-term cost of daily micro-waste.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#moneytips",
+    "#behavioraleconomics",
+    "#mindset"
+  ],
+  "first_comment": "What's the last unnecessary item you bought just to get free shipping?",
+  "facts": [
+    {
+      "claim": "A $5/day habit equals $1,825/year, which grows to $226,659 when invested monthly at 8% for 30 years.",
+      "basis": "Fact Sheet math: $5/day habit = $1,825/year; invested monthly at 8% for 30 years = $226,659."
+    },
+    {
+      "claim": "In MIT studies on the Zero-Price Effect (Ariely et al., 2007), participants chose free low-value items over deeply discounted high-value items.",
+      "basis": "Documented behavioral economics study: Shampanier, Mazar, and Ariely (2007) 'Zero as a Special Price'."
+    }
+  ],
+  "source": "llm",
+  "pillar": "psychology",
+  "look": "",
+  "loop_map": {
+    "stakes": "Abandoning a shopping cart over $5 shipping vs spending $70 to get it free.",
+    "big_question": "Why does the word 'free' make us spend more money overall?",
+    "assume": "Most people think they are saving $5 and getting a bargain.",
+    "reveal": "The Zero-Price Effect turns off risk perception, making us buy useless items to avoid a fee.",
+    "rehook_beats": [
+      5,
+      8
+    ],
+    "payoff_beat": 10
+  }
+}

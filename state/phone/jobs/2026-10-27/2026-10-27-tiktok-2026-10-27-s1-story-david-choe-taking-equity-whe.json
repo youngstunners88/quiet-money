@@ -1,0 +1,18 @@
+{
+ "id": "2026-10-27-tiktok-2026-10-27-s1-story-david-choe-taking-equity-whe",
+ "kind": "tiktok",
+ "day": "2026-10-27",
+ "key": "2026-10-27-s1-story-david-choe-taking-equity-when-ca",
+ "status": "queued",
+ "created": "2026-10-27T09:49:35+00:00",
+ "recipe": "TikTok upload",
+ "media": [
+  {
+   "source": "production/output/2026-10-27/2026-10-27-s1-story-david-choe-taking-equity-when-ca/final.mp4",
+   "name": "final.mp4"
+  }
+ ],
+ "staged": true,
+ "text": "Linear income keeps you trading time for dollars. Asymmetric equity changes the math entirely.\n\nThe Quiet Money Daily Planner: link in bio (paid).\n\n#MoneyPsychology #PersonalFinance #WealthBuilding #Investing #FinancialFreedom\n\nEducation, not financial advice.",
+ "ai_label": "AI-generated content: on"
+}

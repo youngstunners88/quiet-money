@@ -1,26 +1,26 @@
-# Slot 2: The $16 Million Lottery Trap That Ruined William Post
+# Slot 2: The Graffiti Artist Who Chose Risk Over Cash
 Post at: 2026-10-27 11:30 EDT
 
 ## YouTube Shorts
-Title: The $16 Million Lottery Trap That Ruined William Post
+Title: The Graffiti Artist Who Chose Risk Over Cash
 
-In 1988, William Post went from $2 to $16 million overnight, only to end up $1 million in debt twelve months later. Sudden wealth amplifies existing weaknesses and ruins lives without financial discipline.
+How artist David Choe traded a $60,000 wall-painting gig for Facebook stock worth $200 million, proving the power of asymmetric equity risk.
 
-Free 7-day Money Reset checklist + calculators: https://youngstunners88.github.io/quiet-money/links/?utm_source=youtube&utm_medium=short&utm_campaign=checklist&utm_content=2026-10-26-s6-story-the-cautionary-tale-of-william-p&o=checklist
+The Quiet Money Daily Planner (paid), and the free Money Reset checklist: https://youngstunners88.github.io/quiet-money/links/?utm_source=youtube&utm_medium=short&utm_campaign=daily-quiet-money-planner&utm_content=2026-10-27-s1-story-david-choe-taking-equity-when-ca&o=daily-quiet-money-planner
 
 Educational content, not financial advice.
 
-#money #personalfinance #lottery #moneymindset #wealth #shorts
+#MoneyPsychology #PersonalFinance #WealthBuilding #Investing #FinancialFreedom #shorts
 
 ## TikTok / Instagram caption
-Winning $16 million destroyed William Post in less than a year. Here's why sudden wealth magnifies your flaws.
+Linear income keeps you trading time for dollars. Asymmetric equity changes the math entirely.
 
-Free money reset checklist: link in bio.
+The Quiet Money Daily Planner: link in bio (paid).
 
-#money #personalfinance #lottery #moneymindset #wealth
+#MoneyPsychology #PersonalFinance #WealthBuilding #Investing #FinancialFreedom
 
 ## Checklist
 - [ ] Toggle the platform's AI-generated content label ON
 - [ ] TikTok: add a trending sound at 5-10% volume under the voice
-- [ ] Pin this comment: Free 60-second money reset checklist is in my bio. Educational only, not financial advice.
+- [ ] Pin this comment: The Quiet Money Daily Planner is in my bio (paid). Educational only, not financial advice.
 - [ ] Profile link on every platform is the hub page (see OFFER.md); links in captions and comments are not tappable

@@ -1,0 +1,77 @@
+{
+  "id": "2026-10-27-s0-myth-myth-loyalty-to-one-company-grow",
+  "pillar": "myth",
+  "topic": "Myth: Loyalty to One Company Grows Your Income Fastest",
+  "day": "2026-10-27",
+  "slot": 0,
+  "status": "published",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-27T09:24:19Z",
+      "words": 189
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-27T09:26:09Z",
+      "seconds": 70.335,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-27T09:27:08Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-27T09:30:30Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-27T09:30:30Z",
+      "score": 98
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-27T09:30:31Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-10-27T09:30:31Z",
+      "local": "2026-10-27T07:30:00-04:00",
+      "youtube": null
+    }
+  ],
+  "artifacts": {
+    "angle": "Internal salary raises average 3%, while job-switching yields 10% to 20% increases due to market-rate anchoring.",
+    "hook": "Staying at the same company for more than two years costs you an average of 50% in lifetime earnings.",
+    "title": "Why Staying at One Company Costs You 50% in Income",
+    "style": "cinematic",
+    "video": "/home/user/quiet-money/production/output/2026-10-27/2026-10-27-s0-myth-myth-loyalty-to-one-company-grow/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-27/2026-10-27-s0-myth-myth-loyalty-to-one-company-grow/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-10-27/slot1-myth",
+        "post_at": "2026-10-27T07:30:00-04:00"
+      },
+      "youtube": {
+        "skipped": "YouTube daily cap reached (5 scheduled for 2026-10-27); the local pack is ready"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 98,
+    "passed": true
+  },
+  "cost": {
+    "tts:edge:chars": 1207
+  },
+  "notes": []
+}

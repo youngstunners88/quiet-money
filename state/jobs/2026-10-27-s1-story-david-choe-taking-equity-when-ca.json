@@ -1,0 +1,77 @@
+{
+  "id": "2026-10-27-s1-story-david-choe-taking-equity-when-ca",
+  "pillar": "story",
+  "topic": "David Choe: Taking Equity When Cash is the Safe Choice",
+  "day": "2026-10-27",
+  "slot": 1,
+  "status": "published",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-27T09:32:46Z",
+      "words": 152
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-27T09:34:14Z",
+      "seconds": 62.979,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-27T09:34:53Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-27T09:38:03Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-27T09:38:03Z",
+      "score": 96
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-27T09:38:03Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-10-27T09:38:03Z",
+      "local": "2026-10-27T11:30:00-04:00",
+      "youtube": null
+    }
+  ],
+  "artifacts": {
+    "angle": "Taking asymmetric equity risk when your baseline living costs are covered offers mathematically infinite upside compared to linear earned income.",
+    "hook": "In 2005, a struggling graffiti artist was offered either $60,000 in cash or company shares to paint the walls of a fledgling startup called Facebook.",
+    "title": "The Graffiti Artist Who Chose Risk Over Cash",
+    "style": "cinematic",
+    "video": "/home/user/quiet-money/production/output/2026-10-27/2026-10-27-s1-story-david-choe-taking-equity-when-ca/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-27/2026-10-27-s1-story-david-choe-taking-equity-when-ca/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-10-27/slot2-story",
+        "post_at": "2026-10-27T11:30:00-04:00"
+      },
+      "youtube": {
+        "skipped": "YouTube daily cap reached (5 scheduled for 2026-10-27); the local pack is ready"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 96,
+    "passed": true
+  },
+  "cost": {
+    "tts:edge:chars": 897
+  },
+  "notes": []
+}

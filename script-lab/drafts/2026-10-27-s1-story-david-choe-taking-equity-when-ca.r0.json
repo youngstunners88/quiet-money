@@ -1,0 +1,85 @@
+{
+  "title": "The Graffiti Artist Who Chose Risk Over Cash",
+  "hook_text": "$60,000 CASH OR SHARES?",
+  "beats": [
+    {
+      "say": "In 2005, a struggling graffiti artist was offered either $60,000 in cash or company shares to paint walls.",
+      "callout": "",
+      "visual": "Extreme close-up of a spray paint can nozzle venting mist under harsh sodium street light, low angle, dark urban alley."
+    },
+    {
+      "say": "Most folks would grab the $60,000. That's a safe paycheck you can spend today.",
+      "callout": "CASH VS SHARES",
+      "visual": "A worn leather wallet resting on wet asphalt at night, blue hour lighting, wide shot of empty street."
+    },
+    {
+      "say": "David Choe didn't want the safe cash. He took a gamble on stock in a tiny startup called Facebook.",
+      "callout": "",
+      "visual": "Low angle shot of a massive concrete highway bridge cutting across a foggy skyline at dusk."
+    },
+    {
+      "say": "Why would anyone trade guaranteed money for random paper? How did that wild bet actually play out?",
+      "callout": "THE BIG BET",
+      "visual": "Silhouette of a lone person walking along a razor-wire fence against a dim grey dawn."
+    },
+    {
+      "say": "You assume a small art gig pays pennies. But his risk wasn't blind luck. His baseline living costs were covered.",
+      "callout": "STEP ONE",
+      "visual": "Extreme wide shot of a rusted shipping container yard under cold fluorescent security lights."
+    },
+    {
+      "say": "When you don't need the next paycheck to survive, you can play a totally different game than everyone else.",
+      "callout": "STEP TWO",
+      "visual": "Close-up of scarred hands holding a blank white canvas under a single bare overhead bulb."
+    },
+    {
+      "say": "That graffiti gig turned into shares worth $200,000,000 when the company went public.",
+      "callout": "$60,000 VS $200,000,000",
+      "visual": "Extreme wide shot of glass corporate skyscraper towers reflecting a cold winter sunset."
+    },
+    {
+      "say": "Linear earned income has a hard ceiling. Asymmetric equity risk has mathematically infinite upside.",
+      "callout": "INFINITE UPSIDE",
+      "visual": "High angle shot of a steep mountain ridge line cutting through heavy fog, cold blue tones."
+    },
+    {
+      "say": "Cover your baseline costs first. Then take the equity. Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "Silhouette of a solitary figure standing at the very edge of a concrete parking structure roof at night."
+    }
+  ],
+  "caption": "Linear income keeps you trading time for dollars. Asymmetric equity changes the math entirely. \n\n#MoneyPsychology #PersonalFinance #WealthBuilding #Investing #FinancialFreedom",
+  "description": "How artist David Choe traded a $60,000 wall-painting gig for Facebook stock worth $200 million, proving the power of asymmetric equity risk.",
+  "hashtags": [
+    "#MoneyPsychology",
+    "#PersonalFinance",
+    "#WealthBuilding",
+    "#Investing",
+    "#FinancialFreedom"
+  ],
+  "first_comment": "Would you have taken the $60,000 cash or rolled the dice on the shares?",
+  "facts": [
+    {
+      "claim": "David Choe was offered $60,000 or stock by Facebook in 2005",
+      "basis": "Well-documented tech startup history"
+    },
+    {
+      "claim": "His Facebook stock stake was later valued at roughly $200 million",
+      "basis": "Publicly reported financial estimates following the 2012 IPO"
+    }
+  ],
+  "source": "llm",
+  "pillar": "story",
+  "look": "",
+  "loop_map": {
+    "stakes": "A graffiti artist is offered $60,000 cash or startup shares.",
+    "big_question": "How did that wild bet actually play out?",
+    "assume": "Most folks would grab the safe $60,000 cash.",
+    "reveal": "He took equity worth $200 million instead.",
+    "rehook_beats": [
+      4,
+      7
+    ],
+    "payoff_beat": 8
+  }
+}

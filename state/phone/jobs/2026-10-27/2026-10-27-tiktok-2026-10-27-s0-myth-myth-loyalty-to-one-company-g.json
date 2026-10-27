@@ -1,0 +1,18 @@
+{
+ "id": "2026-10-27-tiktok-2026-10-27-s0-myth-myth-loyalty-to-one-company-g",
+ "kind": "tiktok",
+ "day": "2026-10-27",
+ "key": "2026-10-27-s0-myth-myth-loyalty-to-one-company-grow",
+ "status": "queued",
+ "created": "2026-10-27T09:49:35+00:00",
+ "recipe": "TikTok upload",
+ "media": [
+  {
+   "source": "production/output/2026-10-27/2026-10-27-s0-myth-myth-loyalty-to-one-company-grow/final.mp4",
+   "name": "final.mp4"
+  }
+ ],
+ "staged": true,
+ "text": "Company loyalty is draining your long-term wealth. Here is the math behind job switching.\n\nFree money reset checklist: link in bio.\n\n#money #careers #personalfinance #salary #quietmoney\n\nEducation, not financial advice.",
+ "ai_label": "AI-generated content: on"
+}

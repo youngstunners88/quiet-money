@@ -1,23 +1,23 @@
-# Slot 1: The Diversification Lie Draining Your Money
+# Slot 1: Why Staying at One Company Costs You 50% in Income
 Post at: 2026-10-27 07:30 EDT
 
 ## YouTube Shorts
-Title: The Diversification Lie Draining Your Money
+Title: Why Staying at One Company Costs You 50% in Income
 
-More funds do not mean less risk. Discover why portfolio overlap creates diworsification, inflates hidden management fees, and leaves your paycheck exposed to identical crashes.
+Staying at one company longer than two years can cost you up to 50% in lifetime earnings. Learn why corporate budgets cap internal raises at 3% while paying market rates for new hires.
 
-Free 7-day Money Reset checklist + calculators: https://youngstunners88.github.io/quiet-money/links/?utm_source=youtube&utm_medium=short&utm_campaign=checklist&utm_content=2026-10-26-s5-myth-myth-financial-diversification-m&o=checklist
+Free 7-day Money Reset checklist + calculators: https://youngstunners88.github.io/quiet-money/links/?utm_source=youtube&utm_medium=short&utm_campaign=checklist&utm_content=2026-10-27-s0-myth-myth-loyalty-to-one-company-grow&o=checklist
 
 Educational content, not financial advice.
 
-#money #personalfinance #investing #indexfunds #financialfreedom #shorts
+#money #personalfinance #careers #salary #quietmoney #shorts
 
 ## TikTok / Instagram caption
-Owning twenty funds isn't diversification if they all hold the exact same stocks.
+Company loyalty is draining your long-term wealth. Here is the math behind job switching.
 
 Free money reset checklist: link in bio.
 
-#money #personalfinance #investing #wealth #financialliteracy #indexfunds #financialfreedom
+#money #careers #personalfinance #salary #quietmoney
 
 ## Checklist
 - [ ] Toggle the platform's AI-generated content label ON

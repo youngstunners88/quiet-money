@@ -1,0 +1,96 @@
+{
+  "title": "Stop Getting Blindsided By Bills You Knew Were Coming",
+  "hook_text": "YOUR CAR BILL ISN'T A SURPRISE",
+  "beats": [
+    {
+      "say": "Your car registration isn't a surprise bill. It just arrives like one.",
+      "callout": "",
+      "visual": "Extreme close-up of a lone car key resting on wet asphalt under harsh sodium streetlights."
+    },
+    {
+      "say": "Every single year, predictable bills feel like financial emergencies. Why do we keep paying for them with panicked savings?",
+      "callout": "",
+      "visual": "Low angle silhouette of a person standing alone in a dark kitchen, illuminated only by open refrigerator light."
+    },
+    {
+      "say": "When a $3,000 bill hits a 24% APR credit card, paying minimums costs $4,887 in interest.",
+      "callout": "$4,887 IN INTEREST",
+      "visual": "Extreme close-up of a credit card edge on a steel desk in cold fluorescent light."
+    },
+    {
+      "say": "Most people assume they need a higher income. But you actually just need a simple sinking fund.",
+      "callout": "INCOME VS TIMING",
+      "visual": "High angle shot of an empty highway at night with mist drifting across lane markers."
+    },
+    {
+      "say": "Here's the 15-minute system to neutralize every yearly expense before it ever hits your mailbox.",
+      "callout": "",
+      "visual": "Silhouette of hands holding a dark smartphone screen in a fog-filled room during blue hour."
+    },
+    {
+      "say": "Step one. Choose one recurring bill due later this year, like car registration or holiday gifts.",
+      "callout": "STEP ONE",
+      "visual": "Extreme close-up of a dark calendar on a wooden table lit by a single desk lamp."
+    },
+    {
+      "say": "Take the total dollar amount and count the exact months remaining until that bill is due.",
+      "callout": "",
+      "visual": "Cinematic shot of heavy rain slanting across a dark suburban street under towering utility poles."
+    },
+    {
+      "say": "Step two. Divide that total cost by the remaining months to calculate your exact monthly requirement.",
+      "callout": "STEP TWO",
+      "visual": "Low angle view of an empty concrete bridge under single practical light at midnight."
+    },
+    {
+      "say": "Divide that figure by your paychecks per month so you know what to save each payday.",
+      "callout": "",
+      "visual": "Extreme close-up of water droplets running down a dark glass window pane."
+    },
+    {
+      "say": "Step three. Open a separate sub-account and automate that exact transfer on every single payday.",
+      "callout": "STEP THREE",
+      "visual": "Silhouette looking out from a high-rise tower edge over a foggy city skyline."
+    },
+    {
+      "say": "When the invoice lands, the full balance is already sitting there, completely paid for without stress.",
+      "callout": "PAINLESS PAYMENT",
+      "visual": "Cinematic wide shot of an empty asphalt road reaching into a dark horizon under pale blue twilight."
+    },
+    {
+      "say": "Follow for the money rules school never taught you, so no bill arrives like a surprise again.",
+      "callout": "",
+      "visual": "Extreme close-up of red car taillights fading into dark night fog on a wet road."
+    }
+  ],
+  "caption": "Stop letting annual bills destroy your emergency fund. Here is the 3-step sinking fund formula to automate every recurring bill today.",
+  "description": "Annual bills like car registration, insurance renewals, and holiday gifts feel like sudden emergencies when paid all at once. This 15-minute sinking fund system splits irregular expenses into payday automated transfers so you never pay debt interest on predictable life expenses.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#sinkingfunds",
+    "#budgeting",
+    "#financialfreedom"
+  ],
+  "first_comment": "Which annual bill always seems to sneak up on your budget?",
+  "facts": [
+    {
+      "claim": "Paying only minimums on a $3,000 credit card balance at 24% APR costs $4,887 in interest.",
+      "basis": "$3,000 credit card at 24% APR paying only the minimum (1% + interest, min $25): 183 months (~15 years), $4,887 interest"
+    }
+  ],
+  "source": "llm",
+  "pillar": "playbook",
+  "look": "",
+  "loop_map": {
+    "stakes": "Predictable annual expenses turning into credit card debt emergencies.",
+    "big_question": "Why do predictable bills constantly trigger financial panic and high credit card interest?",
+    "assume": "You need a higher income to absorb large annual expenses.",
+    "reveal": "You just need a sinking fund to split the bill across remaining paychecks.",
+    "rehook_beats": [
+      4,
+      8
+    ],
+    "payoff_beat": 11
+  }
+}

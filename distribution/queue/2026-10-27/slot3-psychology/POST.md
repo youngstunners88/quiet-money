@@ -1,23 +1,23 @@
-# Slot 3: Why Optimism Bias Destroys Your Savings
+# Slot 3: Why 'Free' Makes You Spend $50 Extra
 Post at: 2026-10-27 15:00 EDT
 
 ## YouTube Shorts
-Title: Why Optimism Bias Destroys Your Savings
+Title: Why 'Free' Makes You Spend $50 Extra
 
-Optimism bias tricks us into believing predictable maintenance costs are rare emergencies. Here is how that mistake forces thousands into high-interest debt and how sinking funds solve it.
+Explaining the Zero-Price Effect and why free shipping prompts consumers to overspend on items they do not need. Includes compounding math showing the long-term cost of daily micro-waste.
 
-Free 7-day Money Reset checklist + calculators: https://youngstunners88.github.io/quiet-money/links/?utm_source=youtube&utm_medium=short&utm_campaign=checklist&utm_content=2026-10-26-s7-psychology-optimism-bias&o=checklist
+Free 7-day Money Reset checklist + calculators: https://youngstunners88.github.io/quiet-money/links/?utm_source=youtube&utm_medium=short&utm_campaign=checklist&utm_content=2026-10-27-s2-psychology-the-zero-price-effect&o=checklist
 
 Educational content, not financial advice.
 
-#moneypsychology #personalfinance #emergencyfund #debtfreejourney #financialliteracy #shorts
+#money #personalfinance #moneytips #behavioraleconomics #mindset #shorts
 
 ## TikTok / Instagram caption
-Your car will break down. Your teeth will need work. Stop letting optimism bias drain your wealth. 🧠💸
+The word 'free' triggers an emotional response that shuts down rational math. Here is what it costs you long term.
 
 Free money reset checklist: link in bio.
 
-#moneypsychology #emergencyfund #debtfreejourney #budgeting #quietmoney #personalfinance #financialliteracy
+#money #personalfinance #behavioraleconomics #smartmoney #wealthbuilding #moneytips #mindset
 
 ## Checklist
 - [ ] Toggle the platform's AI-generated content label ON

@@ -1,0 +1,39 @@
+{
+  "id": "2026-10-27-s3-playbook-a-sinking-fund-for-one-bill-you",
+  "pillar": "playbook",
+  "topic": "A sinking fund for one bill you know is coming",
+  "day": "2026-10-27",
+  "slot": 3,
+  "status": "visualized",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-27T09:46:52Z",
+      "words": 191
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-27T09:47:37Z",
+      "seconds": 65.907,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-27T09:47:52Z"
+    }
+  ],
+  "artifacts": {
+    "angle": "three steps: pick one yearly or irregular bill (car registration, a renewal, gifts), divide it by the months until it is due, move that amount on payday into its own pot; the viewer does the division, no figure claimed",
+    "hook": "Your car registration isn't a surprise. It just arrives like one.",
+    "title": "Stop Getting Blindsided By Bills You Knew Were Coming",
+    "style": "cinematic"
+  },
+  "scores": {},
+  "cost": {
+    "tts:edge:chars": 1144
+  },
+  "notes": []
+}

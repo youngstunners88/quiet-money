@@ -1,0 +1,105 @@
+{
+  "title": "Why Staying at One Company Costs You 50% in Income",
+  "hook_text": "COMPANY LOYALTY IS COSTING YOU 50%",
+  "beats": [
+    {
+      "say": "Staying at the same job for over 2 years costs you 50% in lifetime earnings.",
+      "callout": "",
+      "visual": "Low angle silhouette of a lone worker walking past massive cold concrete office pillars in heavy driving rain."
+    },
+    {
+      "say": "You're taught that staying loyal pays off through bigger promotions and steady annual pay raises.",
+      "callout": "THE LOYALTY TRAP",
+      "visual": "Extreme close-up of a cheap corporate ID badge resting on wet asphalt under cold fluorescent light."
+    },
+    {
+      "say": "Why does company loyalty cap your paycheck while job switching multiplies your income?",
+      "callout": "",
+      "visual": "High angle wide shot of an empty glass elevator ascending a dark skyscraper during blue hour."
+    },
+    {
+      "say": "Most workers assume staying put and working hard guarantees the highest long-term salary growth.",
+      "callout": "3% VS 15% RAISE",
+      "visual": "Fog cutting through a towering city office skyline illuminated by sodium streetlights at midnight."
+    },
+    {
+      "say": "In reality, internal raises average just 3%, which that's barely keeping pace with 3% inflation.",
+      "callout": "3% AVERAGE RAISE",
+      "visual": "Extreme close-up of hands typing on a glowing laptop keyboard in a pitch-black room."
+    },
+    {
+      "say": "So how's that tiny 3% raise compounding into a massive 50% lifetime earnings loss?",
+      "callout": "",
+      "visual": "Wide angle shot of a solitary person standing at the edge of a dark rain-slicked highway underpass."
+    },
+    {
+      "say": "When you switch companies, average job-hop raises jump between 10% and 20% instantly.",
+      "callout": "10% TO 20% JUMP",
+      "visual": "Low angle shot looking up at towering corporate steel beams framed by thick fog and cold light."
+    },
+    {
+      "say": "But why do corporate payroll budgets aggressively favor outside hires over their most loyal workers?",
+      "callout": "",
+      "visual": "Silhouette of a commuter standing alone on an empty train platform during a midnight downpour."
+    },
+    {
+      "say": "Retention budgets are anchored to your starting salary, strictly capped by rigid corporate policy.",
+      "callout": "RETENTION VS RECRUITING",
+      "visual": "Extreme close-up of a heavy steel vault door locking under a single harsh spotlight."
+    },
+    {
+      "say": "Meanwhile, competitive hiring budgets must match current market rates just to pull in new talent.",
+      "callout": "",
+      "visual": "High angle view of wet city street reflecting harsh neon store lights in the dark."
+    },
+    {
+      "say": "Company loyalty caps your paycheck because internal raises stay at 3% while hiring budgets pay market rates.",
+      "callout": "MARKET RATE PAY",
+      "visual": "Extreme wide shot of a giant illuminated office tower rising into dark storm clouds."
+    },
+    {
+      "say": "Reframe your labor as a business service rather than an emotional family loyalty.",
+      "callout": "",
+      "visual": "Low angle silhouette of a person looking out from a high-floor office glass window over a sprawling city."
+    },
+    {
+      "say": "Follow for the money rules school never taught you, so staying quiet never costs you fortune.",
+      "callout": "QUIET MONEY",
+      "visual": "Rain-slicked city avenue reflecting red taillights fading into the midnight horizon."
+    }
+  ],
+  "caption": "Company loyalty is draining your long-term wealth. Here is the math behind job switching. #money #careers #personalfinance #salary #quietmoney",
+  "description": "Staying at one company longer than two years can cost you up to 50% in lifetime earnings. Learn why corporate budgets cap internal raises at 3% while paying market rates for new hires.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#careers",
+    "#salary",
+    "#quietmoney"
+  ],
+  "first_comment": "How long have you been at your current job?",
+  "facts": [
+    {
+      "claim": "Staying at a company over two years costs 50% in lifetime earnings on average.",
+      "basis": "Forbes analysis on workforce salary data by Cameron Keng."
+    },
+    {
+      "claim": "Internal salary raises average ~3% while job switching yields 10% to 20% increases.",
+      "basis": "ADP Pay Insights workforce data on job-stayers vs. job-switchers."
+    }
+  ],
+  "source": "llm",
+  "pillar": "myth",
+  "look": "",
+  "loop_map": {
+    "stakes": "Staying at the same job for over 2 years costs you 50% in lifetime earnings.",
+    "big_question": "Why does company loyalty cap your paycheck while job switching multiplies your income?",
+    "assume": "Staying loyal and working hard brings the highest long-term salary growth.",
+    "reveal": "Internal raises average 3% while job switching yields 10% to 20% increases due to market-rate anchoring.",
+    "rehook_beats": [
+      6,
+      8
+    ],
+    "payoff_beat": 11
+  }
+}
