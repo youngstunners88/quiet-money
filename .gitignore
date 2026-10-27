@@ -76,3 +76,7 @@ channel/services/studio/samples/*/*.jpg
 channel/services/studio/samples/*/sheet.pdf
 # second-language editions: the video is rebuilt from script.json; POST.md, meta.json and script.json are committed
 distribution/editions/**/*.mp4
+
+# rendered hero edits (large, reproducible with tools/hero_edit.py)
+channel/flow/hero/*.mp4
+channel/services/web3-video/outbound/drafts-*.md
