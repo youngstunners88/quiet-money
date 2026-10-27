@@ -3,7 +3,7 @@
  "kind": "tiktok",
  "day": "2026-10-26",
  "key": "2026-10-26-s4-playbook-lower-your-cell-phone-bill-with",
- "status": "held",
+ "status": "done",
  "created": "2026-10-26T03:31:34+00:00",
  "recipe": "TikTok upload",
  "media": [
@@ -20,6 +20,11 @@
    "at": "2026-10-26T10:00:12+00:00",
    "result": "held",
    "note": "no video file in the container; render it again before posting"
+  },
+  {
+   "at": "2026-10-27T02:07:05+00:00",
+   "result": "posted",
+   "note": "posted from phone 2026-10-27, AI label on; dropped #budgeting #financialfreedom (TikTok keeps 5 hashtags)"
   }
  ]
 }
