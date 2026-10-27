@@ -325,7 +325,7 @@ def check_render(info: dict, voice: dict) -> list[Gate]:
 def check_package(meta: dict) -> list[Gate]:
     d = meta["description"].lower()
     return [
-        Gate("disclosure", "not financial advice" in d and "ai-assisted" in d, 10, True, "missing disclaimers", "package"),
+        Gate("disclosure", "not financial advice" in d, 10, True, "missing disclaimer", "package"),
         Gate("affiliate_disclosure", not config.load()["channel"].get("has_affiliate_links") or "affiliate" in d, 8, True,
              "affiliate links are on but the description has no affiliate disclosure", "package"),
         Gate("caption_tags", "#" in meta["caption"], 2, False, "caption has no hashtags", "package"),

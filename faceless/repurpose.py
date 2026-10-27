@@ -23,7 +23,7 @@ from faceless import brand, config
 from faceless.config import Paths
 from faceless.state import all_jobs
 
-DISCLOSE = "Educational content, not financial advice. Narration and visuals are AI-assisted."
+DISCLOSE = "Educational content, not financial advice."
 CAROUSEL = (1080, 1350)
 PIN = (1000, 1500)
 ACTION = re.compile(r"\b(this week|today|tonight|right now|tomorrow|open |set up|pick |list |call |cancel|check |write |turn on)", re.I)

@@ -7,7 +7,7 @@ import json
 from faceless import config, events, offer
 from faceless.fsutil import write_atomic
 
-DISCLAIMER = "Educational content, not financial advice. Narration and visuals are AI-assisted."
+DISCLAIMER = "Educational content, not financial advice."
 
 
 def _offer(job, title: str) -> dict | None:
