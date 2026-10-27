@@ -8,7 +8,7 @@ In 1988, William Post went from $2 to $16 million overnight, only to end up $1 m
 
 Free 7-day Money Reset checklist + calculators: https://youngstunners88.github.io/quiet-money/links/?utm_source=youtube&utm_medium=short&utm_campaign=checklist&utm_content=2026-10-26-s6-story-the-cautionary-tale-of-william-p&o=checklist
 
-Educational content, not financial advice. Narration and visuals are AI-assisted.
+Educational content, not financial advice.
 
 #money #personalfinance #lottery #moneymindset #wealth #shorts
 

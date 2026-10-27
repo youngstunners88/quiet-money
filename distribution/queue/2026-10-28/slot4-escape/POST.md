@@ -8,7 +8,7 @@ Doing every job yourself puts a hard ceiling on your income. By building a dream
 
 The Money Reset Kit (paid), and the free Money Reset checklist: https://youngstunners88.github.io/quiet-money/links/?utm_source=youtube&utm_medium=short&utm_campaign=money-reset-kit&utm_content=2026-10-26-s13-escape-dream-team-hire-people-better-th&o=money-reset-kit
 
-Educational content, not financial advice. Narration and visuals are AI-assisted.
+Educational content, not financial advice.
 
 #money #personalfinance #business #wealth #quietmoney #shorts
 

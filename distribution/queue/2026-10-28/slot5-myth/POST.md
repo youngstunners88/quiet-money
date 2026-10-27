@@ -8,7 +8,7 @@ Gold is often marketed as the ultimate safe-haven asset, but history shows it la
 
 Free 7-day Money Reset checklist + calculators: https://youngstunners88.github.io/quiet-money/links/?utm_source=youtube&utm_medium=short&utm_campaign=checklist&utm_content=2026-10-26-s14-myth-myth-gold-is-the-best-safe-haven&o=checklist
 
-Educational content, not financial advice. Narration and visuals are AI-assisted.
+Educational content, not financial advice.
 
 #money #personalfinance #wealth #investing #gold #shorts
 

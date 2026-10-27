@@ -8,7 +8,7 @@ Learn how to spot and eliminate hidden credit card payment protection and credit
 
 Free 7-day Money Reset checklist + calculators: https://youngstunners88.github.io/quiet-money/links/?utm_source=youtube&utm_medium=short&utm_campaign=checklist&utm_content=2026-10-26-s12-playbook-remove-credit-card-protection-pl&o=checklist
 
-Educational content, not financial advice. Narration and visuals are AI-assisted.
+Educational content, not financial advice.
 
 #money #personalfinance #creditcard #financialfreedom #dothistoday #shorts
 

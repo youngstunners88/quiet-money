@@ -8,7 +8,7 @@ More funds do not mean less risk. Discover why portfolio overlap creates diworsi
 
 Free 7-day Money Reset checklist + calculators: https://youngstunners88.github.io/quiet-money/links/?utm_source=youtube&utm_medium=short&utm_campaign=checklist&utm_content=2026-10-26-s5-myth-myth-financial-diversification-m&o=checklist
 
-Educational content, not financial advice. Narration and visuals are AI-assisted.
+Educational content, not financial advice.
 
 #money #personalfinance #investing #indexfunds #financialfreedom #shorts
 

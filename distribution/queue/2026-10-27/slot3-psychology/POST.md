@@ -8,7 +8,7 @@ Optimism bias tricks us into believing predictable maintenance costs are rare em
 
 Free 7-day Money Reset checklist + calculators: https://youngstunners88.github.io/quiet-money/links/?utm_source=youtube&utm_medium=short&utm_campaign=checklist&utm_content=2026-10-26-s7-psychology-optimism-bias&o=checklist
 
-Educational content, not financial advice. Narration and visuals are AI-assisted.
+Educational content, not financial advice.
 
 #moneypsychology #personalfinance #emergencyfund #debtfreejourney #financialliteracy #shorts
 
