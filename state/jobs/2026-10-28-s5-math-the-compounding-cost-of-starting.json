@@ -1,0 +1,77 @@
+{
+  "id": "2026-10-28-s5-math-the-compounding-cost-of-starting",
+  "pillar": "math",
+  "topic": "The Compounding Cost of Starting at 20 vs 30",
+  "day": "2026-10-28",
+  "slot": 5,
+  "status": "published",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-28T09:34:35Z",
+      "words": 164
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-28T09:36:54Z",
+      "seconds": 63.859,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-28T09:40:01Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-28T09:42:03Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-28T09:42:03Z",
+      "score": 95
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-28T09:42:04Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-10-28T09:42:08Z",
+      "local": "2026-10-29T07:30:00-04:00",
+      "youtube": null
+    }
+  ],
+  "artifacts": {
+    "angle": "Comparing the math of investing $200 a month starting at age 20 versus waiting until 30, assuming an 8% return until age 65.",
+    "hook": "Waiting just ten years to start investing doesn't cost you ten years of savings—it costs you half a million dollars by the time you retire.",
+    "title": "The Brutal Math of Starting at 20 vs 30",
+    "style": "cinematic",
+    "video": "/home/user/quiet-money/production/output/2026-10-28/2026-10-28-s5-math-the-compounding-cost-of-starting/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-28/2026-10-28-s5-math-the-compounding-cost-of-starting/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-10-29/slot1-math",
+        "post_at": "2026-10-29T07:30:00-04:00"
+      },
+      "youtube": {
+        "skipped": "YouTube refused the upload session (HTTP 429): quota or rate limit; it resets at midnight Pacific"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 95,
+    "passed": true
+  },
+  "cost": {
+    "tts:edge:chars": 890
+  },
+  "notes": []
+}

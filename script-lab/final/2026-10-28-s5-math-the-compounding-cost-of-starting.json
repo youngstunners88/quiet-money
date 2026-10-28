@@ -1,0 +1,105 @@
+{
+  "title": "The Brutal Math of Starting at 20 vs 30",
+  "hook_text": "WAITING 10 YEARS COSTS YOU HALF A MILLION",
+  "beats": [
+    {
+      "say": "Waiting just ten years to start investing doesn't cost you ten years of savings—it costs you half a million dollars by the time you retire.",
+      "callout": "",
+      "visual": "Extreme wide shot of a solitary commuter walking across a vast concrete plaza under cold blue hour light."
+    },
+    {
+      "say": "How does pausing for a single decade erase a fortune?",
+      "callout": "$698,000 VS $298,000",
+      "visual": "Low angle shot of a massive steel bridge tower vanishing into heavy grey fog."
+    },
+    {
+      "say": "Most people assume waiting till thirty just lops off the exact cash they failed to stash away.",
+      "callout": "",
+      "visual": "Close up of worn leather gloves resting on wet asphalt under a single sodium streetlamp."
+    },
+    {
+      "say": "That is completely wrong.",
+      "callout": "",
+      "visual": "High angle shot of empty highway lanes cutting through dark pine trees at night."
+    },
+    {
+      "say": "Let's run the exact math at an 8% return until age 65.",
+      "callout": "8% RETURN",
+      "visual": "Extreme close up of rusty iron bolts on a damp concrete sea wall."
+    },
+    {
+      "say": "If you invest $200 a month starting at age 20, you put in $96,000 over your working life.",
+      "callout": "START AT 20",
+      "visual": "Back view of a person standing at the edge of a rain-slick concrete observation deck."
+    },
+    {
+      "say": "Compound interest turns that pile into a massive $698,202 by the time you hit 65.",
+      "callout": "$698,202",
+      "visual": "Silhouette of a lone figure walking past towering concrete pillars in deep shadow."
+    },
+    {
+      "say": "Now look what happens if you wait until age 30 to drop that exact same $200 a month.",
+      "callout": "START AT 30",
+      "visual": "Low angle shot of cold fluorescent lights flickering in an empty subway tunnel."
+    },
+    {
+      "say": "You only put in $72,000, which sounds close enough.",
+      "callout": "$72,000",
+      "visual": "Extreme close up of heavy raindrops hitting a puddle on dark stone."
+    },
+    {
+      "say": "Except your total crashes down to $298,072.",
+      "callout": "$298,072",
+      "visual": "Wide shot of a dark industrial rail yard under a heavy, overcast winter sky."
+    },
+    {
+      "say": "Delaying ten years strips $400,130 straight out of your future account.",
+      "callout": "",
+      "visual": "Silhouette of a person standing on a windy mountain ridge overlooking a foggy valley."
+    },
+    {
+      "say": "Time is the only asset you cannot buy back.",
+      "callout": "",
+      "visual": "Extreme wide shot of a vast empty highway stretching toward a dark horizon at dusk."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "Single practical light cutting through dense fog on a cold concrete staircase."
+    }
+  ],
+  "caption": "Waiting a decade before investing doesn't just lose you deposits—it starves your compounding engine of its best years. #money #personalfinance #investing #wealth #themaththeyhide",
+  "description": "Comparing the math of investing $200 a month starting at age 20 versus waiting until 30, assuming an 8% return until age 65.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#investing",
+    "#wealth",
+    "#themaththeyhide"
+  ],
+  "first_comment": "At what age did you make your first investment?",
+  "facts": [
+    {
+      "claim": "$200/month invested for 40 years at 8% = $698,202",
+      "basis": "MONEY FACT SHEET"
+    },
+    {
+      "claim": "$200/month invested for 30 years at 8% = $298,072",
+      "basis": "MONEY FACT SHEET"
+    }
+  ],
+  "source": "llm",
+  "pillar": "math",
+  "look": "",
+  "loop_map": {
+    "stakes": "Waiting ten years costs you half a million dollars by retirement.",
+    "big_question": "How does pausing for a single decade erase a fortune?",
+    "assume": "Waiting until thirty just lops off the exact cash you failed to stash away.",
+    "reveal": "Starting at 20 yields $698,202 while starting at 30 yields $298,072.",
+    "rehook_beats": [
+      5,
+      8
+    ],
+    "payoff_beat": 10
+  }
+}

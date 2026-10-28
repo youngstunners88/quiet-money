@@ -4,7 +4,7 @@
   "topic": "A sinking fund for one bill you know is coming",
   "day": "2026-10-27",
   "slot": 3,
-  "status": "visualized",
+  "status": "published",
   "history": [
     {
       "from": "planned",
@@ -23,15 +23,53 @@
       "from": "voiced",
       "to": "visualized",
       "ts": "2026-10-27T09:47:52Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-27T09:50:45Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-27T09:50:45Z",
+      "score": 98
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-27T09:50:46Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-10-27T09:50:46Z",
+      "local": "2026-10-27T18:30:00-04:00",
+      "youtube": null
     }
   ],
   "artifacts": {
     "angle": "three steps: pick one yearly or irregular bill (car registration, a renewal, gifts), divide it by the months until it is due, move that amount on payday into its own pot; the viewer does the division, no figure claimed",
     "hook": "Your car registration isn't a surprise. It just arrives like one.",
     "title": "Stop Getting Blindsided By Bills You Knew Were Coming",
-    "style": "cinematic"
+    "style": "cinematic",
+    "video": "/home/user/quiet-money/production/output/2026-10-27/2026-10-27-s3-playbook-a-sinking-fund-for-one-bill-you/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-27/2026-10-27-s3-playbook-a-sinking-fund-for-one-bill-you/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-10-27/slot4-playbook",
+        "post_at": "2026-10-27T18:30:00-04:00"
+      },
+      "youtube": {
+        "skipped": "YouTube daily cap reached (5 scheduled for 2026-10-27); the local pack is ready"
+      }
+    }
   },
-  "scores": {},
+  "scores": {
+    "gauntlet": 98,
+    "passed": true
+  },
   "cost": {
     "tts:edge:chars": 1144
   },

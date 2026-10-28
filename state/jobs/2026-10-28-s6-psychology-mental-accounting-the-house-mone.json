@@ -1,0 +1,33 @@
+{
+  "id": "2026-10-28-s6-psychology-mental-accounting-the-house-mone",
+  "pillar": "psychology",
+  "topic": "Mental Accounting (The House Money Effect)",
+  "day": "2026-10-28",
+  "slot": 6,
+  "status": "voiced",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-28T09:46:21Z",
+      "words": 185
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-28T09:47:18Z",
+      "seconds": 63.889,
+      "provider": "edge"
+    }
+  ],
+  "artifacts": {
+    "angle": "Expose how treating tax refunds, work bonuses, or cash gifts differently than normal salary causes people to waste thousands. Show how a $2,000 tax refund gets treated like 'free money' and spent on impulse trips instead of debt. The counter-move: automated single-bucket routing where all incoming funds hit the exact same high-yield buffer account.",
+    "hook": "Why do we spend a tax refund three times faster than our regular paycheck?",
+    "title": "Why You Waste Tax Refunds (And How to Stop)"
+  },
+  "scores": {},
+  "cost": {
+    "tts:edge:chars": 1095
+  },
+  "notes": []
+}

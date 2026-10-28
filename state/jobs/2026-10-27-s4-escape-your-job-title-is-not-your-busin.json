@@ -1,0 +1,40 @@
+{
+  "id": "2026-10-27-s4-escape-your-job-title-is-not-your-busin",
+  "pillar": "escape",
+  "topic": "Your job title is not your business",
+  "day": "2026-10-27",
+  "slot": 4,
+  "status": "visualized",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-27T09:52:03Z",
+      "words": 143
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-27T09:53:24Z",
+      "seconds": 63.171,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-27T09:53:39Z"
+    }
+  ],
+  "artifacts": {
+    "angle": "Kiyosaki's 'mind your own business': a profession pays you; your business is the list of things you own that pay you",
+    "brief": "kiyosaki",
+    "hook": "You can be great at your job and still own nothing that pays you.",
+    "title": "Your Job Title Is Not Your Business",
+    "style": "cinematic"
+  },
+  "scores": {},
+  "cost": {
+    "tts:edge:chars": 777
+  },
+  "notes": []
+}

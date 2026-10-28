@@ -1,0 +1,95 @@
+{
+  "title": "Your Job Title Is Not Your Business",
+  "hook_text": "YOU CAN BE GREAT AT YOUR JOB",
+  "beats": [
+    {
+      "say": "You can be great at your job and still own nothing that pays you.",
+      "callout": "",
+      "visual": "Extreme wide shot of a solitary commuter walking down a rain-slick city underpass at blue hour."
+    },
+    {
+      "say": "That paycheck covers rent and bills, but where does the surplus actually go?",
+      "callout": "PAYCHECK VS ASSET",
+      "visual": "Low angle of a heavy steel bridge truss cutting across a cold gray sky."
+    },
+    {
+      "say": "Most people assume a long career equals a growing business.",
+      "callout": "",
+      "visual": "Silhouette of a worker's back against a glowing office tower edge at night."
+    },
+    {
+      "say": "Your profession trades your time for money, which is just another form of rent.",
+      "callout": "",
+      "visual": "Extreme close-up of a lone hand turning a heavy mechanical deadbolt in shadow."
+    },
+    {
+      "say": "So why does working harder on your salary leave you trapped in the same room?",
+      "callout": "THE RAT RACE",
+      "visual": "Sodium light cutting through fog over an empty wet highway at midnight."
+    },
+    {
+      "say": "Because your real business is the list of assets you own that pay you.",
+      "callout": "ASSET VS LIABILITY",
+      "visual": "Cold fluorescent light reflecting off a dark industrial warehouse floor."
+    },
+    {
+      "say": "Investing $200 a month at 8% a year compounds to $698,202 over 40 years.",
+      "callout": "$698,202 VS $298,072",
+      "visual": "Single practical light bulb hanging over a concrete ridge line at dusk."
+    },
+    {
+      "say": "Starting at 25 instead of 35 changes the final math by $400,130.",
+      "callout": "",
+      "visual": "High angle looking down at a tiny human crossing a vast concrete plaza."
+    },
+    {
+      "say": "The honest catch is that building passive income takes years of capital and cold risk.",
+      "callout": "THE HONEST CATCH",
+      "visual": "Extreme wide shot of dark ocean waves hitting a jagged stone seawall."
+    },
+    {
+      "say": "Shift your focus this week from your job title to your asset column.",
+      "callout": "STEP ONE",
+      "visual": "Back view of a person standing at the edge of a high rooftop overlooking city lights."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "Silhouette of a lone figure walking away down a dark, wet asphalt street."
+    }
+  ],
+  "caption": "Your job title isn't your business. Time to build assets that pay you. #MoneyPsychology #PersonalFinance #WealthBuilding #FinancialFreedom #QuietMoney",
+  "description": "Learn the difference between a job and a business. A profession pays your bills, but your asset column builds your freedom.",
+  "hashtags": [
+    "#MoneyPsychology",
+    "#PersonalFinance",
+    "#WealthBuilding",
+    "#FinancialFreedom",
+    "#QuietMoney"
+  ],
+  "first_comment": "What asset are you building this month?",
+  "facts": [
+    {
+      "claim": "$200 a month invested at 8% for 40 years reaches $698,202",
+      "basis": "Fact sheet calculation: $200/month invested for 40 years at 8%/yr (monthly compounding) = $698,202"
+    },
+    {
+      "claim": "Starting at 25 vs 35 with $200 a month at 8% costs $400,130",
+      "basis": "Fact sheet calculation: $698,202 vs $298,072 difference is $400,130"
+    }
+  ],
+  "source": "llm",
+  "pillar": "escape",
+  "look": "",
+  "loop_map": {
+    "stakes": "A paycheck covers bills, but leaves you owning nothing that pays you.",
+    "big_question": "Where does the surplus actually go?",
+    "assume": "Most people assume a long career equals a growing business.",
+    "reveal": "Your profession trades time for money; your business is your asset column.",
+    "rehook_beats": [
+      5,
+      8
+    ],
+    "payoff_beat": 10
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "title": "The Silent Inflation Cash Devaluation",
+  "hook_text": "YOUR BANK ACCOUNT IS DRAINING ITSELF",
+  "beats": [
+    {
+      "say": "Leaving your cash sitting safely in a traditional bank account is a guaranteed way to lose a third of your life's savings without spending a dime.",
+      "callout": "",
+      "visual": "Extreme close-up of a lone steel vault door handle in cold blue fluorescent light, raindrops sliding down the heavy metal."
+    },
+    {
+      "say": "It feels secure to watch that balance sit untouched year after year in a low-yield account.",
+      "callout": "",
+      "visual": "Low angle of a concrete underpass at dusk, headlights cutting through thick gray fog against wet asphalt."
+    },
+    {
+      "say": "How much purchasing power quietly vanishes when you leave $10,000 sitting at a 0.01% interest rate?",
+      "callout": "",
+      "visual": "Silhouette of a person walking away down an empty highway at night under sodium streetlights."
+    },
+    {
+      "say": "Most people assume a safe bank balance stays worth the exact same amount over time.",
+      "callout": "ASSUME VS FACT",
+      "visual": "Extreme wide shot of a massive brutalist concrete bridge over dark, churning river water."
+    },
+    {
+      "say": "That is the illusion keeping millions of people trapped.",
+      "callout": "",
+      "visual": "Close-up of rusted iron bolts on a damp bridge support, flickering orange safety light reflecting off the metal."
+    },
+    {
+      "say": "At a historical 3% inflation rate, look at what happens to your buying power.",
+      "callout": "3% INFLATION",
+      "visual": "Low angle shot of a massive cooling tower edge cutting across a grey twilight sky."
+    },
+    {
+      "say": "Think about how $100 today is worth just $55 in buying power after 20 years of 3% inflation.",
+      "callout": "$100 VS $55",
+      "visual": "Extreme close-up of heavy iron chains resting on cold wet dock wood."
+    },
+    {
+      "say": "When you apply that same math to $10,000 over 15 years, the loss is staggering.",
+      "callout": "",
+      "visual": "Silhouette of a lone figure standing at the edge of a high concrete roof against an overcast sky."
+    },
+    {
+      "say": "The bank pays you basically zero at 0.01%, while inflation eats away at your real wealth every single day.",
+      "callout": "0.01% VS 3%",
+      "visual": "Single practical light bulb swinging slowly in a dark, empty industrial warehouse."
+    },
+    {
+      "say": "Your $10,000 still says $10,000 on the screen, but it buys what $6,400 used to buy.",
+      "callout": "$10,000 VS $6,400",
+      "visual": "Extreme wide shot of rain cutting across an abandoned railway yard under sodium lights."
+    },
+    {
+      "say": "That is a silent tax on every dollar you refuse to put to work.",
+      "callout": "",
+      "visual": "Low angle shot of a heavy steel staircase twisting down into shadow."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "FOLLOW",
+      "visual": "Silhouette of a person walking through a heavy fog on an empty concrete ridge line at blue hour."
+    }
+  ],
+  "caption": "The bank makes money while your cash loses value. #money #personalfinance #inflation #wealth #finance",
+  "description": "Computing the exact purchasing power loss of keeping cash in a 0.01% savings account over 15 years at a historical 3% inflation rate.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#inflation",
+    "#wealth",
+    "#finance"
+  ],
+  "first_comment": "Are you keeping too much cash in a traditional savings account?",
+  "facts": [
+    {
+      "claim": "$100 today is worth $55 in buying power after 20 years of 3% inflation",
+      "basis": "Fact sheet provided in prompt"
+    }
+  ],
+  "source": "llm",
+  "pillar": "math",
+  "look": "",
+  "loop_map": {
+    "stakes": "Leaving $10,000 in a traditional bank account loses a third of your savings to inflation.",
+    "big_question": "How much purchasing power quietly vanishes when you leave $10,000 sitting at a 0.01% interest rate?",
+    "assume": "Most people assume a safe bank balance stays worth the exact same amount over time.",
+    "reveal": "At 3% inflation, $100 drops to $55 in 20 years, and cash loses massive purchasing power.",
+    "rehook_beats": [
+      6,
+      10
+    ],
+    "payoff_beat": 10
+  }
+}

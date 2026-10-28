@@ -1,0 +1,19 @@
+{
+ "id": "2026-10-28-yt_short-2026-10-28-s1-math-the-silent-inflation-cash-dev",
+ "kind": "yt_short",
+ "day": "2026-10-28",
+ "key": "2026-10-28-s1-math-the-silent-inflation-cash-devalu",
+ "status": "queued",
+ "created": "2026-10-28T09:48:55+00:00",
+ "recipe": "YouTube Short upload",
+ "media": [
+  {
+   "source": "production/output/2026-10-28/2026-10-28-s1-math-the-silent-inflation-cash-devalu/final.mp4",
+   "name": "final.mp4"
+  }
+ ],
+ "staged": true,
+ "title": "The Silent Inflation Cash Devaluation",
+ "text": "Computing the exact purchasing power loss of keeping cash in a 0.01% savings account over 15 years at a historical 3% inflation rate.\n\nThe Money Reset Kit (paid), and the free Money Reset checklist: https://youngstunners88.github.io/quiet-money/links/?utm_source=youtube&utm_medium=short&utm_campaign=money-reset-kit&utm_content=2026-10-28-s1-math-the-silent-inflation-cash-devalu&o=money-reset-kit\n\nEducational content, not financial advice.\n\n#money #personalfinance #inflation #wealth #finance #shorts",
+ "ai_label": "altered or synthetic content: Yes"
+}

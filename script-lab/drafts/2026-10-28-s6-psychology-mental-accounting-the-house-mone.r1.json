@@ -1,0 +1,100 @@
+{
+  "title": "Why You Waste Tax Refunds (And How to Stop)",
+  "hook_text": "WHY TAX REFUNDS DISAPPEAR SO FAST",
+  "beats": [
+    {
+      "say": "Why do we spend a $2,000 tax refund three times faster than our regular paycheck?",
+      "callout": "",
+      "visual": "Extreme close-up of wet asphalt at blue hour with cold sodium light reflections."
+    },
+    {
+      "say": "Behavioral economists call this mental accounting, and it quietly drains thousands from your net worth.",
+      "callout": "MENTAL ACCOUNTING",
+      "visual": "Low angle shot of a massive brutalist concrete structure looming in cold morning fog."
+    },
+    {
+      "say": "Why does your brain treat incoming cash differently depending on where it comes from?",
+      "callout": "",
+      "visual": "High angle extreme wide of a silhouette walking across an empty wet plaza at night."
+    },
+    {
+      "say": "You assume a refund is free bonus money because it didn't come from daily work.",
+      "callout": "BONUS VS SALARY",
+      "visual": "Cinematic close-up of gloved hands holding a wet steel railing on a misty bridge over water."
+    },
+    {
+      "say": "In reality, it's just an interest-free loan you gave the government from your own earnings.",
+      "callout": "",
+      "visual": "Wide silhouette of an empty urban highway underpass illuminated by a single sodium lamp."
+    },
+    {
+      "say": "So what actually happens when you blow that money while carrying high-interest credit card debt?",
+      "callout": "",
+      "visual": "Low angle looking up at dark glass skyscrapers cutting through thick low-hanging fog."
+    },
+    {
+      "say": "A $3,000 credit card balance at 24% APR paying only minimums takes 15 years to pay off.",
+      "callout": "15 YEARS TO PAY OFF",
+      "visual": "Cold fluorescent lighting along an empty subterranean tunnel stretching far into shadows."
+    },
+    {
+      "say": "Sticking to minimum payments burns $4,887 in total interest on that single $3,000 balance.",
+      "callout": "$4,887 IN INTEREST",
+      "visual": "Silhouette of a person seated inside a parked car on wet pavement beneath harsh streetlights."
+    },
+    {
+      "say": "So how do you stop treating unexpected money like play cash before you blow it?",
+      "callout": "",
+      "visual": "Silhouetted figure sitting on a cold bench at a desolate transit stop under blue light."
+    },
+    {
+      "say": "Set up single-bucket routing: send every refund, bonus, and cash gift straight to one buffer account.",
+      "callout": "STEP ONE: SINGLE BUCKET",
+      "visual": "High angle extreme wide of an empty cargo terminal illuminated by distant stadium lights."
+    },
+    {
+      "say": "When every dollar lands in the exact same place, your brain stops finding excuses to waste it.",
+      "callout": "STEP TWO: REMOVE EXCUSES",
+      "visual": "Dark silhouette standing at the edge of a rain-slicked concrete pier over open dark water."
+    },
+    {
+      "say": "Follow for the money rules school never taught you, and keep every dollar working for your future.",
+      "callout": "",
+      "visual": "Low angle shot of wet asphalt alleyway reflecting cold overhead fluorescent lighting."
+    }
+  ],
+  "caption": "A tax refund isn't free money—it's your money returning home. Here is how mental accounting drains your net worth.\n\n#money #personalfinance #moneypsychology #financialfreedom #smartmoney",
+  "description": "Exposing the House Money Effect and mental accounting bias. Learn why treating tax refunds differently than paychecks leads to wasted cash, and how single-bucket routing fixes it.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#moneypsychology",
+    "#wealthbuilding",
+    "#financialliteracy"
+  ],
+  "first_comment": "How do you usually spend your tax refund or work bonuses? Let me know below.",
+  "facts": [
+    {
+      "claim": "A $3,000 credit card balance at 24% APR paying only the minimum takes 15 years to pay off.",
+      "basis": "$3,000 credit card at 24% APR paying only the minimum (1% + interest, min $25): 183 months (~15 years), $4,887 interest"
+    },
+    {
+      "claim": "Minimum payments on a $3,000 credit card balance at 24% APR generate $4,887 in interest.",
+      "basis": "$3,000 credit card at 24% APR paying only the minimum: $4,887 interest"
+    }
+  ],
+  "source": "llm",
+  "pillar": "psychology",
+  "look": "",
+  "loop_map": {
+    "stakes": "Blowing a $2,000 tax refund on impulse trips while holding high-interest credit card debt.",
+    "big_question": "Why does your brain treat incoming cash differently depending on where it comes from?",
+    "assume": "A tax refund is free bonus money meant for spending.",
+    "reveal": "It's an interest-free loan you gave the government while your 24% APR debt silently costs thousands.",
+    "rehook_beats": [
+      6,
+      9
+    ],
+    "payoff_beat": 10
+  }
+}

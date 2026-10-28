@@ -1,0 +1,77 @@
+{
+  "id": "2026-10-28-s1-math-the-silent-inflation-cash-devalu",
+  "pillar": "math",
+  "topic": "The Silent Inflation Cash Devaluation",
+  "day": "2026-10-28",
+  "slot": 1,
+  "status": "published",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-28T09:23:28Z",
+      "words": 187
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-28T09:24:26Z",
+      "seconds": 66.225,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-28T09:28:33Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-28T09:30:45Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-28T09:30:45Z",
+      "score": 95
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-28T09:30:46Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-10-28T09:30:48Z",
+      "local": "2026-10-28T11:30:00-04:00",
+      "youtube": null
+    }
+  ],
+  "artifacts": {
+    "angle": "Computing the exact purchasing power loss of keeping $10,000 in a 0.01% savings account over 15 years at a historical 3% inflation rate.",
+    "hook": "Leaving your cash sitting safely in a traditional bank account is a guaranteed way to lose a third of your life's savings without spending a dime.",
+    "title": "The Silent Inflation Cash Devaluation",
+    "style": "cinematic",
+    "video": "/home/user/quiet-money/production/output/2026-10-28/2026-10-28-s1-math-the-silent-inflation-cash-devalu/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-28/2026-10-28-s1-math-the-silent-inflation-cash-devalu/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-10-28/slot2-math",
+        "post_at": "2026-10-28T11:30:00-04:00"
+      },
+      "youtube": {
+        "skipped": "YouTube refused the upload session (HTTP 429): quota or rate limit; it resets at midnight Pacific"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 95,
+    "passed": true
+  },
+  "cost": {
+    "tts:edge:chars": 1037
+  },
+  "notes": []
+}

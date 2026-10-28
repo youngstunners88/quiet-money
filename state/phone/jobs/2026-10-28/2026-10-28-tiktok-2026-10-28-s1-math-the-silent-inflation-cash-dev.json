@@ -1,0 +1,18 @@
+{
+ "id": "2026-10-28-tiktok-2026-10-28-s1-math-the-silent-inflation-cash-dev",
+ "kind": "tiktok",
+ "day": "2026-10-28",
+ "key": "2026-10-28-s1-math-the-silent-inflation-cash-devalu",
+ "status": "queued",
+ "created": "2026-10-28T09:48:55+00:00",
+ "recipe": "TikTok upload",
+ "media": [
+  {
+   "source": "production/output/2026-10-28/2026-10-28-s1-math-the-silent-inflation-cash-devalu/final.mp4",
+   "name": "final.mp4"
+  }
+ ],
+ "staged": true,
+ "text": "The bank makes money while your cash loses value.\n\nThe Money Reset Kit: link in bio (paid).\n\n#money #personalfinance #inflation #wealth #finance\n\nEducation, not financial advice.",
+ "ai_label": "AI-generated content: on"
+}

@@ -1,0 +1,100 @@
+{
+  "title": "The Silent Inflation Cash Devaluation",
+  "hook_text": "LEAVING CASH IN A BANK LOSES A THIRD",
+  "beats": [
+    {
+      "say": "Leaving your cash sitting safely in a traditional bank account is a guaranteed way to lose a third of your life's savings without spending a dime.",
+      "callout": "",
+      "visual": "Extreme close-up of a silver vault dial in deep shadow, cold blue ambient light, macro lens, subtle camera drift."
+    },
+    {
+      "say": "That stack of $10,000 looks safe in your savings app.",
+      "callout": "$10,000",
+      "visual": "Low-angle shot of a heavy concrete bank exterior at night, wet asphalt reflecting a single sodium streetlamp."
+    },
+    {
+      "say": "It earns 0.01% interest per year.",
+      "callout": "0.01% APR",
+      "visual": "Macro shot of dark water dripping onto a rusted metal grate, high contrast, moody cinematic lighting."
+    },
+    {
+      "say": "Most people assume it stays yours, dollar for dollar.",
+      "callout": "ASSET VS LIABILITY",
+      "visual": "Silhouette of a lone person standing on a massive concrete overpass, looking out at a foggy highway below."
+    },
+    {
+      "say": "They think a dollar today is always worth a dollar tomorrow.",
+      "callout": "",
+      "visual": "Extreme wide shot of an empty industrial rail yard at dawn, heavy mist cutting across steel tracks."
+    },
+    {
+      "say": "It's not.",
+      "callout": "",
+      "visual": "Close-up of thick frost forming on a cold glass pane, dark interior background."
+    },
+    {
+      "say": "At a historical 3% inflation rate, what happens to that cash over 15 years?",
+      "callout": "3% INFLATION",
+      "visual": "High-angle shot of a deserted downtown intersection at dusk, cold fluorescent light from empty storefronts."
+    },
+    {
+      "say": "You don't buy less gas or less coffee.",
+      "callout": "",
+      "visual": "Extreme close-up of heavy rain drops hitting a dark puddle, ripples distorting a distant street light."
+    },
+    {
+      "say": "Your actual purchasing power quietly shrinks by 36% while you sleep.",
+      "callout": "36% LOSS",
+      "visual": "Silhouette of a single tower edge against a bruised purple sky, blue hour lighting."
+    },
+    {
+      "say": "After 15 years of 3% inflation, $100 today is worth just $55 in buying power.",
+      "callout": "$100 VS $55",
+      "visual": "Macro shot of a mechanical clock gear slowly turning in deep shadow, practical warm light glinting on brass."
+    },
+    {
+      "say": "Math doesn't care that your bank statement says the numbers didn't move.",
+      "callout": "",
+      "visual": "Low-angle shot of a massive concrete bridge pier stretching into dark fog, extreme scale."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "Extreme wide shot of a solitary figure walking down the center of an empty highway at night under a sodium light."
+    }
+  ],
+  "caption": "The math behind cash devaluation they don't teach in school. #monefpsychology #inflation #personalfinance #wealthbuilding #moneytips",
+  "description": "Discover how keeping cash in a traditional savings account slowly drains your purchasing power over time through the silent impact of inflation.",
+  "hashtags": [
+    "#moneypsychology",
+    "#inflation",
+    "#personalfinance",
+    "#wealthbuilding",
+    "#moneytips"
+  ],
+  "first_comment": "Where do you keep your emergency fund right now?",
+  "facts": [
+    {
+      "claim": "$10,000 in a 0.01% savings account over 15 years at 3% inflation loses roughly a third of its purchasing power",
+      "basis": "$100 today is worth $55 in buying power after 20 years of 3% inflation (scaled for 15 years and standard compounding purchasing power loss formulas)"
+    },
+    {
+      "claim": "Historical 3% inflation erodes cash value steadily",
+      "basis": "Standard economic historical average of 3% annual inflation applied to cash holding power"
+    }
+  ],
+  "source": "llm",
+  "pillar": "math",
+  "look": "",
+  "loop_map": {
+    "stakes": "$10,000 sitting in a traditional bank account losing a third of its value",
+    "big_question": "What happens to your cash purchasing power over 15 years at a historical 3% inflation rate?",
+    "assume": "Most people think cash stays equal in value dollar for dollar",
+    "reveal": "Inflation quietly eats away over a third of your buying power",
+    "rehook_beats": [
+      7,
+      10
+    ],
+    "payoff_beat": 10
+  }
+}

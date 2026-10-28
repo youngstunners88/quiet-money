@@ -1,0 +1,91 @@
+{
+  "title": "The Mental Accounting Trap Stealing Your Tax Refund",
+  "hook_text": "WHY DO WE WASTE A TAX REFUND?",
+  "beats": [
+    {
+      "say": "Why do we spend a tax refund three times faster than our regular paycheck?",
+      "callout": "",
+      "visual": "Extreme wide shot of a lone commuter walking across a massive rain-slick concrete plaza at dusk, sodium streetlights casting long shadows."
+    },
+    {
+      "say": "It’s not because you’re reckless. It’s mental accounting playing tricks on your brain.",
+      "callout": "MENTAL ACCOUNTING",
+      "visual": "Low angle shot of a massive concrete bridge support cutting through a heavy fog bank under cold fluorescent light."
+    },
+    {
+      "say": "When a $2,000 refund lands, most people treat it like free money from the sky.",
+      "callout": "$2,000 REFUND",
+      "visual": "Extreme close up of heavy rain hitting a dark, weathered wooden surface, single practical light glinting off water."
+    },
+    {
+      "say": "They assume it’s bonus cash meant for an impulse trip or a weekend splurge.",
+      "callout": "FREE MONEY",
+      "visual": "Silhouette of a person standing at the edge of a high concrete balcony looking down at an empty highway at night."
+    },
+    {
+      "say": "But salary and refunds are identical dollars. Both cost you your time.",
+      "callout": "SALARY VS REFUND",
+      "visual": "High angle shot of dark, wet asphalt on an empty underpass, illuminated by a distant blue hour glow."
+    },
+    {
+      "say": "So why does a $3,000 credit card balance at 24% APR sit there gathering interest?",
+      "callout": "24% APR",
+      "visual": "Extreme close up of a heavy iron chain link resting on cold stone, rusted and weathered."
+    },
+    {
+      "say": "Paying only the minimum turns that debt into 183 months of payments.",
+      "callout": "183 MONTHS",
+      "visual": "Low angle shot of a towering brick industrial facade disappearing into gray morning mist."
+    },
+    {
+      "say": "You end up wasting $4,887 in pure interest while treating your refund as fun cash.",
+      "callout": "$4,887 INTEREST",
+      "visual": "Extreme wide shot of a single empty freight train car stalled on a dark track at night."
+    },
+    {
+      "say": "The counter move is automated single-bucket routing.",
+      "callout": "",
+      "visual": "Silhouette of hands sliding a plain metal latch shut in a dim, cold room."
+    },
+    {
+      "say": "Route every incoming dollar straight into the exact same high-yield buffer account.",
+      "callout": "",
+      "visual": "Extreme close up of dark water rippling under a single overhead sodium light."
+    },
+    {
+      "say": "Treat every dollar the same way. Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "Extreme wide shot of an empty ridge line against a cold winter dawn, no people in frame."
+    }
+  ],
+  "caption": "Stop treating extra cash like free money. #MoneyPsychology #PersonalFinance #FinancialFreedom #SmartMoney #WealthBuilding",
+  "description": "Exposing how mental accounting causes people to waste thousands on impulse buys instead of debt.",
+  "hashtags": [
+    "#MoneyPsychology",
+    "#PersonalFinance",
+    "#FinancialFreedom",
+    "#SmartMoney",
+    "#WealthBuilding"
+  ],
+  "first_comment": "What is the hardest mental trap to break when unexpected cash arrives?",
+  "facts": [
+    {
+      "claim": "$3,000 credit card at 24% APR paying only the minimum takes 183 months and costs $4,887 interest",
+      "basis": "MONEY FACT SHEET"
+    }
+  ],
+  "source": "llm",
+  "pillar": "psychology",
+  "look": "",
+  "loop_map": {
+    "stakes": "A $2,000 tax refund treated as free money.",
+    "big_question": "Why do we spend a tax refund three times faster than a regular paycheck?",
+    "assume": "Most people assume a refund is bonus cash for fun.",
+    "reveal": "Refunds and salary are identical dollars that should fight high-interest debt.",
+    "rehook_beats": [
+      4,
+      6
+    ],
+    "payoff_beat": 10
+  }
+}
