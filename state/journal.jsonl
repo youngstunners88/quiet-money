@@ -9834,3 +9834,7 @@
 {"ts": "2026-10-28T09:49:41Z", "t": 1793180981.946, "actor": "engine", "type": "YOUTUBE_API", "path": "videos", "method": "GET", "status": 200}
 {"ts": "2026-10-28T09:49:50Z", "t": 1793180990.144, "actor": "engine", "type": "PROVIDER_OK", "capability": "image", "provider": "cloudflare", "job": "2026-10-28-s6-psychology-mental-accounting-the-house-mone", "ms": 136477}
 {"ts": "2026-10-28T09:49:51Z", "t": 1793180991.091, "actor": "engine", "type": "CLEF_CALL", "job": "2026-10-28-s6-psychology-mental-accounting-the-house-mone", "model": "clef", "questions": ["text", "face", "logo"], "images": 1, "input_tokens": 1397}
+{"ts": "2026-10-28T09:50:01Z", "t": 1793181001.025, "actor": "engine", "type": "PROVIDER_OK", "capability": "image", "provider": "cloudflare", "job": "2026-10-28-s6-psychology-mental-accounting-the-house-mone", "ms": 162070}
+{"ts": "2026-10-28T09:50:01Z", "t": 1793181001.746, "actor": "engine", "type": "CLEF_CALL", "job": "2026-10-28-s6-psychology-mental-accounting-the-house-mone", "model": "clef", "questions": ["text", "face", "logo"], "images": 1, "input_tokens": 1397}
+{"ts": "2026-10-28T09:50:01Z", "t": 1793181001.759, "actor": "engine", "type": "VISUALS_DONE", "job": "2026-10-28-s6-psychology-mental-accounting-the-house-mone", "providers": {"cloudflare": 7, "card": 3, "muapi": 2}, "qa_flagged": 0, "qa_swapped": 0}
+{"ts": "2026-10-28T09:50:01Z", "t": 1793181001.759, "actor": "engine", "type": "JOB_TRANSITION", "job": "2026-10-28-s6-psychology-mental-accounting-the-house-mone", "to": "visualized"}
