@@ -1,0 +1,18 @@
+{
+ "id": "2026-10-29-tiktok-2026-10-29-s3-myth-myth-buying-the-cheapest-opti",
+ "kind": "tiktok",
+ "day": "2026-10-29",
+ "key": "2026-10-29-s3-myth-myth-buying-the-cheapest-option",
+ "status": "queued",
+ "created": "2026-10-29T09:39:11+00:00",
+ "recipe": "TikTok upload",
+ "media": [
+  {
+   "source": "production/output/2026-10-29/2026-10-29-s3-myth-myth-buying-the-cheapest-option/final.mp4",
+   "name": "final.mp4"
+  }
+ ],
+ "staged": true,
+ "text": "Low price tags are often the most expensive trap in personal finance. Learn the Cost-Per-Use Rule.\n\nFree money reset checklist: link in bio.\n\n#money #personalfinance #wealth #financialliteracy #budgeting #smartspending\n\nEducation, not financial advice.",
+ "ai_label": "AI-generated content: on"
+}

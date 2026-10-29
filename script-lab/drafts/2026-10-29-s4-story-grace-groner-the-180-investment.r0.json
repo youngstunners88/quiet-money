@@ -1,0 +1,101 @@
+{
+  "title": "The $180 Stock Purchase That Grew to $7 Million",
+  "hook_text": "$180 TURNED INTO $7 MILLION",
+  "beats": [
+    {
+      "say": "In 1935, a quiet clerk bought three shares for $180, never added a penny, and died with $7 million.",
+      "callout": "",
+      "visual": "Extreme wide shot of a solitary woman's silhouette walking past a towering 1930s granite bank building at blue hour, rain-slick street reflecting amber streetlights."
+    },
+    {
+      "say": "Most people today can't hold a stock for 75 days, let alone 75 years.",
+      "callout": "75 DAYS VS 75 YEARS",
+      "visual": "Extreme close-up shot of an antique brass wall clock ticking inside a dim, cold fluorescent hallway."
+    },
+    {
+      "say": "So how did $180 turn into a massive $7 million fortune without buying extra shares?",
+      "callout": "$180 VS $7,000,000",
+      "visual": "Low angle shot looking up at towering steel skyscrapers piercing thick low-hanging fog at dawn."
+    },
+    {
+      "say": "You'd assume Grace Groner made genius trades and constantly timed the market just right.",
+      "callout": "",
+      "visual": "High angle shot of a solitary silhouette standing at the edge of a rainy elevated transit platform under sodium lights."
+    },
+    {
+      "say": "But she never sold a single share, never bought more, and completely ignored every financial panic.",
+      "callout": "",
+      "visual": "Extreme close shot of hands holding a worn leather ledger on a dark wooden table lit by a single desk lamp."
+    },
+    {
+      "say": "Her secret was uninterrupted compounding on an essential product, with dividends automatically buying more stock.",
+      "callout": "AUTOMATIC REINVESTMENT",
+      "visual": "Low angle shot of water droplets steadily dripping off a cold rusty iron valve into a quiet reservoir."
+    },
+    {
+      "say": "But what keeps normal investors from ever seeing compound growth like this in their accounts?",
+      "callout": "",
+      "visual": "Silhouette of a person looking out from a high-rise office window at an empty wet highway stretching into the distance at midnight."
+    },
+    {
+      "say": "Every time you buy and sell, taxes, fees, and bad timing drain your total returns.",
+      "callout": "TAXES AND FEES",
+      "visual": "Extreme close shot of paper financial statements being slowly folded into an envelope under harsh overhead industrial fluorescent lighting."
+    },
+    {
+      "say": "Grace removed taxes, timing mistakes, and panic selling simply by leaving her investment completely alone.",
+      "callout": "",
+      "visual": "Extreme wide shot of a solitary figure walking along a misty coastal ridge line at twilight."
+    },
+    {
+      "say": "Over 75 years, her small $180 outlay quietly doubled again and again without friction.",
+      "callout": "75 YEARS OF COMPOUNDING",
+      "visual": "Low angle view of massive concrete bridge pillars rising into thick gray river fog."
+    },
+    {
+      "say": "The real barrier to wealth isn't market drops, it's your urge to constantly touch your money.",
+      "callout": "",
+      "visual": "Extreme close-up of a hand pausing over a dark desk, lit only by a single amber practical light."
+    },
+    {
+      "say": "When you get out of your own way, quiet time does the heavy lifting for you.",
+      "callout": "",
+      "visual": "Extreme wide shot of a quiet cargo port at blue hour, massive steel cranes silhouetted against cold open water."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "Low angle shot of a solitary figure standing on a cold concrete overlook watching dawn break over a city skyline."
+    }
+  ],
+  "caption": "Grace Groner bought $180 of stock in 1935 and never touched it. 75 years later, it was worth over $7 million.\n\n#money #personalfinance #investing #compounding #wealth",
+  "description": "The true story of Grace Groner, a secretary who bought three shares of Abbott Laboratories for $180 in 1935 and held them until her death in 2010. By avoiding taxes, trading fees, and emotional selling, uninterrupted compounding grew her initial $180 into a $7 million estate.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#investing",
+    "#compounding",
+    "#wealthbuilding"
+  ],
+  "first_comment": "What's the longest you've ever held a single investment without touching it?",
+  "facts": [
+    {
+      "claim": "Grace Groner bought 3 shares of Abbott Laboratories for $180 in 1935 and died with $7 million in 2010.",
+      "basis": "Documented record of Grace Groner's $7 million estate gift to Lake Forest College upon her death in 2010."
+    }
+  ],
+  "source": "llm",
+  "pillar": "story",
+  "look": "",
+  "loop_map": {
+    "stakes": "A $180 stock purchase in 1935 grew into $7 million over 75 years of zero interference.",
+    "big_question": "How did $180 turn into $7 million without buying extra shares?",
+    "assume": "Grace Groner actively traded, timed market cycles, and picked winning trends.",
+    "reveal": "She held a single essential stock for 75 years, allowing automatic dividend reinvestment to compound tax-free.",
+    "rehook_beats": [
+      3,
+      7
+    ],
+    "payoff_beat": 10
+  }
+}

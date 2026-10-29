@@ -1,0 +1,105 @@
+{
+  "title": "The $180 Investment That Ran Untouched for 75 Years",
+  "hook_text": "$180 TO $7 MILLION UNTOUCHED",
+  "beats": [
+    {
+      "say": "In 1935, a clerk bought three stock shares for $180, never touched them, and died with $7 million.",
+      "callout": "",
+      "visual": "Extreme close-up of a vintage 1930s fountain pen resting on aged paper under single sharp streetlight glow through window."
+    },
+    {
+      "say": "How did a tiny single purchase turn into a multi-million dollar fortune without ever adding more cash?",
+      "callout": "$180 TO $7 MILLION",
+      "visual": "Silhouette of a solitary person walking past towering granite bank columns illuminated by cold sodium lighting at night."
+    },
+    {
+      "say": "Most investors think building real wealth requires constant trading, perfect timing, and aggressive monthly contributions.",
+      "callout": "",
+      "visual": "Low angle of a sleek modern skyscraper cutting through dense fog under dark blue hour sky."
+    },
+    {
+      "say": "But constant activity creates massive tax drag, transaction fees, and endless opportunities to panic sell.",
+      "callout": "FEES VS TAX DRAG",
+      "visual": "Extreme close-up of rainy asphalt reflecting dim yellow traffic lights in total silence."
+    },
+    {
+      "say": "Grace Groner avoided all of it by using a quiet mechanism built directly into corporate capitalism.",
+      "callout": "",
+      "visual": "High angle looking down an empty concrete stairwell lit by cold blue fluorescent light."
+    },
+    {
+      "say": "She bought Abbott Laboratories stock, set her dividends to automatically reinvest, and completely walked away.",
+      "callout": "AUTOMATIC GROWTH",
+      "visual": "Silhouette of hands holding a dark leather ledger in front of a frost-covered window pane."
+    },
+    {
+      "say": "Over 75 years, the company paid cash payouts every quarter, buying more fractional shares for her.",
+      "callout": "",
+      "visual": "Extreme wide shot of a solitary freight train moving across an endless dark plain at dusk."
+    },
+    {
+      "say": "What happens when you never sell a winning asset through market crashes, wars, and recessions?",
+      "callout": "NO SELLING",
+      "visual": "Low angle looking up at giant rusted iron bridge arches looming against twilight skies."
+    },
+    {
+      "say": "Because she never sold, she never triggered capital gains taxes that strip away decades of growth.",
+      "callout": "",
+      "visual": "Extreme close shot of wet fallen oak leaves stuck to cold black pavement under street lamp."
+    },
+    {
+      "say": "Three shares split dozens of times into thousands, generating millions in compounding value completely uninterrupted.",
+      "callout": "3 SHARES TO THOUSANDS",
+      "visual": "Silhouette standing at the edge of a massive empty concrete dock looking across quiet open dark water."
+    },
+    {
+      "say": "Your biggest financial multiplier isn't smart stock picking, it's removing friction and staying completely out of the way.",
+      "callout": "REMOVE FRICTION",
+      "visual": "Low angle of tall glass office towers standing quietly under a pale winter sky."
+    },
+    {
+      "say": "Let continuous time do the heavy lifting while you live your life.",
+      "callout": "",
+      "visual": "Extreme wide silhouette of a single pine tree atop a mist-covered ridge line at blue hour."
+    },
+    {
+      "say": "Follow Quiet Money for the money rules school never taught you.",
+      "callout": "",
+      "visual": "Extreme close-up of a brass key resting on dark weathered stone under soft sodium light."
+    }
+  ],
+  "caption": "A single $180 purchase in 1935 compounded into $7M because zero selling meant zero tax drag.\n\n#money #compounding #investing #personalfinance #financialfreedom",
+  "description": "Grace Groner bought three shares of Abbott Laboratories for $180 in 1935 and held them for 75 years with automatic dividend reinvestment. By never selling, she avoided taxes and timing errors, proving that removing friction beats active trading.",
+  "hashtags": [
+    "#money",
+    "#compounding",
+    "#investing",
+    "#personalfinance",
+    "#wealthbuilding"
+  ],
+  "first_comment": "Would you have the discipline to hold a stock for 75 years without selling?",
+  "facts": [
+    {
+      "claim": "Grace Groner bought three shares of Abbott Laboratories for $180 in 1935.",
+      "basis": "Documented historical fact regarding the estate of Grace Groner."
+    },
+    {
+      "claim": "Her stock grew to over $7 million upon her death 75 years later.",
+      "basis": "Estate tax returns and press reports upon her passing in 2010."
+    }
+  ],
+  "source": "llm",
+  "pillar": "story",
+  "look": "",
+  "loop_map": {
+    "stakes": "A single $180 stock purchase in 1935 compounds untouched into $7 million.",
+    "big_question": "How did a tiny single purchase turn into $7 million without adding extra cash?",
+    "assume": "Wealth creation requires constant trading, market timing, and active management.",
+    "reveal": "Uninterrupted dividend reinvestment and zero tax drag allow frictionless compounding to multiply wealth effortlessly.",
+    "rehook_beats": [
+      5,
+      8
+    ],
+    "payoff_beat": 11
+  }
+}

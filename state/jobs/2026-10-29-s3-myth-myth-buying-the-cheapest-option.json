@@ -1,0 +1,77 @@
+{
+  "id": "2026-10-29-s3-myth-myth-buying-the-cheapest-option",
+  "pillar": "myth",
+  "topic": "Myth: Buying the Cheapest Option Always Saves Money",
+  "day": "2026-10-29",
+  "slot": 3,
+  "status": "published",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-29T09:30:48Z",
+      "words": 181
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-29T09:32:15Z",
+      "seconds": 66.795,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-29T09:32:40Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-29T09:33:52Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-29T09:33:52Z",
+      "score": 98
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-29T09:33:52Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-10-29T09:33:52Z",
+      "local": "2026-10-29T18:30:00-04:00",
+      "youtube": null
+    }
+  ],
+  "artifacts": {
+    "angle": "Low-quality goods require frequent replacement, causing high long-term lifetime costs compared to durable goods.",
+    "hook": "Buying a $30 pair of work boots every year costs double what a $150 pair that lasts ten years costs. Meet the Cost-Per-Use Rule.",
+    "title": "The Cost-Per-Use Rule That Saves Thousands",
+    "style": "cinematic",
+    "video": "/home/user/quiet-money/production/output/2026-10-29/2026-10-29-s3-myth-myth-buying-the-cheapest-option/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-29/2026-10-29-s3-myth-myth-buying-the-cheapest-option/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-10-29/slot4-myth",
+        "post_at": "2026-10-29T18:30:00-04:00"
+      },
+      "youtube": {
+        "skipped": "YouTube daily cap reached (5 scheduled for 2026-10-29); the local pack is ready"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 98,
+    "passed": true
+  },
+  "cost": {
+    "tts:edge:chars": 1057
+  },
+  "notes": []
+}

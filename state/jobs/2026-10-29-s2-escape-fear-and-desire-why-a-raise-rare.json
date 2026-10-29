@@ -1,0 +1,78 @@
+{
+  "id": "2026-10-29-s2-escape-fear-and-desire-why-a-raise-rare",
+  "pillar": "escape",
+  "topic": "Fear and desire: why a raise rarely sets you free",
+  "day": "2026-10-29",
+  "slot": 2,
+  "status": "published",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-29T09:25:04Z",
+      "words": 193
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-29T09:25:58Z",
+      "seconds": 65.984,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-29T09:26:24Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-29T09:28:15Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-29T09:28:15Z",
+      "score": 98
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-29T09:28:16Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-10-29T09:28:16Z",
+      "local": "2026-10-29T15:00:00-04:00",
+      "youtube": null
+    }
+  ],
+  "artifacts": {
+    "angle": "fear keeps people in a job, desire spends the raise; the question 'is there another way?'",
+    "brief": "kiyosaki",
+    "hook": "Two feelings run most money decisions, and neither one is math.",
+    "title": "Why Your Next Raise Won't Set You Free",
+    "style": "cinematic",
+    "video": "/home/user/quiet-money/production/output/2026-10-29/2026-10-29-s2-escape-fear-and-desire-why-a-raise-rare/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-29/2026-10-29-s2-escape-fear-and-desire-why-a-raise-rare/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-10-29/slot3-escape",
+        "post_at": "2026-10-29T15:00:00-04:00"
+      },
+      "youtube": {
+        "skipped": "YouTube daily cap reached (5 scheduled for 2026-10-29); the local pack is ready"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 98,
+    "passed": true
+  },
+  "cost": {
+    "tts:edge:chars": 1106
+  },
+  "notes": []
+}

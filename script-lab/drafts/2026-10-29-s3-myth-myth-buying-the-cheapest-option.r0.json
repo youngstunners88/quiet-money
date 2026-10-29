@@ -1,0 +1,104 @@
+{
+  "title": "The Cost-Per-Use Rule That Saves Thousands",
+  "hook_text": "CHEAP ITEMS ARE DESTROYING YOUR WEALTH",
+  "beats": [
+    {
+      "say": "Buying $30 boots every year costs double what a $150 pair costs over a decade.",
+      "callout": "",
+      "visual": "Extreme close-up of worn leather boot soles stepping onto rain-slick asphalt under harsh sodium streetlight."
+    },
+    {
+      "say": "Cheap price tags feel like wins, but why don't cheap items actually save you money?",
+      "callout": "$30 VS $150",
+      "visual": "Low-angle silhouette of a figure standing alone in a dimly lit warehouse aisle, surrounded by tall industrial shelving."
+    },
+    {
+      "say": "Most people assume picking the lowest price at checkout keeps more cash in their bank account.",
+      "callout": "",
+      "visual": "Top-down view of a hand placing a worn leather wallet onto a cold concrete surface lit by blue hour daylight."
+    },
+    {
+      "say": "But cheap items break fast, forcing endless replacements that quietly destroy your hard-earned net worth.",
+      "callout": "THE CHEAP TRAP",
+      "visual": "Extreme close-up of frayed stitching tearing apart on a dark boot, illuminated by a single practical overhead light."
+    },
+    {
+      "say": "A simple $15 monthly replacement habit burns $1,800 over 10 years without building any real value.",
+      "callout": "$1,800 WASTED",
+      "visual": "High-angle shot of paper receipts fluttering down onto wet black pavement under cold fluorescent lights."
+    },
+    {
+      "say": "It's called the Cost-Per-Use Rule: total price divided by total days you actually use it.",
+      "callout": "COST PER USE",
+      "visual": "Cinematic shot of a heavy-duty leather boot standing firm on a muddy construction site at dusk."
+    },
+    {
+      "say": "$30 boots replaced yearly cost you 15 cents for every single day you wear them.",
+      "callout": "$0.15 PER DAY",
+      "visual": "Extreme macro shot of metal lace eyelets on a rugged work boot under sharp directional light."
+    },
+    {
+      "say": "A $150 pair lasting ten years costs just 7 cents a day—less than half the cost.",
+      "callout": "$0.15 VS $0.07",
+      "visual": "Low-angle silhouette of a worker walking down an empty fog-covered bridge at blue hour."
+    },
+    {
+      "say": "What if you invested that daily difference into real assets instead of endless low-quality replacements?",
+      "callout": "",
+      "visual": "Extreme wide shot of a solitary person walking along a coastal ridge line against a misty horizon."
+    },
+    {
+      "say": "Investing a $5 a day habit at 8% grows to $226,659 over 30 years.",
+      "callout": "$226,659",
+      "visual": "Cinematic night view of a towering skyscraper silhouette cutting through thick low-hanging fog."
+    },
+    {
+      "say": "Don't fall for low checkout prices when high lifetime costs drain your future wealth.",
+      "callout": "",
+      "visual": "Low-angle shot of a heavy metal vault door reflection shimmering in a pool of water on wet asphalt."
+    },
+    {
+      "say": "Follow for the money rules school never taught you, before buying your next cheap item.",
+      "callout": "",
+      "visual": "Extreme wide shot of an empty concrete highway stretching toward a deep twilight horizon."
+    }
+  ],
+  "caption": "Low price tags are often the most expensive trap in personal finance. Learn the Cost-Per-Use Rule. #money #personalfinance #wealth #financialliteracy #budgeting",
+  "description": "Why buying the cheapest option often drains your wealth through high replacement frequency. Use the Cost-Per-Use rule to evaluate true lifetime cost.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#wealth",
+    "#financialliteracy",
+    "#smartspending"
+  ],
+  "first_comment": "What's one cheap item you bought that ended up costing you way more in the long run?",
+  "facts": [
+    {
+      "claim": "Buying a $30 pair of work boots every year for 10 years costs $300, which is double a $150 pair that lasts 10 years.",
+      "basis": "10 years x $30/yr = $300 vs $150 once = $150."
+    },
+    {
+      "claim": "A $15/month subscription for 10 years = $1,800.",
+      "basis": "Official Fact Sheet calculation: $15 * 12 * 10 = $1,800."
+    },
+    {
+      "claim": "A $5/day habit invested monthly at 8% for 30 years equals $226,659.",
+      "basis": "Official Fact Sheet compound interest calculation."
+    }
+  ],
+  "source": "llm",
+  "pillar": "myth",
+  "look": "",
+  "loop_map": {
+    "stakes": "Buying cheap boots yearly costs double what a durable pair costs over a decade.",
+    "big_question": "Why don't cheap items actually save you money over time?",
+    "assume": "Buying the lowest sticker price at checkout saves cash.",
+    "reveal": "Low durability forces frequent replacements that multiply long-term lifetime costs.",
+    "rehook_beats": [
+      5,
+      9
+    ],
+    "payoff_beat": 11
+  }
+}

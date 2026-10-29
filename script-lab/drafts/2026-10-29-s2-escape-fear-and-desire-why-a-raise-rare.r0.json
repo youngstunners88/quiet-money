@@ -1,0 +1,96 @@
+{
+  "title": "Why a Raise Never Sets You Free",
+  "hook_text": "TWO FEELINGS RUN YOUR MONEY",
+  "beats": [
+    {
+      "say": "Two feelings run most money decisions, and neither one is math.",
+      "callout": "",
+      "visual": "Extreme close-up of a lone hand gripping a steering wheel under flickering sodium streetlights."
+    },
+    {
+      "say": "Fear keeps you tied to a desk you hate, and desire spends every raise you get.",
+      "callout": "FEAR VS DESIRE",
+      "visual": "Low angle shot of a massive corporate glass tower disappearing into a cold, foggy night sky."
+    },
+    {
+      "say": "So why does a bigger paycheck always vanish by month end?",
+      "callout": "",
+      "visual": "Silhouette of a lone person walking past a row of glowing storefronts in the rain."
+    },
+    {
+      "say": "Most people assume working harder and earning more is the only exit from the rat race.",
+      "callout": "HARD WORK",
+      "visual": "Cold fluorescent light reflecting off a wet asphalt parking lot outside an empty office building."
+    },
+    {
+      "say": "That's the trap. Your expenses rise right alongside your salary.",
+      "callout": "THE TRAP",
+      "visual": "Extreme wide shot of a solitary car crawling along an endless concrete highway at night."
+    },
+    {
+      "say": "Is there another way out of this loop?",
+      "callout": "",
+      "visual": "Single practical desk lamp cutting sharp shadows across an empty wooden table in a dark room."
+    },
+    {
+      "say": "The shift starts when you stop trading time for dollars.",
+      "callout": "STEP ONE",
+      "visual": "Close-up of a pen resting on a blank paper on a dark, rainy windowsill."
+    },
+    {
+      "say": "Assets put money in your pocket, while liabilities take money out.",
+      "callout": "ASSET VS LIABILITY",
+      "visual": "Silhouette of a person standing at a high window overlooking a dark urban grid."
+    },
+    {
+      "say": "An extra $1,000 a month invested at 8% for 10 years grows to $182,946.",
+      "callout": "$182,946",
+      "visual": "Low angle shot of an old iron bridge cutting across a heavy blue-hour fog."
+    },
+    {
+      "say": "The honest catch is that building systems takes years of real effort and risk.",
+      "callout": "THE CATCH",
+      "visual": "Raindrops streaking down a cold glass window with blurred neon lights in the deep background."
+    },
+    {
+      "say": "You escape when your assets buy your freedom.",
+      "callout": "",
+      "visual": "Extreme wide shot of an empty coastline under a massive, moody twilight sky."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "Silhouette of a single figure walking toward a distant highway horizon at blue hour."
+    }
+  ],
+  "caption": "Two feelings run most money decisions, and neither one is math. #money #personalfinance #financialfreedom #ratrace #wealth",
+  "description": "Fear keeps people in jobs they dislike while desire spends every raise. Learn why the rat race continues and how asset building changes the math.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#financialfreedom",
+    "#ratrace",
+    "#wealth"
+  ],
+  "first_comment": "What is the biggest expense that eats your raises?",
+  "facts": [
+    {
+      "claim": "An extra $1,000/month invested at 8% for 10 years = $182,946 (you put in $120,000)",
+      "basis": "Money Fact Sheet"
+    }
+  ],
+  "source": "llm",
+  "pillar": "escape",
+  "look": "",
+  "loop_map": {
+    "stakes": "A paycheck that vanishes every month despite working harder",
+    "big_question": "Why does a bigger paycheck always vanish by month end?",
+    "assume": "Working harder and earning more is the only exit from the rat race",
+    "reveal": "Expenses rise with income unless you build asset systems",
+    "rehook_beats": [
+      3,
+      6
+    ],
+    "payoff_beat": 11
+  }
+}

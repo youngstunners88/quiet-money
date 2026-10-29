@@ -1,0 +1,95 @@
+{
+  "title": "The $180 Share That Grew Into Millions",
+  "hook_text": "$180 BOUGHT THIS 75-YEAR FORTUNE",
+  "beats": [
+    {
+      "say": "In 1935, a quiet office worker spent $180 on 3 shares of a local healthcare stock.",
+      "callout": "",
+      "visual": "Extreme close-up of a weathered fountain pen resting on aged yellow paper under a single dim bulb."
+    },
+    {
+      "say": "She didn't sell when world wars hit, and she didn't sell during panics.",
+      "callout": "$180 VS MILLIONS",
+      "visual": "Low angle shot of a solitary skyscraper cutting through thick, grey fog at dusk."
+    },
+    {
+      "say": "How does a tiny $180 starter stack turn into an eight-figure estate without a single trade?",
+      "callout": "",
+      "visual": "High angle shot of rain slicked empty asphalt reflecting harsh sodium streetlights at night."
+    },
+    {
+      "say": "You’d assume she constantly traded hot tips or timed every market crash.",
+      "callout": "ACTIVE TRADING",
+      "visual": "Silhouette of a person walking across a vast concrete underpass against cold fluorescent light."
+    },
+    {
+      "say": "That’s false. She simply stuffed the paper certificates in a desk drawer and forgot them.",
+      "callout": "THE DRAWER",
+      "visual": "Extreme close-up of heavy brass keys dangling from a rusted iron ring in open water."
+    },
+    {
+      "say": "Why didn't taxes and brokerage fees eat her alive along the way?",
+      "callout": "STEP ONE",
+      "visual": "Cinematic wide shot of a cold ridgeline under heavy overcast winter skies."
+    },
+    {
+      "say": "Because she let dividends reinvest automatically while the company kept growing its core products.",
+      "callout": "STEP TWO",
+      "visual": "Extreme close-up of wet autumn leaves stuck to dark asphalt under sodium light."
+    },
+    {
+      "say": "What happens when you remove human panic from the equation for 7.5 decades?",
+      "callout": "",
+      "visual": "Low angle view of a massive steel bridge tower disappearing into low storm clouds."
+    },
+    {
+      "say": "Most people panic and sell at the worst possible second.",
+      "callout": "PANIC VS TIME",
+      "visual": "Silhouette of a single figure standing at the edge of a vast concrete pier."
+    },
+    {
+      "say": "Grace Groner died with over $7 million, proving that inaction beats intervention every single time.",
+      "callout": "$7,000,000",
+      "visual": "Cinematic extreme wide shot of a dark highway stretching into a foggy horizon at blue hour."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "Extreme close-up of a heavy iron door latch under cold fluorescent light."
+    }
+  ],
+  "caption": "Most investors destroy their own returns by panicking. Grace Groner left hers alone for 75 years. #moneypsychology #personalfinance #wealth #investing #quietmoney",
+  "description": "The true story of Grace Groner, who turned $180 into millions through uninterrupted compounding and zero emotional selling.",
+  "hashtags": [
+    "#moneypsychology",
+    "#personalfinance",
+    "#wealth",
+    "#investing",
+    "#quietmoney"
+  ],
+  "first_comment": "What's the hardest part of leaving an investment completely alone for a decade?",
+  "facts": [
+    {
+      "claim": "Grace Groner bought 3 shares of Abbott Laboratories for $180 in 1935",
+      "basis": "Documented historical biography of Grace Groner and her estate gift to Lake Forest College."
+    },
+    {
+      "claim": "Her estate was worth over $7 million when she died 75 years later",
+      "basis": "Public probate records and university endowment announcements upon her passing."
+    }
+  ],
+  "source": "llm",
+  "pillar": "story",
+  "look": "",
+  "loop_map": {
+    "stakes": "A $180 office worker investment turning into millions over a lifetime.",
+    "big_question": "How does a tiny $180 starter stack turn into an eight-figure estate without a single trade?",
+    "assume": "She constantly traded hot tips or timed every market crash.",
+    "reveal": "She stuffed the certificates in a drawer and never touched them.",
+    "rehook_beats": [
+      3,
+      8
+    ],
+    "payoff_beat": 10
+  }
+}

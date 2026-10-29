@@ -1,0 +1,110 @@
+{
+  "title": "Why Your Next Raise Won't Set You Free",
+  "hook_text": "WHY RAISES WON'T SET YOU FREE",
+  "beats": [
+    {
+      "say": "Two feelings run most money decisions, and neither one is math.",
+      "callout": "",
+      "visual": "Cinematic extreme wide shot of a solitary commuter walking under a cold concrete underpass at dusk, lit by a single sodium streetlight."
+    },
+    {
+      "say": "You get a $5,000 raise, but your bank account feels just as tight six months later.",
+      "callout": "$5,000 RAISE",
+      "visual": "Silhouette of a person standing at a rain-slicked train platform at night, glowing blue station lights reflected on wet asphalt."
+    },
+    {
+      "say": "So why does every paycheck boost disappear before it ever sets you free?",
+      "callout": "",
+      "visual": "Low angle shot of massive dark glass skyscrapers towering overhead under heavy fog cutting the city skyline."
+    },
+    {
+      "say": "Most people think earning more money is the fix.",
+      "callout": "EARN MORE VS FREE",
+      "visual": "High angle shot looking down at a lonely figure walking down a dark, empty highway at night with sodium lights overhead."
+    },
+    {
+      "say": "But fear keeps you in the chair, and desire spends the extra cash immediately.",
+      "callout": "",
+      "visual": "Extreme close up of leather car seats and a steering wheel sitting parked in a cold dark parking garage under fluorescent lighting."
+    },
+    {
+      "say": "That's called lifestyle creep, and it turns every new salary into a higher baseline expense.",
+      "callout": "",
+      "visual": "High angle wide shot of an empty concrete staircase spiraling downward into cold industrial shadows."
+    },
+    {
+      "say": "To break out, your pay must buy assets that put cash back into your pocket every month.",
+      "callout": "ASSETS VS EXPENSES",
+      "visual": "Low angle silhouette of a person looking out from a high tower edge over an expanse of dark water at blue hour."
+    },
+    {
+      "say": "If you invest $500 a month at 8% a year, you reach $600,000 in 27.6 years.",
+      "callout": "$600,000 IN 27.6 YRS",
+      "visual": "Single practical desk lamp illuminating a plain, dark wooden table in a dimly lit, silent room."
+    },
+    {
+      "say": "But how much passive income does that actually generate when you want to stop working?",
+      "callout": "",
+      "visual": "Extreme wide shot of a single figure standing on an elevated ridge line against a stormy horizon at dusk."
+    },
+    {
+      "say": "Under the 4% rule, that $600,000 portfolio generates $2,000 a month in passive income.",
+      "callout": "$2,000 / MONTH",
+      "visual": "Low angle shot of cold fluorescent lights reflecting off a polished concrete floor in a silent corridor."
+    },
+    {
+      "say": "Here's the honest catch: building passive assets takes years of discipline and carries real market risks.",
+      "callout": "",
+      "visual": "Silhouette of a figure standing before a massive steel door inside a vast, dark industrial warehouse."
+    },
+    {
+      "say": "This week, audit your last raise and route half of every future bump into investments.",
+      "callout": "STEP ONE",
+      "visual": "Extreme close up of hands sealing a plain dark paper envelope on a dark stone desk under warm side light."
+    },
+    {
+      "say": "Earning more won't buy freedom until you stop letting emotion direct every dollar.",
+      "callout": "",
+      "visual": "Low angle silhouette of a person walking away down an empty, illuminated city street at night."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "Extreme wide shot of a quiet highway stretching toward a distant horizon under early morning fog."
+    }
+  ],
+  "caption": "Two feelings control your money, and neither one is math. Here is how to break the cycle.\n#money #personalfinance #ratrace #financialfreedom #investing",
+  "description": "A higher salary rarely creates freedom because lifestyle creep spends every new dollar. Learn how replacing fear and desire with real assets builds true passive income.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#ratrace",
+    "#financialfreedom",
+    "#investing"
+  ],
+  "first_comment": "What did you do with your last pay raise?",
+  "facts": [
+    {
+      "claim": "Investing $500 a month at 8% annual returns reaches $600,000 in 27.6 years, which provides $2,000 a month in passive income under the 4% rule.",
+      "basis": "Money Fact Sheet ($2,000/month of passive income needs about $600,000 invested; investing $500/month at 8%/yr reaches $600,000 in 27.6 years)"
+    },
+    {
+      "claim": "Fear keeps people in a job and desire spends the raise.",
+      "basis": "Research Brief (Robert Kiyosaki framework: Fear and desire; Rich Dad Poor Dad)"
+    }
+  ],
+  "source": "llm",
+  "pillar": "escape",
+  "look": "",
+  "loop_map": {
+    "stakes": "A $5,000 raise gets swallowed by fear and lifestyle creep.",
+    "big_question": "Why does every paycheck boost disappear before it ever sets you free?",
+    "assume": "Earning a higher salary will eventually buy financial freedom.",
+    "reveal": "Fear keeps people working and desire spends the extra income immediately on lifestyle creep.",
+    "rehook_beats": [
+      6,
+      9
+    ],
+    "payoff_beat": 13
+  }
+}

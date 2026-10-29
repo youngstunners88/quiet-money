@@ -1,0 +1,95 @@
+{
+  "title": "The $180 Stock That Grew to $7 Million",
+  "hook_text": "SHE BOUGHT 3 SHARES FOR $180",
+  "beats": [
+    {
+      "say": "In 1935, a quiet clerk named Grace Groner bought 3 shares of a healthcare company for $180.",
+      "callout": "",
+      "visual": "Extreme wide shot of a solitary clerk silhouette at a heavy mahogany desk in an empty, towering archive hall under cold fluorescent light."
+    },
+    {
+      "say": "She put the paper certificate in a drawer, left it alone, and never added another single cent.",
+      "callout": "3 SHARES",
+      "visual": "Extreme close up of weathered hands closing a dark wooden drawer with a brass pull, low angle, blue hour light."
+    },
+    {
+      "say": "How did a tiny $180 purchase turn into a multi-million dollar fortune by the time she died?",
+      "callout": "",
+      "visual": "Low angle shot of a massive concrete office tower edge cutting across a pale winter sky, sodium light bleeding from below."
+    },
+    {
+      "say": "Most people assume you've got to trade daily, time the market swings, and dodge crashes to get rich.",
+      "callout": "ACTIVE TRADING VS PATIENCE",
+      "visual": "High angle shot of a rain-slick street at night with streaks of red and white taillights rushing past in a blur."
+    },
+    {
+      "say": "Grace didn't check tickers. She didn't panic when recessions hit. She just let the dividends reinvest quietly.",
+      "callout": "STEP ONE",
+      "visual": "Silhouette of a person standing alone on a vast concrete overpass, looking out at dark open water under heavy fog."
+    },
+    {
+      "say": "What happened to her tax bill while those shares compounded for 75 uninterrupted years?",
+      "callout": "",
+      "visual": "Extreme close up of wet asphalt reflecting a single practical amber light in an empty alleyway at night."
+    },
+    {
+      "say": "She never sold a share. That means she paid zero capital gains tax along the way. Friction stayed at absolute zero.",
+      "callout": "STEP TWO",
+      "visual": "Low angle shot of a massive steel suspension bridge tower disappearing into heavy fog and low clouds."
+    },
+    {
+      "say": "How much was that original $180 stack actually worth when she passed away at age 100?",
+      "callout": "",
+      "visual": "High angle shot looking down a steep, empty concrete stairwell lit by a single flickering fluorescent bulb."
+    },
+    {
+      "say": "By the time she died, her little investment had quietly ballooned to over $7 million.",
+      "callout": "$180 VS $7M",
+      "visual": "Extreme wide shot of a tiny human silhouette walking across a vast, empty concrete dam at twilight."
+    },
+    {
+      "say": "She left the entire sum to her college to fund scholarships, proving simple time beats clever timing every single time.",
+      "callout": "",
+      "visual": "Silhouette of a hand resting on cold stone railing against a dark, moody ridge line at blue hour."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "Low angle shot of a solitary warm light shining from a single window in a towering concrete monolith at night."
+    }
+  ],
+  "caption": "Three shares. Zero trades. Seventy-five years of untouched compounding.\n\n#moneypsychology #wealthbuilding #investingtips #personalfinance #smartmoney",
+  "description": "The true story of Grace Groner, who turned $180 into over $7 million by simply leaving her investment alone for 75 years.",
+  "hashtags": [
+    "#moneypsychology",
+    "#wealthbuilding",
+    "#investingtips",
+    "#personalfinance",
+    "#smartmoney"
+  ],
+  "first_comment": "What's the hardest part of leaving an investment completely alone for decades?",
+  "facts": [
+    {
+      "claim": "Grace Groner bought 3 shares of Abbott Laboratories for $180 in 1935.",
+      "basis": "Documented historical biography of Grace Groner and her estate donation."
+    },
+    {
+      "claim": "She died 75 years later with over $7 million.",
+      "basis": "Lake Forest College endowment records from her 2010 bequest."
+    }
+  ],
+  "source": "llm",
+  "pillar": "story",
+  "look": "",
+  "loop_map": {
+    "stakes": "Grace Groner investing $180 in 1935 and holding it for 75 years.",
+    "big_question": "How did a tiny $180 purchase turn into a multi-million dollar fortune?",
+    "assume": "Most people think you need to trade actively and time the market to build wealth.",
+    "reveal": "Uninterrupted compounding on an essential product removes taxes, timing errors, and panic selling.",
+    "rehook_beats": [
+      6,
+      8
+    ],
+    "payoff_beat": 9
+  }
+}
