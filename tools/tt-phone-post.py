@@ -51,6 +51,11 @@ video,capfile=sys.argv[1],sys.argv[2]
 page_only="--page-only" in sys.argv
 dur=(sys.argv[sys.argv.index("--dur")+1] if "--dur" in sys.argv else "")   # mm:ss of the video, to pick the right tile
 want=ascii_safe(open(capfile,encoding="utf-8").read().strip())
+sys.path.insert(0,os.path.join(os.path.dirname(os.path.abspath(__file__)),".."))
+from faceless import ttpolicy                                      # skill faceless-tiktok-policy: refuse wording that can trip TikTok's rules
+bad=ttpolicy.blockers(want)
+if bad and "--allow-wording" not in sys.argv: die("risky wording, reword first:\n"+"\n".join(map(str,bad)))
+PROMO=ttpolicy.needs_commercial_disclosure(want)
 tags=re.findall(r"#\w+",want)
 if len(tags)>5:
     for t in tags[5:]: want=want.replace(" "+t,"",1)
@@ -84,6 +89,7 @@ print("caption ok")
 if "mInputShown=true" in adb("dumpsys input_method"): adb("input tap 900 785"); time.sleep(1.5)   # close the keyboard by tapping blank space (the back key can leave the page)
 time.sleep(1.5); adb("input tap 540 1383"); time.sleep(3.5)      # More options (fixed position; the UI tree is slow here)
 if not find(lambda t:"AI-generated content" in t,10): die("AI-generated content row missing")
+if "--explore" in sys.argv: print("explore: stopped with More options open"); sys.exit(0)
 def ai_on():
     x=subprocess.run("adb exec-out uiautomator dump /dev/tty",shell=True,capture_output=True,text=True).stdout
     return bool(re.search(r'content-desc="AI-generated content,[^>]*checked="true"',x))

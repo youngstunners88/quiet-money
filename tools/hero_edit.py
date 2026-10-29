@@ -20,7 +20,7 @@ CLIP_LUFS = -21.0
 # source seconds of each clip; `elastic` is the segment whose speed is nudged so the hit lands on a beat
 ACTS = [
     dict(name="leak", src="playbook-20261027-1.mp4", impact=6.2, elastic=1, text="THE LEAK",
-         line="Every month, something quietly bleeds you.", line_at="early",
+         line="Every month, something quietly drains you.", line_at="early",
          segs=[(0, 1.2, 1.0), (1.2, 5.2, 1.5), (5.2, 6.2, 0.65), (6.2, 8.0, 1.0)]),
     dict(name="myth", src="myth-20261027-2.mp4", impact=2.3, elastic=0, text="THE MYTH CRACKS",
          line="The story you were sold cracks open.", line_at="after_hit",

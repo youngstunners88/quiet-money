@@ -322,6 +322,13 @@ def check_render(info: dict, voice: dict) -> list[Gate]:
     ]
 
 
+def _wording_hits(meta: dict) -> list[str]:
+    """Advisory: risky wording in the title, caption and description (skill faceless-tiktok-policy)."""
+    from faceless import ttpolicy
+    text = " ".join(str(meta.get(k, "")) for k in ("title", "caption", "description"))
+    return [str(f) for f in ttpolicy.blockers(text)]
+
+
 def check_package(meta: dict) -> list[Gate]:
     d = meta["description"].lower()
     return [
@@ -329,6 +336,7 @@ def check_package(meta: dict) -> list[Gate]:
         Gate("affiliate_disclosure", not config.load()["channel"].get("has_affiliate_links") or "affiliate" in d, 8, True,
              "affiliate links are on but the description has no affiliate disclosure", "package"),
         Gate("caption_tags", "#" in meta["caption"], 2, False, "caption has no hashtags", "package"),
+        Gate("platform_wording", not _wording_hits(meta), 4, False, "wording that can trip TikTok/YouTube policy: " + "; ".join(_wording_hits(meta)[:3]), "package"),
         _offer_gate(meta),
     ]
 

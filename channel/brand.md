@@ -39,3 +39,9 @@ policy targets templated, near-identical uploads. Our variety is real, not cosme
 - **Contradiction:** "Your last raise made you poorer."
 - **Direct challenge:** "Renting isn't throwing money away. Here's the math."
 - **Specific promise:** "Do this once and save money forever."
+
+## Title rule (2026-10-29 review of 68 Shorts, `analytics/performance-2026-10-29.md`)
+- Every title carries a **number or a named thing** (person, brand, product) and a consequence. Titles with a digit averaged 38.5 views against 18.2 without.
+- No abstract nouns as the hook (Hidden, Silent, Brain, Direction, Psychology): those titles had a median of 1.5 views. Name the thing instead ("Your $14 Kindle Charge", not "The Hidden Cost of Convenience").
+- The first 1.5 seconds on screen show the number or the name.
+- Never use graphic or scam wording (see `faceless-tiktok-policy`): bleed, kill, blood, free money, guaranteed, get rich.
