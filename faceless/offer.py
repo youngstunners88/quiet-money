@@ -50,8 +50,8 @@ DEFAULTS = {
 }
 
 COPY = {
-    "free": {"pinned": "Free 60-second money reset checklist is in my bio. Educational only, not financial advice.",
-             "caption": "Free money reset checklist: link in bio.",
+    "free": {"pinned": "Free 60-second reset checklist is in my bio. Educational only, not financial advice.",
+             "caption": "Free reset checklist: link in bio.",
              "description": "Free 7-day Money Reset checklist + calculators: {url}"},
     "paid": {"pinned": "{short} is in my bio (paid). Educational only, not financial advice.",
              "caption": "{short}: link in bio (paid).",

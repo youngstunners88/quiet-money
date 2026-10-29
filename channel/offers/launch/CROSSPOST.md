@@ -31,7 +31,7 @@
 | Caption line 1 | the pack title | same |
 | Line 2 | first sentence of the pack caption (POST.md "TikTok / Instagram caption", or `caption` in the script JSON for videos without a pack) | same |
 | Line 3: CTA if the pillar is story, psychology or myth | `The Quiet Money Daily Planner (paid): tap the Instagram icon on my profile.` | `The Quiet Money Daily Planner: link in bio (paid).` |
-| Line 3: CTA if the pillar is escape or math | `Free money reset checklist: tap the Instagram icon on my profile.` | `Free money reset checklist: link in bio.` |
+| Line 3: CTA if the pillar is escape or math | `Free money reset checklist: tap the Instagram icon on my profile.` | `Free reset checklist: link in bio.` |
 | Line 4 (rule 2, every post) | `Educational, not financial advice. Narration and visuals are AI-assisted.` | same |
 | Hashtags | 4-5 from the pack. Drop `#passiveincome` and `#financialfreedom`, which are claim-gate terms in MARKETING C1 | same |
 | Pinned comment | line 3 + ` Educational only, not financial advice.` (at most 134 of 150 characters) | the pack's OFFER.md pinned line |

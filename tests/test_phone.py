@@ -21,7 +21,7 @@ Educational content, not financial advice. Narration and visuals are AI-assisted
 ## TikTok / Instagram caption
 How 26 half-payments equal 13.
 
-Free money reset checklist: link in bio.
+Free reset checklist: link in bio.
 
 #money
 

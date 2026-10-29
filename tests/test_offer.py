@@ -42,7 +42,7 @@ def test_the_claim_check_refuses_money_promises(text):
 @pytest.mark.parametrize("text", [
     "Free 60-second money reset checklist is in my bio. Educational only, not financial advice.",
     "The Debt Payoff & Compound Interest Planner is in my bio (paid). Educational only, not financial advice.",
-    "Not financial advice.", "Free money reset checklist: link in bio.", "See what a $15 subscription costs over ten years."])
+    "Not financial advice.", "Free reset checklist: link in bio.", "See what a $15 subscription costs over ten years."])
 def test_the_claim_check_lets_the_built_in_copy_through(text):
     assert offer.violations(text) == []
 
@@ -155,7 +155,7 @@ def pkg_job(tmp_path, monkeypatch):
 
 def test_package_puts_the_offer_in_the_caption_and_the_description_and_the_gate_passes(pkg_job):
     meta = package.run(pkg_job(), _script())
-    assert "Free money reset checklist: link in bio." in meta["caption"] and meta["caption"].rstrip().endswith("#personalfinance")
+    assert "Free reset checklist: link in bio." in meta["caption"] and meta["caption"].rstrip().endswith("#personalfinance")
     assert meta["description"].count("http") == 1 and "utm_content=2026-10-08-s1-math-x" in meta["description"]
     assert meta["offer"]["status"] == "draft" and meta["first_comment"] == "Which one will you cancel?"
     gate = next(g for g in gauntlet.check_package(meta) if g.name == "offer_cta")
