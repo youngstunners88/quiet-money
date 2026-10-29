@@ -1,0 +1,100 @@
+{
+  "title": "The $180 Investment That Ran for 75 Years",
+  "hook_text": "$180 TO $7 MILLION",
+  "beats": [
+    {
+      "say": "In 1935, a quiet clerk bought three shares of a healthcare company for $180.",
+      "callout": "",
+      "visual": "Extreme close up of an aged paper stock certificate from 1935 held by gloved hands under cold fluorescent light."
+    },
+    {
+      "say": "She never touched them or added cash, yet died 75 years later with over $7 million.",
+      "callout": "$180 VS $7,000,000",
+      "visual": "Silhouette of an elderly woman looking through a tall window over a rainy city skyline at blue hour."
+    },
+    {
+      "say": "How does a tiny $180 investment turn into a multi-million-dollar fortune without a single trade?",
+      "callout": "",
+      "visual": "Low angle shot of massive stone columns outside an abandoned exchange under harsh sodium light."
+    },
+    {
+      "say": "Most assume wealth requires active trading, constant market timing, and chasing hot stocks.",
+      "callout": "ACTIVE VS PASSIVE",
+      "visual": "Rain-slick street reflecting red break lights outside a dark skyscraper at night."
+    },
+    {
+      "say": "In reality, Grace Groner simply bought an essential business and reinvested every dividend.",
+      "callout": "",
+      "visual": "Extreme close up of black ink soaking into thick off-white parchment under single practical light."
+    },
+    {
+      "say": "She didn't sell when World War II broke out, and she ignored every panic that followed.",
+      "callout": "75 YEARS HELD",
+      "visual": "Fog cutting through a cold concrete underpass at dusk with a solitary streetlight flickering."
+    },
+    {
+      "say": "By never selling, she didn't trigger capital gains taxes that quietly slice away compounding.",
+      "callout": "",
+      "visual": "High angle of dark water swirling beneath a massive steel bridge during heavy rain."
+    },
+    {
+      "say": "So why do most modern investors fail to repeat this exact outcome with their own savings?",
+      "callout": "THE REAL TRAP",
+      "visual": "Silhouette of a lone figure standing on a cold mountain ridge line against stormy grey skies."
+    },
+    {
+      "say": "We panic during market crashes, pay trading fees, and interrupt our cash before it grows.",
+      "callout": "",
+      "visual": "Wet asphalt highway stretching into an endless empty dark horizon under dim sodium light."
+    },
+    {
+      "say": "Grace Groner left behind over $7 million, showing how disciplined buy-and-hold can outperform active trading.",
+      "callout": "NO TAX FRICTION",
+      "visual": "Extreme wide shot of an empty concrete terminal dimly lit by cold fluorescent light."
+    },
+    {
+      "say": "You don't need wild trading setups; you need patience and time working without interruption.",
+      "callout": "PATIENCE & TIME",
+      "visual": "Extreme wide shot of a solitary radio tower piercing deep coastal fog at blue hour."
+    },
+    {
+      "say": "Grace's $180 became a legend because time beats timing. Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "High angle shot of wet asphalt on a desolate street reflecting solitary sodium streetlights."
+    }
+  ],
+  "caption": "A $180 clerk purchase became over $7 million without trading. Uninterrupted compounding beats market timing every time.",
+  "description": "Grace Groner bought three shares of Abbott Laboratories in 1935 for $180 and never sold. By reinvesting dividends and avoiding tax friction, her small stake grew into an estate worth over $7 million after 75 years.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#investing",
+    "#compounding",
+    "#wealthbuilding"
+  ],
+  "first_comment": "What's one asset you'd hold for 30 years without touching?",
+  "facts": [
+    {
+      "claim": "Grace Groner bought 3 shares of Abbott Laboratories for $180 in 1935.",
+      "basis": "Documented in Abbott Laboratories corporate history and estate court records upon her death in 2010."
+    },
+    {
+      "claim": "Her estate was worth over $7 million upon her death 75 years later.",
+      "basis": "Groner donated her $7.2 million estate to Lake Forest College upon her passing in 2010."
+    }
+  ],
+  "source": "llm",
+  "pillar": "story",
+  "look": "",
+  "loop_map": {
+    "stakes": "A $180 purchase became a $7 million fortune over 75 years without adding cash.",
+    "big_question": "How does a tiny $180 investment turn into a multi-million-dollar fortune without a single trade?",
+    "assume": "Wealth requires active trading, timing market dips, and frequent moves.",
+    "reveal": "Grace Groner bought an essential business, reinvested dividends, and eliminated tax and emotional friction by holding.",
+    "rehook_beats": [
+      6,
+      8
+    ],
+    "payoff_beat": 10
+  }
+}
