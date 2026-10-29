@@ -1,0 +1,99 @@
+#!/usr/bin/env python3
+"""Post one video to TikTok through the app on the owner's phone (adb + UI tree). usage: tt-phone-post.py VIDEO.mp4 CAPTION.txt [--page-only]
+Flow: Create -> gallery -> '+' (grant the new file) -> pick the newest tile -> Next -> Next -> caption -> More options -> AI-generated content on -> Post."""
+import re,subprocess,sys,time,html,difflib,os
+SC=os.environ.get("TT_SCRATCH","/tmp")
+def adb(c): return subprocess.run(["adb","shell",c],capture_output=True,text=True).stdout
+def tree():
+    x=subprocess.run("adb exec-out uiautomator dump /dev/tty",shell=True,capture_output=True,text=True).stdout
+    out=[]
+    for m in re.finditer(r'<node[^>]*?text="([^"]*)"[^>]*?content-desc="([^"]*)"[^>]*?bounds="\[(\d+),(\d+)\]\[(\d+),(\d+)\]"',x):
+        t=html.unescape(m.group(1) or m.group(2)).replace("\n"," ")
+        if t: out.append((t,(int(m.group(3))+int(m.group(5)))//2,(int(m.group(4))+int(m.group(6)))//2))
+    return out
+def find(pred,wait=0):
+    end=time.time()+wait
+    while True:
+        for t,x,y in tree():
+            if pred(t): return t,x,y
+        if time.time()>=end: return None
+        time.sleep(1.5)
+def tap(p): adb(f"input tap {p[1]} {p[2]}")
+def shot(n): subprocess.run(f"adb exec-out screencap -p > {SC}/tt_{n}.png",shell=True)
+def die(msg): shot("fail"); print("FAIL:",msg); sys.exit(1)
+def step(label,pred,wait=8):
+    p=find(pred,wait)
+    if not p: die(label)
+    tap(p); time.sleep(2.5); return p
+def ascii_safe(x): return x.replace("—",", ").replace("–","-").replace("’","'").replace("‘","'").replace("“",'"').replace("”",'"')
+def rawtype(s):
+    for pi,part in enumerate(s.split("'")):
+        if pi: adb("input keyevent 75")
+        for i in range(0,len(part),10):
+            adb("input text '"+part[i:i+10].replace(" ","%s")+"'"); time.sleep(0.45)
+def newlines_type(s):
+    for li,line in enumerate(s.split("\n")):
+        if li: adb("input keyevent 66"); time.sleep(0.2)
+        rawtype(line)
+def caption_text():
+    c=[t for t,_,_ in tree() if t.startswith(want[:25])]
+    return max(c,key=len) if c else None
+def sync(rounds=5):
+    wn=want.replace("\n"," ")
+    for attempt in range(rounds):
+        adb("input keycombination 113 29"); time.sleep(0.5); adb("input keyevent 67"); time.sleep(0.8)
+        newlines_type(want); time.sleep(2)
+        got=caption_text()
+        if got and re.sub(r"\s+"," ",got).strip().lower()==re.sub(r"\s+"," ",wn).strip().lower(): return True   # the keyboard capitalizes a word after some hashtags or periods: cosmetic
+        print("caption differs:",repr(got)[:200])
+    return False
+video,capfile=sys.argv[1],sys.argv[2]
+page_only="--page-only" in sys.argv
+dur=(sys.argv[sys.argv.index("--dur")+1] if "--dur" in sys.argv else "")   # mm:ss of the video, to pick the right tile
+want=ascii_safe(open(capfile,encoding="utf-8").read().strip())
+tags=re.findall(r"#\w+",want)
+if len(tags)>5:
+    for t in tags[5:]: want=want.replace(" "+t,"",1)
+if any(ord(c)>127 for c in want): die("non-ASCII in caption")
+if not page_only:
+    fn=os.path.basename(video)
+    subprocess.run(["adb","push",video,f"/sdcard/Download/QuietMoney/{fn}"],capture_output=True)
+    adb(f"touch /sdcard/Download/QuietMoney/{fn}; am broadcast -a android.intent.action.MEDIA_SCANNER_SCAN_FILE -d file:///sdcard/Download/QuietMoney/{fn}")
+    adb("am force-stop com.ss.android.ugc.trill"); time.sleep(1); adb("monkey -p com.ss.android.ugc.trill 1"); time.sleep(6)
+    for _ in range(3):
+        d=find(lambda t:t in("Don\u2019t allow","Not now","Dismiss"),2)    # permission and promo pop-ups: decline
+        if d: tap(d); time.sleep(1.5)
+    time.sleep(2); adb("input tap 540 2272"); time.sleep(4)          # the + button (the feed video hides it from the UI tree)
+    adb("input tap 113 2172"); time.sleep(3)           # gallery thumbnail (bottom left of the camera)
+    if not find(lambda t:t=="Recents",6): die("gallery did not open")
+    adb("input tap 185 808"); time.sleep(3)                            # '+' tile: pick more media for TikTok
+    p=find(lambda t:t.startswith("Video taken on") and (not dur or t.endswith("duration "+dur)),8)
+    if not p: die("system picker has no videos")
+    tap(p); time.sleep(1.5)
+    step("Done",lambda t:t=="Done",5); time.sleep(3)
+    q=find(lambda t:dur and t==dur,4)
+    if q: tap(q)                                                       # the tile with this duration
+    else: adb("input tap 541 808")                                     # newest tile, first slot after '+'
+    time.sleep(2)
+    step("Next",lambda t:t=="Next",8); time.sleep(3)
+    step("Next 2",lambda t:t=="Next",10); time.sleep(3)
+if not find(lambda t:t.startswith("Add description") or t.startswith(want[:20]),10): die("post page missing")
+adb("input tap 344 477"); time.sleep(1.5)
+if not sync(): die("caption does not match")
+print("caption ok")
+if "mInputShown=true" in adb("dumpsys input_method"): adb("input tap 900 785"); time.sleep(1.5)   # close the keyboard by tapping blank space (the back key can leave the page)
+time.sleep(1.5); adb("input tap 540 1383"); time.sleep(3.5)      # More options (fixed position; the UI tree is slow here)
+if not find(lambda t:"AI-generated content" in t,10): die("AI-generated content row missing")
+def ai_on():
+    x=subprocess.run("adb exec-out uiautomator dump /dev/tty",shell=True,capture_output=True,text=True).stdout
+    return bool(re.search(r'content-desc="AI-generated content,[^>]*checked="true"',x))
+adb("input tap 924 2172"); time.sleep(2)
+shot("ai_on")
+if not ai_on(): die("AI-generated content label did not turn on")
+adb("input keyevent 4"); time.sleep(2)
+if not find(lambda t:t=="Post",6): die("post button missing")
+step("Post",lambda t:t=="Post",6)
+for i in range(40):
+    if find(lambda t:t in("Uploading","Posting"),2) is None and i>2: break
+    time.sleep(3)
+time.sleep(6); shot("after_post"); print("POSTED",os.path.basename(video))

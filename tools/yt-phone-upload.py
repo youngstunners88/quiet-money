@@ -133,8 +133,9 @@ for attempt in range(3):
     if not sl: continue
     adb(f"input tap 480 {sl[2]-152}"); time.sleep(3)
     if not settle(lambda t:t=="Add tags",5): adb("input keyevent 4"); time.sleep(2); continue
-    adb("input tap 480 328"); time.sleep(3)
-    if not settle(lambda t:t.startswith("Was AI used") or t=="AI use",5): adb("input keyevent 4"); time.sleep(2); continue
+    adb("input tap 985 328"); time.sleep(3)         # the AI use row is not in the UI tree: tap its chevron
+    if find(lambda t:t=="Add tags",2): adb("input tap 985 328"); time.sleep(3)
+    if find(lambda t:t=="Add tags",1): adb("input keyevent 4"); time.sleep(2); continue
     adb("input tap 102 1026"); time.sleep(1.5); ok_ai=True; break
 if not ok_ai: die("could not set AI use")
 shot("ai_use")

@@ -3,7 +3,7 @@
  "kind": "tiktok",
  "day": "2026-10-27",
  "key": "2026-10-27-s2-psychology-the-zero-price-effect",
- "status": "queued",
+ "status": "done",
  "created": "2026-10-27T09:49:35+00:00",
  "recipe": "TikTok upload",
  "media": [
@@ -14,5 +14,12 @@
  ],
  "staged": true,
  "text": "The word 'free' triggers an emotional response that shuts down rational math. Here is what it costs you long term.\n\nFree money reset checklist: link in bio.\n\n#money #personalfinance #behavioraleconomics #smartmoney #wealthbuilding #moneytips #mindset\n\nEducation, not financial advice.",
- "ai_label": "AI-generated content: on"
+ "ai_label": "AI-generated content: on",
+ "history": [
+  {
+   "at": "2026-10-29T02:57:44+00:00",
+   "result": "posted",
+   "note": "posted from phone 2026-10-29, AI label on"
+  }
+ ]
 }

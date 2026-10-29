@@ -3,7 +3,7 @@
  "kind": "yt_short",
  "day": "2026-10-26",
  "key": "2026-10-26-s12-playbook-remove-credit-card-protection-pl",
- "status": "queued",
+ "status": "done",
  "created": "2026-10-26T09:59:52+00:00",
  "recipe": "YouTube Short upload",
  "media": [
@@ -15,5 +15,12 @@
  "staged": true,
  "title": "How to Cancel Credit Card Protection Fees in 15 Minutes",
  "text": "Learn how to spot and eliminate hidden credit card payment protection and credit shield fees in under 15 minutes using a simple 3-step action plan.\n\nFree 7-day Money Reset checklist + calculators: https://youngstunners88.github.io/quiet-money/links/?utm_source=youtube&utm_medium=short&utm_campaign=checklist&utm_content=2026-10-26-s12-playbook-remove-credit-card-protection-pl&o=checklist\n\nEducational content, not financial advice.\n\n#money #personalfinance #creditcard #financialfreedom #dothistoday #shorts",
- "ai_label": "altered or synthetic content: Yes"
+ "ai_label": "altered or synthetic content: Yes",
+ "history": [
+  {
+   "at": "2026-10-29T02:34:03+00:00",
+   "result": "posted",
+   "note": "uploaded from phone 2026-10-29, AI use Yes"
+  }
+ ]
 }

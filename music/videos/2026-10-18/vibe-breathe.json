@@ -1,11 +1,8 @@
 {
- "video": "/home/user/quiet-money/music/videos/2026-10-18/vibe-breathe.mp4",
- "seconds": 207.74,
+ "video": "music/videos/2026-10-18/vibe-breathe.mp4",
+ "seconds": 207.72,
  "size": "1920x1080",
- "fps": 30,
- "bpm": 129.2,
- "shots": 14,
- "clips": [],
- "title": "Breathe",
- "draft": false
+ "draft": false,
+ "grade": "deep",
+ "title": "Breathe"
 }
