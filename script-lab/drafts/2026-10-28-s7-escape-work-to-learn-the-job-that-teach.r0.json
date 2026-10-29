@@ -1,0 +1,90 @@
+{
+  "title": "The Best-Paid Job Can Be Your Worst Career Move",
+  "hook_text": "THE BEST-PAID JOB CAN BE A TRAP",
+  "beats": [
+    {
+      "say": "The best-paid job can be the worst career move.",
+      "callout": "",
+      "visual": "Extreme wide shot of a solitary lone commuter walking through a massive brutalist concrete underpass at blue hour."
+    },
+    {
+      "say": "You take a higher salary, but your skills stop growing.",
+      "callout": "HIGH PAY VS LOW SKILL",
+      "visual": "Low angle shot of a towering gray corporate skyscraper cutting sharply against a heavy fog."
+    },
+    {
+      "say": "So why do so many people chase the highest paycheck first?",
+      "callout": "",
+      "visual": "Extreme close up of worn leather work boots standing still on cold, wet asphalt under sodium light."
+    },
+    {
+      "say": "Most assume a big starting salary builds long-term wealth fastest.",
+      "callout": "SALARY VS SKILL",
+      "visual": "Silhouette of a person carrying a heavy briefcase across a rain-slick street at night."
+    },
+    {
+      "say": "That is the trap. A high wage without a core skill leaves you chained to a desk.",
+      "callout": "THE RAT RACE",
+      "visual": "High angle shot of empty highway lanes cutting through dark mountains under cold moonlight."
+    },
+    {
+      "say": "What skill actually breaks the cycle?",
+      "callout": "RE-HOOK",
+      "visual": "Close up of a heavy steel industrial door latch in deep shadow with a single practical light above."
+    },
+    {
+      "say": "It is learning how to sell.",
+      "callout": "STEP ONE",
+      "visual": "Extreme close up of calloused hands sliding a blank contract across a dark wooden table."
+    },
+    {
+      "say": "Selling moves money, drives businesses, and builds independent cash flow.",
+      "callout": "STEP TWO",
+      "visual": "Low angle shot of a massive suspension bridge tower vanishing upward into dark clouds."
+    },
+    {
+      "say": "Without it, you rely entirely on someone else's payroll system.",
+      "callout": "STEP THREE",
+      "visual": "Single practical light casting a long shadow down an empty, cold industrial corridor."
+    },
+    {
+      "say": "Choose your next job for the ability it teaches, not just the starting cash.",
+      "callout": "",
+      "visual": "Extreme wide shot of an empty open highway stretching endlessly toward a dark horizon."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "Silhouette of a person standing at the edge of a high concrete roof looking out at a dark city skyline."
+    }
+  ],
+  "caption": "The highest paying job isn't always the smart move. Pick your work for the skills it builds, not just the salary. #money #personalfinance #wealth #career #learn",
+  "description": "Choose your work partly for the skills it builds like selling and communicating. A high salary without skill development keeps you stuck in the rat race.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#wealth",
+    "#career",
+    "#learn"
+  ],
+  "first_comment": "What is the most important skill you have learned at work so far?",
+  "facts": [
+    {
+      "claim": "Work to learn, don't work for money is a core lesson from Rich Dad Poor Dad",
+      "basis": "Rich Dad Poor Dad book framework and verified lessons list"
+    }
+  ],
+  "source": "llm",
+  "pillar": "escape",
+  "look": "",
+  "loop_map": {
+    "stakes": "A high-paying job that lacks skill growth.",
+    "big_question": "Why does a big salary often trap you in the rat race?",
+    "assume": "Most people assume a high starting salary builds long-term wealth fastest.",
+    "reveal": "A high wage without core skills leaves you dependent on a single payroll.",
+    "rehook_beats": [
+      6
+    ],
+    "payoff_beat": 10
+  }
+}

@@ -4,7 +4,7 @@
   "topic": "Mental Accounting (The House Money Effect)",
   "day": "2026-10-28",
   "slot": 6,
-  "status": "visualized",
+  "status": "published",
   "history": [
     {
       "from": "planned",
@@ -23,15 +23,53 @@
       "from": "voiced",
       "to": "visualized",
       "ts": "2026-10-28T09:50:01Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-28T09:52:06Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-28T09:52:06Z",
+      "score": 99
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-28T09:52:06Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-10-28T09:52:09Z",
+      "local": "2026-10-29T11:30:00-04:00",
+      "youtube": null
     }
   ],
   "artifacts": {
     "angle": "Expose how treating tax refunds, work bonuses, or cash gifts differently than normal salary causes people to waste thousands. Show how a $2,000 tax refund gets treated like 'free money' and spent on impulse trips instead of debt. The counter-move: automated single-bucket routing where all incoming funds hit the exact same high-yield buffer account.",
     "hook": "Why do we spend a tax refund three times faster than our regular paycheck?",
     "title": "Why You Waste Tax Refunds (And How to Stop)",
-    "style": "cinematic"
+    "style": "cinematic",
+    "video": "/home/user/quiet-money/production/output/2026-10-28/2026-10-28-s6-psychology-mental-accounting-the-house-mone/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-28/2026-10-28-s6-psychology-mental-accounting-the-house-mone/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-10-29/slot2-psychology",
+        "post_at": "2026-10-29T11:30:00-04:00"
+      },
+      "youtube": {
+        "skipped": "YouTube refused the upload session (HTTP 429): quota or rate limit; it resets at midnight Pacific"
+      }
+    }
   },
-  "scores": {},
+  "scores": {
+    "gauntlet": 99,
+    "passed": true
+  },
   "cost": {
     "tts:edge:chars": 1095
   },
