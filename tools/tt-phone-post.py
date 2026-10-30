@@ -68,9 +68,14 @@ if not page_only:
     for _ in range(3):
         d=find(lambda t:t in("Don\u2019t allow","Not now","Dismiss"),2)    # permission and promo pop-ups: decline
         if d: tap(d); time.sleep(1.5)
-    time.sleep(2); adb("input tap 540 2272"); time.sleep(4)          # the + button (the feed video hides it from the UI tree)
-    adb("input tap 113 2172"); time.sleep(3)           # gallery thumbnail (bottom left of the camera)
-    if not find(lambda t:t=="Recents",6): die("gallery did not open")
+    time.sleep(4)
+    for attempt in range(4):                                           # the feed, camera and gallery load slowly when the phone is short of memory
+        if not find(lambda t:t=="Recents",1):
+            if not find(lambda t:t=="Add sound",1): adb("input tap 540 2272"); time.sleep(5)
+            adb("input tap 113 2172"); time.sleep(4)                   # gallery thumbnail (bottom left of the camera)
+        if find(lambda t:t=="Recents",6): break
+        adb("input keyevent 4"); time.sleep(2)
+    if not find(lambda t:t=="Recents",3): die("gallery did not open")
     adb("input tap 185 808"); time.sleep(3)                            # '+' tile: pick more media for TikTok
     p=find(lambda t:t.startswith("Video taken on") and (not dur or t.endswith("duration "+dur)),8)
     if not p: die("system picker has no videos")
@@ -89,6 +94,13 @@ print("caption ok")
 if "mInputShown=true" in adb("dumpsys input_method"): adb("input tap 900 785"); time.sleep(1.5)   # close the keyboard by tapping blank space (the back key can leave the page)
 time.sleep(1.5); adb("input tap 540 1383"); time.sleep(3.5)      # More options (fixed position; the UI tree is slow here)
 if not find(lambda t:"AI-generated content" in t,10): die("AI-generated content row missing")
+if PROMO:                                                          # promoting our own offer: TikTok requires Content disclosure -> Your brand
+    adb("input tap 540 2013"); time.sleep(3)
+    adb("input tap 948 472"); time.sleep(1.5); adb("input tap 982 685"); time.sleep(1.5); adb("input tap 541 2208"); time.sleep(2.5)
+    c=find(lambda t:t=="Continue",5)
+    if c: tap(c); time.sleep(3)
+    if not find(lambda t:"AI-generated content" in t,6): die("did not return to More options after the disclosure setting")
+    print("brand disclosure on")
 if "--explore" in sys.argv: print("explore: stopped with More options open"); sys.exit(0)
 def ai_on():
     x=subprocess.run("adb exec-out uiautomator dump /dev/tty",shell=True,capture_output=True,text=True).stdout

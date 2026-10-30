@@ -161,4 +161,12 @@ shot("before_upload"); tap(up); time.sleep(8)
 for i in range(30):
     if not find(lambda t:t.startswith("Uploading")): break
     time.sleep(10)
-shot("after"); print("UPLOADED",slot,title)
+ok=False
+for i in range(40):                                               # the app says "Uploaded to Your Channel" or "Upload failed": believe only the first
+    seen=[t for t,_,_ in tree()]
+    if any("Uploaded to Your Channel" in t for t in seen): ok=True; break
+    if any("Upload failed" in t for t in seen): break
+    time.sleep(6)
+shot("after")
+if not ok: die("YouTube did not confirm the upload (failed or still running): check the channel before retrying, never blind-retry")
+print("UPLOADED",slot,title)
