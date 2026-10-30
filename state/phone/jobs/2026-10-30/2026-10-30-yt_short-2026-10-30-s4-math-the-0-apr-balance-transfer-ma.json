@@ -1,0 +1,19 @@
+{
+ "id": "2026-10-30-yt_short-2026-10-30-s4-math-the-0-apr-balance-transfer-ma",
+ "kind": "yt_short",
+ "day": "2026-10-30",
+ "key": "2026-10-30-s4-math-the-0-apr-balance-transfer-mathe",
+ "status": "queued",
+ "created": "2026-10-30T10:09:23+00:00",
+ "recipe": "YouTube Short upload",
+ "media": [
+  {
+   "source": "production/output/2026-10-30/2026-10-30-s4-math-the-0-apr-balance-transfer-mathe/final.mp4",
+   "name": "final.mp4"
+  }
+ ],
+ "staged": true,
+ "title": "The 0% Balance Transfer Fee Math",
+ "text": "Calculating the exact break-even point and hidden fees when moving high-interest debt to a 0% introductory rate card.\n\nFree 7-day Money Reset checklist + calculators: https://youngstunners88.github.io/quiet-money/links/?utm_source=youtube&utm_medium=short&utm_campaign=checklist&utm_content=2026-10-30-s4-math-the-0-apr-balance-transfer-mathe&o=checklist\n\nEducational content, not financial advice.\n\n#MoneyTips #DebtFree #PersonalFinance #CreditCards #SmartMoney #shorts",
+ "ai_label": "altered or synthetic content: Yes"
+}

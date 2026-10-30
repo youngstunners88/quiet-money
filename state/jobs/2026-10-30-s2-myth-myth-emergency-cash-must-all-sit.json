@@ -1,0 +1,77 @@
+{
+  "id": "2026-10-30-s2-myth-myth-emergency-cash-must-all-sit",
+  "pillar": "myth",
+  "topic": "Myth: Emergency Cash Must All Sit in a Standard Checking Account",
+  "day": "2026-10-30",
+  "slot": 2,
+  "status": "published",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-30T09:49:46Z",
+      "words": 172
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-30T09:51:07Z",
+      "seconds": 63.136,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-30T09:51:24Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-30T09:53:05Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-30T09:53:05Z",
+      "score": 95
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-30T09:53:06Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-10-30T09:53:08Z",
+      "local": "2026-10-30T15:00:00-04:00",
+      "youtube": null
+    }
+  ],
+  "artifacts": {
+    "angle": "Keeping 6 months of living expenses in zero-interest cash creates massive inflation drag without adding extra security.",
+    "hook": "Leaving $30,000 in a standard checking account quietly burns $1,500 every year in lost yield—here is the Tiered Liquidity Rule.",
+    "title": "The Checking Account Cash Trap",
+    "style": "cinematic",
+    "video": "/home/user/quiet-money/production/output/2026-10-30/2026-10-30-s2-myth-myth-emergency-cash-must-all-sit/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-30/2026-10-30-s2-myth-myth-emergency-cash-must-all-sit/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-10-30/slot3-myth",
+        "post_at": "2026-10-30T15:00:00-04:00"
+      },
+      "youtube": {
+        "skipped": "YouTube refused the upload session (HTTP 429): quota or rate limit; it resets at midnight Pacific"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 95,
+    "passed": true
+  },
+  "cost": {
+    "tts:edge:chars": 1008
+  },
+  "notes": []
+}

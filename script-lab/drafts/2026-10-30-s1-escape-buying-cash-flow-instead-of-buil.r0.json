@@ -1,0 +1,95 @@
+{
+  "title": "The Hidden Reality of Buying Cash Flow",
+  "hook_text": "SOME PEOPLE NEVER START A BUSINESS",
+  "beats": [
+    {
+      "say": "Some people never start a business. They buy one that already pays.",
+      "callout": "",
+      "visual": "Extreme wide shot of a solitary silhouette standing on a wet concrete rooftop under heavy blue hour fog."
+    },
+    {
+      "say": "How do you skip years of building from zero and acquire a running cash flow?",
+      "callout": "BUY VS BUILD",
+      "visual": "Low angle closeup of heavy iron keys sliding across a scratched dark wooden tabletop."
+    },
+    {
+      "say": "Most buyers assume you need massive personal wealth to buy an established company.",
+      "callout": "THE ASSUMPTION",
+      "visual": "Cinematic shot of a lone car driving down a damp empty highway at night under sodium lights."
+    },
+    {
+      "say": "That is false. Many use other people's money and seller financing to fund the purchase.",
+      "callout": "OPM",
+      "visual": "Extreme close up of rain drops hitting a cold window pane with city lights blurred in the background."
+    },
+    {
+      "say": "Here is the exact framework to evaluate your target. Step one, check the historical cash flow.",
+      "callout": "STEP ONE",
+      "visual": "High angle shot of a solitary person walking past towering concrete pillars in deep shadow."
+    },
+    {
+      "say": "Step two, verify the debt coverage ratio before you sign any agreements.",
+      "callout": "STEP TWO",
+      "visual": "Close up of a heavy brass door handle reflecting a dim hallway light."
+    },
+    {
+      "say": "Step three, structure the deal so the business pays its own debt down over time.",
+      "callout": "STEP THREE",
+      "visual": "Extreme wide shot of a massive steel bridge cutting through thick evening mist."
+    },
+    {
+      "say": "What is the honest catch no one talks about?",
+      "callout": "DEBT VS BAD YEARS",
+      "visual": "Cinematic shot of dark stormy ocean waves crashing hard against a jagged stone cliff."
+    },
+    {
+      "say": "The debt is owed in bad years too. Lenders demand personal guarantees regardless of market drops.",
+      "callout": "",
+      "visual": "Single practical light casting harsh shadows across an empty industrial warehouse floor."
+    },
+    {
+      "say": "You acquire existing cash flow by using borrowed capital, but you carry the full risk when revenue dips.",
+      "callout": "",
+      "visual": "Low angle silhouette of a person standing on an overpass looking at distant traffic lights."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "Extreme wide shot of a vast horizon at dusk with the last strip of gold light fading out."
+    }
+  ],
+  "caption": "Some buyers skip the startup phase entirely. Here is the reality of buying cash flow. #money #personalfinance #business #wealth #finance",
+  "description": "Learn how buying an existing cash-flowing business works using other people's money, and understand the brutal debt risk when bad years hit.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#business",
+    "#wealth",
+    "#finance"
+  ],
+  "first_comment": "Would you take on debt to buy an existing cash flow?",
+  "facts": [
+    {
+      "claim": "Acquiring an existing cash-flowing business uses other people's money and seller financing",
+      "basis": "Research brief: Buying instead of starting, OPM and OPR."
+    },
+    {
+      "claim": "The debt is owed in bad years too with personal guarantees required by lenders",
+      "basis": "Research brief: The honest catch - debt is owed even when the business has a bad year."
+    }
+  ],
+  "source": "llm",
+  "pillar": "escape",
+  "look": "",
+  "loop_map": {
+    "stakes": "Skipping the startup phase by purchasing an existing cash-flowing business instead of building from zero.",
+    "big_question": "How do you acquire a running business and what is the hidden catch?",
+    "assume": "Most people assume you need massive personal wealth to buy an established company.",
+    "reveal": "Many use other people's money and debt, but the debt remains due during bad years.",
+    "rehook_beats": [
+      5,
+      8
+    ],
+    "payoff_beat": 10
+  }
+}

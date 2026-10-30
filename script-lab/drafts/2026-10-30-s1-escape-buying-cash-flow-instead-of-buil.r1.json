@@ -1,0 +1,96 @@
+{
+  "title": "Why Buying Cash Flow Beats Starting from Zero",
+  "hook_text": "BUY CASH FLOW NOT ZERO",
+  "beats": [
+    {
+      "say": "Some people never start a business from scratch. They buy one that's already paying cash flow.",
+      "callout": "",
+      "visual": "Silhouette of a person standing on a wet asphalt rooftop at night under cold sodium light, overlooking a foggy dark city."
+    },
+    {
+      "say": "Building a company from zero takes years of unpaid effort before you're seeing a single dollar.",
+      "callout": "",
+      "visual": "Low angle shot of an empty dimly lit industrial warehouse floor wet with puddles, dark cold fluorescent overhead lights."
+    },
+    {
+      "say": "Most people assume you've got to invent something new. But what if you bought existing profits instead?",
+      "callout": "BUILD VS BUY",
+      "visual": "Extreme close up of silent heavy iron gears in a darkened factory, illuminated by a single amber spotlight."
+    },
+    {
+      "say": "Buyers acquire established companies using debt leverage, putting down initial cash and borrowing what's left from lenders.",
+      "callout": "",
+      "visual": "Extreme wide shot of a solitary silhouette walking past a rain-slick alleyway at blue hour, dense fog rolling across pavement."
+    },
+    {
+      "say": "Take a business yielding an extra $1,000 a month. How fast does that cash flow compound your wealth?",
+      "callout": "STEP ONE",
+      "visual": "Looking up at a cold towering concrete building against a stormy night sky, single bright practical light over entrance."
+    },
+    {
+      "say": "If you invest that $1,000 a month at 8% for 10 years, you'll reach $182,946 total.",
+      "callout": "$182,946",
+      "visual": "High angle shot of wet highway asphalt at night reflecting yellow sodium lights in complete darkness, long exposure tail lights."
+    },
+    {
+      "say": "You've put in $120,000 of your own cash, while compound market returns quietly add $62,946 on top.",
+      "callout": "$120,000 VS $182,946",
+      "visual": "Silhouette of a massive dark iron bridge cutting across misty black open water late at night, solitary horizon light."
+    },
+    {
+      "say": "But here's the quiet catch that stops most buyers. What happens when revenue drops during a bad year?",
+      "callout": "",
+      "visual": "Low angle view looking down a cold narrow concrete underpass at night with flickering fluorescent lighting."
+    },
+    {
+      "say": "Lenders don't pause monthly debt payments when profits fall, and they'll often demand a personal guarantee on loans.",
+      "callout": "THE HONEST CATCH",
+      "visual": "Extreme wide shot of an empty industrial parking lot on a fog-drenched night under a single buzzing lamp post."
+    },
+    {
+      "say": "This week, check local business listings online and review cash flow multiples with a certified professional.",
+      "callout": "STEP TWO",
+      "visual": "High angle view of a dark quiet wet street corner lined with brick buildings, asphalt reflecting dim neon light."
+    },
+    {
+      "say": "Owning existing cash flow beats building from zero, provided you've managed the loan debt properly.",
+      "callout": "",
+      "visual": "Looking up at the steel underside of a massive dark highway overpass under a deep blue hour sky."
+    },
+    {
+      "say": "You don't have to start from zero, so follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "Silhouette of a person looking out from a high tower edge over an expanse of fog and distant dark city lights."
+    }
+  ],
+  "caption": "Why build from zero when you can buy existing cash flow?\nUnderstand how leverage works before taking the leap.\n#money #personalfinance #cashflow #wealthbuilding #investing",
+  "description": "Starting a business from scratch comes with high failure rates and unpaid years. Acquiring established cash flow using debt leverage offers an alternative path, though managing loan obligations during down years is critical.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#cashflow",
+    "#wealthbuilding",
+    "#investing"
+  ],
+  "first_comment": "Would you rather build a new business from scratch or buy one that already pays?",
+  "facts": [
+    {
+      "claim": "An extra $1,000/month invested at 8% for 10 years equals $182,946 on $120,000 principal",
+      "basis": "Money Fact Sheet calculation"
+    }
+  ],
+  "source": "llm",
+  "pillar": "escape",
+  "look": "",
+  "loop_map": {
+    "stakes": "Building from scratch risks years of unpaid effort.",
+    "big_question": "How do buyers jump straight to cash flow without building from zero?",
+    "assume": "Most assume you must invent a business from scratch to build wealth.",
+    "reveal": "Buyers use debt leverage to acquire existing profitable businesses.",
+    "rehook_beats": [
+      5,
+      8
+    ],
+    "payoff_beat": 11
+  }
+}

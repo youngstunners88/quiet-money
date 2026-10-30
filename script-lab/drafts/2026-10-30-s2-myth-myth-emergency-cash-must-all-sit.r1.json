@@ -1,0 +1,100 @@
+{
+  "title": "The Emergency Cash Trap Draining Your Wealth",
+  "hook_text": "LEAVING $30,000 IN CHECKING BURNS $1,500 YEARLY",
+  "beats": [
+    {
+      "say": "Leaving $30,000 in a standard checking account quietly burns $1,500 every year in lost yield.",
+      "callout": "",
+      "visual": "Extreme close-up of a lone brass key resting on wet, dark asphalt under cold sodium street lighting."
+    },
+    {
+      "say": "Most people think six months of living expenses must sit in zero-interest cash for absolute safety.",
+      "callout": "ZERO YIELD VS SAFETY",
+      "visual": "Low-angle shot of a towering concrete bridge pier cutting through heavy evening fog."
+    },
+    {
+      "say": "Why keep thousands of dollars exposed to massive inflation drag when it adds zero extra security?",
+      "callout": "INFLATION VS CASH",
+      "visual": "Silhouette of a lone commuter walking across an empty, rain-slicked concrete plaza at blue hour."
+    },
+    {
+      "say": "You do not need six months of cash sitting idle in one single checking account.",
+      "callout": "",
+      "visual": "Extreme wide shot of a vast, empty container port under dark, heavy overcast skies."
+    },
+    {
+      "say": "Here is the Tiered Liquidity Rule that fixes this hidden wealth leak.",
+      "callout": "STEP ONE",
+      "visual": "Close-up of scarred metal stairs descending into a dark subway station under fluorescent lights."
+    },
+    {
+      "say": "Keep only one month of living expenses in your checking account for immediate bills.",
+      "callout": "ONE MONTH",
+      "visual": "A single heavy steel door slightly ajar with cold blue light spilling across a concrete floor."
+    },
+    {
+      "say": "Where does the rest of your emergency fund actually go so it stays safe and productive?",
+      "callout": "",
+      "visual": "High-angle view of a stark, empty highway intersection under midnight stars."
+    },
+    {
+      "say": "Put the remaining five months into high-yield savings or short-duration instruments earning real yield.",
+      "callout": "STEP TWO",
+      "visual": "Extreme close-up of heavy iron chains resting on weathered wooden docks by dark open water."
+    },
+    {
+      "say": "Why does this split protect your purchasing power without risking a single dollar when emergencies hit?",
+      "callout": "",
+      "visual": "Low-angle shot of a monolithic concrete dam spillway at night with rushing dark water."
+    },
+    {
+      "say": "Your tier-one cash covers today, while your tier-two cash beats inflation quietly in the background.",
+      "callout": "TIER ONE VS TIER TWO",
+      "visual": "Silhouette of a person standing on a high ridgeline against a cold, grey morning sky."
+    },
+    {
+      "say": "Stop letting zero-interest banks bleed your reserves dry.",
+      "callout": "",
+      "visual": "Extreme wide shot of a massive steel industrial crane standing still against a dark horizon."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "Cinematic shot of a single practical streetlamp glowing through heavy fog on an empty asphalt road."
+    }
+  ],
+  "caption": "Your emergency fund shouldn't be losing ground to inflation every single day. #personalfinance #moneytips #wealthbuilding #inflation #smartmoney",
+  "description": "Keeping your entire emergency fund in a zero-interest checking account creates massive inflation drag. Here is how the Tiered Liquidity Rule protects your cash.",
+  "hashtags": [
+    "#personalfinance",
+    "#moneytips",
+    "#wealthbuilding",
+    "#inflation",
+    "#smartmoney"
+  ],
+  "first_comment": "How many months of expenses do you currently keep in cash?",
+  "facts": [
+    {
+      "claim": "Leaving $30,000 in a standard checking account loses yield relative to high-yield alternatives",
+      "basis": "Opportunity cost of zero-interest vs yield-bearing cash reserves"
+    },
+    {
+      "claim": "100 today is worth 55 in buying power after 20 years of 3% inflation",
+      "basis": "Fact sheet inflation baseline"
+    }
+  ],
+  "source": "llm",
+  "pillar": "myth",
+  "look": "",
+  "loop_map": {
+    "stakes": "Leaving $30,000 in checking loses $1,500 every year in lost yield.",
+    "big_question": "Why keep six months of expenses in zero-interest cash?",
+    "assume": "All emergency cash must sit in a standard checking account.",
+    "reveal": "Split emergency cash into tiered liquidity to beat inflation drag.",
+    "rehook_beats": [
+      4,
+      7
+    ],
+    "payoff_beat": 10
+  }
+}

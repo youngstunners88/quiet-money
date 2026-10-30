@@ -1,0 +1,96 @@
+{
+  "title": "The Fake Price Tag Trap Draining Your Account",
+  "hook_text": "THE FAKE DISCOUNT TRAP EXPOSED",
+  "beats": [
+    {
+      "say": "Retailers use one fake price tag number to quietly drain $121 from your wallet.",
+      "callout": "",
+      "visual": "High angle shot of a solitary shopping bag sitting on wet asphalt pavement, illuminated by a single harsh sodium street light at night."
+    },
+    {
+      "say": "You see a coat marked down from $200 to $79 and feel like you're winning a major deal.",
+      "callout": "",
+      "visual": "Silhouette of a person standing in a dark retail aisle, cold fluorescent light framing a long rack of dark coats."
+    },
+    {
+      "say": "Why does grabbing that $121 discount still leave your checking account completely empty at night?",
+      "callout": "",
+      "visual": "Extreme close-up of a hand holding an open leather wallet over an empty glass counter under moody blue hour lighting."
+    },
+    {
+      "say": "Most buyers believe they've just saved over $100 on a high-value item.",
+      "callout": "$200 VS $79",
+      "visual": "Low angle view of massive dark clothing racks towering overhead inside an empty warehouse-style store."
+    },
+    {
+      "say": "In reality, retailers set that $200 anchor so spending $79 feels like a massive win.",
+      "callout": "",
+      "visual": "High angle shot of a single discarded paper price tag lying on a cold concrete floor, fog drifting through the frame."
+    },
+    {
+      "say": "That original price tag wasn't the real value; it was just a target placed to control your decisions.",
+      "callout": "",
+      "visual": "Extreme close-up shot of a credit card being held against a shadowy checkout terminal in low key lighting."
+    },
+    {
+      "say": "You didn't save $121 today; you actually lost $79 on a purchase you never planned to make.",
+      "callout": "SAVED VS SPENT",
+      "visual": "A single practical bulb hanging low over an empty dark wood table with scattered paper receipts beneath it."
+    },
+    {
+      "say": "So how do you break this psychological trap before tapping your credit card at the register?",
+      "callout": "",
+      "visual": "Rain-slicked store glass window reflecting blurred neon traffic lights at night from a quiet sidewalk angle."
+    },
+    {
+      "say": "First, strip away the red sale sticker and judge the item as if $79 were full price.",
+      "callout": "STEP ONE",
+      "visual": "Close-up of hands peeling a dark sticker off an unmarked cardboard box under a stark desk lamp."
+    },
+    {
+      "say": "Step two: calculate price per use to discover what that item is truly costing you long-term.",
+      "callout": "STEP TWO",
+      "visual": "Low angle shot of an old industrial clock mounted on a dark brick wall under cold overhead fluorescent lights."
+    },
+    {
+      "say": "Investing $200 every month at 8% interest compounds to $298,072 over 30 years instead.",
+      "callout": "$298,072",
+      "visual": "Extreme wide shot of a modern glass skyscraper skyline cutting through heavy morning fog at blue hour."
+    },
+    {
+      "say": "Stop falling for fake discounts, and follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "Silhouette of a person walking along an empty two-lane highway at dusk beneath a deep amber horizon."
+    }
+  ],
+  "caption": "The $200 original price was never real. It's anchoring psychology designed to make you spend $79 on things you don't need.\n\n#money #personalfinance #moneypsychology #financialliteracy #anchoringeffect",
+  "description": "Retailers use anchoring bias to make normal prices look like incredible discounts. By setting a high MSRP, spending money feels like saving money. Learn the counter-move to protect your paycheck.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#moneypsychology",
+    "#financialliteracy",
+    "#anchoringeffect"
+  ],
+  "first_comment": "What's an item you bought on sale that you never actually end up using?",
+  "facts": [
+    {
+      "claim": "Investing $200 every month at 8% interest compounds to $298,072 over 30 years.",
+      "basis": "$200/month invested for 30 years at 8%/yr (monthly compounding) = $298,072"
+    }
+  ],
+  "source": "llm",
+  "pillar": "psychology",
+  "look": "",
+  "loop_map": {
+    "stakes": "A fake price tag number tricks consumers into spending money on items they don't need.",
+    "big_question": "Why does grabbing that $121 discount still leave your checking account completely empty at night?",
+    "assume": "Most shoppers believe they saved over $100 on a high-value item.",
+    "reveal": "The $200 anchor was set by retailers to make spending $79 feel like a win, when you actually lost $79.",
+    "rehook_beats": [
+      6,
+      8
+    ],
+    "payoff_beat": 11
+  }
+}

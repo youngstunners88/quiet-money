@@ -1,0 +1,96 @@
+{
+  "title": "The Fake MSRP Trap Draining Your Wallet",
+  "hook_text": "THE FAKE PRICE TAG TRICK",
+  "beats": [
+    {
+      "say": "A slashed $200 price tag tricks your brain into spending $79 you never planned to.",
+      "callout": "",
+      "visual": "Extreme close-up of hands in leather gloves cutting a tag off a jacket under cold fluorescent lighting in a dark alleyway display."
+    },
+    {
+      "say": "Why does saving $121 on paper leave your real bank account $79 poorer?",
+      "callout": "",
+      "visual": "High angle shot of a lone person in dark silhouette walking past massive rain-slick glass storefront windows reflecting amber sodium lights."
+    },
+    {
+      "say": "Most shoppers believe they're walking away with $121 in free value from the store.",
+      "callout": "$121 FAKE VALUE",
+      "visual": "Low angle silhouette of a shopper holding a paper bag, standing beneath huge monolithic steel store arches under a dark blue hour sky."
+    },
+    {
+      "say": "In reality, that original $200 price was artificially inflated just to anchor your brain's perception.",
+      "callout": "",
+      "visual": "Extreme wide shot of a massive empty distribution warehouse at night with single practical lights hanging over endless steel shelving."
+    },
+    {
+      "say": "If the anchor's totally fake, how do you protect your wallet from these retail traps?",
+      "callout": "",
+      "visual": "Cold fluorescent lighting shining on a solitary steel counter inside a dark, quiet concrete basement."
+    },
+    {
+      "say": "First, cover the red sale tag and ask yourself if you'd pay $79 cash for it plain.",
+      "callout": "STEP ONE",
+      "visual": "Extreme close-up of hands holding crisp paper bills over a dark wet asphalt surface illuminated by a single overhead street lamp."
+    },
+    {
+      "say": "Second, calculate price per use by dividing $79 by how many times you'll realistically use it.",
+      "callout": "STEP TWO",
+      "visual": "Low angle shot of a leather shoe stepping onto a wet pavement curb at night under flickering streetlights."
+    },
+    {
+      "say": "What happens when you stop buying fake discounts and put those saved dollars into real assets?",
+      "callout": "",
+      "visual": "Silhouette of a person standing on a foggy city ridge line looking down at distant glowing skyscrapers at dusk."
+    },
+    {
+      "say": "Investing $100 a month at 8% for 30 years grows to $149,036 from just $36,000 put in.",
+      "callout": "$149,036 VS $36,000",
+      "visual": "Extreme wide shot of a single illuminated office tower cutting through heavy midnight fog in a financial district."
+    },
+    {
+      "say": "Retailers anchor your mind to fictional savings so you willingly trade real future wealth for junk.",
+      "callout": "REAL LOSS",
+      "visual": "High angle view of an empty rain-slick highway stretching toward distant sodium lights under a stormy night sky."
+    },
+    {
+      "say": "Evaluate every item as if it were never on sale to keep your cash where it belongs.",
+      "callout": "",
+      "visual": "Extreme close-up of hands turning a heavy steel safe dial illuminated by a cold practical beam."
+    },
+    {
+      "say": "Master your spending psychology today. Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "Silhouette of a solitary figure standing at the edge of a high rise tower overlooking a sprawling neon city at night."
+    }
+  ],
+  "caption": "The $200 MSRP tag was never real. Here is how retail anchoring drains your paycheck.\n\n#money #personalfinance #behavioraleconomics #smartmoney #financialfreedom",
+  "description": "Retailers use the anchoring effect by setting high fictional original prices to make discounted items feel like guaranteed wins. Learn how to break the anchor and evaluate true value.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#behavioraleconomics",
+    "#smartmoney",
+    "#financialfreedom"
+  ],
+  "first_comment": "What is the most useless thing you bought just because it was on sale?",
+  "facts": [
+    {
+      "claim": "$100/month invested for 30 years at 8%/yr (monthly compounding) = $149,036 (you put in $36,000)",
+      "basis": "Money Fact Sheet provided in prompt context."
+    }
+  ],
+  "source": "llm",
+  "pillar": "psychology",
+  "look": "",
+  "loop_map": {
+    "stakes": "A slashed $200 tag tricks your brain into spending $79 on something unneeded.",
+    "big_question": "Why does saving $121 on paper leave your real bank account $79 poorer?",
+    "assume": "Shoppers assume they are acquiring $121 of free market value.",
+    "reveal": "The original $200 price was artificially inflated to anchor perception.",
+    "rehook_beats": [
+      5,
+      8
+    ],
+    "payoff_beat": 10
+  }
+}

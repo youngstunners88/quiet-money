@@ -1,0 +1,67 @@
+{
+  "id": "2026-10-30-s0-psychology-the-anchoring-effect-the-fake-ms",
+  "pillar": "psychology",
+  "topic": "The Anchoring Effect (The Fake MSRP Trap)",
+  "day": "2026-10-30",
+  "slot": 0,
+  "status": "held",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-30T09:29:34Z",
+      "words": 183
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-30T09:30:45Z",
+      "seconds": 61.795,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-30T09:31:10Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-30T09:33:19Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-30T09:33:19Z",
+      "score": 92
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-30T09:33:20Z"
+    },
+    {
+      "from": "packaged",
+      "to": "held",
+      "ts": "2026-10-30T09:33:20Z"
+    }
+  ],
+  "artifacts": {
+    "angle": "Demonstrate how retailers set high original price tags ('Was $200, Now $79') to anchor your perception of value. Show how consumers buy items they don't need simply to acquire the perceived $121 'discount'. Counter-move: calculate price per use or evaluate the item as if it were never on sale.",
+    "hook": "Retailers use this one fake number on price tags to trick your brain into spending money you never planned to.",
+    "title": "The Fake MSRP Trap That Drains Your Paycheck",
+    "style": "cinematic",
+    "video": "/home/user/quiet-money/production/output/2026-10-30/2026-10-30-s0-psychology-the-anchoring-effect-the-fake-ms/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-30/2026-10-30-s0-psychology-the-anchoring-effect-the-fake-ms/cover.jpg"
+  },
+  "scores": {
+    "gauntlet": 92,
+    "passed": false
+  },
+  "cost": {
+    "tts:edge:chars": 962
+  },
+  "notes": [
+    "held for review: originality"
+  ]
+}

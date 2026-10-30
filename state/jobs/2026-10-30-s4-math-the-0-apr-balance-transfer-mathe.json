@@ -1,0 +1,77 @@
+{
+  "id": "2026-10-30-s4-math-the-0-apr-balance-transfer-mathe",
+  "pillar": "math",
+  "topic": "The 0% APR Balance Transfer Mathematical Reality",
+  "day": "2026-10-30",
+  "slot": 4,
+  "status": "published",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-30T10:03:46Z",
+      "words": 167
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-30T10:06:14Z",
+      "seconds": 64.025,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-30T10:06:33Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-30T10:08:28Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-30T10:08:28Z",
+      "score": 98
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-30T10:08:29Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-10-30T10:08:31Z",
+      "local": "2026-10-30T21:00:00-04:00",
+      "youtube": null
+    }
+  ],
+  "artifacts": {
+    "angle": "Calculating the exact break-even point and hidden transfer fees when moving high-interest debt to a 0% introductory rate card.",
+    "hook": "Moving your credit card debt to a 0% balance transfer card sounds like a cheat code, but the hidden 5% fee can completely wipe out your savings if you miscalculate.",
+    "title": "The 0% Balance Transfer Fee Math",
+    "style": "cinematic",
+    "video": "/home/user/quiet-money/production/output/2026-10-30/2026-10-30-s4-math-the-0-apr-balance-transfer-mathe/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-30/2026-10-30-s4-math-the-0-apr-balance-transfer-mathe/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-10-30/slot5-math",
+        "post_at": "2026-10-30T21:00:00-04:00"
+      },
+      "youtube": {
+        "skipped": "YouTube refused the upload session (HTTP 429): quota or rate limit; it resets at midnight Pacific"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 98,
+    "passed": true
+  },
+  "cost": {
+    "tts:edge:chars": 871
+  },
+  "notes": []
+}

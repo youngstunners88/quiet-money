@@ -1,0 +1,101 @@
+{
+  "title": "The 0% Balance Transfer Fee Math",
+  "hook_text": "THE 0% TRANSFER TRAP",
+  "beats": [
+    {
+      "say": "Moving your credit card debt to a 0% card sounds like a cheat code.",
+      "callout": "",
+      "visual": "Extreme close-up of a dark metallic credit card resting on wet asphalt under a single sodium streetlamp."
+    },
+    {
+      "say": "It is not free money. The fine print hides a sting.",
+      "callout": "5% FEE",
+      "visual": "Low angle shot of a towering concrete bridge pier cutting through heavy evening fog."
+    },
+    {
+      "say": "How much does that upfront balance transfer fee actually cost you?",
+      "callout": "",
+      "visual": "Silhouette of a lone figure walking across a vast open concrete parking deck at blue hour."
+    },
+    {
+      "say": "Most people assume a 0% APR offer buys you pure savings for a year.",
+      "callout": "ASSUME VS FACT",
+      "visual": "Extreme wide shot of empty highway lanes reflecting harsh white overhead fluorescent lights."
+    },
+    {
+      "say": "They forget about the 5% fee charged on the total amount you move over.",
+      "callout": "",
+      "visual": "Close-up of cold raindrops hitting the surface of a deep puddle, rippling under grey skies."
+    },
+    {
+      "say": "If you transfer $6,000 onto that new card, the bank takes $300 instantly.",
+      "callout": "$300 FEE",
+      "visual": "High angle shot of a single dark car moving down a wet city street at night."
+    },
+    {
+      "say": "Can you pay off that full balance before the zero percent period expires?",
+      "callout": "",
+      "visual": "Macro shot of rusty metal links on a heavy chain against a dark background."
+    },
+    {
+      "say": "If you pay $300 a month on a $6,000 balance at 24% APR, it takes 26 months.",
+      "callout": "26 MONTHS",
+      "visual": "Extreme wide shot of a massive empty industrial warehouse lit by cold blue window light."
+    },
+    {
+      "say": "That same $6,000 card racks up $1,739 in interest over those 26 months.",
+      "callout": "$1,739 INTEREST",
+      "visual": "Low angle view of a towering rusted steel crane against a heavy overcast sky."
+    },
+    {
+      "say": "If your transfer fee is $300 and you clear the debt in time, you win.",
+      "callout": "WIN VS LOSE",
+      "visual": "Silhouette of a person standing on a high concrete ridge looking over a dark city skyline."
+    },
+    {
+      "say": "But miss the deadline, and standard APR kicks in on the remaining balance.",
+      "callout": "",
+      "visual": "Extreme close-up of dark water rushing through a narrow concrete drainage channel."
+    },
+    {
+      "say": "Run the exact math before you move a single dollar.",
+      "callout": "CHECK THE MATH",
+      "visual": "Wide shot of a single amber light glowing in a massive dark concrete stairwell."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "Extreme wide shot of a dark empty bridge stretching into thick morning fog."
+    }
+  ],
+  "caption": "Moving debt isn't free. Always check the transfer fee math before you leap. #MoneyTips #DebtFree #PersonalFinance #CreditCards #SmartMoney",
+  "description": "Calculating the exact break-even point and hidden fees when moving high-interest debt to a 0% introductory rate card.",
+  "hashtags": [
+    "#MoneyTips",
+    "#DebtFree",
+    "#PersonalFinance",
+    "#CreditCards",
+    "#SmartMoney"
+  ],
+  "first_comment": "Have you ever used a balance transfer card? Did the math work out?",
+  "facts": [
+    {
+      "claim": "$6,000 at 24% paying $300/month takes 26 months and costs $1,739 in interest",
+      "basis": "Money Fact Sheet"
+    }
+  ],
+  "source": "llm",
+  "pillar": "math",
+  "look": "",
+  "loop_map": {
+    "stakes": "Moving credit card debt to a 0% card with hidden 5% fees.",
+    "big_question": "How much does that upfront balance transfer fee actually cost you?",
+    "assume": "0% APR buys pure savings for a year.",
+    "reveal": "Upfront 5% transfer fee plus standard APR if you miss the deadline.",
+    "rehook_beats": [
+      3,
+      7
+    ],
+    "payoff_beat": 10
+  }
+}

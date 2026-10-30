@@ -1,0 +1,77 @@
+{
+  "id": "2026-10-30-s3-story-leonard-tose-gambling-away-an-nf",
+  "pillar": "story",
+  "topic": "Leonard Tose: Gambling Away an NFL Franchise at the Blackjack Table",
+  "day": "2026-10-30",
+  "slot": 3,
+  "status": "published",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-30T09:59:10Z",
+      "words": 168
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-30T10:01:03Z",
+      "seconds": 62.009,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-30T10:01:18Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-30T10:03:10Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-30T10:03:10Z",
+      "score": 96
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-30T10:03:10Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-10-30T10:03:14Z",
+      "local": "2026-10-30T18:30:00-04:00",
+      "youtube": null
+    }
+  ],
+  "artifacts": {
+    "angle": "The illusion of control and chasing sunk costs destroys wealth faster than bad investments; discipline is an absolute prerequisite to capital retention.",
+    "hook": "He owned the Philadelphia Eagles and controlled a massive trucking empire, yet lost his team, his mansion, and over $40 million betting $10,000 hands at Atlantic City casinos.",
+    "title": "How a Billionaire Lost His NFL Team at Blackjack",
+    "style": "cinematic",
+    "video": "/home/user/quiet-money/production/output/2026-10-30/2026-10-30-s3-story-leonard-tose-gambling-away-an-nf/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-30/2026-10-30-s3-story-leonard-tose-gambling-away-an-nf/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-10-30/slot4-story",
+        "post_at": "2026-10-30T18:30:00-04:00"
+      },
+      "youtube": {
+        "skipped": "YouTube refused the upload session (HTTP 429): quota or rate limit; it resets at midnight Pacific"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 96,
+    "passed": true
+  },
+  "cost": {
+    "tts:edge:chars": 995
+  },
+  "notes": []
+}

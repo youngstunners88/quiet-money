@@ -1,0 +1,91 @@
+{
+  "title": "The Fake MSRP Trap That Drains Your Paycheck",
+  "hook_text": "THE FAKE MSRP TRAP",
+  "beats": [
+    {
+      "say": "Retailers use this one fake number on price tags to trick your brain into spending money you never planned to.",
+      "callout": "",
+      "visual": "Extreme close-up of a red clearance tag on a wet coat rack in a dark, empty corridor under cold fluorescent light."
+    },
+    {
+      "say": "You see a jacket marked was $200 and now $79 and your brain feels an instant rush of saving money.",
+      "callout": "$200 VS $79",
+      "visual": "Low angle of a single price tag fluttering on a metal hanger against a bleak concrete pillar."
+    },
+    {
+      "say": "Retailers artificially inflate the $200 price tag just to anchor your brain into viewing $79 as a bargain.",
+      "callout": "THE ANCHOR",
+      "visual": "Silhouette of a hand hovering over a rack of heavy winter coats under harsh sodium street light."
+    },
+    {
+      "say": "Most shoppers assume that big red sticker means a genuine discount on a high value item.",
+      "callout": "BIG SAVINGS?",
+      "visual": "Extreme wide of an empty retail floor at blue hour, rain streaks cutting across massive plate glass."
+    },
+    {
+      "say": "That is the trap. The item was never worth $200. The fake MSRP exists only to make $79 feel cheap.",
+      "callout": "FALSE VALUE",
+      "visual": "Close-up of a cash register screen glowing dimly in an otherwise pitch-black convenience store."
+    },
+    {
+      "say": "Cover the original price tag with your thumb and ask: would I hand over $79 cold, hard cash for this item if it had no red sticker?",
+      "callout": "THE TEST",
+      "visual": "Silhouette of a thumb pressing against a blank white price tag on a dark wooden table."
+    },
+    {
+      "say": "If you redirect those fake savings into real assets, $100 a month invested at 8% grows to $149,036 over 30 years.",
+      "callout": "$149,036",
+      "visual": "Extreme close-up of a single silver coin resting on cold, wet asphalt under a sodium street light."
+    },
+    {
+      "say": "Calculate the price per use or evaluate the item as if it were never on sale at all.",
+      "callout": "STEP ONE",
+      "visual": "Low angle shot of a towering concrete bridge pier cutting through heavy evening fog."
+    },
+    {
+      "say": "Stop paying for the illusion of a discount.",
+      "callout": "",
+      "visual": "Silhouette of a person walking away down a long, empty underpass lit by a single practical bulb."
+    },
+    {
+      "say": "Keep your cash in your pocket.",
+      "callout": "",
+      "visual": "Extreme wide shot of a solitary figure standing at the edge of a vast, dark body of water."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "Dark highway stretching into a foggy horizon under a cold, starless night sky."
+    }
+  ],
+  "caption": "Retailers use fake MSRP tags to trick your brain into buying things you don't need. Learn the counter-move. #moneypsychology #personalfinance #smartspending #wealthbuilding",
+  "description": "Discover how the anchoring effect and fake MSRP tags manipulate your spending habits. Learn how to evaluate purchases and build long-term wealth instead.",
+  "hashtags": [
+    "#moneypsychology",
+    "#personalfinance",
+    "#smartspending",
+    "#wealthbuilding",
+    "#financialliteracy"
+  ],
+  "first_comment": "What is the most ridiculous 'was $200, now $79' item you have almost bought?",
+  "facts": [
+    {
+      "claim": "$100/month invested for 30 years at 8%/yr (monthly compounding) = $149,036 (you put in $36,000)",
+      "basis": "MONEY FACT SHEET"
+    }
+  ],
+  "source": "llm",
+  "pillar": "psychology",
+  "look": "",
+  "loop_map": {
+    "stakes": "You see a jacket marked was $200 and now $79 and your brain feels an instant rush of saving money.",
+    "big_question": "Why do retailers use fake high MSRP numbers on price tags?",
+    "assume": "Most shoppers assume that big red sticker means a genuine discount on a high value item.",
+    "reveal": "The item was never worth $200, and the fake MSRP exists only to anchor your perception of value.",
+    "rehook_beats": [
+      4,
+      7
+    ],
+    "payoff_beat": 7
+  }
+}

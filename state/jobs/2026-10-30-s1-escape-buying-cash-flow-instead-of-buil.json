@@ -1,0 +1,78 @@
+{
+  "id": "2026-10-30-s1-escape-buying-cash-flow-instead-of-buil",
+  "pillar": "escape",
+  "topic": "Buying cash flow instead of building from zero",
+  "day": "2026-10-30",
+  "slot": 1,
+  "status": "published",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-30T09:38:17Z",
+      "words": 201
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-30T09:39:27Z",
+      "seconds": 72.124,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-30T09:39:51Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-30T09:41:55Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-30T09:41:55Z",
+      "score": 97
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-30T09:41:56Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-10-30T09:41:58Z",
+      "local": "2026-10-30T11:30:00-04:00",
+      "youtube": null
+    }
+  ],
+  "artifacts": {
+    "angle": "some owners buy a business that already pays instead of starting one; honest catch: the debt is owed in bad years too",
+    "brief": "pena",
+    "hook": "Some people never start a business. They buy one that already pays.",
+    "title": "Why Buying Cash Flow Beats Starting from Zero",
+    "style": "cinematic",
+    "video": "/home/user/quiet-money/production/output/2026-10-30/2026-10-30-s1-escape-buying-cash-flow-instead-of-buil/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-30/2026-10-30-s1-escape-buying-cash-flow-instead-of-buil/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-10-30/slot2-escape",
+        "post_at": "2026-10-30T11:30:00-04:00"
+      },
+      "youtube": {
+        "skipped": "YouTube refused the upload session (HTTP 429): quota or rate limit; it resets at midnight Pacific"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 97,
+    "passed": true
+  },
+  "cost": {
+    "tts:edge:chars": 1220
+  },
+  "notes": []
+}

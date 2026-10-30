@@ -1,0 +1,18 @@
+{
+ "id": "2026-10-30-tiktok-2026-10-30-s4-math-the-0-apr-balance-transfer-ma",
+ "kind": "tiktok",
+ "day": "2026-10-30",
+ "key": "2026-10-30-s4-math-the-0-apr-balance-transfer-mathe",
+ "status": "queued",
+ "created": "2026-10-30T10:09:23+00:00",
+ "recipe": "TikTok upload",
+ "media": [
+  {
+   "source": "production/output/2026-10-30/2026-10-30-s4-math-the-0-apr-balance-transfer-mathe/final.mp4",
+   "name": "final.mp4"
+  }
+ ],
+ "staged": true,
+ "text": "Moving debt isn't free. Always check the transfer fee math before you leap.\n\nFree reset checklist: link in bio.\n\n#MoneyTips #DebtFree #PersonalFinance #CreditCards #SmartMoney\n\nEducation, not financial advice.",
+ "ai_label": "AI-generated content: on"
+}

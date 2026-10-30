@@ -1,0 +1,96 @@
+{
+  "title": "The Checking Account Cash Trap",
+  "hook_text": "LEAVING $30,000 IN CASH BURNS $1,500 A YEAR",
+  "beats": [
+    {
+      "say": "Leaving $30,000 in a standard checking account quietly burns $1,500 every year in lost yield.",
+      "callout": "",
+      "visual": "Extreme close-up of a dark metal bank vault door handle under harsh sodium lighting, high angle."
+    },
+    {
+      "say": "That dead cash sits there losing ground to inflation every single month you sleep.",
+      "callout": "$30,000 VS $0",
+      "visual": "Wide shot of a massive concrete dam holding back dark blue water at dusk, low angle."
+    },
+    {
+      "say": "Why do millions of savers keep six months of emergency money where it earns zero?",
+      "callout": "",
+      "visual": "Silhouette of a lone person walking across a vast, wet concrete parking lot under cold fluorescent lights."
+    },
+    {
+      "say": "Most people assume your safety net has to sit in a basic checking account to stay safe.",
+      "callout": "MYTH VS FACT",
+      "visual": "Extreme close-up of worn leather keys on a cold steel table, single practical overhead light."
+    },
+    {
+      "say": "That assumption creates massive inflation drag without adding a single ounce of actual security.",
+      "callout": "",
+      "visual": "Fog cutting across a steep concrete highway overpass at night, blue hour lighting."
+    },
+    {
+      "say": "So how do you keep your emergency cash completely liquid while actually beating inflation?",
+      "callout": "STEP ONE",
+      "visual": "Extreme wide shot of a dark industrial harbor crane against a flat gray sky."
+    },
+    {
+      "say": "Here is the Tiered Liquidity Rule that protects your cash and puts it to work.",
+      "callout": "STEP TWO",
+      "visual": "Close-up of wet asphalt reflecting red tail lights in the rain, extreme low angle."
+    },
+    {
+      "say": "Step one: keep just one month of bills in your checking account for daily expenses.",
+      "callout": "STEP THREE",
+      "visual": "Silhouette of hands opening a heavy wooden door into a dark, empty room."
+    },
+    {
+      "say": "Step two: move the remaining five months into a high yield vehicle or short-term treasury.",
+      "callout": "",
+      "visual": "Wide shot of a massive steel suspension bridge tower edge cutting into thick fog."
+    },
+    {
+      "say": "Your money stays fully accessible for emergencies while earning a real return instead of zero.",
+      "callout": "",
+      "visual": "Extreme close-up of a single drop of water falling onto a dark metal surface, high speed."
+    },
+    {
+      "say": "Stop paying a stealth inflation tax on the cash you worked hard to save.",
+      "callout": "",
+      "visual": "Wide shot of empty train tracks stretching into a dark mountain tunnel at night."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "Extreme wide shot of a solitary glowing light on a distant mountain ridge under a vast starry sky."
+    }
+  ],
+  "caption": "Your emergency fund is losing ground every day it sits in a zero-interest account. Use the Tiered Liquidity Rule to fix it.\n\n#personalfinance #moneytips #wealth #investing #savingmoney",
+  "description": "Keeping six months of living expenses in a standard checking account creates massive inflation drag. Learn the Tiered Liquidity Rule to keep your cash safe and productive.",
+  "hashtags": [
+    "#personalfinance",
+    "#moneytips",
+    "#wealth",
+    "#investing",
+    "#savingmoney"
+  ],
+  "first_comment": "Where do you currently keep your emergency fund?",
+  "facts": [
+    {
+      "claim": "Leaving $30,000 in a standard checking account loses yield to inflation",
+      "basis": "Standard checking accounts typically pay 0.01% interest while inflation erodes purchasing power"
+    }
+  ],
+  "source": "llm",
+  "pillar": "myth",
+  "look": "",
+  "loop_map": {
+    "stakes": "Leaving $30,000 in a standard checking account quietly burns $1,500 every year in lost yield.",
+    "big_question": "Why do millions of savers keep six months of emergency money where it earns zero?",
+    "assume": "Your safety net has to sit in a basic checking account to stay safe.",
+    "reveal": "That assumption creates massive inflation drag without adding extra security.",
+    "rehook_beats": [
+      3,
+      6
+    ],
+    "payoff_beat": 10
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "title": "How a Billionaire Lost His NFL Team at Blackjack",
+  "hook_text": "HE LOST AN NFL TEAM AT BLACKJACK",
+  "beats": [
+    {
+      "say": "He owned the Philadelphia Eagles and a massive trucking empire, yet lost it all betting $10,000 hands in Atlantic City.",
+      "callout": "",
+      "visual": "Extreme wide shot of a solitary silhouette standing on a rain-slicked Atlantic City boardwalk at blue hour under harsh sodium light."
+    },
+    {
+      "say": "How does a multimillionaire sport owner watch his entire fortune vanish across a single green felt table?",
+      "callout": "FORTUNE VS FELT",
+      "visual": "Low angle extreme close-up of heavy velvet chips sliding across dark, wet wooden grain in cold fluorescent light."
+    },
+    {
+      "say": "Most people assume smart business owners know when to walk away from a losing streak.",
+      "callout": "STAY VS QUIT",
+      "visual": "Silhouette of a man's back facing a towering, dark brick stadium exterior under a foggy night sky."
+    },
+    {
+      "say": "They think intelligence protects you from the psychology of chasing sunken money.",
+      "callout": "",
+      "visual": "High angle shot of a solitary car driving down an empty, wet highway cutting through dark industrial yards."
+    },
+    {
+      "say": "The truth is brutal. Leonard Tose dropped over $40 million because every loss triggered the urge to win it back.",
+      "callout": "$40M LOST",
+      "visual": "Extreme close-up of a hand resting on cold, rain-streaked window glass with sodium lights blurring outside."
+    },
+    {
+      "say": "Why did doubling his bets feel like control when it was actually financial suicide?",
+      "callout": "CONTROL VS RUIN",
+      "visual": "Silhouette of a person walking away from a massive concrete overpass under a single practical light."
+    },
+    {
+      "say": "Because our brains treat past losses as a debt the universe owes us.",
+      "callout": "",
+      "visual": "Extreme wide shot of dark, choppy open water crashing against a jagged stone jetty at night."
+    },
+    {
+      "say": "He didn't lose because he was dumb. He lost because he couldn't accept a bad trade.",
+      "callout": "BAD TRADE",
+      "visual": "Low angle shot of a heavy iron bridge girder cutting across a cold blue sky."
+    },
+    {
+      "say": "That illusion of control destroys wealth faster than any bad investment ever could.",
+      "callout": "ILLUSION VS ASSET",
+      "visual": "Silhouette of a man standing at the edge of a towering skyscraper roof against a dark stormy horizon."
+    },
+    {
+      "say": "Discipline means cutting your losses before they cut your life.",
+      "callout": "DISCIPLINE",
+      "visual": "Extreme close-up of wet asphalt reflecting a single cold fluorescent street lamp."
+    },
+    {
+      "say": "Master your losses, or your losses will master you.",
+      "callout": "",
+      "visual": "Silhouette of a lone figure walking down a long, empty underpass lit by flickering sodium bulbs."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "Extreme wide shot of a massive concrete industrial tower fading into heavy fog at blue hour."
+    }
+  ],
+  "caption": "A trucking mogul and NFL owner lost $40M because he couldn't stop chasing his losses. Discipline beats ego every single time. #MoneyPsychology #PersonalFinance #WealthMindset #FinancialLiteracy #SmartMoney",
+  "description": "The true story of Leonard Tose losing the Philadelphia Eagles at the blackjack table, and the money psychology lesson on sunk costs and discipline.",
+  "hashtags": [
+    "#MoneyPsychology",
+    "#PersonalFinance",
+    "#WealthMindset",
+    "#FinancialLiteracy",
+    "#SmartMoney"
+  ],
+  "first_comment": "What's the hardest financial loss you've ever had to walk away from?",
+  "facts": [
+    {
+      "claim": "Leonard Tose owned the Philadelphia Eagles and a trucking empire",
+      "basis": "Historical record of Leonard Tose acquiring the Eagles in 1969 and running his family's trucking business."
+    },
+    {
+      "claim": "Tose lost over $40 million gambling in Atlantic City",
+      "basis": "Documented biographical accounts of his heavy gambling losses at Atlantic City casinos."
+    }
+  ],
+  "source": "llm",
+  "pillar": "story",
+  "look": "",
+  "loop_map": {
+    "stakes": "Leonard Tose loses his NFL team and $40 million fortune at the blackjack table.",
+    "big_question": "How does a multimillionaire owner watch his entire fortune vanish across a single green felt table?",
+    "assume": "Most people assume smart business owners know when to walk away from a losing streak.",
+    "reveal": "Tose dropped over $40 million because every loss triggered the urge to win it back through the illusion of control.",
+    "rehook_beats": [
+      6,
+      8
+    ],
+    "payoff_beat": 9
+  }
+}

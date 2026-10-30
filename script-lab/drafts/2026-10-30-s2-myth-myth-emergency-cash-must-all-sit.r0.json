@@ -1,0 +1,110 @@
+{
+  "title": "The $30,000 Emergency Fund Mistake Costing You $1,500",
+  "hook_text": "YOUR CHECKING ACCOUNT IS BURNING CASH",
+  "beats": [
+    {
+      "say": "Leaving $30,000 in checking quietly burns $1,500 every single year in lost yield.",
+      "callout": "",
+      "visual": "Extreme close-up of a hand resting on a stack of bank deposit slips under cold fluorescent light in an empty industrial vault."
+    },
+    {
+      "say": "Most people think hoarding six months of expenses in one checking account protects them.",
+      "callout": "",
+      "visual": "High angle shot looking down at a lonely figure walking across a rain-slick street under amber sodium light."
+    },
+    {
+      "say": "Why does playing it safe with your cash secretly drain your net worth?",
+      "callout": "SAFE VS BROKE",
+      "visual": "Low angle view of a towering concrete bank exterior cutting through thick fog at blue hour."
+    },
+    {
+      "say": "You assume idle cash is safe, but inflation silently eats its purchasing power.",
+      "callout": "",
+      "visual": "Extreme wide shot of a solitary silhouette standing beneath a massive highway underpass at night."
+    },
+    {
+      "say": "At 3% inflation, $100 drops to just $55 in buying power after 20 years.",
+      "callout": "$100 VS $55",
+      "visual": "Macro extreme close-up of an old rusted metal scale balancing under a single practical light in the dark."
+    },
+    {
+      "say": "So how do you protect against disaster without letting your cash bleed value?",
+      "callout": "",
+      "visual": "Silhouette of a person standing at a sharp ridge line overlooking dark open water at dusk."
+    },
+    {
+      "say": "You don't need all six months of expenses instantly accessible at midnight.",
+      "callout": "",
+      "visual": "Low angle shot of an empty highway at night with wet asphalt reflecting distant sodium streetlights."
+    },
+    {
+      "say": "True emergencies almost never demand thirty thousand dollars cleared within five minutes.",
+      "callout": "",
+      "visual": "Extreme wide shot showing a tiny human silhouette walking past a monolithic brutalist tower edge."
+    },
+    {
+      "say": "That's why wealthy savers use the Tiered Liquidity Rule to split their emergency cash.",
+      "callout": "",
+      "visual": "High angle shot of a clean granite table illuminated by a single practical light, holding three brass keys."
+    },
+    {
+      "say": "Tier one keeps one month of basic expenses in checking for immediate peace of mind.",
+      "callout": "STEP ONE",
+      "visual": "Extreme close-up of hands opening a heavy steel safe drawer under cold fluorescent overhead tubes."
+    },
+    {
+      "say": "Tier two holds two months in high-yield savings, earning yield while staying reachable.",
+      "callout": "STEP TWO",
+      "visual": "Silhouette against weather looking out from a high-rise window as storm clouds roll over the city skyline."
+    },
+    {
+      "say": "Tier three parks the final three months in safe, ultra-short liquid reserves.",
+      "callout": "STEP THREE",
+      "visual": "Low angle perspective of heavy stone pillars lining a silent financial corridor in the blue hour."
+    },
+    {
+      "say": "You keep full emergency protection, immediate access, and pocket that missing $1,500 every year.",
+      "callout": "+$1,500 PER YEAR",
+      "visual": "Extreme close-up of a hand turning a solid brass deadbolt lock under a single warm light bulb."
+    },
+    {
+      "say": "Leaving $30,000 in checking is expensive. Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "Extreme wide shot of a figure standing motionless on wet asphalt under a towering foggy skyline at night."
+    }
+  ],
+  "caption": "Keeping all your emergency cash in checking costs you hundreds every year. Split it into tiers instead.\n#quietmoney #personalfinance #emergencyfund #moneyrules #financialliteracy",
+  "description": "Leaving six months of expenses in a standard checking account causes unnecessary inflation drag without improving your safety. The Tiered Liquidity Rule splits your reserves across checking, high-yield savings, and short-term reserves to maximize protection and earnings.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#emergencyfund",
+    "#financialfreedom",
+    "#investingbasics"
+  ],
+  "first_comment": "How many months of expenses do you currently keep in checking?",
+  "facts": [
+    {
+      "claim": "At 3% inflation, $100 drops to $55 in buying power after 20 years.",
+      "basis": "Fact sheet entry: '$100 today is worth $55 in buying power after 20 years of 3% inflation'."
+    },
+    {
+      "claim": "Leaving $30,000 in checking quietly burns $1,500 every year in lost yield.",
+      "basis": "Arithmetic: $30,000 at a standard competitive cash yield of 5.0% generates $1,500 annually versus 0% in standard checking."
+    }
+  ],
+  "source": "llm",
+  "pillar": "myth",
+  "look": "",
+  "loop_map": {
+    "stakes": "A $30,000 emergency fund in a zero-yield checking account burns $1,500 every year to inflation drag.",
+    "big_question": "Why does playing it safe with your cash secretly drain your net worth?",
+    "assume": "Keeping all six months of expenses in checking is the safest way to store emergency savings.",
+    "reveal": "Emergencies don't require all cash instantly, so un-tiered cash suffers massive inflation drag without extra security.",
+    "rehook_beats": [
+      6,
+      9
+    ],
+    "payoff_beat": 12
+  }
+}

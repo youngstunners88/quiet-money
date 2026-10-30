@@ -1,0 +1,91 @@
+{
+  "title": "How Leonard Tose Gambled Away an NFL Franchise",
+  "hook_text": "HE LOST AN NFL TEAM AT BLACKJACK",
+  "beats": [
+    {
+      "say": "He owned the Philadelphia Eagles and a massive trucking empire, yet lost it all at Atlantic City blackjack tables.",
+      "callout": "",
+      "visual": "Extreme wide shot of a solitary neon sign glowing through heavy coastal fog at night."
+    },
+    {
+      "say": "How does a billionaire owner bleed out $40 million in cold cash until nothing is left?",
+      "callout": "FORTUNE VS RUIN",
+      "visual": "Low angle shot of a massive concrete stadium facade under cold fluorescent security lights."
+    },
+    {
+      "say": "You’d assume he simply ran out of luck on a few bad nights of high-stakes cards.",
+      "callout": "BAD LUCK",
+      "visual": "Extreme close-up of worn green felt under a harsh single overhead practical light."
+    },
+    {
+      "say": "That's the lie. The casino didn't beat him. His own brain did.",
+      "callout": "THE TRUTH",
+      "visual": "High angle shot of wet asphalt reflecting red and blue neon in a dark alley."
+    },
+    {
+      "say": "Every time he lost $10,000 on a hand, the illusion of control whispered one simple lie.",
+      "callout": "STEP ONE",
+      "visual": "Silhouette of a man walking past a tall chain-link fence under sodium streetlamps."
+    },
+    {
+      "say": "Just win this hand back, and you're even.",
+      "callout": "CHASING LOSSES",
+      "visual": "Extreme close-up of heavy iron wheels rusting on an abandoned freight track."
+    },
+    {
+      "say": "Why didn't he just walk away when the debt crossed $1 million?",
+      "callout": "THE TRAP",
+      "visual": "Low angle shot of a towering concrete bridge pier cutting through thick evening mist."
+    },
+    {
+      "say": "Because sunk cost bias turns smart executives into desperate gamblers throwing good money after bad.",
+      "callout": "STEP TWO",
+      "visual": "A single pair of hands gripping a cold steel railing over dark water."
+    },
+    {
+      "say": "He traded his NFL franchise for a stack of chips just to chase yesterday's losses.",
+      "callout": "",
+      "visual": "Extreme wide shot of an empty highway stretching into a black horizon under a vast sky."
+    },
+    {
+      "say": "Discipline is your only shield against the illusion of control.",
+      "callout": "",
+      "visual": "Low angle shot of a heavy steel door locked tight in a concrete wall."
+    },
+    {
+      "say": "Protect your capital, know when to fold, and follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "Silhouette of a single figure walking away down a wet, rain-slicked concrete underpass."
+    }
+  ],
+  "caption": "The illusion of control destroys wealth faster than bad investments. Discipline is everything. #moneypsychology #personalfinance #wealth #investing #finance",
+  "description": "The true story of Leonard Tose, who gambled away the Philadelphia Eagles, and the money lesson on sunk costs and discipline.",
+  "hashtags": [
+    "#moneypsychology",
+    "#personalfinance",
+    "#wealth",
+    "#investing",
+    "#finance"
+  ],
+  "first_comment": "What's the hardest time you've had walking away from a bad investment?",
+  "facts": [
+    {
+      "claim": "Leonard Tose owned the Philadelphia Eagles and lost over $40 million gambling in Atlantic City.",
+      "basis": "Well-documented sports history and financial biographies of Leonard Tose."
+    }
+  ],
+  "source": "llm",
+  "pillar": "story",
+  "look": "",
+  "loop_map": {
+    "stakes": "A billionaire owner losing his entire fortune and NFL franchise at the card table.",
+    "big_question": "How does a billionaire owner bleed out $40 million in cold cash until nothing is left?",
+    "assume": "He simply ran out of luck on a few bad nights of high-stakes cards.",
+    "reveal": "Sunk cost bias and the illusion of control forced him to keep chasing his losses.",
+    "rehook_beats": [
+      5,
+      7
+    ],
+    "payoff_beat": 9
+  }
+}
