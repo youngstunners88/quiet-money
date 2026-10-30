@@ -1,0 +1,121 @@
+{
+  "source": "human",
+  "title": "Binance Says Hackers Took $6.3 Billion",
+  "hook_text": "BINANCE: $6.3 BILLION STOLEN",
+  "beats": [
+    {
+      "say": "Binance says hackers took six point three billion dollars in twenty minutes.",
+      "callout": "$6.3 BILLION",
+      "visual": "a giant glass vault door slightly open in a dark server hall, thin cold light spilling out, no people"
+    },
+    {
+      "say": "The biggest crypto theft on record.",
+      "callout": "NEW RECORD",
+      "visual": "a tall stack of gold coins towering beside a much smaller stack on a black marble table, dramatic side light"
+    },
+    {
+      "say": "Withdrawals were paused late Thursday.",
+      "callout": "WITHDRAWALS PAUSED",
+      "visual": "a row of locked steel safety deposit boxes in a dim bank vault, one red indicator light glowing"
+    },
+    {
+      "say": "Binance says it will cover all losses from company funds.",
+      "callout": "$6.34B SET ASIDE",
+      "visual": "a calm executive desk at night with a closed leather folder and a single lamp, city skyline through the window"
+    },
+    {
+      "say": "Reports say about three billion dollars was frozen.",
+      "callout": "ABOUT $3B FROZEN",
+      "visual": "a stack of gold coins encased in clear blue ice on a dark steel table, cold backlight"
+    },
+    {
+      "say": "Investigators point to a North Korea linked group. Binance has not blamed anyone yet.",
+      "callout": "NOT CONFIRMED",
+      "visual": "a detective corkboard of blurred documents and red string under a desk lamp, no faces, shallow depth of field"
+    },
+    {
+      "say": "Binance first pointed to an engineer's laptop, then called it a more complex attack.",
+      "callout": "STILL UNKNOWN",
+      "visual": "a lone laptop glowing on an empty office desk at night, screen showing only abstract light, rain on the window"
+    },
+    {
+      "say": "What can a saver learn? Not what to buy or sell. Just where your money sits.",
+      "callout": "WHERE IT SITS",
+      "visual": "a hand placing a single key on a wooden table beside a small brass lockbox, warm lamp light"
+    },
+    {
+      "say": "On an exchange, the company holds the keys. That promise is worth what the company can pay.",
+      "callout": "THEY HOLD THE KEYS",
+      "visual": "a ring of brass keys hanging on a hook inside a locked glass cabinet, moody light"
+    },
+    {
+      "say": "Hold your own keys, and the risk moves to you. Lose them, and nobody can reset them.",
+      "callout": "NO OPTION IS SAFE",
+      "visual": "a small lockbox half buried in sand with a single key beside it, sunset light"
+    },
+    {
+      "say": "Proof of reserves is a public check that assets match what customers are owed.",
+      "callout": "PROOF OF RESERVES",
+      "visual": "a brass balance scale with gold coins on one side and paper receipts on the other, clean studio light"
+    },
+    {
+      "say": "Spread where your money sits, so one bad night in one place cannot freeze all of it.",
+      "callout": "A SNAPSHOT",
+      "visual": "a security guard desk with rows of dark monitors and one steady green light, empty chair"
+    },
+    {
+      "say": "Educational content, not financial advice. Free reset checklist, link in bio.",
+      "callout": "SPREAD IT OUT",
+      "visual": "several small identical jars of coins placed in separate spots across a bright wooden shelf, daylight"
+    },
+    {
+      "say": "Educational content, not financial advice. Free reset checklist, link in bio.",
+      "callout": "",
+      "visual": "a single warmly lit window in a small wooden house on a quiet night"
+    }
+  ],
+  "caption": "Binance says hackers took $6.3 billion in about 20 minutes. What is confirmed, what is not, and where your money sits. Educational content, not financial advice.\n\nFree reset checklist: link in bio.\n\n#money #personalfinance #crypto #financialliteracy #quietmoney",
+  "description": "Binance says about $6.3 billion was stolen in the largest crypto hack on record. Here is what has been confirmed, what investigators only suspect, and what it teaches about where your money sits.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#crypto",
+    "#financialliteracy",
+    "#quietmoney"
+  ],
+  "first_comment": "Where does most of your money sit: one place or several? Educational only, not financial advice.",
+  "facts": [
+    {
+      "claim": "Binance says about $6.3B stolen in ~20 minutes, largest crypto theft on record",
+      "basis": "Al Jazeera 2026-10-30; CoinDesk 2026-10-30; CNBC 2026-10-29"
+    },
+    {
+      "claim": "Prior record $1.5B Bybit Feb 2025",
+      "basis": "Al Jazeera 2026-10-30"
+    },
+    {
+      "claim": "Withdrawals paused, deposits open, resume expected in 45-48 hours",
+      "basis": "CoinDesk; Yahoo Finance"
+    },
+    {
+      "claim": "Binance will cover losses, set aside ~$6.34B",
+      "basis": "CoinDesk 2026-10-30"
+    },
+    {
+      "claim": "~$3B frozen; Tether ~$1.5B, Circle ~$800M",
+      "basis": "CNBC; Yahoo Finance; Al Jazeera"
+    },
+    {
+      "claim": "North Korea-linked attribution by TRM Labs/Chainalysis; Binance has not attributed",
+      "basis": "Al Jazeera 2026-10-30"
+    },
+    {
+      "claim": "Engineer laptop first suggested, later 'more complex attack'",
+      "basis": "CNBC; Al Jazeera"
+    },
+    {
+      "claim": "Proof of Reserves statement",
+      "basis": "CoinDesk"
+    }
+  ]
+}

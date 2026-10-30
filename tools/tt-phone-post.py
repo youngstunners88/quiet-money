@@ -73,6 +73,7 @@ if not page_only:
         if not find(lambda t:t=="Recents",1):
             if not find(lambda t:t=="Add sound",1): adb("input tap 540 2272"); time.sleep(5)
             adb("input tap 113 2172"); time.sleep(4)                   # gallery thumbnail (bottom left of the camera)
+            if not find(lambda t:t=="Recents",2): adb("input tap 113 2255"); time.sleep(4)   # same thumbnail when the camera permission screen shifts the layout
         if find(lambda t:t=="Recents",6): break
         adb("input keyevent 4"); time.sleep(2)
     if not find(lambda t:t=="Recents",3): die("gallery did not open")
@@ -81,10 +82,24 @@ if not page_only:
     if not p: die("system picker has no videos")
     tap(p); time.sleep(1.5)
     step("Done",lambda t:t=="Done",5); time.sleep(3)
-    q=find(lambda t:dur and t==dur,4)
-    if q: tap(q)                                                       # the tile with this duration
-    else: adb("input tap 541 808")                                     # newest tile, first slot after '+'
-    time.sleep(2)
+    def avg(cmd):
+        r=subprocess.run(cmd,shell=True,capture_output=True); return list(r.stdout[:3]) if len(r.stdout)>=3 else None
+    want_rgb=avg(f'ffmpeg -v error -ss 0.3 -i "{video}" -frames:v 1 -vf scale=1:1 -f rawvideo -pix_fmt rgb24 -')
+    def tray_matches():
+        """the selected-video tray shows the first frame: its average colour must match the file we mean to post (a same-length older video is the usual mix-up)"""
+        subprocess.run(f"adb exec-out screencap -p > {SC}/tt_sel.png",shell=True)
+        got=avg(f'ffmpeg -v error -i {SC}/tt_sel.png -vf "crop=150:150:50:1930,scale=1:1" -frames:v 1 -f rawvideo -pix_fmt rgb24 -')
+        if not got or not want_rgb: return False
+        d=sum(abs(x-y) for x,y in zip(got,want_rgb)); print("tray colour",got,"want",want_rgb,"diff",d)
+        return d<=45
+    tiles=[(t,x,y) for t,x,y in tree() if dur and t==dur]
+    if not tiles: tiles=[("newest",541,808)]
+    picked=False
+    for t,x,y in tiles[:6]:
+        adb(f"input tap {x} {y}"); time.sleep(2.5)
+        if tray_matches(): picked=True; break
+        adb("input keyevent 4"); time.sleep(2)                         # wrong video: back to the gallery grid, try the next tile of that length
+    if not picked: die("could not find the right video in the gallery (colour check failed for every tile of that length)")
     step("Next",lambda t:t=="Next",8); time.sleep(3)
     step("Next 2",lambda t:t=="Next",10); time.sleep(3)
 if not find(lambda t:t.startswith("Add description") or t.startswith(want[:20]),10): die("post page missing")
