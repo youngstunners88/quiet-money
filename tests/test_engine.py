@@ -434,7 +434,7 @@ def test_failed_slot_never_fails_the_previous_finished_job(tmp_path, monkeypatch
     monkeypatch.setattr(orchestrator.Paths, "ensure", lambda: None)
     calls = iter([{"topic": "first"}, RuntimeError("no fresh topics")])
 
-    def next_topic(pillar, reserved):
+    def next_topic(pillar, reserved, mix_taken=None, remaining=None):
         item = next(calls)
         if isinstance(item, Exception):
             raise item
@@ -556,7 +556,7 @@ def test_topic_error_does_not_fail_previous_slot(monkeypatch):
 
     topics = iter([{"topic": "first"}])
 
-    def next_topic(pillar, reserved):
+    def next_topic(pillar, reserved, mix_taken=None, remaining=None):
         item = next(topics, None)
         if item is None:
             raise RuntimeError("no fresh topics")

@@ -47,6 +47,9 @@ median of 25 views against 13 for avoid-the-trap videos, and ruin stories flop (
 Net worth, contract value, equity percentage or ownership stake, career length, bankruptcy or distress rates, business
 counts and franchise details, direct quotes, and causal claims ("this decision made them wealthy").
 
+## Roster
+These scripts are additional. Hormozi, Kiyosaki and Peña stay the core of the `escape` pillar; whom this skill covers, and the growing queue, is in `channel/ROSTER.md`. Researched so far: LeBron James (W1), Jay-Z (W2, W1) and Taylor Swift (W2), each with a brief and backlog topics. Add posture to every new backlog line (`"posture": "offense"`); `python -m faceless mix` shows the split.
+
 ## Neuron library
 | ID | Neuron | Dose up | Dose down | Posture |
 |----|--------|---------|-----------|---------|

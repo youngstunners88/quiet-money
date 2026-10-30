@@ -524,6 +524,23 @@ def cmd_variety(args) -> int:
     return 0
 
 
+def cmd_mix(_args) -> int:
+    """The offense / defense split of the unused backlog and of the videos made so far; a check on the keyword read of posture."""
+    from faceless import mix
+    from faceless.pipeline import ideate
+    cfg = mix.settings()
+    pool = [i for i in ideate.load_backlog() if i["topic"].lower() not in {h.lower() for h in ideate.history_texts()}]
+    print(f"rules: {'on' if cfg['enabled'] else 'off'}; per day at most {cfg['defense_max']} defense, at least {cfg['offense_min']} offense, "
+          f"a lead word ({', '.join(cfg['lead_words'])}) once")
+    by: dict[str, dict] = {}
+    for i in pool:
+        by.setdefault(i["pillar"], {mix.OFFENSE: 0, mix.DEFENSE: 0, mix.NEUTRAL: 0})[mix.posture(i)] += 1
+    for pid, c in sorted(by.items()):
+        print(f"{pid:12} offense {c[mix.OFFENSE]:3}  neutral {c[mix.NEUTRAL]:3}  defense {c[mix.DEFENSE]:3}")
+    print("backlog total", mix.split(pool))
+    return 0
+
+
 def _muapi_payload(args, upload: bool) -> dict:
     """--json FILE and --set key=value (values parse as JSON when they can; @file reads text). A local media file for an input
     becomes a hosted URL when `upload` is true (free); for an estimate it becomes a placeholder so nothing is uploaded."""
@@ -1525,6 +1542,8 @@ def main(argv: list[str] | None = None) -> int:
     va = sub.add_parser("variety", help="sameness audit of the last N videos (YouTube's inauthentic-content risk); writes analytics/variety.md")
     va.add_argument("-n", type=int, default=20)
     va.set_defaults(fn=cmd_variety)
+    mx = sub.add_parser("mix", help="offense / defense split of the unused backlog and the daily mix rules (channel/CONTENT-MIX.md)")
+    mx.set_defaults(fn=cmd_mix)
     fl = sub.add_parser("flint", help="Flint, the free extra hands (side work only, never the daily path): status | ask TEXT | seeds [-n N] [--pillar P] [--dry-run]")
     fl.add_argument("action", choices=["status", "ask", "seeds"])
     fl.add_argument("rest", nargs="*")

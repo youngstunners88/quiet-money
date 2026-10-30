@@ -6,6 +6,7 @@ The "why" and the rules. Everything else in the studio reads from here.
 |---|---|---|
 | `brand.md` | Name, voice, audience, pillars, visual identity, hooks that work | script-lab, production |
 | `monetization.md` | How the channel makes money, in order of speed | you, analytics |
+| `ROSTER.md` | Whose work the channel draws on: the core pillars (Hormozi, Kiyosaki, Peña) and the growing list of people with research briefs | script-lab, scout, ceo |
 | `CONTENT-MIX.md` | The daily mix of what we dispense (offense vs defense), variation axes, the flip test | script-lab, scout, ceo |
 | `compliance.md` | Platform policies, finance disclaimers, AI disclosure | gauntlet, distribution |
 

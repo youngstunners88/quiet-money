@@ -4,6 +4,9 @@ Hand-written. The generated sameness score is `analytics/variety.md` (it measure
 overwritten each run); this file is the rule for what the channel is *about* each day. Evidence and the full autopsy:
 `brain/topics/offense.md`. Written 2026-10-30.
 
+## Status: enforced in code (2026-10-30)
+`faceless/mix.py` applies the daily rules when the engine picks a topic (`[mix]` in `studio.toml`): at most 2 defense, at least 2 offense, a lead word once a day. If a day's pillar has no offense left it moves the slot to story, escape or playbook; if nothing fits it falls back to the old order and logs `MIX_RELAXED`, so a run is never stopped. `python -m faceless mix` shows the split of the unused backlog. Backlog items carry a hand `posture`; without one a keyword read of the title is used, which agreed with hand labels on 44 of 68 titles, so label new items.
+
 ## The problem
 Too many videos teach the same lesson in the same posture: a trap, a leak, a hidden fee, a bias, and a "stop doing
 X". 40 of 68 Shorts are defense; the best defense Short got 104 views and the median is 13. Offense, the viewer
