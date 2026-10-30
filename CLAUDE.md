@@ -115,6 +115,9 @@ humans set strategy, connect accounts, and review held videos.
 | Outbound pipeline, what a lead's status is, outcomes, the weekly outbound review | `/channel/services/web3-video/schema/outcome.json` | `channel/services/web3-video/CONTEXT.md` | `service-pipeline` |
 | The owner's phone: Posts-tab comics, Shorts the API quota refused, TikTok, Google Flow pictures, Fiverr inbox (OpenDeviceMCP on the owner's computer) | `/faceless/phone.py`, `tools/open-device-mcp` | `python -m faceless phone status` | `faceless-phone` |
 | Keep the phone working with nobody home: the always-on host, Opus 5.5 runs, port recovery, heartbeat, a stale or unreachable host | `/tools/phone-host` | `python -m faceless phone status` (host) | `faceless-phone-host` |
+| What is working, the standing prompts for the next videos, the checkpoints (the data block is regenerated weekly by `python -m faceless strategy`) | `/channel/STRATEGY.md` | `python -m faceless strategy` | `faceless-performance-review` |
+| Keep TikTok posts inside the Community Guidelines: caption wording, the picture checklist, the lint, what to do after a removal | `/faceless/ttpolicy.py` | `.claude/skills/faceless-tiktok-policy` | `faceless-tiktok-policy` |
+| Polish any cut in CapCut or ffmpeg: retention pacing, beat-synced cuts, sound design, grade, export QA | `/production` | `.claude/skills/faceless-capcut-mastery` | `faceless-capcut-mastery` |
 | Money now: every revenue rail's state and the owner's next 30 minutes, ranked by how soon it pays | `/faceless/cash.py` | `python -m faceless cash` | `faceless-cash` |
 | Partner Program progress and the website funnel (PostHog, cookieless) | `/faceless/ypp.py`, `sitestats.py` | `python -m faceless ypp` | `faceless-measure` |
 | HQ: the owner's dashboard (freedom number, engines, next moves, horizon, goals, build queue), its daily refresh | `/faceless/hq.py` | `python -m faceless hq` | `faceless-hq` |

@@ -289,10 +289,22 @@ def cmd_yt_comments(args) -> int:
 
 
 def cmd_scout(args) -> int:
-    from faceless import scout
+    from faceless import scout, strategy
     extra = json.loads(Path(args.import_file).read_text(encoding="utf-8")) if args.import_file else None
     scout.run(act=args.act, extra=extra)
     print((scout.REPORT).read_text(encoding="utf-8"))
+    try:                                                # the strategy file follows the scout's numbers; a failure here never fails the scout
+        print(f"strategy: {strategy.write()['path']}")
+    except Exception as e:  # noqa: BLE001
+        print(f"strategy not updated: {type(e).__name__}: {e}")
+    return 0
+
+
+def cmd_strategy(_args) -> int:
+    """Strategy: `strategy` rewrites channel/STRATEGY.md's data block from the latest numbers and keeps the judgment below it."""
+    from faceless import strategy
+    res = strategy.write()
+    print(f"{res['path']}: {res['shorts']} Shorts from snapshot {res['snapshot'] or 'none'}; trend rows {res['trend_rows']}")
     return 0
 
 
@@ -1451,6 +1463,7 @@ def main(argv: list[str] | None = None) -> int:
     sc.add_argument("--act", action="store_true", help="do the safe auto actions (backlog top-up) too")
     sc.add_argument("--import", dest="import_file", help="JSON list of external findings from web research")
     sc.set_defaults(fn=cmd_scout)
+    sub.add_parser("strategy", help="rewrite channel/STRATEGY.md from the latest numbers (the weekly scout does this too)").set_defaults(fn=cmd_strategy)
     sub.add_parser("empire", help="run the empire gauntlet: rank the income portfolio, kill the bad ideas, list what the owner unlocks").set_defaults(fn=cmd_empire)
     kt = sub.add_parser("kit", help="repurposing kit per packaged video (thread, LinkedIn, carousel, pin, newsletter item, audio)")
     kt.add_argument("target", nargs="?", help="post day YYYY-MM-DD or job id (default: today); with --issue, the last day of the week")

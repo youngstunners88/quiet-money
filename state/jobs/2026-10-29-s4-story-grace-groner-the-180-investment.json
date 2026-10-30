@@ -4,21 +4,64 @@
   "topic": "Grace Groner: The $180 Investment That Ran for 75 Years",
   "day": "2026-10-29",
   "slot": 4,
-  "status": "scripted",
+  "status": "held",
   "history": [
     {
       "from": "planned",
       "to": "scripted",
       "ts": "2026-10-29T09:40:48Z",
       "words": 99
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-29T09:48:59Z",
+      "seconds": 68.791,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-29T09:49:20Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-29T09:50:54Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-29T09:50:54Z",
+      "score": 94
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-29T09:50:55Z"
+    },
+    {
+      "from": "packaged",
+      "to": "held",
+      "ts": "2026-10-29T09:50:55Z"
     }
   ],
   "artifacts": {
     "angle": "Uninterrupted compounding on an essential product removes the friction of taxes, timing errors, and emotional panic selling.",
     "hook": "In 1935, a quiet clerk bought three shares of a healthcare company for $180, never touched them or added another penny, and died 75 years later with over $7 million.",
-    "title": "The $180 Investment That Outlasted a Lifetime"
+    "title": "The $180 Investment That Ran for 75 Years",
+    "style": "cinematic",
+    "video": "/home/user/quiet-money/production/output/2026-10-29/2026-10-29-s4-story-grace-groner-the-180-investment/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-29/2026-10-29-s4-story-grace-groner-the-180-investment/cover.jpg"
   },
-  "scores": {},
-  "cost": {},
-  "notes": []
+  "scores": {
+    "gauntlet": 94,
+    "passed": false
+  },
+  "cost": {
+    "tts:edge:chars": 1710
+  },
+  "notes": [
+    "held for review: not_semantic_duplicate"
+  ]
 }
