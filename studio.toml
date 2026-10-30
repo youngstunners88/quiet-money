@@ -199,6 +199,13 @@ similarity_max = 0.55
 topic_dup = 0.5                              # a backlog topic whose meaning (embedding) is this close to a recent video or a topic taken today is skipped
 vision_check = false
 
+[mix]                                        # the daily offense / defense balance (faceless/mix.py, channel/CONTENT-MIX.md); never stops a run, falls back and logs MIX_RELAXED
+enabled = true
+defense_max = 2                              # avoid-the-trap videos per post day
+offense_min = 2                              # videos where a person or the viewer makes a bold move that pays
+lead_word_max = 1                            # titles per day that may share one of the lead words below
+lead_words = ["trap", "hidden", "cost", "costs", "leak", "quiet", "silent", "why your"]
+
 [publish]
 # local: write a posting pack per video. upload_post: push via Upload-Post API (needs secrets).
 # youtube: also schedule each video on the studio's YouTube channel for its slot (Composio connection; see [publish.youtube]).

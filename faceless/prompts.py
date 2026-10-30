@@ -147,6 +147,9 @@ def ideas_prompt(pillar, n: int, avoid: list[str], briefs: list[str] | None = No
         "for them exists (CLAUDE.md rule 8).",
         "# CONSTRAINTS",
         "- Evergreen, globally understandable, factually checkable. No specific stock/crypto picks.",
+        "- Mix: at least half should put the viewer or a person on OFFENSE (a bold move that pays: taking equity, a negotiated deal, "
+        "owning the asset, building one). At most a third may be avoid-the-trap ideas, and each of those must say who made a move. "
+        "Do not open more than one topic with the same word (trap, hidden, cost, why your). Set 'posture' to offense, defense or neutral.",
         "- Each must support a 61-72 second script with a strong number or story.",
         *people,
         *([f"- People are searching for (use as inspiration, do not copy): {'; '.join(signals)}."] if signals else []),
@@ -154,7 +157,7 @@ def ideas_prompt(pillar, n: int, avoid: list[str], briefs: list[str] | None = No
         *[f"  - {a}" for a in avoid[-60:]],
         "# OUTPUT FORMAT",
         'Return ONLY JSON: {"ideas": [{"topic": str, "angle": str, "hook": str'
-        + (', "brief": str' if briefs else "") + '}]}',
+        + (', "brief": str' if briefs else "") + ', "posture": str}]}',
     ])
 
 

@@ -11,7 +11,10 @@ the real page; 6 are Facebook and 2 Instagram posts. 21 go to Wikipedia. Only a 
 here is verified. Per CLAUDE.md rule 8, a fact reaches a script only after it is written into `channel/research/<person>.md`
 with a real source.
 
-## Leads by neuron (all UNVERIFIED)
+## Checked 2026-10-30
+LeBron James, Jay-Z and Taylor Swift are researched: see `channel/research/lebron-james.md`, `jay-z.md`, `taylor-swift.md`. The checks changed the leads below: Swift's 2019 sale was about $300M (not $330M); Jay-Z sold half of his champagne brand in 2021 and does not own all of it (the report says he does); the "$700M from Beats" claim has no source and LeBron's reported Beats payout is about $30M; W5 does not fit Jay-Z. The Jordan Brand claim is still unchecked.
+
+## Leads by neuron (all UNVERIFIED unless noted above)
 | Neuron | Subject | Lead from the report | Check before use |
 |---|---|---|---|
 | W1 | Magic Johnson | played 13 seasons, earned about $40M; bought a 60% stake in EquiTrust Life Insurance for about $50M in 2015; assets under management grew from $16B to over $33B | the price and the stake; the AUM growth and whether he drove it; any net-worth figure |

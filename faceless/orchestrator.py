@@ -244,15 +244,21 @@ def daily(count: int | None = None, extra: int = 0, pillar: str | None = None, *
                 weights={k: round(v, 3) for k, v in weights.items()})
     jobs, reserved = [], [j.topic for j in all_jobs() if j.day == today.isoformat()]
     forced = pillar
-    for post_day, k in slots:
+    day_topics = {today.isoformat(): [j.topic for j in all_jobs() if j.day == today.isoformat()]}      # per post day, for the content mix
+    for idx, (post_day, k) in enumerate(slots):
         plan = plans.setdefault(post_day, launch.strategic_plan(
             analytics.allocate(per_day, weights, date.fromisoformat(post_day).toordinal()), post_day))
         pillar = forced or plan[k]
+        taken = day_topics.setdefault(post_day, [])
+        remaining = sum(1 for d, _ in slots[idx:] if d == post_day)
+        if not forced:
+            pillar = ideate.pillar_for_mix(pillar, taken, remaining, reserved)
         slot = (date.fromisoformat(post_day) - today).days * per_day + k
         job = None
         try:
-            item = ideate.next_topic(pillar, reserved)
+            item = ideate.next_topic(pillar, reserved, taken, remaining)
             reserved.append(item["topic"])
+            taken.append(item["topic"])
             job = start_job(pillar, item, slot)
             jobs.append(job)
             produce(job, **kw)

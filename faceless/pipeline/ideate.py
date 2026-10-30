@@ -5,7 +5,7 @@ from __future__ import annotations
 import json
 import re
 
-from faceless import config, events
+from faceless import config, events, mix
 from faceless.config import Paths
 from faceless.providers import llm
 from faceless.prompts import ideas_prompt
@@ -120,14 +120,52 @@ def first_distinct(items: list[dict], reserved: list[str], limit: float) -> dict
     return None
 
 
-def next_topic(pillar_id: str, reserved: list[str] | None = None) -> dict:
-    """The best unused topic for the pillar: topics with researched demand first (highest score), the rest in the order they were written."""
-    cfg = config.load()
-    threshold = cfg["gauntlet"]["similarity_max"]
+def _fresh_pool(pillar_id: str, reserved: list[str] | None) -> list[dict]:
+    """The pillar's backlog items not yet used and not a near repeat of history or of today's picks, best demand first."""
+    threshold = config.load()["gauntlet"]["similarity_max"]
     history = history_texts() + list(reserved or [])
     used = {h.lower() for h in history}
     pool = sorted((i for i in load_backlog() if i["pillar"] == pillar_id), key=lambda i: -demand_score(i))        # stable: ties keep file order
-    fresh = [i for i in pool if i["topic"].lower() not in used and is_fresh(i["topic"], history, 0.8)]
+    return [i for i in pool if i["topic"].lower() not in used and is_fresh(i["topic"], history, 0.8)]
+
+
+def _taken(topics: list[str] | None) -> list[dict]:
+    return [find_topic(t) or {"topic": t} for t in topics or []]
+
+
+def pillar_for_mix(pillar_id: str, mix_taken: list[str] | None, remaining: int | None, reserved: list[str] | None = None) -> str:
+    """The pillar the slot should use. Normally the planned one; when the day still owes offense videos in exactly the slots that
+    are left, and the planned pillar has none to give, the first pillar that has one (story, escape, playbook)."""
+    cfg = mix.settings()
+    if not cfg["enabled"] or mix_taken is None or not remaining:
+        return pillar_id
+    taken = _taken(mix_taken)
+    if mix.offense_needed(taken, cfg) < remaining or mix.offense_needed(taken, cfg) <= 0:
+        return pillar_id
+    for pid in (pillar_id, "story", "escape", "playbook"):
+        if any(mix.posture(i) == mix.OFFENSE and mix.admissible(i, taken, remaining, cfg) is None for i in _fresh_pool(pid, reserved)):
+            if pid != pillar_id:
+                events.emit("MIX_PILLAR_SWITCH", planned=pillar_id, used=pid)
+            return pid
+    return pillar_id
+
+
+def next_topic(pillar_id: str, reserved: list[str] | None = None, mix_taken: list[str] | None = None,
+               remaining: int | None = None) -> dict:
+    """The best unused topic for the pillar: topics with researched demand first (highest score), the rest in the order they were written.
+    With `mix_taken` (the topics already chosen for this post day) the content-mix rules apply first (faceless/mix.py); if they
+    leave nothing the old order is used and MIX_RELAXED is logged."""
+    cfg = config.load()
+    threshold = cfg["gauntlet"]["similarity_max"]
+    history = history_texts() + list(reserved or [])
+    fresh = _fresh_pool(pillar_id, reserved)
+    if fresh and mix_taken is not None and mix.settings()["enabled"]:
+        taken = _taken(mix_taken)
+        ok = [i for i in fresh if mix.admissible(i, taken, remaining or 0) is None]
+        if ok:
+            fresh = ok
+        else:
+            events.emit("MIX_RELAXED", pillar=pillar_id, reason=mix.admissible(fresh[0], taken, remaining or 0))
     if fresh:
         pick = first_distinct(fresh, list(reserved or []), float(cfg["gauntlet"].get("topic_dup", 0.5)))
         if pick is not None:
@@ -138,7 +176,7 @@ def next_topic(pillar_id: str, reserved: list[str] | None = None) -> dict:
     briefs = research.available() if pillar_id == "escape" else None
     res = llm.complete(ideas_prompt(pillar, 8, history, briefs), want_json=True, temperature=1.0)
     raw = res.get("ideas", []) if isinstance(res, dict) else res
-    ideas = [dict(pillar=pillar_id, **{k: str(i.get(k) or "") for k in ("topic", "angle", "hook", "brief")})
+    ideas = [dict(pillar=pillar_id, **{k: str(i.get(k) or "") for k in ("topic", "angle", "hook", "brief", "posture")})
              for i in (raw if isinstance(raw, list) else []) if isinstance(i, dict) and i.get("topic")
              and (not i.get("brief") or i["brief"] in (briefs or []))]
     fresh = [i for i in ideas if is_fresh(i["topic"], history, threshold)]
