@@ -10,23 +10,23 @@ Generated 2026-10-30 (UTC). Sources: the latest public snapshot, metrics.jsonl, 
 
 | | Now |
 |---|---|
-| Shorts with a public snapshot (2026-10-29) | 68 |
-| Mean / median views per Short | 24.8 / 15.5 |
-| Best Short | 229 |
-| Shorts at 5 views or fewer | 16 of 68 |
+| Shorts with a public snapshot (2026-10-30) | 20 |
+| Mean / median views per Short | 37.5 / 13.0 |
+| Best Short | 314 |
+| Shorts at 5 views or fewer | 3 of 20 |
 | Subscribers | not pulled (YouTube quota) |
 | Website pageviews (latest day 2026-10-23) | 0 |
-| Offers in the ledger, by status | draft 92 |
+| Offers in the ledger, by status | draft 96 |
 | Revenue | not wired into this file |
 
 ## What the titles show (signals unless n >= 30)
 
 | Feature | With it: n, median | Without it: n, median |
 |---|---|---|
-| title has a number (signal) | 22, 17.0 | 46, 11.0 |
-| title has a $ or % (signal) | 15, 16 | 53, 14 |
-| abstract words (hidden, silent, brain, direction) (signal) | 9, 2 | 59, 16 |
-| starts with 'Why' (signal) | 19, 14 | 49, 16 |
+| title has a number (signal) | 6, 22.5 | 14, 10.5 |
+| title has a $ or % (signal) | 3, 23 | 17, 11 |
+| abstract words (hidden, silent, brain, direction) (signal) | 3, 18 | 17, 13 |
+| starts with 'Why' (signal) | 7, 9 | 13, 18 |
 
 ## Pillars (metrics.jsonl, one row per job)
 
@@ -43,7 +43,7 @@ Generated 2026-10-30 (UTC). Sources: the latest public snapshot, metrics.jsonl, 
 
 ## Production
 
-- Last 7 days: 38 videos, 16 held (42%). Top failing gates: loop_plan x12, word_count x4, pillar_structure x4.
+- Last 7 days: 43 videos, 17 held (40%). Top failing gates: loop_plan x13, distinct_topic x5, word_count x4.
 - Phone lane posts recorded: tiktok 10, yt_community 5, yt_short 10.
 
 ## Trend (one row per run, newest last)
@@ -51,6 +51,7 @@ Generated 2026-10-30 (UTC). Sources: the latest public snapshot, metrics.jsonl, 
 | Run (UTC) | Snapshot | Shorts | Mean | Median | <=5 views | Hold rate | Subscribers |
 |---|---|---|---|---|---|---|---|
 | 2026-10-30T00:59 | 2026-10-29 | 68 | 24.8 | 15.5 | 16 | 42% | - |
+| 2026-10-30T10:10 | 2026-10-30 | 20 | 37.5 | 13.0 | 3 | 40% | - |
 
 <!-- data:end -->
 
@@ -67,6 +68,7 @@ Written 2026-10-30 from the 2026-10-29 snapshot (68 Shorts; the snapshot carries
   - Correction to the 2026-10-29 review, which said every zero-view Short is abstract. It is 4 of 7.
 - **Holds.** 16 of 38 videos were held in the last seven days (42%). The most common failing gate is `loop_plan` (12 times). Every hold is a video that never reaches the channel.
 - **Fresh videos cannot reach the channel.** On 10-27 and again on 10-29 the five daily slots went to backlog videos from October 9 to 24, so the new batch waits locally.
+- **Upload quota.** The shared API project refused uploads on 10-28 (three jobs) and on 10-30 (four jobs, from 09:41 UTC, after the 07:00 reset). Fresh videos wait for the phone lane, which uploads through the owner's own app and quota.
 - **Engagement.** One comment on about 1.7K views (app figures from the 10-29 review; not in the snapshot). The endings do not invite a reply.
 - **Compliance.** One TikTok removal and one warning are recorded (warning 10-27). Another violation can restrict the account.
 
@@ -74,7 +76,8 @@ Written 2026-10-30 from the 2026-10-29 snapshot (68 Shorts; the snapshot carries
 1. Three Shorts a day plus one hero piece a week, instead of five. The 10-29 review found that more volume did not raise per-video views. This snapshot has no dates, so that was not re-checked here.
 2. The five daily slots go to the newest passed videos first. Backlog takes a slot only when the batch has none left.
 3. A visit counter or PostHog key for the hub page. Without it the funnel ends at the view.
-4. Revenue is zero. The platform route is far off: the last YPP row (2026-10-23) shows 767 Shorts views in 90 days against 10,000,000 needed for ad sharing. The first money comes from the products and services in `channel/empire/CASH.md`.
+4. An upload route with the owner's own YouTube API project (a Google Cloud project and credentials the owner creates). It removes the shared quota. Account and credential work, so the owner's.
+5. Revenue is zero. The platform route is far off: the last YPP row (2026-10-23) shows 767 Shorts views in 90 days against 10,000,000 needed for ad sharing. The first money comes from the products and services in `channel/empire/CASH.md`.
 
 ### Next bets (ranked by evidence per cost)
 1. **Enforce the title rule in the gauntlet:** a number, a $ or % figure, or a named person or brand. Operator; an engine change with a test. Evidence: moderate (n = 9 against 59).
