@@ -1,10 +1,8 @@
 {
   "job": "2026-10-31-s13-story-jay-z-sold-half-of-ace-of-spades",
-  "score": 93,
-  "passed": false,
-  "hard_failures": [
-    "judge_facts"
-  ],
+  "score": 94,
+  "passed": true,
+  "hard_failures": [],
   "gates": [
     {
       "name": "word_count",
@@ -144,10 +142,10 @@
     },
     {
       "name": "judge_hook",
-      "passed": true,
+      "passed": false,
       "weight": 8,
       "hard": false,
-      "detail": "hook scored 7/10. 1. Replace the opening claim with verified data: 'In 2021, Jay‑Z sold 50% of his champagne brand Ace of Spades to Moët Hennessy for an undisclosed amount, but Forbes later estimated the brand’s value at around $630 million.'; 2. Clarify the bottle sales line: 'By 2019, Ace of Spades had sold over 500,000 bottles worldwide, showing steady growth.'; 3. Tighten the conclusion: 'The key takeaway? Own a piece of a brand—ownership turns a name into a sellable asset.'",
+      "detail": "hook scored 5/10. Rewrite Line 1 to cut weak opening words: Change 'Reportedly, Jay-Z sold half of one champagne brand...' to 'Jay-Z turned a champagne brand into $300 million in cash without selling all of it.'; Cut or bridge Line 9 (Tidal deal): Dropping a second company randomly at line 9 breaks focus—either remove Tidal entirely or use it as a 2-second fast frame: 'And it wasn't a fluke—days later he sold most of Tidal for $297 million.'; Tighten Lines 6-7: 'In 2021, he sold 50% to Moet Hennessy. The official price wasn't disclosed, but Forbes estimated the brand at $630 million.'",
       "fix": "script"
     },
     {
@@ -155,7 +153,7 @@
       "passed": true,
       "weight": 6,
       "hard": false,
-      "detail": "retention scored 6/10. 1. Replace the opening claim with verified data: 'In 2021, Jay‑Z sold 50% of his champagne brand Ace of Spades to Moët Hennessy for an undisclosed amount, but Forbes later estimated the brand’s value at around $630 million.'; 2. Clarify the bottle sales line: 'By 2019, Ace of Spades had sold over 500,000 bottles worldwide, showing steady growth.'; 3. Tighten the conclusion: 'The key takeaway? Own a piece of a brand—ownership turns a name into a sellable asset.'",
+      "detail": "retention scored 6/10. Rewrite Line 1 to cut weak opening words: Change 'Reportedly, Jay-Z sold half of one champagne brand...' to 'Jay-Z turned a champagne brand into $300 million in cash without selling all of it.'; Cut or bridge Line 9 (Tidal deal): Dropping a second company randomly at line 9 breaks focus—either remove Tidal entirely or use it as a 2-second fast frame: 'And it wasn't a fluke—days later he sold most of Tidal for $297 million.'; Tighten Lines 6-7: 'In 2021, he sold 50% to Moet Hennessy. The official price wasn't disclosed, but Forbes estimated the brand at $630 million.'",
       "fix": "script"
     },
     {
@@ -163,15 +161,15 @@
       "passed": true,
       "weight": 5,
       "hard": false,
-      "detail": "value scored 6/10. 1. Replace the opening claim with verified data: 'In 2021, Jay‑Z sold 50% of his champagne brand Ace of Spades to Moët Hennessy for an undisclosed amount, but Forbes later estimated the brand’s value at around $630 million.'; 2. Clarify the bottle sales line: 'By 2019, Ace of Spades had sold over 500,000 bottles worldwide, showing steady growth.'; 3. Tighten the conclusion: 'The key takeaway? Own a piece of a brand—ownership turns a name into a sellable asset.'",
+      "detail": "value scored 8/10. Rewrite Line 1 to cut weak opening words: Change 'Reportedly, Jay-Z sold half of one champagne brand...' to 'Jay-Z turned a champagne brand into $300 million in cash without selling all of it.'; Cut or bridge Line 9 (Tidal deal): Dropping a second company randomly at line 9 breaks focus—either remove Tidal entirely or use it as a 2-second fast frame: 'And it wasn't a fluke—days later he sold most of Tidal for $297 million.'; Tighten Lines 6-7: 'In 2021, he sold 50% to Moet Hennessy. The official price wasn't disclosed, but Forbes estimated the brand at $630 million.'",
       "fix": "script"
     },
     {
       "name": "judge_facts",
-      "passed": false,
+      "passed": true,
       "weight": 10,
       "hard": true,
-      "detail": "factual risk 5/10: Jay‑Z sold half of a champagne brand for $300 million in cash; Forbes estimated the brand’s value at $630 million",
+      "detail": "factual risk 1/10: ",
       "fix": "script"
     },
     {
@@ -179,7 +177,7 @@
       "passed": true,
       "weight": 10,
       "hard": true,
-      "detail": "compliance risk 2/10",
+      "detail": "compliance risk 1/10",
       "fix": "script"
     },
     {
@@ -334,23 +332,5 @@
       "detail": "",
       "fix": "package"
     }
-  ],
-  "judge": {
-    "hook": 7,
-    "retention": 6,
-    "value": 6,
-    "clarity": 5,
-    "complete_ending": 10,
-    "factual_risk": 5,
-    "compliance_risk": 2,
-    "suspect_claims": [
-      "Jay‑Z sold half of a champagne brand for $300 million in cash",
-      "Forbes estimated the brand’s value at $630 million"
-    ],
-    "fixes": [
-      "1. Replace the opening claim with verified data: 'In 2021, Jay‑Z sold 50% of his champagne brand Ace of Spades to Moët Hennessy for an undisclosed amount, but Forbes later estimated the brand’s value at around $630 million.'",
-      "2. Clarify the bottle sales line: 'By 2019, Ace of Spades had sold over 500,000 bottles worldwide, showing steady growth.'",
-      "3. Tighten the conclusion: 'The key takeaway? Own a piece of a brand—ownership turns a name into a sellable asset.'"
-    ]
-  }
+  ]
 }

@@ -1,5 +1,5 @@
 # Gauntlet: 2026-10-31-s13-story-jay-z-sold-half-of-ace-of-spades
-Score **93/100**, FAIL
+Score **94/100**, PASS
 
 | gate | result | weight | detail |
 |---|---|---|---|
@@ -20,10 +20,10 @@ Score **93/100**, FAIL
 | originality (hard) | pass | 8 |  |
 | voice_quality | pass | 5 |  |
 | readability | pass | 3 |  |
-| judge_hook | pass | 8 |  |
+| judge_hook | FAIL | 8 | hook scored 5/10. Rewrite Line 1 to cut weak opening words: Change 'Reportedly, Jay-Z sold half of one champagne brand...' to 'Jay-Z turned a champagne brand into $300 million in cash without selling all of it.'; Cut or bridge Line 9 (Tidal deal): Dropping a second company randomly at line 9 breaks focus—either remove Tidal entirely or use it as a 2-second fast frame: 'And it wasn't a fluke—days later he sold most of Tidal for $297 million.'; Tighten Lines 6-7: 'In 2021, he sold 50% to Moet Hennessy. The official price wasn't disclosed, but Forbes estimated the brand at $630 million.' |
 | judge_retention | pass | 6 |  |
 | judge_value | pass | 5 |  |
-| judge_facts (hard) | FAIL | 10 | factual risk 5/10: Jay‑Z sold half of a champagne brand for $300 million in cash; Forbes estimated the brand’s value at $630 million |
+| judge_facts (hard) | pass | 10 |  |
 | judge_compliance (hard) | pass | 10 |  |
 | duration (hard) | pass | 10 |  |
 | word_timings (hard) | pass | 8 |  |
