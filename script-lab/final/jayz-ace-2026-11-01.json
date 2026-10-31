@@ -1,0 +1,104 @@
+{
+ "source": "human",
+ "title": "Jay-Z Sold Half Of One Brand For $300 Million",
+ "hook_text": "HALF A BRAND, $300 MILLION",
+ "beats": [
+  {
+   "say": "In 2021, Jay-Z cashed out half of his champagne brand for an estimated three hundred million dollars.",
+   "callout": "",
+   "visual": "a dark champagne bottle with a metallic gold surface on black glass, hard rim light, no text, no people"
+  },
+  {
+   "say": "The brand is Ace of Spades. He took full ownership of it in twenty fourteen.",
+   "callout": "OWNED IT ALL",
+   "visual": "a dim private cellar of dusty bottles lined in rows under a single hanging bulb, no people"
+  },
+  {
+   "say": "He wanted to own a brand, not just promote one.",
+   "callout": "OWN, NOT PROMOTE",
+   "visual": "a spotlit empty stage with a single microphone stand and a row of dark seats, no people"
+  },
+  {
+   "say": "In twenty nineteen it sold half a million bottles.",
+   "callout": "500,000 BOTTLES",
+   "visual": "a towering wall of wooden shipping crates in a vast warehouse at night, cold sodium light"
+  },
+  {
+   "say": "So what is half of a growing brand worth to the right buyer?",
+   "callout": "WHAT IS HALF WORTH?",
+   "visual": "a pair of old brass scales balanced with gold on one side, dramatic dark background"
+  },
+  {
+   "say": "According to the Financial Times, in February twenty twenty one he sold fifty percent to Moet Hennessy. The price was not disclosed.",
+   "callout": "SOLD 50%",
+   "visual": "two heavy glass doors of a corporate tower opening in a bright lobby at dawn, no people"
+  },
+  {
+   "say": "Here is the part nobody tells you. Forbes valued the brand near six hundred and thirty million dollars. That is an estimate, not a filing.",
+   "callout": "ESTIMATES, NOT FACTS",
+   "visual": "a handwritten ledger page with columns of numbers under a green banker lamp, close-up"
+  },
+  {
+   "say": "He kept the other half, and a seat at the table.",
+   "callout": "HE KEPT HALF",
+   "visual": "a long dark conference table with one chair pulled out and the rest pushed in, moody light"
+  },
+  {
+   "say": "And it was not a fluke: days later, Square agreed to pay two hundred and ninety seven million dollars for most of Tidal.",
+   "callout": "$297 MILLION MORE",
+   "visual": "a glowing tower of server racks in a dark data hall, blue light, no people"
+  },
+  {
+   "say": "Why does it matter? Ownership turns a name into an asset you can sell.",
+   "callout": "OWN IT, SELL IT",
+   "visual": "a rising staircase of coins under a spotlight, climbing into darkness"
+  },
+  {
+   "say": "The honest catch. He started with a hit record and famous partners, and many of his other businesses never became giants.",
+   "callout": "THE CATCH",
+   "visual": "a row of locked shop shutters on a dark city street at night, one with light behind it"
+  },
+  {
+   "say": "Your takeaway is not to build a brand. It is to ask, in every deal, what part of this can I own?",
+   "callout": "WHAT CAN I OWN?",
+   "visual": "a hand holding a single brass key up to the light, extreme close-up, no face"
+  },
+  {
+   "say": "Follow for the money rules school never taught you.",
+   "callout": "",
+   "visual": "an empty highway stretching toward a glowing sunrise horizon, wide shot"
+  }
+ ],
+ "caption": "Jay-Z sold half of Ace of Spades to Moet Hennessy in 2021. Forbes estimated at least $300 million in cash. What owning the brand did, and the catch. Educational content, not financial advice.",
+ "description": "Jay-Z took full ownership of Armand de Brignac in 2014 and sold 50% to Moet Hennessy in 2021. Forbes estimated at least $300 million in cash. The ownership lesson and the honest catch.",
+ "hashtags": [
+  "#money",
+  "#personalfinance",
+  "#jayz",
+  "#ownership",
+  "#quietmoney"
+ ],
+ "first_comment": "Would you rather be paid to promote a brand or own part of it? Educational only, not financial advice.",
+ "facts": [
+  {
+   "claim": "Full ownership of Armand de Brignac (Ace of Spades) in 2014; 500,000 bottles sold in 2019",
+   "basis": "Financial Times, 2021"
+  },
+  {
+   "claim": "2021-02-22 sold 50% to Moet Hennessy (LVMH), price undisclosed",
+   "basis": "FT 2021; Forbes 2021-02-26"
+  },
+  {
+   "claim": "Forbes estimated brand at about $630M and his cash at least $300M (estimate)",
+   "basis": "Forbes, 2021-02-26"
+  },
+  {
+   "claim": "Tidal: Square agreed to pay $297M in cash and stock for a significant majority stake, March 2021",
+   "basis": "The Verge; NYT, 2021-03-04"
+  },
+  {
+   "claim": "Catch: started with a hit record and famous partners; valuations are estimates",
+   "basis": "channel/research/jay-z.md"
+  }
+ ]
+}

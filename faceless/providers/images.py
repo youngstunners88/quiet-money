@@ -210,7 +210,8 @@ def generate(prompt: str, *, seed: int, hero: bool = False, job: str | None = No
     w, h = cfg["width"], cfg["height"]
     cache = Paths.cache / "images"
     cache.mkdir(parents=True, exist_ok=True)
-    digest = hashlib.sha1(f"{prompt}|{w}x{h}|{seed}|{hero}".encode(), usedforsecurity=False).hexdigest()[:16]
+    models = f"{cfg.get('cloudflare_model')}|{cfg.get('cloudflare_hero_model')}|{cfg.get('muapi_model')}|{cfg.get('muapi_hero_model')}"   # a new model must never reuse older, softer stills
+    digest = hashlib.sha1(f"{prompt}|{w}x{h}|{seed}|{hero}|{models}".encode(), usedforsecurity=False).hexdigest()[:16]
     for existing in cache.glob(f"{digest}.*.jpg"):
         return existing.name.split(".")[1], str(existing)
 
