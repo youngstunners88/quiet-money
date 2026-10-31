@@ -31,7 +31,11 @@ def gen(prompt,outname):
     else: print("timeout generating"); return False
     time.sleep(2)
     adb("input keyevent 111")  # hide keyboard if any
-    tile=find(lambda t:t.endswith(", 1 item") or ", 1 item" in t)
+    tile=None
+    for _ in range(6):
+        tile=find(lambda t:", 1 item" in t)
+        if tile: break
+        time.sleep(2)
     if not tile: print("no tile", [t for t,_,_ in tree()][:12]); return False
     tap(tile); time.sleep(4)
     mo=find(lambda t:t=="More options")
