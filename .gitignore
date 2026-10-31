@@ -80,3 +80,7 @@ distribution/editions/**/*.mp4
 # rendered hero edits (large, reproducible with tools/hero_edit.py)
 channel/flow/hero/*.mp4
 channel/services/web3-video/outbound/drafts-*.md
+
+# third-party clones (Showhow engine, owner approved 2026-10-31): never commit
+repo-farm/showhow/
+production/showhow/
