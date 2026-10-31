@@ -1,0 +1,4 @@
+{
+  "voice": {"id": "en-US-AndrewMultilingualNeural", "name": "Andrew (Edge voice, Quiet Money standard)", "model": "edge"},
+  "theme": { "motion": "measured", "handover": "continuous" }
+}
