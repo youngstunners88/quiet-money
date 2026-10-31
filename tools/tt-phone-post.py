@@ -51,6 +51,7 @@ video,capfile=sys.argv[1],sys.argv[2]
 page_only="--page-only" in sys.argv
 dur=(sys.argv[sys.argv.index("--dur")+1] if "--dur" in sys.argv else "")   # mm:ss of the video, to pick the right tile
 want=ascii_safe(open(capfile,encoding="utf-8").read().strip())
+if re.search(r"#\w+\s*$",want): want+="\n\nEducation, not financial advice."   # a caption that ends on a hashtag gets the last tag autocompleted into another one (#quietmoney -> #quietmoneyclothing)
 sys.path.insert(0,os.path.join(os.path.dirname(os.path.abspath(__file__)),".."))
 from faceless import ttpolicy                                      # skill faceless-tiktok-policy: refuse wording that can trip TikTok's rules
 bad=ttpolicy.blockers(want)
@@ -61,7 +62,7 @@ if len(tags)>5:
     for t in tags[5:]: want=want.replace(" "+t,"",1)
 if any(ord(c)>127 for c in want): die("non-ASCII in caption")
 if not page_only:
-    fn=os.path.basename(video)
+    fn=os.path.basename(os.path.dirname(os.path.abspath(video)))+"_"+os.path.basename(video)   # unique name per video: several packs all call theirs video.mp4 and overwrite each other on the phone
     subprocess.run(["adb","push",video,f"/sdcard/Download/QuietMoney/{fn}"],capture_output=True)
     adb(f"touch /sdcard/Download/QuietMoney/{fn}; am broadcast -a android.intent.action.MEDIA_SCANNER_SCAN_FILE -d file:///sdcard/Download/QuietMoney/{fn}")
     adb("am force-stop com.ss.android.ugc.trill"); time.sleep(1); adb("monkey -p com.ss.android.ugc.trill 1"); time.sleep(6)
@@ -85,22 +86,27 @@ if not page_only:
     def avg(cmd):
         r=subprocess.run(cmd,shell=True,capture_output=True); return list(r.stdout[:3]) if len(r.stdout)>=3 else None
     want_rgb=avg(f'ffmpeg -v error -ss 0.3 -i "{video}" -frames:v 1 -vf scale=1:1 -f rawvideo -pix_fmt rgb24 -')
-    def tray_matches():
-        """the selected-video tray shows the first frame: its average colour must match the file we mean to post (a same-length older video is the usual mix-up)"""
-        subprocess.run(f"adb exec-out screencap -p > {SC}/tt_sel.png",shell=True)
-        got=avg(f'ffmpeg -v error -i {SC}/tt_sel.png -vf "crop=150:150:50:1930,scale=1:1" -frames:v 1 -f rawvideo -pix_fmt rgb24 -')
-        if not got or not want_rgb: return False
-        d=sum(abs(x-y) for x,y in zip(got,want_rgb)); print("tray colour",got,"want",want_rgb,"diff",d)
-        return d<=45
-    tiles=[(t,x,y) for t,x,y in tree() if dur and t==dur]
-    if not tiles: tiles=[("newest",541,808)]
-    picked=False
-    for t,x,y in tiles[:6]:
-        adb(f"input tap {x} {y}"); time.sleep(2.5)
-        if tray_matches(): picked=True; break
-        adb("input keyevent 4"); time.sleep(2)                         # wrong video: back to the gallery grid, try the next tile of that length
-    if not picked: die("could not find the right video in the gallery (colour check failed for every tile of that length)")
-    step("Next",lambda t:t=="Next",8); time.sleep(3)
+    def tile_diff(x,y):
+        """average colour of the tile's thumbnail (the duration label sits at its bottom right) against the file's first frame"""
+        subprocess.run(f"adb exec-out screencap -p > {SC}/tt_grid.png",shell=True)
+        got=avg(f'ffmpeg -v error -i {SC}/tt_grid.png -vf "crop=200:200:{max(x-260,0)}:{max(y-300,0)},scale=1:1" -frames:v 1 -f rawvideo -pix_fmt rgb24 -')
+        if not got or not want_rgb: return 999
+        return sum(abs(a-b) for a,b in zip(got,want_rgb))
+    try: _d=float(subprocess.check_output(["ffprobe","-v","error","-show_entries","format=duration","-of","csv=p=0",video],text=True))
+    except Exception: _d=None
+    grid={dur} | ({f"{int(round(_d))//60:02d}:{int(round(_d))%60:02d}"} if _d else set())   # the system picker truncates the length, the gallery grid rounds it
+    tiles=[(t,x,y) for t,x,y in tree() if t in grid]
+    if "--grid" in sys.argv: print("grid tiles:",tiles); sys.exit(0)                   # stop at the gallery grid so the right tile can be picked by eye
+    if os.environ.get("TT_PICK"): tiles=[(dur,)+tuple(map(int,os.environ["TT_PICK"].split(",")))]   # TT_PICK="x,y": tap this tile's duration label position
+    scored=sorted(((tile_diff(x,y),x,y) for t,x,y in tiles),key=lambda r:r[0])
+    print("tiles of that length (colour diff, x, y):",scored)
+    if not scored: die("no gallery tile of that length")
+    if len(scored)>1 and scored[0][0]>45: die("several tiles of that length and none clearly matches the file: pick the right one by hand")
+    if len(scored)>1: print("several near-identical tiles: older copies of the same video, taking the first")
+    _,x,y=scored[0]; adb(f"input tap {x-150} {y-150}"); time.sleep(2.5)
+    nx=find(lambda t:t=="Next" or t.startswith("Next ("),8)
+    if not nx: die("Next missing")
+    tap(nx); time.sleep(3)
     step("Next 2",lambda t:t=="Next",10); time.sleep(3)
 if not find(lambda t:t.startswith("Add description") or t.startswith(want[:20]),10): die("post page missing")
 adb("input tap 344 477"); time.sleep(1.5)
