@@ -13,6 +13,7 @@ import hashlib
 import io
 import math
 import random
+import re
 import threading
 import time
 import urllib.parse
@@ -160,14 +161,15 @@ _POLL_LOCK = threading.Lock()   # the anonymous tier allows one request at a tim
 def pollinations(prompt: str, w: int, h: int, seed: int, out, hero: bool = False) -> None:
     q = urllib.parse.quote(prompt[:900])
     with _POLL_LOCK:
-        for attempt in range(4):   # sporadic 402/429 when requests come too fast; a short wait clears it
+        for attempt in range(8):   # 402/429 when requests come too fast; the anonymous tier says how long to wait ("Retry after 37s")
             r = http().get(f"https://image.pollinations.ai/prompt/{q}",
                            params={"width": w, "height": h, "nologo": "true", "seed": seed, "model": "flux"}, timeout=180)
             if r.status_code == 200 and "image" in r.headers.get("content-type", ""):
                 break
-            if r.status_code not in (402, 429, 500, 502, 503) or attempt == 3:
+            if r.status_code not in (402, 429, 500, 502, 503) or attempt == 7:
                 raise ProviderError(f"pollinations {r.status_code}")
-            time.sleep(2 + 2 * attempt)
+            m = re.search(r"[Rr]etry after (\d+)s", r.text or "")
+            time.sleep(min(60, int(m.group(1)) + 2) if m else 2 + 2 * attempt)
     im = Image.open(io.BytesIO(r.content)).convert("RGB")
     iw, ih = im.size
     im = im.crop((0, 0, iw, int(ih * 0.93)))  # anonymous tier stamps a logo bottom-right

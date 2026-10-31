@@ -1,0 +1,108 @@
+{
+  "source": "human",
+  "title": "Taylor Swift Spent 6 Years Buying Back Her Songs",
+  "hook_text": "SHE DIDN'T OWN HER OWN SONGS",
+  "beats": [
+    {
+      "say": "At fifteen, Taylor Swift signed a deal that meant she did not own her own songs.",
+      "callout": "",
+      "visual": "an old black vinyl record spinning on a turntable in a dim room, a single warm lamp, extreme close-up, no people"
+    },
+    {
+      "say": "Her label kept the master recordings. That was the standard deal. She was a teenager, and she signed.",
+      "callout": "THE STANDARD DEAL",
+      "visual": "a thick contract stack with a pen resting on top on a polished boardroom table, cold window light, no faces"
+    },
+    {
+      "say": "In twenty nineteen the label was sold, and her first six albums went with it, for around three hundred million dollars.",
+      "callout": "$300 MILLION",
+      "visual": "a huge steel vault door closing slowly in a dark hall, thin light along the edge"
+    },
+    {
+      "say": "She says she asked for years for a chance to own her work, and never got one she could take.",
+      "callout": "SHE ASKED FOR YEARS",
+      "visual": "a lone empty chair at the end of a long conference table, late evening light through blinds"
+    },
+    {
+      "say": "So what does a person do when someone else owns the thing they made?",
+      "callout": "WHAT DO YOU DO?",
+      "visual": "a silhouette standing at the edge of a rooftop looking over a glowing city at blue hour"
+    },
+    {
+      "say": "Here is the part nobody tells you. She kept the publishing, because she wrote the songs. So she could record them again.",
+      "callout": "SHE KEPT PUBLISHING",
+      "visual": "a handwritten notebook page under a desk lamp with a pencil resting across it, shallow depth of field"
+    },
+    {
+      "say": "She re-recorded her old albums as Taylor's Version. Fans streamed the new ones.",
+      "callout": "TAYLOR'S VERSION",
+      "visual": "a professional recording booth with a hanging microphone glowing in warm amber light, no people"
+    },
+    {
+      "say": "In twenty twenty the catalog was resold, reportedly for three hundred million dollars or more.",
+      "callout": "SOLD AGAIN",
+      "visual": "two hands exchanging a heavy briefcase across a dark marble table, dramatic side light, no faces"
+    },
+    {
+      "say": "In May twenty twenty five, she announced she had bought her masters back. Price undisclosed, but reports say nine figures.",
+      "callout": "BOUGHT BACK",
+      "visual": "a brass key being placed into the hand of a person standing before a tall wooden door at sunrise, silhouette"
+    },
+    {
+      "say": "Six years. A public fight. Hundreds of millions of dollars. To own what she wrote at fifteen.",
+      "callout": "6 YEARS",
+      "visual": "a calendar wall of torn pages blowing across an empty stage under a single spotlight"
+    },
+    {
+      "say": "The honest catch: her fame made this possible. Most artists never get that chance.",
+      "callout": "THE CATCH",
+      "visual": "a single locked door at the end of a dim concrete hallway with a thin line of light underneath"
+    },
+    {
+      "say": "The lesson is sharper. Before you sign, read who owns the work you make, and what has to happen for it to come back.",
+      "callout": "WHO OWNS THE WORK?",
+      "visual": "a hand running a finger along a line of a printed contract under a lamp, close-up, no faces"
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "an empty highway stretching toward a glowing sunrise horizon, wide shot"
+    }
+  ],
+  "caption": "Taylor Swift signed at 15 and did not own her masters. In 2025 she announced she bought them back. The contract lesson, and the honest catch. Educational content, not financial advice.",
+  "description": "Taylor Swift's masters were sold in 2019 for around $300 million, resold in 2020, and bought back by her in 2025. What it teaches about who owns the work you create, and the catch.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#taylorswift",
+    "#ownership",
+    "#quietmoney"
+  ],
+  "first_comment": "Have you ever signed something without checking who owns the work? Educational only, not financial advice.",
+  "facts": [
+    {
+      "claim": "Signed with Big Machine at 15 (2005); label kept the masters, standard at the time",
+      "basis": "The Guardian, 2025-05-30"
+    },
+    {
+      "claim": "2019 sale of Big Machine, with her first six albums' masters, for around $300M",
+      "basis": "Variety, 2025"
+    },
+    {
+      "claim": "She says she asked for years for a chance to own her work (accounts conflict)",
+      "basis": "The Guardian; The Verge; Deadline"
+    },
+    {
+      "claim": "Kept publishing, enabled re-recordings",
+      "basis": "NPR, 2025-05-31"
+    },
+    {
+      "claim": "2020 resale to Shamrock reportedly $300M or more",
+      "basis": "Variety 2020; Billboard via The Verge"
+    },
+    {
+      "claim": "2025-05-30 announced buying masters back; price undisclosed, nine figures reported",
+      "basis": "Reuters; Variety; Deadline"
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "source": "human",
+  "title": "Your $1,200 Phone Costs 48 Hours Of Work",
+  "hook_text": "$1,200 = 48 HOURS OF WORK",
+  "beats": [
+    {
+      "say": "A twelve hundred dollar phone is not twelve hundred dollars. It is forty eight hours of your life.",
+      "callout": "",
+      "visual": "a sleek dark smartphone lying on a stack of time cards under a cold desk lamp, extreme close-up, no text, no people"
+    },
+    {
+      "say": "There is a simple rule. Before any purchase, divide the price by what you earn in an hour after tax.",
+      "callout": "PRICE / HOURLY PAY",
+      "visual": "a hand holding a pocket calculator over a wooden desk in warm morning light, no faces"
+    },
+    {
+      "say": "Say you take home twenty five dollars an hour. That is your exchange rate between money and time.",
+      "callout": "$25 AN HOUR",
+      "visual": "an old brass clock face with a gold coin balanced on the hour hand, dramatic dark background"
+    },
+    {
+      "say": "Twelve hundred divided by twenty five is forty eight. Six full workdays for one phone.",
+      "callout": "6 WORKDAYS",
+      "visual": "a wall calendar with six consecutive days crossed out in red marker, close-up, soft light"
+    },
+    {
+      "say": "Does that change how it feels? For some, yes. For others, the phone is still worth it. Both are fine.",
+      "callout": "STILL WORTH IT?",
+      "visual": "a fork in a quiet forest path under soft backlight, two directions, no people"
+    },
+    {
+      "say": "Now try something small. A five dollar coffee every workday is about twelve hundred fifty dollars a year.",
+      "callout": "$5 EVERY DAY",
+      "visual": "a steaming paper cup of coffee on a worn desk beside a stack of coins, morning window light"
+    },
+    {
+      "say": "Here is the part nobody tells you. That is fifty hours of work a year. More than a full workweek, on one habit.",
+      "callout": "50 HOURS A YEAR",
+      "visual": "a stopwatch ticking on a dark table with a long time trail behind it, long exposure"
+    },
+    {
+      "say": "Now flip it. A three thousand dollar vacation is one hundred twenty hours. Fifteen workdays for a trip you will remember.",
+      "callout": "$3,000 = 120 HOURS",
+      "visual": "a lone tropical beach at sunrise with golden light on calm water, wide shot, no people"
+    },
+    {
+      "say": "This rule does not tell you to stop spending. It tells you what you are actually trading.",
+      "callout": "WHAT ARE YOU TRADING?",
+      "visual": "a pair of balanced brass scales with a gold coin on one side and an hourglass on the other"
+    },
+    {
+      "say": "So here is the move. Find your hourly number tonight. Write it on a card in your wallet.",
+      "callout": "FIND YOUR NUMBER",
+      "visual": "a small white index card with a pen beside it on a dark wooden table, close-up, no text visible"
+    },
+    {
+      "say": "Next time you hover over the buy button, divide first. Then decide.",
+      "callout": "DIVIDE FIRST",
+      "visual": "a finger hovering over a glowing phone screen in a dark room, extreme close-up, no faces"
+    },
+    {
+      "say": "Spend on what is worth your hours. Skip what is not. Follow for the money rules school never taught you.",
+      "callout": "SPEND ON WHAT'S WORTH IT",
+      "visual": "an empty highway stretching toward a glowing sunrise horizon, wide shot"
+    }
+  ],
+  "caption": "Price divided by your after-tax hourly pay. A $1,200 phone at $25 an hour is 48 hours of work. Spend on what is worth your hours. Educational content, not financial advice.",
+  "description": "A simple rule: divide any price by your after-tax hourly pay to see what you trade for it. A $1,200 phone at $25 an hour is 48 hours, six workdays.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#budgeting",
+    "#moneytips",
+    "#quietmoney"
+  ],
+  "first_comment": "What is the last thing you bought that was clearly worth the hours? Educational only, not financial advice.",
+  "facts": [
+    {
+      "claim": "$1,200 / $25 per hour = 48 hours = 6 eight-hour days",
+      "basis": "arithmetic"
+    },
+    {
+      "claim": "$5 a workday x 250 workdays = $1,250 a year = 50 hours at $25",
+      "basis": "arithmetic"
+    },
+    {
+      "claim": "$3,000 / $25 = 120 hours = 15 eight-hour days",
+      "basis": "arithmetic"
+    }
+  ]
+}

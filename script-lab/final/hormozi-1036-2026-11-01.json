@@ -1,0 +1,100 @@
+{
+  "source": "human",
+  "title": "From $1,036 In The Bank To A $46 Million Deal",
+  "hook_text": "$1,036 TO A $46 MILLION DEAL",
+  "beats": [
+    {
+      "say": "He says he had one thousand thirty six dollars left in the bank. Then he sold two thirds of his company.",
+      "callout": "",
+      "visual": "a nearly empty wallet with a few crumpled bills on a worn wooden table under a single dim lamp, no people, no text"
+    },
+    {
+      "say": "That man is Alex Hormozi. The low point he describes was December twenty sixteen.",
+      "callout": "$1,036 LEFT",
+      "visual": "an empty winter street at night with one lit shop window, falling snow, wide shot, no people"
+    },
+    {
+      "say": "So what changed? Not luck. A method, and years of work.",
+      "callout": "WHAT CHANGED?",
+      "visual": "a lone figure climbing a long concrete staircase toward a bright doorway at dawn, silhouette"
+    },
+    {
+      "say": "He built a company that taught gym owners how to sell memberships, then sold the same customers supplements.",
+      "callout": "SELL TO THE SAME PEOPLE",
+      "visual": "a bright empty gym floor with rows of weights and rubber mats in early morning light, no people"
+    },
+    {
+      "say": "Here is the part nobody tells you. He did not chase strangers. He found a hungry group and kept serving it.",
+      "callout": "SERVE ONE GROUP",
+      "visual": "a crowd of silhouettes facing a single glowing stage in a dark hall, backlit"
+    },
+    {
+      "say": "In twenty twenty one, he says, he sold a sixty six percent stake to a private equity firm, in cash.",
+      "callout": "66% SOLD",
+      "visual": "a heavy glass boardroom table with a single document and a pen under cool light, no faces"
+    },
+    {
+      "say": "That put the value of the two companies at forty six point two million dollars, he says.",
+      "callout": "$46.2 MILLION",
+      "visual": "a tall glowing tower of gold coins rising into a dark sky, dramatic low angle"
+    },
+    {
+      "say": "He kept the last third, and later started a firm that buys stakes in other businesses.",
+      "callout": "KEPT A THIRD",
+      "visual": "a brass key resting on an open ledger beside a small potted plant, warm desk light"
+    },
+    {
+      "say": "Now the honest catch. About one in five new US businesses close within a year, according to government data.",
+      "callout": "1 IN 5 CLOSE",
+      "visual": "a row of shuttered storefronts on a rainy street at dusk, one shop dark with a faded sign, no text"
+    },
+    {
+      "say": "And by his own telling, it took years of long weeks and failures. Nobody can promise yours.",
+      "callout": "NO PROMISES",
+      "visual": "a stack of worn notebooks and a cold coffee cup on a desk at 3 a.m., low light"
+    },
+    {
+      "say": "So what is the takeaway? Pick one group with a clear problem, and solve it better than anyone around you.",
+      "callout": "ONE GROUP, ONE PROBLEM",
+      "visual": "a single spotlight on a small wooden desk in a dark room, a notebook and pencil on top, no faces"
+    },
+    {
+      "say": "That is a method, not a miracle. Test it small before you bet anything big.",
+      "callout": "TEST IT SMALL",
+      "visual": "a small flame growing on a candle wick in a dark room, extreme close-up"
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "an empty highway stretching toward a glowing sunrise horizon, wide shot"
+    }
+  ],
+  "caption": "He says he had $1,036 left in the bank in December 2016, then in 2021 sold a 66% stake at a $46.2 million valuation. What the method was, and the honest catch. Educational content, not financial advice.",
+  "description": "Alex Hormozi says his bank balance fell to $1,036 in December 2016, and in 2021 he sold a 66% stake in Gym Launch and Prestige Labs at a $46.2 million valuation. The method, and the catch: about 1 in 5 new US businesses close in year one.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#alexhormozi",
+    "#entrepreneurship",
+    "#quietmoney"
+  ],
+  "first_comment": "What is one problem you could solve better than the people around you? Educational only, not financial advice.",
+  "facts": [
+    {
+      "claim": "He says his bank balance fell to $1,036 in December 2016",
+      "basis": "his own Threads post; channel/research/hormozi.md"
+    },
+    {
+      "claim": "2021: sold 66% stake in Gym Launch and Prestige Labs to American Pacific Group at a $46.2M valuation, in cash (his own post)",
+      "basis": "Threads post DMaaOoMgjBs; BusinessWire"
+    },
+    {
+      "claim": "Gym Launch taught gym owners to sell memberships; Prestige Labs sold supplements to the same customers",
+      "basis": "channel/research/hormozi.md"
+    },
+    {
+      "claim": "About 1 in 5 US businesses close in the first year",
+      "basis": "BLS Business Employment Dynamics"
+    }
+  ]
+}

@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Stage locally produced Shorts (production/output/<day>/<job>/final.mp4 + meta.json) as distribution/queue/<day>/q<N>/ for the phone upload scripts.
-Rewrites wording that trips ttpolicy (skill faceless-tiktok-policy), lints, and prints loudness. usage: stage_local.py DAY"""
+Rewrites wording that trips ttpolicy (skill faceless-tiktok-policy), lints, and prints loudness. usage: stage_local.py DAY [--into QUEUE_DAY] [--jobs JOB_ID,JOB_ID,...]
+(--jobs stages only those jobs, numbered q1.. in the order given; --into names a different queue day than the render day)"""
 import json, os, re, shutil, subprocess, sys
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
 from faceless import ttpolicy
@@ -11,12 +12,15 @@ def clean(t):
     for a, b in SWAP: t = re.sub(a, b, t)
     for a, b in ASCII.items(): t = t.replace(a, b)
     return t.encode("ascii", "ignore").decode()
+args = sys.argv[2:]
+into = args[args.index("--into") + 1] if "--into" in args else day
+only = args[args.index("--jobs") + 1].split(",") if "--jobs" in args else None
 n = 0
-for d in sorted(os.listdir(os.path.join(root, "production/output", day))):
+for d in (only if only else sorted(os.listdir(os.path.join(root, "production/output", day)))):
     p = os.path.join(root, "production/output", day, d)
     if not os.path.isfile(p + "/final.mp4") or not os.path.isfile(p + "/meta.json"): continue
     m = json.load(open(p + "/meta.json")); n += 1
-    q = os.path.join(root, "distribution/queue", day, f"q{n}"); os.makedirs(q, exist_ok=True)
+    q = os.path.join(root, "distribution/queue", into, f"q{n}"); os.makedirs(q, exist_ok=True)
     shutil.copy(p + "/final.mp4", q + "/video.mp4")
     title, desc, cap = clean(m["title"]), clean(m["description"]), clean(m["caption"])
     open(q + "/POST.md", "w").write(f"# q{n}\n\n## YouTube Shorts\nTitle: {title}\n\n{desc}\n\n## TikTok\n{cap}\n")

@@ -13,6 +13,7 @@ import json
 import re
 import shutil
 import subprocess
+import tempfile
 import time
 from dataclasses import dataclass
 from datetime import datetime, timezone
@@ -109,7 +110,7 @@ def checks_quota() -> list[Check]:
 
 def checks_machine() -> list[Check]:
     out = []
-    for label, path in (("repo", STUDIO), ("temp", "/tmp")):   # nosec B108 - only asks how much space is free
+    for label, path in (("repo", STUDIO), ("temp", tempfile.gettempdir())):   # the directory the run really writes to (TMPDIR), not a hardcoded /tmp
         free = shutil.disk_usage(path).free / 2**30
         out.append(Check(f"disk:{label}", FAIL if free < 1.5 else WARN if free < 4 else OK, f"{free:.1f} GB free", "delete production/output and production/cache for old days" if free < 4 else ""))
     git = STUDIO / ".git"
