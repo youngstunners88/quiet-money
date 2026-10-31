@@ -73,8 +73,9 @@ def test_a_switched_off_pillar_never_enters_the_daily_plan(monkeypatch):
     assert "ledger" not in analytics.pillar_weights() and "story" in analytics.pillar_weights()
 
 
-def test_the_drawn_series_is_on_in_the_shipped_plan():
-    assert config.pillar("ledger").enabled and config.pillar("ledger").name == "Penny's Money Lab"
+def test_the_drawn_series_is_retired_from_the_shipped_plan():
+    """The owner scrapped the Penny / Fee Gremlin look on 2026-10-31 (one measured video, 2 views); the pillar stays defined so it can come back."""
+    assert not config.pillar("ledger").enabled and config.pillar("ledger").name == "Penny's Money Lab"
 
 
 def test_muapi_instant_models_answer_without_a_job_record(monkeypatch):

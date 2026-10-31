@@ -1,0 +1,242 @@
+{
+  "title": "LeBron Passed on a Reported $15M for a Pizza Stake",
+  "hook_text": "$15M OR A PIZZA STAKE?",
+  "beats": [
+    {
+      "say": "In 2015, LeBron James walked away from a reported fifteen million dollars to back a pizza chain.",
+      "callout": "",
+      "visual": "a lone basketball under a single hard sodium light on an empty court at dawn, a paper takeout bag with a red logo-free pizza box beside it, long shadows",
+      "scene": {
+        "type": "fork",
+        "left": {
+          "label": "McDONALD'S",
+          "value": "$15M",
+          "sub": "over 4 years, reported",
+          "word": "fifteen"
+        },
+        "right": {
+          "label": "BLAZE PIZZA",
+          "value": "A STAKE",
+          "sub": "a small chain",
+          "word": "pizza"
+        },
+        "pick": "right"
+      }
+    },
+    {
+      "say": "McDonald's had paid him about four million dollars a year.",
+      "callout": "",
+      "visual": "close on a stack of crisp cash held by a rubber band on a steel counter, cold fluorescent light, shallow depth of field",
+      "scene": {
+        "type": "stat",
+        "value": "$4M",
+        "label": "A YEAR FROM McDONALD'S",
+        "word": "four"
+      }
+    },
+    {
+      "say": "Another four years meant roughly fifteen million, his business partner says.",
+      "callout": "$15M OVER 4 YEARS",
+      "visual": "a thick paper contract and a pen on a dark conference table, one desk lamp, a glass wall with city lights behind it",
+      "scene": {
+        "type": "stat",
+        "value": "$15M",
+        "label": "ANOTHER 4 YEARS · HIS PARTNER SAYS",
+        "word": "fifteen"
+      }
+    },
+    {
+      "say": "So he backed a small pizza chain instead, with about a million dollars of his own.",
+      "callout": "~$1M OF HIS OWN",
+      "visual": "an open pizza oven glowing orange in a narrow restaurant kitchen at night, flour dust in the air, a chef's silhouette",
+      "scene": {
+        "type": "stat",
+        "value": "~$1M",
+        "label": "HIS OWN MONEY · BLAZE, 2012",
+        "word": "million"
+      }
+    },
+    {
+      "say": "A flat fee ends when the contract ends. A stake keeps growing with the company.",
+      "callout": "FEE VS STAKE",
+      "visual": "two doors side by side in a long concrete corridor, the left one shut and dim, the right one open with warm light spilling out",
+      "scene": {
+        "type": "versus",
+        "left": {
+          "label": "A FLAT FEE",
+          "sub": "ends with the contract",
+          "word": "flat"
+        },
+        "right": {
+          "label": "A STAKE",
+          "sub": "grows with the company",
+          "word": "stake"
+        }
+      }
+    },
+    {
+      "say": "ESPN reported he owns more than ten percent of Blaze. So what was that stake worth?",
+      "callout": ">10% OF BLAZE",
+      "visual": "a pie chart-like pizza cut into slices on a dark table, one slice lifted away trailing steam, moody overhead light",
+      "scene": {
+        "type": "ring",
+        "percent": 10,
+        "text": ">10%",
+        "label": "OF BLAZE · ESPN REPORTED",
+        "word": "percent"
+      }
+    },
+    {
+      "say": "By 2022, Forbes estimated it at about thirty million dollars, roughly thirty times his first investment, on paper.",
+      "callout": "~$30M (FORBES EST.)",
+      "visual": "a tall glass tower at blue hour, a single window lit gold at the top floor, wet street reflections below",
+      "scene": {
+        "type": "bars",
+        "items": [
+          {
+            "label": "FIRST INVESTMENT",
+            "value": 1,
+            "text": "~$1M",
+            "word": "investment"
+          },
+          {
+            "label": "FORBES ESTIMATE, 2022",
+            "value": 30,
+            "text": "~$30M",
+            "word": "thirty"
+          }
+        ]
+      }
+    },
+    {
+      "say": "In 2008 he took a small stake in Beats for promoting the headphones. Was that a fluke?",
+      "callout": "BEATS, 2008",
+      "visual": "a pair of over-ear headphones resting on a black speaker in a dark studio, red light strip, dust motes",
+      "scene": {
+        "type": "timeline",
+        "events": [
+          {
+            "year": "2008",
+            "label": "BEATS STAKE",
+            "word": "2008"
+          },
+          {
+            "year": "2014",
+            "label": "APPLE BUYS",
+            "word": "Apple"
+          }
+        ],
+        "active": 0
+      }
+    },
+    {
+      "say": "Apple bought Beats for three billion dollars in 2014, and he reportedly collected about thirty million.",
+      "callout": "$3B APPLE DEAL",
+      "visual": "a heavy bank vault door half open in dark shadow, one beam of light across brushed steel",
+      "scene": {
+        "type": "stat",
+        "value": "$3B",
+        "label": "APPLE PAID FOR BEATS",
+        "value2": "~$30M",
+        "label2": "HIS REPORTED CUT",
+        "word": "three",
+        "word2": "thirty"
+      }
+    },
+    {
+      "say": "So why choose a stake over guaranteed money? A check pays once. Ownership keeps paying as the company grows.",
+      "callout": "",
+      "visual": "a single oak tree growing through cracked concrete in an empty lot at sunrise, long golden light",
+      "scene": {
+        "type": "phrase",
+        "lines": [
+          "A CHECK PAYS ONCE.",
+          "OWNERSHIP KEEPS PAYING."
+        ],
+        "hl": [
+          "ONCE",
+          "KEEPS"
+        ]
+      }
+    },
+    {
+      "say": "The catch: he was already among the league's highest-paid players, and most equity deals pay nothing.",
+      "callout": "",
+      "visual": "an empty arena tunnel with one lit exit at the end, wet floor, harsh overhead lights, no people",
+      "scene": {
+        "type": "catch",
+        "lines": [
+          "ALREADY AMONG THE HIGHEST-PAID",
+          "MOST EQUITY DEALS PAY NOTHING"
+        ],
+        "hl": [
+          "NOTHING"
+        ]
+      }
+    },
+    {
+      "say": "Check or stake? Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "a lone figure in silhouette on a rooftop at dusk looking at a city skyline, a gold light on the horizon",
+      "scene": {
+        "type": "end",
+        "text": "CHECK OR STAKE?"
+      }
+    }
+  ],
+  "caption": "A fixed check ends with the contract. A stake keeps growing. 🍕\n\n#money #personalfinance #wealth #equity #business",
+  "description": "In 2015 LeBron James let his McDonald's endorsement lapse, a reported $14-15 million over four years, and backed Blaze Pizza instead. Forbes later estimated his stake at about $30 million. The lesson: ask what you can own, not only what you will be paid. Figures are reported or estimated; he was already among the highest-paid players alive.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#wealth",
+    "#business",
+    "#equity"
+  ],
+  "first_comment": "Guaranteed $15 million, or about $1 million into a company you believe in. Which one do you take?",
+  "facts": [
+    {
+      "claim": "In 2015 LeBron James did not renew his McDonald's endorsement; his business partner Maverick Carter said that meant walking away from about $14-15 million over four years.",
+      "basis": "Forbes, Kurt Badenhausen, 2017-04-26; brief channel/research/lebron-james.md."
+    },
+    {
+      "claim": "McDonald's extended the deal in 2012 for roughly $4 million a year.",
+      "basis": "Forbes, 2017-04-26."
+    },
+    {
+      "claim": "He was an early Blaze Pizza investor in 2012 with a first investment of about $1 million (ESPN said less than $1 million).",
+      "basis": "PitchBook 2018; ESPN as cited by Investopedia."
+    },
+    {
+      "claim": "ESPN's Darren Rovell reported he owns more than 10% of Blaze Pizza.",
+      "basis": "Forbes, 2017-04-26."
+    },
+    {
+      "claim": "Forbes estimated his Blaze stake at about $30 million in 2022. This is an estimate, not a sale.",
+      "basis": "CNBC, 2022-06-02, citing Forbes."
+    },
+    {
+      "claim": "In 2008 he received a small Beats stake in exchange for promoting the headphones; Apple bought Beats for $3 billion in 2014 and he reportedly received about $30 million in cash and stock.",
+      "basis": "PitchBook 2018; SBN 2015; Investopedia 2023 (reported figure)."
+    },
+    {
+      "claim": "He was among the highest-paid NBA players when he made these choices (Forbes ranked him No. 1 for 2022-23, $124.5 million).",
+      "basis": "Forbes, 2023-02-08."
+    }
+  ],
+  "source": "human",
+  "pillar": "story",
+  "look": "explainer",
+  "loop_map": {
+    "stakes": "LeBron James choosing between a reported $15 million of McDonald's money and a stake in a small pizza chain in 2015.",
+    "big_question": "Why did LeBron James turn down guaranteed money for a small pizza chain?",
+    "assume": "A guaranteed check is the safe choice.",
+    "reveal": "Ownership kept paying: Forbes estimates the stake at about $30 million, and an earlier Beats stake paid a reported $30 million.",
+    "rehook_beats": [
+      4,
+      6,
+      8
+    ],
+    "payoff_beat": 10
+  }
+}

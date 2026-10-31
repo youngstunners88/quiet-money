@@ -1,0 +1,58 @@
+{
+  "id": "2026-10-31-s0-story-lebron-james-turned-down-a-repor",
+  "pillar": "story",
+  "topic": "LeBron James Turned Down a Reported $15M From McDonald's to Own a Slice of Blaze Pizza",
+  "day": "2026-10-31",
+  "slot": 0,
+  "status": "packaged",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-31T04:50:55Z",
+      "words": 183
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-31T04:51:28Z",
+      "seconds": 63.193,
+      "provider": "gemini"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-31T04:51:28Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-31T04:53:07Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-31T04:53:07Z",
+      "score": 99
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-31T04:53:08Z"
+    }
+  ],
+  "artifacts": {
+    "title": "LeBron Passed on a Reported $15M for a Pizza Stake",
+    "style": "explainer",
+    "video": "/home/user/qm-auto/production/output/2026-10-31/2026-10-31-s0-story-lebron-james-turned-down-a-repor/final.mp4",
+    "cover": "/home/user/qm-auto/production/output/2026-10-31/2026-10-31-s0-story-lebron-james-turned-down-a-repor/cover.jpg"
+  },
+  "scores": {
+    "gauntlet": 99,
+    "passed": true
+  },
+  "cost": {
+    "tts:gemini:chars": 1064
+  },
+  "notes": []
+}

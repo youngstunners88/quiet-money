@@ -5,6 +5,8 @@ description: The second visual style of the Quiet Money series, the "ledger" loo
 
 # Ledger: the second look, and the drawn series
 
+> **Retired 2026-10-31.** The owner scrapped the Penny / Fee Gremlin cast: its one measured video got 2 views (median 15.5; seven were made, one reached YouTube). The pillar is `enabled = false`; the code stays so it can be brought back. New drawn work uses `faceless-explainer`.
+
 ## The drawn series "The Ledger" (pillar `ledger`, `drawn = true`)
 Owner's rule (2026-10-11): no OpenRouter for images, and a series independent of Muapi. The Ledger is that series. It calls **no image generator of any kind**
 (no Cloudflare, Muapi, OpenRouter or Pollinations): `visuals.run_drawn` draws every beat, the hook included, as a scene in code; the hook opens on a drawn title page

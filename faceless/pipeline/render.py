@@ -166,6 +166,22 @@ def _run(cmd: list[str]) -> None:
         raise RuntimeError(f"ffmpeg failed: {p.stderr[-1500:]}")
 
 
+def night_page(out: Path) -> Path:
+    """The explainer look's page as a picture: night navy with the brand gold glow. The base of its cover."""
+    W, H = 1080, 1920
+    top, bottom = (0x12, 0x25, 0x4d), (0x03, 0x06, 0x0f)
+    im = Image.new("RGB", (W, H))
+    d = ImageDraw.Draw(im)
+    for y in range(H):
+        p = y / H
+        d.line([(0, y), (W, y)], fill=tuple(round(a + (b - a) * p) for a, b in zip(top, bottom)))
+    glow = Image.new("RGB", (W, H), (0x0b, 0x16, 0x30))
+    ImageDraw.Draw(glow).ellipse([140, 300, 940, 1100], fill=(0xff, 0xd2, 0x3f))
+    im = Image.blend(im, glow.filter(ImageFilter.GaussianBlur(220)), 0.3)
+    im.save(out, "JPEG", quality=92)
+    return out
+
+
 def paper_page(out: Path) -> Path:
     """The ledger's page as a picture: warm paper, a soft gold glow, ruled lines. The base of a drawn video's cover."""
     W, H = 1080, 1920
@@ -311,7 +327,8 @@ def run(job, script: dict, voice: dict, imgs: list[dict]) -> dict:
           "-r", str(fps), "-c:a", "aac", "-b:a", "192k", "-ac", "2", "-t", f"{total:.3f}",
           "-movflags", "+faststart", str(out)])
     cover = job.dir / "cover.jpg"
-    first = imgs[0]["path"] or str(paper_page(job.dir / "cover-paper.jpg"))     # a drawn series has no still: its cover is the hook on ledger paper
+    page = night_page if (job.artifacts or {}).get("style") == "explainer" else paper_page
+    first = imgs[0]["path"] or str(page(job.dir / "cover-paper.jpg"))     # a drawn video has no still: its cover is the hook on ledger paper (explainer: night navy)
     cover_image(first, script.get("hook_text") or script["title"], cover, cfg["accent"])
     (job.dir / "cover-paper.jpg").unlink(missing_ok=True)
     for t in tasks:  # shots are reproducible from cache; keep the job folder light

@@ -300,3 +300,20 @@ Each row was read from the project's own README, manifest, licence file or regis
 | Tool | Stage | Why |
 |---|---|---|
 | CozyClay (NomaDamas/CozyClay) | visuals | A free browser previs studio: block a 3D set, move capsule or rigged cast, cut the camera on a timeline, and export a first frame, a greybox clip, a camera and a prompt for an AI video model, or a storyboard animatic and contact… |
+
+## Intake 2026-10-31 (verified from dossiers in `repo-farm/intake/2026-10-31/`)
+
+Each row was read from the project's own README, manifest, licence file or registry entry; nothing was installed or run. Stars and dates were unavailable where the GitHub API is closed to this machine.
+
+### Parked (named condition)
+
+| Tool | Stage | Why |
+|---|---|---|
+| Showhow (sirioberati/showhow) | render | MIT. |
+| YouTube AI Motion Graphics (sirioberati) | render | MIT. |
+
+### Rejected (recorded so nobody re-evaluates)
+
+| Tool | Stage | Why |
+|---|---|---|
+| Genjustsu Open Source Workflow (sirioberati) | visuals | MIT. |

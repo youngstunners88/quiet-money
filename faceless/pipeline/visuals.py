@@ -56,10 +56,26 @@ def run_drawn(job, script: dict) -> list[dict]:
     return results
 
 
+def run_explainer(job, script: dict) -> list[dict]:
+    """The explainer look (a script with "look": "explainer"): every beat is a diagram drawn in code on one drifting world, timed to the words.
+    No image generator is called. Needs Node 22 and ffmpeg; without them the video is refused rather than shipped with placeholder art."""
+    from faceless.pipeline import explainer
+    if not cards.available():
+        raise ProviderUnavailable("the explainer look needs Node 22 and ffmpeg (HyperFrames); not making a video with placeholder art")
+    job.artifacts["style"] = "explainer"
+    planned = explainer.choose(script)
+    results = [{"beat": i, "provider": "card", "path": None, "prompt": "", "card": planned[i]} for i in range(len(script["beats"]))]
+    write_atomic(job.dir / "images.json", json.dumps(results, indent=1))
+    events.emit("VISUALS_DONE", job=job.id, providers={"card": len(results)}, qa_flagged=0, qa_swapped=0)
+    return results
+
+
 def run(job, script: dict) -> list[dict]:
     pillar = config.pillar(job.pillar)
     if pillar.drawn:
         return run_drawn(job, script)
+    if script.get("look") == "explainer":
+        return run_explainer(job, script)
     cfg = config.load()["images"]
 
     style = cards.style_for(job.id, job.pillar)
