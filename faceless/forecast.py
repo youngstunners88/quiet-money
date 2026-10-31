@@ -17,7 +17,7 @@ from faceless.providers import images as image_providers
 from faceless.state import all_jobs
 
 OPENROUTER_PER_IMAGE = 0.04
-MUAPI_PER_IMAGE = 0.0057           # klein 4B turbo $0.0052 for most beats, $0.0104 for the hook still (Muapi catalog, 2026-10-08)
+MUAPI_PER_IMAGE = 0.0072           # klein 9B turbo $0.0065 for most beats, $0.013 for the hook still (Muapi catalog, 2026-10-08)
 CF_PAID_PER_1K_NEURONS = 0.011     # Workers Paid, beyond the free 10k/day (Cloudflare pricing page, 2026-10-05)
 CF_PAID_BASE_MONTH = 5.0
 RENDER_MINUTES = 4.5               # measured wall-clock per video on this machine

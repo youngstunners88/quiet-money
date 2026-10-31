@@ -88,12 +88,12 @@ gemini_model = "gemini-2.5-flash-preview-tts"
 
 [images]
 chain = ["cloudflare", "muapi", "pollinations", "procedural"]   # never openrouter: the owner banned paid OpenRouter images (2026-10-11)
-cloudflare_model = "@cf/black-forest-labs/flux-2-klein-4b"
-cloudflare_hero_model = "@cf/black-forest-labs/flux-2-klein-4b"   # 9b is sharper but costs ~9x the neurons
+cloudflare_model = "@cf/black-forest-labs/flux-2-klein-9b"   # owner rule 2026-10-31: never the 4B model (soft, smeared faces); the free pool covers fewer stills, Muapi 9b takes the rest
+cloudflare_hero_model = "@cf/black-forest-labs/flux-2-klein-9b"
 cloudflare_daily_neurons = 9500              # free tier is 10,000 neurons/day; keep a margin
 cloudflare_qa_reserve = 2500                # of those, neurons kept for semantic QA (about 28 per still): generation stops at 7,000 so the checks never starve (day 1 of the live run lost them)
-muapi_model = "flux-2-klein-4b-turbo"        # $0.0052 an image (FLUX.2 klein 4B, 720x1280); the free Cloudflare budget is used first
-muapi_hero_model = "flux-2-klein-4b"         # $0.0104, the hook still
+muapi_model = "flux-2-klein-9b-turbo"        # $0.0065 an image (FLUX.2 klein 9B turbo; never 4B, owner rule 2026-10-31); the free Cloudflare budget is used first
+muapi_hero_model = "flux-2-klein-9b"         # $0.013, the hook still
 muapi_daily_usd = 1.5                        # spend cap per UTC day (about 290 images); the wallet itself is the hard limit
 width = 864                                  # 2x3 Cloudflare tiles: same 156 neurons as 768x1344, exact 9:16
 height = 1536

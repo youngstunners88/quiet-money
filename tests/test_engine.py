@@ -1442,14 +1442,14 @@ class _MuSession:
 
 
 def test_muapi_generates_records_spend_and_sends_the_key_only_as_a_header(tmp_path, monkeypatch):
-    sess = _MuSession(_MuResp(200, {"request_id": "r1", "status": "processing", "cost": {"amount_usd": 0.0052}}),
+    sess = _MuSession(_MuResp(200, {"request_id": "r1", "status": "processing", "cost": {"amount_usd": 0.0065}}),
                       [_MuResp(200, {"status": "processing"}), _MuResp(200, {"status": "completed", "outputs": ["https://cdn.example/x.png"], "has_nsfw_contents": [False]})])
     images, ledger = _mu_env(monkeypatch, tmp_path, sess)
     out = tmp_path / "a.jpg"
     images.muapi("a coin on a desk", 864, 1536, 7, out)
-    assert out.exists() and ledger.used("muapi", "usd") == pytest.approx(0.0052) and ledger.used("muapi", "images") == 1
+    assert out.exists() and ledger.used("muapi", "usd") == pytest.approx(0.0065) and ledger.used("muapi", "images") == 1
     url, body, headers = sess.posted[0]
-    assert url.endswith("/flux-2-klein-4b-turbo") and body["aspect_ratio"] == "9:16" and headers == {"x-api-key": "test-key"} and "test-key" not in url
+    assert url.endswith("/flux-2-klein-9b-turbo") and body["aspect_ratio"] == "9:16" and headers == {"x-api-key": "test-key"} and "test-key" not in url
 
 
 def test_muapi_respects_the_daily_cap_and_blocks_itself_when_credit_runs_out(tmp_path, monkeypatch):

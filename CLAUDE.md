@@ -52,6 +52,7 @@ humans set strategy, connect accounts, and review held videos.
 | Spanish and Portuguese editions of passed Shorts (PARKED by the owner 2026-10-23: run only when asked) | `/faceless/edition.py` | `python -m faceless edition status` | `faceless-empire` |
 | Flow clips (owner's daily Google Flow session) and hook motion | `/faceless/flow.py` | `python -m faceless flow` | `faceless-empire` |
 | Quality gates answered by a decision model, duplicate and variety checks | `/faceless/qa.py`, `variety.py`, `embed.py` | `.claude/skills/faceless-gauntlet` (Semantic gates) | `faceless-gauntlet` |
+| Extra 3 motion-graphics explainers per day (Showhow lane, additive to the classic 5; engine not installed yet, see the skill) | `/faceless/pipeline/cards.py`, `production/showhow/` | `.claude/skills/showhow-extension` | `showhow-extension` |
 | Platform rules, policy changes, what each marketplace allows | `/channel/compliance` | `channel/compliance/platform-rules.md` | `faceless-scout` |
 | Music beds | `/faceless/musiclib.py` | `python -m faceless music` | `faceless-empire` |
 | Spreadsheet products and shop listings | `/faceless/products.py`, `product_debt.py`, `product_print.py` | `channel/products/*/LISTING.md` | `faceless-empire` |

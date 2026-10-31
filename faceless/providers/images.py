@@ -105,14 +105,14 @@ def muapi_balance() -> float | None:
 
 
 def muapi(prompt: str, w: int, h: int, seed: int, out, hero: bool = False) -> None:
-    """Muapi (submit, then poll): FLUX.2 klein 4B at 720x1280, $0.0052 (turbo) or $0.0104. Roughly 8x cheaper than OpenRouter's image model."""
+    """Muapi (submit, then poll): FLUX.2 klein 9B (never the 4B), $0.0065 turbo or $0.013. Roughly 8x cheaper than OpenRouter's image model."""
     global _mu_inflight
     key = config.env("MUAPI_API_KEY")
     if not key:
         raise ProviderUnavailable("MUAPI_API_KEY not set")
     cfg = config.load()["images"]
-    model = cfg.get("muapi_hero_model", "flux-2-klein-4b") if hero else cfg.get("muapi_model", "flux-2-klein-4b-turbo")
-    price = {"flux-2-klein-4b-turbo": 0.0052, "flux-2-klein-4b": 0.0104, "flux-schnell-image": 0.003}.get(model, 0.03)
+    model = cfg.get("muapi_hero_model", "flux-2-klein-9b") if hero else cfg.get("muapi_model", "flux-2-klein-9b-turbo")
+    price = {"flux-2-klein-4b-turbo": 0.0052, "flux-2-klein-4b": 0.0104, "flux-2-klein-9b-turbo": 0.0065, "flux-2-klein-9b": 0.013, "flux-schnell-image": 0.003}.get(model, 0.03)
     cap = float(cfg.get("muapi_daily_usd", 1.5))
     safety.guard("muapi image", price)
     with _MU_LOCK:

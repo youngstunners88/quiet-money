@@ -311,7 +311,8 @@ def run(job, script: dict, voice: dict, imgs: list[dict]) -> dict:
     accent = cfg["accent"].lstrip("#")
     fonts = str(Paths.fonts)
     vf = (f"color=c=0x{accent}:s={W}x10:r={fps}[bar];"
-          f"[0:v][bar]overlay=x='-w+W*t/{total:.3f}':y=0:shortest=1[p];"
+          f"[0:v]unsharp=5:5:0.7:5:5:0.0,noise=alls=5:allf=t[s];"
+          f"[s][bar]overlay=x='-w+W*t/{total:.3f}':y=0:shortest=1[p];"
           f"[p]ass=filename='{ass}':fontsdir='{fonts}'[v]")
     af = (f"[1:a]aresample=48000,asplit=2[vo1][vo2];"
           f"[2:a]aresample=48000,volume={cfg['music_volume']}[mu];"
@@ -322,7 +323,7 @@ def run(job, script: dict, voice: dict, imgs: list[dict]) -> dict:
     out = job.dir / "final.mp4"
     _run(["ffmpeg", "-hide_banner", "-y", "-i", str(raw), "-i", str(job.dir / "voice.wav"), "-i", str(music_wav),
           "-i", str(sfx_wav), "-filter_complex", vf + ";" + af, "-map", "[v]", "-map", "[a]",
-          "-c:v", "libx264", "-preset", "veryfast", "-crf", "21", "-maxrate", "6M", "-bufsize", "12M",
+          "-c:v", "libx264", "-preset", "medium", "-crf", "16", "-maxrate", "16M", "-bufsize", "32M",
           "-profile:v", "high", "-pix_fmt", "yuv420p",
           "-r", str(fps), "-c:a", "aac", "-b:a", "192k", "-ac", "2", "-t", f"{total:.3f}",
           "-movflags", "+faststart", str(out)])
