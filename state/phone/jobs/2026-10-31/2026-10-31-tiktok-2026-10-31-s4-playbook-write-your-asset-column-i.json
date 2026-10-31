@@ -1,0 +1,18 @@
+{
+ "id": "2026-10-31-tiktok-2026-10-31-s4-playbook-write-your-asset-column-i",
+ "kind": "tiktok",
+ "day": "2026-10-31",
+ "key": "2026-10-31-s4-playbook-write-your-asset-column-in-ten-m",
+ "status": "queued",
+ "created": "2026-10-31T09:46:02+00:00",
+ "recipe": "TikTok upload",
+ "media": [
+  {
+   "source": "production/output/2026-10-31/2026-10-31-s4-playbook-write-your-asset-column-in-ten-m/final.mp4",
+   "name": "final.mp4"
+  }
+ ],
+ "staged": true,
+ "text": "Most people list what they spend, not what pays them. Here is how to fix your asset column today.\n\n#money #personalfinance #wealth #investing #asset column\n\nFree reset checklist: link in bio.\n\n#financialliteracy\n\nEducation, not financial advice.",
+ "ai_label": "AI-generated content: on"
+}

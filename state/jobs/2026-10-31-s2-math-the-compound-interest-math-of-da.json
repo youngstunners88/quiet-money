@@ -1,0 +1,77 @@
+{
+  "id": "2026-10-31-s2-math-the-compound-interest-math-of-da",
+  "pillar": "math",
+  "topic": "The Compound Interest Math of Daily Coffee Habits",
+  "day": "2026-10-31",
+  "slot": 2,
+  "status": "published",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-31T09:29:07Z",
+      "words": 178
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-31T09:29:44Z",
+      "seconds": 71.379,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-31T09:30:04Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-31T09:31:55Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-31T09:31:55Z",
+      "score": 92
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-31T09:31:56Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-10-31T09:31:59Z",
+      "local": "2026-10-31T15:00:00-04:00",
+      "youtube": null
+    }
+  ],
+  "artifacts": {
+    "angle": "Calculating what happens if you invest $5 a day into a broad market index fund for 40 years instead of spending it on takeout coffee.",
+    "hook": "That five-dollar daily habit isn't just costing you five dollars today; compounded over a career, it quietly adds up to a quarter of a million dollars.",
+    "title": "The $5 Daily Habit That Costs You $226,000",
+    "style": "cinematic",
+    "video": "/home/user/quiet-money/production/output/2026-10-31/2026-10-31-s2-math-the-compound-interest-math-of-da/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-31/2026-10-31-s2-math-the-compound-interest-math-of-da/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-10-31/slot3-math",
+        "post_at": "2026-10-31T15:00:00-04:00"
+      },
+      "youtube": {
+        "skipped": "YouTube refused the upload session (HTTP 429): quota or rate limit; it resets at midnight Pacific"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 92,
+    "passed": true
+  },
+  "cost": {
+    "tts:edge:chars": 997
+  },
+  "notes": []
+}

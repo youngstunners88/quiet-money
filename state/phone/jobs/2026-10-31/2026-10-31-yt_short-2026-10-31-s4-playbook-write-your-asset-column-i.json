@@ -1,0 +1,19 @@
+{
+ "id": "2026-10-31-yt_short-2026-10-31-s4-playbook-write-your-asset-column-i",
+ "kind": "yt_short",
+ "day": "2026-10-31",
+ "key": "2026-10-31-s4-playbook-write-your-asset-column-in-ten-m",
+ "status": "queued",
+ "created": "2026-10-31T09:46:02+00:00",
+ "recipe": "YouTube Short upload",
+ "media": [
+  {
+   "source": "production/output/2026-10-31/2026-10-31-s4-playbook-write-your-asset-column-in-ten-m/final.mp4",
+   "name": "final.mp4"
+  }
+ ],
+ "staged": true,
+ "title": "Write Your Asset Column in 10 Minutes",
+ "text": "Learn how to build a real asset column in ten minutes. Distinguish between assets and liabilities and set up automated momentum today.\n\nFree 7-day Money Reset checklist + calculators: https://youngstunners88.github.io/quiet-money/links/?utm_source=youtube&utm_medium=short&utm_campaign=checklist&utm_content=2026-10-31-s4-playbook-write-your-asset-column-in-ten-m&o=checklist\n\nEducational content, not financial advice.\n\n#money #personalfinance #wealth #investing #financialliteracy #shorts",
+ "ai_label": "altered or synthetic content: Yes"
+}

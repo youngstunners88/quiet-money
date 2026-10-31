@@ -1,0 +1,78 @@
+{
+  "id": "2026-10-31-s4-playbook-write-your-asset-column-in-ten-m",
+  "pillar": "playbook",
+  "topic": "Write your asset column in ten minutes",
+  "day": "2026-10-31",
+  "slot": 4,
+  "status": "published",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-31T09:37:51Z",
+      "words": 190
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-31T09:38:46Z",
+      "seconds": 62.727,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-31T09:38:59Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-31T09:40:18Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-31T09:40:18Z",
+      "score": 100
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-31T09:40:19Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-10-31T09:40:21Z",
+      "local": "2026-10-31T21:00:00-04:00",
+      "youtube": null
+    }
+  ],
+  "artifacts": {
+    "angle": "list what you own that pays you each month, even $0; the list is the start of the plan",
+    "brief": "kiyosaki",
+    "hook": "Most people cannot name one thing they own that pays them.",
+    "title": "Write Your Asset Column in 10 Minutes",
+    "style": "cinematic",
+    "video": "/home/user/quiet-money/production/output/2026-10-31/2026-10-31-s4-playbook-write-your-asset-column-in-ten-m/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-31/2026-10-31-s4-playbook-write-your-asset-column-in-ten-m/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-10-31/slot5-playbook",
+        "post_at": "2026-10-31T21:00:00-04:00"
+      },
+      "youtube": {
+        "skipped": "YouTube refused the upload session (HTTP 429): quota or rate limit; it resets at midnight Pacific"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 100,
+    "passed": true
+  },
+  "cost": {
+    "tts:edge:chars": 1023
+  },
+  "notes": []
+}

@@ -1,0 +1,100 @@
+{
+  "title": "You Don't Need Money to Make Money",
+  "hook_text": "YOU DON'T NEED MONEY TO START",
+  "beats": [
+    {
+      "say": "Most businesses didn't start with a pile of cash.",
+      "callout": "",
+      "visual": "Low angle silhouette of a lone figure walking across a wet asphalt parking lot under flickering sodium light at midnight."
+    },
+    {
+      "say": "You think you need $50,000 saved just to launch a real income stream today.",
+      "callout": "$50,000 SAVED",
+      "visual": "Extreme close up of cold, empty hands resting on a rusted metal table inside an abandoned factory."
+    },
+    {
+      "say": "So how do people with zero balance construct assets that pay them every single month?",
+      "callout": "ZERO BALANCE",
+      "visual": "High angle shot of a solitary glowing light bulb suspended over a dark steel workbench in blue hour."
+    },
+    {
+      "say": "Most assume cash is the engine, but cash is actually just the fuel you buy later.",
+      "callout": "CASH VS ENGINE",
+      "visual": "Extreme wide shot of a massive container port at dusk under fog cutting a gray skyline."
+    },
+    {
+      "say": "The rich invent money by combining three things: specialized skills, strategic partners, and borrowed resources.",
+      "callout": "SKILLS VS SAVINGS",
+      "visual": "Low angle view of a dark glass skyscraper looming against a stormy, deep blue night sky."
+    },
+    {
+      "say": "You trade labor for skills in sales or management first, then build solutions using someone else's capital.",
+      "callout": "STEP ONE",
+      "visual": "Silhouette of a person standing at the edge of a rainy underpass illuminated by passing headlights."
+    },
+    {
+      "say": "But if you don't bring cash to the table, what are you actually putting on the line?",
+      "callout": "WHAT IS AT RISK?",
+      "visual": "Extreme wide shot of an empty highway stretching into a dense fog on a freezing morning."
+    },
+    {
+      "say": "You're risking your time, your reputational trust, and the contract liability if that project fails.",
+      "callout": "",
+      "visual": "Close up of a heavy brass lock hanging on a wet chain-link gate lit by cold fluorescent light."
+    },
+    {
+      "say": "Debt magnifies gains when you're right, but borrowed money is always owed even if you lose.",
+      "callout": "",
+      "visual": "Low angle shot looking up at massive steel girders under a roaring bridge at dusk."
+    },
+    {
+      "say": "An extra $1,000/month from a side income, invested at 8% for 10 years, reaches $182,946.",
+      "callout": "$182,946 TOTAL",
+      "visual": "High angle view of wet pavement reflecting red taillights in a dark city alley at night."
+    },
+    {
+      "say": "You don't need cash to start, you need leverageable skills that make other people's money find you.",
+      "callout": "",
+      "visual": "Extreme wide silhouette of a figure standing atop a high tower edge overlooking a sprawling city light grid."
+    },
+    {
+      "say": "Follow for the money rules school never taught you, so you can build wealth starting from zero.",
+      "callout": "",
+      "visual": "Low angle shot of a dark ocean water line breaking against a cold, rain-slick stone pier."
+    }
+  ],
+  "caption": "The myth holding most people back is thinking savings come before leverage. Skills and resources start more assets than cash ever will.\n\n#money #personalfinance #wealth #financialliteracy #business",
+  "description": "Exposing the popular myth that you need a fortune saved before building an income stream. We break down how skills, partnerships, and leverage generate assets, plus the real risks of borrowed resources.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#wealth",
+    "#financialliteracy",
+    "#business"
+  ],
+  "first_comment": "What skill are you acquiring right now that doesn't depend on your paycheck?",
+  "facts": [
+    {
+      "claim": "An extra $1,000/month from a side income, invested at 8% for 10 years = $182,946 (you put in $120,000)",
+      "basis": "Money Fact Sheet calculation"
+    },
+    {
+      "claim": "The rich invent money through skills, leverage, and resources rather than starting with cash, though debt carries liability.",
+      "basis": "Rich Dad framework: work to learn, leverage other people's money, debt cuts both ways."
+    }
+  ],
+  "source": "llm",
+  "pillar": "myth",
+  "look": "",
+  "loop_map": {
+    "stakes": "Believing you need cash to start keeps viewers frozen and feeling behind.",
+    "big_question": "How do people with zero balance construct income-generating assets?",
+    "assume": "You need a large pile of saved cash to start a real business.",
+    "reveal": "Skills, partners, and leverage invent assets, though borrowed money remains an obligation.",
+    "rehook_beats": [
+      3,
+      7
+    ],
+    "payoff_beat": 11
+  }
+}

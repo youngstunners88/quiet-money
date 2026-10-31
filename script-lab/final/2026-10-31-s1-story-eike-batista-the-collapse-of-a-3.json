@@ -1,0 +1,105 @@
+{
+  "title": "The $35 Billion Illusion: How Eike Batista Lost It All",
+  "hook_text": "FROM $35 BILLION TO $1B DEBT",
+  "beats": [
+    {
+      "say": "In 2012, Eike Batista held a $35 billion net worth—18 months later, he owed $1 billion.",
+      "callout": "",
+      "visual": "Extreme wide shot of a solitary offshore oil rig silhouette against a stormy ocean at blue hour, dense fog cutting the horizon."
+    },
+    {
+      "say": "He was the world's seventh-richest man, publicly vowing to overtake Bill Gates as number one.",
+      "callout": "7TH RICHEST",
+      "visual": "Low angle view of an imposing glass skyscraper soaring into heavy low clouds, sodium lights reflecting on rain-slicked asphalt below."
+    },
+    {
+      "say": "How does a $35 billion fortune evaporate into negative net worth in under two years?",
+      "callout": "",
+      "visual": "Extreme close shot of a fountain pen dropping black ink onto a legal document, dramatic side lighting in a dark room."
+    },
+    {
+      "say": "Most assume a sudden stock market crash or catastrophic legal fine wiped him out.",
+      "callout": "",
+      "visual": "High angle shot of an empty trading floor at night, dark computer monitors and cold fluorescent lights humming overhead."
+    },
+    {
+      "say": "That's not what happened. His $35 billion empire was an illusion from day one.",
+      "callout": "",
+      "visual": "Silhouette of a man in a suit standing at the edge of a high-rise balcony looking over a foggy city skyline at night."
+    },
+    {
+      "say": "Batista sold stock in oil fields that hadn't pumped a single barrel of oil yet.",
+      "callout": "PROMISED VS ACTUAL",
+      "visual": "Extreme wide shot of a massive industrial drilling vessel anchored in open ocean water under a dark overcast sky."
+    },
+    {
+      "say": "Investors inflated his paper valuation based on purely speculative geological projections and heavy borrowing.",
+      "callout": "",
+      "visual": "Extreme close shot of hands in shadow turning map blueprints over a dimly lit wooden desk under a single lamp."
+    },
+    {
+      "say": "But what happens when debt comes due and the math collides with real life?",
+      "callout": "",
+      "visual": "Low angle shot of massive rusty steel pipes stacked along a misty, empty shipping dock at dawn."
+    },
+    {
+      "say": "When production started, actual oil yield was a fraction of what he promised investors.",
+      "callout": "",
+      "visual": "Silhouette of a tiny worker standing beside an enormous dry oil valve mechanism on a rain-slicked platform."
+    },
+    {
+      "say": "Stock prices plummeted 99%, triggering billions in debt calls he couldn't cover with real cash.",
+      "callout": "99% DROP",
+      "visual": "Extreme wide shot of an abandoned industrial pier at night, wet asphalt reflecting harsh yellow sodium streetlights."
+    },
+    {
+      "say": "Paper net worth isn't real money. Wealth requires tangible, cash-flowing assets that survive bad years.",
+      "callout": "PAPER VS CASH",
+      "visual": "Extreme close shot of cash notes stacked tightly inside a heavy steel vault under cold overhead light."
+    },
+    {
+      "say": "Never mistake high paper valuations for financial freedom.",
+      "callout": "",
+      "visual": "High angle shot of a solitary figure walking across a vast, empty concrete plaza during rain at twilight."
+    },
+    {
+      "say": "Follow for the money rules school never taught you, so you never build on paper promises.",
+      "callout": "",
+      "visual": "Extreme wide shot of a single vehicle driving down an empty coast highway into a misty sunrise."
+    }
+  ],
+  "caption": "Paper net worth isn't real money until it yields actual cash flow. Here is how Brazil's richest man lost $35 billion in 18 months.\n\n#money #personalfinance #wealth #financialliteracy #moneyrules",
+  "description": "Eike Batista became the world's 7th richest man with a $35 billion paper net worth built on speculative oil projections and heavy debt. When real oil production failed to materialize, his paper empire collapsed into over $1 billion of debt in under 18 months.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#wealth",
+    "#financialliteracy",
+    "#moneyrules"
+  ],
+  "first_comment": "Do you track your net worth by paper valuations or actual cash flow?",
+  "facts": [
+    {
+      "claim": "In 2012 Eike Batista was the 7th richest person with $35 billion net worth, and within 18 months was over $1 billion in debt.",
+      "basis": "Documented financial history of Eike Batista's collapse (Bloomberg Billionaires Index, Forbes 2012-2014)."
+    },
+    {
+      "claim": "Batista's OGX stock fell over 99%.",
+      "basis": "OGX filing for bankruptcy protection in October 2013 following a >99% drop in share price."
+    }
+  ],
+  "source": "llm",
+  "pillar": "story",
+  "look": "",
+  "loop_map": {
+    "stakes": "Eike Batista went from $35 billion net worth to $1 billion in debt in 18 months.",
+    "big_question": "How does a $35 billion fortune evaporate into negative net worth in under two years?",
+    "assume": "A market crash or legal fine destroyed his wealth.",
+    "reveal": "His fortune was purely speculative paper valuation backed by heavy debt without cash-flowing oil.",
+    "rehook_beats": [
+      3,
+      8
+    ],
+    "payoff_beat": 11
+  }
+}

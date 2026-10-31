@@ -1,0 +1,105 @@
+{
+  "title": "Write Your Asset Column in 10 Minutes",
+  "hook_text": "NAME ONE THING THAT PAYS YOU",
+  "beats": [
+    {
+      "say": "Most people cannot name one thing they own that pays them every month.",
+      "callout": "",
+      "visual": "Low angle close-up of worn car keys sitting on wet asphalt beside an empty parking bay, illuminated by a harsh sodium light."
+    },
+    {
+      "say": "Your paycheck funds today, but what actually funds your life when you stop working?",
+      "callout": "",
+      "visual": "Silhouette of a lone worker walking through a cold fluorescent underpass at night."
+    },
+    {
+      "say": "Most think their house or car is an asset, but if it drains cash, it's a liability.",
+      "callout": "ASSET VS LIABILITY",
+      "visual": "Extreme wide shot of a dark sedan sitting idle inside an unlit concrete garage beneath a single overhead bulb."
+    },
+    {
+      "say": "So how do you build an asset column that pays you, starting in ten minutes?",
+      "callout": "",
+      "visual": "Blue hour view of an empty commuter train platform slick with rain, distant signals reflecting on the tracks."
+    },
+    {
+      "say": "Step one. Open a blank note on your phone titled My Asset Column.",
+      "callout": "STEP ONE",
+      "visual": "Close-up of hands holding a dark smartphone screen in a dimly lit diner booth, fog on the window."
+    },
+    {
+      "say": "List everything you own that deposits cash into your bank each month, even if it's $0.",
+      "callout": "",
+      "visual": "High angle shot of a minimalist dark wooden desk illuminated by a single practical brass desk lamp."
+    },
+    {
+      "say": "Step two. Add one target line item, like $100 a month into an 8% index fund.",
+      "callout": "STEP TWO",
+      "visual": "Extreme close-up of a dark fountain pen resting on a blank black notebook beside a rain-slicked window at night."
+    },
+    {
+      "say": "What does writing down a tiny $100 deposit actually build over time?",
+      "callout": "",
+      "visual": "Silhouette of high-voltage power lines stretching across a misty twilight horizon."
+    },
+    {
+      "say": "At 8% a year, $100 a month invested for 30 years becomes $149,036 from $36,000 put in.",
+      "callout": "$149,036 VS $36,000",
+      "visual": "Low angle looking up at towering brutalist concrete walls cut by sharp, cold fluorescent beam light."
+    },
+    {
+      "say": "Step three. Automate that transfer right now so your asset column grows on its own.",
+      "callout": "STEP THREE",
+      "visual": "High angle extreme close-up of an unbranded dark metallic key resting on a dark slate counter under cool light."
+    },
+    {
+      "say": "Real talk: passive income takes years of deliberate work, not overnight magic.",
+      "callout": "",
+      "visual": "Extreme wide shot of a solitary cargo ship moving across dark open water during the blue hour."
+    },
+    {
+      "say": "Once your asset column pays your monthly bills, you don't need a job to survive.",
+      "callout": "",
+      "visual": "Silhouette of a person standing on a windy mountain ridge line overlooking a distant glowing city skyline at night."
+    },
+    {
+      "say": "Follow for the money rules school never taught you, so you know what pays you.",
+      "callout": "",
+      "visual": "Low angle shot of wet asphalt reflecting sodium streetlights stretching into an empty highway at night."
+    }
+  ],
+  "caption": "Most people list what they spend, not what pays them. Here is how to fix your asset column today.\n\n#money #personalfinance #wealth #investing #asset column",
+  "description": "Learn how to build a real asset column in ten minutes. Distinguish between assets and liabilities and set up automated momentum today.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#wealth",
+    "#investing",
+    "#financialliteracy"
+  ],
+  "first_comment": "How many items on your asset column pay you today?",
+  "facts": [
+    {
+      "claim": "$100/month invested for 30 years at 8%/yr monthly compounding equals $149,036 on $36,000 principal",
+      "basis": "Quiet Money Fact Sheet item 2"
+    },
+    {
+      "claim": "An asset puts cash in your pocket; a liability takes cash out",
+      "basis": "Robert Kiyosaki Framework (Rich Dad Poor Dad)"
+    }
+  ],
+  "source": "llm",
+  "pillar": "playbook",
+  "look": "",
+  "loop_map": {
+    "stakes": "Most people own liabilities that drain cash rather than assets that pay them.",
+    "big_question": "How do you start an asset column that pays you?",
+    "assume": "Houses and cars are assets that make you secure.",
+    "reveal": "Assets must cash-flow positive; an automated small deposit starts your column today.",
+    "rehook_beats": [
+      4,
+      8
+    ],
+    "payoff_beat": 12
+  }
+}

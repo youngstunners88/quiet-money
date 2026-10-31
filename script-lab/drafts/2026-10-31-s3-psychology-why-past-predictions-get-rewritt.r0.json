@@ -1,0 +1,96 @@
+{
+  "title": "The Memory Trick That Rewrites Your Financial Past",
+  "hook_text": "YOU REMEMBER KNOWING BEFORE THE DROP",
+  "beats": [
+    {
+      "say": "You remember knowing before the drop. You don't remember not knowing.",
+      "callout": "",
+      "visual": "Extreme close-up of heavy rain striking dark wet asphalt under a single amber sodium light."
+    },
+    {
+      "say": "That's hindsight bias at work. It sneaks into your financial history.",
+      "callout": "",
+      "visual": "Low angle shot of a massive concrete highway overpass cutting across a heavy gray sky at dusk."
+    },
+    {
+      "say": "Why does your brain instantly rewrite past investment decisions to look obvious?",
+      "callout": "",
+      "visual": "Extreme wide shot of a lone silhouette standing at the edge of a sheer cliff overlooking coastal fog."
+    },
+    {
+      "say": "Most people assume memory acts like a high definition video recording.",
+      "callout": "VIDEO VS BLUR",
+      "visual": "Cold fluorescent light reflecting off a dark empty subway platform with no passengers in sight."
+    },
+    {
+      "say": "The honest catch is that memory feels like foresight without being accurate.",
+      "callout": "",
+      "visual": "High angle shot of abandoned train tracks disappearing into deep evening shadows between rusted buildings."
+    },
+    {
+      "say": "You look at past market dips and swear you saw them coming.",
+      "callout": "STEP ONE",
+      "visual": "Single practical desk lamp casting harsh shadows across an empty wooden table in a dark room."
+    },
+    {
+      "say": "Did you actually predict that drop, or did your brain just cheat?",
+      "callout": "",
+      "visual": "Extreme close-up of water droplets sliding down a cold glass pane with blurred city lights behind."
+    },
+    {
+      "say": "Psychologists call this the knew-it-all-along effect. It costs you real money.",
+      "callout": "STEP TWO",
+      "visual": "Silhouette of a person walking away down a long narrow concrete underpass at twilight."
+    },
+    {
+      "say": "When you think you predicted the past, you take reckless risks with fresh cash.",
+      "callout": "",
+      "visual": "Extreme wide shot of a dark industrial harbor under a heavy overcast sky with cold blue water."
+    },
+    {
+      "say": "The counter-move is writing down your exact market predictions before they happen.",
+      "callout": "STEP THREE",
+      "visual": "Low angle looking up at a towering steel bridge structure wrapped in thick morning fog."
+    },
+    {
+      "say": "Force your brain to prove what it knew.",
+      "callout": "",
+      "visual": "Extreme close-up of a dark metallic padlock hanging on a weathered iron gate in fading light."
+    },
+    {
+      "say": "Track your calls. Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "Wide cinematic shot of an empty highway stretching out toward a dark mountain ridge at blue hour."
+    }
+  ],
+  "caption": "Hindsight bias makes you feel like a financial genius after the fact. Here is the counter-move. #MoneyPsychology #PersonalFinance #Mindset #SmartMoney #Investing",
+  "description": "Hindsight bias quietly rewrites your financial memory, making past events look predictable. Learn how to spot this mental trap and protect your future decisions.",
+  "hashtags": [
+    "#MoneyPsychology",
+    "#PersonalFinance",
+    "#Mindset",
+    "#SmartMoney",
+    "#Investing"
+  ],
+  "first_comment": "What market drop did you swear you saw coming long before it happened?",
+  "facts": [
+    {
+      "claim": "Hindsight bias alters memory of prior knowledge",
+      "basis": "Established psychological phenomenon documented by Baruch Fischhoff in 1975."
+    }
+  ],
+  "source": "llm",
+  "pillar": "psychology",
+  "look": "",
+  "loop_map": {
+    "stakes": "Your past financial choices and how you remember making them.",
+    "big_question": "Why does your brain instantly rewrite past investment decisions?",
+    "assume": "Most people assume memory acts like a high definition video recording.",
+    "reveal": "Memory feels like foresight without being accurate.",
+    "rehook_beats": [
+      3,
+      7
+    ],
+    "payoff_beat": 10
+  }
+}

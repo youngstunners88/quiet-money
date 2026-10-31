@@ -1,0 +1,77 @@
+{
+  "id": "2026-10-31-s3-psychology-why-past-predictions-get-rewritt",
+  "pillar": "psychology",
+  "topic": "Why Past Predictions Get Rewritten",
+  "day": "2026-10-31",
+  "slot": 3,
+  "status": "published",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-31T09:34:17Z",
+      "words": 166
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-31T09:34:51Z",
+      "seconds": 63.192,
+      "provider": "gemini"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-31T09:35:09Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-31T09:36:49Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-31T09:36:49Z",
+      "score": 97
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-31T09:36:50Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-10-31T09:36:52Z",
+      "local": "2026-10-31T18:30:00-04:00",
+      "youtube": null
+    }
+  ],
+  "artifacts": {
+    "angle": "Hindsight bias can reshape how a person remembers prior knowledge, and the honest catch is that memory can feel like foresight without being accurate.",
+    "hook": "You remember knowing before the drop. You don't remember not knowing.",
+    "title": "Why You Rewrite Your Money Memories",
+    "style": "cinematic",
+    "video": "/home/user/quiet-money/production/output/2026-10-31/2026-10-31-s3-psychology-why-past-predictions-get-rewritt/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-31/2026-10-31-s3-psychology-why-past-predictions-get-rewritt/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-10-31/slot4-psychology",
+        "post_at": "2026-10-31T18:30:00-04:00"
+      },
+      "youtube": {
+        "skipped": "YouTube refused the upload session (HTTP 429): quota or rate limit; it resets at midnight Pacific"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 97,
+    "passed": true
+  },
+  "cost": {
+    "tts:gemini:chars": 972
+  },
+  "notes": []
+}

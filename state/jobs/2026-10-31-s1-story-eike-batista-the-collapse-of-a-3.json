@@ -1,0 +1,77 @@
+{
+  "id": "2026-10-31-s1-story-eike-batista-the-collapse-of-a-3",
+  "pillar": "story",
+  "topic": "Eike Batista: The Collapse of a $35 Billion Paper Empire",
+  "day": "2026-10-31",
+  "slot": 1,
+  "status": "published",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-31T09:23:17Z",
+      "words": 185
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-31T09:25:17Z",
+      "seconds": 67.826,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-31T09:25:48Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-31T09:27:54Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-31T09:27:54Z",
+      "score": 97
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-31T09:27:55Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-10-31T09:28:01Z",
+      "local": "2026-10-31T11:30:00-04:00",
+      "youtube": null
+    }
+  ],
+  "artifacts": {
+    "angle": "Paper net worth built on speculative projections and heavy leverage is an illusion until capital is converted into tangible, cash-flowing assets.",
+    "hook": "In 2012, this Brazilian industrialist was the seventh-richest person on planet Earth with a $35 billion net worth—less than 18 months later, he was over $1 billion in debt.",
+    "title": "The $35 Billion Illusion: How Eike Batista Lost It All",
+    "style": "cinematic",
+    "video": "/home/user/quiet-money/production/output/2026-10-31/2026-10-31-s1-story-eike-batista-the-collapse-of-a-3/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-31/2026-10-31-s1-story-eike-batista-the-collapse-of-a-3/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-10-31/slot2-story",
+        "post_at": "2026-10-31T11:30:00-04:00"
+      },
+      "youtube": {
+        "skipped": "YouTube refused the upload session (HTTP 429): quota or rate limit; it resets at midnight Pacific"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 97,
+    "passed": true
+  },
+  "cost": {
+    "tts:edge:chars": 1130
+  },
+  "notes": []
+}

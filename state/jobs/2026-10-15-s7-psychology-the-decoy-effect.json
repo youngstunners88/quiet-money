@@ -63,6 +63,9 @@
       "youtube": {
         "skipped": "YouTube refused the upload session (HTTP 429): quota or rate limit; it resets at midnight Pacific"
       }
+    },
+    "youtube_plan": {
+      "post_at": "2026-10-31T15:00:00-04:00"
     }
   },
   "scores": {

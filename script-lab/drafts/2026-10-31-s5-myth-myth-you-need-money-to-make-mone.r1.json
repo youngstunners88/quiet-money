@@ -1,0 +1,100 @@
+{
+  "title": "The Myth That You Need Money to Make Money",
+  "hook_text": "YOU DON'T NEED CASH TO START",
+  "beats": [
+    {
+      "say": "Most businesses didn't start with a pile of cash in a bank.",
+      "callout": "",
+      "visual": "Extreme close-up of a blank key card sliding through a steel door slit, cold fluorescent glow on wet asphalt outside."
+    },
+    {
+      "say": "You think you need $50,000 in savings just to start building real income today.",
+      "callout": "$50,000 SAVINGS",
+      "visual": "Silhouette of a person standing alone in a massive empty concrete warehouse under a single sodium light."
+    },
+    {
+      "say": "That myth keeps millions stuck waiting endlessly for a bank balance that never arrives.",
+      "callout": "MYTH VS REALITY",
+      "visual": "Low angle view of towering glass skyscrapers disappearing into heavy night fog."
+    },
+    {
+      "say": "In 1997, a famous money book introduced a simple truth: the rich invent money.",
+      "callout": "",
+      "visual": "Extreme wide shot of a solitary cargo ship navigating dark open water at blue hour."
+    },
+    {
+      "say": "They don't wait for capital—they combine high-value skills, strategic partners, and smart leverage.",
+      "callout": "SKILLS VS CASH",
+      "visual": "Close-up of hands reviewing plain floor blueprints laid across a dark metal table under a single practical desk light."
+    },
+    {
+      "say": "Instead of working only for a paycheck, they work to learn sales, communication, and systems.",
+      "callout": "",
+      "visual": "Back of a figure standing at the edge of a high-rise building balcony overlooking blurred city traffic trails."
+    },
+    {
+      "say": "An extra $1,000 a month from a side income, invested at 8% for 10 years, reaches $182,946.",
+      "callout": "$182,946 TOTAL",
+      "visual": "High angle shot of a wet asphalt alley illuminated by rain-slick reflections at midnight."
+    },
+    {
+      "say": "But if leverage lets you build without cash, why do so many people end up completely wiped out?",
+      "callout": "",
+      "visual": "Extreme close-up of a heavy iron cable under high tension across a dark industrial shipyard."
+    },
+    {
+      "say": "Because leverage cuts both ways: borrowed money magnifies your losses just as fast as your income.",
+      "callout": "",
+      "visual": "Silhouette of a figure sitting alone at a metal desk with cold window light cutting through horizontal blinds."
+    },
+    {
+      "say": "In 2012, even a famous financial company faced a $23.7 million court order and filed for bankruptcy.",
+      "callout": "$23.7M ORDER",
+      "visual": "Low angle shot of massive concrete pillars outside an empty granite building under a dim street lamp."
+    },
+    {
+      "say": "You don't start with cash—you start with leverageable skills that force capital to find you.",
+      "callout": "SKILLS FIRST",
+      "visual": "High angle of a single figure walking across a vast, empty city plaza under distant sodium streetlights."
+    },
+    {
+      "say": "Respect the downside, acquire valuable skills, and follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "Extreme wide shot of a lone car driving down an empty highway into dense morning fog."
+    }
+  ],
+  "caption": "The idea that you need thousands in cash to start earning real money holds millions back. Here is how capital is actually created.\n\n#money #personalfinance #wealth #financialliteracy #leverage",
+  "description": "Waiting for a massive savings balance before building wealth is a trap. The wealthy use skills, strategic partnerships, and leverage to build income streams long before cash accumulates—though leverage always carries downside risk.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#wealth",
+    "#financialliteracy",
+    "#leverage"
+  ],
+  "first_comment": "What high-value skill are you building this year to create your own leverage?",
+  "facts": [
+    {
+      "claim": "An extra $1,000/month invested at 8% for 10 years reaches $182,946.",
+      "basis": "Fact sheet math: $1,000/month invested at 8%/yr monthly compounding for 10 years equals $182,946."
+    },
+    {
+      "claim": "Rich Global LLC filed for bankruptcy in 2012 after a $23.7 million court order.",
+      "basis": "Research brief: In 2012 Robert Kiyosaki's company Rich Global LLC filed for bankruptcy after being ordered to pay $23.7 million to The Learning Annex."
+    }
+  ],
+  "source": "llm",
+  "pillar": "myth",
+  "look": "",
+  "loop_map": {
+    "stakes": "Believing you need $50,000 in savings keeps you trapped waiting for cash you don't have.",
+    "big_question": "How do people start generating real business capital without holding a pile of cash?",
+    "assume": "You must save tens of thousands of dollars before you can start building real business income.",
+    "reveal": "The wealthy combine skills, partners, and resource leverage to generate income, though debt leverage magnifies downside losses.",
+    "rehook_beats": [
+      4,
+      8
+    ],
+    "payoff_beat": 11
+  }
+}

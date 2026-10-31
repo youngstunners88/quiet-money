@@ -1,0 +1,115 @@
+{
+  "title": "The $5 Daily Habit That Costs You $226,000",
+  "hook_text": "THE REAL COST OF $5 COFFEE",
+  "beats": [
+    {
+      "say": "That $5 daily habit isn't just costing you $5 today.",
+      "callout": "",
+      "visual": "Extreme close-up of a damp paper coffee cup discarded on rain-slicked asphalt reflecting a single red streetlight."
+    },
+    {
+      "say": "Over one full year, that morning ritual takes $1,825 straight out of your checking account.",
+      "callout": "$1,825 A YEAR",
+      "visual": "Low angle silhouette of a lonely commuter walking across a wet concrete plaza under cold sodium lamps."
+    },
+    {
+      "say": "Most people assume it's just a harmless expense for daily focus.",
+      "callout": "",
+      "visual": "Cold fluorescent lighting humming inside an empty concrete parking garage in the early morning fog."
+    },
+    {
+      "say": "So where does that money end up if you invest it instead of spending it?",
+      "callout": "",
+      "visual": "High angle extreme wide view of a lone car driving down a deserted wet highway in blue hour."
+    },
+    {
+      "say": "Taking that $5 daily habit and investing it monthly at 8% a year changes everything.",
+      "callout": "",
+      "visual": "Low angle shot of massive dark steel skyscraper pillars rising into a heavy gray sky."
+    },
+    {
+      "say": "Over 30 years, that simple $5 a day grows into $226,659.",
+      "callout": "$226,659 IN 30 YRS",
+      "visual": "Extreme wide silhouette of a lone figure standing beside an empty shipping container terminal at dusk."
+    },
+    {
+      "say": "What happens if you expand that discipline to $200 a month for 40 years?",
+      "callout": "",
+      "visual": "High angle view of cold rain dripping down a dark glass curtain wall of an empty tower."
+    },
+    {
+      "say": "Invested at 8% annually, $200 a month reaches $698,202 while you put in $96,000.",
+      "callout": "$698,202 VS $96,000",
+      "visual": "Low angle extreme close-up of heavy iron gears inside a silent factory at night."
+    },
+    {
+      "say": "That means compound interest quietly paid you over $600,000 for staying consistent.",
+      "callout": "",
+      "visual": "Extreme wide shot of a cargo barge slowly moving down a dark river under a low foggy bridge."
+    },
+    {
+      "say": "Now look at what delay costs you if you wait just 10 years.",
+      "callout": "",
+      "visual": "High angle view looking straight down at an empty wet street grid illuminated by amber streetlights."
+    },
+    {
+      "say": "Starting at 35 instead of 25 drops your final balance down to $298,072.",
+      "callout": "$698,202 VS $298,072",
+      "visual": "Low angle silhouette of two tall modern commercial towers framing a dark overcast sky."
+    },
+    {
+      "say": "Waiting 10 years to start quietly costs you $400,130 in lost compounding.",
+      "callout": "-$400,130 COST",
+      "visual": "Extreme wide shot of a lone runner on an empty ocean pier during a windy blue hour."
+    },
+    {
+      "say": "Your daily coffee isn't just $5 today; it's the future wealth you give away.",
+      "callout": "",
+      "visual": "Close-up of cold dark liquid dripping into a drainage grate in slow motion under a single spotlight."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "Low angle view of an endless open highway cutting through desert mist under sodium light."
+    }
+  ],
+  "caption": "A $5 daily habit costs $1,825 a year. Invested at 8%, that daily amount turns into $226,659 over 30 years.\n\n#money #personalfinance #compounding #investing #wealthbuilding",
+  "description": "We break down the exact compounding math of a $5 daily habit invested in an index fund at 8% annually versus spending it on daily takeout drinks.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#compounding",
+    "#investing",
+    "#financialfreedom"
+  ],
+  "first_comment": "Did you realize a $5 daily habit adds up to $1,825 a year? What daily expense are you cutting back on this year?",
+  "facts": [
+    {
+      "claim": "A $5 daily habit costs $1,825 a year and grows to $226,659 when invested monthly at 8% for 30 years.",
+      "basis": "Fact sheet: $5/day habit = $1,825/year; invested monthly at 8% for 30 years = $226,659"
+    },
+    {
+      "claim": "$200 a month invested at 8% for 40 years yields $698,202 on $96,000 contributed.",
+      "basis": "Fact sheet: $200/month invested for 40 years at 8%/yr (monthly compounding) = $698,202 (you put in $96,000)"
+    },
+    {
+      "claim": "Starting at 25 vs 35 with $200 a month at 8% until 65 results in $698,202 vs $298,072, costing $400,130.",
+      "basis": "Fact sheet: Starting at 25 vs 35 with $200/month at 8% until 65: $698,202 vs $298,072 (10 years late costs $400,130)"
+    }
+  ],
+  "source": "llm",
+  "pillar": "math",
+  "look": "",
+  "loop_map": {
+    "stakes": "A $5 daily coffee habit draining $1,825 from your checking account every year.",
+    "big_question": "How much wealth does a $5 daily habit actually cost you over a career when compounded at 8%?",
+    "assume": "It's just a small $5 expense for daily morning energy.",
+    "reveal": "Invested at 8%, $5 a day grows into $226,659 over 30 years, while delaying 10 years costs over $400,000.",
+    "rehook_beats": [
+      4,
+      7,
+      10
+    ],
+    "payoff_beat": 12
+  }
+}

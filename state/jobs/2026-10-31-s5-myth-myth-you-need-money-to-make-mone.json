@@ -1,0 +1,68 @@
+{
+  "id": "2026-10-31-s5-myth-myth-you-need-money-to-make-mone",
+  "pillar": "myth",
+  "topic": "Myth: you need money to make money",
+  "day": "2026-10-31",
+  "slot": 5,
+  "status": "held",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-10-31T09:43:12Z",
+      "words": 174
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-10-31T09:44:04Z",
+      "seconds": 67.475,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-10-31T09:44:19Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-10-31T09:45:44Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-10-31T09:45:44Z",
+      "score": 93
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-10-31T09:45:45Z"
+    },
+    {
+      "from": "packaged",
+      "to": "held",
+      "ts": "2026-10-31T09:45:45Z"
+    }
+  ],
+  "artifacts": {
+    "angle": "the rich invent money: skills, partners and other people's resources start more businesses than savings do; catch: borrowed money is owed",
+    "brief": "kiyosaki",
+    "hook": "Most businesses did not start with a pile of cash.",
+    "title": "Why You Don't Need Money to Make Money",
+    "style": "cinematic",
+    "video": "/home/user/quiet-money/production/output/2026-10-31/2026-10-31-s5-myth-myth-you-need-money-to-make-mone/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-10-31/2026-10-31-s5-myth-myth-you-need-money-to-make-mone/cover.jpg"
+  },
+  "scores": {
+    "gauntlet": 93,
+    "passed": false
+  },
+  "cost": {
+    "tts:edge:chars": 1065
+  },
+  "notes": [
+    "held for review: originality"
+  ]
+}

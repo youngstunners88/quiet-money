@@ -1,0 +1,100 @@
+{
+  "title": "Why You Rewrite Your Money Memories",
+  "hook_text": "YOU REMEMBER KNOWING BEFORE THE DROP",
+  "beats": [
+    {
+      "say": "You remember knowing before the drop. You don't remember not knowing.",
+      "callout": "",
+      "visual": "Extreme close-up of a vintage analog clock second hand ticking in a dark room under cold fluorescent light."
+    },
+    {
+      "say": "That trade you missed. That stock you swore you called. Your brain rewrites the past.",
+      "callout": "HINDSIGHT BIAS",
+      "visual": "Low angle shot of a massive concrete highway overpass cutting through thick blue hour fog."
+    },
+    {
+      "say": "Why does your memory instantly fabricate old certainty about money?",
+      "callout": "HOW IT WORKS",
+      "visual": "Silhouette of a lone person standing at the edge of a high concrete rooftop looking at a wet asphalt street below."
+    },
+    {
+      "say": "You assume your financial intuition is sharp, because you recall predicting every major market shift.",
+      "callout": "ASSUME VS FACT",
+      "visual": "Extreme wide shot of a rusted steel shipping container yard under sodium streetlights in the rain."
+    },
+    {
+      "say": "The truth is, once an outcome is known, your brain erases your actual past confusion.",
+      "callout": "MEMORY FLAW",
+      "visual": "Close-up of wet rain-slicked pavement reflecting harsh amber street lamps at night."
+    },
+    {
+      "say": "It weaves the final result into your memory as if it was obvious all along.",
+      "callout": "",
+      "visual": "High angle shot of a single empty train track curving away into deep shadows under a moonless sky."
+    },
+    {
+      "say": "How much cash does this mental trick cost you every year?",
+      "callout": "",
+      "visual": "Extreme close-up of weathered hands holding an old leather wallet with worn edges under a single practical light."
+    },
+    {
+      "say": "You think you're getting wiser at spotting trends. So you take bigger risks with your paycheck.",
+      "callout": "",
+      "visual": "Low angle shot of a towering concrete bridge pier stretching up into dark storm clouds."
+    },
+    {
+      "say": "You bet $500 a month on complex trades, thinking your hindsight foresight makes you immune to losses.",
+      "callout": "$500 A MONTH",
+      "visual": "Cinematic wide shot of a dark industrial harbor with crane silhouettes cutting across an open water horizon."
+    },
+    {
+      "say": "Instead of steady investing at 8% a year, you chase ghosts in your own memory.",
+      "callout": "8% RETURN",
+      "visual": "Extreme wide view of a vast empty desert highway stretching toward a cold horizon at twilight."
+    },
+    {
+      "say": "Stop trusting a memory that edits itself after the fact.",
+      "callout": "",
+      "visual": "Silhouette of a person walking alone across a vast open concrete plaza under heavy overcast sky."
+    },
+    {
+      "say": "Write down your bets before they happen. Follow for the money rules school never taught you.",
+      "callout": "RULE NO. 12",
+      "visual": "Low angle shot of a massive steel suspension bridge tower disappearing into heavy morning fog."
+    }
+  ],
+  "caption": "Your brain edits your past financial calls to make you feel smarter than you are. #MoneyPsychology #PersonalFinance #FinancialLiteracy #Mindset",
+  "description": "Hindsight bias tricks you into believing your financial intuition is flawless by rewriting your past memories of market moves.",
+  "hashtags": [
+    "#MoneyPsychology",
+    "#PersonalFinance",
+    "#FinancialLiteracy",
+    "#Mindset",
+    "#QuietMoney"
+  ],
+  "first_comment": "What's a financial trend you swore you saw coming?",
+  "facts": [
+    {
+      "claim": "Investing $500 a month at 8% a year",
+      "basis": "Fact sheet calculation for compounding returns"
+    },
+    {
+      "claim": "Hindsight bias alters past memory of knowledge",
+      "basis": "Established psychological principle of retrospective distortion"
+    }
+  ],
+  "source": "llm",
+  "pillar": "psychology",
+  "look": "",
+  "loop_map": {
+    "stakes": "You risk your paycheck on bad bets because your memory tricks you.",
+    "big_question": "Why does your memory instantly fabricate old certainty about money?",
+    "assume": "You assume your financial intuition is sharp because you recall predicting shifts.",
+    "reveal": "Your brain erases past confusion once an outcome is known.",
+    "rehook_beats": [
+      3,
+      7
+    ],
+    "payoff_beat": 10
+  }
+}

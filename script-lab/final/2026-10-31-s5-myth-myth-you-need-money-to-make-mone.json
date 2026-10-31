@@ -1,0 +1,104 @@
+{
+  "title": "Why You Don't Need Money to Make Money",
+  "hook_text": "MONEY DOES NOT START BUSINESSES",
+  "beats": [
+    {
+      "say": "Most businesses did not start with a pile of cash.",
+      "callout": "",
+      "visual": "Low angle shot of a rain-slicked asphalt road illuminated by orange sodium streetlight glare at night."
+    },
+    {
+      "say": "Waiting to save $50,000 before starting leaves your paycheck trapped in the rat race for years.",
+      "callout": "",
+      "visual": "Silhouette of a lone commuter standing in a cold fluorescent transit underpass during blue hour."
+    },
+    {
+      "say": "So how do wealthy founders build real income when their starting bank balance sits near zero?",
+      "callout": "",
+      "visual": "Extreme close-up of a worn leather notepad lying on concrete above an empty highway at night."
+    },
+    {
+      "say": "Most people assume you must accumulate heavy capital first to launch a profitable business.",
+      "callout": "SAVINGS VS SKILLS",
+      "visual": "High angle shot of a solitary figure walking past a massive dark stone bank facade in deep fog."
+    },
+    {
+      "say": "That's wrong. Wealthy founders invent money by using high-value skills, strategic partners, and existing resources.",
+      "callout": "INVENT MONEY",
+      "visual": "Extreme wide shot of a misty industrial harbor dock at dusk with harsh industrial crane lights."
+    },
+    {
+      "say": "What happens when you substitute high-volume outreach for missing cash?",
+      "callout": "",
+      "visual": "Low angle silhouette looking upward at towering dark steel structural beams in a wet alley."
+    },
+    {
+      "say": "Doing 100 reach-outs a day for 100 days creates 10,000 contacts, yielding 100 clients at a 1% rate.",
+      "callout": "10,000 CONTACTS",
+      "visual": "Cold fluorescent tube light reflecting off a bare concrete workspace with an unbranded black phone."
+    },
+    {
+      "say": "What if that outreach generates an extra $1,000 a month in side income?",
+      "callout": "STEP ONE",
+      "visual": "Extreme close-up of dark water swirling beneath a solitary yellow street lamp beam."
+    },
+    {
+      "say": "Investing $1,000 a month at 8% for 10 years turns your $120,000 contribution into $182,946.",
+      "callout": "$120,000 VS $182,946",
+      "visual": "Wide shot of dark wet asphalt leading into dense midnight fog beneath glowing highway arches."
+    },
+    {
+      "say": "Here's the honest catch: borrowed leverage cuts both ways, because debt stays owed even when assets drop.",
+      "callout": "LEVERAGE CUTS BOTH WAYS",
+      "visual": "Low angle silhouette against a glass skyscraper window overlooking a dark rainy cityscape."
+    },
+    {
+      "say": "You don't need money to make money, but you must control risk before taking on leverage.",
+      "callout": "RESPECT RISK",
+      "visual": "Extreme wide shot of a lone person standing on a mountain ridge line at blue hour."
+    },
+    {
+      "say": "Focus on high-value skills today. Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "Low angle view of a quiet urban street under a single shining streetlight in thick fog."
+    }
+  ],
+  "caption": "You don't need $50,000 to start building wealth. Learn the rules of skills, volume, and leverage.\n\n#money #personalfinance #financialliteracy #wealthbuilding #sideincome",
+  "description": "Discover why waiting for savings keeps people broke and how skills and volume generate cash flow. Learn the truth about leverage and how to invest side income effectively.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#financialliteracy",
+    "#wealthbuilding",
+    "#sideincome"
+  ],
+  "first_comment": "What high-value skill are you building this year to create extra income?",
+  "facts": [
+    {
+      "claim": "100 reach-outs a day for 100 days equals 10,000 contacts, yielding 100 customers at a 1% rate.",
+      "basis": "Rule of 100 volume math from MONEY FACT SHEET."
+    },
+    {
+      "claim": "An extra $1,000/month invested at 8% for 10 years grows to $182,946 on $120,000 put in.",
+      "basis": "Side income investment calculation from MONEY FACT SHEET."
+    },
+    {
+      "claim": "Leverage magnifies losses and borrowed money is owed regardless of asset performance.",
+      "basis": "Leverage math and honest catch from RESEARCH BRIEF."
+    }
+  ],
+  "source": "llm",
+  "pillar": "myth",
+  "look": "",
+  "loop_map": {
+    "stakes": "Waiting for savings keeps your paycheck trapped in the rat race.",
+    "big_question": "How do founders build real income starting with zero cash?",
+    "assume": "You need a big pile of capital to start a profitable business.",
+    "reveal": "Wealthy founders invent money using skills, partners, and volume math.",
+    "rehook_beats": [
+      6,
+      8
+    ],
+    "payoff_beat": 11
+  }
+}
