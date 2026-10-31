@@ -69,8 +69,11 @@ def normalize(script: dict) -> dict:
         say = re.sub(r"\s+", " ", str(b.get("say", ""))).strip()
         if not say:
             continue
-        beats.append({"say": say, "callout": re.sub(r"\s+", " ", str(b.get("callout") or "")).strip()[:28],
-                      "visual": re.sub(r"\s+", " ", str(b.get("visual") or "")).strip()})
+        beat = {"say": say, "callout": re.sub(r"\s+", " ", str(b.get("callout") or "")).strip()[:28],
+                "visual": re.sub(r"\s+", " ", str(b.get("visual") or "")).strip()}
+        if isinstance(b.get("scene"), dict):          # the explainer look's diagram for this beat (faceless/pipeline/explainer.py)
+            beat["scene"] = b["scene"]
+        beats.append(beat)
     if beats:
         beats[0]["callout"] = ""  # the hook headline owns the top of the frame in beat 1
     # keep at most 7 callouts, numbers first: too many on-screen phrases dilutes every one of them

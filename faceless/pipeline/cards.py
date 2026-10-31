@@ -426,13 +426,19 @@ def render_reel(job, picked: dict[int, dict], beat_spans: dict[int, tuple[float,
     except (OSError, ValueError, KeyError):
         words = []
     picked = {i: ({**spec, "words": [(round(w["start"] - beat_spans[i][0], 3), round(w["end"] - beat_spans[i][0], 3)) for w in words
-                                     if beat_spans[i][0] <= w["start"] < beat_spans[i][1]]} if spec.get("kind") == "stage" else spec)
+                                     if beat_spans[i][0] <= w["start"] < beat_spans[i][1]]} if spec.get("kind") == "stage" else
+                   {**spec, "words": [(round(w["start"] - beat_spans[i][0], 3), round(w["end"] - beat_spans[i][0], 3), w.get("w") or w.get("word") or w.get("text") or "")
+                                      for w in words if beat_spans[i][0] <= w["start"] < beat_spans[i][1]]} if spec.get("kind") == "explainer" else spec)
               for i, spec in picked.items()}
     specs = [(i, spec, max(0.5, beat_spans[i][1] - beat_spans[i][0])) for i, spec in sorted(picked.items())]
     theme = "ledger" if (job.artifacts or {}).get("style") == "ledger" else "night"
     if theme == "ledger":
         accent = config.load()["production"].get("ledger", {}).get("accent", accent)    # gold deep enough to read on paper
-    total = build_project(root, specs, pillar_id, accent, fps, kicker=config.pillar(pillar_id).name.upper(), theme=theme)
+    if (job.artifacts or {}).get("style") == "explainer":
+        from faceless.pipeline import explainer
+        total = explainer.build_project(root, specs, fps)
+    else:
+        total = build_project(root, specs, pillar_id, accent, fps, kicker=config.pillar(pillar_id).name.upper(), theme=theme)
     events_ = [(round(beat_spans[i][0] + t, 3), kind) for i, spec, _d in specs for t, kind in spec.get("_ev", [])]     # sound-effect moments, in video time
     if events_ and name == "reel":
         (job.dir / "sfx_events.json").write_text(json.dumps(events_), encoding="utf-8")
