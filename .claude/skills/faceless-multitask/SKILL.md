@@ -29,3 +29,5 @@ Owner rule (2026-10-31): never sit idle while a render runs. Start the PC job fi
 
 ## TikTok poster trap (2026-11-01)
 `tools/tt-phone-post.py VIDEO CAPTION --dur mm:ss` must get the duration WITH a leading zero, e.g. `01:04` (the picker labels tiles "duration 01:04"). `1:04` makes it fail with "system picker has no videos". Compute it with `f'{d//60:02d}:{d%60:02d}'`. After any batch, read every log's last line (it must say POSTED) and check the profile: a failed TikTok post leaves only the old video there.
+
+TikTok tile picking: older copies of a video stay in the phone gallery, so the poster can take the wrong tile (2026-11-01: r5 went up as LeBron footage with the hours caption, and a first Jay-Z attempt hit an old tile). Run `--grid` and compare the tile's thumbnail with `ffmpeg -ss 0.3 -frames:v 1` of the file BEFORE posting, use `TT_PICK=x,y`, and afterwards open the new post and check its footage matches the caption. Delete the phone's old copies in `/sdcard/Download/QuietMoney` (and rescan) so only one tile matches.
