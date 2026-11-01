@@ -307,8 +307,9 @@ def test_open_slots_resume_and_bank_ahead(monkeypatch):
     dawn = datetime(today.year, today.month, today.day, 1, 0, tzinfo=timezone.utc)   # before every slot
     assert orchestrator.open_slots(5, now=dawn) == [(d0, 2), (d0, 3), (d0, 4)]        # held slot is retried
     assert orchestrator.open_slots(5, extra=5, now=dawn) == [(d0, 2), (d0, 3), (d0, 4), (d1, 1), (d1, 2)]
-    # 23:00 UTC is 19:00 in New York: only the 21:00 slot is still ahead; passed slots are never refilled
-    late = datetime(today.year, today.month, today.day, 23, 0, tzinfo=timezone.utc)
+    # only the 21:00 slot is still ahead; passed slots are never refilled
+    # 23:45 UTC sits between the 18:30 and 21:00 New York slots in daylight and in standard time alike
+    late = datetime(today.year, today.month, today.day, 23, 45, tzinfo=timezone.utc)
     assert orchestrator.open_slots(5, now=late) == [(d0, 4)]
 
 

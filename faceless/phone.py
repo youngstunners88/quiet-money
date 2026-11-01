@@ -20,6 +20,7 @@ Posting through the phone was approved by the owner on 2026-10-25 for YouTube, t
 from __future__ import annotations
 
 import json
+import os
 import re
 import shutil
 import subprocess
@@ -296,6 +297,22 @@ def _publish(wt: Path, message: str) -> bool:
     return True
 
 
+GIT_FILE_LIMIT = 90 * 1024 * 1024    # GitHub refuses a file over 100 MB; a larger render goes to the phone as a re-encoded copy
+
+
+def phone_copy(src: Path, dest: Path) -> None:
+    """Copy a video for the phone. A render over GIT_FILE_LIMIT is re-encoded at about 7 Mbps (the same frames and sound, a phone-sized file),
+    written whole or not at all. The API upload always uses the original render; only the phone copy is smaller."""
+    if src.stat().st_size <= GIT_FILE_LIMIT or src.suffix.lower() != ".mp4":
+        shutil.copy2(src, dest)
+        return
+    tmp = dest.with_name(f".{dest.name}.tmp.mp4")
+    subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", str(src), "-c:v", "libx264", "-preset", "medium", "-b:v", "7M",
+                    "-maxrate", "8M", "-bufsize", "16M", "-c:a", "aac", "-b:a", "128k", "-movflags", "+faststart", str(tmp)],
+                   check=True, timeout=900)
+    os.replace(tmp, dest)
+
+
 def stage(day: str, push: bool = True, keep_days: int = 3) -> dict:
     """Copy every unstaged job's media to out/<day>/<id>/ on the media branch; days older than keep_days are dropped from it."""
     wt = worktree()
@@ -312,7 +329,11 @@ def stage(day: str, push: bool = True, keep_days: int = 3) -> dict:
                 ok = False
                 missing.append(m["source"])
                 continue
-            shutil.copy2(src, dest / m["name"])
+            try:
+                phone_copy(src, dest / m["name"])
+            except (subprocess.SubprocessError, OSError) as e:      # one bad file is reported, the others still stage
+                ok = False
+                missing.append(f"{m['source']} ({type(e).__name__}: {str(e)[:120]})")
         if ok:
             job["staged"] = True
             save(job)

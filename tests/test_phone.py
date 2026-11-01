@@ -1,6 +1,7 @@
 """The phone lane (faceless/phone.py): its gates, its receipts and the text it hands the phone. No phone, adb or network needed."""
 
 import json
+from pathlib import Path
 
 import pytest
 
@@ -127,3 +128,31 @@ def test_the_host_heartbeat_commits_only_on_change_and_goes_stale(lane):
     assert phone.heartbeat("192.168.1.5:4000", False, "phone not reachable")["commit"] is True
     assert phone.host()["stale"] is True
     assert phone.status()["host"]["note"] == "phone not reachable"
+
+
+def test_a_small_video_is_copied_as_it_is(tmp_path, monkeypatch):
+    src = tmp_path / "final.mp4"
+    src.write_bytes(b"x" * 2000)
+    monkeypatch.setattr(phone.subprocess, "run", lambda *a, **k: pytest.fail("no re-encode for a small file"))
+    dest = tmp_path / "out" / "final.mp4"
+    dest.parent.mkdir()
+    phone.phone_copy(src, dest)
+    assert dest.read_bytes() == b"x" * 2000
+
+
+def test_a_render_over_the_git_limit_goes_to_the_phone_as_a_smaller_copy(tmp_path, monkeypatch):
+    src = tmp_path / "final.mp4"
+    src.write_bytes(b"x" * 2000)
+    monkeypatch.setattr(phone, "GIT_FILE_LIMIT", 1000)
+    calls = []
+
+    def fake_encode(args, check, timeout):                    # stands in for ffmpeg: writes the temporary file it is asked to
+        calls.append((args, timeout))
+        Path(args[-1]).write_bytes(b"y" * 10)
+    monkeypatch.setattr(phone.subprocess, "run", fake_encode)
+    dest = tmp_path / "out" / "final.mp4"
+    dest.parent.mkdir()
+    phone.phone_copy(src, dest)
+    assert dest.read_bytes() == b"y" * 10 and not list(dest.parent.glob(".*tmp*"))
+    args, timeout = calls[0]
+    assert "-b:v" in args and "7M" in args and timeout > 0    # a re-encode always has a time limit

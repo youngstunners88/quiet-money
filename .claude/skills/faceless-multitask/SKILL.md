@@ -21,7 +21,7 @@ Owner rule (2026-10-31): never sit idle while a render runs. Start the PC job fi
 - Phone quirks live in [[project-phone-posting-tools]]: push media then grant it by hand once, then `SKIP_PUSH=1`; ASCII-only titles and descriptions; keep descriptions near 600 characters.
 
 ## Breathe, twice a week
-`music/videos/2026-10-18/vibe-breathe-original.mp4` is the owner's original (3:27, 1920x1080, untouched; "a masterpiece"). Post it as it is, never remake or recompress it. New ones come from `python -m faceless vibe` (skill `faceless-vibe`: premium 2K images, one coherent world, shots cut on the song's real energy, ElevenLabs voice welcome). Cadence: two long-form films a week, uploaded with `tools/yt-song-upload.py VIDEO TITLE_FILE DESC_FILE` (pack text in `music/packs/<day>/<slug>/`, title/desc ASCII, no "AI-assisted" wording, platform AI toggle on, hub link kept).
+`music/videos/2026-10-18/vibe-breathe-original.mp4` is the owner's original (3:27, 1920x1080, untouched; "a masterpiece"). Post it as it is, never remake or recompress it. New ones are built by the vibe builder in `faceless/vibe.py` (its `make()` function: premium 2K images, one coherent world, shots cut on the song's real energy, ElevenLabs voice welcome). There is no CLI command for it yet. Cadence: two long-form films a week, uploaded with `tools/yt-song-upload.py VIDEO TITLE_FILE DESC_FILE` (pack text in `music/packs/<day>/<slug>/`, title/desc ASCII, no "AI-assisted" wording, platform AI toggle on, hub link kept).
 
 
 ## Uploader notes (2026-10-31)
