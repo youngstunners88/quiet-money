@@ -25,3 +25,11 @@ Owner rule (2026-11-01): stills for re-renders come from Flow, not Muapi; never 
 - Downloads from the browser pane do not reach disk; the 2K "upscaled" menu option is not reachable that way. Use the 1K CDN URL.
 - Menu misclicks can hit "Move to trash"; an "Undo" toast appears (find "Undo", click it).
 - Phone lane: Flow app, New project defaults to Image; set 9:16 x1; never Video, never the "AI credits" link, never add accounts. `adb shell input text` breaks on ( ) ' " & ; characters. Pull the downloaded file, resize as above.
+
+## Phone lane notes (2026-11-01 run, 12/12 stills)
+- If `adb devices` lists nothing: `adb kill-server; adb start-server`.
+- Settings chip reads "Image x1"; the prompt box sits about 150 px above "Add media". The keyboard autocorrects words while `input text` types ("no logo" became "no logos"); harmless, but check.
+- Download: More options > Download > 1K (original size, preselected). Files land in /sdcard/Download as `<digits>_<digits>.jpg`, 768x1376.
+- Find the new image by the ordered tile labels ("<short title>, 1 item", newest top-left); only about 6 tiles are visible, so counts do not work. The UI dump can lag right after Generate.
+- The owner may use the phone mid-run: check that Flow is in the foreground before each tap and pause if not.
+- A phone lane runs at roughly 4 minutes per still; give it the smallest share.
