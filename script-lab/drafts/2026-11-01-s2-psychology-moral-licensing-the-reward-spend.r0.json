@@ -1,0 +1,96 @@
+{
+  "title": "The Moral Licensing Money Trap",
+  "hook_text": "WHY SAVING ON A SALE TRICKS YOU",
+  "beats": [
+    {
+      "say": "Why saving money on a sale usually tricks people into losing more money that same night.",
+      "callout": "",
+      "visual": "Extreme close-up of a lone grocery scanner red laser line slicing across a dark conveyor belt at night."
+    },
+    {
+      "say": "You clip a coupon and save $20 on a routine cart of groceries.",
+      "callout": "SAVE $20",
+      "visual": "Low angle shot of a heavy steel shopping cart abandoned in a wet, empty parking lot under a single sodium light."
+    },
+    {
+      "say": "Your brain logs this win and quietly decides you've earned a reward.",
+      "callout": "",
+      "visual": "Close-up of a human hand tossing car keys onto a dark wooden table in a silent room."
+    },
+    {
+      "say": "So you order a $40 takeout dinner to celebrate your smart budgeting.",
+      "callout": "SPEND $40",
+      "visual": "High angle shot of a solitary paper takeout bag sitting on a cold concrete step under blue hour shadows."
+    },
+    {
+      "say": "Most people assume a win is a win.",
+      "callout": "WIN VS WIN",
+      "visual": "Extreme wide shot of a lone commuter walking across an expansive gray plaza at dusk."
+    },
+    {
+      "say": "That is the moral licensing trap at work.",
+      "callout": "",
+      "visual": "Silhouetted figure walking past a tall chain-link fence under flickering fluorescent light."
+    },
+    {
+      "say": "You didn't save $20. You spent $20 extra because of the first choice.",
+      "callout": "SAVE $20 VS NET -$20",
+      "visual": "Close-up of a rain-slick asphalt street reflecting a single red traffic signal."
+    },
+    {
+      "say": "That net loss repeats every single week across subscriptions, sales, and small treats.",
+      "callout": "NET LOSS",
+      "visual": "Extreme wide shot of a dark empty highway stretching toward a foggy horizon."
+    },
+    {
+      "say": "What happens when you decouple your rewards from your frugal wins?",
+      "callout": "",
+      "visual": "Low angle shot of a heavy iron bridge girder cutting diagonally across a grey morning sky."
+    },
+    {
+      "say": "You keep the $20 in your pocket instead of funding a hidden loop.",
+      "callout": "KEEP $20",
+      "visual": "Close-up of a leather wallet sliding into a dark jacket pocket in a dim hallway."
+    },
+    {
+      "say": "Disconnect good financial behavior from non-budgeted self rewards today.",
+      "callout": "DISCONNECT",
+      "visual": "Extreme close-up of a steel deadbolt clicking shut in a dark door frame."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "Extreme wide shot of a single glowing amber light on a distant radio tower at night."
+    }
+  ],
+  "caption": "The psychological loophole that turns a frugal win into a net loss. Stop letting a saved dollar justify a wasted forty. #MoneyPsychology #PersonalFinance #Budgeting #Wealth #MoneyRules",
+  "description": "Explore moral licensing, the psychological phenomenon where saving small amounts leads to subconscious justification for larger impulse spends.",
+  "hashtags": [
+    "#MoneyPsychology",
+    "#PersonalFinance",
+    "#Budgeting",
+    "#Wealth",
+    "#MoneyRules"
+  ],
+  "first_comment": "What's the last purchase you justified because you saved money somewhere else?",
+  "facts": [
+    {
+      "claim": "Moral licensing leads to subconscious justification of larger impulse purchases after minor savings.",
+      "basis": "Established psychological concept of moral licensing applied to personal finance behavior."
+    }
+  ],
+  "source": "llm",
+  "pillar": "psychology",
+  "look": "",
+  "loop_map": {
+    "stakes": "A routine grocery trip and a $20 discount.",
+    "big_question": "Why does a frugal win lead directly to an expensive treat?",
+    "assume": "Saving $20 on groceries means you are $20 richer.",
+    "reveal": "Spending $40 on takeout right after creates a net loss of $20.",
+    "rehook_beats": [
+      5,
+      9
+    ],
+    "payoff_beat": 10
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "id": "2026-11-01-s3-playbook-a-one-page-skills-audit",
+  "pillar": "playbook",
+  "topic": "A one-page skills audit",
+  "day": "2026-11-01",
+  "slot": 3,
+  "status": "published",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-11-01T10:12:11Z",
+      "words": 190
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-11-01T10:13:00Z",
+      "seconds": 67.683,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-11-01T10:13:25Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-11-01T10:20:52Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-11-01T10:20:52Z",
+      "score": 98
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-11-01T10:20:52Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-11-01T10:20:53Z",
+      "local": "2026-11-01T18:30:00-05:00",
+      "youtube": null
+    }
+  ],
+  "artifacts": {
+    "angle": "list the skills that raised anyone's pay in your field and mark the one you will practise this month",
+    "hook": "One skill can be worth more than a raise.",
+    "title": "The One-Page Audit to Boost Your Paycheck",
+    "style": "cinematic",
+    "video": "/home/user/quiet-money/production/output/2026-11-01/2026-11-01-s3-playbook-a-one-page-skills-audit/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-11-01/2026-11-01-s3-playbook-a-one-page-skills-audit/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-11-01/slot4-playbook",
+        "post_at": "2026-11-01T18:30:00-05:00"
+      },
+      "youtube": {
+        "skipped": "YouTube daily cap reached (5 scheduled for 2026-11-01); the local pack is ready"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 98,
+    "passed": true
+  },
+  "cost": {
+    "tts:edge:chars": 1119
+  },
+  "notes": []
+}

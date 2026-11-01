@@ -1,0 +1,97 @@
+{
+  "title": "The One-Page Audit to Boost Your Paycheck",
+  "hook_text": "ONE SKILL BEATS A 3% RAISE",
+  "beats": [
+    {
+      "say": "Stop waiting an entire year for a 3% raise that inflation immediately destroys.",
+      "callout": "",
+      "visual": "Extreme close-up of analog clock gears turning under cold fluorescent light."
+    },
+    {
+      "say": "How do top earners systematically boost their income without working double hours or burning out?",
+      "callout": "",
+      "visual": "Silhouette of a single worker walking past a towering glass skyscraper at dusk under sodium streetlights."
+    },
+    {
+      "say": "Most people assume working longer hours earns more. But mastering one high-value skill beats a minor promotion.",
+      "callout": "",
+      "visual": "Rain-slicked wet asphalt reflecting red tail lights on an empty downtown avenue during blue hour."
+    },
+    {
+      "say": "So how do you pinpoint the exact skill that actually multiplies your paycheck?",
+      "callout": "",
+      "visual": "High angle shot of a solitary wooden desk lit by a single harsh practical light in a dark room."
+    },
+    {
+      "say": "Step one. Open a notebook and write down 5 people in your field making what you want to earn.",
+      "callout": "STEP ONE",
+      "visual": "Hands in silhouette holding a dark leather notebook under a sharp beam of light."
+    },
+    {
+      "say": "What critical capabilities do they bring to the table that you're missing right now?",
+      "callout": "",
+      "visual": "Low angle shot of a massive concrete wall towering into fog at night."
+    },
+    {
+      "say": "Step two. List the top 3 skills they use to generate revenue or solve expensive problems.",
+      "callout": "STEP TWO",
+      "visual": "Silhouette of a person standing by a rain-streaked window looking at distant city sodium light reflections."
+    },
+    {
+      "say": "Step three. Circle just one skill and practice it for 30 minutes every single morning this month.",
+      "callout": "STEP THREE",
+      "visual": "Extreme close-up of a graphite pencil resting on a textured wooden table in cold light."
+    },
+    {
+      "say": "An extra $1,000 a month from a side income, invested at 8% for 10 years, becomes $182,946.",
+      "callout": "$182,946",
+      "visual": "Fog cutting through an empty bridge underpass lit by a single yellow street lamp at night."
+    },
+    {
+      "say": "What changes when you stop trading raw hours and start building real skill leverage?",
+      "callout": "",
+      "visual": "Extreme wide shot of a lone figure standing on an elevated ridge line against a twilight sky."
+    },
+    {
+      "say": "You systematically boost your income by controlling your value rather than waiting on an annual corporate review.",
+      "callout": "SKILL VS RAISE",
+      "visual": "Low angle silhouette of a person walking along a brutalist concrete walkway at night."
+    },
+    {
+      "say": "One skill can be worth more than a raise. Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "Night-time skyline mist with a single bright practical light cutting through blue hour shadow."
+    }
+  ],
+  "caption": "Stop waiting for an annual 3% raise. Run a one-page skills audit today to find the single leverage point that raises your income.\n#money #personalfinance #career #skills #financialfreedom",
+  "description": "A simple 3-step skills audit helps you identify high-income skills in your field. By practicing one key skill daily, you can increase your earning potential and compound your savings.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#career",
+    "#skills",
+    "#financialfreedom"
+  ],
+  "first_comment": "Which skill in your industry delivers the highest payout?",
+  "facts": [
+    {
+      "claim": "An extra $1,000/month from a side income, invested at 8% for 10 years = $182,946",
+      "basis": "Money Fact Sheet: $1,000/month invested at 8%/yr monthly compounding for 10 years yields $182,946"
+    }
+  ],
+  "source": "llm",
+  "pillar": "playbook",
+  "look": "",
+  "loop_map": {
+    "stakes": "Stop waiting an entire year for a 3% raise that inflation immediately destroys.",
+    "big_question": "How do top earners systematically boost their income without working double hours or burning out?",
+    "assume": "Most people assume working longer hours earns more.",
+    "reveal": "Mastering one high-value skill beats a minor promotion.",
+    "rehook_beats": [
+      4,
+      6,
+      10
+    ],
+    "payoff_beat": 11
+  }
+}

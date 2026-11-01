@@ -1,0 +1,96 @@
+{
+  "title": "The 15-Minute Skill Audit That Beats a Corporate Raise",
+  "hook_text": "ONE SKILL BEATS A RAISE",
+  "beats": [
+    {
+      "say": "One skill can be worth far more than a corporate raise.",
+      "callout": "",
+      "visual": "Low angle shot of a massive brutalist concrete skyscraper under cold rain-slick asphalt at blue hour, single sodium streetlight flickering."
+    },
+    {
+      "say": "Most people wait an entire year for a 3% pay bump that inflation destroys.",
+      "callout": "3% RAISE VS INFLATION",
+      "visual": "Cold fluorescent hallway with drop ceiling stretching into dark shadows, empty polished vinyl floor."
+    },
+    {
+      "say": "So how do high earners quietly double their paycheck in under 12 months?",
+      "callout": "",
+      "visual": "Extreme close-up of hands typing on a mechanical keyboard, dark silhouette against a dim amber monitor light."
+    },
+    {
+      "say": "You don't need a new college degree or brutal 80-hour work weeks.",
+      "callout": "",
+      "visual": "Massive rusted steel garage door under heavy shadow, stark overhead spotlight illuminating wet concrete."
+    },
+    {
+      "say": "It all comes down to a quick 15-minute audit you can run today.",
+      "callout": "",
+      "visual": "Extreme wide view of an empty subway platform at night, single silhouette standing near the edge under cold neon lights."
+    },
+    {
+      "say": "Step one. Open a blank note app and write down the five top earners in your field.",
+      "callout": "STEP ONE",
+      "visual": "Overhead low-key shot of hands writing in a black notebook with a fountain pen, single desk light cutting through darkness."
+    },
+    {
+      "say": "Step two. Next to each name, write the primary high-value skill they've mastered that you haven't.",
+      "callout": "STEP TWO",
+      "visual": "Deep focus of a stark modern conference room bathed in blue foggy dawn light through floor-to-ceiling glass."
+    },
+    {
+      "say": "Look closely at that list. It's rarely raw hard labor. It's usually high-leverage negotiation or sales.",
+      "callout": "",
+      "visual": "Low angle silhouette of a figure staring out at a smog-covered city skyline from a high tower edge at dusk."
+    },
+    {
+      "say": "Step three. Circle just one skill and block 20 minutes to practice it every single day this month.",
+      "callout": "STEP THREE",
+      "visual": "Extreme wide shot of a lone car traveling down a dark rainy highway illuminated by tall sodium light poles."
+    },
+    {
+      "say": "Here's the math. An extra $1,000/month from elevated skills, invested at 8% for 10 years, becomes $182,946.",
+      "callout": "$182,946",
+      "visual": "High angle shot of a massive concrete vault floor illuminated by a single overhead spotlight in a quiet atmospheric hall."
+    },
+    {
+      "say": "That simple monthly focus turns zero extra effort into nearly $183,000 in your personal asset column.",
+      "callout": "+$1,000 / MONTH",
+      "visual": "Silhouette of a figure standing atop a high architectural concrete ledge overlooking a misty canyon at sunrise."
+    },
+    {
+      "say": "Follow for the money rules school never taught you, so one skill can build your wealth.",
+      "callout": "",
+      "visual": "Low angle view of wet city asphalt reflecting streetlights under blue hour fog, silhouette walking away into the distance."
+    }
+  ],
+  "caption": "Stop waiting for a 3% bump. Audit your high-leverage skills today. #money #personalfinance #wealthbuilding #careeradvice #careerhacks",
+  "description": "Waiting for an annual review won't build real financial freedom. Learn how a 15-minute skill audit can add $1,000 a month to your earnings and turn into serious long-term assets.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#wealthbuilding",
+    "#careeradvice",
+    "#financialfreedom"
+  ],
+  "first_comment": "Which one skill in your field pays the highest return when mastered?",
+  "facts": [
+    {
+      "claim": "An extra $1,000/month invested at 8% for 10 years reaches $182,946.",
+      "basis": "Fact sheet: An extra $1,000/month from a side income, invested at 8% for 10 years = $182,946 (you put in $120,000)"
+    }
+  ],
+  "source": "llm",
+  "pillar": "playbook",
+  "look": "",
+  "loop_map": {
+    "stakes": "A standard 3% annual raise gets eaten up by inflation, keeping workers behind.",
+    "big_question": "How do top earners quietly double their paycheck in under 12 months?",
+    "assume": "You need a new degree or 80-hour work weeks to get ahead.",
+    "reveal": "A simple 15-minute skill audit pinpoints high-leverage skills that boost income.",
+    "rehook_beats": [
+      5,
+      8
+    ],
+    "payoff_beat": 11
+  }
+}

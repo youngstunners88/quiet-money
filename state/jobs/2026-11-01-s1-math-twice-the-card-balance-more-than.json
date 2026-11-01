@@ -1,0 +1,67 @@
+{
+  "id": "2026-11-01-s1-math-twice-the-card-balance-more-than",
+  "pillar": "math",
+  "topic": "Twice the card balance, more than four times the interest",
+  "day": "2026-11-01",
+  "slot": 1,
+  "status": "held",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-11-01T09:38:52Z",
+      "words": 168
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-11-01T09:40:45Z",
+      "seconds": 69.678,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-11-01T09:41:05Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-11-01T09:47:03Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-11-01T09:47:03Z",
+      "score": 96
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-11-01T09:47:03Z"
+    },
+    {
+      "from": "packaged",
+      "to": "held",
+      "ts": "2026-11-01T09:47:03Z"
+    }
+  ],
+  "artifacts": {
+    "angle": "same 24% APR and the same $300 a month: $3,000 takes 12 months and $381 interest, $6,000 takes 26 months and $1,739 interest (fact sheet); the new angle is the balance size at a fixed payment, no compounding illustration; both figures already appear in earlier card videos, so the script leads on the comparison, not on either number alone",
+    "hook": "Same $300 a month at 24%: $3,000 costs $381 in interest. $6,000 costs $1,739.",
+    "title": "Why Doubling Your Card Balance Quadruples Interest",
+    "style": "cinematic",
+    "video": "/home/user/quiet-money/production/output/2026-11-01/2026-11-01-s1-math-twice-the-card-balance-more-than/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-11-01/2026-11-01-s1-math-twice-the-card-balance-more-than/cover.jpg"
+  },
+  "scores": {
+    "gauntlet": 96,
+    "passed": false
+  },
+  "cost": {
+    "tts:edge:chars": 977
+  },
+  "notes": [
+    "held for review: originality"
+  ]
+}

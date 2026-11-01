@@ -1,0 +1,101 @@
+{
+  "title": "Your Credit Limit Is Not Your Money",
+  "hook_text": "YOUR CREDIT LIMIT IS A TRAP",
+  "beats": [
+    {
+      "say": "Your credit limit is the bank's number, not yours.",
+      "callout": "",
+      "visual": "Low angle silhouette of a solitary person walking past a looming glass skyscraper in rain at night, sodium streetlight reflecting on wet asphalt."
+    },
+    {
+      "say": "When a card issuer hands you a $6,000 limit, it feels like permission to spend $6,000.",
+      "callout": "$6,000 LIMIT",
+      "visual": "Extreme close-up of a sleek black plastic credit card resting on cold dark concrete under flickering blue fluorescent overhead lights."
+    },
+    {
+      "say": "Most people assume a bank only offers a limit your paycheck can easily carry.",
+      "callout": "AFFORD VS RISK",
+      "visual": "High angle view of an empty tiled subway platform at midnight, cold mist rolling through the quiet corridor."
+    },
+    {
+      "say": "That's the head fake. A credit limit isn't your safety line; it's the lender's risk cap.",
+      "callout": "",
+      "visual": "Extreme wide shot of a massive steel drawbridge suspended over dark open water during blue hour."
+    },
+    {
+      "say": "Lenders profit when you carry debt, so their ceiling is built to test your limits.",
+      "callout": "",
+      "visual": "Silhouette of a person standing at the edge of a rain-slicked rooftop overlook watching distant freeway light trails."
+    },
+    {
+      "say": "So what actually happens if you spend that $6,000 limit and pay minimums?",
+      "callout": "",
+      "visual": "Low angle view of cold concrete pillars beneath a towering freeway underpass illuminated by a single harsh spotlight."
+    },
+    {
+      "say": "On a $6,000 card at 24% APR, minimum payments take 21 years to clear.",
+      "callout": "21 YEARS TO PAY",
+      "visual": "Extreme close-up of heavy iron clock gears slowly turning under a dim amber glow."
+    },
+    {
+      "say": "Even worse, that original $6,000 debt costs you $10,887 in pure interest.",
+      "callout": "$10,887 INTEREST",
+      "visual": "Wide shot of an empty highway stretching straight into a foggy mountain horizon at dusk."
+    },
+    {
+      "say": "So how do you stop a bank's high limit from quietly draining your financial future?",
+      "callout": "",
+      "visual": "High angle view of a lone figure crossing a wet plaza surrounded by sharp architectural shadows."
+    },
+    {
+      "say": "First, ignore the bank's limit and set your own spending line from take-home pay.",
+      "callout": "STEP ONE",
+      "visual": "Close-up from behind of hands opening a worn leather wallet under single overhead lamp illumination."
+    },
+    {
+      "say": "Second, treat your credit card strictly like debit, paying off every balance in full.",
+      "callout": "STEP TWO",
+      "visual": "Extreme wide shot of a rugged mountain ridge line shrouded in dense blue morning fog."
+    },
+    {
+      "say": "Your monthly budget must be set by cash flow, never by a lender's algorithm.",
+      "callout": "",
+      "visual": "Low angle shot of a massive concrete dam holding back deep dark waters in twilight."
+    },
+    {
+      "say": "Follow for the money rules school never taught you, so the bank's number never becomes yours.",
+      "callout": "",
+      "visual": "Silhouette of a person looking out from a high-rise floor-to-ceiling glass window onto a vast glowing city skyline at night."
+    }
+  ],
+  "caption": "Your credit limit is how much the bank is willing to risk on you, not what your month can carry. Don't let their limit dictate your lifestyle.\n\n#money #personalfinance #creditcard #moneymindset #debtfree",
+  "description": "Exposing the myth behind credit card limits. A high limit is a measure of bank risk, not personal affordability. Learn how minimum payments on high interest debt trap cash flow for decades.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#creditcard",
+    "#moneymindset",
+    "#debtfree"
+  ],
+  "first_comment": "Did you ever assume a higher limit meant you were doing great financially?",
+  "facts": [
+    {
+      "claim": "A $6,000 balance at 24% APR paying minimums takes 21 years and costs $10,887 in interest.",
+      "basis": "Fact sheet calculation: $6,000 credit card at 24% APR paying only the minimum (1% + interest, min $25) equals 252 months (~21 years) and $10,887 interest."
+    }
+  ],
+  "source": "llm",
+  "pillar": "myth",
+  "look": "",
+  "loop_map": {
+    "stakes": "A credit limit feels like personal spending power, but it belongs to the lender's risk department.",
+    "big_question": "Why do credit card companies hand out limits that can ruin your paycheck?",
+    "assume": "A high credit limit means the bank verified that you can comfortably afford it.",
+    "reveal": "A credit limit represents the maximum loss a lender will tolerate, designed to earn interest.",
+    "rehook_beats": [
+      6,
+      9
+    ],
+    "payoff_beat": 12
+  }
+}

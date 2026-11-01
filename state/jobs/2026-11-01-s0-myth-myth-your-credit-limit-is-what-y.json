@@ -1,0 +1,77 @@
+{
+  "id": "2026-11-01-s0-myth-myth-your-credit-limit-is-what-y",
+  "pillar": "myth",
+  "topic": "Myth: your credit limit is what you can afford",
+  "day": "2026-11-01",
+  "slot": 0,
+  "status": "published",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-11-01T09:23:38Z",
+      "words": 182
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-11-01T09:24:34Z",
+      "seconds": 62.464,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-11-01T09:24:54Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-11-01T09:29:55Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-11-01T09:29:55Z",
+      "score": 96
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-11-01T09:29:56Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-11-01T09:29:56Z",
+      "local": "2026-11-01T07:30:00-05:00",
+      "youtube": null
+    }
+  ],
+  "artifacts": {
+    "angle": "name the belief; a credit limit is how much a lender is willing to lend, not what your month can carry; counter-move: set your own spending line from your take-home pay; no figure claimed",
+    "hook": "Your credit limit is the bank's number, not yours.",
+    "title": "Your Credit Limit Is Not Your Money",
+    "style": "cinematic",
+    "video": "/home/user/quiet-money/production/output/2026-11-01/2026-11-01-s0-myth-myth-your-credit-limit-is-what-y/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-11-01/2026-11-01-s0-myth-myth-your-credit-limit-is-what-y/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-11-01/slot1-myth",
+        "post_at": "2026-11-01T07:30:00-05:00"
+      },
+      "youtube": {
+        "skipped": "YouTube daily cap reached (5 scheduled for 2026-11-01); the local pack is ready"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 96,
+    "passed": true
+  },
+  "cost": {
+    "tts:edge:chars": 1028
+  },
+  "notes": []
+}

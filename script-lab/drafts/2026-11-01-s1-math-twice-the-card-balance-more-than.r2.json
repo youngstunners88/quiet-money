@@ -1,0 +1,100 @@
+{
+  "title": "Why Doubling Your Card Balance Quadruples Interest",
+  "hook_text": "$3,000 VS $6,000 CREDIT CARD MATH",
+  "beats": [
+    {
+      "say": "Same $300 a month at 24%: $3,000 costs $381 in interest. $6,000 costs $1,739.",
+      "callout": "",
+      "visual": "Low angle extreme close-up of a sleek black metal credit card resting on wet asphalt at blue hour under cold streetlights."
+    },
+    {
+      "say": "You doubled the balance, but your interest bill jumped more than 4 times. Why?",
+      "callout": "$381 VS $1,739",
+      "visual": "Silhouette of a figure standing beneath a massive concrete overpass at night, fog cutting through sodium lighting."
+    },
+    {
+      "say": "Most people assume debt math moves in a straight line. Double the card, double the penalty.",
+      "callout": "",
+      "visual": "High angle shot of a long, dark empty highway stretching into the misty horizon under a twilight sky."
+    },
+    {
+      "say": "But fixed monthly payments don't work like that when interest charges eat your cash first.",
+      "callout": "",
+      "visual": "Cold fluorescent lighting illuminating a lone metal desk inside a vast empty concrete warehouse."
+    },
+    {
+      "say": "Take the $3,000 balance at 24% APR. Paying $300 a month clears it in 12 months.",
+      "callout": "12 MONTHS",
+      "visual": "Macro close-up of a ticking vintage clock gear mechanism shot under a single hard light beam."
+    },
+    {
+      "say": "You hand over $3,381 total. Only $381 goes to the bank.",
+      "callout": "$381 INTEREST",
+      "visual": "Extreme wide view of a lone figure standing on the edge of a rain-slick skyscraper roof at dusk."
+    },
+    {
+      "say": "Now double that balance to $6,000, keeping the exact same $300 monthly check.",
+      "callout": "$6,000 BALANCE",
+      "visual": "Low angle silhouette looking up at massive brutalist concrete pillars lit by harsh blue shadows."
+    },
+    {
+      "say": "You'd expect it to take 24 months and cost double the interest, around $760.",
+      "callout": "$760 EXPECTED",
+      "visual": "Wide shot of an empty train platform late at night with heavy fog rolling across the wet ground."
+    },
+    {
+      "say": "It actually takes 26 months. And the interest rockets straight to $1,739.",
+      "callout": "$1,739 ACTUAL",
+      "visual": "Dark underpass illuminated by a single flickering yellow fluorescent tube, creating long stark shadows."
+    },
+    {
+      "say": "That fixed $300 payment gets eaten alive by interest early on, dragging out your timeline.",
+      "callout": "PAYOFF TRAP",
+      "visual": "High angle shot looking down a steep, narrow spiral staircase ending in dark shadow."
+    },
+    {
+      "say": "Small payment increases protect your paycheck before larger balances multiply your total cost.",
+      "callout": "",
+      "visual": "Silhouette of a person standing on a rocky cliff ridge line at dawn, looking out over open misty waters."
+    },
+    {
+      "say": "Follow Quiet Money for the simple money rules school never taught you about your card.",
+      "callout": "",
+      "visual": "Low angle extreme close-up of the black metal card resting on wet asphalt under streetlights."
+    }
+  ],
+  "caption": "Doubling your credit card balance doesn't double the cost—it quadruples it. Here's how fixed monthly payments secretly drain your cash.\n\n#creditcard #debtpayoff #personalfinance #moneytok #financialliteracy",
+  "description": "When you double a credit card balance while keeping payments fixed, interest overhead expands your repayment timeline. At a 24% APR and $300 monthly payment, a $3,000 balance costs $381 in interest over 12 months, while a $6,000 balance costs $1,739 over 26 months.",
+  "hashtags": [
+    "#creditcard",
+    "#debtpayoff",
+    "#personalfinance",
+    "#moneytok",
+    "#financialliteracy"
+  ],
+  "first_comment": "Did you expect doubling the balance to quadruple the interest cost?",
+  "facts": [
+    {
+      "claim": "A $3,000 credit card balance at 24% APR paying $300/month takes 12 months and costs $381 in interest.",
+      "basis": "Fact sheet calculation: $3,000 at 24% paying $300/month = 12 months, $381 interest."
+    },
+    {
+      "claim": "A $6,000 credit card balance at 24% APR paying $300/month takes 26 months and costs $1,739 in interest.",
+      "basis": "Fact sheet calculation: $6,000 at 24% paying $300/month = 26 months, $1,739 interest."
+    }
+  ],
+  "source": "llm",
+  "pillar": "math",
+  "look": "",
+  "loop_map": {
+    "stakes": "A fixed $300 monthly payment on a doubled card balance creates more than 4 times the interest charges.",
+    "big_question": "Why does doubling a credit card balance multiply interest charges more than 4 times when keeping payments fixed?",
+    "assume": "Most people assume doubling a debt balance linearly doubles the repayment timeline and interest paid.",
+    "reveal": "Fixed monthly payments get absorbed by larger monthly interest charges early on, extending the timeline and quadrupling the total interest.",
+    "rehook_beats": [
+      5,
+      7
+    ],
+    "payoff_beat": 10
+  }
+}

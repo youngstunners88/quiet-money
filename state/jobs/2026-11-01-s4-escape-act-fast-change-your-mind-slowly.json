@@ -1,0 +1,40 @@
+{
+  "id": "2026-11-01-s4-escape-act-fast-change-your-mind-slowly",
+  "pillar": "escape",
+  "topic": "Act fast, change your mind slowly",
+  "day": "2026-11-01",
+  "slot": 4,
+  "status": "visualized",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-11-01T10:25:47Z",
+      "words": 198
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-11-01T10:26:23Z",
+      "seconds": 71.214,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-11-01T10:26:43Z"
+    }
+  ],
+  "artifacts": {
+    "angle": "a decision rule from Pena: decide quickly, then hold the decision long enough to test it",
+    "brief": "pena",
+    "hook": "Fast deciders are not reckless. They just stop re-deciding.",
+    "title": "The Decision Rule That Saves You $400,130",
+    "style": "cinematic"
+  },
+  "scores": {},
+  "cost": {
+    "tts:edge:chars": 1180
+  },
+  "notes": []
+}

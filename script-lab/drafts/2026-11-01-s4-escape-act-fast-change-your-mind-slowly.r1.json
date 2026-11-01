@@ -1,0 +1,96 @@
+{
+  "title": "The $400,000 Cost of Hesitating With Your Paycheck",
+  "hook_text": "THE $400K COST OF WAITING",
+  "beats": [
+    {
+      "say": "Fast deciders aren't reckless: delaying a $200 monthly investment by 10 years costs you $400,130.",
+      "callout": "",
+      "visual": "High-angle shot of a sole commuter walking past massive granite columns in a fog-drenched financial district at blue hour."
+    },
+    {
+      "say": "Why does deciding fast build real wealth, while hesitating quietly drains your monthly paycheck?",
+      "callout": "",
+      "visual": "Low-angle silhouetted figure standing atop a rain-slick skyscraper edge looking down at sodium-lit city traffic."
+    },
+    {
+      "say": "Most people assume waiting for more cash or market clarity protects their money from risk.",
+      "callout": "WAITING VS ACTING",
+      "visual": "Extreme close-up of a wrist with a simple analog watch under a harsh single fluorescent light in an empty vault."
+    },
+    {
+      "say": "In reality, starting at 35 yields $298,072 at 65 instead of $698,202 at 8% compounding.",
+      "callout": "$698,202 VS $298,072",
+      "visual": "Cinematic wide shot of an empty, rain-slick highway disappearing into dense night fog illuminated by distant streetlights."
+    },
+    {
+      "say": "High performers make strategic moves quickly, then hold their decision long enough to let math compound.",
+      "callout": "",
+      "visual": "Underpass with dark concrete walls and a single amber streetlamp casting long shadows on wet pavement."
+    },
+    {
+      "say": "Investing $1,000 a month at 8% per year reaches a $600,000 portfolio in 20.2 years.",
+      "callout": "20.2 YEARS TO $600K",
+      "visual": "Extreme low-angle shot looking up at towering steel beams of a suspension bridge enveloped in morning mist."
+    },
+    {
+      "say": "So what's the actual decision mechanism that separates fast deciders from chronic financial overthinkers?",
+      "callout": "",
+      "visual": "Silhouette of a lone person standing at an open industrial doorway looking out at a stormy grey sea."
+    },
+    {
+      "say": "Here's the catch: moving fast requires committing real capital, and leverage or debt can still fail.",
+      "callout": "THE HONEST CATCH",
+      "visual": "Cold fluorescent lighting over a bare steel table holding an unlit desk lamp in an abandoned office."
+    },
+    {
+      "say": "This week, pick one automated asset move, like $500 monthly at 8%, and commit to testing it.",
+      "callout": "STEP ONE",
+      "visual": "High-angle shot of dark ocean waters churning beneath a misty coastal cliff line at twilight."
+    },
+    {
+      "say": "Deciding fast builds wealth while waiting drains it because action unleashes time, stopping constant re-deciding.",
+      "callout": "STOP RE-DECIDING",
+      "visual": "Extreme wide shot of a solitary train track cutting straight through a vast snow-covered valley."
+    },
+    {
+      "say": "Stop letting hesitation steal your compounding years. Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "Low-angle silhouette of a person standing on wet asphalt outside a dimly lit warehouse at blue hour."
+    }
+  ],
+  "caption": "Hesitation costs more than bad timing. Here is why fast decisions win.\n\n#personalfinance #money #investing #wealth #buildingwealth",
+  "description": "Learn the financial power of deciding quickly and changing your mind slowly. Hesitating on asset investments drains hundreds of thousands in compounding returns.",
+  "hashtags": [
+    "#personalfinance",
+    "#money",
+    "#investing",
+    "#wealth",
+    "#financialeducation"
+  ],
+  "first_comment": "What money decision have you been putting off this year?",
+  "facts": [
+    {
+      "claim": "Starting at 25 vs 35 with $200/month at 8% until 65 costs $400,130 ($698,202 vs $298,072)",
+      "basis": "Fact sheet rule: Starting at 25 vs 35 with $200/month at 8% until 65: $698,202 vs $298,072 (10 years late costs $400,130)"
+    },
+    {
+      "claim": "Investing $1,000/month at 8% reaches $600,000 in 20.2 years",
+      "basis": "Fact sheet rule: $2,000/month of passive income needs about $600,000 invested; investing $1,000/month at 8%/yr reaches $600,000 in 20.2 years"
+    }
+  ],
+  "source": "llm",
+  "pillar": "escape",
+  "look": "",
+  "loop_map": {
+    "stakes": "Delaying a $200 monthly investment by 10 years costs $400,130 in compounding growth.",
+    "big_question": "Why does deciding fast build real wealth, while hesitating quietly drains your monthly paycheck?",
+    "assume": "Waiting for more cash or market clarity protects your money from risk.",
+    "reveal": "Starting at 35 yields $298,072 at 65 instead of $698,202 at 8% compounding.",
+    "rehook_beats": [
+      4,
+      7,
+      9
+    ],
+    "payoff_beat": 10
+  }
+}

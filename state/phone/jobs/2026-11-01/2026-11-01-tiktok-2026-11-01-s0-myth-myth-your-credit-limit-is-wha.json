@@ -1,0 +1,18 @@
+{
+ "id": "2026-11-01-tiktok-2026-11-01-s0-myth-myth-your-credit-limit-is-wha",
+ "kind": "tiktok",
+ "day": "2026-11-01",
+ "key": "2026-11-01-s0-myth-myth-your-credit-limit-is-what-y",
+ "status": "queued",
+ "created": "2026-11-01T09:49:14+00:00",
+ "recipe": "TikTok upload",
+ "media": [
+  {
+   "source": "production/output/2026-11-01/2026-11-01-s0-myth-myth-your-credit-limit-is-what-y/final.mp4",
+   "name": "final.mp4"
+  }
+ ],
+ "staged": true,
+ "text": "Your credit limit is how much the bank is willing to risk on you, not what your month can carry. Don't let their limit dictate your lifestyle.\n\nThe Money Reset Kit: link in bio (paid).\n\n#money #personalfinance #creditcard #moneymindset #debtfree\n\nEducation, not financial advice.",
+ "ai_label": "AI-generated content: on"
+}

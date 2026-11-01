@@ -1,0 +1,105 @@
+{
+  "title": "Act Fast, Change Your Mind Slowly: The Money Decision Rule",
+  "hook_text": "STOP RE-DECIDING YOUR MONEY",
+  "beats": [
+    {
+      "say": "Fast deciders aren't reckless. They just stop re-deciding every single week.",
+      "callout": "",
+      "visual": "Low angle shot of a solitary figure standing on a rain-slick skyscraper roof at dusk, urban skyline foggy."
+    },
+    {
+      "say": "Waiting ten years to start investing $200 a month costs you $400,130 by age 65.",
+      "callout": "$400,130 LOST",
+      "visual": "Wet asphalt beneath a flickering sodium streetlamp on an empty shipping dock."
+    },
+    {
+      "say": "Why do most people lose hundreds of thousands without ever taking a real risk?",
+      "callout": "",
+      "visual": "Cold fluorescent light spilling across an empty corporate corridor at night."
+    },
+    {
+      "say": "You assume hesitation keeps your cash safe from bad choices.",
+      "callout": "",
+      "visual": "High angle extreme wide of a massive concrete dam holding back dark open water."
+    },
+    {
+      "say": "In reality, second-guessing every move creates permanent delay, which is the ultimate loss.",
+      "callout": "DELAY VS RISK",
+      "visual": "High angle silhouette of a person looking down at a lonely foggy train track."
+    },
+    {
+      "say": "So how do high earners make decisions that actually stick?",
+      "callout": "",
+      "visual": "Extreme close up of a heavy steel vault lock mechanism in blue hour light."
+    },
+    {
+      "say": "Business mentor Dan Peña teaches high performers to act quickly and change their minds slowly.",
+      "callout": "",
+      "visual": "Back view of a person standing at a towering glass facade overlooking city rain."
+    },
+    {
+      "say": "When you pick an asset or a side business, execute it for 100 days straight.",
+      "callout": "STEP ONE",
+      "visual": "Underpass with a single practical streetlight shining on dark wet concrete."
+    },
+    {
+      "say": "Building an extra $1,000 a month and investing it at 8% yields $182,946 in ten years.",
+      "callout": "$182,946 RETURN",
+      "visual": "Extreme wide shot of a shipping yard with stacked containers under cold spotlights."
+    },
+    {
+      "say": "What's the honest catch to choosing fast and holding firm?",
+      "callout": "",
+      "visual": "Ridge line silhouette against a dark twilight sky cut by heavy fog."
+    },
+    {
+      "say": "Execution takes brutal effort, and using debt or partners means you owe results even when it fails.",
+      "callout": "THE HONEST CATCH",
+      "visual": "Silhouette of a figure climbing a massive rusty industrial stairway in blue light."
+    },
+    {
+      "say": "Stop re-analyzing your first step. Pick the target, hold it long enough to test, and build.",
+      "callout": "ACT FAST",
+      "visual": "Tower edge at sunrise, wide shot overlooking a massive industrial port."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "Low angle wide of an empty bridge stretching into mist at blue hour."
+    }
+  ],
+  "caption": "Fast decisions beat endless re-analyzing every single time. Here's why delay is the most expensive mistake you can make.\n\n#money #personalfinance #wealth #investing #wealthbuilding",
+  "description": "Learn the decision framework that high earners use to build long-term assets. By deciding fast and changing your mind slowly, you avoid the massive cost of permanent financial delay.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#wealth",
+    "#investing",
+    "#wealthbuilding"
+  ],
+  "first_comment": "What's one financial move you've been overthinking for months?",
+  "facts": [
+    {
+      "claim": "Waiting 10 years to start investing $200/month costs $400,130 by age 65.",
+      "basis": "Investing $200/month at 8% from age 25 to 65 yields $698,202, while starting at 35 yields $298,072."
+    },
+    {
+      "claim": "An extra $1,000/month invested at 8% for 10 years yields $182,946.",
+      "basis": "Fact sheet calculation: $1,000/month invested at 8% per year compounded monthly over 10 years equals $182,946."
+    }
+  ],
+  "source": "llm",
+  "pillar": "escape",
+  "look": "",
+  "loop_map": {
+    "stakes": "Hesitation costs $400,130 in lost wealth over 10 years.",
+    "big_question": "Why do most people lose hundreds of thousands without ever taking a real risk?",
+    "assume": "Hesitation keeps your money safe from bad decisions.",
+    "reveal": "Indecision creates permanent delay, which burns potential returns.",
+    "rehook_beats": [
+      6,
+      10
+    ],
+    "payoff_beat": 12
+  }
+}

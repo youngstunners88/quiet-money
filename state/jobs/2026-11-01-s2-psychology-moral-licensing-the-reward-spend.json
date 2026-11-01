@@ -1,0 +1,77 @@
+{
+  "id": "2026-11-01-s2-psychology-moral-licensing-the-reward-spend",
+  "pillar": "psychology",
+  "topic": "Moral Licensing (The Reward Spend Loop)",
+  "day": "2026-11-01",
+  "slot": 2,
+  "status": "published",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-11-01T09:53:52Z",
+      "words": 174
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-11-01T09:55:20Z",
+      "seconds": 63.667,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-11-01T09:59:39Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-11-01T10:07:51Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-11-01T10:07:51Z",
+      "score": 92
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-11-01T10:07:52Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-11-01T10:07:52Z",
+      "local": "2026-11-01T15:00:00-05:00",
+      "youtube": null
+    }
+  ],
+  "artifacts": {
+    "angle": "Explore the psychological phenomenon where doing something financially disciplined (saving $20 on groceries) leads to subconscious justification of an expensive treat ($40 takeout dinner). Show the net loss math (-$20). Counter-move: disconnect 'good financial behavior' from non-budgeted self-rewards.",
+    "hook": "Why saving money on a sale usually tricks people into losing more money that same night.",
+    "title": "The Moral Licensing Trap That Drains Your Wallet",
+    "style": "cinematic",
+    "video": "/home/user/quiet-money/production/output/2026-11-01/2026-11-01-s2-psychology-moral-licensing-the-reward-spend/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-11-01/2026-11-01-s2-psychology-moral-licensing-the-reward-spend/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-11-01/slot3-psychology",
+        "post_at": "2026-11-01T15:00:00-05:00"
+      },
+      "youtube": {
+        "skipped": "YouTube daily cap reached (5 scheduled for 2026-11-01); the local pack is ready"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 92,
+    "passed": true
+  },
+  "cost": {
+    "tts:edge:chars": 987
+  },
+  "notes": []
+}

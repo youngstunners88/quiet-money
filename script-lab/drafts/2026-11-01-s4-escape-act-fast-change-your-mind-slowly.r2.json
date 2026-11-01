@@ -1,0 +1,100 @@
+{
+  "title": "The Decision Rule That Saves You $400,130",
+  "hook_text": "FAST DECIDERS STOP RE-DECIDING",
+  "beats": [
+    {
+      "say": "Waiting 10 years to pick a simple monthly investment costs you $400,130 in total wealth.",
+      "callout": "",
+      "visual": "Extreme low angle of an old clock face mounted on a wet asphalt street under cold sodium light."
+    },
+    {
+      "say": "Starting at age 25 instead of 35 with $200 a month at 8% creates that exact gap.",
+      "callout": "$698,202 VS $298,072",
+      "visual": "High angle of two metal keys sitting on a rust-stained steel table in blue hour fog."
+    },
+    {
+      "say": "So why do millions of capable people hesitate for a decade before making one clear financial move?",
+      "callout": "",
+      "visual": "Silhouette of a figure standing on a cold concrete tower edge overlooking a sprawling city skyline."
+    },
+    {
+      "say": "You might assume fast deciders are reckless gamblers taking unneeded risks with their hard-earned money.",
+      "callout": "RECKLESS VS FOCUSED",
+      "visual": "Extreme close-up of wet asphalt reflecting a single yellow practical light under a misty underpass."
+    },
+    {
+      "say": "That's wrong. Fast deciders aren't reckless at all; they just stop re-deciding the same choice every morning.",
+      "callout": "",
+      "visual": "Silhouette against rainy glass overlooking an empty urban highway at night."
+    },
+    {
+      "say": "Smart execution rules mean choosing a direction quickly, then locking that decision in for the long haul.",
+      "callout": "",
+      "visual": "Extreme wide shot of a solitary figure walking along a fog-drenched concrete pier over open water."
+    },
+    {
+      "say": "But how long must you actually test your new direction before changing your mind makes real sense?",
+      "callout": "",
+      "visual": "Low angle shot of a massive steel industrial crane against a dark blue hour sky."
+    },
+    {
+      "say": "High performers hold a path long enough to gather real data, like making 100 reach-outs a day for 100 days.",
+      "callout": "10,000 CONTACTS",
+      "visual": "High angle shot of a heavy closed ledger on a solitary metal desk under a single cold fluorescent light."
+    },
+    {
+      "say": "At a modest 1% yes-rate, those 10,000 total contacts bring you 100 real paying customers.",
+      "callout": "",
+      "visual": "Extreme wide of a concrete underpass with rain slicking the pavement and dark shadows stretching across."
+    },
+    {
+      "say": "Here's the catch: changing your mind slowly means enduring painful dry spells while your effort builds up.",
+      "callout": "THE HONEST CATCH",
+      "visual": "Silhouette of a figure standing on a rocky ridge line looking down into dense morning fog."
+    },
+    {
+      "say": "Make your decisions quickly to start building assets, then hold them long enough for compounding to work.",
+      "callout": "HOLD LONG ENOUGH",
+      "visual": "Extreme close-up of a heavy rusted iron lock around thick steel chains on a damp wooden gate."
+    },
+    {
+      "say": "Follow Quiet Money right now for the simple money rules school never taught you.",
+      "callout": "",
+      "visual": "Tower edge at night with cold blue lights from the distant city flickering below."
+    }
+  ],
+  "caption": "Decide quickly, change your mind slowly. Hesitating for 10 years can cost you over $400,000 in wealth.\n\n#money #personalfinance #moneytok #financialfreedom #mindset",
+  "description": "Learn why high performers make decisions fast and hold them long enough to see real results. Hesitation carries a massive price tag over time.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#moneytok",
+    "#financialfreedom",
+    "#mindset"
+  ],
+  "first_comment": "What's one financial decision you've been delaying for way too long?",
+  "facts": [
+    {
+      "claim": "Starting at 25 vs 35 with $200/month at 8% until 65 costs $400,130 ($698,202 vs $298,072)",
+      "basis": "Money Fact Sheet calculation"
+    },
+    {
+      "claim": "100 reach-outs a day for 100 days yields 10,000 contacts and 100 customers at a 1% yes-rate",
+      "basis": "Rule of 100 volume math"
+    }
+  ],
+  "source": "llm",
+  "pillar": "escape",
+  "look": "",
+  "loop_map": {
+    "stakes": "Waiting 10 years to pick an investment costs $400,130.",
+    "big_question": "Why do smart people hesitate, and how do fast deciders win without taking reckless risks?",
+    "assume": "Fast deciders are reckless gamblers taking wild financial risks.",
+    "reveal": "Fast deciders simply stop re-deciding and hold their execution long enough for the math to work.",
+    "rehook_beats": [
+      3,
+      7
+    ],
+    "payoff_beat": 11
+  }
+}

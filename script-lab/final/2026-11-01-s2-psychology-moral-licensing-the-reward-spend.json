@@ -1,0 +1,96 @@
+{
+  "title": "The Moral Licensing Trap That Drains Your Wallet",
+  "hook_text": "WHY SAVING $20 TRICKS YOU",
+  "beats": [
+    {
+      "say": "Why saving money on a sale usually tricks people into losing more money that same night.",
+      "callout": "",
+      "visual": "Extreme wide shot of a solitary person walking under a cold fluorescent highway overpass at dusk."
+    },
+    {
+      "say": "You scan the grocery aisle, skip the brand name, and save $20 on your weekly food bill.",
+      "callout": "SAVED $20",
+      "visual": "Low angle close-up of heavy wire shopping cart wheels rolling across wet asphalt in the dark."
+    },
+    {
+      "say": "That small win sparks a hidden psychological trigger in your brain called moral licensing.",
+      "callout": "THE TRIGGER",
+      "visual": "Silhouetted hands holding a receipt under a single sodium streetlamp."
+    },
+    {
+      "say": "You think you've earned a reward for being financially disciplined all week long.",
+      "callout": "THE ASSUMPTION",
+      "visual": "Cold fluorescent light reflecting off a rain-slicked metal sliding door."
+    },
+    {
+      "say": "So what happens when you order a $40 takeout dinner right after getting home?",
+      "callout": "$40 TAKEOUT",
+      "visual": "Blurred view of a dark, empty street through a fogged restaurant window."
+    },
+    {
+      "say": "You feel good because you saved money earlier, but where does the actual cash go?",
+      "callout": "NET LOSS",
+      "visual": "Close-up of a lone car's red taillights fading into thick highway fog."
+    },
+    {
+      "say": "Most people assume a win cancels out a loss, leaving you even on the day.",
+      "callout": "THE HEAD FAKE",
+      "visual": "High angle shot of an empty concrete parking lot lit by pale blue security lights."
+    },
+    {
+      "say": "It doesn't. You didn't save $20. You just subsidized a $40 splurge with your own groceries.",
+      "callout": "-$20 LOSS",
+      "visual": "Extreme close-up of dark water dripping off a rusted steel beam."
+    },
+    {
+      "say": "That single night leaves you with a net loss of $20 you never planned to spend.",
+      "callout": "",
+      "visual": "Low angle of a towering concrete bridge pier cutting across a gray sky."
+    },
+    {
+      "say": "The counter-move is brutal. Never tie your savings today to a non-budgeted reward tonight.",
+      "callout": "",
+      "visual": "Silhouette of a person standing motionless at the edge of an empty concrete pier."
+    },
+    {
+      "say": "Separate your grocery budget from your treats so your brain stops playing tricks on you.",
+      "callout": "",
+      "visual": "Cold blue light cutting across an empty, rain-slicked highway lane at night."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "Fade to dark obsidian water reflecting a single distant sodium light."
+    }
+  ],
+  "caption": "The psychological loop that turns a small win into a net loss. Separate your savings from your rewards. #moneypsychology #personalfinance #budgeting #savingmoney #mindset",
+  "description": "Moral licensing tricks your brain into justifying a splurge after you save a small amount. Here is how the net loss math works and how to fix it.",
+  "hashtags": [
+    "#moneypsychology",
+    "#personalfinance",
+    "#budgeting",
+    "#savingmoney",
+    "#mindset"
+  ],
+  "first_comment": "What is the last thing you bought to 'reward' yourself after saving money?",
+  "facts": [
+    {
+      "claim": "Saving $20 on groceries and spending $40 on takeout results in a net loss of $20",
+      "basis": "Basic arithmetic: $20 saved minus $40 spent equals a net loss of $20"
+    }
+  ],
+  "source": "llm",
+  "pillar": "psychology",
+  "look": "",
+  "loop_map": {
+    "stakes": "A weekly grocery run where you save $20.",
+    "big_question": "Why does saving money on a sale usually lead to losing more money that same night?",
+    "assume": "Most people assume saving $20 and spending $40 leaves you balanced out or ahead because of the initial win.",
+    "reveal": "Saving $20 and spending $40 actually results in a net loss of $20.",
+    "rehook_beats": [
+      5,
+      8
+    ],
+    "payoff_beat": 9
+  }
+}
