@@ -26,3 +26,6 @@ Owner rule (2026-10-31): never sit idle while a render runs. Start the PC job fi
 
 ## Uploader notes (2026-10-31)
 `tools/yt-song-upload.py` reports `FAIL: description does not match` after typing a ~600-character description on this laggy phone even when the text on screen is exact: check the screenshot, then finish by hand (Back x3, Attributes > AI use chevron (985,328) > Yes (102,1026), Back x2, Upload (540,2264)). Typing takes about 5 minutes; start it, then work elsewhere.
+
+## TikTok poster trap (2026-11-01)
+`tools/tt-phone-post.py VIDEO CAPTION --dur mm:ss` must get the duration WITH a leading zero, e.g. `01:04` (the picker labels tiles "duration 01:04"). `1:04` makes it fail with "system picker has no videos". Compute it with `f'{d//60:02d}:{d%60:02d}'`. After any batch, read every log's last line (it must say POSTED) and check the profile: a failed TikTok post leaves only the old video there.
