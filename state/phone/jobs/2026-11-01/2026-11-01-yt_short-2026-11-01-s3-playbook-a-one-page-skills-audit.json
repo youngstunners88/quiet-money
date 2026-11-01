@@ -1,0 +1,19 @@
+{
+ "id": "2026-11-01-yt_short-2026-11-01-s3-playbook-a-one-page-skills-audit",
+ "kind": "yt_short",
+ "day": "2026-11-01",
+ "key": "2026-11-01-s3-playbook-a-one-page-skills-audit",
+ "status": "queued",
+ "created": "2026-11-01T10:32:49+00:00",
+ "recipe": "YouTube Short upload",
+ "media": [
+  {
+   "source": "production/output/2026-11-01/2026-11-01-s3-playbook-a-one-page-skills-audit/final.mp4",
+   "name": "final.mp4"
+  }
+ ],
+ "staged": true,
+ "title": "The One-Page Audit to Boost Your Paycheck",
+ "text": "A simple 3-step skills audit helps you identify high-income skills in your field. By practicing one key skill daily, you can increase your earning potential and compound your savings.\n\nFree 7-day Money Reset checklist + calculators: https://youngstunners88.github.io/quiet-money/links/?utm_source=youtube&utm_medium=short&utm_campaign=checklist&utm_content=2026-11-01-s3-playbook-a-one-page-skills-audit&o=checklist\n\nEducational content, not financial advice.\n\n#money #personalfinance #career #skills #financialfreedom #shorts",
+ "ai_label": "altered or synthetic content: Yes"
+}

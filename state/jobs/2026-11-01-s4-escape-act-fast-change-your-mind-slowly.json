@@ -4,7 +4,7 @@
   "topic": "Act fast, change your mind slowly",
   "day": "2026-11-01",
   "slot": 4,
-  "status": "visualized",
+  "status": "held",
   "history": [
     {
       "from": "planned",
@@ -23,6 +23,27 @@
       "from": "voiced",
       "to": "visualized",
       "ts": "2026-11-01T10:26:43Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-11-01T10:32:34Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-11-01T10:32:34Z",
+      "score": 94
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-11-01T10:32:35Z"
+    },
+    {
+      "from": "packaged",
+      "to": "held",
+      "ts": "2026-11-01T10:32:35Z"
     }
   ],
   "artifacts": {
@@ -30,11 +51,18 @@
     "brief": "pena",
     "hook": "Fast deciders are not reckless. They just stop re-deciding.",
     "title": "The Decision Rule That Saves You $400,130",
-    "style": "cinematic"
+    "style": "cinematic",
+    "video": "/home/user/quiet-money/production/output/2026-11-01/2026-11-01-s4-escape-act-fast-change-your-mind-slowly/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-11-01/2026-11-01-s4-escape-act-fast-change-your-mind-slowly/cover.jpg"
   },
-  "scores": {},
+  "scores": {
+    "gauntlet": 94,
+    "passed": false
+  },
   "cost": {
     "tts:edge:chars": 1180
   },
-  "notes": []
+  "notes": [
+    "held for review: originality"
+  ]
 }

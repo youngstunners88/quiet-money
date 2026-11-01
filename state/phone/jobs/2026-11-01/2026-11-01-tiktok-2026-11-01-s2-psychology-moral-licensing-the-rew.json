@@ -1,0 +1,18 @@
+{
+ "id": "2026-11-01-tiktok-2026-11-01-s2-psychology-moral-licensing-the-rew",
+ "kind": "tiktok",
+ "day": "2026-11-01",
+ "key": "2026-11-01-s2-psychology-moral-licensing-the-reward-spend",
+ "status": "queued",
+ "created": "2026-11-01T10:32:49+00:00",
+ "recipe": "TikTok upload",
+ "media": [
+  {
+   "source": "production/output/2026-11-01/2026-11-01-s2-psychology-moral-licensing-the-reward-spend/final.mp4",
+   "name": "final.mp4"
+  }
+ ],
+ "staged": true,
+ "text": "The psychological loop that turns a small win into a net loss. Separate your savings from your rewards.\n\nFree reset checklist: link in bio.\n\n#moneypsychology #personalfinance #budgeting #savingmoney #mindset\n\nEducation, not financial advice.",
+ "ai_label": "AI-generated content: on"
+}

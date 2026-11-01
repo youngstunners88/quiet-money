@@ -1,0 +1,18 @@
+{
+ "id": "2026-11-01-tiktok-2026-11-01-s3-playbook-a-one-page-skills-audit",
+ "kind": "tiktok",
+ "day": "2026-11-01",
+ "key": "2026-11-01-s3-playbook-a-one-page-skills-audit",
+ "status": "queued",
+ "created": "2026-11-01T10:32:49+00:00",
+ "recipe": "TikTok upload",
+ "media": [
+  {
+   "source": "production/output/2026-11-01/2026-11-01-s3-playbook-a-one-page-skills-audit/final.mp4",
+   "name": "final.mp4"
+  }
+ ],
+ "staged": true,
+ "text": "Stop waiting for an annual 3% raise. Run a one-page skills audit today to find the single leverage point that raises your income.\n\nFree reset checklist: link in bio.\n\n#money #personalfinance #career #skills #financialfreedom\n\nEducation, not financial advice.",
+ "ai_label": "AI-generated content: on"
+}
