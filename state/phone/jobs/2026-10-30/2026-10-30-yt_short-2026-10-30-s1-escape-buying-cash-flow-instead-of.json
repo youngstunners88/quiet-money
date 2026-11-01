@@ -3,7 +3,7 @@
  "kind": "yt_short",
  "day": "2026-10-30",
  "key": "2026-10-30-s1-escape-buying-cash-flow-instead-of-buil",
- "status": "queued",
+ "status": "held",
  "created": "2026-10-30T10:09:23+00:00",
  "recipe": "YouTube Short upload",
  "media": [
@@ -15,5 +15,12 @@
  "staged": true,
  "title": "Why Buying Cash Flow Beats Starting from Zero",
  "text": "Starting a business from scratch comes with high failure rates and unpaid years. Acquiring established cash flow using debt leverage offers an alternative path, though managing loan obligations during down years is critical.\n\nFree 7-day Money Reset checklist + calculators: https://youngstunners88.github.io/quiet-money/links/?utm_source=youtube&utm_medium=short&utm_campaign=checklist&utm_content=2026-10-30-s1-escape-buying-cash-flow-instead-of-buil&o=checklist\n\nEducational content, not financial advice.\n\n#money #personalfinance #cashflow #wealthbuilding #investing #shorts",
- "ai_label": "altered or synthetic content: Yes"
+ "ai_label": "altered or synthetic content: Yes",
+ "history": [
+  {
+   "at": "2026-11-01T07:09:32+00:00",
+   "result": "held",
+   "note": "uploaded through the API as ScW87ziLoNs; not to be posted again from the phone"
+  }
+ ]
 }
