@@ -3,12 +3,12 @@
  "hook_text": "HE SOLD AT THE TOP, THEN HEDGED",
  "beats": [
   {
-   "say": "In nineteen ninety nine, Mark Cuban sold his company for about five point seven billion dollars.",
+   "say": "In nineteen ninety nine, Mark Cuban sold his company for five point seven billion dollars, paid entirely in stock.",
    "callout": "",
    "visual": "a sealed leather briefcase on a polished desk beside a single glowing lamp, no people"
   },
   {
-   "say": "The buyer was Yahoo, and it paid in Yahoo stock, not cash.",
+   "say": "The buyer was Yahoo, and every dollar of it depended on Yahoo's share price.",
    "callout": "",
    "visual": "a tall stack of paper stock certificates tied with string under a green banker lamp, no people"
   },
@@ -33,7 +33,7 @@
    "visual": "a brass compass resting on an old map in dim light, close-up"
   },
   {
-   "say": "He has said he used hedges, contracts that paid off if his shares dropped.",
+   "say": "He has said he used hedges, which are contracts that pay off if his Yahoo shares drop.",
    "callout": "",
    "visual": "an old steel safe door slowly closing in a dark vault, thin light along the edge"
   },

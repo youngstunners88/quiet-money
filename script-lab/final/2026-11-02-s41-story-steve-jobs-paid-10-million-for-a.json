@@ -1,0 +1,107 @@
+{
+  "title": "Steve Jobs Paid $10 Million For A Hobby And Got $7 Billion",
+  "hook_text": "HIS $10M HOBBY BECAME $7.4B",
+  "beats": [
+    {
+      "say": "In 1986, Steve Jobs paid about ten million dollars for a small computer graphics company nobody wanted.",
+      "callout": "",
+      "visual": "a dim empty workshop with an old computer under a single hanging lamp, no people"
+    },
+    {
+      "say": "It was Pixar, a unit Lucasfilm was selling. Jobs paid five million for it and put in about five million more.",
+      "callout": "",
+      "visual": "two steel keys resting on a dark wooden desk beside a stack of blueprints, warm lamp light, no people"
+    },
+    {
+      "say": "For years it lost money, and plenty of people called it an expensive hobby.",
+      "callout": "",
+      "visual": "a dusty drafting desk covered in crumpled paper balls under one lamp at night, no people"
+    },
+    {
+      "say": "Then in nineteen ninety five, Toy Story arrived, and Pixar went public.",
+      "callout": "",
+      "visual": "a bright projector beam cutting through dark theatre dust toward a blank screen, no people"
+    },
+    {
+      "say": "Jobs owned most of the company, and the value of his shares took off.",
+      "callout": "",
+      "visual": "a tall tower of gold coins rising into a dark sky, dramatic low angle"
+    },
+    {
+      "say": "So what happened to that ten million dollar bet?",
+      "callout": "THE $10M BET",
+      "visual": "a single brass key lying alone on a black table, hard rim light"
+    },
+    {
+      "say": "In two thousand six, Disney bought Pixar for about seven point four billion dollars, paid in Disney stock.",
+      "callout": "",
+      "visual": "a grand marble staircase inside an empty film studio lobby at sunrise, no people"
+    },
+    {
+      "say": "Jobs held about half of Pixar, so he became Disney's largest individual shareholder.",
+      "callout": "",
+      "visual": "a long empty boardroom table with one chair pulled out, golden window light, no people"
+    },
+    {
+      "say": "Here is the part nobody tells you. He did not get rich by being paid. He got rich by owning.",
+      "callout": "OWN, DON'T JUST EARN",
+      "visual": "two hands passing a heavy brass key across a dark table, close-up, no faces"
+    },
+    {
+      "say": "A salary stops when the work stops. Ownership can keep growing while you sleep.",
+      "callout": "",
+      "visual": "a quiet city skyline at night with a few lit windows, wide shot, no people"
+    },
+    {
+      "say": "The honest catch: Pixar lost money for years, and the payoff took about twenty years to arrive.",
+      "callout": "THE CATCH",
+      "visual": "a stormy sea with waves rising under a heavy sky and a lighthouse in the distance"
+    },
+    {
+      "say": "Most bets like this do not work out, so owning a piece is a risk, not a promise.",
+      "callout": "",
+      "visual": "a narrow rope bridge crossing a foggy canyon at dawn, no people"
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "an empty highway stretching toward a glowing sunrise horizon, wide shot"
+    }
+  ],
+  "caption": "Jobs paid about $10M for Pixar in 1986. Disney paid about $7.4B in stock in 2006. Ownership vs salary, and the catch. Educational content, not financial advice.",
+  "description": "In 1986 Steve Jobs bought Pixar for about ten million dollars in total; Disney bought it in 2006 for about 7.4 billion dollars in stock. What ownership did that a salary could not, and the honest catch.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#stevejobs",
+    "#ownership",
+    "#quietmoney"
+  ],
+  "first_comment": "Would you take a salary or a piece of the company? Educational only, not financial advice.",
+  "facts": [
+    {
+      "claim": "1986: Jobs bought Pixar's graphics unit from Lucasfilm for $5M and invested about $5M more",
+      "basis": "Walter Isaacson, Steve Jobs (2011); Pixar corporate history"
+    },
+    {
+      "claim": "Pixar went public in Nov 1995 after Toy Story; Jobs held a majority stake",
+      "basis": "SEC S-1 / Pixar IPO coverage, Nov 1995"
+    },
+    {
+      "claim": "Disney acquired Pixar in 2006 for about $7.4B in stock",
+      "basis": "Disney press release 2006-01-24"
+    },
+    {
+      "claim": "Jobs became Disney's largest individual shareholder (about 7%)",
+      "basis": "Disney 2006 proxy; Reuters 2006-01-24"
+    },
+    {
+      "claim": "Catch: Pixar lost money for years before Toy Story",
+      "basis": "Isaacson; Pixar history"
+    }
+  ],
+  "source": "human",
+  "pillar": "story",
+  "look": "",
+  "loop_map": {}
+}

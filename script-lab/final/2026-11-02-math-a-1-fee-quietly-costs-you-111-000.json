@@ -3,7 +3,7 @@
  "hook_text": "A 1% FEE = $111,000",
  "beats": [
   {
-   "say": "A one percent fee sounds like nothing. Over thirty years, it can cost about one hundred eleven thousand dollars.",
+   "say": "A one percent fee will cost you about one hundred eleven thousand dollars over thirty years.",
    "callout": "",
    "visual": "a single drop of water falling into a huge dark pool, extreme close-up"
   },

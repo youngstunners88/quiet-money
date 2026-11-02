@@ -3,12 +3,12 @@
  "hook_text": "CHECKING IT DOESN'T HURT IT",
  "beats": [
   {
-   "say": "Lots of people never look at their own credit score because they think looking will hurt it.",
+   "say": "Checking your own credit score never lowers it. Here is what actually damages your score.",
    "callout": "",
    "visual": "a closed metal mailbox covered in dust on a quiet street, wide shot, no people"
   },
   {
-   "say": "It does not. Checking your own score is not what lowers it.",
+   "say": "The difference is one word: soft versus hard.",
    "callout": "",
    "visual": "an old brass magnifying glass resting on a closed ledger, soft window light"
   },

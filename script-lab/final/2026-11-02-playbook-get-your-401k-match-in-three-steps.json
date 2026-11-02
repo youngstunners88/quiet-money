@@ -3,7 +3,7 @@
  "hook_text": "3 STEPS TO YOUR MATCH",
  "beats": [
   {
-   "say": "Many workers leave part of their pay unclaimed, and it hides inside the retirement plan.",
+   "say": "Your boss may be offering you up to eighteen hundred dollars a year, and you might be turning it down.",
    "callout": "",
    "visual": "a small unopened envelope lying on a dark wooden desk under a warm lamp, no text"
   },
@@ -33,12 +33,12 @@
    "visual": "a tall stack of gold coins growing beside a smaller stack on black marble"
   },
   {
-   "say": "Step three. Raise your contribution by one percent each year, ideally when you get a raise.",
-   "callout": "STEP 3: RAISE 1%",
+   "say": "Step three. Check your vesting schedule, so you know when the match is fully yours.",
+   "callout": "STEP 3: KEEP IT",
    "visual": "a single stone step leading up a long quiet staircase into morning mist, no people"
   },
   {
-   "say": "You barely notice one percent, but over a career it adds up.",
+   "say": "Some plans make you wait a few years before the match belongs to you, so know the date.",
    "callout": "",
    "visual": "a small plant slowly growing in a sunny windowsill pot, time lapse feel, no people"
   },
@@ -48,12 +48,12 @@
    "visual": "an open empty wallet beside a pair of scissors on a dark table, moody light"
   },
   {
-   "say": "The honest catch: some matches vest over several years, so leaving early can mean losing part of it.",
+   "say": "The honest catch: not every employer offers a match, and the formula changes from plan to plan.",
    "callout": "THE CATCH",
    "visual": "a heavy iron gate half open onto a foggy path, no people"
   },
   {
-   "say": "Not every employer offers a match. Check your own plan rules.",
+   "say": "Check your own plan rules before you change anything.",
    "callout": "",
    "visual": "an old paper map being unfolded on a wooden table, hands out of focus"
   },
@@ -68,7 +68,7 @@
    "visual": "an empty highway stretching toward a glowing sunrise horizon, wide shot"
   }
  ],
- "description": "A 401k match is part of your pay that many people leave unclaimed. Three steps to find yours and claim it today. An example, not advice; plans and vesting rules vary.",
+ "description": "Your 401k match may be pay you are leaving unclaimed. Three steps to find it, claim it and keep it. An example, not advice; plans and vesting rules vary.",
  "hashtags": [
   "#money",
   "#personalfinance",
@@ -95,5 +95,5 @@
  "pillar": "playbook",
  "look": "",
  "loop_map": {},
- "caption": "Step one: find your 401k match. Step two: contribute enough to get all of it. Step three: raise it 1% a year. An example, not advice; plans vary. Educational content, not financial advice."
+ "caption": "Step one: find your 401k match. Step two: contribute enough to get all of it. Step three: check the vesting schedule so you keep it. An example, not advice; plans vary. Educational content, not financial advice."
 }
