@@ -1,0 +1,100 @@
+{
+  "title": "Why Free Customers Buy The Most",
+  "hook_text": "THE CUSTOMER WHO CAME IN FOR FREE MAY BUY THE MOST",
+  "beats": [
+    {
+      "say": "The customer who came in for free may buy the most.",
+      "callout": "",
+      "visual": "Extreme low angle of a heavy brass turnstile at a dimly lit subway station, sodium street light reflecting on wet concrete, no people."
+    },
+    {
+      "say": "Most founders assume free signups waste your time.",
+      "callout": "FREE VS PAID",
+      "visual": "A single yellow ticket stub resting on rain-slick asphalt at blue hour, high-angle shot, no text."
+    },
+    {
+      "say": "They think paying customers are the only ones worth a second look.",
+      "callout": "ASSUMPTION",
+      "visual": "Silhouette of a rusted steel bridge tower cutting against a cold grey fog bank, extreme wide shot."
+    },
+    {
+      "say": "So why did split tests show equal close rates for both groups?",
+      "callout": "",
+      "visual": "Close-up of a weathered mechanical counter spinning past zero inside a darkened workshop, single practical bulb overhead."
+    },
+    {
+      "say": "He reports that free front-end offers generate volume five times cheaper.",
+      "callout": "STEP ONE",
+      "visual": "A massive concrete dam wall seen from far below, water spilling over the center edge in slow motion."
+    },
+    {
+      "say": "That lower cost changes your unit economics instantly.",
+      "callout": "STEP TWO",
+      "visual": "A heavy iron railway switch lever half-submerged in gravel, low angle, dusk lighting."
+    },
+    {
+      "say": "Most new businesses close fast. About 1 in 5 fail in their first year.",
+      "callout": "1 IN 5",
+      "visual": "Empty highway stretching toward a flat horizon under heavy storm clouds, sodium vapor lighting."
+    },
+    {
+      "say": "And close to half shut down by year five according to government data.",
+      "callout": "YEAR FIVE",
+      "visual": "A rusted shipping container yard viewed from a high tower crane, cold blue shadows."
+    },
+    {
+      "say": "Volume gives you data you can actually use to survive.",
+      "callout": "",
+      "visual": "A solitary hand holding a brass key against an unpainted concrete wall, side lighting."
+    },
+    {
+      "say": "Get flow first, monetize flow next, and only then add friction.",
+      "callout": "THE RULE",
+      "visual": "A heavy copper pipe dripping water into a dark drain, extreme macro shot."
+    },
+    {
+      "say": "That is how you turn zero into a real business.",
+      "callout": "",
+      "visual": "An open doorway at the end of a long, dark concrete underpass with a single overhead light."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "Silhouette of a person walking away down a wet asphalt ridge line at sunrise, extreme wide."
+    }
+  ],
+  "caption": "Free leads aren't bad customers. They're your cheapest entry point to scale. #moneypodcast #businessgrowth #financialliteracy #entrepreneurship #moneytips",
+  "description": "Why free signups often convert just as well as paid ones and how front-end volume changes your business economics.",
+  "hashtags": [
+    "#moneypodcast",
+    "#businessgrowth",
+    "#financialliteracy",
+    "#entrepreneurship",
+    "#moneytips"
+  ],
+  "first_comment": "Would you rather have 100 free leads or 10 paid leads?",
+  "facts": [
+    {
+      "claim": "About 1 in 5 US businesses close in their first year and close to half by year five",
+      "basis": "US Bureau of Labor Statistics, Business Employment Dynamics"
+    },
+    {
+      "claim": "Free-offer split tests show equal close rates and leads are about 5x cheaper",
+      "basis": "Acquisition.com free downloads and founder self-reported tests"
+    }
+  ],
+  "source": "llm",
+  "pillar": "myth",
+  "look": "",
+  "loop_map": {
+    "stakes": "Founders losing money because they ignore free sign-ups.",
+    "big_question": "Why do free sign-ups convert just as well as paid ones in tests?",
+    "assume": "Free customers are low quality and waste your time.",
+    "reveal": "Free offers generate cheaper volume that fuels long-term sales.",
+    "rehook_beats": [
+      4,
+      7
+    ],
+    "payoff_beat": 10
+  }
+}

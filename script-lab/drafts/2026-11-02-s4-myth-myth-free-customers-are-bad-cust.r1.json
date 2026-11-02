@@ -1,0 +1,100 @@
+{
+  "title": "The Free Customer Myth",
+  "hook_text": "FREE CUSTOMERS BUY MORE",
+  "beats": [
+    {
+      "say": "You think free sign-ups are a waste of time.",
+      "callout": "",
+      "visual": "Extreme wide shot of a solitary figure walking across a vast empty concrete plaza at blue hour."
+    },
+    {
+      "say": "That is the standard assumption. But what if it is dead wrong?",
+      "callout": "THE ASSUMPTION",
+      "visual": "Low angle of a rusted industrial iron bridge cutting across a heavy gray fog."
+    },
+    {
+      "say": "He reports equal close rates for free and paid sign-ups in his tests.",
+      "callout": "EQUAL RATES",
+      "visual": "Close-up of weathered wooden dock planks in dim sodium light, wet from rain."
+    },
+    {
+      "say": "How do free leads actually beat paid ones?",
+      "callout": "STEP ONE",
+      "visual": "Silhouette of a person standing at the edge of a sheer cliff overlooking dark water."
+    },
+    {
+      "say": "He says free offers bring in five times more volume.",
+      "callout": "5X VOLUME",
+      "visual": "High angle shot of a massive empty highway curving under cold fluorescent streetlamps."
+    },
+    {
+      "say": "More volume means lower cost per lead. That is how you build flow.",
+      "callout": "STEP TWO",
+      "visual": "Extreme close-up of dark coarse sand shifting slowly in the tide."
+    },
+    {
+      "say": "Why does that front-end volume matter for your business?",
+      "callout": "STEP THREE",
+      "visual": "Tower edge silhouetted against a dark violet twilight sky with low clouds."
+    },
+    {
+      "say": "Because you monetize the flow on the back end.",
+      "callout": "",
+      "visual": "Single practical light bulb swaying gently in a dark, empty concrete underpass."
+    },
+    {
+      "say": "About one in five new businesses fail in their first year. Friction keeps survivors alive.",
+      "callout": "1 IN 5",
+      "visual": "Wet asphalt reflecting red brake lights on a foggy night, extreme wide shot."
+    },
+    {
+      "say": "Add friction only after you get the flow.",
+      "callout": "",
+      "visual": "A tiny human figure standing on a massive concrete dam wall at dusk."
+    },
+    {
+      "say": "The customer who came in for free may buy the most.",
+      "callout": "",
+      "visual": "Extreme close-up of an old iron latch clicking shut in a dark room."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "A solitary dark ridge line against a cold winter dawn sky."
+    }
+  ],
+  "caption": "The free customer myth is costing you growth. Here is why zero-dollar offers win.\n\n#MoneyMyths #BusinessGrowth #PersonalFinance #QuietMoney #WealthMindset",
+  "description": "Free sign-ups are often dismissed as low quality. Split tests show equal close rates and much higher volume when you build the front end right.",
+  "hashtags": [
+    "#MoneyMyths",
+    "#BusinessGrowth",
+    "#PersonalFinance",
+    "#QuietMoney",
+    "#WealthMindset"
+  ],
+  "first_comment": "What is the biggest mistake you made trying to get new customers?",
+  "facts": [
+    {
+      "claim": "About one in 5 US businesses close in their first year",
+      "basis": "US Bureau of Labor Statistics, Business Employment Dynamics"
+    },
+    {
+      "claim": "Equal close rates for free and paid sign-ups in tests",
+      "basis": "Alex Hormozi reported free-offer split tests"
+    }
+  ],
+  "source": "llm",
+  "pillar": "myth",
+  "look": "",
+  "loop_map": {
+    "stakes": "You think free sign-ups waste your time and bring bad buyers.",
+    "big_question": "Why do free leads actually outperform paid ones?",
+    "assume": "Free customers are always low value.",
+    "reveal": "He reports equal close rates and five times more volume on free offers.",
+    "rehook_beats": [
+      4,
+      7
+    ],
+    "payoff_beat": 11
+  }
+}

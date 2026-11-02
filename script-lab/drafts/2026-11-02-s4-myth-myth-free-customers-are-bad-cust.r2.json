@@ -1,0 +1,100 @@
+{
+  "title": "Why Free Customers Can Buy The Most",
+  "hook_text": "FREE CUSTOMERS BUY MORE",
+  "beats": [
+    {
+      "say": "The customer who came in for free may actually end up buying the most.",
+      "callout": "",
+      "visual": "Low angle shot of a solitary silhouette standing outside a massive locked steel warehouse at blue hour."
+    },
+    {
+      "say": "Most owners charge upfront to filter out cheap leads, but does charging first actually make you more money?",
+      "callout": "PAID VS FREE",
+      "visual": "High angle view of a wet asphalt alleyway lit by a single orange sodium streetlamp at midnight."
+    },
+    {
+      "say": "You're taught that free sign-ups are just bargain hunters who won't ever spend real cash.",
+      "callout": "",
+      "visual": "Extreme close up of cold rain dripping down a dark window overlooking a foggy city skyline."
+    },
+    {
+      "say": "Yet entrepreneur Alex Hormozi reports equal close rates for free and paid leads in his tests.",
+      "callout": "EQUAL CLOSE RATES",
+      "visual": "A lone figure walking past huge tall glass skyscrapers in thick morning fog."
+    },
+    {
+      "say": "So why do traditional money rules tell you to put a price tag on every front-end offer?",
+      "callout": "",
+      "visual": "Extreme wide shot of a massive concrete underpass at dusk with a single car headlight illuminating wet road."
+    },
+    {
+      "say": "Free offers build massive customer flow at roughly 5 times lower cost per sign-up.",
+      "callout": "5X CHEAPER LEADS",
+      "visual": "Low angle silhouette of a shipping container terminal at night under towering harbor cranes."
+    },
+    {
+      "say": "But how do you keep free leads from wasting your time if they don't buy?",
+      "callout": "",
+      "visual": "Cold fluorescent light illuminating an empty industrial hallway with long shadows stretching across grey concrete."
+    },
+    {
+      "say": "You adjust friction dials like adding short qualification questions or required video views.",
+      "callout": "STEP ONE",
+      "visual": "Extreme close up of hands adjusting a thick steel mechanical dial on heavy factory machinery."
+    },
+    {
+      "say": "First you get customer flow, then you monetize it, and only then do you add friction.",
+      "callout": "STEP TWO",
+      "visual": "Silhouette of a person standing on a rocky ridge line overlooking open dark ocean at twilight."
+    },
+    {
+      "say": "Keep in mind, about 1 in 5 US businesses close in their first year regardless.",
+      "callout": "1 IN 5 CLOSE",
+      "visual": "High angle shot of an empty crosswalk on a rain-slicked city street lit by glowing shop windows."
+    },
+    {
+      "say": "Removing front-end friction brings in high-value buyers your competitors filter out before seeing their pitch.",
+      "callout": "THE REAL RULE",
+      "visual": "Extreme wide cinematic shot of a single illuminated window high up in a dark glass skyscraper at night."
+    },
+    {
+      "say": "Follow for the money rules school never taught you, because free customers can buy the most.",
+      "callout": "",
+      "visual": "A lone figure walking along an empty highway at night under sodium light."
+    }
+  ],
+  "caption": "Charging first isn't always the smart play. Here is why free offers can outperform paid sign-ups.\n\n#money #business strategy #personalfinance #wealth #entrepreneurship",
+  "description": "Conventional wisdom says free leads are low quality, but testing reveals free sign-ups can convert at the exact same rate as paid ones. By maximizing flow before adding friction, businesses lower customer acquisition costs.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#business strategy",
+    "#entrepreneurship",
+    "#wealth"
+  ],
+  "first_comment": "Do you usually skip free trials, or do they convince you to buy later?",
+  "facts": [
+    {
+      "claim": "Alex Hormozi reports equal close rates for free and paid sign-ups in his tests.",
+      "basis": "Research brief: Hormozi's self-reported free-offer split test results."
+    },
+    {
+      "claim": "About 1 in 5 US businesses close in their first year.",
+      "basis": "US Bureau of Labor Statistics, Business Employment Dynamics."
+    }
+  ],
+  "source": "llm",
+  "pillar": "myth",
+  "look": "",
+  "loop_map": {
+    "stakes": "Charging upfront might be keeping your highest-paying customers away.",
+    "big_question": "Does charging upfront actually make a business more money?",
+    "assume": "Free sign-ups are low-quality bargain hunters who never buy.",
+    "reveal": "Free and paid leads close at equal rates while costing 5x less per lead.",
+    "rehook_beats": [
+      5,
+      7
+    ],
+    "payoff_beat": 11
+  }
+}
