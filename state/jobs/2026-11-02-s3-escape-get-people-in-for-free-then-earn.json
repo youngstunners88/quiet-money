@@ -4,7 +4,7 @@
   "topic": "Get people in for free, then earn",
   "day": "2026-11-02",
   "slot": 3,
-  "status": "visualized",
+  "status": "published",
   "history": [
     {
       "from": "planned",
@@ -23,6 +23,29 @@
       "from": "voiced",
       "to": "visualized",
       "ts": "2026-11-02T10:01:33Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-11-02T10:04:59Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-11-02T10:04:59Z",
+      "score": 95
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-11-02T10:05:01Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-11-02T10:05:04Z",
+      "local": "2026-11-02T18:30:00-05:00",
+      "youtube": null
     }
   ],
   "artifacts": {
@@ -30,9 +53,24 @@
     "brief": "hormozi",
     "hook": "The first customers of many businesses paid nothing.",
     "title": "The 3-Step Method to Turn Free Work Into Real Income",
-    "style": "cinematic"
+    "style": "cinematic",
+    "video": "/home/user/quiet-money/production/output/2026-11-02/2026-11-02-s3-escape-get-people-in-for-free-then-earn/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-11-02/2026-11-02-s3-escape-get-people-in-for-free-then-earn/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-11-02/slot4-escape",
+        "post_at": "2026-11-02T18:30:00-05:00"
+      },
+      "youtube": {
+        "skipped": "YouTube refused the upload session (HTTP 429): quota or rate limit; it resets at midnight Pacific"
+      }
+    }
   },
-  "scores": {},
+  "scores": {
+    "gauntlet": 95,
+    "passed": true
+  },
   "cost": {
     "tts:edge:chars": 1089
   },

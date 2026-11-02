@@ -1,0 +1,25 @@
+{
+  "id": "2026-11-02-s4-myth-myth-free-customers-are-bad-cust",
+  "pillar": "myth",
+  "topic": "Myth: free customers are bad customers",
+  "day": "2026-11-02",
+  "slot": 4,
+  "status": "scripted",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-11-02T10:06:10Z",
+      "words": 184
+    }
+  ],
+  "artifacts": {
+    "angle": "he reports equal close rates for free and paid sign-ups in his tests; label as his report",
+    "brief": "hormozi",
+    "hook": "The customer who came in for free may buy the most.",
+    "title": "Why Free Customers Can Buy The Most"
+  },
+  "scores": {},
+  "cost": {},
+  "notes": []
+}

@@ -1,14 +1,23 @@
 {
  "id": "tiktok-creator-rewards",
- "fetched": "2026-10-12",
- "sha": "09868fd5014d8d12",
+ "fetched": "2026-11-02",
+ "sha": "68f58f5ce8c50e1e",
  "snippets": [
+  "Creators must be at least 18 years old (or 19 in South Korea).",
+  "Creators must have at least 10,000 followers.",
+  "Creators must have at least 100,000 video views in the last 30 days.",
+  "Creators must have a Personal Account.",
   "Business Accounts and accounts belonging to political or government organizations aren't eligible.",
-  "Post original content that's eligible for rewards.",
-  "Post original and high-quality content that is filmed, designed, and produced entirely by yourself.",
-  "Video views must be longer than 5 seconds.",
-  "Qualified views are unique video views from the For You feed and exclude views with fraud, paid views, disliked views, views with less than 5 seconds watched, promoted views, and artificial views.",
-  "Videos must reach 1,000 For You feed views to start generating earnings."
+  "Creators must post original content that's eligible for rewards.",
+  "Creators must post videos that are at least one minute long.",
+  "Videos must be uploaded after joining the Creator Rewards Program.",
+  "Videos must have at least 1,000 qualified For You feed views.",
+  "Videos must be longer than 5 seconds to count as a view.",
+  "Original content is quality content that's designed, filmed, and produced by you.",
+  "Content that is reproduced from others with only slight modifications, including videos that are sped up or contain filters, fixed texts, or stickers, is not considered original.",
+  "Content that contains different videos or pictures originating from other people, creators, or sources without new and personal ideas is not considered original.",
+  "Content that contains looping videos, single or multiple photos, or only text overlays is not considered original.",
+  "Advertisements, paid promotions, sponsored content, or videos linked to a Series are not allowed in the program."
  ],
- "changed": "2026-10-12"
+ "changed": "2026-11-02"
 }

@@ -1,7 +1,7 @@
 {
  "id": "gemini-pricing",
- "fetched": "2026-10-26",
- "sha": "523fde1e69f39ee9",
+ "fetched": "2026-11-02",
+ "sha": "183f3df1666fefb6",
  "snippets": [
   "Agents in AI Studio Playground",
   "Gemini Developer API pricing",
@@ -15,12 +15,12 @@
   "be invited by email and see a callout in AI Studio.",
   "$0.50 / 1,000,000 tokens per hour (storage price) through December 31, 2026.",
   "$1.00 / 1,000,000 tokens per hour (storage price) starting January 1, 2027.",
+  "$0.50 / 1,000,000 tokens per hour (storage price)",
   "Our previous generation Flash model, balancing speed and multimodal capabilities across general agentic and everyday tasks.",
   "** Can be tested in Google AI Studio.",
   "* Billing is based on total input and output audio token consumption, calculated at a rate of 25 tokens per second of audio, equating to an effective price of approximately $0.0368 per minute.",
   "* Estimated pricing is based on 25 audio tokens per second for input",
   "$1.00 / 1,000,000 tokens per hour (storage price)",
-  "$0.50 / 1,000,000 tokens per hour (storage price)",
   "$1.80 / 1,000,000 tokens per hour (storage price)",
   "Our next-generation video generation and editing model, now generally available",
   "Under Standard pricing, this",
@@ -52,8 +52,8 @@
   "Same as Gemini 3.1 Pro Preview pricing",
   "including input, output, and intermediate input / reasoning tokens generated",
   "Tool usage fees apply per existing pricing",
-  "Google AI Studio usage is free of charge in all available regions.",
-  "For Gemini Enterprise Agent Platform prices, see the Gemini Enterprise Agent Platform pricing page."
+  "Google AI Studio usage is free of charge in all available",
+  "prices, see the Gemini Enterprise Agent Platform pricing"
  ],
- "changed": "2026-10-26"
+ "changed": "2026-11-02"
 }
