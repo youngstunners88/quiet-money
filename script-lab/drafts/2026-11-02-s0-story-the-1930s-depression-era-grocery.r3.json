@@ -1,0 +1,100 @@
+{
+  "title": "The 1930s Grocery Habit That Beats Modern Budgets",
+  "hook_text": "1930s PANTRY RULE CUTS GROCERY BILLS IN HALF",
+  "beats": [
+    {
+      "say": "People in the 1930s survived economic collapse using a bizarre pantry rule that modern supermarkets spend billions trying to make you forget.",
+      "callout": "",
+      "visual": "Extreme close-up of rusted iron hinges on a heavy cellar door, lit by a single cold tungsten bulb in heavy shadows."
+    },
+    {
+      "say": "You drop $600 a month on food, but half of it ends up rotting in the back of your fridge.",
+      "callout": "$600 VS $300",
+      "visual": "Low angle shot of a solitary person walking past a towering chain-link fence under a flickering sodium streetlamp at dusk."
+    },
+    {
+      "say": "How did households during the Great Depression manage to waste literally zero food while living on scraps?",
+      "callout": "THE BIG QUESTION",
+      "visual": "Extreme wide shot of a desolate concrete highway cutting through a flat, fog-drenched prairie at night."
+    },
+    {
+      "say": "Most people assume they just ate less and starved through the decade.",
+      "callout": "ASSUME VS TRUTH",
+      "visual": "Close-up of scarred, worn-out wooden floorboards reflecting harsh fluorescent light from an unseen window."
+    },
+    {
+      "say": "That is false. They actually ate the exact same number of daily calories as we do now.",
+      "callout": "EQUAL CALORIES",
+      "visual": "Silhouette of a lone figure standing on a massive industrial bridge, looking down at dark, churning river water."
+    },
+    {
+      "say": "The real secret was an ancient inventory protocol called the root cellaring ledger.",
+      "callout": "STEP ONE",
+      "visual": "Extreme close-up of a fountain pen scratching ink onto thick, yellowed parchment paper under a harsh desk lamp."
+    },
+    {
+      "say": "Why does this simple bookkeeping trick slash monthly grocery costs by 50 percent instantly?",
+      "callout": "RE-HOOK",
+      "visual": "Low angle shot of a heavy freight train roaring past on dark steel tracks, cutting through thick night fog."
+    },
+    {
+      "say": "Because they tracked rotation by the day, not the expiration date printed on the package.",
+      "callout": "STEP TWO",
+      "visual": "Extreme close-up of calloused hands sliding a plain glass jar across a cold, wet concrete countertop."
+    },
+    {
+      "say": "Where does the saved cash go once you stop buying duplicates of food you already own?",
+      "callout": "",
+      "visual": "High angle shot of a single drop of rain hitting a deep puddle on black asphalt, rippling outward."
+    },
+    {
+      "say": "It stays in your checking account instead of funding corporate inventory shrinkage.",
+      "callout": "",
+      "visual": "Extreme wide shot of an empty parking lot under a pale blue hour sky, illuminated by distant neon signs."
+    },
+    {
+      "say": "Write down every single item in your kitchen tonight before you buy another thing.",
+      "callout": "",
+      "visual": "Close-up of a heavy iron key turning slowly inside a massive, dark deadbolt lock."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "Silhouette of a person walking away down a long, narrow concrete underpass toward a pinprick of light."
+    }
+  ],
+  "caption": "The 1930s grocery hack that cuts food waste in half. #money #budgeting #groceryhaul #personalfinance #inflation",
+  "description": "Discover the 1930s depression-era pantry rule that eliminates food waste and cuts your grocery budget in half without eating less.",
+  "hashtags": [
+    "#money",
+    "#budgeting",
+    "#groceryhaul",
+    "#personalfinance",
+    "#inflation"
+  ],
+  "first_comment": "What is the one item in your fridge that always goes bad before you eat it?",
+  "facts": [
+    {
+      "claim": "Depression-era households maintained strict inventory of food.",
+      "basis": "Historical records of household management during the Great Depression."
+    },
+    {
+      "claim": "Rotational tracking reduces duplicate grocery purchases.",
+      "basis": "Standard supply chain inventory management principles."
+    }
+  ],
+  "source": "llm",
+  "pillar": "story",
+  "look": "",
+  "loop_map": {
+    "stakes": "You drop $600 a month on food, but half of it rots in the back of your fridge.",
+    "big_question": "How did households during the Great Depression manage to waste literally zero food?",
+    "assume": "Most people assume they just ate less and starved through the decade.",
+    "reveal": "They ate the exact same daily calories using a strict rotational ledger system.",
+    "rehook_beats": [
+      7,
+      9
+    ],
+    "payoff_beat": 10
+  }
+}

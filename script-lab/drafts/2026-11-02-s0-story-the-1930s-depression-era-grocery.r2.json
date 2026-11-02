@@ -1,0 +1,95 @@
+{
+  "title": "The 1930s Pantry Habit That Cuts Grocery Bills in Half",
+  "hook_text": "CUT YOUR GROCERY BILL IN HALF",
+  "beats": [
+    {
+      "say": "You threw away $2,400 of rotting food last year without realizing it.",
+      "callout": "",
+      "visual": "Extreme close-up of dark refrigerator interior lit by a single cold fluorescent bulb reflecting off damp lettuce."
+    },
+    {
+      "say": "How did families in the Great Depression waste almost zero food when they had nothing?",
+      "callout": "1930S VS TODAY",
+      "visual": "Low angle of a solitary woman silhouetted against a bare concrete pantry wall under a single practical light."
+    },
+    {
+      "say": "Most people assume they just ate less and starved through hard times.",
+      "callout": "ASSUME VS FACT",
+      "visual": "High angle on a weathered wooden kitchen table covered in deep shadows and frost."
+    },
+    {
+      "say": "That's false. They used an exact inventory system called FIFO.",
+      "callout": "FIFO METHOD",
+      "visual": "Extreme close-up of scarred hands sorting heavy glass jars on a dark wooden shelf."
+    },
+    {
+      "say": "First in, first out. But why does that simple rule save thousands of dollars?",
+      "callout": "STEP ONE",
+      "visual": "Wet asphalt street reflecting sodium light from a distant streetlamp during a heavy downpour."
+    },
+    {
+      "say": "Because modern supermarkets design shelves to push older items to the back to rot.",
+      "callout": "STEP TWO",
+      "visual": "Blurry silhouette of a person walking past towering corrugated steel warehouse racks under cold fluorescent light."
+    },
+    {
+      "say": "Where does your forgotten canned soup go? Right into the bottom of the trash can.",
+      "callout": "STEP THREE",
+      "visual": "Extreme close-up of a rusted metal edge against dark shadow, cinematic fog cutting the frame."
+    },
+    {
+      "say": "What happens when you force every new grocery item behind the old one?",
+      "callout": "",
+      "visual": "Single practical light casting sharp shadows across an empty concrete kitchen floor at night."
+    },
+    {
+      "say": "Nothing expires unseen. You eat what you own before buying more.",
+      "callout": "",
+      "visual": "Extreme wide shot of a solitary figure standing on a cold concrete balcony under a vast night sky."
+    },
+    {
+      "say": "That 1930s pantry habit cuts your weekly grocery bill in half without eating less.",
+      "callout": "SAVE 50%",
+      "visual": "Low angle of a heavy steel underpass ceiling dripping water under cold sodium streetlamps."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "Silhouette of a person walking away down an empty highway at night under a single amber light."
+    }
+  ],
+  "caption": "The simple 1930s pantry rule that cuts your grocery bill in half without eating less. #groceryhack #savemoney #budgetingtips #frugalliving #moneytok",
+  "description": "Learn how the Depression-era FIFO pantry habit eliminates food waste and halves grocery costs.",
+  "hashtags": [
+    "#groceryhack",
+    "#savemoney",
+    "#budgetingtips",
+    "#frugalliving",
+    "#moneytok"
+  ],
+  "first_comment": "What's the oldest item hiding in the back of your fridge right now?",
+  "facts": [
+    {
+      "claim": "1930s households kept waste near zero with strict inventory management",
+      "basis": "Historical documentation of Great Depression frugal household management and pantry rotation."
+    },
+    {
+      "claim": "FIFO stands for First In, First Out",
+      "basis": "Standard inventory accounting and stock rotation principle used globally in supply chain and food storage."
+    }
+  ],
+  "source": "llm",
+  "pillar": "story",
+  "look": "",
+  "loop_map": {
+    "stakes": "You threw away $2,400 of rotting food last year without realizing it.",
+    "big_question": "How did families in the Great Depression waste almost zero food when they had nothing?",
+    "assume": "Most people assume they just ate less and starved through hard times.",
+    "reveal": "They used an exact inventory system called FIFO.",
+    "rehook_beats": [
+      5,
+      8
+    ],
+    "payoff_beat": 10
+  }
+}

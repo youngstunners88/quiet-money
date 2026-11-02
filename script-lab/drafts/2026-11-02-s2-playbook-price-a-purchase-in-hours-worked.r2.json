@@ -1,0 +1,101 @@
+{
+  "title": "The Real Cost of Every Purchase in Hours",
+  "hook_text": "THAT SHIRT COSTS HALF A DAY",
+  "beats": [
+    {
+      "say": "That $100 shirt doesn't cost $100. It costs half a day of your life.",
+      "callout": "",
+      "visual": "Extreme close-up of a price tag hanging on dark fabric, sodium light, shallow depth of field."
+    },
+    {
+      "say": "Before you buy it, turn the price into hours of your work.",
+      "callout": "STEP ONE",
+      "visual": "Low angle shot of a solitary desk lamp cutting through deep blue hour shadows in an empty room."
+    },
+    {
+      "say": "Step one. Work out your exact take-home pay per hour once.",
+      "callout": "",
+      "visual": "Close-up of a pen resting on a blank white sheet of paper on a dark wooden table, cold fluorescent light."
+    },
+    {
+      "say": "Divide your monthly take-home pay by the total hours you spend working.",
+      "callout": "STEP TWO",
+      "visual": "Extreme wide shot of a solitary commuter walking across a wet asphalt underpass at night."
+    },
+    {
+      "say": "Step two. Divide the price of that new item by your actual hourly take-home rate.",
+      "callout": "",
+      "visual": "Silhouette of hands tapping a calculator on a stark metal surface, backlit by single practical light."
+    },
+    {
+      "say": "Is that item really worth the exact hours you spent earning it?",
+      "callout": "A VS B",
+      "visual": "High angle shot of a lone coffee cup sitting on a massive concrete bridge at dusk."
+    },
+    {
+      "say": "Step three. Ask whether the thing is worth those hours of labor.",
+      "callout": "STEP THREE",
+      "visual": "Extreme close-up of clock hands ticking in a dark room, illuminated by faint blue light."
+    },
+    {
+      "say": "Most people assume a $200 purchase is just $200 from an abstract account.",
+      "callout": "ASSUME",
+      "visual": "Wide shot of empty highway at night under flickering amber streetlamps."
+    },
+    {
+      "say": "The truth is you traded actual living time for that specific object.",
+      "callout": "REVEAL",
+      "visual": "Close-up of rain-slick street reflecting a single red taillight in the dark."
+    },
+    {
+      "say": "Money is just stored human time sitting in your wallet.",
+      "callout": "",
+      "visual": "Extreme close-up of a hand sliding a dark card into a slot under cold fluorescent lighting."
+    },
+    {
+      "say": "When you price things in hours, impulse buys suddenly lose their shiny appeal.",
+      "callout": "",
+      "visual": "Low angle shot of a massive concrete pillar stretching up into a foggy night sky."
+    },
+    {
+      "say": "Calculate your last impulse buy right now and test this rule today.",
+      "callout": "",
+      "visual": "Silhouette of a person walking away down a long, narrow corridor lit by a single overhead bulb."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "Extreme wide shot of a dark horizon line under a pale blue dawn sky."
+    }
+  ],
+  "caption": "Turn any price into hours worked and watch your impulse spending vanish. #money #personalfinance #smartmoney #budgeting #wealth",
+  "description": "Learn the three-step rule to price purchases in hours of your life instead of dollars, cutting impulse buys instantly.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#smartmoney",
+    "#budgeting",
+    "#wealth"
+  ],
+  "first_comment": "How many hours of work did your last big impulse buy cost you?",
+  "facts": [
+    {
+      "claim": "Money represents stored time and labor",
+      "basis": "Standard personal finance principle of hourly wage conversion"
+    }
+  ],
+  "source": "llm",
+  "pillar": "playbook",
+  "look": "",
+  "loop_map": {
+    "stakes": "A $100 shirt or $200 purchase costs actual hours of your life.",
+    "big_question": "How do you actually calculate the true time cost of what you buy?",
+    "assume": "Most people think a purchase only costs its cash price.",
+    "reveal": "Every purchase trades your actual living time and labor.",
+    "rehook_beats": [
+      6,
+      11
+    ],
+    "payoff_beat": 11
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "id": "2026-11-02-s3-escape-get-people-in-for-free-then-earn",
+  "pillar": "escape",
+  "topic": "Get people in for free, then earn",
+  "day": "2026-11-02",
+  "slot": 3,
+  "status": "visualized",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-11-02T10:00:10Z",
+      "words": 186
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-11-02T10:01:13Z",
+      "seconds": 64.602,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-11-02T10:01:33Z"
+    }
+  ],
+  "artifacts": {
+    "angle": "Hormozi's order for a side hustle: get flow, monetize flow, then add friction; catch: free work costs time",
+    "brief": "hormozi",
+    "hook": "The first customers of many businesses paid nothing.",
+    "title": "The 3-Step Method to Turn Free Work Into Real Income",
+    "style": "cinematic"
+  },
+  "scores": {},
+  "cost": {
+    "tts:edge:chars": 1089
+  },
+  "notes": []
+}

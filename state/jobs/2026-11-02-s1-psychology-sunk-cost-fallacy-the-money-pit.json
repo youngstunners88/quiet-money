@@ -1,0 +1,77 @@
+{
+  "id": "2026-11-02-s1-psychology-sunk-cost-fallacy-the-money-pit",
+  "pillar": "psychology",
+  "topic": "Sunk Cost Fallacy (The Money Pit Repair Trap)",
+  "day": "2026-11-02",
+  "slot": 1,
+  "status": "published",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-11-02T09:43:29Z",
+      "words": 184
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-11-02T09:45:18Z",
+      "seconds": 68.495,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-11-02T09:45:42Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-11-02T09:49:16Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-11-02T09:49:16Z",
+      "score": 96
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-11-02T09:49:17Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-11-02T09:49:19Z",
+      "local": "2026-11-02T11:30:00-05:00",
+      "youtube": null
+    }
+  ],
+  "artifacts": {
+    "angle": "Break down why people continue throwing money into deteriorating assets—like putting a $2,000 transmission into a $1,500 car—because they already invested $3,000 last year. Explain the emotional resistance to writing off past spending. Counter-move: evaluating future costs strictly against current market utility.",
+    "hook": "This psychological trap tricks smart people into pouring thousands down a financial black hole.",
+    "title": "Why You Keep Throwing Good Money After Bad",
+    "style": "cinematic",
+    "video": "/home/user/quiet-money/production/output/2026-11-02/2026-11-02-s1-psychology-sunk-cost-fallacy-the-money-pit/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-11-02/2026-11-02-s1-psychology-sunk-cost-fallacy-the-money-pit/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-11-02/slot2-psychology",
+        "post_at": "2026-11-02T11:30:00-05:00"
+      },
+      "youtube": {
+        "skipped": "YouTube refused the upload session (HTTP 429): quota or rate limit; it resets at midnight Pacific"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 96,
+    "passed": true
+  },
+  "cost": {
+    "tts:edge:chars": 1098
+  },
+  "notes": []
+}

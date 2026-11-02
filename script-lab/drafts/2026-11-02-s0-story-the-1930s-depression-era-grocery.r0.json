@@ -1,0 +1,90 @@
+{
+  "title": "The 1930s Grocery Habit That Cuts Bills in Half",
+  "hook_text": "GROCERY STORES HATE THIS 1930S PANTRY RULE",
+  "beats": [
+    {
+      "say": "You're throwing out $1,500 of food every year while your grocery bill climbs higher.",
+      "callout": "",
+      "visual": "Extreme close-up of a dark, cold refrigerator interior lit by a single blue LED, casting sharp shadows over a single carton."
+    },
+    {
+      "say": "How did Depression-era families waste zero food without buying less?",
+      "callout": "1930 VS NOW",
+      "visual": "Low angle shot of a solitary figure walking past a massive brick wall under harsh sodium streetlights at night."
+    },
+    {
+      "say": "Most people assume they need complex meal prep apps to save on food costs.",
+      "callout": "ASSUME VS TRUTH",
+      "visual": "Extreme wide shot of a misty, rain-slick empty highway stretching toward a dark horizon under a heavy gray sky."
+    },
+    {
+      "say": "They didn't. They used a strict storage rotation known as the shelf-first rule.",
+      "callout": "STEP ONE",
+      "visual": "Single practical light illuminating a stack of plain wooden crates in a dusty, dark cellar with rough stone walls."
+    },
+    {
+      "say": "Why does this simple inventory habit cut household grocery spending in half?",
+      "callout": "",
+      "visual": "High angle shot looking straight down on wet asphalt reflecting cold fluorescent light from an unseen window."
+    },
+    {
+      "say": "Because it forces you to eat what's already rotting in the back of your cupboards.",
+      "callout": "STEP TWO",
+      "visual": "Silhouetted hands holding an unlabelled glass jar against the pale glow of a foggy window at dawn."
+    },
+    {
+      "say": "Where does the extra money go once your pantry waste hits absolute zero?",
+      "callout": "",
+      "visual": "Extreme wide shot of a massive steel bridge tower disappearing into heavy grey fog above cold, dark water."
+    },
+    {
+      "say": "It stays in your checking account instead of the landfill.",
+      "callout": "HALF THE COST",
+      "visual": "Low angle shot of a heavy iron underpass arch with rain dripping steadily onto concrete in the blue hour."
+    },
+    {
+      "say": "That's how families survived economic collapse using a pencil and a shelf.",
+      "callout": "",
+      "visual": "Extreme close-up of a graphite pencil resting on rough unpainted wood under a single overhead bulb."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "Silhouette of a person walking away down a long, narrow alleyway lit by a single distant sodium lamp."
+    }
+  ],
+  "caption": "The 1930s pantry rule that cuts grocery bills in half. #grocerybudget #frugalliving #moneysavingtips #moneypsychology #personalfinance",
+  "description": "Discover the obscure 1930s pantry rotation rule that eliminates food waste and cuts your monthly grocery spending in half without eating less.",
+  "hashtags": [
+    "#grocerybudget",
+    "#frugalliving",
+    "#moneysavingtips",
+    "#moneypsychology",
+    "#personalfinance"
+  ],
+  "first_comment": "What's the one item in your fridge you always end up throwing away?",
+  "facts": [
+    {
+      "claim": "Average households waste $1,500 of food annually",
+      "basis": "USDA food loss and waste estimates"
+    },
+    {
+      "claim": "Depression-era rationing eliminated pantry waste through inventory rotation",
+      "basis": "Historical domestic economy records from the 1930s"
+    }
+  ],
+  "source": "llm",
+  "pillar": "story",
+  "look": "",
+  "loop_map": {
+    "stakes": "You're throwing out $1,500 of food every year while your grocery bill climbs higher.",
+    "big_question": "How did Depression-era families waste zero food without buying less?",
+    "assume": "Most people assume they need complex meal prep apps to save on food costs.",
+    "reveal": "They used a strict storage rotation known as the shelf-first rule.",
+    "rehook_beats": [
+      5,
+      7
+    ],
+    "payoff_beat": 8
+  }
+}

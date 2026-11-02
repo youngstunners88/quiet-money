@@ -1,0 +1,91 @@
+{
+  "title": "The 3-Step Work Test Before You Buy",
+  "hook_text": "THAT $100 SHIRT COSTS HOURS",
+  "beats": [
+    {
+      "say": "Before you buy it, turn the price into hours of your work.",
+      "callout": "",
+      "visual": "Extreme close-up of a price tag fluttering on a dark jacket under harsh sodium light."
+    },
+    {
+      "say": "Most people look at a $100 price tag and see a number. But what is it really costing you?",
+      "callout": "A VS B",
+      "visual": "Low angle shot of a towering concrete office building cutting into a cold blue hour sky."
+    },
+    {
+      "say": "Step one. Work out your exact take-home pay per hour after taxes.",
+      "callout": "STEP ONE",
+      "visual": "A hand sliding a blank paper across a dark wooden desk under a single practical lamp."
+    },
+    {
+      "say": "Step two. Divide the price of the item by that hourly rate.",
+      "callout": "STEP TWO",
+      "visual": "Extreme wide shot of an empty highway stretching into a foggy industrial ridge line at night."
+    },
+    {
+      "say": "Step three. Ask yourself if the item is truly worth those hours of your life.",
+      "callout": "STEP THREE",
+      "visual": "Silhouette of a lone person standing against a vast expanse of open dark water."
+    },
+    {
+      "say": "Suddenly, a $100 impulse buy costs you 4 full hours sitting in a stuffy office.",
+      "callout": "4 HOURS",
+      "visual": "Wet asphalt reflecting cold fluorescent lights in an empty downtown underpass."
+    },
+    {
+      "say": "Is trading 4 hours of your breathing life for a shirt actually a fair trade?",
+      "callout": "FAIR TRADE?",
+      "visual": "Extreme close-up of a heavy brass clock hand ticking past an unlit index mark."
+    },
+    {
+      "say": "Most folks assume money just disappears. But your paycheck is stored time.",
+      "callout": "ASSUME VS FACT",
+      "visual": "High angle shot of rain-slick pavement under a solitary flickering street lamp."
+    },
+    {
+      "say": "When you view purchases through hours worked, the urge to spend quietly fades.",
+      "callout": "",
+      "visual": "Silhouette of a person walking away down a long, narrow industrial corridor at dusk."
+    },
+    {
+      "say": "Try this math on your next purchase and drop the item in the comments.",
+      "callout": "",
+      "visual": "Extreme close-up of a dark keyboard with a single pool of light catching the keys."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "Extreme wide shot of a solitary tower edge cutting through heavy fog at dawn."
+    }
+  ],
+  "caption": "Turn any price into hours worked before you spend a dime. #moneypsychology #personalfinance #smartspending #budgeting",
+  "description": "Stop looking at dollar signs. Use this simple three-step work test to price purchases in hours of your life.",
+  "hashtags": [
+    "#moneypsychology",
+    "#personalfinance",
+    "#smartspending",
+    "#budgeting",
+    "#wealthmindset"
+  ],
+  "first_comment": "What is the last thing you bought measured in hours of work?",
+  "facts": [
+    {
+      "claim": "Price items in hours worked to evaluate true cost",
+      "basis": "Behavioral finance mental accounting framework"
+    }
+  ],
+  "source": "llm",
+  "pillar": "playbook",
+  "look": "",
+  "loop_map": {
+    "stakes": "A $100 purchase measured in hours of work.",
+    "big_question": "How do you know if a purchase is actually worth your time?",
+    "assume": "Most people think a price tag is just a number.",
+    "reveal": "A price tag is stored hours of your life.",
+    "rehook_beats": [
+      4,
+      7
+    ],
+    "payoff_beat": 9
+  }
+}

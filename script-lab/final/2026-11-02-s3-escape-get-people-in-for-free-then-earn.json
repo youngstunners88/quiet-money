@@ -1,0 +1,96 @@
+{
+  "title": "The 3-Step Method to Turn Free Work Into Real Income",
+  "hook_text": "THE FREE WORK TRICK",
+  "beats": [
+    {
+      "say": "The first customers of many successful businesses paid nothing for the service when they started out.",
+      "callout": "",
+      "visual": "Low angle shot of a massive dark steel skyscraper during blue hour, with wet asphalt reflections on the ground."
+    },
+    {
+      "say": "Most people assume that doing free work for anyone is just a complete waste of time.",
+      "callout": "FREE WORK WASTE?",
+      "visual": "Silhouette of a person sitting alone in a cold fluorescent lit room, viewed from behind facing a blank screen."
+    },
+    {
+      "say": "But building a new income requires getting customer flow before you've ever charged a single dollar.",
+      "callout": "FLOW BEFORE MONEY",
+      "visual": "Extreme wide shot of an empty rain-slicked highway stretching toward a foggy city skyline at night."
+    },
+    {
+      "say": "Step one's getting flow. You offer your skill for free to get customers through the door fast.",
+      "callout": "STEP ONE",
+      "visual": "Extreme close up of stationary industrial gears under harsh yellow sodium light in an empty warehouse."
+    },
+    {
+      "say": "This builds social proof, reviews, and real confidence without any friction or purchasing resistance from clients.",
+      "callout": "BUILD SOCIAL PROOF",
+      "visual": "Silhouette of a person walking through a massive damp underpass with a single flickering light overhead."
+    },
+    {
+      "say": "Step two's monetizing that flow. Once people want what you've built, you start charging a set price.",
+      "callout": "STEP TWO",
+      "visual": "High angle view of a dark suspension bridge stretching across open water at twilight toward a distant glowing tower."
+    },
+    {
+      "say": "An extra $1,000 a month from a side income, invested at 8%, grows to $182,946 in 10 years.",
+      "callout": "$1,000 VS $182,946",
+      "visual": "Extreme wide shot of a lone car parked on an empty desert highway beneath a vast twilight sky."
+    },
+    {
+      "say": "Step three's adding friction. You raise prices or add application steps to filter out bad client leads.",
+      "callout": "",
+      "visual": "Low angle view of massive concrete overpass pillars shrouded in heavy fog at dusk."
+    },
+    {
+      "say": "Here's the honest catch. Free work costs time, and about 1 in 5 US businesses close in year one.",
+      "callout": "1 IN 5 CLOSE",
+      "visual": "Silhouette of a single figure standing in a vast empty asphalt lot under a single buzzing street light."
+    },
+    {
+      "say": "You're trading unpaid hours today to build an active income stream that can pay you for years.",
+      "callout": "",
+      "visual": "High angle shot from the edge of a colossal concrete dam looking down at a tiny dark figure."
+    },
+    {
+      "say": "Get flow first, monetize second, then add friction. Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "Cinematic silhouette of a figure walking down a dark foggy street toward a distant street light."
+    }
+  ],
+  "caption": "Work for free to build flow, then charge what you're worth.\n\n#money #personalfinance #sidehustle #business #financialfreedom",
+  "description": "Learn the three-step framework for turning free skill offers into a scalable side income. By building customer flow before monetizing and adding friction, you create leverage without risking wasted effort.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#sidehustle",
+    "#business",
+    "#financialfreedom"
+  ],
+  "first_comment": "Would you trade 20 hours of free work today to secure your first paying clients?",
+  "facts": [
+    {
+      "claim": "An extra $1,000/month from a side income, invested at 8% for 10 years grows to $182,946.",
+      "basis": "Money fact sheet calculation ($120,000 contributed, compounding monthly at 8%)."
+    },
+    {
+      "claim": "About 1 in 5 US businesses close in their first year.",
+      "basis": "US Bureau of Labor Statistics, Business Employment Dynamics."
+    }
+  ],
+  "source": "llm",
+  "pillar": "escape",
+  "look": "",
+  "loop_map": {
+    "stakes": "Working for free feels like losing money, but charging too early stops customer flow completely.",
+    "big_question": "How do you turn unpaid work into a profitable side business?",
+    "assume": "Most people assume free work is a complete waste of time.",
+    "reveal": "Getting flow for free creates the demand and leverage needed to charge higher prices later.",
+    "rehook_beats": [
+      4,
+      6,
+      8
+    ],
+    "payoff_beat": 10
+  }
+}

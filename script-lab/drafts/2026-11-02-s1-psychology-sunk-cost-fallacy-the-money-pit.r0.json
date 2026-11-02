@@ -1,0 +1,95 @@
+{
+  "title": "The Sunk Cost Trap: Why We Repair Broken Assets",
+  "hook_text": "THIS PSYCHOLOGICAL TRAP TRICKS SMART PEOPLE",
+  "beats": [
+    {
+      "say": "This psychological trap tricks smart people into pouring thousands down a financial black hole.",
+      "callout": "",
+      "visual": "Extreme close-up of a rusted car engine under a single dim sodium light in a dark garage."
+    },
+    {
+      "say": "You face a $2,000 repair bill for a car worth only $1,500 on the open market.",
+      "callout": "$2,000 VS $1,500",
+      "visual": "Low angle shot of an old car parked alone on a wet asphalt underpass during blue hour."
+    },
+    {
+      "say": "Why do you immediately hand over the cash instead of walking away from the wreck?",
+      "callout": "",
+      "visual": "Extreme wide shot of a lone human silhouette standing on a vast empty highway at night."
+    },
+    {
+      "say": "Most people assume the new parts add value to what they already own.",
+      "callout": "ASSET VS LIABILITY",
+      "visual": "Silhouette of hands holding a greasy metal wrench against cold fluorescent workshop lights."
+    },
+    {
+      "say": "That's false. You're actually paying to protect your pride from a past mistake.",
+      "callout": "",
+      "visual": "Close-up of dripping engine oil pooling on raw concrete under a flickering utility bulb."
+    },
+    {
+      "say": "Last year you spent $3,000 fixing the transmission. That money is gone forever.",
+      "callout": "PAST VS FUTURE",
+      "visual": "Fog cutting across a dark city skyline viewed from a high concrete tower edge."
+    },
+    {
+      "say": "So how do you stop letting yesterday's receipts dictate tomorrow's financial choices?",
+      "callout": "",
+      "visual": "High angle shot of a solitary figure walking across an empty bridge in heavy rain."
+    },
+    {
+      "say": "The rule is simple. Ignore what you spent last year.",
+      "callout": "STEP ONE",
+      "visual": "Extreme close-up of dark water rippling under a single practical dock light."
+    },
+    {
+      "say": "Evaluate the future repair cost strictly against current market utility today.",
+      "callout": "STEP TWO",
+      "visual": "Wide shot of a massive concrete bridge support under an overcast gray sky."
+    },
+    {
+      "say": "Cut the emotional cord. Stop throwing good money after bad.",
+      "callout": "",
+      "visual": "Silhouette against a cold industrial window as heavy rain streaks down the glass."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "Extreme wide shot of a dark ridge line at dusk under a fading cold sky."
+    }
+  ],
+  "caption": "The sunk cost fallacy keeps you paying for yesterday's mistakes. Cut the cord and look at the math. #MoneyPsychology #PersonalFinance #SmartMoney #FinancialLiteracy #WealthBuilding",
+  "description": "Break down why people throw money into deteriorating assets due to emotional resistance, and learn the counter-move to evaluate costs strictly against current utility.",
+  "hashtags": [
+    "#MoneyPsychology",
+    "#PersonalFinance",
+    "#SmartMoney",
+    "#FinancialLiteracy",
+    "#WealthBuilding"
+  ],
+  "first_comment": "What is the hardest financial loss you've ever had to just write off?",
+  "facts": [
+    {
+      "claim": "$2,000 repair on a $1,500 car example",
+      "basis": "Illustrates the sunk cost fallacy in everyday consumer decisions."
+    },
+    {
+      "claim": "Ignoring past spending when evaluating future utility",
+      "basis": "Core behavioral economics principle regarding sunk costs."
+    }
+  ],
+  "source": "llm",
+  "pillar": "psychology",
+  "look": "",
+  "loop_map": {
+    "stakes": "A car owner facing a $2,000 repair on a $1,500 vehicle.",
+    "big_question": "Why do people continue throwing money into deteriorating assets?",
+    "assume": "Most people assume new parts add value to what they own.",
+    "reveal": "You are paying to protect your pride from a past mistake.",
+    "rehook_beats": [
+      3,
+      7
+    ],
+    "payoff_beat": 9
+  }
+}

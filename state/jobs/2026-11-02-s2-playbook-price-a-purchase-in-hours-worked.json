@@ -1,0 +1,77 @@
+{
+  "id": "2026-11-02-s2-playbook-price-a-purchase-in-hours-worked",
+  "pillar": "playbook",
+  "topic": "Price a purchase in hours worked before you buy",
+  "day": "2026-11-02",
+  "slot": 2,
+  "status": "published",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-11-02T09:51:53Z",
+      "words": 157
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-11-02T09:53:28Z",
+      "seconds": 62.281,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-11-02T09:53:50Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-11-02T09:59:28Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-11-02T09:59:28Z",
+      "score": 95
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-11-02T09:59:29Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-11-02T09:59:32Z",
+      "local": "2026-11-02T15:00:00-05:00",
+      "youtube": null
+    }
+  ],
+  "artifacts": {
+    "angle": "three steps: work out your take-home pay per hour once, divide a price by it, ask whether the thing is worth those hours; the viewer does the division, no figure claimed",
+    "hook": "Before you buy it, turn the price into hours of your work.",
+    "title": "The Real Cost of Every Purchase in Hours",
+    "style": "cinematic",
+    "video": "/home/user/quiet-money/production/output/2026-11-02/2026-11-02-s2-playbook-price-a-purchase-in-hours-worked/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-11-02/2026-11-02-s2-playbook-price-a-purchase-in-hours-worked/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-11-02/slot3-playbook",
+        "post_at": "2026-11-02T15:00:00-05:00"
+      },
+      "youtube": {
+        "skipped": "YouTube refused the upload session (HTTP 429): quota or rate limit; it resets at midnight Pacific"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 95,
+    "passed": true
+  },
+  "cost": {
+    "tts:edge:chars": 867
+  },
+  "notes": []
+}

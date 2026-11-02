@@ -1,0 +1,96 @@
+{
+  "title": "The 1930s Grocery Habit That Cuts Food Waste",
+  "hook_text": "DEPRESSION ERA GROCERY HBIT CUTS FOOD WASTE",
+  "beats": [
+    {
+      "say": "You drop $500 on groceries each month, yet half of it rots in the back of your fridge.",
+      "callout": "",
+      "visual": "Extreme close-up of wilted greens in a cold, dark refrigerator under single practical light."
+    },
+    {
+      "say": "People in the 1930s survived economic collapse using a bizarre pantry rule that modern supermarkets spend billions trying to make you forget.",
+      "callout": "",
+      "visual": "Low angle shot of rows of empty glass jars on wooden shelves in a damp cellar."
+    },
+    {
+      "say": "How did households during the Great Depression manage to waste almost zero food without starving?",
+      "callout": "ZERO WASTE VS 31%",
+      "visual": "Silhouette of hands sorting dry beans on a rough wooden table in blue hour light."
+    },
+    {
+      "say": "Most people assume they simply ate far fewer meals and suffered through empty stomachs.",
+      "callout": "LESS FOOD VS SAME CALORIES",
+      "visual": "Wide shot of an empty highway at night under sodium street lighting."
+    },
+    {
+      "say": "Records show they ate the same daily meals, but they relied on first-in, first-out kitchen rotation to stretch every single ingredient.",
+      "callout": "",
+      "visual": "Close-up of chalk writing on a slate board inside a dark pantry, lit by a single bulb."
+    },
+    {
+      "say": "What exact logging method did they use to track every item before buying duplicates?",
+      "callout": "STEP ONE",
+      "visual": "Overhead shot of a wet asphalt alleyway under heavy rain, cold fluorescent glow."
+    },
+    {
+      "say": "The real strategy was strict pantry auditing, where older items moved to the front and nothing new was opened until the old was gone.",
+      "callout": "STEP TWO",
+      "visual": "Extreme close-up of a tarnished metal spoon resting on an empty ceramic bowl, low angle."
+    },
+    {
+      "say": "Why does basic kitchen inventory drastically cut your monthly food spend by half?",
+      "callout": "50% SAVINGS",
+      "visual": "Cold fluorescent light cutting across an empty kitchen counter at midnight."
+    },
+    {
+      "say": "Because when you see every single item you own, duplicate purchases drop to zero and nothing spoils in the dark.",
+      "callout": "",
+      "visual": "Silhouette of a person walking away down a long, narrow industrial corridor."
+    },
+    {
+      "say": "That is how a simple 1930s ledger rule beats modern budgeting apps every single time.",
+      "callout": "APP VS LEDGER",
+      "visual": "High angle shot of a solitary figure standing on a concrete bridge in the fog."
+    },
+    {
+      "say": "Apply this old pantry audit today and keep your cash in your pocket.",
+      "callout": "",
+      "visual": "Single practical lightbulb swinging gently in a vast, dark empty warehouse."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "Extreme wide shot of a dark skyline under a heavy blue hour sky."
+    }
+  ],
+  "caption": "The 1930s pantry rule that cuts grocery bills in half. #grocerybudget #frugalliving #moneysavingtips #finance",
+  "description": "Learn the Depression-era grocery habit that cuts food waste and trims your food bill by half without eating less.",
+  "hashtags": [
+    "#grocerybudget",
+    "#frugalliving",
+    "#moneysavingtips",
+    "#finance",
+    "#moneypsychology"
+  ],
+  "first_comment": "",
+  "facts": [
+    {
+      "claim": "Great Depression households utilized strict rotation methods to minimize household waste.",
+      "basis": "Historical records on 1930s home economics and rationing."
+    }
+  ],
+  "source": "llm",
+  "pillar": "story",
+  "look": "",
+  "loop_map": {
+    "stakes": "You drop $500 on groceries each month, yet half of it rots in the back of your fridge.",
+    "big_question": "How did households during the Great Depression manage to waste almost zero food without starving?",
+    "assume": "Most people assume they simply ate far fewer meals and suffered through empty stomachs.",
+    "reveal": "Records show they ate the same daily meals, but they relied on first-in, first-out kitchen rotation.",
+    "rehook_beats": [
+      6,
+      8
+    ],
+    "payoff_beat": 10
+  }
+}

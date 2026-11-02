@@ -1,0 +1,101 @@
+{
+  "title": "Why You Keep Throwing Good Money After Bad",
+  "hook_text": "THE MONEY PIT REPAIR TRAP",
+  "beats": [
+    {
+      "say": "Putting a $2,000 transmission into a $1,500 car quietly drains your wealth.",
+      "callout": "",
+      "visual": "Low angle shot of a rusted exhaust pipe dripping water on rain-slick asphalt at blue hour under cold streetlights."
+    },
+    {
+      "say": "You do it because you spent $3,000 on repairs last year and hate walking away.",
+      "callout": "$3,000 ALREADY SPENT",
+      "visual": "Silhouette of a person standing alone next to a broken sedan on an empty highway shoulder late at night."
+    },
+    {
+      "say": "That's the sunk cost fallacy, a mental trap that confuses past payments with future value.",
+      "callout": "",
+      "visual": "Extreme close-up of worn leather steering wheel illuminated by solitary flickering yellow sodium light."
+    },
+    {
+      "say": "Most people think pouring more cash in protects their past investment.",
+      "callout": "PROTECT VS WASTE",
+      "visual": "Cold fluorescent lights reflected in puddles inside a dark concrete underground parking garage."
+    },
+    {
+      "say": "In reality, every dollar you spent yesterday is gone forever and cannot be recovered.",
+      "callout": "$0 RECOVERABLE",
+      "visual": "High angle shot of an old rusty mechanic workshop floor with oil stains cutting through dark shadows."
+    },
+    {
+      "say": "Why do smart earners double down on dying assets instead of cutting their losses?",
+      "callout": "",
+      "visual": "Silhouette of an unidentifiable figure looking through fog cutting across a massive bridge span at dusk."
+    },
+    {
+      "say": "Your brain hates recognizing a loss, so it treats write-offs like personal failures.",
+      "callout": "",
+      "visual": "Extreme wide shot of a solitary figure walking along a wet concrete pier into deep oceanic mist."
+    },
+    {
+      "say": "So instead of accepting a $3,000 loss today, you lock in a $5,000 loss tomorrow.",
+      "callout": "$3,000 VS $5,000",
+      "visual": "Low angle view of wet dark asphalt under high-voltage utility towers in cold rain."
+    },
+    {
+      "say": "What's the simple counter-move that stops this quiet drain on your paycheck?",
+      "callout": "",
+      "visual": "Silhouette of a driver seated inside a stationary dark vehicle staring out at sodium streetlight reflections."
+    },
+    {
+      "say": "Step one is evaluating an asset strictly on its current market utility, ignoring yesterday's spending.",
+      "callout": "STEP ONE",
+      "visual": "High angle wide view of an empty rain-soaked intersection lit only by a single red traffic signal."
+    },
+    {
+      "say": "If a repair costs more than the asset's utility, walk away and redirect that cash elsewhere.",
+      "callout": "STEP TWO",
+      "visual": "Cold neon glow framing a lonely bus stop shelter on an empty industrial avenue at midnight."
+    },
+    {
+      "say": "That extra $200 a month invested at 8% for 30 years grows to $298,072 instead.",
+      "callout": "$298,072 WEALTH",
+      "visual": "Extreme close-up of a dark metallic keyring dropped on cold concrete pavement under dim blue light."
+    },
+    {
+      "say": "Follow Quiet Money for the money rules school never taught you, so you never drain your wealth.",
+      "callout": "",
+      "visual": "Low angle silhouette of a distant figure looking out over a foggy skyline from a tower edge."
+    }
+  ],
+  "caption": "Stop letting past spending dictate your future cash flow. Evaluate every asset by current utility, not historical cost.\n\n#money #personalfinance #behavioraleconomics #wealth #mindset",
+  "description": "The sunk cost fallacy tricks smart people into pouring cash into deteriorating assets. By evaluating future costs strictly against current utility, you preserve capital and build long-term wealth.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#behavioraleconomics",
+    "#wealth",
+    "#mindset"
+  ],
+  "first_comment": "What's one thing you kept paying for way longer than you should have?",
+  "facts": [
+    {
+      "claim": "$200/month invested for 30 years at 8%/yr grows to $298,072",
+      "basis": "Computed compounding math: $200/month at 8% annual return compounded monthly for 30 years equals $298,072."
+    }
+  ],
+  "source": "llm",
+  "pillar": "psychology",
+  "look": "",
+  "loop_map": {
+    "stakes": "Putting a $2,000 repair into a $1,500 car because you spent $3,000 last year.",
+    "big_question": "Why do smart earners double down on dying assets instead of cutting their losses?",
+    "assume": "Pouring more cash in protects your past investment.",
+    "reveal": "Past money is unrecoverable; holding on locks in larger future losses.",
+    "rehook_beats": [
+      6,
+      9
+    ],
+    "payoff_beat": 10
+  }
+}

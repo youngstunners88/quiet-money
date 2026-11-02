@@ -1,0 +1,77 @@
+{
+  "id": "2026-11-02-s0-story-the-1930s-depression-era-grocery",
+  "pillar": "story",
+  "topic": "The 1930s Depression-Era Grocery Habit That Beats Modern Budgeting",
+  "day": "2026-11-02",
+  "slot": 0,
+  "status": "published",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-11-02T09:31:49Z",
+      "words": 139
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-11-02T09:37:22Z",
+      "seconds": 64.624,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-11-02T09:37:40Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-11-02T09:41:31Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-11-02T09:41:32Z",
+      "score": 97
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-11-02T09:41:32Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-11-02T09:41:40Z",
+      "local": "2026-11-02T07:30:00-05:00",
+      "youtube": null
+    }
+  ],
+  "artifacts": {
+    "angle": "How an obscure rationing technique from the Great Depression completely eliminates food waste and trims grocery budgets by half without eating less.",
+    "hook": "People in the 1930s survived economic collapse using a bizarre pantry rule that modern supermarkets spend billions trying to make you forget.",
+    "title": "The 1930s Grocery Habit That Cuts Your Bill in Half",
+    "style": "cinematic",
+    "video": "/home/user/quiet-money/production/output/2026-11-02/2026-11-02-s0-story-the-1930s-depression-era-grocery/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-11-02/2026-11-02-s0-story-the-1930s-depression-era-grocery/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-11-02/slot1-story",
+        "post_at": "2026-11-02T07:30:00-05:00"
+      },
+      "youtube": {
+        "skipped": "YouTube refused the upload session (HTTP 429): quota or rate limit; it resets at midnight Pacific"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 97,
+    "passed": true
+  },
+  "cost": {
+    "tts:edge:chars": 1885
+  },
+  "notes": []
+}

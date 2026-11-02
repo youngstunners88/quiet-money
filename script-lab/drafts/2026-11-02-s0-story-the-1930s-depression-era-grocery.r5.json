@@ -1,0 +1,105 @@
+{
+  "title": "The 1930s Grocery Habit That Cuts Your Bill in Half",
+  "hook_text": "STOP WASTING $1,800 ON GROCERIES",
+  "beats": [
+    {
+      "say": "If you spend $500 on monthly groceries, nearly 30% ends up in the trash.",
+      "callout": "",
+      "visual": "Extreme close shot of overflowing dark trash bags lying on rain-slick asphalt under harsh overhead sodium streetlights at night."
+    },
+    {
+      "say": "That's over $1,800 thrown directly into the dumpster every single year.",
+      "callout": "$1,800 WASTED",
+      "visual": "Low angle shot of a massive metal industrial dumpster in a dark alley, illuminated by cold fluorescent light from an adjacent wall."
+    },
+    {
+      "say": "How did 1930s families cut food costs without starving during an economic collapse?",
+      "callout": "1930S COLLAPSE",
+      "visual": "Silhouette of a lonely figure standing on an empty fog-covered dirt road at dusk, framing vast open farmland."
+    },
+    {
+      "say": "Most people assume they just ate less food or skipped daily meals.",
+      "callout": "",
+      "visual": "Extreme wide shot of a solitary wooden house sitting on a bleak, windy plain under grey stormy skies."
+    },
+    {
+      "say": "But Depression-era households survived by adopting a commercial store rule: First-In, First-Out.",
+      "callout": "FIRST-IN FIRST-OUT",
+      "visual": "High angle shot of dark wooden pantry shelves in a dim room lit by a single warm bulb hanging from the ceiling."
+    },
+    {
+      "say": "Supermarkets still use it today to protect profits, while your home fridge stays chaotic.",
+      "callout": "CHAOS VS ORDER",
+      "visual": "Extreme close up of blurred glass jars and unlabeled metal tins resting in cold blue shadows inside a dark pantry."
+    },
+    {
+      "say": "Step one: when unpacking bags, pull older ingredients to the front of your shelves.",
+      "callout": "STEP ONE",
+      "visual": "Close up shot of a pair of hands in low key lighting sliding plain glass containers forward on a clean dark shelf."
+    },
+    {
+      "say": "Step two: load fresh groceries directly behind the old items so they're hidden.",
+      "callout": "STEP TWO",
+      "visual": "Low angle view of dark wooden pantry shelves filled with neatly aligned ceramic jars, lit by a single warm lamp."
+    },
+    {
+      "say": "Why does this basic 1930s pantry rotation stop you from wasting hard-earned cash?",
+      "callout": "",
+      "visual": "Silhouette of a person standing in a doorway at night, looking down a long dark corridor with blue hour light outside."
+    },
+    {
+      "say": "Because pushing older food front and center eliminates forgotten rot, duplicate purchases, and expensive takeout.",
+      "callout": "ZERO FOOD WASTE",
+      "visual": "Extreme close up of clean wooden surface with stacked linen towels and simple pottery under soft single practical lighting."
+    },
+    {
+      "say": "You end up eating every single dollar you spend instead of throwing cash away.",
+      "callout": "",
+      "visual": "High angle shot of a single empty porcelain plate on a dark rustic wooden table lit by a soft lamp."
+    },
+    {
+      "say": "It's the simplest habit to cut grocery bills without eating less daily food.",
+      "callout": "",
+      "visual": "Extreme wide shot of a tiny cabin standing against a massive dark mountain ridge line during blue hour."
+    },
+    {
+      "say": "Follow for the money rules school never taught you, and stop wasting your paycheck.",
+      "callout": "",
+      "visual": "Low angle silhouette of a solitary figure standing at the edge of an empty wet highway under sodium lights at dusk."
+    }
+  ],
+  "caption": "The Great Depression taught families how to stretch every dollar. Here's the simple pantry rule that stops food waste forever.\n\n#money #personalfinance #budgeting #groceryhacks #quietmoney",
+  "description": "Learn how the 1930s Depression-era pantry rotation rule (FIFO) eliminates food waste and reduces your monthly grocery bill without eating less.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#budgeting",
+    "#groceryhacks",
+    "#frugalliving"
+  ],
+  "first_comment": "How much of your monthly grocery bill do you think ends up in the trash?",
+  "facts": [
+    {
+      "claim": "US households waste nearly 30% of their purchased food, totaling over $1,800 annually.",
+      "basis": "USDA Economic Research Service estimates 30-40% food waste in the US food supply chain, with household loss averaging ~30% of consumer purchases."
+    },
+    {
+      "claim": "Depression-era households used First-In, First-Out (FIFO) stock rotation to eliminate food spoilage.",
+      "basis": "Historical home economics documentation from the 1930s emphasizes store-style pantry management to maximize food utility."
+    }
+  ],
+  "source": "llm",
+  "pillar": "story",
+  "look": "",
+  "loop_map": {
+    "stakes": "Nearly 30% of a $500 monthly grocery budget ($1,800 a year) is thrown in the trash.",
+    "big_question": "How did 1930s families cut food costs without starving during an economic collapse?",
+    "assume": "They ate less food or skipped daily meals.",
+    "reveal": "They used the commercial inventory rule First-In, First-Out (FIFO) to rotate pantry stock.",
+    "rehook_beats": [
+      6,
+      9
+    ],
+    "payoff_beat": 10
+  }
+}

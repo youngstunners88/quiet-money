@@ -1,0 +1,100 @@
+{
+  "title": "The 1930s Grocery Habit That Trims Food Budgets",
+  "hook_text": "THE 1930S PANTRY RULE THAT BEATS INFLATION",
+  "beats": [
+    {
+      "say": "People in the 1930s survived economic collapse using a bizarre pantry rule that modern supermarkets spend billions trying to make you forget.",
+      "callout": "",
+      "visual": "Extreme wide shot of a solitary figure walking down a wet asphalt highway at night under sodium streetlights."
+    },
+    {
+      "say": "How did households back then cut their weekly food waste down to nearly zero without eating less?",
+      "callout": "ZERO WASTE",
+      "visual": "Low angle extreme close-up of heavy iron hinges on an old wooden pantry door swinging open in cold fluorescent light."
+    },
+    {
+      "say": "You'd think they just ate smaller portions or starved through hard times.",
+      "callout": "LESS FOOD VS SYSTEM",
+      "visual": "Silhouette of a person against a foggy window pane in a dimly lit kitchen during blue hour."
+    },
+    {
+      "say": "That's not what happened at all.",
+      "callout": "",
+      "visual": "High angle shot of empty glass mason jars sitting on a cold concrete floor under a single practical lightbulb."
+    },
+    {
+      "say": "They used a strict inventory system called the rotating shelf rule.",
+      "callout": "STEP ONE",
+      "visual": "Extreme close-up of rough hands placing a plain brown paper bag onto a dark wooden table."
+    },
+    {
+      "say": "Every new item went straight to the back.",
+      "callout": "STEP TWO",
+      "visual": "Single practical light casting sharp shadows over a row of unlabelled tin cans on a steel shelf."
+    },
+    {
+      "say": "The oldest items stayed right in front where you had to use them first.",
+      "callout": "STEP THREE",
+      "visual": "Wet asphalt street reflecting the cold yellow glow of a distant storefront sign at night."
+    },
+    {
+      "say": "Why does this simple habit stop you from throwing away hundreds of dollars in spoiled food every single year?",
+      "callout": "$2,200 LOST",
+      "visual": "Extreme wide shot of an empty concrete underpass lit by a harsh overhead sodium light."
+    },
+    {
+      "say": "Because out of sight always means out of mind in a cluttered kitchen.",
+      "callout": "SIGHT VS MIND",
+      "visual": "Low angle view of a massive concrete tower edge cutting a dark evening sky."
+    },
+    {
+      "say": "When you put old items in front, you stop buying duplicates of food you already own.",
+      "callout": "",
+      "visual": "Silhouette of a person carrying a heavy crate across an open concrete loading dock at dusk."
+    },
+    {
+      "say": "That is the exact mechanism that trims modern grocery bills without eating less.",
+      "callout": "",
+      "visual": "Extreme close-up of rough hands closing a heavy wooden storage crate under a single practical bulb."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "Extreme wide shot of a lone figure standing on a vast ridge line under a cold blue hour sky."
+    }
+  ],
+  "caption": "The Great Depression taught us a quiet lesson about food waste that still works today. #MoneyRules #PersonalFinance #Budgeting #FrugalLiving #SmartMoney",
+  "description": "Discover the 1930s rotating shelf rule that cuts grocery waste and saves money without eating less.",
+  "hashtags": [
+    "#MoneyRules",
+    "#PersonalFinance",
+    "#Budgeting",
+    "#FrugalLiving",
+    "#SmartMoney"
+  ],
+  "first_comment": "What is the one item in your pantry that always goes bad before you eat it?",
+  "facts": [
+    {
+      "claim": "Depression-era households used a rotating inventory system to reduce waste.",
+      "basis": "Historical domestic economy records from the 1930s regarding pantry management."
+    },
+    {
+      "claim": "Modern households waste significant money on duplicate grocery purchases.",
+      "basis": "USDA food waste and consumer purchasing habit studies."
+    }
+  ],
+  "source": "llm",
+  "pillar": "story",
+  "look": "",
+  "loop_map": {
+    "stakes": "The average household loses money every month on wasted groceries sitting in dark cupboards.",
+    "big_question": "How did households back then cut their weekly food waste down to nearly zero without eating less?",
+    "assume": "Most people think families during the Great Depression simply starved or ate tiny portions.",
+    "reveal": "They used a strict inventory rotation system that forced them to consume oldest items first.",
+    "rehook_beats": [
+      2,
+      8
+    ],
+    "payoff_beat": 11
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "title": "The 3-Step Work Test Before You Buy",
+  "hook_text": "BEFORE YOU BUY, TURN IT INTO WORK",
+  "beats": [
+    {
+      "say": "Before you buy it, turn the price into hours of your work.",
+      "callout": "",
+      "visual": "Extreme close-up of a price tag fluttering on a coat sleeve in a dark empty room, low angle, single sodium light."
+    },
+    {
+      "say": "That simple gadget looks cheap until you count the time it takes to pay for it.",
+      "callout": "",
+      "visual": "Low angle shot of a solitary pedestrian silhouette walking past a towering concrete wall under blue hour fog."
+    },
+    {
+      "say": "How many actual hours of your life does that purchase cost you?",
+      "callout": "",
+      "visual": "Macro lens view of heavy stainless steel clock gears turning slowly in cold fluorescent light."
+    },
+    {
+      "say": "Most people look at the sticker price and assume it fits their weekly budget.",
+      "callout": "A VS B",
+      "visual": "High angle shot of a wet asphalt road cutting through an empty industrial yard at night."
+    },
+    {
+      "say": "Step one. Work out your exact take-home pay per hour just once.",
+      "callout": "STEP ONE",
+      "visual": "Close-up of hands typing numbers on a dark calculator screen lit by a single desk lamp."
+    },
+    {
+      "say": "Step two. Divide the total price of the item by that hourly number.",
+      "callout": "STEP TWO",
+      "visual": "Silhouetted fingers tapping a glowing glass table in a dim room, extreme close."
+    },
+    {
+      "say": "Step three. Ask yourself if the physical item is truly worth those exact hours.",
+      "callout": "STEP THREE",
+      "visual": "Wide shot of a single glowing amber practical light in an abandoned warehouse at dusk."
+    },
+    {
+      "say": "That shirt isn't worth five hours in a stuffy office when you see the math.",
+      "callout": "",
+      "visual": "Rain-slick street at night reflecting a lone red traffic light, extreme wide shot."
+    },
+    {
+      "say": "Time is your only non-renewable asset, yet you trade it blindly every single day.",
+      "callout": "",
+      "visual": "Silhouette of a person walking across a vast open concrete bridge at blue hour."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "Extreme close-up of a heavy iron door latch clicking shut in cold fluorescent light."
+    }
+  ],
+  "caption": "Stop looking at the sticker price. Translate purchases into hours worked. #moneyrules #personalfinance #smartspending #budgetingtips",
+  "description": "Learn a simple 3-step math test to price any purchase in hours worked before you hand over your cash.",
+  "hashtags": [
+    "#moneyrules",
+    "#personalfinance",
+    "#smartspending",
+    "#budgetingtips",
+    "#financialliteracy"
+  ],
+  "first_comment": "How many hours of work is your last impulse buy actually worth?",
+  "facts": [
+    {
+      "claim": "Translating purchases into hours worked reveals the true cost of consumption.",
+      "basis": "Behavioral finance principle of time-cost evaluation."
+    }
+  ],
+  "source": "llm",
+  "pillar": "playbook",
+  "look": "",
+  "loop_map": {
+    "stakes": "A purchase looks cheap until you measure it in the time it takes to earn.",
+    "big_question": "How many actual hours of your life does that item cost you?",
+    "assume": "Most people assume a price tag tells the whole story.",
+    "reveal": "Dividing the price by your hourly take-home pay reveals the true time cost.",
+    "rehook_beats": [
+      3,
+      7
+    ],
+    "payoff_beat": 8
+  }
+}
