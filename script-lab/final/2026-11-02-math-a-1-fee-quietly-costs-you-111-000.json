@@ -1,0 +1,99 @@
+{
+ "title": "A 1% Fee Quietly Costs You $111,000",
+ "hook_text": "A 1% FEE = $111,000",
+ "beats": [
+  {
+   "say": "A one percent fee sounds like nothing. Over thirty years, it can cost about one hundred eleven thousand dollars.",
+   "callout": "",
+   "visual": "a single drop of water falling into a huge dark pool, extreme close-up"
+  },
+  {
+   "say": "This is an illustration, not a promise. We assume ten thousand dollars to start and five hundred dollars a month.",
+   "callout": "AN ILLUSTRATION",
+   "visual": "an old brass calculator beside a stack of ledgers under a green banker lamp, no people"
+  },
+  {
+   "say": "Picture two investors. Both put in the same money for thirty years.",
+   "callout": "",
+   "visual": "two identical empty wooden chairs facing a window at dawn, no people"
+  },
+  {
+   "say": "The first earns seven percent a year. After thirty years, about six hundred forty three thousand dollars.",
+   "callout": "7%: $643K",
+   "visual": "a tall golden staircase climbing into soft clouds, wide shot, no people"
+  },
+  {
+   "say": "The second pays a one percent fee, so earns six percent. About five hundred thirty two thousand dollars.",
+   "callout": "6%: $532K",
+   "visual": "a slightly shorter silver staircase climbing into soft clouds, wide shot, no people"
+  },
+  {
+   "say": "Same deposits. Same time. One percent apart.",
+   "callout": "SAME DEPOSITS",
+   "visual": "two parallel train tracks leaving a station into misty morning light, no people"
+  },
+  {
+   "say": "The gap is about one hundred eleven thousand dollars.",
+   "callout": "$111K GAP",
+   "visual": "a large stack of gold coins crumbling from one side in a dark room, dramatic light"
+  },
+  {
+   "say": "Here is the part nobody tells you. Fees do not send a bill. They just take a little from your growth every single year.",
+   "callout": "QUIET COST",
+   "visual": "a thin crack slowly spreading across a glass bowl of coins, extreme close-up"
+  },
+  {
+   "say": "Over time, the money you never see leave is the money you never get to compound.",
+   "callout": "",
+   "visual": "a leaking brass tap dripping slowly into an old metal bucket, moody light"
+  },
+  {
+   "say": "The honest catch: real returns bounce around, and a pricier fund is sometimes worth it. Your numbers will differ.",
+   "callout": "REAL LIFE VARIES",
+   "visual": "a stormy sea with waves rising and falling under a heavy sky and a lighthouse"
+  },
+  {
+   "say": "So the move is simple: find the fee on your funds, then compare it.",
+   "callout": "",
+   "visual": "a hand holding a magnifying glass over an old printed page, close-up, no face"
+  },
+  {
+   "say": "A small number checked once can be worth a lot over decades.",
+   "callout": "",
+   "visual": "a single stone step leading up a long quiet staircase into morning mist, no people"
+  },
+  {
+   "say": "Follow for the money rules school never taught you.",
+   "callout": "",
+   "visual": "an empty highway stretching toward a glowing sunrise horizon, wide shot"
+  }
+ ],
+ "description": "A one percent fee sounds tiny. On 10,000 dollars plus 500 dollars a month for 30 years at 7 percent versus 6 percent, the gap is about 111,000 dollars. An illustration, not a promise.",
+ "hashtags": [
+  "#money",
+  "#personalfinance",
+  "#investing",
+  "#fees",
+  "#quietmoney"
+ ],
+ "first_comment": "Do you know the fees on your account? Educational only, not financial advice.",
+ "facts": [
+  {
+   "claim": "$10,000 start + $6,000/year for 30 years, annual compounding: 7% gives about $642,887; 6% gives about $531,784; gap about $111,103",
+   "basis": "Standard future value formula; computed 2026-11-02"
+  },
+  {
+   "claim": "Fund fees (expense ratios) reduce returns every year",
+   "basis": "SEC Investor.gov, 'Mutual Fund Fees and Expenses'"
+  },
+  {
+   "claim": "Assumed returns are an illustration, not a forecast",
+   "basis": "n/a"
+  }
+ ],
+ "source": "human",
+ "pillar": "math",
+ "look": "",
+ "loop_map": {},
+ "caption": "$10,000 plus $500 a month for 30 years: 7% grows to about $643K, 6% (a 1% fee) to about $532K. The gap is about $111K. An illustration, not a promise. Educational content, not financial advice."
+}

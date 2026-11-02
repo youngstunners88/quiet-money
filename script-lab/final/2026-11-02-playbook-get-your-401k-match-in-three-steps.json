@@ -1,0 +1,99 @@
+{
+ "title": "Get Your 401k Match In Three Steps",
+ "hook_text": "3 STEPS TO YOUR MATCH",
+ "beats": [
+  {
+   "say": "Many workers leave part of their pay unclaimed, and it hides inside the retirement plan.",
+   "callout": "",
+   "visual": "a small unopened envelope lying on a dark wooden desk under a warm lamp, no text"
+  },
+  {
+   "say": "It is called the employer match. Here is how to claim yours in three steps.",
+   "callout": "3 STEPS",
+   "visual": "three wooden doors in a row in a quiet hallway, the middle one slightly open with light"
+  },
+  {
+   "say": "Step one. Find your match. Ask human resources or open your plan page and look for the matching formula.",
+   "callout": "STEP 1: FIND IT",
+   "visual": "a hand sliding a thin folder across a polished desk, close-up, no face"
+  },
+  {
+   "say": "A common example is fifty cents for every dollar you put in, up to six percent of your pay.",
+   "callout": "",
+   "visual": "a glass jar slowly filling with small gold coins, macro shot, soft light"
+  },
+  {
+   "say": "Step two. Contribute enough to get the full match, and no less.",
+   "callout": "STEP 2: GET IT ALL",
+   "visual": "a stack of coins and a matching smaller stack placed side by side, dramatic side light"
+  },
+  {
+   "say": "On a sixty thousand dollar pay, six percent is thirty six hundred a year, and the match adds about eighteen hundred.",
+   "callout": "$3,600 + $1,800",
+   "visual": "a tall stack of gold coins growing beside a smaller stack on black marble"
+  },
+  {
+   "say": "Step three. Raise your contribution by one percent each year, ideally when you get a raise.",
+   "callout": "STEP 3: RAISE 1%",
+   "visual": "a single stone step leading up a long quiet staircase into morning mist, no people"
+  },
+  {
+   "say": "You barely notice one percent, but over a career it adds up.",
+   "callout": "",
+   "visual": "a small plant slowly growing in a sunny windowsill pot, time lapse feel, no people"
+  },
+  {
+   "say": "Here is the part nobody tells you. Skipping the match is like turning down part of your paycheck.",
+   "callout": "",
+   "visual": "an open empty wallet beside a pair of scissors on a dark table, moody light"
+  },
+  {
+   "say": "The honest catch: some matches vest over several years, so leaving early can mean losing part of it.",
+   "callout": "THE CATCH",
+   "visual": "a heavy iron gate half open onto a foggy path, no people"
+  },
+  {
+   "say": "Not every employer offers a match. Check your own plan rules.",
+   "callout": "",
+   "visual": "an old paper map being unfolded on a wooden table, hands out of focus"
+  },
+  {
+   "say": "This is education, not advice. A few minutes this week could matter for years.",
+   "callout": "",
+   "visual": "a quiet kitchen table at morning with a coffee cup and a notepad, no people"
+  },
+  {
+   "say": "Follow for the money rules school never taught you.",
+   "callout": "",
+   "visual": "an empty highway stretching toward a glowing sunrise horizon, wide shot"
+  }
+ ],
+ "description": "A 401k match is part of your pay that many people leave unclaimed. Three steps to find yours and claim it today. An example, not advice; plans and vesting rules vary.",
+ "hashtags": [
+  "#money",
+  "#personalfinance",
+  "#401k",
+  "#retirement",
+  "#quietmoney"
+ ],
+ "first_comment": "Do you know your employer's match? Educational only, not financial advice.",
+ "facts": [
+  {
+   "claim": "Many employers offer a 401k match; formulas vary (for example 50 cents per dollar up to 6% of pay)",
+   "basis": "Vanguard 'How America Saves'; IRS 401k overview"
+  },
+  {
+   "claim": "Matching contributions may be subject to a vesting schedule",
+   "basis": "IRS, 'Retirement Topics - Vesting'"
+  },
+  {
+   "claim": "Example: $60,000 pay, 6% contribution = $3,600; 50% match = $1,800 (illustration)",
+   "basis": "Computed 2026-11-02"
+  }
+ ],
+ "source": "human",
+ "pillar": "playbook",
+ "look": "",
+ "loop_map": {},
+ "caption": "Step one: find your 401k match. Step two: contribute enough to get all of it. Step three: raise it 1% a year. An example, not advice; plans vary. Educational content, not financial advice."
+}

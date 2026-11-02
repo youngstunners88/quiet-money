@@ -1,0 +1,103 @@
+{
+ "title": "Checking Your Own Credit Score Does Not Lower It",
+ "hook_text": "CHECKING IT DOESN'T HURT IT",
+ "beats": [
+  {
+   "say": "Lots of people never look at their own credit score because they think looking will hurt it.",
+   "callout": "",
+   "visual": "a closed metal mailbox covered in dust on a quiet street, wide shot, no people"
+  },
+  {
+   "say": "It does not. Checking your own score is not what lowers it.",
+   "callout": "",
+   "visual": "an old brass magnifying glass resting on a closed ledger, soft window light"
+  },
+  {
+   "say": "Here is the difference. A soft inquiry is a look. A hard inquiry is a lender's decision check.",
+   "callout": "",
+   "visual": "two doors in a dim corridor, one slightly open with warm light, no people"
+  },
+  {
+   "say": "When you check your own score, or a company checks it for pre approval, that is a soft look.",
+   "callout": "",
+   "visual": "a quiet window at night with a single lit lamp inside, no people"
+  },
+  {
+   "say": "A soft look does not lower your score.",
+   "callout": "SOFT LOOK: NO HIT",
+   "visual": "a feather resting on the surface of a perfectly still dark lake, close-up"
+  },
+  {
+   "say": "A hard inquiry happens when you apply for new credit, like a card or a loan.",
+   "callout": "",
+   "visual": "a heavy rubber stamp resting on a stack of papers, dramatic side light"
+  },
+  {
+   "say": "That can lower your score by a small amount, often under five points, for a while.",
+   "callout": "SMALL AND TEMPORARY",
+   "visual": "a thin crack in a small clay pot, extreme close-up, warm light"
+  },
+  {
+   "say": "Here is the part nobody tells you. Not looking does not protect your score. It only hides mistakes.",
+   "callout": "HIDING HELPS NOTHING",
+   "visual": "a dusty mirror covered by a heavy cloth in a dark attic, no people"
+  },
+  {
+   "say": "Errors on a report can cost you real money, and you will never know unless you look.",
+   "callout": "",
+   "visual": "a single wrong page torn from a ledger lying on a wooden floor, no text"
+  },
+  {
+   "say": "You can get your reports for free every week at the official site, annual credit report dot com.",
+   "callout": "",
+   "visual": "a quiet desk with a laptop open in morning light, no people"
+  },
+  {
+   "say": "The honest catch: applying for many cards at once adds several hard inquiries, and that adds up.",
+   "callout": "THE CATCH",
+   "visual": "a stack of identical empty cardboard boxes in a dim warehouse, no people"
+  },
+  {
+   "say": "So look as often as you like. Apply only when you mean to.",
+   "callout": "",
+   "visual": "a calm hand opening a window to morning light, close-up, no face"
+  },
+  {
+   "say": "Follow for the money rules school never taught you.",
+   "callout": "",
+   "visual": "an empty highway stretching toward a glowing sunrise horizon, wide shot"
+  }
+ ],
+ "description": "Many people avoid looking at their own credit score because they think it lowers it. Checking your own score is a soft inquiry and does not hurt it. The myth, the rule and the honest catch.",
+ "hashtags": [
+  "#money",
+  "#personalfinance",
+  "#creditscore",
+  "#moneymyths",
+  "#quietmoney"
+ ],
+ "first_comment": "Did you believe this one? Educational only, not financial advice.",
+ "facts": [
+  {
+   "claim": "Checking your own credit score or report is a soft inquiry and does not affect your score",
+   "basis": "myFICO; CFPB 'Will checking my credit score hurt it?'"
+  },
+  {
+   "claim": "A hard inquiry from a lender can lower scores by a small amount (often under 5 points for FICO) for a time",
+   "basis": "myFICO; Experian"
+  },
+  {
+   "claim": "Rate-shopping for a mortgage/auto loan within a short window counts as one inquiry",
+   "basis": "myFICO"
+  },
+  {
+   "claim": "You can get free weekly credit reports at AnnualCreditReport.com",
+   "basis": "FTC / AnnualCreditReport.com"
+  }
+ ],
+ "source": "human",
+ "pillar": "myth",
+ "look": "",
+ "loop_map": {},
+ "caption": "Checking your own credit score is a soft inquiry and does not lower it. Applying for new credit is a hard inquiry. The myth, the rule and the catch. Educational content, not financial advice."
+}

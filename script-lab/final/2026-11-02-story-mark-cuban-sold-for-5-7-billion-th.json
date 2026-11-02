@@ -1,0 +1,103 @@
+{
+ "title": "Mark Cuban Sold For $5.7 Billion Then Protected It",
+ "hook_text": "HE SOLD AT THE TOP, THEN HEDGED",
+ "beats": [
+  {
+   "say": "In nineteen ninety nine, Mark Cuban sold his company for about five point seven billion dollars.",
+   "callout": "",
+   "visual": "a sealed leather briefcase on a polished desk beside a single glowing lamp, no people"
+  },
+  {
+   "say": "The buyer was Yahoo, and it paid in Yahoo stock, not cash.",
+   "callout": "",
+   "visual": "a tall stack of paper stock certificates tied with string under a green banker lamp, no people"
+  },
+  {
+   "say": "That meant his fortune could shrink if the price fell.",
+   "callout": "",
+   "visual": "a glass hourglass with sand running out on a dark table, hard side light"
+  },
+  {
+   "say": "And the price was sky high, in the middle of a tech bubble.",
+   "callout": "THE BUBBLE",
+   "visual": "a giant soap bubble floating over a dark city skyline at dusk, no people"
+  },
+  {
+   "say": "Most people who get rich in stock just hold it and hope. Hope is not a plan when a fortune is tied to one price.",
+   "callout": "",
+   "visual": "a lone figure standing under a flickering streetlamp in the rain, silhouette"
+  },
+  {
+   "say": "So what did Cuban do instead?",
+   "callout": "WHAT DID HE DO?",
+   "visual": "a brass compass resting on an old map in dim light, close-up"
+  },
+  {
+   "say": "He has said he used hedges, contracts that paid off if his shares dropped.",
+   "callout": "",
+   "visual": "an old steel safe door slowly closing in a dark vault, thin light along the edge"
+  },
+  {
+   "say": "Then Yahoo's stock fell by more than ninety percent from its peak.",
+   "callout": "",
+   "visual": "a steep snowy cliff face disappearing into clouds, wide shot, no people"
+  },
+  {
+   "say": "Here is the part nobody tells you. Making a gain and keeping a gain are two different jobs.",
+   "callout": "GAIN ≠ KEPT",
+   "visual": "a hand holding a single gold coin over a deep dark well, close-up, no face"
+  },
+  {
+   "say": "Protecting a gain can mean selling some, spreading it out, or paying for insurance like that.",
+   "callout": "",
+   "visual": "a row of sturdy wooden umbrellas open in a heavy storm, no people"
+  },
+  {
+   "say": "The honest catch: hedging costs money, it caps your upside, and looking back always feels easy. Nobody knows the top in advance.",
+   "callout": "THE CATCH",
+   "visual": "a quiet empty road in thick fog with faint headlights far away, no people"
+  },
+  {
+   "say": "Do not copy a billionaire's trade. Copy the question: what happens if this goes wrong?",
+   "callout": "",
+   "visual": "a lone lantern glowing on a dark wooden dock at night, no people"
+  },
+  {
+   "say": "Follow for the money rules school never taught you.",
+   "callout": "",
+   "visual": "an empty highway stretching toward a glowing sunrise horizon, wide shot"
+  }
+ ],
+ "description": "In 1999 Mark Cuban sold Broadcast.com to Yahoo for about 5.7 billion dollars in stock, then reportedly hedged his Yahoo shares before the dot-com crash. What protecting a gain means, and the honest catch.",
+ "hashtags": [
+  "#money",
+  "#personalfinance",
+  "#markcuban",
+  "#investing",
+  "#quietmoney"
+ ],
+ "first_comment": "Would you have sold, or held on? Educational only, not financial advice.",
+ "facts": [
+  {
+   "claim": "1999: Yahoo bought Broadcast.com for about $5.7B in stock",
+   "basis": "Yahoo/Broadcast.com press release and NYT, 1999-04-01"
+  },
+  {
+   "claim": "Cuban has said he hedged his Yahoo shares with collars and puts",
+   "basis": "Cuban interviews; Business Insider; Vox"
+  },
+  {
+   "claim": "Yahoo stock fell roughly 90%+ from its 2000 peak by 2001-02",
+   "basis": "Historical price data (Yahoo Finance)"
+  },
+  {
+   "claim": "Catch: hedging costs money and limits upside; hindsight is easy",
+   "basis": "Options basics; Investopedia"
+  }
+ ],
+ "source": "human",
+ "pillar": "story",
+ "look": "",
+ "loop_map": {},
+ "caption": "Cuban sold Broadcast.com to Yahoo for about $5.7B in stock in 1999, then reportedly hedged before the crash. Protecting a gain, and the catch. Educational content, not financial advice."
+}
