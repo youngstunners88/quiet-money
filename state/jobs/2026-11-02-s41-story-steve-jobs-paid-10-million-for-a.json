@@ -1,0 +1,65 @@
+{
+  "id": "2026-11-02-s41-story-steve-jobs-paid-10-million-for-a",
+  "pillar": "story",
+  "topic": "Steve Jobs Paid $10 Million For A Hobby And Got $7 Billion",
+  "day": "2026-11-02",
+  "slot": 41,
+  "status": "held",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-11-02T02:16:38Z",
+      "words": 196
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-11-02T02:17:39Z",
+      "seconds": 64.2,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-11-02T02:17:39Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-11-02T02:22:03Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-11-02T02:22:03Z",
+      "score": 95
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-11-02T02:22:03Z"
+    },
+    {
+      "from": "packaged",
+      "to": "held",
+      "ts": "2026-11-02T02:22:03Z"
+    }
+  ],
+  "artifacts": {
+    "title": "Steve Jobs Paid $10 Million For A Hobby And Got $7 Billion",
+    "style": "cinematic",
+    "video": "/home/kofibeatz/Documents/Quiet Money/quiet-money/production/output/2026-11-02/2026-11-02-s41-story-steve-jobs-paid-10-million-for-a/final.mp4",
+    "cover": "/home/kofibeatz/Documents/Quiet Money/quiet-money/production/output/2026-11-02/2026-11-02-s41-story-steve-jobs-paid-10-million-for-a/cover.jpg"
+  },
+  "scores": {
+    "gauntlet": 95,
+    "passed": false
+  },
+  "cost": {
+    "tts:edge:chars": 1074
+  },
+  "notes": [
+    "held for review: not_semantic_duplicate"
+  ]
+}

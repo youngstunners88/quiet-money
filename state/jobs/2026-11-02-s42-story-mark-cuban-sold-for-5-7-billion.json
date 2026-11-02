@@ -1,0 +1,67 @@
+{
+  "id": "2026-11-02-s42-story-mark-cuban-sold-for-5-7-billion",
+  "pillar": "story",
+  "topic": "Mark Cuban Sold For $5.7 Billion Then Protected It",
+  "day": "2026-11-02",
+  "slot": 42,
+  "status": "held",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-11-02T02:49:36Z",
+      "words": 196
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-11-02T02:51:26Z",
+      "seconds": 64.509,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-11-02T02:51:26Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-11-02T02:55:48Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-11-02T02:55:48Z",
+      "score": 95
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-11-02T02:55:48Z"
+    },
+    {
+      "from": "packaged",
+      "to": "held",
+      "ts": "2026-11-02T02:55:48Z"
+    }
+  ],
+  "artifacts": {
+    "title": "Mark Cuban Sold For $5.7 Billion Then Protected It",
+    "style": "cinematic",
+    "video": "/home/kofibeatz/Documents/Quiet Money/quiet-money/production/output/2026-11-02/2026-11-02-s42-story-mark-cuban-sold-for-5-7-billion/final.mp4",
+    "cover": "/home/kofibeatz/Documents/Quiet Money/quiet-money/production/output/2026-11-02/2026-11-02-s42-story-mark-cuban-sold-for-5-7-billion/cover.jpg"
+  },
+  "scores": {
+    "gauntlet": 95,
+    "passed": false
+  },
+  "cost": {
+    "tts:edge:chars": 2066
+  },
+  "notes": [
+    "held for review: not_semantic_duplicate",
+    "restarted from held",
+    "held for review: not_semantic_duplicate"
+  ]
+}

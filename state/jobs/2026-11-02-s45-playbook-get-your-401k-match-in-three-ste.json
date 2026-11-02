@@ -1,0 +1,67 @@
+{
+  "id": "2026-11-02-s45-playbook-get-your-401k-match-in-three-ste",
+  "pillar": "playbook",
+  "topic": "Get Your 401k Match In Three Steps",
+  "day": "2026-11-02",
+  "slot": 45,
+  "status": "held",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-11-02T01:51:19Z",
+      "words": 206
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-11-02T01:52:41Z",
+      "seconds": 62.926,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-11-02T01:52:41Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-11-02T01:56:52Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-11-02T01:56:52Z",
+      "score": 97
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-11-02T01:56:52Z"
+    },
+    {
+      "from": "packaged",
+      "to": "held",
+      "ts": "2026-11-02T01:56:52Z"
+    }
+  ],
+  "artifacts": {
+    "title": "Get Your 401k Match In Three Steps",
+    "style": "cinematic",
+    "video": "/home/kofibeatz/Documents/Quiet Money/quiet-money/production/output/2026-11-02/2026-11-02-s45-playbook-get-your-401k-match-in-three-ste/final.mp4",
+    "cover": "/home/kofibeatz/Documents/Quiet Money/quiet-money/production/output/2026-11-02/2026-11-02-s45-playbook-get-your-401k-match-in-three-ste/cover.jpg"
+  },
+  "scores": {
+    "gauntlet": 97,
+    "passed": false
+  },
+  "cost": {
+    "tts:edge:chars": 2194
+  },
+  "notes": [
+    "held for review: not_semantic_duplicate",
+    "restarted from held",
+    "held for review: not_semantic_duplicate"
+  ]
+}

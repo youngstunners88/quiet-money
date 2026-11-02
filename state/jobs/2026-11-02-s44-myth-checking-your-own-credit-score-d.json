@@ -1,0 +1,67 @@
+{
+  "id": "2026-11-02-s44-myth-checking-your-own-credit-score-d",
+  "pillar": "myth",
+  "topic": "Checking Your Own Credit Score Does Not Lower It",
+  "day": "2026-11-02",
+  "slot": 44,
+  "status": "held",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-11-02T03:40:19Z",
+      "words": 192
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-11-02T03:42:19Z",
+      "seconds": 64.057,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-11-02T03:42:19Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-11-02T03:45:52Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-11-02T03:45:52Z",
+      "score": 89
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-11-02T03:45:52Z"
+    },
+    {
+      "from": "packaged",
+      "to": "held",
+      "ts": "2026-11-02T03:45:52Z"
+    }
+  ],
+  "artifacts": {
+    "title": "Checking Your Own Credit Score Does Not Lower It",
+    "style": "cinematic",
+    "video": "/home/kofibeatz/Documents/Quiet Money/quiet-money/production/output/2026-11-02/2026-11-02-s44-myth-checking-your-own-credit-score-d/final.mp4",
+    "cover": "/home/kofibeatz/Documents/Quiet Money/quiet-money/production/output/2026-11-02/2026-11-02-s44-myth-checking-your-own-credit-score-d/cover.jpg"
+  },
+  "scores": {
+    "gauntlet": 89,
+    "passed": false
+  },
+  "cost": {
+    "tts:edge:chars": 2048
+  },
+  "notes": [
+    "held for review: originality, not_semantic_duplicate",
+    "restarted from held",
+    "held for review: originality, not_semantic_duplicate"
+  ]
+}
