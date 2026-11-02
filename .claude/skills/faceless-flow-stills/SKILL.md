@@ -33,3 +33,11 @@ Owner rule (2026-11-01): stills for re-renders come from Flow, not Muapi; never 
 - Find the new image by the ordered tile labels ("<short title>, 1 item", newest top-left); only about 6 tiles are visible, so counts do not work. The UI dump can lag right after Generate.
 - The owner may use the phone mid-run: check that Flow is in the foreground before each tap and pause if not.
 - A phone lane runs at roughly 4 minutes per still; give it the smallest share.
+
+## Run notes 2026-11-02 (the phone was the only lane that survived)
+- The PC browser pane lost its Google sign-in when it closed overnight; Flow showed the sign-in page and Claude in Chrome was not connected. Never enter credentials: fall back to the phone lane.
+- The Gemini API image models (incl. `gemini-nano-banana-2.1`) return 429 on the free key; they are paid-only.
+- Phone lane: ONE agent for the whole batch, all beats, about 30 to 95 s per still (49 stills in about 80 min). Give it the plan JSON, tell it to message "main" after each video so rendering can start on finished videos while the phone continues.
+- Render each finished video immediately (`faceless make --pillar P --slot N --script S.json --no-publish`, two at a time), look at a stills contact sheet (`tools/stills_sheet.py SLOT OUT.jpg`) and pack it (`tools/pack_queue.py DAY SLOT NAME`).
+- Fix before posting: the gauntlet's judge_hook (rewrite beat 1 with a number and a "you"), a hard first-frame fail (a near-black first still: lift it with gamma 0.5), and ignore the self-duplicate flag (the script matches its own saved copy).
+- Posting: portrait lock (`adb shell cmd window fixed-to-user-rotation enabled; adb shell wm user-rotation lock 0`), delete old pushed copies in /sdcard/Download/QuietMoney so each new video has one gallery tile.
