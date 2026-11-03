@@ -1,0 +1,99 @@
+{
+  "title": "Why $15 Today Beats $100 In Ten Years",
+  "hook_text": "$15 NOW = $100 IN 10 YEARS",
+  "beats": [
+    {
+      "say": "You would likely take fifteen dollars today over one hundred in ten years, and a famous experiment found people do exactly that.",
+      "callout": "",
+      "visual": "a single worn dollar bill lying on a dark table under a warm lamp, no text"
+    },
+    {
+      "say": "The researcher was the economist Richard Thaler, in nineteen eighty one.",
+      "callout": "",
+      "visual": "an old chalkboard in an empty classroom, no writing, window light"
+    },
+    {
+      "say": "He asked how much more money people would need to wait.",
+      "callout": "",
+      "visual": "a pocket watch swinging on a chain in dim light, close-up"
+    },
+    {
+      "say": "To wait one month, the typical answer was twenty dollars.",
+      "callout": "",
+      "visual": "a calendar page being turned once, hands only, soft light"
+    },
+    {
+      "say": "To wait one year, the typical answer was fifty dollars.",
+      "callout": "",
+      "visual": "a stack of twelve calendar pages on a wooden desk, no text, soft light"
+    },
+    {
+      "say": "To wait ten years, the typical answer was one hundred dollars.",
+      "callout": "",
+      "visual": "a tall hourglass with golden sand running slowly in a dark room"
+    },
+    {
+      "say": "So fifteen dollars now felt as good as a hundred dollars a decade away.",
+      "callout": "",
+      "visual": "a small golden coin glowing on a dark table beside a faint distant stack of coins"
+    },
+    {
+      "say": "Here is the part nobody tells you. The brain does not shrink the future evenly. The next few weeks look huge and the far future looks tiny.",
+      "callout": "THE FUTURE LOOKS SMALL",
+      "visual": "a long road narrowing into fog with a bright lamp close by, no people"
+    },
+    {
+      "say": "Economists call it present bias, and it is why saving for later is hard.",
+      "callout": "",
+      "visual": "a closed front door with a thin line of warm light underneath, no people"
+    },
+    {
+      "say": "The fix is not willpower. It is making the choice once, so it runs on its own.",
+      "callout": "",
+      "visual": "a small automatic sprinkler watering a young plant at sunrise, no people"
+    },
+    {
+      "say": "The honest catch: it was a lab question with pretend money, mostly students, and small amounts.",
+      "callout": "THE CATCH",
+      "visual": "a stormy sea with waves rising under a heavy sky and a lighthouse in the distance"
+    },
+    {
+      "say": "But the pattern has shown up in many studies, so plan for a brain that prefers now.",
+      "callout": "",
+      "visual": "a single stone step leading up a long quiet staircase into morning mist, no people"
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "an empty highway stretching toward a glowing sunrise horizon, wide shot"
+    }
+  ],
+  "caption": "In a 1981 experiment, $15 now felt as good as $100 in ten years. Present bias and how to plan for it. A lab question, not a verdict. Educational content, not financial advice.",
+  "description": "In a famous 1981 experiment, people said 15 dollars today was worth the same as 100 dollars in ten years. Why the present feels so loud, and how to work with it. The honest catch: it was a hypothetical lab question.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#psychology",
+    "#behavioraleconomics",
+    "#quietmoney"
+  ],
+  "first_comment": "Which would you pick, 15 dollars now or 100 in ten years? Educational only, not financial advice.",
+  "facts": [
+    {
+      "claim": "Thaler (1981): median answers made people indifferent between $15 now and $20 in one month, $50 in one year, or $100 in ten years",
+      "basis": "Thaler 1981, Economics Letters; MIT OCW 14.13 lecture notes"
+    },
+    {
+      "claim": "Implied discount rates fall as the wait gets longer (hyperbolic discounting)",
+      "basis": "Wikipedia 'Hyperbolic discounting'; JEP 1989"
+    },
+    {
+      "claim": "Catch: hypothetical questions, mostly students, small sums",
+      "basis": "Thaler 1981"
+    }
+  ],
+  "source": "human",
+  "pillar": "psychology",
+  "look": "",
+  "loop_map": {}
+}

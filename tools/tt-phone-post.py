@@ -96,6 +96,10 @@ if not page_only:
     except Exception: _d=None
     grid={dur} | ({f"{int(round(_d))//60:02d}:{int(round(_d))%60:02d}"} if _d else set())   # the system picker truncates the length, the gallery grid rounds it
     tiles=[(t,x,y) for t,x,y in tree() if t in grid]
+    for _ in range(6):                                                                  # the granted file can sit below the first screen of the grid
+        if tiles: break
+        adb("input swipe 540 1700 540 700 400"); time.sleep(1.5)
+        tiles=[(t,x,y) for t,x,y in tree() if t in grid]
     if "--grid" in sys.argv: print("grid tiles:",tiles); sys.exit(0)                   # stop at the gallery grid so the right tile can be picked by eye
     if os.environ.get("TT_PICK"): tiles=[(dur,)+tuple(map(int,os.environ["TT_PICK"].split(",")))]   # TT_PICK="x,y": tap this tile's duration label position
     scored=sorted(((tile_diff(x,y),x,y) for t,x,y in tiles),key=lambda r:r[0])

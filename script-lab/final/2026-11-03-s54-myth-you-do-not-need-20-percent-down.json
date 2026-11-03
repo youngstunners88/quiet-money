@@ -1,0 +1,103 @@
+{
+  "title": "You Do Not Need 20 Percent Down To Buy A Home",
+  "hook_text": "YOU DON'T NEED 20% DOWN",
+  "beats": [
+    {
+      "say": "You do not need twenty percent down to buy a home, and most first time buyers do not put that much down.",
+      "callout": "",
+      "visual": "a quiet front door of a small house at golden hour, no people"
+    },
+    {
+      "say": "Twenty percent is one of the most repeated numbers in money.",
+      "callout": "",
+      "visual": "a stack of twenty identical gold coins beside one coin set apart, black marble"
+    },
+    {
+      "say": "But in a national survey of buyers, first time buyers put down a median of about ten percent.",
+      "callout": "FIRST-TIME MEDIAN: 10%",
+      "visual": "an open wallet with a small handful of coins on a wooden table, soft window light"
+    },
+    {
+      "say": "Across all buyers, the median was about nineteen percent.",
+      "callout": "",
+      "visual": "a for sale sign leaning against an empty porch in morning light, no text"
+    },
+    {
+      "say": "There are also loans built for smaller down payments.",
+      "callout": "",
+      "visual": "three different brass keys fanned out on a dark table, hard rim light"
+    },
+    {
+      "say": "An FHA loan can require as little as three and a half percent, if your credit score is high enough.",
+      "callout": "FHA: 3.5% DOWN",
+      "visual": "a short wooden step stool beside a tall shelf, warm light, no people"
+    },
+    {
+      "say": "Some conventional loans go as low as three percent.",
+      "callout": "",
+      "visual": "a small stack of coins beside a miniature wooden house model, macro, soft light"
+    },
+    {
+      "say": "Here is the part nobody tells you. Twenty percent is not a rule. It is where one extra fee usually stops.",
+      "callout": "20% IS A LINE, NOT A RULE",
+      "visual": "a painted white line crossing an empty road at dawn, no people"
+    },
+    {
+      "say": "Below twenty percent, lenders often add mortgage insurance, which protects the lender, not you.",
+      "callout": "",
+      "visual": "a heavy umbrella held over a small house in the rain, no people"
+    },
+    {
+      "say": "The honest catch: a smaller down payment means a bigger loan, a monthly insurance cost, and more interest over time.",
+      "callout": "THE CATCH",
+      "visual": "a stormy sea with waves rising and falling under a heavy sky and a lighthouse"
+    },
+    {
+      "say": "Closing costs also come on top. Run the full numbers, not just the down payment.",
+      "callout": "",
+      "visual": "a hand holding a magnifying glass over an old printed page, close-up, no face"
+    },
+    {
+      "say": "So the myth is that you must wait for twenty percent. The truth is, it is a trade with a price.",
+      "callout": "",
+      "visual": "an old paper map being unfolded on a wooden table, hands out of focus"
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "an empty highway stretching toward a glowing sunrise horizon, wide shot"
+    }
+  ],
+  "caption": "You do not need 20% down: first-time buyers put down a median of about 10% (NAR 2025), and FHA loans can be 3.5%. The catch: bigger loan, mortgage insurance. Educational content, not financial advice.",
+  "description": "Many people believe you need 20 percent down to buy a home. The median first-time buyer put down about 10 percent, and some loans ask for as little as 3.5 percent. The myth, the rule and the honest catch.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#homebuying",
+    "#moneymyths",
+    "#quietmoney"
+  ],
+  "first_comment": "What did you think you needed to put down? Educational only, not financial advice.",
+  "facts": [
+    {
+      "claim": "NAR 2025 Profile: median down payment 10% for first-time buyers, 19% for all buyers",
+      "basis": "NAR 2025 Profile of Home Buyers and Sellers"
+    },
+    {
+      "claim": "FHA loans allow 3.5% down with a credit score of 580 or higher",
+      "basis": "HUD / FHA program rules"
+    },
+    {
+      "claim": "Conventional loans can go as low as 3% down; under 20% usually adds private mortgage insurance (PMI)",
+      "basis": "Fannie Mae; CFPB 'What is private mortgage insurance?'"
+    },
+    {
+      "claim": "Catch: smaller down payment means a bigger loan, PMI and more interest",
+      "basis": "CFPB"
+    }
+  ],
+  "source": "human",
+  "pillar": "myth",
+  "look": "",
+  "loop_map": {}
+}

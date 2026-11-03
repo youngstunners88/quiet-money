@@ -1,0 +1,103 @@
+{
+  "title": "Lower Your Car Insurance In Three Steps",
+  "hook_text": "3 STEPS TO CUT YOUR CAR INSURANCE",
+  "beats": [
+    {
+      "say": "You may be overpaying for car insurance, and three steps can show you in about thirty minutes.",
+      "callout": "",
+      "visual": "a car key and a folded paper bill on a dark wooden table under a warm lamp, no text"
+    },
+    {
+      "say": "Insurance companies can price the very same driver differently. Here is how to check yours.",
+      "callout": "3 STEPS",
+      "visual": "three wooden doors in a quiet hallway, the middle one slightly open with warm light"
+    },
+    {
+      "say": "Step one. Compare at least three quotes, using the same coverage on each, so the prices match like for like.",
+      "callout": "STEP 1: COMPARE 3 QUOTES",
+      "visual": "three identical white coffee cups in a row on a bright desk, soft morning light, no people"
+    },
+    {
+      "say": "Write down your current coverage first, so you do not cut protection by accident.",
+      "callout": "",
+      "visual": "a notepad and pencil on a clean desk beside a car key, soft daylight, no text"
+    },
+    {
+      "say": "Step two. Ask for every discount you could qualify for.",
+      "callout": "STEP 2: ASK FOR DISCOUNTS",
+      "visual": "a hand holding a small gold star over an open drawer, close-up, no face"
+    },
+    {
+      "say": "Common ones include bundling, a clean driving record, low mileage and paying in full.",
+      "callout": "",
+      "visual": "a small stack of coins beside a tiny toy car on a white desk, macro, bright daylight"
+    },
+    {
+      "say": "Step three. Think about your deductible, the part you pay first when you claim.",
+      "callout": "STEP 3: SET YOUR DEDUCTIBLE",
+      "visual": "a steel safe door slightly open on a shelf, soft warm light, no people"
+    },
+    {
+      "say": "A higher deductible can lower your premium, but only choose one you could pay from savings tomorrow.",
+      "callout": "",
+      "visual": "a small glass jar of coins beside a car key on a clean desk, soft daylight"
+    },
+    {
+      "say": "Here is the part nobody tells you. Staying with the same company for years is not always rewarded.",
+      "callout": "",
+      "visual": "a long empty road with a single parked car at dawn, wide shot, no people"
+    },
+    {
+      "say": "The honest catch: the cheapest policy is not always the best. Service and coverage matter too.",
+      "callout": "THE CATCH",
+      "visual": "a stormy sea with waves rising under a heavy sky and a lighthouse in the distance"
+    },
+    {
+      "say": "Rates and rules also differ by state and company, so check your own policy.",
+      "callout": "",
+      "visual": "an old paper map being unfolded on a wooden table, hands out of focus"
+    },
+    {
+      "say": "This is education, not advice. Thirty minutes this week could matter all year.",
+      "callout": "",
+      "visual": "a quiet kitchen table at morning with a coffee cup and a notepad, no people"
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "an empty highway stretching toward a glowing sunrise horizon, wide shot"
+    }
+  ],
+  "caption": "Step one: compare three quotes. Step two: ask for every discount. Step three: set your deductible with care. Rates vary; not advice. Educational content, not financial advice.",
+  "description": "You may be overpaying for car insurance. Three steps to check it in about thirty minutes: compare quotes, ask about discounts, and set your deductible with care. Rates and rules vary; this is not advice.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#carinsurance",
+    "#savemoney",
+    "#quietmoney"
+  ],
+  "first_comment": "When did you last compare car insurance quotes? Educational only, not financial advice.",
+  "facts": [
+    {
+      "claim": "Insurers price the same driver differently, so comparing quotes can change the price",
+      "basis": "NAIC consumer guide to auto insurance; Consumer Reports"
+    },
+    {
+      "claim": "Common discounts include bundling, safe driving, low mileage, paying in full and telematics",
+      "basis": "Insurance Information Institute (III)"
+    },
+    {
+      "claim": "A higher deductible usually lowers premiums but raises what you pay after a claim",
+      "basis": "III; NAIC"
+    },
+    {
+      "claim": "Rates and discount rules vary by state and company",
+      "basis": "NAIC"
+    }
+  ],
+  "source": "human",
+  "pillar": "playbook",
+  "look": "",
+  "loop_map": {}
+}

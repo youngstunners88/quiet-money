@@ -1,0 +1,99 @@
+{
+  "title": "Your Savings Rate Sets Your Retirement Date",
+  "hook_text": "SAVE 10%: 51 YEARS. SAVE 50%: 17",
+  "beats": [
+    {
+      "say": "Save ten percent of your pay, and it takes about fifty one years to reach financial independence. Save fifty percent, and it takes about seventeen.",
+      "callout": "",
+      "visual": "a long winding road stretching to a distant horizon in morning mist, wide shot, no people"
+    },
+    {
+      "say": "This is an illustration, not a promise. We assume a five percent return after inflation.",
+      "callout": "AN ILLUSTRATION",
+      "visual": "an old brass calculator beside a stack of ledgers under a green banker lamp, no people"
+    },
+    {
+      "say": "We also assume you need twenty five times your yearly spending saved.",
+      "callout": "",
+      "visual": "a tall stack of twenty five gold coins on a dark table, dramatic side light"
+    },
+    {
+      "say": "Here is the math. Every year, you save a slice of your pay.",
+      "callout": "",
+      "visual": "a single seed on bare soil in soft window light, macro, no people"
+    },
+    {
+      "say": "Save ten percent, and you spend ninety. The target is big and the savings are small.",
+      "callout": "10%: 51 YEARS",
+      "visual": "a very tall mountain with a tiny trail climbing it at dawn, wide shot, no people"
+    },
+    {
+      "say": "It takes about fifty one years.",
+      "callout": "",
+      "visual": "an hourglass nearly full of sand on a dark wooden table, hard side light"
+    },
+    {
+      "say": "Save twenty five percent, and it takes about thirty two years.",
+      "callout": "25%: 32 YEARS",
+      "visual": "a long staircase winding up a quiet hillside in morning light, no people"
+    },
+    {
+      "say": "Save fifty percent, and you spend half. The target is half as big, and you fill it twice as fast.",
+      "callout": "50%: 17 YEARS",
+      "visual": "two stacks of gold coins, one half the height of the other, black marble, dramatic light"
+    },
+    {
+      "say": "That is about seventeen years. Save sixty five percent, and it is about ten and a half.",
+      "callout": "65%: 10.5 YEARS",
+      "visual": "a short bridge crossing a narrow stream at sunrise, no people"
+    },
+    {
+      "say": "Here is the part nobody tells you. Your savings rate does two jobs. It fills the pot and shrinks the target.",
+      "callout": "TWO JOBS AT ONCE",
+      "visual": "a funnel of golden light pouring into a small glass jar in a dark room"
+    },
+    {
+      "say": "The honest catch: real returns bounce around, and saving fifty percent is not possible for everyone.",
+      "callout": "THE CATCH",
+      "visual": "a stormy sea with waves rising and falling under a heavy sky and a lighthouse"
+    },
+    {
+      "say": "So treat it as direction, not a prediction. Each extra percent moves the finish line closer.",
+      "callout": "",
+      "visual": "a single stone step leading up a long quiet staircase into morning mist, no people"
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "an empty highway stretching toward a glowing sunrise horizon, wide shot"
+    }
+  ],
+  "caption": "Saving 10% of pay: about 51 years to financial independence. Saving 50%: about 17. A 5% real return and 25x spending assumed. An illustration, not a promise. Educational content, not financial advice.",
+  "description": "How long until you can stop working depends more on how much of your pay you save than on what you earn. At a 5 percent real return and 25 times spending, saving 10 percent takes about 51 years and saving 50 percent about 17. An illustration, not a promise.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#savingsrate",
+    "#financialfreedom",
+    "#quietmoney"
+  ],
+  "first_comment": "What is your savings rate right now? Educational only, not financial advice.",
+  "facts": [
+    {
+      "claim": "Years to reach 25x annual spending, saving s of pay each year at a 5% real return: 10% = about 51 years, 25% = about 32, 50% = about 17, 65% = about 10.5",
+      "basis": "Future value formula; computed 2026-11-03"
+    },
+    {
+      "claim": "25x annual spending corresponds to the 4% withdrawal guideline",
+      "basis": "Cooley, Hubbard, Walz (Trinity study, 1998)"
+    },
+    {
+      "claim": "Assumptions: spending constant, no taxes, steady real return; real life varies",
+      "basis": "n/a"
+    }
+  ],
+  "source": "human",
+  "pillar": "math",
+  "look": "",
+  "loop_map": {}
+}
