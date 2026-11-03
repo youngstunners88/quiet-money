@@ -1,0 +1,95 @@
+{
+  "title": "$500 A Month: The Last 10 Years Add $1 Million",
+  "hook_text": "$60,000 BECOMES $1 MILLION",
+  "beats": [
+    {
+      "say": "Put in five hundred dollars a month for forty years, and the last ten years alone add about one million dollars.",
+      "callout": "",
+      "visual": "a tall glowing tower of gold coins rising into a dark sky above a small stack, dramatic low angle, no people"
+    },
+    {
+      "say": "This is an illustration, not a promise. We assume eight percent a year, and no market pays that on schedule.",
+      "callout": "AN ASSUMPTION",
+      "visual": "a hand resting on a worn paper ledger beside a calculator under a green banker lamp, close-up, no faces"
+    },
+    {
+      "say": "Here is the math. After ten years, you have put in sixty thousand dollars. It has grown to about ninety one thousand.",
+      "callout": "10 YEARS: $91K",
+      "visual": "a small sapling in a pot on a sunlit windowsill, soft morning light"
+    },
+    {
+      "say": "That feels slow. This is where most people quit.",
+      "callout": "",
+      "visual": "an empty running track at dawn with a single pair of shoes left on the line, wide shot"
+    },
+    {
+      "say": "After twenty years, about two hundred ninety four thousand dollars. Still only one hundred twenty thousand of it is yours.",
+      "callout": "20 YEARS: $294K",
+      "visual": "a snowball beginning to roll down a gentle snowy slope, golden hour light"
+    },
+    {
+      "say": "After thirty years, about seven hundred forty five thousand.",
+      "callout": "30 YEARS: $745K",
+      "visual": "a large snowball gathering speed down a long slope between pine trees, dramatic light"
+    },
+    {
+      "say": "So what do the final ten years do?",
+      "callout": "THE LAST 10",
+      "visual": "a dark cliff edge above a glowing valley at dusk, a single path leading toward it, silhouette"
+    },
+    {
+      "say": "After forty years, about one million seven hundred forty five thousand. Only two hundred forty thousand of it is deposits.",
+      "callout": "40 YEARS: $1.7M",
+      "visual": "a vast wave of glowing gold light rolling across a dark ocean at night, wide shot"
+    },
+    {
+      "say": "Here is the part nobody tells you. The final ten years added about one million dollars, from just sixty thousand of new deposits.",
+      "callout": "$60K ADDS $1M",
+      "visual": "a single match lighting a huge bonfire at night in an open field, sparks rising"
+    },
+    {
+      "say": "The first twenty years built the base. The last ten harvested it. Quitting at year ten throws that away.",
+      "callout": "",
+      "visual": "a farmer's silhouette walking into a golden wheat field at sunrise, long shadows"
+    },
+    {
+      "say": "The honest catch: real returns bounce around, fees take a cut, and inflation shrinks every dollar. Your numbers will not match this one.",
+      "callout": "",
+      "visual": "a stormy sea with waves rising and falling under a heavy sky, a lighthouse in the distance"
+    },
+    {
+      "say": "But the shape holds. Time does the heavy lifting, so the move is to start and stay in.",
+      "callout": "",
+      "visual": "a single stone step leading up a long quiet staircase into morning mist, no people"
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "an empty highway stretching toward a glowing sunrise horizon, wide shot"
+    }
+  ],
+  "caption": "At an assumed 8% a year, $500 a month for 40 years grows to about $1.75 million, and the last 10 years add about $1 million. An illustration, not a promise. Educational content, not financial advice.",
+  "description": "Illustration only: at an assumed 8% a year, $500 a month for 40 years grows to about $1.75 million, and the last 10 years add about $1 million of it. Returns are not guaranteed.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#compoundinterest",
+    "#investing101",
+    "#quietmoney"
+  ],
+  "first_comment": "At what age did you start putting money away? Illustration only, not financial advice.",
+  "facts": [
+    {
+      "claim": "$500/month at 8% for 10/20/30/40 years = $91,473 / $294,510 / $745,180 / $1,745,504; deposits $60k / $120k / $180k / $240k",
+      "basis": "faceless.moneymath.future_value_monthly"
+    },
+    {
+      "claim": "Last 10 years add about $1,000,324 from $60,000 of deposits",
+      "basis": "faceless.moneymath.future_value_monthly (40y minus 30y)"
+    }
+  ],
+  "source": "human",
+  "pillar": "math",
+  "look": "",
+  "loop_map": {}
+}
