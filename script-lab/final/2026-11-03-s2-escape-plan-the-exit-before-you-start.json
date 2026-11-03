@@ -1,0 +1,104 @@
+{
+  "title": "Plan Your Exit Before Day One",
+  "hook_text": "PLAN YOUR EXIT BEFORE YOU START",
+  "beats": [
+    {
+      "say": "The best time to plan leaving a business is before it even exists.",
+      "callout": "",
+      "visual": "A silhouette of a person standing at the edge of a high-rise concrete roof at blue hour, looking out over a foggy skyline."
+    },
+    {
+      "say": "Most founders accidentally build a job, then get trapped working 70 hours a week.",
+      "callout": "",
+      "visual": "Low-angle shot of a lone suit jacket hung over a chair in a dark, empty glass skyscraper at night, cold fluorescent lighting."
+    },
+    {
+      "say": "You might assume buyers pay top dollar for your personal hustle and hard work.",
+      "callout": "ASSUME VS REALITY",
+      "visual": "Extreme close-up of hands typing rapidly on a dark keyboard under a single sodium desk lamp, deep shadow surrounding."
+    },
+    {
+      "say": "That's wrong. Nobody buys a business that breaks the minute you step out the door.",
+      "callout": "",
+      "visual": "Extreme wide shot of an empty warehouse floor with wet asphalt reflecting harsh overhead spotlights."
+    },
+    {
+      "say": "So how do you build a company that someone will actually pay you cash to own?",
+      "callout": "",
+      "visual": "High-angle perspective looking down an endless dark stairwell, illuminated only by blue emergency lights."
+    },
+    {
+      "say": "Step one is deciding your exit strategy before you spend your first dollar.",
+      "callout": "STEP ONE",
+      "visual": "Macro shot of a leather fountain pen resting beside blank blueprint paper on a heavy wooden desk in low light."
+    },
+    {
+      "say": "Investor Dan Peña lists exit planning as a core rule. By his account, he built a $450 million company.",
+      "callout": "$450 MILLION",
+      "visual": "Silhouette of a figure walking down a long, rain-slick stone corridor in an ancient castle courtyard at twilight."
+    },
+    {
+      "say": "He says true wealth comes from making yourself replaceable, not staying indispensable.",
+      "callout": "",
+      "visual": "Low-angle camera looking up at massive steel financial district towers framed against a stormy, dark sky."
+    },
+    {
+      "say": "Step two is documenting every single task so anyone can run the operations without you.",
+      "callout": "STEP TWO",
+      "visual": "Close-up shot from behind showing gloved hands flipping through a thick black binder under cold fluorescent light."
+    },
+    {
+      "say": "Here's the honest catch: using borrowed money to scale fast means you owe debt during bad months.",
+      "callout": "",
+      "visual": "Extreme wide shot of a solitary car driving down a deserted dark highway under heavy fog at night."
+    },
+    {
+      "say": "When systems generate cash without your labor, you don't just own a job, you own a sellable asset.",
+      "callout": "JOB VS ASSET",
+      "visual": "Low angle of a sleek black luxury sedan parked on rain-wet pavement under the glow of a single streetlamp."
+    },
+    {
+      "say": "Decide how you'll leave before day one. Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "Extreme wide silhouette of a person walking across a dark concrete bridge, mist cutting across the distance."
+    }
+  ],
+  "caption": "Buyers pay for systems, not your personal hustle. Here is why you plan the exit before day one.\n\n#money #business #wealth #financialfreedom #exitstrategy",
+  "description": "Most business owners build a job they can never leave. By planning your exit on day one and building systems that run without you, you create a sellable asset instead of a trap.",
+  "hashtags": [
+    "#money",
+    "#business",
+    "#wealth",
+    "#financialfreedom",
+    "#exitstrategy"
+  ],
+  "first_comment": "If you started a business today, would you aim to sell it or keep it forever?",
+  "facts": [
+    {
+      "claim": "Dan Peña claims his oil company reached a $450 million market value.",
+      "basis": "Research brief: Great Western Resources reached a $450 million market value by his account."
+    },
+    {
+      "claim": "Plan the exit is Peña's 7th step.",
+      "basis": "Research brief: His 7 Steps to Super Success includes 'plan the exit' from day one."
+    },
+    {
+      "claim": "Borrowing money creates fixed debt obligations regardless of business performance.",
+      "basis": "Research brief honest catch: Buying or scaling a business with borrowed money means debt is owed even during bad years."
+    }
+  ],
+  "source": "llm",
+  "pillar": "escape",
+  "look": "",
+  "loop_map": {
+    "stakes": "Founders build businesses that trap them for 70 hours a week.",
+    "big_question": "How do you build a business someone will actually pay cash to buy?",
+    "assume": "Buyers pay for founder hustle and past revenue.",
+    "reveal": "Buyers pay for automated systems that operate without the founder.",
+    "rehook_beats": [
+      5,
+      8
+    ],
+    "payoff_beat": 11
+  }
+}

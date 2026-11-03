@@ -1,0 +1,78 @@
+{
+  "id": "2026-11-03-s4-story-how-a-small-stake-in-beats-paid",
+  "pillar": "story",
+  "topic": "How a Small Stake in Beats Paid LeBron James About $30M When Apple Paid $3B",
+  "day": "2026-11-03",
+  "slot": 4,
+  "status": "published",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-11-03T09:48:33Z",
+      "words": 184
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-11-03T09:49:39Z",
+      "seconds": 61.872,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-11-03T09:51:19Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-11-03T09:53:50Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-11-03T09:53:50Z",
+      "score": 97
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-11-03T09:53:50Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-11-03T09:53:50Z",
+      "local": "2026-11-03T21:00:00-05:00",
+      "youtube": null
+    }
+  ],
+  "artifacts": {
+    "angle": "W1 equity over wages. In 2008 he took a small stake in a headphone start-up in exchange for promoting it; Apple bought Beats in 2014. Catch: the payout is a reported figure and few promotional stakes pay anything.",
+    "brief": "lebron-james",
+    "hook": "In 2008, LeBron James took a small piece of a headphone start-up for promoting it.",
+    "title": "How LeBron Made $30M From Beats",
+    "style": "cinematic",
+    "video": "/home/user/quiet-money/production/output/2026-11-03/2026-11-03-s4-story-how-a-small-stake-in-beats-paid/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-11-03/2026-11-03-s4-story-how-a-small-stake-in-beats-paid/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-11-03/slot5-story",
+        "post_at": "2026-11-03T21:00:00-05:00"
+      },
+      "youtube": {
+        "skipped": "YouTube daily cap reached (5 scheduled for 2026-11-03); the local pack is ready"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 97,
+    "passed": true
+  },
+  "cost": {
+    "tts:edge:chars": 1048
+  },
+  "notes": []
+}

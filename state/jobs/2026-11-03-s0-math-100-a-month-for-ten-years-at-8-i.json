@@ -1,0 +1,67 @@
+{
+  "id": "2026-11-03-s0-math-100-a-month-for-ten-years-at-8-i",
+  "pillar": "math",
+  "topic": "$100 a month for ten years at 8% is $18,295",
+  "day": "2026-11-03",
+  "slot": 0,
+  "status": "held",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-11-03T09:19:24Z",
+      "words": 171
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-11-03T09:20:52Z",
+      "seconds": 69.964,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-11-03T09:21:23Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-11-03T09:24:42Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-11-03T09:24:42Z",
+      "score": 93
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-11-03T09:24:42Z"
+    },
+    {
+      "from": "packaged",
+      "to": "held",
+      "ts": "2026-11-03T09:24:42Z"
+    }
+  ],
+  "artifacts": {
+    "angle": "a short horizon example: $12,000 put in, $18,295 at a hypothetical 8% (moneymath future_value_monthly)",
+    "hook": "Ten years of $100 a month is not $12,000.",
+    "title": "Ten Years of $100 a Month Is Not $12,000",
+    "style": "cinematic",
+    "video": "/home/user/quiet-money/production/output/2026-11-03/2026-11-03-s0-math-100-a-month-for-ten-years-at-8-i/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-11-03/2026-11-03-s0-math-100-a-month-for-ten-years-at-8-i/cover.jpg"
+  },
+  "scores": {
+    "gauntlet": 93,
+    "passed": false
+  },
+  "cost": {
+    "tts:edge:chars": 976
+  },
+  "notes": [
+    "held for review: no_faces"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+ "id": "2026-11-03-tiktok-2026-11-03-s3-myth-the-equity-trade-why-taking-l",
+ "kind": "tiktok",
+ "day": "2026-11-03",
+ "key": "2026-11-03-s3-myth-the-equity-trade-why-taking-lowe",
+ "status": "queued",
+ "created": "2026-11-03T09:54:24+00:00",
+ "recipe": "TikTok upload",
+ "media": [
+  {
+   "source": "production/output/2026-11-03/2026-11-03-s3-myth-the-equity-trade-why-taking-lowe/final.mp4",
+   "name": "final.mp4"
+  }
+ ],
+ "staged": true,
+ "text": "A salary pays for your hours. Equity pays for your assets. Here is why ownership wins long term.\n\nThe Quiet Money Daily Planner: link in bio (paid).\n\n#money #personalfinance #equity #investing #wealthbuilding\n\nEducation, not financial advice.",
+ "ai_label": "AI-generated content: on"
+}

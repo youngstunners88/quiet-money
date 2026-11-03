@@ -1,0 +1,77 @@
+{
+  "id": "2026-11-03-s3-myth-the-equity-trade-why-taking-lowe",
+  "pillar": "myth",
+  "topic": "The equity trade: why taking lower salary for ownership beats a promotion",
+  "day": "2026-11-03",
+  "slot": 3,
+  "status": "published",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-11-03T09:39:43Z",
+      "words": 175
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-11-03T09:41:52Z",
+      "seconds": 65.293,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-11-03T09:45:05Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-11-03T09:47:34Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-11-03T09:47:34Z",
+      "score": 92
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-11-03T09:47:34Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-11-03T09:47:34Z",
+      "local": "2026-11-03T18:30:00-05:00",
+      "youtube": null
+    }
+  ],
+  "artifacts": {
+    "angle": "A popular belief is that a higher base salary always makes you richer. In reality, capped salaries lose to compounding equity stakes. The rule is to trade immediate cash flow for proportional ownership in an asset that scales without your hours.",
+    "hook": "Why taking a twenty percent pay cut was the smartest financial move of my career—and the math behind why my boss hated it.",
+    "title": "Why a Pay Cut Can Make You Richer Than a Promotion",
+    "style": "cinematic",
+    "video": "/home/user/quiet-money/production/output/2026-11-03/2026-11-03-s3-myth-the-equity-trade-why-taking-lowe/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-11-03/2026-11-03-s3-myth-the-equity-trade-why-taking-lowe/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-11-03/slot4-myth",
+        "post_at": "2026-11-03T18:30:00-05:00"
+      },
+      "youtube": {
+        "skipped": "YouTube daily cap reached (5 scheduled for 2026-11-03); the local pack is ready"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 92,
+    "passed": true
+  },
+  "cost": {
+    "tts:edge:chars": 995
+  },
+  "notes": []
+}

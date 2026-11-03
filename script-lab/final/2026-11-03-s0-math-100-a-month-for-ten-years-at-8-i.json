@@ -1,0 +1,113 @@
+{
+  "title": "Ten Years of $100 a Month Is Not $12,000",
+  "hook_text": "10 YEARS OF $100 ISN'T $12,000",
+  "beats": [
+    {
+      "say": "Ten years of $100 a month isn't $12,000.",
+      "callout": "",
+      "visual": "Extreme close-up of a crisp $100 bill resting on wet asphalt under amber sodium streetlights at night."
+    },
+    {
+      "say": "Most people add up 120 payments and think their savings cap out right at $12,000.",
+      "callout": "",
+      "visual": "Low angle silhouette of a lonely commuter walking past a towering glass skyscraper in blue hour fog."
+    },
+    {
+      "say": "But invested at an average 8% return, that steady $100 monthly balance grows to $18,295.",
+      "callout": "$12,000 VS $18,295",
+      "visual": "High angle wide view of a massive empty industrial rail yard with solitary light poles standing in mist."
+    },
+    {
+      "say": "That's over $6,200 in free growth without adding a single extra dollar.",
+      "callout": "+$6,200 GROWTH",
+      "visual": "Rain-slick street reflecting bright neon signage in a quiet deserted city alley at midnight."
+    },
+    {
+      "say": "You might assume a short 10-year window is too brief for real compounding to work.",
+      "callout": "",
+      "visual": "Silhouette of a figure standing on a cold concrete harbor pier gazing at open water at dusk."
+    },
+    {
+      "say": "So what happens if you leave that $100 monthly habit running for 20 years instead?",
+      "callout": "10 YRS VS 20 YRS",
+      "visual": "Extreme wide shot of a long straight desert highway stretching toward a dark mountain ridge line."
+    },
+    {
+      "say": "You put in $24,000 total, but at 8% interest, your account holds $58,902.",
+      "callout": "$24,000 VS $58,902",
+      "visual": "Dramatic low angle of massive concrete underpass pillars lit by a single cold fluorescent tube."
+    },
+    {
+      "say": "That means interest officially contributed more to your wealth than your actual paychecks did.",
+      "callout": "",
+      "visual": "High angle view of a dark quiet container port with towering steel cranes against blue hour sky."
+    },
+    {
+      "say": "Now, what if you stretch that exact same habit out to 30 years?",
+      "callout": "30 YEARS",
+      "visual": "Silhouette against weather standing atop a windy hill looking at distant city lights flickering in heavy fog."
+    },
+    {
+      "say": "You deposit $36,000 over time, yet compounding builds your balance all the way to $149,036.",
+      "callout": "$36,000 VS $149,036",
+      "visual": "Cold neon streetlight illuminating wet pavement outside a quiet closed diner in early morning rain."
+    },
+    {
+      "say": "Push it to 40 years, and $48,000 out of pocket turns into $349,101.",
+      "callout": "$48,000 VS $349,101",
+      "visual": "Extreme close-up of heavy rust on an old iron bridge superstructure lit by harsh blue twilight."
+    },
+    {
+      "say": "Small consistent amounts don't stay small when you let time do the heavy lifting.",
+      "callout": "",
+      "visual": "Wide silhouette of a lone cargo ship moving across calm open water during a deep blue sunrise."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "Low angle shot of wet asphalt reflecting sodium light outside a quiet train station at dawn."
+    }
+  ],
+  "caption": "Saving $100 a month adds up to $12,000 in cash—but invested at 8%, compounding changes the math completely. Here is how small habits grow over time.",
+  "description": "A breakdown of how $100 monthly contributions grow over 10, 20, 30, and 40 years at an 8% annual return. Learn the math behind compound interest and long-term investing.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#investing",
+    "#wealthbuilding",
+    "#compoundinterest"
+  ],
+  "first_comment": "How much are you setting aside each month for your long-term goals?",
+  "facts": [
+    {
+      "claim": "$100/month invested for 10 years at 8%/yr (monthly compounding) equals $18,295 ($12,000 put in).",
+      "basis": "Standard compound interest formula FV = PMT * (((1+r/n)^(n*t) - 1) / (r/n))."
+    },
+    {
+      "claim": "$100/month invested for 20 years at 8%/yr (monthly compounding) equals $58,902 ($24,000 put in).",
+      "basis": "Provided in Money Fact Sheet."
+    },
+    {
+      "claim": "$100/month invested for 30 years at 8%/yr (monthly compounding) equals $149,036 ($36,000 put in).",
+      "basis": "Provided in Money Fact Sheet."
+    },
+    {
+      "claim": "$100/month invested for 40 years at 8%/yr (monthly compounding) equals $349,101 ($48,000 put in).",
+      "basis": "Provided in Money Fact Sheet."
+    }
+  ],
+  "source": "llm",
+  "pillar": "math",
+  "look": "",
+  "loop_map": {
+    "stakes": "Ten years of $100 monthly contributions yields far more than standard addition.",
+    "big_question": "How much does a $100 monthly deposit really grow over 10, 20, 30, and 40 years at 8%?",
+    "assume": "10 years of $100 a month equals $12,000 because short windows don't yield compounding returns.",
+    "reveal": "At 8%, 10 years turns $12,000 into $18,295, and 40 years turns $48,000 into $349,101.",
+    "rehook_beats": [
+      6,
+      9
+    ],
+    "payoff_beat": 11
+  }
+}

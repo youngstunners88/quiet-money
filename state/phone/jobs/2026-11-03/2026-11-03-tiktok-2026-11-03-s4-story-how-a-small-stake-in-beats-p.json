@@ -1,0 +1,18 @@
+{
+ "id": "2026-11-03-tiktok-2026-11-03-s4-story-how-a-small-stake-in-beats-p",
+ "kind": "tiktok",
+ "day": "2026-11-03",
+ "key": "2026-11-03-s4-story-how-a-small-stake-in-beats-paid",
+ "status": "queued",
+ "created": "2026-11-03T09:54:24+00:00",
+ "recipe": "TikTok upload",
+ "media": [
+  {
+   "source": "production/output/2026-11-03/2026-11-03-s4-story-how-a-small-stake-in-beats-paid/final.mp4",
+   "name": "final.mp4"
+  }
+ ],
+ "staged": true,
+ "text": "Why LeBron chose equity over upfront cash in 2008—and what most people miss about start-up payouts.\n\nFree reset checklist: link in bio.\n\n#money #personalfinance #wealth #equity #investing\n\nEducation, not financial advice.",
+ "ai_label": "AI-generated content: on"
+}

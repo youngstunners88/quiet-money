@@ -1,0 +1,105 @@
+{
+  "title": "How LeBron Made $30M From Beats",
+  "hook_text": "EQUITY OVER WAGES",
+  "beats": [
+    {
+      "say": "In 2008, LeBron James took a small piece of a headphone start-up for promoting it.",
+      "callout": "",
+      "visual": "Extreme close-up of heavy matte black headphones sitting on a worn leather desk under a single overhead sodium light."
+    },
+    {
+      "say": "Most athletes wanted a fast paycheck, but he chose equity instead of upfront cash.",
+      "callout": "PAYCHECK VS EQUITY",
+      "visual": "Low angle shot of cold fluorescent lights reflecting off wet asphalt outside a massive dark sports stadium at night."
+    },
+    {
+      "say": "In 2014, Apple bought that headphone company for $3B. So how much did he actually pocket?",
+      "callout": "",
+      "visual": "Silhouette of a person standing at a towering glass skyscraper window looking over fog at blue hour."
+    },
+    {
+      "say": "Most people assume a $3B tech buyout meant he walked away with hundreds of millions.",
+      "callout": "$3B TECH BUYOUT",
+      "visual": "High angle shot of a dark glass smartphone lying on a rain-slick metal balcony railing overlooking a sodium-lit highway."
+    },
+    {
+      "say": "But his reported payout was about $30M in cash and Apple stock.",
+      "callout": "$30M PAYOUT",
+      "visual": "Cold neon lighting illuminating a hand holding an unmarked dark metallic card against a weathered concrete wall."
+    },
+    {
+      "say": "That was still reported as the largest payout to a pro athlete at the time.",
+      "callout": "",
+      "visual": "Extreme wide shot of an empty concrete stadium tunnel lit by harsh overhead strip lights with long shadows."
+    },
+    {
+      "say": "So why don't all creators and employees demand equity instead of taking wages?",
+      "callout": "",
+      "visual": "Close-up of an analog audio mixing board under a single warm bulb inside a quiet dark recording studio."
+    },
+    {
+      "say": "Here's the catch: most promotional start-up equity stakes end up paying out zero dollars.",
+      "callout": "$0 VS $30M",
+      "visual": "Low angle view of an industrial metal fire escape on a dark brick building under fog and blue hour streetlights."
+    },
+    {
+      "say": "He could take that risk because his guaranteed paycheck already covered all his expenses.",
+      "callout": "",
+      "visual": "High angle silhouette of a solitary figure walking across a wet asphalt plaza toward a glowing structure."
+    },
+    {
+      "say": "Equity is how wealth accelerates, but steady cash flow is what keeps you in the game.",
+      "callout": "CASH FLOW VS EQUITY",
+      "visual": "Extreme close-up of heavy brass keys lying on a cold wet concrete ledge beneath sodium lighting."
+    },
+    {
+      "say": "You don't need a sports salary, but you do need stability before taking equity risks.",
+      "callout": "",
+      "visual": "Silhouette of a modern glass skyscraper rising into dense night fog, illuminated by subtle ambient lights."
+    },
+    {
+      "say": "In 2008, LeBron James took a small piece of a start-up for promoting it.",
+      "callout": "",
+      "visual": "Extreme close-up of studio headphones lying on a polished steel table under cold blue light."
+    },
+    {
+      "say": "Follow Quiet Money for the money rules school never taught you.",
+      "callout": "",
+      "visual": "Low angle shot of a massive concrete bridge pillar standing firm in dark open water at twilight."
+    }
+  ],
+  "caption": "Why LeBron chose equity over upfront cash in 2008—and what most people miss about start-up payouts.\n\n#money #personalfinance #wealth #equity #investing",
+  "description": "In 2008, LeBron James took a promotional equity stake in Beats by Dre. When Apple acquired the company for $3B in 2014, his reported payout reached $30M. Here is why equity builds wealth, but cash flow protects it.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#wealth",
+    "#equity",
+    "#investing"
+  ],
+  "first_comment": "Would you take equity over a guaranteed paycheck if your job offered it?",
+  "facts": [
+    {
+      "claim": "LeBron James took a small equity stake in Beats in 2008 for promoting it, earning about $30M when Apple bought Beats for $3B in 2014.",
+      "basis": "SBN 2015 and PitchBook 2018 reported he received a small stake in 2008 and made about $30M in cash and stock upon Apple's $3B purchase."
+    },
+    {
+      "claim": "Most start-up equity stakes pay out nothing and his equity sat on top of high salary income.",
+      "basis": "Fact sheet notes that many equity deals pay nothing and LeBron earned massive NBA paychecks underneath his equity investments."
+    }
+  ],
+  "source": "llm",
+  "pillar": "story",
+  "look": "",
+  "loop_map": {
+    "stakes": "Taking a small start-up equity stake instead of an upfront cash paycheck.",
+    "big_question": "How much did LeBron James actually make when Apple bought Beats for $3B?",
+    "assume": "Most people assume a $3B tech buyout pays out hundreds of millions to an early celebrity promoter.",
+    "reveal": "He reportedly made about $30M in cash and stock, and most start-up equity deals pay out zero dollars.",
+    "rehook_beats": [
+      3,
+      7
+    ],
+    "payoff_beat": 10
+  }
+}

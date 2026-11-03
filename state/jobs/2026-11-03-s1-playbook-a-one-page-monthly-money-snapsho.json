@@ -1,0 +1,77 @@
+{
+  "id": "2026-11-03-s1-playbook-a-one-page-monthly-money-snapsho",
+  "pillar": "playbook",
+  "topic": "A one-page monthly money snapshot",
+  "day": "2026-11-03",
+  "slot": 1,
+  "status": "published",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-11-03T09:25:51Z",
+      "words": 192
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-11-03T09:28:23Z",
+      "seconds": 71.575,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-11-03T09:30:03Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-11-03T09:32:53Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-11-03T09:32:53Z",
+      "score": 98
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-11-03T09:32:53Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-11-03T09:32:53Z",
+      "local": "2026-11-03T11:30:00-05:00",
+      "youtube": null
+    }
+  ],
+  "artifacts": {
+    "angle": "three steps: list what you own, list what you owe, write the difference once a month",
+    "hook": "Two lists and one subtraction tell you if you're ahead or behind.",
+    "title": "The One-Page Monthly Money Snapshot",
+    "style": "cinematic",
+    "video": "/home/user/quiet-money/production/output/2026-11-03/2026-11-03-s1-playbook-a-one-page-monthly-money-snapsho/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-11-03/2026-11-03-s1-playbook-a-one-page-monthly-money-snapsho/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-11-03/slot2-playbook",
+        "post_at": "2026-11-03T11:30:00-05:00"
+      },
+      "youtube": {
+        "skipped": "YouTube daily cap reached (5 scheduled for 2026-11-03); the local pack is ready"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 98,
+    "passed": true
+  },
+  "cost": {
+    "tts:edge:chars": 1132
+  },
+  "notes": []
+}

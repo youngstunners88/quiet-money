@@ -1,0 +1,100 @@
+{
+  "title": "Why a Pay Cut Can Make You Richer Than a Promotion",
+  "hook_text": "WHY MY 20% PAY CUT WORKED",
+  "beats": [
+    {
+      "say": "Taking a 20% pay cut was the smartest financial move I've ever made.",
+      "callout": "",
+      "visual": "Extreme close-up of a fountain pen signing a dark contract, low angle, illuminated by a single cold fluorescent light."
+    },
+    {
+      "say": "Most people celebrate a 20% promotion because they think a higher salary makes them rich.",
+      "callout": "",
+      "visual": "Silhouette of a monolithic skyscraper at dark blue hour, fog cutting across the upper windows."
+    },
+    {
+      "say": "So why does trading immediate cash flow for company ownership build far more wealth?",
+      "callout": "",
+      "visual": "Extreme wide shot of a solitary figure standing at the edge of a massive concrete shipping dock at night."
+    },
+    {
+      "say": "You assume a bigger raise beats equity, but hours and taxes always cap your paycheck.",
+      "callout": "SALARY VS EQUITY",
+      "visual": "Low angle of heavy steel industrial gears turning slowly under warm sodium streetlights."
+    },
+    {
+      "say": "A salary requires your physical presence every single hour just to keep paying you cash.",
+      "callout": "",
+      "visual": "High angle looking down an empty subway platform under cold, flickering industrial lights."
+    },
+    {
+      "say": "An equity stake doesn't care if you're sleeping, sick, or taking time off work.",
+      "callout": "",
+      "visual": "Rain-slicked city asphalt reflecting distant high-rises on an empty street at dawn."
+    },
+    {
+      "say": "If you invest $500 a month at 8% a year, it reaches $745,180 in 30 years.",
+      "callout": "$745,180 IN 30Y",
+      "visual": "Silhouette of a massive cargo vessel gliding quietly across dark open water at twilight."
+    },
+    {
+      "say": "What actually happens when you direct an extra $1,000 a month into an asset?",
+      "callout": "",
+      "visual": "Extreme close-up of heavy iron mooring chains resting on dark damp concrete."
+    },
+    {
+      "say": "An extra $1,000 a month invested at 8% for 10 years builds $182,946 total.",
+      "callout": "$182,946 IN 10Y",
+      "visual": "Wide shot of a suspension bridge disappearing into thick dark fog over black water."
+    },
+    {
+      "say": "High salary buys lifestyle today, but real equity buys back your time forever.",
+      "callout": "",
+      "visual": "Back of a silhouette standing atop a high concrete wall looking over a vast dimly lit city skyline."
+    },
+    {
+      "say": "Trading cash flow for ownership means you're no longer selling hours for a capped check.",
+      "callout": "CASH VS OWNERSHIP",
+      "visual": "Low angle silhouette of a glass tower reaching straight up into a dark, stormy night sky."
+    },
+    {
+      "say": "Stop chasing capped wages and start owning assets. Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "Dark asphalt highway stretching into distant dark mountains under a clear midnight sky."
+    }
+  ],
+  "caption": "A salary pays for your hours. Equity pays for your assets. Here is why ownership wins long term.\n\n#money #personalfinance #equity #investing #wealthbuilding",
+  "description": "Why trading immediate cash flow for equity scales wealth far beyond a standard paycheck promotion. Learn how equity compounds independently of your hours.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#equity",
+    "#investing",
+    "#wealthbuilding"
+  ],
+  "first_comment": "Would you take lower pay today for ownership in a growing asset? Let us know below.",
+  "facts": [
+    {
+      "claim": "$500 a month invested at 8% a year reaches $745,180 in 30 years.",
+      "basis": "Fact Sheet: $500/month invested for 30 years at 8%/yr (monthly compounding) = $745,180"
+    },
+    {
+      "claim": "An extra $1,000 a month invested at 8% for 10 years builds $182,946.",
+      "basis": "Fact Sheet: An extra $1,000/month from a side income, invested at 8% for 10 years = $182,946"
+    }
+  ],
+  "source": "llm",
+  "pillar": "myth",
+  "look": "",
+  "loop_map": {
+    "stakes": "Trading immediate income for equity sounds risky when pay raises offer instant cash.",
+    "big_question": "Why does trading immediate cash flow for company ownership build far more wealth?",
+    "assume": "A higher base salary is always the fastest path to building wealth.",
+    "reveal": "Salary is capped by physical hours, whereas ownership compounds independently of labor.",
+    "rehook_beats": [
+      4,
+      8
+    ],
+    "payoff_beat": 11
+  }
+}

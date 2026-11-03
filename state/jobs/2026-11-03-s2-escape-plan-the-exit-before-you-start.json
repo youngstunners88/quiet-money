@@ -1,0 +1,78 @@
+{
+  "id": "2026-11-03-s2-escape-plan-the-exit-before-you-start",
+  "pillar": "escape",
+  "topic": "Plan the exit before you start",
+  "day": "2026-11-03",
+  "slot": 2,
+  "status": "published",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-11-03T09:34:10Z",
+      "words": 182
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-11-03T09:34:42Z",
+      "seconds": 63.206,
+      "provider": "gemini"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-11-03T09:35:56Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-11-03T09:38:43Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-11-03T09:38:43Z",
+      "score": 92
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-11-03T09:38:43Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-11-03T09:38:43Z",
+      "local": "2026-11-03T15:00:00-05:00",
+      "youtube": null
+    }
+  ],
+  "artifacts": {
+    "angle": "Pena's last step: decide how you would sell or hand off before day one, because buyers pay for systems",
+    "brief": "pena",
+    "hook": "The best time to plan leaving a business is before it exists.",
+    "title": "Plan Your Exit Before Day One",
+    "style": "cinematic",
+    "video": "/home/user/quiet-money/production/output/2026-11-03/2026-11-03-s2-escape-plan-the-exit-before-you-start/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-11-03/2026-11-03-s2-escape-plan-the-exit-before-you-start/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-11-03/slot3-escape",
+        "post_at": "2026-11-03T15:00:00-05:00"
+      },
+      "youtube": {
+        "skipped": "YouTube daily cap reached (5 scheduled for 2026-11-03); the local pack is ready"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 92,
+    "passed": true
+  },
+  "cost": {
+    "tts:gemini:chars": 1031
+  },
+  "notes": []
+}

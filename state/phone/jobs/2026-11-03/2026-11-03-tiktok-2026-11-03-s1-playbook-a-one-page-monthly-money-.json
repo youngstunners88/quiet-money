@@ -1,0 +1,18 @@
+{
+ "id": "2026-11-03-tiktok-2026-11-03-s1-playbook-a-one-page-monthly-money-",
+ "kind": "tiktok",
+ "day": "2026-11-03",
+ "key": "2026-11-03-s1-playbook-a-one-page-monthly-money-snapsho",
+ "status": "queued",
+ "created": "2026-11-03T09:54:24+00:00",
+ "recipe": "TikTok upload",
+ "media": [
+  {
+   "source": "production/output/2026-11-03/2026-11-03-s1-playbook-a-one-page-monthly-money-snapsho/final.mp4",
+   "name": "final.mp4"
+  }
+ ],
+ "staged": true,
+ "text": "Stop guessing if you're building wealth or falling behind. Take 15 minutes today to calculate your monthly snapshot.\n\nFree reset checklist: link in bio.\n\n#money #personalfinance #networth #financialfreedom #moneytips\n\nEducation, not financial advice.",
+ "ai_label": "AI-generated content: on"
+}

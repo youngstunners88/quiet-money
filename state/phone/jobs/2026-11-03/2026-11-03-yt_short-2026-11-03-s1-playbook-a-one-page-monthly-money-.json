@@ -1,0 +1,19 @@
+{
+ "id": "2026-11-03-yt_short-2026-11-03-s1-playbook-a-one-page-monthly-money-",
+ "kind": "yt_short",
+ "day": "2026-11-03",
+ "key": "2026-11-03-s1-playbook-a-one-page-monthly-money-snapsho",
+ "status": "queued",
+ "created": "2026-11-03T09:54:24+00:00",
+ "recipe": "YouTube Short upload",
+ "media": [
+  {
+   "source": "production/output/2026-11-03/2026-11-03-s1-playbook-a-one-page-monthly-money-snapsho/final.mp4",
+   "name": "final.mp4"
+  }
+ ],
+ "staged": true,
+ "title": "The One-Page Monthly Money Snapshot",
+ "text": "Learn how a simple one-page monthly snapshot reveals your true net worth in under 15 minutes. Discover why tracking what you own versus what you owe prevents costly financial drift.\n\nFree 7-day Money Reset checklist + calculators: https://youngstunners88.github.io/quiet-money/links/?utm_source=youtube&utm_medium=short&utm_campaign=checklist&utm_content=2026-11-03-s1-playbook-a-one-page-monthly-money-snapsho&o=checklist\n\nEducational content, not financial advice.\n\n#money #personalfinance #networth #financialfreedom #moneytips #shorts",
+ "ai_label": "altered or synthetic content: Yes"
+}
