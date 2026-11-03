@@ -317,3 +317,13 @@ Each row was read from the project's own README, manifest, licence file or regis
 | Tool | Stage | Why |
 |---|---|---|
 | Genjustsu Open Source Workflow (sirioberati) | visuals | MIT. |
+
+## Intake 2026-11-03 (verified from dossiers in `repo-farm/intake/2026-11-03/`)
+
+Each row was read from the project's own README, manifest, licence file or registry entry; nothing was installed or run. Stars and dates were unavailable where the GitHub API is closed to this machine.
+
+### Parked (named condition)
+
+| Tool | Stage | Why |
+|---|---|---|
+| phone-harness/mcp | post | Hosted cloud emulator or cloud iPhone (MIT code, paid service). |
