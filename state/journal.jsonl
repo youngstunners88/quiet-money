@@ -11656,3 +11656,9 @@
 {"ts": "2026-11-02T11:17:27Z", "t": 1793618247.746, "actor": "engine", "type": "SCOUT_TOPUP", "pillar": "myth", "added": 6}
 {"ts": "2026-11-02T11:18:03Z", "t": 1793618283.299, "actor": "engine", "type": "COMPOSIO_SESSION", "user": "quiet-money-studio", "session_hash": "2e0895ca"}
 {"ts": "2026-11-02T22:27:56Z", "t": 1793658476.928, "actor": "engine", "type": "AEO_TRACK", "probes": 16, "ok": 0, "mentioned": 0}
+{"ts": "2026-11-03T07:07:13Z", "t": 1793689633.501, "actor": "engine", "type": "COMPOSIO_SESSION", "user": "quiet-money-studio", "session_hash": "6c285d32"}
+{"ts": "2026-11-03T07:07:15Z", "t": 1793689635.817, "actor": "engine", "type": "COMPOSIO_EXECUTE", "tool": "YOUTUBE_LIST_CHANNELS", "ok": false, "log_id": "log_HNan54rTFIUB", "job": "2026-11-02-s3-escape-get-people-in-for-free-then-earn"}
+{"ts": "2026-11-03T07:07:16Z", "t": 1793689636.667, "actor": "engine", "type": "COMPOSIO_EXECUTE", "tool": "YOUTUBE_LIST_CHANNELS", "ok": false, "log_id": "log_Tgw2aJBBhrSb", "job": "2026-11-02-s0-story-the-1930s-depression-era-grocery"}
+{"ts": "2026-11-03T07:07:17Z", "t": 1793689637.658, "actor": "engine", "type": "COMPOSIO_EXECUTE", "tool": "YOUTUBE_LIST_CHANNELS", "ok": false, "log_id": "log_IrPr-EMoUQ25", "job": "2026-10-31-s2-math-the-compound-interest-math-of-da"}
+{"ts": "2026-11-03T07:07:19Z", "t": 1793689639.534, "actor": "engine", "type": "COMPOSIO_EXECUTE", "tool": "YOUTUBE_LIST_CHANNELS", "ok": false, "log_id": "log_WGurrTDIZgaR", "job": "2026-11-02-s1-psychology-sunk-cost-fallacy-the-money-pit"}
+{"ts": "2026-11-03T07:07:21Z", "t": 1793689641.052, "actor": "engine", "type": "COMPOSIO_EXECUTE", "tool": "YOUTUBE_LIST_CHANNELS", "ok": false, "log_id": "log_Zlwyh4Xj-eJn", "job": "2026-11-01-s0-myth-myth-your-credit-limit-is-what-y"}

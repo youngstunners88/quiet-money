@@ -64,6 +64,9 @@
       "youtube": {
         "skipped": "YouTube daily cap reached (5 scheduled for 2026-11-01); the local pack is ready"
       }
+    },
+    "youtube_plan": {
+      "post_at": "2026-11-03T07:30:00-05:00"
     }
   },
   "scores": {

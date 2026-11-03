@@ -119,6 +119,10 @@ humans set strategy, connect accounts, and review held videos.
 | What is working, the standing prompts for the next videos, the checkpoints (the data block is regenerated weekly by `python -m faceless strategy`) | `/channel/STRATEGY.md` | `python -m faceless strategy` | `faceless-performance-review` |
 | Keep TikTok posts inside the Community Guidelines: caption wording, the picture checklist, the lint, what to do after a removal | `/faceless/ttpolicy.py` | `.claude/skills/faceless-tiktok-policy` | `faceless-tiktok-policy` |
 | Polish any cut in CapCut or ffmpeg: retention pacing, beat-synced cuts, sound design, grade, export QA | `/production` | `.claude/skills/faceless-capcut-mastery` | `faceless-capcut-mastery` |
+| Make a sharp video and prove it before posting (resolution, bitrate, edge energy, the platform side of softness) | `/production` | `.claude/skills/faceless-sharpness` | `faceless-sharpness` |
+| Run the lanes in parallel: PC renders while the phone does one task at a time; the twice-weekly Breathe film cadence | `/faceless/phone.py` | `.claude/skills/faceless-multitask` | `faceless-multitask` |
+| Make a motion-graphics explainer in the explainer look (one drawn world, diagrams timed to the words, no characters) | `/faceless/pipeline` | `.claude/skills/faceless-explainer` | `faceless-explainer` |
+| Make every still for one or more Shorts in Google Flow (Image mode, 0 credits) before any paid image model | `/faceless/flow.py` | `.claude/skills/faceless-flow-stills` | `faceless-flow-stills` |
 | Money now: every revenue rail's state and the owner's next 30 minutes, ranked by how soon it pays | `/faceless/cash.py` | `python -m faceless cash` | `faceless-cash` |
 | Partner Program progress and the website funnel (PostHog, cookieless) | `/faceless/ypp.py`, `sitestats.py` | `python -m faceless ypp` | `faceless-measure` |
 | HQ: the owner's dashboard (freedom number, engines, next moves, horizon, goals, build queue), its daily refresh | `/faceless/hq.py` | `python -m faceless hq` | `faceless-hq` |
@@ -142,7 +146,7 @@ python -m faceless forecast                    # the math: next batch, monthly c
 python -m faceless kit [day]                   # repurposing kit per video; `kit --issue` compiles the weekly newsletter
 python -m faceless podcast build               # the week's passed Shorts as one podcast episode (mp3 + chapters) -> distribution/podcast/<week>/
 python -m faceless longform build              # the week's most viewed Shorts as one 16:9 episode with chapters + thumbnail -> distribution/longform/<week>/
-python -m faceless longform post --apply       # upload the week's episode (once a week; Sundays at the 07:00 UTC quota reset by the scheduled task)
+python -m faceless longform post --apply       # upload the week's episode (once a week; Sundays just after midnight Pacific, the quota reset: 08:00 UTC from 1 Nov to 7 Mar, 07:00 UTC the rest of the year)
 python -m faceless edition --day D --lang es   # Spanish (or pt) editions of a day's passed Shorts -> distribution/editions/<lang>/ (posting waits on the owner's channel)
 python -m faceless flow                        # today's Flow shot list for the owner's session
 python -m faceless products                    # build + verify spreadsheet products, write listings

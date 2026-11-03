@@ -24,7 +24,7 @@ The owner wants the studio to run without them. Small breakages are yours to sol
 | 401 or expired token | `composio status`, then one read-only call; re-sign-in is the owner's |
 | Scope too narrow | compare the connection's granted scope list with what the endpoint needs |
 | 400 invalid input | the error names the field; read the tool schema (`get_raw_composio_tool_by_slug(...).input_parameters`) |
-| 403 or 429 quota | read the error text for the metric, compute the reset time (Google: midnight Pacific) |
+| 403 or 429 quota | read the error text for the metric, compute the reset time (Google: midnight Pacific, which is 08:00 UTC from the first Sunday of November to the second Sunday of March and 07:00 UTC the rest of the year; compute it with zoneinfo America/Los_Angeles, never by hand) |
 | Success, then vanishes or stays "processing" | read the end state at +5 and +20 minutes; check the file locally (`ffprobe`, a full decode) |
 | Partial result (wrong or missing metadata) | read the live record back and diff it against the payload |
 | Removed or rejected by the platform (policy, copyright, moderation) | read the record's status and rejection reason; never re-upload the same content; the owner decides |
