@@ -5,67 +5,67 @@
     {
       "say": "You can lock down your credit for free in three steps, and it takes about fifteen minutes.",
       "callout": "",
-      "visual": "a brass padlock on a dark wooden door in warm side light, no people"
+      "visual": "a heavy steel padlock hanging from a neon-lit shop shutter in a rain-wet alley, macro, no people"
     },
     {
       "say": "Since September two thousand eighteen, federal law has made credit freezes free.",
       "callout": "FREEZES ARE FREE",
-      "visual": "a folded paper letter with a wax seal on a dark desk, soft light, no people"
+      "visual": "a courthouse facade at night with wide stairs reflecting in a puddle, wide shot, no people"
     },
     {
       "say": "Step one. Contact each of the three credit bureaus: Equifax, Experian and TransUnion.",
       "callout": "STEP 1: ALL THREE BUREAUS",
-      "visual": "three identical steel mailboxes in a row on a quiet street at dawn, no people"
+      "visual": "three identical steel mailboxes in a row under sodium lights on a wet street, no people"
     },
     {
       "say": "You have to freeze at all three, because each keeps its own file on you.",
       "callout": "",
-      "visual": "three identical white folders fanned on a clean desk, soft morning light"
+      "visual": "three vault doors in a dark corridor, each with a faint glow, wide shot, no people"
     },
     {
       "say": "Step two. Place the freeze online or by phone, and the bureau must apply it within one business day.",
       "callout": "STEP 2: PLACE THE FREEZE",
-      "visual": "a hand pressing a single key on an old brass typewriter, close-up, no faces"
+      "visual": "a gloved hand pressing a glowing keypad on a wall in the dark, close-up, no face"
     },
     {
       "say": "Keep your login or PIN somewhere safe, because you will need it later.",
       "callout": "",
-      "visual": "a small key resting on a closed notebook on a wooden table, macro, no people"
+      "visual": "a small brass key lying on wet asphalt under pink neon light, macro, no people"
     },
     {
       "say": "Step three. When you apply for credit, lift the freeze for free, then freeze it again.",
       "callout": "STEP 3: THAW, THEN RE-FREEZE",
-      "visual": "a door held ajar by a small wooden wedge in warm hallway light, no people"
+      "visual": "a rolling shop shutter half raised with warm light spilling onto the wet pavement, wide, no people"
     },
     {
       "say": "A freeze limits new creditors from opening accounts in your name.",
       "callout": "",
-      "visual": "a heavy iron gate closed across an old stone archway at dusk, no people"
+      "visual": "a tall iron gate closed across a lit tunnel entrance with neon reflections, no people"
     },
     {
       "say": "Here is the part nobody tells you. A freeze does not stop misuse of cards and accounts you already have.",
       "callout": "",
-      "visual": "a row of old brass keys hanging on a wall hook in dim light, no people"
+      "visual": "a row of parked cars at night with one door ajar and its interior light on, no people"
     },
     {
       "say": "The honest catch: a freeze is not a full shield, so keep checking your statements.",
       "callout": "THE CATCH",
-      "visual": "a stormy sea with waves rising under a heavy sky and a lighthouse in the distance, no people"
+      "visual": "a cracked window pane glowing with neon and rain on the glass, macro, no people"
     },
     {
       "say": "Plan ahead, because you will need to thaw it before a loan, card or rental application.",
       "callout": "",
-      "visual": "a paper calendar with one date circled in soft window light, no people"
+      "visual": "a tall apartment block at night with one window lit differently from the rest, wide, no people"
     },
     {
       "say": "This is education, not advice. Check each bureau's website for the current steps.",
       "callout": "",
-      "visual": "a quiet kitchen table at morning with a coffee cup and a notepad, no people"
+      "visual": "an empty crosswalk with a green signal glowing on a wet road, no people"
     },
     {
       "say": "Follow for the money rules school never taught you.",
       "callout": "",
-      "visual": "an empty highway stretching toward a glowing sunrise horizon, wide shot, no people"
+      "visual": "dawn light breaking over a rain-wet city street, wide shot, no people"
     }
   ],
   "description": "Credit freezes have been free by federal law since September 2018. Contact Equifax, Experian and TransUnion, place the freeze online or by phone, and lift it temporarily when you apply for credit. A freeze limits new accounts in your name but does not stop misuse of existing accounts. Educational only, not financial advice.",
@@ -93,7 +93,8 @@
   ],
   "source": "human",
   "pillar": "playbook",
-  "look": "",
+  "look": "night street photography, glossy wet asphalt, vivid cyan and magenta neon reflections, sharp flash, modern urban, high contrast",
   "loop_map": {},
-  "caption": "Credit freezes are free by federal law. Three steps: contact Equifax, Experian and TransUnion; place the freeze; lift it only when you apply for credit. Not a full shield. Educational content, not financial advice."
+  "caption": "Credit freezes are free by federal law. Three steps: contact Equifax, Experian and TransUnion; place the freeze; lift it only when you apply for credit. Not a full shield. Educational content, not financial advice.",
+  "look_pack": "neon-night-street"
 }

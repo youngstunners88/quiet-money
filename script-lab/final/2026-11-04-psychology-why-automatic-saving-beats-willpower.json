@@ -5,67 +5,67 @@
     {
       "say": "You save more when it is automatic: eighty six percent joined, compared with about twenty.",
       "callout": "",
-      "visual": "a single open door at the end of a quiet hallway with warm light, no people"
+      "visual": "a miniature office floor where a line of faceless clay workers walks through one wide open doorway into a glowing room"
     },
     {
       "say": "Economists Brigitte Madrian and Dennis Shea studied one large company that switched to automatic enrollment.",
       "callout": "",
-      "visual": "an old filing cabinet with one drawer pulled open in soft window light, no people"
+      "visual": "a tiny faceless clay researcher standing beside a giant filing cabinet with one drawer open"
     },
     {
       "say": "The switch happened in nineteen ninety eight, and it applied to new hires.",
       "callout": "",
-      "visual": "a paper calendar page turning on a wooden desk, macro, no people"
+      "visual": "a giant miniature desk calendar with one page curling, a clay figure standing beneath it"
     },
     {
       "say": "Among workers hired under automatic enrollment, eighty six percent joined the retirement plan.",
       "callout": "86% JOINED",
-      "visual": "a full glass jar of coins glowing on a dark shelf, warm light, no people"
+      "visual": "a crowd of tiny faceless clay workers all marching up a ramp into a giant glowing treasure chest"
     },
     {
       "say": "Under the old opt in rule, only about twenty percent had joined after three months.",
       "callout": "~20% AFTER 3 MONTHS",
-      "visual": "a mostly empty glass jar with a few coins at the bottom, soft light, no people"
+      "visual": "only a few clay figures standing outside a tall closed gate on an empty plaza"
     },
     {
       "say": "The plan was the same. Only the default changed.",
       "callout": "THE DEFAULT CHANGED",
-      "visual": "two identical doors side by side, one open and one closed, soft hallway light"
+      "visual": "two identical miniature doors on a pastel wall, one open and one closed, a clay figure between them"
     },
     {
       "say": "That is the default effect: people tend to stay with whatever is chosen for them.",
       "callout": "",
-      "visual": "a river flowing along a worn stone channel at dawn, wide shot, no people"
+      "visual": "a miniature pastel river with tiny clay boats all drifting the same way downstream"
     },
     {
       "say": "Here is the part nobody tells you. Many workers also kept the default contribution and fund.",
       "callout": "",
-      "visual": "a long winding road stretching to a distant horizon in morning mist, no people"
+      "visual": "a miniature conveyor belt carrying identical clay briefcases through a gate"
     },
     {
       "say": "The honest catch: a default is not always right for you. The starting rate may be too low.",
       "callout": "THE CATCH",
-      "visual": "a stormy sea with waves rising under a heavy sky and a lighthouse in the distance, no people"
+      "visual": "a faceless clay figure stuck walking on a tiny treadmill on a pastel stage"
     },
     {
       "say": "You can check your own plan and change your rate if it does not fit.",
       "callout": "",
-      "visual": "a hand turning a small brass dial on an old machine, close-up, no faces"
+      "visual": "a tiny clay figure turning a giant knob on a pastel control panel"
     },
     {
       "say": "One simple move is to set up the saving to happen automatically yourself.",
       "callout": "",
-      "visual": "a calendar with one repeating date circled in soft light, no people"
+      "visual": "a clay figure placing one coin onto a belt that leads to a jar, miniature set"
     },
     {
       "say": "This is education, not advice. Make the good choice the easy choice.",
       "callout": "",
-      "visual": "a quiet kitchen table at morning with a coffee cup and a notepad, no people"
+      "visual": "a tiny clay figure sitting on a park bench watching a miniature sunrise"
     },
     {
       "say": "Follow for the money rules school never taught you.",
       "callout": "",
-      "visual": "an empty highway stretching toward a glowing sunrise horizon, wide shot, no people"
+      "visual": "a miniature clay path winding up a pastel hill toward a rising sun"
     }
   ],
   "description": "In a classic study of one large company, automatic 401(k) enrollment lifted participation among new hires to 86 percent, versus about 20 percent after three months under the old opt-in rule. Defaults shape behavior. A default may not fit you. Educational only, not financial advice.",
@@ -93,7 +93,8 @@
   ],
   "source": "human",
   "pillar": "psychology",
-  "look": "",
+  "look": "tilt-shift miniature diorama, handmade clay figures without faces, pastel studio set, soft overhead light, macro depth of field",
   "loop_map": {},
-  "caption": "At one big company, automatic enrollment got 86% of new hires into the 401(k), versus about 20% after three months with opt-in. Same plan, different default. A default may not fit you. Educational content, not financial advice."
+  "caption": "At one big company, automatic enrollment got 86% of new hires into the 401(k), versus about 20% after three months with opt-in. Same plan, different default. A default may not fit you. Educational content, not financial advice.",
+  "look_pack": "clay-diorama"
 }
