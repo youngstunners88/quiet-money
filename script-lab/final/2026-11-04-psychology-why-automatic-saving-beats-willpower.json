@@ -1,0 +1,99 @@
+{
+  "title": "Why Automatic Saving Beats Willpower",
+  "hook_text": "86% SAVED WHEN IT WAS AUTOMATIC",
+  "beats": [
+    {
+      "say": "You save more when it is automatic: eighty six percent joined, compared with about twenty.",
+      "callout": "",
+      "visual": "a single open door at the end of a quiet hallway with warm light, no people"
+    },
+    {
+      "say": "Economists Brigitte Madrian and Dennis Shea studied one large company that switched to automatic enrollment.",
+      "callout": "",
+      "visual": "an old filing cabinet with one drawer pulled open in soft window light, no people"
+    },
+    {
+      "say": "The switch happened in nineteen ninety eight, and it applied to new hires.",
+      "callout": "",
+      "visual": "a paper calendar page turning on a wooden desk, macro, no people"
+    },
+    {
+      "say": "Among workers hired under automatic enrollment, eighty six percent joined the retirement plan.",
+      "callout": "86% JOINED",
+      "visual": "a full glass jar of coins glowing on a dark shelf, warm light, no people"
+    },
+    {
+      "say": "Under the old opt in rule, only about twenty percent had joined after three months.",
+      "callout": "~20% AFTER 3 MONTHS",
+      "visual": "a mostly empty glass jar with a few coins at the bottom, soft light, no people"
+    },
+    {
+      "say": "The plan was the same. Only the default changed.",
+      "callout": "THE DEFAULT CHANGED",
+      "visual": "two identical doors side by side, one open and one closed, soft hallway light"
+    },
+    {
+      "say": "That is the default effect: people tend to stay with whatever is chosen for them.",
+      "callout": "",
+      "visual": "a river flowing along a worn stone channel at dawn, wide shot, no people"
+    },
+    {
+      "say": "Here is the part nobody tells you. Many workers also kept the default contribution and fund.",
+      "callout": "",
+      "visual": "a long winding road stretching to a distant horizon in morning mist, no people"
+    },
+    {
+      "say": "The honest catch: a default is not always right for you. The starting rate may be too low.",
+      "callout": "THE CATCH",
+      "visual": "a stormy sea with waves rising under a heavy sky and a lighthouse in the distance, no people"
+    },
+    {
+      "say": "You can check your own plan and change your rate if it does not fit.",
+      "callout": "",
+      "visual": "a hand turning a small brass dial on an old machine, close-up, no faces"
+    },
+    {
+      "say": "One simple move is to set up the saving to happen automatically yourself.",
+      "callout": "",
+      "visual": "a calendar with one repeating date circled in soft light, no people"
+    },
+    {
+      "say": "This is education, not advice. Make the good choice the easy choice.",
+      "callout": "",
+      "visual": "a quiet kitchen table at morning with a coffee cup and a notepad, no people"
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "an empty highway stretching toward a glowing sunrise horizon, wide shot, no people"
+    }
+  ],
+  "description": "In a classic study of one large company, automatic 401(k) enrollment lifted participation among new hires to 86 percent, versus about 20 percent after three months under the old opt-in rule. Defaults shape behavior. A default may not fit you. Educational only, not financial advice.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#psychology",
+    "#behavioraleconomics",
+    "#quietmoney"
+  ],
+  "first_comment": "Is your saving automatic or do you have to remember? Educational only, not financial advice.",
+  "facts": [
+    {
+      "claim": "At one Fortune 500 company that adopted automatic 401(k) enrollment on 1998-04-01, new hires had an 86% participation rate; under opt-in only about 20% participated after three months (65% after 36 months)",
+      "basis": "Madrian and Shea (2001), The Power of Suggestion, Quarterly Journal of Economics 116(4); NBER w7682"
+    },
+    {
+      "claim": "A substantial fraction of auto-enrolled workers kept the default contribution rate and fund allocation",
+      "basis": "Madrian and Shea (2001)"
+    },
+    {
+      "claim": "Results come from one company; other firms and plans differ",
+      "basis": "n/a"
+    }
+  ],
+  "source": "human",
+  "pillar": "psychology",
+  "look": "",
+  "loop_map": {},
+  "caption": "At one big company, automatic enrollment got 86% of new hires into the 401(k), versus about 20% after three months with opt-in. Same plan, different default. A default may not fit you. Educational content, not financial advice."
+}

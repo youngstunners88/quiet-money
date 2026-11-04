@@ -1,0 +1,99 @@
+{
+  "title": "You Do Not Need Thousands To Start Investing",
+  "hook_text": "YOU CAN START WITH $1",
+  "beats": [
+    {
+      "say": "You do not need thousands to invest: some brokers let you start with one dollar.",
+      "callout": "",
+      "visual": "a single coin resting on a clean white desk in soft morning light, macro, no people"
+    },
+    {
+      "say": "Many people think you need a pile of cash before you can begin.",
+      "callout": "",
+      "visual": "an empty glass jar on a wooden shelf in dim light, no people"
+    },
+    {
+      "say": "That belief comes from account minimums and the price of whole shares.",
+      "callout": "",
+      "visual": "a tall stack of gold coins beside one coin set apart, black marble, no people"
+    },
+    {
+      "say": "Fidelity has a zero dollar minimum to open a brokerage account.",
+      "callout": "$0 MINIMUM",
+      "visual": "an open wallet with one small coin inside, wooden table, soft light, no faces"
+    },
+    {
+      "say": "It also lets you buy fractional shares of more than seven thousand stocks and funds, from as little as one dollar.",
+      "callout": "FROM $1",
+      "visual": "a pie cut into thin slices on a plain white plate, top view, no people"
+    },
+    {
+      "say": "Commissions on US stock and ETF trades are zero there too.",
+      "callout": "$0 COMMISSIONS",
+      "visual": "a brass scale with one small coin on one side, soft light, no people"
+    },
+    {
+      "say": "Other brokers offer similar features, so compare a few before you choose.",
+      "callout": "",
+      "visual": "three identical white coffee cups in a row on a bright desk, soft morning light, no people"
+    },
+    {
+      "say": "Here is the part nobody tells you. Starting small can build the habit of investing regularly.",
+      "callout": "",
+      "visual": "a small green seedling growing in dark soil with morning light, macro, no people"
+    },
+    {
+      "say": "The honest catch: investing can lose money, and small amounts carry the same risk for each dollar.",
+      "callout": "THE CATCH",
+      "visual": "a stormy sea with waves rising under a heavy sky and a lighthouse in the distance, no people"
+    },
+    {
+      "say": "Fund fees, taxes and risk apply at any size, and nothing here says what to buy.",
+      "callout": "",
+      "visual": "a hand holding a magnifying glass over an old printed page, close-up, no faces"
+    },
+    {
+      "say": "Keep an emergency fund first, because investments can fall when you need the cash.",
+      "callout": "",
+      "visual": "a steel safe door slightly open on a shelf, soft warm light, no people"
+    },
+    {
+      "say": "So the myth says wait until you have thousands. The truth is, access is easy. Understanding the risk is the real work.",
+      "callout": "",
+      "visual": "an old paper map being unfolded on a wooden table, hands out of focus"
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "an empty highway stretching toward a glowing sunrise horizon, wide shot, no people"
+    }
+  ],
+  "description": "You do not need thousands to open an investing account. Fidelity has a $0 account minimum and lets you buy fractional shares of thousands of stocks and ETFs from as little as $1, with $0 commissions on US stock and ETF trades. Investing can lose money. Educational only, not financial advice.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#investing",
+    "#moneymyths",
+    "#quietmoney"
+  ],
+  "first_comment": "What was the first amount you ever invested? Educational only, not financial advice.",
+  "facts": [
+    {
+      "claim": "Fidelity: $0 minimum to open a brokerage account; $0 commissions on US stock and ETF trades",
+      "basis": "Fidelity.com and Motley Fool Fidelity review, checked 2026-11-04"
+    },
+    {
+      "claim": "Fidelity fractional shares: trade more than 7,000 US stocks and ETFs for as little as $1",
+      "basis": "Fidelity.com/trading/fractional-shares, checked 2026-11-04"
+    },
+    {
+      "claim": "Investing involves risk of loss at any account size; no recommendation made",
+      "basis": "n/a"
+    }
+  ],
+  "source": "human",
+  "pillar": "myth",
+  "look": "",
+  "loop_map": {},
+  "caption": "You do not need thousands to invest. Fidelity has a $0 account minimum and fractional shares from $1. Investing can lose money, so learn the risks first. Educational content, not financial advice."
+}

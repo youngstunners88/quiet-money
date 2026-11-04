@@ -1,0 +1,99 @@
+{
+  "title": "A Quarter Point On Your Mortgage Costs $20,600",
+  "hook_text": "A 0.25% RATE GAP = $20,600",
+  "beats": [
+    {
+      "say": "A quarter point on your mortgage costs you about twenty thousand dollars over thirty years.",
+      "callout": "",
+      "visual": "a small model house on a stack of coins under warm lamp light, macro, no people"
+    },
+    {
+      "say": "Take a three hundred fifty thousand dollar loan, fixed for thirty years.",
+      "callout": "$350,000 LOAN, 30 YEARS",
+      "visual": "a closed brown folder with a brass paperclip on a dark desk, soft light, no people"
+    },
+    {
+      "say": "At six and a half percent, the monthly payment is about twenty two hundred twelve dollars.",
+      "callout": "6.5%: $2,212 A MONTH",
+      "visual": "an old brass calculator beside a stack of ledgers under a green banker lamp, no people"
+    },
+    {
+      "say": "Over the full loan, you would pay about four hundred forty six thousand dollars in interest.",
+      "callout": "$446,000 INTEREST",
+      "visual": "a tall stack of gold coins casting a long shadow on black marble, no people"
+    },
+    {
+      "say": "Now lower the rate to six and a quarter percent.",
+      "callout": "6.25%",
+      "visual": "a dial on an old radio turned a small step, close-up, warm light, no people"
+    },
+    {
+      "say": "The payment falls to about twenty one fifty five, a gap of fifty seven dollars a month.",
+      "callout": "$57 A MONTH",
+      "visual": "a single coin standing on its edge on a wooden table, macro, no people"
+    },
+    {
+      "say": "Over thirty years, that gap adds up to about twenty thousand six hundred dollars.",
+      "callout": "~$20,600 OVER 30 YEARS",
+      "visual": "a long row of identical envelopes stretching away on a dark table, no people"
+    },
+    {
+      "say": "Here is the part nobody tells you. A small rate gap gets multiplied by three hundred sixty payments.",
+      "callout": "",
+      "visual": "a long calendar wall of small identical squares in soft light, no people"
+    },
+    {
+      "say": "The honest catch: a lower rate can come with fees or points paid up front, which can eat the savings.",
+      "callout": "THE CATCH",
+      "visual": "a stormy sea with waves rising under a heavy sky and a lighthouse in the distance, no people"
+    },
+    {
+      "say": "Rates, fees, and how long you stay in the home all change the answer.",
+      "callout": "",
+      "visual": "an old paper map being unfolded on a wooden table, hands out of focus"
+    },
+    {
+      "say": "So compare the total cost of each offer, not just the headline rate.",
+      "callout": "",
+      "visual": "a hand holding a magnifying glass over an old printed page, close-up, no faces"
+    },
+    {
+      "say": "This is an illustration, not advice. A quarter point looks tiny, but time makes it large.",
+      "callout": "",
+      "visual": "a quiet kitchen table at morning with a coffee cup and a notepad, no people"
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "an empty highway stretching toward a glowing sunrise horizon, wide shot, no people"
+    }
+  ],
+  "description": "On a $350,000 30-year fixed loan, 6.5% means about $2,212 a month and about $446,000 in interest. At 6.25% the payment is about $57 a month lower, roughly $20,600 less over 30 years. An illustration; fees and points can change the answer. Educational only, not financial advice.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#mortgage",
+    "#homebuying",
+    "#quietmoney"
+  ],
+  "first_comment": "What rate would make you refinance? Educational only, not financial advice.",
+  "facts": [
+    {
+      "claim": "$350,000 at 6.5%, 30 years fixed: payment $2,212.24, total interest $446,406",
+      "basis": "Standard amortization formula, computed 2026-11-04; principal and interest only"
+    },
+    {
+      "claim": "Same loan at 6.25%: payment $2,155.01, total interest $425,804; difference $57.23 a month and $20,602 over 30 years",
+      "basis": "Standard amortization formula, computed 2026-11-04"
+    },
+    {
+      "claim": "Assumptions: fixed rate, no taxes, insurance, fees or points; real offers vary",
+      "basis": "n/a"
+    }
+  ],
+  "source": "human",
+  "pillar": "math",
+  "look": "",
+  "loop_map": {},
+  "caption": "$350,000, 30 years: at 6.5% you pay about $446,000 in interest. At 6.25% about $20,600 less. A quarter point adds up. An illustration, not a promise. Educational content, not financial advice."
+}
