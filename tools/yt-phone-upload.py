@@ -69,7 +69,7 @@ def ascii_safe(x): return x.replace("\u2014",", ").replace("\u2013","-").replace
 desc=ascii_safe(desc); title=ascii_safe(title)
 if any(ord(c)>127 for c in desc+title): die("non-ASCII characters remain in the text")
 # --- file on phone
-fn=f"yt_{slot}.mp4"
+fn=f"yt_{day}_{slot}.mp4"   # unique per day: a reused name leaves a stale gallery entry
 subprocess.run(["adb","push",f"{REPO}/distribution/queue/{day}/{slot}/video.mp4",f"/sdcard/Download/QuietMoney/{fn}"],capture_output=True)
 adb(f"touch /sdcard/Download/QuietMoney/{fn}"); adb(f"am broadcast -a android.intent.action.MEDIA_SCANNER_SCAN_FILE -d file:///sdcard/Download/QuietMoney/{fn}"); time.sleep(2)
 adb("settings put system user_rotation 0"); adb("svc power stayon true")
