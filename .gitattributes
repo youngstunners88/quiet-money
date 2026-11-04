@@ -6,3 +6,4 @@ state/decisions.jsonl merge=union
 analytics/aeo.jsonl merge=union
 analytics/opportunities.jsonl merge=union
 state/offers.jsonl merge=union
+state/crouton.jsonl merge=union

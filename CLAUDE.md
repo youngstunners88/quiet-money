@@ -88,6 +88,7 @@ humans set strategy, connect accounts, and review held videos.
 | Marketing: the weekly brief, funnel, measurement, experiments, what to tell the owner (the plan is `channel/empire/MARKETING.md`) | `/faceless/marketing.py`, `metrics.py` | `channel/empire/MARKETING.md` (section 8), `channel/empire/experiments.json` | `faceless-marketing` |
 | Learn from a video, post or channel; search what the Brain knows (transcripts in, notes out) | `/brain` | `brain/CONTEXT.md` | `faceless-brain` |
 | Free extra hands for side work (topic and script seeds, drafts); never the daily critical path | `/faceless/flint.py` | `python -m faceless flint status` | `faceless-flint` |
+| A second free model for long reads (Brain, a week of reports), drafts, reviews and a measured advisory script pre-screen that can only add holds; never the daily critical path | `/faceless/crouton.py` | `python -m faceless crouton status` | `faceless-crouton` |
 | Run the business as CEO: sprints, lanes as Claude Code workers (MCP `claude-code-orchestrator`), the sprint report | `/brain/PROMPTS` | `brain/PROMPTS/ORCHESTRATOR.md` | `faceless-ceo` |
 | What to sell next: proof-first demand research, scored on a rubric (never a fake door) | `/analytics/product-hunt` | `analytics/product-hunt/README.md` | `faceless-product-hunter` |
 | A free lead magnet that leads to one paid product (checklist, sample, tracker) | `/channel/offers/lead-magnets` | `channel/offers/sprint-01/` | `faceless-lead-magnet` |

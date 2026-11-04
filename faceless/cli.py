@@ -755,6 +755,32 @@ def cmd_brain(args) -> int:
     return 1
 
 
+def cmd_crouton(args) -> int:
+    """Crouton, free extra hands on a stealth model: status | ask TEXT | screen FILE | bench [--runs N] [--limit N] [--dry-run] | cases. Never on the critical path."""
+    from faceless import crouton
+    from faceless.providers import ProviderError, ProviderUnavailable
+    try:
+        if args.action == "status":
+            print(json.dumps(crouton.status(), indent=1))
+        elif args.action == "ask" and args.rest:
+            print(crouton.ask(" ".join(args.rest), task="cli-ask", kind="review"))
+        elif args.action == "screen" and args.rest:
+            print(json.dumps(crouton.screen(Path(args.rest[0]).read_text(encoding="utf-8")), indent=1))
+        elif args.action == "cases":
+            cases = crouton.make_gate_cases(split=args.split)
+            print(f"wrote {len(cases)} labelled {args.split} cases")
+        elif args.action == "bench":
+            res = crouton.bench(runs=args.runs, limit=args.limit, dry_run=args.dry_run, split=args.split)
+            print(json.dumps(res if res.get("dry_run") else {"report": f"analytics/crouton/{res['day']}-gate-{res['split']}-{res['prompt']}.json", **res["score"]}, indent=1))
+        else:
+            print("usage: crouton status | ask TEXT | screen FILE | cases | bench [--runs N] [--limit N] [--dry-run]")
+            return 2
+    except (ProviderError, ProviderUnavailable) as e:
+        print(f"crouton: {e}")
+        return 1
+    return 0
+
+
 def cmd_flint(args) -> int:
     """Flint, the free extra hands: status (measured success rates) | ask TEXT | seeds [-n N] [--pillar P] [--dry-run]. Never on the critical path."""
     from faceless import flint
@@ -1551,6 +1577,14 @@ def main(argv: list[str] | None = None) -> int:
     fl.add_argument("--pillar", default="escape")
     fl.add_argument("--dry-run", action="store_true")
     fl.set_defaults(fn=cmd_flint)
+    cr = sub.add_parser("crouton", help="Crouton, free extra hands on a stealth model (side work and a measured advisory pre-screen, never the daily path): status | ask TEXT | screen FILE | cases | bench [--runs N] [--limit N] [--dry-run]")
+    cr.add_argument("action", choices=["status", "ask", "screen", "cases", "bench"])
+    cr.add_argument("rest", nargs="*")
+    cr.add_argument("--split", choices=["dev", "holdout"], default="dev")
+    cr.add_argument("--runs", type=int, default=1)
+    cr.add_argument("--limit", type=int, default=None)
+    cr.add_argument("--dry-run", action="store_true")
+    cr.set_defaults(fn=cmd_crouton)
     br = sub.add_parser("brain", help="the Brain: ingest URL --file PATH --method M | check | index | search WORDS | watch | fetch VIDEO_ID --paid | status")
     br.add_argument("action", choices=["ingest", "check", "index", "search", "watch", "fetch", "status"])
     br.add_argument("rest", nargs="*")
