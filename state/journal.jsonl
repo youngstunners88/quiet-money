@@ -11959,3 +11959,11 @@
 {"ts": "2026-11-03T09:54:04Z", "t": 1793699644.083, "actor": "engine", "type": "KIT_BUILT", "job": "2026-11-03-s4-story-how-a-small-stake-in-beats-paid", "files": 8, "audio": true}
 {"ts": "2026-11-03T09:54:21Z", "t": 1793699661.298, "actor": "engine", "type": "COMPOSIO_SESSION", "user": "quiet-money-studio", "session_hash": "19b4837c"}
 {"ts": "2026-11-03T09:54:23Z", "t": 1793699663.039, "actor": "engine", "type": "YOUTUBE_API", "path": "videos", "method": "GET", "status": 200}
+{"ts": "2026-11-04T09:19:32Z", "t": 1793783972.823, "actor": "engine", "type": "COMPOSIO_SESSION", "user": "quiet-money-studio", "session_hash": "604dff43"}
+{"ts": "2026-11-04T09:19:41Z", "t": 1793783981.647, "actor": "engine", "type": "COMPOSIO_SESSION", "user": "quiet-money-studio", "session_hash": "d43ca809"}
+{"ts": "2026-11-04T09:19:42Z", "t": 1793783982.931, "actor": "engine", "type": "COMPOSIO_EXECUTE", "tool": "YOUTUBE_POST_COMMENT", "ok": true, "log_id": "log_ilEuq194sjO3", "job": "2026-11-01-s0-myth-myth-your-credit-limit-is-what-y"}
+{"ts": "2026-11-04T09:19:43Z", "t": 1793783983.933, "actor": "engine", "type": "COMPOSIO_EXECUTE", "tool": "YOUTUBE_POST_COMMENT", "ok": true, "log_id": "log_EIMqIdzvC3Ho", "job": "2026-11-02-s0-story-the-1930s-depression-era-grocery"}
+{"ts": "2026-11-04T09:19:44Z", "t": 1793783984.92, "actor": "engine", "type": "COMPOSIO_EXECUTE", "tool": "YOUTUBE_POST_COMMENT", "ok": true, "log_id": "log_wz-1mhyi-YmI", "job": "2026-11-02-s1-psychology-sunk-cost-fallacy-the-money-pit"}
+{"ts": "2026-11-04T09:19:45Z", "t": 1793783985.849, "actor": "engine", "type": "COMPOSIO_EXECUTE", "tool": "YOUTUBE_POST_COMMENT", "ok": true, "log_id": "log_TQK2sRolst39", "job": "2026-11-02-s3-escape-get-people-in-for-free-then-earn"}
+{"ts": "2026-11-04T09:19:45Z", "t": 1793783985.875, "actor": "engine", "type": "DAILY_PLAN", "slots": ["2026-11-04#1", "2026-11-04#2", "2026-11-04#3", "2026-11-04#4", "2026-11-04#5"], "extra": 5, "weights": {"story": 0.989, "math": 0.873, "psychology": 0.784, "myth": 1.0, "playbook": 0.618, "escape": 1.481}}
+{"ts": "2026-11-04T09:19:47Z", "t": 1793783987.927, "actor": "engine", "type": "JOB_CREATED", "job": "2026-11-04-s0-psychology-present-bias-hyperbolic-discount", "pillar": "psychology", "topic": "Present Bias (Hyperbolic Discounting)", "slot": 0}

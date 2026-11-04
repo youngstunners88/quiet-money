@@ -1,0 +1,16 @@
+{
+  "id": "2026-11-04-s0-psychology-present-bias-hyperbolic-discount",
+  "pillar": "psychology",
+  "topic": "Present Bias (Hyperbolic Discounting)",
+  "day": "2026-11-04",
+  "slot": 0,
+  "status": "planned",
+  "history": [],
+  "artifacts": {
+    "angle": "Explain why human neurology over-values immediate small rewards over massive future gains (choosing $50 today over $100 next year). Show how this bias quietly destroys compound growth in retirement accounts over a 30-year horizon. Counter-move: pre-commitment mechanisms that lock future income straight into investment vehicles.",
+    "hook": "Your brain is hardwired to choose $50 right now over $500 next year—and banks profit millions off it."
+  },
+  "scores": {},
+  "cost": {},
+  "notes": []
+}
