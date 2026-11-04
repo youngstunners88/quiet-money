@@ -1,0 +1,7 @@
+{
+ "id": "g1-deepseek-sanders",
+ "app": "deepseek",
+ "prompt": "Fact check, answer in under 120 words with sources: (1) Did Harland Sanders sell his Kentucky Fried Chicken interest in 1964 for about 2 million dollars? (2) Was the company sold to Heublein in 1971 for about 285 million dollars? (3) Was his Social Security check about 105 dollars a month? Say which of the three you can confirm and which you cannot, with the source name for each.",
+ "out": "production/lanes/out/g1-deepseek-sanders.md",
+ "max_seconds": 45
+}

@@ -1,0 +1,7 @@
+{
+ "id": "g5-grok-hooks",
+ "app": "grok",
+ "prompt": "Give 5 short, punchy hook lines (under 18 words, with a number and the word you) for a Short about the ostrich effect: investors log in to their accounts about 9.5 percent less after market drops. Plain text, numbered.",
+ "out": "production/lanes/out/g5-grok-hooks.md",
+ "max_seconds": 45
+}

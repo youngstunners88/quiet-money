@@ -156,53 +156,14 @@ def fix_title():
 if not fix_title(): die("title still not exact before upload")
 print("title verified")
 SCHEDULE=os.environ.get("YT_SCHEDULE","")                         # "YYYY-MM-DD HH:MM" in the phone's local time: publish later instead of now (daily-cap fix, skill faceless-youtube-schedule)
-def raw_nodes():
-    x=subprocess.run("adb exec-out uiautomator dump /dev/tty",shell=True,capture_output=True,text=True).stdout
-    for m in re.finditer(r'<node[^>]*?text="([^"]*)"[^>]*?resource-id="([^"]*)"[^>]*?content-desc="([^"]*)"[^>]*?bounds="\[(\d+),(\d+)\]\[(\d+),(\d+)\]"',x):
-        yield html.unescape(m.group(1)),m.group(2),html.unescape(m.group(3)),((int(m.group(4))+int(m.group(6)))//2,(int(m.group(5))+int(m.group(7)))//2)
-def tap_node(pred,wait=8):
-    end=time.time()+wait
-    while True:
-        for t,rid,cd,c in raw_nodes():
-            if pred(t,rid,cd): adb(f"input tap {c[0]} {c[1]}"); time.sleep(1.5); return True
-        if time.time()>=end: return False
-        time.sleep(1.5)
-def schedule_visibility(when):
-    import datetime
-    d=datetime.datetime.strptime(when,"%Y-%m-%d %H:%M")
-    if not tap_node(lambda t,r,c:t=="Visibility" or c=="Visibility"): tap_xy=adb("input tap 540 1135"); time.sleep(2)
-    else: time.sleep(1.5)
-    if not find(lambda t:t=="Set visibility",6): adb("input tap 540 1135"); time.sleep(2)
-    if not find(lambda t:t=="Set visibility",6): die("visibility sheet missing")
-    adb("input tap 540 1176"); time.sleep(2)                     # the Schedule row expands
-    adb("input tap 540 857"); time.sleep(2.5)                    # the date field opens the calendar
-    months=(d.year-2026)*12+d.month-11                           # the calendar opens on the default month: step the arrow for later months
-    for _ in range(max(0,months)):
-        if not tap_node(lambda t,r,c:"next month" in c.lower() or r.endswith("next_month") or c=="Next month",3): adb("input tap 843 893"); time.sleep(1)
-    want_cd=d.strftime("%d %B %Y")
-    if not tap_node(lambda t,r,c:c==want_cd,6): die("calendar day "+want_cd+" not found")
-    if not tap_node(lambda t,r,c:t=="OK",5): die("date OK missing")
-    time.sleep(1.5)
-    if not find(lambda t:t=="Set time",5) and not find(lambda t:"hour" in t,3): pass
-    tap_node(lambda t,r,c:"keyboard" in c.lower() or r.endswith("material_timepicker_mode_button"),4)   # switch the clock to typed input
-    time.sleep(1.5)
-    ok_h=tap_node(lambda t,r,c:r.endswith("input_hour"),4)
-    adb("input keyevent 123"); [adb("input keyevent 67") for _ in range(3)]; adb(f"input text {d.hour:02d}"); time.sleep(.8)
-    tap_node(lambda t,r,c:r.endswith("input_minute"),4)
-    adb("input keyevent 123"); [adb("input keyevent 67") for _ in range(3)]; adb(f"input text {d.minute:02d}"); time.sleep(.8)
-    if not tap_node(lambda t,r,c:t=="OK",5): die("time OK missing")
-    time.sleep(2)
-    got=[t for t,_,_ in tree() if "Local Time" in t]
-    want_txt=d.strftime("%b ")+str(d.day)+d.strftime(", %Y, %H:%M")
-    if not any(want_txt in g for g in got): die(f"schedule not set: wanted {want_txt}, page shows {got}")
-    print("scheduled for",want_txt)
-    adb("input keyevent 4"); time.sleep(2)                       # back to the details page
-    if not find(lambda t:t.startswith("Add details") or t=="Upload Short" or t=="Schedule",8): die("did not return to details after scheduling")
+if SCHEDULE:
+    sys.path.insert(0,os.path.dirname(os.path.abspath(__file__)))
+    import datetime,yt_schedule
 if os.environ.get("YT_EXPLORE"):                                  # stop on the Visibility sheet and dump it (building the schedule step)
     v=find(lambda t:t=="Visibility",6)
     if v: tap(v); time.sleep(3)
     shot("visibility"); print("EXPLORE",[t for t,_,_ in tree()]); sys.exit(0)
-if SCHEDULE: schedule_visibility(SCHEDULE)
+if SCHEDULE: yt_schedule.schedule_on_details(datetime.datetime.strptime(SCHEDULE,"%Y-%m-%d %H:%M"),die)
 up=find(lambda t:t in("Upload Short","Schedule"),6)
 if not up: die("upload button missing")
 shot("before_upload"); tap(up); time.sleep(8)

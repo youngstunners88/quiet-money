@@ -1,0 +1,7 @@
+{
+ "id": "g4-perplexity-unclaimed",
+ "app": "perplexity",
+ "prompt": "Is searching for unclaimed property on state treasurer websites and MissingMoney.com free? Which official organization sponsors MissingMoney.com? Answer in 60 words with sources.",
+ "out": "production/lanes/out/g4-perplexity-unclaimed.md",
+ "max_seconds": 45
+}

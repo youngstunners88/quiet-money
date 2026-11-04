@@ -1,0 +1,7 @@
+{
+ "id": "g3-gemini-hooks",
+ "app": "gemini",
+ "prompt": "Write 3 alternative opening lines (under 18 words each, each with a number and the word you) for a 60-second finance Short titled: A Two Week Loan Can Cost You 391 Percent A Year. Plain text, numbered.",
+ "out": "production/lanes/out/g3-gemini-hooks.md",
+ "max_seconds": 45
+}

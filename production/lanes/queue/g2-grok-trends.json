@@ -1,0 +1,7 @@
+{
+ "id": "g2-grok-trends",
+ "app": "grok",
+ "prompt": "What personal finance and money topics are people on X arguing about or sharing today? Give 8 specific topics as one line each (topic, why it is hot). No advice, just topics.",
+ "out": "production/lanes/out/g2-grok-trends.md",
+ "max_seconds": 45
+}
