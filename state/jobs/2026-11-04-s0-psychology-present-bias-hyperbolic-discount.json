@@ -4,13 +4,74 @@
   "topic": "Present Bias (Hyperbolic Discounting)",
   "day": "2026-11-04",
   "slot": 0,
-  "status": "planned",
-  "history": [],
+  "status": "published",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-11-04T09:23:21Z",
+      "words": 173
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-11-04T09:24:36Z",
+      "seconds": 68.122,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-11-04T09:24:53Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-11-04T09:28:49Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-11-04T09:28:49Z",
+      "score": 95
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-11-04T09:28:50Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-11-04T09:28:52Z",
+      "local": "2026-11-04T07:30:00-05:00",
+      "youtube": null
+    }
+  ],
   "artifacts": {
     "angle": "Explain why human neurology over-values immediate small rewards over massive future gains (choosing $50 today over $100 next year). Show how this bias quietly destroys compound growth in retirement accounts over a 30-year horizon. Counter-move: pre-commitment mechanisms that lock future income straight into investment vehicles.",
-    "hook": "Your brain is hardwired to choose $50 right now over $500 next year—and banks profit millions off it."
+    "hook": "Your brain is hardwired to choose $50 right now over $500 next year—and banks profit millions off it.",
+    "title": "Why Your Brain Chooses $50 Now Over $100 Next Year",
+    "style": "cinematic",
+    "video": "/home/user/quiet-money/production/output/2026-11-04/2026-11-04-s0-psychology-present-bias-hyperbolic-discount/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-11-04/2026-11-04-s0-psychology-present-bias-hyperbolic-discount/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-11-04/slot1-psychology",
+        "post_at": "2026-11-04T07:30:00-05:00"
+      },
+      "youtube": {
+        "skipped": "YouTube refused the upload session (HTTP 429): quota or rate limit; it resets at midnight Pacific"
+      }
+    }
   },
-  "scores": {},
-  "cost": {},
+  "scores": {
+    "gauntlet": 95,
+    "passed": true
+  },
+  "cost": {
+    "tts:edge:chars": 1115
+  },
   "notes": []
 }

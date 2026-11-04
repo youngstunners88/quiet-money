@@ -1,0 +1,78 @@
+{
+  "id": "2026-11-04-s1-escape-the-friction-dial-harder-can-mea",
+  "pillar": "escape",
+  "topic": "The friction dial: harder can mean better customers",
+  "day": "2026-11-04",
+  "slot": 1,
+  "status": "published",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-11-04T09:32:11Z",
+      "words": 158
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-11-04T09:34:04Z",
+      "seconds": 62.794,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-11-04T09:36:50Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-11-04T09:40:27Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-11-04T09:40:27Z",
+      "score": 91
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-11-04T09:40:27Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-11-04T09:40:30Z",
+      "local": "2026-11-04T11:30:00-05:00",
+      "youtube": null
+    }
+  ],
+  "artifacts": {
+    "angle": "more steps and questions cut sign-ups but raise quality; finding the sweet spot (Hormozi)",
+    "brief": "hormozi",
+    "hook": "Making something harder to buy can bring better buyers.",
+    "title": "Why Making Things Harder Makes Better Buyers",
+    "style": "cinematic",
+    "video": "/home/user/quiet-money/production/output/2026-11-04/2026-11-04-s1-escape-the-friction-dial-harder-can-mea/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-11-04/2026-11-04-s1-escape-the-friction-dial-harder-can-mea/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-11-04/slot2-escape",
+        "post_at": "2026-11-04T11:30:00-05:00"
+      },
+      "youtube": {
+        "skipped": "YouTube refused the upload session (HTTP 429): quota or rate limit; it resets at midnight Pacific"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 91,
+    "passed": true
+  },
+  "cost": {
+    "tts:edge:chars": 925
+  },
+  "notes": []
+}

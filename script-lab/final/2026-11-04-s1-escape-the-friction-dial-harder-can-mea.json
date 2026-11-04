@@ -1,0 +1,96 @@
+{
+  "title": "Why Making Things Harder Makes Better Buyers",
+  "hook_text": "MAKING SOMETHING HARDER TO BUY BRINGS BETTER BUYERS",
+  "beats": [
+    {
+      "say": "You spent weeks building an offer, but your sign-up form gets 100 dead leads a week.",
+      "callout": "",
+      "visual": "Extreme wide shot of a solitary figure walking across a wet concrete plaza at blue hour."
+    },
+    {
+      "say": "How do you stop wasting time on buyers who never buy?",
+      "callout": "THE BIG QUESTION",
+      "visual": "Low angle shot of a massive steel bridge underpass cutting through grey fog."
+    },
+    {
+      "say": "Most people think you need to make checkout faster and easier to grow your customer list.",
+      "callout": "EASY VS HARD",
+      "visual": "Close up of worn hands sliding a plain metal latch on an old wooden door."
+    },
+    {
+      "say": "That assumption costs you thousands in wasted support calls and refunds from the wrong crowd.",
+      "callout": "",
+      "visual": "High angle shot of heavy rain striking dark asphalt in a narrow alley."
+    },
+    {
+      "say": "Here is the friction dial: adding steps and questions cuts total volume.",
+      "callout": "STEP ONE",
+      "visual": "Extreme close up of a heavy brass key turning slowly in a dark lock."
+    },
+    {
+      "say": "Why would you intentionally turn away potential sign-ups?",
+      "callout": "",
+      "visual": "Silhouette of a person standing on a windy concrete rooftop against gray clouds."
+    },
+    {
+      "say": "Because it filters out tire kickers and leaves only the buyers who actually value the result.",
+      "callout": "STEP TWO",
+      "visual": "Single practical light cutting through deep shadows in an empty brick warehouse."
+    },
+    {
+      "say": "About 1 in 5 US businesses close by year five, often drowning in poor customers.",
+      "callout": "1 IN 5",
+      "visual": "Wide shot of rusting industrial pipes running along a damp stone wall."
+    },
+    {
+      "say": "Instead of removing friction from the start, you add hoops once your flow works.",
+      "callout": "STEP THREE",
+      "visual": "Low angle shot of a heavy steel door bolted shut in a concrete wall."
+    },
+    {
+      "say": "You trade raw volume for high intent by forcing questions before checkout.",
+      "callout": "",
+      "visual": "Extreme close up of heavy iron chain links resting on wet gravel."
+    },
+    {
+      "say": "That exact friction sweet spot protects your time and raises your average order quality.",
+      "callout": "",
+      "visual": "Blue hour wide shot of an empty highway bridge stretching into fog."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "FOLLOW",
+      "visual": "Single sodium light glowing through heavy mist on a dark suburban road."
+    }
+  ],
+  "caption": "Making something harder to buy can bring better buyers. #MoneyPsychology #BusinessRules #QuietMoney #WealthBuilding #Entrepreneurship",
+  "description": "Adding friction and questions to your offer cuts low-quality volume and attracts better buyers. Here is how to find the sweet spot.",
+  "hashtags": [
+    "#MoneyPsychology",
+    "#BusinessRules",
+    "#QuietMoney",
+    "#WealthBuilding",
+    "#Entrepreneurship"
+  ],
+  "first_comment": "What is the hardest step in your current offer?",
+  "facts": [
+    {
+      "claim": "About 1 in 5 US businesses close in their first year and close to half by year five",
+      "basis": "US Bureau of Labor Statistics, Business Employment Dynamics"
+    }
+  ],
+  "source": "llm",
+  "pillar": "escape",
+  "look": "",
+  "loop_map": {
+    "stakes": "You spent weeks building an offer, but your sign-up form gets 100 dead leads a week.",
+    "big_question": "How do you stop wasting time on buyers who never buy?",
+    "assume": "make checkout faster and easier",
+    "reveal": "adding steps and questions cuts total volume while raising quality",
+    "rehook_beats": [
+      6,
+      8
+    ],
+    "payoff_beat": 10
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "title": "The Math Myth That Keeps Your Wallet Empty",
+  "hook_text": "YOU DON'T NEED GOOD MATH",
+  "beats": [
+    {
+      "say": "You don't need to be good at math to manage money.",
+      "callout": "",
+      "visual": "Extreme close-up of a vintage pocket calculator resting on a wet concrete ledge under cold sodium light, empty highway at night."
+    },
+    {
+      "say": "You need one blank page and a calculator.",
+      "callout": "STEP ONE",
+      "visual": "Low-angle shot of a single blank white sheet flapping against a cold glass window in pouring rain, blue hour."
+    },
+    {
+      "say": "Most people think a budget requires calculus or an accounting degree.",
+      "callout": "MYTH VS FACT",
+      "visual": "Silhouette of a person hunched over a heavy desk in an empty warehouse under a single dim fluorescent tube."
+    },
+    {
+      "say": "They stare at spreadsheets until they freeze and quit.",
+      "callout": "",
+      "visual": "Extreme wide shot of a lone skyscraper window glowing yellow against a vast dark mountain ridge line."
+    },
+    {
+      "say": "Here's what everyday money decisions actually demand from you.",
+      "callout": "",
+      "visual": "High-angle shot of a single metal pen resting on cold dark asphalt under an underpass."
+    },
+    {
+      "say": "You add your income. You subtract your rent and food.",
+      "callout": "",
+      "visual": "Close-up of weathered hands flipping the page of a blank notebook in deep fog."
+    },
+    {
+      "say": "And you use one multiplication for your annual targets.",
+      "callout": "ONE MULTIPLY",
+      "visual": "Extreme close-up of metallic calculator buttons reflecting a cold blue neon light in the dark."
+    },
+    {
+      "say": "Your phone does every hard calculation in three seconds flat.",
+      "callout": "",
+      "visual": "Silhouette of hands holding a dark smartphone against a massive concrete bridge support at night."
+    },
+    {
+      "say": "The math isn't the hurdle holding your wealth back.",
+      "callout": "",
+      "visual": "Low-angle shot of a heavy steel bridge tower cutting through a dense bank of fog."
+    },
+    {
+      "say": "It's the habit of hiding from the numbers entirely.",
+      "callout": "FACE THE NUMBERS",
+      "visual": "Extreme wide shot of an empty highway stretching into a black horizon under a cold moon."
+    },
+    {
+      "say": "Pick up your phone. Write down today's exact balance.",
+      "callout": "GET STARTED",
+      "visual": "Close-up of a single drop of rain hitting a dark glass surface, reflecting sodium light."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "FOLLOW NOW",
+      "visual": "Extreme wide shot of a tiny human figure standing on a vast open concrete plaza at dawn."
+    }
+  ],
+  "caption": "The math excuse stops here. You only need basic arithmetic and a phone calculator to run your money. #MoneyRules #PersonalFinance #FinancialLiteracy #Budgeting #QuietMoney",
+  "description": "You do not need an advanced degree or complex math to manage your money successfully. Everyday financial decisions require only basic addition, subtraction, and one multiplication.",
+  "hashtags": [
+    "#MoneyRules",
+    "#PersonalFinance",
+    "#FinancialLiteracy",
+    "#Budgeting",
+    "#QuietMoney"
+  ],
+  "first_comment": "What's the hardest number for you to look at in your budget right now?",
+  "facts": [
+    {
+      "claim": "Everyday money decisions require adding, subtracting, and one multiplication.",
+      "basis": "Basic arithmetic sufficiency for personal budgeting."
+    }
+  ],
+  "source": "llm",
+  "pillar": "myth",
+  "look": "",
+  "loop_map": {
+    "stakes": "The daily avoidance of personal finance numbers due to math anxiety.",
+    "big_question": "How much math do you actually need to manage your money?",
+    "assume": "Most people assume money management requires advanced calculus or an accounting degree.",
+    "reveal": "Everyday money decisions only need adding, subtracting, and one multiplication.",
+    "rehook_beats": [
+      5,
+      9
+    ],
+    "payoff_beat": 8
+  }
+}

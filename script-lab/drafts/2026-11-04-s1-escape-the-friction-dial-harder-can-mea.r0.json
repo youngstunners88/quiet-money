@@ -1,0 +1,101 @@
+{
+  "title": "Why Making Your Offer Harder To Buy Raises Quality",
+  "hook_text": "MAKING IT HARDER TO BUY BRINGS BETTER BUYERS",
+  "beats": [
+    {
+      "say": "Making something harder to buy can bring better buyers.",
+      "callout": "",
+      "visual": "Extreme close-up of a heavy metal vault door closing, dark industrial lighting, low angle."
+    },
+    {
+      "say": "Most sellers think every customer is a good customer.",
+      "callout": "",
+      "visual": "Wide shot of an empty highway disappearing into a dense gray fog at dusk."
+    },
+    {
+      "say": "How do you filter out the noise and attract people who actually pay?",
+      "callout": "",
+      "visual": "Low angle of a towering brutalist concrete bridge over dark open water."
+    },
+    {
+      "say": "You add friction to the checkout.",
+      "callout": "ADD FRICTION",
+      "visual": "Silhouette of a lone person walking past a single sodium streetlamp on wet asphalt."
+    },
+    {
+      "say": "More steps and strict questions cut your total sign-ups.",
+      "callout": "LESS VOLUME",
+      "visual": "Extreme wide shot of a solitary figure standing on a dark ridge line at blue hour."
+    },
+    {
+      "say": "That drop feels terrifying when you need revenue today.",
+      "callout": "FEAR OF LOSS",
+      "visual": "Close-up of heavy rain hitting a dark car window with blurred streetlights behind."
+    },
+    {
+      "say": "Why would anyone want fewer leads knocking on their door?",
+      "callout": "WHY FEWER",
+      "visual": "High angle looking down at an empty multi-lane highway crossing a concrete overpass."
+    },
+    {
+      "say": "Because cheap leads bring endless complaints and refunds.",
+      "callout": "CHEP VS DEAR",
+      "visual": "Silhouette of a worker standing against a massive glowing industrial crane at night."
+    },
+    {
+      "say": "Adding qualifications weeds out the buyers who drain your time.",
+      "callout": "FILTER OUT",
+      "visual": "Extreme close-up of heavy steel chains resting on cold wet concrete."
+    },
+    {
+      "say": "The sweet spot is the exact point where volume drops and quality surges.",
+      "callout": "SWEET SPOT",
+      "visual": "Low angle shot of a massive concrete dam wall under pale moonlight."
+    },
+    {
+      "say": "Build the filter before you scale the traffic.",
+      "callout": "",
+      "visual": "Wide shot of a single warm practical light cutting through a dark concrete underpass."
+    },
+    {
+      "say": "About 1 in 5 US businesses close in their first year.",
+      "callout": "",
+      "visual": "Extreme wide shot of a massive empty industrial yard under a cold gray sky."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "Silhouette of a person walking away down a wet asphalt road toward a single light."
+    }
+  ],
+  "caption": "The friction dial changes everything about your customer quality. #moneypsychology #businessrules #entrepreneurship #smartmoney #quietmoney",
+  "description": "Adding steps and questions to an offer cuts low-quality volume and brings better buyers.",
+  "hashtags": [
+    "#moneypsychology",
+    "#businessrules",
+    "#entrepreneurship",
+    "#smartmoney",
+    "#quietmoney"
+  ],
+  "first_comment": "What is the hardest friction test you have ever faced as a buyer?",
+  "facts": [
+    {
+      "claim": "About 1 in 5 US businesses close in their first year",
+      "basis": "US Bureau of Labor Statistics, Business Employment Dynamics"
+    }
+  ],
+  "source": "llm",
+  "pillar": "escape",
+  "look": "",
+  "loop_map": {
+    "stakes": "Sellers lose money chasing every low-quality lead that crosses their path.",
+    "big_question": "Why would anyone want fewer leads knocking on their door?",
+    "assume": "More traffic and easier checkout always equal a better business.",
+    "reveal": "Adding friction cuts volume but raises customer quality and retention.",
+    "rehook_beats": [
+      7,
+      10
+    ],
+    "payoff_beat": 10
+  }
+}

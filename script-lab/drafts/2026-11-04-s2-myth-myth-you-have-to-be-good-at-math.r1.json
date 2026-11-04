@@ -1,0 +1,110 @@
+{
+  "title": "The Math Myth That Keeps Your Money Trapped",
+  "hook_text": "YOU DON'T NEED ADVANCED MATH",
+  "beats": [
+    {
+      "say": "You don't need to be good at math to manage money.",
+      "callout": "",
+      "visual": "Extreme close-up of a fountain pen hovering over a blank white ledger page under a single practical brass desk lamp, blue hour."
+    },
+    {
+      "say": "You need one page and a calculator.",
+      "callout": "ONE PAGE",
+      "visual": "Low angle shot of a vintage metal pocket calculator resting on wet asphalt at night under sodium street lighting."
+    },
+    {
+      "say": "Most people assume building wealth takes a complex calculus degree.",
+      "callout": "COMPLEX VS SIMPLE",
+      "visual": "Extreme wide shot of a solitary commuter walking across an empty concrete train platform in the fog."
+    },
+    {
+      "say": "They think a single wrong decimal point will ruin their life.",
+      "callout": "",
+      "visual": "Close-up of rain-slicked glass on a skyscraper window reflecting neon lights in cold blue tones."
+    },
+    {
+      "say": "So why do people who hate numbers still build fortunes?",
+      "callout": "THE REAL QUESTION",
+      "visual": "Silhouette of a person standing at the edge of a massive concrete highway overpass at dusk."
+    },
+    {
+      "say": "Because everyday money decisions only need adding, subtracting, and one multiplication.",
+      "callout": "",
+      "visual": "Overhead shot of a hand turning a blank page in a heavy leather notebook on a dark wood table."
+    },
+    {
+      "say": "That is it.",
+      "callout": "",
+      "visual": "Extreme close-up of dark coffee rippling in a ceramic mug under cold fluorescent light."
+    },
+    {
+      "say": "Take a $3,000 credit card balance at 24% APR paying only the minimum.",
+      "callout": "183 MONTHS",
+      "visual": "Low angle shot of a heavy steel bridge truss cutting across a grey winter sky."
+    },
+    {
+      "say": "It takes 15 years and costs $4,887 in interest.",
+      "callout": "$4,887 INTEREST",
+      "visual": "Wide shot of empty train tracks vanishing into a dark tunnel under sodium light."
+    },
+    {
+      "say": "Now look what happens when you change just one monthly number.",
+      "callout": "",
+      "visual": "Close-up of a wet brass key sliding into a heavy deadbolt on an old oak door."
+    },
+    {
+      "say": "Pay $300 a month instead of the minimum on that exact same balance.",
+      "callout": "300 VS MINIMUM",
+      "visual": "High angle shot of a lone pedestrian crossing a rain-slicked intersection at night."
+    },
+    {
+      "say": "The timeline drops from 15 years down to 12 months.",
+      "callout": "12 MONTHS",
+      "visual": "Extreme close-up of a digital watch ticking over in the dark under a blue security light."
+    },
+    {
+      "say": "That is subtraction, addition, and one division working for you.",
+      "callout": "",
+      "visual": "Silhouette of a person walking up a steep concrete ridge line against a cold morning fog."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "Extreme wide shot of a solitary lighthouse beam cutting through dense coastal fog at night."
+    }
+  ],
+  "caption": "You don't need a math degree to fix your finances. Just a calculator and the right rules. #MoneyMyths #PersonalFinance #FinancialLiteracy #SmartMoney #MoneyTips",
+  "description": "Debunking the myth that you need advanced math to manage money. Everyday financial choices only require basic arithmetic and a phone calculator.",
+  "hashtags": [
+    "#MoneyMyths",
+    "#PersonalFinance",
+    "#FinancialLiteracy",
+    "#SmartMoney",
+    "#MoneyTips"
+  ],
+  "first_comment": "What is the one math concept that used to scare you about money?",
+  "facts": [
+    {
+      "claim": "$3,000 credit card at 24% APR paying minimum takes 183 months and costs $4,887 in interest",
+      "basis": "Fact sheet calculation for credit card minimum payments"
+    },
+    {
+      "claim": "Same $3,000 balance paying $300/month takes 12 months and costs $381 in interest",
+      "basis": "Fact sheet calculation for fixed payments"
+    }
+  ],
+  "source": "llm",
+  "pillar": "myth",
+  "look": "",
+  "loop_map": {
+    "stakes": "A person facing credit card debt and feeling intimidated by numbers",
+    "big_question": "Why do people who hate numbers still build fortunes?",
+    "assume": "Building wealth requires complex calculus and advanced math",
+    "reveal": "Everyday money decisions only need basic addition, subtraction, and one multiplication",
+    "rehook_beats": [
+      5,
+      10
+    ],
+    "payoff_beat": 13
+  }
+}

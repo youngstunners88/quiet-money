@@ -1,0 +1,67 @@
+{
+  "id": "2026-11-04-s2-myth-myth-you-have-to-be-good-at-math",
+  "pillar": "myth",
+  "topic": "Myth: you have to be good at math to manage money",
+  "day": "2026-11-04",
+  "slot": 2,
+  "status": "held",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-11-04T09:41:48Z",
+      "words": 170
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-11-04T09:42:52Z",
+      "seconds": 61.773,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-11-04T09:43:20Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-11-04T09:46:15Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-11-04T09:46:15Z",
+      "score": 94
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-11-04T09:46:16Z"
+    },
+    {
+      "from": "packaged",
+      "to": "held",
+      "ts": "2026-11-04T09:46:16Z"
+    }
+  ],
+  "artifacts": {
+    "angle": "name the belief; everyday money decisions need adding, subtracting and one multiplication, and a phone calculator does the rest; counter-move: one page and one calculator; no figure claimed",
+    "hook": "You don't need to be good at math. You need one page and a calculator.",
+    "title": "The Math Myth That Keeps Your Money Trapped",
+    "style": "cinematic",
+    "video": "/home/user/quiet-money/production/output/2026-11-04/2026-11-04-s2-myth-myth-you-have-to-be-good-at-math/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-11-04/2026-11-04-s2-myth-myth-you-have-to-be-good-at-math/cover.jpg"
+  },
+  "scores": {
+    "gauntlet": 94,
+    "passed": false
+  },
+  "cost": {
+    "tts:edge:chars": 985
+  },
+  "notes": [
+    "held for review: originality"
+  ]
+}

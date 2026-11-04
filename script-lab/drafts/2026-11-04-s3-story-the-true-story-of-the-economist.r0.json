@@ -1,0 +1,91 @@
+{
+  "title": "Why Savings Rate Beats High Salary",
+  "hook_text": "A $45,000 SALARY CAN BEAT A $150,000 SALARY",
+  "beats": [
+    {
+      "say": "A groundbreaking study proved that someone making $45,000 can retire richer than someone making $150,000.",
+      "callout": "",
+      "visual": "Extreme wide shot of a lone commuter walking across a massive rain-slick concrete plaza at blue hour."
+    },
+    {
+      "say": "How did an economist prove that your paycheck size doesn't actually dictate your financial freedom?",
+      "callout": "$45,000 VS $150,000",
+      "visual": "Low angle shot of a towering brutalist concrete office building cutting into a foggy night sky."
+    },
+    {
+      "say": "Most people assume building wealth is just about climbing the corporate ladder and earning a bigger salary.",
+      "callout": "SALARY VS SAVINGS",
+      "visual": "Close up of heavy steel vault gears turning under a single harsh industrial light."
+    },
+    {
+      "say": "But economist Vicki Robin tracked the math and found that your savings rate matters exponentially more.",
+      "callout": "THE REAL MATH",
+      "visual": "Silhouette of a person's hands flipping through heavy paper financial ledgers by desk lamp."
+    },
+    {
+      "say": "Why does a higher earner often end up working decades longer than a modest earner?",
+      "callout": "TIME TRAP",
+      "visual": "Extreme close up of a ticking pocket watch resting on cold wet asphalt at night."
+    },
+    {
+      "say": "Lifestyle inflation quietly swallows every extra dollar that hits a high earner's bank account.",
+      "callout": "COST OF LIVING",
+      "visual": "High angle shot of yellow cab headlights cutting through a dense urban rainstorm."
+    },
+    {
+      "say": "Bigger apartment, luxury car lease, and expensive dinners trap high earners in a golden cage.",
+      "callout": "GOLDEN CAGE",
+      "visual": "Silhouette of a person standing behind floor-to-ceiling glass in a high-rise tower at dusk."
+    },
+    {
+      "say": "Meanwhile, the lower earner keeps their baseline expenses low and invests the rest consistently.",
+      "callout": "STEP ONE",
+      "visual": "Extreme close up of a single coin dropping into a dark wooden box on a stark table."
+    },
+    {
+      "say": "They cut their required living costs down so their accumulated investments cover their actual life.",
+      "callout": "",
+      "visual": "Low angle view of a bridge arch spanning dark, cold open water at night."
+    },
+    {
+      "say": "Financial freedom isn't about the total amount you earn. It's the percentage you keep.",
+      "callout": "",
+      "visual": "Sodium light cutting across an empty highway overpass with zero traffic."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "Silhouette of a person walking away down a dim concrete underpass toward a distant light."
+    }
+  ],
+  "caption": "Your salary isn't what makes you rich. Your savings rate is. #moneypsychology #personalfinance #wealthbuilding #financialfreedom #smartmoney",
+  "description": "An economic study proves why your savings rate matters exponentially more than your income level for achieving absolute financial freedom.",
+  "hashtags": [
+    "#moneypsychology",
+    "#personalfinance",
+    "#wealthbuilding",
+    "#financialfreedom",
+    "#smartmoney"
+  ],
+  "first_comment": "What's your current savings rate? Drop your percentage below.",
+  "facts": [
+    {
+      "claim": "Someone making $45,000 can retire richer than someone making $150,000 by changing savings rate",
+      "basis": "Vicki Robin and Joe Dominguez, Your Money or Your Life math on savings rate versus absolute income."
+    }
+  ],
+  "source": "llm",
+  "pillar": "story",
+  "look": "",
+  "loop_map": {
+    "stakes": "A $45,000 earner retiring richer than a $150,000 earner.",
+    "big_question": "How did an economist prove that your paycheck size doesn't actually dictate your financial freedom?",
+    "assume": "Building wealth is just about earning a bigger salary.",
+    "reveal": "Your savings rate matters exponentially more than your income level.",
+    "rehook_beats": [
+      5,
+      8
+    ],
+    "payoff_beat": 10
+  }
+}

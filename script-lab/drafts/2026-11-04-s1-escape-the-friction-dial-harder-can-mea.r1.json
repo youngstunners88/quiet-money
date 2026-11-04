@@ -1,0 +1,96 @@
+{
+  "title": "Why Harder To Buy Means Better Customers",
+  "hook_text": "MAKING IT HARDER TO BUY BRINGS BETTER BUYERS",
+  "beats": [
+    {
+      "say": "Making something harder to buy can bring better buyers.",
+      "callout": "",
+      "visual": "Extreme close-up of a brass door lock turning in cold blue dusk light."
+    },
+    {
+      "say": "If you want clients who never ask for refunds, why do you make checkout so easy?",
+      "callout": "EASY VS HARD",
+      "visual": "Low angle shot of a heavy steel gate sliding shut on a rain-slick street."
+    },
+    {
+      "say": "Most people assume fewer steps mean more sales.",
+      "callout": "THE ASSUMPTION",
+      "visual": "Wide silhouette of a lone commuter walking past glowing storefronts at night."
+    },
+    {
+      "say": "That is wrong. According to Alex Hormozi, adding checkout qualifications weeds out cheap leads who drain your time.",
+      "callout": "STEP ONE",
+      "visual": "Extreme close-up of a fountain pen signing a dark contract under sodium lights."
+    },
+    {
+      "say": "How do you filter out bad buyers without killing your revenue?",
+      "callout": "THE QUESTION",
+      "visual": "High angle shot of empty highway lanes cutting through a concrete overpass."
+    },
+    {
+      "say": "Get sales flowing first, then add friction so you don't filter out zero volume.",
+      "callout": "STEP TWO",
+      "visual": "Close-up of a single practical light bulb swinging in a dark, damp concrete room."
+    },
+    {
+      "say": "Every extra question and qualification cuts volume but raises buyer quality.",
+      "callout": "QUALITY VS VOLUME",
+      "visual": "Extreme wide shot of a solitary figure standing on a massive concrete dam at dusk."
+    },
+    {
+      "say": "What is the honest catch for building a business this way?",
+      "callout": "",
+      "visual": "Low angle shot of rusted iron girders under a heavy grey fog."
+    },
+    {
+      "say": "About 1 in 5 US businesses close in their first year, and close to half by year five.",
+      "callout": "1 IN 5",
+      "visual": "Close-up of a weathered brick wall struck by cold morning light."
+    },
+    {
+      "say": "This requires massive effort, and nobody can promise your results.",
+      "callout": "",
+      "visual": "Silhouette of a lone worker climbing an industrial tower against a dark sky."
+    },
+    {
+      "say": "This week, add one qualification question to your checkout form.",
+      "callout": "",
+      "visual": "Extreme close-up of a mechanical timer ticking down on a dark metal desk."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "Wide shot of a single amber light cutting through a deep urban fog."
+    }
+  ],
+  "caption": "Making something harder to buy brings better buyers. #moneypsychology #businessgrowth #personalfinance #wealthmindset #financialfreedom",
+  "description": "Learn why adding friction to your checkout process can weed out cheap leads and attract higher-quality customers.",
+  "hashtags": [
+    "#moneypsychology",
+    "#businessgrowth",
+    "#personalfinance",
+    "#wealthmindset",
+    "#financialfreedom"
+  ],
+  "first_comment": "Would you add friction to your offer if it meant higher-paying customers?",
+  "facts": [
+    {
+      "claim": "About 1 in 5 US businesses close in their first year and close to half by year five",
+      "basis": "US Bureau of Labor Statistics, Business Employment Dynamics"
+    }
+  ],
+  "source": "llm",
+  "pillar": "escape",
+  "look": "",
+  "loop_map": {
+    "stakes": "Your checkout process and customer quality are at risk.",
+    "big_question": "How do you filter out bad buyers without killing your revenue?",
+    "assume": "Fewer steps mean more sales.",
+    "reveal": "Adding checkout qualifications weeds out cheap leads.",
+    "rehook_beats": [
+      5,
+      8
+    ],
+    "payoff_beat": 7
+  }
+}

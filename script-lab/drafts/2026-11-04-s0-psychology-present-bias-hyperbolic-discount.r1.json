@@ -1,0 +1,100 @@
+{
+  "title": "Why Your Brain Chooses $50 Now Over $100 Next Year",
+  "hook_text": "YOUR BRAIN CHOOSES $50 OVER $500",
+  "beats": [
+    {
+      "say": "Your brain is hardwired to choose $50 right now over $500 next year—and banks profit millions off it.",
+      "callout": "",
+      "visual": "Extreme close-up of worn leather wallet edges under harsh sodium light on wet asphalt."
+    },
+    {
+      "say": "Why does the human nervous system completely penalize future rewards while aggressively overvaluing immediate cash?",
+      "callout": "WIRED FOR NOW",
+      "visual": "Low angle silhouette of a person walking past a towering concrete underpass at dusk."
+    },
+    {
+      "say": "Most people assume this is just poor discipline or a lack of personal willpower.",
+      "callout": "DISCIPLINE VS BIOLOGY",
+      "visual": "Cold fluorescent light reflecting off a dark, rain-slick empty highway at midnight."
+    },
+    {
+      "say": "That is false. Neuroscientists call it hyperbolic discounting, an evolutionary survival mechanism.",
+      "callout": "THE BRAIN'S GLITCH",
+      "visual": "Extreme wide shot of a solitary glowing window on a massive brutalist concrete tower edge."
+    },
+    {
+      "say": "Our ancestors faced immediate threats, so immediate food and immediate shelter beat long-term survival every time.",
+      "callout": "SURVIVAL INSTINCT",
+      "visual": "Single practical light cutting through thick blue hour fog over an empty industrial bridge."
+    },
+    {
+      "say": "How does this ancient mental shortcut quietly destroy your long-term retirement accounts?",
+      "callout": "30-YEAR COST",
+      "visual": "Low angle shot of heavy iron bridge girders dripping with cold rain under heavy gray skies."
+    },
+    {
+      "say": "Let us look at the math. Investing $500 a month for 30 years at 8% yields $745,180.",
+      "callout": "$500/MO VS 30 YEARS",
+      "visual": "Extreme close-up of heavy industrial gears turning slowly in deep shadow with amber highlights."
+    },
+    {
+      "say": "If you wait just 10 years to start, that final total drops by hundreds of thousands of dollars.",
+      "callout": "$745,180 VS $294,000",
+      "visual": "Wide shot of dark open water churning violently against a sharp concrete seawall at night."
+    },
+    {
+      "say": "The counter-move is simple. You remove willpower entirely by setting up pre-commitment mechanisms.",
+      "callout": "",
+      "visual": "Silhouette of hands adjusting a heavy steel latch in dim industrial lighting."
+    },
+    {
+      "say": "Lock your future income to route straight into investment vehicles the moment payday hits.",
+      "callout": "",
+      "visual": "Extreme low angle looking straight up at a massive concrete bridge support under sodium vapor."
+    },
+    {
+      "say": "When the money never touches your checking account, your brain stops fighting to spend it.",
+      "callout": "",
+      "visual": "Cold blue hour light fading over an endless expanse of wet empty asphalt highway."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "Single warm practical light shining against a dark, rain-soaked concrete wall at night."
+    }
+  ],
+  "caption": "Your brain is fighting against you every time you look at your paycheck. Fix the system, not your willpower. #moneypsychology #personalfinance #wealthbuilding #investing101 #moneyrules",
+  "description": "Explaining hyperbolic discounting and how pre-commitment mechanisms protect your retirement savings from present bias.",
+  "hashtags": [
+    "#moneypsychology",
+    "#personalfinance",
+    "#wealthbuilding",
+    "#investing101",
+    "#moneyrules"
+  ],
+  "first_comment": "What is one purchase you made this week that you immediately regretted?",
+  "facts": [
+    {
+      "claim": "$500/month invested for 30 years at 8%/yr reaches $745,180",
+      "basis": "MONEY FACT SHEET: $500/month invested for 30 years at 8% (monthly compounding) = $745,180"
+    },
+    {
+      "claim": "$500/month invested for 20 years at 8%/yr reaches $294,510",
+      "basis": "MONEY FACT SHEET: $500/month invested for 20 years at 8% (monthly compounding) = $294,510"
+    }
+  ],
+  "source": "llm",
+  "pillar": "psychology",
+  "look": "",
+  "loop_map": {
+    "stakes": "Your bank account and long-term retirement security are drained by present bias.",
+    "big_question": "How does this ancient mental shortcut quietly destroy your long-term retirement accounts?",
+    "assume": "Most people assume this is just poor discipline or a lack of personal willpower.",
+    "reveal": "Neuroscientists call it hyperbolic discounting, an evolutionary survival mechanism.",
+    "rehook_beats": [
+      6,
+      9
+    ],
+    "payoff_beat": 11
+  }
+}

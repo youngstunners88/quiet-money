@@ -1,0 +1,110 @@
+{
+  "title": "The Math Myth That Keeps Your Money Trapped",
+  "hook_text": "YOU DON'T NEED ADVANCED MATH FOR MONEY",
+  "beats": [
+    {
+      "say": "You don't need to be good at math. You need one page and a calculator.",
+      "callout": "",
+      "visual": "Extreme close-up of a weathered wooden desk under cold fluorescent light, with a single black pen lying across a blank sheet of paper."
+    },
+    {
+      "say": "Most people assume a financial planner needs complex calculus to grow a fortune.",
+      "callout": "MYTH VS FACT",
+      "visual": "Low-angle shot of a towering concrete bridge pier cutting through heavy evening fog."
+    },
+    {
+      "say": "They think a $3,000 credit card balance at 24% APR requires an engineering degree to solve.",
+      "callout": "$3,000 AT 24%",
+      "visual": "Extreme close-up of dark rain slicked asphalt reflecting a single amber sodium light."
+    },
+    {
+      "say": "Instead, everyday money decisions need only adding, subtracting, and one multiplication.",
+      "callout": "ADD AND SUBTRACT",
+      "visual": "Silhouette of a person walking across an open train platform beneath a vast grey sky."
+    },
+    {
+      "say": "Paying only the minimum on that $3,000 balance stretches the debt across 183 months.",
+      "callout": "183 MONTHS",
+      "visual": "High-angle shot of empty highway lanes cutting through a dark industrial wasteland at night."
+    },
+    {
+      "say": "That slow crawl adds up to $4,887 in interest alone.",
+      "callout": "$4,887 INTEREST",
+      "visual": "Extreme wide shot of a solitary metal transmission tower standing alone against a cold horizon."
+    },
+    {
+      "say": "How do you break that cycle without a spreadsheet or a degree?",
+      "callout": "",
+      "visual": "Low-angle shot of rusted steel girders under an overpass in blue hour light."
+    },
+    {
+      "say": "The counter-move is simple: shift from minimum payments to a fixed monthly target.",
+      "callout": "",
+      "visual": "Extreme close-up of a heavy iron bolt holding a dark industrial beam in place."
+    },
+    {
+      "say": "Paying $300 a month instead crushes that exact same balance in just 12 months.",
+      "callout": "12 MONTHS VS 183",
+      "visual": "Silhouette of a single figure standing at the edge of a concrete multi-level parking roof."
+    },
+    {
+      "say": "Total interest drops from thousands down to $381.",
+      "callout": "$381 INTEREST",
+      "visual": "Extreme close-up of a rain drop hitting a dark puddle under sodium street lighting."
+    },
+    {
+      "say": "What stops most earners from making this single calculation today?",
+      "callout": "",
+      "visual": "Low-angle shot of a massive concrete dam wall under overcast grey skies."
+    },
+    {
+      "say": "It is not your math skills. It is the fear of looking at the page.",
+      "callout": "",
+      "visual": "Extreme wide shot of a vast empty shipping yard under cold morning fluorescent light."
+    },
+    {
+      "say": "Grab one blank page and a basic calculator right now.",
+      "callout": "",
+      "visual": "Silhouette of hands resting on a cold metal railing above dark open water."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "Extreme close-up of a single warm practical light glowing against a dark concrete wall."
+    }
+  ],
+  "caption": "You don't need calculus to fix your finances. Just basic math and one page. #MoneyMyth #PersonalFinance #FinancialLiteracy #WealthBuilding #MoneyTips",
+  "description": "You do not need to be good at math to manage money. Everyday decisions require basic arithmetic, a calculator, and a single page.",
+  "hashtags": [
+    "#MoneyMyth",
+    "#PersonalFinance",
+    "#FinancialLiteracy",
+    "#WealthBuilding",
+    "#MoneyTips"
+  ],
+  "first_comment": "What money rule did school fail to teach you?",
+  "facts": [
+    {
+      "claim": "$3,000 credit card at 24% APR paying only the minimum (1% + interest, min $25) takes 183 months and costs $4,887 interest",
+      "basis": "Money Fact Sheet"
+    },
+    {
+      "claim": "Same $3,000 at 24% paying $300/month takes 12 months and costs $381 interest",
+      "basis": "Money Fact Sheet"
+    }
+  ],
+  "source": "llm",
+  "pillar": "myth",
+  "look": "",
+  "loop_map": {
+    "stakes": "Credit card debt costing thousands in hidden interest",
+    "big_question": "How do you break the debt cycle without advanced math?",
+    "assume": "You need complex calculus or a financial degree to manage money",
+    "reveal": "Everyday decisions need only basic arithmetic and a single page",
+    "rehook_beats": [
+      7,
+      11
+    ],
+    "payoff_beat": 10
+  }
+}
