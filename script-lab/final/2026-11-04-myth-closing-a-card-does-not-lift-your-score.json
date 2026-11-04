@@ -1,0 +1,108 @@
+{
+  "title": "Closing A Credit Card Does Not Lift Your Score",
+  "hook_text": "CLOSING ONE CARD: 20% TO 40%",
+  "beats": [
+    {
+      "say": "Closing one card can push you from twenty percent credit use to forty percent.",
+      "callout": "",
+      "visual": "low angle up a monolithic concrete tower where half the windows have gone dark, one amber window left, overcast sky"
+    },
+    {
+      "say": "Many people think closing an unused card cleans up their credit.",
+      "callout": "",
+      "visual": "eye level through a bare concrete doorway at a push broom leaning on a clean gray wall, one warm lamp beyond"
+    },
+    {
+      "say": "That is actually backwards. The Consumer Financial Protection Bureau says closing a card can lower your score.",
+      "callout": "CAN LOWER YOUR SCORE",
+      "visual": "a rain puddle on a concrete plaza reflecting a stark tower upside down, shot at puddle level, overcast"
+    },
+    {
+      "say": "Your score weighs credit use: what you owe divided by your total limits.",
+      "callout": "CREDIT USE",
+      "visual": "worm's-eye view of a huge concrete dam face with a dark waterline staining one fifth of the way up"
+    },
+    {
+      "say": "Say two cards each have a five thousand dollar limit and you owe two thousand. That is twenty percent.",
+      "callout": "20% USED",
+      "visual": "overhead flat shot of a row of ten identical concrete bollards in a plaza, two with warm lit tops, eight dark"
+    },
+    {
+      "say": "Close one card and the same debt sits on five thousand of limit. That is forty percent.",
+      "callout": "40% USED",
+      "visual": "overhead of a rectangular concrete courtyard pool split by a new poured wall, all the dark water crowded on one side"
+    },
+    {
+      "say": "The Bureau adds that keeping an old account with good history may help your score.",
+      "callout": "",
+      "visual": "silhouette of a weathered moss-covered concrete bridge pier standing firm in a river at dusk, long lens compression"
+    },
+    {
+      "say": "Here is the part nobody tells you. Good history can keep reporting after a card closes, so the dip may be minor.",
+      "callout": "",
+      "visual": "a hidden hatch in the seam of a bare concrete floor lifted slightly to show warm light below, overhead flat shot"
+    },
+    {
+      "say": "The honest catch: closing can still make sense when a card has an annual fee or poor terms.",
+      "callout": "THE CATCH",
+      "visual": "a cracked concrete beam bowing over a narrow passage with rebar showing, low angle, cold gray, one faint warm light"
+    },
+    {
+      "say": "Those costs can outweigh a score dip that may be temporary.",
+      "callout": "",
+      "visual": "silhouette of a heavy concrete weight block hanging from a crane hook above a small warm lit doorway, overcast sky"
+    },
+    {
+      "say": "This is education, not personal advice, so check your own reports before you decide.",
+      "callout": "",
+      "visual": "a lone gray bench on an empty concrete train platform with a small warm lamp glowing in soft fog, eye level"
+    },
+    {
+      "say": "So the myth says closing a card lifts your score. The truth is, it can lower it.",
+      "callout": "",
+      "visual": "an enormous concrete seesaw slab tipped steeply on an empty playground, extreme wide shot, one warm lamp on a pole"
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "a lone gray heron stepping through shallow water toward a concrete culvert tunnel with a small warm light inside, long lens"
+    }
+  ],
+  "description": "Many people think closing an unused credit card cleans up their credit. The Consumer Financial Protection Bureau says closing an existing card can raise your credit utilization ratio and lower your score, and that keeping an old account with a positive payment history may help maintain a higher score. Closing can still make sense if a card has an annual fee or poor terms, and the change may be temporary or minor. Educational only, not financial advice.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#creditscore",
+    "#moneymyths",
+    "#quietmoney"
+  ],
+  "first_comment": "Have you ever closed a card and watched your score move? Educational only, not financial advice.",
+  "facts": [
+    {
+      "claim": "Closing an existing credit card can increase your credit utilization ratio and lower your score",
+      "basis": "Consumer Financial Protection Bureau, 'Does it hurt my credit to close a credit card?', consumerfinance.gov/ask-cfpb/does-it-hurt-my-credit-to-close-a-credit-card-en-1231/, checked 2026-11-04"
+    },
+    {
+      "claim": "Keeping an old account open, especially with a positive payment history, may help maintain a higher credit score",
+      "basis": "Consumer Financial Protection Bureau, same page, checked 2026-11-04"
+    },
+    {
+      "claim": "Closing can be reasonable when a card has annual fees or poor terms that outweigh its benefits, and the score change may be temporary or minor",
+      "basis": "Consumer Financial Protection Bureau, same page, checked 2026-11-04"
+    },
+    {
+      "claim": "Positive on-time payment history may keep being reported after an account is closed",
+      "basis": "Consumer Financial Protection Bureau, 'How long does information stay on my credit report?', consumerfinance.gov/ask-cfpb/how-long-does-information-stay-on-my-credit-report-en-323/, checked 2026-11-04"
+    },
+    {
+      "claim": "Example math: two cards with five thousand dollar limits and two thousand dollars owed is 20% utilization (2,000 / 10,000); closing one leaves the same debt on a 5,000 limit, or 40% (2,000 / 5,000)",
+      "basis": "arithmetic from the CFPB definition of utilization (credit used divided by total credit available); illustrative example, not a prediction of any score"
+    }
+  ],
+  "source": "human",
+  "pillar": "myth",
+  "look": "brutalist concrete architecture, overcast sky, stark geometry, cold gray palette, one small warm light",
+  "loop_map": {},
+  "caption": "Closing an unused card does not clean up your score. The CFPB says closing a card can raise your credit utilization and lower your score, though it may be temporary or minor. A card with an annual fee or poor terms can still be worth closing. Educational content, not financial advice.",
+  "look_pack": "brutalist-concrete"
+}

@@ -1,0 +1,104 @@
+{
+  "title": "The Ostrich Effect: Why You Stop Checking Your Money When It Hurts",
+  "hook_text": "LOGINS FALL 9.5% AFTER A MARKET DROP",
+  "beats": [
+    {
+      "say": "Investors log in nine and a half percent less after a market drop. You might too.",
+      "callout": "",
+      "visual": "extreme macro of one fat dewdrop sliding off a fern frond edge, a whole stormy sky flipped upside down inside it"
+    },
+    {
+      "say": "Economists call this the ostrich effect: avoiding bad news by simply not looking.",
+      "callout": "THE OSTRICH EFFECT",
+      "visual": "low angle macro of a small beetle with its head pushed deep into a moss crevice, razor focus on its glossy back"
+    },
+    {
+      "say": "Karlsson, Loewenstein and Seppi published the paper on it in two thousand nine.",
+      "callout": "",
+      "visual": "overhead flat-lay of a split seed pod on dark soil with three seeds spilled out, soft side light"
+    },
+    {
+      "say": "Later, a Vanguard study tracked one point one million investors over two years.",
+      "callout": "1.1M INVESTORS",
+      "visual": "extreme wide aerial of a hillside meadow of thousands of identical tiny blue flax flowers, a sea of blue specks"
+    },
+    {
+      "say": "They reviewed over eight hundred fifty million daily logins and trades.",
+      "callout": "",
+      "visual": "macro along an unbroken trail of ants carrying crumbs across rough bark, focus sweeping down the line"
+    },
+    {
+      "say": "After the prior day's stock market fell, logins dropped nine and a half percent.",
+      "callout": "LOGINS DOWN 9.5%",
+      "visual": "backlit macro of a spider web strung with dew where several strands sag empty and bare, glowing green bokeh behind"
+    },
+    {
+      "say": "In everyday life, it is the retirement app you skip and the statement left sealed.",
+      "callout": "",
+      "visual": "eye level macro of a tightly shut pine cone resting in damp moss, scales clamped closed, drizzle beads on it"
+    },
+    {
+      "say": "Here is the part nobody tells you. Investors holding only bonds did the opposite, logging in more when stocks fell.",
+      "callout": "BONDS FLIPPED IT",
+      "visual": "side view macro of two snails creeping in opposite directions along one wet branch, antennae lifted, silver trails"
+    },
+    {
+      "say": "The honest catch: these are averages from one provider, and logging in less does not prove anyone lost money.",
+      "callout": "THE CATCH",
+      "visual": "overhead macro of a dry mud flat cracked into narrow plates, one thin crack widening toward the camera"
+    },
+    {
+      "say": "The counter move: pick a review date, like once a quarter, and open your accounts then, whatever the market did.",
+      "callout": "PICK A DATE",
+      "visual": "low sun casts the long shadow of one grass blade across a pale river stone, macro from ground level"
+    },
+    {
+      "say": "Write down one question for each review, like whether your savings rate and mix still fit your plan.",
+      "callout": "",
+      "visual": "backlit low angle macro of a clover seedling with two small leaves pushing up through brown leaf litter"
+    },
+    {
+      "say": "This is education, not advice. Looking on a schedule is easier than looking on a mood.",
+      "callout": "",
+      "visual": "long lens view of a still pond at dawn with one lily pad, drifting mist and reeds reflected in the water"
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "silhouette macro of a single dandelion seed drifting upward through soft green bokeh against low gold sun"
+    }
+  ],
+  "description": "In a Review of Financial Studies paper using Vanguard data on 1.1 million investors over two years, account logins fell 9.5 percent after a decline in the previous day's stock market. Economists call avoiding bad financial news the ostrich effect. A fixed review date is one way to look anyway. Educational only, not financial advice.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#psychology",
+    "#behavioraleconomics",
+    "#quietmoney"
+  ],
+  "first_comment": "Do you open your accounts when the market is down, or wait until it feels safe? Educational only, not financial advice.",
+  "facts": [
+    {
+      "claim": "Account logins fell by 9.5% after market declines (a decline in the previous day's stock market); the data covered over 852 million day-to-day observations on logins and trades for 1.1 million Vanguard investors over two years",
+      "basis": "Sicherman, Loewenstein, Seppi and Utkus (2016), Financial Attention, Review of Financial Studies 29(4): 863-897; Carnegie Mellon University news release, December 2015"
+    },
+    {
+      "claim": "The 'ostrich effect' on selective attention to financial information was published in 2009",
+      "basis": "Karlsson, Loewenstein and Seppi (2009), The ostrich effect: Selective attention to information, Journal of Risk and Uncertainty 38(2): 95-115"
+    },
+    {
+      "claim": "Investors holding only bonds showed the reverse pattern and were much more likely to log in when the stock market was down",
+      "basis": "Carnegie Mellon University news release, December 2015, on Sicherman, Loewenstein, Seppi and Utkus (2016)"
+    },
+    {
+      "claim": "Results are averages for one provider's investors over two years and do not predict any single person's behavior or outcomes",
+      "basis": "n/a"
+    }
+  ],
+  "source": "human",
+  "pillar": "psychology",
+  "look": "extreme macro nature photography, dew, insects, moss and seeds, razor-thin focus, soft green and gold bokeh",
+  "loop_map": {},
+  "caption": "Investors in a Vanguard study logged in 9.5% less after a market drop, a habit called the ostrich effect. These are averages, not a rule for you. A set review date is one way to keep looking. Educational content, not financial advice.",
+  "look_pack": "macro-nature"
+}

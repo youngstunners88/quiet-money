@@ -1,0 +1,112 @@
+{
+  "title": "A $75 Fee On $500 Is Really 391% A Year",
+  "hook_text": "A 2-WEEK LOAN = 391% A YEAR",
+  "beats": [
+    {
+      "say": "A two week loan can cost you three hundred ninety one percent a year.",
+      "callout": "",
+      "visual": "straight-down extreme wide drone shot of a vast terraced open-pit mine, concentric rings narrowing into a dark center, hard shadows"
+    },
+    {
+      "say": "Borrow five hundred dollars until payday, paying fifteen dollars per hundred.",
+      "callout": "$500 AT $15 PER $100",
+      "visual": "low side-on drone hover above a narrow suspension footbridge spanning a deep green gorge, long lens, one thin shadow"
+    },
+    {
+      "say": "That is seventy five dollars for fourteen days, or fifteen percent.",
+      "callout": "$75 FOR 14 DAYS",
+      "visual": "top-down drone view of a shipping container yard, a few orange containers among rows of identical grey ones, midday shadows"
+    },
+    {
+      "say": "Scale fourteen days up to three hundred sixty five and fifteen percent becomes about three hundred ninety one.",
+      "callout": "15% SCALED TO A YEAR = 391% APR",
+      "visual": "rising drone pullback from one tiny greenhouse to reveal an enormous grid of hundreds of glass greenhouses on a plain"
+    },
+    {
+      "say": "A twenty four percent credit card would charge about four dollars sixty on five hundred for two weeks.",
+      "callout": "$4.60 ON A 24% CARD",
+      "visual": "low drone skimming harbor water, one tiny empty rowboat dwarfed by the towering hull of a cargo ship, crisp light"
+    },
+    {
+      "say": "Here is the part nobody tells you. A federal study found about four in five payday loans are rolled over or renewed within fourteen days.",
+      "callout": "4 IN 5 ROLL OVER",
+      "visual": "straight-down drone shot into a deep round sinkhole in a green field, a thin rim of grass hiding the drop"
+    },
+    {
+      "say": "Roll it over for six months and you pay nine hundred seventy five dollars in fees and still owe five hundred.",
+      "callout": "13 FEES = $975",
+      "visual": "low side pass of a drone along a long row of thirteen identical grain silos, long shadows across stubble fields"
+    },
+    {
+      "say": "The fee never pays down the loan itself.",
+      "callout": "",
+      "visual": "top-down drone shot of tire tracks looping in circles across a dusty gravel lot, long shadows, vast empty scale"
+    },
+    {
+      "say": "The honest catch: paid on time, the real cost is seventy five dollars, because the percent only annualizes two weeks.",
+      "callout": "THE CATCH",
+      "visual": "high oblique drone view of a concrete dam spillway with one hairline crack running down its sunlit face"
+    },
+    {
+      "say": "Fees vary by lender and state, and some states cap or ban these loans.",
+      "callout": "",
+      "visual": "straight-down drone view of patchwork farmland in mismatched rectangles of different colors, hard field edges"
+    },
+    {
+      "say": "So ask for the dollar fee and the due date, and compare cheaper options first.",
+      "callout": "",
+      "visual": "low forward-gliding drone follows a footpath that splits into three trails across a sunlit meadow"
+    },
+    {
+      "say": "This is an illustration, not advice or a promise. Your terms may differ.",
+      "callout": "",
+      "visual": "slow drone descent over a single empty tennis court, crisp white lines, the long shadow of the net"
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "forward-moving drone shot rising over rows of solar panels on a pale desert plain, even lines catching the sun"
+    }
+  ],
+  "description": "A $500 payday loan with a $15-per-$100 fee costs $75 for 14 days, which scales to about 391% APR. A 24% credit card would charge about $4.60 over the same two weeks. The CFPB found 80% of payday loans were rolled over or renewed within 14 days (2014 data); 13 renewals would be $975 in fees. An illustration; fees and state rules vary. Educational only, not financial advice.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#debt",
+    "#paydayloans",
+    "#quietmoney"
+  ],
+  "first_comment": "Would you have guessed a fifteen dollar fee works out to almost four hundred percent a year? Educational only, not financial advice.",
+  "facts": [
+    {
+      "claim": "$500 payday loan, fee $15 per $100 for 14 days: fee $75 (15% of principal for the term); annualized 15% x 365/14 = 391.07% APR",
+      "basis": "Single-payment loan APR = fee / principal x 365 / term days, computed 2026-11-04; CFPB (Ask CFPB, consumerfinance.gov) states a $15 fee per $100 on a two-week loan is an APR of almost 400 percent"
+    },
+    {
+      "claim": "At $20 per $100 the same formula gives 521.4% APR; typical payday fees are $15-$20 per $100, i.e. 391%-521% APR for two weeks",
+      "basis": "Computed 2026-11-04; fee range and APR range per CFPB (consumerfinance.gov newsroom, 'CFPB Examines Payday Lending')"
+    },
+    {
+      "claim": "Credit card comparison: $500 at 24% APR for 14 days = $4.60 interest; the $75 payday fee is about 16 times larger",
+      "basis": "Simple daily interest, $500 x 0.24 x 14/365 = $4.603; 24% APR is an assumed typical card rate; ignores compounding and grace periods"
+    },
+    {
+      "claim": "Rolled over for six months (13 two-week periods): 13 x $75 = $975 in fees, 1.95 times the $500 borrowed, with the $500 principal still owed",
+      "basis": "Computed 2026-11-04; assumes the same $75 fee is paid at each renewal and no principal is repaid"
+    },
+    {
+      "claim": "About four in five payday loans (80%) were rolled over or renewed within 14 days",
+      "basis": "CFPB, 'CFPB Finds Four Out of Five Payday Loans Are Rolled Over or Renewed', March 2014, 12 months of data on more than 12 million storefront payday loans; renewal means a new loan within 14 days of repaying the previous one; older data"
+    },
+    {
+      "claim": "Assumptions: fee $15 per $100, flat 14-day term, no other charges; real fees, terms and legality vary by lender and state",
+      "basis": "n/a"
+    }
+  ],
+  "source": "human",
+  "pillar": "math",
+  "look": "high altitude aerial drone photography, geometric patterns seen from above, long shadows, crisp midday light, vast scale",
+  "loop_map": {},
+  "caption": "$500 borrowed for two weeks at $15 per $100 costs $75, about 391% APR. A 24% card would charge about $4.60. Roll it over for six months: $975 in fees. An illustration, not a promise. Educational content, not financial advice.",
+  "look_pack": "aerial-drone"
+}

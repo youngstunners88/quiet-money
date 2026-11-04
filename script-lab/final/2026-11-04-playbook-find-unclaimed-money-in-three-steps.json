@@ -1,0 +1,108 @@
+{
+  "title": "Find Unclaimed Money In Three Steps",
+  "hook_text": "3 STEPS TO FIND UNCLAIMED MONEY",
+  "beats": [
+    {
+      "say": "One in seven people has unclaimed money waiting, and you can check yours in three steps.",
+      "callout": "",
+      "visual": "one lone brown suitcase circling on an empty airport baggage carousel under strip lights, overhead view, no people"
+    },
+    {
+      "say": "When a bank, employer or utility cannot reach you, the leftover money goes to the state.",
+      "callout": "STATES HOLD IT",
+      "visual": "a domed state capitol building glowing in golden hour light, seen across a sprinkler-wet lawn, long lens compression, no people"
+    },
+    {
+      "say": "Step one. Search your state's unclaimed property office through unclaimed dot org.",
+      "callout": "STEP 1: SEARCH YOUR STATE",
+      "visual": "a pulled-out library card catalog drawer packed with index cards, macro with razor focus on the front edge, no people"
+    },
+    {
+      "say": "Searching costs nothing, and the government will not call or text asking for a fee.",
+      "callout": "",
+      "visual": "a glass phone booth glowing yellow in a snowy empty lot with the receiver left dangling, low angle wide shot, no people"
+    },
+    {
+      "say": "Step two. Repeat the search in every other state where you have lived.",
+      "callout": "STEP 2: ALL YOUR STATES",
+      "visual": "aerial view of square farm fields cut by dirt roads forking toward three tiny towns, extreme wide, no people"
+    },
+    {
+      "say": "MissingMoney dot com, sponsored by state officials, checks most states at once.",
+      "callout": "",
+      "visual": "an old telephone switchboard wall of patch cables with a few small bulbs lighting at once, eye level close-up, no people"
+    },
+    {
+      "say": "Step three. When you find a match, file a claim with the state office that holds it.",
+      "callout": "STEP 3: FILE THE CLAIM",
+      "visual": "a rubber date stamp and a red ink pad on a blank form, overhead flat-lay, no readable text, no people"
+    },
+    {
+      "say": "Expect to prove it is yours, but claims cost nothing, and state treasurers say the right never expires.",
+      "callout": "CLAIMS COST NOTHING",
+      "visual": "a giant tortoise plodding across a sunny dirt path, low angle from ground level, no people"
+    },
+    {
+      "say": "Here is the part nobody tells you. Money can sit under an old name or a misspelling, so try variations.",
+      "callout": "",
+      "visual": "a worn-smooth metal nameplate screwed beside an old brick doorway with the letters rubbed away, macro, no people"
+    },
+    {
+      "say": "The honest catch: you may find nothing, and scammers pose as officials, so use only official state sites.",
+      "callout": "THE CATCH",
+      "visual": "a feathered fishing lure hanging above dark still river water with its reflection, eye level, bright midday glare, no people"
+    },
+    {
+      "say": "If anyone pushes a fee or a rush, stop and search the state site yourself.",
+      "callout": "",
+      "visual": "a striped railway crossing gate lowered across empty tracks, twin red lamps glowing, silhouette against an orange dusk sky, no people"
+    },
+    {
+      "say": "This is education, not advice. Check your state's site for current steps and documents.",
+      "callout": "",
+      "visual": "an empty porch swing swaying slightly beside a screen door in late afternoon light, medium shot, no people"
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "a paper kite rising into a pale morning sky above a wheat field, wide shot, no people"
+    }
+  ],
+  "description": "About one in seven people has unclaimed property waiting, according to state treasurers and NAUPA. Search your state at unclaimed.org, repeat in every state where you have lived, then file a claim with the state office that holds the money. Searching and claiming cost nothing, and officials will not call or text asking for a fee. Educational only, not financial advice.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#unclaimedmoney",
+    "#moneytips",
+    "#quietmoney"
+  ],
+  "first_comment": "Have you ever searched for unclaimed money in your name? Educational only, not financial advice.",
+  "facts": [
+    {
+      "claim": "Every state has a free process to search for unclaimed funds, found through unclaimed.org/search; the government will not call or text and ask you to pay to search",
+      "basis": "FTC Consumer Alert, How to handle unexpected calls about unclaimed funds, 2026-03-30 (consumer.ftc.gov)"
+    },
+    {
+      "claim": "If you have lived in other states, check their unclaimed property offices too",
+      "basis": "USA.gov, How to find unclaimed money from the government (usa.gov/unclaimed-money); NAUPA unclaimed.org/search says to check each state you have lived or done business in"
+    },
+    {
+      "claim": "MissingMoney.com is the free multi-state search sponsored by NAUPA and endorsed by the states; there is no fee to search; 1 in 7 individuals have unclaimed property waiting; owners can reclaim in perpetuity; unclaimed property includes inactive accounts, missed paychecks and utility refunds",
+      "basis": "NAST and NAUPA statement on the MissingMoney.com relaunch (unclaimed.org/nast-and-naupa-relaunch-missingmoney-com)"
+    },
+    {
+      "claim": "Claims are processed at no cost, and the claimant must provide documentation to establish ownership; try name variations, nicknames, misspellings and previous addresses when searching",
+      "basis": "Missouri State Treasurer Unclaimed Property FAQ (treasurer.mo.gov); NY State Comptroller how to search and claim (osc.ny.gov); NAUPA unclaimed.org/search"
+    },
+    {
+      "claim": "Scammers posing as government officials use fake agency names, pressure to act fast and upfront processing fees; the safe move is to search your state's official site yourself",
+      "basis": "FTC Consumer Alert, How to handle unexpected calls about unclaimed funds, 2026-03-30 (consumer.ftc.gov)"
+    }
+  ],
+  "source": "human",
+  "pillar": "playbook",
+  "look": "1970s offset print illustration, halftone dots, mustard rust and teal palette, grainy paper texture",
+  "loop_map": {},
+  "caption": "One in seven people has unclaimed property waiting. Three steps: search your state at unclaimed dot org, repeat in every state you have lived in, then file a claim with the state that holds it. Searching and claiming cost nothing. Educational content, not financial advice.",
+  "look_pack": "retro-70s-print"
+}

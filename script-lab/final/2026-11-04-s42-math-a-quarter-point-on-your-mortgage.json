@@ -1,0 +1,99 @@
+{
+  "title": "A Quarter Point On Your Mortgage Costs $20,600",
+  "hook_text": "A 0.25% RATE GAP = $20,600",
+  "beats": [
+    {
+      "say": "A quarter point on your mortgage costs you about twenty thousand dollars over thirty years.",
+      "callout": "",
+      "visual": "an isometric blueprint of a small house balanced on a stack of round coin discs, drafting lines"
+    },
+    {
+      "say": "Take a three hundred fifty thousand dollar loan, fixed for thirty years.",
+      "callout": "$350,000 LOAN, 30 YEARS",
+      "visual": "a blueprint of a very long bridge span crossing a river, drawn end to end, no lettering"
+    },
+    {
+      "say": "At six and a half percent, the monthly payment is about twenty two hundred twelve dollars.",
+      "callout": "6.5%: $2,212 A MONTH",
+      "visual": "a blueprint of a gear train with one large gear turning a small gear, hand-drafted"
+    },
+    {
+      "say": "Over the full loan, you would pay about four hundred forty six thousand dollars in interest.",
+      "callout": "$446,000 INTEREST",
+      "visual": "a blueprint of a vast staircase descending into a deep stepped pit, strong perspective lines"
+    },
+    {
+      "say": "Now lower the rate to six and a quarter percent.",
+      "callout": "6.25%",
+      "visual": "a blueprint close-up of a precision dial with a tiny gap between two tick marks, no numbers"
+    },
+    {
+      "say": "The payment falls to about twenty one fifty five, a gap of fifty seven dollars a month.",
+      "callout": "$57 A MONTH",
+      "visual": "a blueprint of two nearly identical pipes, one slightly narrower, with one tiny drip, exploded view"
+    },
+    {
+      "say": "Over thirty years, that gap adds up to about twenty thousand six hundred dollars.",
+      "callout": "~$20,600 OVER 30 YEARS",
+      "visual": "a blueprint of a long hall of identical doors receding to a vanishing point, one-point perspective"
+    },
+    {
+      "say": "Here is the part nobody tells you. A small rate gap gets multiplied by three hundred sixty payments.",
+      "callout": "",
+      "visual": "a blueprint of a lever and fulcrum where a tiny weight lifts a huge block"
+    },
+    {
+      "say": "The honest catch: a lower rate can come with fees or points paid up front, which can eat the savings.",
+      "callout": "THE CATCH",
+      "visual": "a blueprint of a steel hatch with a small hidden latch marked only by arrows"
+    },
+    {
+      "say": "Rates, fees, and how long you stay in the home all change the answer.",
+      "callout": "",
+      "visual": "a blueprint of a bridge truss with a single hairline crack drawn in one thin line"
+    },
+    {
+      "say": "So compare the total cost of each offer, not just the headline rate.",
+      "callout": "",
+      "visual": "a blueprint site plan of a house with a looping arrow leaving and returning"
+    },
+    {
+      "say": "This is an illustration, not advice. A quarter point looks tiny, but time makes it large.",
+      "callout": "",
+      "visual": "a blueprint of a compass and ruler crossing on drafting paper"
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "a blueprint of a road arch rising toward a drawn sun, drafting style"
+    }
+  ],
+  "caption": "$350,000, 30 years: at 6.5% you pay about $446,000 in interest. At 6.25% about $20,600 less. A quarter point adds up. An illustration, not a promise. Educational content, not financial advice.",
+  "description": "On a $350,000 30-year fixed loan, 6.5% means about $2,212 a month and about $446,000 in interest. At 6.25% the payment is about $57 a month lower, roughly $20,600 less over 30 years. An illustration; fees and points can change the answer. Educational only, not financial advice.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#mortgage",
+    "#homebuying",
+    "#quietmoney"
+  ],
+  "first_comment": "What rate would make you refinance? Educational only, not financial advice.",
+  "facts": [
+    {
+      "claim": "$350,000 at 6.5%, 30 years fixed: payment $2,212.24, total interest $446,406",
+      "basis": "Standard amortization formula, computed 2026-11-04; principal and interest only"
+    },
+    {
+      "claim": "Same loan at 6.25%: payment $2,155.01, total interest $425,804; difference $57.23 a month and $20,602 over 30 years",
+      "basis": "Standard amortization formula, computed 2026-11-04"
+    },
+    {
+      "claim": "Assumptions: fixed rate, no taxes, insurance, fees or points; real offers vary",
+      "basis": "n/a"
+    }
+  ],
+  "source": "human",
+  "pillar": "math",
+  "look": "architectural cyanotype blueprint, white linework on deep prussian blue, precise technical drafting, no lettering, no numbers",
+  "loop_map": {}
+}

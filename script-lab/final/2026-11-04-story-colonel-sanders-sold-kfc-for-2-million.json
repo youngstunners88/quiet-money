@@ -1,0 +1,108 @@
+{
+  "title": "Colonel Sanders Sold KFC For $2M. It Resold For $285M",
+  "hook_text": "SOLD FOR $2M, RESOLD FOR $285M",
+  "beats": [
+    {
+      "say": "You could sell for two million, then watch buyers resell it for two hundred eighty five million.",
+      "callout": "",
+      "visual": "one small paper bucket of fried chicken on a stone pedestal beside a colossal mountain of identical buckets rising into clouds, extreme wide shot, no lettering, no people"
+    },
+    {
+      "say": "Harland Sanders sold fried chicken from a roadside restaurant in Corbin, Kentucky.",
+      "callout": "",
+      "visual": "a lone timber roadside cafe with a glowing paper lantern by its door beside a narrow country road at dusk, low angle from the ground, no people"
+    },
+    {
+      "say": "In nineteen fifty two, at sixty two, he began franchising his recipe.",
+      "callout": "",
+      "visual": "a heavy cast iron pressure fryer on a charcoal flame with steam curling from its valve, macro with razor focus, no people"
+    },
+    {
+      "say": "A planned interstate would bypass Corbin, so he auctioned his business for seventy five thousand dollars.",
+      "callout": "",
+      "visual": "an aerial view of a broad new road curving around a sleepy mountain village and leaving its single lane untouched, morning mist, no people"
+    },
+    {
+      "say": "He later wrote of a one hundred five dollar Social Security check arriving every month.",
+      "callout": "$105 A MONTH",
+      "visual": "a thin plain paper envelope tied with string on a windowsill while rain streaks the glass behind it, shallow focus, no people"
+    },
+    {
+      "say": "By nineteen sixty four, more than six hundred restaurants were franchised.",
+      "callout": "600+ RESTAURANTS",
+      "visual": "a long village lane lined with hundreds of identical glowing paper lanterns fading into the dusk, long lens compression, no people"
+    },
+    {
+      "say": "That year, at seventy three, he sold his interest to investors for two million dollars.",
+      "callout": "$2 MILLION",
+      "visual": "two pairs of hands passing a closed red lacquer box across a tatami mat, overhead view, faces out of frame, no people"
+    },
+    {
+      "say": "In July nineteen seventy one, the company was sold to Heublein for two hundred eighty five million dollars.",
+      "callout": "$285 MILLION",
+      "visual": "a towering stone castle keep rising above a sea of small tiled rooftops, worm's-eye view up its walls, no people"
+    },
+    {
+      "say": "Here is the part nobody tells you. The rags to riches meme skips that he had franchised since sixty two.",
+      "callout": "",
+      "visual": "the cut cross section of an ancient cedar stump with dense growth rings, macro, soft rain on the bark, no people"
+    },
+    {
+      "say": "The honest catch: the buyers grew it to over thirty five hundred restaurants, so that gap is not simply his loss.",
+      "callout": "THE CATCH",
+      "visual": "a bamboo ladder leaning against a tall persimmon tree with one rung cracked through, looking up from the roots, no people"
+    },
+    {
+      "say": "The lesson is about trade-offs. Selling a business swaps its future growth for cash today.",
+      "callout": "",
+      "visual": "a balance scale holding a green seedling in one pan and a small mound of rice in the other, silhouette against a glowing paper screen, no people"
+    },
+    {
+      "say": "This is a story, not a plan. Your situation and risks are your own.",
+      "callout": "",
+      "visual": "a pair of straw sandals set neatly on a stone step at a quiet inn entrance in falling snow, close eye level, no people"
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "a white crane lifting off a still misty pond at first light, extreme wide silhouette, no people"
+    }
+  ],
+  "description": "Colonel Harland Sanders began franchising his chicken in 1952. In 1964, with more than 600 franchised restaurants, he sold his interest for $2 million. In July 1971 the company sold to Heublein for $285 million, after the buyers grew it past 3,500 restaurants, so the gap is not simply his loss. A story, not a plan. Educational only, not financial advice.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#colonelsanders",
+    "#businesshistory",
+    "#quietmoney"
+  ],
+  "first_comment": "Would you sell a business you built for cash today, or keep the risk and the growth? Educational only, not financial advice.",
+  "facts": [
+    {
+      "claim": "Sanders began franchising his chicken in 1952, at age 62, starting with Pete Harman in Salt Lake City, Utah; the viral rags-to-riches meme about starting at 65 was rated false",
+      "basis": "AAP FactCheck, 2021-10-19, 'Barely a nugget of truth in Colonel Sanders rags-to-riches meme'; Wikipedia (Colonel Sanders)"
+    },
+    {
+      "claim": "Sanders wrote that he had a $105 Social Security check coming in every month",
+      "basis": "Sanders's own words quoted in AAP FactCheck, 2021-10-19; Encyclopedia.com (Colonel Sanders biography)"
+    },
+    {
+      "claim": "With the interstate bypass of Corbin, Kentucky planned, Sanders sold his business at auction for $75,000 (1956)",
+      "basis": "AAP FactCheck, 2021-10-19 (quoting Sanders); Encyclopedia.com (Colonel Sanders biography)"
+    },
+    {
+      "claim": "In 1964, with more than 600 franchised outlets, Sanders sold his interest in Kentucky Fried Chicken for $2 million to investors led by John Y. Brown Jr. and Jack Massey; he was 73",
+      "basis": "Biography.com (Colonel Harland Sanders); Wikipedia (KFC, citing Smith 2011); AOL/Benzinga report on the sale"
+    },
+    {
+      "claim": "In July 1971 the company was sold to Heublein for $285 million, with more than 3,500 franchised and company-owned restaurants",
+      "basis": "Wikipedia (KFC, citing Barmash, New York Times, 1971); AOL report citing KFC's history"
+    }
+  ],
+  "source": "human",
+  "pillar": "story",
+  "look": "Japanese ukiyo-e woodblock print, flat color planes, bold ink outlines, textured paper, muted indigo and vermilion",
+  "loop_map": {},
+  "caption": "Colonel Sanders sold his interest in KFC for $2 million in 1964. In 1971 the company sold for $285 million, after the buyers grew it past 3,500 restaurants. A story, not a plan. Educational content, not financial advice.",
+  "look_pack": "ukiyo-woodblock"
+}

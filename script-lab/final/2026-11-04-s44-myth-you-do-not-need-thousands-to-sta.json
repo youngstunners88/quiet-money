@@ -1,0 +1,99 @@
+{
+  "title": "You Do Not Need Thousands To Start Investing",
+  "hook_text": "YOU CAN START WITH $1",
+  "beats": [
+    {
+      "say": "You do not need thousands to invest: some brokers let you start with one dollar.",
+      "callout": "",
+      "visual": "a single paper coin standing on the first rung of a tiny paper ladder, bold layers"
+    },
+    {
+      "say": "Many people think you need a pile of cash before you can begin.",
+      "callout": "",
+      "visual": "a huge paper mountain of coins towering over a small paper silhouette on a cliff edge"
+    },
+    {
+      "say": "That belief comes from account minimums and the price of whole shares.",
+      "callout": "",
+      "visual": "a paper wall with a giant round door shaped like a pie, layered shadows"
+    },
+    {
+      "say": "Fidelity has a zero dollar minimum to open a brokerage account.",
+      "callout": "$0 MINIMUM",
+      "visual": "a wide open paper gate with cream light spilling out and a coin as its hinge"
+    },
+    {
+      "say": "It also lets you buy fractional shares of more than seven thousand stocks and funds, from as little as one dollar.",
+      "callout": "FROM $1",
+      "visual": "a paper pie cut into thin wedges, one wedge lifted by tweezers, layered"
+    },
+    {
+      "say": "Commissions on US stock and ETF trades are zero there too.",
+      "callout": "$0 COMMISSIONS",
+      "visual": "a paper balance with a feather on one side and tall paper coins on the other"
+    },
+    {
+      "say": "Other brokers offer similar features, so compare a few before you choose.",
+      "callout": "",
+      "visual": "three paper doors side by side in different colors, layered drop shadows"
+    },
+    {
+      "say": "Here is the part nobody tells you. Starting small can build the habit of investing regularly.",
+      "callout": "",
+      "visual": "a paper sprout growing from a paper coin in cream soil, bold layers"
+    },
+    {
+      "say": "The honest catch: investing can lose money, and small amounts carry the same risk for each dollar.",
+      "callout": "THE CATCH",
+      "visual": "a paper roller coaster track dipping sharply with a tiny paper car at the top"
+    },
+    {
+      "say": "Fund fees, taxes and risk apply at any size, and nothing here says what to buy.",
+      "callout": "",
+      "visual": "a paper umbrella over a small stack of paper coins in layered paper rain"
+    },
+    {
+      "say": "Keep an emergency fund first, because investments can fall when you need the cash.",
+      "callout": "",
+      "visual": "a paper padlock and a paper key resting side by side on cream paper"
+    },
+    {
+      "say": "So the myth says wait until you have thousands. The truth is, access is easy. Understanding the risk is the real work.",
+      "callout": "",
+      "visual": "a cut-paper mountain trail with a tiny flag at the summit"
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "a cut-paper sun rising over layered paper hills"
+    }
+  ],
+  "caption": "You do not need thousands to invest. Fidelity has a $0 account minimum and fractional shares from $1. Investing can lose money, so learn the risks first. Educational content, not financial advice.",
+  "description": "You do not need thousands to open an investing account. Fidelity has a $0 account minimum and lets you buy fractional shares of thousands of stocks and ETFs from as little as $1, with $0 commissions on US stock and ETF trades. Investing can lose money. Educational only, not financial advice.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#investing",
+    "#moneymyths",
+    "#quietmoney"
+  ],
+  "first_comment": "What was the first amount you ever invested? Educational only, not financial advice.",
+  "facts": [
+    {
+      "claim": "Fidelity: $0 minimum to open a brokerage account; $0 commissions on US stock and ETF trades",
+      "basis": "Fidelity.com and Motley Fool Fidelity review, checked 2026-11-04"
+    },
+    {
+      "claim": "Fidelity fractional shares: trade more than 7,000 US stocks and ETFs for as little as $1",
+      "basis": "Fidelity.com/trading/fractional-shares, checked 2026-11-04"
+    },
+    {
+      "claim": "Investing involves risk of loss at any account size; no recommendation made",
+      "basis": "n/a"
+    }
+  ],
+  "source": "human",
+  "pillar": "myth",
+  "look": "layered cut-paper art, bold flat crimson cream and ink black, crisp drop shadows between paper layers, handcrafted",
+  "loop_map": {}
+}
