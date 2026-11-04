@@ -1,0 +1,18 @@
+{
+ "id": "2026-11-04-tiktok-2026-11-04-s3-story-the-true-story-of-the-econom",
+ "kind": "tiktok",
+ "day": "2026-11-04",
+ "key": "2026-11-04-s3-story-the-true-story-of-the-economist",
+ "status": "queued",
+ "created": "2026-11-04T10:05:11+00:00",
+ "recipe": "TikTok upload",
+ "media": [
+  {
+   "source": "production/output/2026-11-04/2026-11-04-s3-story-the-true-story-of-the-economist/final.mp4",
+   "name": "final.mp4"
+  }
+ ],
+ "staged": false,
+ "text": "Your savings rate matters infinitely more than your paycheck size. Here is the math behind fast financial freedom.\n\nFree reset checklist: link in bio.\n\n#money #personalfinance #financialfreedom #investing #wealth #savingsrate\n\nEducation, not financial advice.",
+ "ai_label": "AI-generated content: on"
+}

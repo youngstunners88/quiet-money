@@ -1,0 +1,18 @@
+{
+ "id": "2026-11-04-tiktok-2026-11-04-s0-psychology-present-bias-hyperbolic",
+ "kind": "tiktok",
+ "day": "2026-11-04",
+ "key": "2026-11-04-s0-psychology-present-bias-hyperbolic-discount",
+ "status": "queued",
+ "created": "2026-11-04T10:05:11+00:00",
+ "recipe": "TikTok upload",
+ "media": [
+  {
+   "source": "production/output/2026-11-04/2026-11-04-s0-psychology-present-bias-hyperbolic-discount/final.mp4",
+   "name": "final.mp4"
+  }
+ ],
+ "staged": true,
+ "text": "Your brain is fighting against you every time you look at your paycheck. Fix the system, not your willpower.\n\nFree reset checklist: link in bio.\n\n#moneypsychology #personalfinance #wealthbuilding #investing101 #moneyrules\n\nEducation, not financial advice.",
+ "ai_label": "AI-generated content: on"
+}

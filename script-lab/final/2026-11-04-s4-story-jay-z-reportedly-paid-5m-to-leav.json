@@ -1,0 +1,99 @@
+{
+  "title": "The $5 Million Play for Future Masters",
+  "hook_text": "HE PAID $5M TO LEAVE",
+  "beats": [
+    {
+      "say": "In 2009, Jay-Z reportedly paid $5 million to leave his record label and kept his future master recordings.",
+      "callout": "",
+      "visual": "Extreme wide shot of a solitary silhouette standing on a wet asphalt rooftop under cold sodium light, blue hour."
+    },
+    {
+      "say": "That single exit cost millions upfront, but it unlocked an asset most paycheck earners never touch.",
+      "callout": "$5M VS FUTURE",
+      "visual": "Extreme close-up of a heavy iron door latch in deep shadow, single practical light glinting on cold metal."
+    },
+    {
+      "say": "How do you secure future catalog control when you're just starting out on a W2 salary?",
+      "callout": "THE BIG QUESTION",
+      "visual": "Low angle shot of a massive concrete bridge support cutting into a foggy, dark skyline."
+    },
+    {
+      "say": "Most people assume your employer owns everything your brain produces while you're on the clock.",
+      "callout": "EMPLOYER VS YOU",
+      "visual": "High angle shot of empty highway at night, car light streaks cutting through wet darkness."
+    },
+    {
+      "say": "That's false. Independent contracts and side agreements let creators negotiate the rights to their own work.",
+      "callout": "",
+      "visual": "Silhouette of a person walking across an open concrete underpass, wet ground reflecting cold fluorescent light."
+    },
+    {
+      "say": "He also had a massive $150 million Live Nation deal ready to land on when he made the jump.",
+      "callout": "CATALOG VS DEAL",
+      "visual": "Extreme wide shot of a tiny human figure standing at the edge of a dark ridge line overlooking a sprawling city."
+    },
+    {
+      "say": "What happens when you stop trading your daily output for a flat wage and start owning the upside?",
+      "callout": "NEXT LEVEL",
+      "visual": "Low angle shot of a towering glass office facade reflecting cold gray clouds at dusk."
+    },
+    {
+      "say": "He leveraged his hits and his corporate partnership to demand full control over his future catalog.",
+      "callout": "STEP ONE",
+      "visual": "Extreme close-up of heavy hands resting on a cold concrete ledge, single light source from the side."
+    },
+    {
+      "say": "And in 2023, he stated he simply will not sell those masters, because ownership compounds over decades.",
+      "callout": "STEP TWO",
+      "visual": "Silhouette of a person walking away down a long, empty tunnel under cold fluorescent lighting."
+    },
+    {
+      "say": "Own the underlying asset of your labor instead of just renting out your time for a paycheck.",
+      "callout": "",
+      "visual": "Extreme wide shot of an empty suspension bridge spanning dark water under a heavy night sky."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "Low angle shot of a single glowing practical light on a dark, wet brick wall."
+    }
+  ],
+  "caption": "Ownership changes the math. #personalfinance #money #wealth #investing #freedom",
+  "description": "Learn how owning your output instead of just collecting a paycheck changes your financial future for good.",
+  "hashtags": [
+    "#personalfinance",
+    "#money",
+    "#wealth",
+    "#investing",
+    "#freedom"
+  ],
+  "first_comment": "What's one asset you're building outside your main job?",
+  "facts": [
+    {
+      "claim": "In 2009 he left Def Jam, reportedly at a cost of $5 million, and gained control of his future master recordings",
+      "basis": "Reuters, 2009"
+    },
+    {
+      "claim": "A roughly $150 million, 10-year deal with Live Nation that created Roc Nation",
+      "basis": "SEC Form 8-K, via Billboard and The Hollywood Reporter, 2008"
+    },
+    {
+      "claim": "In a 2023 CBS Mornings interview he said that he will not sell them",
+      "basis": "CBS Mornings, 2023"
+    }
+  ],
+  "source": "llm",
+  "pillar": "story",
+  "look": "",
+  "loop_map": {
+    "stakes": "Leaving a label for $5 million to own future master recordings.",
+    "big_question": "How do you secure control of your future output when starting from scratch?",
+    "assume": "Most people assume your employer owns everything you produce.",
+    "reveal": "Contract terms and side deals let you retain rights to your own work.",
+    "rehook_beats": [
+      3,
+      7
+    ],
+    "payoff_beat": 10
+  }
+}

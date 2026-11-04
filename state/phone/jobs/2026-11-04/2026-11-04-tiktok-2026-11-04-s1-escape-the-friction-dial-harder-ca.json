@@ -1,0 +1,18 @@
+{
+ "id": "2026-11-04-tiktok-2026-11-04-s1-escape-the-friction-dial-harder-ca",
+ "kind": "tiktok",
+ "day": "2026-11-04",
+ "key": "2026-11-04-s1-escape-the-friction-dial-harder-can-mea",
+ "status": "queued",
+ "created": "2026-11-04T10:05:11+00:00",
+ "recipe": "TikTok upload",
+ "media": [
+  {
+   "source": "production/output/2026-11-04/2026-11-04-s1-escape-the-friction-dial-harder-can-mea/final.mp4",
+   "name": "final.mp4"
+  }
+ ],
+ "staged": false,
+ "text": "Making something harder to buy can bring better buyers.\n\nThe Money Reset Kit: link in bio (paid).\n\n#MoneyPsychology #BusinessRules #QuietMoney #WealthBuilding #Entrepreneurship\n\nEducation, not financial advice.",
+ "ai_label": "AI-generated content: on"
+}

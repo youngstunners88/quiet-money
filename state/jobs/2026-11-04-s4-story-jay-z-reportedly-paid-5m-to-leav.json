@@ -1,0 +1,78 @@
+{
+  "id": "2026-11-04-s4-story-jay-z-reportedly-paid-5m-to-leav",
+  "pillar": "story",
+  "topic": "Jay-Z Reportedly Paid $5M to Leave Def Jam and Walk Out Owning His Masters",
+  "day": "2026-11-04",
+  "slot": 4,
+  "status": "published",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-11-04T09:54:23Z",
+      "words": 177
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-11-04T09:56:58Z",
+      "seconds": 62.969,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-11-04T10:00:09Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-11-04T10:03:42Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-11-04T10:03:42Z",
+      "score": 91
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-11-04T10:03:43Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-11-04T10:03:45Z",
+      "local": "2026-11-04T21:00:00-05:00",
+      "youtube": null
+    }
+  ],
+  "artifacts": {
+    "angle": "W2 own the master. 2009: he left Def Jam, reportedly at a cost of $5M, and gained control of his future master recordings; in 2023 he said he would not sell them. Catch: he had a hit catalog and a $150M Live Nation deal to land on.",
+    "brief": "jay-z",
+    "hook": "In 2009, Jay-Z reportedly paid $5 million to leave his label, and kept the rights to his future recordings.",
+    "title": "The $5 Million Play for Future Masters",
+    "style": "cinematic",
+    "video": "/home/user/quiet-money/production/output/2026-11-04/2026-11-04-s4-story-jay-z-reportedly-paid-5m-to-leav/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-11-04/2026-11-04-s4-story-jay-z-reportedly-paid-5m-to-leav/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-11-04/slot5-story",
+        "post_at": "2026-11-04T21:00:00-05:00"
+      },
+      "youtube": {
+        "skipped": "YouTube refused the upload session (HTTP 429): quota or rate limit; it resets at midnight Pacific"
+      }
+    }
+  },
+  "scores": {
+    "gauntlet": 91,
+    "passed": true
+  },
+  "cost": {
+    "tts:edge:chars": 1037
+  },
+  "notes": []
+}
