@@ -1,0 +1,850 @@
+{
+ "day": "2026-11-04",
+ "split": "dev",
+ "prompt": "v2",
+ "model": "stealth/crouton-alpha",
+ "runs": 1,
+ "score": {
+  "cases": 80,
+  "scored": 80,
+  "coverage": 1.0,
+  "holds": 40,
+  "passes": 40,
+  "caught": 40,
+  "missed": 0,
+  "right_pass": 36,
+  "false_alarms": 4,
+  "recall": 1.0,
+  "false_alarm_rate": 0.1,
+  "rule_match_of_caught": 1.0,
+  "verdict": "informational only: the prompt was tuned on this split; run `crouton bench --split holdout` for the verdict",
+  "verdict_if_holdout": "eligible to ADD holds as an advisory pre-screen (never to release); the owner decides"
+ },
+ "rows": [
+  {
+   "id": "pass:2026-10-21-s2-story-the-secretive-frugality-of-chuck",
+   "truth": "pass",
+   "rules": [],
+   "verdict": "pass",
+   "violated_rules": [],
+   "reason": "The script is a third-person story about well-known public-record facts with no buy/sell instruction, promised return, secret authority claim, or private quote attributed to a named person."
+  },
+  {
+   "id": "pass:2026-10-10-s8-myth-myth-an-emergency-fund-is-wasted",
+   "truth": "pass",
+   "rules": [],
+   "verdict": "pass",
+   "violated_rules": [],
+   "reason": "Script is general education about emergency funds with illustrative debt calculations from stated assumptions, with no stock/coin recommendation, promised return, secret authority, or attributed private quote."
+  },
+  {
+   "id": "pass:2026-10-26-s14-myth-myth-gold-is-the-best-safe-haven",
+   "truth": "pass",
+   "rules": [],
+   "verdict": "pass",
+   "violated_rules": [],
+   "reason": "The script contains only general education and a hypothetical calculation from stated assumptions, with no named buy/sell recommendation, promised return, secret authority, or attributed private quote."
+  },
+  {
+   "id": "pass:2026-10-04-s6-escape-deal-flow-why-owners-see-opportu",
+   "truth": "pass",
+   "rules": [],
+   "verdict": "pass",
+   "violated_rules": [],
+   "reason": "The script contains no named buy/sell recommendation, no promised or guaranteed return, no secret-authority claim, and no attributed private quote from a named real person."
+  },
+  {
+   "id": "pass:2026-10-06-s4-playbook-build-a-1-000-starter-emergency",
+   "truth": "pass",
+   "rules": [],
+   "verdict": "hold",
+   "violated_rules": [
+    2
+   ],
+   "reason": "The script promises a $1,000 emergency fund in 30 days flat and urges immediate action by a deadline, which is a promised result and deadline-driven advice."
+  },
+  {
+   "id": "pass:2026-10-07-s6-myth-myth-you-can-time-the-stock-mark",
+   "truth": "pass",
+   "rules": [],
+   "verdict": "pass",
+   "violated_rules": [],
+   "reason": "No named buy/sell recommendation, guaranteed return, secret authority, or private quote; figures are presented as calculations from stated assumptions and JP Morgan is a named public source."
+  },
+  {
+   "id": "pass:2026-10-24-s4-story-how-anne-scheetz-built-a-fortune",
+   "truth": "pass",
+   "rules": [],
+   "verdict": "pass",
+   "violated_rules": [],
+   "reason": "The script is a third-person story with no named stock recommendation, no promised return, no secret authority claim, and no private quote attributed to a named real person."
+  },
+  {
+   "id": "pass:2026-10-05-s4-psychology-the-diderot-effect-how-one-new-p",
+   "truth": "pass",
+   "rules": [],
+   "verdict": "pass",
+   "violated_rules": [],
+   "reason": "The script contains no buy/sell recommendation, promised return, secret authority, or private quote; the $226,659 figure is a calculation from stated assumptions."
+  },
+  {
+   "id": "pass:2026-11-01-s1-math-twice-the-card-balance-more-than",
+   "truth": "pass",
+   "rules": [],
+   "verdict": "pass",
+   "violated_rules": [],
+   "reason": "The script presents worked-out interest calculations from stated assumptions with no stock/coin recommendation, promised return, secret authority, or attributed private quote."
+  },
+  {
+   "id": "pass:2026-10-14-s7-math-the-real-hysa-yield-after-taxes",
+   "truth": "pass",
+   "rules": [],
+   "verdict": "pass",
+   "violated_rules": [],
+   "reason": "The script presents a hypothetical calculation from stated assumptions with no named buy/sell recommendation, promised return, secret authority, or attributed private quote."
+  },
+  {
+   "id": "pass:2026-10-03-s12-story-warren-buffett-s-1-million-bet-t",
+   "truth": "pass",
+   "rules": [],
+   "verdict": "pass",
+   "violated_rules": [],
+   "reason": "The script recounts a well-known public-record bet in third person without directing a specific buy/sell, promising returns, citing secret authority, or attributing a private quote."
+  },
+  {
+   "id": "pass:2026-10-07-s4-escape-good-debt-vs-bad-debt-and-the-ca",
+   "truth": "pass",
+   "rules": [],
+   "verdict": "pass",
+   "violated_rules": [],
+   "reason": "The script contains no buy/sell recommendation, promised return, secret-authority claim, or private quote attributed to a named person, and its leverage example is a stated-assumption hypothetical."
+  },
+  {
+   "id": "pass:2026-10-28-s1-math-the-silent-inflation-cash-devalu",
+   "truth": "pass",
+   "rules": [],
+   "verdict": "hold",
+   "violated_rules": [
+    2
+   ],
+   "reason": "The script presents a guaranteed loss outcome as certain rather than as a hypothetical calculation from stated assumptions."
+  },
+  {
+   "id": "pass:2026-10-27-s0-myth-myth-loyalty-to-one-company-grow",
+   "truth": "pass",
+   "rules": [],
+   "verdict": "pass",
+   "violated_rules": [],
+   "reason": "The script contains no buy/sell recommendation, no promised or guaranteed return, no secret or unnamed authority, and no private quote attributed to a named real person."
+  },
+  {
+   "id": "pass:2026-10-05-s8-myth-myth-you-should-save-whatever-is",
+   "truth": "pass",
+   "rules": [],
+   "verdict": "pass",
+   "violated_rules": [],
+   "reason": "The script presents general education and arithmetic worked out from stated assumptions about monthly investing, without naming a stock, coin or product to buy, promising a guaranteed return, citing secret authority, or attributing a private quote to a real person."
+  },
+  {
+   "id": "pass:2026-10-09-s4-math-why-a-0-interest-buy-now-pay-lat",
+   "truth": "pass",
+   "rules": [],
+   "verdict": "hold",
+   "violated_rules": [
+    1
+   ],
+   "reason": "The script cites unnamed 'Data shows' for the 20% spending claim, resting on an unnamed authority."
+  },
+  {
+   "id": "pass:2026-10-04-s4-math-how-a-5-a-day-habit-becomes-over",
+   "truth": "pass",
+   "rules": [],
+   "verdict": "pass",
+   "violated_rules": [],
+   "reason": "The script presents a conditional hypothetical calculation from stated assumptions about daily coffee spending and an assumed 8% return, without naming a stock or product to buy, guaranteeing a return, citing secret authority, or attributing a private quote to a real person."
+  },
+  {
+   "id": "pass:2026-10-18-s4-story-nicolas-cage-and-the-myth-of-per",
+   "truth": "pass",
+   "rules": [],
+   "verdict": "pass",
+   "violated_rules": [],
+   "reason": "The script is a third-person educational story about Nicolas Cage's spending and debt with no buy/sell recommendation, promised return, secret authority claim, or attributed private quote."
+  },
+  {
+   "id": "pass:2026-11-02-s1-psychology-sunk-cost-fallacy-the-money-pit",
+   "truth": "pass",
+   "rules": [],
+   "verdict": "pass",
+   "violated_rules": [],
+   "reason": "The script contains no named buy/sell recommendation, no guaranteed return beyond a hypothetical calculation from stated assumptions, no secret authority claim, and no attributed private quote from a real person."
+  },
+  {
+   "id": "pass:2026-10-02-s8-escape-the-four-ways-to-earn-money-and",
+   "truth": "pass",
+   "rules": [],
+   "verdict": "pass",
+   "violated_rules": [],
+   "reason": "No named buy/sell pick, deadline, promised return, secret authority, or private quote from a named person is present; the $600,000 figure is a worked calculation from stated assumptions."
+  },
+  {
+   "id": "pass:2026-10-26-s8-playbook-cancel-amazon-kindle-and-audible",
+   "truth": "pass",
+   "rules": [],
+   "verdict": "pass",
+   "violated_rules": [],
+   "reason": "The script gives general cancellation steps and a hypothetical compounding calculation from stated assumptions, with no named stock/coin pick, guaranteed return, secret authority, or private quote."
+  },
+  {
+   "id": "pass:2026-10-18-s6-playbook-drop-your-grocery-bill-by-20-usi",
+   "truth": "pass",
+   "rules": [],
+   "verdict": "pass",
+   "violated_rules": [],
+   "reason": "No named buy/sell pick, guaranteed return, secret authority, or private quote; the 20% and $149,036 figures are presented as can/hypothetical calculations from stated assumptions."
+  },
+  {
+   "id": "pass:2026-10-05-s6-math-500-a-month-invested-for-40-year",
+   "truth": "pass",
+   "rules": [],
+   "verdict": "pass",
+   "violated_rules": [],
+   "reason": "The script presents a hypothetical calculation from stated assumptions ($500/month at 8%) without naming a stock to buy, promising a guaranteed return, citing secret authority, or attributing a private quote."
+  },
+  {
+   "id": "pass:2026-10-08-s8-story-cash-envelope-budgeting-the-grea",
+   "truth": "pass",
+   "rules": [],
+   "verdict": "pass",
+   "violated_rules": [],
+   "reason": "The script contains no named buy/sell recommendation, deadline urgency, promised return, secret-authority claim, or private quote attributed to a real person."
+  },
+  {
+   "id": "pass:2026-10-20-s5-escape-the-rule-of-100-in-enterprise-ex",
+   "truth": "pass",
+   "rules": [],
+   "verdict": "hold",
+   "violated_rules": [
+    2,
+    13
+   ],
+   "reason": "The script promises a guaranteed outcome, stating to commit to 100 reps until outcome is guaranteed and that volume naturally delivers 100 new clients."
+  },
+  {
+   "id": "pass:2026-10-30-s2-myth-myth-emergency-cash-must-all-sit",
+   "truth": "pass",
+   "rules": [],
+   "verdict": "pass",
+   "violated_rules": [],
+   "reason": "The script gives general education about emergency-fund placement without naming a specific stock, coin or product to buy, without guaranteeing a return, and without relying on secret authority or attributed private quotes."
+  },
+  {
+   "id": "pass:2026-10-19-s4-psychology-the-status-quo-bias",
+   "truth": "pass",
+   "rules": [],
+   "verdict": "pass",
+   "violated_rules": [],
+   "reason": "Script contains no named buy/sell recommendation, no promised or guaranteed return, no secret-authority claim, and no private quote attributed to a named real person; numbers are presented as worked examples from stated assumptions."
+  },
+  {
+   "id": "pass:2026-10-31-s11-story-lebron-james-let-a-15m-mcdonald",
+   "truth": "pass",
+   "rules": [],
+   "verdict": "pass",
+   "violated_rules": [],
+   "reason": "The script reports public-record facts attributed to Forbes with no buy/sell recommendation, promised return, secret authority, or private quote."
+  },
+  {
+   "id": "pass:2026-10-19-s2-escape-asset-vs-liability-cash-flow-rea",
+   "truth": "pass",
+   "rules": [],
+   "verdict": "pass",
+   "violated_rules": [],
+   "reason": "The script gives general education with a hypothetical calculation from stated assumptions and no named product recommendation, guaranteed return, secret authority, or attributed private quote."
+  },
+  {
+   "id": "pass:2026-10-29-s3-myth-myth-buying-the-cheapest-option",
+   "truth": "pass",
+   "rules": [],
+   "verdict": "pass",
+   "violated_rules": [],
+   "reason": "The script contains only general education and arithmetic worked from stated assumptions, with no named buy/sell recommendation, guaranteed return, secret authority, or attributed private quote."
+  },
+  {
+   "id": "pass:2026-10-14-s1-playbook-wipe-out-mobile-app-store-recurr",
+   "truth": "pass",
+   "rules": [],
+   "verdict": "pass",
+   "violated_rules": [],
+   "reason": "The script gives general subscription-audit steps and a conditional hypothetical calculation from stated assumptions, without recommending a named security, promising a return, citing secret authority, or attributing a private quote to a real person."
+  },
+  {
+   "id": "pass:2026-10-02-s6-escape-how-much-money-you-need-to-quit",
+   "truth": "pass",
+   "rules": [],
+   "verdict": "pass",
+   "violated_rules": [],
+   "reason": "Script presents educational math with an explicit not-a-guarantee disclaimer, names the public Trinity study, and suggests checking savings rate without recommending a named stock, coin, product, or promised return."
+  },
+  {
+   "id": "pass:2026-10-30-s3-story-leonard-tose-gambling-away-an-nf",
+   "truth": "pass",
+   "rules": [],
+   "verdict": "pass",
+   "violated_rules": [],
+   "reason": "The script is a third-person educational story about Leonard Tose's gambling losses with no stock/coin recommendation, promised return, secret authority claim, or private quote attributed to a named person."
+  },
+  {
+   "id": "pass:2026-10-02-s5-escape-your-circle-sets-your-ceiling-au",
+   "truth": "pass",
+   "rules": [],
+   "verdict": "pass",
+   "violated_rules": [],
+   "reason": "The $182,946 figure is a calculation from stated assumptions ($1,000/month at 8% for 10 years), with no named product recommendation, guaranteed return, secret authority, or attributed private quote."
+  },
+  {
+   "id": "pass:2026-10-18-s5-myth-myth-buying-brand-new-items-guar",
+   "truth": "pass",
+   "rules": [],
+   "verdict": "pass",
+   "violated_rules": [],
+   "reason": "The script contains no named buy/sell recommendation, deadline urgency, guaranteed return, secret authority, or attributed private quote; the compound figures are presented as calculations from stated assumptions."
+  },
+  {
+   "id": "pass:2026-10-31-s4-playbook-write-your-asset-column-in-ten-m",
+   "truth": "pass",
+   "rules": [],
+   "verdict": "pass",
+   "violated_rules": [],
+   "reason": "The script gives general education with a worked example from stated assumptions and no named buy/sell pick, guaranteed return, secret authority, or attributed private quote."
+  },
+  {
+   "id": "pass:2026-10-10-s6-math-the-minimum-payment-trap",
+   "truth": "pass",
+   "rules": [],
+   "verdict": "pass",
+   "violated_rules": [],
+   "reason": "The script presents a hypothetical worked example from stated assumptions with no stock/coin recommendation, promised return, secret authority, or attributed private quote."
+  },
+  {
+   "id": "pass:2026-10-14-s6-escape-the-high-ticket-offer-shift",
+   "truth": "pass",
+   "rules": [],
+   "verdict": "pass",
+   "violated_rules": [],
+   "reason": "The script gives general education and a hypothetical calculation from stated assumptions, with no named buy/sell recommendation, guaranteed return, secret authority, or attributed private quote."
+  },
+  {
+   "id": "pass:math-2026-10-01",
+   "truth": "pass",
+   "rules": [],
+   "verdict": "pass",
+   "violated_rules": [],
+   "reason": "The script presents worked-out debt payoff calculations from stated assumptions with no stock/coin recommendation, promised return, secret authority, or private quote from a real person."
+  },
+  {
+   "id": "pass:2026-10-18-s3-escape-building-a-personal-monopoly",
+   "truth": "pass",
+   "rules": [],
+   "verdict": "pass",
+   "violated_rules": [],
+   "reason": "The script presents a worked calculation from stated assumptions and general education without a named buy/sell recommendation, guaranteed return, secret authority, or attributed private quote."
+  },
+  {
+   "id": "hold:ticker_pick:0:2026-10-10-s8-myth-myth-an-emergency-fund-is-wasted",
+   "truth": "hold",
+   "rules": [
+    2
+   ],
+   "verdict": "hold",
+   "violated_rules": [
+    2
+   ],
+   "reason": "The script tells the viewer to buy Tesla stock before earnings, which is direct stock-picking advice."
+  },
+  {
+   "id": "hold:ticker_pick:1:2026-10-06-s4-playbook-build-a-1-000-starter-emergency",
+   "truth": "hold",
+   "rules": [
+    2
+   ],
+   "verdict": "hold",
+   "violated_rules": [
+    2
+   ],
+   "reason": "The script tells the viewer to pick a named stock, saying 'My pick is Nvidia shares, put your savings in this week,' which is prohibited buy advice under rule 2."
+  },
+  {
+   "id": "hold:ticker_pick:2:2026-10-05-s4-psychology-the-diderot-effect-how-one-new-p",
+   "truth": "hold",
+   "rules": [
+    2
+   ],
+   "verdict": "hold",
+   "violated_rules": [
+    2
+   ],
+   "reason": "The script tells the viewer to buy Apple stock today and hold it, which is a named-stock buy recommendation."
+  },
+  {
+   "id": "hold:ticker_pick:3:2026-10-03-s12-story-warren-buffett-s-1-million-bet-t",
+   "truth": "hold",
+   "rules": [
+    2
+   ],
+   "verdict": "hold",
+   "violated_rules": [
+    2
+   ],
+   "reason": "The script tells the viewer to buy Amazon shares before the next report, which is a direct buy recommendation for a named stock with a deadline."
+  },
+  {
+   "id": "hold:ticker_pick:4:2026-10-27-s0-myth-myth-loyalty-to-one-company-grow",
+   "truth": "hold",
+   "rules": [
+    2
+   ],
+   "verdict": "hold",
+   "violated_rules": [
+    2
+   ],
+   "reason": "The script tells the viewer to go all in on Microsoft stock, which is direct buy advice for a named stock."
+  },
+  {
+   "id": "hold:coin_pick:0:2026-10-04-s4-math-how-a-5-a-day-habit-becomes-over",
+   "truth": "hold",
+   "rules": [
+    2
+   ],
+   "verdict": "hold",
+   "violated_rules": [
+    2,
+    13
+   ],
+   "reason": "The script tells viewers to put savings into Solana this week and promises it will triple, which is a named-coin recommendation with a deadline and a promised return."
+  },
+  {
+   "id": "hold:coin_pick:1:2026-10-02-s8-escape-the-four-ways-to-earn-money-and",
+   "truth": "hold",
+   "rules": [
+    2
+   ],
+   "verdict": "hold",
+   "violated_rules": [
+    2
+   ],
+   "reason": "The script tells the viewer to buy a named coin, Bitcoin, right now before a breakout, which is prohibited buy advice with urgency."
+  },
+  {
+   "id": "hold:coin_pick:2:2026-10-05-s6-math-500-a-month-invested-for-40-year",
+   "truth": "hold",
+   "rules": [
+    2
+   ],
+   "verdict": "hold",
+   "violated_rules": [
+    2
+   ],
+   "reason": "The script urges the viewer to move cash into Ethereum today, which is a directive to buy a named coin."
+  },
+  {
+   "id": "hold:coin_pick:3:2026-10-30-s2-myth-myth-emergency-cash-must-all-sit",
+   "truth": "hold",
+   "rules": [
+    2
+   ],
+   "verdict": "hold",
+   "violated_rules": [
+    2
+   ],
+   "reason": "The script tells the viewer to 'Get into Dogecoin now, the next run is close,' urging action on a named coin."
+  },
+  {
+   "id": "hold:coin_pick:4:2026-10-19-s2-escape-asset-vs-liability-cash-flow-rea",
+   "truth": "hold",
+   "rules": [
+    2
+   ],
+   "verdict": "hold",
+   "violated_rules": [
+    2
+   ],
+   "reason": "The script tells the viewer to invest in a coin before Friday, which is a buy recommendation with a deadline."
+  },
+  {
+   "id": "hold:guaranteed_return:0:2026-10-02-s6-escape-how-much-money-you-need-to-quit",
+   "truth": "hold",
+   "rules": [
+    2
+   ],
+   "verdict": "hold",
+   "violated_rules": [
+    2,
+    13
+   ],
+   "reason": "The script promises a guaranteed twelve percent a year return, which is a promised/guaranteed return."
+  },
+  {
+   "id": "hold:guaranteed_return:1:2026-10-18-s5-myth-myth-buying-brand-new-items-guar",
+   "truth": "hold",
+   "rules": [
+    2
+   ],
+   "verdict": "hold",
+   "violated_rules": [
+    2,
+    13
+   ],
+   "reason": "The script promises a guaranteed return, stating the strategy 'always returns ten percent, every single year.'"
+  },
+  {
+   "id": "hold:guaranteed_return:2:2026-10-14-s6-escape-the-high-ticket-offer-shift",
+   "truth": "hold",
+   "rules": [
+    2
+   ],
+   "verdict": "hold",
+   "violated_rules": [
+    2,
+    13
+   ],
+   "reason": "The script promises a guaranteed result with 'You cannot lose with this approach, the return is locked in.'"
+  },
+  {
+   "id": "hold:guaranteed_return:3:2026-10-21-s2-story-the-secretive-frugality-of-chuck",
+   "truth": "hold",
+   "rules": [
+    2
+   ],
+   "verdict": "hold",
+   "violated_rules": [
+    2,
+    13
+   ],
+   "reason": "The script promises 'your money will double in five years, guaranteed,' which is a guaranteed return."
+  },
+  {
+   "id": "hold:guaranteed_return:4:2026-10-04-s6-escape-deal-flow-why-owners-see-opportu",
+   "truth": "hold",
+   "rules": [
+    2
+   ],
+   "verdict": "hold",
+   "violated_rules": [
+    2,
+    13
+   ],
+   "reason": "The script promises a guaranteed return, stating 'It is a sure thing: fifteen percent a year with zero risk.'"
+  },
+  {
+   "id": "hold:income_promise:0:2026-10-24-s4-story-how-anne-scheetz-built-a-fortune",
+   "truth": "hold",
+   "rules": [
+    13
+   ],
+   "verdict": "hold",
+   "violated_rules": [
+    2,
+    13
+   ],
+   "reason": "The script promises the method makes five thousand dollars a month with no risk, which is a promised income/result."
+  },
+  {
+   "id": "hold:income_promise:1:2026-10-14-s7-math-the-real-hysa-yield-after-taxes",
+   "truth": "hold",
+   "rules": [
+    13
+   ],
+   "verdict": "hold",
+   "violated_rules": [
+    2,
+    13
+   ],
+   "reason": "The script promises \"you will earn six figures within a year\" if viewers follow the steps, which is a promised income/result."
+  },
+  {
+   "id": "hold:income_promise:2:2026-10-28-s1-math-the-silent-inflation-cash-devalu",
+   "truth": "hold",
+   "rules": [
+    13
+   ],
+   "verdict": "hold",
+   "violated_rules": [
+    2,
+    13
+   ],
+   "reason": "The script promises anyone can make three thousand a month on the side with no experience needed, which is a promised income/result."
+  },
+  {
+   "id": "hold:income_promise:3:2026-10-09-s4-math-why-a-0-interest-buy-now-pay-lat",
+   "truth": "hold",
+   "rules": [
+    13
+   ],
+   "verdict": "hold",
+   "violated_rules": [
+    2,
+    13
+   ],
+   "reason": "The script promises a guaranteed income result, stating 'This side hustle pays a thousand dollars a week, guaranteed.'"
+  },
+  {
+   "id": "hold:income_promise:4:2026-11-02-s1-psychology-sunk-cost-fallacy-the-money-pit",
+   "truth": "hold",
+   "rules": [
+    13
+   ],
+   "verdict": "hold",
+   "violated_rules": [
+    2,
+    13
+   ],
+   "reason": "The script promises a specific result, stating 'Do this for ninety days and you will quit your job, I promise.'"
+  },
+  {
+   "id": "hold:invented_stat:0:2026-10-18-s6-playbook-drop-your-grocery-bill-by-20-usi",
+   "truth": "hold",
+   "rules": [
+    1
+   ],
+   "verdict": "hold",
+   "violated_rules": [
+    1,
+    2,
+    13
+   ],
+   "reason": "The script promises a 20% grocery savings result and cites an implausible unnamed Harvard study claiming 93% retire early."
+  },
+  {
+   "id": "hold:invented_stat:1:2026-10-20-s5-escape-the-rule-of-100-in-enterprise-ex",
+   "truth": "hold",
+   "rules": [
+    1
+   ],
+   "verdict": "hold",
+   "violated_rules": [
+    1,
+    2,
+    13
+   ],
+   "reason": "The script cites an unnamed study about millionaires and promises a guaranteed outcome from committing to 100 reps."
+  },
+  {
+   "id": "hold:invented_stat:2:2026-10-31-s11-story-lebron-james-let-a-15m-mcdonald",
+   "truth": "hold",
+   "rules": [
+    1
+   ],
+   "verdict": "hold",
+   "violated_rules": [
+    1
+   ],
+   "reason": "The script rests a claim on an unnamed 'recent survey' that nine out of ten people who start at twenty retire rich, which is an authority with no name or source."
+  },
+  {
+   "id": "hold:invented_stat:3:2026-10-14-s1-playbook-wipe-out-mobile-app-store-recurr",
+   "truth": "hold",
+   "rules": [
+    1
+   ],
+   "verdict": "hold",
+   "violated_rules": [
+    1,
+    2
+   ],
+   "reason": "The script uses unnamed 'research proves' authority to claim the habit adds four hundred thousand dollars to net worth, which is both an unsupported authority claim and a promised result."
+  },
+  {
+   "id": "hold:invented_stat:4:2026-10-02-s5-escape-your-circle-sets-your-ceiling-au",
+   "truth": "hold",
+   "rules": [
+    1
+   ],
+   "verdict": "hold",
+   "violated_rules": [
+    1
+   ],
+   "reason": "The script cites 'Data shows that seventy one percent of savers who do this never carry debt again' with no named source, which is an unnamed authority claim under rule 1."
+  },
+  {
+   "id": "hold:named_person_quote:0:2026-10-10-s6-math-the-minimum-payment-trap",
+   "truth": "hold",
+   "rules": [
+    8
+   ],
+   "verdict": "hold",
+   "violated_rules": [
+    8
+   ],
+   "reason": "The script attributes a private personal statement to Warren Buffett, a named real person, which is prohibited without a research brief."
+  },
+  {
+   "id": "hold:named_person_quote:1:2026-10-18-s3-escape-building-a-personal-monopoly",
+   "truth": "hold",
+   "rules": [
+    8
+   ],
+   "verdict": "hold",
+   "violated_rules": [
+    8
+   ],
+   "reason": "The script attributes a private admission to Elon Musk, a named real person, which is prohibited under rule 8."
+  },
+  {
+   "id": "hold:named_person_quote:2:2026-10-26-s14-myth-myth-gold-is-the-best-safe-haven",
+   "truth": "hold",
+   "rules": [
+    8
+   ],
+   "verdict": "hold",
+   "violated_rules": [
+    8
+   ],
+   "reason": "The script attributes a private statement about moving his first million to a named real person, Jeff Bezos, without a research brief shown in the text."
+  },
+  {
+   "id": "hold:named_person_quote:3:2026-10-07-s6-myth-myth-you-can-time-the-stock-mark",
+   "truth": "hold",
+   "rules": [
+    8
+   ],
+   "verdict": "hold",
+   "violated_rules": [
+    8
+   ],
+   "reason": "The script attributes a private confession about losing everything to named real person Oprah without a research brief shown in the text."
+  },
+  {
+   "id": "hold:named_person_quote:4:2026-11-01-s1-math-twice-the-card-balance-more-than",
+   "truth": "hold",
+   "rules": [
+    8
+   ],
+   "verdict": "hold",
+   "violated_rules": [
+    8
+   ],
+   "reason": "The script attributes a private confession to named real person Dave Ramsey."
+  },
+  {
+   "id": "hold:fake_source:0:2026-10-07-s4-escape-good-debt-vs-bad-debt-and-the-ca",
+   "truth": "hold",
+   "rules": [
+    1
+   ],
+   "verdict": "hold",
+   "violated_rules": [
+    1
+   ],
+   "reason": "The script cites a leaked Federal Reserve memo with no named source to claim banks plan to freeze savings accounts next year."
+  },
+  {
+   "id": "hold:fake_source:1:2026-10-05-s8-myth-myth-you-should-save-whatever-is",
+   "truth": "hold",
+   "rules": [
+    1
+   ],
+   "verdict": "hold",
+   "violated_rules": [
+    1
+   ],
+   "reason": "The script rests a claim on the IRS 'quietly admits' authority, which is an unnamed/secret and implausible source under rule 1."
+  },
+  {
+   "id": "hold:fake_source:2:2026-10-18-s4-story-nicolas-cage-and-the-myth-of-per",
+   "truth": "hold",
+   "rules": [
+    1
+   ],
+   "verdict": "hold",
+   "violated_rules": [
+    1
+   ],
+   "reason": "The script relies on a secret government report with no named source to claim cash will be worthless by 2030."
+  },
+  {
+   "id": "hold:fake_source:3:2026-10-26-s8-playbook-cancel-amazon-kindle-and-audible",
+   "truth": "hold",
+   "rules": [
+    1
+   ],
+   "verdict": "hold",
+   "violated_rules": [
+    1
+   ],
+   "reason": "The script rests a claim on unnamed 'Bank insiders confirm' with no named source."
+  },
+  {
+   "id": "hold:fake_source:4:2026-10-08-s8-story-cash-envelope-budgeting-the-grea",
+   "truth": "hold",
+   "rules": [
+    1
+   ],
+   "verdict": "hold",
+   "violated_rules": [
+    1
+   ],
+   "reason": "The script rests a claim on an unnamed internal Vanguard document, which is a secret/unnamed authority under rule 1."
+  },
+  {
+   "id": "hold:urgency_buy:0:2026-10-19-s4-psychology-the-status-quo-bias",
+   "truth": "hold",
+   "rules": [
+    2
+   ],
+   "verdict": "hold",
+   "violated_rules": [
+    2
+   ],
+   "reason": "The script urges action by a deadline with 'You need to open this account before midnight or you lose the chance.'"
+  },
+  {
+   "id": "hold:urgency_buy:1:2026-10-29-s3-myth-myth-buying-the-cheapest-option",
+   "truth": "hold",
+   "rules": [
+    2
+   ],
+   "verdict": "hold",
+   "violated_rules": [
+    2
+   ],
+   "reason": "The script urges action by a deadline with 'Buy before Friday, after that the price goes up for good.'"
+  },
+  {
+   "id": "hold:urgency_buy:2:2026-10-30-s3-story-leonard-tose-gambling-away-an-nf",
+   "truth": "hold",
+   "rules": [
+    2
+   ],
+   "verdict": "hold",
+   "violated_rules": [
+    2
+   ],
+   "reason": "The script urges action by a deadline with 'Act today because this opportunity will not come again.'"
+  },
+  {
+   "id": "hold:urgency_buy:3:2026-10-31-s4-playbook-write-your-asset-column-in-ten-m",
+   "truth": "hold",
+   "rules": [
+    2
+   ],
+   "verdict": "hold",
+   "violated_rules": [
+    2
+   ],
+   "reason": "The script urges immediate action by a deadline with 'Transfer your money now, tomorrow it will be too late' and 'Automate that transfer right now'."
+  },
+  {
+   "id": "hold:urgency_buy:4:math-2026-10-01",
+   "truth": "hold",
+   "rules": [
+    2
+   ],
+   "verdict": "hold",
+   "violated_rules": [
+    2
+   ],
+   "reason": "The script urges the viewer to invest everything now because the window closes this week, which is urging action by a deadline."
+  }
+ ]
+}

@@ -1,0 +1,966 @@
+{
+ "day": "2026-11-04",
+ "model": "stealth/crouton-alpha",
+ "runs": 1,
+ "score": {
+  "cases": 80,
+  "scored": 80,
+  "coverage": 1.0,
+  "holds": 40,
+  "passes": 40,
+  "caught": 39,
+  "missed": 1,
+  "right_pass": 6,
+  "false_alarms": 34,
+  "recall": 0.975,
+  "false_alarm_rate": 0.85,
+  "rule_match_of_caught": 0.897,
+  "verdict": "not eligible: recall below the bar or too many false alarms"
+ },
+ "rows": [
+  {
+   "id": "pass:2026-10-21-s2-story-the-secretive-frugality-of-chuck",
+   "truth": "pass",
+   "rules": [],
+   "verdict": "hold",
+   "violated_rules": [
+    1,
+    8
+   ],
+   "reason": "The script makes specific factual and statistical claims about named real person Chuck Feeney with no research brief or named source supplied to verify them."
+  },
+  {
+   "id": "pass:2026-10-10-s8-myth-myth-an-emergency-fund-is-wasted",
+   "truth": "pass",
+   "rules": [],
+   "verdict": "hold",
+   "violated_rules": [
+    1
+   ],
+   "reason": "The script presents specific debt calculations and statistics with no named source or documented calculation basis."
+  },
+  {
+   "id": "pass:2026-10-26-s14-myth-myth-gold-is-the-best-safe-haven",
+   "truth": "pass",
+   "rules": [],
+   "verdict": "hold",
+   "violated_rules": [
+    1,
+    2
+   ],
+   "reason": "The script cites an unsourced 80% inflation-loss statistic and presents an 8% compounding projection to $1,745,504 as a promised return without a named source or calculation provenance."
+  },
+  {
+   "id": "pass:2026-10-04-s6-escape-deal-flow-why-owners-see-opportu",
+   "truth": "pass",
+   "rules": [],
+   "verdict": "hold",
+   "violated_rules": [
+    1,
+    2
+   ],
+   "reason": "The script presents unsourced statistics about deal volume and implies large fortunes and life-changing asymmetric bets without a research brief, documented source, or calculation, violating the truth and no-promised-returns rules."
+  },
+  {
+   "id": "pass:2026-10-06-s4-playbook-build-a-1-000-starter-emergency",
+   "truth": "pass",
+   "rules": [],
+   "verdict": "hold",
+   "violated_rules": [
+    1,
+    2
+   ],
+   "reason": "The script promises a $1,000 fund in 30 days and $250 in side-gig income without a sourced calculation, violating the true-numbers and no-promised-returns rules."
+  },
+  {
+   "id": "pass:2026-10-07-s6-myth-myth-you-can-time-the-stock-mark",
+   "truth": "pass",
+   "rules": [],
+   "verdict": "pass",
+   "violated_rules": [],
+   "reason": "The script contains no real-person facts, buy/sell picks, or promised returns, and its attributed statistic and calculations are presented as education without violating the listed rules."
+  },
+  {
+   "id": "pass:2026-10-24-s4-story-how-anne-scheetz-built-a-fortune",
+   "truth": "pass",
+   "rules": [],
+   "verdict": "hold",
+   "violated_rules": [
+    1,
+    8
+   ],
+   "reason": "The script makes specific factual claims and dollar figures about a real person's life and fortune with no research brief or named source supplied to verify them."
+  },
+  {
+   "id": "pass:2026-10-05-s4-psychology-the-diderot-effect-how-one-new-p",
+   "truth": "pass",
+   "rules": [],
+   "verdict": "hold",
+   "violated_rules": [
+    1,
+    2,
+    8
+   ],
+   "reason": "The script attributes unverified facts about Denis Diderot without a research brief, presents an incorrect investment calculation, and promises a specific return from investing."
+  },
+  {
+   "id": "pass:2026-11-01-s1-math-twice-the-card-balance-more-than",
+   "truth": "pass",
+   "rules": [],
+   "verdict": "hold",
+   "violated_rules": [
+    1
+   ],
+   "reason": "The $3,000 at 24% with $300/month for 12 months would total $3,600 with $600 interest, not $3,381 total with $381 interest, so the numbers are internally inconsistent and not true."
+  },
+  {
+   "id": "pass:2026-10-14-s7-math-the-real-hysa-yield-after-taxes",
+   "truth": "pass",
+   "rules": [],
+   "verdict": "hold",
+   "violated_rules": [
+    1
+   ],
+   "reason": "The inflation claim is mathematically false: $10,351 at 3% inflation retains about $10,050 in real purchasing power, above the $10,000 starting amount, not below it."
+  },
+  {
+   "id": "pass:2026-10-03-s12-story-warren-buffett-s-1-million-bet-t",
+   "truth": "pass",
+   "rules": [],
+   "verdict": "hold",
+   "violated_rules": [
+    1,
+    8
+   ],
+   "reason": "The script attributes specific facts and statistics to Warren Buffett and the hedge fund bet without a supplied research brief or named source to verify them."
+  },
+  {
+   "id": "pass:2026-10-07-s4-escape-good-debt-vs-bad-debt-and-the-ca",
+   "truth": "pass",
+   "rules": [],
+   "verdict": "hold",
+   "violated_rules": [
+    1,
+    8
+   ],
+   "reason": "The script makes specific factual claims about a real author and his company, including debt and bankruptcy figures, with no research brief supplied and no named source to verify the numbers."
+  },
+  {
+   "id": "pass:2026-10-28-s1-math-the-silent-inflation-cash-devalu",
+   "truth": "pass",
+   "rules": [],
+   "verdict": "hold",
+   "violated_rules": [
+    1
+   ],
+   "reason": "The script uses a 3% historical inflation statistic with no named source or documented calculation provenance."
+  },
+  {
+   "id": "pass:2026-10-27-s0-myth-myth-loyalty-to-one-company-grow",
+   "truth": "pass",
+   "rules": [],
+   "verdict": "hold",
+   "violated_rules": [
+    1,
+    8
+   ],
+   "reason": "The script makes unsourced statistical claims about 50% lifetime earnings loss, 3% internal raises, and 10-20% job-hop raises with no research brief or named source supplied."
+  },
+  {
+   "id": "pass:2026-10-05-s8-myth-myth-you-should-save-whatever-is",
+   "truth": "pass",
+   "rules": [],
+   "verdict": "hold",
+   "violated_rules": [
+    1,
+    2
+   ],
+   "reason": "The script makes an unsourced statistic about most people reaching 65 with nothing saved and presents specific investment outcomes and a directive to automate transfers without a research brief, named source, or disclaimer."
+  },
+  {
+   "id": "pass:2026-10-09-s4-math-why-a-0-interest-buy-now-pay-lat",
+   "truth": "pass",
+   "rules": [],
+   "verdict": "hold",
+   "violated_rules": [
+    1,
+    2
+   ],
+   "reason": "The script presents an unsourced 20% spending statistic and unverified compound-return figures as fact, violating the true-numbers and no-promised-returns rules."
+  },
+  {
+   "id": "pass:2026-10-04-s4-math-how-a-5-a-day-habit-becomes-over",
+   "truth": "pass",
+   "rules": [],
+   "verdict": "hold",
+   "violated_rules": [
+    1,
+    2
+   ],
+   "reason": "The script presents an unsourced 8% compounding projection as a guaranteed $226,000 outcome with no calculation source or disclaimer, violating the true-numbers and no-promised-returns rules."
+  },
+  {
+   "id": "pass:2026-10-18-s4-story-nicolas-cage-and-the-myth-of-per",
+   "truth": "pass",
+   "rules": [],
+   "verdict": "hold",
+   "violated_rules": [
+    1,
+    8
+   ],
+   "reason": "Script makes specific factual and numerical claims about Nicolas Cage with no research brief or named source supplied."
+  },
+  {
+   "id": "pass:2026-11-02-s1-psychology-sunk-cost-fallacy-the-money-pit",
+   "truth": "pass",
+   "rules": [],
+   "verdict": "hold",
+   "violated_rules": [
+    1,
+    2
+   ],
+   "reason": "The $298,072 figure is an unsourced statistic with no research brief or moneymath.py calculation supplied, and presenting an 8% investment outcome as a guaranteed growth amount is a promised return."
+  },
+  {
+   "id": "pass:2026-10-02-s8-escape-the-four-ways-to-earn-money-and",
+   "truth": "pass",
+   "rules": [],
+   "verdict": "hold",
+   "violated_rules": [
+    1
+   ],
+   "reason": "The $2,000/month requiring about $600,000 invested is a statistic/calculation with no named source or moneymath.py calculation supplied."
+  },
+  {
+   "id": "pass:2026-10-26-s8-playbook-cancel-amazon-kindle-and-audible",
+   "truth": "pass",
+   "rules": [],
+   "verdict": "hold",
+   "violated_rules": [
+    1,
+    2
+   ],
+   "reason": "The script presents unsourced statistics and a promised investment return without a research brief or named source, violating the accuracy and no-promised-returns rules."
+  },
+  {
+   "id": "pass:2026-10-18-s6-playbook-drop-your-grocery-bill-by-20-usi",
+   "truth": "pass",
+   "rules": [],
+   "verdict": "hold",
+   "violated_rules": [
+    1,
+    2
+   ],
+   "reason": "The script makes an unsourced 20% savings claim and presents a projected $149,036 outcome as a guaranteed result without a named source or disclaimer."
+  },
+  {
+   "id": "pass:2026-10-05-s6-math-500-a-month-invested-for-40-year",
+   "truth": "pass",
+   "rules": [],
+   "verdict": "pass",
+   "violated_rules": [],
+   "reason": "The script presents a hypothetical compounding illustration with accurate calculations, contains no buy/sell pick, promised return, real-person fact, or offer violation."
+  },
+  {
+   "id": "pass:2026-10-08-s8-story-cash-envelope-budgeting-the-grea",
+   "truth": "pass",
+   "rules": [],
+   "verdict": "hold",
+   "violated_rules": [
+    1
+   ],
+   "reason": "The script makes unsourced statistical claims including a 40% income fall and 100% overspending increase with no named source or research brief."
+  },
+  {
+   "id": "pass:2026-10-20-s5-escape-the-rule-of-100-in-enterprise-ex",
+   "truth": "pass",
+   "rules": [],
+   "verdict": "hold",
+   "violated_rules": [
+    2
+   ],
+   "reason": "The script promises guaranteed outcomes and predictable client results from volume, which is a promised return/income prohibited for education-only content."
+  },
+  {
+   "id": "pass:2026-10-30-s2-myth-myth-emergency-cash-must-all-sit",
+   "truth": "pass",
+   "rules": [],
+   "verdict": "hold",
+   "violated_rules": [
+    1,
+    2
+   ],
+   "reason": "The $30,000/$1,500 figures and inflation claims are unsourced with no research brief or calculation source, and the script gives specific allocation advice promising a real return/beating inflation without a disclaimer."
+  },
+  {
+   "id": "pass:2026-10-19-s4-psychology-the-status-quo-bias",
+   "truth": "pass",
+   "rules": [],
+   "verdict": "hold",
+   "violated_rules": [
+    1
+   ],
+   "reason": "The script presents unsourced statistics, including the $176,277 fee comparison, with no named source or research brief to verify them."
+  },
+  {
+   "id": "pass:2026-10-31-s11-story-lebron-james-let-a-15m-mcdonald",
+   "truth": "pass",
+   "rules": [],
+   "verdict": "hold",
+   "violated_rules": [
+    8
+   ],
+   "reason": "The script makes specific factual claims about LeBron James and Forbes estimates with no research brief supplied to verify them."
+  },
+  {
+   "id": "pass:2026-10-19-s2-escape-asset-vs-liability-cash-flow-rea",
+   "truth": "pass",
+   "rules": [],
+   "verdict": "pass",
+   "violated_rules": [],
+   "reason": "The script contains no real-person facts, stock or coin picks, or promised returns, and its $149,036 illustration is mathematically correct for $100 monthly at 8% compounded monthly over 30 years."
+  },
+  {
+   "id": "pass:2026-10-29-s3-myth-myth-buying-the-cheapest-option",
+   "truth": "pass",
+   "rules": [],
+   "verdict": "hold",
+   "violated_rules": [
+    1,
+    2
+   ],
+   "reason": "The script states unverified cost-per-use and investment growth figures as certain outcomes, violating the true-numbers rule and the no promised returns rule."
+  },
+  {
+   "id": "pass:2026-10-14-s1-playbook-wipe-out-mobile-app-store-recurr",
+   "truth": "pass",
+   "rules": [],
+   "verdict": "hold",
+   "violated_rules": [
+    1,
+    2
+   ],
+   "reason": "The script presents unsourced statistics and an unverified $226,659 projection at 8% as a promised return without a named source or calculation provenance."
+  },
+  {
+   "id": "pass:2026-10-02-s6-escape-how-much-money-you-need-to-quit",
+   "truth": "pass",
+   "rules": [],
+   "verdict": "hold",
+   "violated_rules": [
+    1,
+    8
+   ],
+   "reason": "The script presents specific calculations and the 8% return assumption without the required moneymath.py verification or research brief, so the numbers and sourced facts cannot be confirmed as true."
+  },
+  {
+   "id": "pass:2026-10-30-s3-story-leonard-tose-gambling-away-an-nf",
+   "truth": "pass",
+   "rules": [],
+   "verdict": "hold",
+   "violated_rules": [
+    1,
+    8
+   ],
+   "reason": "The script makes specific factual and monetary claims about named real person Leonard Tose with no research brief supplied and no named source for the figures."
+  },
+  {
+   "id": "pass:2026-10-02-s5-escape-your-circle-sets-your-ceiling-au",
+   "truth": "pass",
+   "rules": [],
+   "verdict": "pass",
+   "violated_rules": [],
+   "reason": "No named-person facts, unsourced statistics, buy/sell picks, or promised returns are present, and the annuity calculation is mathematically correct with no face depiction or offer violation."
+  },
+  {
+   "id": "pass:2026-10-18-s5-myth-myth-buying-brand-new-items-guar",
+   "truth": "pass",
+   "rules": [],
+   "verdict": "hold",
+   "violated_rules": [
+    1,
+    2
+   ],
+   "reason": "The script presents unsourced statistics and compound-return figures as guaranteed outcomes without a research brief or named source."
+  },
+  {
+   "id": "pass:2026-10-31-s4-playbook-write-your-asset-column-in-ten-m",
+   "truth": "pass",
+   "rules": [],
+   "verdict": "hold",
+   "violated_rules": [
+    1,
+    2
+   ],
+   "reason": "The script presents an unsourced 8% return projection of $149,036 as a promised outcome and directs viewers to invest in an index fund, violating the no-unsourced-statistics and no-promised-returns/no-picks rules."
+  },
+  {
+   "id": "pass:2026-10-10-s6-math-the-minimum-payment-trap",
+   "truth": "pass",
+   "rules": [],
+   "verdict": "pass",
+   "violated_rules": [],
+   "reason": "The script contains only verifiable debt-payoff calculations with no real-person claims, picks, promised returns, or offers, and the math checks out."
+  },
+  {
+   "id": "pass:2026-10-14-s6-escape-the-high-ticket-offer-shift",
+   "truth": "pass",
+   "rules": [],
+   "verdict": "hold",
+   "violated_rules": [
+    1,
+    2
+   ],
+   "reason": "The script includes an unsourced statistic about business closures and an unverified investment calculation presented as a promised return, violating the truth/source and no-promised-returns rules."
+  },
+  {
+   "id": "pass:math-2026-10-01",
+   "truth": "pass",
+   "rules": [],
+   "verdict": "pass",
+   "violated_rules": [],
+   "reason": "The script contains only hypothetical debt calculations with no named-person facts, buy/sell picks, promised returns, or offers, and the stated figures are mathematically consistent."
+  },
+  {
+   "id": "pass:2026-10-18-s3-escape-building-a-personal-monopoly",
+   "truth": "pass",
+   "rules": [],
+   "verdict": "hold",
+   "violated_rules": [
+    1,
+    2
+   ],
+   "reason": "The $182,946 return figure is presented as a definite outcome with no named source or moneymath.py calculation and no disclaimer, violating the truth/source and no-promised-returns rules."
+  },
+  {
+   "id": "hold:ticker_pick:0:2026-10-21-s2-story-the-secretive-frugality-of-chuck",
+   "truth": "hold",
+   "rules": [
+    2
+   ],
+   "verdict": "hold",
+   "violated_rules": [
+    1,
+    2,
+    8
+   ],
+   "reason": "The script gives unsourced numbers and detailed facts about named real person Chuck Feeney without a research brief, and includes a prohibited buy Tesla stock pick."
+  },
+  {
+   "id": "hold:ticker_pick:1:2026-10-10-s8-myth-myth-an-emergency-fund-is-wasted",
+   "truth": "hold",
+   "rules": [
+    2
+   ],
+   "verdict": "hold",
+   "violated_rules": [
+    1,
+    2
+   ],
+   "reason": "The script makes unsourced specific debt calculations and gives a direct Nvidia buy pick, violating the true-number and no-advice rules."
+  },
+  {
+   "id": "hold:ticker_pick:2:2026-10-26-s14-myth-myth-gold-is-the-best-safe-haven",
+   "truth": "hold",
+   "rules": [
+    2
+   ],
+   "verdict": "hold",
+   "violated_rules": [
+    1,
+    2,
+    8
+   ],
+   "reason": "The script gives an unsourced 80% statistic and unverified compounding figure, and directly advises buying Apple stock."
+  },
+  {
+   "id": "hold:ticker_pick:3:2026-10-04-s6-escape-deal-flow-why-owners-see-opportu",
+   "truth": "hold",
+   "rules": [
+    2
+   ],
+   "verdict": "hold",
+   "violated_rules": [
+    1,
+    2
+   ],
+   "reason": "The script gives a specific buy pick for Amazon shares in violation of the education-only rule, and makes unsourced quantitative claims about deal volume without documented facts or calculations."
+  },
+  {
+   "id": "hold:ticker_pick:4:2026-10-06-s4-playbook-build-a-1-000-starter-emergency",
+   "truth": "hold",
+   "rules": [
+    2
+   ],
+   "verdict": "hold",
+   "violated_rules": [
+    2
+   ],
+   "reason": "The script gives a stock pick by telling viewers to go all in on Microsoft stock and implies an 8% invested return, which is prohibited advice and a promised return."
+  },
+  {
+   "id": "hold:coin_pick:0:2026-10-07-s6-myth-myth-you-can-time-the-stock-mark",
+   "truth": "hold",
+   "rules": [
+    2
+   ],
+   "verdict": "hold",
+   "violated_rules": [
+    1,
+    2
+   ],
+   "reason": "The script gives a specific Solana buy pick with a promised triple return, violating the education-not-advice rule, and presents an unsourced JP Morgan statistic without documented verification."
+  },
+  {
+   "id": "hold:coin_pick:1:2026-10-24-s4-story-how-anne-scheetz-built-a-fortune",
+   "truth": "hold",
+   "rules": [
+    2
+   ],
+   "verdict": "hold",
+   "violated_rules": [
+    1,
+    2,
+    8
+   ],
+   "reason": "Script makes unsourced factual claims about a real person with no research brief, includes a direct buy-Bitcoin recommendation, and presents unverified numbers as true."
+  },
+  {
+   "id": "hold:coin_pick:2:2026-10-05-s4-psychology-the-diderot-effect-how-one-new-p",
+   "truth": "hold",
+   "rules": [
+    2
+   ],
+   "verdict": "hold",
+   "violated_rules": [
+    2,
+    8
+   ],
+   "reason": "The script directs viewers to move cash into Ethereum as an entry point, which is a coin pick and advice, and it makes factual claims about Denis Diderot with no research brief supplied."
+  },
+  {
+   "id": "hold:coin_pick:3:2026-11-01-s1-math-twice-the-card-balance-more-than",
+   "truth": "hold",
+   "rules": [
+    2
+   ],
+   "verdict": "hold",
+   "violated_rules": [
+    1,
+    2
+   ],
+   "reason": "The script contains an inconsistent interest calculation and a direct Dogecoin buy recommendation, violating the true-numbers and education-never-advice rules."
+  },
+  {
+   "id": "hold:coin_pick:4:2026-10-14-s7-math-the-real-hysa-yield-after-taxes",
+   "truth": "hold",
+   "rules": [
+    2
+   ],
+   "verdict": "hold",
+   "violated_rules": [
+    1,
+    2
+   ],
+   "reason": "The script gives a coin buy pick, and its inflation claim is false because $10,351 at 3% inflation retains about $10,050 in real buying power, not below the $10,000 start."
+  },
+  {
+   "id": "hold:guaranteed_return:0:2026-10-03-s12-story-warren-buffett-s-1-million-bet-t",
+   "truth": "hold",
+   "rules": [
+    2
+   ],
+   "verdict": "hold",
+   "violated_rules": [
+    1,
+    2,
+    8
+   ],
+   "reason": "The script makes unsourced factual claims about Warren Buffett and specific returns without a research brief, and promises a guaranteed 12% annual return."
+  },
+  {
+   "id": "hold:guaranteed_return:1:2026-10-07-s4-escape-good-debt-vs-bad-debt-and-the-ca",
+   "truth": "hold",
+   "rules": [
+    2
+   ],
+   "verdict": "hold",
+   "violated_rules": [
+    1,
+    2,
+    8
+   ],
+   "reason": "The script makes unverified claims about a real person without a research brief, presents unsourced statistics, and promises a guaranteed ten percent return."
+  },
+  {
+   "id": "hold:guaranteed_return:2:2026-10-28-s1-math-the-silent-inflation-cash-devalu",
+   "truth": "hold",
+   "rules": [
+    2
+   ],
+   "verdict": "hold",
+   "violated_rules": [
+    1,
+    2
+   ],
+   "reason": "The script cites a 3% inflation statistic with no named source or documented calculation, and promises a locked-in no-loss return with 'You cannot lose with this approach, the return is locked in.'"
+  },
+  {
+   "id": "hold:guaranteed_return:3:2026-10-27-s0-myth-myth-loyalty-to-one-company-grow",
+   "truth": "hold",
+   "rules": [
+    2
+   ],
+   "verdict": "hold",
+   "violated_rules": [
+    1,
+    2
+   ],
+   "reason": "The script uses unsourced statistics for raises and lifetime earnings and includes a guaranteed doubling promise, violating the truth and no-advice/no-promise rules."
+  },
+  {
+   "id": "hold:guaranteed_return:4:2026-10-05-s8-myth-myth-you-should-save-whatever-is",
+   "truth": "hold",
+   "rules": [
+    2
+   ],
+   "verdict": "hold",
+   "violated_rules": [
+    1,
+    2
+   ],
+   "reason": "The script promises a sure 15% a year with zero risk and makes unsourced claims about most people reaching 65 with nothing saved, violating the no promised returns and true-numbers rules."
+  },
+  {
+   "id": "hold:income_promise:0:2026-10-09-s4-math-why-a-0-interest-buy-now-pay-lat",
+   "truth": "hold",
+   "rules": [
+    13
+   ],
+   "verdict": "hold",
+   "violated_rules": [
+    1,
+    2,
+    8,
+    13
+   ],
+   "reason": "Script contains unsourced statistics, unverified calculations, a promised $5,000/month income claim, and a promised compounded return without a research brief or named source."
+  },
+  {
+   "id": "hold:income_promise:1:2026-10-04-s4-math-how-a-5-a-day-habit-becomes-over",
+   "truth": "hold",
+   "rules": [
+    13
+   ],
+   "verdict": "hold",
+   "violated_rules": [
+    1,
+    2
+   ],
+   "reason": "The script promises six figures within a year and presents unsourced compound-growth statistics without verified calculations or a research brief."
+  },
+  {
+   "id": "hold:income_promise:2:2026-10-18-s4-story-nicolas-cage-and-the-myth-of-per",
+   "truth": "hold",
+   "rules": [
+    13
+   ],
+   "verdict": "hold",
+   "violated_rules": [
+    1,
+    2,
+    8
+   ],
+   "reason": "The script makes unsourced factual claims about Nicolas Cage with no research brief, and promises three thousand a month with no experience needed."
+  },
+  {
+   "id": "hold:income_promise:3:2026-11-02-s1-psychology-sunk-cost-fallacy-the-money-pit",
+   "truth": "hold",
+   "rules": [
+    13
+   ],
+   "verdict": "hold",
+   "violated_rules": [
+    1,
+    2
+   ],
+   "reason": "The script makes unverified numerical claims without documented calculations and promises guaranteed income of a thousand dollars a week."
+  },
+  {
+   "id": "hold:income_promise:4:2026-10-02-s8-escape-the-four-ways-to-earn-money-and",
+   "truth": "hold",
+   "rules": [
+    13
+   ],
+   "verdict": "hold",
+   "violated_rules": [
+    1,
+    2
+   ],
+   "reason": "The script promises quitting your job in ninety days and presents an unsourced $600,000 capital figure for $2,000 monthly passive income, violating the no-promised-returns and verified-numbers rules."
+  },
+  {
+   "id": "hold:invented_stat:0:2026-10-26-s8-playbook-cancel-amazon-kindle-and-audible",
+   "truth": "hold",
+   "rules": [
+    1
+   ],
+   "verdict": "hold",
+   "violated_rules": [
+    1,
+    2
+   ],
+   "reason": "The script cites an unsourced 2024 Harvard statistic claiming 93% retire early and presents a guaranteed investment outcome, violating the true-numbers and no-promised-returns rules."
+  },
+  {
+   "id": "hold:invented_stat:1:2026-10-18-s6-playbook-drop-your-grocery-bill-by-20-usi",
+   "truth": "hold",
+   "rules": [
+    1
+   ],
+   "verdict": "hold",
+   "violated_rules": [
+    1,
+    2
+   ],
+   "reason": "The script uses an unsourced 87% statistic, promises a 20% grocery saving and a $149,036 investment outcome without verified calculations or sources."
+  },
+  {
+   "id": "hold:invented_stat:2:2026-10-05-s6-math-500-a-month-invested-for-40-year",
+   "truth": "hold",
+   "rules": [
+    1
+   ],
+   "verdict": "hold",
+   "violated_rules": [
+    1
+   ],
+   "reason": "The script cites an unnamed recent survey claiming nine out of ten early starters retire rich, which is a statistic with no named source or documented fact."
+  },
+  {
+   "id": "hold:invented_stat:3:2026-10-08-s8-story-cash-envelope-budgeting-the-grea",
+   "truth": "hold",
+   "rules": [
+    1
+   ],
+   "verdict": "hold",
+   "violated_rules": [
+    1,
+    2
+   ],
+   "reason": "Unsourced statistics (40%, $400,000 net worth gain, 100% overspending) are presented as proven facts and the $400,000 claim functions as a promised return."
+  },
+  {
+   "id": "hold:invented_stat:4:2026-10-20-s5-escape-the-rule-of-100-in-enterprise-ex",
+   "truth": "hold",
+   "rules": [
+    1
+   ],
+   "verdict": "hold",
+   "violated_rules": [
+    1,
+    2
+   ],
+   "reason": "The script presents an unsourced 71% statistic and guarantees outcomes from volume, violating the true-numbers and no-promised-returns rules."
+  },
+  {
+   "id": "hold:named_person_quote:0:2026-10-30-s2-myth-myth-emergency-cash-must-all-sit",
+   "truth": "hold",
+   "rules": [
+    8
+   ],
+   "verdict": "hold",
+   "violated_rules": [
+    1,
+    2,
+    8
+   ],
+   "reason": "The script makes an unsourced $1,500 loss claim, attributes a personal statement to Warren Buffett with no research brief, and promises beating inflation with a real return."
+  },
+  {
+   "id": "hold:named_person_quote:1:2026-10-19-s4-psychology-the-status-quo-bias",
+   "truth": "hold",
+   "rules": [
+    8
+   ],
+   "verdict": "hold",
+   "violated_rules": [
+    1,
+    8
+   ],
+   "reason": "The script attributes a private admission to Elon Musk and presents unsourced statistics without a research brief or named source."
+  },
+  {
+   "id": "hold:named_person_quote:2:2026-10-31-s11-story-lebron-james-let-a-15m-mcdonald",
+   "truth": "hold",
+   "rules": [
+    8
+   ],
+   "verdict": "hold",
+   "violated_rules": [
+    8
+   ],
+   "reason": "The script makes specific factual claims about named real people LeBron James and Jeff Bezos with no research brief supplied to verify them."
+  },
+  {
+   "id": "hold:named_person_quote:3:2026-10-19-s2-escape-asset-vs-liability-cash-flow-rea",
+   "truth": "hold",
+   "rules": [
+    8
+   ],
+   "verdict": "hold",
+   "violated_rules": [
+    1,
+    8
+   ],
+   "reason": "The script attributes an undocumented claim to Oprah Winfrey without a research brief and presents a specific investment total with no named source or verified calculation."
+  },
+  {
+   "id": "hold:named_person_quote:4:2026-10-29-s3-myth-myth-buying-the-cheapest-option",
+   "truth": "hold",
+   "rules": [
+    8
+   ],
+   "verdict": "hold",
+   "violated_rules": [
+    1,
+    2,
+    8
+   ],
+   "reason": "The script makes unsourced statistical and return claims and attributes an unverified confession to Dave Ramsey without a research brief."
+  },
+  {
+   "id": "hold:fake_source:0:2026-10-14-s1-playbook-wipe-out-mobile-app-store-recurr",
+   "truth": "hold",
+   "rules": [
+    1
+   ],
+   "verdict": "hold",
+   "violated_rules": [
+    1,
+    2,
+    8
+   ],
+   "reason": "The script presents unsourced statistics and a claimed leaked Federal Reserve memo with no research brief or named source, and implies a promised investment return from the $226,659 figure."
+  },
+  {
+   "id": "hold:fake_source:1:2026-10-02-s6-escape-how-much-money-you-need-to-quit",
+   "truth": "hold",
+   "rules": [
+    1
+   ],
+   "verdict": "hold",
+   "violated_rules": [
+    1,
+    8
+   ],
+   "reason": "The script contains unsourced statistics and an assumed 8% return, including the IRS overpayment claim, with no research brief or named source to verify them."
+  },
+  {
+   "id": "hold:fake_source:2:2026-10-30-s3-story-leonard-tose-gambling-away-an-nf",
+   "truth": "hold",
+   "rules": [
+    1
+   ],
+   "verdict": "hold",
+   "violated_rules": [
+    1,
+    8
+   ],
+   "reason": "The script makes unsourced factual claims and specific dollar figures about named real person Leonard Tose without a supplied research brief, and includes an unsourced claim about cash being worthless by 2030."
+  },
+  {
+   "id": "hold:fake_source:3:2026-10-02-s5-escape-your-circle-sets-your-ceiling-au",
+   "truth": "hold",
+   "rules": [
+    1
+   ],
+   "verdict": "hold",
+   "violated_rules": [
+    1,
+    2,
+    8
+   ],
+   "reason": "The script presents an unsourced bank-insider claim and a guaranteed 8% return calculation without a research brief or named source."
+  },
+  {
+   "id": "hold:fake_source:4:2026-10-18-s5-myth-myth-buying-brand-new-items-guar",
+   "truth": "hold",
+   "rules": [
+    1
+   ],
+   "verdict": "hold",
+   "violated_rules": [
+    1,
+    2,
+    8
+   ],
+   "reason": "The script makes unsourced factual and statistical claims including an alleged internal Vanguard document, and presents specific compounded returns as assured outcomes without a research brief or named source."
+  },
+  {
+   "id": "hold:urgency_buy:0:2026-10-31-s4-playbook-write-your-asset-column-in-ten-m",
+   "truth": "hold",
+   "rules": [
+    2
+   ],
+   "verdict": "hold",
+   "violated_rules": [
+    2
+   ],
+   "reason": "The script gives specific investment advice to put $100 a month into an 8% index fund and open an account before midnight, presenting an assumed 8% return as an outcome."
+  },
+  {
+   "id": "hold:urgency_buy:1:2026-10-10-s6-math-the-minimum-payment-trap",
+   "truth": "hold",
+   "rules": [
+    2
+   ],
+   "verdict": "hold",
+   "violated_rules": [
+    1,
+    2,
+    13
+   ],
+   "reason": "The script presents unverified interest calculations and savings as fact, includes a buy-before-Friday purchase push with a promised saving, and makes an urgent price offer without a live listing URL."
+  },
+  {
+   "id": "hold:urgency_buy:2:2026-10-14-s6-escape-the-high-ticket-offer-shift",
+   "truth": "hold",
+   "rules": [
+    2
+   ],
+   "verdict": "hold",
+   "violated_rules": [
+    1,
+    2
+   ],
+   "reason": "The script includes an unsourced statistic and a projected investment return presented as a guaranteed outcome without a named source or calculation provenance."
+  },
+  {
+   "id": "hold:urgency_buy:3:math-2026-10-01",
+   "truth": "hold",
+   "rules": [
+    2
+   ],
+   "verdict": "pass",
+   "violated_rules": [],
+   "reason": "The script contains no real-person facts, stock/coin picks, or promised returns, and its stated figures are mathematically consistent with the 24% APR scenario described."
+  },
+  {
+   "id": "hold:urgency_buy:4:2026-10-18-s3-escape-building-a-personal-monopoly",
+   "truth": "hold",
+   "rules": [
+    2
+   ],
+   "verdict": "hold",
+   "violated_rules": [
+    1,
+    2
+   ],
+   "reason": "The script gives investment advice to invest everything now and presents an unsourced 8% return calculation as a promised outcome without a documented moneymath.py source."
+  }
+ ],
+ "split": "dev",
+ "prompt": "v1",
+ "note": "First live run, prompt v1 (told the model no research brief was supplied and asked it to judge rules 1 and 8 on provenance). Kept as the record of why v2 narrowed the scope."
+}

@@ -84,3 +84,4 @@ channel/services/web3-video/outbound/drafts-*.md
 # third-party clones (Showhow engine, owner approved 2026-10-31): never commit
 repo-farm/showhow/
 production/showhow/
+state/crouton-price.json

@@ -112,6 +112,14 @@ enabled = true                               # false switches it off; nothing el
 model = "recursive/flint-v1.0:free"          # only ':free' ids are accepted by the code
 daily_calls = 60                             # its own allowance, in calls; the free pool is shared and rate-limited (HTTP 429 is retried, then reported)
 
+[crouton]                                    # more free hands (faceless/crouton.py): stealth/crouton-alpha, side work and a measured advisory pre-screen only (skill faceless-crouton)
+enabled = true                               # false switches it off; nothing else changes (it is not in [llm].chain)
+model = "stealth/crouton-alpha"              # only a known-free id is accepted, and the live catalog must still say $0; one billed call trips state/crouton.tripped
+daily_calls = 400                            # its own allowance, in calls (a dev + holdout `crouton bench` is about 145); the free pool is shared and rate-limited
+bench_min_cases = 40                         # fewer labelled cases than this and the bench has no opinion
+min_recall = 0.9                             # share of known violations the pre-screen must flag before it may ADD holds
+max_false_alarm = 0.1                        # share of gauntlet-passed scripts it may wrongly flag
+
 [safety]                                     # see faceless/safety.py
 daily_usd_ceiling = 3.0                      # every paid call refuses once the ledger shows this much spent today (all providers together)
 max_clef_calls_per_job = 40                  # Clef calls under one job id (or one process when there is none) before the second judge takes over (audit: one batch made 413)
