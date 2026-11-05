@@ -1,0 +1,67 @@
+{
+  "id": "2026-11-05-s1-story-why-winning-the-lottery-usually",
+  "pillar": "story",
+  "topic": "Why Winning the Lottery Usually Destroys Your Net Worth Within Five Years",
+  "day": "2026-11-05",
+  "slot": 1,
+  "status": "held",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-11-05T09:41:06Z",
+      "words": 176
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-11-05T09:41:49Z",
+      "seconds": 69.558,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-11-05T09:43:35Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-11-05T09:48:03Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-11-05T09:48:03Z",
+      "score": 96
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-11-05T09:48:03Z"
+    },
+    {
+      "from": "packaged",
+      "to": "held",
+      "ts": "2026-11-05T09:48:03Z"
+    }
+  ],
+  "artifacts": {
+    "angle": "The psychological and structural traps that turn multi-million dollar windfalls into bankruptcy, anchored by the hidden cost of sudden social obligations.",
+    "hook": "Most lottery winners are broke five years later, not because they bought sports cars, but because of a psychological trap called the obligation spiral.",
+    "title": "Why a $5.4M Lottery Jackpot Vanished in 15 Years",
+    "style": "cinematic",
+    "video": "/home/user/quiet-money/production/output/2026-11-05/2026-11-05-s1-story-why-winning-the-lottery-usually/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-11-05/2026-11-05-s1-story-why-winning-the-lottery-usually/cover.jpg"
+  },
+  "scores": {
+    "gauntlet": 96,
+    "passed": false
+  },
+  "cost": {
+    "tts:edge:chars": 1126
+  },
+  "notes": [
+    "held for review: not_semantic_duplicate"
+  ]
+}

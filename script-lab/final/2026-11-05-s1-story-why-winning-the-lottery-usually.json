@@ -1,0 +1,95 @@
+{
+  "title": "Why a $5.4M Lottery Jackpot Vanished in 15 Years",
+  "hook_text": "HOW A $5.4M WINNER LOST EVERYTHING",
+  "beats": [
+    {
+      "say": "In 1985 and 1986, Evelyn Adams won $5.4 million in the New Jersey lottery.",
+      "callout": "",
+      "visual": "Extreme close-up of a wet lottery slip on dark rain-slicked asphalt under cold sodium lights."
+    },
+    {
+      "say": "By 2001, every dollar was gone, leaving her broke in a trailer. How did $5.4 million evaporate?",
+      "callout": "$5.4M TO $0",
+      "visual": "Silhouette of a tiny figure walking through heavy fog in an empty trailer park at blue hour."
+    },
+    {
+      "say": "You'd think she wasted it all on mansions, yachts, and expensive sports cars like typical millionaires.",
+      "callout": "MANSIONS VS REALITY",
+      "visual": "Low angle shot of towering rusted wrought-iron gates in front of an abandoned darkened estate."
+    },
+    {
+      "say": "But luxury wasn't the main cause. She fell into a psychological trap called the obligation spiral. What is it?",
+      "callout": "",
+      "visual": "High angle shot of a solitary wooden chair under a single overhead bulb in a concrete room."
+    },
+    {
+      "say": "Relatives, friends, and strangers begged for loans and handouts she didn't know how to refuse.",
+      "callout": "HANDOUTS VS ASSETS",
+      "visual": "Close-up of hands resting on a cold metal table littered with thick stacks of unread mail."
+    },
+    {
+      "say": "To cover those losses, she gambled heavily at Atlantic City slot machines, losing millions more trying to win.",
+      "callout": "SLOT MACHINES",
+      "visual": "Extreme wide shot of a towering concrete casino building looming over dark Atlantic ocean water at night."
+    },
+    {
+      "say": "Guilt bled her cash, while panic broke her judgment. Why does sudden wealth destroy people who aren't prepared?",
+      "callout": "",
+      "visual": "Silhouette of a lonely figure standing at the edge of a rain-slicked pier under storm clouds."
+    },
+    {
+      "say": "Without clear rules, sudden money magnifies your existing habits, bad advice, and social guilt into total bankruptcy.",
+      "callout": "",
+      "visual": "High angle of an empty subterranean concrete corridor illuminated by flickering fluorescent lights."
+    },
+    {
+      "say": "$5.4 million evaporated because cash without personal boundaries creates endless demands and desperation you can't survive.",
+      "callout": "WEALTH AMPLIFIED",
+      "visual": "Low angle of a single rusted streetlight shining down on a completely empty asphalt road."
+    },
+    {
+      "say": "Windfalls don't fix money problems—they only multiply whatever habits you already have.",
+      "callout": "",
+      "visual": "Silhouette of a person looking down from a high glass tower edge onto a fog-covered city."
+    },
+    {
+      "say": "Build strict financial boundaries today. Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "Extreme wide shot of a wet open highway stretching straight toward a cold sunrise horizon."
+    }
+  ],
+  "caption": "Winning $5.4 million didn't protect Evelyn Adams from the obligation spiral. Here is why sudden windfalls vanish.\n\n#money #personalfinance #wealth #lottery #psychologyofmoney",
+  "description": "Evelyn Adams won $5.4M in the New Jersey lottery but lost it all within 15 years. The combination of intense social pressure to hand out money and reckless efforts to win it back at slot machines bankrupted her. Learn why boundaries matter more than windfall cash.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#wealth",
+    "#lottery",
+    "#financialfreedom"
+  ],
+  "first_comment": "If you won $5M tomorrow, who is the first person you would tell?",
+  "facts": [
+    {
+      "claim": "Evelyn Adams won $5.4 million total in 1985 and 1986 in the New Jersey Lottery.",
+      "basis": "Documented historical news reports (New York Times, AP News archives)."
+    },
+    {
+      "claim": "Adams lost her fortune to gifts/loans to relatives and heavy slot machine gambling in Atlantic City, ending up living in a trailer by 2001.",
+      "basis": "Documented news profiles on Evelyn Adams post-jackpot."
+    }
+  ],
+  "source": "llm",
+  "pillar": "story",
+  "look": "",
+  "loop_map": {
+    "stakes": "Evelyn Adams won $5.4M but ended up broke living in a trailer.",
+    "big_question": "How did $5.4 million evaporate?",
+    "assume": "She spent it all on luxury mansions and sports cars.",
+    "reveal": "An obligation spiral of endless handouts combined with gambling losses destroyed her balance.",
+    "rehook_beats": [
+      4,
+      7
+    ],
+    "payoff_beat": 9
+  }
+}

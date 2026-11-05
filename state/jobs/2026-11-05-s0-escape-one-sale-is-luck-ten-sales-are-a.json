@@ -4,22 +4,75 @@
   "topic": "One sale is luck, ten sales are a business",
   "day": "2026-11-05",
   "slot": 0,
-  "status": "scripted",
+  "status": "published",
   "history": [
     {
       "from": "planned",
       "to": "scripted",
       "ts": "2026-11-05T09:22:26Z",
       "words": 146
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-11-05T09:29:04Z",
+      "seconds": 66.631,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-11-05T09:29:56Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-11-05T09:34:34Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-11-05T09:34:34Z",
+      "score": 93
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-11-05T09:34:34Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-11-05T09:34:34Z",
+      "local": "2026-11-05T07:30:00-05:00",
+      "youtube": null
     }
   ],
   "artifacts": {
     "angle": "the graduation test for the first stage: consistent first sales to strangers, not friends",
     "brief": "hormozi",
     "hook": "One sale proves you got lucky. Ten sales to strangers prove a business.",
-    "title": "One sale is luck. Ten sales are a business."
+    "title": "One Sale Is Luck. Ten Sales Are a Business.",
+    "style": "cinematic",
+    "video": "/home/user/quiet-money/production/output/2026-11-05/2026-11-05-s0-escape-one-sale-is-luck-ten-sales-are-a/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-11-05/2026-11-05-s0-escape-one-sale-is-luck-ten-sales-are-a/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-11-05/slot1-escape",
+        "post_at": "2026-11-05T07:30:00-05:00"
+      },
+      "youtube": {
+        "skipped": "YouTube daily cap reached (5 scheduled for 2026-11-05); the local pack is ready"
+      }
+    }
   },
-  "scores": {},
-  "cost": {},
+  "scores": {
+    "gauntlet": 93,
+    "passed": true
+  },
+  "cost": {
+    "tts:edge:chars": 1866
+  },
   "notes": []
 }

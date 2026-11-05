@@ -1,0 +1,91 @@
+{
+  "title": "Why Lottery Winners Go Broke So Fast",
+  "hook_text": "THE OBLIGATION SPIRAL DESTROYS LOTTERY WINNERS",
+  "beats": [
+    {
+      "say": "Most lottery winners are broke 5 years later, not because of sports cars, but due to an obligation spiral.",
+      "callout": "",
+      "visual": "Extreme wide shot of a solitary silhouette standing on a rain-slick concrete bridge at blue hour under sodium streetlights."
+    },
+    {
+      "say": "You see a $20,000,000 jackpot and think financial freedom is finally locked in for good.",
+      "callout": "$20M JACKPOT",
+      "visual": "Low angle shot of a rusted iron fire escape cutting across a cold concrete wall, lit by harsh fluorescent light."
+    },
+    {
+      "say": "Where does all that cash actually vanish to so quickly?",
+      "callout": "",
+      "visual": "Extreme close-up of heavy iron padlocks on a weathered gate under a dark overcast sky."
+    },
+    {
+      "say": "Most folks assume poor budgeting or luxury shopping drains the bank account.",
+      "callout": "BUDGET VS SOCIAL",
+      "visual": "High angle shot of a wet asphalt highway intersection with no traffic, dimly lit by a single distant amber light."
+    },
+    {
+      "say": "The real culprit is a hidden psychological trap that forces you to fund everyone else's life.",
+      "callout": "",
+      "visual": "Silhouette of a person walking away down a long concrete underpass cut by harsh shadows."
+    },
+    {
+      "say": "When a relative asks for $5,000 to save their home, saying no feels impossible.",
+      "callout": "$5,000 ASK",
+      "visual": "Extreme close-up of rough concrete pillars dripping with rainwater under a cold highway overpass."
+    },
+    {
+      "say": "How do dozens of sudden requests drain a multi-million dollar fund in just 60 months?",
+      "callout": "",
+      "visual": "Low angle shot of a massive steel industrial crane tower cutting into a dark, foggy sky."
+    },
+    {
+      "say": "Every accepted favor creates three new demands from friends and distant family members.",
+      "callout": "ONE FAVOR VS THREE DEMANDS",
+      "visual": "Extreme wide shot of dark ocean waves crashing against jagged black rocks at night."
+    },
+    {
+      "say": "The obligation spiral swallows principal faster than any sports car ever could.",
+      "callout": "",
+      "visual": "Silhouette of a lone figure standing at the edge of a vast, empty rooftop against a navy blue horizon."
+    },
+    {
+      "say": "Wealth isn't destroyed by what you buy yourself, but by what you say yes to for others.",
+      "callout": "SELF VS OTHERS",
+      "visual": "Extreme close-up of wet cobblestone street reflecting a single harsh sodium light."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "FOLLOW",
+      "visual": "Low angle shot of a heavy steel bridge structure disappearing into thick evening fog."
+    }
+  ],
+  "caption": "Why winning millions often leads straight back to zero. #moneypk #personalfinance #wealth #psychology #moneyrules",
+  "description": "An exploration of the obligation spiral that drains lottery windfalls within five years.",
+  "hashtags": [
+    "#moneypk",
+    "#personalfinance",
+    "#wealth",
+    "#psychology",
+    "#moneyrules"
+  ],
+  "first_comment": "What's the hardest person to say no to when money gets tight?",
+  "facts": [
+    {
+      "claim": "Most lottery winners face severe financial distress or bankruptcy within five years.",
+      "basis": "Documented studies by the National Endowment for Financial Education and financial planners regarding sudden wealth syndrome."
+    }
+  ],
+  "source": "llm",
+  "pillar": "story",
+  "look": "",
+  "loop_map": {
+    "stakes": "A $20,000,000 lottery jackpot and the illusion of permanent financial freedom.",
+    "big_question": "Where does all that cash actually vanish to so quickly?",
+    "assume": "Most folks assume poor budgeting or luxury shopping drains the bank account.",
+    "reveal": "The real culprit is the obligation spiral of funding everyone else.",
+    "rehook_beats": [
+      3,
+      7
+    ],
+    "payoff_beat": 10
+  }
+}

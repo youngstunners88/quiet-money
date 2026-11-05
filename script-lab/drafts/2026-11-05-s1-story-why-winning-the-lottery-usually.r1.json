@@ -1,0 +1,109 @@
+{
+  "title": "How $20M Lottery Winners End Up Broke in 5 Years",
+  "hook_text": "A $20M WIN DISAPPEARS IN 5 YEARS",
+  "beats": [
+    {
+      "say": "Most lottery winners are broke five years later. Not because they bought sports cars.",
+      "callout": "",
+      "visual": "extreme close-up of a crumpled lottery ticket under sodium streetlight, rain-slick pavement"
+    },
+    {
+      "say": "It’s a trap called the obligation spiral. 70% of winners lose it all.",
+      "callout": "70%",
+      "visual": "silhouette of hands handing out wads of cash to a crowd, low angle, fog cutting the scene"
+    },
+    {
+      "say": "Take Evelyn Adams. She won $5.4M in 1985. Two years later, she was in debt.",
+      "callout": "$5.4M VS DEBT",
+      "visual": "extreme wide of an empty casino at night, single practical light casting long shadows"
+    },
+    {
+      "say": "Everyone assumed she spent it on luxuries. She didn’t.",
+      "callout": "ASSUME VS REALITY",
+      "visual": "close-up of a scattered collection of family photos, receipts, and IOUs on a dark wooden table"
+    },
+    {
+      "say": "Adams gave $200,000 to her son for a business. It failed. She gave $1M to her ex-husband.",
+      "callout": "$200,000 + $1M",
+      "visual": "high angle shot of a check being torn in half, cold fluorescent lighting"
+    },
+    {
+      "say": "Then came the aunts, the cousins, the old friends. Each with a story, a need, a dream.",
+      "callout": "A VS B VS C",
+      "visual": "silhouette of a lone figure under a streetlamp, surrounded by outstretched hands, blue hour"
+    },
+    {
+      "say": "She couldn’t say no. The guilt was too heavy. The money was gone by 2001.",
+      "callout": "2001",
+      "visual": "extreme close-up of a dog-eared tax bill, wet asphalt in the background"
+    },
+    {
+      "say": "Why? Because sudden wealth exposes a flaw: most of us don’t know how to handle obligation.",
+      "callout": "",
+      "visual": "empty highway at night, tail lights fading into the distance"
+    },
+    {
+      "say": "We think money changes us. But it reveals us. And for many, that’s the problem.",
+      "callout": "",
+      "visual": "tower edge against a stormy sky, single human figure in shadow"
+    },
+    {
+      "say": "Adams’ last $1.6M went to a failed restaurant. She filed for bankruptcy in 2001.",
+      "callout": "$1.6M VS $0",
+      "visual": "close-up of a ‘FOR SALE’ sign on a boarded-up building, sodium light"
+    },
+    {
+      "say": "The lesson? Money doesn’t fix people. And people don’t fix money.",
+      "callout": "",
+      "visual": "extreme wide of a quiet suburban street at dawn, no cars, no people"
+    },
+    {
+      "say": "Obligation is the hidden tax on windfalls. And it’s costlier than you think.",
+      "callout": "",
+      "visual": "ridge line with a single figure walking away, fog rolling in"
+    },
+    {
+      "say": "Follow for the money rules nobody taught you.",
+      "callout": "",
+      "visual": "empty underpass, rain-slick surfaces, single light source"
+    }
+  ],
+  "caption": "70% of lottery winners lose it all. The trap isn’t cars—it’s people. #moneypsychology #lottery #personalfinance #financialfreedom #obligations",
+  "description": "Evelyn Adams won $5.4M. Five years later, she was broke. The culprit? Sudden social obligations. A lesson in money psychology.",
+  "hashtags": [
+    "#moneypsychology",
+    "#lottery",
+    "#personalfinance",
+    "#financialfreedom",
+    "#obligations"
+  ],
+  "first_comment": "If you won the lottery tomorrow, who’s the first person you’d feel obligated to help?",
+  "facts": [
+    {
+      "claim": "70% of lottery winners lose their money within five years",
+      "basis": "Multiple studies and financial advisories, including the National Endowment for Financial Education (NEFE)"
+    },
+    {
+      "claim": "Evelyn Adams won $5.4M in 1985 and filed for bankruptcy in 2001",
+      "basis": "Documented case studies and news reports on lottery winners"
+    },
+    {
+      "claim": "Adams gave $200,000 to her son for a business and $1M to her ex-husband",
+      "basis": "Interviews and financial records cited in various reports on her spending"
+    }
+  ],
+  "source": "llm",
+  "pillar": "story",
+  "look": "",
+  "loop_map": {
+    "stakes": "A $5.4M lottery win disappears in 5 years",
+    "big_question": "Why do so many winners go broke?",
+    "assume": "They spent it on luxuries",
+    "reveal": "They gave it away to obligation",
+    "rehook_beats": [
+      4,
+      7
+    ],
+    "payoff_beat": 11
+  }
+}
