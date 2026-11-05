@@ -57,5 +57,10 @@ Nothing from another app is published unverified: every number needs a source in
 - [ ] each video packed and posted as soon as it renders; YouTube beyond the cap is scheduled ([[faceless-youtube-schedule]])
 - [ ] handoff written, memory updated, everything committed
 
-## Untested parts (record the result when first run)
-Flow background-generation behaviour, and each app's exact tap recipe. Save what works under references/ and update this skill.
+## Verified 2026-11-04
+- **Flow keeps generating while another app is in front** (driver started a still, spent about 90 s in DeepSeek, the tile was finished on return). Gap jobs therefore run inside Flow's wait. Pace with gap jobs about 65 s per still.
+- DeepSeek fact-check worked from the phone (answer read from the UI tree, 21 sources cited); its answer is data to verify, not a source.
+- The job id and Flow cache folder carry the UTC day: render before 00:00 UTC (09:00 KST) or the stills will not be found.
+
+## Still untested
+The other apps' exact tap recipes beyond DeepSeek. Save what works under references/ and update this skill.
