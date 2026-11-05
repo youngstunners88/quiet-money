@@ -88,6 +88,10 @@ humans set strategy, connect accounts, and review held videos.
 | Marketing: the weekly brief, funnel, measurement, experiments, what to tell the owner (the plan is `channel/empire/MARKETING.md`) | `/faceless/marketing.py`, `metrics.py` | `channel/empire/MARKETING.md` (section 8), `channel/empire/experiments.json` | `faceless-marketing` |
 | Learn from a video, post or channel; search what the Brain knows (transcripts in, notes out) | `/brain` | `brain/CONTEXT.md` | `faceless-brain` |
 | Free extra hands for side work (topic and script seeds, drafts); never the daily critical path | `/faceless/flint.py` | `python -m faceless flint status` | `faceless-flint` |
+| Weekly current strategies and fresh rat-race cases (cheap models do the bulk, Brain notes out, seeds to the backlog) | `/brain` | `brain/CONTEXT.md` | `faceless-weekly-current` |
+| Run production as parallel lanes (PC subagents write and render while one phone driver interleaves Flow stills with other phone apps) | `/faceless/phone.py` | `.claude/skills/faceless-parallel-lanes` | `faceless-parallel-lanes` |
+| Expand and rotate the look of the stills so videos stop looking alike (24 look packs, banned stock frames, linter) | `/faceless/prompts.py` | `.claude/skills/faceless-visual-range` | `faceless-visual-range` |
+| YouTube's daily upload cap: schedule instead of publishing now, re-send stuck uploads (phone scheduler, slot plan) | `/distribution` | `.claude/skills/faceless-youtube-schedule` | `faceless-youtube-schedule` |
 | Run the business as CEO: sprints, lanes as Claude Code workers (MCP `claude-code-orchestrator`), the sprint report | `/brain/PROMPTS` | `brain/PROMPTS/ORCHESTRATOR.md` | `faceless-ceo` |
 | What to sell next: proof-first demand research, scored on a rubric (never a fake door) | `/analytics/product-hunt` | `analytics/product-hunt/README.md` | `faceless-product-hunter` |
 | A free lead magnet that leads to one paid product (checklist, sample, tracker) | `/channel/offers/lead-magnets` | `channel/offers/sprint-01/` | `faceless-lead-magnet` |
