@@ -82,7 +82,7 @@
       "basis": "Historical sales reports from Salton Inc. and Spectrum Brands."
     }
   ],
-  "source": "llm",
+  "source": "human",
   "pillar": "story",
   "look": "clean isometric 3D render, soft clay shading, bright flat background, tiny scale details, playful geometry",
   "loop_map": {

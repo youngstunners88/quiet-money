@@ -83,7 +83,7 @@
       "basis": "Historical corporate literature of IKEA"
     }
   ],
-  "source": "llm",
+  "source": "human",
   "pillar": "story",
   "look": "long exposure light painting, streaking lights in the dark, motion blur trails, deep black background, saturated color",
   "look_pack": "long-exposure-light"

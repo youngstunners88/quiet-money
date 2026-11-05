@@ -44,7 +44,14 @@ elif step=="fill":
     x,y,r=where("AI-generated content"); tap(r-100,y,3)
     if 'AI-generated content,' in ui() and 'checked="true"' not in re.search(r'content-desc="AI-generated content,[^>]*',ui()).group(0): sys.exit("FAIL: AI label is not on")
     tap(1004,748,3); tap(344,477,2)                                    # close the sheet, caption box
+    want=want.replace("\u2019","'").replace("\u2018","'").replace("\u201c",'"').replace("\u201d",'"').replace("\u2014",", ").replace("\u2013","-")
+    want=re.sub(r"[^\x00-\x7f]","",want)                         # adb input text cannot type emoji or accents
+    want=re.sub(r"[ ]{2,}"," ",want).replace(" \n","\n")
     for li,line in enumerate(want.split("\n")):
         if li: adb("input keyevent 66"); time.sleep(0.2)
-        for i in range(0,len(line),8): adb("input text '"+line[i:i+8].replace(" ","%s")+"'"); time.sleep(0.4)
+        for pi,part in enumerate(line.split("'")):                  # an apostrophe breaks the shell quoting: type it as a key event (75)
+            if pi: adb("input keyevent 75"); time.sleep(0.2)
+            for i in range(0,len(part),8):
+                chunk=part[i:i+8].replace(" ","%s").replace('"','')
+                if chunk: adb("input text '"+chunk+"'"); time.sleep(0.4)
     time.sleep(2); tap(900,785,2); print("filled; verify cover, AI label and caption, then Post")
