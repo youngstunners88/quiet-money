@@ -4,7 +4,7 @@
   "topic": "Separate side-hustle money from day one",
   "day": "2026-11-05",
   "slot": 4,
-  "status": "voiced",
+  "status": "published",
   "history": [
     {
       "from": "planned",
@@ -18,15 +18,59 @@
       "ts": "2026-11-05T10:17:08Z",
       "seconds": 64.423,
       "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-11-05T10:20:28Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-11-05T10:24:05Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-11-05T10:24:05Z",
+      "score": 97
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-11-05T10:24:05Z"
+    },
+    {
+      "from": "packaged",
+      "to": "published",
+      "ts": "2026-11-05T10:24:05Z",
+      "local": "2026-11-05T21:00:00-05:00",
+      "youtube": null
     }
   ],
   "artifacts": {
     "angle": "a separate account and a simple record from the first dollar makes taxes and decisions easier",
     "brief": "hormozi",
     "hook": "The first dollar your side hustle earns should not touch your checking account.",
-    "title": "Side Hustle Money: The One Rule That Saves You"
+    "title": "Side Hustle Money: The One Rule That Saves You",
+    "style": "cinematic",
+    "video": "/home/user/quiet-money/production/output/2026-11-05/2026-11-05-s4-playbook-separate-side-hustle-money-from/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-11-05/2026-11-05-s4-playbook-separate-side-hustle-money-from/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-11-05/slot5-playbook",
+        "post_at": "2026-11-05T21:00:00-05:00"
+      },
+      "youtube": {
+        "skipped": "YouTube daily cap reached (5 scheduled for 2026-11-05); the local pack is ready"
+      }
+    }
   },
-  "scores": {},
+  "scores": {
+    "gauntlet": 97,
+    "passed": true
+  },
   "cost": {
     "tts:edge:chars": 945
   },

@@ -1,0 +1,18 @@
+{
+ "id": "2026-11-05-tiktok-2026-11-05-s4-playbook-separate-side-hustle-mone",
+ "kind": "tiktok",
+ "day": "2026-11-05",
+ "key": "2026-11-05-s4-playbook-separate-side-hustle-money-from",
+ "status": "queued",
+ "created": "2026-11-05T10:25:15+00:00",
+ "recipe": "TikTok upload",
+ "media": [
+  {
+   "source": "production/output/2026-11-05/2026-11-05-s4-playbook-separate-side-hustle-money-from/final.mp4",
+   "name": "final.mp4"
+  }
+ ],
+ "staged": false,
+ "text": "The first dollar of your side hustle should NEVER hit your checking. Here’s how to fix it in 15 minutes.\n\nFree reset checklist: link in bio.\n\n#SideHustle #MoneyRules #TaxTips #PersonalFinance #MoneyPsychology #QuietMoney\n\nEducation, not financial advice.",
+ "ai_label": "AI-generated content: on"
+}
