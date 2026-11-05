@@ -1,0 +1,85 @@
+{
+  "title": "The Mortgage Payoff Trap",
+  "hook_text": "PAYING OFF YOUR MORTGAGE EARLY IS A TRAP",
+  "beats": [
+    {
+      "say": "Throwing extra cash at a low-interest mortgage feels smart. It's actually costing you hundreds of thousands.",
+      "callout": "",
+      "visual": "Extreme wide shot of a tiny felt house with a wool yarn chimney sitting alone on a green felt hill, a single dark thread tied to its door, warm tungsten glow"
+    },
+    {
+      "say": "That fixed rate debt is cheap. Meanwhile, missing out on compounding interest destroys your net worth.",
+      "callout": "ASSET VS LIABILITY",
+      "visual": "Macro close-up of stitched felt door seam with a tiny wool padlock, visible fibers, razor-thin focus on one red stitch, handmade set"
+    },
+    {
+      "say": "Take investing $500 a month at 8% a year. In 30 years, it grows into $745,180.",
+      "callout": "$745,180",
+      "visual": "Overhead view of a towering felt mountain built from layered cream felt sheets of mortgage paper, tiny felt climber seen only from behind near the base, soft light"
+    },
+    {
+      "say": "If you send that money to the bank instead, you save a tiny 3% or 4% interest rate.",
+      "callout": "3% VS 8%",
+      "visual": "Low angle looking up a tall wool ladder with several rungs missing, rungs of braided yarn, felt clouds above, dramatic tungsten rim light"
+    },
+    {
+      "say": "You're trading a massive compounding return for a tiny guaranteed savings.",
+      "callout": "",
+      "visual": "Long lens compression of a row of identical felt houses with wool chimneys, one house glowing amber while the rest sit gray, shallow depth of field"
+    },
+    {
+      "say": "Look at the math. In 40 years, that same $500 a month turns into $1,745,504.",
+      "callout": "$1,745,504",
+      "visual": "Side view of a felt trapdoor set into a wool-stitched floor, slightly ajar with a warm glow from below, a felt lever beside it"
+    },
+    {
+      "say": "That house is paid off, but your overall wealth is miles behind where it could be.",
+      "callout": "",
+      "visual": "Aerial overhead of two felt paths over green felt hills, one short and dull gray, the other winding long and growing into a golden wool tree, handmade diorama"
+    },
+    {
+      "say": "Inflation also eats away at that debt. Your fixed payment shrinks in real buying power every single year.",
+      "callout": "",
+      "visual": "Macro of a stitched felt vault door with a wool dial and thick yarn bolts, one bolt pulled free, soft fibers catching warm light"
+    },
+    {
+      "say": "So what's the better rule? Never rush to crush cheap debt.",
+      "callout": "STEP ONE",
+      "visual": "Eye level through a felt doorway of a tiny wool piggy-like hill, a felt clockwork gear turning slowly and shrinking a stack of felt blocks, tungsten light"
+    },
+    {
+      "say": "Keep the low rate, pocket the spread, and let compounding do the heavy lifting.",
+      "callout": "STEP TWO",
+      "visual": "Overhead of a felt seesaw balanced on a wool spool, a small gray felt block on one end and a large golden felt tree on the other, shallow depth of field"
+    },
+    {
+      "say": "Because holding cheap debt while investing the difference is exactly how",
+      "callout": "",
+      "visual": "Wide dusk shot of a small felt house garden where a wool seedling grows into a tall yarn tree beside the chimney, felt stars, warm calm light"
+    }
+  ],
+  "caption": "The math behind cheap debt beats the emotional comfort of a zero balance every single time. #mortgage #personalfinance #wealth #investing",
+  "description": "Paying off a low-interest mortgage early often destroys long-term wealth through missed compounding opportunities. Here is the comparative math behind cheap debt.",
+  "hashtags": [
+    "#mortgage",
+    "#personalfinance",
+    "#wealth",
+    "#investing",
+    "#moneyrules"
+  ],
+  "first_comment": "Would you rather have a paid-off house or a bigger investment portfolio at age 65?",
+  "facts": [
+    {
+      "claim": "$500/month invested for 30 years at 8%/yr equals $745,180",
+      "basis": "Fact sheet: $500/month for 30 years at 8% = $745,180"
+    },
+    {
+      "claim": "$500/month invested for 40 years at 8%/yr equals $1,745,504",
+      "basis": "Fact sheet: $500/month for 40 years at 8% = $1,745,504"
+    }
+  ],
+  "source": "llm",
+  "pillar": "myth",
+  "look": "stop motion felt and wool craft, visible fibers, handmade set, warm tungsten light, shallow depth of field",
+  "look_pack": "stop-motion-felt"
+}

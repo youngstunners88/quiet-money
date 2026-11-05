@@ -1,0 +1,97 @@
+{
+  "title": "The Checking Account Cash Trap",
+  "hook_text": "LEAVING $30,000 IN CASH BURNS $1,500 A YEAR",
+  "beats": [
+    {
+      "say": "Leaving $30,000 in a standard checking account quietly burns $1,500 every year in lost yield.",
+      "callout": "",
+      "visual": "Macro of paper banknotes drifting like pale jellyfish in a still dark pond, one warm lamp-bright bucket rising beneath them, low angle."
+    },
+    {
+      "say": "That dead cash sits there losing ground to inflation every single month you sleep.",
+      "callout": "$30,000 VS $0",
+      "visual": "Overhead view of a sunken bank door half buried in silt, bubbles carrying small coins upward through green water."
+    },
+    {
+      "say": "Why do millions of savers keep six months of emergency money where it earns zero?",
+      "callout": "",
+      "visual": "Wide shot of an empty swimming pool floor with sunbeams slicing through the drain grate, long lens, silhouette."
+    },
+    {
+      "say": "Most people assume your safety net has to sit in a basic checking account to stay safe.",
+      "callout": "MYTH VS FACT",
+      "visual": "Macro of a rusted padlock on a sunken wooden gate, tiny bubbles trickling from its keyhole, razor focus."
+    },
+    {
+      "say": "That assumption creates massive inflation drag without adding a single ounce of actual security.",
+      "callout": "",
+      "visual": "Worm's-eye view of a school of tiny silver fish drifting in a loose circle above a sleeping anchor, blue haze."
+    },
+    {
+      "say": "So how do you keep your emergency cash completely liquid while actually beating inflation?",
+      "callout": "STEP ONE",
+      "visual": "Extreme wide aerial of a flooded valley with a single glowing buoy marking a dark channel, teal water."
+    },
+    {
+      "say": "Here is the Tiered Liquidity Rule that protects your cash and puts it to work.",
+      "callout": "STEP TWO",
+      "visual": "Eye level through a drowned doorway where a school of tiny fish forms an arrow pointing toward bright surface light."
+    },
+    {
+      "say": "Step one: keep just one month of bills in your checking account for daily expenses.",
+      "callout": "STEP THREE",
+      "visual": "Close-up of a small glowing glass lantern jar resting on seabed sand, one coral branch leaning toward it."
+    },
+    {
+      "say": "Step two: move the remaining five months into a high yield vehicle or short-term treasury.",
+      "callout": "",
+      "visual": "Overhead flat view of a slow river of paper leaves flowing into a bright underwater spring, ripples of light."
+    },
+    {
+      "say": "Your money stays fully accessible for emergencies while earning a real return instead of zero.",
+      "callout": "",
+      "visual": "Low angle of a long glass tube of rising bubbles in dark water, each bubble catching a sunbeam, macro."
+    },
+    {
+      "say": "Stop paying a stealth inflation tax on the cash you worked hard to save.",
+      "callout": "",
+      "visual": "Silhouette of a sunken ladder climbing from the dark seabed toward a shimmering bright surface, wide shot."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "Long lens of a lone glowing jellyfish drifting upward past a drowned stone arch, calm indigo water."
+    }
+  ],
+  "caption": "Your emergency fund is losing ground every day it sits in a zero-interest account. Use the Tiered Liquidity Rule to fix it.\n\n#personalfinance #moneytips #wealth #investing #savingmoney",
+  "description": "Keeping six months of living expenses in a standard checking account creates massive inflation drag. Learn the Tiered Liquidity Rule to keep your cash safe and productive.",
+  "hashtags": [
+    "#personalfinance",
+    "#moneytips",
+    "#wealth",
+    "#investing",
+    "#savingmoney"
+  ],
+  "first_comment": "Where do you currently keep your emergency fund?",
+  "facts": [
+    {
+      "claim": "Leaving $30,000 in a standard checking account loses yield to inflation",
+      "basis": "Standard checking accounts typically pay 0.01% interest while inflation erodes purchasing power"
+    }
+  ],
+  "source": "llm",
+  "pillar": "myth",
+  "look": "underwater photography, shafts of light from the surface, floating particles, deep teal and blue, serene scale",
+  "loop_map": {
+    "stakes": "Leaving $30,000 in a standard checking account quietly burns $1,500 every year in lost yield.",
+    "big_question": "Why do millions of savers keep six months of emergency money where it earns zero?",
+    "assume": "Your safety net has to sit in a basic checking account to stay safe.",
+    "reveal": "That assumption creates massive inflation drag without adding extra security.",
+    "rehook_beats": [
+      3,
+      6
+    ],
+    "payoff_beat": 10
+  },
+  "look_pack": "underwater-blue"
+}
