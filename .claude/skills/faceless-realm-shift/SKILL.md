@@ -31,3 +31,12 @@ When credits run out: stop. The owner allows switching to another Google account
 
 ## After generation
 Edit with `faceless-film-editing` (plan) and `faceless-capcut-phone` (do it on the phone), then post only through the gate (`faceless-phone`, AI label on).
+
+## The bar, and the mistake that broke it (2026-11-05)
+Three clips were rejected as "absolute trash": a calm person facing the lens in a pretty place (hourglass, frozen lake, rope bridge) with a locked camera. Do not repeat it. Before spending credits, a prompt must pass all of these:
+1. **Impossible world**, built from the money idea and unlike any other clip this week (not a landscape with a prop).
+2. **A struggle with physics**: the character is pulled, hit, falling, climbing, running or holding something that fights back. Never "stands" or "waits".
+3. **Camera moves on a plan**: at least three named moves (orbit, whip-pan, snap-zoom to the mouth, crane up, rapid pull-back). Never "locked camera".
+4. **Events on named words** (the world reacts to the exact words: shockwave, shatter, ignite).
+5. **Scale and color shock**: one frame that would make someone stop scrolling with the sound off.
+6. **What kept Omni honest, keep it**: one fully described character, the exact line after a colon, the voice described, timed beats, "no text, no numbers, no logos", lip movement matched to the words. Verify with `tools/clip_transcribe.py` (spoken line at the planned second) and a contact sheet before posting.
