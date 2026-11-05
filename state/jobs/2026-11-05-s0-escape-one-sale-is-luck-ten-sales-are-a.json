@@ -4,12 +4,20 @@
   "topic": "One sale is luck, ten sales are a business",
   "day": "2026-11-05",
   "slot": 0,
-  "status": "planned",
-  "history": [],
+  "status": "scripted",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-11-05T09:22:26Z",
+      "words": 146
+    }
+  ],
   "artifacts": {
     "angle": "the graduation test for the first stage: consistent first sales to strangers, not friends",
     "brief": "hormozi",
-    "hook": "One sale proves you got lucky. Ten sales to strangers prove a business."
+    "hook": "One sale proves you got lucky. Ten sales to strangers prove a business.",
+    "title": "One sale is luck. Ten sales are a business."
   },
   "scores": {},
   "cost": {},

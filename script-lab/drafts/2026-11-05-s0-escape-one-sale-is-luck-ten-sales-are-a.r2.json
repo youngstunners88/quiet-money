@@ -1,0 +1,105 @@
+{
+  "title": "One sale is luck. Ten sales are a business.",
+  "hook_text": "ONE SALE IS LUCK",
+  "beats": [
+    {
+      "say": "Your first sale feels like success. But it’s just luck.",
+      "callout": "",
+      "visual": "extreme close of a single $20 bill under a dim desk lamp, shallow depth of field"
+    },
+    {
+      "say": "One customer paying you $100 proves nothing.",
+      "callout": "$100",
+      "visual": "silhouette of a hand exchanging a crisp bill against a rain-slick street at night"
+    },
+    {
+      "say": "How do you know it wasn’t a fluke?",
+      "callout": "FLUKE?",
+      "visual": "empty neon-lit underpass, fog rolling in, low angle looking up at abandoned carts"
+    },
+    {
+      "say": "Most think: if it works once, it’ll work again. But markets don’t care about your hope.",
+      "callout": "HOPE VS REALITY",
+      "visual": "towering office buildings at twilight, a lone figure walking away, extreme wide shot"
+    },
+    {
+      "say": "Here’s the test: sell to 10 strangers, not your friends.",
+      "callout": "10 STRANGERS",
+      "visual": "crowded city plaza, slow pan over faceless crowd, sodium streetlights blur"
+    },
+    {
+      "say": "At a 1% yes-rate, 100 reach-outs a day for 100 days nets 100 customers.",
+      "callout": "100 REACH-OUTS",
+      "visual": "desk with a laptop, hands typing, extreme close on keyboard, cold fluorescent light"
+    },
+    {
+      "say": "One sale is luck. Ten is a pattern. A pattern is a business.",
+      "callout": "1 VS 10",
+      "visual": "high angle shot of a rolling suitcase on wet asphalt, tracks leading into distance"
+    },
+    {
+      "say": "But most quit after the first yes. Or the first no.",
+      "callout": "",
+      "visual": "abandoned storefront, broken neon sign, blue hour lighting"
+    },
+    {
+      "say": "What’s your next move: more of what works, or pivot to fantasy?",
+      "callout": "",
+      "visual": "ridge line at dusk, a tiny hiker against the vast horizon"
+    },
+    {
+      "say": "Do more of what already works, then make it better, then try something new.",
+      "callout": "",
+      "visual": "extreme close of a hand tightening a bolt on a machine, industrial setting"
+    },
+    {
+      "say": "The catch: active income first. Passive comes later, if ever.",
+      "callout": "",
+      "visual": "empty highway at night, tail lights fading into distance, low angle"
+    },
+    {
+      "say": "Ten sales to strangers prove you’re in business. Then the real work starts.",
+      "callout": "10 SALES = BUSINESS",
+      "visual": "sunrise over a city skyline, silhouettes of cranes, high angle"
+    },
+    {
+      "say": "Follow for the money rules nobody taught you.",
+      "callout": "",
+      "visual": "tall glass skyscraper at golden hour, reflected in a puddle, extreme low angle"
+    }
+  ],
+  "caption": "One sale proves luck. Ten sales to strangers prove a business. The test you’re not taking.",
+  "description": "The graduation test for your first stage of income: consistent first sales to strangers, not friends. Here’s the rule to prove it’s a business, not luck.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#sidehustle",
+    "#escapetheratrace",
+    "#business"
+  ],
+  "first_comment": "What’s one thing you’ve sold that wasn’t a fluke?",
+  "facts": [
+    {
+      "claim": "At a 1% yes-rate, 100 reach-outs a day for 100 days nets 100 customers",
+      "basis": "Rule of 100 volume math from money fact sheet"
+    },
+    {
+      "claim": "Business frameworks build active income first; passive income comes later, if ever",
+      "basis": "The honest catch from research brief: 'These are business frameworks: they build ACTIVE income first. Passive income comes later, if ever.'"
+    }
+  ],
+  "source": "llm",
+  "pillar": "escape",
+  "look": "",
+  "loop_map": {
+    "stakes": "Your first sale feels like success but it’s just luck",
+    "big_question": "How do you know it wasn’t a fluke?",
+    "assume": "If it works once, it’ll work again",
+    "reveal": "One sale is luck. Ten is a pattern. A pattern is a business",
+    "rehook_beats": [
+      5,
+      8
+    ],
+    "payoff_beat": 11
+  }
+}

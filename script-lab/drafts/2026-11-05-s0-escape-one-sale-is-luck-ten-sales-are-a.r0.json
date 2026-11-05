@@ -1,0 +1,104 @@
+{
+  "title": "The 10-Sale Test To Escape the Paycheck",
+  "hook_text": "ONE SALE IS LUCK",
+  "beats": [
+    {
+      "say": "That first $200 sale felt like a win.",
+      "callout": "",
+      "visual": "A single crisp $100 bill on a rainy parking lot asphalt, extreme close-up, neon sign blur in background"
+    },
+    {
+      "say": "One sale proves you got lucky. Ten sales to strangers prove a business.",
+      "callout": "1 VS 10",
+      "visual": "A row of 10 identical white envelopes on a cold metal table, low angle, single fluorescent light above"
+    },
+    {
+      "say": "So how do you turn one into ten?",
+      "callout": "",
+      "visual": "A shadow of a hand placing the 11th envelope next to the row, high contrast"
+    },
+    {
+      "say": "Most people assume you need a viral post or a big ad budget.",
+      "callout": "ASSUMPTION",
+      "visual": "A smartphone screen glowing in the dark under a bridge, trash and graffiti around"
+    },
+    {
+      "say": "But the math is simpler: 100 reach-outs a day for 100 days = 10,000 contacts.",
+      "callout": "100x100=10,000",
+      "visual": "A foggy city skyline at dusk, silhouette of a person typing on a laptop from behind, sodium streetlights"
+    },
+    {
+      "say": "At a 1% yes-rate, that’s 100 new customers.",
+      "callout": "1% = 100",
+      "visual": "Close-up of a phone screen showing a 'New Message' notification, rain droplets sliding down the glass"
+    },
+    {
+      "say": "But here’s the catch: those are active sales, not passive income.",
+      "callout": "ACTIVE VS PASSIVE",
+      "visual": "A split frame: left side a bustling market, right side an empty warehouse with a single lightbulb"
+    },
+    {
+      "say": "So why do most new businesses fail before they hit ten?",
+      "callout": "",
+      "visual": "A 'CLOSED' sign in a shop window, reflection of a stormy sky"
+    },
+    {
+      "say": "Because they stop at the first sale and wait for luck to strike again.",
+      "callout": "STOP VS KEEP GOING",
+      "visual": "A single die rolling on a cracked pavement, motion blur"
+    },
+    {
+      "say": "The rule is simple: do the 100-reach daily grind until ten strangers say yes.",
+      "callout": "100 REACHES",
+      "visual": "A towering stack of business cards on a desk, extreme wide angle from the floor"
+    },
+    {
+      "say": "That’s the graduation test from luck to a real business.",
+      "callout": "",
+      "visual": "A diploma on a wooden chair in an empty auditorium, single spotlight"
+    },
+    {
+      "say": "Ten sales to strangers mean you’ve escaped the paycheck. Follow for the money rules nobody taught you.",
+      "callout": "",
+      "visual": "A road stretching into the horizon at blue hour, fog rolling in, no cars"
+    }
+  ],
+  "caption": "One sale is luck. Ten to strangers is a business. Here’s how to test it. #moneyrules #escapetheratrace #sidehustle #businessmindset",
+  "description": "The 10-sale test: why consistent sales to strangers, not friends, prove you have a real business. The frameworks, the math, and the honest catch.",
+  "hashtags": [
+    "#moneyrules",
+    "#escapetheratrace",
+    "#sidehustle",
+    "#businessmindset",
+    "#personalfinance"
+  ],
+  "first_comment": "How many cold reach-outs do you do in a day?",
+  "facts": [
+    {
+      "claim": "100 reach-outs a day for 100 days = 10,000 contacts; at a 1% yes-rate that's 100 customers",
+      "basis": "Rule of 100 volume math, computed from fact sheet"
+    },
+    {
+      "claim": "Most new businesses do not last: about 1 in 5 close in their first year and close to half by year five",
+      "basis": "US Bureau of Labor Statistics, Business Employment Dynamics"
+    },
+    {
+      "claim": "Active income comes first; passive income is later, if ever",
+      "basis": "Honest catch from Acquisition.com frameworks"
+    }
+  ],
+  "source": "llm",
+  "pillar": "escape",
+  "look": "",
+  "loop_map": {
+    "stakes": "That first $200 sale felt like a win",
+    "big_question": "But how do you turn one sale into ten?",
+    "assume": "Most people assume you need a viral post or a big ad budget",
+    "reveal": "But the math is simpler: 100 reach-outs a day for 100 days = 10,000 contacts",
+    "rehook_beats": [
+      6,
+      8
+    ],
+    "payoff_beat": 11
+  }
+}

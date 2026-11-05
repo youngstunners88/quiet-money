@@ -1,0 +1,106 @@
+{
+  "title": "The Graduation Test For Your First Sales",
+  "hook_text": "ONE SALE PROVES YOU GOT LUCKY",
+  "beats": [
+    {
+      "say": "One sale proves you got lucky.",
+      "callout": "",
+      "visual": "Extreme wide shot of a solitary glowing billboard over a rain-slick interstate at 3 AM, cold sodium light reflecting in wet asphalt."
+    },
+    {
+      "say": "Ten sales to strangers prove a business.",
+      "callout": "1 VS 10",
+      "visual": "Low angle shot of a massive concrete suspension bridge tower cutting through heavy fog, tiny red warning light blinking at the top."
+    },
+    {
+      "say": "Most people launch a product and show their friends.",
+      "callout": "FRIENDS VS STRANGERS",
+      "visual": "Extreme close-up of a rusted metal lock clicking shut in deep shadow, single practical overhead light."
+    },
+    {
+      "say": "Your friends buy to support you, not the product.",
+      "callout": "",
+      "visual": "Silhouettes of commuters walking past a subway turnstile against a harsh blue fluorescent wall, motion blurred."
+    },
+    {
+      "say": "That is social support disguised as market validation.",
+      "callout": "FAKE DEMAND",
+      "visual": "High angle shot of a cold empty train platform at night, water dripping from rusted steel beams."
+    },
+    {
+      "say": "How do you cross the gap to actual strangers?",
+      "callout": "THE GAP",
+      "visual": "Extreme wide shot of a dark mountain ridge line under pale moonlight, freezing wind sweeping across dead grass."
+    },
+    {
+      "say": "You use the Rule of 100 volume math.",
+      "callout": "",
+      "visual": "Close-up of weathered hands hammering a heavy wooden stake into cold dark soil, mist rising."
+    },
+    {
+      "say": "One hundred reach-outs a day for one hundred days.",
+      "callout": "10,000 CONTACTS",
+      "visual": "Cinematic shot of countless vertical steel cables on a suspension bridge vanishing into grey rain."
+    },
+    {
+      "say": "At a one percent yes rate, that gives you one hundred paying customers.",
+      "callout": "1% YES RATE",
+      "visual": "Extreme close-up of heavy iron gears grinding together in dim industrial amber light, sparks flying."
+    },
+    {
+      "say": "This week, pick one channel and send your offer to one hundred strangers.",
+      "callout": "",
+      "visual": "Low angle shot of a solitary runner sprinting across a vast concrete plaza under a massive brutalist overpass."
+    },
+    {
+      "say": "The honest catch is harsh: about one in five US businesses close in year one.",
+      "callout": "1 IN 5",
+      "visual": "Extreme wide shot of an empty industrial warehouse floor bathed in cold blue dawn light through cracked windows."
+    },
+    {
+      "say": "Build active income first, because freedom takes relentless volume.",
+      "callout": "",
+      "visual": "Silhouettes of people climbing a steep endless flight of concrete stairs into a heavy fog bank."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "Cinematic shot of a single golden practical streetlamp cutting through pitch-black fog on an empty coastal highway."
+    }
+  ],
+  "caption": "One sale is luck. Ten sales to strangers is a business. #money #business #entrepreneurship #personalfinance #wealth",
+  "description": "Learn the graduation test for your first sales. One sale proves you got lucky, but ten sales to strangers prove a real business.",
+  "hashtags": [
+    "#money",
+    "#business",
+    "#entrepreneurship",
+    "#personalfinance",
+    "#wealth"
+  ],
+  "first_comment": "What is the hardest part of finding your first customer?",
+  "facts": [
+    {
+      "claim": "Rule of 100 volume math: 100 reach-outs a day for 100 days = 10,000 contacts; at a 1% yes-rate that's 100 customers",
+      "basis": "Fact sheet Rule of 100 volume math"
+    },
+    {
+      "claim": "About 1 in 5 US businesses close in their first year",
+      "basis": "Fact sheet honest catch US Bureau of Labor Statistics"
+    }
+  ],
+  "source": "llm",
+  "pillar": "escape",
+  "look": "",
+  "loop_map": {
+    "stakes": "Renting your self-worth to friends who buy out of pity instead of market demand.",
+    "big_question": "How do you move from accidental luck to a repeatable business?",
+    "assume": "That selling to your warm circle proves your idea works.",
+    "reveal": "Real validation only happens when strangers pay full price.",
+    "rehook_beats": [
+      6,
+      8,
+      11
+    ],
+    "payoff_beat": 10
+  }
+}
