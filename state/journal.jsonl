@@ -12246,3 +12246,29 @@
 {"ts": "2026-11-04T13:03:45Z", "t": 1793797425.45, "actor": "engine", "type": "YOUTUBE_API", "path": "channels", "method": "GET", "status": 200}
 {"ts": "2026-11-04T13:03:46Z", "t": 1793797426.344, "actor": "engine", "type": "YOUTUBE_API", "path": "playlists", "method": "GET", "status": 200}
 {"ts": "2026-11-04T13:03:47Z", "t": 1793797427.251, "actor": "engine", "type": "YOUTUBE_API", "path": "channelSections", "method": "GET", "status": 200}
+{"ts": "2026-11-05T08:07:15Z", "t": 1793866035.592, "actor": "engine", "type": "COMPOSIO_SESSION", "user": "quiet-money-studio", "session_hash": "1a8c30ba"}
+{"ts": "2026-11-05T08:07:16Z", "t": 1793866036.534, "actor": "engine", "type": "COMPOSIO_EXECUTE", "tool": "YOUTUBE_LIST_CHANNELS", "ok": true, "log_id": "log_p1EQutHwazT_", "job": "2026-11-03-s2-escape-plan-the-exit-before-you-start"}
+{"ts": "2026-11-05T08:07:28Z", "t": 1793866048.717, "actor": "engine", "type": "YOUTUBE_UPLOAD", "video_id": "Y1vha2eU4p8", "channel": "UC9B1QBr3_8Eulok8IdQbCqQ", "bytes": 129038246, "job": "2026-11-03-s2-escape-plan-the-exit-before-you-start"}
+{"ts": "2026-11-05T08:07:30Z", "t": 1793866050.121, "actor": "engine", "type": "YOUTUBE_API", "path": "playlists", "method": "GET", "status": 200}
+{"ts": "2026-11-05T08:07:31Z", "t": 1793866051.456, "actor": "engine", "type": "YOUTUBE_API", "path": "playlistItems", "method": "POST", "status": 200}
+{"ts": "2026-11-05T08:07:31Z", "t": 1793866051.459, "actor": "engine", "type": "PUBLISH_SCHEDULED", "job": "2026-11-03-s2-escape-plan-the-exit-before-you-start", "provider": "youtube", "when": "2026-11-05T11:30:00-05:00", "video_id": "Y1vha2eU4p8"}
+{"ts": "2026-11-05T08:07:32Z", "t": 1793866052.31, "actor": "engine", "type": "COMPOSIO_EXECUTE", "tool": "YOUTUBE_LIST_CHANNELS", "ok": true, "log_id": "log_MnFp0q0_Nb45", "job": "2026-11-04-s3-story-the-true-story-of-the-economist"}
+{"ts": "2026-11-05T08:07:46Z", "t": 1793866066.873, "actor": "engine", "type": "YOUTUBE_UPLOAD", "video_id": "IevZF9eBvIM", "channel": "UC9B1QBr3_8Eulok8IdQbCqQ", "bytes": 142536894, "job": "2026-11-04-s3-story-the-true-story-of-the-economist"}
+{"ts": "2026-11-05T08:07:50Z", "t": 1793866070.257, "actor": "engine", "type": "YOUTUBE_API", "path": "playlistItems", "method": "POST", "status": 200}
+{"ts": "2026-11-05T08:07:50Z", "t": 1793866070.26, "actor": "engine", "type": "PUBLISH_SCHEDULED", "job": "2026-11-04-s3-story-the-true-story-of-the-economist", "provider": "youtube", "when": "2026-11-05T18:30:00-05:00", "video_id": "IevZF9eBvIM"}
+{"ts": "2026-11-05T08:07:51Z", "t": 1793866071.78, "actor": "engine", "type": "COMPOSIO_EXECUTE", "tool": "YOUTUBE_LIST_CHANNELS", "ok": true, "log_id": "log_gn3LX52ioIDl", "job": "2026-11-04-s0-psychology-present-bias-hyperbolic-discount"}
+{"ts": "2026-11-05T08:08:05Z", "t": 1793866085.895, "actor": "engine", "type": "YOUTUBE_UPLOAD", "video_id": "q6PL7w8bEvM", "channel": "UC9B1QBr3_8Eulok8IdQbCqQ", "bytes": 139329380, "job": "2026-11-04-s0-psychology-present-bias-hyperbolic-discount"}
+{"ts": "2026-11-05T08:08:07Z", "t": 1793866087.511, "actor": "engine", "type": "YOUTUBE_API", "path": "playlistItems", "method": "POST", "status": 200}
+{"ts": "2026-11-05T08:08:07Z", "t": 1793866087.515, "actor": "engine", "type": "PUBLISH_SCHEDULED", "job": "2026-11-04-s0-psychology-present-bias-hyperbolic-discount", "provider": "youtube", "when": "2026-11-05T21:00:00-05:00", "video_id": "q6PL7w8bEvM"}
+{"ts": "2026-11-05T08:08:09Z", "t": 1793866089.146, "actor": "engine", "type": "COMPOSIO_EXECUTE", "tool": "YOUTUBE_LIST_CHANNELS", "ok": true, "log_id": "log_W4t6n11OyeoZ", "job": "2026-11-03-s3-myth-the-equity-trade-why-taking-lowe"}
+{"ts": "2026-11-05T08:08:23Z", "t": 1793866103.47, "actor": "engine", "type": "YOUTUBE_UPLOAD", "video_id": "QAoIR6AD2J0", "channel": "UC9B1QBr3_8Eulok8IdQbCqQ", "bytes": 133498355, "job": "2026-11-03-s3-myth-the-equity-trade-why-taking-lowe"}
+{"ts": "2026-11-05T08:08:25Z", "t": 1793866105.307, "actor": "engine", "type": "YOUTUBE_API", "path": "playlistItems", "method": "POST", "status": 200}
+{"ts": "2026-11-05T08:08:25Z", "t": 1793866105.307, "actor": "engine", "type": "PUBLISH_SCHEDULED", "job": "2026-11-03-s3-myth-the-equity-trade-why-taking-lowe", "provider": "youtube", "when": "2026-11-05T15:00:00-05:00", "video_id": "QAoIR6AD2J0"}
+{"ts": "2026-11-05T08:08:26Z", "t": 1793866106.614, "actor": "engine", "type": "COMPOSIO_EXECUTE", "tool": "YOUTUBE_LIST_CHANNELS", "ok": true, "log_id": "log_swc5zxHkvcQk", "job": "2026-10-31-s4-playbook-write-your-asset-column-in-ten-m"}
+{"ts": "2026-11-05T08:08:30Z", "t": 1793866110.576, "actor": "engine", "type": "YOUTUBE_UPLOAD", "video_id": "vcFeUsNEkKY", "channel": "UC9B1QBr3_8Eulok8IdQbCqQ", "bytes": 12129968, "job": "2026-10-31-s4-playbook-write-your-asset-column-in-ten-m"}
+{"ts": "2026-11-05T08:08:32Z", "t": 1793866112.066, "actor": "engine", "type": "YOUTUBE_API", "path": "playlistItems", "method": "POST", "status": 200}
+{"ts": "2026-11-05T08:08:32Z", "t": 1793866112.069, "actor": "engine", "type": "PUBLISH_SCHEDULED", "job": "2026-10-31-s4-playbook-write-your-asset-column-in-ten-m", "provider": "youtube", "when": "2026-11-05T07:30:00-05:00", "video_id": "vcFeUsNEkKY"}
+{"ts": "2026-11-05T08:08:46Z", "t": 1793866126.273, "actor": "engine", "type": "COMPOSIO_SESSION", "user": "quiet-money-studio", "session_hash": "e7119bbd"}
+{"ts": "2026-11-05T08:08:47Z", "t": 1793866127.173, "actor": "engine", "type": "YOUTUBE_API", "path": "videos", "method": "GET", "status": 200}
+{"ts": "2026-11-05T08:08:59Z", "t": 1793866139.737, "actor": "engine", "type": "COMPOSIO_SESSION", "user": "quiet-money-studio", "session_hash": "08f6dd92"}
+{"ts": "2026-11-05T08:09:01Z", "t": 1793866141.514, "actor": "engine", "type": "YOUTUBE_API", "path": "videos", "method": "GET", "status": 200}

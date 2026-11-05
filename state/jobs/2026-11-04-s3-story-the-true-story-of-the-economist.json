@@ -66,7 +66,15 @@
       }
     },
     "youtube_plan": {
-      "post_at": "2026-11-04T18:30:00-05:00"
+      "post_at": "2026-11-05T18:30:00-05:00"
+    },
+    "youtube": {
+      "video_id": "IevZF9eBvIM",
+      "channel_id": "UC9B1QBr3_8Eulok8IdQbCqQ",
+      "privacy": "private",
+      "post_at": "2026-11-05T18:30:00-05:00",
+      "comment_posted": false,
+      "series": true
     }
   },
   "scores": {
