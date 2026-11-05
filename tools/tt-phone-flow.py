@@ -21,7 +21,9 @@ elif step=="open":
     tap(540,2272,6); tap(113,2172,6); tap(185,808,7)      # create, gallery, '+'
     tap(150,1000,2); tap(896,2185,8)                       # newest tile in the system picker, Done
     tap(540,810,7)                                         # first tile in TikTok's grid
-    tap(797,2248,8); tap(801,2179,14)                      # Next, Next
+    tap(797,2248,8)                                        # Next -> the editor (Add sound, volume)
+    if os.environ.get("TT_STOP_AT_EDITOR"): print("on the editor screen (add sound here, then tap Next at 801,2179)"); sys.exit(0)
+    tap(801,2179,14)                                       # Next -> post page
     print("on post page (check the cover)")
 elif step=="fill":
     import re,html
