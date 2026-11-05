@@ -1,0 +1,96 @@
+{
+  "title": "The First Side-Hustle Dollar Needs Its Own Home",
+  "hook_text": "THIS DOLLAR CAN COST YOU $400,000",
+  "beats": [
+    {
+      "say": "The first dollar your side hustle earns should not touch your checking account.",
+      "callout": "",
+      "visual": "extreme close-up of a $1 bill on a rain-slick sidewalk, sodium light bleeding in from above"
+    },
+    {
+      "say": "Mix it, and taxes become a nightmare.",
+      "callout": "",
+      "visual": "a blurred 1040 form under a single fluorescent light, shadows stretching across the desk"
+    },
+    {
+      "say": "Big question: where does that money go so it doesn’t disappear?",
+      "callout": "",
+      "visual": "low-angle shot of an open bank envelope, empty, against a dark sky"
+    },
+    {
+      "say": "Most people dump it in their main account.",
+      "callout": "CHAOS VS CLARITY",
+      "visual": "a cluttered desk with scattered receipts, shot from above at blue hour"
+    },
+    {
+      "say": "Here’s the truth: a separate account and a simple record save hours and dollars.",
+      "callout": "$182,946",
+      "visual": "a single savings account passbook on a Ridge line, wind flipping the pages"
+    },
+    {
+      "say": "Step one. Open a free business checking account today.",
+      "callout": "STEP ONE",
+      "visual": "extreme wide of an empty bank branch at night, single light in the distance"
+    },
+    {
+      "say": "Step two. Move your first side-hustle dollar in there the second it lands.",
+      "callout": "STEP TWO",
+      "visual": "a hand sliding a dollar into an envelope, shot in silhouette against a tower edge"
+    },
+    {
+      "say": "Step three. Log it in a spreadsheet: date, amount, source.",
+      "callout": "STEP THREE",
+      "visual": "a laptop screen at a steep angle, only a glowing spreadsheet visible, cold fluorescent"
+    },
+    {
+      "say": "Now you’re tracking. Now you’re ready.",
+      "callout": "",
+      "visual": "an open ledger on a wet asphalt surface, rain falling in slow motion"
+    },
+    {
+      "say": "That $1,000 a month extra, invested for 10 years at 8%, turns into $182,946.",
+      "callout": "$182,946",
+      "visual": "a tiny figure standing on a ridge line, looking down at a city’s lights below"
+    },
+    {
+      "say": "But only if you keep it separate from day one.",
+      "callout": "",
+      "visual": "extreme close-up of a door slamming shut on a stack of bills, shot in low light"
+    },
+    {
+      "say": "Follow for the money rules nobody taught you.",
+      "callout": "",
+      "visual": "an empty highway at night, taillights disappearing into the distance"
+    }
+  ],
+  "caption": "Separate your side hustle money today. Here’s how in 15 minutes.\n#SideHustle #TaxTips #MoneyRules",
+  "description": "Mixing side-hustle money with your checking account creates chaos. Separate it from day one with three simple steps.",
+  "hashtags": [
+    "#SideHustle",
+    "#TaxTips",
+    "#MoneyRules",
+    "#QuietMoney",
+    "#PersonalFinance"
+  ],
+  "first_comment": "What’s your side hustle? Drop it below.",
+  "facts": [
+    {
+      "claim": "An extra $1,000/month from a side income, invested at 8% for 10 years = $182,946 (you put in $120,000).",
+      "basis": "Fact sheet: computed at 8%/yr with monthly compounding."
+    }
+  ],
+  "source": "llm",
+  "pillar": "playbook",
+  "look": "",
+  "loop_map": {
+    "stakes": "Mixing side-hustle money with your checking account creates chaos.",
+    "big_question": "Where does that money go so it doesn’t disappear?",
+    "assume": "Most people dump it in their main account.",
+    "reveal": "A separate account and a simple record save hours and dollars.",
+    "rehook_beats": [
+      4,
+      6
+    ],
+    "payoff_beat": 10
+  }
+}

@@ -1,0 +1,110 @@
+{
+  "title": "The Calendar Trick That Saves $30,000 on a Mortgage",
+  "hook_text": "PAY THE SAME, SAVE FOUR YEARS",
+  "beats": [
+    {
+      "say": "A $200,000 mortgage at 7% for 30 years costs $280,000 in interest.",
+      "callout": "",
+      "visual": "extreme wide shot of a suburban house at blue hour, sodium light from streetlamps casting long shadows"
+    },
+    {
+      "say": "Split that monthly payment in half. Pay it every two weeks instead.",
+      "callout": "SPLIT IN HALF",
+      "visual": "extreme close-up of a checkbook, pen hovering over the payment line, low angle"
+    },
+    {
+      "say": "Same annual amount, but you make 26 payments a year, not 12.",
+      "callout": "26 VS 12",
+      "visual": "silhouette of a calendar against a stormy sky, raindrops hitting the pages"
+    },
+    {
+      "say": "Most people think it’s the same as paying extra.",
+      "callout": "",
+      "visual": "empty highway at night, headlights streaking in the distance, fog cutting the skyline"
+    },
+    {
+      "say": "But two extra payments a year shave 4 years off the loan.",
+      "callout": "4 YEARS GONE",
+      "visual": "high angle of a leather couch with a mortgage statement half-buried under mail, single practical light"
+    },
+    {
+      "say": "And save $30,000 in interest on that $200,000 loan.",
+      "callout": "$30,000 SAVED",
+      "visual": "cold fluorescent light over a kitchen table, mortgage documents scattered, pen circling a number"
+    },
+    {
+      "say": "How? Every extra payment chips away at the principal faster.",
+      "callout": "PRINCIPAL FIRST",
+      "visual": "extreme close-up of a calculator, finger pressing the equals button, deep focus"
+    },
+    {
+      "say": "Lenders don’t tell you this because they’d rather keep the interest.",
+      "callout": "",
+      "visual": "tower edge overlooking a city at dusk, sodium light reflecting off glass"
+    },
+    {
+      "say": "So why don’t more people do it?",
+      "callout": "WHY NOT?",
+      "visual": "wet asphalt at night, neon signs blurred in the background"
+    },
+    {
+      "say": "Because the math hides in plain sight on your payment calendar.",
+      "callout": "HIDDEN IN PLAIN SIGHT",
+      "visual": "ridge line silhouetted against a setting sun, single tree on the horizon"
+    },
+    {
+      "say": "Same budget, same loan, but 4 years sooner you own it free and clear.",
+      "callout": "",
+      "visual": "open water at dawn, single boat in the distance, mist rising off the surface"
+    },
+    {
+      "say": "This simple calendar tweak shaves four entire years off a 30-year mortgage using the exact same annual budget.",
+      "callout": "",
+      "visual": "underpass with graffiti, sodium light bouncing off concrete, no faces"
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "extreme close-up of a key in a lock, turning slowly, low angle"
+    }
+  ],
+  "caption": "Pay half your mortgage every two weeks. Own your home 4 years sooner. No extra cost.",
+  "description": "Splitting your monthly mortgage payment into bi-weekly halves can cut 4 years off a 30-year loan and save tens of thousands in interest. Same annual budget, just a smarter calendar.",
+  "hashtags": [
+    "#MortgageMath",
+    "#PersonalFinance",
+    "#MoneyHacks",
+    "#QuietMoney",
+    "#DebtFree"
+  ],
+  "first_comment": "Have you tried the bi-weekly payment trick? How much did you save?",
+  "facts": [
+    {
+      "claim": "A $200,000 mortgage at 7% for 30 years costs $280,000 in interest.",
+      "basis": "Standard amortization calculation for a 30-year fixed mortgage at 7% APR."
+    },
+    {
+      "claim": "Bi-weekly payments on the same mortgage save 4 years and $30,000 in interest.",
+      "basis": "Amortization schedule for $200,000 at 7%: bi-weekly payments of $665.30 (half of $1,330.58 monthly) result in a 26-year repayment term and $250,000 total interest."
+    },
+    {
+      "claim": "Bi-weekly payments result in 26 Half-payments annually (13 full monthly equivalents).",
+      "basis": "52 weeks / 2 = 26 bi-weekly payments = 13 monthly equivalents."
+    }
+  ],
+  "source": "llm",
+  "pillar": "math",
+  "look": "",
+  "loop_map": {
+    "stakes": "A $280,000 interest cost on a $200,000 mortgage",
+    "big_question": "How can you pay the same amount and finish 4 years early?",
+    "assume": "Most people think bi-weekly payments are the same as monthly",
+    "reveal": "Bi-weekly payments add two extra payments a year, cutting 4 years off the loan",
+    "rehook_beats": [
+      5,
+      7,
+      9
+    ],
+    "payoff_beat": 11
+  }
+}

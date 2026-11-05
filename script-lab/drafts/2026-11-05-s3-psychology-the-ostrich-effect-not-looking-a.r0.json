@@ -1,0 +1,110 @@
+{
+  "title": "The Ostrich Effect: Why Ignoring Your Balance Costs $4,887",
+  "hook_text": "THE BILL YOU IGNORE STILL COUNTS",
+  "beats": [
+    {
+      "say": "The $3,000 credit card balance you refuse to open still counts.",
+      "callout": "",
+      "visual": "Low angle close-up of a sealed envelope on a rain-slick glass tabletop under flickering sodium streetlight."
+    },
+    {
+      "say": "When money gets tight, it's easy to leave your banking app closed for weeks.",
+      "callout": "",
+      "visual": "High angle silhouette of a person standing motionless in an empty concrete underpass at twilight."
+    },
+    {
+      "say": "Why do we actively hide from financial numbers we know are waiting for us?",
+      "callout": "",
+      "visual": "Extreme wide shot of a solitary figure walking along a wet, dark highway in dense morning fog."
+    },
+    {
+      "say": "Most people assume we dodge our account balances because we're just careless.",
+      "callout": "CARELESS VS BIAS",
+      "visual": "Cold fluorescent lighting illuminating an empty, stark industrial stairwell at night."
+    },
+    {
+      "say": "In reality, psychology names this the ostrich effect: avoiding information to escape short-term bad news.",
+      "callout": "OSTRICH EFFECT",
+      "visual": "Low angle shot of massive concrete tower edges cutting through a blue hour misty skyline."
+    },
+    {
+      "say": "That temporary emotional relief quieted your stress, but it carries a brutal hidden financial price.",
+      "callout": "",
+      "visual": "Extreme close-up of wet dark asphalt reflecting yellow sodium streetlights."
+    },
+    {
+      "say": "At 24% interest, paying minimums on a $3,000 card takes 15 years and costs $4,887 in interest.",
+      "callout": "$4,887 INTEREST COST",
+      "visual": "Silhouette of a figure standing at the edge of a high-rise rooftop looking over a dark city grid."
+    },
+    {
+      "say": "At that 24% rate, the Rule of 72 shows your unpaid debt doubles every 3 years.",
+      "callout": "DOUBLES EVERY 3 YEARS",
+      "visual": "Night shot of a massive steel suspension bridge stretching over black open water in thick fog."
+    },
+    {
+      "say": "What is the single counter-move that breaks this costly cognitive habit for good?",
+      "callout": "",
+      "visual": "Extreme wide shot of a vast, empty train terminal bathed in a single dramatic overhead beam of light."
+    },
+    {
+      "say": "Step one: set a timer for two minutes on the exact same day every single week.",
+      "callout": "STEP ONE",
+      "visual": "Angle shot of a hand holding a dark matte smartphone with a soft glow, face unidentifiable in deep shadows."
+    },
+    {
+      "say": "Checking your balance on schedule neutralizes anxiety before unread bills compound into real damage.",
+      "callout": "",
+      "visual": "Low angle view of wet pavement outside a glass building reflecting cold blue street lamps."
+    },
+    {
+      "say": "Taking 120 seconds to look keeps $4,887 of interest inside your own bank account.",
+      "callout": "120 SECONDS",
+      "visual": "Silhouette standing behind a tall glass window looking out at a rain-drenched empty street at night."
+    },
+    {
+      "say": "The unopened balance always counts, so don't let silence steal your future compounding.",
+      "callout": "",
+      "visual": "Extreme close-up of a brass key turning inside an old lock under a dim sodium lamp."
+    },
+    {
+      "say": "Follow Quiet Money for the money rules school never taught you.",
+      "callout": "",
+      "visual": "Extreme wide shot of empty wet asphalt highway lanes fading into night fog under a single street light."
+    }
+  ],
+  "caption": "Ignoring bad financial news doesn't pause the math. The ostrich effect tricks your brain into avoiding your bank balance, letting high-interest debt multiply in the dark. Break the habit with a two-minute weekly check.\n\n#money #personalfinance #debtfree #financialpsychology #quietmoney",
+  "description": "Explaining the ostrich effect: why avoiding your bank statements creates severe long-term financial loss, and how a two-minute weekly ritual stops cognitive avoidance.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#debtfree",
+    "#financialpsychology",
+    "#quietmoney"
+  ],
+  "first_comment": "How often do you check your banking app when money feels tight?",
+  "facts": [
+    {
+      "claim": "A $3,000 balance at 24% APR paying minimums takes 15 years and costs $4,887 in interest.",
+      "basis": "Quiet Money Fact Sheet: $3,000 credit card at 24% APR paying minimum (1% + interest, min $25) = 183 months (~15 years), $4,887 interest."
+    },
+    {
+      "claim": "At 24% interest, debt doubles every 3 years according to the Rule of 72.",
+      "basis": "Quiet Money Fact Sheet: Rule of 72: at 24% debt doubles every 3 years."
+    }
+  ],
+  "source": "llm",
+  "pillar": "psychology",
+  "look": "",
+  "loop_map": {
+    "stakes": "An ignored $3,000 credit card balance doesn't stop compounding just because you refuse to look.",
+    "big_question": "Why do we actively hide from financial numbers we know are waiting for us?",
+    "assume": "People ignore their balances because they are careless or irresponsible.",
+    "reveal": "It is the ostrich effect: avoiding information to temporarily escape short-term negative emotions.",
+    "rehook_beats": [
+      6,
+      9
+    ],
+    "payoff_beat": 11
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "title": "The first dollar from your side hustle shouldn’t touch your checking",
+  "hook_text": "THIS MONEY COSTS YOU BIG",
+  "beats": [
+    {
+      "say": "The first dollar your side hustle earns should not touch your checking account.",
+      "callout": "",
+      "visual": "extreme close-up of a $1 bill on a wet asphalt road, neon glow from a distant sign reflecting on the surface, low angle"
+    },
+    {
+      "say": "Mix it with paychecks, and come April, you’ll owe taxes on income you can’t even track.",
+      "callout": "$18,800",
+      "visual": "silhouette of a person at a desk, backlit by a single desk lamp, papers and a laptop half-lit, rain streaking the window"
+    },
+    {
+      "say": "Why do most people still dump it all in one place?",
+      "callout": "",
+      "visual": "empty office chair under cold fluorescent light, a single dollar bill on the seat, high angle shot"
+    },
+    {
+      "say": "They assume it’s easier. But mixed money means mixed headaches.",
+      "callout": "STEP ONE",
+      "visual": "extreme wide shot of a city skyline at blue hour, a tiny human walking along a ridge line, fog rolling in"
+    },
+    {
+      "say": "Step one: open a free business checking account online today. Takes 5 minutes.",
+      "callout": "STEP ONE",
+      "visual": "hands typing on a keyboard, screen blurred, sodium street light through blinds casting stripes"
+    },
+    {
+      "say": "Step two: auto-transfer every side-hustle dollar here the second it hits.",
+      "callout": "STEP TWO",
+      "visual": "close-up of a phone screen with a banking app, shot from behind, finger tapping, background out of focus"
+    },
+    {
+      "say": "Step three: keep a simple spreadsheet. Date, amount, source. That’s it.",
+      "callout": "STEP THREE",
+      "visual": "notebook on a wooden table, single practical light casting a sharp shadow, only the edge of the pen visible"
+    },
+    {
+      "say": "Now, what about taxes? One account means one ledger, one clean answer.",
+      "callout": "$18,800",
+      "visual": "stack of tax forms under a flickering fluorescent light, shadow stretching across the floor"
+    },
+    {
+      "say": "An extra $1,000 a month invested from that side income for 10 years at 8%? $182,946.",
+      "callout": "$182,946",
+      "visual": "golden hour light hitting an empty road, a single dollar bill pinned under a windshield wiper, close-up"
+    },
+    {
+      "say": "But first, you’ve got to separate it. So that money doesn’t vanish into bills or impulse buys.",
+      "callout": "",
+      "visual": "two separate jars of coins on a windowsill, one labeled 'PAYCHECK', one 'HUSTLE', both backlit by sunset"
+    },
+    {
+      "say": "The money rules nobody taught you: separate your side income from day one.",
+      "callout": "",
+      "visual": "extreme low angle of a skyscraper, a tiny human standing at its base, looking up, fog cutting the skyline"
+    }
+  ],
+  "caption": "Your side hustle money deserves its own account. Here’s why and how to do it today.\n#SideHustle #MoneyTips #PersonalFinance #Taxes #QuietMoney",
+  "description": "The first dollar from your side hustle should never touch your checking account. Here’s the 3-step fix to keep it clean and trackable.",
+  "hashtags": [
+    "#SideHustle",
+    "#MoneyTips",
+    "#PersonalFinance",
+    "#Taxes",
+    "#QuietMoney"
+  ],
+  "first_comment": "What’s the first side hustle dollar you ever earned?",
+  "facts": [
+    {
+      "claim": "An extra $1,000 a month from side income invested at 8% for 10 years = $182,946",
+      "basis": "Fact sheet: $1,000/month invested for 10 years at 8%/yr (monthly compounding) = $182,946"
+    }
+  ],
+  "source": "llm",
+  "pillar": "playbook",
+  "look": "",
+  "loop_map": {
+    "stakes": "Side hustle money mixed with paychecks creates tax and tracking headaches",
+    "big_question": "Why do most people dump all their income in one place?",
+    "assume": "It’s easier to keep everything in one account",
+    "reveal": "Mixed money means mixed headaches and lost opportunities",
+    "rehook_beats": [
+      4,
+      7
+    ],
+    "payoff_beat": 10
+  }
+}

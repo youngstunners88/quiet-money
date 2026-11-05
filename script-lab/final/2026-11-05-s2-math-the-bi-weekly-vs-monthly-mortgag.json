@@ -1,0 +1,100 @@
+{
+  "title": "The Calendar Tweak That Shaves 4 Years Off Your Mortgage",
+  "hook_text": "SHAVE 4 YEARS OFF YOUR MORTGAGE",
+  "beats": [
+    {
+      "say": "This payment calendar tweak shaves 4 years off a 30-year mortgage on the same budget.",
+      "callout": "",
+      "visual": "Extreme wide shot of suburban rooftops under cold sodium streetlights, thick fog rolling over wet asphalt."
+    },
+    {
+      "say": "Most homeowners send 12 monthly checks every year, giving away tens of thousands in unnecessary interest.",
+      "callout": "12 PAYMENTS / YEAR",
+      "visual": "Low angle of a suburban home entryway illuminated by a single practical porch light at blue hour."
+    },
+    {
+      "say": "How can you wipe out 4 years of debt without spending an extra dollar of your salary?",
+      "callout": "",
+      "visual": "High angle looking down on an empty kitchen counter bathed in harsh fluorescent light."
+    },
+    {
+      "say": "You might assume cutting years off a mortgage requires expensive refinancing or painful budget cuts.",
+      "callout": "",
+      "visual": "Silhouette of a person from behind staring out a rain-slicked glass window over an empty highway at night."
+    },
+    {
+      "say": "But the secret isn't paying extra money—it's simply changing how your payment aligns with the calendar.",
+      "callout": "STEP ONE",
+      "visual": "Extreme close-up of a house key resting on cold dark slate under a sharp spotlight."
+    },
+    {
+      "say": "When you pay monthly, you make 12 payments per year. But 1 year contains 52 full weeks.",
+      "callout": "52 WEEKS / YEAR",
+      "visual": "Underpass beneath a towering concrete bridge at night, sodium vapor lighting casting deep shadows."
+    },
+    {
+      "say": "If you divide your monthly bill in half and pay every 2 weeks, you make 26 half-payments.",
+      "callout": "STEP TWO",
+      "visual": "Low angle shot of wet asphalt reflected in puddles along a quiet residential street at dusk."
+    },
+    {
+      "say": "26 half-payments equal 13 full monthly payments every year instead of 12.",
+      "callout": "13 VS 12 PAYMENTS",
+      "visual": "Extreme close-up of a plain calendar paper under a single cool desk lamp."
+    },
+    {
+      "say": "That automated 13th payment attacks your principal balance directly before interest has time to compound.",
+      "callout": "STEP THREE",
+      "visual": "Silhouette of a massive concrete pillar standing against a foggy city skyline at dawn."
+    },
+    {
+      "say": "Over a 30-year loan, that tiny shift removes 4 full years of debt and saves thousands in interest.",
+      "callout": "-4 YEARS DEBT",
+      "visual": "Extreme wide low-angle shot of a dark house standing quietly against a crisp blue hour sky."
+    },
+    {
+      "say": "The bank relies on standard monthly schedules, but bi-weekly math puts your mortgage on fast-forward.",
+      "callout": "",
+      "visual": "Tower edge overlooking a glowing city grid bathed in distant neon and fog."
+    },
+    {
+      "say": "You own your house years earlier by moving your calendar. Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "Tiny silhouette standing on a steep ridge line overlooking an open highway bathed in sodium light."
+    }
+  ],
+  "caption": "Splitting your mortgage into bi-weekly payments adds one extra full payment a year. Here is how the calendar math works in your favor.\n\n#mortgage #personalfinance #homeownership #moneymath #quietmoney",
+  "description": "Learn how changing your mortgage payment schedule from monthly to bi-weekly results in 13 full payments per year. This simple calendar tweak cuts 4 years off a standard 30-year loan without increasing your overall budget.",
+  "hashtags": [
+    "#mortgage",
+    "#personalfinance",
+    "#homeownership",
+    "#moneymath",
+    "#quietmoney"
+  ],
+  "first_comment": "Are you currently paying your mortgage monthly or bi-weekly?",
+  "facts": [
+    {
+      "claim": "52 weeks in a year equals 26 bi-weekly half-payments, which equals 13 full monthly payments.",
+      "basis": "52 / 2 = 26 half-payments. 26 / 2 = 13 full monthly payments per year."
+    },
+    {
+      "claim": "Bi-weekly mortgage payments cut approximately 4 years off a standard 30-year loan term.",
+      "basis": "Standard amortization calculation: 13 full payments per year accelerates principal reduction, shortening a 30-year loan term by approximately 4 to 5 years depending on interest rate."
+    }
+  ],
+  "source": "llm",
+  "pillar": "math",
+  "look": "",
+  "loop_map": {
+    "stakes": "A 30-year mortgage drains decades of interest unless you adjust your payment calendar.",
+    "big_question": "How can you wipe out 4 years of mortgage debt without spending an extra dollar of your salary?",
+    "assume": "Slashing mortgage debt requires expensive refinancing fees or severe budget sacrifices.",
+    "reveal": "Splitting payments bi-weekly yields 13 full payments per year, shaving 4 years off the principal.",
+    "rehook_beats": [
+      5,
+      7
+    ],
+    "payoff_beat": 10
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "title": "The Ostrich Effect: Your Unopened Statement Costs You",
+  "hook_text": "YOUR UNOPENED STATEMENT STILL COUNTS",
+  "beats": [
+    {
+      "say": "The statement you don't open still counts. Every week.",
+      "callout": "",
+      "visual": "extreme close-up of a sealed bank envelope on a rain-slick table, sodium light reflecting off the paper"
+    },
+    {
+      "say": "You skip the app, dodge the mailbox. That's the ostrich effect: avoiding numbers you fear.",
+      "callout": "FEAR VS FACT",
+      "visual": "silhouette of a person walking past a glowing ATM screen, backlit by neon, low angle"
+    },
+    {
+      "say": "Ignoring the balance doesn’t make it disappear. It just lets small problems grow in the dark.",
+      "callout": "",
+      "visual": "extreme wide shot of a single credit card left on an empty dining table, dim overhead light"
+    },
+    {
+      "say": "Most people assume: if I don’t look, I don’t owe. But the money’s still moving.",
+      "callout": "ASSUME VS REALITY",
+      "visual": "high angle shot of a phone face-down on a cold fluorescent desk, ashtray nearby"
+    },
+    {
+      "say": "A $3,000 card at 24% paying minimums costs $4,887 in interest. Ignorance is expensive.",
+      "callout": "$4,887 INTEREST",
+      "visual": "extreme close-up of a crumpled receipt in a back pocket, blue hour lighting"
+    },
+    {
+      "say": "Reality check: the longer you wait, the bigger the hole. Time turns blind spots into sinks.",
+      "callout": "TIME VS COST",
+      "visual": "silhouette of a person standing under a highway overpass, fog rolling in"
+    },
+    {
+      "say": "Here’s the move: two minutes, same day each week, open the app.",
+      "callout": "2 MINUTES",
+      "visual": "hands typing on a laptop in a dark room, single practical light casting shadows"
+    },
+    {
+      "say": "See the real number. Then decide. Knowledge shrinks the fear.",
+      "callout": "KNOWLEDGE VS FEAR",
+      "visual": "empty parking lot at night, a single streetlamp illuminating a discarded coffee cup"
+    },
+    {
+      "say": "Two minutes a week beats 15 years of surprise interest. That’s the math.",
+      "callout": "15 YEARS VS 2 MINUTES",
+      "visual": "tower edge at dusk, wind tugging at papers on the ledge"
+    },
+    {
+      "say": "Start this week. Open the app. The number’s already there. Now you know.",
+      "callout": "",
+      "visual": "extreme close-up of a finger hovering over a phone screen, low-angle sodium glow"
+    },
+    {
+      "say": "Follow for the money rules nobody taught you.",
+      "callout": "",
+      "visual": "ridge line against a stormy sky, a lone figure walking away"
+    }
+  ],
+  "caption": "Your bank app won’t judge you. Ignorance will. #MoneyPsychology #OstrichEffect #PersonalFinance #DebtFreeJourney",
+  "description": "The ostrich effect costs more than discomfort. Learn the two-minute move to face your finances and stop surprise interest from growing.",
+  "hashtags": [
+    "#MoneyPsychology",
+    "#OstrichEffect",
+    "#PersonalFinance",
+    "#DebtFreeJourney",
+    "#FinancialFreedom"
+  ],
+  "first_comment": "What’s the longest you’ve avoided checking your balance?",
+  "facts": [
+    {
+      "claim": "A $3,000 credit card at 24% APR paying only the minimum (1% + interest, min $25) costs $4,887 in interest over ~15 years.",
+      "basis": "Computed from the provided fact sheet."
+    },
+    {
+      "claim": "The ostrich effect is the cognitive bias of avoiding information that may cause distress.",
+      "basis": "Documented psychological concept in behavioral finance studies."
+    }
+  ],
+  "source": "llm",
+  "pillar": "psychology",
+  "look": "",
+  "loop_map": {
+    "stakes": "Ignoring your balance lets small problems grow in the dark.",
+    "big_question": "Does ignoring your balance actually protect you?",
+    "assume": "If I don’t look, I don’t owe.",
+    "reveal": "Ignorance just lets the problem grow.",
+    "rehook_beats": [
+      3,
+      6
+    ],
+    "payoff_beat": 8
+  }
+}

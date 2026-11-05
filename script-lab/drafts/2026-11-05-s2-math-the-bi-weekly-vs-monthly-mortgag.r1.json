@@ -1,0 +1,99 @@
+{
+  "title": "Bi-Weekly Mortgage Trick Saves $27k and 4 Years",
+  "hook_text": "PAY HALF AS OFTEN, END 4 YEARS EARLIER",
+  "beats": [
+    {
+      "say": "A $300,000 mortgage at 7% for 30 years costs $400,000 in interest.",
+      "callout": "",
+      "visual": "extreme close of a mortgage statement on wet asphalt, rain droplets catching sodium streetlight"
+    },
+    {
+      "say": "You pay $2,000 a month. Same money, but split into $1,000 every two weeks.",
+      "callout": "$2,000 VS $1,000",
+      "visual": "silhouette of a hand placing two paychecks on a table, low angle under a single hanging bulb"
+    },
+    {
+      "say": "Most think it’s the same as paying monthly. It’s not.",
+      "callout": "MYTH VS MATH",
+      "visual": "empty highway at night, headlights streaking past a road sign half-blurred"
+    },
+    {
+      "say": "52 weeks a year means 26 bi-weekly payments. That’s 13 full payments, not 12.",
+      "callout": "13 VS 12 PAYMENTS",
+      "visual": "calendar pages flipping under cold fluorescent light, extreme close on the 13th month"
+    },
+    {
+      "say": "That extra $2,000 a year cuts 4 years off the loan. Total interest? $373,000.",
+      "callout": "$400,000 VS $373,000",
+      "visual": "high angle of a calculator showing numbers, shadow cutting across a tower edge"
+    },
+    {
+      "say": "You save $27,000 and own the house 4 years sooner.",
+      "callout": "$27,000 SAVED",
+      "visual": "silhouette of a house key against a foggy skyline at blue hour"
+    },
+    {
+      "say": "Same annual budget. Just a calendar tweak.",
+      "callout": "",
+      "visual": "extreme wide of a ridge line, tiny human holding a checkbook"
+    },
+    {
+      "say": "Why don’t banks offer this? It hurts their profits.",
+      "callout": "",
+      "visual": "glass bank door from a low angle, rain-slick street reflecting its shine"
+    },
+    {
+      "say": "You make 13 payments a year. They want 12.",
+      "callout": "13 > 12",
+      "visual": "open water, distant city lights blurred, a single paycheck floating on the surface"
+    },
+    {
+      "say": "Set it up once. The math does the rest.",
+      "callout": "",
+      "visual": "hands placing a payment stub into an envelope, extreme close on the sealing flap"
+    },
+    {
+      "say": "4 years of your life. $27,000 in your pocket. Same annual cost.",
+      "callout": "4 YEARS EARLIER",
+      "visual": "empty chair on a tower edge, wind blowing a mortgage statement into the void"
+    }
+  ],
+  "caption": "Pay half as often, end 4 years earlier. Same annual budget, $27k saved.\n#StoreMoreWealth #BiWeeklyPayments #MortgageHack #QuietMoney #DebtFree",
+  "description": "Splitting your monthly mortgage payment into bi-weekly halves cuts 4 years off a 30-year loan and saves tens of thousands in interest. Same annual budget, just a calendar tweak.",
+  "hashtags": [
+    "#StoreMoreWealth",
+    "#BiWeeklyPayments",
+    "#MortgageHack",
+    "#QuietMoney",
+    "#DebtFree"
+  ],
+  "first_comment": "Would you try this if your lender made it easy?",
+  "facts": [
+    {
+      "claim": "A $300,000 mortgage at 7% for 30 years costs $400,000 in interest.",
+      "basis": "Standard amortization calculation at 7% APR for 30 years."
+    },
+    {
+      "claim": "Bi-weekly payments (26/year) on the same mortgage save ~4 years and ~$27,000 in interest.",
+      "basis": "Amortization schedule comparison: 30-year monthly vs bi-weekly on $300,000 at 7%."
+    },
+    {
+      "claim": "Bi-weekly payments create 13 full monthly payments per year, not 12.",
+      "basis": "52 weeks / 2 = 26 payments; 26 bi-weekly payments = 13 full monthly equivalents."
+    }
+  ],
+  "source": "llm",
+  "pillar": "math",
+  "look": "",
+  "loop_map": {
+    "stakes": "A $300,000 mortgage at 7% for 30 years costs $400,000 in interest.",
+    "big_question": "How can you cut 4 years off a 30-year loan without paying extra?",
+    "assume": "Bi-weekly payments are the same as monthly payments.",
+    "reveal": "Bi-weekly payments create 13 full monthly payments per year, saving $27,000 and 4 years.",
+    "rehook_beats": [
+      4,
+      6
+    ],
+    "payoff_beat": 5
+  }
+}

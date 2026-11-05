@@ -1,0 +1,67 @@
+{
+  "id": "2026-11-05-s3-psychology-the-ostrich-effect-not-looking-a",
+  "pillar": "psychology",
+  "topic": "The ostrich effect: not looking at your balance",
+  "day": "2026-11-05",
+  "slot": 3,
+  "status": "held",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-11-05T10:03:21Z",
+      "words": 147
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-11-05T10:05:35Z",
+      "seconds": 63.58,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-11-05T10:08:54Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-11-05T10:12:30Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-11-05T10:12:30Z",
+      "score": 92
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-11-05T10:12:30Z"
+    },
+    {
+      "from": "packaged",
+      "to": "held",
+      "ts": "2026-11-05T10:12:30Z"
+    }
+  ],
+  "artifacts": {
+    "angle": "name the bias (avoiding information that might be bad news), show it in a normal week (the unopened statement, the banking app left closed), give one counter-move: a two-minute look on the same day each week; no study figure claimed",
+    "hook": "The statement you don't open still counts.",
+    "title": "The $3,000 Debt That Takes 15 Years to Disappear",
+    "style": "cinematic",
+    "video": "/home/user/quiet-money/production/output/2026-11-05/2026-11-05-s3-psychology-the-ostrich-effect-not-looking-a/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-11-05/2026-11-05-s3-psychology-the-ostrich-effect-not-looking-a/cover.jpg"
+  },
+  "scores": {
+    "gauntlet": 92,
+    "passed": false
+  },
+  "cost": {
+    "tts:edge:chars": 806
+  },
+  "notes": [
+    "held for review: originality"
+  ]
+}

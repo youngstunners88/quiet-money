@@ -1,0 +1,106 @@
+{
+  "title": "Side Hustle Money: The One Rule That Saves You",
+  "hook_text": "YOUR FIRST DOLLAR IS A RED FLAG",
+  "beats": [
+    {
+      "say": "The first dollar your side hustle earns should not touch your checking account.",
+      "callout": "",
+      "visual": "extreme close-up of a crisp $1 bill on a wet asphalt road, sodium vapor light casting long shadows, rain droplets magnified"
+    },
+    {
+      "say": "Mix it in and you lose the trail. Come tax time, you’re guessing.",
+      "callout": "",
+      "visual": "high angle of a scattered pile of receipts and a phone with a cracked screen, dim fluorescent light from above"
+    },
+    {
+      "say": "Where does that money go? How much did you really make?",
+      "callout": "BIG QUESTION",
+      "visual": "silhouette of a person holding a laptop against a stormy skyline, backlit by distant city lights"
+    },
+    {
+      "say": "Most people dump it all in one account. It’s simpler, right?",
+      "callout": "ASSUME",
+      "visual": "low angle of a single debit card propped against a concrete wall, cold blue hour lighting"
+    },
+    {
+      "say": "But the IRS doesn’t care about simple. They care about the paper.",
+      "callout": "REVEAL",
+      "visual": "towering stack of manila folders with a single red flag pinned to the top, shot from ground level"
+    },
+    {
+      "say": "Step one. Open a separate high-yield account today. Takes 5 minutes.",
+      "callout": "STEP ONE",
+      "visual": "hands typing on a phone, glowing screen the only light source, deep shadows around"
+    },
+    {
+      "say": "Name it something obvious: ‘Freelance’ or ‘Etsy.’ No creative fluff.",
+      "callout": "",
+      "visual": "extreme close-up of a phone screen showing an account named ‘SIDE HUSTLE,’ blurred for anonymity, shallow depth of field"
+    },
+    {
+      "say": "Step two. Move that first dollar into it. Then every dollar after.",
+      "callout": "STEP TWO",
+      "visual": "a dollar bill sliding into a slot on a minimalist wooden desk, single practical light from the left"
+    },
+    {
+      "say": "Now you see every cent. And so does your accountant.",
+      "callout": "",
+      "visual": "a leather-bound ledger with a pen resting on it, shot from above with a single desk lamp casting a warm glow"
+    },
+    {
+      "say": "Step three. Track it in a spreadsheet. Date, amount, project. That’s it.",
+      "callout": "STEP THREE",
+      "visual": "a laptop screen displaying a simple spreadsheet, shot from behind the screen so text is unreadable, dark room with one monitor glow"
+    },
+    {
+      "say": "An extra $1,000 a month invested at 8% for 10 years? That’s $182,946. Not bad for a side gig.",
+      "callout": "$182,946",
+      "visual": "extreme wide shot of an empty highway at night, a single headlight in the distance, star-filled sky"
+    },
+    {
+      "say": "But here’s the kicker: without the trail, you might not even know it’s there.",
+      "callout": "",
+      "visual": "a split frame: left side shows a clean, organized desk with a calculator; right side shows a cluttered desk with coffee stains and loose papers, both under cold fluorescent light"
+    },
+    {
+      "say": "Separate the money from day one. Then you’ll know. And you’ll grow.",
+      "callout": "",
+      "visual": "a single $1 bill pinned to a corkboard with a red thumbtack, shot in close-up with a soft bokah background"
+    },
+    {
+      "say": "Follow for the money rules nobody taught you.",
+      "callout": "",
+      "visual": "a dimly lit underpass with a faint glow at the end, silhouettes moving through it, cinematic grain"
+    }
+  ],
+  "caption": "The first dollar of your side hustle should NEVER hit your checking. Here’s how to fix it in 15 minutes. #SideHustle #MoneyRules #TaxTips",
+  "description": "Side hustle money needs its own account from day one. Three steps to separate it, track it, and let it grow without the tax headache.",
+  "hashtags": [
+    "#SideHustle",
+    "#PersonalFinance",
+    "#TaxTips",
+    "#MoneyPsychology",
+    "#QuietMoney"
+  ],
+  "first_comment": "What’s the first thing you’d do with your side hustle’s first $100?",
+  "facts": [
+    {
+      "claim": "An extra $1,000/month from a side income, invested at 8% for 10 years = $182,946.",
+      "basis": "Fact sheet: $1,000/month invested for 10 years at 8%/yr (monthly compounding) = $182,946 (you put in $120,000)."
+    }
+  ],
+  "source": "llm",
+  "pillar": "playbook",
+  "look": "",
+  "loop_map": {
+    "stakes": "Your side hustle dollars get lost in your checking account and come tax time you’re guessing.",
+    "big_question": "Where does that money go?",
+    "assume": "Mixing side hustle money with personal funds is simpler.",
+    "reveal": "The IRS cares about the paper trail, not simplicity.",
+    "rehook_beats": [
+      6,
+      9
+    ],
+    "payoff_beat": 13
+  }
+}

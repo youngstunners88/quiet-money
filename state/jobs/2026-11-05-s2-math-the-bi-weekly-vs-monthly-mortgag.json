@@ -4,13 +4,64 @@
   "topic": "The Bi-Weekly vs Monthly Mortgage Interest Math",
   "day": "2026-11-05",
   "slot": 2,
-  "status": "planned",
-  "history": [],
+  "status": "held",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-11-05T09:53:51Z",
+      "words": 192
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-11-05T09:54:59Z",
+      "seconds": 66.894,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-11-05T09:56:32Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-11-05T10:00:34Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-11-05T10:00:34Z",
+      "score": 95
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-11-05T10:00:34Z"
+    },
+    {
+      "from": "packaged",
+      "to": "held",
+      "ts": "2026-11-05T10:00:34Z"
+    }
+  ],
   "artifacts": {
     "angle": "Demonstrating how splitting your monthly mortgage payment into half every two weeks cuts 4 years off a 30-year loan and saves tens of thousands in interest.",
-    "hook": "This simple payment calendar tweak shaves four entire years off a 30-year mortgage using the exact same annual budget."
+    "hook": "This simple payment calendar tweak shaves four entire years off a 30-year mortgage using the exact same annual budget.",
+    "title": "The Calendar Tweak That Shaves 4 Years Off Your Mortgage",
+    "style": "cinematic",
+    "video": "/home/user/quiet-money/production/output/2026-11-05/2026-11-05-s2-math-the-bi-weekly-vs-monthly-mortgag/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-11-05/2026-11-05-s2-math-the-bi-weekly-vs-monthly-mortgag/cover.jpg"
   },
-  "scores": {},
-  "cost": {},
-  "notes": []
+  "scores": {
+    "gauntlet": 95,
+    "passed": false
+  },
+  "cost": {
+    "tts:edge:chars": 1151
+  },
+  "notes": [
+    "held for review: not_semantic_duplicate"
+  ]
 }

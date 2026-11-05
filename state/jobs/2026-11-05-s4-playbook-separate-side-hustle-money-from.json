@@ -1,0 +1,34 @@
+{
+  "id": "2026-11-05-s4-playbook-separate-side-hustle-money-from",
+  "pillar": "playbook",
+  "topic": "Separate side-hustle money from day one",
+  "day": "2026-11-05",
+  "slot": 4,
+  "status": "voiced",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-11-05T10:14:22Z",
+      "words": 168
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-11-05T10:17:08Z",
+      "seconds": 64.423,
+      "provider": "edge"
+    }
+  ],
+  "artifacts": {
+    "angle": "a separate account and a simple record from the first dollar makes taxes and decisions easier",
+    "brief": "hormozi",
+    "hook": "The first dollar your side hustle earns should not touch your checking account.",
+    "title": "Side Hustle Money: The One Rule That Saves You"
+  },
+  "scores": {},
+  "cost": {
+    "tts:edge:chars": 945
+  },
+  "notes": []
+}

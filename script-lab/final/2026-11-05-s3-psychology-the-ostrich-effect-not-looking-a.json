@@ -1,0 +1,104 @@
+{
+  "title": "The $3,000 Debt That Takes 15 Years to Disappear",
+  "hook_text": "THE STATEMENT YOU DON'T OPEN STILL COUNTS",
+  "beats": [
+    {
+      "say": "The statement you don’t open still counts. A $3,000 credit card at 24%minimum payments takes 15 years.",
+      "callout": "",
+      "visual": "extreme close of a crumpled unopened envelope on a rain-slick iron table, sodium streetlight glare"
+    },
+    {
+      "say": "Why does ignoring it make it worse?",
+      "callout": "",
+      "visual": "high angle shot of a phone face-down on a foggy bridge rail, cold blue light"
+    },
+    {
+      "say": "Most think: if I don’t look, the problem stays small. But interest never sleeps.",
+      "callout": "24% APR",
+      "visual": "silhouette of a hand holding a closed banking app, towering city lights behind"
+    },
+    {
+      "say": "That $3,000 grows to $7,887 in payments. 15 years of your life.",
+      "callout": "$7,887",
+      "visual": "extreme wide of an empty highway at 3 AM, single headlight fading into the distance"
+    },
+    {
+      "say": "What if you paid $300 a month instead? You’d be done in 12 months, paying only $381 in interest.",
+      "callout": "$300 VS $25",
+      "visual": "low angle shot of a cash envelope on wet asphalt, neon sign reflecting"
+    },
+    {
+      "say": "So why do we keep our heads in the sand?",
+      "callout": "",
+      "visual": "silhouette of a person under an underpass, sodium light cutting across"
+    },
+    {
+      "say": "Psychologists call it the ostrich effect. We avoid bad news to reduce stress today.",
+      "callout": "OSTRICH EFFECT",
+      "visual": "extreme close of a credit card half-buried in sand, golden hour light"
+    },
+    {
+      "say": "But stress now or stress for 15 years? The math is clear.",
+      "callout": "15 YEARS",
+      "visual": "high angle of a calendar with a single red circle on a rainy day, cold fluorescent"
+    },
+    {
+      "say": "Here’s the move: two minutes, same day each week. Open the app, look, then act.",
+      "callout": "",
+      "visual": "back of a phone held over a ridge line at blue hour, hands steady"
+    },
+    {
+      "say": "No drama, no panic. Just the numbers.",
+      "callout": "2 MINUTES",
+      "visual": "empty office chair spinning under a single practical light, late night"
+    },
+    {
+      "say": "Because the $3,000 you ignore today becomes the $7,887 problem tomorrow.",
+      "callout": "$3,000 VS $7,887",
+      "visual": "extreme wide of a credit card on a desert road, sun setting behind"
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "silhouette of a person walking into mist, city skyline in the distance, sodium light"
+    }
+  ],
+  "caption": "Ignoring your balance doesn’t make it go away. It just makes it more expensive. #MoneyPsychology #QuietMoney #DebtFree #PersonalFinance #OstrichEffect",
+  "description": "The ostrich effect makes us avoid bad financial news, but ignoring a $3,000 credit card at 24% can cost you 15 years and $7,887. The fix? Two minutes a week to face the numbers.",
+  "hashtags": [
+    "#MoneyPsychology",
+    "#QuietMoney",
+    "#DebtFree",
+    "#PersonalFinance",
+    "#OstrichEffect"
+  ],
+  "first_comment": "What’s the longest you’ve avoided checking a balance?",
+  "facts": [
+    {
+      "claim": "A $3,000 credit card at 24% APR with minimum payments (1% + interest, min $25) takes 183 months (~15 years) and $4,887 in interest.",
+      "basis": "Provided in the money fact sheet."
+    },
+    {
+      "claim": "The same $3,000 at 24% APR paid with $300/month takes 12 months and $381 in interest.",
+      "basis": "Provided in the money fact sheet."
+    },
+    {
+      "claim": "The ostrich effect is a documented psychological bias where people avoid information that may cause discomfort.",
+      "basis": "Well-documented in behavioral psychology research."
+    }
+  ],
+  "source": "llm",
+  "pillar": "psychology",
+  "look": "",
+  "loop_map": {
+    "stakes": "A $3,000 credit card balance at 24% APR",
+    "big_question": "Why does ignoring it make it worse?",
+    "assume": "If I don’t look, the problem stays small",
+    "reveal": "Interest never sleeps; the balance grows regardless",
+    "rehook_beats": [
+      4,
+      6
+    ],
+    "payoff_beat": 10
+  }
+}
