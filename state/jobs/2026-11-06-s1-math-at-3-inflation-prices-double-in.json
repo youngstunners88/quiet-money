@@ -47,7 +47,14 @@
     "title": "The Math That Doubles Prices While You Sleep",
     "style": "cinematic",
     "video": "/home/user/quiet-money/production/output/2026-11-06/2026-11-06-s1-math-at-3-inflation-prices-double-in/final.mp4",
-    "cover": "/home/user/quiet-money/production/output/2026-11-06/2026-11-06-s1-math-at-3-inflation-prices-double-in/cover.jpg"
+    "cover": "/home/user/quiet-money/production/output/2026-11-06/2026-11-06-s1-math-at-3-inflation-prices-double-in/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-11-06/slot2-math",
+        "post_at": "2026-11-06T11:30:00-05:00"
+      }
+    }
   },
   "scores": {
     "gauntlet": 90,

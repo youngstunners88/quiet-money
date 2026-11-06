@@ -1,0 +1,18 @@
+{
+ "id": "2026-11-06-tiktok-2026-11-06-s3-playbook-a-simple-sales-log-for-a-",
+ "kind": "tiktok",
+ "day": "2026-11-06",
+ "key": "2026-11-06-s3-playbook-a-simple-sales-log-for-a-side-hu",
+ "status": "queued",
+ "created": "2026-11-06T10:22:29+00:00",
+ "recipe": "TikTok upload",
+ "media": [
+  {
+   "source": "production/output/2026-11-06/2026-11-06-s3-playbook-a-simple-sales-log-for-a-side-hu/final.mp4",
+   "name": "final.mp4"
+  }
+ ],
+ "staged": false,
+ "text": "Stop letting uncollected sales leak from your side income. Four simple columns keep your cash intact.\n\nFree reset checklist: link in bio.\n\n#sidehustle #moneytips #personalfinance #quietmoney #financialfreedom\n\nEducation, not financial advice.",
+ "ai_label": "AI-generated content: on"
+}

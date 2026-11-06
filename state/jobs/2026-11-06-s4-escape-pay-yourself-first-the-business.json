@@ -4,7 +4,7 @@
   "topic": "Pay yourself first, the business version",
   "day": "2026-11-06",
   "slot": 4,
-  "status": "visualized",
+  "status": "packaged",
   "history": [
     {
       "from": "planned",
@@ -23,6 +23,22 @@
       "from": "voiced",
       "to": "visualized",
       "ts": "2026-11-06T10:17:29Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-11-06T10:21:15Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-11-06T10:21:15Z",
+      "score": 97
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-11-06T10:21:15Z"
     }
   ],
   "artifacts": {
@@ -30,9 +46,21 @@
     "brief": "pena",
     "hook": "Most small business owners pay themselves last.",
     "title": "Why Small Business Owners Pay Themselves Last",
-    "style": "cinematic"
+    "style": "cinematic",
+    "video": "/home/user/quiet-money/production/output/2026-11-06/2026-11-06-s4-escape-pay-yourself-first-the-business/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-11-06/2026-11-06-s4-escape-pay-yourself-first-the-business/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-11-06/slot5-escape",
+        "post_at": "2026-11-06T21:00:00-05:00"
+      }
+    }
   },
-  "scores": {},
+  "scores": {
+    "gauntlet": 97,
+    "passed": true
+  },
   "cost": {
     "tts:edge:chars": 1076
   },

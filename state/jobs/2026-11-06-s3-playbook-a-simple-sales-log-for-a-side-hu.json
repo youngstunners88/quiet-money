@@ -47,7 +47,14 @@
     "title": "The Simple Sales Log That Keeps Your Side Hustle Money",
     "style": "cinematic",
     "video": "/home/user/quiet-money/production/output/2026-11-06/2026-11-06-s3-playbook-a-simple-sales-log-for-a-side-hu/final.mp4",
-    "cover": "/home/user/quiet-money/production/output/2026-11-06/2026-11-06-s3-playbook-a-simple-sales-log-for-a-side-hu/cover.jpg"
+    "cover": "/home/user/quiet-money/production/output/2026-11-06/2026-11-06-s3-playbook-a-simple-sales-log-for-a-side-hu/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-11-06/slot4-playbook",
+        "post_at": "2026-11-06T18:30:00-05:00"
+      }
+    }
   },
   "scores": {
     "gauntlet": 99,

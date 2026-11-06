@@ -47,7 +47,14 @@
     "title": "Why $5 a Day Is Draining Your Wealth",
     "style": "cinematic",
     "video": "/home/user/quiet-money/production/output/2026-11-06/2026-11-06-s2-psychology-per-day-pricing-why-less-than-a/final.mp4",
-    "cover": "/home/user/quiet-money/production/output/2026-11-06/2026-11-06-s2-psychology-per-day-pricing-why-less-than-a/cover.jpg"
+    "cover": "/home/user/quiet-money/production/output/2026-11-06/2026-11-06-s2-psychology-per-day-pricing-why-less-than-a/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-11-06/slot3-psychology",
+        "post_at": "2026-11-06T15:00:00-05:00"
+      }
+    }
   },
   "scores": {
     "gauntlet": 97,
