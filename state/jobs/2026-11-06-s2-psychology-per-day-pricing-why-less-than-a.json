@@ -1,0 +1,33 @@
+{
+  "id": "2026-11-06-s2-psychology-per-day-pricing-why-less-than-a",
+  "pillar": "psychology",
+  "topic": "Per-day pricing: why less than a coffee a day sounds cheap",
+  "day": "2026-11-06",
+  "slot": 2,
+  "status": "voiced",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-11-06T09:47:03Z",
+      "words": 188
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-11-06T09:48:16Z",
+      "seconds": 69.142,
+      "provider": "edge"
+    }
+  ],
+  "artifacts": {
+    "angle": "name the framing (a price split into days feels smaller than the same price per year), show it in subscriptions and plans, give one counter-move: turn any per-day price into a yearly one before deciding (the viewer multiplies by 365); no study figure claimed",
+    "hook": "Less than a coffee a day is still a yearly bill.",
+    "title": "Why $5 a Day Is Draining Your Wealth"
+  },
+  "scores": {},
+  "cost": {
+    "tts:edge:chars": 1069
+  },
+  "notes": []
+}

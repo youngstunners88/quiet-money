@@ -1,0 +1,60 @@
+{
+  "id": "2026-11-06-s1-math-at-3-inflation-prices-double-in",
+  "pillar": "math",
+  "topic": "At 3% inflation prices double in 24 years",
+  "day": "2026-11-06",
+  "slot": 1,
+  "status": "packaged",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-11-06T09:33:13Z",
+      "words": 162
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-11-06T09:36:05Z",
+      "seconds": 62.81,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-11-06T09:39:18Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-11-06T09:42:41Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-11-06T09:42:41Z",
+      "score": 90
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-11-06T09:42:41Z"
+    }
+  ],
+  "artifacts": {
+    "angle": "the Rule of 72 applied to prices instead of savings (72 / 3 = 24)",
+    "hook": "The price of almost everything doubles while you sleep, slowly.",
+    "title": "The Math That Doubles Prices While You Sleep",
+    "style": "cinematic",
+    "video": "/home/user/quiet-money/production/output/2026-11-06/2026-11-06-s1-math-at-3-inflation-prices-double-in/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-11-06/2026-11-06-s1-math-at-3-inflation-prices-double-in/cover.jpg"
+  },
+  "scores": {
+    "gauntlet": 90,
+    "passed": true
+  },
+  "cost": {
+    "tts:edge:chars": 942
+  },
+  "notes": []
+}

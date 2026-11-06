@@ -1,0 +1,95 @@
+{
+  "title": "The Per-Day Price Trick That Hides Your Yearly Bills",
+  "hook_text": "LESS THAN A COFFEE A DAY",
+  "beats": [
+    {
+      "say": "Less than a coffee a day is still a yearly bill.",
+      "callout": "",
+      "visual": "Extreme close-up of dark coffee dripping into a ceramic cup on a cold wet table under dim sodium light."
+    },
+    {
+      "say": "That streaming app or gym pass quotes you a tiny daily rate.",
+      "callout": "",
+      "visual": "Low angle shot of a massive concrete highway overpass cutting across a heavy gray fog."
+    },
+    {
+      "say": "Why does a 5 dollar daily fee feel completely weightless on your card?",
+      "callout": "",
+      "visual": "Silhouette of a lone person walking past a towering glass skyscraper at blue hour."
+    },
+    {
+      "say": "Most people assume it's just pocket change that won't show up on a bank statement.",
+      "callout": "POCKET CHANGE VS DRAIN",
+      "visual": "Extreme wide shot of empty highway lanes cutting through a dark barren landscape."
+    },
+    {
+      "say": "That tiny cost is actually a 5 dollar habit becoming 1,825 dollars every year.",
+      "callout": "$5 VS $1,825",
+      "visual": "Cold fluorescent light reflecting off wet asphalt in a deserted city alley."
+    },
+    {
+      "say": "How much does that monthly plan quietly steal over a decade?",
+      "callout": "STEP ONE",
+      "visual": "Single practical light bulb swinging slowly in a dark concrete industrial room."
+    },
+    {
+      "say": "A 15 dollar monthly subscription adds up to 1,800 dollars in 10 years.",
+      "callout": "$15 VS $1,800",
+      "visual": "High angle shot of dark ocean waves crashing hard against a jagged stone ridge line."
+    },
+    {
+      "say": "What is the counter-move to break this pricing trap instantly?",
+      "callout": "STEP TWO",
+      "visual": "Silhouette of hands holding a dark metallic card against a cold rainy window pane."
+    },
+    {
+      "say": "Always multiply any daily price by 365 before you hit subscribe.",
+      "callout": "MULTIPLY BY 365",
+      "visual": "Extreme close-up of an analog clock hand ticking sharply under stark white light."
+    },
+    {
+      "say": "Face the total yearly number so you see the real cost of your choices.",
+      "callout": "REAL COST",
+      "visual": "Low angle of a massive steel bridge tower disappearing into heavy night fog."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "Extreme wide shot of a solitary figure standing at the edge of a vast dark canyon."
+    }
+  ],
+  "caption": "The daily pricing trick that makes hundreds of dollars feel like cents. #moneypsychology #personalfinance #smartmoney #moneyliteracies",
+  "description": "Learn why per-day pricing makes bills feel smaller and the simple counter-move to see their true yearly cost.",
+  "hashtags": [
+    "#moneypsychology",
+    "#personalfinance",
+    "#smartmoney",
+    "#moneyliteracies",
+    "#financialtips"
+  ],
+  "first_comment": "Which subscription shocked you the most when you calculated the yearly total?",
+  "facts": [
+    {
+      "claim": "A $5/day habit equals $1,825/year",
+      "basis": "5 multiplied by 365 days."
+    },
+    {
+      "claim": "A $15/month subscription for 10 years equals $1,800",
+      "basis": "15 multiplied by 120 months."
+    }
+  ],
+  "source": "llm",
+  "pillar": "psychology",
+  "look": "",
+  "loop_map": {
+    "stakes": "A recurring subscription or daily habit billed in small increments.",
+    "big_question": "Why does a per-day price make a large bill feel so small?",
+    "assume": "Small daily charges are negligible pocket change.",
+    "reveal": "A small daily charge compounds into a massive yearly bill.",
+    "rehook_beats": [
+      6,
+      8
+    ],
+    "payoff_beat": 9
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "title": "The Math That Doubles Prices While You Sleep",
+  "hook_text": "PRICES DOUBLE WHILE YOU SLEEP",
+  "beats": [
+    {
+      "say": "The price of almost everything doubles while you sleep, slowly.",
+      "callout": "",
+      "visual": "Extreme close-up of worn keys resting on a dark, rain-slicked concrete ledge under a single sodium streetlamp, low angle."
+    },
+    {
+      "say": "You check your grocery receipt and wonder why a simple cart of food costs way more than it did last year.",
+      "callout": "",
+      "visual": "High angle shot of a solitary shopping cart abandoned in a massive, empty asphalt parking lot at blue hour."
+    },
+    {
+      "say": "How fast does inflation actually steal your purchasing power behind your back?",
+      "callout": "",
+      "visual": "Extreme wide shot of a lone commuter walking down a massive concrete underpass, wet asphalt reflecting cold fluorescent light."
+    },
+    {
+      "say": "Most people assume a stable three percent inflation rate is harmless and barely changes your daily life.",
+      "callout": "3% INFLATION",
+      "visual": "Cinematic shot of a heavy steel bridge tower edge cutting into thick fog under a grey overcast sky."
+    },
+    {
+      "say": "Here's what the math actually says. At three percent inflation, prices double in twenty four years.",
+      "callout": "PRICES DOUBLE",
+      "visual": "Low angle of a heavy metal railway crossing arm resting against a dim evening sky, no text."
+    },
+    {
+      "say": "Look at $100 today. After twenty years of three percent inflation, it's worth just $55 in buying power.",
+      "callout": "$100 VS $55",
+      "visual": "Extreme close-up of worn leather wallet edges on a dark wood table under a single practical light, shadows stretching far."
+    },
+    {
+      "say": "Why does that invisible shrinkage happen so fast to money you worked hard to earn?",
+      "callout": "",
+      "visual": "A tiny human silhouette walking past a towering brutalist concrete wall, natural fog rolling in from the side."
+    },
+    {
+      "say": "It happens because of the Rule of Seventy-Two. Divide seventy-two by three, and you get twenty-four years.",
+      "callout": "72 / 3 = 24",
+      "visual": "Extreme close-up of a rusty mechanical gear mechanism turning slowly in deep shadow, cold blue light glinting on steel."
+    },
+    {
+      "say": "That's the exact timeline for your dollar to lose half its real weight.",
+      "callout": "HALF WEIGHT",
+      "visual": "Wide shot of empty highway lanes stretching into a dark horizon under a heavy, overcast sodium light."
+    },
+    {
+      "say": "To beat that silent erosion, your cash has to work harder than you do.",
+      "callout": "",
+      "visual": "Low angle view of a massive stone bridge pylon rising straight up into a dark, foggy sky."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "FOLLOW US",
+      "visual": "Extreme close of a heavy brass door latch resting in deep shadow, single practical light beam cutting across."
+    }
+  ],
+  "caption": "The math behind inflation is simpler than you think. #money #personalfinance #inflation #wealth #finance",
+  "description": "Applying the Rule of 72 to inflation reveals how fast prices double and erode your cash.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#inflation",
+    "#wealth",
+    "#finance"
+  ],
+  "first_comment": "What price increase shocked you the most this year?",
+  "facts": [
+    {
+      "claim": "$100 today is worth $55 in buying power after 20 years of 3% inflation",
+      "basis": "Money Fact Sheet"
+    },
+    {
+      "claim": "At 3% inflation prices double in 24 years via Rule of 72",
+      "basis": "Money Fact Sheet (Rule of 72)"
+    }
+  ],
+  "source": "llm",
+  "pillar": "math",
+  "look": "",
+  "loop_map": {
+    "stakes": "Grocery receipts costing more than last year",
+    "big_question": "How fast does inflation actually steal your purchasing power behind your back?",
+    "assume": "Stable 3% inflation is harmless and barely changes daily life",
+    "reveal": "At 3% inflation prices double in 24 years",
+    "rehook_beats": [
+      3,
+      7
+    ],
+    "payoff_beat": 9
+  }
+}

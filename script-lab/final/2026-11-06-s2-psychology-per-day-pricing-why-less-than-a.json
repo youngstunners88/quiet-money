@@ -1,0 +1,104 @@
+{
+  "title": "Why $5 a Day Is Draining Your Wealth",
+  "hook_text": "$5 A DAY IS AN $1,825 BILL",
+  "beats": [
+    {
+      "say": "Less than a $5 coffee a day sounds tiny until it hits your account as an $1,825 yearly bill.",
+      "callout": "",
+      "visual": "Extreme close up of a cold coffee cup sitting alone on wet asphalt at night under a single amber sodium streetlight."
+    },
+    {
+      "say": "Why do software companies and gym plans always quote you per day instead of per year?",
+      "callout": "DAILY VS YEARLY",
+      "visual": "Silhouette of a single person walking down an empty rain-slicked city street beneath massive soaring dark skyscrapers."
+    },
+    {
+      "say": "It's called per-day price framing, and it quietly re-anchors how your brain perceives cost.",
+      "callout": "",
+      "visual": "Low angle view of an imposing concrete underpass lit by a single cold fluorescent tube casting long dark shadows."
+    },
+    {
+      "say": "You think $5 a day is harmless because your brain's comparing it to a cheap snack.",
+      "callout": "",
+      "visual": "High angle shot looking down at a lonely figure standing inside an empty, dark industrial warehouse."
+    },
+    {
+      "say": "It hides the real impact: even a small $15 monthly subscription steals $1,800 over 10 years.",
+      "callout": "$1,800 COST",
+      "visual": "Fog cutting across a dense skyline at blue hour with distant solitary windows glowing faintly."
+    },
+    {
+      "say": "Put that $5 a day into an investment paying 8% a year, and 30 years yields $226,659.",
+      "callout": "$226,659 FUTURE",
+      "visual": "Extreme wide shot of a solitary figure standing on a windswept mountain ridge against a dark storm sky."
+    },
+    {
+      "say": "So how do you protect your wallet every single time you see a per-day price tag?",
+      "callout": "",
+      "visual": "Wet asphalt stretching down an empty midnight highway illuminated only by overhead streetlights."
+    },
+    {
+      "say": "Step one: don't make the purchasing decision using their daily price framing.",
+      "callout": "STEP ONE",
+      "visual": "Hands viewed from behind holding a dark payment card in a shadow-filled room illuminated by a desk lamp."
+    },
+    {
+      "say": "Step two: multiply any per-day price by 365 to instantly see the full yearly contract.",
+      "callout": "STEP TWO",
+      "visual": "Close up from over the shoulder showing hands typing on a dark mechanical keyboard under cold blue light."
+    },
+    {
+      "say": "Step three: compare that yearly figure directly against your savings goals before signing up.",
+      "callout": "STEP THREE",
+      "visual": "Silhouette of a person standing at the edge of a high rise concrete tower overlooking a vast dark city."
+    },
+    {
+      "say": "Seeing the full bill destroys the mental illusion and protects your long-term wealth.",
+      "callout": "REAL COST",
+      "visual": "Low angle of massive brutalist concrete architecture towering overhead against a bleak foggy sky."
+    },
+    {
+      "say": "Follow Quiet Money for the money rules school never taught you. Remember, a daily price is still a yearly bill.",
+      "callout": "",
+      "visual": "Extreme wide shot of an open ocean horizon at blue hour with dark rolling waters."
+    }
+  ],
+  "caption": "Small daily charges hide massive yearly costs. Multiply by 365 before you subscribe.",
+  "description": "Per-day pricing tricks your brain into anchoring small charges against daily snacks instead of your annual budget. By converting every daily price into its true yearly total, you break the psychological framing and keep your money compounding for your future.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#moneypsychology",
+    "#wealthbuilding",
+    "#quietmoney"
+  ],
+  "first_comment": "What is one small subscription you canceled once you multiplied it by 365?",
+  "facts": [
+    {
+      "claim": "$5/day habit equals $1,825 per year.",
+      "basis": "$5/day habit = $1,825/year from the money fact sheet."
+    },
+    {
+      "claim": "A $15 monthly subscription equals $1,800 over 10 years.",
+      "basis": "A $15/month subscription for 10 years = $1,800 from the money fact sheet."
+    },
+    {
+      "claim": "$5 per day invested monthly at 8% per year for 30 years equals $226,659.",
+      "basis": "$5/day habit invested monthly at 8% for 30 years = $226,659 from the money fact sheet."
+    }
+  ],
+  "source": "llm",
+  "pillar": "psychology",
+  "look": "",
+  "loop_map": {
+    "stakes": "A $5 daily cost silently turns into an $1,825 annual drain on your finances.",
+    "big_question": "Why do subscriptions frame costs per day instead of per year?",
+    "assume": "Most people think a small daily charge is harmless pocket change.",
+    "reveal": "Daily price framing tricks the brain into comparing subscription costs against small snacks instead of yearly bills.",
+    "rehook_beats": [
+      4,
+      7
+    ],
+    "payoff_beat": 11
+  }
+}

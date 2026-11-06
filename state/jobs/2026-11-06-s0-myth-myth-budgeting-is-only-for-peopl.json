@@ -4,13 +4,57 @@
   "topic": "Myth: budgeting is only for people who are struggling",
   "day": "2026-11-06",
   "slot": 0,
-  "status": "planned",
-  "history": [],
+  "status": "packaged",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-11-06T09:21:49Z",
+      "words": 181
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-11-06T09:23:01Z",
+      "seconds": 68.67,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-11-06T09:26:58Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-11-06T09:30:43Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-11-06T09:30:43Z",
+      "score": 95
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-11-06T09:30:43Z"
+    }
+  ],
   "artifacts": {
     "angle": "name the belief; a budget is a plan for where money goes at any income, not a sign of being broke; counter-move: one page a month; no figure claimed",
-    "hook": "A budget isn't a sign you're broke. It's a plan with your name on it."
+    "hook": "A budget isn't a sign you're broke. It's a plan with your name on it.",
+    "title": "The Budgeting Myth That Keeps People Broke",
+    "style": "cinematic",
+    "video": "/home/user/quiet-money/production/output/2026-11-06/2026-11-06-s0-myth-myth-budgeting-is-only-for-peopl/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-11-06/2026-11-06-s0-myth-myth-budgeting-is-only-for-peopl/cover.jpg"
   },
-  "scores": {},
-  "cost": {},
+  "scores": {
+    "gauntlet": 95,
+    "passed": true
+  },
+  "cost": {
+    "tts:edge:chars": 1082
+  },
   "notes": []
 }

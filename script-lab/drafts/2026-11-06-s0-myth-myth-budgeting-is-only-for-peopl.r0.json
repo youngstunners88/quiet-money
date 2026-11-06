@@ -1,0 +1,105 @@
+{
+  "title": "The Budgeting Myth That Keeps People Broke",
+  "hook_text": "BUDGETING ISN'T FOR BROKE PEOPLE",
+  "beats": [
+    {
+      "say": "A budget isn't a sign you're broke. It's a plan with your name on it.",
+      "callout": "",
+      "visual": "High angle shot of wet asphalt on a dark city street lit by a single sodium streetlight."
+    },
+    {
+      "say": "Most people think writing down their spend is a punishment for running low on cash.",
+      "callout": "MYTH VS FACT",
+      "visual": "Back of a silhouette figure standing before a massive steel bridge under cold grey fog."
+    },
+    {
+      "say": "They assume high earners just spend freely and never look at a single bank statement.",
+      "callout": "ASSUMPTION",
+      "visual": "Cold fluorescent lights illuminating a long empty concrete hallway in blue hour."
+    },
+    {
+      "say": "So why do millionaires track every dollar that enters and exits their bank account?",
+      "callout": "THE REAL QUESTION",
+      "visual": "Silhouette of a figure looking out from a high-rise tower edge over a dark city skyline."
+    },
+    {
+      "say": "Without a clear target, unguided money disappears into forgotten habits and unseen subscription fees.",
+      "callout": "",
+      "visual": "Low angle view of an underpass at blue hour with distant car lights blurring."
+    },
+    {
+      "say": "A simple $15/month subscription alone quietly drains $1,800 over 10 years.",
+      "callout": "$15/MO VS $1,800",
+      "visual": "Extreme close-up of a heavy key turning in an old iron lock in dim sodium light."
+    },
+    {
+      "say": "What happens when you give those exact dollars a job instead of letting them leak out?",
+      "callout": "",
+      "visual": "Extreme wide shot of an empty highway stretch extending toward distant rain clouds."
+    },
+    {
+      "say": "Investing $500/month at 8%/yr builds $745,180 over 30 years.",
+      "callout": "$500/MO AT 8%",
+      "visual": "Silhouette of a lone ship navigating calm open water under blue hour skies."
+    },
+    {
+      "say": "That math doesn't happen by accident. It happens because a budget bought that future freedom first.",
+      "callout": "",
+      "visual": "Fog cutting through skyscraper frames at dusk, shot from a low street angle on wet asphalt."
+    },
+    {
+      "say": "A budget isn't restriction. It's controlling your velocity, whether you make $30,000 or $300,000.",
+      "callout": "CONTROL VS RESTRICTION",
+      "visual": "Wet asphalt reflective under cold streetlamps in an empty financial plaza at night."
+    },
+    {
+      "say": "Your counter-move is simple: write one single page at the start of every month.",
+      "callout": "STEP ONE",
+      "visual": "High angle close-up of hands laying a matte black notebook on a dark wooden surface."
+    },
+    {
+      "say": "Tell every single dollar where to go before your impulses make the decision for you.",
+      "callout": "",
+      "visual": "Silhouette against a foggy skyline lit by solitary sodium lamps on a quiet night."
+    },
+    {
+      "say": "Follow for the money rules school never taught you, so you stay ahead.",
+      "callout": "",
+      "visual": "High angle extreme wide shot of a solitary walker crossing a massive concrete plaza at blue hour."
+    }
+  ],
+  "caption": "A budget isn't a leash—it's steering. Control where your money goes before it disappears.",
+  "description": "Budgeting is not a sign of financial failure. It is the core tool for directing cash flow toward long-term assets at any income level.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#budgeting",
+    "#wealthbuilding",
+    "#moneytips"
+  ],
+  "first_comment": "Do you currently keep a monthly budget, or just check your balance?",
+  "facts": [
+    {
+      "claim": "A $15/month subscription for 10 years equals $1,800",
+      "basis": "$15/month subscription for 10 years = $1,800 (exact from fact sheet)"
+    },
+    {
+      "claim": "Investing $500/month at 8%/yr for 30 years yields $745,180",
+      "basis": "$500/month invested for 30 years at 8%/yr (monthly compounding) = $745,180 (exact from fact sheet)"
+    }
+  ],
+  "source": "llm",
+  "pillar": "myth",
+  "look": "",
+  "loop_map": {
+    "stakes": "Unmanaged money leaks out regardless of how much you earn.",
+    "big_question": "Why do millionaires track every dollar if budgeting is only for people struggling?",
+    "assume": "Budgeting is a restriction reserved for people running out of cash.",
+    "reveal": "Budgeting is intentional asset allocation that converts earned income into compounding wealth.",
+    "rehook_beats": [
+      4,
+      7
+    ],
+    "payoff_beat": 10
+  }
+}
