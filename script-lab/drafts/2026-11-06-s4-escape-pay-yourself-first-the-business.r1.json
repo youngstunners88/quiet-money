@@ -1,0 +1,105 @@
+{
+  "title": "The Business Rule That Stops You Working For Free",
+  "hook_text": "MOST SMALL BUSINESS OWNERS PAY THEMSELVES LAST",
+  "beats": [
+    {
+      "say": "Most small business owners pay themselves last.",
+      "callout": "",
+      "visual": "Extreme close-up of a lone fountain pen resting on a dark, rain-slicked concrete ledger at night."
+    },
+    {
+      "say": "Every month, revenue hits the business account.",
+      "callout": "REVENUE",
+      "visual": "Low angle shot of a massive concrete bridge pier cutting through a heavy twilight fog."
+    },
+    {
+      "say": "Suppliers get paid. Software gets paid. Ads get paid.",
+      "callout": "BILLS FIRST",
+      "visual": "Extreme wide shot of a solitary silhouette walking across a vast, empty industrial rail yard under sodium lights."
+    },
+    {
+      "say": "And what is left at the bottom belongs to the owner.",
+      "callout": "LEFTOVERS",
+      "visual": "High angle shot of single practical light illuminating a wet, empty asphalt parking lot."
+    },
+    {
+      "say": "Why do millions of business owners run on empty?",
+      "callout": "THE TRAP",
+      "visual": "Cinematic shot of a heavy steel warehouse door slowly closing against a cold blue hour sky."
+    },
+    {
+      "say": "Most people assume owner pay is whatever is left over after expenses.",
+      "callout": "ASSUME VS FACT",
+      "visual": "Silhouette of a person standing at the edge of a sheer concrete roof against an overcast skyline."
+    },
+    {
+      "say": "That is the trap that keeps a business alive while the owner starves.",
+      "callout": "STEP ONE",
+      "visual": "Extreme close-up of heavy machinery gears turning in cold fluorescent light."
+    },
+    {
+      "say": "How do you break out of that cycle this week?",
+      "callout": "REHOOK",
+      "visual": "Low angle shot of a towering concrete dam wall under heavy gray rain."
+    },
+    {
+      "say": "You treat your own salary as a fixed operating expense.",
+      "callout": "",
+      "visual": "Single practical light cutting through deep shadows in an empty brick corridor."
+    },
+    {
+      "say": "Before a single vendor is paid, owner pay is planned into the budget.",
+      "callout": "",
+      "visual": "Extreme wide shot of a dark industrial harbor with crane silhouettes against a winter horizon."
+    },
+    {
+      "say": "The honest catch is that fixed owner pay forces you to cut weak expenses fast.",
+      "callout": "",
+      "visual": "Raindrops hitting the dark, reflective surface of a deserted highway at night."
+    },
+    {
+      "say": "Pay yourself first because a business built on your free labor is just a job you cannot quit.",
+      "callout": "",
+      "visual": "A lone figure walking away into the fog under a single amber sodium streetlamp."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "Extreme close-up of a heavy steel latch clicking shut in cold blue light."
+    }
+  ],
+  "caption": "Most small business owners treat their own paycheck as a leftover. Flip the rule and treat owner pay as a fixed expense. #smallbusiness #moneypsychology #businessowner #wealth",
+  "description": "Why small business owners pay themselves last and how treating owner pay as a fixed operating expense changes the game.",
+  "hashtags": [
+    "#smallbusiness",
+    "#moneypsychology",
+    "#businessowner",
+    "#wealth",
+    "#personalfinance"
+  ],
+  "first_comment": "Are you paying yourself first or taking whatever is left at the end of the month?",
+  "facts": [
+    {
+      "claim": "Most small business owners pay themselves last.",
+      "basis": "Common business reality addressed by business education frameworks."
+    },
+    {
+      "claim": "Treating owner pay as a fixed operating expense stops relying on leftovers.",
+      "basis": "Standard cash flow management principle from business efficiency frameworks."
+    }
+  ],
+  "source": "llm",
+  "pillar": "escape",
+  "look": "",
+  "loop_map": {
+    "stakes": "Small business owners paying themselves last from business revenue.",
+    "big_question": "Why do millions of business owners run on empty?",
+    "assume": "Owner pay is whatever is left over after expenses.",
+    "reveal": "Owner pay must be planned as a fixed operating expense.",
+    "rehook_beats": [
+      5,
+      8
+    ],
+    "payoff_beat": 12
+  }
+}

@@ -4,7 +4,7 @@
   "topic": "Per-day pricing: why less than a coffee a day sounds cheap",
   "day": "2026-11-06",
   "slot": 2,
-  "status": "voiced",
+  "status": "packaged",
   "history": [
     {
       "from": "planned",
@@ -18,14 +18,41 @@
       "ts": "2026-11-06T09:48:16Z",
       "seconds": 69.142,
       "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-11-06T09:51:30Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-11-06T09:55:20Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-11-06T09:55:20Z",
+      "score": 97
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-11-06T09:55:20Z"
     }
   ],
   "artifacts": {
     "angle": "name the framing (a price split into days feels smaller than the same price per year), show it in subscriptions and plans, give one counter-move: turn any per-day price into a yearly one before deciding (the viewer multiplies by 365); no study figure claimed",
     "hook": "Less than a coffee a day is still a yearly bill.",
-    "title": "Why $5 a Day Is Draining Your Wealth"
+    "title": "Why $5 a Day Is Draining Your Wealth",
+    "style": "cinematic",
+    "video": "/home/user/quiet-money/production/output/2026-11-06/2026-11-06-s2-psychology-per-day-pricing-why-less-than-a/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-11-06/2026-11-06-s2-psychology-per-day-pricing-why-less-than-a/cover.jpg"
   },
-  "scores": {},
+  "scores": {
+    "gauntlet": 97,
+    "passed": true
+  },
   "cost": {
     "tts:edge:chars": 1069
   },

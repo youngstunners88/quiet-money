@@ -1,0 +1,40 @@
+{
+  "id": "2026-11-06-s4-escape-pay-yourself-first-the-business",
+  "pillar": "escape",
+  "topic": "Pay yourself first, the business version",
+  "day": "2026-11-06",
+  "slot": 4,
+  "status": "visualized",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-11-06T10:12:35Z",
+      "words": 180
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-11-06T10:14:10Z",
+      "seconds": 65.589,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-11-06T10:17:29Z"
+    }
+  ],
+  "artifacts": {
+    "angle": "Pena and Kiyosaki both put paying yourself first; in a business it means owner pay is planned, not leftover",
+    "brief": "pena",
+    "hook": "Most small business owners pay themselves last.",
+    "title": "Why Small Business Owners Pay Themselves Last",
+    "style": "cinematic"
+  },
+  "scores": {},
+  "cost": {
+    "tts:edge:chars": 1076
+  },
+  "notes": []
+}

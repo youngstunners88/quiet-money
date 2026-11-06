@@ -1,0 +1,96 @@
+{
+  "title": "The Four-Column Sales Log For Your Side Hustle",
+  "hook_text": "MOST SELLERS CANNOT SAY WHO OWES",
+  "beats": [
+    {
+      "say": "Most small sellers cannot say who still owes them money.",
+      "callout": "",
+      "visual": "Extreme close-up of a weathered wooden desk under a single amber bulb, cold blue hour light cutting through blinds."
+    },
+    {
+      "say": "Unpaid invoices bleed side hustles dry before they ever scale.",
+      "callout": "",
+      "visual": "Low angle shot of heavy rain washing across dark asphalt under a sodium streetlamp."
+    },
+    {
+      "say": "Where does that missing cash actually vanish to every single month?",
+      "callout": "",
+      "visual": "Silhouette of a lone figure standing near the edge of a massive concrete bridge at dusk."
+    },
+    {
+      "say": "Most people think memory is enough to track a growing side income.",
+      "callout": "ASSUME VS FACT",
+      "visual": "Extreme wide view of an empty highway stretching into a dense gray fog."
+    },
+    {
+      "say": "That memory fails the moment you cross ten clients a month.",
+      "callout": "",
+      "visual": "Cold fluorescent light reflecting off wet steel beams inside an abandoned transit station."
+    },
+    {
+      "say": "Step one. Open a blank sheet and name your first column date.",
+      "callout": "STEP ONE",
+      "visual": "Close-up of a bare metal table illuminated by a harsh overhead workshop lamp."
+    },
+    {
+      "say": "Step two. Add the customer name so you know exactly who bought.",
+      "callout": "STEP TWO",
+      "visual": "High angle shot of dark ocean waves crashing against a jagged stone shoreline at night."
+    },
+    {
+      "say": "Step three. Put the exact dollar amount in column three.",
+      "callout": "STEP THREE",
+      "visual": "Silhouette of a rusted metal tower cutting into a cold twilight sky."
+    },
+    {
+      "say": "Step four. Type paid or unpaid as the final column gate.",
+      "callout": "",
+      "visual": "Extreme close-up of heavy iron rivets on a dark industrial bridge under sodium light."
+    },
+    {
+      "say": "That simple four-column log stops cash from walking out the back door.",
+      "callout": "",
+      "visual": "Low angle view of a towering concrete overpass cutting through thick evening mist."
+    },
+    {
+      "say": "An extra $1,000 a month from a side income invested at 8% for 10 years hits $182,946.",
+      "callout": "$182,000",
+      "visual": "Extreme wide shot of a dark mountain ridge line under a cold blue winter moon."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "Single practical light casting a long shadow down an empty concrete corridor at night."
+    }
+  ],
+  "caption": "Four columns fix a leaking side hustle. Follow for the money rules school never taught you. #sidehustle #moneytips #personalfinance #businessowner #wealthmindset",
+  "description": "A simple four-column sales log stops side hustle money from going missing. Learn the exact columns to track date, customer, amount, and payment status.",
+  "hashtags": [
+    "#sidehustle",
+    "#moneytips",
+    "#personalfinance",
+    "#businessowner",
+    "#wealthmindset"
+  ],
+  "first_comment": "What is the hardest part of tracking your side hustle money?",
+  "facts": [
+    {
+      "claim": "An extra $1,000/month from a side income, invested at 8% for 10 years = $182,946 (you put in $120,000)",
+      "basis": "MONEY FACT SHEET"
+    }
+  ],
+  "source": "llm",
+  "pillar": "playbook",
+  "look": "",
+  "loop_map": {
+    "stakes": "Unpaid side hustle invoices bleed small sellers dry.",
+    "big_question": "Where does that missing cash actually vanish to every single month?",
+    "assume": "Memory is enough to track a growing side income.",
+    "reveal": "Memory fails at scale and a four-column log stops the leak.",
+    "rehook_beats": [
+      3,
+      10
+    ],
+    "payoff_beat": 10
+  }
+}

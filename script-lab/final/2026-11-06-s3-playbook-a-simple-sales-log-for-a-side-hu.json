@@ -1,0 +1,96 @@
+{
+  "title": "The Simple Sales Log That Keeps Your Side Hustle Money",
+  "hook_text": "YOUR SIDE HUSTLE IS WORKING FREE",
+  "beats": [
+    {
+      "say": "If you don't track unpaid invoices today, your side hustle is working for free.",
+      "callout": "",
+      "visual": "Low angle silhouette of a solo worker walking down a dark rain-slick street under a single yellow streetlamp."
+    },
+    {
+      "say": "Most small sellers can't name every single customer who still owes them money right now.",
+      "callout": "",
+      "visual": "Cold fluorescent lighting in an empty midnight warehouse, a single wooden pallet sitting isolated on wet concrete."
+    },
+    {
+      "say": "Where does that uncollected cash actually vanish when you're busy running your daily hustle?",
+      "callout": "",
+      "visual": "Extreme high angle of a blank metal workbench illuminated by a harsh practical desk lamp, deep shadows."
+    },
+    {
+      "say": "You might assume modern payment apps automatically track and collect every pending order for you.",
+      "callout": "APP VS REALITY",
+      "visual": "Silhouette of hands holding a smartphone in a dark fog-filled room, screen glow lighting up the hands only."
+    },
+    {
+      "say": "In reality, cash constantly leaks through forgotten DMs, late payment links, and informal verbal agreements.",
+      "callout": "UNCOLLECTED SALES",
+      "visual": "Extreme close up of a retro metal cash box sitting closed under dim blue light."
+    },
+    {
+      "say": "So how do you stop money going missing in under 15 minutes without paying for expensive software?",
+      "callout": "15 MINUTE FIX",
+      "visual": "Extreme wide shot of a solitary figure standing at the edge of a rainy shipping pier at night."
+    },
+    {
+      "say": "Step one. Open a blank spreadsheet or clean notebook paper and create four simple tracking columns today.",
+      "callout": "STEP ONE",
+      "visual": "High angle shot of a clean wooden desk with a quiet practical lamp casting a focused cone of light."
+    },
+    {
+      "say": "Step two. Label your columns clearly: Date, Customer Name, Total Amount, and Paid Or Not.",
+      "callout": "STEP TWO",
+      "visual": "Extreme close up of a fountain pen resting beside a blank sheet of paper under cold fluorescent light."
+    },
+    {
+      "say": "Step three. Log every single order immediately, and highlight any unpaid row until cash settles.",
+      "callout": "STEP THREE",
+      "visual": "Low angle shot of a solitary light bulb hanging over a plain wooden workbench in a shadowy garage."
+    },
+    {
+      "say": "Why does keeping this basic four-column sales log make such a dramatic impact on your long-term wealth?",
+      "callout": "",
+      "visual": "Blue hour view of an empty suspension bridge stretching into heavy fog over calm ocean waters."
+    },
+    {
+      "say": "Recovering just $1,000 a month in uncollected sales and investing it at 8% for 10 years builds $182,946.",
+      "callout": "$1,000/MO = $182,946",
+      "visual": "Extreme wide view of a modern concrete bridge under flickering highway lights in midnight mist."
+    },
+    {
+      "say": "Stop letting unpaid work slip away today. Follow Quiet Money for the money rules school never taught you.",
+      "callout": "",
+      "visual": "Low angle silhouette of a person standing on a windy coastal ridge at dawn against a vast morning sky."
+    }
+  ],
+  "caption": "Stop letting uncollected sales leak from your side income. Four simple columns keep your cash intact.\n\n#sidehustle #moneytips #personalfinance #quietmoney #financialfreedom",
+  "description": "Learn how a simple four-column sales log prevents uncollected income from vanishing. See how capturing $1,000 a month in missed revenue builds long-term wealth when invested.",
+  "hashtags": [
+    "#sidehustle",
+    "#moneytips",
+    "#personalfinance",
+    "#quietmoney",
+    "#financialfreedom"
+  ],
+  "first_comment": "How do you track your side hustle payments right now?",
+  "facts": [
+    {
+      "claim": "An extra $1,000/month from a side income, invested at 8% for 10 years = $182,946.",
+      "basis": "Money Fact Sheet: An extra $1,000/month from a side income, invested at 8% for 10 years = $182,946 (you put in $120,000)"
+    }
+  ],
+  "source": "llm",
+  "pillar": "playbook",
+  "look": "",
+  "loop_map": {
+    "stakes": "Uncollected side hustle sales mean working for free without knowing who owes you.",
+    "big_question": "Where does uncollected cash vanish when running a side hustle?",
+    "assume": "Payment apps automatically track and hold people accountable for pending orders.",
+    "reveal": "Cash leaks through forgotten messages, late links, and informal verbal agreements.",
+    "rehook_beats": [
+      6,
+      10
+    ],
+    "payoff_beat": 11
+  }
+}

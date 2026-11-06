@@ -1,0 +1,96 @@
+{
+  "title": "The Business Rule Nobody Taught You",
+  "hook_text": "MOST SMALL BUSINESS OWNERS PAY THEMSELVES LAST",
+  "beats": [
+    {
+      "say": "Most small business owners pay themselves last.",
+      "callout": "",
+      "visual": "Extreme close-up of a lone fountain pen resting on a dark walnut desk under a single overhead tungsten light."
+    },
+    {
+      "say": "Every month, vendors get paid first.",
+      "callout": "",
+      "visual": "Low angle shot of a massive concrete office tower disappearing into a cold, overcast morning sky."
+    },
+    {
+      "say": "Then rent, software, and random overhead.",
+      "callout": "",
+      "visual": "Silhouette of a tired worker walking alone past a chain-link fence in the blue hour."
+    },
+    {
+      "say": "Whatever is left belongs to you.",
+      "callout": "LEFT VS RIGHT",
+      "visual": "High angle shot of a wet asphalt parking lot reflecting a single amber streetlamp."
+    },
+    {
+      "say": "How do you break this cycle and keep your business afloat?",
+      "callout": "",
+      "visual": "Extreme wide shot of a solitary figure standing at the edge of a vast, foggy industrial rail yard."
+    },
+    {
+      "say": "You might assume owner pay is just leftover profit.",
+      "callout": "STEP ONE",
+      "visual": "Extreme close-up of heavy iron gears turning slowly inside a darkened factory wall."
+    },
+    {
+      "say": "That is the trap that keeps you broke.",
+      "callout": "",
+      "visual": "Sodium light cutting through thick fog over an empty concrete bridge at midnight."
+    },
+    {
+      "say": "Both business theorists teach the exact opposite rule.",
+      "callout": "STEP TWO",
+      "visual": "Low angle shot of a heavy steel shipping container hanging from a massive crane hook."
+    },
+    {
+      "say": "Pay yourself first as a fixed line item.",
+      "callout": "",
+      "visual": "Extreme close-up of a mechanical stopwatch ticking against a dark, textured steel plate."
+    },
+    {
+      "say": "Treat your own salary like any other critical bill.",
+      "callout": "",
+      "visual": "Wide shot of a single glowing light cutting across a dark warehouse floor at night."
+    },
+    {
+      "say": "The honest catch is that fixed owner pay forces hard cuts elsewhere.",
+      "callout": "THE CATCH",
+      "visual": "Extreme close-up of weathered hands tightening a heavy steel bolt with a wrench."
+    },
+    {
+      "say": "Set your owner pay today before bills arrive. Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "Cinematic wide shot of an empty highway stretching into a dark mountain ridge at dusk."
+    }
+  ],
+  "caption": "Most small business owners get this backwards. #businessowner #moneypsychology #wealthbuilding #personalfinance #entrepreneurship",
+  "description": "Learn why paying yourself last traps you in a cycle of business stress, and how treating owner pay as a fixed expense changes everything.",
+  "hashtags": [
+    "#businessowner",
+    "#moneypsychology",
+    "#wealthbuilding",
+    "#personalfinance",
+    "#entrepreneurship"
+  ],
+  "first_comment": "What is the hardest bill for your business to cover each month?",
+  "facts": [
+    {
+      "claim": "Owner pay must be planned as a fixed line item rather than left over profit",
+      "basis": "Pena and Kiyosaki framework on paying yourself first in business"
+    }
+  ],
+  "source": "llm",
+  "pillar": "escape",
+  "look": "",
+  "loop_map": {
+    "stakes": "Most small business owners pay themselves last and drain their own cash flow.",
+    "big_question": "How do you break this cycle and keep your business afloat?",
+    "assume": "Owner pay is just leftover profit at the end of the month.",
+    "reveal": "Owner pay must be treated as a fixed operating expense.",
+    "rehook_beats": [
+      5,
+      8
+    ],
+    "payoff_beat": 10
+  }
+}

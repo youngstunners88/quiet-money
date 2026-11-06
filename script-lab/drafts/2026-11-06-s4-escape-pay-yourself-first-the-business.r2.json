@@ -1,0 +1,96 @@
+{
+  "title": "Why Small Business Owners Pay Themselves Last",
+  "hook_text": "STOP PAYING YOURSELF LAST",
+  "beats": [
+    {
+      "say": "Most small business owners pay themselves last, leaving their own bank account completely empty.",
+      "callout": "",
+      "visual": "Low angle silhouette of a business owner standing outside a dark storefront under flickering cold sodium light."
+    },
+    {
+      "say": "They assume business profit will magically appear after every bill and supplier gets paid.",
+      "callout": "",
+      "visual": "High angle wide shot of an empty warehouse at blue hour, rain dripping from the ceiling beams."
+    },
+    {
+      "say": "So why do most new founders struggle to hand themselves a steady paycheck for years?",
+      "callout": "THE FOUNDER TRAP",
+      "visual": "Extreme close up of a single desk lamp illuminating plain unbranded ledger paper in total darkness."
+    },
+    {
+      "say": "You assume you must clear expenses first and survive on whatever scraps are left.",
+      "callout": "LEFTOVER VS PLANNED",
+      "visual": "Rain-slicked wet asphalt in a dark urban alley illuminated by a single practical overhead lamp."
+    },
+    {
+      "say": "In reality, sharp operators flip the equation and lock in owner pay from day one.",
+      "callout": "",
+      "visual": "Extreme wide shot of a solitary silhouette standing on a concrete tower edge at dusk."
+    },
+    {
+      "say": "If you don't reserve pay upfront, how do you stop the business from eating every dollar?",
+      "callout": "",
+      "visual": "Silhouette looking into a massive empty concrete underpass illuminated by red tail lights."
+    },
+    {
+      "say": "Step one: transfer a fixed 5% of all incoming revenue into a private account immediately.",
+      "callout": "STEP ONE",
+      "visual": "Low angle view of gloved hands opening an unbranded metal box under harsh cold fluorescent light."
+    },
+    {
+      "say": "Step two: force operational expenses to fit what's left, driving sharp efficiency instead of waste.",
+      "callout": "STEP TWO",
+      "visual": "Extreme wide shot of a fog-covered skyline pierced by dark concrete skyscraper edges at morning light."
+    },
+    {
+      "say": "An extra $1,000 a month invested at 8% for 10 years builds $182,946 in capital.",
+      "callout": "$182,946 IN 10 YRS",
+      "visual": "Single sharp beam of light cutting through misty air onto a dark metallic tabletop."
+    },
+    {
+      "say": "Here's the honest catch: paying yourself first shrinks your spending buffer, so bad months hurt faster.",
+      "callout": "THE HONEST CATCH",
+      "visual": "High angle view of a wet ocean pier at blue hour with dark cold water reaching out."
+    },
+    {
+      "say": "This week, open a separate owner account and automate a 5% transfer on every client payment.",
+      "callout": "THIS WEEK",
+      "visual": "Silhouette standing at a high floor-to-ceiling window observing an empty highway at night."
+    },
+    {
+      "say": "Follow for the money rules school never taught you, so you never pay yourself last.",
+      "callout": "",
+      "visual": "Extreme wide shot of a quiet dark highway leading into distant mountain fog at twilight."
+    }
+  ],
+  "caption": "Stop living off leftover scraps from your own company. Lock in owner pay first. #money #entrepreneurship #businessgrowth #personalfinance #financialfreedom",
+  "description": "Most business owners work endlessly and pay themselves last. Here is the framework to treat owner pay as a fixed cost from day one.",
+  "hashtags": [
+    "#money",
+    "#entrepreneurship",
+    "#businessgrowth",
+    "#personalfinance",
+    "#financialfreedom"
+  ],
+  "first_comment": "Do you pay yourself a predictable paycheck from your business, or just take whatever is left?",
+  "facts": [
+    {
+      "claim": "An extra $1,000/month invested at 8% for 10 years grows to $182,946.",
+      "basis": "Fact sheet calculation: $1,000/month invested at 8% compounding over 10 years equals $182,946."
+    }
+  ],
+  "source": "llm",
+  "pillar": "escape",
+  "look": "",
+  "loop_map": {
+    "stakes": "Small business owners work for years without securing personal money.",
+    "big_question": "How do you guarantee owner pay without draining company liquidity?",
+    "assume": "Cover all operating costs first and take leftover profit.",
+    "reveal": "Treat owner pay as a mandatory fixed cost deducted from incoming revenue immediately.",
+    "rehook_beats": [
+      3,
+      6
+    ],
+    "payoff_beat": 11
+  }
+}

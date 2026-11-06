@@ -1,0 +1,60 @@
+{
+  "id": "2026-11-06-s3-playbook-a-simple-sales-log-for-a-side-hu",
+  "pillar": "playbook",
+  "topic": "A simple sales log for a side hustle",
+  "day": "2026-11-06",
+  "slot": 3,
+  "status": "packaged",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-11-06T09:59:36Z",
+      "words": 190
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-11-06T10:01:23Z",
+      "seconds": 69.756,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-11-06T10:04:39Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-11-06T10:08:20Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-11-06T10:08:20Z",
+      "score": 99
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-11-06T10:08:20Z"
+    }
+  ],
+  "artifacts": {
+    "angle": "date, customer, amount, paid or not: the four columns that stop money going missing",
+    "hook": "Most small sellers cannot say who still owes them money.",
+    "title": "The Simple Sales Log That Keeps Your Side Hustle Money",
+    "style": "cinematic",
+    "video": "/home/user/quiet-money/production/output/2026-11-06/2026-11-06-s3-playbook-a-simple-sales-log-for-a-side-hu/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-11-06/2026-11-06-s3-playbook-a-simple-sales-log-for-a-side-hu/cover.jpg"
+  },
+  "scores": {
+    "gauntlet": 99,
+    "passed": true
+  },
+  "cost": {
+    "tts:edge:chars": 1174
+  },
+  "notes": []
+}

@@ -1,0 +1,101 @@
+{
+  "title": "The Four Column Rule That Saves Your Side Income",
+  "hook_text": "WHO STILL OWES YOU MONEY?",
+  "beats": [
+    {
+      "say": "Most small sellers can't say who still owes them money today.",
+      "callout": "",
+      "visual": "Extreme close-up of hands counting paper currency under a single harsh sodium street light at night."
+    },
+    {
+      "say": "You work late nights for extra income, but uncollected payments quietly vanish into thin air.",
+      "callout": "",
+      "visual": "High-angle wide shot of a solitary figure walking down a wet rain-slicked city sidewalk under blue hour light."
+    },
+    {
+      "say": "Where does all that hard-earned side hustle money actually leak out?",
+      "callout": "",
+      "visual": "Low-angle shot of a tall concrete urban wall in heavy fog cutting a quiet city skyline."
+    },
+    {
+      "say": "Most people think lost revenue comes from high fees or bad pricing.",
+      "callout": "FEES VS UNPAID",
+      "visual": "Silhouetted back of a person standing over an empty highway overpass at midnight."
+    },
+    {
+      "say": "That's wrong. Money usually disappears simply because nobody wrote down who hadn't paid yet.",
+      "callout": "",
+      "visual": "Dark underpass illuminated by a single flickering fluorescent tube overhead."
+    },
+    {
+      "say": "If you collect an extra $1,000 a month and invest it at 8% for 10 years, that's $182,946.",
+      "callout": "$182,946 INVESTED",
+      "visual": "Extreme wide shot of a lonely concrete harbor pier stretching into open black water."
+    },
+    {
+      "say": "But you can't invest what you never collect. Here's your 15-minute fix.",
+      "callout": "",
+      "visual": "Cold neon reflection bouncing off wet asphalt beside an industrial fence."
+    },
+    {
+      "say": "Step one. Open a blank sheet on your phone and name it Sales Log.",
+      "callout": "STEP ONE",
+      "visual": "Close-up from behind a hand holding a sleek smartphone screen, heavily blurred background."
+    },
+    {
+      "say": "Step two. Create four columns: Date, Customer, Amount, and Paid or Not.",
+      "callout": "STEP TWO",
+      "visual": "Extreme close-up of a pen point resting on dark recycled leather journal pages under desk lamp light."
+    },
+    {
+      "say": "Step three. Check your messages and text anyone marked unpaid with your payment link right now.",
+      "callout": "STEP THREE",
+      "visual": "Silhouette of a person standing against a frosted glass office door at dusk."
+    },
+    {
+      "say": "Four columns stop your cash from disappearing so every dollar works for your future.",
+      "callout": "FOUR COLUMNS",
+      "visual": "High-angle view of rain droplets sliding down a dark window pane facing a dimly lit street."
+    },
+    {
+      "say": "Follow Quiet Money for the simple wealth rules school never taught you.",
+      "callout": "",
+      "visual": "Extreme wide shot of a lone ridge line silhouetted against a deep indigo twilight sky."
+    },
+    {
+      "say": "That's how small sellers always know exactly who still owes them money.",
+      "callout": "",
+      "visual": "Low-angle shot of a tall concrete pillar under sodium night lighting."
+    }
+  ],
+  "caption": "Stop losing side hustle income to uncollected invoices. A simple 4-column log protects your cash flow.\n\n#personalfinance #sidehustle #moneytips #moneypsychology #quietmoney",
+  "description": "Learn the simple 4-column sales log format that stops uncollected money from disappearing from your side business, backed by compounding returns math.",
+  "hashtags": [
+    "#personalfinance",
+    "#sidehustle",
+    "#moneytips",
+    "#moneypsychology",
+    "#quietmoney"
+  ],
+  "first_comment": "How do you track your side income right now?",
+  "facts": [
+    {
+      "claim": "An extra $1,000/month from a side income, invested at 8% for 10 years = $182,946",
+      "basis": "Money Fact Sheet calculation ($120,000 contributed, compounding at 8% annually)."
+    }
+  ],
+  "source": "llm",
+  "pillar": "playbook",
+  "look": "",
+  "loop_map": {
+    "stakes": "Small sellers lose track of uncollected cash.",
+    "big_question": "Where does all that hard-earned side hustle money actually leak out?",
+    "assume": "Lost income comes from high fees or bad pricing.",
+    "reveal": "Money vanishes because uncollected debt isn't logged or tracked.",
+    "rehook_beats": [
+      3,
+      7
+    ],
+    "payoff_beat": 11
+  }
+}
