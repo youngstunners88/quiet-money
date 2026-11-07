@@ -1,0 +1,91 @@
+{
+  "title": "The $7 Daily Habit Costing You A Luxury Car",
+  "hook_text": "THAT $7 HABIT COSTS A LUXURY CAR",
+  "beats": [
+    {
+      "say": "That $7 daily takeout coffee is actually costing you a luxury car by the time you retire.",
+      "callout": "",
+      "visual": "Extreme close-up of a steaming paper cup on a wet, rain-slick concrete curb under cold fluorescent light."
+    },
+    {
+      "say": "Here is the exact compound math behind every single morning purchase you make.",
+      "callout": "THE MATH",
+      "visual": "Low angle shot of a solitary pedestrian silhouette crossing an empty highway at night under sodium streetlamps."
+    },
+    {
+      "say": "Most people assume spending $7 a day just means skipping a small treat.",
+      "callout": "TREAT VS FUTURE",
+      "visual": "High angle shot of a dark, rain-slick intersection with single practical streetlights cutting through thick fog."
+    },
+    {
+      "say": "They figure it is only $210 a month leaving their checking account.",
+      "callout": "$210 MONTHLY",
+      "visual": "Extreme wide shot of a massive suspension bridge tower edge disappearing into heavy blue hour mist."
+    },
+    {
+      "say": "But where does that money actually go over a standard career?",
+      "callout": "",
+      "visual": "Silhouetted hands holding a blank card against a dark background lit by a single cold fluorescent tube."
+    },
+    {
+      "say": "Invested at an 8% annual return over 30 years, that routine grows.",
+      "callout": "8% RETURN",
+      "visual": "Low angle shot of towering concrete highway overpasses cutting across a dark, rain-soaked landscape."
+    },
+    {
+      "say": "It does not just add up to $75,000 in raw cash.",
+      "callout": "$75K VS $310K",
+      "visual": "Extreme close-up of dark water rippling under cold, sodium-lit dock pilings at night."
+    },
+    {
+      "say": "It turns into $310,000 of lost investment capital by retirement day.",
+      "callout": "$310,000 LOST",
+      "visual": "Silhouettes of commuters walking past a massive concrete wall under harsh fluorescent station lights."
+    },
+    {
+      "say": "That tiny daily convenience trades your future freedom for instant morning comfort.",
+      "callout": "COMFORT VS FREEDOM",
+      "visual": "Extreme wide shot of an empty asphalt highway stretching toward a dark, fog-covered mountain ridge."
+    },
+    {
+      "say": "You can keep buying the habit, or redirect the cash into your own accounts.",
+      "callout": "",
+      "visual": "Single practical light casting a long shadow across a wet concrete loading dock at blue hour."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "Extreme close-up of dark rain hitting a cold metal rail under a single sodium light."
+    }
+  ],
+  "caption": "That daily habit is quietly stealing your retirement capital. #money #personalfinance #investing #wealth #retirement",
+  "description": "Breaking down how small daily convenience purchases compound into hundreds of thousands in lost investment capital over a working career.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#investing",
+    "#wealth",
+    "#retirement"
+  ],
+  "first_comment": "What is one daily habit you would trade for a six-figure portfolio?",
+  "facts": [
+    {
+      "claim": "$210 a month invested at 8% over 30 years grows to over $310,000",
+      "basis": "Standard compound interest formula: PMT 210, rate 8%, periods 360 months"
+    }
+  ],
+  "source": "llm",
+  "pillar": "story",
+  "look": "",
+  "loop_map": {
+    "stakes": "Daily convenience purchases and their true cost over a career.",
+    "big_question": "How much does a $7 daily habit actually cost you by retirement?",
+    "assume": "People assume spending $7 a day only costs the raw cash spent.",
+    "reveal": "It compounds into over $310,000 in lost investment capital at 8% over 30 years.",
+    "rehook_beats": [
+      5,
+      8
+    ],
+    "payoff_beat": 8
+  }
+}

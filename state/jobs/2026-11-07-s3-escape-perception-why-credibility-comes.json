@@ -1,0 +1,26 @@
+{
+  "id": "2026-11-07-s3-escape-perception-why-credibility-comes",
+  "pillar": "escape",
+  "topic": "Perception: why credibility comes before the deal",
+  "day": "2026-11-07",
+  "slot": 3,
+  "status": "failed",
+  "history": [
+    {
+      "from": "planned",
+      "to": "failed",
+      "ts": "2026-11-07T09:37:28Z",
+      "error": "all llm providers failed: gemini: ProviderError: gemini: gemini-3.8-flash:ProxyError,gemini-3.5-flash:ProxyError,gemini-3.5-flash-lite:ProxyError | longcat: unavailable (LONGCAT_API_KEY not set) | mis"
+    }
+  ],
+  "artifacts": {
+    "angle": "Pena's 'build perception' step: track record, advisers and a clear plan make others say yes",
+    "brief": "pena",
+    "hook": "People decide whether to trust you before they hear your offer."
+  },
+  "scores": {},
+  "cost": {},
+  "notes": [
+    "all llm providers failed: gemini: ProviderError: gemini: gemini-3.8-flash:ProxyError,gemini-3.5-flash:ProxyError,gemini-3.5-flash-lite:ProxyError | longcat: unavailable (LONGCAT_API_KEY not set) | mistral: unavailable (mistral: every key limited or refused (ProxyError,ProxyError)) | openrouter: Prov"
+  ]
+}

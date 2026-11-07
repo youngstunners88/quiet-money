@@ -4,13 +4,57 @@
   "topic": "The Unsuspected Price Tag of Convenience Culture on Your Retirement",
   "day": "2026-11-07",
   "slot": 0,
-  "status": "planned",
-  "history": [],
+  "status": "packaged",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-11-07T09:26:56Z",
+      "words": 135
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-11-07T09:33:43Z",
+      "seconds": 71.148,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-11-07T09:34:00Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-11-07T09:37:27Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-11-07T09:37:28Z",
+      "score": 98
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-11-07T09:37:28Z"
+    }
+  ],
   "artifacts": {
     "angle": "Breaking down how small, daily convenience purchases compound into hundreds of thousands in lost investment capital over a working career.",
-    "hook": "That $7 daily convenience is actually costing you a luxury car by the time you retire—here is the exact compound math."
+    "hook": "That $7 daily convenience is actually costing you a luxury car by the time you retire—here is the exact compound math.",
+    "title": "The $7 Daily Shortcut Costing You $489,000",
+    "style": "cinematic",
+    "video": "/home/user/quiet-money/production/output/2026-11-07/2026-11-07-s0-story-the-unsuspected-price-tag-of-con/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-11-07/2026-11-07-s0-story-the-unsuspected-price-tag-of-con/cover.jpg"
   },
-  "scores": {},
-  "cost": {},
+  "scores": {
+    "gauntlet": 98,
+    "passed": true
+  },
+  "cost": {
+    "tts:edge:chars": 1882
+  },
   "notes": []
 }

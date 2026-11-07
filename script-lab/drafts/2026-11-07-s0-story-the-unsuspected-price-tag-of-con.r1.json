@@ -1,0 +1,91 @@
+{
+  "title": "The $7 Daily Habit Costing You $226,000",
+  "hook_text": "THAT $7 DAILY HABIT COSTS A CAR",
+  "beats": [
+    {
+      "say": "That $7 daily convenience is actually costing you a luxury car by the time you retire.",
+      "callout": "",
+      "visual": "Extreme wide shot of a lone commuter silhouette walking across a vast, rain-slicked concrete plaza at blue hour."
+    },
+    {
+      "say": "Here is the exact compound math behind that morning purchase over a 30 year career.",
+      "callout": "30 YEARS",
+      "visual": "Low angle closeup of brass numbers embedded in a weathered skyscraper corner under cold fluorescent light."
+    },
+    {
+      "say": "Most people assume $7 a day is just pocket change that won't alter a retirement account.",
+      "callout": "POCKET CHANGE",
+      "visual": "Silhouette of a hand dropping coins into a dark subway turnstile slot, high contrast overhead shot."
+    },
+    {
+      "say": "That daily $7 equals roughly $210 a month spent on quick convenience items.",
+      "callout": "$210 MONTHLY",
+      "visual": "Close crop of a damp asphalt curb under sodium street light, zero motion, moody atmosphere."
+    },
+    {
+      "say": "Where does that money go once it leaves your checking account every single week?",
+      "callout": "",
+      "visual": "Extreme wide of an empty four lane highway at night cutting through dark hills under open water reflection."
+    },
+    {
+      "say": "You might think it vanishes into thin air with nothing left to show for it.",
+      "callout": "THIN AIR",
+      "visual": "Silhouette of a person walking away down a long, fog filled subway underpass toward a single practical light."
+    },
+    {
+      "say": "Instead, invested at 8% a year, that exact amount turns into $226,000.",
+      "callout": "8% RETURN",
+      "visual": "High angle shot of rough ridge line silhouettes against a cold, pale pre dawn sky."
+    },
+    {
+      "say": "That is the real price tag of convenience culture hiding inside your daily routine.",
+      "callout": "$226,000",
+      "visual": "Extreme close of rusted steel bridge bolts catching a single sharp beam of sodium light."
+    },
+    {
+      "say": "Small daily habits quietly build or break the wealth you need for your future.",
+      "callout": "BUILD OR BREAK",
+      "visual": "Silhouette of a lone human figure standing at the edge of a massive concrete dam wall."
+    },
+    {
+      "say": "Cut the hidden leaks before they drain your retirement fund completely dry.",
+      "callout": "",
+      "visual": "Low angle shot of a heavy tower edge cutting vertically across a dark, overcast sky."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "Extreme wide view of calm dark ocean water under a stark horizon line at dusk."
+    }
+  ],
+  "caption": "The math behind daily convenience habits is wild. Follow for the money rules school never taught you. #money #personalfinance #wealth #investing #retirement",
+  "description": "Breaking down how small daily convenience purchases compound into hundreds of thousands in lost investment capital over a working career.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#wealth",
+    "#investing",
+    "#retirement"
+  ],
+  "first_comment": "What is one daily convenience habit you are willing to cut this week?",
+  "facts": [
+    {
+      "claim": "$210 monthly invested at 8% over 30 years yields approximately $226,000",
+      "basis": "Standard compound interest formula FV = PMT * (((1 + r)^n - 1) / r) with $210 monthly, 8% annual return, 30 years."
+    }
+  ],
+  "source": "llm",
+  "pillar": "story",
+  "look": "",
+  "loop_map": {
+    "stakes": "A $7 daily convenience purchase over a 30 year working career.",
+    "big_question": "Where does that money go once it leaves your checking account every single week?",
+    "assume": "Most people assume $7 a day is just pocket change that won't alter a retirement account.",
+    "reveal": "Instead, invested at 8% a year, that exact amount turns into $226,000.",
+    "rehook_beats": [
+      5,
+      9
+    ],
+    "payoff_beat": 7
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "title": "The $312,000 Price Tag of Convenience Culture",
+  "hook_text": "THAT $7 HABIT COSTS $312K",
+  "beats": [
+    {
+      "say": "That $7 daily convenience purchase actually costs you $312,000 by the time you retire.",
+      "callout": "",
+      "visual": "Extreme close-up of dark coffee pouring into a blank paper cup under cold fluorescent light."
+    },
+    {
+      "say": "You think you're just spending $7 on quick delivery or daily drive-thru coffee.",
+      "callout": "$7 DAILY COST",
+      "visual": "Low-angle shot of a rain-slicked asphalt street reflecting yellow sodium streetlights at midnight."
+    },
+    {
+      "say": "So where does all that small money actually go over a full working career?",
+      "callout": "",
+      "visual": "Silhouette of a lone figure standing beside massive brutalist concrete pillars at blue hour."
+    },
+    {
+      "say": "Most people assume cutting small daily spending only saves a few thousand dollars.",
+      "callout": "SAVINGS MYTH",
+      "visual": "High-angle shot of a dark metallic desk with a single dim desk lamp casting heavy shadows."
+    },
+    {
+      "say": "That's completely wrong because it ignores the real power of compound interest.",
+      "callout": "",
+      "visual": "Cinematic wide shot of an empty concrete overpass cutting through dense night fog."
+    },
+    {
+      "say": "Paying $7 every single day adds up to $210 coming out of your pocket monthly.",
+      "callout": "$210 PER MONTH",
+      "visual": "Extreme close-up of physical paper currency resting on wet slate under flickering street lights."
+    },
+    {
+      "say": "Over a 30 year career, that daily habit drains $75,600 in direct cash.",
+      "callout": "$75,600 CASH SPENT",
+      "visual": "Low-angle shot of towering glass skyscraper facades bathed in sharp spotlights under dark storm clouds."
+    },
+    {
+      "say": "So how does $75,600 in spent cash turn into over $300,000 of lost wealth?",
+      "callout": "",
+      "visual": "Extreme wide shot of a lone vehicle driving on an empty highway through an endless flat desert at dusk."
+    },
+    {
+      "say": "If you invest that $210 monthly at an 8% average return, compound growth takes over.",
+      "callout": "8% ANNUAL RETURN",
+      "visual": "Top-down shot of dark open water with slow concentric ripples catching a single golden accent light."
+    },
+    {
+      "say": "In 30 years, those small daily convenience purchases cost you $312,000 in lost retirement capital.",
+      "callout": "$312,000 LOST WEALTH",
+      "visual": "Silhouette of a person standing on a high rooftop edge looking out over a foggy industrial skyline."
+    },
+    {
+      "say": "You're not just buying speed today—you're trading away your future financial independence.",
+      "callout": "",
+      "visual": "Low-angle view of a massive steel vault door in a dark underground corridor under cold neon lights."
+    },
+    {
+      "say": "It's simple: audit your daily convenience habits before they compound against your future.",
+      "callout": "AUDIT YOUR BUYS",
+      "visual": "High-angle shot of an empty concrete alleyway illuminated by a single overhead security spotlight."
+    },
+    {
+      "say": "Stop letting tiny fees drain your retirement, and follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "Extreme close-up of mechanical watch gears moving precisely on black velvet background under side lighting."
+    }
+  ],
+  "caption": "Small daily convenience purchases feel harmless today, but the math over 30 years is brutal. Here is how $7 a day turns into over $300,000 of lost investment wealth.",
+  "description": "Daily delivery fees and quick convenience buys look minor on your monthly statement, but they carry a massive opportunity cost. Investing just $7 a day at an 8% return yields over $312,000 over a 30-year working career.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#compoundinterest",
+    "#financialfreedom",
+    "#retirement"
+  ],
+  "first_comment": "What's one small $5-$10 daily expense you could cut today to invest instead?",
+  "facts": [
+    {
+      "claim": "Saving $7 per day totals $210 per month and $75,600 over 30 years.",
+      "basis": "$7 * 30 days = $210/month. $210 * 12 months * 30 years = $75,600."
+    },
+    {
+      "claim": "Investing $210 monthly at an 8% average annual return yields $312,975 over 30 years.",
+      "basis": "Standard future value formula for annuity: PMT=$210, r=0.08/12, n=360 months equals $312,975."
+    }
+  ],
+  "source": "llm",
+  "pillar": "story",
+  "look": "",
+  "loop_map": {
+    "stakes": "A $7 daily convenience habit trades away $312,000 in retirement wealth over 30 years.",
+    "big_question": "How does spending $75,600 on convenience turn into over $300,000 in lost wealth?",
+    "assume": "Cutting small convenience buys only saves a few thousand dollars total.",
+    "reveal": "Compounding $210 monthly at an 8% return yields $312,000 over 30 years.",
+    "rehook_beats": [
+      5,
+      8
+    ],
+    "payoff_beat": 10
+  }
+}

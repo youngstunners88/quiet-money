@@ -1,0 +1,25 @@
+{
+  "id": "2026-11-07-s1-psychology-the-what-the-hell-effect-one-sli",
+  "pillar": "psychology",
+  "topic": "The what-the-hell effect: one slip and the whole budget goes",
+  "day": "2026-11-07",
+  "slot": 1,
+  "status": "failed",
+  "history": [
+    {
+      "from": "planned",
+      "to": "failed",
+      "ts": "2026-11-07T09:37:28Z",
+      "error": "all llm providers failed: gemini: ProviderError: gemini: gemini-3.8-flash:ProxyError,gemini-3.5-flash:ProxyError,gemini-3.5-flash-lite:ProxyError | longcat: unavailable (LONGCAT_API_KEY not set) | mis"
+    }
+  ],
+  "artifacts": {
+    "angle": "name the effect (after one slip, people tend to drop the whole plan), show it (one takeout order and the week's tracking stops), give one counter-move: count the slip and keep the next day's plan; no study figure claimed",
+    "hook": "One takeout order doesn't ruin a budget. Quitting after it does."
+  },
+  "scores": {},
+  "cost": {},
+  "notes": [
+    "all llm providers failed: gemini: ProviderError: gemini: gemini-3.8-flash:ProxyError,gemini-3.5-flash:ProxyError,gemini-3.5-flash-lite:ProxyError | longcat: unavailable (LONGCAT_API_KEY not set) | mistral: unavailable (mistral: every key limited or refused (ProxyError,ProxyError)) | openrouter: Prov"
+  ]
+}

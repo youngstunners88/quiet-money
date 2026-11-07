@@ -1,0 +1,109 @@
+{
+  "title": "The $7 Daily Shortcut Costing You $489,000",
+  "hook_text": "$7 DAILY CONVENIENCE COSTS $489K",
+  "beats": [
+    {
+      "say": "Your $7 daily convenience purchase isn't just taking cash from today's paycheck.",
+      "callout": "",
+      "visual": "Low angle shot of rain-slick street under dark sodium light, paper takeaway cup sitting wet on asphalt."
+    },
+    {
+      "say": "It's quietly wiping out a $489,000 fortune from your future retirement account by age 65.",
+      "callout": "$489,000 LOST",
+      "visual": "High angle silhouette of worker standing on tower edge overlooking fog cutting city skyline at blue hour."
+    },
+    {
+      "say": "Where does all that massive wealth actually vanish over thirty-five years of normal working life?",
+      "callout": "",
+      "visual": "Extreme wide shot of an empty highway at night under a single glowing sodium lamp."
+    },
+    {
+      "say": "Most people assume they're only losing the $2,555 they hand over in cash each year.",
+      "callout": "$2,555 VS $489,000",
+      "visual": "Cold fluorescent lighting spilling across an empty parking lot on wet asphalt."
+    },
+    {
+      "say": "That's the real trap. You aren't just spending cash, you're destroying decades of compounding power.",
+      "callout": "",
+      "visual": "Silhouette of a person standing under a concrete underpass near open water at dusk."
+    },
+    {
+      "say": "Invested at an 8% average annual return, that $7 daily spend becomes $213 every month.",
+      "callout": "8% RETURN",
+      "visual": "Extreme close shot of hands resting on a cold steel counter in dark moody lighting."
+    },
+    {
+      "say": "Your direct out-of-pocket cash contribution over thirty-five full years totals only $89,000.",
+      "callout": "$89,000 SPENT",
+      "visual": "High angle extreme wide shot of a tiny silhouette walking along a mountain ridge line in heavy fog."
+    },
+    {
+      "say": "The missing $400,000 is pure compound interest that never reaches your bank account.",
+      "callout": "$400,000 INTEREST",
+      "visual": "Extreme close of raindrops sliding down dark glass reflecting distant blue hour streetlights."
+    },
+    {
+      "say": "So how do you reclaim that massive price tag without giving up daily comfort?",
+      "callout": "",
+      "visual": "Silhouette of solitary commuter walking past a sodium light on rain-slick pavement at night."
+    },
+    {
+      "say": "Automate that exact $7 daily habit straight into a low-cost index fund every morning.",
+      "callout": "STEP ONE",
+      "visual": "Extreme close shot of dark polished wooden desk under a single practical lamp illuminating shadows."
+    },
+    {
+      "say": "That single automated shift puts the full $489,000 right back into your hands.",
+      "callout": "",
+      "visual": "Extreme wide shot of city skyline at blue hour with dense fog rolling between skyscrapers."
+    },
+    {
+      "say": "Follow for the money rules school never taught you, and build real wealth early.",
+      "callout": "",
+      "visual": "Silhouette against rainy window glass overlooking a quiet wet street under yellow streetlights."
+    },
+    {
+      "say": "Because your daily $7 convenience fee shouldn't cost you your retirement.",
+      "callout": "",
+      "visual": "Extreme close low angle shot of wet asphalt under sodium street lamps late at night."
+    }
+  ],
+  "caption": "Small daily convenience purchases add up fast, but the lost compound growth costs hundreds of thousands by retirement. Here is the math.\n\n#money #personalfinance #wealthbuilding #investing #compoundinterest",
+  "description": "A breakdown of how small daily convenience purchases drain hundreds of thousands in compounding wealth over a 35-year working career.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#wealthbuilding",
+    "#investing",
+    "#compoundinterest"
+  ],
+  "first_comment": "What daily convenience purchase do you find hardest to cut?",
+  "facts": [
+    {
+      "claim": "$7 daily equals $213 monthly",
+      "basis": "$7 * 365 days = $2,555 annually / 12 months = $212.91 per month"
+    },
+    {
+      "claim": "$213 monthly at 8% annual return over 35 years grows to approximately $489,000",
+      "basis": "Standard compound interest formula with monthly contributions over 35 years at 8% annual return yields ~$489,000 total"
+    },
+    {
+      "claim": "Direct contributions total $89,000 while growth accounts for $400,000",
+      "basis": "$213 * 420 months = $89,460 total out of pocket; $489,000 minus $89,000 leaves ~$400,000 in compound interest"
+    }
+  ],
+  "source": "llm",
+  "pillar": "story",
+  "look": "",
+  "loop_map": {
+    "stakes": "A $7 daily convenience purchase eroding a $489,000 retirement account.",
+    "big_question": "Where does all that massive wealth vanish over a 35-year working career?",
+    "assume": "Most people think small daily conveniences only cost $2,555 a year in spent cash.",
+    "reveal": "The true loss is $489,000 because daily $7 ($213/mo) invested at 8% yields $400,000 in lost compound interest.",
+    "rehook_beats": [
+      3,
+      9
+    ],
+    "payoff_beat": 11
+  }
+}

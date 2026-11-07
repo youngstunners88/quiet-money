@@ -1,0 +1,26 @@
+{
+  "id": "2026-11-07-s4-story-taylor-swift-spent-6-years-buyin",
+  "pillar": "story",
+  "topic": "Taylor Swift Spent 6 Years Buying Back Her Own Songs",
+  "day": "2026-11-07",
+  "slot": 4,
+  "status": "failed",
+  "history": [
+    {
+      "from": "planned",
+      "to": "failed",
+      "ts": "2026-11-07T09:37:28Z",
+      "error": "all llm providers failed: gemini: ProviderError: gemini: gemini-3.8-flash:ProxyError,gemini-3.5-flash:ProxyError,gemini-3.5-flash-lite:ProxyError | longcat: unavailable (LONGCAT_API_KEY not set) | mis"
+    }
+  ],
+  "artifacts": {
+    "angle": "W2 own the master. 2019: her first six albums' masters sold for about $300M and she says she was never given the chance to bid; she re-recorded four albums; in 2025 she bought them back for an undisclosed nine-figure sum. Catch: it took fame, six years and hundreds of millions; the viewer's lesson is the contract.",
+    "brief": "taylor-swift",
+    "hook": "In 2019, the recordings of Taylor Swift's first six albums were sold for about $300 million, and she says she never got to bid."
+  },
+  "scores": {},
+  "cost": {},
+  "notes": [
+    "all llm providers failed: gemini: ProviderError: gemini: gemini-3.8-flash:ProxyError,gemini-3.5-flash:ProxyError,gemini-3.5-flash-lite:ProxyError | longcat: unavailable (LONGCAT_API_KEY not set) | mistral: unavailable (mistral: every key limited or refused (ProxyError,ProxyError)) | openrouter: Prov"
+  ]
+}
