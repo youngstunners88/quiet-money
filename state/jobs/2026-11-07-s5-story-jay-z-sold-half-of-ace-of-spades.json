@@ -1,0 +1,26 @@
+{
+  "id": "2026-11-07-s5-story-jay-z-sold-half-of-ace-of-spades",
+  "pillar": "story",
+  "topic": "Jay-Z Sold Half of Ace of Spades: Forbes Estimated at Least $300M in Cash",
+  "day": "2026-11-07",
+  "slot": 5,
+  "status": "failed",
+  "history": [
+    {
+      "from": "planned",
+      "to": "failed",
+      "ts": "2026-11-07T11:51:30Z",
+      "error": "all llm providers failed: gemini: ProviderError: gemini: gemini-3.8-flash:ProxyError,gemini-3.5-flash:ProxyError,gemini-3.5-flash-lite:ProxyError | longcat: unavailable (LONGCAT_API_KEY not set) | mis"
+    }
+  ],
+  "artifacts": {
+    "angle": "W1/W2 ownership. He owned the whole champagne brand from 2014, then sold 50% to LVMH's Moet Hennessy in 2021 for an undisclosed price; Forbes estimated at least $300M. Catch: the figure is an estimate and the sale came during a pandemic downturn that hit his other businesses.",
+    "brief": "jay-z",
+    "hook": "In 2021, Jay-Z sold half of his champagne brand, and Forbes put his cash at $300 million or more."
+  },
+  "scores": {},
+  "cost": {},
+  "notes": [
+    "all llm providers failed: gemini: ProviderError: gemini: gemini-3.8-flash:ProxyError,gemini-3.5-flash:ProxyError,gemini-3.5-flash-lite:ProxyError | longcat: unavailable (LONGCAT_API_KEY not set) | mistral: unavailable (mistral: every key limited or refused (ProxyError,ProxyError)) | openrouter: Prov"
+  ]
+}

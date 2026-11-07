@@ -4,13 +4,57 @@
   "topic": "Choice overload: too many options, no decision",
   "day": "2026-11-07",
   "slot": 1,
-  "status": "planned",
-  "history": [],
+  "status": "packaged",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-11-07T11:44:24Z",
+      "words": 190
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-11-07T11:46:42Z",
+      "seconds": 71.378,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-11-07T11:47:05Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-11-07T11:51:29Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-11-07T11:51:29Z",
+      "score": 98
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-11-07T11:51:29Z"
+    }
+  ],
   "artifacts": {
     "angle": "name it (a long list of options can stall a decision; the research on it is mixed, so no study figure is claimed), show it (never choosing a savings account or a plan), give one counter-move: shortlist three and pick by one rule",
-    "hook": "Comparing every savings account is how you end up opening none."
+    "hook": "Comparing every savings account is how you end up opening none.",
+    "title": "Why Having Too Many Options Keeps You Broke",
+    "style": "cinematic",
+    "video": "/home/user/quiet-money/production/output/2026-11-07/2026-11-07-s1-psychology-choice-overload-too-many-options/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-11-07/2026-11-07-s1-psychology-choice-overload-too-many-options/cover.jpg"
   },
-  "scores": {},
-  "cost": {},
+  "scores": {
+    "gauntlet": 98,
+    "passed": true
+  },
+  "cost": {
+    "tts:edge:chars": 1146
+  },
   "notes": []
 }

@@ -1,0 +1,25 @@
+{
+  "id": "2026-11-07-s2-playbook-map-every-bill-s-due-date-agains",
+  "pillar": "playbook",
+  "topic": "Map every bill's due date against payday",
+  "day": "2026-11-07",
+  "slot": 2,
+  "status": "failed",
+  "history": [
+    {
+      "from": "planned",
+      "to": "failed",
+      "ts": "2026-11-07T11:51:29Z",
+      "error": "all llm providers failed: gemini: ProviderError: gemini: gemini-3.8-flash:ProxyError,gemini-3.5-flash:ProxyError,gemini-3.5-flash-lite:ProxyError | longcat: unavailable (LONGCAT_API_KEY not set) | mis"
+    }
+  ],
+  "artifacts": {
+    "angle": "three steps: list each bill with its due date, mark paydays on one calendar page, cover the week where bills bunch up before it arrives; no figure claimed",
+    "hook": "One calendar page shows the week your bills pile up."
+  },
+  "scores": {},
+  "cost": {},
+  "notes": [
+    "all llm providers failed: gemini: ProviderError: gemini: gemini-3.8-flash:ProxyError,gemini-3.5-flash:ProxyError,gemini-3.5-flash-lite:ProxyError | longcat: unavailable (LONGCAT_API_KEY not set) | mistral: unavailable (mistral: every key limited or refused (ProxyError,ProxyError)) | openrouter: Prov"
+  ]
+}

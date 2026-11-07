@@ -1,0 +1,16 @@
+{
+  "id": "2026-11-07-s2-playbook-your-seven-day-restart",
+  "pillar": "playbook",
+  "topic": "Your seven-day restart",
+  "day": "2026-11-07",
+  "slot": 2,
+  "status": "planned",
+  "history": [],
+  "artifacts": {
+    "angle": "three steps: pick one box a day, start on any day, finish the week",
+    "hook": "Seven small boxes can reset your money week."
+  },
+  "scores": {},
+  "cost": {},
+  "notes": []
+}
