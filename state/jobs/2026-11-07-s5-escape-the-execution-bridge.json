@@ -1,0 +1,25 @@
+{
+  "id": "2026-11-07-s5-escape-the-execution-bridge",
+  "pillar": "escape",
+  "topic": "The Execution Bridge",
+  "day": "2026-11-07",
+  "slot": 5,
+  "status": "failed",
+  "history": [
+    {
+      "from": "planned",
+      "to": "failed",
+      "ts": "2026-11-07T12:00:06Z",
+      "error": "all llm providers failed: gemini: ProviderError: gemini: gemini-3.8-flash:ProxyError,gemini-3.5-flash:ProxyError,gemini-3.5-flash-lite:ProxyError | longcat: unavailable (LONGCAT_API_KEY not set) | mis"
+    }
+  ],
+  "artifacts": {
+    "angle": "The framework centers on acting, measuring, and repeating rather than collecting courses, though the catch is that execution without skill can burn time and runway.",
+    "hook": "You can't think your way across a gap; you have to build it plank by plank."
+  },
+  "scores": {},
+  "cost": {},
+  "notes": [
+    "all llm providers failed: gemini: ProviderError: gemini: gemini-3.8-flash:ProxyError,gemini-3.5-flash:ProxyError,gemini-3.5-flash-lite:ProxyError | longcat: unavailable (LONGCAT_API_KEY not set) | mistral: unavailable (mistral: every key limited or refused (ProxyError,ProxyError)) | openrouter: Prov"
+  ]
+}

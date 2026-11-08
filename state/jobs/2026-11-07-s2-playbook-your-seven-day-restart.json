@@ -4,13 +4,64 @@
   "topic": "Your seven-day restart",
   "day": "2026-11-07",
   "slot": 2,
-  "status": "planned",
-  "history": [],
+  "status": "packaged",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-11-07T11:54:48Z",
+      "words": 184
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-11-07T11:56:02Z",
+      "seconds": 66.346,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-11-07T11:56:34Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-11-07T12:00:05Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-11-07T12:00:05Z",
+      "score": 98
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-11-07T12:00:05Z"
+    }
+  ],
   "artifacts": {
     "angle": "three steps: pick one box a day, start on any day, finish the week",
-    "hook": "Seven small boxes can reset your money week."
+    "hook": "Seven small boxes can reset your money week.",
+    "title": "The 7-Day Money Restart (3 Steps)",
+    "style": "cinematic",
+    "video": "/home/user/quiet-money/production/output/2026-11-07/2026-11-07-s2-playbook-your-seven-day-restart/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-11-07/2026-11-07-s2-playbook-your-seven-day-restart/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-11-07/slot3-playbook",
+        "post_at": "2026-11-08T15:00:00-05:00"
+      }
+    }
   },
-  "scores": {},
-  "cost": {},
+  "scores": {
+    "gauntlet": 98,
+    "passed": true
+  },
+  "cost": {
+    "tts:edge:chars": 1078
+  },
   "notes": []
 }

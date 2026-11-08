@@ -1,0 +1,12 @@
+{
+ "id": "2026-11-07-fiverr_inbox-inbox-2026-11-07",
+ "kind": "fiverr_inbox",
+ "day": "2026-11-07",
+ "key": "inbox-2026-11-07",
+ "status": "queued",
+ "created": "2026-11-08T09:19:39+00:00",
+ "recipe": "Fiverr inbox (read and draft)",
+ "media": [],
+ "staged": false,
+ "draft_dir": "state/phone/fiverr/2026-11-07"
+}

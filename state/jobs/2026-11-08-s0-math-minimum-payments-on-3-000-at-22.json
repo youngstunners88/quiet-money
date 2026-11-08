@@ -1,0 +1,16 @@
+{
+  "id": "2026-11-08-s0-math-minimum-payments-on-3-000-at-22",
+  "pillar": "math",
+  "topic": "Minimum payments on $3,000 at 22%: about 15 years",
+  "day": "2026-11-08",
+  "slot": 0,
+  "status": "planned",
+  "history": [],
+  "artifacts": {
+    "angle": "paying only the minimum (1% plus interest, at least $25): 180 months and $4,433 interest (moneymath card_minimum_payoff)",
+    "hook": "A $3,000 balance can outlast your car, your job and your phone."
+  },
+  "scores": {},
+  "cost": {},
+  "notes": []
+}
