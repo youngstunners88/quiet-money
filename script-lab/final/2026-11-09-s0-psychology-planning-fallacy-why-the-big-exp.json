@@ -1,0 +1,102 @@
+{
+  "title": "Why Every Big Expense Costs More Than Planned",
+  "hook_text": "WHY BIG EXPENSES ALWAYS COST MORE",
+  "beats": [
+    {
+      "say": "The repair always costs more than the plan. That's a known bias, not bad luck.",
+      "callout": "",
+      "visual": "Extreme close-up of a broken car transmission resting on wet rain-slick asphalt beneath a single cold sodium street light."
+    },
+    {
+      "say": "You carefully budget $3,000 for a home repair, a move, or a holiday.",
+      "callout": "$3,000 BUDGET",
+      "visual": "Silhouette of a person standing inside a gutted room at blue hour, extreme high angle shot."
+    },
+    {
+      "say": "But when final bills arrive, you end up paying $4,500 out of pocket instead.",
+      "callout": "$3,000 VS $4,500",
+      "visual": "Low angle shot of paper invoices fluttering across a wet dark concrete underpass at night."
+    },
+    {
+      "say": "Why does almost every major expense quietly blow past your original budget?",
+      "callout": "",
+      "visual": "Wide shot of a massive unfinished concrete bridge tower shrouded in thick morning fog."
+    },
+    {
+      "say": "Most people assume unexpected surprises hit them out of nowhere just this once.",
+      "callout": "MYTH: BAD LUCK",
+      "visual": "Extreme high angle of a lone figure walking across a vast empty industrial parking lot in cold fluorescent light."
+    },
+    {
+      "say": "Psychologists call this common cognitive trap the Planning Fallacy.",
+      "callout": "PLANNING FALLACY",
+      "visual": "Extreme close-up of dark architectural plans resting on rusted metal lit by a single beam of practical light."
+    },
+    {
+      "say": "Your brain naturally plans for the absolute best-case scenario while ignoring past overruns.",
+      "callout": "",
+      "visual": "Low angle silhouette of a person looking up at a towering glass skyscraper under orange sodium streetlights."
+    },
+    {
+      "say": "Even after your last project went over budget, you still expect the next one to run smoothly.",
+      "callout": "",
+      "visual": "Rain-slick street at night reflecting flickering neon light beside heavy stacked moving boxes."
+    },
+    {
+      "say": "Here's the counter-move to protect your bank account from your own optimism.",
+      "callout": "",
+      "visual": "Top-down extreme wide view of an empty wet highway cutting through a dark forest at dusk."
+    },
+    {
+      "say": "Step one: never build a budget based on ideal quotes or best-case timelines.",
+      "callout": "STEP ONE",
+      "visual": "Macro shot of a heavy iron padlock on a wet dark wooden surface under cold blue hour light."
+    },
+    {
+      "say": "Step two: look at what the last similar project actually cost, and add 30%.",
+      "callout": "STEP TWO",
+      "visual": "Silhouette of a hand marking a dark leather notebook beside a solitary desk lamp on an empty tower floor."
+    },
+    {
+      "say": "When you anchor your budget to historical reality instead of hope, your money stays intact.",
+      "callout": "REALITY VS HOPE",
+      "visual": "Cinematic wide shot of a quiet open water harbor at blue hour with distant sodium skyline lights."
+    },
+    {
+      "say": "Stop letting bad plans drain your paycheck. Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "Low angle silhouette of a person standing on a wet city ridge line overlooking foggy city lights."
+    }
+  ],
+  "caption": "Why do your projects always go over budget? It's not bad luck—it's the Planning Fallacy. #money #personalfinance #moneypsychology #wealth #mindset",
+  "description": "Learn why big expenses routinely cost more than your initial estimates. Discover the psychological bias known as the Planning Fallacy and the simple counter-move to protect your savings.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#moneypsychology",
+    "#wealth",
+    "#mindset"
+  ],
+  "first_comment": "What was the last project or expense that went way over your original budget?",
+  "facts": [
+    {
+      "claim": "People underestimate the time and cost of tasks even when aware that past tasks took longer and cost more.",
+      "basis": "Planning Fallacy, documented psychological bias identified by Daniel Kahneman and Amos Tversky (1979)."
+    }
+  ],
+  "source": "llm",
+  "pillar": "psychology",
+  "look": "",
+  "loop_map": {
+    "stakes": "Budgeting $3,000 for a plan only to get hit with a $4,500 bill.",
+    "big_question": "Why does almost every major expense quietly blow past your original budget?",
+    "assume": "Surprises and bad luck hit out of nowhere just this once.",
+    "reveal": "The Planning Fallacy makes your brain ignore past overruns and plan exclusively for best-case scenarios.",
+    "rehook_beats": [
+      4,
+      8,
+      9
+    ],
+    "payoff_beat": 12
+  }
+}
