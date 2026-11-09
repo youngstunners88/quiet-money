@@ -13282,3 +13282,4 @@
 {"ts": "2026-11-09T11:16:04Z", "t": 1794222964.582, "actor": "engine", "type": "PROVIDER_OK", "capability": "llm", "provider": "gemini", "job": "2026-11-09-s0-psychology-decision-fatigue-and-money-defau", "ms": 99543}
 {"ts": "2026-11-09T11:16:04Z", "t": 1794222964.584, "actor": "engine", "type": "SCRIPT_DRAFTED", "job": "2026-11-09-s0-psychology-decision-fatigue-and-money-defau", "words": 189, "beats": 13, "round": 0}
 {"ts": "2026-11-09T11:16:37Z", "t": 1794222997.71, "actor": "engine", "type": "PROVIDER_OK", "capability": "llm", "provider": "gemini", "job": null, "ms": 95894}
+{"ts": "2026-11-09T23:08:46Z", "t": 1794265726.114, "actor": "engine", "type": "AEO_TRACK", "probes": 16, "ok": 0, "mentioned": 0}
