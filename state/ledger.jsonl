@@ -7877,3 +7877,4 @@
 {"day": "2026-11-08", "provider": "cloudflare", "unit": "neurons", "amount": 27.7745, "usd": 0.0, "job": "2026-11-08-s0-math-minimum-payments-on-3-000-at-22"}
 {"day": "2026-11-08", "provider": "cloudflare", "unit": "neurons", "amount": 27.7964, "usd": 0.0, "job": "2026-11-08-s0-math-minimum-payments-on-3-000-at-22"}
 {"day": "2026-11-08", "provider": "cloudflare", "unit": "neurons", "amount": 27.5345, "usd": 0.0, "job": "2026-11-08-s0-math-minimum-payments-on-3-000-at-22"}
+{"day": "2026-11-09", "provider": "gemini", "unit": "tokens", "amount": 9794, "usd": 0.0, "job": null}
