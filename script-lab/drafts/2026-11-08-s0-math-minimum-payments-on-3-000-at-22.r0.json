@@ -1,0 +1,104 @@
+{
+  "title": "The $3,000 Credit Card Trap That Takes 15 Years",
+  "hook_text": "THE 15-YEAR $3,000 CREDIT CARD TRAP",
+  "beats": [
+    {
+      "say": "A $3,000 credit card balance can easily outlast your car, your job, and your smartphone.",
+      "callout": "",
+      "visual": "Extreme close shot of a worn leather wallet resting on wet asphalt at night under sodium light."
+    },
+    {
+      "say": "You swipe for a simple purchase, assuming that a tiny balance vanishes in just a few months.",
+      "callout": "$3,000 BALANCE",
+      "visual": "Silhouette of a person holding a plastic credit card against a foggy city skyline during blue hour."
+    },
+    {
+      "say": "So why does paying the monthly statement minimum turn $3,000 into a 15-year financial sentence?",
+      "callout": "15-YEAR SENTENCE",
+      "visual": "High angle view of a cold fluorescent light illuminating a locked steel bank vault door at night."
+    },
+    {
+      "say": "Most people assume minimum payments steadily erase what they owe. At 24% APR, they mostly pay interest.",
+      "callout": "",
+      "visual": "Low angle shot of a massive brutalist concrete tower under a dark overcast sky."
+    },
+    {
+      "say": "Here's where the credit card company's fine print quietly traps your hard-earned paycheck for 183 months.",
+      "callout": "183 MONTHS",
+      "visual": "Extreme close shot of a fountain pen resting on an empty paper contract under a single desk lamp."
+    },
+    {
+      "say": "Standard minimums cover just 1% of the balance plus interest, leaving your original debt almost untouched.",
+      "callout": "1% + INTEREST",
+      "visual": "Silhouette of a figure standing on an empty concrete overpass above a dark highway."
+    },
+    {
+      "say": "At 24% APR, compounding math means debt doubles every 3 years under the classic Rule of 72.",
+      "callout": "RULE OF 72",
+      "visual": "Low angle shot of a giant outdoor analog clock mounted on a dark brick wall under sodium light."
+    },
+    {
+      "say": "So how much extra cash actually drains out of your bank account over that whole 15-year period?",
+      "callout": "",
+      "visual": "Rain-slick street reflecting dark red taillights under a moody city skyline at midnight."
+    },
+    {
+      "say": "Paying only the minimum hands your bank $4,887 in interest fees on a basic $3,000 balance.",
+      "callout": "$4,887 INTEREST",
+      "visual": "Extreme wide shot of an empty asphalt parking lot lit by stark white fluorescent streetlights."
+    },
+    {
+      "say": "If you bump your payment to $300 a month instead, that exact same balance vanishes in 12 months.",
+      "callout": "183 MOS VS 12 MOS",
+      "visual": "High angle shot of hands gripping a steering wheel inside a quiet car parked on a dark ridge line."
+    },
+    {
+      "say": "Paying $300 monthly incurs only $381 in interest, saving you $4,506 and killing the balance fast.",
+      "callout": "",
+      "visual": "Silhouette of a person standing on a windy coastal ridge overlooking open dark water."
+    },
+    {
+      "say": "Follow for the money rules school never taught you, before your balance outlasts your next phone.",
+      "callout": "",
+      "visual": "Extreme close shot of a metallic key resting on dark wet stone illuminated by a single warm light."
+    }
+  ],
+  "caption": "Paying statement minimums isn't clearing credit card debt—it's extending it for 15 years. Here is the math behind the trap.\n\n#moneymath #creditcarddebt #personalfinance #financialliteracy #quietmoney",
+  "description": "A breakdown of credit card minimum payment math, showing how a $3,000 balance at 24% APR takes 183 months and $4,887 in interest when paying only minimums versus 12 months when paying $300 monthly.",
+  "hashtags": [
+    "#moneymath",
+    "#creditcarddebt",
+    "#personalfinance",
+    "#financialliteracy",
+    "#quietmoney"
+  ],
+  "first_comment": "What interest rate is your credit card company charging you right now?",
+  "facts": [
+    {
+      "claim": "A $3,000 credit card balance at 24% APR paying only the minimum (1% + interest, min $25) takes 183 months (~15 years) and costs $4,887 in interest.",
+      "basis": "Money Fact Sheet"
+    },
+    {
+      "claim": "The same $3,000 balance at 24% APR paying $300/month takes 12 months and costs $381 in interest.",
+      "basis": "Money Fact Sheet"
+    },
+    {
+      "claim": "Under the Rule of 72, at 24% interest, debt doubles every 3 years.",
+      "basis": "Money Fact Sheet"
+    }
+  ],
+  "source": "llm",
+  "pillar": "math",
+  "look": "",
+  "loop_map": {
+    "stakes": "A $3,000 credit card balance can outlast your car, job, and phone.",
+    "big_question": "Why does paying the monthly statement minimum turn $3,000 into a 15-year financial sentence?",
+    "assume": "Minimum payments steadily clear the principal debt.",
+    "reveal": "Minimums cover mostly interest (1% principal + interest), dragging a $3,000 balance out to 183 months and $4,887 in interest at 24% APR.",
+    "rehook_beats": [
+      5,
+      8
+    ],
+    "payoff_beat": 10
+  }
+}

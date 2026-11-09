@@ -1,0 +1,91 @@
+{
+  "title": "The True Cost of Credit Card Minimum Payments",
+  "hook_text": "A $3,000 BALANCE CAN OUTLAST YOUR CAR",
+  "beats": [
+    {
+      "say": "A $3,000 balance can outlast your car, your job, and your phone.",
+      "callout": "",
+      "visual": "Extreme close up of a rusted car headlight in heavy rain at night, sodium streetlamp reflection."
+    },
+    {
+      "say": "When you only pay the minimum on a 22% rate, where does your cash actually vanish?",
+      "callout": "THE MATH",
+      "visual": "Low angle shot of a massive concrete bridge pier at dusk, wet asphalt reflecting cold light."
+    },
+    {
+      "say": "Most assume paying the minimum gets the principal down fast.",
+      "callout": "ASSUME VS TRUTH",
+      "visual": "Silhouette of a lone person walking past a towering glass skyscraper, overcast sky."
+    },
+    {
+      "say": "That's false. At 22%, the minimum payment is just 1% plus the monthly interest.",
+      "callout": "MINIMUM TRAP",
+      "visual": "Extreme wide shot of a solitary freight train crossing a foggy mountain ridge at dawn."
+    },
+    {
+      "say": "So how long does it take to wipe out that $3,000?",
+      "callout": "HOW LONG?",
+      "visual": "Close up of heavy drops falling into a deep puddle, dark moody lighting."
+    },
+    {
+      "say": "It takes 180 months.",
+      "callout": "180 MONTHS",
+      "visual": "View from under a high highway overpass looking out at empty grey concrete pillars in fog."
+    },
+    {
+      "say": "That is 15 years of monthly payments.",
+      "callout": "15 YEARS",
+      "visual": "Extreme close up of peeling black paint on an abandoned metal door under a single bulb."
+    },
+    {
+      "say": "And what is the total cost of that timeline?",
+      "callout": "",
+      "visual": "Low angle tilt up a towering brick warehouse wall against a pale blue hour sky."
+    },
+    {
+      "say": "You will hand over $4,433 in interest alone.",
+      "callout": "$4,433 INTEREST",
+      "visual": "Silhouette of a single hand holding a dark metal railing above a steep drop, cold wind."
+    },
+    {
+      "say": "That is more than the original debt itself.",
+      "callout": "",
+      "visual": "Extreme wide shot of an empty four lane highway stretching into heavy fog at night."
+    },
+    {
+      "say": "Pay more than the minimum today. Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "Back view of a solitary figure walking toward a bright horizon at sunrise under a massive overpass."
+    }
+  ],
+  "caption": "The math behind credit card minimum payments is brutal. $3,000 at 22% takes 15 years and costs $4,433 in interest. #creditcards #debtfree #personalfinance #moneytips #financialliteracy",
+  "description": "Discover the hidden math of credit card minimum payments. Paying only the minimum on $3,000 at 22% stretches across 15 years and costs thousands in extra interest.",
+  "hashtags": [
+    "#creditcards",
+    "#debtfree",
+    "#personalfinance",
+    "#moneytips",
+    "#financialliteracy"
+  ],
+  "first_comment": "What is the longest you've ever carried a credit card balance?",
+  "facts": [
+    {
+      "claim": "$3,000 credit card balance at 22% paying only the minimum takes 180 months and costs $4,433 in interest",
+      "basis": "card_minimum_payoff math model for revolving debt"
+    }
+  ],
+  "source": "llm",
+  "pillar": "math",
+  "look": "",
+  "loop_map": {
+    "stakes": "A $3,000 credit card balance.",
+    "big_question": "Where does your cash actually vanish when you pay the minimum?",
+    "assume": "Paying the minimum gets the principal down fast.",
+    "reveal": "It takes 180 months and $4,433 in interest.",
+    "rehook_beats": [
+      5,
+      8
+    ],
+    "payoff_beat": 9
+  }
+}
