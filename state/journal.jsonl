@@ -13279,3 +13279,6 @@
 {"ts": "2026-11-09T09:21:53Z", "t": 1794216113.151, "actor": "engine", "type": "CARDS_RENDERED", "job": "2026-11-09-s0-psychology-planning-fallacy-why-the-big-exp", "cards": 5, "seconds": 27.1}
 {"ts": "2026-11-09T11:14:22Z", "t": 1794222862.338, "actor": "engine", "type": "DAILY_PLAN", "slots": ["2026-11-09#1", "2026-11-09#2", "2026-11-09#3", "2026-11-09#4", "2026-11-09#5"], "extra": 5, "weights": {"story": 0.989, "math": 0.873, "psychology": 0.784, "myth": 1.0, "playbook": 0.618, "escape": 1.481}}
 {"ts": "2026-11-09T11:14:25Z", "t": 1794222865.024, "actor": "engine", "type": "JOB_CREATED", "job": "2026-11-09-s0-psychology-decision-fatigue-and-money-defau", "pillar": "psychology", "topic": "Decision fatigue and money defaults", "slot": 0}
+{"ts": "2026-11-09T11:16:04Z", "t": 1794222964.582, "actor": "engine", "type": "PROVIDER_OK", "capability": "llm", "provider": "gemini", "job": "2026-11-09-s0-psychology-decision-fatigue-and-money-defau", "ms": 99543}
+{"ts": "2026-11-09T11:16:04Z", "t": 1794222964.584, "actor": "engine", "type": "SCRIPT_DRAFTED", "job": "2026-11-09-s0-psychology-decision-fatigue-and-money-defau", "words": 189, "beats": 13, "round": 0}
+{"ts": "2026-11-09T11:16:37Z", "t": 1794222997.71, "actor": "engine", "type": "PROVIDER_OK", "capability": "llm", "provider": "gemini", "job": null, "ms": 95894}
