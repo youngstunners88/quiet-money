@@ -7969,3 +7969,4 @@
 {"day": "2026-11-10", "provider": "cloudflare", "unit": "neurons", "amount": 1411.9359, "usd": 0.0, "job": null}
 {"day": "2026-11-10", "provider": "cloudflare", "unit": "neurons", "amount": 27.6655, "usd": 0.0, "job": "2026-11-10-s0-escape-why-a-paycheck-feels-safe-and-st"}
 {"day": "2026-11-10", "provider": "cloudflare", "unit": "neurons", "amount": 30.48, "usd": 0.0, "job": "2026-11-10-s0-escape-why-a-paycheck-feels-safe-and-st"}
+{"day": "2026-11-10", "provider": "gemini", "unit": "tokens", "amount": 2170, "usd": 0.0, "job": null}
