@@ -5,6 +5,6 @@
 set -euo pipefail
 cd "$(dirname "$0")/.."
 git pull --rebase --quiet origin main
-adb get-state >/dev/null || { echo "no phone: plug it in and allow USB debugging"; exit 1; }
+adb get-state >/dev/null || { echo "no phone: on the phone turn on Wireless debugging (same Wi-Fi as this computer), then 'adb connect <ip>:<port>'; first-time setup is in tools/phone-setup/TEST.md step 1"; exit 1; }
 claude -p --model "${PHONE_MODEL:-claude-opus-5-5}" "Use the faceless-phone skill. Run every job that 'python -m faceless phone next --push' hands out, one at a time, following references/recipes.md, and record each with 'phone done'. Stop at the first thing that needs the owner. Then commit state/phone and push to main." \
   --allowedTools "mcp__open-device__*" "Bash(python -m faceless phone:*)" "Bash(python -m faceless client reply:*)" "Bash(git add:*)" "Bash(git commit:*)" "Bash(git push:*)" "Bash(git pull:*)" "Read" "Write"
