@@ -10,6 +10,9 @@ without anyone sitting through them, and without copying them. The skill is `fac
 | `sources/<day>-<speaker>-<slug>.md` | one note per source: frontmatter, claims (S/V/U), tactics, how we could use it, reject, evidence |
 | `topics/<topic>.md` | running synthesis: storytelling, product-and-pricing, demand-research, paid-traffic, organic-traffic, tools |
 | `topics/never.md` | every tactic we refuse, where we saw it, which rule it breaks |
+| `concepts/<slug>.md` | compiled pages (mechanism, numbers, use, contested points); `status: active/contested/deprecated` |
+| `decisions/<day>-<slug>.md` | what we decided and why, so it is not re-argued (skill `faceless-brain-upgrade`) |
+| `connections.md` | source, concept and decision links |
 | `watchlist.toml` | channels the weekly routine follows: handle, channel_id, why, max per week |
 | `PROMPTS/ORCHESTRATOR.md` | the CEO's operating manual: lanes, the worker contract, the sprint, the report format |
 | `PROMPTS/sprint-NN/` | each sprint's plan and the lanes' manifests |
