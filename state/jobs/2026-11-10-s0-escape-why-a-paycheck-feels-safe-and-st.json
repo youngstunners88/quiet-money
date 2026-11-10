@@ -4,13 +4,36 @@
   "topic": "Why a paycheck feels safe and still keeps you stuck",
   "day": "2026-11-10",
   "slot": 0,
-  "status": "planned",
-  "history": [],
+  "status": "visualized",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-11-10T02:18:16Z",
+      "words": 185
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-11-10T02:19:44Z",
+      "seconds": 70.446,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-11-10T02:19:52Z"
+    }
+  ],
   "artifacts": {
     "angle": "[format-test] 5-step exit explainer is the proven length (user9to5exit); keep ours to education only, no income promise",
-    "hook": "Your paycheck feels safe. That's the trap."
+    "hook": "Your paycheck feels safe. That's the trap.",
+    "title": "Why a Paycheck Feels Safe and Keeps You Stuck",
+    "style": "cinematic"
   },
   "scores": {},
-  "cost": {},
+  "cost": {
+    "tts:edge:chars": 1081
+  },
   "notes": []
 }

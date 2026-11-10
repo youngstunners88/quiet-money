@@ -1,0 +1,108 @@
+{
+  "title": "Why a Paycheck Feels Safe and Keeps You Stuck",
+  "hook_text": "YOUR PAYCHECK IS A TRAP",
+  "beats": [
+    {
+      "say": "Your paycheck feels safe. That's the trap.",
+      "callout": "",
+      "visual": "Extreme low angle of a lone figure walking across wet asphalt outside a towering glass skyscraper at dusk under harsh cold fluorescent lights."
+    },
+    {
+      "say": "It trades 40 hours of your week for a ceiling someone else sets.",
+      "callout": "",
+      "visual": "Fog cutting across a city skyline at dusk, tiny silhouette standing near an empty bus stop under a flickering sodium light."
+    },
+    {
+      "say": "Most people think saving more from work buys freedom. But a job alone rarely builds assets.",
+      "callout": "",
+      "visual": "High angle view of an empty subway train interior late at night, blue hour light leaking through windows."
+    },
+    {
+      "say": "Step one: define your exit number. To replace $2,000 a month passively takes about $600,000 invested.",
+      "callout": "STEP ONE",
+      "visual": "Extreme close-up of a silver key resting on a dark stained wooden table under a single overhead light bulb."
+    },
+    {
+      "say": "Step two: build leverage outside work. 100 outreach calls a day for 100 days creates 10,000 contacts.",
+      "callout": "STEP TWO",
+      "visual": "Silhouette of a person standing at a rain-slicked window overlooking a sprawling city highway at night."
+    },
+    {
+      "say": "At a 1% response rate, that's 100 paying customers created without leaving your day job.",
+      "callout": "10,000 VS 100",
+      "visual": "Dark industrial desk with a simple black notebook and a metal pen under sodium streetlights streaming from outside."
+    },
+    {
+      "say": "Step three: invest every dollar of surplus. Adding $1,000 a month at 8% reaches $600,000 in 20.2 years.",
+      "callout": "STEP THREE",
+      "visual": "Low angle view of an open bridge spanning cold dark water at blue hour."
+    },
+    {
+      "say": "Cut that monthly investment to $500 at 8% and the exact same goal takes 27.6 years.",
+      "callout": "20.2 YRS VS 27.6 YRS",
+      "visual": "Extreme wide shot of a solitary figure walking along an empty misty shoreline under a gray sky."
+    },
+    {
+      "say": "Step four: protect your baseline. Step five: build before you jump. Your move this week is tracking every expense.",
+      "callout": "STEP FOUR & FIVE",
+      "visual": "Cold concrete wall illuminated by a single amber lamp inside a dark underground parking garage."
+    },
+    {
+      "say": "Here's the honest catch: building side income takes months of unpaid work after your 9 to 5.",
+      "callout": "",
+      "visual": "High angle shot of a solitary dark car parked on a wet asphalt lot at 2 AM under distant streetlights."
+    },
+    {
+      "say": "A steady paycheck keeps you comfortable, but owning compounding assets is what actually sets you free.",
+      "callout": "PAYCHECK VS ASSETS",
+      "visual": "Silhouette of a person standing on a windy cliff ridge line overlooking a vast horizon at sunrise."
+    },
+    {
+      "say": "Follow Quiet Money for the money rules school never taught you. Your paycheck feels safe.",
+      "callout": "",
+      "visual": "Extreme wide shot of a dark empty highway stretching into the misty distance at dusk."
+    }
+  ],
+  "caption": "A paycheck pays today's bills, but compounding assets buy your future. Here is the 5-step exit framework.\n\n#money #personalfinance #ratrace #financialfreedom #passiveincome",
+  "description": "Learn the 5-step framework to transition from relying on a job to building income-generating assets. We break down the exact math behind compounding returns and outreach volume.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#ratrace",
+    "#financialfreedom",
+    "#passiveincome"
+  ],
+  "first_comment": "What's the hardest part of building side income while working a 9 to 5?",
+  "facts": [
+    {
+      "claim": "$2,000/month of passive income needs about $600,000 invested.",
+      "basis": "4% rule baseline from the 1998 Trinity study."
+    },
+    {
+      "claim": "100 reach-outs a day for 100 days = 10,000 contacts; at 1% yes-rate that's 100 customers.",
+      "basis": "Rule of 100 volume math."
+    },
+    {
+      "claim": "Investing $1,000/month at 8%/yr reaches $600,000 in 20.2 years.",
+      "basis": "Money fact sheet compounding math."
+    },
+    {
+      "claim": "Investing $500/month at 8%/yr reaches $600,000 in 27.6 years.",
+      "basis": "Money fact sheet compounding math."
+    }
+  ],
+  "source": "llm",
+  "pillar": "escape",
+  "look": "",
+  "loop_map": {
+    "stakes": "Trading 40 hours a week for a fixed paycheck caps your income growth.",
+    "big_question": "How do you systematically replace a paycheck with assets without taking foolish risks?",
+    "assume": "Most people think saving money from a regular job is enough to buy freedom.",
+    "reveal": "True freedom requires building leverage outside your job to buy compounding assets.",
+    "rehook_beats": [
+      4,
+      7
+    ],
+    "payoff_beat": 11
+  }
+}
