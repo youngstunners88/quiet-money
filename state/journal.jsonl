@@ -13103,3 +13103,16 @@
 {"ts": "2026-11-07T11:51:30Z", "t": 1794052290.012, "actor": "engine", "type": "JOB_TRANSITION", "job": "2026-11-07-s5-story-jay-z-sold-half-of-ace-of-spades", "to": "failed", "error": "all llm providers failed: gemini: ProviderError: gemini: gemini-3.8-flash:ProxyError,gemini-3.5-flash:ProxyError,gemini-3.5-flash-lite:ProxyError | longcat: unavailable (LONGCAT_API_KEY not set) | mis"}
 {"ts": "2026-11-07T11:53:06Z", "t": 1794052386.839, "actor": "engine", "type": "DAILY_PLAN", "slots": ["2026-11-07#3", "2026-11-07#4", "2026-11-07#5", "2026-11-08#1", "2026-11-08#2"], "extra": 5, "weights": {"story": 0.989, "math": 0.873, "psychology": 0.784, "myth": 1.0, "playbook": 0.618, "escape": 1.481}}
 {"ts": "2026-11-07T11:53:07Z", "t": 1794052387.676, "actor": "engine", "type": "JOB_CREATED", "job": "2026-11-07-s2-playbook-your-seven-day-restart", "pillar": "playbook", "topic": "Your seven-day restart", "slot": 2}
+{"ts": "2026-11-10T00:30:45Z", "t": 1794270645.164, "actor": "engine", "type": "MONID_RUN", "job": null, "endpoint": "anyapi/tiktok.search_keyword", "usd": 0.0, "run": "01M71DTHRJD6"}
+{"ts": "2026-11-10T00:30:48Z", "t": 1794270648.27, "actor": "engine", "type": "MONID_RUN", "job": null, "endpoint": "anyapi/tiktok.search_keyword", "usd": 0.0, "run": "01M71DTMQD0Q"}
+{"ts": "2026-11-10T00:30:51Z", "t": 1794270651.538, "actor": "engine", "type": "MONID_RUN", "job": null, "endpoint": "anyapi/tiktok.search_keyword", "usd": 0.0, "run": "01M71DTQQXCN"}
+{"ts": "2026-11-10T00:30:54Z", "t": 1794270654.517, "actor": "engine", "type": "MONID_RUN", "job": null, "endpoint": "anyapi/tiktok.search_keyword", "usd": 0.0, "run": "01M71DTTVTEZ"}
+{"ts": "2026-11-10T00:30:57Z", "t": 1794270657.873, "actor": "engine", "type": "MONID_RUN", "job": null, "endpoint": "anyapi/tiktok.search_keyword", "usd": 0.0, "run": "01M71DTY58PQ"}
+{"ts": "2026-11-10T00:31:04Z", "t": 1794270664.331, "actor": "engine", "type": "MONID_RUN", "job": null, "endpoint": "anyapi/tiktok.search_keyword", "usd": 0.0, "run": "01M71DV4BJ17"}
+{"ts": "2026-11-10T00:31:11Z", "t": 1794270671.496, "actor": "engine", "type": "MONID_RUN", "job": null, "endpoint": "anyapi/tiktok.search_keyword", "usd": 0.0, "run": "01M71DV7CKAP"}
+{"ts": "2026-11-10T00:31:14Z", "t": 1794270674.414, "actor": "engine", "type": "MONID_RUN", "job": null, "endpoint": "anyapi/tiktok.search_keyword", "usd": 0.0, "run": "01M71DVEAD86"}
+{"ts": "2026-11-10T00:31:18Z", "t": 1794270678.566, "actor": "engine", "type": "MONID_RUN", "job": null, "endpoint": "anyapi/tiktok.search_keyword", "usd": 0.0, "run": "01M71DVJD383"}
+{"ts": "2026-11-10T00:31:33Z", "t": 1794270693.966, "actor": "engine", "type": "MONID_RUN", "job": null, "endpoint": "anyapi/tiktok.search_keyword", "usd": 0.0012, "run": "01M71DVRPJYJ"}
+{"ts": "2026-11-10T00:31:46Z", "t": 1794270706.381, "actor": "engine", "type": "MONID_RUN", "job": null, "endpoint": "anyapi/tiktok.search_keyword", "usd": 0.0012, "run": "01M71DW4SFNT"}
+{"ts": "2026-11-10T00:32:03Z", "t": 1794270723.135, "actor": "engine", "type": "MONID_RUN", "job": null, "endpoint": "anyapi/tiktok.search_keyword", "usd": 0.0012, "run": "01M71DWGRCGG"}
+{"ts": "2026-11-10T00:32:16Z", "t": 1794270736.148, "actor": "engine", "type": "MONID_RUN", "job": null, "endpoint": "anyapi/tiktok.search_keyword", "usd": 0.0012, "run": "01M71DX1A9CP"}
