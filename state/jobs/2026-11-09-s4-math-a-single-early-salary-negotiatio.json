@@ -1,0 +1,25 @@
+{
+  "id": "2026-11-09-s4-math-a-single-early-salary-negotiatio",
+  "pillar": "math",
+  "topic": "A Single Early Salary Negotiation",
+  "day": "2026-11-09",
+  "slot": 4,
+  "status": "failed",
+  "history": [
+    {
+      "from": "planned",
+      "to": "failed",
+      "ts": "2026-11-09T11:26:28Z",
+      "error": "all llm providers failed: gemini: ProviderError: gemini: gemini-3.8-flash:ProxyError,gemini-3.5-flash:ProxyError,gemini-3.5-flash-lite:ProxyError | longcat: unavailable (LONGCAT_API_KEY not set) | mis"
+    }
+  ],
+  "artifacts": {
+    "angle": "The compounding 30-year lifetime math of securing a $5,000 baseline raise on day one.",
+    "hook": "A single $5,000 salary negotiation at age 25 creates over $440,000 in extra lifetime wealth, so why does accepting the initial offer cost far more than just $5,000?"
+  },
+  "scores": {},
+  "cost": {},
+  "notes": [
+    "all llm providers failed: gemini: ProviderError: gemini: gemini-3.8-flash:ProxyError,gemini-3.5-flash:ProxyError,gemini-3.5-flash-lite:ProxyError | longcat: unavailable (LONGCAT_API_KEY not set) | mistral: unavailable (mistral: every key limited or refused (ProxyError,ProxyError)) | openrouter: Prov"
+  ]
+}

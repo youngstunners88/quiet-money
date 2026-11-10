@@ -4,13 +4,57 @@
   "topic": "Decision fatigue and money defaults",
   "day": "2026-11-09",
   "slot": 0,
-  "status": "planned",
-  "history": [],
+  "status": "packaged",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-11-09T11:17:32Z",
+      "words": 189
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-11-09T11:19:55Z",
+      "seconds": 73.015,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-11-09T11:22:41Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-11-09T11:26:28Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-11-09T11:26:28Z",
+      "score": 96
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-11-09T11:26:28Z"
+    }
+  ],
   "artifacts": {
     "angle": "late-day decisions default to the easy option; set money decisions as defaults in the morning",
-    "hook": "Your worst money decisions may happen after 9 pm."
+    "hook": "Your worst money decisions may happen after 9 pm.",
+    "title": "Why Your Worst Money Decisions Happen After 9 PM",
+    "style": "cinematic",
+    "video": "/home/user/quiet-money/production/output/2026-11-09/2026-11-09-s0-psychology-decision-fatigue-and-money-defau/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-11-09/2026-11-09-s0-psychology-decision-fatigue-and-money-defau/cover.jpg"
   },
-  "scores": {},
-  "cost": {},
+  "scores": {
+    "gauntlet": 96,
+    "passed": true
+  },
+  "cost": {
+    "tts:edge:chars": 1151
+  },
   "notes": []
 }
