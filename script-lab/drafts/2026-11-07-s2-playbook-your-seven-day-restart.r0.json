@@ -1,0 +1,100 @@
+{
+  "title": "The 7-Day Money Restart (3 Steps)",
+  "hook_text": "RESET YOUR MONEY IN 7 DAYS",
+  "beats": [
+    {
+      "say": "Seven small boxes can reset your money week before Sunday night comes.",
+      "callout": "",
+      "visual": "Extreme close up of a cold silver metal calendar grid sitting under harsh overhead sodium lighting."
+    },
+    {
+      "say": "Most people delay fixing their cash flow until Monday, constantly waiting for a clean fresh start.",
+      "callout": "",
+      "visual": "Silhouette of a lonely commuter sitting on wet asphalt under a single glowing streetlamp at midnight."
+    },
+    {
+      "say": "So why does almost every major financial overhaul completely break down by Wednesday night?",
+      "callout": "",
+      "visual": "High angle shot of an empty concrete stairwell lit by a buzzing cold blue fluorescent tube."
+    },
+    {
+      "say": "You assume you need complex spreadsheets, but you don't—you just need three fast daily moves.",
+      "callout": "SYSTEM VS SPREADSHEET",
+      "visual": "Extreme close up hands shuffling plain unbranded dark paper index cards on a weathered steel surface."
+    },
+    {
+      "say": "Step one. Open your main banking app right now and cancel one forgotten $15 monthly subscription.",
+      "callout": "STEP ONE",
+      "visual": "Steep low angle of tall glass office towers reflected in rain-slick street asphalt at twilight."
+    },
+    {
+      "say": "That single ignored recurring charge quietly bleeds $1,800 straight out of your pocket over 10 years.",
+      "callout": "$1,800 LOST",
+      "visual": "Extreme wide shot of a dark empty two-lane highway stretching toward a dense fog bank."
+    },
+    {
+      "say": "What happens when you lock in step two tomorrow without altering your current income?",
+      "callout": "",
+      "visual": "Low angle view of massive concrete bridge supports looming against a dark bruised evening sky."
+    },
+    {
+      "say": "Step two. Log into your account and set an automated transfer of $5 a day to savings.",
+      "callout": "STEP TWO",
+      "visual": "Close up silhouette of hands resting a heavy iron token onto a dark polished slate table."
+    },
+    {
+      "say": "That simple $5 daily habit builds up to store $1,825 in your account every single year.",
+      "callout": "$1,825 SAVED",
+      "visual": "Extreme wide silhouette of a solitary dockworker standing at the edge of a foggy concrete pier."
+    },
+    {
+      "say": "Now, how do you guarantee this momentum doesn't vanish before the full week ends?",
+      "callout": "",
+      "visual": "Sodium light illuminating a wet asphalt alleyway framed by cold industrial brick walls at night."
+    },
+    {
+      "say": "Step three. Start on any day, sketch seven small boxes on paper, and tick one daily.",
+      "callout": "STEP THREE",
+      "visual": "High angle view of a dark pen marking a sharp box on coarse grey paper under dim warm lamp light."
+    },
+    {
+      "say": "You don't need a new year to claim control. Follow for the money rules school never taught you.",
+      "callout": "QUIET MONEY",
+      "visual": "Extreme close up of a heavy silver coin resting on wet dark asphalt during blue hour."
+    }
+  ],
+  "caption": "Reset your money in seven days with three simple actions. Small habits compound over time.\n\n#money #personalfinance #financialfreedom #moneymindset #quietmoney",
+  "description": "Stop waiting for Monday to fix your finances. Follow these three practical steps to plug money leaks, automate daily savings, and build continuous momentum in under 15 minutes a day.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#financialfreedom",
+    "#moneymindset",
+    "#quietmoney"
+  ],
+  "first_comment": "Which day of the week are you starting your seven-day restart?",
+  "facts": [
+    {
+      "claim": "A $15 monthly subscription totals $1,800 over 10 years.",
+      "basis": "A $15/month subscription for 10 years = $1,800"
+    },
+    {
+      "claim": "A $5 daily habit equals $1,825 per year.",
+      "basis": "$5/day habit = $1,825/year"
+    }
+  ],
+  "source": "llm",
+  "pillar": "playbook",
+  "look": "",
+  "loop_map": {
+    "stakes": "Delaying cash flow fixes drains cash leaks and destroys financial momentum.",
+    "big_question": "Why does almost every financial overhaul completely break down by Wednesday night?",
+    "assume": "You need complex spreadsheets and a fresh Monday to fix your money.",
+    "reveal": "Three 15-minute micro-actions checked off over seven daily boxes create lasting momentum.",
+    "rehook_beats": [
+      7,
+      10
+    ],
+    "payoff_beat": 11
+  }
+}

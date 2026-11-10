@@ -1,0 +1,18 @@
+{
+ "id": "2026-11-07-tiktok-2026-11-07-s2-playbook-your-seven-day-restart",
+ "kind": "tiktok",
+ "day": "2026-11-07",
+ "key": "2026-11-07-s2-playbook-your-seven-day-restart",
+ "status": "queued",
+ "created": "2026-11-08T09:19:39+00:00",
+ "recipe": "TikTok upload",
+ "media": [
+  {
+   "source": "production/output/2026-11-07/2026-11-07-s2-playbook-your-seven-day-restart/final.mp4",
+   "name": "final.mp4"
+  }
+ ],
+ "staged": true,
+ "text": "Reset your money in seven days with three simple actions. Small habits compound over time.\n\nFree reset checklist: link in bio.\n\n#money #personalfinance #financialfreedom #moneymindset #quietmoney\n\nEducation, not financial advice.",
+ "ai_label": "AI-generated content: on"
+}

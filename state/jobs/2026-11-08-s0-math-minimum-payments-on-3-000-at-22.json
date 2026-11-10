@@ -1,0 +1,39 @@
+{
+  "id": "2026-11-08-s0-math-minimum-payments-on-3-000-at-22",
+  "pillar": "math",
+  "topic": "Minimum payments on $3,000 at 22%: about 15 years",
+  "day": "2026-11-08",
+  "slot": 0,
+  "status": "visualized",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-11-08T09:26:37Z",
+      "words": 114
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-11-08T09:36:54Z",
+      "seconds": 67.42,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-11-08T09:37:09Z"
+    }
+  ],
+  "artifacts": {
+    "angle": "paying only the minimum (1% plus interest, at least $25): 180 months and $4,433 interest (moneymath card_minimum_payoff)",
+    "hook": "A $3,000 balance can outlast your car, your job and your phone.",
+    "title": "The $3,000 Credit Card Trap Hidden in Plain Sight",
+    "style": "cinematic"
+  },
+  "scores": {},
+  "cost": {
+    "tts:edge:chars": 1640
+  },
+  "notes": []
+}

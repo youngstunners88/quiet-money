@@ -1,0 +1,25 @@
+{
+  "id": "2026-11-07-s4-myth-the-degree-illusion-why-speciali",
+  "pillar": "myth",
+  "topic": "The degree illusion: why specialized certifications beat traditional university debt",
+  "day": "2026-11-07",
+  "slot": 4,
+  "status": "failed",
+  "history": [
+    {
+      "from": "planned",
+      "to": "failed",
+      "ts": "2026-11-07T12:00:05Z",
+      "error": "all llm providers failed: gemini: ProviderError: gemini: gemini-3.8-flash:ProxyError,gemini-3.5-flash:ProxyError,gemini-3.5-flash-lite:ProxyError | longcat: unavailable (LONGCAT_API_KEY not set) | mis"
+    }
+  ],
+  "artifacts": {
+    "angle": "Society tells us that a four-year university degree is the safest ticket to wealth. The reality is that debt-financed general education delays wealth accumulation by a decade. The rule is to buy specific, high-leverage skills through targeted apprenticeships or certificates that generate immediate cash flow.",
+    "hook": "Your university degree cost you forty thousand dollars and four years, while a six-week certification just outearned it."
+  },
+  "scores": {},
+  "cost": {},
+  "notes": [
+    "all llm providers failed: gemini: ProviderError: gemini: gemini-3.8-flash:ProxyError,gemini-3.5-flash:ProxyError,gemini-3.5-flash-lite:ProxyError | longcat: unavailable (LONGCAT_API_KEY not set) | mistral: unavailable (mistral: every key limited or refused (ProxyError,ProxyError)) | openrouter: Prov"
+  ]
+}

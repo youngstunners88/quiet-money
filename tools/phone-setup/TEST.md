@@ -12,8 +12,17 @@ cd quiet-money
 Windows: `powershell -ExecutionPolicy Bypass -File tools\phone-setup\setup.ps1`  ·  Mac/Linux: `bash tools/phone-setup/setup.sh`
 
 ## 1. Phone connected
-On the phone: Settings → About phone → tap **Build number** 7 times → Developer options → **USB debugging** on. Plug in with a data cable and tap **Allow**.
-`adb devices` must say `device` (not `unauthorized`). `open-device-mcp doctor` must show your phone as `[ok]`.
+On the phone: Settings → About phone → tap **Build number** 7 times → Developer options → **USB debugging** on.
+
+**Without a cable (Android 11 or newer, the normal way):** keep the phone on a wall charger and the home Wi-Fi.
+1. Developer options → **Wireless debugging** on, and **Stay awake** on (while charging).
+2. Tap **Pair device with pairing code**, then on this computer run `adb pair <ip>:<pair-port>` and enter the code.
+3. On the Wireless debugging screen, read the port, then run `adb connect <ip>:<port>`. Put the same address in `~/.config/quiet-money/phone.env` as `PHONE_ADB_ADDR=<ip>:<port>`.
+4. Unplug the data cable.
+
+**With a cable (first pairing, or Android 10 and older):** plug in with a data cable and tap **Allow**. Android 10 and older must be reconnected over USB after each phone restart (`adb tcpip 5555`, then `adb connect <phone-ip>:5555`).
+
+Either way, `adb devices` must say `device` (not `unauthorized`), and `open-device-mcp doctor` must show your phone as `[ok]`. The phone's charger stays plugged into the wall; only the data cable is optional.
 Xiaomi/Oppo/Vivo: see `tools/open-device-mcp/docs/ANDROID.md` (extra switch for taps).
 
 ## 2. Sign in by hand, once, on the phone

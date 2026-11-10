@@ -47,7 +47,14 @@
     "title": "The $7 Daily Shortcut Costing You $489,000",
     "style": "cinematic",
     "video": "/home/user/quiet-money/production/output/2026-11-07/2026-11-07-s0-story-the-unsuspected-price-tag-of-con/final.mp4",
-    "cover": "/home/user/quiet-money/production/output/2026-11-07/2026-11-07-s0-story-the-unsuspected-price-tag-of-con/cover.jpg"
+    "cover": "/home/user/quiet-money/production/output/2026-11-07/2026-11-07-s0-story-the-unsuspected-price-tag-of-con/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-11-07/slot1-story",
+        "post_at": "2026-11-08T07:30:00-05:00"
+      }
+    }
   },
   "scores": {
     "gauntlet": 98,

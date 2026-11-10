@@ -1,0 +1,39 @@
+{
+  "id": "2026-11-09-s0-psychology-planning-fallacy-why-the-big-exp",
+  "pillar": "psychology",
+  "topic": "Planning fallacy: why the big expense always costs more than planned",
+  "day": "2026-11-09",
+  "slot": 0,
+  "status": "visualized",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-11-09T09:19:59Z",
+      "words": 176
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-11-09T09:20:40Z",
+      "seconds": 67.244,
+      "provider": "gemini"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-11-09T09:20:54Z"
+    }
+  ],
+  "artifacts": {
+    "angle": "name the bias (people underestimate the cost and time of their own plans, even after past overruns), show it (a move, a repair, a holiday), give one counter-move: plan from what the last similar thing really cost; no study figure claimed",
+    "hook": "The repair always costs more than the plan. That's a known bias, not bad luck.",
+    "title": "Why Every Big Expense Costs More Than Planned",
+    "style": "cinematic"
+  },
+  "scores": {},
+  "cost": {
+    "tts:gemini:chars": 1053
+  },
+  "notes": []
+}

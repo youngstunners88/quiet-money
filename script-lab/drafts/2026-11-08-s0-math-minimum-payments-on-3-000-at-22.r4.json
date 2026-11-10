@@ -1,0 +1,100 @@
+{
+  "title": "The $3,000 Card Balance That Takes 15 Years to Clear",
+  "hook_text": "A $3,000 BALANCE LASTS 15 YEARS",
+  "beats": [
+    {
+      "say": "A $3,000 credit card balance can easily outlast your car, your job, and your phone.",
+      "callout": "",
+      "visual": "Low angle extreme close-up of a dark worn credit card resting on wet asphalt under a single amber sodium light at night."
+    },
+    {
+      "say": "When you swipe that plastic card, banks don't demand you pay everything back next month.",
+      "callout": "",
+      "visual": "Silhouette of a hand holding a credit card over a dark counter, cold fluorescent lighting in an empty room, high angle."
+    },
+    {
+      "say": "They only ask for a tiny minimum payment, but where's that money actually going?",
+      "callout": "",
+      "visual": "Extreme close-up shot of an unbranded paper statement sitting on a dark metal surface, lit by blue hour light."
+    },
+    {
+      "say": "Most people assume paying the required minimum steadily clears away what they borrowed.",
+      "callout": "THE ASSUMPTION",
+      "visual": "Fog cutting across a deserted city street late at night, solitary streetlamp creating dramatic shadows on damp concrete."
+    },
+    {
+      "say": "Here's the reality: at 24% interest, a minimum payment is just 1% plus interest.",
+      "callout": "1% PLUS INTEREST",
+      "visual": "Cold fluorescent light illuminating a stark stainless steel table in a dark underpass, low angle view."
+    },
+    {
+      "say": "Because of that, your check doesn't touch the principal. How long until you're finally debt-free?",
+      "callout": "",
+      "visual": "Extreme wide shot of a tiny human silhouette walking along an empty highway at night under distant sodium lights."
+    },
+    {
+      "say": "Paying only the minimum on a $3,000 balance takes 183 months. That's over 15 full years.",
+      "callout": "183 MONTHS",
+      "visual": "Rain-slick street at night with soft light reflections, extreme wide view showing an endless row of dark structures."
+    },
+    {
+      "say": "Across those 15 years, you won't just return $3,000. You'll hand over $4,887 in interest alone.",
+      "callout": "$4,887 INTEREST",
+      "visual": "High angle shot of a solitary dark bench in a concrete transit station lit by a single harsh overhead light."
+    },
+    {
+      "say": "So what happens if you raise that monthly check from the minimum up to $300?",
+      "callout": "",
+      "visual": "Dramatic mountain ridge line silhouette against a deep blue hour sky, cold misty atmospheric view."
+    },
+    {
+      "say": "Paying $300 a month clears that $3,000 balance in 12 months, costing just $381 in interest.",
+      "callout": "$300/MO VS MINIMUM",
+      "visual": "Low angle shot of a stark concrete building edge against a dark moody overcast night sky."
+    },
+    {
+      "say": "That single decision cuts 14 years of payments and saves over $4,500 in wasted interest.",
+      "callout": "SAVE 14 YEARS",
+      "visual": "Extreme close-up of dark moving water reflecting a single distant yellow streetlamp."
+    },
+    {
+      "say": "Follow for the money rules school never taught you, so your balance doesn't outlast your future.",
+      "callout": "",
+      "visual": "Extreme wide shot of a tiny silhouette standing on a high ridge looking out over foggy open water at dusk."
+    }
+  ],
+  "caption": "Paying the minimum on a credit card isn't progress—it's profit for the bank. Here is the math on a $3,000 balance.\n\n#moneymath #creditcarddebt #debtfree #personalfinance #quietmoney",
+  "description": "Learn how credit card minimum payments work and why a $3,000 balance at 24% APR takes over 15 years to pay off when paying only the minimum. Compare the exact cost of minimum payments against paying $300 a month.",
+  "hashtags": [
+    "#moneymath",
+    "#creditcarddebt",
+    "#debtfree",
+    "#personalfinance",
+    "#quietmoney"
+  ],
+  "first_comment": "Have you ever checked how many years your credit card minimum payment will take?",
+  "facts": [
+    {
+      "claim": "A $3,000 balance at 24% APR paying minimum (1% + interest, min $25) takes 183 months (~15 years) and costs $4,887 in interest.",
+      "basis": "Money Fact Sheet: $3,000 credit card at 24% APR paying minimum (1% + interest, min $25) = 183 months (~15 years), $4,887 interest"
+    },
+    {
+      "claim": "The same $3,000 balance at 24% APR paid at $300/month takes 12 months and costs $381 in interest.",
+      "basis": "Money Fact Sheet: Same $3,000 at 24% paying $300/month: 12 months, $381 interest"
+    }
+  ],
+  "source": "llm",
+  "pillar": "math",
+  "look": "",
+  "loop_map": {
+    "stakes": "A $3,000 credit card balance can outlast your car, job, and phone, costing $4,887 in interest over 15 years.",
+    "big_question": "Where does minimum payment money actually go, and how long does it take to clear the debt?",
+    "assume": "Paying the required minimum steadily clears off what was borrowed.",
+    "reveal": "At 24% APR, minimum payments cover interest first (1% principal + interest), extending payoff to 183 months.",
+    "rehook_beats": [
+      6,
+      9
+    ],
+    "payoff_beat": 10
+  }
+}

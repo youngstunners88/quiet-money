@@ -1,0 +1,25 @@
+{
+  "id": "2026-11-07-s3-escape-the-leverage-paradox",
+  "pillar": "escape",
+  "topic": "The Leverage Paradox",
+  "day": "2026-11-07",
+  "slot": 3,
+  "status": "failed",
+  "history": [
+    {
+      "from": "planned",
+      "to": "failed",
+      "ts": "2026-11-07T12:00:05Z",
+      "error": "all llm providers failed: gemini: ProviderError: gemini: gemini-3.8-flash:ProxyError,gemini-3.5-flash:ProxyError,gemini-3.5-flash-lite:ProxyError | longcat: unavailable (LONGCAT_API_KEY not set) | mis"
+    }
+  ],
+  "artifacts": {
+    "angle": "The framework uses other people's money or equity to scale faster, but the catch is that the debt or ownership given up can remain when the asset underperforms.",
+    "hook": "Using someone else's money still leaves you holding the risk."
+  },
+  "scores": {},
+  "cost": {},
+  "notes": [
+    "all llm providers failed: gemini: ProviderError: gemini: gemini-3.8-flash:ProxyError,gemini-3.5-flash:ProxyError,gemini-3.5-flash-lite:ProxyError | longcat: unavailable (LONGCAT_API_KEY not set) | mistral: unavailable (mistral: every key limited or refused (ProxyError,ProxyError)) | openrouter: Prov"
+  ]
+}

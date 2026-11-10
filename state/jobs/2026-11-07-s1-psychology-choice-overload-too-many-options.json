@@ -47,7 +47,14 @@
     "title": "Why Having Too Many Options Keeps You Broke",
     "style": "cinematic",
     "video": "/home/user/quiet-money/production/output/2026-11-07/2026-11-07-s1-psychology-choice-overload-too-many-options/final.mp4",
-    "cover": "/home/user/quiet-money/production/output/2026-11-07/2026-11-07-s1-psychology-choice-overload-too-many-options/cover.jpg"
+    "cover": "/home/user/quiet-money/production/output/2026-11-07/2026-11-07-s1-psychology-choice-overload-too-many-options/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-11-07/slot2-psychology",
+        "post_at": "2026-11-08T11:30:00-05:00"
+      }
+    }
   },
   "scores": {
     "gauntlet": 98,
