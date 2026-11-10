@@ -1,0 +1,100 @@
+{
+  "title": "The Asset vs Liability Rule That Separates Earners From Owners",
+  "hook_text": "WHY WORKING HARDER KEEPS YOU POOR",
+  "beats": [
+    {
+      "say": "Working harder at a job keeps you poorer than owning a single boring machine.",
+      "callout": "",
+      "visual": "Extreme close-up of a heavy industrial mechanical gear turning inside a cold fluorescent factory at night."
+    },
+    {
+      "say": "Most people assume the path to wealth is climbing a corporate ladder for higher pay.",
+      "callout": "",
+      "visual": "Low angle silhouette of a lone worker standing at the base of a massive brutalist concrete staircase."
+    },
+    {
+      "say": "That's a head fake. You're still trading finite hours for someone else's profit margin.",
+      "callout": "TIME VS SCALE",
+      "visual": "Rain-slick city street under amber sodium light, looking up at a towering glass skyscraper in fog."
+    },
+    {
+      "say": "There are four ways to earn money, but only two let you build true wealth.",
+      "callout": "THE 4 QUADRANTS",
+      "visual": "Extreme wide high angle of four massive empty concrete shipping docks under heavy coastal fog."
+    },
+    {
+      "say": "Employees and freelancers trade hours for cash. Stop working, and your income stops completely.",
+      "callout": "EARNER CEILING",
+      "visual": "Cold fluorescent illumination over a dark, empty subway platform at 2 AM with infinite train tracks."
+    },
+    {
+      "say": "So how do top earners cross over to become owners who buy back their time?",
+      "callout": "",
+      "visual": "Ridge line silhouette of a figure looking out over a vast misty harbor at blue hour."
+    },
+    {
+      "say": "Owners build systems. Investors deploy capital, forcing their money to work around the clock.",
+      "callout": "EARNER VS OWNER",
+      "visual": "Wide shot of automated industrial cargo cranes moving heavy containers at a dark illuminated night port."
+    },
+    {
+      "say": "Here's the math: $2,000 a month of passive income needs about $600,000 invested.",
+      "callout": "$2,000 / MONTH",
+      "visual": "Single practical desk lamp illuminating a dark tabletop with iron padlocks sitting in deep shadow."
+    },
+    {
+      "say": "If you invest $1,000 a month at 8% a year, reaching $600,000 takes 20.2 years.",
+      "callout": "20.2 YEARS",
+      "visual": "Perspective view looking straight down a long, dark asphalt highway stretching into a distant horizon."
+    },
+    {
+      "say": "What's the catch? Building assets takes upfront work, and market investments carry real risk.",
+      "callout": "",
+      "visual": "Deep shadows beneath a concrete bridge underpass, wet asphalt catching the gleam of a single street lamp."
+    },
+    {
+      "say": "Start this week by buying income producing assets rather than liabilities that drain your cash.",
+      "callout": "STEP ONE",
+      "visual": "Hands holding a simple unbranded black ledger book over a textured slate surface under stark side light."
+    },
+    {
+      "say": "Stop selling your time short, and follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "Low angle silhouette of a solitary figure walking toward a distant lit skyline at dusk."
+    }
+  ],
+  "caption": "Trading time for money puts a hard ceiling on your net worth. Here is how owners build real wealth. 📈 #money #personalfinance #financialfreedom #ratrace #wealthbuilding",
+  "description": "Learn the core difference between earning a paycheck and owning income-producing assets. We break down the math of passive income and why system ownership is the key to escaping the rat race.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#wealthbuilding",
+    "#financialfreedom",
+    "#ratrace"
+  ],
+  "first_comment": "Are you currently focused on raising your salary or building assets?",
+  "facts": [
+    {
+      "claim": "$2,000/month of passive income needs about $600,000 invested.",
+      "basis": "4% rule calculation guideline from the 1998 Trinity study."
+    },
+    {
+      "claim": "Investing $1,000/month at 8%/yr reaches $600,000 in 20.2 years.",
+      "basis": "Monthly compounding investment calculation at 8% annual return."
+    }
+  ],
+  "source": "llm",
+  "pillar": "escape",
+  "look": "",
+  "loop_map": {
+    "stakes": "Working at a job caps your income because you sell finite hours.",
+    "big_question": "How do top earners cross over to become owners who buy back their time?",
+    "assume": "Working harder and climbing the corporate ladder is the path to wealth.",
+    "reveal": "True wealth comes from owning systems and capital that generate cashflow independent of your hours.",
+    "rehook_beats": [
+      6,
+      10
+    ],
+    "payoff_beat": 9
+  }
+}

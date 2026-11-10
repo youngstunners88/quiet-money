@@ -4,11 +4,19 @@
   "topic": "The Asset vs Liability Split That Separates Earners from Owners",
   "day": "2026-11-10",
   "slot": 0,
-  "status": "planned",
-  "history": [],
+  "status": "scripted",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-11-10T02:39:05Z",
+      "words": 163
+    }
+  ],
   "artifacts": {
     "angle": "Explain the four ways to earn and why trading time for money puts a hard ceiling on net worth.",
-    "hook": "Why working harder at a job keeps you poorer than owning a single boring machine."
+    "hook": "Why working harder at a job keeps you poorer than owning a single boring machine.",
+    "title": "Why a Job Keeps You Poorer Than a Machine"
   },
   "scores": {},
   "cost": {},

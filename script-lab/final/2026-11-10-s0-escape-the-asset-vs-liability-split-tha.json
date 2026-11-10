@@ -1,0 +1,100 @@
+{
+  "title": "Why a Job Keeps You Poorer Than a Machine",
+  "hook_text": "WORKING HARDER KEEPS YOU POORER",
+  "beats": [
+    {
+      "say": "Why working harder at a job keeps you poorer than owning a single boring machine.",
+      "callout": "",
+      "visual": "Extreme close-up of a greasy gear spinning slowly in low sodium light, low angle."
+    },
+    {
+      "say": "Most folks think trading more hours for a higher hourly wage builds real wealth.",
+      "callout": "HOURS VS ASSETS",
+      "visual": "A lone silhouette walking down a long, rain-slick concrete underpass, wet asphalt."
+    },
+    {
+      "say": "That is the trap. Your time has a strict limit of twenty four hours a day.",
+      "callout": "",
+      "visual": "High-angle view of a vast, empty highway at night cut by cold fluorescent streetlamps."
+    },
+    {
+      "say": "How do you break that glass ceiling without burning out completely?",
+      "callout": "THE CEILING",
+      "visual": "Silhouette of a person standing at the sharp edge of a concrete tower under blue hour."
+    },
+    {
+      "say": "You stop trading time and start acquiring productive assets that generate cash.",
+      "callout": "ASSET VS LIABILITY",
+      "visual": "A heavy metal door half open to a dark, fog-filled industrial room with one practical light."
+    },
+    {
+      "say": "An asset puts cash in your pocket while you sleep, month after month.",
+      "callout": "",
+      "visual": "Close-up of weathered hands tightening a heavy steel bolt with a wrench in dim light."
+    },
+    {
+      "say": "A liability only drains your cash flow through constant maintenance and payments.",
+      "callout": "",
+      "visual": "Extreme wide shot of a rusted shipping container yard under heavy grey fog."
+    },
+    {
+      "say": "Can a small stream of passive cash actually replace a full time paycheck?",
+      "callout": "PASSIVE MATH",
+      "visual": "Dark open water catching a single cold reflection of a distant sodium dock light."
+    },
+    {
+      "say": "It takes about six hundred thousand dollars invested to safely yield two thousand a month.",
+      "callout": "$600,000 INVESTED",
+      "visual": "A tiny human figure crossing a massive steel suspension bridge against a grey horizon."
+    },
+    {
+      "say": "Investing five hundred a month at eight percent reaches that mark in twenty seven years.",
+      "callout": "27.6 YEARS",
+      "visual": "Low angle shot of a towering concrete bridge pier slick with morning rain."
+    },
+    {
+      "say": "The honest catch is the extreme discipline required to buy assets instead of toys.",
+      "callout": "THE CATCH",
+      "visual": "Cold fluorescent light reflecting off wet pavement in an empty city alleyway."
+    },
+    {
+      "say": "Build the machine today. Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "Extreme wide shot of a solitary ridge line under a heavy, dark blue storm sky."
+    }
+  ],
+  "caption": "The four ways to earn teach us one hard truth: trading time for a paycheck has a hard limit. Shifting focus to assets changes the math.\n\n#personalfinance #moneytips #wealthbuilding #financialfreedom #smartmoney",
+  "description": "Discover why working harder at a job keeps you behind. Learn the asset versus liability split that separates earners from owners.",
+  "hashtags": [
+    "#personalfinance",
+    "#moneytips",
+    "#wealthbuilding",
+    "#financialfreedom",
+    "#smartmoney"
+  ],
+  "first_comment": "What is the first asset you plan on acquiring this year?",
+  "facts": [
+    {
+      "claim": "$2,000/month of passive income needs about $600,000 invested",
+      "basis": "PASSIVE INCOME ('4% rule', 1998 Trinity study)"
+    },
+    {
+      "claim": "investing $500/month at 8%/yr reaches $600,000 in 27.6 years",
+      "basis": "PASSIVE INCOME math"
+    }
+  ],
+  "source": "llm",
+  "pillar": "escape",
+  "look": "",
+  "loop_map": {
+    "stakes": "The hard ceiling on net worth caused by trading time for money at a job.",
+    "big_question": "How do you break that glass ceiling without burning out completely?",
+    "assume": "Most people assume working harder and logging more hours at a job builds real wealth.",
+    "reveal": "True wealth comes from owning productive assets that generate cash without extra time.",
+    "rehook_beats": [
+      4,
+      8
+    ],
+    "payoff_beat": 9
+  }
+}
