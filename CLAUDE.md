@@ -19,6 +19,7 @@ humans set strategy, connect accounts, and review held videos.
 - `/channel/services/web3-video`: the Web3 video + KOL service desk, a parallel engine to the daily machine
 - `/repo-farm`: which external repos/tools we use, park, or reject
 - `/brain`: what we learned from outside videos and posts, one note per source (the knowledge base)
+- `/outbound`: DM drafts and the daily money brief (the owner sends; nothing here is sent)
 - `/faceless`: the engine (Python). `/state`: journal, jobs, ledger, decisions
 
 ## Routing
@@ -130,6 +131,8 @@ humans set strategy, connect accounts, and review held videos.
 | Make every still for one or more Shorts in Google Flow (Image mode, 0 credits) before any paid image model | `/faceless/flow.py` | `.claude/skills/faceless-flow-stills` | `faceless-flow-stills` |
 | Money now: every revenue rail's state and the owner's next 30 minutes, ranked by how soon it pays | `/faceless/cash.py` | `python -m faceless cash` | `faceless-cash` |
 | Partner Program progress and the website funnel (PostHog, cookieless) | `/faceless/ypp.py`, `sitestats.py` | `python -m faceless ypp` | `faceless-measure` |
+| Command center on the owner's phone (Wi-Fi or Tailscale, no USB): the overview projection, the page, the token server, the herdr tab | `/faceless/overview.py`, `dashboard.py`, `serve.py` | `OPERATIONS.md` (Command center), `STATUS.md` | `faceless-cash` |
+| DMs the owner sends by hand, the daily money brief, receipts (the only proof of income) | `/faceless/dmdesk.py`, `moneybrief.py`, `receipts.py` | `python -m faceless money` | `faceless-cash` |
 | HQ: the owner's dashboard (freedom number, engines, next moves, horizon, goals, build queue), its daily refresh | `/faceless/hq.py` | `python -m faceless hq` | `faceless-hq` |
 
 ## Commands (run from this folder)
@@ -185,6 +188,12 @@ python -m faceless site-stats --days 7          # what the website did (PostHog,
 python -m faceless ypp [--pull]                # the road to the YouTube Partner Program: progress per tier, pace, estimated dates (07:02 UTC task pulls daily)
 python -m faceless phone queue --stage         # jobs for the owner's phone (comics, Shorts, TikTok, Flow, Fiverr inbox); `phone next --push` / `phone done` run on the owner's computer
 python -m faceless cash                        # the money desk: every rail's state and your next 30 minutes -> channel/empire/CASH.md
+python -m faceless overview                    # the command center's projection: real state -> state/overview.json (reads only)
+python -m faceless dashboard                   # render the phone page into site/command-center/ (gitignored, never deployed)
+python -m faceless serve                       # serve it on the LAN with a token and a QR code (`--init-token` once; `--host 127.0.0.1` behind `tailscale serve`)
+python -m faceless dm                          # ten DMs for the owner to send by hand -> outbound/drafts/<day>.md; `dm log <id> sent|replied|bought`; never sends
+python -m faceless money                       # the daily money brief: 3 owner actions, DMs, follow-ups, changes -> outbound/brief/<day>.md
+python -m faceless receipts add --rail gumroad --gross 17 --ref ORDER   # record one real receipt; `receipts` alone prints the month
 python -m faceless hq                          # one snapshot of the whole business for HQ (reads only); `--json` is the document HQ shows
 python -m faceless ci                          # CI as GitHub sees it (clean export, no keys): run before every push of code
 python -m pytest -q tests                      # engine tests

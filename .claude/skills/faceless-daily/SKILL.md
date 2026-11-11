@@ -43,7 +43,8 @@ The batch runs daily as a Claude Code routine in the owner's cloud environment, 
 keys as environment variables, so no key is stored on GitHub. `.claude/hooks/session-start.sh` installs the
 Python dependencies when the session starts. In a routine session:
 1. Steps 0-4 above (`daily` and `make` also run a fast gate themselves: on a machine that cannot render they print BLOCKED, spend nothing and exit 4).
-2. Commit `state/` (including `offers.jsonl`), `script-lab/`, `gauntlet/reports/`, `analytics/` and the text files of `distribution/queue/` (never media) and push to `main`;
+2. Run the money work for the day (free, sends nothing): `python -m faceless dm`, then `python -m faceless money` (skill `faceless-cash`); commit `outbound/` with the rest.
+   Then commit `state/` (including `offers.jsonl`), `script-lab/`, `gauntlet/reports/`, `analytics/` and the text files of `distribution/queue/` (never media) and push to `main`;
    the push rebuilds the website. If the push is rejected, the remote moved: `git fetch origin main`, rebase onto it (the logs in
    `state/` merge by union, so both sessions' lines survive), run the tests, push again. Never force-push.
    `python -m faceless watchdog` should say `healthy` afterwards; the same check runs every six hours on GitHub and opens an "Ops alert" issue

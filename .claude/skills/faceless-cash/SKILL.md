@@ -31,6 +31,19 @@ already did, and the owner's next 30 minutes. HQ shows the same top three steps.
 Setting or changing any price, going live, sending any message to a person, creating marketplace accounts, payouts. Never write a
 `[shop.approved]` entry without the owner's own message naming the price; quote it in the commit.
 
+## The daily money brief, the DM desk and receipts
+Run these three after `cash`, every day, in this order; all are free and none sends anything:
+1. `python -m faceless dm` writes `outbound/drafts/<day>.md`: ten DMs the owner sends by hand, each built on a verified number from a
+   passed video, with two link-free follow-ups. With `--prospects people.csv` (handle, name, context, last interaction, segment) the
+   drafts name real people and go to a gitignored file. The desk refuses when paused, above 20 a day, inside 3 days of the last message
+   to the same person, or for a line that carries a link, a money promise or a generic phrase. Never edit a draft to get past its lint.
+2. `python -m faceless money` writes `outbound/brief/<day>.md` (three owner actions of 15 minutes or less, follow-ups due, what changed
+   since yesterday, what could not be done) and `channel/empire/INCOME-RAILS.md` (every rail with its blocker and kill rule).
+3. `python -m faceless dashboard` refreshes the command center page the owner opens on the phone (`python -m faceless serve`).
+The owner records what happened: `dm log <draft_id> sent|replied|clicked|bought|dead` and `receipts add --rail gumroad --gross 17 --ref <order>`.
+**Money is counted only from a receipt** (`state/receipts.jsonl`, `analytics/sales.jsonl`). Views, clicks, replies and anything called
+potential are never reported as income, and no revenue figure is forecast in the brief.
+
 ## Reporting
 Lead with the money line (sales, net), then the next 30 minutes exactly as `cash` prints them. If nothing sold and nothing changed,
 say so in one line; do not pad. A rail that is "blocked" names the one step that unblocks it.

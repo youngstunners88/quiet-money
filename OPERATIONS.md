@@ -42,6 +42,37 @@ python -m faceless offer              # offer coverage and mix, and the three pr
 If the watchdog finds a problem, GitHub opens one issue titled **Ops alert**, assigned to the owner, keeps it current, and closes it when everything is healthy.
 If the watchdog itself cannot run, that is an alert too.
 
+## Command center (the owner's phone, no USB)
+
+One page, read-only, computed from this repo: did the run happen, what is held or failed, revenue from receipts, today's DMs with copy
+buttons, alerts with their fix. No adb, no cable, no shell on the phone.
+
+```bash
+python -m faceless serve --init-token     # once per computer: makes QM_DASH_TOKEN in ~/.config/quiet-money/env (owner-only file, never printed)
+python -m faceless dashboard && python -m faceless serve      # after a daily run: rebuild, then serve; scan the QR code with the phone
+scripts/qm-command-center.sh start|stop|status|open           # the same in a herdr workspace named qm-cc (falls back to a background process)
+```
+
+| Where the phone is | Use | How |
+|---|---|---|
+| Same Wi-Fi as the computer | LAN (default) | `python -m faceless serve` binds the computer's LAN address on port 8787 and prints a QR code that carries the token. Unplug the cable; scan. |
+| Anywhere else | Tailscale | Tailscale on both devices, then on the computer `python -m faceless serve --host 127.0.0.1` and `tailscale serve --bg 8787`. Open the `https://<machine>.<tailnet>.ts.net/?t=<token>` address once on the phone (`--base-url` with that address prints its QR code). HTTPS and device identity come from Tailscale; no router port is opened. |
+| Never the default | a public tunnel (`tailscale funnel`, Cloudflare Tunnel) | Only as a stated exception, and only with the token in front: the page would be reachable from the internet with one secret between it and your numbers. |
+
+What protects it: the page and `overview.json` answer 401 without the token; wrong tokens are rate-limited to 10 a minute per address and all
+requests to 120; GET and HEAD only; `Cache-Control: no-store`, `X-Robots-Tag: noindex`, no cookie; it binds the LAN address, not every
+interface, unless you pass `--host 0.0.0.0`. The manifest, icons and service worker hold no state and are served without the token because a
+browser fetches them without one. The token rides in the QR code and in the first URL, so do not screenshot the code into a chat; to rotate
+it, delete the `QM_DASH_TOKEN` line from `~/.config/quiet-money/env` and run `--init-token` again.
+
+When the server stops: an open tab keeps showing the last state it loaded, with a "server not reachable" banner. Over Tailscale (HTTPS) the
+page also survives being closed and reopened, because a service worker keeps a copy; over plain LAN HTTP browsers do not allow service
+workers, so a page closed while the server is down shows the browser's own error until the server is back.
+
+The page is stale after 24 hours without a rebuild and says so. `site/` is gitignored and the public website is built by CI from a clean
+checkout, so the command center is never deployed. It writes nothing: the DM record and receipts change only through
+`python -m faceless dm log ...` and `python -m faceless receipts add ...`, run by the owner.
+
 ## When something breaks
 
 `.claude/skills/faceless-daily/references/failure-playbook.md` is the table: symptom, cause, the safe move. The short version:
