@@ -3,6 +3,8 @@
 One agent (Claude Code) is the operator; skills are departments, scheduled routines are shifts, deterministic code is the factory,
 and the owner is the board for money, accounts, legal and face. Scores are judgment until metrics exist (see `faceless forecast`).
 
+Income rails by distance to cash, each with its blocker, owner step and kill rule: `INCOME-RAILS.md` (written daily by `python -m faceless money`; no projections).
+
 ## Built: waiting for the owner to launch
 Finished and checked; one owner step turns each on.
 | id | opportunity | rail | stage | score | next |

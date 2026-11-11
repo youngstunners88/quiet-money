@@ -1264,6 +1264,85 @@ def cmd_frontcover(args) -> int:
     return 1 if bad else 0
 
 
+def cmd_overview(args) -> int:
+    """The command center's projection: real state in, state/overview.json out (reads everything else)."""
+    from faceless import overview
+    doc = overview.write()
+    print(json.dumps(doc, indent=1, ensure_ascii=False) if args.json else overview.summary(doc) + f"\nwrote {overview.OUT.relative_to(Paths.root)}")
+    return 0
+
+
+def cmd_dashboard(args) -> int:
+    """Render the command center page from a fresh overview into site/command-center/ (gitignored, never deployed)."""
+    from faceless import dashboard
+    r = dashboard.write(out=Path(args.out) if args.out else None)
+    print(f"wrote {r['dir']} ({r['bytes'] / 1024:.1f} KB, as of {r['generatedAt']}). Show it on the phone: python -m faceless serve")
+    return 0
+
+
+def cmd_serve(args) -> int:
+    """Serve the command center on the LAN (or behind Tailscale) with a token. GET only; writes nothing."""
+    from faceless import serve
+    if args.init_token:
+        print(serve.init_token())
+        return 0
+    return serve.run(args.host, args.port, show_url=args.show_url, invert=args.qr_invert, base_url=args.base_url)
+
+
+def cmd_dm(args) -> int:
+    """The DM desk: draft the owner's messages, record what happened. It never sends."""
+    from faceless import dmdesk
+    if args.action == "log":
+        if len(args.rest) != 2:
+            print("usage: python -m faceless dm log <draft_id> <sent|replied|clicked|bought|dead> [--handle @name] [--notes text]")
+            return 2
+        try:
+            print(json.dumps(dmdesk.log(args.rest[0], args.rest[1], handle=args.handle or "", notes=args.notes or "")))
+        except ValueError as e:
+            print(f"refused: {e}")
+            return 1
+        return 0
+    if args.action == "status":
+        print(json.dumps({"funnel": dmdesk.funnel(), "follow_ups": dmdesk.follow_ups(), "weekly": dmdesk.weekly()}, indent=1))
+        return 0
+    try:
+        r = dmdesk.draft(args.n, Path(args.prospects) if args.prospects else None)
+    except dmdesk.DeskRefused as e:
+        print(f"refused: {e}")
+        return 1
+    print(f"{len(r['drafts'])} drafts" + (" (already written today)" if r["already"] else "") + f": {r['path']}. Nothing was sent; you send by hand.")
+    for s in r["skipped"]:
+        print(f"  skipped {s['handle_hash'] or 'a draft'}: {s['why']}")
+    for d in r["drafts"]:
+        print(f"\n--- {d['id']} {d.get('handle') or ''} ({d['why']})\n{d['first']}\n    after sending: python -m faceless dm log {d['id']} sent" + ("" if d.get("handle") else " --handle @theirhandle"))
+    return 0
+
+
+def cmd_money(args) -> int:
+    """The daily money brief: three owner actions, today's DMs, follow-ups due, what changed, what could not be done."""
+    from faceless import moneybrief
+    b = moneybrief.write()
+    print(json.dumps(b, indent=1, ensure_ascii=False) if args.json else moneybrief.markdown(b) + f"\nwrote outbound/brief/{b['day']}.md and channel/empire/INCOME-RAILS.md")
+    return 0
+
+
+def cmd_receipts(args) -> int:
+    """Receipts: the only proof of income. `add` records one real receipt; with no action, the month's summary."""
+    from faceless import receipts
+    if args.action == "add":
+        if args.rail is None or args.gross is None:
+            print("usage: python -m faceless receipts add --rail gumroad|etsy|fiverr|service|affiliate|other --gross 17 [--fee 2.99] [--product id] [--ref order-number] [--day YYYY-MM-DD]")
+            return 2
+        try:
+            print(json.dumps(receipts.add(args.rail, args.gross, args.fee, args.product or "", args.ref or "", args.day, args.note or "")))
+        except ValueError as e:
+            print(f"refused: {e}")
+            return 1
+        return 0
+    print(json.dumps(receipts.summary(), indent=1))
+    return 0
+
+
 def cmd_cash(args) -> int:
     """The money desk: every rail, its state, what the agent did, and the owner's next steps ranked by how soon they can pay (reads only)."""
     from faceless import cash
@@ -1576,6 +1655,41 @@ def main(argv: list[str] | None = None) -> int:
     fc.add_argument("action", nargs="?", default="build", choices=["build", "check", "sheet"])
     fc.add_argument("product", nargs="?", default="")
     fc.set_defaults(fn=cmd_frontcover)
+    ov = sub.add_parser("overview", help="the command center's projection: real state in, state/overview.json out (reads only)")
+    ov.add_argument("--json", action="store_true")
+    ov.set_defaults(fn=cmd_overview)
+    db = sub.add_parser("dashboard", help="render the command center page into site/command-center/ from a fresh overview")
+    db.add_argument("--out", help="another folder to write the page into")
+    db.set_defaults(fn=cmd_dashboard)
+    sv = sub.add_parser("serve", help="serve the command center to the phone over Wi-Fi or Tailscale (token required, GET only)")
+    sv.add_argument("--host", help="address to bind (default: this machine's LAN address; 127.0.0.1 behind `tailscale serve`)")
+    sv.add_argument("--port", type=int, default=8787)
+    sv.add_argument("--init-token", action="store_true", help="make QM_DASH_TOKEN once and save it in ~/.config/quiet-money/env (not printed)")
+    sv.add_argument("--show-url", action="store_true", help="also print the address with the token in it")
+    sv.add_argument("--base-url", help="the address the phone uses when something sits in front (https://<machine>.<tailnet>.ts.net)")
+    sv.add_argument("--qr-invert", action="store_true", help="draw the QR code for a light terminal")
+    sv.set_defaults(fn=cmd_serve)
+    dmp = sub.add_parser("dm", help="the DM desk: draft (default) | log <draft_id> <status> | status. Drafts only; the owner sends by hand")
+    dmp.add_argument("action", nargs="?", default="draft", choices=["draft", "log", "status"])
+    dmp.add_argument("rest", nargs="*")
+    dmp.add_argument("--prospects", help="CSV: handle,name,context,last interaction,segment (drafts then go to a gitignored file)")
+    dmp.add_argument("-n", type=int, default=10)
+    dmp.add_argument("--handle")
+    dmp.add_argument("--notes")
+    dmp.set_defaults(fn=cmd_dm)
+    mo = sub.add_parser("money", help="the daily money brief: 3 owner actions, today's DMs, follow-ups, what changed -> outbound/brief/<day>.md")
+    mo.add_argument("--json", action="store_true")
+    mo.set_defaults(fn=cmd_money)
+    rc = sub.add_parser("receipts", help="receipts, the only proof of income: summary (default) | add --rail R --gross N [--fee N --product ID --ref ORDER]")
+    rc.add_argument("action", nargs="?", default="summary", choices=["summary", "add"])
+    rc.add_argument("--rail")
+    rc.add_argument("--gross", type=float)
+    rc.add_argument("--fee", type=float)
+    rc.add_argument("--product")
+    rc.add_argument("--ref")
+    rc.add_argument("--day")
+    rc.add_argument("--note")
+    rc.set_defaults(fn=cmd_receipts)
     ca = sub.add_parser("cash", help="the money desk: every revenue rail, its state, and your next 30 minutes ranked by how soon it pays (reads only)")
     ca.add_argument("--json", action="store_true")
     ca.set_defaults(fn=cmd_cash)

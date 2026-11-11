@@ -84,3 +84,10 @@ channel/services/web3-video/outbound/drafts-*.md
 # third-party clones (Showhow engine, owner approved 2026-10-31): never commit
 repo-farm/showhow/
 production/showhow/
+
+# command center: derived projection (rebuilt by `python -m faceless overview`); the page itself lives in the gitignored site/
+state/overview.json
+# DM desk: drafts made from a prospect list name real people; the block list too. Template drafts (open slots, no handles) are committed.
+outbound/drafts/*.private.md
+outbound/drafts/*.private.json
+outbound/private/
