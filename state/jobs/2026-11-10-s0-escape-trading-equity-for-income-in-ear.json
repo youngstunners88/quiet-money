@@ -4,14 +4,37 @@
   "topic": "Trading Equity for Income in Early-Stage Ventures",
   "day": "2026-11-10",
   "slot": 0,
-  "status": "planned",
-  "history": [],
+  "status": "visualized",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-11-10T09:21:41Z",
+      "words": 191
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-11-10T09:22:54Z",
+      "seconds": 68.977,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-11-10T09:24:24Z"
+    }
+  ],
   "artifacts": {
     "angle": "Show how taking a piece of the upside instead of straight cash scales wealth exponentially.",
     "brief": "hormozi",
-    "hook": "The ownership swap that turns a standard employee into a silent partner."
+    "hook": "The ownership swap that turns a standard employee into a silent partner.",
+    "title": "The Ownership Swap That Scales Wealth Exponentially",
+    "style": "cinematic"
   },
   "scores": {},
-  "cost": {},
+  "cost": {
+    "tts:edge:chars": 1060
+  },
   "notes": []
 }
