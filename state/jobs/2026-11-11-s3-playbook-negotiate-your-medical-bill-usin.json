@@ -1,0 +1,60 @@
+{
+  "id": "2026-11-11-s3-playbook-negotiate-your-medical-bill-usin",
+  "pillar": "playbook",
+  "topic": "Negotiate Your Medical Bill Using Charity Care Policy Rules",
+  "day": "2026-11-11",
+  "slot": 3,
+  "status": "packaged",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-11-11T09:47:08Z",
+      "words": 173
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-11-11T09:48:57Z",
+      "seconds": 64.657,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-11-11T09:51:52Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-11-11T09:54:19Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-11-11T09:54:19Z",
+      "score": 96
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-11-11T09:54:20Z"
+    }
+  ],
+  "artifacts": {
+    "angle": "Request an itemized bill and cite non-profit hospital tax regulations to reduce or eliminate out-of-pocket medical debt.",
+    "hook": "Federal tax rules mandate that non-profit hospitals lower or forgive medical bills based on income, but only if you ask for the policy.",
+    "title": "How to Erase Medical Bills Using IRS Tax Rules",
+    "style": "cinematic",
+    "video": "/home/user/quiet-money/production/output/2026-11-11/2026-11-11-s3-playbook-negotiate-your-medical-bill-usin/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-11-11/2026-11-11-s3-playbook-negotiate-your-medical-bill-usin/cover.jpg"
+  },
+  "scores": {
+    "gauntlet": 96,
+    "passed": true
+  },
+  "cost": {
+    "tts:edge:chars": 1076
+  },
+  "notes": []
+}

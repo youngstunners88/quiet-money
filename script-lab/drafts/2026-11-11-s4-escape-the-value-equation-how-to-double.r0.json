@@ -1,0 +1,104 @@
+{
+  "title": "The Value Equation: Make One Hour Pay Like 40",
+  "hook_text": "MAKE ONE HOUR PAY LIKE FORTY",
+  "beats": [
+    {
+      "say": "A 40-hour paycheck trades 2,000 hours a year for a strictly capped income.",
+      "callout": "",
+      "visual": "Low angle shot of a massive concrete office monolithic tower at night, wet asphalt reflecting harsh sodium light, tiny silhouette of a lone figure walking toward the revolving glass door."
+    },
+    {
+      "say": "How do high earners make one hour pay like 40 without working 80-hour weeks?",
+      "callout": "",
+      "visual": "Extreme wide shot of an empty multi-lane highway at night curving into dense fog cutting a distant city skyline under eerie sodium vapor lighting."
+    },
+    {
+      "say": "Most people assume the only path is working overtime, grinding harder, or getting another degree.",
+      "callout": "",
+      "visual": "Cold fluorescent lighting buzzing over an endless hallway of empty industrial cubicles, high angle shot showing repeating geometric metal desks and harsh shadows."
+    },
+    {
+      "say": "That's linear thinking. Real pricing power comes from a framework known as the Value Equation.",
+      "callout": "LINEAR VS LEVERAGE",
+      "visual": "Extreme close shot of heavy steel gears and clockwork mechanisms locking together, illuminated by a single practical warm tungsten light against deep obsidian shadows."
+    },
+    {
+      "say": "The top of the fraction is what clients want: their dream outcome multiplied by certainty.",
+      "callout": "DREAM X CERTAINTY",
+      "visual": "High angle shot looking over a tower edge onto a rain-slick street far below during blue hour, wet pavement reflecting streaks of amber and cobalt."
+    },
+    {
+      "say": "When you show proof that the result is guaranteed, perceived value doubles before you do any work.",
+      "callout": "",
+      "visual": "Silhouette of hands pressing a heavy wax stamp onto a closed document at an angle, bathed in low directional side lighting from a single practical desk lamp."
+    },
+    {
+      "say": "Now look at the real secret: the bottom half of the fraction controls your price.",
+      "callout": "",
+      "visual": "Low angle view beneath a massive concrete underpass, wet asphalt gleaming with puddle reflections of distant amber streetlamps slicing through mist."
+    },
+    {
+      "say": "It divides your value by two factors: the time delay and the client's effort.",
+      "callout": "TIME X EFFORT",
+      "visual": "Extreme close macro shot of an antique brass sand hourglass draining steadily, lit by a single beam of cold light against pure black background."
+    },
+    {
+      "say": "When you deliver immediately and remove their effort, a $50 chore becomes a $1,000 asset.",
+      "callout": "$50 VS $1,000",
+      "visual": "Extreme wide shot of an industrial shipping container yard at dusk, blue hour fog hanging over towering steel stacks with a lone worker silhouette far away."
+    },
+    {
+      "say": "Just an extra $1,000 a month from that leverage, invested at 8% for 10 years, yields $182,946.",
+      "callout": "$182,946 AT 8%",
+      "visual": "Extreme close shot of heavy vault door locking bolts sliding forward into solid steel, lit by sharp cold fluorescent light from above."
+    },
+    {
+      "say": "Here's the honest catch: about 1 in 5 businesses close in year one according to labor statistics.",
+      "callout": "1 IN 5 FAIL",
+      "visual": "High angle view of a dark rain-slick alleyway at night, water streaming down cracked asphalt under flickering sodium light reflecting in deep puddles."
+    },
+    {
+      "say": "This requires brutal upfront sweat before leverage kicks in. Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "Extreme wide shot of a lone person silhouetted against weather on a windswept mountain ridge line at sunrise, mist breaking over jagged rocks below."
+    }
+  ],
+  "caption": "Trading time for money has a hard ceiling. Learn the math that actually scales your rate.\n#money #personalfinance #wealthbuilding #sideincome #financialfreedom",
+  "description": "Trading hours for dollars keeps your income capped. This video breaks down the Value Equation: how multiplying perceived certainty while shrinking time delay and client effort allows you to charge premium rates without logging more hours.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#wealthbuilding",
+    "#sideincome",
+    "#financialfreedom"
+  ],
+  "first_comment": "Would you rather work 60 hours a week for a promotion or build a high-leverage skill on the side?",
+  "facts": [
+    {
+      "claim": "An extra $1,000 a month invested at 8% for 10 years yields $182,946.",
+      "basis": "Fact sheet: An extra $1,000/month from a side income, invested at 8% for 10 years = $182,946 (you put in $120,000)."
+    },
+    {
+      "claim": "About 1 in 5 businesses close in their first year.",
+      "basis": "Research brief: US Bureau of Labor Statistics, Business Employment Dynamics."
+    },
+    {
+      "claim": "Value is determined by dream outcome and certainty divided by time delay and effort.",
+      "basis": "Research brief: Alex Hormozi Value Equation framework ($100M Offers)."
+    }
+  ],
+  "source": "llm",
+  "pillar": "escape",
+  "look": "",
+  "loop_map": {
+    "stakes": "A 40-hour paycheck trades 2,000 hours a year for a strictly capped income.",
+    "big_question": "How do high earners make one hour pay like 40 without working 80-hour weeks?",
+    "assume": "Most people assume the only path is working overtime, grinding harder, or getting another degree.",
+    "reveal": "Real pricing power comes from the Value Equation: multiplying dream outcome and certainty while shrinking time delay and effort.",
+    "rehook_beats": [
+      5,
+      7
+    ],
+    "payoff_beat": 9
+  }
+}

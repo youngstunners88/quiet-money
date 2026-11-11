@@ -1,0 +1,105 @@
+{
+  "title": "The Medical Bill Loophole Non-Profits Hide",
+  "hook_text": "THE $3,000 MEDICAL BILL LOOPHOLE",
+  "beats": [
+    {
+      "say": "A sudden $3,000 emergency room bill can drain your entire checking account overnight.",
+      "callout": "",
+      "visual": "Extreme wide shot of a solitary figure standing outside a massive concrete hospital under cold fluorescent lights at blue hour."
+    },
+    {
+      "say": "Why do non-profit hospitals mail out massive bills they're legally mandated to forgive?",
+      "callout": "",
+      "visual": "Low angle shot of towering glass hospital wings cutting through dense fog, illuminated by sterile amber sodium lights."
+    },
+    {
+      "say": "Most people assume medical charges are final, so they quietly swipe a credit card.",
+      "callout": "",
+      "visual": "Extreme close-up of a hand clutching an unbranded embossed plastic card against a dark rain-slick street."
+    },
+    {
+      "say": "A $3,000 credit card at 24% APR paying only the minimum costs $4,887 in interest.",
+      "callout": "$4,887 IN INTEREST",
+      "visual": "High angle shot of a solitary diner counter at night, illuminated by a single practical overhead pendant light."
+    },
+    {
+      "say": "Here's how you can cut or erase that bill today in under fifteen minutes.",
+      "callout": "",
+      "visual": "Silhouette of a person standing at the edge of a wet concrete underpass, wet asphalt reflecting taillights."
+    },
+    {
+      "say": "Step one. Call patient billing and demand an itemized bill with every single procedure code.",
+      "callout": "STEP ONE",
+      "visual": "Extreme close-up of fingers gripping a landline phone receiver in a darkened room with blue hour rim lighting."
+    },
+    {
+      "say": "Billing errors and phantom charges often vanish the second a human auditor reviews the codes.",
+      "callout": "",
+      "visual": "High angle shot looking down a steep, narrow stairwell in a brutalist building, cold overhead fluorescent illumination."
+    },
+    {
+      "say": "Step two. Ask for their formal charity care application under federal non-profit tax guidelines.",
+      "callout": "STEP TWO",
+      "visual": "Low angle shot of a massive stone government facade shrouded in mist, illuminated by faint sodium spotlights."
+    },
+    {
+      "say": "What if your paycheck is too high for one hundred percent debt forgiveness?",
+      "callout": "",
+      "visual": "Extreme wide shot of a tiny human silhouette walking along an empty highway at night under sodium light."
+    },
+    {
+      "say": "Step three. Request sliding-scale relief, or offer to pay the cash Medicare reimbursement rate.",
+      "callout": "STEP THREE",
+      "visual": "Close-up from behind of hands resting flat against a cold dark granite desk in dim moody lighting."
+    },
+    {
+      "say": "Federal Section 501(r) rules require non-profit systems to provide financial relief, but only if you ask.",
+      "callout": "SECTION 501(R)",
+      "visual": "Tiny human silhouette standing before an imposing monolithic skyscraper lobby under muted cold fluorescent light."
+    },
+    {
+      "say": "Don't put medical debt on high-interest plastic before you force the hospital to follow federal law.",
+      "callout": "",
+      "visual": "Low angle silhouette against a rain-streaked window looking out over a foggy skyline at dusk."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "Extreme wide cinematic shot of a lone traveler at a desolate coastal ridge line under blue hour skies."
+    }
+  ],
+  "caption": "Never put a medical bill on a credit card before requesting an itemized receipt and charity care.\n\n#personalfinance #moneytips #debtfree #financialliteracy #medicaldebt",
+  "description": "Non-profit hospitals are legally required under IRS Section 501(r) to offer financial assistance and bill forgiveness based on income. Here is the 3-step script to lower or eliminate your medical debt today.",
+  "hashtags": [
+    "#personalfinance",
+    "#moneytips",
+    "#debtfree",
+    "#financialliteracy",
+    "#medicaldebt"
+  ],
+  "first_comment": "Have you ever asked a hospital for an itemized bill or charity care application?",
+  "facts": [
+    {
+      "claim": "A $3,000 credit card at 24% APR paying only the minimum costs $4,887 in interest.",
+      "basis": "Money Fact Sheet: $3,000 credit card at 24% APR paying only the minimum (1% + interest, min $25): 183 months (~15 years), $4,887 interest."
+    },
+    {
+      "claim": "Federal Section 501(r) requires non-profit hospitals to maintain written financial assistance policies.",
+      "basis": "IRS Internal Revenue Code Section 501(r)(4) mandates tax-exempt hospitals establish and publicize financial assistance policies to preserve 501(c)(3) status."
+    }
+  ],
+  "source": "llm",
+  "pillar": "playbook",
+  "look": "",
+  "loop_map": {
+    "stakes": "A sudden $3,000 emergency room bill draining checking account savings.",
+    "big_question": "Why do non-profit hospitals mail out massive bills they're legally mandated to forgive?",
+    "assume": "Patients assume hospital charges are final and put medical balances on high-interest cards.",
+    "reveal": "IRS Section 501(r) legally requires non-profit hospitals to provide charity care policies that discount or forgive bills based on income.",
+    "rehook_beats": [
+      5,
+      9
+    ],
+    "payoff_beat": 11
+  }
+}

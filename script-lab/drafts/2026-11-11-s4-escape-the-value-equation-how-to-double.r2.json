@@ -1,0 +1,100 @@
+{
+  "title": "The Math Behind Making One Hour Pay Like Forty",
+  "hook_text": "THE 40-HOUR PAYCHECK TRAP",
+  "beats": [
+    {
+      "say": "Trading 40 hours every week for one fixed paycheck caps your income forever.",
+      "callout": "",
+      "visual": "Extreme wide shot of a lone commuter silhouette walking across a vast rain-slick concrete plaza beneath towering Brutalist monolithic columns, cold blue hour mist."
+    },
+    {
+      "say": "Why do two people with the exact same skills earn radically different rates for an hour's work?",
+      "callout": "",
+      "visual": "Low angle view of two vintage pocket watches hanging by chains from iron hooks over dark wet asphalt, lit by a distant amber sodium streetlight."
+    },
+    {
+      "say": "Most people assume the only answer is working 80 hours a week or sacrificing their sleep.",
+      "callout": "80-HOUR GRIND",
+      "visual": "Extreme close-up of worn leather work boots standing motionless on cracked concrete under flickering cold fluorescent industrial lighting."
+    },
+    {
+      "say": "Real leverage comes from what entrepreneur Alex Hormozi calls the value equation.",
+      "callout": "THE VALUE EQUATION",
+      "visual": "High angle shot looking down a dizzying spiral iron staircase inside a shadowy industrial tower, single beam of pale daylight cutting through the dust."
+    },
+    {
+      "say": "Value equals the client's dream outcome multiplied by their perceived likelihood of achievement.",
+      "callout": "",
+      "visual": "Silhouette of a figure standing atop a rocky ridge line overlooking a vast valley submerged in deep morning fog, faint dawn light on the horizon."
+    },
+    {
+      "say": "A trainer selling generic gym sessions gets $30, while one guaranteeing a marathon finish charges $300.",
+      "callout": "$30 VS $300",
+      "visual": "Extreme close-up of a runner's mud-spattered sneakers resting on wet asphalt after rain, bathed in orange sodium street glow."
+    },
+    {
+      "say": "So how does a higher price actually require less physical time from you?",
+      "callout": "",
+      "visual": "Extreme wide shot of a solitary figure walking along the edge of a massive concrete bridge over dark open water at twilight."
+    },
+    {
+      "say": "Because the bottom of the equation divides that result by time delay and effort and sacrifice.",
+      "callout": "TIME AND EFFORT",
+      "visual": "Low angle perspective of massive heavy steel gears inside an abandoned clock tower, lit by a single warm practical bulb casting long sharp shadows."
+    },
+    {
+      "say": "When you eliminate the client's waiting time and remove their tedious chores, your value multiplies automatically.",
+      "callout": "",
+      "visual": "Low angle view through a dark concrete underpass looking out toward rain-slick city pavement gleaming under distant sodium vapor lamps."
+    },
+    {
+      "say": "Investing an extra $1,000 a month from that pricing edge reaches $182,946 in 10 years at 8%.",
+      "callout": "$182,946 AT 8%",
+      "visual": "Extreme wide shot of a tiny solitary figure standing at the base of a colossal brutalist dam wall, cold blue hour light spilling over wet stone."
+    },
+    {
+      "say": "The honest catch is building active income isn't easy: 1 in 5 US businesses close in year one.",
+      "callout": "1 IN 5 FAIL",
+      "visual": "High angle view of an empty wet crossroads at midnight under the harsh amber glow of a solitary overhead streetlamp, puddles rippling in the wind."
+    },
+    {
+      "say": "Stop selling raw time and start pricing compressed outcomes. Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "Extreme wide silhouette of a lone traveler standing on a towering ridge line looking out over an endless expanse of rolling fog beneath cold twilight skies."
+    }
+  ],
+  "caption": "Stop selling raw time to someone else. Here's how the value equation breaks the hourly trap.\n#money #personalfinance #escapetheratrace #wealthmindset #sidehustle",
+  "description": "Trading your time for an hourly wage puts a permanent ceiling on your wealth. By applying the value equation, you can charge for outcomes instead of hours and invest the surplus into long-term compounding.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#escapetheratrace",
+    "#wealthmindset",
+    "#sidehustle"
+  ],
+  "first_comment": "Are you currently paid for your time, or for the result you deliver?",
+  "facts": [
+    {
+      "claim": "An extra $1,000/month from a side income, invested at 8% for 10 years = $182,946",
+      "basis": "Money Fact Sheet calculation: $1,000/month invested at 8% annual return compounded monthly over 10 years yields $182,946 ($120,000 principal)."
+    },
+    {
+      "claim": "About 1 in 5 US businesses close in their first year",
+      "basis": "US Bureau of Labor Statistics, Business Employment Dynamics data."
+    }
+  ],
+  "source": "llm",
+  "pillar": "escape",
+  "look": "",
+  "loop_map": {
+    "stakes": "Trading 40 hours a week for a fixed paycheck caps personal earning power forever.",
+    "big_question": "Why do two people with the exact same skills earn radically different rates for an hour's work?",
+    "assume": "Most people assume earning more requires working 80-hour weeks or sacrificing sleep.",
+    "reveal": "Earnings multiply through the value equation: increasing outcome certainty while cutting time delay and client effort.",
+    "rehook_beats": [
+      7,
+      9
+    ],
+    "payoff_beat": 10
+  }
+}

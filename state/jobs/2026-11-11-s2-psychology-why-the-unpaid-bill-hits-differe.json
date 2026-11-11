@@ -4,7 +4,7 @@
   "topic": "Why the Unpaid Bill Hits Different",
   "day": "2026-11-11",
   "slot": 2,
-  "status": "visualized",
+  "status": "packaged",
   "history": [
     {
       "from": "planned",
@@ -23,15 +23,36 @@
       "from": "voiced",
       "to": "visualized",
       "ts": "2026-11-11T09:42:03Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-11-11T09:44:35Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-11-11T09:44:35Z",
+      "score": 96
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-11-11T09:44:36Z"
     }
   ],
   "artifacts": {
     "angle": "Framing can make deferred costs feel less emotionally real than immediate ones, but the honest catch is that awareness alone does not make the payment smaller.",
     "hook": "You didn't feel the cost until the bill showed up.",
     "title": "Why Unpaid Bills Hit Different: The Credit Trap",
-    "style": "cinematic"
+    "style": "cinematic",
+    "video": "/home/user/quiet-money/production/output/2026-11-11/2026-11-11-s2-psychology-why-the-unpaid-bill-hits-differe/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-11-11/2026-11-11-s2-psychology-why-the-unpaid-bill-hits-differe/cover.jpg"
   },
-  "scores": {},
+  "scores": {
+    "gauntlet": 96,
+    "passed": true
+  },
   "cost": {
     "tts:gemini:chars": 1129
   },
