@@ -1,0 +1,95 @@
+{
+  "title": "The Golden Entertainer Who Died Broke",
+  "hook_text": "HE EARNED MILLIONS YET DIED BROKE",
+  "beats": [
+    {
+      "say": "He earned more than movie stars in his prime, but when he died, he couldn't afford his own funeral.",
+      "callout": "",
+      "visual": "Extreme close-up of a tarnished brass trumpet resting on a dark velvet surface under a single practical bulb."
+    },
+    {
+      "say": "That was the shocking reality for Billy Eckstine, a musical giant who packed stadiums across America in the 1940s.",
+      "callout": "BILLY ECKSTINE",
+      "visual": "Low angle shot of a massive empty theater balcony lit by cold sodium light through high windows."
+    },
+    {
+      "say": "So where did every single dollar vanish to?",
+      "callout": "",
+      "visual": "High angle shot of rain-slick asphalt reflecting a blurry neon sign at night."
+    },
+    {
+      "say": "You'd assume he blew it all on wild parties and luxury cars.",
+      "callout": "MYTH VS FACT",
+      "visual": "Silhouette of a man walking alone across a vast, empty concrete parking lot under overcast skies."
+    },
+    {
+      "say": "The truth is far worse. He confused massive gross revenue with actual net wealth.",
+      "callout": "GROSS VS NET",
+      "visual": "Extreme wide shot of a lone train track cutting through a foggy industrial wasteland at dawn."
+    },
+    {
+      "say": "He funded a massive touring big band out of his own pocket every single week.",
+      "callout": "STEP ONE",
+      "visual": "Macro shot of heavy brass instrument keys being pressed down in heavy shadow."
+    },
+    {
+      "say": "Payroll, travel, and stage production ate every cent before he ever saw a paycheck.",
+      "callout": "STEP TWO",
+      "visual": "Extreme close-up of worn paper bills burning slowly at the edge of a rusted metal drum."
+    },
+    {
+      "say": "Even worse, he didn't own the masters to the records that made him famous.",
+      "callout": "STEP THREE",
+      "visual": "Underpass view of dark concrete pillars cutting across cold, wet pavement."
+    },
+    {
+      "say": "So why do so many high earners still repeat this exact same cash flow trap today?",
+      "callout": "THE TRAP",
+      "visual": "Extreme wide shot of a lone car taillight fading into an empty highway at night."
+    },
+    {
+      "say": "Top-line revenue is just a vanity metric. Real wealth is what stays in your control after all the bills clear.",
+      "callout": "",
+      "visual": "Low angle shot of a towering concrete bridge pier against dark blue evening clouds."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "Extreme close-up of a heavy steel door latch clicking shut in sharp focus."
+    }
+  ],
+  "caption": "Top-line revenue means nothing if your net wealth is zero. Learn how cash flow actually works. #money #personalfinance #wealth #investing",
+  "description": "The cautionary tale of Billy Eckstine reveals the hidden danger of confusing gross revenue with net wealth.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#wealth",
+    "#investing",
+    "#financialliteracy"
+  ],
+  "first_comment": "What's a better metric than revenue to measure true financial success?",
+  "facts": [
+    {
+      "claim": "Billy Eckstine earned a massive income in his prime touring era",
+      "basis": "Historical jazz era documentation and box office records."
+    },
+    {
+      "claim": "He died with very little personal wealth despite his high earnings",
+      "basis": "Biographical accounts of his later years and estate."
+    }
+  ],
+  "source": "llm",
+  "pillar": "story",
+  "look": "",
+  "loop_map": {
+    "stakes": "A high-earning entertainer dying unable to afford his own funeral.",
+    "big_question": "Where did every single dollar vanish to?",
+    "assume": "Most people assume high earners blow their money on luxury items.",
+    "reveal": "He funded expensive overhead and lacked ownership of his revenue streams.",
+    "rehook_beats": [
+      3,
+      9
+    ],
+    "payoff_beat": 10
+  }
+}

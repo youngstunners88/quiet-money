@@ -1,0 +1,86 @@
+{
+  "title": "The $5 Daily Habit That Builds $226,659",
+  "hook_text": "THAT $5 DAILY HABIT COSTS YOU $226,000",
+  "beats": [
+    {
+      "say": "That $5 daily purchase isn't costing you $5. It's stealing over $200,000 from your future.",
+      "callout": "",
+      "visual": "Extreme close-up of a contactless card tapping a reader in deep shadow, cold blue light."
+    },
+    {
+      "say": "Where does that money actually go when you spend it without thinking twice?",
+      "callout": "THE LEAK",
+      "visual": "Low angle of a wet asphalt street under sodium lights at night, empty and slick."
+    },
+    {
+      "say": "Most people assume small daily leaks don't matter, but the math reveals a brutal truth.",
+      "callout": "SMALL VS HUGE",
+      "visual": "Silhouette of a lone person walking past a towering brutalist concrete wall, high angle."
+    },
+    {
+      "say": "A $5 a day habit adds up to $1,825 every single year.",
+      "callout": "STEP ONE",
+      "visual": "Extreme wide shot of an empty highway at night under a heavy fog."
+    },
+    {
+      "say": "Step one. Open your banking app and locate your recurring daily small purchases.",
+      "callout": "STEP TWO",
+      "visual": "Close-up of hands typing on a dark phone screen lit only by cold fluorescent glare."
+    },
+    {
+      "say": "Step two. Set up an automatic transfer of that exact same daily amount into an investment account.",
+      "callout": "STEP THREE",
+      "visual": "Single practical light illuminating a stark metal desk in a dark room."
+    },
+    {
+      "say": "Step three. Choose a broad market fund that targets growth over the long haul.",
+      "callout": "THE PAYOFF",
+      "visual": "Underpass silhouette framing a massive distant bridge lit by amber sodium lamps."
+    },
+    {
+      "say": "Invested at an average 8% return, that exact same $5 a day turns into $226,659 in 30 years.",
+      "callout": "$226,659",
+      "visual": "Blue hour skyline cut by sharp fog, tiny human silhouette against a massive concrete pillar."
+    },
+    {
+      "say": "That's how a tiny routine beats a massive salary when you let time do the heavy lifting.",
+      "callout": "",
+      "visual": "Rain-slick street reflecting cold neon signs in deep shadow, extreme close-up."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "Tower edge looking straight down into a dark, foggy city street at midnight."
+    }
+  ],
+  "caption": "That small daily habit is costing you a fortune. Fix it today. #personalfinance #wealth #moneyhabits #investing",
+  "description": "Discover how a simple $5 daily habit transforms into over $226,000 using compound growth over 30 years. Follow for the money rules school never taught you.",
+  "hashtags": [
+    "#personalfinance",
+    "#wealth",
+    "#moneyhabits",
+    "#investing",
+    "#financialfreedom"
+  ],
+  "first_comment": "What's one small daily purchase you could automate into savings starting today?",
+  "facts": [
+    {
+      "claim": "$5/day habit = $1,825/year; invested monthly at 8% for 30 years = $226,659",
+      "basis": "MONEY FACT SHEET"
+    }
+  ],
+  "source": "llm",
+  "pillar": "playbook",
+  "look": "",
+  "loop_map": {
+    "stakes": "That $5 daily purchase isn't costing you $5. It's stealing over $200,000 from your future.",
+    "big_question": "Where does that money actually go when you spend it without thinking twice?",
+    "assume": "Most people assume small daily leaks don't matter",
+    "reveal": "Invested at an average 8% return, that exact same $5 a day turns into $226,659 in 30 years.",
+    "rehook_beats": [
+      3,
+      7
+    ],
+    "payoff_beat": 8
+  }
+}

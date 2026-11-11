@@ -1,0 +1,96 @@
+{
+  "title": "The $200 Million Wall Painting",
+  "hook_text": "CHOOSING STOCK OVER CASH MADE MILLIONS",
+  "beats": [
+    {
+      "say": "In 2005, an artist was offered $60,000 cash or company stock for painting startup office walls.",
+      "callout": "",
+      "visual": "Extreme close-up of a single paintbrush dripping red acrylic paint on a dark concrete wall, cinematic low-angle lighting, blue hour."
+    },
+    {
+      "say": "David Choe didn't want the cash. He took the risky equity bet instead.",
+      "callout": "CASH VS STOCK",
+      "visual": "Silhouette of a man standing against a massive glass skyscraper facade at night, cold fluorescent reflections on wet asphalt."
+    },
+    {
+      "say": "Why would anyone gamble thousands of hours of labor on a brand-new, unproven tech company?",
+      "callout": "",
+      "visual": "Extreme wide shot of an empty highway cutting through a foggy, barren mountain pass at dawn, sodium light."
+    },
+    {
+      "say": "Most people assume a safe hourly wage beats a gamble every single time.",
+      "callout": "WAGE VS GAMBLE",
+      "visual": "Close-up of a mechanical desk clock ticking on a dark wood surface, single practical light, shallow depth of field."
+    },
+    {
+      "say": "That's why 99% of workers take the paycheck and walk away.",
+      "callout": "",
+      "visual": "High-angle shot of commuters walking briskly through a rain-slick transit station, gray tones, heavy shadows."
+    },
+    {
+      "say": "But Choe spotted something the casual observer missed in that hot garage office.",
+      "callout": "STEP ONE",
+      "visual": "Extreme close-up of an old metal door hinge covered in rust, harsh side lighting, gritty texture."
+    },
+    {
+      "say": "He bet on the founders' raw leverage instead of the immediate paper currency.",
+      "callout": "STEP TWO",
+      "visual": "Low-angle shot of a towering concrete bridge support cutting across an overcast sky, stark brutalist architecture."
+    },
+    {
+      "say": "Fast forward a few years and that tiny unknown startup was named Facebook.",
+      "callout": "$200,000,000",
+      "visual": "Extreme wide shot of a massive data center server aisle stretching into absolute darkness, blinking blue lights."
+    },
+    {
+      "say": "His worthless wall painting shares quietly ballooned to a staggering $200 million payout.",
+      "callout": "",
+      "visual": "Close-up of wet asphalt reflecting a single neon sign in the rain, moody cinematic atmosphere."
+    },
+    {
+      "say": "Ownership pays you forever while a cash wage stops the second you clock out.",
+      "callout": "ASSET VS LIABILITY",
+      "visual": "Silhouette of a solitary figure walking along a jagged ocean ridge line at dusk, dark moody water below."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "Extreme wide shot of a solitary glowing streetlamp on an empty bridge at night, dense fog rolling underneath."
+    }
+  ],
+  "caption": "A single wall painting turned into a $200 million payout because one man chose equity over cash. The rules of ownership change everything. #money #wealth #investing #finance #mindset",
+  "description": "In 2005, artist David Choe chose startup stock over $60,000 cash to paint Facebook's office walls. The gamble generated a $200 million generational wealth payout.",
+  "hashtags": [
+    "#money",
+    "#wealth",
+    "#investing",
+    "#finance",
+    "#mindset"
+  ],
+  "first_comment": "Would you take the $60,000 cash or gamble on the startup stock?",
+  "facts": [
+    {
+      "claim": "David Choe was offered $60,000 cash or stock for painting Facebook's first office in 2005.",
+      "basis": "Well-documented historical fact regarding the early Facebook graffiti artist payout."
+    },
+    {
+      "claim": "His stock eventually reached an estimated value around $200 million.",
+      "basis": "Publicly reported valuations of David Choe's Facebook shares after the 2012 IPO."
+    }
+  ],
+  "source": "llm",
+  "pillar": "story",
+  "look": "",
+  "loop_map": {
+    "stakes": "An artist chooses between a $60,000 cash paycheck and unproven startup stock for painting an office.",
+    "big_question": "How did a simple wall painting job turn into a $200 million fortune?",
+    "assume": "Most people assume a guaranteed cash wage is always safer than risky equity.",
+    "reveal": "Choe's equity bet on Facebook transformed a standard gig into generational wealth.",
+    "rehook_beats": [
+      3,
+      6,
+      8
+    ],
+    "payoff_beat": 9
+  }
+}

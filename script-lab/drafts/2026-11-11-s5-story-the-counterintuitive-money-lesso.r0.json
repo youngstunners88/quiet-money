@@ -1,0 +1,91 @@
+{
+  "title": "The Singer Who Died Broke With Millions",
+  "hook_text": "HE DIED BROKE DESPITE MILLIONS",
+  "beats": [
+    {
+      "say": "He earned more than movie stars in his prime, but when he died, he couldn't afford his own funeral.",
+      "callout": "",
+      "visual": "Extreme wide shot of a solitary silhouette walking down a rain-slick street under sodium streetlights at night."
+    },
+    {
+      "say": "That was 1973, and the man was Bobby Darin. How did a legend with massive chart hits run completely out of cash?",
+      "callout": "$15,000,000 VS $0",
+      "visual": "Low angle shot of a massive Art Deco theater marquee, weathered and dark against a cold blue hour sky."
+    },
+    {
+      "say": "Most people assume that when you make millions, your bank account just grows on its own.",
+      "callout": "GROSS VS NET",
+      "visual": "Close up of heavy brass vault doors reflecting a lone cold fluorescent light in an empty hallway."
+    },
+    {
+      "say": "That's wrong. Darin's gross revenue was huge, but his cash flow was bleeding out every single week.",
+      "callout": "REVENUE VS WEALTH",
+      "visual": "High angle shot of a single hand dropping a heavy brass key onto a wet asphalt curb."
+    },
+    {
+      "say": "Where was the money actually going before it ever hit his pocket?",
+      "callout": "CASH DRAIN",
+      "visual": "Extreme close up of water rushing down a dark concrete storm drain under a sodium streetlamp."
+    },
+    {
+      "say": "He funded his own movie studio, a record label, and a lavish lifestyle that required constant massive inflows.",
+      "callout": "STEP ONE",
+      "visual": "Silhouette of a man standing at the edge of a high concrete rooftop, looking down at a distant highway."
+    },
+    {
+      "say": "When his hits slowed down in the late 1960s, those fixed overhead costs didn't stop.",
+      "callout": "STEP TWO",
+      "visual": "Wide shot of an empty concrete underpass cut by harsh fluorescent lights and deep shadows."
+    },
+    {
+      "say": "So why couldn't he just sell his assets to stay afloat?",
+      "callout": "ILLIQUID ASSETS",
+      "visual": "Extreme close up of a heavy iron chain resting on wet, dark stone in the rain."
+    },
+    {
+      "say": "Because owning valuable things isn't the same as having spendable cash when emergencies hit.",
+      "callout": "",
+      "visual": "Low angle shot of a towering concrete bridge pier stretching up into a foggy, overcast sky."
+    },
+    {
+      "say": "He confused top-line revenue with true net wealth, and the math caught up to him.",
+      "callout": "",
+      "visual": "Extreme wide shot of a single car driving across an empty bridge over dark, open water at night."
+    },
+    {
+      "say": "Keep your overhead low and your cash liquid. Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "Silhouette of a person walking away down a dark, fog-cut alley lit by a single practical bulb."
+    }
+  ],
+  "caption": "Gross revenue doesn't equal net wealth. Keep your cash liquid. \n\n#money #personalfinance #wealth #cashflow #finance",
+  "description": "Bobby Darin earned millions in his prime but died broke. This cautionary tale explains the danger of confusing gross revenue with true net wealth.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#wealth",
+    "#cashflow",
+    "#finance"
+  ],
+  "first_comment": "What's a bigger risk: making too little or spending too much? Drop your thoughts below.",
+  "facts": [
+    {
+      "claim": "Bobby Darin died in 1973 completely broke despite massive career earnings.",
+      "basis": "Historical biographical records of Bobby Darin's financial decline and estate at death."
+    }
+  ],
+  "source": "llm",
+  "pillar": "story",
+  "look": "",
+  "loop_map": {
+    "stakes": "Bobby Darin earning millions in his prime and dying broke.",
+    "big_question": "How did a legend with massive chart hits run completely out of cash?",
+    "assume": "When you make millions, your bank account grows on its own.",
+    "reveal": "Gross revenue was huge, but cash flow bled out through high fixed overhead.",
+    "rehook_beats": [
+      5,
+      8
+    ],
+    "payoff_beat": 10
+  }
+}

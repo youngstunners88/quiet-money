@@ -1,0 +1,91 @@
+{
+  "title": "The Hourly Rate Cap vs Royalty Model",
+  "hook_text": "YOUR HOURLY WAGE HAS A HARD CEILING",
+  "beats": [
+    {
+      "say": "Trading your time for a high hourly wage creates a strict ceiling on your lifetime income.",
+      "callout": "",
+      "visual": "Extreme close-up of a brass time clock punch machine in dim sodium light, cold industrial setting."
+    },
+    {
+      "say": "You might pull $100 an hour, but you only have 24 hours in a single day.",
+      "callout": "$100/HR VS 24 HOURS",
+      "visual": "Low angle shot of a massive concrete digital wall clock ticking past midnight in fog."
+    },
+    {
+      "say": "So why do most professionals rely entirely on direct billable hours to build their wealth?",
+      "callout": "",
+      "visual": "Silhouette of a lone worker hunched over a desk beneath a single fluorescent bulb, high angle."
+    },
+    {
+      "say": "They assume selling more hours is the only safe way to scale earnings.",
+      "callout": "TIME VS SCALE",
+      "visual": "Extreme wide shot of an empty multi-lane toll highway stretching into darkness under a heavy gray sky."
+    },
+    {
+      "say": "That assumption breaks down fast when your body hits a wall or burnout takes over.",
+      "callout": "",
+      "visual": "Wet asphalt reflecting red tail lights on a rain-slick city street at dusk."
+    },
+    {
+      "say": "What if your core skills could run without your hands touching the work?",
+      "callout": "SKILL VS LABOR",
+      "visual": "Close-up of industrial printing press rollers spinning in slow motion, blue hour lighting."
+    },
+    {
+      "say": "That brings us to the royalty licensing model, where a standard operating procedure prints value repeatedly.",
+      "callout": "",
+      "visual": "Single stack of heavy steel shipping containers under an overcast sky, extreme wide angle."
+    },
+    {
+      "say": "An extra $1,000 a month invested at 8% for 10 years turns into $182,946.",
+      "callout": "$182,946 TOTAL",
+      "visual": "Macro shot of cold water droplets sliding down a raw iron beam in shadow."
+    },
+    {
+      "say": "That is the exact difference between trading hours and owning a licensed system.",
+      "callout": "HOURS VS SYSTEMS",
+      "visual": "Silhouette of a person walking across the edge of a concrete dam against open water at sunset."
+    },
+    {
+      "say": "Build a process once, license it out, and let continuous revenue replace manual labor.",
+      "callout": "STEP ONE",
+      "visual": "Low angle view of a massive steel suspension bridge tower cutting through low fog."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "Distant silhouette of a solitary figure standing on a ridge line under a vast evening sky."
+    }
+  ],
+  "caption": "Trading hours limits your peak. Systems change the math. #money #personalfinance #wealth #investing #moneypsychology",
+  "description": "Trading billable hours caps daily earning capacity, whereas turning a skill into a licensed standard operating procedure generates continuous income without added labor.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#wealth",
+    "#investing",
+    "#moneypsychology"
+  ],
+  "first_comment": "What skill do you have that could become a licensed standard operating procedure?",
+  "facts": [
+    {
+      "claim": "An extra $1,000/month from a side income, invested at 8% for 10 years = $182,946 (you put in $120,000)",
+      "basis": "Money Fact Sheet"
+    }
+  ],
+  "source": "llm",
+  "pillar": "myth",
+  "look": "",
+  "loop_map": {
+    "stakes": "Trading time for an hourly wage caps lifetime earnings.",
+    "big_question": "Why do professionals rely entirely on billable hours?",
+    "assume": "Selling more hours is the only safe way to scale earnings.",
+    "reveal": "Licensing a standard operating procedure generates continuous income without added labor.",
+    "rehook_beats": [
+      6,
+      9
+    ],
+    "payoff_beat": 10
+  }
+}

@@ -4,13 +4,57 @@
   "topic": "The Counterintuitive Money Lesson From Someone Who Died Completely Broke Despite Earning Fortunes",
   "day": "2026-11-11",
   "slot": 5,
-  "status": "planned",
-  "history": [],
+  "status": "packaged",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-11-11T10:05:26Z",
+      "words": 160
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-11-11T10:06:04Z",
+      "seconds": 63.185,
+      "provider": "gemini"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-11-11T10:06:27Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-11-11T10:09:03Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-11-11T10:09:03Z",
+      "score": 96
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-11-11T10:09:04Z"
+    }
+  ],
   "artifacts": {
     "angle": "A cautionary tale of a golden-era entertainer who made millions but understood cash flow too late, revealing the danger of confusing gross revenue with net wealth.",
-    "hook": "He earned more than movie stars in his prime, but when he died, he couldn't afford his own funeral. This is where every dollar went."
+    "hook": "He earned more than movie stars in his prime, but when he died, he couldn't afford his own funeral. This is where every dollar went.",
+    "title": "The Golden Entertainer Who Died Broke",
+    "style": "cinematic",
+    "video": "/home/user/quiet-money/production/output/2026-11-11/2026-11-11-s5-story-the-counterintuitive-money-lesso/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-11-11/2026-11-11-s5-story-the-counterintuitive-money-lesso/cover.jpg"
   },
-  "scores": {},
-  "cost": {},
+  "scores": {
+    "gauntlet": 96,
+    "passed": true
+  },
+  "cost": {
+    "tts:gemini:chars": 883
+  },
   "notes": []
 }

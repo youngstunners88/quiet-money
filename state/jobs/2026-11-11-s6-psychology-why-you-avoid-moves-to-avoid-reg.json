@@ -1,0 +1,60 @@
+{
+  "id": "2026-11-11-s6-psychology-why-you-avoid-moves-to-avoid-reg",
+  "pillar": "psychology",
+  "topic": "Why You Avoid Moves to Avoid Regret",
+  "day": "2026-11-11",
+  "slot": 6,
+  "status": "packaged",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-11-11T10:09:47Z",
+      "words": 181
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-11-11T10:11:26Z",
+      "seconds": 67.113,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-11-11T10:11:54Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-11-11T10:14:33Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-11-11T10:14:33Z",
+      "score": 100
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-11-11T10:14:33Z"
+    }
+  ],
+  "artifacts": {
+    "angle": "Anticipated regret can push people away from reasonable choices, and the honest catch is that caution can protect or freeze a decision.",
+    "hook": "You didn't open the cheaper-rate email. You just closed the tab.",
+    "title": "Why You Avoid Moves to Avoid Regret",
+    "style": "cinematic",
+    "video": "/home/user/quiet-money/production/output/2026-11-11/2026-11-11-s6-psychology-why-you-avoid-moves-to-avoid-reg/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-11-11/2026-11-11-s6-psychology-why-you-avoid-moves-to-avoid-reg/cover.jpg"
+  },
+  "scores": {
+    "gauntlet": 100,
+    "passed": true
+  },
+  "cost": {
+    "tts:edge:chars": 1025
+  },
+  "notes": []
+}

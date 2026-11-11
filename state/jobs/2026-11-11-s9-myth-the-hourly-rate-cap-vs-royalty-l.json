@@ -1,0 +1,34 @@
+{
+  "id": "2026-11-11-s9-myth-the-hourly-rate-cap-vs-royalty-l",
+  "pillar": "myth",
+  "topic": "The Hourly Rate Cap vs. Royalty Licensing Model",
+  "day": "2026-11-11",
+  "slot": 9,
+  "status": "voiced",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-11-11T10:26:34Z",
+      "words": 154
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-11-11T10:32:49Z",
+      "seconds": 64.375,
+      "provider": "edge"
+    }
+  ],
+  "artifacts": {
+    "angle": "Trading billable hours caps daily earning capacity, whereas turning a skill into a licensed standard operating procedure generates continuous income without added labor.",
+    "hook": "Trading your time for a high hourly wage creates a strict ceiling on your lifetime income.",
+    "title": "The Hourly Rate Cap vs Royalty Model"
+  },
+  "scores": {},
+  "cost": {
+    "tts:gemini:chars": 883,
+    "tts:edge:chars": 1035
+  },
+  "notes": []
+}

@@ -1,0 +1,100 @@
+{
+  "title": "The Hourly Rate Cap vs Royalty Model",
+  "hook_text": "YOUR HOURLY WAGE HAS A CEILING",
+  "beats": [
+    {
+      "say": "Trading your time for a high hourly wage creates a strict ceiling on your lifetime income.",
+      "callout": "",
+      "visual": "Extreme close-up of a vintage brass desk clock ticking in a dark room under harsh sodium light."
+    },
+    {
+      "say": "You work fifty hours a week and pull in a heavy paycheck.",
+      "callout": "50 HOURS",
+      "visual": "Low angle shot of a heavy steel skyscraper cutting through dense blue-hour fog."
+    },
+    {
+      "say": "You feel secure because the numbers hit your bank account every single Friday like clockwork.",
+      "callout": "",
+      "visual": "A lone silhouette walking down a rain-slick asphalt street beneath a single amber streetlamp."
+    },
+    {
+      "say": "Most people assume working harder at that same hourly rate is the fastest path to lasting wealth.",
+      "callout": "WORK HARDER VS SYSTEM",
+      "visual": "Extreme wide shot of a massive concrete bridge spanning dark, turbulent open water at night."
+    },
+    {
+      "say": "It is a trap because your personal clock dictates every single dollar you will ever earn.",
+      "callout": "",
+      "visual": "Close-up of weathered hands flipping the pages of a thick, worn leather ledger in dim fluorescent light."
+    },
+    {
+      "say": "What happens the moment you stop trading hours for dollars due to burnout or illness?",
+      "callout": "THE STOP",
+      "visual": "High angle shot of empty highway lanes cutting straight through a dark rural ridge line."
+    },
+    {
+      "say": "The income stops instantly while your living expenses keep running at full speed.",
+      "callout": "",
+      "visual": "Extreme close-up of a brass key turning inside a heavy deadbolt on a cold iron door."
+    },
+    {
+      "say": "You didn't build an asset; you just built a high-paying job that you can never leave.",
+      "callout": "JOB VS ASSET",
+      "visual": "Silhouette of a person standing alone at the edge of a high concrete tower looking into the dark."
+    },
+    {
+      "say": "How do you break that rigid cap without cloning yourself or working twenty four hours a day?",
+      "callout": "",
+      "visual": "Low angle shot of rusted industrial water tanks under a heavy, overcast cold sky."
+    },
+    {
+      "say": "You turn your core skills into a licensed standard operating procedure that other businesses pay to use.",
+      "callout": "STEP ONE",
+      "visual": "Close-up of a fountain pen signing a dark paper document under a single practical desk light."
+    },
+    {
+      "say": "That single move generates continuous royalty income without adding a single labor hour to your day.",
+      "callout": "STEP TWO",
+      "visual": "Extreme wide shot of a massive shipping container terminal lit by cold blue security towers at night."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "A lone figure walking away down a wet, empty underpass toward a bright light in the distance."
+    }
+  ],
+  "caption": "Trading hours for cash keeps you trapped. Turn your skills into systems. #personalfinance #wealth #money #finance #business",
+  "description": "Trading billable hours caps your daily earning capacity. Turning a skill into a licensed standard operating procedure generates continuous income without added labor.",
+  "hashtags": [
+    "#personalfinance",
+    "#wealth",
+    "#money",
+    "#finance",
+    "#business"
+  ],
+  "first_comment": "What skill do you have that could become a licensed standard operating procedure?",
+  "facts": [
+    {
+      "claim": "Trading time for an hourly wage creates a strict ceiling on lifetime income",
+      "basis": "Direct logical deduction from the hourly rate cap model"
+    },
+    {
+      "claim": "Turning a skill into a licensed standard operating procedure generates continuous income without added labor",
+      "basis": "Royalty licensing model economics"
+    }
+  ],
+  "source": "llm",
+  "pillar": "myth",
+  "look": "",
+  "loop_map": {
+    "stakes": "You work fifty hours a week for a paycheck that feels secure.",
+    "big_question": "How do you break that rigid cap without cloning yourself?",
+    "assume": "Working harder at a high hourly rate builds wealth.",
+    "reveal": "Trading time creates a strict ceiling; licensing a process generates continuous income.",
+    "rehook_beats": [
+      6,
+      9
+    ],
+    "payoff_beat": 11
+  }
+}
