@@ -47,7 +47,14 @@
     "title": "How to Erase Medical Bills Using IRS Tax Rules",
     "style": "cinematic",
     "video": "/home/user/quiet-money/production/output/2026-11-11/2026-11-11-s3-playbook-negotiate-your-medical-bill-usin/final.mp4",
-    "cover": "/home/user/quiet-money/production/output/2026-11-11/2026-11-11-s3-playbook-negotiate-your-medical-bill-usin/cover.jpg"
+    "cover": "/home/user/quiet-money/production/output/2026-11-11/2026-11-11-s3-playbook-negotiate-your-medical-bill-usin/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-11-11/slot4-playbook",
+        "post_at": "2026-11-11T18:30:00-05:00"
+      }
+    }
   },
   "scores": {
     "gauntlet": 96,

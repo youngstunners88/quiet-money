@@ -47,7 +47,14 @@
     "title": "Why You Avoid Moves to Avoid Regret",
     "style": "cinematic",
     "video": "/home/user/quiet-money/production/output/2026-11-11/2026-11-11-s6-psychology-why-you-avoid-moves-to-avoid-reg/final.mp4",
-    "cover": "/home/user/quiet-money/production/output/2026-11-11/2026-11-11-s6-psychology-why-you-avoid-moves-to-avoid-reg/cover.jpg"
+    "cover": "/home/user/quiet-money/production/output/2026-11-11/2026-11-11-s6-psychology-why-you-avoid-moves-to-avoid-reg/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-11-12/slot2-psychology",
+        "post_at": "2026-11-12T11:30:00-05:00"
+      }
+    }
   },
   "scores": {
     "gauntlet": 100,

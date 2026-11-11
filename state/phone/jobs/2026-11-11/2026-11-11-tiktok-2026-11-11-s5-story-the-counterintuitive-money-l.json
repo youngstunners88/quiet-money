@@ -1,0 +1,18 @@
+{
+ "id": "2026-11-11-tiktok-2026-11-11-s5-story-the-counterintuitive-money-l",
+ "kind": "tiktok",
+ "day": "2026-11-11",
+ "key": "2026-11-11-s5-story-the-counterintuitive-money-lesso",
+ "status": "queued",
+ "created": "2026-11-11T10:36:01+00:00",
+ "recipe": "TikTok upload",
+ "media": [
+  {
+   "source": "production/output/2026-11-11/2026-11-11-s5-story-the-counterintuitive-money-lesso/final.mp4",
+   "name": "final.mp4"
+  }
+ ],
+ "staged": false,
+ "text": "Top-line revenue means nothing if your net wealth is zero. Learn how cash flow actually works.\n\nFree reset checklist: link in bio.\n\n#money #personalfinance #wealth #investing #financialliteracy\n\nEducation, not financial advice.",
+ "ai_label": "AI-generated content: on"
+}

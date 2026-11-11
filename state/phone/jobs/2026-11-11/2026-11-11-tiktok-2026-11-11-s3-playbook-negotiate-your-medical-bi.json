@@ -1,0 +1,18 @@
+{
+ "id": "2026-11-11-tiktok-2026-11-11-s3-playbook-negotiate-your-medical-bi",
+ "kind": "tiktok",
+ "day": "2026-11-11",
+ "key": "2026-11-11-s3-playbook-negotiate-your-medical-bill-usin",
+ "status": "queued",
+ "created": "2026-11-11T10:36:01+00:00",
+ "recipe": "TikTok upload",
+ "media": [
+  {
+   "source": "production/output/2026-11-11/2026-11-11-s3-playbook-negotiate-your-medical-bill-usin/final.mp4",
+   "name": "final.mp4"
+  }
+ ],
+ "staged": false,
+ "text": "Non-profit hospitals get tax breaks to erase patient bills. Here is how to request your policy today.\n\nFree reset checklist: link in bio.\n\n#personalfinance #moneyrules #medicaldebt #charitycare #financialliteracy\n\nEducation, not financial advice.",
+ "ai_label": "AI-generated content: on"
+}

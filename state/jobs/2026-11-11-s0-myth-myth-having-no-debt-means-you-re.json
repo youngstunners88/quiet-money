@@ -47,7 +47,14 @@
     "title": "Why Having Zero Debt Isn't Enough",
     "style": "cinematic",
     "video": "/home/user/quiet-money/production/output/2026-11-11/2026-11-11-s0-myth-myth-having-no-debt-means-you-re/final.mp4",
-    "cover": "/home/user/quiet-money/production/output/2026-11-11/2026-11-11-s0-myth-myth-having-no-debt-means-you-re/cover.jpg"
+    "cover": "/home/user/quiet-money/production/output/2026-11-11/2026-11-11-s0-myth-myth-having-no-debt-means-you-re/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-11-11/slot1-myth",
+        "post_at": "2026-11-11T07:30:00-05:00"
+      }
+    }
   },
   "scores": {
     "gauntlet": 94,

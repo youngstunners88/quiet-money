@@ -47,7 +47,14 @@
     "title": "Why Unpaid Bills Hit Different: The Credit Trap",
     "style": "cinematic",
     "video": "/home/user/quiet-money/production/output/2026-11-11/2026-11-11-s2-psychology-why-the-unpaid-bill-hits-differe/final.mp4",
-    "cover": "/home/user/quiet-money/production/output/2026-11-11/2026-11-11-s2-psychology-why-the-unpaid-bill-hits-differe/cover.jpg"
+    "cover": "/home/user/quiet-money/production/output/2026-11-11/2026-11-11-s2-psychology-why-the-unpaid-bill-hits-differe/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-11-11/slot3-psychology",
+        "post_at": "2026-11-11T15:00:00-05:00"
+      }
+    }
   },
   "scores": {
     "gauntlet": 96,

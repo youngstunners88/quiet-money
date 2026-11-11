@@ -4,7 +4,7 @@
   "topic": "The Hourly Rate Cap vs. Royalty Licensing Model",
   "day": "2026-11-11",
   "slot": 9,
-  "status": "voiced",
+  "status": "packaged",
   "history": [
     {
       "from": "planned",
@@ -18,14 +18,48 @@
       "ts": "2026-11-11T10:32:49Z",
       "seconds": 64.375,
       "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-11-11T10:33:12Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-11-11T10:35:40Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-11-11T10:35:40Z",
+      "score": 90
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-11-11T10:35:40Z"
     }
   ],
   "artifacts": {
     "angle": "Trading billable hours caps daily earning capacity, whereas turning a skill into a licensed standard operating procedure generates continuous income without added labor.",
     "hook": "Trading your time for a high hourly wage creates a strict ceiling on your lifetime income.",
-    "title": "The Hourly Rate Cap vs Royalty Model"
+    "title": "The Hourly Rate Cap vs Royalty Model",
+    "style": "cinematic",
+    "video": "/home/user/quiet-money/production/output/2026-11-11/2026-11-11-s9-myth-the-hourly-rate-cap-vs-royalty-l/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-11-11/2026-11-11-s9-myth-the-hourly-rate-cap-vs-royalty-l/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-11-12/slot5-myth",
+        "post_at": "2026-11-12T21:00:00-05:00"
+      }
+    }
   },
-  "scores": {},
+  "scores": {
+    "gauntlet": 90,
+    "passed": true
+  },
   "cost": {
     "tts:gemini:chars": 883,
     "tts:edge:chars": 1035

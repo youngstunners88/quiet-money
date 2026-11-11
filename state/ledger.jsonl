@@ -8378,3 +8378,7 @@
 {"day": "2026-11-11", "provider": "muapi", "unit": "usd", "amount": 0.0065, "usd": 0.0065, "job": null}
 {"day": "2026-11-11", "provider": "muapi", "unit": "images", "amount": 1, "usd": 0.0, "job": null}
 {"day": "2026-11-11", "provider": "cloudflare", "unit": "neurons", "amount": 27.7091, "usd": 0.0, "job": "2026-11-11-s9-myth-the-hourly-rate-cap-vs-royalty-l"}
+{"day": "2026-11-11", "provider": "cloudflare", "unit": "neurons", "amount": 27.6218, "usd": 0.0, "job": "2026-11-11-s9-myth-the-hourly-rate-cap-vs-royalty-l"}
+{"day": "2026-11-11", "provider": "cloudflare", "unit": "neurons", "amount": 27.5345, "usd": 0.0, "job": "2026-11-11-s9-myth-the-hourly-rate-cap-vs-royalty-l"}
+{"day": "2026-11-11", "provider": "cloudflare", "unit": "neurons", "amount": 27.6873, "usd": 0.0, "job": "2026-11-11-s9-myth-the-hourly-rate-cap-vs-royalty-l"}
+{"day": "2026-11-11", "provider": "cloudflare", "unit": "neurons", "amount": 4.1455, "usd": 0.0, "job": null}

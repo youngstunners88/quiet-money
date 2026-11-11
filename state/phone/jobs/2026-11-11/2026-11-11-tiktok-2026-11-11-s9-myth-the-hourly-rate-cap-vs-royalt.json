@@ -1,0 +1,18 @@
+{
+ "id": "2026-11-11-tiktok-2026-11-11-s9-myth-the-hourly-rate-cap-vs-royalt",
+ "kind": "tiktok",
+ "day": "2026-11-11",
+ "key": "2026-11-11-s9-myth-the-hourly-rate-cap-vs-royalty-l",
+ "status": "queued",
+ "created": "2026-11-11T10:36:01+00:00",
+ "recipe": "TikTok upload",
+ "media": [
+  {
+   "source": "production/output/2026-11-11/2026-11-11-s9-myth-the-hourly-rate-cap-vs-royalty-l/final.mp4",
+   "name": "final.mp4"
+  }
+ ],
+ "staged": false,
+ "text": "Trading hours for cash keeps you trapped. Turn your skills into systems.\n\nFree reset checklist: link in bio.\n\n#personalfinance #wealth #money #finance #business\n\nEducation, not financial advice.",
+ "ai_label": "AI-generated content: on"
+}
