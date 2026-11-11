@@ -1,0 +1,109 @@
+{
+  "title": "Why Unpaid Bills Hit Different: The Credit Trap",
+  "hook_text": "WHY UNPAID BILLS HIT DIFFERENT",
+  "beats": [
+    {
+      "say": "You didn't feel the cost until the paper bill showed up in your mailbox.",
+      "callout": "",
+      "visual": "Extreme close low angle of an unopened white envelope lying flat on wet asphalt under cold amber sodium light."
+    },
+    {
+      "say": "Swiping plastic uncouples the joy of buying from the immediate pain of parting with cash.",
+      "callout": "",
+      "visual": "High angle silhouette of a gloved hand tapping an unbranded matte black card onto a terminal in pouring rain."
+    },
+    {
+      "say": "Why does deferring the payment trick your mind into treating real debt like monopoly money?",
+      "callout": "PAIN OF PAYING",
+      "visual": "Blue hour extreme wide shot of an empty concrete underpass illuminated by a single flickering fluorescent light."
+    },
+    {
+      "say": "Most people assume that simply knowing this mental framing trick protects them from overspending.",
+      "callout": "",
+      "visual": "Low angle silhouette of a solitary figure walking past massive brutalist concrete pillars at dusk."
+    },
+    {
+      "say": "It doesn't. Psychological awareness doesn't shave a single penny off your balance when it's due.",
+      "callout": "AWARENESS VS COST",
+      "visual": "Extreme close-up of dark water rippling over rusted industrial steel plates in cold evening light."
+    },
+    {
+      "say": "So what happens when that invisible swipe sits on your credit card at 24% APR?",
+      "callout": "",
+      "visual": "Extreme wide shot of an empty wet highway at night cutting through dense fog under towering overhead lamps."
+    },
+    {
+      "say": "The Rule of 72 proves that at 24% interest, your debt doubles every 3 years.",
+      "callout": "DOUBLES EVERY 3 YEARS",
+      "visual": "Low angle shot looking up at a towering concrete bridge support lit by harsh industrial floodlights."
+    },
+    {
+      "say": "Leave a $3,000 balance on minimum payments, and it takes 183 months to finish paying.",
+      "callout": "",
+      "visual": "High angle shot of a solitary bare metal desk under a single hanging lightbulb in a cavernous warehouse."
+    },
+    {
+      "say": "That's roughly 15 years of payments, handing the bank $4,887 in pure interest alone.",
+      "callout": "$4,887 IN INTEREST",
+      "visual": "Extreme close-up of heavy iron chains hanging taut against a dark concrete wall in blue shadow."
+    },
+    {
+      "say": "How do you shatter the illusion before compound interest quietly drains your hard-earned paycheck?",
+      "callout": "",
+      "visual": "Tiny human silhouette standing on a high windswept ridge line against a stormy twilight horizon."
+    },
+    {
+      "say": "Stepping up to $300 a month clears that $3,000 in 12 months with $381 interest.",
+      "callout": "$381 VS $4,887",
+      "visual": "Low angle shot of two massive shipping containers stacked on rain-slick harbor asphalt at night."
+    },
+    {
+      "say": "Frame every transaction as instant cash leaving your pocket the exact second you swipe it.",
+      "callout": "",
+      "visual": "Extreme close-up of a solitary solid brass key resting on a wet slab of slate in blue hour."
+    },
+    {
+      "say": "Follow for the money rules school never taught you, before the next bill shows up.",
+      "callout": "",
+      "visual": "Blue hour extreme wide shot of a solitary figure standing at the edge of a wet concrete pier over open water."
+    }
+  ],
+  "caption": "Delaying the payment doesn't delay the math. Here is why unpaid bills hit so hard.\n#money #personalfinance #debtfreejourney #creditcarddebt #moneypsychology",
+  "description": "Deferred costs remove the friction of spending, but awareness alone won't lower your balance. See how minimum payments turn a $3,000 credit card bill into $4,887 in interest and how to break the psychological trap.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#debtfreejourney",
+    "#creditcarddebt",
+    "#moneypsychology"
+  ],
+  "first_comment": "Do you feel the cost more when paying with physical cash versus card?",
+  "facts": [
+    {
+      "claim": "At 24% interest, debt doubles every 3 years according to the Rule of 72.",
+      "basis": "Rule of 72 fact sheet entry: 72 / 24 = 3 years."
+    },
+    {
+      "claim": "A $3,000 balance at 24% APR on minimum payments takes 183 months and costs $4,887 in interest.",
+      "basis": "Fact sheet entry: $3,000 credit card at 24% APR paying only the minimum (1% + interest, min $25) takes 183 months (~15 years) and $4,887 interest."
+    },
+    {
+      "claim": "A $3,000 balance at 24% APR paid at $300/month takes 12 months and costs $381 in interest.",
+      "basis": "Fact sheet entry: Same $3,000 at 24% paying $300/month takes 12 months and $381 interest."
+    }
+  ],
+  "source": "llm",
+  "pillar": "psychology",
+  "look": "",
+  "loop_map": {
+    "stakes": "A delayed bill uncouples the pain of spending from the true long-term financial cost.",
+    "big_question": "Why does deferring payment trick your mind into treating debt like it's free?",
+    "assume": "Knowing about this psychological bias protects you from overspending.",
+    "reveal": "Awareness alone doesn't reduce the debt, leaving you vulnerable to compounding 24% APR.",
+    "rehook_beats": [
+      6,
+      10
+    ],
+    "payoff_beat": 11
+  }
+}

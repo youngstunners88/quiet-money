@@ -1,0 +1,39 @@
+{
+  "id": "2026-11-11-s2-psychology-why-the-unpaid-bill-hits-differe",
+  "pillar": "psychology",
+  "topic": "Why the Unpaid Bill Hits Different",
+  "day": "2026-11-11",
+  "slot": 2,
+  "status": "visualized",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-11-11T09:41:00Z",
+      "words": 191
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-11-11T09:41:37Z",
+      "seconds": 63.849,
+      "provider": "gemini"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-11-11T09:42:03Z"
+    }
+  ],
+  "artifacts": {
+    "angle": "Framing can make deferred costs feel less emotionally real than immediate ones, but the honest catch is that awareness alone does not make the payment smaller.",
+    "hook": "You didn't feel the cost until the bill showed up.",
+    "title": "Why Unpaid Bills Hit Different: The Credit Trap",
+    "style": "cinematic"
+  },
+  "scores": {},
+  "cost": {
+    "tts:gemini:chars": 1129
+  },
+  "notes": []
+}

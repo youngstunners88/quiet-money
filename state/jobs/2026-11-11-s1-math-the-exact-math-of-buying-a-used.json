@@ -4,13 +4,64 @@
   "topic": "The exact math of buying a used car with cash versus financing",
   "day": "2026-11-11",
   "slot": 1,
-  "status": "planned",
-  "history": [],
+  "status": "held",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-11-11T09:34:54Z",
+      "words": 190
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-11-11T09:36:39Z",
+      "seconds": 65.556,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-11-11T09:37:03Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-11-11T09:39:41Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-11-11T09:39:41Z",
+      "score": 85
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-11-11T09:39:42Z"
+    },
+    {
+      "from": "packaged",
+      "to": "held",
+      "ts": "2026-11-11T09:39:42Z"
+    }
+  ],
   "artifacts": {
     "angle": "Comparing the total cash outflow of a 5% loan versus paying outright, revealing the exact interest cost over 60 months.",
-    "hook": "You think paying cash for a car saves you money, but the actual math on a $25,000 purchase proves you might be richer keeping the cash."
+    "hook": "You think paying cash for a car saves you money, but the actual math on a $25,000 purchase proves you might be richer keeping the cash.",
+    "title": "The $25,000 Used Car Cash vs Loan Math",
+    "style": "cinematic",
+    "video": "/home/user/quiet-money/production/output/2026-11-11/2026-11-11-s1-math-the-exact-math-of-buying-a-used/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-11-11/2026-11-11-s1-math-the-exact-math-of-buying-a-used/cover.jpg"
   },
-  "scores": {},
-  "cost": {},
-  "notes": []
+  "scores": {
+    "gauntlet": 85,
+    "passed": false
+  },
+  "cost": {
+    "tts:edge:chars": 1080
+  },
+  "notes": [
+    "held for review: judge_facts"
+  ]
 }

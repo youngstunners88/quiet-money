@@ -1,0 +1,97 @@
+{
+  "title": "The $25,000 Used Car Cash vs Loan Math",
+  "hook_text": "CASH FOR A CAR WASTES IT",
+  "beats": [
+    {
+      "say": "You think paying cash for a used car saves you money, but the actual math on a $25,000 purchase proves you might be richer keeping the cash.",
+      "callout": "",
+      "visual": "Extreme wide shot of a wet asphalt highway under cold sodium lights at night."
+    },
+    {
+      "say": "Most people assume parting with $25,000 upfront avoids all bank fees and interest charges.",
+      "callout": "CASH VS LOAN",
+      "visual": "Low angle shot of heavy rain splashing on dark, empty concrete."
+    },
+    {
+      "say": "But why does keeping your liquid cash in reserve actually change your net worth over a 60 month period?",
+      "callout": "",
+      "visual": "Silhouettes of industrial cranes cutting against a foggy blue hour sky."
+    },
+    {
+      "say": "The assumption is that a cash buyer pays zero extra dollars to acquire the vehicle.",
+      "callout": "ZERO EXTRAS",
+      "visual": "Close-up of a lone hand resting on a cold steel bridge rail."
+    },
+    {
+      "say": "The reality is that locking up $25,000 in a depreciating asset destroys your immediate cash flow.",
+      "callout": "ASSET VS DRAIN",
+      "visual": "Extreme close-up of dark water droplets sliding down a frosted window pane."
+    },
+    {
+      "say": "If you take a 5% loan instead and invest that same cash, what happens to your total wealth?",
+      "callout": "",
+      "visual": "High angle shot looking down at an empty underpass at night."
+    },
+    {
+      "say": "Consider what happens if you invest $500 a month at an 8% annual return over time.",
+      "callout": "$500 A MONTH",
+      "visual": "Shot of rough open water reflecting a distant amber light."
+    },
+    {
+      "say": "At 8% a year, investing $500 monthly for 30 years reaches $745,180 total.",
+      "callout": "$745,180",
+      "visual": "Single practical light cutting through deep fog on a dark ridge line."
+    },
+    {
+      "say": "Your car loan costs you interest, but your retained cash keeps compounding in the market.",
+      "callout": "COMPOUNDING",
+      "visual": "Low angle shot of a massive concrete tower edge cutting a dark sky."
+    },
+    {
+      "say": "When you factor in loan interest against potential market growth, the math flips entirely.",
+      "callout": "THE MATH FLIPS",
+      "visual": "Extreme wide shot of a solitary figure walking across a wet pier."
+    },
+    {
+      "say": "Keep your liquidity, finance at a low rate, and let your capital work elsewhere.",
+      "callout": "",
+      "visual": "Cold fluorescent lights glowing above an empty industrial parking lot."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "Silhouette of a person walking away down a dark, rain-slick street."
+    }
+  ],
+  "caption": "The hidden math of buying a car with cash vs financing. #moneytips #personalfinance #wealth #carbuying #finance",
+  "description": "Breaking down the exact math of a $25,000 cash car purchase versus financing and investing your capital.",
+  "hashtags": [
+    "#moneytips",
+    "#personalfinance",
+    "#wealth",
+    "#carbuying",
+    "#finance"
+  ],
+  "first_comment": "Would you rather pay cash for a car or keep your liquidity? Let us know below.",
+  "facts": [
+    {
+      "claim": "$500/month invested for 30 years at 8%/yr reaches $745,180",
+      "basis": "$500/month invested for 30 years at 8%/yr (monthly compounding) = $745,180 (you put in $180,000)"
+    }
+  ],
+  "source": "llm",
+  "pillar": "math",
+  "look": "",
+  "loop_map": {
+    "stakes": "A $25,000 used car purchase tied up in cash versus financing.",
+    "big_question": "Why does keeping your liquid cash in reserve actually change your net worth over a 60 month period?",
+    "assume": "Paying cash saves you all bank fees and interest.",
+    "reveal": "Locking up cash in a depreciating asset halts compounding growth.",
+    "rehook_beats": [
+      3,
+      6,
+      9
+    ],
+    "payoff_beat": 11
+  }
+}
