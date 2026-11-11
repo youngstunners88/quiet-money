@@ -4,7 +4,7 @@
   "topic": "Planning fallacy: why the big expense always costs more than planned",
   "day": "2026-11-09",
   "slot": 0,
-  "status": "visualized",
+  "status": "held",
   "history": [
     {
       "from": "planned",
@@ -23,17 +23,45 @@
       "from": "voiced",
       "to": "visualized",
       "ts": "2026-11-09T09:20:54Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-11-11T09:24:43Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-11-11T09:24:43Z",
+      "score": 92
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-11-11T09:24:44Z"
+    },
+    {
+      "from": "packaged",
+      "to": "held",
+      "ts": "2026-11-11T09:24:44Z"
     }
   ],
   "artifacts": {
     "angle": "name the bias (people underestimate the cost and time of their own plans, even after past overruns), show it (a move, a repair, a holiday), give one counter-move: plan from what the last similar thing really cost; no study figure claimed",
     "hook": "The repair always costs more than the plan. That's a known bias, not bad luck.",
     "title": "Why Every Big Expense Costs More Than Planned",
-    "style": "cinematic"
+    "style": "cinematic",
+    "video": "/home/user/quiet-money/production/output/2026-11-09/2026-11-09-s0-psychology-planning-fallacy-why-the-big-exp/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-11-09/2026-11-09-s0-psychology-planning-fallacy-why-the-big-exp/cover.jpg"
   },
-  "scores": {},
+  "scores": {
+    "gauntlet": 92,
+    "passed": false
+  },
   "cost": {
     "tts:gemini:chars": 1053
   },
-  "notes": []
+  "notes": [
+    "held for review: originality"
+  ]
 }

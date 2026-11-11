@@ -4,7 +4,7 @@
   "topic": "Minimum payments on $3,000 at 22%: about 15 years",
   "day": "2026-11-08",
   "slot": 0,
-  "status": "visualized",
+  "status": "held",
   "history": [
     {
       "from": "planned",
@@ -23,17 +23,45 @@
       "from": "voiced",
       "to": "visualized",
       "ts": "2026-11-08T09:37:09Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-11-11T09:22:05Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-11-11T09:22:06Z",
+      "score": 94
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-11-11T09:22:06Z"
+    },
+    {
+      "from": "packaged",
+      "to": "held",
+      "ts": "2026-11-11T09:22:06Z"
     }
   ],
   "artifacts": {
     "angle": "paying only the minimum (1% plus interest, at least $25): 180 months and $4,433 interest (moneymath card_minimum_payoff)",
     "hook": "A $3,000 balance can outlast your car, your job and your phone.",
     "title": "The $3,000 Credit Card Trap Hidden in Plain Sight",
-    "style": "cinematic"
+    "style": "cinematic",
+    "video": "/home/user/quiet-money/production/output/2026-11-08/2026-11-08-s0-math-minimum-payments-on-3-000-at-22/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-11-08/2026-11-08-s0-math-minimum-payments-on-3-000-at-22/cover.jpg"
   },
-  "scores": {},
+  "scores": {
+    "gauntlet": 94,
+    "passed": false
+  },
   "cost": {
     "tts:edge:chars": 1640
   },
-  "notes": []
+  "notes": [
+    "held for review: originality"
+  ]
 }

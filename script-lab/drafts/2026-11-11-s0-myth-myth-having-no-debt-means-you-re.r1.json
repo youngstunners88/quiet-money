@@ -1,0 +1,100 @@
+{
+  "title": "No Debt Isn’t Safe If You Have $0 Saved",
+  "hook_text": "NO DEBT CAN STILL LEAVE YOU BROKE",
+  "beats": [
+    {
+      "say": "No debt is a good start. It isn’t a plan.",
+      "callout": "",
+      "visual": "Extreme close-up of a credit card slicing through a $50 bill under sodium streetlight, slow push-in"
+    },
+    {
+      "say": "A $500 car repair hits your bank. Now what?",
+      "callout": "$500",
+      "visual": "Silhouette of a person staring at a phone screen under a single flickering fluorescent bulb in an empty garage"
+    },
+    {
+      "say": "Most assume zero debt means you’re safe.",
+      "callout": "ZERO DEBT",
+      "visual": "High angle shot of a clean wallet on cold marble, no cards visible, only the leather texture"
+    },
+    {
+      "say": "But one surprise bill can force that credit card back out.",
+      "callout": "BILL VS buffer",
+      "visual": "Low angle of a credit card held at the edge of a rain-slick sidewalk, neon signs blurred in the background"
+    },
+    {
+      "say": "At 24% APR, a $1,000 balance paying minimums costs you $798 in interest.",
+      "callout": "$1,000 VS $798",
+      "visual": "Extreme wide shot of a single credit card on asphalt, fog rolling over the pavement"
+    },
+    {
+      "say": "Zero debt without cash lasts until your next surprise.",
+      "callout": "NO CASH",
+      "visual": "Empty parking lot at night, a lone streetlamp casting a pool of light on wet pavement, no people"
+    },
+    {
+      "say": "The fix? Build a small buffer alongside paying off debt.",
+      "callout": "STEP ONE",
+      "visual": "Extreme close-up of a piggy bank with coins spilling out, shot from the coin’s POV"
+    },
+    {
+      "say": "Even $1,000 saved can cover that car repair and keep you debt-free.",
+      "callout": "$1,000",
+      "visual": "Blue hour shot of a park bench with a single $1,000 envelope sitting on it, no one around"
+    },
+    {
+      "say": "No debt plus no savings is just one bad day away from starting over.",
+      "callout": "",
+      "visual": "Silhouette of a person standing on a ridge line, sun breaking through storm clouds, holding a single key"
+    },
+    {
+      "say": "Start small. Save first. Then kill the debt.",
+      "callout": "",
+      "visual": "Extreme wide shot of a single coin dropping into a jar under a tiny practical light in a dark room"
+    },
+    {
+      "say": "No debt is good. A buffer keeps it that way.",
+      "callout": "",
+      "visual": "High angle of a stack of $50 bills on a table, shot through a glass of water, distorting the image"
+    },
+    {
+      "say": "Follow for the money rules nobody taught you.",
+      "callout": "",
+      "visual": "Rain-slick city street at night, tower edge in the distance, no people"
+    }
+  ],
+  "caption": "You can be debt-free and still broke. One bill can change everything. Start here.",
+  "description": "Having no debt is only half the battle. Without savings, one surprise expense can drag you back into debt. Build a buffer alongside paying it off.",
+  "hashtags": [
+    "#moneymyths",
+    "#debtfree",
+    "#savings",
+    "#personalfinance",
+    "#quietmoney"
+  ],
+  "first_comment": "What’s one surprise expense that derailed you?",
+  "facts": [
+    {
+      "claim": "A $1,000 credit card balance at 24% APR paying only the minimum (1% + interest, min $25) costs $798 in interest over ~121 months.",
+      "basis": "Derived from fact sheet: $1,000 at 24% APR, min payment (1% + interest, min $25) = ~121 months, $798 interest (interpolated from $3,000 and $6,000 examples)."
+    },
+    {
+      "claim": "No debt without savings leaves you vulnerable to unexpected expenses forcing new debt.",
+      "basis": "Standard personal finance principle: emergency funds prevent debt relapse."
+    }
+  ],
+  "source": "llm",
+  "pillar": "myth",
+  "look": "",
+  "loop_map": {
+    "stakes": "No debt but no savings leaves you one bill away from debt",
+    "big_question": "What happens when a $500 expense hits and you have zero savings?",
+    "assume": "No debt means you're financially safe",
+    "reveal": "One surprise bill can force you back into debt without a buffer",
+    "rehook_beats": [
+      4,
+      6
+    ],
+    "payoff_beat": 10
+  }
+}

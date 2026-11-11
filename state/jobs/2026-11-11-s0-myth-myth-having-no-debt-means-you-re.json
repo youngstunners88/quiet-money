@@ -4,13 +4,57 @@
   "topic": "Myth: having no debt means you're doing fine",
   "day": "2026-11-11",
   "slot": 0,
-  "status": "planned",
-  "history": [],
+  "status": "packaged",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-11-11T09:23:56Z",
+      "words": 185
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-11-11T09:24:40Z",
+      "seconds": 64.482,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-11-11T09:25:27Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-11-11T09:29:15Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-11-11T09:29:15Z",
+      "score": 94
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-11-11T09:29:16Z"
+    }
+  ],
   "artifacts": {
     "angle": "name the belief; having no debt is good, but with no savings one surprise bill can start new debt; counter-move: a small buffer, built alongside; no figure claimed",
-    "hook": "No debt is a good start. It isn't a plan."
+    "hook": "No debt is a good start. It isn't a plan.",
+    "title": "Why Having Zero Debt Isn't Enough",
+    "style": "cinematic",
+    "video": "/home/user/quiet-money/production/output/2026-11-11/2026-11-11-s0-myth-myth-having-no-debt-means-you-re/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-11-11/2026-11-11-s0-myth-myth-having-no-debt-means-you-re/cover.jpg"
   },
-  "scores": {},
-  "cost": {},
+  "scores": {
+    "gauntlet": 94,
+    "passed": true
+  },
+  "cost": {
+    "tts:edge:chars": 1107
+  },
   "notes": []
 }
