@@ -1,0 +1,16 @@
+{
+  "id": "2026-11-13-s0-math-trading-a-weekly-restaurant-meal",
+  "pillar": "math",
+  "topic": "Trading a weekly restaurant meal for an index fund contribution",
+  "day": "2026-11-13",
+  "slot": 0,
+  "status": "planned",
+  "history": [],
+  "artifacts": {
+    "angle": "Calculating the 30-year compounding result of redirecting $50 a week into a broad market fund assuming an 8% return.",
+    "hook": "That $50 Sunday dinner isn't costing you fifty bucks; it's quietly stealing $340,000 from your future self."
+  },
+  "scores": {},
+  "cost": {},
+  "notes": []
+}
