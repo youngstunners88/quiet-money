@@ -1,0 +1,96 @@
+{
+  "title": "The $745,180 Car Payment Trap",
+  "hook_text": "YOUR CAR PAYMENT IS A TRAP",
+  "beats": [
+    {
+      "say": "Your $500 monthly car payment isn't a normal bill. It's a permanent subscription to staying middle class.",
+      "callout": "",
+      "visual": "Low angle shot of a sleek black sedan parked under flickering sodium streetlights on wet asphalt at night."
+    },
+    {
+      "say": "After 60 long months of payments, most drivers trade it in and reset the loan clock back to zero.",
+      "callout": "$500 / MONTH",
+      "visual": "Extreme wide shot of an empty highway underpass in heavy rain with blurred red tail lights in blue hour fog."
+    },
+    {
+      "say": "Most people assume a shiny new car builds status, but where does that cash actually end up?",
+      "callout": "",
+      "visual": "Silhouette of a driver sitting inside a parked vehicle at midnight, cold fluorescent light cutting through the window."
+    },
+    {
+      "say": "It doesn't build equity. It quietly evaporates into brutal depreciation before your very first oil change.",
+      "callout": "EQUITY VS DEPRECIATION",
+      "visual": "High angle shot of a massive empty industrial parking lot covered in dark rainwater."
+    },
+    {
+      "say": "What if you broke the cycle, buying a reliable 5-year-old vehicle in cash instead?",
+      "callout": "",
+      "visual": "Extreme close up of a person's hand holding worn metal car keys over wet asphalt at dusk."
+    },
+    {
+      "say": "STEP ONE: skip the new car smell so you can keep full control of your monthly paycheck.",
+      "callout": "STEP ONE",
+      "visual": "Wide shot of a lonely commuter train track disappearing into dense morning fog."
+    },
+    {
+      "say": "STEP TWO: take that exact $500 monthly car note and redirect it straight into a low-cost index fund.",
+      "callout": "STEP TWO",
+      "visual": "Low angle silhouette of a glass financial tower rising into a stormy grey skyline."
+    },
+    {
+      "say": "So what does 30 years of driving used vehicles actually buy your financial future?",
+      "callout": "",
+      "visual": "Extreme wide shot of a single figure standing on the ridge line above an empty highway at night."
+    },
+    {
+      "say": "At $500 a month invested at 8% a year, you'll put in $180,000 of your own money.",
+      "callout": "$180,000 DEPOSITED",
+      "visual": "Cold fluorescent lighting shining down an empty corridor of grey concrete columns."
+    },
+    {
+      "say": "After 30 years, that account compounding at 8% a year grows to a massive $745,180.",
+      "callout": "$745,180 TOTAL",
+      "visual": "High angle shot of a sleek modern high-rise reflected in rain-slicked pavement."
+    },
+    {
+      "say": "You're trading nearly $3/4 of a million in real wealth for a temporary smell and a leather seat.",
+      "callout": "",
+      "visual": "Single practical light illuminating an empty leather car seat inside a dark garage."
+    },
+    {
+      "say": "Stop financing status you don't own. Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "Cinematic silhouette of a person standing atop a damp skyscraper roof edge at blue hour."
+    }
+  ],
+  "caption": "Car payments are keeping you broke. Here is how redirecting a $500 car note builds real wealth over time.\n\n#money #personalfinance #wealthbuilding #carfinancing #investing",
+  "description": "Financing or leasing a new car every five years creates an endless monthly cycle that drains your income. By driving a reliable used car and investing the $500 monthly payment at an 8% annual return, that cash can compound into over $745,000 in 30 years.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#wealthbuilding",
+    "#carfinancing",
+    "#investing"
+  ],
+  "first_comment": "Are you currently paying off a car loan or driving a paid-off vehicle?",
+  "facts": [
+    {
+      "claim": "$500/month invested for 30 years at 8%/yr (monthly compounding) grows to $745,180 on $180,000 deposited.",
+      "basis": "Standard compound interest formula with monthly compounding ($500/mo, 8% annual interest, 360 periods)."
+    }
+  ],
+  "source": "llm",
+  "pillar": "myth",
+  "look": "",
+  "loop_map": {
+    "stakes": "Your monthly $500 car note quietly keeps you trapped in the middle class.",
+    "big_question": "Where does your monthly car payment money actually go?",
+    "assume": "A car payment is a normal monthly bill required to drive a safe car.",
+    "reveal": "Car payments evaporate into depreciation, while investing $500/month at 8% for 30 years builds $745,180.",
+    "rehook_beats": [
+      5,
+      8
+    ],
+    "payoff_beat": 10
+  }
+}

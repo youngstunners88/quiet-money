@@ -4,13 +4,57 @@
   "topic": "Trading a weekly restaurant meal for an index fund contribution",
   "day": "2026-11-13",
   "slot": 0,
-  "status": "planned",
-  "history": [],
+  "status": "packaged",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-11-13T09:20:49Z",
+      "words": 183
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-11-13T09:21:02Z",
+      "seconds": 71.7,
+      "provider": "elevenlabs"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-11-13T09:21:18Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-11-13T09:25:04Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-11-13T09:25:04Z",
+      "score": 96
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-11-13T09:25:05Z"
+    }
+  ],
   "artifacts": {
     "angle": "Calculating the 30-year compounding result of redirecting $50 a week into a broad market fund assuming an 8% return.",
-    "hook": "That $50 Sunday dinner isn't costing you fifty bucks; it's quietly stealing $340,000 from your future self."
+    "hook": "That $50 Sunday dinner isn't costing you fifty bucks; it's quietly stealing $340,000 from your future self.",
+    "title": "The $50 Dinner Habit That Costs $298,072",
+    "style": "cinematic",
+    "video": "/home/user/quiet-money/production/output/2026-11-13/2026-11-13-s0-math-trading-a-weekly-restaurant-meal/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-11-13/2026-11-13-s0-math-trading-a-weekly-restaurant-meal/cover.jpg"
   },
-  "scores": {},
-  "cost": {},
+  "scores": {
+    "gauntlet": 96,
+    "passed": true
+  },
+  "cost": {
+    "tts:elevenlabs:chars": 1078
+  },
   "notes": []
 }

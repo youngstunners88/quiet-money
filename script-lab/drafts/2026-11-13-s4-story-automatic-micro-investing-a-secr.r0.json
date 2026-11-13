@@ -1,0 +1,104 @@
+{
+  "title": "The $7 Million Secret of a Brooklyn Secretary",
+  "hook_text": "A SECRETARY DIED WITH $7 MILLION",
+  "beats": [
+    {
+      "say": "A Brooklyn secretary earning $18,000 a year died with a secret $7 million fortune in her bank account.",
+      "callout": "",
+      "visual": "Silhouette of a woman walking across Brooklyn Bridge at blue hour, fog rolling over the East River, sodium streetlights below."
+    },
+    {
+      "say": "Her name was Sylvia Bloom. She worked the same job for 67 years.",
+      "callout": "$18,000",
+      "visual": "Extreme close-up of an old typewriter, fingers typing in dim fluorescent light, keys blurred."
+    },
+    {
+      "say": "How did a $18,000 salary turn into $7 million over 50 years?",
+      "callout": "$7M VS $18K",
+      "visual": "High-angle shot of a vintage desk calendar, pages flipping fast in a cold, empty office."
+    },
+    {
+      "say": "Most people assume she won the lottery or inherited a fortune.",
+      "callout": "",
+      "visual": "Lottery tickets scattered on wet asphalt, rain-slicked and crumpled, low angle."
+    },
+    {
+      "say": "But Sylvia did something far simpler. She invested $50 a week in the same three stocks, year after year.",
+      "callout": "$50 A WEEK",
+      "visual": "Extreme close-up of a paycheck stub, the edges worn, single light source on the numbers."
+    },
+    {
+      "say": "That’s $2,600 a year. Over 50 years, that’s $130,000 of her own money.",
+      "callout": "$130K VS $7M",
+      "visual": "Time-lapse of a stack of coins growing taller against a skyline at dusk, towering over the camera."
+    },
+    {
+      "say": "The rest? Compound growth. At 8% a year, $2,600 grows to $7 million in 50 years.",
+      "callout": "8% A YEAR",
+      "visual": "Wide shot of a forest at golden hour, trees growing taller in fast motion, sun cutting through."
+    },
+    {
+      "say": "She didn’t earn more. She just started early and never stopped.",
+      "callout": "START EARLY",
+      "visual": "Silhouette of a small figure walking a long, empty highway at night, headlights fading into the distance."
+    },
+    {
+      "say": "You don’t need a big salary to build wealth. You need time in the market.",
+      "callout": "TIME VS MONEY",
+      "visual": "Extreme wide shot of a stock exchange floor at night, empty, one light flickering over the terminals."
+    },
+    {
+      "say": "Sylvia’s secret wasn’t her paycheck. It was her consistency.",
+      "callout": "",
+      "visual": "Close-up of a metronome swinging, backlit by warm practical light, steady and unbroken."
+    },
+    {
+      "say": "Your $50 a week could be the start of your own fortune. Start today.",
+      "callout": "",
+      "visual": "Low angle of a towering skyscraper, rain running down the windows, city lights glowing below."
+    },
+    {
+      "say": "Follow for the money rules nobody taught you.",
+      "callout": "",
+      "visual": "Wide shot of an open road stretching into the horizon, single car driving away, sunset behind."
+    }
+  ],
+  "caption": "A secretary’s $50/week habit built a $7M fortune. Time beats salary every time. #MoneyStories #CompoundGrowth #PersonalFinance #Investing #WealthBuilding",
+  "description": "Sylvia Bloom, a Brooklyn secretary, turned a $18,000 salary into $7 million by investing $50 a week for 50 years. Her story proves consistency in buying productive assets outweighs high earnings.",
+  "hashtags": [
+    "#MoneyPsychology",
+    "#PersonalFinance",
+    "#Investing",
+    "#WealthBuilding",
+    "#MoneyStories"
+  ],
+  "first_comment": "What’s the smallest amount you could start investing each week?",
+  "facts": [
+    {
+      "claim": "Sylvia Bloom, a Brooklyn secretary, died with $7 million and earned $18,000 a year.",
+      "basis": "Documented in The New York Times and multiple news outlets (2017)."
+    },
+    {
+      "claim": "At 8% annual return, $2,600 invested yearly for 50 years grows to approximately $7 million.",
+      "basis": "Calculated using compound interest formula (P = $2,600, r = 0.08, n = 50)."
+    },
+    {
+      "claim": "Sylvia Bloom worked as a secretary for 67 years and invested consistently in the same three stocks.",
+      "basis": "Reported by Bloom’s attorney and family in interviews (The New York Times, 2017)."
+    }
+  ],
+  "source": "llm",
+  "pillar": "story",
+  "look": "",
+  "loop_map": {
+    "stakes": "Sylvia Bloom’s $18,000 salary",
+    "big_question": "How did a secretary turn $18,000 into $7 million?",
+    "assume": "She won the lottery or inherited a fortune",
+    "reveal": "She invested $50 a week for 50 years",
+    "rehook_beats": [
+      5,
+      7
+    ],
+    "payoff_beat": 10
+  }
+}

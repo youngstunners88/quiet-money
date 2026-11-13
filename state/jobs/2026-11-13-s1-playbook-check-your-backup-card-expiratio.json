@@ -1,0 +1,60 @@
+{
+  "id": "2026-11-13-s1-playbook-check-your-backup-card-expiratio",
+  "pillar": "playbook",
+  "topic": "Check Your Backup Card Expiration",
+  "day": "2026-11-13",
+  "slot": 1,
+  "status": "packaged",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-11-13T09:28:05Z",
+      "words": 186
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-11-13T09:28:15Z",
+      "seconds": 63.665,
+      "provider": "elevenlabs"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-11-13T09:28:38Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-11-13T09:31:32Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-11-13T09:31:32Z",
+      "score": 98
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-11-13T09:31:33Z"
+    }
+  ],
+  "artifacts": {
+    "angle": "An unused backup card can expire while sitting in a drawer, so the task is to verify expiration and status before an account recovery or replacement need, though expiration alone may not stop every payment method.",
+    "hook": "Your wallet has a card you forgot was expired.",
+    "title": "Check Your Backup Card Before It Fails You",
+    "style": "cinematic",
+    "video": "/home/user/quiet-money/production/output/2026-11-13/2026-11-13-s1-playbook-check-your-backup-card-expiratio/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-11-13/2026-11-13-s1-playbook-check-your-backup-card-expiratio/cover.jpg"
+  },
+  "scores": {
+    "gauntlet": 98,
+    "passed": true
+  },
+  "cost": {
+    "tts:elevenlabs:chars": 1125
+  },
+  "notes": []
+}

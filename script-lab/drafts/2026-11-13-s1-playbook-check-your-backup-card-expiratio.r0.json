@@ -1,0 +1,91 @@
+{
+  "title": "The Backup Card Sitting In Your Drawer",
+  "hook_text": "YOUR WALLET HAS AN EXPIRED CARD",
+  "beats": [
+    {
+      "say": "Your wallet has a card you forgot was expired.",
+      "callout": "",
+      "visual": "Extreme close-up of a leather wallet edge under cold fluorescent light."
+    },
+    {
+      "say": "It sits in a drawer, untouched for months, while auto-pay tries to charge it.",
+      "callout": "",
+      "visual": "Low angle of a dark wooden desk drawer half-open in blue hour shadow."
+    },
+    {
+      "say": "Why does a quiet piece of plastic suddenly break your monthly bills?",
+      "callout": "BILL BREAK",
+      "visual": "Extreme wide of an empty highway at night under sodium streetlamps."
+    },
+    {
+      "say": "Most people think an expired card stops working on everything right away.",
+      "callout": "ASSUME VS TRUTH",
+      "visual": "Silhouette of a person standing against a foggy city skyline."
+    },
+    {
+      "say": "That is false. Many subscriptions use tokenization, so renewals slip through even after expiry.",
+      "callout": "TOKEN LINK",
+      "visual": "Macro shot of wet asphalt reflecting a single red practical light."
+    },
+    {
+      "say": "Step one. Open your banking app and check every backup card expiry date today.",
+      "callout": "STEP ONE",
+      "visual": "Close-up of hands holding a dark phone in a dim room."
+    },
+    {
+      "say": "Step two. Log into your top 3 recurring accounts and update the numbers.",
+      "callout": "STEP TWO",
+      "visual": "High angle shot of a solitary coffee cup on a cold stone ledge."
+    },
+    {
+      "say": "Step three. Cancel the cards you do not use to stop hidden annual fees cold.",
+      "callout": "STEP THREE",
+      "visual": "Silhouette of a hand dropping a small plastic card into a metal bin."
+    },
+    {
+      "say": "An unmonitored card date leaves you blind when an emergency replacement is needed.",
+      "callout": "FEE DRAIN",
+      "visual": "Extreme close-up of a rusted padlock on a chain in damp fog."
+    },
+    {
+      "say": "Check your backup cards today, update your details, and keep your cash under control.",
+      "callout": "",
+      "visual": "Wide shot of a towering concrete bridge pier under heavy rain."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "Cold fluorescent light reflecting off wet concrete at dusk."
+    }
+  ],
+  "caption": "That forgotten card in your drawer isn't as safe as you think. Check the date before it breaks your next auto-pay. #personalfinance #moneytips #budgeting #financialfreedom #smartmoney",
+  "description": "Unused backup cards expire quietly while subscriptions and auto-pays hang in the balance. Here is a 3-step audit to check your dates and take back control of your accounts.",
+  "hashtags": [
+    "#personalfinance",
+    "#moneytips",
+    "#budgeting",
+    "#financialfreedom",
+    "#smartmoney"
+  ],
+  "first_comment": "When was the last time you checked the expiration date on your backup card?",
+  "facts": [
+    {
+      "claim": "Backup cards expire in drawers while auto-pay and subscriptions may use tokenization or fail silently",
+      "basis": "Standard payment processing and card expiration rules"
+    }
+  ],
+  "source": "llm",
+  "pillar": "playbook",
+  "look": "",
+  "loop_map": {
+    "stakes": "A forgotten backup card sitting in a drawer.",
+    "big_question": "Why does a quiet piece of plastic suddenly break your monthly bills?",
+    "assume": "Most people think an expired card stops working on everything right away.",
+    "reveal": "Many subscriptions use tokenization, so renewals slip through or fail unexpectedly.",
+    "rehook_beats": [
+      3,
+      6
+    ],
+    "payoff_beat": 10
+  }
+}

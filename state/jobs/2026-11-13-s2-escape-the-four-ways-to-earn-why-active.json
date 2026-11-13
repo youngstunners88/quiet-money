@@ -1,0 +1,60 @@
+{
+  "id": "2026-11-13-s2-escape-the-four-ways-to-earn-why-active",
+  "pillar": "escape",
+  "topic": "The Four Ways to Earn: Why Active Income Caps Your Life",
+  "day": "2026-11-13",
+  "slot": 2,
+  "status": "packaged",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-11-13T09:33:45Z",
+      "words": 173
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-11-13T09:34:02Z",
+      "seconds": 62.086,
+      "provider": "elevenlabs"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-11-13T09:36:44Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-11-13T09:39:49Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-11-13T09:39:49Z",
+      "score": 93
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-11-13T09:39:50Z"
+    }
+  ],
+  "artifacts": {
+    "angle": "Exposing the ceiling of trading direct time for dollars versus owning scalable systems.",
+    "hook": "Every single dollar you earn falls into one of four buckets, and three of them guarantee you will always trade your life for a wage.",
+    "title": "The Four Buckets of Income: Why Wages Cap Your Life",
+    "style": "cinematic",
+    "video": "/home/user/quiet-money/production/output/2026-11-13/2026-11-13-s2-escape-the-four-ways-to-earn-why-active/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-11-13/2026-11-13-s2-escape-the-four-ways-to-earn-why-active/cover.jpg"
+  },
+  "scores": {
+    "gauntlet": 93,
+    "passed": true
+  },
+  "cost": {
+    "tts:elevenlabs:chars": 1043
+  },
+  "notes": []
+}
