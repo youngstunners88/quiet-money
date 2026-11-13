@@ -47,7 +47,14 @@
     "title": "The Four Buckets of Income: Why Wages Cap Your Life",
     "style": "cinematic",
     "video": "/home/user/quiet-money/production/output/2026-11-13/2026-11-13-s2-escape-the-four-ways-to-earn-why-active/final.mp4",
-    "cover": "/home/user/quiet-money/production/output/2026-11-13/2026-11-13-s2-escape-the-four-ways-to-earn-why-active/cover.jpg"
+    "cover": "/home/user/quiet-money/production/output/2026-11-13/2026-11-13-s2-escape-the-four-ways-to-earn-why-active/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-11-13/slot3-escape",
+        "post_at": "2026-11-13T15:00:00-05:00"
+      }
+    }
   },
   "scores": {
     "gauntlet": 93,

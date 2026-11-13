@@ -4,13 +4,64 @@
   "topic": "Automatic Micro-Investing: A Secretary’s $7 Million Secret",
   "day": "2026-11-13",
   "slot": 4,
-  "status": "planned",
-  "history": [],
+  "status": "held",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-11-13T09:53:21Z",
+      "words": 137
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-11-13T09:53:36Z",
+      "seconds": 62.365,
+      "provider": "elevenlabs"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-11-13T09:56:21Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-11-13T09:59:38Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-11-13T09:59:38Z",
+      "score": 91
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-11-13T09:59:39Z"
+    },
+    {
+      "from": "packaged",
+      "to": "held",
+      "ts": "2026-11-13T09:59:39Z"
+    }
+  ],
   "artifacts": {
     "angle": "Consistency in purchasing productive assets over fifty years outweighs high earnings.",
-    "hook": "A Brooklyn secretary earning $18,000 a year died with a secret $7 million fortune in her bank account."
+    "hook": "A Brooklyn secretary earning $18,000 a year died with a secret $7 million fortune in her bank account.",
+    "title": "The Secretary Who Out-Earned Wall Street",
+    "style": "cinematic",
+    "video": "/home/user/quiet-money/production/output/2026-11-13/2026-11-13-s4-story-automatic-micro-investing-a-secr/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-11-13/2026-11-13-s4-story-automatic-micro-investing-a-secr/cover.jpg"
   },
-  "scores": {},
-  "cost": {},
-  "notes": []
+  "scores": {
+    "gauntlet": 91,
+    "passed": false
+  },
+  "cost": {
+    "tts:elevenlabs:chars": 784
+  },
+  "notes": [
+    "held for review: originality"
+  ]
 }

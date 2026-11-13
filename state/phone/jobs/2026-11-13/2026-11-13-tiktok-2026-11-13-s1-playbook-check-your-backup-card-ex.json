@@ -1,0 +1,18 @@
+{
+ "id": "2026-11-13-tiktok-2026-11-13-s1-playbook-check-your-backup-card-ex",
+ "kind": "tiktok",
+ "day": "2026-11-13",
+ "key": "2026-11-13-s1-playbook-check-your-backup-card-expiratio",
+ "status": "queued",
+ "created": "2026-11-13T09:59:53+00:00",
+ "recipe": "TikTok upload",
+ "media": [
+  {
+   "source": "production/output/2026-11-13/2026-11-13-s1-playbook-check-your-backup-card-expiratio/final.mp4",
+   "name": "final.mp4"
+  }
+ ],
+ "staged": false,
+ "text": "An unused card sitting in your drawer isn't harmless. Here is how to verify your backup funds today.\n\nFree reset checklist: link in bio.\n\n#personalfinance #moneytips #financialliteracy #creditcards #quietmoney\n\nEducation, not financial advice.",
+ "ai_label": "AI-generated content: on"
+}

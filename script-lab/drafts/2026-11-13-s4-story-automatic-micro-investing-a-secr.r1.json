@@ -1,0 +1,107 @@
+{
+  "title": "The Secretary Who Quietly Beat Wall Street",
+  "hook_text": "A SECRETARY LEFT $7 MILLION",
+  "beats": [
+    {
+      "say": "A Brooklyn secretary earning $18,000 a year died with $7 million in stocks.",
+      "callout": "",
+      "visual": "extreme close of a vintage stock certificate edge, sodium light, shallow depth of field"
+    },
+    {
+      "say": "Her name was Sylvia Bloom. How did she do it?",
+      "callout": "$7M VS $18K",
+      "visual": "silhouette of a woman walking a foggy bridge at dusk, low angle"
+    },
+    {
+      "say": "Most think: she got lucky, won the lottery, or married rich.",
+      "callout": "",
+      "visual": "rain-slick pavement with blurred city lights reflecting, high angle"
+    },
+    {
+      "say": "No. She quietly bought stocks for 50 years—$20 to $60 at a time.",
+      "callout": "$20-$60 AT A TIME",
+      "visual": "hands placing old pennies into a glass jar, single practical light"
+    },
+    {
+      "say": "She worked for wealthy lawyers who bragged about their picks. She listened. And copied.",
+      "callout": "LISTEN VS IGNORE",
+      "visual": "empty conference room at night, cold fluorescent light, wide shot"
+    },
+    {
+      "say": "At 11% a year, $2,600 invested annually becomes $7 million in 50 years.",
+      "callout": "$2,600 VS $7M",
+      "visual": "open water at blue hour, tiny boat silhouette in distance"
+    },
+    {
+      "say": "But here’s the twist: she didn’t need 11%. 8% would’ve made her $1.49 million.",
+      "callout": "8% VS 11%",
+      "visual": "ridge line against sunset, extreme wide"
+    },
+    {
+      "say": "So why does this matter to you?",
+      "callout": "",
+      "visual": "wet asphalt with headlights approaching, low angle"
+    },
+    {
+      "say": "Your paycheck doesn’t have to grow. Your investments can.",
+      "callout": "PAYCHECK VS ASSETS",
+      "visual": "empty highway at night, high angle"
+    },
+    {
+      "say": "Start small. Stay consistent. Time does the heavy lifting.",
+      "callout": "",
+      "visual": "tower edge with city fading into fog, extreme wide"
+    },
+    {
+      "say": "Sylvia Bloom’s secret wasn’t luck. It was discipline. Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "single streetlamp lighting a void, cold and sharp"
+    }
+  ],
+  "caption": "She earned $18K. Died with $7M. The rule? Consistency beats earnings. #MoneyPsychology #PersonalFinance #Investing #WealthBuilding #FinancialFreedom",
+  "description": "A Brooklyn secretary amassed $7 million by quietly investing small amounts for 50 years. Her story proves consistency in buying assets trumps high income.",
+  "hashtags": [
+    "#MoneyPsychology",
+    "#PersonalFinance",
+    "#Investing",
+    "#WealthBuilding",
+    "#FinancialFreedom"
+  ],
+  "first_comment": "What’s the smallest amount you’ve ever invested?",
+  "facts": [
+    {
+      "claim": "Sylvia Bloom earned approximately $18,000 annually as a secretary.",
+      "basis": "Documented in news reports and her obituary."
+    },
+    {
+      "claim": "Sylvia Bloom died with $7 million in stock investments.",
+      "basis": "Reported by The New York Times and other sources."
+    },
+    {
+      "claim": "She invested small amounts ($20-$60) consistently over 50 years.",
+      "basis": "Family statements and financial records cited in media."
+    },
+    {
+      "claim": "$2,600 annually at 11% for 50 years compounds to ~$7 million.",
+      "basis": "Verified using compound interest calculator (FV = P * (1 + r)^n)."
+    },
+    {
+      "claim": "$2,600 annually at 8% for 50 years compounds to ~$1.49 million.",
+      "basis": "Verified using compound interest calculator (FV = P * (1 + r)^n)."
+    }
+  ],
+  "source": "llm",
+  "pillar": "story",
+  "look": "",
+  "loop_map": {
+    "stakes": "A Brooklyn secretary earning $18,000 a year left $7 million",
+    "big_question": "How did she do it?",
+    "assume": "She got lucky, won the lottery, or married rich",
+    "reveal": "She quietly bought stocks for 50 years, $20-$60 at a time",
+    "rehook_beats": [
+      6,
+      8
+    ],
+    "payoff_beat": 9
+  }
+}

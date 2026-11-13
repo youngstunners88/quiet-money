@@ -47,7 +47,14 @@
     "title": "Why Driving a New Car Keeps You Poor",
     "style": "cinematic",
     "video": "/home/user/quiet-money/production/output/2026-11-13/2026-11-13-s3-myth-the-lease-trap-why-driving-a-new/final.mp4",
-    "cover": "/home/user/quiet-money/production/output/2026-11-13/2026-11-13-s3-myth-the-lease-trap-why-driving-a-new/cover.jpg"
+    "cover": "/home/user/quiet-money/production/output/2026-11-13/2026-11-13-s3-myth-the-lease-trap-why-driving-a-new/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-11-13/slot4-myth",
+        "post_at": "2026-11-13T18:30:00-05:00"
+      }
+    }
   },
   "scores": {
     "gauntlet": 95,

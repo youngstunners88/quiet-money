@@ -1,0 +1,18 @@
+{
+ "id": "2026-11-13-tiktok-2026-11-13-s0-math-trading-a-weekly-restaurant-m",
+ "kind": "tiktok",
+ "day": "2026-11-13",
+ "key": "2026-11-13-s0-math-trading-a-weekly-restaurant-meal",
+ "status": "queued",
+ "created": "2026-11-13T09:59:53+00:00",
+ "recipe": "TikTok upload",
+ "media": [
+  {
+   "source": "production/output/2026-11-13/2026-11-13-s0-math-trading-a-weekly-restaurant-meal/final.mp4",
+   "name": "final.mp4"
+  }
+ ],
+ "staged": false,
+ "text": "Trading one dinner out for an index fund changes everything over 30 years.\n\nFree reset checklist: link in bio.\n\n#money #personalfinance #investing #compounding #quietmoney #wealth\n\nEducation, not financial advice.",
+ "ai_label": "AI-generated content: on"
+}

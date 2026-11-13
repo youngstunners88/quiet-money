@@ -47,7 +47,14 @@
     "title": "The $50 Dinner Habit That Costs $298,072",
     "style": "cinematic",
     "video": "/home/user/quiet-money/production/output/2026-11-13/2026-11-13-s0-math-trading-a-weekly-restaurant-meal/final.mp4",
-    "cover": "/home/user/quiet-money/production/output/2026-11-13/2026-11-13-s0-math-trading-a-weekly-restaurant-meal/cover.jpg"
+    "cover": "/home/user/quiet-money/production/output/2026-11-13/2026-11-13-s0-math-trading-a-weekly-restaurant-meal/cover.jpg",
+    "publish": {
+      "local": {
+        "mode": "local",
+        "folder": "/home/user/quiet-money/distribution/queue/2026-11-13/slot1-math",
+        "post_at": "2026-11-13T07:30:00-05:00"
+      }
+    }
   },
   "scores": {
     "gauntlet": 96,

@@ -1,0 +1,18 @@
+{
+ "id": "2026-11-13-tiktok-2026-11-13-s2-escape-the-four-ways-to-earn-why-a",
+ "kind": "tiktok",
+ "day": "2026-11-13",
+ "key": "2026-11-13-s2-escape-the-four-ways-to-earn-why-active",
+ "status": "queued",
+ "created": "2026-11-13T09:59:53+00:00",
+ "recipe": "TikTok upload",
+ "media": [
+  {
+   "source": "production/output/2026-11-13/2026-11-13-s2-escape-the-four-ways-to-earn-why-active/final.mp4",
+   "name": "final.mp4"
+  }
+ ],
+ "staged": false,
+ "text": "Trading time for money has a built-in ceiling. Here is how asset ownership changes the math.\n\nFree reset checklist: link in bio.\n\n#money #personalfinance #wealth #ratrace #financialfreedom\n\nEducation, not financial advice.",
+ "ai_label": "AI-generated content: on"
+}
