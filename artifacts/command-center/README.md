@@ -1,0 +1,132 @@
+# Quiet Money Command Center
+
+One page, served from this checkout, that shows the studio's real state and runs the commands that move it. On the computer it is an
+app window; on the phone it is the same page over Wi-Fi or Tailscale.
+
+It is a control surface, not a second system. Every number is read from the files that own it (`state/jobs`, `state/phone`,
+`state/outbound.jsonl`, `state/receipts.jsonl`, `state/ledger.jsonl`, `studio.toml`, `herdr api snapshot`, agent config files). Every
+button runs one existing `python -m faceless ...` or `herdr ...` command. There is no database and no background service of its own.
+
+## Launch
+
+| How | What it does |
+|---|---|
+| App menu: **Quiet Money Command Center** | Runs `scripts/qm-command-center-app.sh` |
+| `scripts/qm-command-center-app.sh` | Starts the server if it is down, then opens a dedicated Chromium app window (class `qm-cc`, own profile in `~/.config/qm-command-center/chromium`), already signed in. Falls back to the default browser. |
+| `scripts/qm-command-center.sh start\|stop\|status\|open\|url` | The server in a herdr workspace named `qm-cc` (a background process when herdr is not running). `start` prints the QR code for the phone. |
+| `python -m faceless serve --init-token` | Once per machine: makes the token (`QM_DASH_TOKEN` in `~/.config/quiet-money/env`). It is never printed. |
+
+After changing code in `faceless/`, restart the server (`stop`, then `start`): it does not reload itself. A restart ends any action
+that is still running.
+
+## What each tab can do
+
+A gold button runs something. A ghost "Copy" button copies a command or a message for you to use elsewhere. Text with a `source:` line
+under it is display only.
+
+| Tab | Button | What runs | Notes |
+|---|---|---|---|
+| Today | **Run today's batch** (tap twice) | `python -m faceless daily --no-publish` | Writes, renders, gates and packs. Nothing is uploaded: YouTube posting is off (CLAUDE.md rule 18) and passed videos reach TikTok through the phone lane. Can run for hours; the button shows "Running". |
+| Today | **Advance phone** | `python -m faceless phone next --push` | Fetches the next phone job and puts its files on the phone. Posting is the phone driver's job; it closes the job with `phone done`. |
+| Today | **Park jobs with no media** | `python -m faceless phone park` | Shown when queued jobs lost their video (the media branch keeps three days). Holds each with the reason so the lane has a head that can run. Undo one with Release after a re-stage. |
+| Today | **Non-stop** toggle | see below | Off by default. |
+| Money | **Write today's brief** | `python -m faceless money` | Writes `outbound/brief/<day>.md`. |
+| Money | Open listing, Open DMs | a link, a tab change | |
+| DMs | **Draft today's DMs** | `python -m faceless dm` | Drafts only. Nothing is ever sent for you. |
+| DMs | **Sent / Replied / Bought / No reply: close** | `python -m faceless dm log <id> <status> [--handle @x]` | Press after you sent or heard back by hand. The handle goes to the command and never to the journal. |
+| DMs | Copy message, Copy | clipboard | |
+| Jobs | **Retry** (failed) | `python -m faceless retry <job_id>` | Starts the job again from where it stopped. Packages; never uploads. |
+| Jobs | **Release: re-run gates** (held) | `python -m faceless retry <job_id>` | Renders again from the files on disk and runs every gate. A pass becomes `packaged`; a fail stays `held` with the reason recorded. |
+| Jobs | **Release** (phone job held) | `python -m faceless phone requeue <id>` | Back to the queue only if its gate is open; otherwise it stays held and says why. |
+| Jobs | **View steps** | reads `/job.json?id=` | The job's own history, the error at the failing step, the gates that failed in its gauntlet report. |
+| Agents | **Focus in herdr / Focus this pane** | `herdr workspace focus <id>`, `herdr agent focus <pane>` | Brings that workspace or agent pane to the front in herdr. |
+| Agents | Copy: `claude`, `codex`, `hermes chat`, `hermes gateway run`, ... | clipboard | |
+| Models | Search box, provider filter | filters the catalog | The tab starts, pulls and switches no model. |
+| Alerts | The gold button on an alert | the same actions as above | Each alert names its fix; when the fix is an action, the button runs it. "Open Jobs" / "Open DMs" takes you to the buttons. |
+
+### Display only, and why
+
+- **Revenue, receipts, offers, spend**: money is counted only from receipts, and a price or a listing is the owner's decision.
+- **Phone jobs blocked by a gate**: each gate is a switch or a daily cap in `studio.toml [phone]`.
+- **Hermes sessions**: read from the session database; message content is never read.
+- **Agent defaults, Ollama, the model catalog**: shown from config files and caches.
+- **Targets**: only the ones written in `studio.toml` (`[production] videos_per_day`, `[outbound] ready_min_per_day`). There is no
+  revenue target, so none is drawn.
+
+### Not wired on purpose
+
+- **Shipping a video that failed a gate.** The only override in the engine is `publish --force`, and it uploads to YouTube, which rule 18
+  forbids. Release re-runs the gates; it cannot overrule them.
+- **Resuming a pause.** Only the owner removes `state/PAUSE` (`python -m faceless pause --resume`).
+- **Starting the Hermes gateway.** It is a long-running service; the page shows `hermes gateway run` to copy.
+
+## After a click
+
+1. The button shows the action's name with "…", and the strip under the header shows it running.
+2. The server answers within about two seconds: either the result, or "running" for something slow. While anything runs the page asks
+   again every two seconds.
+3. When it ends the page reloads the state it changed. The strip shows the last action, its result and its exit code. Tap the strip (or
+   open Alerts) for the activity log, with the command's own error text for anything that failed.
+
+A refusal, a non-zero exit and a timeout are results. They are shown and journaled; nothing fails silently.
+
+What happened is one `CC_ACTION` line per click in `state/journal.jsonl`, the same journal every stage writes. What is running right
+now is held in the server's memory only.
+
+## Non-stop
+
+The rule comes from the Non-Stop Operating Spec (`~/open-device-mcp/nonstop/NON_STOP_OPS.md`): the moment a phone job is closed, the
+next one is handed out with `python -m faceless phone next --push`.
+
+With the toggle on, **this open page** asks the server every 30 seconds what to do. The server decides from the kill switch, the phone
+queue and the journal:
+
+| It says | Meaning |
+|---|---|
+| `run` | The staged job was closed (or nothing is staged): it runs **Advance phone** now. If the head of the queue has lost its video, it runs **Park** instead, so the lane keeps moving. |
+| `waiting` | The next job is already on the phone. It is never pushed twice; it waits for the driver's `phone done`. |
+| `idle` | The queue is empty, or everything left is stopped by a gate or a cap. |
+| `tripped` | Two tries failed in a row. It stops for 30 minutes, then tries once more. Pressing Advance phone yourself, once the cause is fixed, re-arms it. |
+| `paused` | `state/PAUSE` exists. Nothing runs. |
+| `holding` | You are typing in a field on the page. Nothing runs until you leave it. |
+
+It advances the phone lane only. It never starts a batch, retries a job or logs a DM.
+
+It keeps the phone fed; it does not tap the phone. Posting still needs a phone driver recording `phone done` (an agent session using the
+`faceless-phone` skill, or the home host in `tools/phone-host`).
+
+### How to stop it
+
+- Turn the toggle off. The setting is per browser and is off until you turn it on.
+- Close the window. There is no background loop: no open page, no Non-stop.
+- `python -m faceless pause "why"` (creates `state/PAUSE`). This also refuses every other button that moves the pipeline.
+
+## Safety
+
+- The token is required for the page, the data and every action. Buttons need it in the `Authorization` header; the `?t=` link opens the
+  page and nothing else. A request from another origin is refused.
+- Only the names in `faceless/actions.py` can run. Ids must be plain job, draft or pane ids, and commands run without a shell.
+- One action per lane at a time (`phone`, `render`, `desk`, `herdr`). A second click on a busy lane is refused and says what holds it.
+- With `state/PAUSE`, everything that moves the pipeline is refused. Logging a DM and focusing a pane still work.
+- The journal is committed, so it gets a one-line summary per click: no command output, no handle.
+
+## Alerts, in order
+
+1. The studio is paused
+2. Nothing ran today
+3. Failed jobs, with the step most of them stopped at
+4. Videos held for review
+5. DM drafts and service-desk packages waiting for you to send
+6. The Hermes gateway is down (only when a messaging platform is set up in `~/.hermes/.env`)
+7. Everything else: unfinished videos, the phone lane, spend, follow-ups, unlisted products
+
+## Files
+
+| File | Role |
+|---|---|
+| `faceless/overview.py` | The projection: one JSON document from real state, the alerts, `job_detail` |
+| `faceless/actions.py` | The allowlist, the runner, the journal line, the Non-stop decision |
+| `faceless/serve.py` | The token server: GET reads, `POST /action` |
+| `faceless/dashboard.py` | The page (one self-contained HTML file, phone layout below 900 px, sidebar above) |
+| `faceless/agents.py`, `hermes.py`, `models.py` | Agents, Hermes and models, read only |
+| `tests/test_command_center.py` | `python -m pytest -q tests/test_command_center.py` |

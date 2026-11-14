@@ -518,6 +518,63 @@ def record(jid: str, result: str, *, url: str = "", note: str = "", ai_label: bo
     return row
 
 
+def _branch_files() -> set[str] | None:
+    """Every file under out/ on the media branch as this checkout last fetched it. None when the branch is not here (unknown)."""
+    try:
+        r = subprocess.run(["git", "ls-tree", "-r", "--name-only", f"origin/{cfg()['branch']}", "out/"], cwd=Paths.root, capture_output=True, text=True, timeout=60)
+    except (OSError, subprocess.SubprocessError):
+        return None
+    return set(r.stdout.splitlines()) if r.returncode == 0 else None
+
+
+def media_missing(job: dict, on_branch: set[str] | None = None) -> list[str]:
+    """The job's files that can no longer reach the phone: not on the media branch (`stage` drops days older than keep_days) and
+    not on this disk either, so `stage` cannot put them back. Empty when the branch cannot be read: never a guess."""
+    if not job.get("media"):
+        return []
+    files = _branch_files() if on_branch is None else on_branch
+    if files is None:
+        return []
+    out = []
+    for m in job["media"]:
+        src = Paths.root / m["source"] if not Path(m["source"]).is_absolute() else Path(m["source"])
+        if f"out/{job['day']}/{job['id']}/{m['name']}" not in files and not src.is_file():
+            out.append(m["name"])
+    return out
+
+
+def park_missing(refresh: bool = True) -> dict:
+    """Hold every queued job the gate would hand out but whose media is gone, each with the reason on its receipt, so the lane's
+    head is a job that can actually run (Non-Stop rule: record why, advance). Reversible: `phone requeue ID` after a re-stage."""
+    branch = cfg()["branch"]
+    if refresh:
+        _git("fetch", "origin", f"{branch}:refs/remotes/origin/{branch}", "--depth", "1", timeout=600)
+    files = _branch_files()
+    if files is None:
+        raise RuntimeError(f"origin/{branch} is not in this checkout, so nothing is parked on a guess")
+    held = []
+    for job in sorted((j for j in jobs() if j.get("status") == "queued"), key=lambda j: (j["day"], j["id"])):
+        if gate(job) is None and (gone := media_missing(job, files)):
+            record(job["id"], "held", note=f"media gone from {branch} and this disk: {', '.join(gone)}")
+            held.append(job["id"])
+    nxt = next_job()
+    return {"held": held, "count": len(held), "next": nxt["id"] if nxt else None}
+
+
+def requeue(jid: str, note: str = "") -> dict:
+    """A held job goes back to the queue after a person looked (the command center's Release button), but only when the gate would
+    let it run. If it still cannot, the job stays held and the answer says why, so a release is never silent and never half done."""
+    job = load(jid)
+    if job.get("status") != "held":
+        raise ValueError(f"job is {job.get('status', 'queued')}, not held")
+    if why := gate({**job, "status": "queued"}):
+        return {"id": jid, "status": "held", "runs": False, "why": why}
+    job["status"] = "queued"
+    job.setdefault("history", []).append({"at": now(), "result": "requeued", "note": note[:200]})
+    save(job)
+    return {"id": jid, "status": "queued", "runs": True, "why": ""}
+
+
 def approve(jid: str) -> Path:
     job = load(jid)
     if job["kind"] != "fiverr_reply":

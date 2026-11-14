@@ -5,6 +5,7 @@ from __future__ import annotations
 import argparse
 import json
 import shutil
+import subprocess
 import sys
 from datetime import datetime, timezone
 from pathlib import Path
@@ -166,6 +167,50 @@ def cmd_gauntlet(args) -> int:
     job.save()
     print((Paths.reports / f"{job.id}.md").read_text(encoding="utf-8"))
     return 0 if rep["passed"] else 2
+
+
+def cmd_retry(args) -> int:
+    """Pick one stopped video job up again (the command center's Retry and Release buttons). A job that already has its pictures is
+    rendered, gated and packed again from the files on disk; an earlier stop starts from the script. It packages and never uploads
+    (rule 18: no new posting on YouTube; passed videos reach TikTok through the phone lane). Exit 0: packaged. 2: held, with why."""
+    from faceless import events, orchestrator, safety
+    from faceless.state import load_job
+    try:
+        job = load_job(args.job)
+    except (OSError, ValueError, TypeError):
+        print(f"no job {args.job} in state/jobs", file=sys.stderr)
+        return 1
+    if job.status not in ("failed", "held", "planned", "scripted", "visualized"):
+        print(f"{job.id} is {job.status}: nothing to retry" + ("" if job.status in ("packaged", "published") else "; `python -m faceless daily` resumes it"), file=sys.stderr)
+        return 1
+    if why := safety.paused():
+        print(f"HALTED: the studio is paused ({why}). `python -m faceless pause --resume` to continue.", file=sys.stderr)
+        return 3
+    if _blocked_by_preflight(args):
+        return 4
+    was = job.status
+    events.emit("JOB_RETRY", job=job.id, was=was)
+    on_disk = (Paths.final / f"{job.id}.json").is_file() and (job.dir / "voice.json").is_file() and (job.dir / "images.json").is_file()
+    try:
+        if job.reached("visualized") and on_disk:
+            orchestrator.resume(job, do_publish=False)
+        else:
+            orchestrator.produce(job, judge=not args.no_judge, do_publish=False)
+    except Exception as e:  # noqa: BLE001 - the reason is recorded on the job, as `daily` does
+        events.emit("JOB_FAILED", job=job.id, error=str(e)[:300])
+        job.notes.append(str(e)[:300])
+        if job.status not in ("packaged", "published", "failed", "held"):
+            job.advance("failed", error=str(e)[:200])
+        else:
+            job.save()
+        print(json.dumps({"job": job.id, "status": job.status, "was": was, "why": str(e)[:300]}))
+        print(f"{job.id} failed again: {str(e)[:300]}", file=sys.stderr)
+        return 1
+    why = job.notes[-1] if job.status == "held" and job.notes else ""
+    print(json.dumps({"job": job.id, "status": job.status, "was": was, "score": job.scores.get("gauntlet"), "why": why}))
+    if job.status != "packaged":
+        print(f"{job.id} is {job.status}: {why or 'see its gauntlet report'}", file=sys.stderr)
+    return 0 if job.status == "packaged" else 2
 
 
 def cmd_publish(args) -> int:
@@ -935,7 +980,7 @@ def cmd_songs(args) -> int:
 
 
 def cmd_phone(args) -> int:
-    """Phone lane (skill faceless-phone): `phone status|queue|stage|next|done|pull|inbound|collect|approve|reply|heartbeat` (jobs for the owner's phone)."""
+    """Phone lane (skill faceless-phone): `phone status|queue|stage|next|done|pull|inbound|collect|approve|requeue|park|reply|heartbeat` (jobs for the owner's phone)."""
     from faceless import phone
     a, day = args.args, args.day
     act = a[0] if a else "status"
@@ -970,6 +1015,22 @@ def cmd_phone(args) -> int:
         print(json.dumps(phone.collect(day), indent=1))
     elif act == "approve":
         print(f"approved: {phone.approve(a[1])}")
+    elif act == "park":
+        try:
+            print(json.dumps(phone.park_missing(refresh=not args.no_push)))
+        except (OSError, RuntimeError, subprocess.SubprocessError) as e:
+            print(f"refused: {e}", file=sys.stderr)
+            return 1
+    elif act == "requeue":
+        try:
+            r = phone.requeue(a[1], note=args.note or "")
+            print(json.dumps(r))
+            if not r["runs"]:
+                print(f"{r['id']} stays held: {r['why']}", file=sys.stderr)
+                return 2
+        except (OSError, ValueError, IndexError) as e:
+            print(f"refused: {e}", file=sys.stderr)
+            return 1
     elif act == "heartbeat":
         print(json.dumps(phone.heartbeat(a[1] if len(a) > 1 else "", reachable=not args.unreachable, note=args.note or ""), indent=1))
     elif act == "reply":
@@ -1661,7 +1722,7 @@ def main(argv: list[str] | None = None) -> int:
     db = sub.add_parser("dashboard", help="render the command center page into site/command-center/ from a fresh overview")
     db.add_argument("--out", help="another folder to write the page into")
     db.set_defaults(fn=cmd_dashboard)
-    sv = sub.add_parser("serve", help="serve the command center to the phone over Wi-Fi or Tailscale (token required, GET only)")
+    sv = sub.add_parser("serve", help="serve the command center to the phone over Wi-Fi or Tailscale (token required; POST /action runs allowlisted commands)")
     sv.add_argument("--host", help="address to bind (default: this machine's LAN address; 127.0.0.1 behind `tailscale serve`)")
     sv.add_argument("--port", type=int, default=8787)
     sv.add_argument("--init-token", action="store_true", help="make QM_DASH_TOKEN once and save it in ~/.config/quiet-money/env (not printed)")
@@ -1827,7 +1888,7 @@ def main(argv: list[str] | None = None) -> int:
     sv.add_argument("--pan-from", type=float, default=0.0)
     sv.add_argument("--pan-to", type=float, default=1.0)
     sv.set_defaults(fn=cmd_songvideo)
-    ph = sub.add_parser("phone", help="jobs for the owner's own phone (skill faceless-phone): `phone status|queue [--stage] [--flow F|--vibe SLUG]|stage|next [--fetch] [--push]|done ID posted|made|drafted|held|failed [--ai-label yes|no]|pull ID|inbound ID FILES|collect|approve ID|reply THREAD --draft F|heartbeat DEVICE [--unreachable]`")
+    ph = sub.add_parser("phone", help="jobs for the owner's own phone (skill faceless-phone): `phone status|queue [--stage] [--flow F|--vibe SLUG]|stage|next [--fetch] [--push]|done ID posted|made|drafted|held|failed [--ai-label yes|no]|pull ID|inbound ID FILES|collect|approve ID|requeue ID|park|reply THREAD --draft F|heartbeat DEVICE [--unreachable]`")
     ph.add_argument("args", nargs="*"); ph.add_argument("--day"); ph.add_argument("--flow"); ph.add_argument("--vibe"); ph.add_argument("--stage", action="store_true")
     ph.add_argument("--no-push", action="store_true"); ph.add_argument("--no-fiverr", action="store_true"); ph.add_argument("--fetch", action="store_true"); ph.add_argument("--push", action="store_true")
     ph.add_argument("--url"); ph.add_argument("--note"); ph.add_argument("--ai-label", choices=("yes", "no")); ph.add_argument("--draft"); ph.add_argument("--unreachable", action="store_true")
@@ -1905,6 +1966,11 @@ def main(argv: list[str] | None = None) -> int:
     pbl.add_argument("--n", type=int, default=5)
     pbl.add_argument("--apply", action="store_true")
     pbl.set_defaults(fn=cmd_post_backlog)
+    rt = sub.add_parser("retry", help="pick one failed, held or unfinished video job up again (packages; never uploads)")
+    rt.add_argument("job")
+    rt.add_argument("--no-judge", action="store_true")
+    rt.add_argument("--skip-preflight", action="store_true", help="start even if the machine cannot finish a video (not recommended)")
+    rt.set_defaults(fn=cmd_retry)
     pb = sub.add_parser("publish", help="(re)publish a packaged job")
     pb.add_argument("job")
     pb.add_argument("--force", action="store_true", help="publish even though the gauntlet did not pass (human-reviewed)")

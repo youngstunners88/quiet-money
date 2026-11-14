@@ -1,19 +1,27 @@
-"""Serve the command center to the owner's phone over Wi-Fi or Tailscale. No USB, no adb, no shell on the phone. Reads only.
+"""Serve the command center to the owner's phone over Wi-Fi or Tailscale. No USB, no adb, no shell on the phone.
 
     python -m faceless serve --init-token      # once: makes QM_DASH_TOKEN and saves it in ~/.config/quiet-money/env (never printed)
     python -m faceless serve                   # binds this machine's LAN address on port 8787 and prints the address and a QR code
     python -m faceless serve --host 127.0.0.1  # behind `tailscale serve 8787` (HTTPS and identity from Tailscale, no open port)
 
 What the server does and does not do:
-  * GET only. `/` is the page and `/overview.json` the data, both computed from the repo on request (cached for a few seconds) and both
-    refused with 401 without the token. The manifest, the two icons and the service worker hold no state and need no token, because a
-    browser fetches them without one. `/healthz` answers "ok" and nothing else.
+  * Reads are GET. `/` is the page and `/overview.json` the data, both computed from the repo on request (cached for a few seconds) and
+    both refused with 401 without the token. `/actions.json` is what the action desk is running and the newest clicks from the journal;
+    `/job.json?id=` is one job's own history and gauntlet report. The manifest, the two icons and the service worker hold no state and
+    need no token, because a browser fetches them without one. `/healthz` answers "ok" and nothing else.
+  * One write door: `POST /action` with `{"name": ..., "args": {...}}`. The name must be on the allowlist in `faceless/actions.py`, each
+    of which runs one existing `python -m faceless ...` or `herdr ...` command; nothing else can be run from the page. The token must
+    come in the Authorization header (never the query), the body must be JSON, and a request from another origin is refused, so a link
+    or a form on some other page cannot press a button. `{"name": "nonstop_tick"}` is the open page asking whether the phone lane
+    should be advanced (Non-stop). Every other method, and POST anywhere else, is 405.
   * The token comes in as `?t=` on the first visit (that is what the QR code carries), is kept by the page in the browser's own storage,
     and is sent as an Authorization header afterwards. No cookie is ever set.
   * Every reply carries `Cache-Control: no-store` and `X-Robots-Tag: noindex`. Requests are counted per address: too many, or a run of
     wrong tokens, gets 429.
   * It binds the LAN address by default, not every interface, and refuses to start without a token of at least 16 characters.
-  * It never writes: not a job, not the ledger, not even its own overview file.
+  * The server itself still writes nothing: not a job, not the ledger, not even its own overview file. State changes only because an
+    action's command ran, and each click is one line in the journal (`CC_ACTION`). The kill switch (`state/PAUSE`) refuses every
+    action that moves the pipeline.
 """
 
 from __future__ import annotations
@@ -131,9 +139,19 @@ class Source:
                 self.doc, self.at = self.build(), time.monotonic()
             return self.doc
 
+    def expire(self) -> None:
+        """An action just changed the repo: the next request rebuilds instead of showing the cached copy."""
+        with self.lock:
+            self.at = 0.0
 
-def make_handler(tok: str, source: Source, limiter: Limiter, static: dict):
-    from faceless import dashboard
+
+MAX_BODY = 4096
+
+
+def make_handler(tok: str, source: Source, limiter: Limiter, static: dict, models_source: Source | None = None, desk=None):
+    from faceless import actions, dashboard
+    if desk is None:
+        desk = actions.Desk(on_done=lambda result: source.expire())
 
     class Handler(BaseHTTPRequestHandler):
         server_version, sys_version, protocol_version = "qm-cc", "", "HTTP/1.1"
@@ -170,38 +188,96 @@ def make_handler(tok: str, source: Source, limiter: Limiter, static: dict):
                 return self.reply(429, "text/plain; charset=utf-8", b"too many requests; wait a minute\n", head)
             if path in static:
                 return self.reply(200, static[path][0], static[path][1], head)
-            if path not in ("", "index.html", "overview.json"):
+            if path not in ("", "index.html", "overview.json", "models.json", "actions.json", "job.json"):
                 return self.reply(404, "text/plain; charset=utf-8", b"not found\n", head)
             if not self.authed(url):
                 limiter.wrong(ip)
                 return self.reply(401, "text/html; charset=utf-8", DENIED.encode("utf-8"), head)
             try:
+                if path == "models.json":
+                    if models_source is None:
+                        from faceless import models
+                        doc = models.catalog()
+                    else:
+                        doc = models_source.get()
+                    return self.reply(200, "application/json; charset=utf-8", json.dumps(doc, ensure_ascii=False).encode("utf-8"), head)
+                if path == "actions.json":
+                    return self.json(200, {**desk.snapshot(), "nonstop": desk.plan(), "actions": actions.catalog()}, head)
+                if path == "job.json":
+                    from faceless import overview
+                    doc = overview.job_detail((parse_qs(url.query).get("id") or [""])[0])
+                    return self.json(200 if doc else 404, doc or {"error": "no such job"}, head)
                 doc = source.get()
             except Exception as e:   # noqa: BLE001 - the phone gets a plain error, and keeps showing its saved copy
-                return self.reply(500, "text/plain; charset=utf-8", f"overview failed: {type(e).__name__}\n".encode(), head)
+                return self.reply(500, "text/plain; charset=utf-8", f"projection failed: {type(e).__name__}\n".encode(), head)
             if path == "overview.json":
                 return self.reply(200, "application/json; charset=utf-8", json.dumps(doc, ensure_ascii=False).encode("utf-8"), head)
             return self.reply(200, "text/html; charset=utf-8", dashboard.render(doc).encode("utf-8"), head)
 
+        def json(self, code: int, doc: dict, head: bool = False) -> None:
+            self.reply(code, "application/json; charset=utf-8", json.dumps(doc, ensure_ascii=False).encode("utf-8"), head)
+
+        def act(self) -> None:
+            """The one write door. Header token, JSON body, same origin, an allowlisted name: anything else is refused before it runs."""
+            ip = self.client_address[0]
+            url = urlsplit(self.path)
+            self.close_connection = True                     # a refusal leaves the body unread: never let it be parsed as the next request
+            if url.path.lstrip("/") != "action":
+                return self.refuse()
+            if not limiter.allow(ip):
+                return self.reply(429, "text/plain; charset=utf-8", b"too many requests; wait a minute\n")
+            header = self.headers.get("Authorization") or ""
+            given = header[7:].strip() if header.lower().startswith("bearer ") else ""
+            if not given or not hmac.compare_digest(given.encode("utf-8"), tok.encode("utf-8")):
+                limiter.wrong(ip)
+                return self.json(401, {"error": "this needs the token in the Authorization header"})
+            origin = self.headers.get("Origin")
+            if origin and urlsplit(origin).netloc != (self.headers.get("Host") or ""):
+                return self.json(403, {"error": "actions are accepted from the command center page only"})
+            try:
+                length = int(self.headers.get("Content-Length") or 0)
+            except ValueError:
+                length = -1
+            if not 0 < length <= MAX_BODY or "application/json" not in (self.headers.get("Content-Type") or ""):
+                return self.json(400, {"error": "send a small JSON body: {\"name\": ..., \"args\": {...}}"})
+            try:
+                raw = self.rfile.read(length)
+                self.close_connection = False
+                body = json.loads(raw.decode("utf-8"))
+                name, args = body["name"], body.get("args") or {}
+                if not isinstance(name, str) or not isinstance(args, dict):
+                    raise ValueError
+            except (ValueError, KeyError, TypeError, UnicodeDecodeError):
+                return self.json(400, {"error": "send a small JSON body: {\"name\": ..., \"args\": {...}}"})
+            try:
+                result = desk.tick() if name == "nonstop_tick" else desk.start(name, args)
+            except Exception as e:   # noqa: BLE001 - the page shows the failure instead of a hung button
+                result = {"action": name, "state": "done", "ok": False, "exit": None, "summary": f"the action desk failed: {type(e).__name__}"}
+            return self.json(200, result)
+
         def do_GET(self):   # noqa: N802
             self.serve(False)
+
+        def do_POST(self):   # noqa: N802
+            self.act()
 
         def do_HEAD(self):   # noqa: N802
             self.serve(True)
 
         def refuse(self):
-            self.reply(405, "text/plain; charset=utf-8", b"read-only: GET and HEAD only\n")
+            self.reply(405, "text/plain; charset=utf-8", b"GET and HEAD read; POST /action is the only write door\n")
 
-        do_POST = do_PUT = do_DELETE = do_PATCH = do_OPTIONS = refuse   # noqa: N815
+        do_PUT = do_DELETE = do_PATCH = do_OPTIONS = refuse   # noqa: N815
 
     return Handler
 
 
-def make_server(host: str, port: int, tok: str, build=None, limiter: Limiter | None = None) -> ThreadingHTTPServer:
+def make_server(host: str, port: int, tok: str, build=None, limiter: Limiter | None = None, desk=None) -> ThreadingHTTPServer:
     if not tok or len(tok) < MIN_TOKEN:
         raise ValueError(f"{TOKEN_NAME} is missing or shorter than {MIN_TOKEN} characters: run `python -m faceless serve --init-token` once")
-    from faceless import dashboard
-    httpd = ThreadingHTTPServer((host, port), make_handler(tok, Source(build), limiter or Limiter(), dashboard.assets()))
+    from faceless import dashboard, models
+    model_source = Source(build=models.catalog, seconds=60)
+    httpd = ThreadingHTTPServer((host, port), make_handler(tok, Source(build), limiter or Limiter(), dashboard.assets(), model_source, desk))
     httpd.daemon_threads = True
     return httpd
 
@@ -231,7 +307,7 @@ def run(host: str | None, port: int = DEFAULT_PORT, show_url: bool = False, inve
     shown = (lan_ip() or host) if host == "0.0.0.0" else host   # noqa: S104
     base = (base_url or f"http://{shown}:{port}").rstrip("/")
     full = f"{base}/?t={tok}"
-    print(f"Command center: {base}/   (read-only; token required)")
+    print(f"Command center: {base}/   (token required; buttons run allowlisted faceless commands, state/PAUSE stops them)")
     art = None if host.startswith("127.") and not base_url else qr.terminal(full, invert=invert)
     if art:
         print("Scan with the phone's camera (same Wi-Fi, cable unplugged). The code carries the token, so do not screenshot it into a chat:\n")
