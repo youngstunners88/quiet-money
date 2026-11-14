@@ -22,7 +22,8 @@ PORT="${QM_CC_PORT:-8787}"
 LABEL="qm-cc"
 RUN="$ROOT/state/tmp"                      # gitignored
 LOG="$RUN/qm-cc.log"
-PY="${PYTHON:-python3}"
+# The page renderer needs Pillow for its icons, which the system Python does not have; the repo's .venv does. Prefer it.
+if [ -n "${PYTHON:-}" ]; then PY="$PYTHON"; elif [ -x "$ROOT/.venv/bin/python" ]; then PY="$ROOT/.venv/bin/python"; else PY=python3; fi
 cd "$ROOT"
 
 host() { "$PY" -c "from faceless import serve; print(serve.lan_ip() or '127.0.0.1')"; }
@@ -101,10 +102,20 @@ stop() {
   return 0
 }
 
+# The signed-in address, for a local launcher that opens the page on this computer. It carries the token, so it goes to stdout only.
+url() {
+  QM_CC_PORT="$PORT" "$PY" -c 'import os
+from faceless import serve
+tok = serve.token()
+host = serve.lan_ip() or "127.0.0.1"
+print("http://" + host + ":" + os.environ.get("QM_CC_PORT", "8787") + "/?t=" + (tok or ""))'
+}
+
 case "${1:-start}" in
   start) start ;;
   stop) stop ;;
   status) if healthy; then echo "up: http://$(host):$PORT/"; else echo "down"; exit 1; fi ;;
   open) if herdr_ok && has workspace focus; then read -r ws _p <<<"$(find_ws) "; [ -n "$ws" ] && herdr workspace focus "$ws" || echo "No $LABEL workspace; run: $0 start"; else echo "herdr is not running here."; fi ;;
-  *) echo "usage: $0 start|stop|status|open"; exit 2 ;;
+  url) url ;;
+  *) echo "usage: $0 start|stop|status|open|url"; exit 2 ;;
 esac
