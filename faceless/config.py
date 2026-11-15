@@ -91,6 +91,15 @@ def load_dotenv(path: Path | None = None) -> int:
     return n
 
 
+MACHINE_ENV = Path.home() / ".config" / "quiet-money" / "env"
+
+
+def load_keys() -> int:
+    """The studio's .env first, then this machine's key file (the one the Autopilot timer and the board read), so a command typed by hand
+    has the same keys as the same command run by the timer. Real environment variables still win."""
+    return load_dotenv() + load_dotenv(MACHINE_ENV)
+
+
 def today_utc() -> date:
     """Today's date in UTC. Job days, the spend ledger and the posting calendar are all UTC; `date.today()` follows the machine's clock zone and would
     name tomorrow (or yesterday) for a few hours a day on a laptop outside UTC."""

@@ -160,3 +160,22 @@ def test_board_runs_the_client_hunt_once_a_day_and_hands_packages_to_the_owner()
     assert after["send-packages-2026-11-15"]["kind"] == "owner" and not after["send-packages-2026-11-15"]["auto"]   # a person sends
     for sd in (None, {"waiting": 0}):                                           # an unreadable desk offers nothing
         assert not [i for i in got(sd) if i.startswith(("client-hunt-", "send-packages-"))]
+
+
+def test_a_hand_typed_command_gets_the_machine_keys_the_timer_has(tmp_path, monkeypatch):
+    from faceless import config
+    studio, machine = tmp_path / "studio", tmp_path / "env"
+    studio.mkdir()
+    (studio / ".env").write_text("QM_TEST_A=from-studio\n")
+    machine.write_text("QM_TEST_A=from-machine\nQM_TEST_B=only-machine\n")
+    monkeypatch.setattr(config, "STUDIO", studio)
+    monkeypatch.setattr(config, "MACHINE_ENV", machine)
+    for k in ("QM_TEST_A", "QM_TEST_B"):
+        monkeypatch.delenv(k, raising=False)
+    try:
+        assert config.load_keys() == 2
+        assert config.env("QM_TEST_A") == "from-studio" and config.env("QM_TEST_B") == "only-machine"
+    finally:
+        import os
+        os.environ.pop("QM_TEST_A", None)
+        os.environ.pop("QM_TEST_B", None)

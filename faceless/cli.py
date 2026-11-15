@@ -1611,7 +1611,7 @@ def cmd_outbound(args) -> int:
 
 
 def main(argv: list[str] | None = None) -> int:
-    config.load_dotenv()
+    config.load_keys()
     p = argparse.ArgumentParser(prog="faceless", description="Faceless Studio engine")
     sub = p.add_subparsers(dest="cmd", required=True)
     sub.add_parser("doctor", help="check tools, fonts, keys").set_defaults(fn=cmd_doctor)
