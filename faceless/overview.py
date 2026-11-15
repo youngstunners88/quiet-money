@@ -385,6 +385,13 @@ def build(today: str | None = None) -> dict:
     except Exception:   # noqa: BLE001 - a damaged drop file must not blank the board
         doc["prospects"] = None
     doc["missions"] = missions.board(doc)                    # the work board: derived to-do, who has what, done today
+    from faceless import team
+    try:
+        doc["team"] = team.board([{"id": c["id"], "installed": c.get("installed", True), "status": c.get("status")}
+                                  for c in (doc["missions"] or {}).get("crew", [])])
+        doc["gauges"] = team.gauges(today)
+    except Exception:   # noqa: BLE001 - a damaged beat file must not blank the board
+        doc["team"], doc["gauges"] = None, None
     return doc
 
 
