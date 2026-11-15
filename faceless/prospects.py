@@ -148,7 +148,35 @@ def collect(youtube=None) -> tuple[list[dict], list[dict]]:
         notes.append({"source": "youtube comments", "rows": len(yt), "note": ""})
     except Exception as e:   # noqa: BLE001 - one absent source must not stop the others
         notes.append({"source": "youtube comments", "rows": 0, "note": f"unavailable: {config.redact(str(e))[:120]}"})
+    _record_youtube(notes[-1])
     return rows, notes
+
+
+YOUTUBE_RETRY_HOURS = 6                             # after a failed read the board stops offering the run for this long, then lets one run try again
+
+
+def _record_youtube(note: dict) -> None:
+    """Keep what the last real read of YouTube comments gave, so the board shows that and not merely that a key is present."""
+    try:
+        write_atomic(LISTS / "youtube-source.json", json.dumps({"t": events.now_iso(), "ok": not note["note"], "rows": note["rows"], "note": note["note"]}))
+    except OSError:
+        pass                                        # the record is a convenience for the board; a run never fails over it
+
+
+def youtube_state() -> dict:
+    """{"ok", "note"}: whether the board may count on YouTube comments, from the key and the last real read (no network)."""
+    if not config.env("COMPOSIO_API_KEY", "COMPOSIO_API"):
+        return {"ok": False, "note": "no Composio key on this machine"}
+    try:
+        last = json.loads((LISTS / "youtube-source.json").read_text(encoding="utf-8"))
+        age = _now() - datetime.fromisoformat(str(last["t"]).replace("Z", "+00:00"))
+    except (OSError, ValueError, KeyError, TypeError):
+        return {"ok": True, "note": "a key is present; no read has been tried yet"}
+    if last.get("ok"):
+        return {"ok": True, "note": f"last read gave {last.get('rows', 0)} comment(s)"}
+    if age > timedelta(hours=YOUTUBE_RETRY_HOURS):
+        return {"ok": True, "note": f"last read failed ({last.get('note', '')}); due for another try"}
+    return {"ok": False, "note": str(last.get("note") or "last read failed")}
 
 
 # ---------------------------------------------------------------- sorting
@@ -225,10 +253,11 @@ def pending(youtube=None) -> dict:
 
 
 def board_state() -> dict:
-    """The cheap view the command center polls: the drop folder only (no network), and whether a comment source is connected."""
+    """The cheap view the command center polls: the drop folder only (no network), and what the last real read of YouTube comments gave."""
     ready, dropped = queue(from_inbox())
-    return {"ready": len(ready), "dropped": len(dropped), "draftedToday": drafted_today(),
-            "youtube": bool(config.env("COMPOSIO_API_KEY", "COMPOSIO_API")), "addedToday": any(INBOX.glob(f"*-{config.today_utc().isoformat()}.jsonl"))}
+    yt = youtube_state()
+    return {"ready": len(ready), "dropped": len(dropped), "draftedToday": drafted_today(), "youtube": yt["ok"], "youtubeNote": yt["note"],
+            "addedToday": any(INBOX.glob(f"*-{config.today_utc().isoformat()}.jsonl"))}
 
 
 def drafted_today(day: str | None = None) -> bool:

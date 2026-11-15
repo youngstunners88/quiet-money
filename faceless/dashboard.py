@@ -357,7 +357,7 @@ V.dms=function(){var ob=D.outbound,d=D.dms,out=[];
       h('div',{class:'btns'},actBtn('They replied','dm_log',{draft:f.draft_id,status:'replied'},{sm:true}),actBtn('Close: no reply','dm_log',{draft:f.draft_id,status:'dead'},{sm:true,ghost:true})))}),src('state/outbound.jsonl')))}
   var pr=D.prospects;if(pr){out.push(h('h2',{},'People who wrote to us'));
     out.push(card(h('div',{class:'t'},pr.ready?pr.ready+' waiting to be drafted':'Nobody new in the drop folder'),
-      h('div',{class:'s'},pr.draftedToday?'Today\'s batch is drafted; the rest waits for tomorrow.':(pr.youtube?'YouTube comments are read on each run.':'YouTube comments are not connected; the drop folder is the only source.')),
+      h('div',{class:'s'},pr.draftedToday?'Today\'s batch is drafted; the rest waits for tomorrow.':(pr.youtube?'YouTube comments are read on each run.':'YouTube comments are not being read'+(pr.youtubeNote?' ('+pr.youtubeNote+')':'')+'; the drop folder is the only source.')),
       h('div',{class:'btns'},pr.draftedToday?null:actBtn('Find people to write to','prospect',{})),
       h('div',{class:'s dim'},'Runs python -m faceless prospect. It reads and drafts; it never contacts anyone.'),src('outbound/private/inbox/')))}
   out.push(h('h2',{},'Drafts waiting on you'));

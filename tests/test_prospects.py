@@ -132,3 +132,19 @@ def test_autopilot_never_starts_a_paid_agent_by_itself(monkeypatch):
     card["route"]["cost"] = "free"
     board["autopilot"]["max_cost"] = 0
     assert missions.plan_auto({"missions": board})["state"] == "run"
+
+
+def test_board_reports_the_last_real_youtube_read_not_the_key(desk, monkeypatch):
+    monkeypatch.setenv("COMPOSIO_API_KEY", "present")
+    assert prospects.board_state()["youtube"] is True                            # a key and no read yet: worth one try
+    prospects.collect(no_youtube)
+    b = prospects.board_state()
+    assert b["youtube"] is False and "not connected" in b["youtubeNote"]         # a key that does not work is not a source
+    monkeypatch.setattr(prospects, "_now", lambda: prospects.datetime.now(prospects.timezone.utc) + prospects.timedelta(hours=7))
+    assert prospects.board_state()["youtube"] is True                            # after the wait the board lets one run try again
+    monkeypatch.setattr(prospects, "_now", lambda: prospects.datetime.now(prospects.timezone.utc))
+    prospects.collect(lambda: [])
+    assert prospects.board_state()["youtube"] is True and "0 comment" in prospects.board_state()["youtubeNote"]
+    monkeypatch.delenv("COMPOSIO_API_KEY")
+    monkeypatch.delenv("COMPOSIO_API", raising=False)
+    assert prospects.board_state()["youtube"] is False
