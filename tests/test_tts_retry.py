@@ -14,7 +14,7 @@ def _fake_edge(monkeypatch, plan):
 
     class Communicate:
         def __init__(self, *a, **k):
-            pass
+            calls.setdefault("rates", []).append(k.get("rate"))
 
         async def stream(self):
             calls["n"] += 1
@@ -33,10 +33,16 @@ def test_a_transient_no_audio_is_retried_on_the_same_voice(tmp_path, monkeypatch
     calls = _fake_edge(monkeypatch, ["fail", "fail", "ok"])
     words = tts.edge("hello", tmp_path / "v.wav")
     assert calls["n"] == 3 and words[0]["w"] == "hello"                  # the third try worked, no voice change
+    assert calls["rates"] == ["+14%", "+13%", "+15%"]                    # each retry nudges the speed: an identical request fails identically
 
 
 def test_three_failures_still_raise_so_the_chain_can_move_on(tmp_path, monkeypatch):
-    calls = _fake_edge(monkeypatch, ["fail", "fail", "fail"])
+    calls = _fake_edge(monkeypatch, ["fail"] * tts.EDGE_ATTEMPTS)
     with pytest.raises(ProviderError):
         tts.edge("hello", tmp_path / "v.wav")
-    assert calls["n"] == 3
+    assert calls["n"] == tts.EDGE_ATTEMPTS
+
+
+def test_the_nudge_only_touches_a_plain_percent_speed():
+    assert [tts._nudged("+14%", i) for i in range(5)] == ["+14%", "+13%", "+15%", "+12%", "+16%"]
+    assert tts._nudged("-5%", 1) == "-6%" and tts._nudged("fast", 2) == "fast"

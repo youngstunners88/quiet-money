@@ -63,9 +63,19 @@ def _edge_ssl_patch() -> None:
     comm._SSL_CTX = ssl.create_default_context(cafile=bundle)
 
 
-EDGE_ATTEMPTS = 3
+EDGE_ATTEMPTS = 5
 EDGE_TIMEOUT_S = 180
 EDGE_BACKOFF_S = 4
+
+
+def _nudged(rate: str, attempt: int) -> str:
+    """The configured speed on the first try, then one point off in alternating directions (+14% -> +13%, +15%, +12%, +16%)."""
+    m = re.fullmatch(r"([+-])(\d+)%", rate.strip())
+    if not attempt or not m:
+        return rate
+    delta = (attempt + 1) // 2 * (-1 if attempt % 2 else 1)
+    val = int(m.group(2)) * (1 if m.group(1) == "+" else -1) + delta
+    return f"{val:+d}%"
 
 
 def edge(text: str, out: Path, *, rate: str | None = None) -> list[dict]:
@@ -78,8 +88,10 @@ def edge(text: str, out: Path, *, rate: str | None = None) -> list[dict]:
     mp3 = out.with_suffix(".edge.mp3")
     words: list[dict] = []
 
-    async def go():
-        c = edge_tts.Communicate(text, cfg["edge_voice"], rate=rate or cfg["edge_rate"], boundary="WordBoundary")
+    base_rate = rate or cfg["edge_rate"]
+
+    async def go(use_rate: str):
+        c = edge_tts.Communicate(text, cfg["edge_voice"], rate=use_rate, boundary="WordBoundary")
         with open(mp3, "wb") as f:
             async for ch in c.stream():
                 if ch["type"] == "audio":
@@ -88,13 +100,14 @@ def edge(text: str, out: Path, *, rate: str | None = None) -> list[dict]:
                     s = ch["offset"] / 1e7
                     words.append({"w": ch["text"], "start": round(s, 3), "end": round(s + ch["duration"] / 1e7, 3)})
 
-    # Edge's service sometimes answers "no audio received" to a script it renders fine a minute later (2026-11-15: 2 of 3 videos
-    # failed, the same text then worked twice). Retry the SAME voice, so the sound of the channel never changes, before the chain moves on.
+    # Edge's service answers "no audio received" to some (text, speed) pairs and renders the same text at a neighbouring speed (2026-11-15: the
+    # same line failed at +14% and +13% and worked at +15%, every time). So a retry changes the speed by a point, not the voice: the sound of the
+    # channel stays the same, and a repeat of the identical request would only fail the same way.
     last = None
     for attempt in range(EDGE_ATTEMPTS):
         words.clear()
         try:
-            asyncio.run(asyncio.wait_for(go(), timeout=EDGE_TIMEOUT_S))
+            asyncio.run(asyncio.wait_for(go(_nudged(base_rate, attempt)), timeout=EDGE_TIMEOUT_S))
             if words and mp3.stat().st_size >= 2000:
                 last = None
                 break
