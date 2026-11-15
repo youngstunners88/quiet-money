@@ -65,3 +65,10 @@ def test_the_board_drafts_by_engine_and_leaves_posting_to_the_owner():
     got = {m["id"]: m for m in missions.derive({**base, "x": {"waiting": 2, "undrafted": 3}})}
     assert got["x-draft-2026-11-15"]["kind"] == "engine" and got["x-draft-2026-11-15"]["action"] == "x_draft"
     assert got["post-x-2026-11-15"]["kind"] == "owner" and not got["post-x-2026-11-15"]["auto"]
+
+
+def test_the_overview_puts_x_on_the_board_before_the_missions_read_it():
+    import inspect
+    from faceless import overview
+    src = inspect.getsource(overview.build)
+    assert src.index('doc["x"]') < src.index('doc["missions"]')
