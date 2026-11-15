@@ -148,3 +148,15 @@ def test_board_reports_the_last_real_youtube_read_not_the_key(desk, monkeypatch)
     monkeypatch.delenv("COMPOSIO_API_KEY")
     monkeypatch.delenv("COMPOSIO_API", raising=False)
     assert prospects.board_state()["youtube"] is False
+
+
+def test_board_runs_the_client_hunt_once_a_day_and_hands_packages_to_the_owner():
+    base = {"day": "2026-11-15", "jobs": None, "phone": None, "outbound": None, "offers": None, "prospects": None}
+    got = lambda sd: {m["id"]: m for m in missions.derive({**base, "serviceDesk": sd})}   # noqa: E731
+    hunt = got({"ranToday": False, "waiting": 0})["client-hunt-2026-11-15"]
+    assert hunt["kind"] == "engine" and hunt["action"] == "outbound_run" and hunt["auto"]
+    after = got({"ranToday": True, "waiting": 4})
+    assert "client-hunt-2026-11-15" not in after                                  # one batch a day
+    assert after["send-packages-2026-11-15"]["kind"] == "owner" and not after["send-packages-2026-11-15"]["auto"]   # a person sends
+    for sd in (None, {"waiting": 0}):                                           # an unreadable desk offers nothing
+        assert not [i for i in got(sd) if i.startswith(("client-hunt-", "send-packages-"))]

@@ -125,6 +125,8 @@ ACTIONS: dict[str, dict] = {
                  "argv": lambda a: _py("dm"), "shows": "python -m faceless dm"},
     "prospect": {"label": "Find people to write to", "lane": "desk", "moves": True, "timeout": 600,
                  "argv": lambda a: _py("prospect"), "shows": "python -m faceless prospect"},
+    "outbound_run": {"label": "Hunt for clients", "lane": "desk", "moves": True, "timeout": 2 * 3600,
+                     "argv": lambda a: _py("outbound", "run"), "shows": "python -m faceless outbound run"},
     "dm_log": {"label": "Log DM", "lane": "desk", "moves": False, "timeout": 60, "argv": _dm_log,
                "shows": "python -m faceless dm log <id> <status>"},
     "money_brief": {"label": "Write the money brief", "lane": "desk", "moves": False, "timeout": 300,

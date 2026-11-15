@@ -268,7 +268,9 @@ def service_desk() -> dict | None:
     except Exception:   # noqa: BLE001 - a second desk's trouble must not blank the page
         return None
     o = p["outcomes"]
-    return {"projectsSeen": p["projects_seen"], "sent": o.get("sent", 0), "replies": sum(v for k, v in o.items() if k.startswith("reply")),
+    return {"ranToday": (outbound.REVIEWS / f"batch-{config.today_utc().isoformat()}.md").exists(),
+            "leads": sum(1 for _ in outbound.LEADS.glob("*.json")) if outbound.LEADS.exists() else 0,
+            "projectsSeen": p["projects_seen"], "sent": o.get("sent", 0), "replies": sum(v for k, v in o.items() if k.startswith("reply")),
             "closed": o.get("closed", 0), "waiting": len(p["packages_waiting"]), "waitingTop": p["packages_waiting"][:8],
             "source": "state/outbound-seen.json, state/outbound-outcomes.jsonl, channel/services/web3-video packages"}
 

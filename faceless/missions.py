@@ -143,6 +143,12 @@ def derive(doc: dict) -> list[dict]:
         add(f"send-dms-{day}", f"Send {ob['blockedOnOwner']} DM drafts", "The shortest road to a first receipt: a conversation with one person.", "owner", tab="dms")
     if ob and ob.get("followUpsDue"):
         add(f"follow-ups-{day}", f"Send {ob['followUpsDue']} follow-ups", "Most replies come on the second message.", "owner", tab="dms")
+    sd = doc.get("serviceDesk")
+    if sd and sd.get("waiting"):
+        add(f"send-packages-{day}", f"Send {sd['waiting']} outreach package(s)", "A client is a project that got a message; the packages are written and waiting.", "owner", tab="dms")
+    if sd and sd.get("ranToday") is False:
+        add(f"client-hunt-{day}", "Hunt for clients: research today's projects and write outreach packages",
+            "The service desk only has someone to write to on days it runs. Free models; nothing is sent.", "engine", action="outbound_run", args={})
     pr = doc.get("prospects")
     if pr and not pr.get("draftedToday") and (pr.get("ready") or pr.get("youtube")):
         n = pr.get("ready") or 0
