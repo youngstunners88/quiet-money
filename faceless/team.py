@@ -156,9 +156,18 @@ def gauges(day: str | None = None) -> dict:
     from faceless import ledger, safety
     day = day or config.today_utc().isoformat()
     per: dict[str, dict] = {}
+    models: dict[str, dict] = {}
     for r in read_jsonl(ledger.LEDGER) if ledger.LEDGER.exists() else []:
         if r.get("day") != day or not r.get("provider"):
             continue
+        if r.get("model"):
+            m = models.setdefault(r["model"], {"model": r["model"], "provider": r["provider"], "calls": 0, "tokensIn": 0, "tokensOut": 0,
+                                                "tokens": 0, "usd": 0.0})
+            m["calls"] += 1
+            m["tokensIn"] += int(r.get("tokens_in") or 0)
+            m["tokensOut"] += int(r.get("tokens_out") or 0)
+            m["tokens"] += int(r.get("amount") or 0) if r.get("unit") == "tokens" else 0
+            m["usd"] = round(m["usd"] + float(r.get("usd") or 0), 6)
         g = per.setdefault(r["provider"], {"provider": r["provider"], "usd": 0.0, "units": {}, "calls": 0})
         g["calls"] += 1
         g["usd"] += float(r.get("usd") or 0)
@@ -177,7 +186,10 @@ def gauges(day: str | None = None) -> dict:
     except (OSError, ValueError):
         pass
     total = round(sum(g["usd"] for g in rows), 4)
-    return {"day": day, "providers": rows, "usdToday": total, "ceilingUsd": safety.ceiling(),
+    mrows = sorted(models.values(), key=lambda m: (-m["usd"], -m["tokens"]))
+    for m in mrows:
+        m["free"] = m["model"].endswith(":free") or m["usd"] == 0
+    return {"day": day, "providers": rows, "models": mrows, "usdToday": total, "ceilingUsd": safety.ceiling(),
             "autopilotMaxCost": autopilot.get("max_cost"), "source": "state/ledger.jsonl, studio.toml [safety], crew.toml [autopilot]"}
 
 

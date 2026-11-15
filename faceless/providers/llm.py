@@ -102,7 +102,8 @@ def openrouter(prompt: str, *, system: str | None, want_json: bool, temperature:
         d = r.json()
         usage = d.get("usage") or {}
         cost = usage.get("cost") if isinstance(usage.get("cost"), (int, float)) else 0.0
-        ledger.spend("openrouter", "tokens", usage.get("total_tokens", 0), usd=cost)   # a paid call the ceiling must be able to see
+        ledger.spend("openrouter", "tokens", usage.get("total_tokens", 0), usd=cost, model=model,   # a paid call the ceiling must be able to see
+                     tokens_in=usage.get("prompt_tokens"), tokens_out=usage.get("completion_tokens"))
         try:
             return d["choices"][0]["message"]["content"]
         except (KeyError, IndexError):

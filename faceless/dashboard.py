@@ -315,6 +315,8 @@ function teamView(){var t=D.team,out=[];
       row('Autopilot cost cap',g.autopilotMaxCost==null?'not set':'max_cost = '+g.autopilotMaxCost+' (0 free, 1 cheap)'),
       g.providers.length?h('table',{class:'gt'},h('tbody',{},g.providers.map(function(p){var u=Object.keys(p.units).map(function(k){return fmtN(p.units[k])+' '+k}).join(' · ');
         return h('tr',{},h('td',{},p.provider),h('td',{},chip(p.free?'free':'paid',p.free?'done':'paused')),h('td',{},u||(p.calls+' calls')),h('td',{class:'n'},'$'+p.usd.toFixed(4)))}))):h('div',{class:'s dim'},'No calls recorded today.'),
+      (g.models&&g.models.length)?h('table',{class:'gt'},h('tbody',{},g.models.map(function(m){
+        return h('tr',{},h('td',{},m.model),h('td',{},chip(m.free?'free':'paid',m.free?'done':'paused')),h('td',{},fmtN(m.tokensIn)+' in · '+fmtN(m.tokensOut)+' out · '+m.calls+' calls'),h('td',{class:'n'},'$'+m.usd.toFixed(4)))}))):h('div',{class:'s dim'},'Per-model rows start with the next model call (the ledger began recording the model on 2026-11-15).'),
       src(g.source)))}
   var tg=D.targets||[];
   if(tg.length){out.push(h('h2',{},'Targets'));

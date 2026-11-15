@@ -74,10 +74,23 @@ def test_gauges_read_the_ledger_and_mark_free_and_paid(tmp_path, monkeypatch):
     led = tmp_path / "ledger.jsonl"
     rows = [{"day": "2026-11-15", "provider": "openrouter", "unit": "tokens", "amount": 1000, "usd": 0.01},
             {"day": "2026-11-15", "provider": "edge", "unit": "chars", "amount": 500, "usd": 0},
-            {"day": "2026-11-14", "provider": "openrouter", "unit": "tokens", "amount": 9999, "usd": 9}]
+            {"day": "2026-11-14", "provider": "openrouter", "unit": "tokens", "amount": 9999, "usd": 9},
+            {"day": "2026-11-15", "provider": "openrouter", "unit": "tokens", "amount": 300, "usd": 0, "model": "x/y:free", "tokens_in": 250, "tokens_out": 50},
+            {"day": "2026-11-15", "provider": "openrouter", "unit": "tokens", "amount": 100, "usd": 0, "model": "x/y:free", "tokens_in": 80, "tokens_out": 20}]
     led.write_text("".join(json.dumps(r) + "\n" for r in rows))
     monkeypatch.setattr(ledger, "LEDGER", led)
     g = team.gauges("2026-11-15")
     by = {p["provider"]: p for p in g["providers"]}
-    assert by["openrouter"]["units"]["tokens"] == 1000 and not by["openrouter"]["free"]
+    assert by["openrouter"]["units"]["tokens"] == 1400 and not by["openrouter"]["free"]
+    m = g["models"][0]                                                  # rows that name a model also add up per model
+    assert m["model"] == "x/y:free" and m["calls"] == 2 and (m["tokensIn"], m["tokensOut"], m["tokens"]) == (330, 70, 400) and m["free"]
     assert by["edge"]["free"] and g["usdToday"] == 0.01                # yesterday is not today
+
+
+def test_the_ledger_keeps_the_model_and_split_when_given(tmp_path, monkeypatch):
+    from faceless import ledger
+    monkeypatch.setattr(ledger, "LEDGER", tmp_path / "l.jsonl")
+    ledger.spend("openrouter", "tokens", 30, usd=0.0, model="a/b:free", tokens_in=20, tokens_out=10)
+    ledger.spend("edge", "chars", 5)
+    rows = [json.loads(x) for x in (tmp_path / "l.jsonl").read_text().splitlines()]
+    assert rows[0]["model"] == "a/b:free" and rows[0]["tokens_in"] == 20 and "model" not in rows[1]
