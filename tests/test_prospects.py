@@ -179,3 +179,15 @@ def test_a_hand_typed_command_gets_the_machine_keys_the_timer_has(tmp_path, monk
         import os
         os.environ.pop("QM_TEST_A", None)
         os.environ.pop("QM_TEST_B", None)
+
+
+def test_a_successful_read_is_not_offered_again_for_hours(desk, monkeypatch):
+    monkeypatch.setenv("COMPOSIO_API_KEY", "present")
+    assert prospects.board_state()["youtubeDue"] is True                          # never read: one run is worth it
+    prospects.collect(lambda: [])
+    b = prospects.board_state()
+    assert b["youtube"] is True and b["youtubeDue"] is False                      # read just now, nobody there: do not loop
+    base = {"day": "2026-11-15", "jobs": None, "phone": None, "outbound": None, "offers": None}
+    assert not [m for m in missions.derive({**base, "prospects": b}) if m["id"].startswith("prospect-")]
+    monkeypatch.setattr(prospects, "_now", lambda: prospects.datetime.now(prospects.timezone.utc) + prospects.timedelta(hours=7))
+    assert prospects.board_state()["youtubeDue"] is True

@@ -152,7 +152,7 @@ def collect(youtube=None) -> tuple[list[dict], list[dict]]:
     return rows, notes
 
 
-YOUTUBE_RETRY_HOURS = 6                             # after a failed read the board stops offering the run for this long, then lets one run try again
+YOUTUBE_RETRY_HOURS = 6                             # after any read the board waits this long before offering another (each read spends YouTube quota)
 
 
 def _record_youtube(note: dict) -> None:
@@ -171,11 +171,12 @@ def youtube_state() -> dict:
         last = json.loads((LISTS / "youtube-source.json").read_text(encoding="utf-8"))
         age = _now() - datetime.fromisoformat(str(last["t"]).replace("Z", "+00:00"))
     except (OSError, ValueError, KeyError, TypeError):
-        return {"ok": True, "note": "a key is present; no read has been tried yet"}
+        return {"ok": True, "due": True, "note": "a key is present; no read has been tried yet"}
     if last.get("ok"):
-        return {"ok": True, "note": f"last read gave {last.get('rows', 0)} comment(s)"}
+        return {"ok": True, "due": age > timedelta(hours=YOUTUBE_RETRY_HOURS),
+                "note": f"last read gave {last.get('rows', 0)} comment(s), {int(age.total_seconds() // 60)} min ago"}
     if age > timedelta(hours=YOUTUBE_RETRY_HOURS):
-        return {"ok": True, "note": f"last read failed ({last.get('note', '')}); due for another try"}
+        return {"ok": True, "due": True, "note": f"last read failed ({last.get('note', '')}); due for another try"}
     return {"ok": False, "note": str(last.get("note") or "last read failed")}
 
 
@@ -256,7 +257,7 @@ def board_state() -> dict:
     """The cheap view the command center polls: the drop folder only (no network), and what the last real read of YouTube comments gave."""
     ready, dropped = queue(from_inbox())
     yt = youtube_state()
-    return {"ready": len(ready), "dropped": len(dropped), "draftedToday": drafted_today(), "youtube": yt["ok"], "youtubeNote": yt["note"],
+    return {"ready": len(ready), "dropped": len(dropped), "draftedToday": drafted_today(), "youtube": yt["ok"], "youtubeDue": bool(yt.get("due")), "youtubeNote": yt["note"],
             "addedToday": any(INBOX.glob(f"*-{config.today_utc().isoformat()}.jsonl"))}
 
 

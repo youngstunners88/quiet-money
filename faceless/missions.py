@@ -150,7 +150,7 @@ def derive(doc: dict) -> list[dict]:
         add(f"client-hunt-{day}", "Hunt for clients: research today's projects and write outreach packages",
             "The service desk only has someone to write to on days it runs. Free models; nothing is sent.", "engine", action="outbound_run", args={})
     pr = doc.get("prospects")
-    if pr and not pr.get("draftedToday") and (pr.get("ready") or pr.get("youtube")):
+    if pr and not pr.get("draftedToday") and (pr.get("ready") or pr.get("youtubeDue")):
         n = pr.get("ready") or 0
         add(f"prospect-{day}", f"Turn {n} new comment(s) into DM drafts" if n else "Read today's comments for people to write to",
             "Someone who already wrote to us is the warmest person there is.", "engine", action="prospect", args={})
