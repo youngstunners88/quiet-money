@@ -12,6 +12,7 @@ import base64
 import re
 import ssl
 import subprocess
+import time
 import wave
 from pathlib import Path
 
@@ -62,6 +63,11 @@ def _edge_ssl_patch() -> None:
     comm._SSL_CTX = ssl.create_default_context(cafile=bundle)
 
 
+EDGE_ATTEMPTS = 3
+EDGE_TIMEOUT_S = 180
+EDGE_BACKOFF_S = 4
+
+
 def edge(text: str, out: Path, *, rate: str | None = None) -> list[dict]:
     try:
         import edge_tts
@@ -82,9 +88,23 @@ def edge(text: str, out: Path, *, rate: str | None = None) -> list[dict]:
                     s = ch["offset"] / 1e7
                     words.append({"w": ch["text"], "start": round(s, 3), "end": round(s + ch["duration"] / 1e7, 3)})
 
-    asyncio.run(go())
-    if not words or mp3.stat().st_size < 2000:
-        raise ProviderError("edge returned no audio")
+    # Edge's service sometimes answers "no audio received" to a script it renders fine a minute later (2026-11-15: 2 of 3 videos
+    # failed, the same text then worked twice). Retry the SAME voice, so the sound of the channel never changes, before the chain moves on.
+    last = None
+    for attempt in range(EDGE_ATTEMPTS):
+        words.clear()
+        try:
+            asyncio.run(asyncio.wait_for(go(), timeout=EDGE_TIMEOUT_S))
+            if words and mp3.stat().st_size >= 2000:
+                last = None
+                break
+            last = ProviderError("edge returned no audio")
+        except (Exception, asyncio.TimeoutError) as e:   # noqa: BLE001 - NoAudioReceived, a dropped socket and a hang all get the same retry
+            last = e
+        if attempt + 1 < EDGE_ATTEMPTS:
+            time.sleep(EDGE_BACKOFF_S * (attempt + 1))
+    if last is not None:
+        raise last if isinstance(last, ProviderError) else ProviderError(f"edge: {type(last).__name__}: {last}"[:300])
     _to_wav(mp3, out)
     mp3.unlink(missing_ok=True)
     ledger.spend("edge", "chars", len(text))
