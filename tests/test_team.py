@@ -113,3 +113,13 @@ def test_every_board_action_that_moves_reports_on_the_team_board(beats, monkeypa
     assert "2026-11-15-s1-story-x" in rows[2]["task"] and "boom" in rows[3]["task"]
     by = {r["agent"]: r for r in team.board()["agents"]}
     assert by["engine-render"]["status"] == "error" and by["engine-desk"]["status"] == "done"
+
+
+def test_a_mission_whose_dispatch_failed_is_blocked_for_the_day(tmp_path, monkeypatch):
+    from faceless import events, missions
+    j = tmp_path / "journal.jsonl"
+    j.write_text(json.dumps({"ts": "2026-11-15T10:31:58Z", "type": "CC_ACTION", "actor": "autopilot", "action": "mission",
+                             "args": {"mission": "held-review-2026-11-15", "by": "autopilot"}, "ok": False, "summary": "refused: herdr workspace create"}) + "\n")
+    monkeypatch.setattr(events, "JOURNAL", j)
+    rows = missions.log()
+    assert any(r["mission"] == "held-review-2026-11-15" and r["event"] == "blocked" and r["agent"] == "dispatch" for r in rows)

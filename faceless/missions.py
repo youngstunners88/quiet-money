@@ -117,7 +117,7 @@ def log(limit: int = 400, window: int = 900_000) -> list[dict]:
         return []
     rows = []
     for line in chunk.splitlines()[(1 if size > window else 0):]:
-        if EVENT not in line and '"mission:' not in line:
+        if EVENT not in line and '"mission:' not in line and '"action": "mission"' not in line:
             continue
         try:
             e = json.loads(line)
@@ -128,6 +128,10 @@ def log(limit: int = 400, window: int = 900_000) -> list[dict]:
         elif e.get("type") == "CC_ACTION" and str(e.get("actor") or "").startswith("mission:"):
             rows.append({"ts": e.get("ts"), "type": EVENT, "mission": e["actor"][8:], "event": "done" if e.get("ok") else "blocked",
                          "agent": "engine", "note": e.get("summary") or ""})
+        elif e.get("type") == "CC_ACTION" and e.get("action") == "mission" and not e.get("ok") and (e.get("args") or {}).get("mission"):
+            # the dispatch itself failed (herdr down, agent missing): blocked for today, or Autopilot retries it every tick
+            rows.append({"ts": e.get("ts"), "type": EVENT, "mission": e["args"]["mission"], "event": "blocked", "agent": "dispatch",
+                         "note": e.get("summary") or e.get("refused") or "dispatch failed"})
     return rows[-limit:]
 
 
