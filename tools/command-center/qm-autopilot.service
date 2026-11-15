@@ -1,0 +1,14 @@
+# Autopilot with no window open: one step of mission control. Install:
+#   cp tools/command-center/qm-autopilot.* ~/.config/systemd/user/ && systemctl --user daemon-reload && systemctl --user enable --now qm-autopilot.timer
+# Stop: `systemctl --user disable --now qm-autopilot.timer`, or `[autopilot] enabled = false` in crew.toml, or `python -m faceless pause "why"`.
+[Unit]
+Description=Quiet Money Autopilot (one mission-control step)
+
+[Service]
+Type=oneshot
+WorkingDirectory=%h/quiet-money
+Environment=PATH=%h/.local/bin:%h/.opencode/bin:%h/.local/share/mise/shims:/usr/local/bin:/usr/bin:/bin
+EnvironmentFile=-%h/.config/quiet-money/env
+ExecStart=%h/quiet-money/.venv/bin/python -m faceless crew tick
+# the step starts its mission detached and returns; the mission must outlive the step
+KillMode=process

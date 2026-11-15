@@ -5,19 +5,22 @@
 # Job tags in use: writing, research, bulk, phone, code, review, hard
 
 [autopilot]
+enabled = true            # the timer (tools/command-center/qm-autopilot.timer) acts only while this is true; state/PAUSE also stops it
 max_parallel = 2          # missions in motion at once
-phone = false             # true lets Autopilot hand the phone lane to an agent (off while a person or another agent drives the phone)
+phone = true              # Autopilot hands posting to the phone agent; it waits while that agent is busy in a terminal the board cannot see
 agent_ttl_minutes = 180   # an agent mission with no report after this is offered again
 
 [agents.opencode]
 name = "OpenCode"
 kind = "opencode"
-jobs = ["bulk", "phone", "research", "writing"]
+args = ["--model", "opencode/deepseek-v4.1-flash-free"]   # a free model for every session the board starts; change the id to switch
+jobs = ["phone", "bulk", "research", "writing"]
 cost = 0
 
 [agents.hermes]
 name = "Hermes"
 kind = "hermes"
+enabled = false           # 2026-11-15: OpenRouter rejects its key (HTTP 401). Run `hermes setup`, then delete this line.
 jobs = ["writing", "research", "bulk"]
 cost = 0
 

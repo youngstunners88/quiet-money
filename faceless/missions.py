@@ -29,7 +29,7 @@ from faceless.config import Paths
 
 EVENT = "CC_MISSION"
 ROSTER = Paths.root / "crew.toml"
-DEFAULTS = {"max_parallel": 2, "phone": False, "agent_ttl_minutes": 180}
+DEFAULTS = {"enabled": False, "max_parallel": 2, "phone": False, "agent_ttl_minutes": 180}
 TAG = re.compile(r"^[a-z][a-z0-9-]{1,24}$")
 MISSION = re.compile(r"^[A-Za-z0-9][A-Za-z0-9._-]{2,180}$")
 COST = {0: "free", 1: "cheap", 2: "paid"}
@@ -68,13 +68,34 @@ def crew(agents_doc: dict | None = None) -> list[dict]:
     panes = (agents_doc.get("herdr") or {}).get("agents") or []
     out = []
     for aid, a in raw.items():
+        if a.get("enabled") is False:                        # benched by the owner (a dead key, a trial that ran out)
+            continue
         kind = str(a.get("kind") or aid)
         live = [{"pane": p.get("id"), "status": p.get("status") or "unknown"} for p in panes if p.get("agent") == kind]
-        out.append({"id": aid, "name": a.get("name") or aid, "kind": kind, "jobs": list(a.get("jobs") or []), "cost": int(a.get("cost", 1)),
+        out.append({"args": [str(x) for x in a.get("args") or []], "outside": _outside(kind, len(live)),
+                    "id": aid, "name": a.get("name") or aid, "kind": kind, "jobs": list(a.get("jobs") or []), "cost": int(a.get("cost", 1)),
                     "costLabel": COST.get(int(a.get("cost", 1)), "paid"), "installed": bool(shutil.which(str(a.get("bin") or kind))), "panes": live,
                     "status": ("working" if any(p["status"] == "working" for p in live) else "blocked" if any(p["status"] == "blocked" for p in live)
                                else "idle" if live else "asleep")})
     return sorted(out, key=lambda a: (a["cost"], a["id"]))
+
+
+def _outside(kind: str, in_herdr: int) -> bool:
+    """Is this agent also running somewhere the board cannot see (a terminal of the owner's)? True when more processes exist than panes."""
+    try:
+        r = subprocess.run(["pgrep", "-x", kind], capture_output=True, text=True, timeout=5)
+    except (OSError, subprocess.SubprocessError):
+        return False
+    return len(r.stdout.split()) > in_herdr
+
+
+def made_unposted(day: str, days: int = 3) -> list[str]:
+    """Passed, packaged videos of the last few days that have no TikTok receipt and no phone job yet: made, and reaching nobody."""
+    from faceless import phone
+    from faceless.state import scan_jobs
+    seen = {r.get("key") for r in phone.receipts() if r.get("kind") == "tiktok"} | {j.get("key") for j in phone.jobs() if j.get("kind") == "tiktok"}
+    return sorted(j.id for j in scan_jobs()[0] if j.day > _days_ago(day, days) and j.status == "packaged" and (j.scores or {}).get("passed")
+                  and j.id not in seen and j.artifacts.get("video"))
 
 
 def route(tag: str, roster: list[dict]) -> dict | None:
@@ -140,6 +161,17 @@ def derive(doc: dict) -> list[dict]:
         add("phone-lane", f"Post through the phone: {n} job(s) ready", "A passed video only reaches people once it is posted.", "agent", tag="phone", auto=bool(settings()["phone"]),
             brief=("Use the faceless-phone skill. Run every job `python -m faceless phone next --push` hands out, one at a time, following its recipes, and record "
                    "each with `python -m faceless phone done`. AI label on for every post. Stop at a login wall or a verification screen and report blocked."))
+    try:
+        made = made_unposted(day)
+    except Exception:   # noqa: BLE001 - a damaged job file must not blank the board
+        made = []
+    if made:
+        add(f"post-made-{day}", f"Post {len(made)} finished video(s) to TikTok", "Made and passed, but nobody has seen them yet.", "agent", tag="phone", auto=bool(settings()["phone"]),
+            brief=("These videos passed the gauntlet and are not posted: " + ", ".join(made[:5]) + ". Post up to five today to TikTok through the phone, one at a time, "
+                   "oldest first. Use the faceless-phone skill and its TikTok recipe (stage with tools/stage_local.py DAY --jobs ID,ID then post each pack; "
+                   "tools/tt-phone-post.py is the scripted route). Lint every caption with the faceless-tiktok-policy skill first. The AI-generated label must be ON "
+                   "for every post. Record each one with `python -m faceless phone done` or a receipt as the skill says, so nothing is posted twice. "
+                   "No YouTube. Stop at a login wall, a verification screen or a missing AI-label switch and report blocked."))
     if of and of["built"] > of["live"]:
         waiting = [i["name"] for i in of["items"] if not i["live"]]
         add("list-" + "-".join(i["id"] for i in of["items"] if not i["live"])[:60], f"Set a price for {waiting[0]}", "Built and not on sale earns nothing; the price is yours to say.", "owner", tab="money")
@@ -186,6 +218,8 @@ def board(doc: dict) -> dict:
     for m in missions:
         if m["kind"] == "agent":
             a = route(m["tag"], roster_fit)
+            if a and m["tag"] == "phone" and a.get("outside"):
+                m["auto"], m["note"] = False, f"{a['name']} is already working in a terminal the board cannot see; Autopilot waits for it rather than put two drivers on one phone."
             m["route"] = ({"agent": a["id"], "name": a["name"], "cost": a["costLabel"], "why": f"cheapest installed agent that does {m['tag']}"} if a
                           else {"agent": None, "name": "nobody", "cost": "", "why": f"no installed agent lists {m['tag']} in crew.toml"})
         elif m["kind"] == "engine":
@@ -198,6 +232,9 @@ def board(doc: dict) -> dict:
         if m["id"] in quiet:
             m["note"] = f"{quiet[m['id']].get('agent')} took this and went idle without a report (check its model key or login); offered to the next agent."
             todo.append(m)
+        elif e and e.get("event") == "picked" and age < 2:
+            m["run"] = {"agent": "autopilot", "pane": None, "since": e.get("ts"), "status": "starting"}
+            running.append(m)
         elif e and e.get("event") == "dispatched" and age < (cfg["agent_ttl_minutes"] if m["kind"] == "agent" else 300):
             pane = by_pane.get(e.get("pane"))
             m["run"] = {"agent": e.get("agent"), "pane": e.get("pane"), "since": e.get("ts"), "status": pane or ("running" if m["kind"] == "engine" else "unknown")}
@@ -224,11 +261,31 @@ def plan_auto(doc: dict | None = None) -> dict:
     b = doc.get("missions") or board(doc)
     if len(b["running"]) >= int(b["autopilot"]["max_parallel"]):
         return {"state": "busy", "text": f"{len(b['running'])} mission(s) in motion; the limit is {b['autopilot']['max_parallel']}."}
+    rendering = any(m["kind"] == "engine" and m.get("action") in ("daily", "job_retry") for m in b["running"])
     for m in b["todo"]:
+        if rendering and m["kind"] == "engine" and m.get("action") in ("daily", "job_retry"):
+            continue                                         # one render at a time: the machine has one GPU and the batch refills its own slots
         if m["auto"] and not m.get("blocked") and m["route"]["agent"] not in (None, "owner"):
             return {"state": "run", "mission": m["id"], "text": f"Starting: {m['title']} ({m['route']['name']}, {m['route']['cost']})"}
     waiting = sum(1 for m in b["todo"] if m["kind"] == "owner")
     return {"state": "idle", "text": (f"Nothing left that a machine may do; {waiting} thing(s) wait for you." if waiting else "Nothing needs doing right now.")}
+
+
+def tick() -> dict:
+    """One Autopilot step with no page open (the systemd timer runs this). The mission is started detached so a long batch does not
+    hold the next tick; `[autopilot] enabled` in crew.toml is the switch and state/PAUSE the kill switch."""
+    if not settings()["enabled"]:
+        return {"state": "off", "text": "[autopilot] enabled = false in crew.toml"}
+    plan = plan_auto()
+    if plan.get("state") != "run":
+        return plan
+    log_file = Paths.state / "tmp" / "autopilot.log"
+    log_file.parent.mkdir(parents=True, exist_ok=True)
+    with open(log_file, "ab") as out:
+        subprocess.Popen([sys.executable, "-m", "faceless", "crew", "dispatch", plan["mission"], "autopilot"], cwd=Paths.root, stdout=out, stderr=out,   # noqa: S603
+                         stdin=subprocess.DEVNULL, start_new_session=True)
+    events.emit(EVENT, actor="autopilot", mission=plan["mission"], event="picked", note=plan["text"])
+    return plan
 
 
 def _herdr(*args: str, timeout: int = 60) -> dict:
@@ -258,7 +315,7 @@ def _pane_for(agent: dict) -> str:
     if not found:
         raise RuntimeError(f"herdr made the {label} workspace but its pane id could not be read")
     pane = found.group(1)
-    _herdr("agent", "start", label, "--kind", agent["kind"], "--pane", pane, "--timeout", "90000", timeout=120)
+    _herdr("agent", "start", label, "--kind", agent["kind"], "--pane", pane, "--timeout", "90000", *(["--", *agent["args"]] if agent.get("args") else []), timeout=120)
     return pane
 
 
@@ -325,6 +382,8 @@ def main(argv: list[str]) -> int:
             print("\nDONE TODAY")
             for d in b["done"]:
                 print(f"  {d['event']:7} {d['id']}  {d['note'][:90]}")
+        elif act == "tick":
+            print(json.dumps(tick()))
         elif act == "plan":
             print(json.dumps(plan_auto()))
         elif act == "dispatch":
