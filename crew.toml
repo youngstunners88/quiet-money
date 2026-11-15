@@ -1,0 +1,48 @@
+# The crew: every agent the command center may hand work to. Add an agent by adding a block; nothing else changes.
+#   kind  - what herdr starts (`herdr agent start --kind`), also how a live pane is recognised
+#   jobs  - what it is good at; a mission carries one job tag and goes to the cheapest installed agent that lists it
+#   cost  - 0 free, 1 cheap, 2 paid. Engine commands cost no tokens and always win; then the lowest cost here.
+# Job tags in use: writing, research, bulk, phone, code, review, hard
+
+[autopilot]
+max_parallel = 2          # missions in motion at once
+phone = false             # true lets Autopilot hand the phone lane to an agent (off while a person or another agent drives the phone)
+agent_ttl_minutes = 180   # an agent mission with no report after this is offered again
+
+[agents.opencode]
+name = "OpenCode"
+kind = "opencode"
+jobs = ["bulk", "phone", "research", "writing"]
+cost = 0
+
+[agents.hermes]
+name = "Hermes"
+kind = "hermes"
+jobs = ["writing", "research", "bulk"]
+cost = 0
+
+[agents.codex]
+name = "Codex"
+kind = "codex"
+jobs = ["code", "review"]
+cost = 1
+
+[agents.gemini]
+name = "Gemini CLI"
+kind = "gemini"
+jobs = ["research", "writing"]
+cost = 1
+
+[agents.claude]
+name = "Claude Code"
+kind = "claude"
+jobs = ["code", "review", "hard", "phone", "writing"]
+cost = 2
+
+# Agent Zero, when it is installed: uncomment and set `bin` to its launcher.
+# [agents.agent-zero]
+# name = "Agent Zero"
+# kind = "agent-zero"
+# bin = "agent-zero"
+# jobs = ["research", "bulk"]
+# cost = 0

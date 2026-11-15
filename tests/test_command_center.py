@@ -13,7 +13,7 @@ import urllib.request
 
 import pytest
 
-from faceless import actions, config, dashboard, dmdesk, events, hermes, moneybrief, overview, phone, qr, receipts, safety, serve
+from faceless import actions, config, dashboard, dmdesk, events, hermes, missions, moneybrief, overview, phone, qr, receipts, safety, serve
 from faceless.state import scan_jobs
 
 TOKEN = "-".join(["placeholder"] * 3)          # built, not written out: the hygiene test refuses anything shaped like a real key
@@ -577,3 +577,65 @@ def test_every_control_on_the_page_is_wired(desk):
         assert f"'{name}'" in js, name
     assert "LS.get('qm_ns')==='1'" in js                                                # Non-stop is off until the owner turns it on
     assert "typing()" in js and "Display only" in js
+    assert "'mission'" in js and "'autopilot_tick'" in js and "LS.get('qm_ap')==='1'" in js       # Autopilot is off until the owner turns it on
+
+
+# ---------------------------------------------------------------- mission control: one board for every agent
+
+def _crew(**status):
+    base = {"opencode": (0, ["bulk", "phone", "writing"]), "hermes": (0, ["writing", "research"]), "claude": (2, ["code", "writing", "phone"])}
+    return [{"id": k, "name": k.title(), "kind": k, "jobs": jobs, "cost": cost, "costLabel": missions.COST[cost], "installed": status.get(k, "asleep") != "missing",
+             "panes": [], "status": status.get(k, "asleep")} for k, (cost, jobs) in base.items()]
+
+
+def test_work_goes_to_the_cheapest_installed_agent_that_lists_the_job():
+    assert missions.route("writing", _crew())["id"] in ("hermes", "opencode")            # free before paid
+    assert missions.route("writing", _crew(hermes="idle"))["id"] == "hermes"             # among equals, the one already awake
+    assert missions.route("code", _crew())["id"] == "claude"                             # paid only when nothing cheaper lists it
+    assert missions.route("writing", _crew(opencode="missing", hermes="missing"))["id"] == "claude"
+    assert missions.route("video-editing", _crew()) is None
+
+
+def test_the_board_is_derived_from_real_state_and_owner_work_is_never_dispatched(desk, journal, monkeypatch):
+    monkeypatch.setattr(missions, "crew", lambda agents_doc=None: _crew(hermes="idle"))
+    doc = overview.build()
+    doc["jobs"].update(ranToday=False, passedToday=0, failed=[], held=[{"id": "2099-01-01-s1-x", "day": "2099-01-01", "title": "T", "step": "packaged"}])
+    doc["outbound"] = {"blockedOnOwner": 3, "followUpsDue": 0}
+    doc["phone"] = None
+    b = missions.board(doc)
+    kinds = {m["id"].split("-")[0]: m for m in b["todo"]}
+    assert kinds["send"]["route"]["agent"] == "owner" and kinds["daily"]["route"] == {**kinds["daily"]["route"], "agent": "engine", "cost": "0 tokens"}
+    assert kinds["held"]["route"]["agent"] == "hermes" and all("brief" not in m for m in b["todo"])
+    monkeypatch.setattr(overview, "build", lambda today=None: doc)
+    with pytest.raises(RuntimeError, match="yours"):
+        missions.dispatch(kinds["send"]["id"])
+    doc["missions"] = b
+    plan = missions.plan_auto(doc)
+    assert plan["state"] == "run" and plan["mission"].startswith("daily-")                # zero-token engine work first, never the owner's
+    monkeypatch.setattr(safety, "paused", lambda: "owner said stop")
+    assert missions.plan_auto(doc)["state"] == "paused"
+    with pytest.raises(RuntimeError, match="paused"):
+        missions.dispatch(kinds["daily"]["id"])
+
+
+def test_agents_hand_work_to_each_other_through_the_board_and_a_silent_agent_sits_out(desk, journal, monkeypatch):
+    roster = _crew(hermes="idle")
+    roster[1]["panes"] = [{"pane": "w2:p1", "status": "idle"}]
+    monkeypatch.setattr(missions, "crew", lambda agents_doc=None: [dict(a) for a in roster])
+    doc = {"day": "2026-01-01", "jobs": None, "phone": None, "outbound": None, "offers": None, "agents": {}}
+    asked = missions.ask("research", "find three sources on index funds", agent="opencode")
+    b = missions.board(doc)
+    m = next(x for x in b["todo"] if x["id"] == asked["mission"])
+    assert m["route"]["agent"] == "hermes" and m["kind"] == "agent"
+    events.emit(missions.EVENT, mission=m["id"], event="dispatched", agent="hermes", pane="w2:p1")
+    assert [x["id"] for x in missions.board(doc)["running"]] == [m["id"]]
+    monkeypatch.setattr(missions, "_minutes", lambda iso: 10.0)                          # ten minutes on: Hermes is idle and never reported
+    b = missions.board(doc)
+    again = next(x for x in b["todo"] if x["id"] == m["id"])
+    assert again["route"]["agent"] is None and "went idle without a report" in again["note"]      # nobody else lists research here
+    assert next(a for a in b["crew"] if a["id"] == "hermes")["status"] == "no answer"
+    missions.report(m["id"], "done", "three sources filed", agent="hermes")
+    b = missions.board(doc)
+    assert not any(x["id"] == m["id"] for x in b["todo"] + b["running"]) and b["done"][0]["note"] == "three sources filed"
+    with pytest.raises(ValueError):
+        missions.report(m["id"], "maybe")

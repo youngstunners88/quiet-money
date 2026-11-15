@@ -213,6 +213,12 @@ def cmd_retry(args) -> int:
     return 0 if job.status == "packaged" else 2
 
 
+def cmd_crew(args) -> int:
+    """Mission control (faceless/missions.py): the board, dispatch, and how agents report and ask each other for help."""
+    from faceless import missions
+    return missions.main(args.rest)
+
+
 def cmd_publish(args) -> int:
     from faceless.providers import publish
     from faceless.state import load_job
@@ -1971,6 +1977,9 @@ def main(argv: list[str] | None = None) -> int:
     rt.add_argument("--no-judge", action="store_true")
     rt.add_argument("--skip-preflight", action="store_true", help="start even if the machine cannot finish a video (not recommended)")
     rt.set_defaults(fn=cmd_retry)
+    cw = sub.add_parser("crew", help="mission control: `crew board | plan | dispatch <mission> | report <mission> done|blocked \"note\" | ask <job-tag> \"request\"`")
+    cw.add_argument("rest", nargs=argparse.REMAINDER)
+    cw.set_defaults(fn=cmd_crew)
     pb = sub.add_parser("publish", help="(re)publish a packaged job")
     pb.add_argument("job")
     pb.add_argument("--force", action="store_true", help="publish even though the gauntlet did not pass (human-reviewed)")

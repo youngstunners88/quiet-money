@@ -132,6 +132,7 @@ humans set strategy, connect accounts, and review held videos.
 | Money now: every revenue rail's state and the owner's next 30 minutes, ranked by how soon it pays | `/faceless/cash.py` | `python -m faceless cash` | `faceless-cash` |
 | Partner Program progress and the website funnel (PostHog, cookieless) | `/faceless/ypp.py`, `sitestats.py` | `python -m faceless ypp` | `faceless-measure` |
 | Command center on the owner's phone and as a desktop app (Wi-Fi or Tailscale, no USB): the overview projection, the page, the token server, the action desk behind its buttons, Non-stop, the herdr tab | `/faceless/overview.py`, `dashboard.py`, `serve.py`, `actions.py` | `artifacts/command-center/README.md`, `OPERATIONS.md` (Command center), `STATUS.md` | `faceless-cash` |
+| Mission control: the work board, the crew roster, sending work to the cheapest suited agent, agents reporting and asking each other, Autopilot | `/faceless/missions.py`, `crew.toml` | `artifacts/command-center/README.md` (Mission control), `python -m faceless crew board` | `faceless-cash` |
 | DMs the owner sends by hand, the daily money brief, receipts (the only proof of income) | `/faceless/dmdesk.py`, `moneybrief.py`, `receipts.py` | `python -m faceless money` | `faceless-cash` |
 | HQ: the owner's dashboard (freedom number, engines, next moves, horizon, goals, build queue), its daily refresh | `/faceless/hq.py` | `python -m faceless hq` | `faceless-hq` |
 
@@ -192,6 +193,7 @@ python -m faceless cash                        # the money desk: every rail's st
 python -m faceless overview                    # the command center's projection: real state -> state/overview.json (reads only)
 python -m faceless dashboard                   # render the phone page into site/command-center/ (gitignored, never deployed)
 python -m faceless serve                       # serve it on the LAN with a token and a QR code (`--init-token` once; `--host 127.0.0.1` behind `tailscale serve`); its buttons run the allowlist in faceless/actions.py
+python -m faceless crew board                  # mission control: to do, in motion, done; `crew dispatch <mission>`, `crew report <mission> done|blocked "note"`, `crew ask <job-tag> "request"`
 python -m faceless dm                          # ten DMs for the owner to send by hand -> outbound/drafts/<day>.md; `dm log <id> sent|replied|bought`; never sends
 python -m faceless money                       # the daily money brief: 3 owner actions, DMs, follow-ups, changes -> outbound/brief/<day>.md
 python -m faceless receipts add --rail gumroad --gross 17 --ref ORDER   # record one real receipt; `receipts` alone prints the month

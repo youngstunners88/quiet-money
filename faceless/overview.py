@@ -376,6 +376,8 @@ def build(today: str | None = None) -> dict:
     }
     doc["targets"] = targets(doc)                            # studio.toml holds no revenue or audience target, so none is drawn
     doc["alerts"] = alerts(doc)
+    from faceless import missions
+    doc["missions"] = missions.board(doc)                    # the work board: derived to-do, who has what, done today
     return doc
 
 

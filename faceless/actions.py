@@ -34,7 +34,7 @@ from faceless.config import Paths
 EVENT = "CC_ACTION"
 NAME = re.compile(r"^[A-Za-z0-9][A-Za-z0-9._-]{1,180}$")       # ids are file names and argv values: no slash, no leading dash, no space
 HANDLE = re.compile(r"^@?[A-Za-z0-9_.]{1,40}$")
-WORKSPACE, PANE = re.compile(r"^w\d+$"), re.compile(r"^w\d+:p\d+$")
+WORKSPACE, PANE = re.compile(r"^w[0-9A-Za-z]{1,8}$"), re.compile(r"^w[0-9A-Za-z]{1,8}:p[0-9A-Za-z]{1,8}$")
 DM_STATUSES = ("sent", "replied", "clicked", "bought", "dead")
 OUTCOMES = ("sent", "reply", "closed", "rejected")
 BREAKER_FAILS, BREAKER_MINUTES = 2, 30
@@ -100,6 +100,15 @@ def _focus(args: dict) -> list[str]:
     raise Refused("target is a herdr workspace (w2) or an agent pane (w2:p1)")
 
 
+def _mission_lane(args: dict) -> str:
+    mid = str((args or {}).get("mission") or "")
+    return "render" if mid.startswith(("daily-", "retry-")) else "phone" if mid.startswith("phone-") else "crew:" + mid[:40]
+
+
+def lane_of(spec: dict, args: dict | None) -> str:
+    return spec["lane"](args or {}) if callable(spec["lane"]) else spec["lane"]
+
+
 # name -> what it runs. `moves`: it advances the pipeline, so the kill switch refuses it. `lane`: one at a time per lane.
 ACTIONS: dict[str, dict] = {
     "phone_next": {"label": "Advance phone", "lane": "phone", "moves": True, "timeout": 900,
@@ -120,13 +129,16 @@ ACTIONS: dict[str, dict] = {
                     "argv": lambda a: _py("money"), "shows": "python -m faceless money"},
     "outbound_outcome": {"label": "Record outreach outcome", "lane": "desk", "moves": False, "timeout": 60, "argv": _outcome,
                          "shows": "python -m faceless outbound outcome <slug> <event>"},
+    "mission": {"label": "Dispatch mission", "lane": lambda a: _mission_lane(a), "moves": True, "timeout": 4 * 3600,
+                "argv": lambda a: _py("crew", "dispatch", _name(a, "mission"), str(a.get("by") or "owner") if str(a.get("by") or "owner") in ("owner", "autopilot") else "owner"),
+                "shows": "python -m faceless crew dispatch <mission>"},
     "herdr_focus": {"label": "Focus pane", "lane": "herdr", "moves": False, "timeout": 15, "argv": _focus,
                     "shows": "herdr workspace focus <id> | herdr agent focus <pane>"},
 }
 
 
 def catalog() -> list[dict]:
-    return [{"name": k, "label": v["label"], "lane": v["lane"], "stoppedByPause": v["moves"], "runs": v["shows"]} for k, v in ACTIONS.items()]
+    return [{"name": k, "label": v["label"], "lane": v["lane"] if isinstance(v["lane"], str) else "per mission", "stoppedByPause": v["moves"], "runs": v["shows"]} for k, v in ACTIONS.items()]
 
 
 def _now() -> str:
@@ -167,6 +179,13 @@ def summarize(name: str, code: int | None, stdout: str) -> tuple[str, dict]:
         except (ValueError, KeyError, TypeError):
             pass
     lines = [ln.strip() for ln in (stdout or "").splitlines() if ln.strip()]
+    if name == "mission":
+        try:
+            doc = json.loads(stdout)
+            extra["job"] = doc.get("mission")
+            return f"{doc.get('agent')}: {doc.get('summary')}"[:200], extra
+        except (ValueError, TypeError):
+            pass
     if name in ("job_retry", "phone_requeue", "dm_log"):
         try:
             doc = json.loads(stdout)
@@ -305,7 +324,7 @@ class Desk:
         spec = ACTIONS.get(name)
         if spec is None:
             return self.run_action(name, args, actor=actor)                  # journals the refusal
-        lane = spec["lane"]
+        lane = lane_of(spec, args)
         with self.lock:
             busy = self.running.get(lane)
             if busy:
@@ -347,6 +366,14 @@ class Desk:
         if plan.get("state") != "run":
             return plan
         return {**plan, "result": self.start(plan.get("do") or "phone_next", {}, actor="non-stop")}
+
+    def auto(self) -> dict:
+        """One Autopilot step, asked for by the open page: start the next mission a machine may do, if there is room."""
+        from faceless import missions
+        plan = missions.plan_auto()
+        if plan.get("state") != "run":
+            return plan
+        return {**plan, "result": self.start("mission", {"mission": plan["mission"], "by": "autopilot"}, actor="autopilot")}
 
     def snapshot(self, limit: int = 15) -> dict:
         with self.lock:

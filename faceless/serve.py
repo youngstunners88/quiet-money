@@ -250,7 +250,7 @@ def make_handler(tok: str, source: Source, limiter: Limiter, static: dict, model
             except (ValueError, KeyError, TypeError, UnicodeDecodeError):
                 return self.json(400, {"error": "send a small JSON body: {\"name\": ..., \"args\": {...}}"})
             try:
-                result = desk.tick() if name == "nonstop_tick" else desk.start(name, args)
+                result = desk.tick() if name == "nonstop_tick" else desk.auto() if name == "autopilot_tick" else desk.start(name, args)
             except Exception as e:   # noqa: BLE001 - the page shows the failure instead of a hung button
                 result = {"action": name, "state": "done", "ok": False, "exit": None, "summary": f"the action desk failed: {type(e).__name__}"}
             return self.json(200, result)

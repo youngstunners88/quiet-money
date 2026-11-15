@@ -7,6 +7,43 @@ It is a control surface, not a second system. Every number is read from the file
 `state/outbound.jsonl`, `state/receipts.jsonl`, `state/ledger.jsonl`, `studio.toml`, `herdr api snapshot`, agent config files). Every
 button runs one existing `python -m faceless ...` or `herdr ...` command. There is no database and no background service of its own.
 
+## Mission control (the first tab)
+
+The Mission tab is the whole business on one screen: revenue this month, the crew, and three columns.
+
+- **To do** is derived from real state, in the order it pays. Nothing is typed in by hand, so a card disappears when the thing it
+  names is no longer true.
+- **In motion** is what has been sent and not yet reported.
+- **Done today** is what was reported, with the one line the agent or the engine left.
+
+Every card says who should do it and why:
+
+| Route | Meaning |
+|---|---|
+| **Engine · 0 tokens** | A `faceless` command does it. No model is used. Always first. |
+| **an agent · free / cheap / paid** | The cheapest installed agent that lists the job in `crew.toml`; among equals, one already awake. |
+| **You** | Money and the outside world: sending a DM, setting a price. Never dispatched. |
+
+**The crew is `crew.toml`.** One block per agent: `kind` (what herdr starts), `jobs` (what it is good at), `cost` (0 free, 1 cheap,
+2 paid). Adding an agent is adding a block; any agent kind herdr can start can join.
+
+**How agents work together.** Dispatch goes through herdr: an idle pane of that agent is used, or a `qm-<agent>` workspace is created
+and the agent started in it. The agent is told to close the mission and how to ask for help:
+
+```bash
+python -m faceless crew report <mission> done "one line"     # or: blocked "why"
+python -m faceless crew ask <writing|research|bulk|code|review|hard> "what you need"   # opens a card for a better-suited agent
+python -m faceless crew board                                # the same board in a terminal
+```
+
+An agent that takes a mission and goes idle without reporting (a dead key, a login wall) sits out for the day and its mission is
+offered to the next cheapest agent.
+
+**Autopilot** is the toggle in the header, off by default. While the page is open it asks every 45 seconds for the next mission a
+machine may do and starts it, up to `[autopilot] max_parallel`. It never does a "You" card, never restarts a mission that reported
+blocked today, and leaves the phone lane alone unless `[autopilot] phone = true`. Stop it with the toggle, by closing the window, or
+with `python -m faceless pause "why"`.
+
 ## Launch
 
 | How | What it does |

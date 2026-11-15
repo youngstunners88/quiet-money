@@ -168,3 +168,12 @@ The page was a viewer; it now acts. Full reference: `artifacts/command-center/RE
   days) and none on this disk, with the oldest at the head of the queue, so `phone next --push` could only fail. They are now held with
   that reason. Posting them needs the machine that has the renders to stage them again, then Release.
 - Tests: `python -m pytest -q tests/test_command_center.py`.
+
+## 11. Mission control (2026-11-15)
+
+- `crew.toml` is the roster; `faceless/missions.py` derives the to-do list from the overview, routes each mission (engine first, then the
+  cheapest installed agent that lists the job), dispatches through herdr and reads reports from `CC_MISSION` journal lines. No store.
+- `python -m faceless crew board|plan|dispatch|report|ask`. The Mission tab is the page's first tab; Autopilot is its toggle.
+- Proven live: a test mission was sent to Hermes, which could not answer (OpenRouter rejects its key, HTTP 401), was benched, and the
+  mission went to a freshly started OpenCode pane, which reported `done` on the board.
+- Autopilot's first live tick started today's batch (`daily --no-publish`).

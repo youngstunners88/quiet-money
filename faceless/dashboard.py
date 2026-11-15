@@ -123,6 +123,27 @@ button.arm{background:var(--warn);color:var(--bg)}
 .sw button{flex:0 0 auto}
 pre.out{margin:6px 0 0;font:12px/1.4 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;white-space:pre-wrap;overflow-wrap:anywhere;color:var(--dim);background:#0b0c0e;border-radius:8px;padding:8px;max-height:180px;overflow:auto}
 input[type=text]{font:inherit;color:var(--ink);background:#111316;border:1px solid var(--line);border-radius:10px;padding:8px 12px;min-height:38px;flex:1 1 160px;max-width:100%}
+.hero{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;flex-wrap:wrap;background:linear-gradient(135deg,#1c1a14,#17191d 60%);border:1px solid #3a3220;border-radius:16px;padding:18px;margin-bottom:12px}
+.hero .hl{font-size:12px;letter-spacing:.07em;text-transform:uppercase;color:var(--dim)}
+.hero .big{color:var(--gold)}
+.hero .hr{flex:1 1 240px;max-width:420px;display:flex;flex-direction:column;gap:8px;align-items:flex-start}
+.hero .l{font-size:13px;color:var(--dim)}
+.crew{display:flex;gap:8px;overflow-x:auto;padding-bottom:4px;margin-bottom:6px;scrollbar-width:none}
+.cm{flex:0 0 auto;min-width:150px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 12px;display:grid;grid-template-columns:auto 1fr;column-gap:8px;align-items:center}
+.cm b{font-size:14px}.cm span:not(.dotc),.cm em{grid-column:1/-1;font-size:11.5px;color:var(--dim);font-style:normal}
+.cm em{color:#6f757d}
+.cm.off{opacity:.45}
+.dotc{width:9px;height:9px;border-radius:50%;background:#4a4f57}
+.cm.idle .dotc{background:var(--ok)}.cm.working .dotc{background:var(--gold);box-shadow:0 0 0 4px rgba(227,179,65,.18)}.cm.blocked .dotc,.cm.no.answer .dotc{background:var(--stop)}
+.cols{display:grid;grid-template-columns:1fr;gap:4px 14px}
+.mc{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--line);border-radius:12px;padding:12px;margin-bottom:10px;overflow-wrap:anywhere}
+.mc.todo{border-left-color:var(--gold)}.mc.run{border-left-color:var(--info)}.mc.done{border-left-color:var(--ok);opacity:.9}
+.mc.empty{color:var(--dim);font-size:14px;border-style:dashed}
+.mt{font-size:15px;font-weight:600}.mw{font-size:13px;color:var(--dim);margin-top:3px}.mw.stop{color:var(--stop)}.mw.warn{color:var(--warn)}
+.mr{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}
+.chip{font-size:11px;font-weight:600;padding:2px 8px;border-radius:999px;background:#111316;border:1px solid var(--line);color:var(--dim)}
+.chip.eng{color:var(--ok);border-color:#2c4a3a}.chip.ag{color:var(--info);border-color:#2c3f55}.chip.you{color:var(--gold);border-color:#4a3d1c}.chip.info{color:var(--info)}.chip.warn{color:var(--warn)}.chip.none{color:var(--stop)}
+@media (min-width:900px){.cols{grid-template-columns:repeat(3,1fr);align-items:start}}
 #toast{position:fixed;left:50%;bottom:calc(84px + env(safe-area-inset-bottom));transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:8px 14px;border-radius:999px;font-size:14px;font-weight:600;opacity:0;transition:opacity .2s;pointer-events:none;z-index:9}
 #toast.on{opacity:1}
 """
@@ -137,10 +158,10 @@ var seed=null,cached=null;
 try{seed=JSON.parse(document.getElementById('seed').textContent)}catch(e){}
 try{cached=JSON.parse(LS.get('qm_overview')||'null')}catch(e){}
 var D=(cached&&seed&&cached.generatedAt>seed.generatedAt)?cached:(seed||cached),live=null;
-var TABS=[['today','Today','◎'],['money','Money','$'],['dms','DMs','✉'],['jobs','Jobs','▤'],['agents','Agents','✦'],['models','Models','◈'],['alerts','Alerts','!']];
-var tab=(location.hash||'').slice(1)||LS.get('qm_tab')||'today';
-if(!TABS.some(function(t){return t[0]===tab}))tab='today';
-var ACT={running:[],recent:(D&&D.activity)||[]},OPENJ={},NS={on:LS.get('qm_ns')==='1',st:null},dirty=false,polling=null;
+var TABS=[['mission','Mission','⬢'],['today','Today','◎'],['money','Money','$'],['dms','DMs','✉'],['jobs','Jobs','▤'],['agents','Agents','✦'],['models','Models','◈'],['alerts','Alerts','!']];
+var tab=(location.hash||'').slice(1)||LS.get('qm_tab')||'mission';
+if(!TABS.some(function(t){return t[0]===tab}))tab='mission';
+var ACT={running:[],recent:(D&&D.activity)||[]},OPENJ={},NS={on:LS.get('qm_ns')==='1',st:null},AP={on:LS.get('qm_ap')==='1',st:null},dirty=false,polling=null;
 
 function h(tag,attrs){var e=document.createElement(tag),i,c;attrs=attrs||{};
   for(var k in attrs){if(k==='class')e.className=attrs[k];else if(k==='on')e.addEventListener('click',attrs[k]);else if(k.slice(0,2)==='on'&&typeof attrs[k]==='function')e.addEventListener(k.slice(2),attrs[k]);else e.setAttribute(k,attrs[k])}
@@ -169,7 +190,7 @@ function tabName(t){var x=TABS.filter(function(y){return y[0]===t})[0];return x?
 function api(path){return fetch(path,{headers:tok?{Authorization:'Bearer '+tok}:{},cache:'no-store',credentials:'omit'}).then(function(r){if(!r.ok)throw new Error(r.status);return r.json()})}
 function post(body){return fetch('action',{method:'POST',headers:{'Content-Type':'application/json',Authorization:'Bearer '+tok},body:JSON.stringify(body),cache:'no-store',credentials:'omit'})
   .then(function(r){return r.json().then(function(j){if(!r.ok)throw new Error(j.error||r.status);return j},function(){throw new Error(r.status)})})}
-function akey(a){a=a||{};return a.job||a.draft||a.target||a.slug||''}
+function akey(a){a=a||{};return a.job||a.draft||a.target||a.slug||a.mission||''}
 function isRunning(name,key){return ACT.running.some(function(r){return r.action===name&&akey(r.args)===key})}
 function redraw(){if(typing())dirty=true;else draw()}
 function settle(res,label){
@@ -183,7 +204,7 @@ function act(name,args,label){
 function poll(){if(polling)return;polling=setInterval(function(){api('actions.json').then(function(a){
   var was=ACT.running.length;ACT.running=a.running||[];ACT.recent=a.recent||ACT.recent;strip();
   if(!ACT.running.length){clearInterval(polling);polling=null;var l=ACT.recent[0];if(was&&l)toast((l.ok?'Done: ':'Failed: ')+l.label);refresh()}
-  else if(tab==='alerts')redraw()},function(){})},2000)}
+  else if(tab==='alerts'||tab==='mission')redraw()},function(){})},2000)}
 function strip(){var e=document.getElementById('strip'),r=ACT.running[0],l=ACT.recent[0];e.textContent='';
   if(r){e.appendChild(h('span',{class:'spin'}));e.appendChild(h('b',{},r.label));e.appendChild(document.createTextNode(' running since '+when(r.at)+(ACT.running.length>1?' (+'+(ACT.running.length-1)+' more)':'')))}
   else if(l){e.appendChild(h('span',{class:l.ok?'ok':'stop'},l.ok?'✓ ':'✗ '));e.appendChild(h('b',{},'Last action: '+l.label));
@@ -250,6 +271,44 @@ function targetsCard(){var t=D.targets||[];if(!t.length)return null;
     h('div',{class:'s dim'},'Only the targets written in studio.toml. There is no revenue target, so none is drawn.'),src(t.map(function(x){return x.source}).join('; ')))}
 
 var V={};
+// ---- Mission control: what makes money, who has it, what is done. Autopilot starts the next thing a machine may do.
+function apText(){if(!AP.on)return 'Off. When on, this open page starts the next mission a machine may do, every 45 s, up to the limit in crew.toml. It never does what is yours, and state/PAUSE stops it.';
+  return AP.st?(AP.st.state+': '+AP.st.text):'On. First check in a moment…'}
+function apPaint(){var e=document.getElementById('ap-st');if(e)e.textContent=apText()}
+function apTick(){if(!AP.on)return;
+  if(typing()){AP.st={state:'holding',text:'You are typing in a field; nothing starts until you leave it.'};apPaint();return}
+  post({name:'autopilot_tick'}).then(function(r){AP.st={state:r.state||'unknown',text:r.text||''};apPaint();
+      if(r.result){settle(r.result,'Autopilot');if(r.result.state!=='running')refresh();else redraw()}},
+    function(e){AP.st={state:'offline',text:'The server did not answer ('+(e&&e.message||'error')+').'};apPaint()})}
+function chip(text,cls){return h('span',{class:'chip '+(cls||'')},text)}
+function mcard(m,col){var r=m.route||{},who=r.agent==='owner'?'you':r.agent==='engine'?'eng':r.agent?'ag':'none';
+  return h('div',{class:'mc '+col},h('div',{class:'mt'},m.title),h('div',{class:'mw'},m.why),
+    h('div',{class:'mr'},chip(r.name||'?',who),r.cost?chip(r.cost):null,(m.run&&m.run.status)?chip(m.run.status,'info'):null),
+    m.note?h('div',{class:'mw warn'},m.note):null,
+    m.blocked?h('div',{class:'mw stop'},'Blocked today: '+m.blocked.note):null,
+    col==='todo'?h('div',{class:'btns'},
+      m.kind==='owner'?h('button',{class:'ghost sm',type:'button',on:function(){go(m.tab||'alerts')}},'Open '+tabName(m.tab||'alerts')):
+      (r.agent?actBtn(m.kind==='engine'?'Run':'Send to '+r.name,'mission',{mission:m.id},{sm:true,confirm:m.id.indexOf('daily-')===0?'starts the batch':null}):h('div',{class:'mw warn'},r.why))):
+    ((m.run&&m.run.pane)?h('div',{class:'btns'},actBtn('Watch in herdr','herdr_focus',{target:m.run.pane},{sm:true,ghost:true})):null))}
+V.mission=function(){var b=D.missions,c=D.cash,out=[];
+  if(!b)return[missing('Mission control','faceless/missions.py')];
+  var apb=h('button',{class:AP.on?'':'ghost',type:'button','aria-pressed':AP.on?'true':'false',on:function(){AP.on=!AP.on;LS.set('qm_ap',AP.on?'1':'0');AP.st=null;draw();if(AP.on)apTick()}},AP.on?'Autopilot: ON':'Autopilot: off');
+  out.push(h('div',{class:'hero'},h('div',{},h('div',{class:'hl'},'Revenue this month'),h('div',{class:'big'},c?money(c.revenueMTD):'—'),
+      h('div',{class:'note'},c&&c.note?c.note:(c?c.receipts+' receipts':'source missing'))),
+    h('div',{class:'hr'},apb,h('div',{class:'l',id:'ap-st'},apText()))));
+  out.push(h('div',{class:'crew'},b.crew.map(function(a){return h('div',{class:'cm '+a.status+(a.installed?'':' off')},h('span',{class:'dotc'}),h('b',{},a.name),
+    h('span',{},(a.installed?a.status:'not installed')+' · '+a.costLabel),h('em',{},a.jobs.join(' · ')))})));
+  function col(title,items,empty){return h('div',{class:'col'},h('h2',{},title+' ('+items.length+')'),items.length?items:h('div',{class:'mc empty'},empty))}
+  var live=ACT.running.filter(function(r){return r.action==='mission'}).map(function(r){return h('div',{class:'mc run'},h('div',{class:'mt'},h('span',{class:'spin'}),akey(r.args)),h('div',{class:'mr'},chip('starting','info'),chip(when(r.at))))});
+  var liveIds=ACT.running.filter(function(r){return r.action==='mission'}).map(function(r){return akey(r.args)});
+  out.push(h('div',{class:'cols'},
+    col('To do',b.todo.filter(function(m){return liveIds.indexOf(m.id)<0}).map(function(m){return mcard(m,'todo')}),'Nothing needs doing.'),
+    col('In motion',live.concat(b.running.filter(function(m){return liveIds.indexOf(m.id)<0}).map(function(m){return mcard(m,'run')})),'Nothing is running.'),
+    col('Done today',b.done.map(function(d){return h('div',{class:'mc done'},h('div',{class:'mt'},h('span',{class:d.event==='done'?'ok':'stop'},d.event==='done'?'✓ ':'✗ '),d.id),
+      d.note?h('div',{class:'mw'},d.note):null,h('div',{class:'mr'},chip(d.agent||'?'),chip(when(d.at))))}),'Nothing finished yet today.')));
+  out.push(h('div',{class:'s dim',style:'margin-top:14px'},'To do is derived from real state, in the order it pays. Engine work costs no tokens and goes first; agent work goes to the cheapest installed agent that lists the job in crew.toml. Agents close a mission with python -m faceless crew report, and hand work to each other with crew ask.'));
+  out.push(src(b.source));
+  return out};
 V.today=function(){var j=D.jobs,out=[];
   if(!j)out.push(missing('Daily run','state/jobs'));
   else{
@@ -440,6 +499,7 @@ document.addEventListener('focusout',function(){if(dirty)setTimeout(function(){i
 document.getElementById('strip').addEventListener('click',function(){go('alerts')});
 setInterval(function(){if(!document.hidden&&!typing())refresh()},60000);
 setInterval(nsTick,30000);if(NS.on)setTimeout(nsTick,1500);
+setInterval(apTick,45000);if(AP.on)setTimeout(apTick,2500);
 if('serviceWorker' in navigator&&window.isSecureContext){navigator.serviceWorker.register('sw.js').catch(function(){})}
 draw();refresh();
 if(location.protocol!=='file:')api('actions.json').then(function(a){ACT.running=a.running||[];if(a.recent)ACT.recent=a.recent;strip();if(ACT.running.length){poll();redraw()}},function(){});
