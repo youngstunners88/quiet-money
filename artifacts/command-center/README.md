@@ -205,3 +205,17 @@ It keeps the phone fed; it does not tap the phone. Posting still needs a phone d
 | `faceless/prospects.py`, `faceless/toolbox.py` | The prospect machine; the tool catalog search |
 | `faceless/agents.py`, `hermes.py`, `models.py` | Agents, Hermes and models, read only |
 | `tests/test_command_center.py`, `tests/test_prospects.py` | `python -m pytest -q tests/test_command_center.py tests/test_prospects.py` |
+
+## Log
+
+### 2026-11-15
+
+- **YouTube comments.** The board follows the last real read (`prospects.youtube_state()`), not the presence of a key. A project key (`ak_`) is in
+  `.env` and `~/.config/quiet-money/env`; the read answers "quota used up" until midnight Pacific.
+- **Client hunt.** `python -m faceless outbound run` had not run since 2026-10-24. It is now a board action (`outbound_run`) and an engine mission
+  (`client-hunt-<day>`) offered once a day when no batch report exists; waiting packages become the owner mission `send-packages-<day>`.
+- **Keys by hand.** `config.load_keys()` reads the studio `.env` and then the machine key file, so a typed command has the keys the timer has.
+- **Known limit.** The "ready" tier needs Jev's own confident answer on spam risk and on pursue. In the first batch Jev gave neither for any
+  package, so every package that passed the gates landed in "review". The thresholds are the owner's (`studio.toml [outbound]`); none was changed.
+- **Restart trap.** `scripts/qm-command-center.sh stop` ends the shell that calls it when chained with other commands; run `stop` and `start` as
+  separate commands.
