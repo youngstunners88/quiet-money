@@ -147,6 +147,12 @@ def derive(doc: dict) -> list[dict]:
         add(f"send-dms-{day}", f"Send {ob['blockedOnOwner']} DM drafts", "The shortest road to a first receipt: a conversation with one person.", "owner", tab="dms")
     if ob and ob.get("followUpsDue"):
         add(f"follow-ups-{day}", f"Send {ob['followUpsDue']} follow-ups", "Most replies come on the second message.", "owner", tab="dms")
+    xd = doc.get("x")
+    if xd and xd.get("waiting"):
+        add(f"post-x-{day}", f"Post {xd['waiting']} video(s) on X", "Most clients come from X; each draft has the video, the post and the thread ready.", "owner", tab="dms")
+    if xd and xd.get("undrafted"):
+        add(f"x-draft-{day}", f"Draft X posts for {xd['undrafted']} finished video(s)", "A finished video reaches X only once its post is written. 0 tokens.",
+            "engine", action="x_draft", args={})
     sd = doc.get("serviceDesk")
     if sd and sd.get("waiting"):
         add(f"send-packages-{day}", f"Send {sd['waiting']} outreach package(s)", "A client is a project that got a message; the packages are written and waiting.", "owner", tab="dms")

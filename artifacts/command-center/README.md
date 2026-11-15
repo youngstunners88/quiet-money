@@ -231,3 +231,12 @@ It keeps the phone fed; it does not tap the phone. Posting still needs a phone d
   read waits 6 hours.
 - **10-video batch** runs as `daily --extra 10 --no-publish` with `TMPDIR=~/.cache/qm-tmp`: `/tmp` is a 3.9 GB RAM disk and preflight refuses
   below 1.5 GB free. Hermes runs the held-review mission directly (herdr is not running, so the board cannot dispatch to agents).
+- **Per-model gauges (2ce82bf).** `ledger.spend` keeps `model`, `tokens_in`, `tokens_out` when given; the OpenRouter call passes them. The Models
+  table fills from the next call made by a freshly started process.
+- **Actions beat (3c1838f).** Every board action that moves the pipeline writes a running beat and a done/error beat under `engine-<lane>`.
+- **Autopilot (6338aa0).** A mission whose dispatch failed (herdr down) is blocked for the day instead of retried every 45 s. Tests write beats to a
+  scratch file (conftest).
+- **TMPDIR.** `~/.config/quiet-money/env` sets `TMPDIR=~/.cache/qm-tmp`, so the timer, the board server and typed commands render on the main disk.
+- **X desk.** `python -m faceless x` writes `outbound/x/<day>/<job>.md` for each finished video of the last 3 days (video to attach, numbered lead
+  post under 280 characters with the AI line, thread replies, tracked hub link). `x log <job> posted --url` retires it. Board: engine mission
+  `x-draft-<day>`, owner mission `post-x-<day>`, an "X posts" card. It never posts.

@@ -409,6 +409,11 @@ V.dms=function(){var ob=D.outbound,d=D.dms,out=[];
       h('div',{class:'s'},pr.draftedToday?'Today\'s batch is drafted; the rest waits for tomorrow.':(pr.youtube?'YouTube comments are read on each run.':'YouTube comments are not being read'+(pr.youtubeNote?' ('+pr.youtubeNote+')':'')+'; the drop folder is the only source.')),
       h('div',{class:'btns'},pr.draftedToday?null:actBtn('Find people to write to','prospect',{})),
       h('div',{class:'s dim'},'Runs python -m faceless prospect. It reads and drafts; it never contacts anyone.'),src('outbound/private/inbox/')))}
+  var xd=D.x;if(xd){out.push(h('h2',{},'X posts'));
+    out.push(h('div',{class:'card'},row('Drafts waiting for you to post',xd.waiting),row('Finished videos with no draft yet',xd.undrafted),row('Posted today',xd.postedToday),row('Posted all time',xd.postedAllTime),
+      xd.waitingTop.length?h('div',{class:'s'},'Next: outbound/x/…/'+xd.waitingTop[0]+'.md'):null,
+      h('div',{class:'btns'},xd.undrafted?actBtn('Draft X posts','x_draft',{}):null),
+      h('div',{class:'s dim'},'After posting: python -m faceless x log <job> posted --url <link>. It never posts.'),src(xd.source)))}
   var sd=D.serviceDesk;if(sd){out.push(h('h2',{},'Client hunt'));
     out.push(h('div',{class:'card'},row('Lead cards on file',sd.leads),row('Packages waiting for you to send',sd.waiting),row('Sent',sd.sent),row('Replies',sd.replies),
       h('div',{class:'s'},sd.ranToday?'Today\'s batch has run; its report is in channel/services/web3-video/reviews/.':'No batch has run today.'),

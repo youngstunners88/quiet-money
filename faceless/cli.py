@@ -219,6 +219,12 @@ def cmd_crew(args) -> int:
     return missions.main(args.rest)
 
 
+def cmd_x(args) -> int:
+    """The X desk (faceless/xdesk.py): an X draft per finished video; `x status`, `x log <job> posted --url U`. Never posts."""
+    from faceless import xdesk
+    return xdesk.main(args.rest)
+
+
 def cmd_agent(args) -> int:
     """The team board (faceless/team.py): `agent beat <agent> <status> --task ... [--done N --total M --tokens-in N --usd X]`, `agent board`, `agent gauges`."""
     from faceless import team
@@ -1998,6 +2004,9 @@ def main(argv: list[str] | None = None) -> int:
     cw = sub.add_parser("crew", help="mission control: `crew board | plan | dispatch <mission> | report <mission> done|blocked \"note\" | ask <job-tag> \"request\"`")
     cw.add_argument("rest", nargs=argparse.REMAINDER)
     cw.set_defaults(fn=cmd_crew)
+    xp = sub.add_parser("x", help="the X desk: `x` (a draft per finished video -> outbound/x/), `x status`, `x log <job> posted --url U`. Never posts")
+    xp.add_argument("rest", nargs=argparse.REMAINDER)
+    xp.set_defaults(fn=cmd_x)
     ag = sub.add_parser("agent", help="the team board: `agent beat <agent> <status> --task ...` (every agent reports here), `agent board`, `agent gauges`")
     ag.add_argument("rest", nargs=argparse.REMAINDER)
     ag.set_defaults(fn=cmd_agent)
