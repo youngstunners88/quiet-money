@@ -219,6 +219,18 @@ def cmd_crew(args) -> int:
     return missions.main(args.rest)
 
 
+def cmd_prospect(args) -> int:
+    """The prospect machine (faceless/prospects.py): people who wrote to us -> the DM desk's list -> drafts. It never contacts anyone."""
+    from faceless import prospects
+    return prospects.main(args.rest)
+
+
+def cmd_toolbox(args) -> int:
+    """The toolbox (faceless/toolbox.py): search the local copy of the Awesome REA catalog for a reviewed tool."""
+    from faceless import toolbox
+    return toolbox.main(args.rest)
+
+
 def cmd_publish(args) -> int:
     from faceless.providers import publish
     from faceless.state import load_job
@@ -1980,6 +1992,12 @@ def main(argv: list[str] | None = None) -> int:
     cw = sub.add_parser("crew", help="mission control: `crew board | plan | dispatch <mission> | report <mission> done|blocked \"note\" | ask <job-tag> \"request\"`")
     cw.add_argument("rest", nargs=argparse.REMAINDER)
     cw.set_defaults(fn=cmd_crew)
+    pr = sub.add_parser("prospect", help="the prospect machine: `prospect` (collect, sort, draft through the DM desk) | `status` | `add --handle @x --text \"...\"`. Never contacts anyone")
+    pr.add_argument("rest", nargs=argparse.REMAINDER)
+    pr.set_defaults(fn=cmd_prospect)
+    tb = sub.add_parser("toolbox", help="find a reviewed tool in the local Awesome REA catalog: `toolbox find \"need\" [--target app]` | `show <id>` | `sync` | `status`")
+    tb.add_argument("rest", nargs=argparse.REMAINDER)
+    tb.set_defaults(fn=cmd_toolbox)
     pb = sub.add_parser("publish", help="(re)publish a packaged job")
     pb.add_argument("job")
     pb.add_argument("--force", action="store_true", help="publish even though the gauntlet did not pass (human-reviewed)")

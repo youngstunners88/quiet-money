@@ -377,6 +377,11 @@ def build(today: str | None = None) -> dict:
     doc["targets"] = targets(doc)                            # studio.toml holds no revenue or audience target, so none is drawn
     doc["alerts"] = alerts(doc)
     from faceless import missions
+    try:
+        from faceless import prospects
+        doc["prospects"] = prospects.board_state()           # people waiting in the drop folder; local files only
+    except Exception:   # noqa: BLE001 - a damaged drop file must not blank the board
+        doc["prospects"] = None
     doc["missions"] = missions.board(doc)                    # the work board: derived to-do, who has what, done today
     return doc
 

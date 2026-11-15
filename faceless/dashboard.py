@@ -355,6 +355,11 @@ V.dms=function(){var ob=D.outbound,d=D.dms,out=[];
   if(D.followUps&&D.followUps.length){out.push(h('h2',{},'Follow-ups due'));
     out.push(card(D.followUps.map(function(f){return h('div',{class:'item'},h('div',{class:'t'},f.draft_id),h('div',{class:'s'},'Sent '+f.days_since_sent+' days ago: send '+f.send.replace(/_/g,' ')),
       h('div',{class:'btns'},actBtn('They replied','dm_log',{draft:f.draft_id,status:'replied'},{sm:true}),actBtn('Close: no reply','dm_log',{draft:f.draft_id,status:'dead'},{sm:true,ghost:true})))}),src('state/outbound.jsonl')))}
+  var pr=D.prospects;if(pr){out.push(h('h2',{},'People who wrote to us'));
+    out.push(card(h('div',{class:'t'},pr.ready?pr.ready+' waiting to be drafted':'Nobody new in the drop folder'),
+      h('div',{class:'s'},pr.draftedToday?'Today\'s batch is drafted; the rest waits for tomorrow.':(pr.youtube?'YouTube comments are read on each run.':'YouTube comments are not connected; the drop folder is the only source.')),
+      h('div',{class:'btns'},pr.draftedToday?null:actBtn('Find people to write to','prospect',{})),
+      h('div',{class:'s dim'},'Runs python -m faceless prospect. It reads and drafts; it never contacts anyone.'),src('outbound/private/inbox/')))}
   out.push(h('h2',{},'Drafts waiting on you'));
   if(!d){out.push(card(h('div',{class:'t'},'No draft is waiting.'),h('div',{class:'btns'},actBtn('Draft today\'s DMs','dm_draft',{})),
     h('div',{class:'s dim'},'Runs python -m faceless dm. It writes drafts only; nothing is ever sent for you.'),src('outbound/drafts/')));return out}

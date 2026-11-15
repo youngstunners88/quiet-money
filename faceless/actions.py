@@ -123,6 +123,8 @@ ACTIONS: dict[str, dict] = {
               "argv": lambda a: _py("daily", "--no-publish"), "shows": "python -m faceless daily --no-publish"},
     "dm_draft": {"label": "Draft today's DMs", "lane": "desk", "moves": True, "timeout": 600,
                  "argv": lambda a: _py("dm"), "shows": "python -m faceless dm"},
+    "prospect": {"label": "Find people to write to", "lane": "desk", "moves": True, "timeout": 600,
+                 "argv": lambda a: _py("prospect"), "shows": "python -m faceless prospect"},
     "dm_log": {"label": "Log DM", "lane": "desk", "moves": False, "timeout": 60, "argv": _dm_log,
                "shows": "python -m faceless dm log <id> <status>"},
     "money_brief": {"label": "Write the money brief", "lane": "desk", "moves": False, "timeout": 300,

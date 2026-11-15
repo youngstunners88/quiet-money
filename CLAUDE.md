@@ -134,6 +134,8 @@ humans set strategy, connect accounts, and review held videos.
 | Command center on the owner's phone and as a desktop app (Wi-Fi or Tailscale, no USB): the overview projection, the page, the token server, the action desk behind its buttons, Non-stop, the herdr tab | `/faceless/overview.py`, `dashboard.py`, `serve.py`, `actions.py` | `artifacts/command-center/README.md`, `OPERATIONS.md` (Command center), `STATUS.md` | `faceless-cash` |
 | Mission control: the work board, the crew roster, sending work to the cheapest suited agent, agents reporting and asking each other, Autopilot | `/faceless/missions.py`, `crew.toml` | `artifacts/command-center/README.md` (Mission control), `python -m faceless crew board` | `faceless-cash` |
 | DMs the owner sends by hand, the daily money brief, receipts (the only proof of income) | `/faceless/dmdesk.py`, `moneybrief.py`, `receipts.py` | `python -m faceless money` | `faceless-cash` |
+| Who to write to: people who commented under our videos and peer creators, sorted and handed to the DM desk (0 tokens, never contacts anyone) | `/faceless/prospects.py` | `python -m faceless prospect status` | `faceless-prospect` |
+| Finding a reviewed tool for reading a site, an app, a format or a protocol (local copy of the Awesome REA catalog) | `/faceless/toolbox.py` | `python -m faceless toolbox find "need"` | `faceless-toolbox` |
 | HQ: the owner's dashboard (freedom number, engines, next moves, horizon, goals, build queue), its daily refresh | `/faceless/hq.py` | `python -m faceless hq` | `faceless-hq` |
 
 ## Commands (run from this folder)

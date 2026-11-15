@@ -39,10 +39,45 @@ python -m faceless crew board                                # the same board in
 An agent that takes a mission and goes idle without reporting (a dead key, a login wall) sits out for the day and its mission is
 offered to the next cheapest agent.
 
-**Autopilot** is the toggle in the header, off by default. While the page is open it asks every 45 seconds for the next mission a
-machine may do and starts it, up to `[autopilot] max_parallel`. It never does a "You" card, never restarts a mission that reported
-blocked today, and leaves the phone lane alone unless `[autopilot] phone = true`. Stop it with the toggle, by closing the window, or
-with `python -m faceless pause "why"`.
+**Autopilot** has two drivers, and both take the same single step (`python -m faceless crew tick` is that step in a terminal):
+
+- the toggle in the header, off by default: while the page is open it asks every 45 seconds;
+- a systemd user timer every 5 minutes, with no window open, while `[autopilot] enabled = true` in `crew.toml`. Install it once:
+  `cp tools/command-center/qm-autopilot.* ~/.config/systemd/user/ && systemctl --user daemon-reload && systemctl --user enable --now qm-autopilot.timer`.
+
+A step starts the next mission a machine may do, up to `[autopilot] max_parallel`, one render at a time. It never does a "You" card,
+never restarts a mission that reported blocked today, leaves the phone lane alone unless `[autopilot] phone = true`, and never starts
+an agent dearer than `[autopilot] max_cost` (default 1: free and cheap agents only; a paid agent's card waits for your click).
+Stop it with the toggle, `enabled = false`, `systemctl --user disable --now qm-autopilot.timer`, or `python -m faceless pause "why"`.
+
+In `crew.toml`, `enabled = false` on an agent benches it, and `args` are passed when the board starts it (OpenCode's free model is
+set there).
+
+## The prospect machine
+
+The DM desk writes a good message only when it knows who it is for. `python -m faceless prospect` supplies that: it collects people
+who wrote under our videos (and creators who cover the same subject), sorts them by what they wrote, and hands the list to the DM
+desk. The drafts appear on the DMs tab with the person's handle and their own words already in place. It is plain code: 0 tokens.
+It never contacts anyone; you send.
+
+| Source | How it is fed |
+|---|---|
+| Drop folder (`outbound/private/inbox/`, gitignored) | `python -m faceless prospect add --handle @x --text "their words" --video "title"`. The **Collect today's comments** mission sends a phone agent to read the TikTok inbox and add each comment this way. |
+| YouTube comments on our own videos | Read on each run through the connected YouTube account. Says "unavailable" until `COMPOSIO_API_KEY` is set on this machine. |
+
+A question is drafted first, then pushback, then someone describing their own situation, then peers. Promotion, emoji-only reactions,
+anything older than 14 days, the block list and anyone already handled are dropped, with the reason kept. One batch a day. Reddit is
+not a source: it refuses unsigned reads, and a stranger who never wrote to us is not a prospect.
+
+On the board: **Turn N new comments into DM drafts** (Engine, 0 tokens) appears when the drop folder holds someone new; the DMs tab
+has the same button. Skill: `faceless-prospect`.
+
+## The toolbox
+
+`python -m faceless toolbox find "what you need"` searches a local copy of the [Awesome REA](https://github.com/reacher-z/Awesome-REA)
+catalog (about 1,100 reviewed tools and agent integrations for reading websites, apps, binaries and protocols, MIT). An agent finds
+the right tool in one command instead of a web search. `toolbox sync` refreshes the copy into `state/tmp/toolbox.json`. A find is
+vetted with `python -m faceless intake <url>` before anything is installed. Skill: `faceless-toolbox`.
 
 ## Launch
 
@@ -69,6 +104,7 @@ under it is display only.
 | Today | **Non-stop** toggle | see below | Off by default. |
 | Money | **Write today's brief** | `python -m faceless money` | Writes `outbound/brief/<day>.md`. |
 | Money | Open listing, Open DMs | a link, a tab change | |
+| DMs | **Find people to write to** | `python -m faceless prospect` | Turns the drop folder and YouTube comments into drafts with real handles. Once a day. |
 | DMs | **Draft today's DMs** | `python -m faceless dm` | Drafts only. Nothing is ever sent for you. |
 | DMs | **Sent / Replied / Bought / No reply: close** | `python -m faceless dm log <id> <status> [--handle @x]` | Press after you sent or heard back by hand. The handle goes to the command and never to the journal. |
 | DMs | Copy message, Copy | clipboard | |
@@ -165,5 +201,7 @@ It keeps the phone fed; it does not tap the phone. Posting still needs a phone d
 | `faceless/actions.py` | The allowlist, the runner, the journal line, the Non-stop decision |
 | `faceless/serve.py` | The token server: GET reads, `POST /action` |
 | `faceless/dashboard.py` | The page (one self-contained HTML file, phone layout below 900 px, sidebar above) |
+| `faceless/missions.py`, `crew.toml` | The mission board, routing, dispatch, Autopilot |
+| `faceless/prospects.py`, `faceless/toolbox.py` | The prospect machine; the tool catalog search |
 | `faceless/agents.py`, `hermes.py`, `models.py` | Agents, Hermes and models, read only |
-| `tests/test_command_center.py` | `python -m pytest -q tests/test_command_center.py` |
+| `tests/test_command_center.py`, `tests/test_prospects.py` | `python -m pytest -q tests/test_command_center.py tests/test_prospects.py` |

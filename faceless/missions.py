@@ -29,10 +29,11 @@ from faceless.config import Paths
 
 EVENT = "CC_MISSION"
 ROSTER = Paths.root / "crew.toml"
-DEFAULTS = {"enabled": False, "max_parallel": 2, "phone": False, "agent_ttl_minutes": 180}
+DEFAULTS = {"enabled": False, "max_parallel": 2, "phone": False, "agent_ttl_minutes": 180, "max_cost": 1}
 TAG = re.compile(r"^[a-z][a-z0-9-]{1,24}$")
 MISSION = re.compile(r"^[A-Za-z0-9][A-Za-z0-9._-]{2,180}$")
 COST = {0: "free", 1: "cheap", 2: "paid"}
+COST_OF = {v: k for k, v in COST.items()}
 
 
 def _now() -> str:
@@ -142,6 +143,18 @@ def derive(doc: dict) -> list[dict]:
         add(f"send-dms-{day}", f"Send {ob['blockedOnOwner']} DM drafts", "The shortest road to a first receipt: a conversation with one person.", "owner", tab="dms")
     if ob and ob.get("followUpsDue"):
         add(f"follow-ups-{day}", f"Send {ob['followUpsDue']} follow-ups", "Most replies come on the second message.", "owner", tab="dms")
+    pr = doc.get("prospects")
+    if pr and not pr.get("draftedToday") and (pr.get("ready") or pr.get("youtube")):
+        n = pr.get("ready") or 0
+        add(f"prospect-{day}", f"Turn {n} new comment(s) into DM drafts" if n else "Read today's comments for people to write to",
+            "Someone who already wrote to us is the warmest person there is.", "engine", action="prospect", args={})
+    if pr and not pr.get("addedToday") and ph is not None:
+        add(f"harvest-comments-{day}", "Collect today's comments from the TikTok inbox", "The prospect machine can only draft for people it has been shown.",
+            "agent", tag="phone", auto=bool(settings()["phone"]),
+            brief=("Use the faceless-prospect skill. On the phone, open TikTok > Inbox > Activity and read the comments left on our videos in the last three days. "
+                   "For each real comment (skip emoji-only and promotion) run `python -m faceless prospect add --handle @their_handle --text \"their exact words\" "
+                   "--video \"the video title\" --platform tiktok`. Read only: never reply, like, follow or message. When done run `python -m faceless prospect` "
+                   "and report how many were added. Stop at a login wall or a verification screen and report blocked."))
     if j:
         if not j["ranToday"] or j["passedToday"] < 5:
             add(f"daily-{day}", "Make today's five videos", "No videos, no reach; reach is what every offer rides on.", "engine", action="daily", args={})
@@ -265,6 +278,8 @@ def plan_auto(doc: dict | None = None) -> dict:
     for m in b["todo"]:
         if rendering and m["kind"] == "engine" and m.get("action") in ("daily", "job_retry"):
             continue                                         # one render at a time: the machine has one GPU and the batch refills its own slots
+        if COST_OF.get(m["route"].get("cost"), 0) > int(b["autopilot"].get("max_cost", 1)):
+            continue                                         # a paid agent is started by a person's click, never by the timer
         if m["auto"] and not m.get("blocked") and m["route"]["agent"] not in (None, "owner"):
             return {"state": "run", "mission": m["id"], "text": f"Starting: {m['title']} ({m['route']['name']}, {m['route']['cost']})"}
     waiting = sum(1 for m in b["todo"] if m["kind"] == "owner")

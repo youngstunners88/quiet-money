@@ -9,6 +9,7 @@ enabled = true            # the timer (tools/command-center/qm-autopilot.timer) 
 max_parallel = 2          # missions in motion at once
 phone = true              # Autopilot hands posting to the phone agent; it waits while that agent is busy in a terminal the board cannot see
 agent_ttl_minutes = 180   # an agent mission with no report after this is offered again
+max_cost = 1              # the dearest agent Autopilot may start by itself (0 free, 1 cheap, 2 paid); dearer cards wait for your click
 
 [agents.opencode]
 name = "OpenCode"

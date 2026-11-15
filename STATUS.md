@@ -177,3 +177,15 @@ The page was a viewer; it now acts. Full reference: `artifacts/command-center/RE
 - Proven live: a test mission was sent to Hermes, which could not answer (OpenRouter rejects its key, HTTP 401), was benched, and the
   mission went to a freshly started OpenCode pane, which reported `done` on the board.
 - Autopilot's first live tick started today's batch (`daily --no-publish`).
+
+## 12. Prospect machine and toolbox (2026-11-15)
+
+- `faceless/prospects.py`: people who wrote under our videos (drop folder fed by `prospect add`, YouTube comments when Composio is
+  connected) are sorted in code and handed to the DM desk as its prospect list. 0 tokens, never contacts anyone, one batch a day.
+  Board cards: `prospect-<day>` (engine) and `harvest-comments-<day>` (phone agent reads the TikTok inbox).
+- `faceless/toolbox.py`: offline search over the Awesome REA catalog (1,166 tools, 4,025 case studies at sync time).
+- Autopilot gained `max_cost` (default 1): the timer never starts a paid agent.
+- Not yet proven live: no real comment has gone through the machine. This machine has no `COMPOSIO_API_KEY`, so the YouTube source
+  reports unavailable, and the phone was busy with another session, so the harvest mission has not run.
+- Found while testing: the OpenRouter account is out of credit (paid models answer 402) and the free Gemma model was rate-limited
+  (429). Two more free models were added to `[llm] openrouter_models`; they answered.
