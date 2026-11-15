@@ -222,3 +222,12 @@ It keeps the phone fed; it does not tap the phone. Posting still needs a phone d
 - **First real YouTube read (08:02 UTC).** The source works. Of 48 comment threads on the channel, 47 are our own pinned comments and 1 is another
   person's, from 2026-10-21, with fewer than two words. YouTube currently holds nobody to write to; the prospect machine correctly drafted nothing.
 - **Client hunt result.** 103 lead cards, 14 packages waiting on the owner (all "review"), 0 sent. Jev cost $0.0054.
+- **Team board (e5d60da).** Every agent reports into `state/agents/beats.jsonl` with `python -m faceless agent beat <agent> <status> --task ...`
+  (statuses: running, idle, refreshing, blocked, paused, error, done; optional --done/--total, --tokens-in/--tokens-out, --usd, --model, --run,
+  --since). The Mission tab shows one card per agent with a status chip, task, progress bar and token/cost totals; a batch run (`--run batch-*`)
+  counts the job files it made; a running agent silent for 20 min shows stale. Gauges show provider usage and spend from the ledger, free vs paid,
+  against the $3 ceiling and Autopilot's max_cost. Targets get bars. "Alerts + sound" is opt-in (browser notification + short tone).
+- **Prospect loop (fb85a2b).** A successful YouTube read with nobody in it kept the run on the board and Autopilot re-ran it every tick; now any
+  read waits 6 hours.
+- **10-video batch** runs as `daily --extra 10 --no-publish` with `TMPDIR=~/.cache/qm-tmp`: `/tmp` is a 3.9 GB RAM disk and preflight refuses
+  below 1.5 GB free. Hermes runs the held-review mission directly (herdr is not running, so the board cannot dispatch to agents).
