@@ -284,7 +284,6 @@ def tick() -> dict:
     with open(log_file, "ab") as out:
         subprocess.Popen([sys.executable, "-m", "faceless", "crew", "dispatch", plan["mission"], "autopilot"], cwd=Paths.root, stdout=out, stderr=out,   # noqa: S603
                          stdin=subprocess.DEVNULL, start_new_session=True)
-    events.emit(EVENT, actor="autopilot", mission=plan["mission"], event="picked", note=plan["text"])
     return plan
 
 
