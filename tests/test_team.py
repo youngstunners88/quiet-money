@@ -94,3 +94,22 @@ def test_the_ledger_keeps_the_model_and_split_when_given(tmp_path, monkeypatch):
     ledger.spend("edge", "chars", 5)
     rows = [json.loads(x) for x in (tmp_path / "l.jsonl").read_text().splitlines()]
     assert rows[0]["model"] == "a/b:free" and rows[0]["tokens_in"] == 20 and "model" not in rows[1]
+
+
+def test_every_board_action_that_moves_reports_on_the_team_board(beats, monkeypatch):
+    import subprocess
+    from faceless import actions, safety
+    monkeypatch.setattr(safety, "paused", lambda: None)
+    monkeypatch.setattr(actions.events, "emit", lambda *a, **k: {})
+    ok = lambda argv, **kw: subprocess.CompletedProcess(argv, 0, "3 found, 1 worth a message, 1 drafted", "")   # noqa: E731
+    actions.run("prospect", {}, runner=ok)
+    bad = lambda argv, **kw: subprocess.CompletedProcess(argv, 1, "", "Traceback\nRuntimeError: boom")   # noqa: E731
+    monkeypatch.setattr(actions.Paths, "jobs", beats / "jobs")
+    _job(beats / "jobs", "2026-11-15-s1-story-x", "held", None)
+    actions.run("job_retry", {"job": "2026-11-15-s1-story-x"}, runner=bad)
+    rows = [json.loads(x) for x in team.BEATS.read_text().splitlines()]
+    assert [(r["agent"], r["status"]) for r in rows] == [("engine-desk", "running"), ("engine-desk", "done"),
+                                                        ("engine-render", "running"), ("engine-render", "error")]
+    assert "2026-11-15-s1-story-x" in rows[2]["task"] and "boom" in rows[3]["task"]
+    by = {r["agent"]: r for r in team.board()["agents"]}
+    assert by["engine-render"]["status"] == "error" and by["engine-desk"]["status"] == "done"

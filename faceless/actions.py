@@ -213,6 +213,25 @@ def _record(result: dict) -> dict:
     return result
 
 
+def _beat_agent(spec: dict, args: dict) -> str:
+    """Board actions report on the team board under their lane: render, desk, phone, or the mission's crew lane."""
+    lane = lane_of(spec, args)
+    return "engine-" + lane.split(":", 1)[0]
+
+
+def _arg_hint(args: dict) -> str:
+    v = next((str(args[k]) for k in ("mission", "job", "id", "slug") if args.get(k)), "")
+    return f" ({v[:60]})" if v else ""
+
+
+def _beat(agent: str, status: str, task: str, **kw) -> None:
+    try:
+        from faceless import team
+        team.beat(agent, status, task, **kw)
+    except Exception:   # noqa: BLE001 - the team board is a view; an action never fails over it
+        pass
+
+
 def run(name: str, args: dict | None = None, *, actor: str = "owner", runner=subprocess.run, rid: str | None = None) -> dict:
     """Run one allowlisted action to the end and return what happened. Never raises: a refusal or a failure is a result."""
     args = args or {}
@@ -230,6 +249,9 @@ def run(name: str, args: dict | None = None, *, actor: str = "owner", runner=sub
         return refuse(str(e))
     if spec["moves"] and (why := safety.paused()):
         return refuse(f"the studio is paused ({why}); only you resume it: python -m faceless pause --resume")
+    agent = _beat_agent(spec, args)
+    if spec["moves"]:
+        _beat(agent, "running", base["label"] + _arg_hint(args), run=f"action-{base['id']}")
     t0 = time.monotonic()
     try:
         r = runner(argv, cwd=Paths.root, capture_output=True, text=True, timeout=spec["timeout"])
@@ -241,6 +263,9 @@ def run(name: str, args: dict | None = None, *, actor: str = "owner", runner=sub
     summary, extra = summarize(name, code, out)
     ok = code == 0
     error = "" if ok else (_tail(err) or _tail(out) or "failed without a message")[-300:]
+    if spec["moves"]:
+        _beat(agent, "done" if ok else "error", base["label"] + ": " + (summary if ok else (error.splitlines()[-1] if error else summary))[:120],
+              run=f"action-{base['id']}")
     return _record({**base, **extra, "ok": ok, "exit": code, "seconds": round(time.monotonic() - t0, 1),
                     "summary": summary if ok else (error.splitlines()[-1][:200] if error else summary),
                     "error": error, "stdout": _tail(out), "stderr": _tail(err)})
