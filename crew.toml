@@ -21,7 +21,6 @@ cost = 0
 [agents.hermes]
 name = "Hermes"
 kind = "hermes"
-enabled = false           # 2026-11-15: OpenRouter rejects its key (HTTP 401). Run `hermes setup`, then delete this line.
 jobs = ["writing", "research", "bulk"]
 cost = 0
 
