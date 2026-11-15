@@ -219,3 +219,6 @@ It keeps the phone fed; it does not tap the phone. Posting still needs a phone d
   package, so every package that passed the gates landed in "review". The thresholds are the owner's (`studio.toml [outbound]`); none was changed.
 - **Restart trap.** `scripts/qm-command-center.sh stop` ends the shell that calls it when chained with other commands; run `stop` and `start` as
   separate commands.
+- **First real YouTube read (08:02 UTC).** The source works. Of 48 comment threads on the channel, 47 are our own pinned comments and 1 is another
+  person's, from 2026-10-21, with fewer than two words. YouTube currently holds nobody to write to; the prospect machine correctly drafted nothing.
+- **Client hunt result.** 103 lead cards, 14 packages waiting on the owner (all "review"), 0 sent. Jev cost $0.0054.
