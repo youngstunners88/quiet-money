@@ -49,8 +49,8 @@ def spend(provider: str, unit: str, amount: float, usd: float = 0.0, job: str | 
     """One row per call. `model`, `tokens_in` and `tokens_out` are optional detail for the team board's per-model gauges;
     older rows without them still add up by provider."""
     LEDGER.parent.mkdir(parents=True, exist_ok=True)
-    row = {"day": today(), "provider": provider, "unit": unit, "amount": round(amount, 4),
-           "usd": round(usd, 6), "job": job}
+    row = {"day": today(), "t": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"), "provider": provider, "unit": unit, "amount": round(amount, 4),
+           "usd": round(usd, 6), "job": job}                 # `t` lets the instrument panel work out a burn rate; older rows have only the day
     if model:
         row["model"] = str(model)[:120]
     if tokens_in is not None:

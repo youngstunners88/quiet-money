@@ -13,16 +13,14 @@ import subprocess
 import time
 from pathlib import Path
 
-SOURCE = "claude/codex/opencode/hermes/gemini/ollama --version, ~/.claude/settings.json, ~/.codex/config.toml, ~/.hermes/config.yaml, herdr api snapshot"
+SOURCE = "claude/opencode/hermes/ollama --version, ~/.claude/settings.json, ~/.hermes/config.yaml, herdr api snapshot"
 _CACHE: dict[str, tuple[float, dict]] = {}
 _TTL = 30.0
 
 CLIS = (
     {"id": "claude", "name": "Claude Code", "bin": "claude", "version": ["--version"], "launch": "claude"},
-    {"id": "codex", "name": "Codex", "bin": "codex", "version": ["--version"], "launch": "codex"},
     {"id": "opencode", "name": "OpenCode", "bin": "opencode", "version": ["--version"], "launch": "opencode"},
     {"id": "hermes", "name": "Hermes", "bin": "hermes", "version": ["--version"], "launch": "hermes chat"},
-    {"id": "gemini", "name": "Gemini CLI", "bin": "gemini", "version": ["--version"], "launch": "gemini"},
     {"id": "ollama", "name": "Ollama", "bin": "ollama", "version": ["--version"], "launch": "ollama ps"},
 )
 
@@ -59,12 +57,6 @@ def default_models() -> dict[str, dict]:
     except ValueError:
         pass
     out["claude"] = claude
-
-    codex = {}
-    m = re.search(r'(?m)^model\s*=\s*"([^"]+)"', _read(Path.home() / ".codex" / "config.toml"))
-    if m:
-        codex = {"model": m.group(1), "source": "~/.codex/config.toml"}
-    out["codex"] = codex
 
     hermes = {}
     lines = _read(Path.home() / ".hermes" / "config.yaml").splitlines()

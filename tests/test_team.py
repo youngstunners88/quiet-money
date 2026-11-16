@@ -35,12 +35,12 @@ def test_a_beat_refuses_what_would_mislead_the_board(beats):
 def test_latest_beat_wins_and_tokens_add_up_across_the_day(beats):
     team.beat("hermes", "running", "batch", tokens_in=100, tokens_out=40, usd=0.001, model="free-a")
     team.beat("hermes", "refreshing", "batch", tokens_in=50, tokens_out=10, usd=0.002, model="free-b")
-    b = team.board(roster=[{"id": "hermes"}, {"id": "codex", "installed": False}])
+    b = team.board(roster=[{"id": "hermes"}, {"id": "agent-zero", "installed": False}])
     rows = {r["agent"]: r for r in b["agents"]}
     h = rows["hermes"]
     assert h["status"] == "refreshing" and h["tokensIn"] == 150 and h["tokensOut"] == 50 and h["usd"] == 0.003
     assert h["models"] == ["free-a", "free-b"]
-    assert rows["codex"]["status"] == "missing" and rows["codex"]["lastBeat"] is None   # roster only: no invented numbers
+    assert rows["agent-zero"]["status"] == "missing" and rows["agent-zero"]["lastBeat"] is None   # roster only: no invented numbers
 
 
 def test_a_silent_running_agent_shows_stale(beats, monkeypatch):

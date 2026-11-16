@@ -225,6 +225,12 @@ def cmd_x(args) -> int:
     return xdesk.main(args.rest)
 
 
+def cmd_instruments(args) -> int:
+    from faceless import instruments
+    return instruments.main([*(["--json"] if args.json else []), *(["--for", args.agent] if args.agent else []), *(["--probe"] if args.probe else []),
+                             *(["--fast"] if args.fast else [])])
+
+
 def cmd_agent(args) -> int:
     """The team board (faceless/team.py): `agent beat <agent> <status> --task ... [--done N --total M --tokens-in N --usd X]`, `agent board`, `agent gauges`."""
     from faceless import team
@@ -2010,6 +2016,12 @@ def main(argv: list[str] | None = None) -> int:
     ag = sub.add_parser("agent", help="the team board: `agent beat <agent> <status> --task ...` (every agent reports here), `agent board`, `agent gauges`")
     ag.add_argument("rest", nargs=argparse.REMAINDER)
     ag.set_defaults(fn=cmd_agent)
+    ins = sub.add_parser("instruments", help="the instrument panel: `instruments` (reading) | `--json` (the snapshot) | `--for <agent>` (an agent's pre-flight) | `--probe` (check keys)")
+    ins.add_argument("--json", action="store_true")
+    ins.add_argument("--for", dest="agent")
+    ins.add_argument("--probe", action="store_true")
+    ins.add_argument("--fast", action="store_true")
+    ins.set_defaults(fn=cmd_instruments)
     pr = sub.add_parser("prospect", help="the prospect machine: `prospect` (collect, sort, draft through the DM desk) | `status` | `add --handle @x --text \"...\"`. Never contacts anyone")
     pr.add_argument("rest", nargs=argparse.REMAINDER)
     pr.set_defaults(fn=cmd_prospect)

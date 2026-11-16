@@ -16,7 +16,7 @@ from pathlib import Path
 from faceless import agents
 
 CATALOG = Path.home() / ".cache" / "opencode" / "models.json"
-SOURCE = "~/.cache/opencode/models.json, claude/codex/hermes config, ollama list"
+SOURCE = "~/.cache/opencode/models.json, claude/hermes config, ollama list"
 _CACHE: dict[str, tuple[float, object]] = {}
 _TTL = 60.0
 

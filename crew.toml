@@ -2,7 +2,20 @@
 #   kind  - what herdr starts (`herdr agent start --kind`), also how a live pane is recognised
 #   jobs  - what it is good at; a mission carries one job tag and goes to the cheapest installed agent that lists it
 #   cost  - 0 free, 1 cheap, 2 paid. Engine commands cost no tokens and always win; then the lowest cost here.
-# Job tags in use: writing, research, bulk, phone, code, review, hard
+# What the instrument panel (python -m faceless instruments) needs to draw a limit. Write "unknown" where you do not know: the
+# board then draws a grey arc that says so, and never a guess.
+#   plan         - "subscription", "free", "paid" (prepaid credit) or "none"
+#   provider     - who serves its model (also names the key probe: openrouter, composio, elevenlabs ...)
+#   limit        - a number, or "unknown"
+#   limit_unit   - "tokens", "requests" or "usd"
+#   limit_window - "5h" (any <n>h), "day", "week", "month", or "unknown"
+#   reset        - "rolling" (the window slides), "HH:MM" UTC for a daily reset, "mon HH:MM" for a weekly one, or "unknown"
+#   key_env / key_file - the variable that holds its key and the file it is read from (the value is never shown, only its health)
+#   usage        - where its token counts come from: "claude-transcripts", "hermes-db", "opencode-db", or "beats" (what it reports
+#                  with `agent beat --tokens-in/--tokens-out`; the default for any agent without a store of its own)
+# An agent whose block is commented out is drawn as "not installed" with no gauges. Uncomment it and install its launcher and it
+# comes alive: no code changes.
+# Job tags in use: writing, research, bulk, phone, code, review, hard. With this crew, code / review / hard go to Claude Code only.
 
 [autopilot]
 enabled = true            # the timer (tools/command-center/qm-autopilot.timer) acts only while this is true; state/PAUSE also stops it
@@ -10,6 +23,9 @@ max_parallel = 2          # missions in motion at once
 phone = true              # Autopilot hands posting to the phone agent; it waits while that agent is busy in a terminal the board cannot see
 agent_ttl_minutes = 180   # an agent mission with no report after this is offered again
 max_cost = 1              # the dearest agent Autopilot may start by itself (0 free, 1 cheap, 2 paid); dearer cards wait for your click
+stale_minutes = 20        # an agent holding work and silent this long turns amber
+dormant_minutes = 45      # silent this long it turns red, its mission goes back on the board, and Autopilot stops sending it work
+hold_percent = 90         # Autopilot does not start an agent that has used this much of its limit
 
 [agents.opencode]
 name = "OpenCode"
@@ -17,30 +33,40 @@ kind = "opencode"
 args = ["--model", "opencode/deepseek-v4.1-flash-free"]   # a free model for every session the board starts; change the id to switch
 jobs = ["phone", "bulk", "research", "writing"]
 cost = 0
+plan = "free"
+provider = "opencode"
+limit = "unknown"
+limit_unit = "tokens"
+limit_window = "unknown"
+reset = "unknown"
+usage = "opencode-db"
 
 [agents.hermes]
 name = "Hermes"
 kind = "hermes"
 jobs = ["writing", "research", "bulk"]
 cost = 0
-
-[agents.codex]
-name = "Codex"
-kind = "codex"
-jobs = ["code", "review"]
-cost = 1
-
-[agents.gemini]
-name = "Gemini CLI"
-kind = "gemini"
-jobs = ["research", "writing"]
-cost = 1
+plan = "free"
+provider = "openrouter"
+key_env = "OPENROUTER_API_KEY"
+key_file = "~/.hermes/.env"
+limit = "unknown"
+limit_unit = "tokens"
+limit_window = "day"
+reset = "unknown"
+usage = "hermes-db"
 
 [agents.claude]
 name = "Claude Code"
 kind = "claude"
 jobs = ["code", "review", "hard", "phone", "writing"]
 cost = 2
+plan = "subscription"     # which plan is not recorded here yet, so the limit below stays "unknown" until the owner fills it in
+limit = "unknown"
+limit_unit = "tokens"
+limit_window = "unknown"
+reset = "unknown"
+usage = "claude-transcripts"
 
 # Agent Zero, when it is installed: uncomment and set `bin` to its launcher.
 # [agents.agent-zero]
@@ -49,3 +75,8 @@ cost = 2
 # bin = "agent-zero"
 # jobs = ["research", "bulk"]
 # cost = 0
+# plan = "unknown"
+# limit = "unknown"
+# limit_unit = "tokens"
+# limit_window = "unknown"
+# reset = "unknown"
