@@ -106,7 +106,7 @@ details{font-size:12px;color:var(--dim)}summary{cursor:pointer;color:var(--ac);l
 @media(min-width:1000px){
  #hud{grid-template-columns:minmax(0,1fr) minmax(0,1.25fr) minmax(0,1.1fr);grid-template-areas:"top top top" "you you you" "crew core limits" "feed feed feed"}
  #top{grid-area:top}#you{grid-area:you}#core{grid-area:core}#crew{grid-area:crew}#limits{grid-area:limits}#feed{grid-area:feed}
- #feedlist{columns:2;column-gap:28px}#feed .f{break-inside:avoid}
+ #feedlist{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:28px;align-content:start}
 }
 @media(max-width:430px){body{font-size:13px}.dials{gap:2px}.big{font-size:32px}.dial .val{font-size:13px}.stat .v{font-size:12.5px}}
 @media(prefers-reduced-motion:reduce){.arc,.ring,.needle,.burn{transition:none}#ring .hand.open,.dot.live{animation:none}}
