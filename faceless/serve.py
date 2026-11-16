@@ -5,8 +5,10 @@
     python -m faceless serve --host 127.0.0.1  # behind `tailscale serve 8787` (HTTPS and identity from Tailscale, no open port)
 
 What the server does and does not do:
-  * Reads are GET. `/` is the page and `/overview.json` the data, both computed from the repo on request (cached for a few seconds) and
-    both refused with 401 without the token. `/actions.json` is what the action desk is running and the newest clicks from the journal;
+  * Reads are GET. `/` is the head-up display (`faceless/hud.py`), which polls `/instruments.json` (`faceless/instruments.py`: crew,
+    limits, keys, spend, feed) every five seconds; `/desk` is the action desk (`faceless/dashboard.py`, the page with the buttons) and
+    `/overview.json` its data, computed from the repo on request (cached for a few seconds). All refused with 401 without the token.
+    The overview takes many seconds to build, so the instrument's slow lane is refreshed by a background thread and never by a poll. `/actions.json` is what the action desk is running and the newest clicks from the journal;
     `/job.json?id=` is one job's own history and gauntlet report. The manifest, the two icons and the service worker hold no state and
     need no token, because a browser fetches them without one. `/healthz` answers "ok" and nothing else.
   * One write door: `POST /action` with `{"name": ..., "args": {...}}`. The name must be on the allowlist in `faceless/actions.py`, each
@@ -33,6 +35,7 @@ import secrets
 import socket
 import threading
 import time
+from datetime import datetime, timezone
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from urllib.parse import parse_qs, urlsplit
@@ -145,13 +148,50 @@ class Source:
             self.at = 0.0
 
 
+class Panel:
+    """The instrument snapshot for the head-up display. The fast lane is rebuilt at most every few seconds; the slow lane (the
+    overview) and key health are refreshed in one background thread, so a five-second poll never waits on a twenty-second build."""
+
+    def __init__(self, source: Source, build=None, slow_seconds: float = 30.0, seconds: float = 3.0, background: bool = True):
+        self.source, self.build, self.slow_seconds, self.seconds, self.background = source, build, slow_seconds, seconds, background
+        self.started = time.time()
+        self.slow, self.slow_at, self.busy, self.snap, self.snap_at, self.lock = None, 0.0, False, None, 0.0, threading.Lock()
+
+    def refresh(self) -> None:
+        from faceless import instruments
+        try:
+            self.slow = instruments.save_slow(self.source.get())
+            instruments.keyhealth(refresh="stale")
+        except Exception as e:   # noqa: BLE001 - the panel keeps its last slow lane and says how old it is
+            print(f"instrument slow lane failed: {type(e).__name__}", flush=True)
+        finally:
+            self.slow_at, self.busy = time.monotonic(), False
+
+    def get(self) -> dict:
+        from faceless import instruments
+        with self.lock:
+            if not self.busy and (self.slow is None or time.monotonic() - self.slow_at > self.slow_seconds):
+                self.busy = True
+                if self.background:
+                    threading.Thread(target=self.refresh, daemon=True).start()
+                else:
+                    self.refresh()
+            if self.snap is None or time.monotonic() - self.snap_at > self.seconds:
+                started = datetime.fromtimestamp(self.started, timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+                build = self.build or instruments.build
+                self.snap, self.snap_at = build(self.slow, server={"state": "up", "startedAt": started}), time.monotonic()
+            return self.snap
+
+
 MAX_BODY = 4096
 
 
-def make_handler(tok: str, source: Source, limiter: Limiter, static: dict, models_source: Source | None = None, desk=None):
-    from faceless import actions, dashboard
+def make_handler(tok: str, source: Source, limiter: Limiter, static: dict, models_source: Source | None = None, desk=None, panel: Panel | None = None):
+    from faceless import actions, dashboard, hud
     if desk is None:
         desk = actions.Desk(on_done=lambda result: source.expire())
+    if panel is None:
+        panel = Panel(source)
 
     class Handler(BaseHTTPRequestHandler):
         server_version, sys_version, protocol_version = "qm-cc", "", "HTTP/1.1"
@@ -188,12 +228,16 @@ def make_handler(tok: str, source: Source, limiter: Limiter, static: dict, model
                 return self.reply(429, "text/plain; charset=utf-8", b"too many requests; wait a minute\n", head)
             if path in static:
                 return self.reply(200, static[path][0], static[path][1], head)
-            if path not in ("", "index.html", "overview.json", "models.json", "actions.json", "job.json"):
+            if path not in ("", "index.html", "desk", "overview.json", "instruments.json", "models.json", "actions.json", "job.json"):
                 return self.reply(404, "text/plain; charset=utf-8", b"not found\n", head)
             if not self.authed(url):
                 limiter.wrong(ip)
                 return self.reply(401, "text/html; charset=utf-8", DENIED.encode("utf-8"), head)
             try:
+                if path in ("", "index.html"):               # the head-up display holds no data of its own; its first poll fills it
+                    return self.reply(200, "text/html; charset=utf-8", hud.render().encode("utf-8"), head)
+                if path == "instruments.json":
+                    return self.json(200, panel.get(), head)
                 if path == "models.json":
                     if models_source is None:
                         from faceless import models
@@ -272,12 +316,12 @@ def make_handler(tok: str, source: Source, limiter: Limiter, static: dict, model
     return Handler
 
 
-def make_server(host: str, port: int, tok: str, build=None, limiter: Limiter | None = None, desk=None) -> ThreadingHTTPServer:
+def make_server(host: str, port: int, tok: str, build=None, limiter: Limiter | None = None, desk=None, panel: Panel | None = None) -> ThreadingHTTPServer:
     if not tok or len(tok) < MIN_TOKEN:
         raise ValueError(f"{TOKEN_NAME} is missing or shorter than {MIN_TOKEN} characters: run `python -m faceless serve --init-token` once")
     from faceless import dashboard, models
     model_source = Source(build=models.catalog, seconds=60)
-    httpd = ThreadingHTTPServer((host, port), make_handler(tok, Source(build), limiter or Limiter(), dashboard.assets(), model_source, desk))
+    httpd = ThreadingHTTPServer((host, port), make_handler(tok, Source(build), limiter or Limiter(), dashboard.assets(), model_source, desk, panel))
     httpd.daemon_threads = True
     return httpd
 

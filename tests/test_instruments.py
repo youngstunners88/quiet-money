@@ -337,3 +337,70 @@ def test_the_snapshot_has_every_part_of_the_contract(crew):
             assert {"limit", "used", "resetAt", "burnPerHour", "projectedEmptyAt", "source"} <= set(r["limit"]) and r["limit"]["source"] in ("read", "estimate", "unknown")
     text = json.dumps(snap).lower()
     assert "codex" not in text and "gemini cli" not in text
+
+
+# ---------------------------------------------------------------- the page and its two routes
+
+TOKEN = "t" * 32
+
+
+def _serve(crew_dir, doc=None):
+    import threading
+
+    from faceless import serve
+    source = serve.Source(lambda: doc or {"generatedAt": "2026-01-01T00:00:00Z", "day": "2026-01-01", "jobs": None, "missions": None, "alerts": []})
+    httpd = serve.make_server("127.0.0.1", 0, TOKEN, build=source.build, panel=serve.Panel(source, background=False))
+    threading.Thread(target=httpd.serve_forever, kwargs={"poll_interval": 0.05}, daemon=True).start()
+    return httpd, f"http://127.0.0.1:{httpd.server_address[1]}"
+
+
+def _get(url, headers=None):
+    import urllib.error
+    import urllib.request
+    try:
+        with urllib.request.urlopen(urllib.request.Request(url, headers=headers or {}), timeout=10) as r:   # noqa: S310 - loopback test server
+            return r.status, r.read().decode()
+    except urllib.error.HTTPError as e:
+        return e.code, e.read().decode()
+
+
+def test_the_page_carries_no_data_no_sample_and_no_write(crew):
+    from faceless import hud
+    html = hud.render()
+    assert "Quiet Money Command Center" in html and "instruments.json" in html and 'href="desk"' in html
+    assert "prefers-reduced-motion" in html and "aria-label" in html and "setInterval" in html and ",5000)" in html
+    low = html.lower()
+    for word in ("codex", "gemini", "method:'post'", "publish", "lorem", "sample", "demo", "mock", "innerhtml"):
+        assert word not in low, word
+    for area in ('id="you"', 'id="core"', 'id="crew"', 'id="limits"', 'id="feed"'):
+        assert area in html
+    assert html.index('id="you"') < html.index('id="core"') < html.index('id="crew"') < html.index('id="limits"') < html.index('id="feed"')   # the phone's order
+
+
+def test_the_server_serves_the_display_the_desk_and_the_snapshot_behind_the_token(crew, monkeypatch):
+    monkeypatch.setenv("OPENROUTER_API_KEY", SECRET)
+    httpd, base = _serve(crew)
+    try:
+        for path in ("/", "/desk", "/instruments.json"):
+            assert _get(base + path)[0] == 401
+        auth = {"Authorization": f"Bearer {TOKEN}"}
+        code, page = _get(base + "/", auth)
+        assert code == 200 and "COMMAND CENTER" in page and TOKEN not in page and SECRET not in page
+        code, desk = _get(base + "/desk", auth)
+        assert code == 200 and 'id="nav"' in desk
+        code, body = _get(base + "/instruments.json", auth)
+        snap = json.loads(body)
+        assert code == 200 and snap["system"]["server"]["state"] == "up" and snap["slow"]["state"] == "ok"
+        assert {r["id"] for r in snap["crew"]} == {"opencode", "hermes", "claude", "agent-zero"}
+        assert SECRET not in body and TOKEN not in body and SECRET[:16] not in body
+        assert {k["id"]: k["state"] for k in snap["keys"]}["openrouter"] in ("present", "unknown")     # set; its service cannot be reached from a test
+    finally:
+        httpd.shutdown()
+        httpd.server_close()
+
+
+def test_the_same_feed_line_many_times_is_one_line_with_a_count(crew):
+    for _ in range(4):
+        events.emit("CC_MISSION", actor="autopilot", mission="daily-2026-11-17", event="dispatched", agent="engine")
+    f = instruments.feed({"engine": "Engine"})
+    assert len(f) == 1 and f[0]["count"] == 4

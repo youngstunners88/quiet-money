@@ -27,19 +27,19 @@ MANIFEST = {"name": "Quiet Money Command Center", "short_name": "QM Center", "st
 
 # Network first for the page itself; when the server is gone, or answers 401 to a launch from the home screen (no token in that URL),
 # the last good copy of the page is shown and it reads its own cached overview. Data requests are never cached here.
-SERVICE_WORKER = """const SHELL='qm-cc-shell-v1';
+SERVICE_WORKER = """const SHELL='qm-cc-shell-v2';
 self.addEventListener('install',e=>self.skipWaiting());
 self.addEventListener('activate',e=>e.waitUntil(self.clients.claim()));
 self.addEventListener('fetch',e=>{
   if(e.request.mode!=='navigate')return;
   e.respondWith((async()=>{
-    const cache=await caches.open(SHELL);
+    const cache=await caches.open(SHELL),key='shell:'+new URL(e.request.url).pathname;
     try{
       const r=await fetch(e.request);
-      if(r.ok){cache.put('shell',r.clone());return r;}
-      return (await cache.match('shell'))||r;
+      if(r.ok){cache.put(key,r.clone());return r;}
+      return (await cache.match(key))||r;
     }catch(err){
-      return (await cache.match('shell'))||new Response('Command center is offline and no copy is saved on this phone yet.',{status:503,headers:{'Content-Type':'text/plain'}});
+      return (await cache.match(key))||new Response('Command center is offline and no copy is saved on this phone yet.',{status:503,headers:{'Content-Type':'text/plain'}});
     }
   })());
 });

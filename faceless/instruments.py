@@ -267,7 +267,7 @@ def limit_reading(spec: dict, use: dict, now: datetime, provider_limit: dict | N
     if w["rolling"] and ev:
         reset_at = datetime.fromtimestamp(ev[0]["t"], timezone.utc) + timedelta(hours=w["hours"])   # the oldest use falls out of the window then
     out = {"unit": unit, "limit": limit, "limitSource": limit_source, "used": used, "usedSource": use["source"], "usedFrom": use["from"],
-           "usedSince": _iso(start), "usedScope": "this window" if w["start"] else "today (UTC); the window is unknown",
+           "usedSince": _iso(start), "usedScope": "this window" if w["start"] else f"today (UTC); {w['reason'] or 'the window is unknown'}",
            "window": spec.get("limit_window") or "unknown", "windowHours": w["hours"], "resetAt": _iso(reset_at),
            "resetSource": "estimate" if reset_at else "unknown", "resetReason": w["reason"],
            "burnPerHour": round(burn, 4) if burn is not None else None, "burnSource": "estimate" if burn is not None else "unknown",
@@ -639,7 +639,15 @@ def feed(names: dict[str, str], limit: int = 40) -> list[dict]:
                 kind = "blocked"
         if kind:
             out.append({"id": f"{e.get('t') or t}-{i}", "t": t, "kind": kind, "text": " ".join(str(text).split()), "agent": e.get("agent") or e.get("actor")})
-    out = out[::-1][:limit]
+    folded: list[dict] = []
+    for row in out[::-1]:                                    # newest first; the same line many times over becomes one line with a count
+        same = next((f for f in folded[-6:] if f["kind"] == row["kind"] and f["text"] == row["text"]), None)
+        if same:
+            same["count"] = same.get("count", 1) + 1
+            same["firstT"] = row["t"]
+        else:
+            folded.append(row)
+    out = folded[:limit]
     for row in out:                                          # the journal is already scrubbed on write; this is the second lock, on the few lines shown
         row["text"] = config.redact(row["text"])[:220]
     return out
