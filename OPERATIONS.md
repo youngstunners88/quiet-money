@@ -48,6 +48,11 @@ One page, computed from this repo, whose buttons run the studio's own commands (
 `artifacts/command-center/README.md`). It shows: did the run happen, what is held or failed, revenue from receipts, today's DMs with copy
 buttons, alerts with their fix. No adb, no cable, no shell on the phone.
 
+The front page (`/`) is a read-only head-up display: system state, what waits for you, spend, the crew's lamps and limits, key health and a
+live feed, from `python -m faceless instruments --json` (served as `/instruments.json`). The page with the buttons is `/desk`. A grey
+"unknown" limit means `crew.toml` does not say what that agent's plan allows; fill in `plan`, `limit`, `limit_unit`, `limit_window`, `reset`.
+An agent holding a mission and silent for `dormant_minutes` (45) loses it: `python -m faceless crew reap`, run by every Autopilot tick.
+
 ```bash
 python -m faceless serve --init-token     # once per computer: makes QM_DASH_TOKEN in ~/.config/quiet-money/env (owner-only file, never printed)
 python -m faceless dashboard && python -m faceless serve      # after a daily run: rebuild, then serve; scan the QR code with the phone

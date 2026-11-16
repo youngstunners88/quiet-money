@@ -29,7 +29,7 @@ python -m faceless toolbox sync               # refresh the copy (two public fil
 3. **Vet before installing**: `python -m faceless intake <url>`. It reads metadata and red flags and installs nothing. The catalog's
    "source-reviewed" means its documentation was read, not that the tool was run or is safe.
 4. **Prefer the smallest thing**: an official API or export beats a captured private one; a documented endpoint beats a UI script.
-5. **Nothing fits**: `python -m faceless crew ask research "what you need"` opens a card for a better-suited agent.
+5. **Nothing fits**: `python -m faceless crew ask research "what you need" --agent <your-id>` opens a card for a better-suited agent (`faceless-crew`).
 
 ## What we use these for
 

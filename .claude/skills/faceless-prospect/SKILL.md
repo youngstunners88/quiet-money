@@ -43,7 +43,8 @@ python -m faceless prospect add --handle @creator --kind peer --text "sinking fu
 
 1. TikTok > Inbox > Activity. Read the comments on our videos from the last three days.
 2. Run `prospect add` for each real one.
-3. Run `python -m faceless prospect`, then `python -m faceless crew report <mission> done "N added, M drafted"`.
+3. Run `python -m faceless prospect`, then `python -m faceless crew report <mission> done "N added, M drafted" --agent <your-id>`
+   (pre-flight, claim and heartbeat first: the `faceless-crew` skill).
 
 Read only. Never reply, like, follow, open a DM or tap a profile's message button. Stop at a login wall or a verification screen
 and report blocked.

@@ -7,6 +7,36 @@ It is a control surface, not a second system. Every number is read from the file
 `state/outbound.jsonl`, `state/receipts.jsonl`, `state/ledger.jsonl`, `studio.toml`, `herdr api snapshot`, agent config files). Every
 button runs one existing `python -m faceless ...` or `herdr ...` command. There is no database and no background service of its own.
 
+## The head-up display (the front page)
+
+`/` is a read-only instrument panel (`faceless/hud.py`) fed by `GET /instruments.json` (`faceless/instruments.py`) every five seconds.
+The action desk with the buttons is one link away at `/desk`. The display itself has no button and makes no POST.
+
+| Area | What it shows | From |
+|---|---|---|
+| Top strip | Autopilot on/off/paused and its timer, the PAUSE file, server uptime, UTC clock, countdowns to the YouTube quota reset and the spend day, the YOU lamp | `crew.toml`, `state/PAUSE`, `systemctl --user is-active qm-autopilot.timer` |
+| YOU | Everything that waits for a person, each with its one action: a rejected key, a screen to clear, a price, DMs to send, a paid agent that needs your click | derived missions, `state/tmp/keyhealth.json`, journal |
+| Core | Spend today against the ceiling, Autopilot load (running against `max_parallel`), posted against the daily target with ready and held | `state/ledger.jsonl`, journal, `state/jobs` |
+| Crew | One node per agent in `crew.toml` (a commented-out block is drawn "not installed"), lamp, plan, task, age of last beat, handoff lines | `state/agents/beats.jsonl`, claims, each agent's own store |
+| Limits | Per agent: limit arc with 70% and 90% ticks, reset ring, burn marker, "empty in" and "resets in". Grey "unknown" with the reason when nobody has said | `crew.toml` plan fields, the agent's own store |
+| Keys | present / ok / rejected / missing / placeholder / no-credit / unknown, by variable name. Never a value | env files, one free read-only question per service |
+| Feed | Claims, skips ("held because ..."), handoffs, key changes, actions, newest first; repeats folded into one line with a count | `state/journal.jsonl` |
+
+Source tags: `read` (a provider's API or a local file that is the record itself), `estimate` (counted or worked out by us: ledger
+rows, Claude Code transcript lines, an agent's own beats, burn rates, reset clocks), `unknown`. An estimate is never shown as a read.
+
+Lamps: live, idle, stale (holding work, silent past `stale_minutes`), dormant (past `dormant_minutes`; its mission is requeued),
+blocked, benched (took a mission and went idle without a report), key-rejected, not-installed.
+
+How the crew works together (skill `faceless-crew`, `AGENTS.md`): `instruments --for <agent>` before choosing work,
+`crew claim <mission> --agent <id>` before starting (an O_EXCL file under `state/agents/claims/`), `agent beat` while working,
+`crew ask` to hand off, `crew report` to finish. Autopilot (`crew tick`) checks key health, takes back missions from silent agents,
+and holds a mission, logging the reason, rather than send it to an agent with a rejected key, one past `hold_percent` of its limit,
+a dormant one or one dearer than `max_cost`.
+
+To fill in a limit, edit the agent's block in `crew.toml` (`plan`, `limit`, `limit_unit`, `limit_window`, `reset`); the comment at the
+top of that file lists the accepted values. No restart is needed.
+
 ## Mission control (the first tab)
 
 The Mission tab is the whole business on one screen: revenue this month, the crew, and three columns.
@@ -204,9 +234,34 @@ It keeps the phone fed; it does not tap the phone. Posting still needs a phone d
 | `faceless/missions.py`, `crew.toml` | The mission board, routing, dispatch, Autopilot |
 | `faceless/prospects.py`, `faceless/toolbox.py` | The prospect machine; the tool catalog search |
 | `faceless/agents.py`, `hermes.py`, `models.py` | Agents, Hermes and models, read only |
+| `faceless/instruments.py`, `faceless/hud.py` | The instrument snapshot (crew, limits, keys, spend, feed) and the head-up display that shows it |
+| `crew.toml`, `AGENTS.md`, `.claude/skills/faceless-crew` | The roster with plan and limit fields; the start-up note and working rules for every agent |
+| `tests/test_instruments.py` | `python -m pytest -q tests/test_instruments.py` |
 | `tests/test_command_center.py`, `tests/test_prospects.py` | `python -m pytest -q tests/test_command_center.py tests/test_prospects.py` |
 
 ## Log
+
+### 2026-11-17
+
+- **Head-up display.** `/` is now the instrument panel; the old page is `/desk`, unchanged. New: `faceless/instruments.py`, `faceless/hud.py`,
+  `python -m faceless instruments [--json | --for <agent> | --probe]`, `GET /instruments.json`, `tests/test_instruments.py`.
+- **Crew.** Codex and Gemini CLI are out of `crew.toml` and `faceless/agents.py`. The crew is Claude Code, Hermes, OpenCode, with Agent Zero as a
+  commented block that is drawn "not installed". `code`, `review` and `hard` now route to Claude Code only, which costs 2, so Autopilot
+  (`max_cost = 1`) holds those for a click.
+- **Limits.** `crew.toml` gained `plan`, `provider`, `limit`, `limit_unit`, `limit_window`, `reset`, `key_env`, `key_file`, `usage`. Every limit is
+  still "unknown" because nobody has said what the plans allow. Use is real: Hermes and OpenCode from their own session stores (`read`),
+  Claude Code from its transcripts (`estimate`).
+- **Symbiosis.** Claim locks (`crew claim`), requeue of a silent agent's mission (`crew reap`, run by every `crew tick`), Autopilot's gate and its
+  skip log, `--agent <id>` on `crew claim|release|report|ask`. The dispatch prompt now tells every agent to run the pre-flight and to beat.
+- **Keys.** Checked 2026-11-16 16:27 UTC: OpenRouter (engine), Composio, ElevenLabs and Hermes's own OpenRouter key all answered 200. The Composio
+  line that once held a literal `***` now holds a real value in both `.env` and `~/.config/quiet-money/env` (one line each). Hermes's key was
+  rejected (401) on 2026-11-15; it is accepted today. The board re-checks every ten minutes and writes a `CC_KEY` line when a state changes.
+- **Ledger rows carry a time** (`t`) from now on, so spend has a burn rate. Rows written before have only a day; the burn says "unknown" until
+  a timed row exists for the day.
+- **Slow lane.** The overview takes about 20 s to build here. The panel never waits on it: a background thread refreshes it every 30 s into
+  `state/tmp/instruments-slow.json` and the top strip shows its age.
+- **Trap.** `/tmp` is a tmpfs with a per-user quota. When it fills, pytest and `python -m faceless ci` fail with "Disk quota exceeded" in tests
+  that have nothing wrong. Stale `/tmp/faceless-ci-*` and `/tmp/pytest-of-*` folders are the usual cause.
 
 ### 2026-11-15
 
