@@ -226,9 +226,11 @@ def test_a_race_for_one_mission_has_exactly_one_winner(crew):
             return missions.claim("phone-lane", f"agent-{i}")["agent"]
         except ValueError:
             return None
-    with ThreadPoolExecutor(8) as pool:
-        won = [w for w in pool.map(grab, range(8)) if w]
-    assert len(won) == 1 and missions.claims()["phone-lane"]["agent"] == won[0]
+    for round_ in range(15):                              # many rounds: a lock that is only usually exclusive must fail here
+        with ThreadPoolExecutor(8) as pool:
+            won = [w for w in pool.map(grab, range(8)) if w]
+        assert len(won) == 1 and missions.claims()["phone-lane"]["agent"] == won[0], round_
+        missions.release("phone-lane", event="")
 
 
 def test_a_silent_agent_goes_amber_then_red_and_its_mission_is_requeued(crew):
@@ -370,8 +372,12 @@ def test_the_page_carries_no_data_no_sample_and_no_write(crew):
     assert "Quiet Money Command Center" in html and "instruments.json" in html and 'href="desk"' in html
     assert "prefers-reduced-motion" in html and "aria-label" in html and "setInterval" in html and ",5000)" in html
     low = html.lower()
-    for word in ("codex", "gemini", "method:'post'", "publish", "lorem", "sample", "demo", "mock", "innerhtml"):
+    for word in ("codex", "gemini", "publish", "lorem", "sample", "demo", "mock", "innerhtml"):
         assert word not in low, word
+    assert html.count("method:'POST'") == 1 and "SAFE={keys_probe:1,crew_reap:1,mission:1}" in html      # one write door, three action names, none of them posts or sends
+    from faceless import actions
+    for name in ("keys_probe", "crew_reap", "mission"):
+        assert name in actions.ACTIONS and "publish" not in " ".join(actions.ACTIONS[name]["argv"]({"mission": "x-y-z"}))
     for area in ('id="you"', 'id="core"', 'id="crew"', 'id="limits"', 'id="feed"'):
         assert area in html
     assert html.index('id="you"') < html.index('id="core"') < html.index('id="crew"') < html.index('id="limits"') < html.index('id="feed"')   # the phone's order
@@ -509,3 +515,16 @@ def test_the_plan_is_read_from_the_agents_own_account_record_without_the_person(
     c = _rows()["claude"]
     assert c["planDetail"]["text"] == "claude_pro · default_claude_ai" and c["planDetail"]["source"] == "read" and c["plan"] == "subscription"
     assert "someone@example.com" not in json.dumps(instruments.build(slow=None)) and "Some One" not in json.dumps(instruments.build(slow=None))
+
+
+def test_you_items_carry_only_safe_buttons(crew):
+    instruments.keyhealth(missions.crew(DOC["agents"]), refresh=True, session=Session(401))
+    _old_claim("old-job", "opencode", 60)
+    _old_beat("opencode", "running", 60)
+    team.beat("hermes", "idle", "", tokens_in=990)
+    b = _board_with_ask()
+    snap = instruments.build(slow={"missions": b, "jobs": None})
+    do = {y["id"].split("-")[0]: y.get("do") for y in snap["you"]}
+    assert do["key"]["name"] == "keys_probe" and do["dormant"]["name"] == "crew_reap"
+    assert do["send"]["name"] == "mission" and do["send"]["confirm"] is True and do["send"]["args"]["mission"].startswith("ask-")
+    assert {y["do"]["name"] for y in snap["you"] if y.get("do")} <= {"keys_probe", "crew_reap", "mission"}

@@ -573,8 +573,9 @@ def test_every_control_on_the_page_is_wired(desk):
     assert "k==='on')e.addEventListener('click'" in js                                  # the click shorthand every tab and button uses
     for name in ("phone_next", "phone_park", "phone_requeue", "job_retry", "daily", "dm_log", "dm_draft", "money_brief", "herdr_focus", "nonstop_tick"):
         assert f"'{name}'" in js, name
+    from faceless import hud
     for name in (n for n in actions.ACTIONS if n != "outbound_outcome"):
-        assert f"'{name}'" in js, name
+        assert f"'{name}'" in js or f"{name}:1" in hud.JS, name                         # wired on the desk, or on the head-up display's YOU strip
     assert "LS.get('qm_ns')==='1'" in js                                                # Non-stop is off until the owner turns it on
     assert "typing()" in js and "Display only" in js
     assert "'mission'" in js and "'autopilot_tick'" in js and "LS.get('qm_ap')==='1'" in js       # Autopilot is off until the owner turns it on

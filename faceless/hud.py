@@ -7,7 +7,9 @@ when an agent, a waiting item or a feed line appears or goes. Every gauge has an
 that is not known is drawn grey with the word "unknown" and its reason, never as a zero. Every string reaches the page as JSON and
 is placed with `textContent`.
 
-Whatever needs the owner links to the action desk (`/desk`, the page with the buttons). This page never sends, posts or uploads.
+Whatever needs the owner links to the action desk (`/desk`, the page with the buttons). A few items carry one button of their own:
+re-check the keys, take a silent agent's mission back, send a held mission to its agent (asked twice). Each posts one allowlisted
+action name to `POST /action`, the same door the desk uses. Nothing on this page sends a message, posts or uploads.
 """
 
 from __future__ import annotations
@@ -48,6 +50,9 @@ h2{font-size:11px;letter-spacing:.24em;margin:0 0 10px;font-weight:600;color:var
 .yi .a{flex:1 1 220px;color:var(--dim);min-width:0;overflow-wrap:anywhere}
 .yi .a b{color:var(--tx);font-weight:500}
 .yi a{white-space:nowrap}
+.yi .act{font:inherit;font-size:12.5px;color:var(--bg);background:var(--ac);border:0;padding:5px 10px;cursor:pointer;min-height:32px}
+.yi .act:focus-visible{outline:2px solid var(--tx);outline-offset:2px}
+.yi .res{flex:1 1 100%;color:var(--dim);font-size:12.5px;overflow-wrap:anywhere}.yi .res:empty{display:none}
 .tag{display:inline-block;font-size:10px;letter-spacing:.1em;padding:1px 6px;border:1px solid currentColor;border-radius:2px;text-transform:uppercase;vertical-align:1px}
 .tag.read{color:var(--ok)}.tag.estimate{color:var(--warn)}.tag.unknown{color:var(--off)}
 .dials{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
@@ -195,11 +200,22 @@ function tickClocks(){
   [].forEach.call(document.querySelectorAll('[data-since]'),function(e){var v=e.getAttribute('data-since');txt(e,v?(e.getAttribute('data-pre')||'')+dur(since(v))+' ago':e.getAttribute('data-none')||'')});
   [].forEach.call(document.querySelectorAll('[data-until]'),function(e){var v=e.getAttribute('data-until'),u=until(v);txt(e,v?(e.getAttribute('data-pre')||'')+(u<=0?'now':dur(u)):e.getAttribute('data-none')||'')})}
 
+// ---- the only writes this page makes: a YOU item's own button, one allowlisted action name posted to the action desk
+var SAFE={keys_probe:1,crew_reap:1,mission:1};
+function press(bt){
+  var d=bt._do,res=bt.parentNode.lastChild;if(!d||bt._busy||!SAFE[d.name])return;
+  if(d.confirm&&!bt._armed){bt._armed=true;txt(bt,'Confirm: '+d.label);setTimeout(function(){bt._armed=false;if(!bt._busy&&bt._do)txt(bt,bt._do.label)},6000);return}
+  bt._armed=false;bt._busy=true;txt(bt,'Working…');txt(res,'');
+  fetch('action',{method:'POST',headers:{'Content-Type':'application/json',Authorization:'Bearer '+tok},body:JSON.stringify({name:d.name,args:d.args||{}}),cache:'no-store',credentials:'omit'})
+   .then(function(r){return r.json()}).then(function(j){txt(res,j.error?('Refused: '+j.error):j.state==='running'?'Started.':(j.ok?'Done: ':(j.refused?'Refused: ':'Failed: '))+(j.summary||j.refused||''))})
+   .catch(function(){txt(res,'Could not reach the server.')}).then(function(){bt._busy=false;if(bt._do)txt(bt,bt._do.label);setTimeout(poll,1500)})}
 function drawYou(d){
   cls($('you'),'panel'+(d.youCount?' on':''));txt($('younone'),d.youCount?'':'Nothing waits for you.');
   sync($('youlist'),d.you,function(y){return y.id},function(){
-    var e=h('div',{class:'yi'},h('span',{class:'dot'}),h('div',{class:'t'}),h('div',{class:'a'},'Do: ',h('b',{})),h('a',{}));return e},
+    var btn=h('button',{type:'button',class:'act'});btn.addEventListener('click',function(){press(btn)});
+    var e=h('div',{class:'yi'},h('span',{class:'dot'}),h('div',{class:'t'}),h('div',{class:'a'},'Do: ',h('b',{})),h('a',{}),btn,h('span',{class:'res',role:'status'}));return e},
   function(e,y){var c=y.level==='stop'?'bad':y.level==='info'?'ac':'warn';cls(e.children[0],'dot c-'+c);e.children[0].style.color=COL[c];txt(e.children[1],y.text);txt(e.children[2].lastChild,y.action);attr(e,'title','source: '+y.source);
+    var bt=e.children[4];bt._do=y.do||null;bt.style.display=y.do?'':'none';if(y.do&&!bt._busy&&!bt._armed)txt(bt,y.do.label);
     var a=e.children[3];if(y.href){attr(a,'href',y.href);txt(a,'Open the desk →');a.style.display=''}else{a.removeAttribute('href');txt(a,'');a.style.display='none'}})}
 
 function drawCore(d){

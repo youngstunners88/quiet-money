@@ -782,15 +782,16 @@ def you(slow: dict | None, crew_rows: list[dict], keys: list[dict], sysd: dict) 
     """Everything that waits for the owner, each with the one action that clears it. The board never does these itself."""
     out = []
 
-    def add(iid, text, action, level="warn", href=None, src=""):
-        out.append({"id": iid, "text": text, "action": action, "level": level, "href": href, "source": src})
+    def add(iid, text, action, level="warn", href=None, src="", do=None):
+        # `do` is a button the display may press itself: one allowlisted action (faceless/actions.py) that sends, posts and uploads nothing
+        out.append({"id": iid, "text": text, "action": action, "level": level, "href": href, "source": src, **({"do": do} if do else {})})
     if sysd.get("pause"):
         add("pause", f"The studio is paused: {sysd['pause']}", "Resume when ready: python -m faceless pause --resume", "stop", None, "state/PAUSE")
     for k in keys:
         if k["state"] in BAD_KEY:
             users = f" ({', '.join(k['usedBy'])} cannot work without it)" if k["usedBy"] else ""
             add(f"key-{k['id']}", f"{k['label']}: {k['var']} is {k['state']}{users}", f"Paste a working key as {k['var']} in {k['where'] or 'the env file'}",
-                "stop" if k["usedBy"] else "warn", None, "state/tmp/keyhealth.json")
+                "stop" if k["usedBy"] else "warn", None, "state/tmp/keyhealth.json", {"name": "keys_probe", "args": {}, "label": "Re-check keys now"})
     m = (slow or {}).get("missions") or {}
     for x in m.get("todo") or []:
         b = x.get("blocked")
@@ -801,10 +802,12 @@ def you(slow: dict | None, crew_rows: list[dict], keys: list[dict], sysd: dict) 
             add(x["id"], x["title"], {"dms": "Open the DM desk and send by hand", "money": "Open Money and approve a price", "alerts": "Open Alerts for the steps"}.get(x.get("tab"), "Open the desk"),
                 "warn", f"desk#{x.get('tab') or 'mission'}", "overview (derived mission)")
         elif x.get("held") and "send it yourself" in x["held"]:
-            add(f"send-{x['id']}", f"{x['title']} waits for your click: {x['held']}", "Open Mission and send it, or leave it", "info", "desk#mission", "crew.toml [autopilot] max_cost")
+            add(f"send-{x['id']}", f"{x['title']} waits for your click: {x['held']}", "Send it, or leave it", "info", "desk#mission", "crew.toml [autopilot] max_cost",
+                {"name": "mission", "args": {"mission": x["id"]}, "label": f"Send to {(x.get('route') or {}).get('name') or 'the agent'}", "confirm": True})
     for r in crew_rows:
         if r["lamp"] == "dormant":
-            add(f"dormant-{r['id']}", f"{r['name']} went silent: {r['lampReason']}", "Look at its terminal; its mission goes back on the board by itself", "warn", None, "state/agents/beats.jsonl")
+            add(f"dormant-{r['id']}", f"{r['name']} went silent: {r['lampReason']}", "Look at its terminal; its mission goes back on the board by itself", "warn", None, "state/agents/beats.jsonl",
+                {"name": "crew_reap", "args": {}, "label": "Take its mission back now"} if r.get("claims") else None)
     return out
 
 

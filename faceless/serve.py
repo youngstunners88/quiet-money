@@ -152,7 +152,7 @@ class Panel:
     """The instrument snapshot for the head-up display. The fast lane is rebuilt at most every few seconds; the slow lane (the
     overview) and key health are refreshed in one background thread, so a five-second poll never waits on a twenty-second build."""
 
-    def __init__(self, source: Source, build=None, slow_seconds: float = 30.0, seconds: float = 3.0, background: bool = True):
+    def __init__(self, source: Source, build=None, slow_seconds: float = 12.0, seconds: float = 3.0, background: bool = True):
         self.source, self.build, self.slow_seconds, self.seconds, self.background = source, build, slow_seconds, seconds, background
         self.started = time.time()
         self.slow, self.slow_at, self.busy, self.snap, self.snap_at, self.lock = None, 0.0, False, None, 0.0, threading.Lock()
@@ -166,6 +166,11 @@ class Panel:
             print(f"instrument slow lane failed: {type(e).__name__}", flush=True)
         finally:
             self.slow_at, self.busy = time.monotonic(), False
+
+    def expire(self) -> None:
+        """An action just ran: the next poll rebuilds the snapshot and refreshes the slow lane."""
+        with self.lock:
+            self.snap_at, self.slow_at = 0.0, 0.0
 
     def get(self) -> dict:
         from faceless import instruments
@@ -189,7 +194,7 @@ MAX_BODY = 4096
 def make_handler(tok: str, source: Source, limiter: Limiter, static: dict, models_source: Source | None = None, desk=None, panel: Panel | None = None):
     from faceless import actions, dashboard, hud
     if desk is None:
-        desk = actions.Desk(on_done=lambda result: source.expire())
+        desk = actions.Desk(on_done=lambda result: (source.expire(), panel.expire()))
     if panel is None:
         panel = Panel(source)
 

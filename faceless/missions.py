@@ -136,21 +136,22 @@ def claim(mission_id: str, agent: str, force: bool = False) -> dict:
     CLAIMS.mkdir(parents=True, exist_ok=True)
     path = CLAIMS / f"{mission_id}.json"
     row = {"mission": mission_id, "agent": agent, "t": _now()}
-    data = json.dumps(row).encode("utf-8")
+    tmp = CLAIMS / f".{mission_id}.{secrets.token_hex(6)}.tmp"
+    tmp.write_bytes(json.dumps(row).encode("utf-8"))
     try:
-        fd = os.open(path, os.O_CREAT | os.O_EXCL | os.O_WRONLY, 0o644)
+        os.link(tmp, path)                                   # atomic and complete: the claim appears with its contents or not at all
     except FileExistsError:
         held = claims().get(mission_id)
-        if held and held["agent"] != agent and not force:
-            raise ValueError(f"{mission_id} is held by {held['agent']} since {held['t']}; pick another mission") from None
-        tmp = path.with_suffix(f".{secrets.token_hex(4)}.tmp")
-        tmp.write_bytes(data)
+        if not force and (held is None or held["agent"] != agent):
+            who = held["agent"] if held else "another agent"
+            raise ValueError(f"{mission_id} is held by {who}" + (f" since {held['t']}" if held else "") + "; pick another mission") from None
         os.replace(tmp, path)
+        tmp = None
         if held and held["agent"] == agent:
             return {**row, "refreshed": True}
-    else:
-        with os.fdopen(fd, "wb") as f:
-            f.write(data)
+    finally:
+        if tmp is not None:
+            tmp.unlink(missing_ok=True)
     events.emit(EVENT, actor=agent, mission=mission_id, event="claim", agent=agent)
     return row
 

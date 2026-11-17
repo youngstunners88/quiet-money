@@ -138,6 +138,10 @@ ACTIONS: dict[str, dict] = {
     "mission": {"label": "Dispatch mission", "lane": lambda a: _mission_lane(a), "moves": True, "timeout": 4 * 3600,
                 "argv": lambda a: _py("crew", "dispatch", _name(a, "mission"), str(a.get("by") or "owner") if str(a.get("by") or "owner") in ("owner", "autopilot") else "owner"),
                 "shows": "python -m faceless crew dispatch <mission>"},
+    "keys_probe": {"label": "Re-check keys", "lane": "keys", "moves": False, "timeout": 120,
+                   "argv": lambda a: _py("instruments", "--probe", "--fast"), "shows": "python -m faceless instruments --probe --fast"},
+    "crew_reap": {"label": "Take back missions from silent agents", "lane": "crew", "moves": False, "timeout": 60,
+                  "argv": lambda a: _py("crew", "reap"), "shows": "python -m faceless crew reap"},
     "herdr_focus": {"label": "Focus pane", "lane": "herdr", "moves": False, "timeout": 15, "argv": _focus,
                     "shows": "herdr workspace focus <id> | herdr agent focus <pane>"},
 }
