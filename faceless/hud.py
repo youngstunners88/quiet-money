@@ -58,6 +58,11 @@ h2{font-size:11px;letter-spacing:.24em;margin:0 0 10px;font-weight:600;color:var
 #next .t{font-size:15px;margin:10px 0 6px;overflow-wrap:anywhere}#next .a{color:var(--dim);font-size:12.5px;overflow-wrap:anywhere}
 #next .go{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:12px}
 .coin{position:absolute;width:14px;height:14px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#ffe9a8,#e3b341 55%,#8a6514);pointer-events:none;z-index:3}
+.vb{font:inherit;font-size:12px;background:transparent;color:var(--ac);border:1px solid var(--line);padding:5px 9px;cursor:pointer;min-height:32px}
+.vb[aria-pressed=true]{border-color:var(--ac);background:rgba(79,216,255,.1)}.vb:disabled{color:var(--off);cursor:not-allowed}
+#voice{display:flex;gap:6px;flex-wrap:wrap;margin-top:6px;align-items:center}
+#vstat{font-size:12px;color:var(--dim)}#vstat.rec{color:var(--bad);font-weight:600}#vstat.send{color:var(--warn)}
+#vbox{display:none}#vbox.on{display:block}#vbox .heard{font-size:15px;margin:6px 0 10px;overflow-wrap:anywhere}
 #cached{display:none;border:1px solid var(--warn);color:var(--warn);background:rgba(255,176,32,.08);padding:8px 12px;font-size:12.5px}
 #cached.on{display:block}
 body.still *,body.still *:before,body.still *:after{transition:none!important;animation:none!important}
@@ -138,8 +143,8 @@ details{font-size:12px;color:var(--dim)}summary{cursor:pointer;color:var(--ac);l
 #feedlist{max-height:330px;overflow-y:auto;scrollbar-width:thin;scrollbar-color:var(--line) transparent}
 #link.lost{color:var(--bad)}
 @media(min-width:1000px){
- #hud{grid-template-columns:minmax(0,1fr) minmax(0,1.25fr) minmax(0,1.1fr);grid-template-areas:"top sys sys" "cached cached cached" "hero hero hero" "you you you" "crew core limits" "feed feed feed"}
- #top{grid-area:top}#sys{grid-area:sys}#cached{grid-area:cached}#hero{grid-area:hero;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr) minmax(0,1.25fr)}
+ #hud{grid-template-columns:minmax(0,1fr) minmax(0,1.25fr) minmax(0,1.1fr);grid-template-areas:"top sys sys" "cached cached cached" "vbox vbox vbox" "hero hero hero" "you you you" "crew core limits" "feed feed feed"}
+ #top{grid-area:top}#sys{grid-area:sys}#cached{grid-area:cached}#vbox{grid-area:vbox}#hero{grid-area:hero;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr) minmax(0,1.25fr)}
  #you{grid-area:you}#core{grid-area:core}#crew{grid-area:crew}#limits{grid-area:limits}#feed{grid-area:feed}
  #feedlist{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:28px;align-content:start}
 }
@@ -232,7 +237,7 @@ function tickClocks(){
   [].forEach.call(document.querySelectorAll('[data-until]'),function(e){var v=e.getAttribute('data-until'),u=until(v);txt(e,v?(e.getAttribute('data-pre')||'')+(u<=0?'now':dur(u)):e.getAttribute('data-none')||'')})}
 
 // ---- the only writes this page makes: a YOU item's own button, one allowlisted action name posted to the action desk
-var SAFE={keys_probe:1,crew_reap:1,mission:1};
+var SAFE={keys_probe:1,crew_reap:1,mission:1,voice_say:1};
 // Pattern from KokonutUI components/kokonutui/ai-checkout.tsx (status review -> paying -> paid -> receipt) and ai-tool-approval.tsx
 // (HoldToAllow: press and hold 900 ms to confirm), hand-ported to this page's variables. No React, no dependency.
 var HOLD_MS=900;
@@ -251,6 +256,7 @@ function setBtn(bt,d){bt._do=d||null;bt.style.display=d?'':'none';if(!d)return;
   if(!bt._busy&&bt.getAttribute('data-state')==='review'){txt(bt,(d.confirm?'Hold: ':'')+d.label);attr(bt,'aria-label',d.label+(d.confirm?'. Press and hold to confirm':''))}}
 function press(bt,go){
   var d=bt._do,res=bt._res;if(!d||bt._busy||!SAFE[d.name]||!go)return;
+  if(d.name==='voice_say'){if(!VOUT){txt(res,'Voice is off: switch it on at the top to hear it.');return}speakOut((d.args||{}).what||'summary');txt(res,'Reading it out.');return}
   bt._busy=true;bt.disabled=true;attr(bt,'data-state','working');txt(bt,'Working…');txt(res,'');var ok=false;
   fetch('action',{method:'POST',headers:{'Content-Type':'application/json',Authorization:'Bearer '+tok},body:JSON.stringify({name:d.name,args:d.args||{}}),cache:'no-store',credentials:'omit'})
    .then(function(r){return r.json()}).then(function(j){ok=!j.error&&(j.state==='running'||j.ok);
@@ -391,6 +397,41 @@ function drawHero(d){
   txt($('ntext'),nx?nx.text:'Nothing waits for you.');txt($('naction'),nx?'Do: '+nx.action:'');
   var go=$('ngo');if(!go._bt){go._bt=actBtn();go._a=h('a',{});go.appendChild(go._bt);go.appendChild(go._a);go.appendChild(go._bt._res)}
   setBtn(go._bt,nx&&nx.do);if(nx&&nx.href&&!nx.do){attr(go._a,'href',nx.href);txt(go._a,'Open the desk →');go._a.style.display=''}else{go._a.style.display='none'}}
+// ---- voice. OUT: off until switched on here (remembered on this device); the server makes the audio, the key never reaches this page.
+// IN: records only after a tap and only until the next tap or 15 s, says so while recording and while sending, and runs nothing: the
+// transcript and the proposed action are shown, and the action needs the same press-and-hold as any other button.
+var VOUT=LS.get('qm_voice_out')==='1',REC=null;
+function vstat(t,c){var e=$('vstat');txt(e,t||'');cls(e,c||'')}
+function voiceOut(on){VOUT=on;LS.set('qm_voice_out',on?'1':'0');attr($('vout'),'aria-pressed',on?'true':'false');txt($('vout'),on?'🔊 Voice on':'🔈 Voice off');$('vsay').hidden=!on}
+$('vout').addEventListener('click',function(){voiceOut(!VOUT)});voiceOut(VOUT);
+function playLatest(what){return fetch('voice/'+what+'.mp3',{headers:{Authorization:'Bearer '+tok},cache:'no-store',credentials:'omit'}).then(function(r){
+  if(!r.ok)throw new Error(r.status);return r.blob()}).then(function(b){var u=URL.createObjectURL(b),a=new Audio(u);a.onended=function(){URL.revokeObjectURL(u)};return a.play()})}
+function waitAction(id,t0){return fetch('actions.json',{headers:{Authorization:'Bearer '+tok},cache:'no-store',credentials:'omit'}).then(function(r){return r.json()}).then(function(j){
+  var run=(j.running||[]).some(function(x){return x.id===id});if(run&&Date.now()-t0<60000)return new Promise(function(res){setTimeout(function(){res(waitAction(id,t0))},1000)});
+  var done=(j.recent||[]).filter(function(x){return x.id===id})[0];return done||{ok:!run}})}
+function speakOut(what){if(!VOUT)return;vstat('Making the audio…','send');
+  fetch('action',{method:'POST',headers:{'Content-Type':'application/json',Authorization:'Bearer '+tok},body:JSON.stringify({name:'voice_say',args:{what:what}}),cache:'no-store',credentials:'omit'})
+  .then(function(r){return r.json()}).then(function(j){return j.state==='running'?waitAction(j.id,Date.now()):j}).then(function(j){
+    if(j&&j.ok===false){vstat('Not read out: '+(j.summary||j.refused||'failed'));return}vstat('');return playLatest(what)})
+  .catch(function(){vstat('Could not read it out.')})}
+$('vsay').addEventListener('click',function(){speakOut('summary')});
+(function(){var b=$('vin');if(!window.isSecureContext||!navigator.mediaDevices||!window.MediaRecorder){b.disabled=true;attr(b,'title','The microphone needs HTTPS or localhost (tailscale serve gives HTTPS).');return}
+  b.addEventListener('click',function(){if(REC){REC.stop();return}
+    navigator.mediaDevices.getUserMedia({audio:true}).then(function(stream){var chunks=[],mr=new MediaRecorder(stream),timer=setTimeout(function(){if(mr.state==='recording')mr.stop()},15000);
+      REC=mr;attr(b,'aria-pressed','true');txt(b,'■ Stop');vstat('● Recording, tap Stop to send (15 s at most)','rec');
+      mr.ondataavailable=function(e){if(e.data&&e.data.size)chunks.push(e.data)};
+      mr.onstop=function(){clearTimeout(timer);stream.getTracks().forEach(function(t){t.stop()});REC=null;attr(b,'aria-pressed','false');txt(b,'🎙 Talk');
+        var blob=new Blob(chunks,{type:(mr.mimeType||'audio/webm').split(';')[0]});vstat('Sending the clip to Gemini to transcribe…','send');
+        fetch('voice-in',{method:'POST',headers:{'Content-Type':blob.type,Authorization:'Bearer '+tok},body:blob,cache:'no-store',credentials:'omit'})
+        .then(function(r){return r.json()}).then(function(j){vstat('');showHeard(j)}).catch(function(){vstat('Could not reach the server.')})};
+      mr.start()}).catch(function(){vstat('The microphone was not allowed.')})})})();
+function showHeard(j){var box=$('vbox');cls(box,'panel on');var go=$('vgo');
+  if(!go._bt){go._bt=actBtn();go._x=h('button',{type:'button',class:'vb'},'Cancel');go._x.addEventListener('click',function(){cls(box,'panel')});go.appendChild(go._bt);go.appendChild(go._x);go.appendChild(go._bt._res)}
+  txt(go._bt._res,'');
+  if(j.error){txt($('vheard'),'Not heard: '+j.error);txt($('vprop'),'');setBtn(go._bt,null);return}
+  txt($('vheard'),'“'+j.transcript+'”');var p=j.proposal;
+  if(!p||!p.name){txt($('vprop'),p?p.label:'That does not match anything this page can do. Nothing will run.');setBtn(go._bt,null);return}
+  txt($('vprop'),'Proposed: '+p.label+'. Nothing runs until you hold the button.');setBtn(go._bt,{name:p.name,args:p.args||{},label:p.label,confirm:true})}
 function usd2(v){return v==null?'—':'$'+Number(v).toLocaleString(undefined,{minimumFractionDigits:2,maximumFractionDigits:2})}
 function banner(on,text){var b=$('cached');cls(b,on?'on':'');txt(b,on?text:'');document.body.classList.toggle('still',!!on)}
 function draw(d,cached){S=d;LIVE=!cached;if(cached)banner(true,'Showing the copy saved on this device at '+hm(d.generatedAt)+' UTC ('+dur(since(d.generatedAt))+' old). Waiting for the server; nothing here is live.');
@@ -408,10 +449,14 @@ if('serviceWorker' in navigator){navigator.serviceWorker.register('sw.js').catch
 
 BODY = """<div id="hud">
 <section class="panel" id="top" aria-label="Quiet Money command center">
- <div class="brand"><h1>QUIET MONEY // COMMAND CENTER</h1><a href="desk">Action desk (the buttons) →</a><span id="gate" class="c-bad" role="status"></span></div>
+ <div class="brand"><h1>QUIET MONEY // COMMAND CENTER</h1><a href="desk">Action desk (the buttons) →</a><span id="gate" class="c-bad" role="status"></span>
+  <div id="voice"><button type="button" class="vb" id="vout" aria-pressed="false">🔈 Voice off</button><button type="button" class="vb" id="vsay" hidden>Read out</button>
+  <button type="button" class="vb" id="vin">🎙 Talk</button><span id="vstat" role="status"></span></div></div>
  <div id="youlamp" role="status"><div class="n" id="youn">—</div><div class="k" style="font-size:10px;letter-spacing:.2em;color:var(--dim)">YOU</div></div>
 </section>
 <div id="cached" role="status"></div>
+<section class="panel" id="vbox" aria-label="What the command center heard"><h2>Heard</h2><div class="heard" id="vheard"></div>
+ <div class="a" id="vprop" style="color:var(--dim);font-size:12.5px"></div><div class="go" id="vgo" style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:10px"></div></section>
 <div id="hero" aria-label="Money in, videos shipped, next action">
  <section class="panel mc" id="money"><div class="lab">Money in · this month <span class="tag" id="mtag"></span></div>
   <div class="fig" id="mfig" aria-hidden="true">—</div><span class="sr" id="msr" aria-live="polite"></span>

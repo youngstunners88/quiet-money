@@ -225,6 +225,12 @@ def cmd_x(args) -> int:
     return xdesk.main(args.rest)
 
 
+def cmd_speak(args) -> int:
+    """The command center's voice: Quinton reads the summary or the next action (faceless/speak.py)."""
+    from faceless import speak
+    return speak.main([args.what])
+
+
 def cmd_instruments(args) -> int:
     from faceless import instruments
     return instruments.main([*(["--json"] if args.json else []), *(["--for", args.agent] if args.agent else []), *(["--probe"] if args.probe else []),
@@ -2016,6 +2022,9 @@ def main(argv: list[str] | None = None) -> int:
     ag = sub.add_parser("agent", help="the team board: `agent beat <agent> <status> --task ...` (every agent reports here), `agent board`, `agent gauges`")
     ag.add_argument("rest", nargs=argparse.REMAINDER)
     ag.set_defaults(fn=cmd_agent)
+    spk = sub.add_parser("speak", help="the command center reads out loud in Quinton's voice: `speak summary|next` (Fish Audio, cached; the key stays here)")
+    spk.add_argument("what", nargs="?", default="summary", choices=["summary", "next"])
+    spk.set_defaults(fn=cmd_speak)
     ins = sub.add_parser("instruments", help="the instrument panel: `instruments` (reading) | `--json` (the snapshot) | `--for <agent>` (an agent's pre-flight) | `--probe` (check keys)")
     ins.add_argument("--json", action="store_true")
     ins.add_argument("--for", dest="agent")

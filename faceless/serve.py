@@ -233,6 +233,15 @@ def make_handler(tok: str, source: Source, limiter: Limiter, static: dict, model
                 return self.reply(429, "text/plain; charset=utf-8", b"too many requests; wait a minute\n", head)
             if path in static:
                 return self.reply(200, static[path][0], static[path][1], head)
+            if path in ("voice/summary.mp3", "voice/next.mp3"):
+                if not self.authed(url):
+                    limiter.wrong(ip)
+                    return self.reply(401, "text/plain; charset=utf-8", b"token needed\n", head)
+                from faceless import speak
+                got = speak.latest(path[6:-4])
+                if not got:
+                    return self.reply(404, "text/plain; charset=utf-8", b"nothing has been said yet\n", head)
+                return self.reply(200, "audio/mpeg", got[0], head)
             if path not in ("", "index.html", "desk", "overview.json", "instruments.json", "models.json", "actions.json", "job.json"):
                 return self.reply(404, "text/plain; charset=utf-8", b"not found\n", head)
             if not self.authed(url):
@@ -308,7 +317,42 @@ def make_handler(tok: str, source: Source, limiter: Limiter, static: dict, model
             self.serve(False)
 
         def do_POST(self):   # noqa: N802
+            if urlsplit(self.path).path.lstrip("/") == "voice-in":
+                return self.voice_in()
             self.act()
+
+        def voice_in(self) -> None:
+            """The owner's spoken command: one short clip in, its transcript and at most one proposed action out. Nothing is run here:
+            the page shows both and the owner holds a button to allow the action, which then goes through POST /action like any click."""
+            from faceless import speak
+            ip = self.client_address[0]
+            self.close_connection = True
+            if not limiter.allow(ip):
+                return self.reply(429, "text/plain; charset=utf-8", b"too many requests; wait a minute\n")
+            header = self.headers.get("Authorization") or ""
+            given = header[7:].strip() if header.lower().startswith("bearer ") else ""
+            if not given or not hmac.compare_digest(given.encode("utf-8"), tok.encode("utf-8")):
+                limiter.wrong(ip)
+                return self.json(401, {"error": "this needs the token in the Authorization header"})
+            origin = self.headers.get("Origin")
+            if origin and urlsplit(origin).netloc != (self.headers.get("Host") or ""):
+                return self.json(403, {"error": "voice is accepted from the command center page only"})
+            mime = (self.headers.get("Content-Type") or "").split(";")[0].strip()
+            try:
+                length = int(self.headers.get("Content-Length") or 0)
+            except ValueError:
+                length = -1
+            if mime not in speak.AUDIO_TYPES or not 0 < length <= speak.MAX_AUDIO:
+                return self.json(400, {"error": "send one short audio clip (webm, ogg, mp4, mpeg or wav, under 1.5 MB)"})
+            audio = self.rfile.read(length)
+            self.close_connection = False
+            try:
+                heard = speak.transcribe(audio, mime)
+            except PermissionError as e:
+                return self.json(403, {"error": str(e)})
+            except (ValueError, RuntimeError) as e:
+                return self.json(502 if isinstance(e, RuntimeError) else 400, {"error": str(e)})
+            return self.json(200, {**heard, "proposal": speak.propose(heard["transcript"], panel.get())})
 
         def do_HEAD(self):   # noqa: N802
             self.serve(True)

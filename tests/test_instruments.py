@@ -372,9 +372,12 @@ def test_the_page_carries_no_data_no_sample_and_no_write(crew):
     assert "Quiet Money Command Center" in html and "instruments.json" in html and 'href="desk"' in html
     assert "prefers-reduced-motion" in html and "aria-label" in html and "setInterval" in html and ",5000)" in html
     low = html.lower()
-    for word in ("codex", "gemini", "publish", "lorem", "sample", "demo", "mock", "innerhtml"):
+    for word in ("codex", "gemini cli", "gemini-cli", "publish", "lorem", "sample", "demo", "mock", "innerhtml"):   # Gemini as the transcriber is fine; not as an agent
         assert word not in low, word
-    assert html.count("method:'POST'") == 1 and "SAFE={keys_probe:1,crew_reap:1,mission:1}" in html      # one write door, three action names, none of them posts or sends
+    import re as _re
+    posts = _re.findall(r"fetch\('([a-z-]+)',\{method:'POST'", html)
+    assert posts and set(posts) <= {"action", "voice-in"}                      # two doors: the allowlisted action desk, and the voice clip in
+    assert "SAFE={keys_probe:1,crew_reap:1,mission:1,voice_say:1}" in html     # the only names this page may post; none sends, posts or uploads
     from faceless import actions
     for name in ("keys_probe", "crew_reap", "mission"):
         assert name in actions.ACTIONS and "publish" not in " ".join(actions.ACTIONS[name]["argv"]({"mission": "x-y-z"}))
@@ -584,3 +587,65 @@ def test_the_display_inlines_only_the_hash_checked_gsap(monkeypatch, tmp_path):
     bad.write_bytes(hud.VENDOR.read_bytes() + b"/* changed */")
     monkeypatch.setattr(hud, "VENDOR", bad)
     assert hud.gsap_source() == "" and "GSAP 3.14.2" not in hud.render()      # a copy that fails its hash is not run; the page just does not animate
+
+
+# ---------------------------------------------------------------- the look of each video (faceless/variety.py)
+
+def test_two_videos_in_a_row_never_share_a_composition_or_a_camera():
+    from faceless import variety
+    hist = []
+    for k in range(60):
+        comp, cam = variety.choose(hist, f"2026-11-{17 + k // 5:02d}-s{k % 5}-x")
+        if hist:
+            assert comp != hist[-1]["composition"] and cam != hist[-1]["camera"]
+            assert (comp, cam) not in {(r["composition"], r["camera"]) for r in hist[-variety.AVOID_LAST:]}
+        hist.append({"composition": comp, "camera": cam})
+    pairs = {(r["composition"], r["camera"]) for r in hist}
+    assert len(pairs) >= 12 and {c for c, _ in pairs} == set(variety.COMPOSITIONS) and {m for _, m in pairs} == set(variety.CAMERAS)
+
+
+def test_a_job_keeps_its_look_and_the_still_prompt_carries_its_composition(monkeypatch):
+    from faceless import variety
+    from faceless.pipeline import render, visuals
+    a = variety.pick_look("2026-11-17-s1-story-a", "story")
+    assert variety.pick_look("2026-11-17-s1-story-a", "story") == a and len(variety.looks_log()) == 1        # a re-render keeps its look
+    b = variety.pick_look("2026-11-17-s2-math-b", "math")
+    assert b["composition"] != a["composition"] and b["camera"] != a["camera"]
+    prompt = visuals.build_prompt("a ledger on a desk", "editorial photography", "", b)
+    assert variety.COMPOSITIONS[b["composition"]] in prompt and "subject in the center third" not in prompt
+    shots = render.plan_shots([(0, 2), (2, 4), (4, 6)], [{"path": "x"}] * 3, 30, 3.0, "j", b["camera"])
+    assert shots[0]["motion"] == variety.CAMERAS[b["camera"]]["hook"] and all(s["motion"] in variety.CAMERAS[b["camera"]]["moves"] for s in shots[1:])
+    assert render.plan_shots([(0, 2)], [{"path": "x"}], 30, 3.0, "j")[0]["motion"] == render.HOOK          # an older job renders as it always did
+
+
+def test_the_variety_audit_flags_one_style_sentence_and_repeated_pairings(monkeypatch, tmp_path):
+    from faceless import variety
+    monkeypatch.setattr(variety.Paths, "output", tmp_path)
+    rows = []
+    for k in range(8):
+        d = tmp_path / "2026-11-17" / f"j{k}"
+        d.mkdir(parents=True)
+        (d / "images.json").write_text(json.dumps([{"provider": "pollinations", "prompt": "a desk. one style for all, vertical 9:16 composition, x"}]))
+        rows.append({"job": f"j{k}", "day": "2026-11-17", "render": {"look": {"composition": "center", "camera": "drift"}}})
+    score, info = variety.still_style_component(rows)
+    assert score == 1.0 and info["distinct"] == 1
+    score, info = variety.look_component(rows)
+    assert score == 1.0 and info["backToBack"] == 7
+    varied = [{"render": {"look": {"composition": c, "camera": m}}} for c, m in zip(["center", "macro", "wide", "thirds"] * 2, ["pan", "tilt", "punch", "drift"] * 2)]
+    assert variety.look_component(varied)[0] < 0.4
+
+
+def test_a_money_flow_callout_becomes_a_flow_card_that_any_frame_can_render():
+    from faceless.pipeline import cards
+    f = cards.parse_flow("PAYCHECK → $400")
+    assert f == {"kind": "flow", "a": "PAYCHECK", "b": "$400", "value": 400.0, "prefix": "$", "suffix": "", "decimals": 0}
+    assert cards.parse_flow("$1,200 -> index fund")["b"] == "INDEX FUND"
+    for bad in ("PAYCHECK → SAVINGS", "$400 → $500", "1999 → 2024", "A → B → C", "a very long source label here → $5"):
+        assert cards.parse_flow(bad) is None, bad
+    script = {"beats": [{"say": "hook", "callout": ""}, {"say": "x", "callout": "PAYCHECK → $400"}, {"say": "y", "callout": "$1 VS $2"}]}
+    assert cards.parse_compare("PAYCHECK → $400") is None
+    body, js = cards._flow("s1", 2.0, 3.0, f, "#e3b341", "THE MATH")
+    assert "PAYCHECK" in body and all(line.startswith(("tl.set(", "tl.fromTo(")) for line in js)       # seek-safe: no tl.to
+    assert '<div class="flab"></div>' in body                                                         # the amount is the destination: no repeated label
+    from faceless import config, prompts
+    assert "FROM → TO" in prompts.script_prompt(config.pillar("math"), "topic")

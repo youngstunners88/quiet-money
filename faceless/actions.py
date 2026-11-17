@@ -105,6 +105,13 @@ def _mission_lane(args: dict) -> str:
     return "render" if mid.startswith(("daily-", "retry-")) else "phone" if mid.startswith("phone-") else "crew:" + mid[:40]
 
 
+def _what(args: dict) -> str:
+    what = str(args.get("what") or "summary")
+    if what not in ("summary", "next"):
+        raise ValueError("what must be summary or next")
+    return what
+
+
 def lane_of(spec: dict, args: dict | None) -> str:
     return spec["lane"](args or {}) if callable(spec["lane"]) else spec["lane"]
 
@@ -138,6 +145,8 @@ ACTIONS: dict[str, dict] = {
     "mission": {"label": "Dispatch mission", "lane": lambda a: _mission_lane(a), "moves": True, "timeout": 4 * 3600,
                 "argv": lambda a: _py("crew", "dispatch", _name(a, "mission"), str(a.get("by") or "owner") if str(a.get("by") or "owner") in ("owner", "autopilot") else "owner"),
                 "shows": "python -m faceless crew dispatch <mission>"},
+    "voice_say": {"label": "Read out loud", "lane": "voice", "moves": False, "timeout": 90,
+                  "argv": lambda a: _py("speak", _what(a)), "shows": "python -m faceless speak summary|next"},
     "keys_probe": {"label": "Re-check keys", "lane": "keys", "moves": False, "timeout": 120,
                    "argv": lambda a: _py("instruments", "--probe", "--fast"), "shows": "python -m faceless instruments --probe --fast"},
     "crew_reap": {"label": "Take back missions from silent agents", "lane": "crew", "moves": False, "timeout": 60,
