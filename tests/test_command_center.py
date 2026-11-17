@@ -142,12 +142,18 @@ def test_replies_are_never_cached_never_indexed_and_set_no_cookie(server):
         assert TOKEN not in json.dumps(head)
 
 
-def test_the_model_catalog_is_gated_and_read_only(server):
+def test_the_model_catalog_is_gated_and_read_only(server, tmp_path, monkeypatch):
+    from faceless import models
+    cat = tmp_path / "models.json"                          # a CI runner has no OpenCode cache: the test brings its own small catalog
+    cat.write_text(json.dumps({"opencode": {"name": "OpenCode Zen", "models": {"m-free": {"name": "M free"}, "m2": {"name": "M2"}}},
+                               "openrouter": {"name": "OpenRouter", "models": {"x/y:free": {"name": "Y"}}}}))
+    monkeypatch.setattr(models, "CATALOG", cat)
+    monkeypatch.setattr(models, "_CACHE", {})
     assert _get(server + "/models.json")[0] == 401
     code, head, body = _get(server + "/models.json", headers={"Authorization": f"Bearer {TOKEN}"})
     assert code == 200 and "application/json" in head.get("Content-Type", "")
     doc = json.loads(body)
-    assert doc["totalProviders"] >= 1 and doc["totalModels"] >= 1
+    assert doc["totalProviders"] == 2 and doc["totalModels"] == 3
     assert all(p["id"] and p["name"] and "models" in p for p in doc["providers"][:5])
 
 

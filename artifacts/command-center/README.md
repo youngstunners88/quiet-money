@@ -297,6 +297,33 @@ It keeps the phone fed; it does not tap the phone. Posting still needs a phone d
 
 ## Log
 
+### 2026-11-18
+
+- **Baseline (before any change).** Average view duration and first-3-second retention are recorded nowhere in the repo: the YouTube
+  Data API gives views only (`faceless/metrics.py` says so), and the 23 TikTok posts in `state/phone/receipts.jsonl` carry no URL and no
+  stats. Views per video: median 13, mean 37.5, max 314 over 20 Shorts (`analytics/snapshots/youtube-2026-10-30.json`); median 16 over
+  32 rows on 2026-10-20 (`analytics/metrics.jsonl`). Money in: $0, no receipt ever recorded. TikTok posts: 13 in the last 7 days against
+  35, 0 today, 30 passed videos waiting.
+- **Command center v2.** Money in, videos shipped and the next action first; GSAP vendored and inlined; KokonutUI patterns cited above;
+  stale data freezes motion behind an amber banner. Checked in Chromium at 390x844 and 1440x900 and in the rehearsal (count-up $57 → $86
+  with the coin moment, hold-to-allow cancels on a short press and posts once on a full hold, zero tweens under reduced motion).
+- **Look audit (last 20 shipped).** All 148 stills used one style sentence (from an uncommitted `studio.toml` edit of 2026-11-16 that set
+  every pillar's `style` to the same "high contrast documentary editorial photography" sentence; not changed here, it is not this
+  session's file), one framing ("subject in the center third"), Pollinations for every generated still, and the same push-in hook.
+  Only the grade differed per pillar; music beds repeat (story-1.mp3 five times). New: composition × camera families per video
+  (`faceless/variety.py`), recorded in `state/looks.jsonl` and `render.json`, and two new measures in `python -m faceless variety`
+  (stills scored 1.0, the worst). The cards lane gained a money-flow card (`PAYCHECK → $400`).
+- **Quinton.** `channel/host/CASE-2026-11-18.md`: what exists, $2.70 spent so far, where he fits for $0, and the one decision (clips a
+  week). Nothing spent; waiting for the owner.
+- **Voice.** `faceless/speak.py`: read-out in Quinton's voice through Fish Audio REST (his `voice-anchor.wav` as the reference), and voice
+  input through Gemini, built and off. Neither key is set on this machine, so neither has made a real request yet.
+- **Tooling.** shadcn MCP pinned in `.mcp.json` (it had also written a root `package.json`, lockfile and 71 MB `node_modules`, removed);
+  all four servers answer an MCP handshake; the three project servers wait for the owner's approval in Claude Code. Skills
+  `gemini-api-cli` and `fish-audio-api` installed; see `repo-farm/registry.md` (2026-11-18).
+- **Traps.** `[publish] mode = "youtube"` and the Composio key works, so a plain `make` or `daily` would upload to YouTube against rule 18:
+  always `--no-publish` (as the board does). `npx shadcn … mcp init` installs into the repo root. A shell sitting inside a folder cannot
+  delete it (the safety check refuses).
+
 ### 2026-11-17
 
 - **Head-up display.** `/` is now the instrument panel; the old page is `/desk`, unchanged. New: `faceless/instruments.py`, `faceless/hud.py`,
