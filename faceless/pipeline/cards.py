@@ -28,6 +28,7 @@ CLI = "hyperframes@0.8.136"      # pinned: the same input must keep producing th
 GSAP = "https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"
 GSAP_SRI = "sha384-sG0Hv1tP1lZCk9KQmrIbY/XNwi+OY84GQqhMscbnsoBFqAz8KNCil1kvfL3Hbbk2"   # of exactly that file
 LOCAL_GSAP = "assets/gsap.min.js"
+VENDORED = Path(__file__).resolve().parents[1] / "vendor" / "gsap-3.14.2.min.js"   # committed; checked against GSAP_SRI like any other copy
 SECRET_NAME = re.compile(r"KEY|TOKEN|SECRET|PASSWORD|PASSWD|CREDENTIAL|ACCOUNT_ID|AUTH|COOKIE|_PAT$|SESSION_ID", re.I)
 
 
@@ -39,8 +40,9 @@ def ensure_gsap(root: Path) -> None:
     """Put a copy of GSAP whose hash we checked into the project. HyperFrames downloads and inlines a CDN script itself, so a browser-side `integrity`
     attribute is never evaluated and would only look like protection; the check has to be ours, on the bytes the renderer will run."""
     cache = Paths.cache / "gsap-3.14.2.min.js"
-    vendored = Path(__file__).resolve().parents[1] / "vendor" / "gsap-3.14.2.min.js"     # the repo's own copy: no CDN on a fresh checkout
-    data = vendored.read_bytes() if vendored.exists() else cache.read_bytes() if cache.exists() else b""
+    data = VENDORED.read_bytes() if VENDORED.exists() else b""   # the repo's own copy first: a fresh checkout renders with no CDN at all
+    if gsap_digest(data) != GSAP_SRI:
+        data = cache.read_bytes() if cache.exists() else b""
     if gsap_digest(data) != GSAP_SRI:
         from faceless.providers import http
         data = http().get(GSAP, timeout=30).content
