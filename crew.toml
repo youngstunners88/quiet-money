@@ -10,6 +10,9 @@
 #   limit_unit   - "tokens", "requests" or "usd"
 #   limit_window - "5h" (any <n>h), "day", "week", "month", or "unknown"
 #   reset        - "rolling" (the window slides), "HH:MM" UTC for a daily reset, "mon HH:MM" for a weekly one, or "unknown"
+#   limit_file   - a file where the provider's OWN limit reading is saved (percent used and reset time per window). For Claude Code
+#                  it is written by its status line (tools/command-center/claude-statusline.py); when present it is a real read
+#                  and leads, and the fields above are only needed for a limit the provider does not report
 #   key_env / key_file - the variable that holds its key and the file it is read from (the value is never shown, only its health)
 #   usage        - where its token counts come from: "claude-transcripts", "hermes-db", "opencode-db", or "beats" (what it reports
 #                  with `agent beat --tokens-in/--tokens-out`; the default for any agent without a store of its own)
@@ -66,6 +69,7 @@ limit = "unknown"
 limit_unit = "tokens"
 limit_window = "unknown"
 reset = "unknown"
+limit_file = "~/.cache/quiet-money/claude-limits.json"
 usage = "claude-transcripts"
 
 # Agent Zero, when it is installed: uncomment and set `bin` to its launcher.

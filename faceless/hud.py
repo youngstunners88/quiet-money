@@ -246,11 +246,11 @@ function drawCrew(d){
       h('div',{class:'task'}),h('div',{class:'why'}),h('div',{class:'meta'}))},
   function(e,a){var L=LAMP[a.lamp]||['off',a.lamp],hd=e.firstChild;
     cls(hd.children[0],'dot c-'+L[0]+(a.lamp==='live'?' live':''));hd.children[0].style.color=COL[L[0]];txt(hd.children[1],a.name);
-    cls(hd.children[2],'lampw c-'+L[0]);txt(hd.children[2],L[1]);cls(hd.children[3],'tag c-ac');txt(hd.children[3],'plan: '+a.plan);
+    cls(hd.children[2],'lampw c-'+L[0]);txt(hd.children[2],L[1]);cls(hd.children[3],'tag c-ac');txt(hd.children[3],'plan: '+a.plan);attr(hd.children[3],'title',a.planDetail?a.planDetail.text+' ('+a.planDetail.from+')':'crew.toml');
     attr(hd.children[4],'data-since',a.lastBeatAt||'');attr(hd.children[4],'data-pre','last beat ');attr(hd.children[4],'data-none',a.installed?'no beat yet':'');
     txt(e.children[1],a.task?'▸ '+a.task:(a.claims&&a.claims.length?'▸ holds '+a.claims.map(function(c){return c.mission}).join(', '):''));
     txt(e.children[2],a.lamp==='idle'||a.lamp==='live'?'':a.lampReason);attr(e,'title',a.lampReason);
-    txt(e.children[3],a.tokensIn==null?'no gauges until it is installed':'today: in '+n(a.tokensIn)+' · out '+n(a.tokensOut)+' tokens · '+usd(a.usd)+' ('+a.usageSource+')'+(a.model?' · '+a.model:'')+(a.key?' · key '+a.key.state:''));
+    txt(e.children[3],a.tokensIn==null?'no gauges until it is installed':'today: '+(a.requests==null?'':n(a.requests)+' replies · ')+'in '+n(a.tokensIn)+' · out '+n(a.tokensOut)+' tokens · '+usd(a.usd)+' ('+a.usageSource+')'+(a.model?' · '+a.model:'')+(a.key?' · key '+a.key.state:'')+(a.planDetail?' · account: '+a.planDetail.text+' (read)':''));
     attr(e.children[3],'title',a.usageFrom||'')});
   var hl=d.handoffs.slice().reverse();txt($('handnone'),hl.length?'':'No handoffs in the last 48 hours.');
   sync($('hands'),hl,function(x){return x.mission},function(){return h('div',{class:'r'},h('span',{}),h('span',{class:'d'}))},
@@ -260,20 +260,20 @@ function drawCrew(d){
 // ---- limits
 var LG={};
 function drawLimits(d){
-  var rows=d.crew.filter(function(a){return a.limit});
-  sync($('limlist'),rows,function(a){return a.id},function(a){
-    var g=gauge({ticks:[70,90],ring:true,burn:true});LG[a.id]=g;
+  var rows=[];d.crew.forEach(function(a){(a.limits||[]).forEach(function(L){rows.push({k:a.id+':'+L.id,a:a,L:L})})});
+  sync($('limlist'),rows,function(r){return r.k},function(r){
+    var g=gauge({ticks:[70,90],ring:true,burn:true});LG[r.k]=g;
     return h('div',{class:'lim'},g.el,h('div',{},h('div',{},h('span',{class:'n'}),' ',h('span',{class:'tag'})),h('div',{class:'l'}),h('div',{class:'l d'}),h('div',{class:'l d'}),
       h('details',{},h('summary',{},'why?'),h('div',{}))))},
-  function(e,a){var L=a.limit,g=LG[a.id],b=e.lastChild,known=L.limit!=null&&L.pct!=null,u=L.unit==='usd'?usd:n;
+  function(e,r){var a=r.a,L=r.L,g=LG[r.k],b=e.lastChild,known=L.limit!=null&&L.pct!=null,pc=L.unit==='percent',u=L.unit==='usd'?usd:pc?function(v){return v==null?'—':v+'%'}:n;
     var ringPct=null;if(L.resetAt&&L.windowHours){ringPct=100*(1-Math.max(0,until(L.resetAt))/(L.windowHours*3600))}
     var resetTxt=L.resetAt?'resets in '+dur(until(L.resetAt)):'reset unknown',emptyTxt=L.projectedEmptyAt?'empty in '+dur(until(L.projectedEmptyAt)):null;
-    var usedTxt=L.used==null?'use unknown':u(L.used)+' '+(L.unit==='usd'?'':L.unit+' ')+'used '+L.usedScope;
+    var usedTxt=L.used==null?'use unknown':u(L.used)+' '+(L.unit==='usd'||pc?'':L.unit+' ')+'used '+L.usedScope;
     g.set({pct:known?L.pct:null,big:known?Math.round(L.pct)+'%':'unknown',unit:known?'OF LIMIT':'LIMIT',ring:ringPct,burn:L.projectedPctAtReset,
-      aria:a.name+' limit: '+(known?L.pct+' percent used, '+u(L.used)+' of '+u(L.limit)+' '+L.unit+', '+resetTxt+(emptyTxt?', '+emptyTxt:'')+' ('+L.source+')':'unknown. '+(L.reason||'')+' '+usedTxt+' ('+L.usedSource+')')});
-    txt(b.children[0].firstChild,a.name);setTag(b.children[0].lastChild,L.source);
-    txt(b.children[1],known?u(L.used)+' of '+u(L.limit)+' '+L.unit:usedTxt+' ('+L.usedSource+')');
-    txt(b.children[2],L.burnPerHour==null?'burn unknown':'burn '+u(L.burnPerHour)+'/h (estimate)'+(emptyTxt?' · '+emptyTxt:''));
+      aria:a.name+' '+L.label+': '+(known?L.pct+' percent used, '+u(L.used)+' of '+u(L.limit)+' '+L.unit+', '+resetTxt+(emptyTxt?', '+emptyTxt:'')+' ('+L.source+')':'unknown. '+(L.reason||'')+' '+usedTxt+' ('+L.usedSource+')')});
+    txt(b.children[0].firstChild,a.name+' · '+L.label);setTag(b.children[0].lastChild,L.source);
+    txt(b.children[1],known?(pc?u(L.used)+' used, as the provider reports it':u(L.used)+' of '+u(L.limit)+' '+L.unit):usedTxt+' ('+L.usedSource+')');
+    txt(b.children[2],L.burnPerHour==null?'burn unknown':'burn '+u(L.burnPerHour)+'/h (estimate)'+(emptyTxt?' · '+emptyTxt:'')+(L.readAt?' · read '+dur(since(L.readAt))+' ago':''));
     txt(b.children[3],(known||L.resetAt)?resetTxt+(L.resetAt?' ('+L.resetSource+')':''):'window '+L.window+' · '+resetTxt);
     var why=[L.reason,L.usedReason,L.resetReason,L.error,'used: '+L.usedFrom].filter(Boolean).join(' ');txt(b.children[4].lastChild,why);attr(e,'title',why)});
   sync($('keys'),d.keys,function(k){return k.id},function(){return h('div',{class:'r'},h('span',{},h('span',{class:'dot'}),h('span',{})),h('span',{class:'d'}))},

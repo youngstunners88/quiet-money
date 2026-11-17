@@ -43,7 +43,7 @@ CLAIMS = Paths.state / "agents" / "claims"
 DEFAULTS = {"enabled": False, "max_parallel": 2, "phone": False, "agent_ttl_minutes": 180, "max_cost": 1,
             "stale_minutes": 20, "dormant_minutes": 45, "hold_percent": 90}
 AGENT = re.compile(r"^[a-z][a-z0-9-]{1,39}$")
-SPEC = ("plan", "provider", "limit", "limit_unit", "limit_window", "reset", "key_env", "key_file", "usage")   # what the instrument reads
+SPEC = ("plan", "provider", "limit", "limit_unit", "limit_window", "reset", "limit_file", "key_env", "key_file", "usage")   # what the instrument reads
 SKIP_AGAIN_MIN = 360                                         # the same skip for the same reason is logged again only after this long
 TAG = re.compile(r"^[a-z][a-z0-9-]{1,24}$")
 MISSION = re.compile(r"^[A-Za-z0-9][A-Za-z0-9._-]{2,180}$")

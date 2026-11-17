@@ -404,3 +404,108 @@ def test_the_same_feed_line_many_times_is_one_line_with_a_count(crew):
         events.emit("CC_MISSION", actor="autopilot", mission="daily-2026-11-17", event="dispatched", agent="engine")
     f = instruments.feed({"engine": "Engine"})
     assert len(f) == 1 and f[0]["count"] == 4
+
+
+def _hermes_db(path, replies_min_ago):
+    import sqlite3
+    con = sqlite3.connect(path)
+    con.execute("create table sessions (id text primary key, started_at real, ended_at real, input_tokens integer, output_tokens integer, model text)")
+    con.execute("create table messages (id integer primary key autoincrement, session_id text, role text, timestamp real)")
+    now = time.time()
+    con.execute("insert into sessions values ('s1', ?, null, 4000, 600, 'free/model')", (now - 3000,))
+    for m in replies_min_ago:
+        con.execute("insert into messages (session_id, role, timestamp) values ('s1', 'assistant', ?)", (now - m * 60,))
+    con.execute("insert into messages (session_id, role, timestamp) values ('s1', 'user', ?)", (now - 60,))
+    con.commit()
+    con.close()
+
+
+def test_requests_are_counted_from_an_agents_own_replies(crew):
+    _hermes_db(instruments.HERMES_DB, [50, 30, 10, 5, 1])
+    text = missions.ROSTER.read_text().replace('limit = 1000\nlimit_unit = "tokens"', 'limit = 50\nlimit_unit = "requests"').replace('usage = "beats"\n\n[agents.claude]', 'usage = "hermes-db"\n\n[agents.claude]')
+    missions.ROSTER.write_text(text)
+    h = _rows()["hermes"]
+    lim = h["limit"]
+    assert h["requests"] == 5 and (h["tokensIn"], h["tokensOut"]) == (4000, 600) and h["usageSource"] == "read"
+    assert lim["unit"] == "requests" and lim["used"] == 5 and lim["pct"] == 10.0 and lim["burnPerHour"] == 5
+    assert lim["usedSource"] == "estimate" and lim["source"] == "estimate"        # we counted the replies: an estimate, never a read
+
+
+def test_opencode_usage_is_read_reply_by_reply(crew):
+    import sqlite3
+    con = sqlite3.connect(instruments.OPENCODE_DB)
+    con.execute("create table message (id text primary key, session_id text, time_created integer, time_updated integer, data text)")
+    now = int(time.time() * 1000)
+    for i, role in enumerate(("user", "assistant", "assistant")):
+        con.execute("insert into message values (?, 's', ?, ?, ?)", (f"m{i}", now - 60000 * (i + 1), now, json.dumps(
+            {"role": role, "cost": 0, "providerID": "opencode", "modelID": "free-model", "tokens": {"input": 100, "output": 20, "reasoning": 5, "cache": {"write": 10, "read": 9000}}})))
+    con.commit()
+    con.close()
+    o = _rows()["opencode"]
+    assert (o["tokensIn"], o["tokensOut"], o["requests"], o["usageSource"]) == (220, 50, 2, "read") and o["lamp"] == "live" and o["models"] == ["opencode/free-model"]
+
+
+def _limits_file(path, five, seven, age_min=1, reset_in_h=3.0, burn_from=None):
+    now = time.time()
+    samples = [[now - 1800, burn_from], [now - age_min * 60, five]] if burn_from is not None else [[now - age_min * 60, five]]
+    path.write_text(json.dumps({"t": now - age_min * 60, "windows": {
+        "five_hour": {"used_percentage": five, "resets_at": now + reset_in_h * 3600, "samples": samples},
+        "seven_day": {"used_percentage": seven, "resets_at": now + 4 * 86400, "samples": [[now - age_min * 60, seven]]}}}))
+
+
+def _with_limit_file(crew_dir):
+    f = crew_dir / "claude-limits.json"
+    missions.ROSTER.write_text(missions.ROSTER.read_text().replace('plan = "subscription"\nlimit = "unknown"\nusage = "beats"', f'plan = "subscription"\nlimit = "unknown"\nlimit_file = "{f}"\nusage = "beats"'))
+    return f
+
+
+def test_a_limit_the_provider_reported_is_a_read_and_leads(crew):
+    f = _with_limit_file(crew)
+    c = _rows()["claude"]
+    assert c["limit"]["source"] == "unknown" and "does not exist yet" in c["limits"][1]["reason"]          # no reading yet: grey, with how to get one
+    _limits_file(f, 40.0, 62.5, burn_from=30.0)
+    c = _rows()["claude"]
+    five, seven = c["limits"][0], c["limits"][1]
+    assert (five["id"], five["pct"], five["source"], five["usedSource"], five["resetSource"]) == ("five_hour", 40.0, "read", "read", "read")
+    assert five["burnSource"] == "estimate" and 19 < five["burnPerHour"] < 21 and five["projectedEmptyAt"] and five["projectedPctAtReset"] > 90
+    assert (seven["pct"], seven["source"]) == (62.5, "read") and c["limit"]["id"] == "seven_day"            # the fullest window is the one that gates
+    assert "claude" not in instruments.fitness(missions.crew(DOC["agents"]))
+    _limits_file(f, 40.0, 93.0)
+    assert "93% of its 7-day window" in instruments.fitness(missions.crew(DOC["agents"]))["claude"]
+    assert instruments.preflight("claude", instruments.build(slow=None))[0] == 1
+
+
+def test_an_old_reading_or_a_reset_window_is_not_shown_as_current(crew):
+    f = _with_limit_file(crew)
+    _limits_file(f, 80.0, 95.0, age_min=300)
+    c = _rows()["claude"]
+    assert all(w["pct"] is None and w["source"] == "unknown" for w in c["limits"] if w["id"] != "own") and "last read 300 min ago" in c["limits"][1]["reason"]
+    assert "claude" not in instruments.fitness(missions.crew(DOC["agents"]))            # nothing is held on a reading that may no longer be true
+    _limits_file(f, 99.0, 10.0, age_min=1, reset_in_h=-0.1)
+    five = next(w for w in _rows()["claude"]["limits"] if w["id"] == "five_hour")
+    assert five["pct"] is None and "the window reset at" in five["reason"]
+
+
+def test_the_status_line_script_saves_the_readings_and_nothing_personal(tmp_path):
+    import subprocess
+    import sys
+    out = tmp_path / "limits.json"
+    script = missions.Paths.root / "tools" / "command-center" / "claude-statusline.py"
+    payload = {"model": {"display_name": "Model X"}, "context_window": {"used_percentage": 12.4}, "session_id": "abc", "cwd": "/home/someone/secret-project",
+               "rate_limits": {"five_hour": {"used_percentage": 23.5, "resets_at": 1900000000}, "seven_day": {"used_percentage": 41.2, "resets_at": 1900400000}}}
+    r = subprocess.run([sys.executable, str(script)], input=json.dumps(payload), capture_output=True, text=True, timeout=20, env={**os.environ, "QM_CLAUDE_LIMITS": str(out)})
+    assert r.returncode == 0 and r.stdout.strip() == "[Model X] · ctx 12% · 5h 24% · 7d 41%"
+    doc = json.loads(out.read_text())
+    assert doc["windows"]["five_hour"]["used_percentage"] == 23.5 and doc["windows"]["seven_day"]["resets_at"] == 1900400000
+    assert "secret-project" not in out.read_text() and "abc" not in out.read_text()
+    r = subprocess.run([sys.executable, str(script)], input=json.dumps({"model": {"display_name": "Model X"}}), capture_output=True, text=True, timeout=20,
+                       env={**os.environ, "QM_CLAUDE_LIMITS": str(out)})
+    assert r.returncode == 0 and json.loads(out.read_text())["windows"]["five_hour"]["used_percentage"] == 23.5      # a reply without limits erases nothing
+
+
+def test_the_plan_is_read_from_the_agents_own_account_record_without_the_person(crew):
+    instruments.CLAUDE_CONFIG.write_text(json.dumps({"oauthAccount": {"organizationType": "claude_pro", "organizationRateLimitTier": "default_claude_ai",
+                                                                      "emailAddress": "someone@example.com", "displayName": "Some One"}}))
+    c = _rows()["claude"]
+    assert c["planDetail"]["text"] == "claude_pro · default_claude_ai" and c["planDetail"]["source"] == "read" and c["plan"] == "subscription"
+    assert "someone@example.com" not in json.dumps(instruments.build(slow=None)) and "Some One" not in json.dumps(instruments.build(slow=None))

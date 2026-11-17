@@ -13,6 +13,8 @@ import subprocess
 import time
 from pathlib import Path
 
+from faceless import cmdcache
+
 SOURCE = "claude/opencode/hermes/ollama --version, ~/.claude/settings.json, ~/.hermes/config.yaml, herdr api snapshot"
 _CACHE: dict[str, tuple[float, dict]] = {}
 _TTL = 30.0
@@ -106,7 +108,7 @@ def build() -> dict:
                 path = str(candidate)
                 break
         clis.append({"id": spec["id"], "name": spec["name"], "installed": bool(path), "path": path,
-                     "version": _first_line(_run([spec["bin"], *spec["version"]])) if path else None,
+                     "version": _first_line(cmdcache.run([spec["bin"], *spec["version"]], 6 * 3600.0)) if path else None,
                      "launch": spec["launch"], "default": defaults.get(spec["id"]) or {}})
     doc = {"clis": clis, "herdr": _herdr(), "source": SOURCE}
     _CACHE["agents"] = (time.monotonic(), doc)

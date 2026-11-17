@@ -38,6 +38,10 @@ KEYHEALTH = Paths.state / "tmp" / "keyhealth.json"
 CLAUDE_PROJECTS = Path.home() / ".claude" / "projects"
 HERMES_DB = Path.home() / ".hermes" / "state.db"
 OPENCODE_DB = Path.home() / ".local" / "share" / "opencode" / "opencode.db"
+CLAUDE_CONFIG = Path.home() / ".claude.json"                 # Claude Code's own account record: which plan (never the name or the address)
+LIMIT_STALE_MIN = 90                                         # a provider's own limit reading older than this is shown with its age, not as current
+WINDOW_LABEL = {"five_hour": "5-hour window", "seven_day": "7-day window", "spend_limit": "spend limit"}
+WINDOW_HOURS = {"five_hour": 5.0, "seven_day": 168.0}
 KEY_FILES = [Paths.root / ".env", config.MACHINE_ENV]         # where the studio's own keys live; read for health, never shown
 KEY_TTL_MIN = 10                                             # a key's health is asked again at most this often
 SLOW_TTL_MIN = 10                                            # a pre-flight older than this rebuilds the overview itself
@@ -176,17 +180,37 @@ def _usage_hermes(since: float) -> dict:
         if t >= since:
             out["events"].append({"t": t, "in": int(tin or 0), "out": int(tout or 0), "usd": 0.0, "model": model or ""})
     out["events"].sort(key=lambda e: e["t"])
+    replies = _sqlite(HERMES_DB, "select timestamp from messages where role = 'assistant' and timestamp >= ? order by timestamp", (since,))
+    if replies is not None:                                  # one assistant message is one model reply: the request count for a requests-per-day cap
+        out["requests"] = [_ts(r[0]) or 0.0 for r in replies]
     return out
 
 
 def _usage_opencode(since: float) -> dict:
-    """OpenCode's own session store: tokens and cost per session as OpenCode recorded them (`read`), timed by the session's last update."""
-    out = _empty("read", "~/.local/share/opencode/opencode.db (session.tokens_input, tokens_output, cost)")
-    rows = _sqlite(OPENCODE_DB, "select time_updated, tokens_input, tokens_output, cost from session where time_updated >= ?", (int(since * 1000),))
+    """OpenCode's own store, one row per model reply with the tokens and cost OpenCode recorded for it (`read`). When the reply
+    rows cannot be read the per-session totals stand in, and then requests cannot be counted."""
+    out = {**_empty("read", "~/.local/share/opencode/opencode.db (message.data: tokens, cost per reply)"), "grain": "request"}
+    rows = _sqlite(OPENCODE_DB, "select time_created, data from message where time_created >= ?", (int(since * 1000),))
     if rows is None:
-        out["error"] = "session store missing or unreadable"
+        sess = _sqlite(OPENCODE_DB, "select time_updated, tokens_input, tokens_output, cost from session where time_updated >= ?", (int(since * 1000),))
+        if sess is None:
+            out["error"] = "session store missing or unreadable"
+            return out
+        out.update(grain="session", events=sorted(({"t": _ts(r[0]) or 0.0, "in": int(r[1] or 0), "out": int(r[2] or 0), "usd": float(r[3] or 0)} for r in sess), key=lambda e: e["t"]))
+        out["from"] = "~/.local/share/opencode/opencode.db (session totals)"
         return out
-    out["events"] = sorted(({"t": _ts(r[0]) or 0.0, "in": int(r[1] or 0), "out": int(r[2] or 0), "usd": float(r[3] or 0)} for r in rows), key=lambda e: e["t"])
+    for created, data in rows:
+        try:
+            d = json.loads(data)
+        except (TypeError, ValueError):
+            continue
+        if d.get("role") != "assistant":
+            continue
+        tk = d.get("tokens") or {}
+        out["events"].append({"t": _ts(created) or 0.0, "in": int(tk.get("input") or 0) + int((tk.get("cache") or {}).get("write") or 0),
+                              "out": int(tk.get("output") or 0) + int(tk.get("reasoning") or 0), "usd": float(d.get("cost") or 0),
+                              "cacheRead": int((tk.get("cache") or {}).get("read") or 0), "model": "/".join(x for x in (d.get("providerID"), d.get("modelID")) if x)})
+    out["events"].sort(key=lambda e: e["t"])
     return out
 
 
@@ -245,12 +269,16 @@ def limit_reading(spec: dict, use: dict, now: datetime, provider_limit: dict | N
     start = w["start"] or day0
     ev = [e for e in use["events"] if e["t"] >= start.timestamp()]
 
-    countable = unit != "requests" or use.get("grain") == "request"
+    # requests are counted from the store's own per-reply rows: a list of times beside the token events, or the events themselves
+    calls = use["requests"] if "requests" in use else [e["t"] for e in use["events"]] if use.get("grain") == "request" else None
+    countable = unit != "requests" or calls is not None
 
     def amount(rows):
         if not countable:                                    # a store that keeps one row per session cannot say how many requests were made
             return None
-        return (sum(e["in"] + e["out"] for e in rows) if unit == "tokens" else round(sum(e["usd"] for e in rows), 6) if unit == "usd" else len(rows))
+        if unit == "requests":
+            return sum(1 for t in calls if t >= (rows[0]["t"] if rows else float("inf"))) if rows is not ev else sum(1 for t in calls if t >= start.timestamp())
+        return sum(e["in"] + e["out"] for e in rows) if unit == "tokens" else round(sum(e["usd"] for e in rows), 6)
     used = amount(ev)
     limit = _num(spec.get("limit"))
     limit_source, reason = ("read", None) if limit is not None else ("unknown", None)
@@ -261,8 +289,14 @@ def limit_reading(spec: dict, use: dict, now: datetime, provider_limit: dict | N
     if limit is None:
         reason = (f"limit is \"{spec.get('limit', 'unknown')}\" in crew.toml: nobody has said what this plan allows. "
                   "Set limit, limit_unit, limit_window and reset in the agent's block and this arc fills in.")
-    recent = [e for e in use["events"] if e["t"] >= now.timestamp() - BURN_WINDOW_MIN * 60]
-    burn = amount(recent) * (60 / BURN_WINDOW_MIN) if use["events"] and countable else None
+    cut = now.timestamp() - BURN_WINDOW_MIN * 60
+    recent = [e for e in use["events"] if e["t"] >= cut]
+    if unit == "requests":
+        burn = sum(1 for t in calls if t >= cut) * (60 / BURN_WINDOW_MIN) if calls is not None else None
+    else:
+        burn = amount(recent) * (60 / BURN_WINDOW_MIN) if use["events"] else None
+    if unit == "requests" and countable and use["source"] == "read":
+        use = {**use, "source": "estimate", "from": use["from"] + "; replies counted by us"}
     reset_at = w["resetAt"]
     if w["rolling"] and ev:
         reset_at = datetime.fromtimestamp(ev[0]["t"], timezone.utc) + timedelta(hours=w["hours"])   # the oldest use falls out of the window then
@@ -283,6 +317,71 @@ def limit_reading(spec: dict, use: dict, now: datetime, provider_limit: dict | N
             out["projectedPctAtReset"] = round(100 * (used + burn * max(0.0, (reset_at - now).total_seconds() / 3600)) / limit, 1)
     out["source"] = "unknown" if limit is None or used is None else "read" if (limit_source == "read" and out["usedSource"] == "read") else "estimate"
     return out
+
+
+def provider_windows(agent: dict, now: datetime) -> list[dict]:
+    """Limits the provider itself reported, saved by a hook into the file `limit_file` names (Claude Code's status line gives the
+    5-hour and 7-day percentages and reset times). These are `read`. The burn is ours, from the file's own history: `estimate`.
+    A reading whose window has since reset, or that is old, is not shown as current: it is `unknown` with what was last seen."""
+    if not agent.get("limit_file"):
+        return []
+    path = Path(str(agent["limit_file"])).expanduser()
+    where = str(agent["limit_file"])
+    try:
+        doc = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return [{**_blank_window("five_hour", where), "reason": f"{where} does not exist yet: it is written by the agent's status line after its first reply "
+                 "(for Claude Code: the statusLine command in ~/.claude/settings.json, tools/command-center/claude-statusline.py)."}]
+    out = []
+    for key, w in (doc.get("windows") or {}).items():
+        row = _blank_window(key, where)
+        read_at = _ts(w.get("stale_since")) or max(_ts(doc.get("t")) or 0.0, float(w["samples"][-1][0]) if w.get("samples") else 0.0)
+        reset = _ts(w.get("resets_at"))
+        pct = _num(w.get("used_percentage"))
+        age_min = (now.timestamp() - read_at) / 60
+        row.update(readAt=_iso(read_at), resetAt=_iso(reset) if reset else None, resetSource="read" if reset else "unknown")
+        if pct is None:
+            row["reason"] = "the last reading held no percentage"
+        elif reset and reset <= now.timestamp():
+            row["reason"] = f"the window reset at {_iso(reset)}; the last reading before that was {pct:.0f}%. A new one arrives with the agent's next reply."
+            row["resetAt"], row["resetSource"] = None, "unknown"
+        elif age_min > LIMIT_STALE_MIN:
+            row["reason"] = f"last read {int(age_min)} min ago ({pct:.0f}% then); it refreshes with the agent's next reply."
+        else:
+            samples = [x for x in w.get("samples") or [] if isinstance(x, list) and len(x) == 2]
+            burn = None
+            recent = [x for x in samples if x[0] >= now.timestamp() - BURN_WINDOW_MIN * 60]
+            if len(recent) >= 2 and recent[-1][0] - recent[0][0] >= 120:
+                burn = max(0.0, (recent[-1][1] - recent[0][1]) / ((recent[-1][0] - recent[0][0]) / 3600))
+            row.update(limit=100.0, limitSource="read", used=round(pct, 1), usedSource="read", pct=round(pct, 1), source="read",
+                       burnPerHour=round(burn, 2) if burn is not None else None, burnSource="estimate" if burn is not None else "unknown")
+            if burn and pct < 100:
+                row["projectedEmptyAt"] = _iso(now + timedelta(hours=(100 - pct) / burn))
+            if burn is not None and reset:
+                row["projectedPctAtReset"] = round(pct + burn * max(0.0, (reset - now.timestamp()) / 3600), 1)
+        out.append(row)
+    order = list(WINDOW_LABEL)
+    return sorted(out, key=lambda r: order.index(r["id"]) if r["id"] in order else 9)
+
+
+def _blank_window(key: str, where: str) -> dict:
+    return {"id": key, "label": WINDOW_LABEL.get(key, key.replace("_", " ")), "unit": "percent", "limit": None, "limitSource": "unknown", "used": None,
+            "usedSource": "unknown", "usedFrom": f"{where} (the provider's own reading)", "usedSince": None, "usedScope": "this window",
+            "window": key, "windowHours": WINDOW_HOURS.get(key), "resetAt": None, "resetSource": "unknown", "resetReason": None, "burnPerHour": None,
+            "burnSource": "unknown", "burnWindowMin": BURN_WINDOW_MIN, "pct": None, "projectedEmptyAt": None, "projectedPctAtReset": None,
+            "reason": None, "error": None, "source": "unknown"}
+
+
+def plan_detail(agent: dict) -> dict | None:
+    """Which plan the agent's own account record names. Only Claude Code keeps one we know how to read; two fields, nothing personal."""
+    if (agent.get("kind") or agent.get("id")) != "claude":
+        return None
+    try:
+        acct = json.loads(CLAUDE_CONFIG.read_text(encoding="utf-8")).get("oauthAccount") or {}
+    except (OSError, ValueError):
+        return None
+    bits = [str(acct[k]) for k in ("organizationType", "organizationRateLimitTier") if acct.get(k)]
+    return {"text": " · ".join(bits), "source": "read", "from": "~/.claude.json (oauthAccount.organizationType, organizationRateLimitTier)"} if bits else None
 
 
 # ---------------------------------------------------------------- keys: health only, never a value
@@ -481,12 +580,25 @@ def crew_state(roster: list[dict] | None = None, now: datetime | None = None, ke
             task = "working in a session the board did not start"
         row.update(lamp=lamp, lampReason=why, task=task, lastBeatAt=_iso(last_beat), beatAgeSec=int(now.timestamp() - last_beat) if last_beat else None,
                    lastSeenAt=_iso(life) if life else None, silentMin=round(silent, 1) if silent is not None else None,
-                   tokensIn=sum(e["in"] for e in today), tokensOut=sum(e["out"] for e in today), usd=round(sum(e["usd"] for e in today), 6),
+                   tokensIn=sum(e["in"] for e in today), tokensOut=sum(e["out"] for e in today),
+                   requests=(sum(1 for t in use["requests"] if t >= day0.timestamp()) if "requests" in use else len(today) if use.get("grain") == "request" else None), usd=round(sum(e["usd"] for e in today), 6),
                    cacheRead=sum(e.get("cacheRead", 0) for e in today) or None, models=sorted({e.get("model") for e in today if e.get("model")})[:6],
                    usageSource=use["source"], usageFrom=use["from"], usageError=use.get("error"), done=tb.get("done"), total=tb.get("total"),
                    key={"var": key["var"], "state": key["state"], "detail": key["detail"], "checkedAt": key.get("checkedAt")} if key else None,
                    claims=[{"mission": c["mission"], "since": c["t"]} for c in mine],
                    limit=limit_reading(a, use, now, (key or {}).get("facts") if key and key["state"] == "ok" else None))
+        row["limit"].update(id="own", label="crew.toml limit" if row["limit"]["limit"] is not None else "our own count")
+        read = provider_windows(a, now)
+        if any(w["pct"] is not None for w in read):          # the provider's own reading leads; a limit typed into crew.toml stays beside it
+            row["limits"] = read + ([row["limit"]] if row["limit"]["limit"] is not None else [])
+            row["limit"] = max((w for w in row["limits"] if w["pct"] is not None), key=lambda w: w["pct"])
+        else:
+            row["limits"] = [row["limit"]] + read
+        detail = plan_detail(a)
+        if detail:
+            row["planDetail"] = detail
+            if row["plan"] == "unknown":
+                row["plan"], row["planSource"] = detail["text"], "read"
         out.append(row)
     return out
 
@@ -502,7 +614,7 @@ def fitness(roster: list[dict]) -> dict[str, str]:
         elif r["lamp"] == "dormant":
             out[r["id"]] = r["lampReason"]
         elif lim.get("pct") is not None and lim["pct"] >= hold:
-            out[r["id"]] = f"{lim['pct']:.0f}% of its limit is used (Autopilot holds at {hold:.0f}%)"
+            out[r["id"]] = f"{lim['pct']:.0f}% of its {lim.get('label') if lim.get('unit') == 'percent' else 'limit'} is used (Autopilot holds at {hold:.0f}%)"
     return out
 
 
@@ -753,6 +865,8 @@ def build(slow: dict | None = None, server: dict | None = None, now: datetime | 
 def _left(lim: dict | None) -> str:
     if not lim:
         return "no gauge"
+    if lim["unit"] == "percent" and lim["pct"] is not None:
+        return f"{lim['pct']}% of the {lim['label']} used ({lim['source']})" + (f", resets {lim['resetAt']}" if lim["resetAt"] else "")
     if lim["limit"] is None:
         return "limit unknown" + (f" ({lim['used']:,} {lim['unit']} used {lim['usedScope']}, {lim['usedSource']})" if lim["used"] is not None else "")
     return f"{lim['pct']}% used: {lim['used']:,} of {lim['limit']:,.0f} {lim['unit']} ({lim['source']})" + (f", resets {lim['resetAt']}" if lim["resetAt"] else "")

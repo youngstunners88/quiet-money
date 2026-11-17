@@ -27,7 +27,14 @@ def home() -> Path:
     return Path(os.environ.get("QM_HERMES_HOME") or (Path.home() / ".hermes")).expanduser()
 
 
+SLOW_TTL = {"--version": 6 * 3600.0, "gateway": 60.0}        # the version barely changes; the gateway's state is asked once a minute
+
+
 def _run(args: list[str], timeout: float = 8.0) -> str | None:
+    ttl = SLOW_TTL.get(args[1] if len(args) > 1 else "")
+    if ttl:
+        from faceless import cmdcache
+        return cmdcache.run(args, ttl, timeout)
     try:
         r = subprocess.run(args, capture_output=True, text=True, timeout=timeout)
     except (OSError, subprocess.SubprocessError):
