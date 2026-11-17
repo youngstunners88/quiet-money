@@ -327,3 +327,17 @@ Each row was read from the project's own README, manifest, licence file or regis
 | Tool | Stage | Why |
 |---|---|---|
 | phone-harness/mcp | post | Hosted cloud emulator or cloud iPhone (MIT code, paid service). |
+
+## Intake 2026-11-18 (command center v2, look variation, voice)
+
+Each verified before use; nothing here holds a key or sends anything on its own.
+
+| Tool | Verdict | Where | Why |
+|---|---|---|---|
+| **GSAP 3.14.2** (GreenSock, standard licence: free, commercial use included) | ACTIVE | `faceless/vendor/gsap-3.14.2.min.js` | One copy, checked against the hash pinned in `faceless/pipeline/cards.py`. The cards lane renders with it (no CDN on a fresh checkout); the command center inlines it for count-ups and one hero moment. A changed copy is refused. |
+| **KokonutUI** (kokonut-labs/kokonutui, MIT, read at `655ec61`) | PATTERNS ONLY | `faceless/hud.py` | Three components read and hand-ported to plain DOM and the page's CSS variables: `components/kokonutui/metric-card.tsx` (delta badge, breakdown bar, screen-reader copy), `ai-checkout.tsx` (review → working → done → receipt), `ai-tool-approval.tsx` (press and hold 900 ms to allow). There is no npm package `@kokonutui/ai-checkout`; KokonutUI is copy-paste React/Tailwind source and none of it is installed. |
+| **shadcn MCP** (`shadcn@4.23.0`, npm) | ACTIVE (pinned) | `.mcp.json` server `shadcn` | Added by `npx shadcn@4.23.0 mcp init --client claude`, which merged into `.mcp.json` (the three existing servers kept; backup taken first) but also created `package.json`, `package-lock.json` and a 71 MB `node_modules/` at the repo root and wrote `shadcn@latest`. Those three files were removed (all created by that run) and the entry pinned to `4.23.0`; npx fetches it when the server starts. Handshake checked: 7 tools. |
+| **google-gemini/gemini-skills**, skill `gemini-api-cli` (Apache-2.0) | INSTALLED (skill only) | `.claude/skills/gemini-api-cli/SKILL.md` | One Markdown file, copied as published. It tells an agent to install Google's `gemini-api` CLI with `curl … install.sh | bash`; that CLI is NOT installed (the studio has no Gemini key yet and voice input calls the REST API directly). |
+| **fishaudio/fish-audio-plugin** (Fish Audio's own Claude Code/Codex plugin, MIT) | SKILL `fish-audio-api` INSTALLED; plugin NOT installed | `.claude/skills/fish-audio-api/SKILL.md` | The real source of Fish Audio skills (`https://docs.fish.audio` is documentation, not a skills repo). The plugin's own `.mcp.json` points at `https://api.fish.audio/mcp`, which refuses API keys, so the plugin is not installed. The raw REST skill matches what `faceless/speak.py` does (TTS with inline references as MessagePack). |
+| **Fish Audio REST TTS** (`POST https://api.fish.audio/v1/tts`) | ACTIVE when a key is set | `faceless/speak.py` | The command center reads out in Quinton's voice: `channel/host/voice-anchor.wav` and its transcript as the inline reference. Model `s2.1-pro-free`, cached, capped per day in characters. Needs `FISH_AUDIO_API_KEY` in `~/.config/quiet-money/env` (not set on this machine yet). |
+| **Gemini API** for voice input (`gemini-3.5-flash-lite`, $0.30 per 1M audio tokens in, $2.50 per 1M out, read 2026-11-18) | BUILT, OFF | `faceless/speak.py`, `POST /voice-in` | Off until the owner sets `[voice] listen = true` and a `GEMINI_API_KEY`. About $0.0002 for a 10 s command; capped at $0.05 a day. The free tier is cheaper but Google uses its content to improve products. |

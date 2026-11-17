@@ -44,10 +44,19 @@ def allow(provider: str, unit: str, amount: float, cap: float) -> bool:
     return used(provider, unit) + amount <= cap
 
 
-def spend(provider: str, unit: str, amount: float, usd: float = 0.0, job: str | None = None) -> None:
+def spend(provider: str, unit: str, amount: float, usd: float = 0.0, job: str | None = None, model: str | None = None,
+          tokens_in: int | None = None, tokens_out: int | None = None) -> None:
+    """One row per call. `model`, `tokens_in` and `tokens_out` are optional detail for the team board's per-model gauges;
+    older rows without them still add up by provider."""
     LEDGER.parent.mkdir(parents=True, exist_ok=True)
-    row = {"day": today(), "provider": provider, "unit": unit, "amount": round(amount, 4),
-           "usd": round(usd, 6), "job": job}
+    row = {"day": today(), "t": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"), "provider": provider, "unit": unit, "amount": round(amount, 4),
+           "usd": round(usd, 6), "job": job}                 # `t` lets the instrument panel work out a burn rate; older rows have only the day
+    if model:
+        row["model"] = str(model)[:120]
+    if tokens_in is not None:
+        row["tokens_in"] = int(tokens_in)
+    if tokens_out is not None:
+        row["tokens_out"] = int(tokens_out)
     with open(LEDGER, "a", encoding="utf-8") as f:
         f.write(json.dumps(row) + "\n")
 

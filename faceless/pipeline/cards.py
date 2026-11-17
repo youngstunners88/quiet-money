@@ -28,6 +28,7 @@ CLI = "hyperframes@0.8.136"      # pinned: the same input must keep producing th
 GSAP = "https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"
 GSAP_SRI = "sha384-sG0Hv1tP1lZCk9KQmrIbY/XNwi+OY84GQqhMscbnsoBFqAz8KNCil1kvfL3Hbbk2"   # of exactly that file
 LOCAL_GSAP = "assets/gsap.min.js"
+VENDORED = Path(__file__).resolve().parents[1] / "vendor" / "gsap-3.14.2.min.js"   # committed; checked against GSAP_SRI like any other copy
 SECRET_NAME = re.compile(r"KEY|TOKEN|SECRET|PASSWORD|PASSWD|CREDENTIAL|ACCOUNT_ID|AUTH|COOKIE|_PAT$|SESSION_ID", re.I)
 
 
@@ -39,7 +40,9 @@ def ensure_gsap(root: Path) -> None:
     """Put a copy of GSAP whose hash we checked into the project. HyperFrames downloads and inlines a CDN script itself, so a browser-side `integrity`
     attribute is never evaluated and would only look like protection; the check has to be ours, on the bytes the renderer will run."""
     cache = Paths.cache / "gsap-3.14.2.min.js"
-    data = cache.read_bytes() if cache.exists() else b""
+    data = VENDORED.read_bytes() if VENDORED.exists() else b""   # the repo's own copy first: a fresh checkout renders with no CDN at all
+    if gsap_digest(data) != GSAP_SRI:
+        data = cache.read_bytes() if cache.exists() else b""
     if gsap_digest(data) != GSAP_SRI:
         from faceless.providers import http
         data = http().get(GSAP, timeout=30).content
@@ -120,6 +123,24 @@ def parse_compare(callout: str) -> dict | None:
     return {"kind": "compare", "numeric": False, "a": parts[0].strip().upper(), "b": parts[1].strip().upper()}
 
 
+ARROW = re.compile(r"\s*(?:→|->|=>|➜)\s*")
+
+
+def parse_flow(callout: str) -> dict | None:
+    """'PAYCHECK → $400' or '$1,200 → INDEX FUND' -> money moving from one place to another, the amount counting up where it lands.
+    Exactly one side is an amount (a year is not); both sides are short. None otherwise."""
+    parts = ARROW.split((callout or "").strip()[:120])
+    if len(parts) != 2 or not all(0 < len(x.strip()) <= 16 for x in parts):
+        return None
+    nums = [parse_number(x) for x in parts]
+    have = [n for n in nums if n and n["value"] > 0 and not n["static"]]
+    if len(have) != 1:
+        return None
+    n = have[0]
+    return {"kind": "flow", "a": parts[0].strip().upper(), "b": parts[1].strip().upper(), "value": n["value"], "prefix": n["prefix"],
+            "suffix": n["suffix"], "decimals": n["decimals"]}
+
+
 def parse_step(callout: str, say: str = "") -> dict | None:
     """'STEP TWO' -> numeral 2 with the beat's own gist underneath."""
     m = STEP.match(callout or "")
@@ -171,13 +192,13 @@ def pick(script: dict, imgs: list[dict] | None, pillar_id: str, style: str = "ci
             continue
         if mode == "ledger":      # every later beat is drawn: a comparison, a numbered step, a counting number, or the beat's key phrase
             num = parse_number(beat.get("callout", ""))
-            spec = parse_compare(beat.get("callout", "")) or parse_step(beat.get("callout", ""), beat.get("say", ""))
+            spec = parse_compare(beat.get("callout", "")) or parse_flow(beat.get("callout", "")) or parse_step(beat.get("callout", ""), beat.get("say", ""))
             out[i] = spec or ({"kind": "stat", **num} if num else {"kind": "phrase", "text": key_phrase(beat)})
             continue
         num = parse_number(beat.get("callout", ""))
         placeholder = imgs is not None and i < len(imgs) and imgs[i]["provider"] == "procedural"
         if mode == "numbers" and cfg.get("variety", True):    # comparisons and numbered steps suit every series
-            spec = parse_compare(beat.get("callout", "")) or parse_step(beat.get("callout", ""), beat.get("say", ""))
+            spec = parse_compare(beat.get("callout", "")) or parse_flow(beat.get("callout", "")) or parse_step(beat.get("callout", ""), beat.get("say", ""))
             if spec:
                 out[i] = spec
                 continue
@@ -254,6 +275,9 @@ def _scene(n: int, t0: float, dur: float, spec: dict, pal: tuple, accent: str, f
     elif spec["kind"] == "steps":
         body, extra = _steps(sid, t0, dur, spec, accent, kicker)
         js += extra
+    elif spec["kind"] == "flow":
+        body, extra = _flow(sid, t0, dur, spec, accent, kicker)
+        js += extra
     elif spec["kind"] == "stage":
         body = stage_body
         js += stage_js
@@ -316,6 +340,43 @@ def _open(sid: str, t0: float, dur: float, accent: str, kicker: str) -> tuple[st
             f'<div class="mk" id="{sid}m" style="background:{accent}"></div>')
     js = [f'tl.fromTo("#{sid}r{k}",{{scaleX:0}},{{scaleX:1,duration:0.7,ease:"power2.out"}},{t0 + 0.1 + k * 0.12:.3f});' for k in range(5)]
     js.append(f'tl.fromTo("#{sid}m",{{scaleX:0}},{{scaleX:1,duration:0.8,ease:"power3.out"}},{t0 + 0.5:.3f});')
+    return body, js
+
+
+def _flow(sid: str, t0: float, dur: float, spec: dict, accent: str, kicker: str) -> tuple[str, list[str]]:
+    """Money moving: coins fall from the source pill into a vault while the amount counts up inside it, and the vault's fill rises. The
+    whole drawing sits above the caption band like the comparison bars. Only set/fromTo tweens, so any frame can be rendered on its own."""
+    a, b = html.escape(spec["a"]), html.escape(spec["b"])
+    end_text = f'{spec["prefix"]}{_fmt(spec["value"], spec["decimals"])}{spec["suffix"]}'
+    size = min(150, int(700 / (max(3, len(end_text)) * 0.5)))
+    steps = max(8, min(36, round(dur * 12)))
+    t_fill, d_fill = t0 + 0.45, max(0.6, dur * 0.62)
+    spans, js = [], []
+    for s in range(steps + 1):
+        val = spec["value"] * (1 - (1 - s / steps) ** 3)
+        text = f'{spec["prefix"]}{_fmt(val if s < steps else spec["value"], spec["decimals"])}{spec["suffix"]}'
+        spans.append(f'<span class="num" id="{sid}n{s}" style="font-size:{size}px">{html.escape(text)}</span>')
+        ts = t_fill + d_fill * s / (steps + 1)
+        te = t_fill + d_fill * (s + 1) / (steps + 1) if s < steps else t0 + dur
+        js += [f'tl.set("#{sid}n{s}",{{visibility:"hidden"}},{t0:.3f});', f'tl.set("#{sid}n{s}",{{visibility:"visible"}},{ts:.3f});']
+        if s < steps:
+            js.append(f'tl.set("#{sid}n{s}",{{visibility:"hidden"}},{te:.3f});')
+    coins = "".join(f'<div class="coin" id="{sid}c{k}" style="left:{500 + ((k * 37) % 90) - 45}px;background:{accent}">$</div>' for k in range(10))
+    body = (f'<div class="kick">{html.escape(kicker)}</div>'
+            f'<div class="fsrc" id="{sid}a">{a}</div><div class="fpipe" id="{sid}p" style="background:{accent}"></div>{coins}'
+            f'<div class="fdst" id="{sid}d"><div class="ffill" id="{sid}f" style="background:{accent}"></div>'
+            f'<div class="numwrap fnum" style="height:{size}px">{"".join(spans)}</div><div class="flab">{"" if parse_number(spec["b"]) else b}</div></div>')
+    js += [f'tl.fromTo("#{sid}a",{{y:-40,opacity:0}},{{y:0,opacity:1,duration:0.4,ease:"power3.out"}},{t0:.3f});',
+           f'tl.fromTo("#{sid}d",{{y:60,opacity:0}},{{y:0,opacity:1,duration:0.45,ease:"power3.out"}},{t0 + 0.1:.3f});',
+           f'tl.fromTo("#{sid}p",{{scaleY:0}},{{scaleY:1,duration:0.35,ease:"power2.out"}},{t0 + 0.25:.3f});',
+           f'tl.fromTo("#{sid}f",{{scaleY:0}},{{scaleY:1,duration:{d_fill:.3f},ease:"power2.out"}},{t_fill:.3f});']
+    for k in range(10):
+        st = t_fill + k * d_fill / 12
+        drift = ((k * 53) % 120) - 60
+        js.append(f'tl.fromTo("#{sid}c{k}",{{opacity:0}},{{opacity:1,duration:0.06}},{st:.3f});')
+        js.append(f'tl.fromTo("#{sid}c{k}",{{y:0,x:0,rotation:0}},{{y:400,x:{drift},rotation:{(k % 2 * 2 - 1) * 200},'
+                  f'duration:0.62,ease:"power2.in"}},{st:.3f});')
+        js.append(f'tl.fromTo("#{sid}c{k}",{{opacity:1}},{{opacity:0,duration:0.08}},{st + 0.62:.3f});')
     return body, js
 
 
@@ -385,6 +446,16 @@ html,body{{width:1080px;height:1920px;overflow:hidden;background:#000}}
 .w{{display:inline-block;opacity:0}}
 .cb{{position:absolute;transform-origin:center bottom;border-radius:14px 14px 0 0;opacity:.95}}
 .cv{{position:absolute;text-align:center;font:400 96px/1 "Anton";color:var(--ink);opacity:0;letter-spacing:-1px}}
+.fsrc{{position:absolute;left:190px;top:380px;width:700px;text-align:center;font:400 84px/1.15 "Anton";color:var(--ink);opacity:0;letter-spacing:1px;
+ border:6px solid var(--ink);border-radius:60px;padding:22px 10px}}
+.fpipe{{position:absolute;left:530px;top:520px;width:20px;height:150px;border-radius:10px;transform-origin:center top;opacity:.55}}
+.coin{{position:absolute;top:500px;width:84px;height:84px;margin-left:-42px;border-radius:50%;font:400 54px/84px "Anton";text-align:center;color:#101010;
+ opacity:0;box-shadow:inset 0 -8px 0 rgba(0,0,0,.25)}}
+.fdst{{position:absolute;left:150px;top:690px;width:780px;height:400px;border:8px solid var(--ink);border-radius:30px;overflow:hidden;opacity:0}}
+.ffill{{position:absolute;left:0;right:0;bottom:0;height:100%;transform-origin:center bottom;opacity:.28}}
+.fnum{{position:absolute;left:0;right:0;top:70px}}
+.fdst .num{{width:100%;left:0;text-align:center}}
+.flab{{position:absolute;left:0;right:0;bottom:44px;text-align:center;font:400 64px/1 "Anton";color:var(--ink);letter-spacing:2px}}
 .vs{{position:absolute;width:100px;text-align:center;font:400 54px/1 "Anton";color:var(--ink);opacity:0;letter-spacing:4px}}
 .fo{{position:absolute;left:60px;width:960px;text-align:center;font:400 150px/1 "Anton";color:var(--ink);opacity:0;letter-spacing:2px;
   text-shadow:0 6px 40px var(--shade)}}

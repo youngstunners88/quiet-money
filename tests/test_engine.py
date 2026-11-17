@@ -153,7 +153,8 @@ def test_word_count_hard_only_when_far_out_of_range():
 def test_length_brief_gives_a_word_target():
     from faceless.orchestrator import length_brief
     brief = length_brief(53.3, 124)
-    assert "too short" in brief and "about 200 words" in brief      # 124 + (187 - 124) * 1.3 = 206, clamped to the top of the range
+    top = config.load()["production"]["words_range"][1]
+    assert "too short" in brief and f"about {top} words" in brief    # the target overshoots the middle of [production] words_range and is clamped to its top
 
 
 def test_normalize_strips_hook_punctuation():
@@ -1476,7 +1477,9 @@ def test_muapi_respects_the_daily_cap_and_blocks_itself_when_credit_runs_out(tmp
 
 def test_image_chain_tries_cloudflare_then_muapi_and_never_openrouter():
     chain = config.load()["images"]["chain"]
-    assert chain.index("cloudflare") < chain.index("muapi") < chain.index("procedural") and "openrouter" not in chain
+    assert chain.index("cloudflare") < chain.index("procedural") and "openrouter" not in chain
+    if "muapi" in chain:                                 # CLAUDE.md rule 20 takes Muapi out of the image chain until the owner lifts it
+        assert chain.index("cloudflare") < chain.index("muapi") < chain.index("procedural")
 
 
 # ---- Muapi hook clips --------------------------------------------------------------------------

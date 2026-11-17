@@ -222,6 +222,7 @@ class FakeSession:
 def test_a_tampered_gsap_copy_is_refused_and_never_reaches_the_renderer(tmp_path, monkeypatch):
     from faceless import providers
     from faceless.pipeline import cards
+    monkeypatch.setattr(cards, "VENDORED", tmp_path / "no-vendored-copy.js")         # these two are about the CDN fallback
     monkeypatch.setattr(Paths, "cache", tmp_path / "cache")
     monkeypatch.setattr(providers, "http", lambda: FakeSession(b"window.steal=1"))
     with pytest.raises(RuntimeError, match="pinned hash"):
@@ -233,6 +234,7 @@ def test_a_copy_with_the_pinned_hash_is_cached_and_placed_in_the_project(tmp_pat
     from faceless.pipeline import cards
     body = b"/* stand-in for gsap */"
     monkeypatch.setattr(cards, "GSAP_SRI", cards.gsap_digest(body))
+    monkeypatch.setattr(cards, "VENDORED", tmp_path / "no-vendored-copy.js")         # these two are about the CDN fallback
     monkeypatch.setattr(Paths, "cache", tmp_path / "cache")
     from faceless import providers
     session = FakeSession(body)
@@ -244,6 +246,21 @@ def test_a_copy_with_the_pinned_hash_is_cached_and_placed_in_the_project(tmp_pat
     (tmp_path / "cache" / "gsap-3.14.2.min.js").write_bytes(b"corrupted in the cache")   # a damaged cache file is replaced, not trusted
     cards.ensure_gsap(tmp_path / "p3")
     assert (tmp_path / "p3" / cards.LOCAL_GSAP).read_bytes() == body and len(session.urls) == 2
+
+
+def test_a_fresh_checkout_renders_with_the_vendored_copy_and_no_network(tmp_path, monkeypatch):
+    from faceless import providers
+    from faceless.pipeline import cards
+    monkeypatch.setattr(Paths, "cache", tmp_path / "empty-cache")
+    monkeypatch.setattr(providers, "http", lambda: (_ for _ in ()).throw(AssertionError("the CDN was asked")))
+    cards.ensure_gsap(tmp_path / "p")
+    assert cards.gsap_digest((tmp_path / "p" / cards.LOCAL_GSAP).read_bytes()) == cards.GSAP_SRI
+    bad = tmp_path / "vendored.js"
+    bad.write_bytes(cards.VENDORED.read_bytes() + b"//x")
+    monkeypatch.setattr(cards, "VENDORED", bad)                       # a changed vendored copy is not trusted either
+    monkeypatch.setattr(providers, "http", lambda: FakeSession(b"window.steal=1"))
+    with pytest.raises(RuntimeError, match="pinned hash"):
+        cards.ensure_gsap(tmp_path / "q")
 
 
 def test_the_project_page_loads_the_verified_local_copy_not_the_cdn():

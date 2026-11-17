@@ -131,8 +131,12 @@ humans set strategy, connect accounts, and review held videos.
 | Make every still for one or more Shorts in Google Flow (Image mode, 0 credits) before any paid image model | `/faceless/flow.py` | `.claude/skills/faceless-flow-stills` | `faceless-flow-stills` |
 | Money now: every revenue rail's state and the owner's next 30 minutes, ranked by how soon it pays | `/faceless/cash.py` | `python -m faceless cash` | `faceless-cash` |
 | Partner Program progress and the website funnel (PostHog, cookieless) | `/faceless/ypp.py`, `sitestats.py` | `python -m faceless ypp` | `faceless-measure` |
-| Command center on the owner's phone (Wi-Fi or Tailscale, no USB): the overview projection, the page, the token server, the herdr tab | `/faceless/overview.py`, `dashboard.py`, `serve.py` | `OPERATIONS.md` (Command center), `STATUS.md` | `faceless-cash` |
+| Command center on the owner's phone and as a desktop app (Wi-Fi or Tailscale, no USB): the overview projection, the page, the token server, the action desk behind its buttons, Non-stop, the herdr tab | `/faceless/overview.py`, `dashboard.py`, `serve.py`, `actions.py` | `artifacts/command-center/README.md`, `OPERATIONS.md` (Command center), `STATUS.md` | `faceless-cash` |
+| Mission control: the work board, the crew roster, sending work to the cheapest suited agent, agents reporting and asking each other, Autopilot | `/faceless/missions.py`, `crew.toml` | `artifacts/command-center/README.md` (Mission control), `python -m faceless crew board` | `faceless-cash` |
+| Working as one crew (every agent): pre-flight before choosing work, claim locks, heartbeats, handoffs, what Autopilot holds back; the head-up display and its instrument snapshot | `/faceless/instruments.py`, `hud.py`, `crew.toml` | `python -m faceless instruments --for <agent>`, `AGENTS.md` | `faceless-crew` |
 | DMs the owner sends by hand, the daily money brief, receipts (the only proof of income) | `/faceless/dmdesk.py`, `moneybrief.py`, `receipts.py` | `python -m faceless money` | `faceless-cash` |
+| Who to write to: people who commented under our videos and peer creators, sorted and handed to the DM desk (0 tokens, never contacts anyone) | `/faceless/prospects.py` | `python -m faceless prospect status` | `faceless-prospect` |
+| Finding a reviewed tool for reading a site, an app, a format or a protocol (local copy of the Awesome REA catalog) | `/faceless/toolbox.py` | `python -m faceless toolbox find "need"` | `faceless-toolbox` |
 | HQ: the owner's dashboard (freedom number, engines, next moves, horizon, goals, build queue), its daily refresh | `/faceless/hq.py` | `python -m faceless hq` | `faceless-hq` |
 
 ## Commands (run from this folder)
@@ -144,6 +148,7 @@ python -m faceless make --pillar story         # one video, topic from the backl
 python -m faceless make --pillar math --script path.json   # one video from a hand-written script
 python -m faceless caption-check VIDEO CAPTIONS.ass   # caption drift vs the speech; required for hand-built videos
 python -m faceless gauntlet <job_id>           # re-run every gate on a finished job
+python -m faceless retry <job_id>              # pick a failed, held or unfinished video job up again (packages, never uploads); the command center's Retry and Release
 python -m faceless status                      # today's jobs + spend
 python -m faceless composio status             # connected apps (Composio)
 python -m faceless site build                  # Money Rules Library website -> site/
@@ -186,11 +191,14 @@ python -m faceless outbound run                 # the service desk's daily clien
 python -m faceless outbound status|review|package <slug>|outcome <slug> <event>   # the pipeline, the aggregate, a queued draft, what came back
 python -m faceless site-stats --days 7          # what the website did (PostHog, cookieless): pageviews, calculator uses, shop clicks -> analytics/site.jsonl
 python -m faceless ypp [--pull]                # the road to the YouTube Partner Program: progress per tier, pace, estimated dates (07:02 UTC task pulls daily)
-python -m faceless phone queue --stage         # jobs for the owner's phone (comics, Shorts, TikTok, Flow, Fiverr inbox); `phone next --push` / `phone done` run on the owner's computer
+python -m faceless phone queue --stage         # jobs for the owner's phone (comics, Shorts, TikTok, Flow, Fiverr inbox); `phone next --push` / `phone done` run on the owner's computer; `phone requeue ID` releases a held job, `phone park` holds jobs whose media is gone
 python -m faceless cash                        # the money desk: every rail's state and your next 30 minutes -> channel/empire/CASH.md
 python -m faceless overview                    # the command center's projection: real state -> state/overview.json (reads only)
 python -m faceless dashboard                   # render the phone page into site/command-center/ (gitignored, never deployed)
-python -m faceless serve                       # serve it on the LAN with a token and a QR code (`--init-token` once; `--host 127.0.0.1` behind `tailscale serve`)
+python -m faceless serve                       # serve it on the LAN with a token and a QR code (`--init-token` once; `--host 127.0.0.1` behind `tailscale serve`); its buttons run the allowlist in faceless/actions.py
+python -m faceless crew board                  # mission control: to do, in motion, done; `crew dispatch <mission>`, `crew report <mission> done|blocked "note"`, `crew ask <job-tag> "request"`
+python -m faceless instruments                 # the instrument panel: crew lamps, limits, key health, spend; `--json` is what the head-up display polls, `--for <agent>` an agent's pre-flight, `--probe` re-checks keys
+python -m faceless crew claim <mission> --agent <id>   # take a mission before starting (refused if another agent holds it); `crew release`, `crew reap`; `--agent <id>` also on report and ask
 python -m faceless dm                          # ten DMs for the owner to send by hand -> outbound/drafts/<day>.md; `dm log <id> sent|replied|bought`; never sends
 python -m faceless money                       # the daily money brief: 3 owner actions, DMs, follow-ups, changes -> outbound/brief/<day>.md
 python -m faceless receipts add --rail gumroad --gross 17 --ref ORDER   # record one real receipt; `receipts` alone prints the month

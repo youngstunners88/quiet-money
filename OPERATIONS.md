@@ -44,14 +44,38 @@ If the watchdog itself cannot run, that is an alert too.
 
 ## Command center (the owner's phone, no USB)
 
-One page, read-only, computed from this repo: did the run happen, what is held or failed, revenue from receipts, today's DMs with copy
+One page, computed from this repo, whose buttons run the studio's own commands (what each tab can do, Non-stop and how to stop it:
+`artifacts/command-center/README.md`). It shows: did the run happen, what is held or failed, revenue from receipts, today's DMs with copy
 buttons, alerts with their fix. No adb, no cable, no shell on the phone.
+
+The front page (`/`) is a read-only head-up display: system state, what waits for you, spend, the crew's lamps and limits, key health and a
+live feed, from `python -m faceless instruments --json` (served as `/instruments.json`). The page with the buttons is `/desk`. A grey
+"unknown" limit means `crew.toml` does not say what that agent's plan allows; fill in `plan`, `limit`, `limit_unit`, `limit_window`, `reset`.
+An agent holding a mission and silent for `dormant_minutes` (45) loses it: `python -m faceless crew reap`, run by every Autopilot tick.
 
 ```bash
 python -m faceless serve --init-token     # once per computer: makes QM_DASH_TOKEN in ~/.config/quiet-money/env (owner-only file, never printed)
 python -m faceless dashboard && python -m faceless serve      # after a daily run: rebuild, then serve; scan the QR code with the phone
-scripts/qm-command-center.sh start|stop|status|open           # the same in a herdr workspace named qm-cc (falls back to a background process)
+scripts/qm-command-center.sh start|stop|status|open|url      # the same in a herdr workspace named qm-cc (falls back to a background process)
+scripts/qm-command-center-app.sh                              # desktop launcher: start if needed, open the signed-in page
+scripts/qm-hermes-workspace.sh start|stop|status|open         # Hermes in a herdr workspace named qm-hermes (falls back to the desktop app)
 ```
+
+The menu entry **Quiet Money Command Center** (`~/.local/share/applications/qm-command-center.desktop`) calls the app script, which opens
+a dedicated Chromium app window (`--app`, own profile at `~/.config/qm-command-center/chromium`, window class `qm-cc`) rather than a
+browser tab. At 900px and wider the page switches from bottom tabs to a left sidebar so it reads as an app on the computer; below that it
+is the same phone-first bottom-tab layout. Vertical scrolling is explicit (`html{overflow-y:scroll}`), and the tab bar scrolls sideways
+when the window is narrow. If no Chromium-family browser is found, the script falls back to `xdg-open`.
+
+The **Agents** tab is one place for every agent on the machine: herdr workspaces and live panes from `herdr api snapshot`, plus installed
+Claude Code, Codex, OpenCode, Hermes, Gemini CLI and Ollama with their version, default model and copyable launch command. Hermes details
+(version, gateway, desktop link, newest session labels and counts) live in the same tab; `~/.hermes/state.db` is opened read-only and
+message content is never selected.
+
+The **Models** tab shows each agent's configured default model, local Ollama models, and the OpenCode provider catalog (235 providers,
+8,967 models on this machine). The summary is in `overview.json`; the full searchable list is `models.json` (~565 KB), built by
+`faceless/models.py` from `~/.cache/opencode/models.json`, token-gated like the page, and fetched only when the tab is opened. No key or
+credential is read or served.
 
 | Where the phone is | Use | How |
 |---|---|---|
@@ -70,8 +94,17 @@ page also survives being closed and reopened, because a service worker keeps a c
 workers, so a page closed while the server is down shows the browser's own error until the server is back.
 
 The page is stale after 24 hours without a rebuild and says so. `site/` is gitignored and the public website is built by CI from a clean
-checkout, so the command center is never deployed. It writes nothing: the DM record and receipts change only through
-`python -m faceless dm log ...` and `python -m faceless receipts add ...`, run by the owner.
+checkout, so the command center is never deployed.
+
+**It acts only through an allowlist.** A button posts one name to `POST /action`; `faceless/actions.py` maps it to one existing command
+(`phone next --push`, `phone park`, `phone requeue`, `retry`, `daily --no-publish`, `dm`, `dm log`, `money`, `herdr ... focus`), runs it
+without a shell, and writes one `CC_ACTION` line to `state/journal.jsonl`. The server holds no state of its own. `state/PAUSE` refuses
+every button that moves the pipeline. Receipts are still added only by the owner with `python -m faceless receipts add ...`.
+
+**Non-stop** is a toggle on the Today tab, off by default and remembered per browser. While the page is open it asks the server every
+30 seconds whether the phone lane should advance: it runs `phone next --push` when the staged job has been closed, never pushes the same
+job twice, holds a job whose video is gone, and stops for 30 minutes after two failures in a row. To stop it: the toggle, closing the
+window, or `python -m faceless pause "why"`.
 
 ## When something breaks
 
