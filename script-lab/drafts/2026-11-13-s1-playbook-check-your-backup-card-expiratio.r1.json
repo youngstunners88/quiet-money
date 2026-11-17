@@ -1,0 +1,101 @@
+{
+  "title": "Check Your Backup Card Before It Fails You",
+  "hook_text": "YOUR BACKUP CARD IS EXPIRED",
+  "beats": [
+    {
+      "say": "Your wallet has a card you forgot was expired right now.",
+      "callout": "",
+      "visual": "Extreme close-up of a dark leather wallet resting on wet asphalt under heavy sodium streetlights at night."
+    },
+    {
+      "say": "You think an expired card sits quietly in a drawer causing zero harm.",
+      "callout": "",
+      "visual": "A single wooden drawer pulled open in a dimly lit room, illuminated by a cold blue moonlight beam."
+    },
+    {
+      "say": "So why do forgotten cards still charge you while failing during real emergencies?",
+      "callout": "",
+      "visual": "Macro shot of a dark metallic payment card sliding into a pocket under high-contrast single overhead light."
+    },
+    {
+      "say": "Most people assume an expired card stops all payment processing completely.",
+      "callout": "",
+      "visual": "Low angle shot of a silhouette standing beside a rain-slicked highway beneath towering overhead lights."
+    },
+    {
+      "say": "That's false. Card networks use auto-updaters, letting recurring bills bypass expiration dates.",
+      "callout": "ACTIVE VS EXPIRED",
+      "visual": "Extreme close-up of a glass table reflecting cold fluorescent light in an empty industrial hallway."
+    },
+    {
+      "say": "A $15/month subscription can silently charge you $1,800 over 10 years.",
+      "callout": "$1,800 LOST",
+      "visual": "High angle shot of an empty concrete floor with stark shadows cast by heavy steel window bars."
+    },
+    {
+      "say": "Yet when you swipe that same expired card in an emergency, it declines instantly. So how do you secure your safety net?",
+      "callout": "",
+      "visual": "Silhouette of a person standing at a glass terminal in a foggy, dark transit hub at night."
+    },
+    {
+      "say": "Step one. Pull out every backup card from your wallet or drawer right now.",
+      "callout": "STEP ONE",
+      "visual": "Extreme close-up of hands holding dark plastic cards over a matte black metal desk."
+    },
+    {
+      "say": "Check the expiration date on the front, noting any card expiring within 30 days.",
+      "callout": "",
+      "visual": "Macro side-view shot of credit card edges stacked neatly on cold concrete."
+    },
+    {
+      "say": "Step two. Open your banking app, confirm the card status is active, and request a new one if expired.",
+      "callout": "STEP TWO",
+      "visual": "Hand holding a sleek smartphone from behind, screen illumination casting blue light across wet pavement."
+    },
+    {
+      "say": "Step three. Delete old card profiles on saved merchant sites so unwanted subscriptions don't quietly bleed your funds.",
+      "callout": "STEP THREE",
+      "visual": "Wide cinematic shot of an empty concrete bridge at blue hour shrouded in low rolling fog."
+    },
+    {
+      "say": "Checking expiration dates ensures your backup line works when you actually need emergency funds.",
+      "callout": "BACKUP SECURED",
+      "visual": "Low angle perspective looking up at tall dark granite building edges against a dark night sky."
+    },
+    {
+      "say": "Fix your backup card today. Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "Extreme close-up of a leather wallet shutting on a dark wooden surface illuminated by a single warm bulb."
+    }
+  ],
+  "caption": "An unused card sitting in your drawer isn't harmless. Here is how to verify your backup funds today.\n\n#personalfinance #moneytips #financialliteracy #creditcards #quietmoney",
+  "description": "Learn why expired backup cards can still process recurring subscriptions while failing when you actually need them. Follow a quick 3-step audit to fix your backup funding today.",
+  "hashtags": [
+    "#personalfinance",
+    "#moneytips",
+    "#financialliteracy",
+    "#creditcards",
+    "#quietmoney"
+  ],
+  "first_comment": "When was the last time you checked the expiration date on your secondary backup card?",
+  "facts": [
+    {
+      "claim": "A $15/month subscription for 10 years equals $1,800.",
+      "basis": "Money Fact Sheet: A $15/month subscription for 10 years = $1,800"
+    }
+  ],
+  "source": "llm",
+  "pillar": "playbook",
+  "look": "",
+  "loop_map": {
+    "stakes": "Your wallet has a card you forgot was expired right now.",
+    "big_question": "So why do forgotten cards still charge you while failing during real emergencies?",
+    "assume": "Most people assume an expired card stops all payment processing completely.",
+    "reveal": "Card networks use auto-updaters, letting recurring bills bypass expiration dates while manual swipes fail.",
+    "rehook_beats": [
+      3,
+      7
+    ],
+    "payoff_beat": 12
+  }
+}

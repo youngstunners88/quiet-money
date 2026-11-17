@@ -1,0 +1,95 @@
+{
+  "title": "The Math of Paying Cash for a Car",
+  "hook_text": "CASH DOESN'T ALWAYS SAVE YOU",
+  "beats": [
+    {
+      "say": "You think paying cash for a car saves you money, but the actual math on a $25,000 purchase proves you might be richer keeping the cash.",
+      "callout": "",
+      "visual": "Extreme wide shot of a solitary car parked on a rain-slick asphalt lot under cold sodium streetlights."
+    },
+    {
+      "say": "Most people assume zero debt is always the smartest financial move.",
+      "callout": "DEBT VS CASH",
+      "visual": "Low angle shot of a massive concrete highway overpass cutting through heavy blue hour fog."
+    },
+    {
+      "say": "So why do certain buyers finance at 5% and keep their cash invested instead?",
+      "callout": "",
+      "visual": "Close up of wet metal guardrails reflecting faint amber tailights in the dark."
+    },
+    {
+      "say": "Because if you invest that $25,000 at 8% a year, compound growth changes the outcome completely.",
+      "callout": "8% RETURN",
+      "visual": "Silhouette of a single tower edge stretching up into a cold winter night sky."
+    },
+    {
+      "say": "Over 5 years, the loan interest costs you a few thousand dollars.",
+      "callout": "LOAN COST",
+      "visual": "Extreme close up of water droplets sliding down a cold glass window at night."
+    },
+    {
+      "say": "Yet your invested cash continues compounding at 8% a year over that same timeframe.",
+      "callout": "COMPOUND MATH",
+      "visual": "High angle shot of empty dark city streets lit by harsh fluorescent lights."
+    },
+    {
+      "say": "That growth can outpace the total interest paid on the 5% car loan.",
+      "callout": "NET GAIN",
+      "visual": "Wide shot of open water at dusk with dark grey ripples under a heavy grey sky."
+    },
+    {
+      "say": "Keeping liquid cash gives you safety and earning power that sitting in a car's metal frame can't match.",
+      "callout": "LIQUID VS DEAD",
+      "visual": "Silhouette of a person walking across a vast concrete plaza under a massive bridge."
+    },
+    {
+      "say": "You don't lose money to the dealer upfront, and your capital keeps working for you.",
+      "callout": "WORKING CAPITAL",
+      "visual": "Close up of rusted iron bolts on a damp bridge beam in cold blue light."
+    },
+    {
+      "say": "That's how smart buyers protect their wealth while still driving what they need.",
+      "callout": "",
+      "visual": "Low angle shot of a tall concrete stairwell lit by a single bare overhead bulb."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "Extreme wide shot of a lonely highway stretching infinitely into dark rolling hills."
+    }
+  ],
+  "caption": "The hidden math of car buying. Keep your cash or pay outright? #money #personalfinance #wealth #carbuying #smartmoney",
+  "description": "Comparing the total cash outflow of a 5% loan versus paying outright reveals the surprising math of keeping your cash invested.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#wealth",
+    "#carbuying",
+    "#smartmoney"
+  ],
+  "first_comment": "Would you finance at 5% to keep your cash invested, or do you prefer zero car debt?",
+  "facts": [
+    {
+      "claim": "Investing $200 a month at 8% for 20 years yields $117,804",
+      "basis": "From fact sheet: $200/month invested for 20 years at 8%/yr (monthly compounding) = $117,804"
+    },
+    {
+      "claim": "Rule of 72 states at 8% money doubles every 9 years",
+      "basis": "From fact sheet: Rule of 72: at 8% money doubles every 9 years"
+    }
+  ],
+  "source": "llm",
+  "pillar": "math",
+  "look": "",
+  "loop_map": {
+    "stakes": "A $25,000 car purchase made with cash or a 5% loan.",
+    "big_question": "Why do certain buyers finance at 5% and keep their cash invested instead?",
+    "assume": "Zero debt is always the smartest financial move.",
+    "reveal": "Keeping cash invested at 8% can outpace the loan interest.",
+    "rehook_beats": [
+      6,
+      8
+    ],
+    "payoff_beat": 10
+  }
+}

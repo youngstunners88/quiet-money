@@ -4,14 +4,65 @@
   "topic": "Trading Equity for Income in Early-Stage Ventures",
   "day": "2026-11-10",
   "slot": 0,
-  "status": "planned",
-  "history": [],
+  "status": "held",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-11-10T09:21:41Z",
+      "words": 191
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-11-10T09:22:54Z",
+      "seconds": 68.977,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-11-10T09:24:24Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-11-11T09:29:24Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-11-11T09:29:24Z",
+      "score": 87
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-11-11T09:29:24Z"
+    },
+    {
+      "from": "packaged",
+      "to": "held",
+      "ts": "2026-11-11T09:29:24Z"
+    }
+  ],
   "artifacts": {
     "angle": "Show how taking a piece of the upside instead of straight cash scales wealth exponentially.",
     "brief": "hormozi",
-    "hook": "The ownership swap that turns a standard employee into a silent partner."
+    "hook": "The ownership swap that turns a standard employee into a silent partner.",
+    "title": "The Ownership Swap That Scales Wealth Exponentially",
+    "style": "cinematic",
+    "video": "/home/user/quiet-money/production/output/2026-11-10/2026-11-10-s0-escape-trading-equity-for-income-in-ear/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-11-10/2026-11-10-s0-escape-trading-equity-for-income-in-ear/cover.jpg"
   },
-  "scores": {},
-  "cost": {},
-  "notes": []
+  "scores": {
+    "gauntlet": 87,
+    "passed": false
+  },
+  "cost": {
+    "tts:edge:chars": 1060
+  },
+  "notes": [
+    "held for review: originality"
+  ]
 }

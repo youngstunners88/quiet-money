@@ -1,0 +1,67 @@
+{
+  "id": "2026-11-11-s7-playbook-the-10-second-daily-saving-habit",
+  "pillar": "playbook",
+  "topic": "The 10-second daily saving habit loop",
+  "day": "2026-11-11",
+  "slot": 7,
+  "status": "held",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-11-11T10:16:36Z",
+      "words": 143
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-11-11T10:17:18Z",
+      "seconds": 63.203,
+      "provider": "gemini"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-11-11T10:17:39Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-11-11T10:20:17Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-11-11T10:20:17Z",
+      "score": 92
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-11-11T10:20:18Z"
+    },
+    {
+      "from": "packaged",
+      "to": "held",
+      "ts": "2026-11-11T10:20:18Z"
+    }
+  ],
+  "artifacts": {
+    "angle": "[format-test] short loop version (13-20 s), one tiny habit and its payoff, a second format beside the classic 61-72 s",
+    "hook": "Do this once a day and watch what it adds up to.",
+    "title": "The $5 Daily Habit That Builds $226,659",
+    "style": "cinematic",
+    "video": "/home/user/quiet-money/production/output/2026-11-11/2026-11-11-s7-playbook-the-10-second-daily-saving-habit/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-11-11/2026-11-11-s7-playbook-the-10-second-daily-saving-habit/cover.jpg"
+  },
+  "scores": {
+    "gauntlet": 92,
+    "passed": false
+  },
+  "cost": {
+    "tts:gemini:chars": 800
+  },
+  "notes": [
+    "held for review: originality"
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "title": "Why You Avoid Moves to Avoid Regret",
+  "hook_text": "YOU CLOSED THE TAB AGAIN",
+  "beats": [
+    {
+      "say": "You didn't open the cheaper-rate email. You just closed the tab.",
+      "callout": "",
+      "visual": "Extreme close-up of a hand hovering over a laptop trackpad in a dark room, illuminated only by the cold blue fluorescent glow of an unread screen."
+    },
+    {
+      "say": "You told yourself you're just waiting for the right moment to fix your money.",
+      "callout": "",
+      "visual": "Silhouette of a figure seated at an empty diner booth under flickering sodium light through rain-streaked glass, blue hour dusk outside."
+    },
+    {
+      "say": "Why does doing nothing feel so much safer than making a reasonable move?",
+      "callout": "",
+      "visual": "High angle shot looking down into a vast concrete subway terminal at midnight, solitary commuter standing frozen between two staircases."
+    },
+    {
+      "say": "You assume you're being cautious, protecting yourself from making an embarrassing mistake.",
+      "callout": "FEAR OF MISTAKES",
+      "visual": "Extreme close-up of hands nervously folding and unfolding a blank paper envelope, bathed in the sharp amber glow of a single practical desk lamp."
+    },
+    {
+      "say": "Psychologists call it anticipated regret. Your brain fears a bad action twice as much as inaction.",
+      "callout": "ANTICIPATED REGRET",
+      "visual": "Low angle wide shot of a massive brutalist concrete archive corridor, endless identical steel pillars receding into cold fluorescent shadows."
+    },
+    {
+      "say": "But what does dodging that regret actually cost your bank account over time?",
+      "callout": "",
+      "visual": "Wet asphalt highway stretching into a foggy horizon at dawn, viewed from behind the guardrail of an empty overpass."
+    },
+    {
+      "say": "Take $200 a month invested at 8% from age 25 to 65. It grows to $698,202.",
+      "callout": "$698,202 AT 65",
+      "visual": "Extreme wide shot of a solitary figure walking along the ridge line of a massive coastal cliff under golden hour light, tiny against the open ocean."
+    },
+    {
+      "say": "Wait 10 years to start at 35 because you feared picking the wrong fund.",
+      "callout": "",
+      "visual": "Low angle silhouette of a person standing motionless beneath a colossal concrete bridge underpass, rain slicking the pavement around them."
+    },
+    {
+      "say": "At 65, that same $200 a month reaches only $298,072.",
+      "callout": "$298,072 AT 65",
+      "visual": "High angle shot looking down at an empty commuter train platform in the blue hour, wet benches reflecting overhead sodium lamps."
+    },
+    {
+      "say": "Where did that missing $400,130 go when you never lost a single dollar in the market?",
+      "callout": "$400,130 COST",
+      "visual": "Extreme wide shot of a dark industrial shipping yard at night, towering stacks of rust-colored containers under harsh halogen floodlights."
+    },
+    {
+      "say": "Inaction is still an action. You traded a temporary feeling of comfort for a $400,130 penalty.",
+      "callout": "",
+      "visual": "Silhouette of a traveler seen from behind, walking away down an empty wet asphalt road cutting through dense mountain fog."
+    },
+    {
+      "say": "A simple, decent move made early beats a flawless move made 10 years too late.",
+      "callout": "ACTION VS DELAY",
+      "visual": "Extreme close-up of worn leather work gloves resting on a cold steel railing against a sharp blue dawn skyline."
+    },
+    {
+      "say": "Next time, don't close the tab. Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "Low angle shot of a solitary person walking steadily through a rain-slick city crosswalk under amber streetlights, vanishing into the mist."
+    }
+  ],
+  "caption": "Freezing to avoid regret feels safe, but inaction has a hidden price tag. Delaying your plan can cost more than a bad move.",
+  "description": "Anticipated regret tricks our minds into thinking inaction carries zero risk. In reality, waiting 10 years to invest $200 a month at an 8% return costs over $400,000 in compound growth.",
+  "hashtags": [
+    "#moneypsychology",
+    "#personalfinance",
+    "#investingrules",
+    "#compoundinterest",
+    "#quietmoney"
+  ],
+  "first_comment": "What financial move have you put off simply because you were afraid of choosing wrong?",
+  "facts": [
+    {
+      "claim": "Starting at 25 vs 35 with $200/month at 8% until 65 yields $698,202 vs $298,072, meaning a 10-year delay costs $400,130.",
+      "basis": "Money Fact Sheet calculation: $200/month invested for 40 years at 8%/yr monthly compounding equals $698,202; invested for 30 years equals $298,072; the difference is $400,130."
+    }
+  ],
+  "source": "llm",
+  "pillar": "psychology",
+  "look": "",
+  "loop_map": {
+    "stakes": "Closing tabs and delaying financial moves to avoid potential regret quietly costs hundreds of thousands in growth.",
+    "big_question": "Why does doing nothing feel so much safer than making a reasonable move?",
+    "assume": "Doing nothing is just being cautious and avoiding costly mistakes.",
+    "reveal": "Anticipated regret makes inaction feel harmless, but waiting 10 years to invest $200 a month carries a documented $400,130 penalty.",
+    "rehook_beats": [
+      6,
+      10
+    ],
+    "payoff_beat": 11
+  }
+}

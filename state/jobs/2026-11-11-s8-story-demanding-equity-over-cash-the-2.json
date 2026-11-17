@@ -1,0 +1,67 @@
+{
+  "id": "2026-11-11-s8-story-demanding-equity-over-cash-the-2",
+  "pillar": "story",
+  "topic": "Demanding Equity Over Cash: The $200 Million Wall Painting",
+  "day": "2026-11-11",
+  "slot": 8,
+  "status": "held",
+  "history": [
+    {
+      "from": "planned",
+      "to": "scripted",
+      "ts": "2026-11-11T10:21:13Z",
+      "words": 165
+    },
+    {
+      "from": "scripted",
+      "to": "voiced",
+      "ts": "2026-11-11T10:23:19Z",
+      "seconds": 62.671,
+      "provider": "edge"
+    },
+    {
+      "from": "voiced",
+      "to": "visualized",
+      "ts": "2026-11-11T10:23:41Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-11-11T10:26:20Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-11-11T10:26:20Z",
+      "score": 93
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-11-11T10:26:21Z"
+    },
+    {
+      "from": "packaged",
+      "to": "held",
+      "ts": "2026-11-11T10:26:21Z"
+    }
+  ],
+  "artifacts": {
+    "angle": "Choosing ownership in an unproven asset over an immediate cash payout created generational wealth from a single job.",
+    "hook": "In 2005, an artist was offered $60,000 cash or company stock for painting a startup's office walls—and chose the stock.",
+    "title": "The $200 Million Wall Painting Deal",
+    "style": "cinematic",
+    "video": "/home/user/quiet-money/production/output/2026-11-11/2026-11-11-s8-story-demanding-equity-over-cash-the-2/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-11-11/2026-11-11-s8-story-demanding-equity-over-cash-the-2/cover.jpg"
+  },
+  "scores": {
+    "gauntlet": 93,
+    "passed": false
+  },
+  "cost": {
+    "tts:edge:chars": 963
+  },
+  "notes": [
+    "held for review: not_semantic_duplicate"
+  ]
+}

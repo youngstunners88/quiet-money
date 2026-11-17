@@ -1,0 +1,96 @@
+{
+  "title": "How to Erase Medical Bills Using IRS Tax Rules",
+  "hook_text": "ERASE MEDICAL BILLS WITH TAX RULES",
+  "beats": [
+    {
+      "say": "Non-profit hospitals keep multi-million dollar tax breaks by forgiving debt, but only if you ask.",
+      "callout": "",
+      "visual": "Low angle shot of a massive brutalist hospital tower at dusk, cold blue lighting, sodium streetlights casting long shadows."
+    },
+    {
+      "say": "How do health networks quietly erase thousands in patient balances every single day?",
+      "callout": "",
+      "visual": "Moody interior of a sleek hospital glass hallway at night, silhouettes walking past floor-to-ceiling windows under cold fluorescent lights."
+    },
+    {
+      "say": "Most patients assume a hospital bill's set in stone, so they put it on credit cards.",
+      "callout": "",
+      "visual": "Close up silhouette of hands holding a dark payment card over a rainy desk, reflection of wet asphalt outside window."
+    },
+    {
+      "say": "That's a mistake. Step one: call billing and request an itemized statement with service codes.",
+      "callout": "STEP ONE",
+      "visual": "Extreme close up of a landline telephone handset resting on a dark desk in a dimly lit office."
+    },
+    {
+      "say": "Inflated fees vanish fast, but how do you erase the rest of the bill completely?",
+      "callout": "",
+      "visual": "Low angle view of high-rise city buildings shrouded in fog cutting the skyline at dusk."
+    },
+    {
+      "say": "Step two: request their official charity care policy under Section 501(r) IRS tax rules.",
+      "callout": "STEP TWO",
+      "visual": "Silhouette of a person standing in a cold, empty modern hospital corridor with a single practical light overhead."
+    },
+    {
+      "say": "Federal law forces non-profit hospitals to lower or forgive bills based on your income.",
+      "callout": "",
+      "visual": "Exterior wide shot of a government tax building facade at night under harsh sodium street lamps."
+    },
+    {
+      "say": "Eligibility covers surprisingly high earnings, but what if the billing clerk pushes back on you?",
+      "callout": "",
+      "visual": "Low angle perspective of a rainy city intersection at night, car headlights reflecting off wet asphalt."
+    },
+    {
+      "say": "Step three: submit your pay stub and request a supervisor review under non-profit guidelines.",
+      "callout": "STEP THREE",
+      "visual": "Close up of a plain paper document folder resting on a dark wooden table in a dimly lit room."
+    },
+    {
+      "say": "Wiping a $3,000 bill saves you from minimum credit card payments that cost $4,887 in interest.",
+      "callout": "$4,887 INTEREST",
+      "visual": "Extreme wide shot of an empty highway underpass at night, cold blue hour lighting."
+    },
+    {
+      "say": "That preserved cash stays in your savings account, compounding long-term instead of funding medical debt.",
+      "callout": "COMPOUND WEALTH",
+      "visual": "Dramatic ridge line silhouette of a mountain against a rising morning sun, fog settled in the valley."
+    },
+    {
+      "say": "Follow Quiet Money for the money rules school never taught you.",
+      "callout": "",
+      "visual": "Dramatic low angle silhouette of a person standing atop a high tower edge looking out over a glowing city skyline at night."
+    }
+  ],
+  "caption": "Non-profit hospitals get tax breaks to erase patient bills. Here is how to request your policy today.\n\n#personalfinance #moneyrules #medicaldebt #charitycare #financialliteracy",
+  "description": "Learn the 3-step process to request an itemized hospital bill and leverage Section 501(r) charity care rules. Discover how reducing medical balances protects your savings from high credit card interest.",
+  "hashtags": [
+    "#personalfinance",
+    "#moneyrules",
+    "#medicaldebt",
+    "#charitycare",
+    "#financialliteracy"
+  ],
+  "first_comment": "Have you ever negotiated a hospital bill down using an itemized statement?",
+  "facts": [
+    {
+      "claim": "Paying minimums on a $3,000 card balance at 24% APR costs $4,887 in interest.",
+      "basis": "$3,000 credit card at 24% APR paying only the minimum (1% + interest, min $25): 183 months (~15 years), $4,887 interest"
+    }
+  ],
+  "source": "llm",
+  "pillar": "playbook",
+  "look": "",
+  "loop_map": {
+    "stakes": "Non-profit hospitals keep tax exemptions by forgiving debt, but patients pay unnecessary out-of-pocket bills.",
+    "big_question": "How do health networks quietly erase thousands in patient balances every single day?",
+    "assume": "Most patients assume hospital bills are fixed and pay them out-of-pocket or with credit cards.",
+    "reveal": "Federal Section 501(r) tax rules require non-profit hospitals to offer income-based charity care forgiveness.",
+    "rehook_beats": [
+      5,
+      8
+    ],
+    "payoff_beat": 10
+  }
+}

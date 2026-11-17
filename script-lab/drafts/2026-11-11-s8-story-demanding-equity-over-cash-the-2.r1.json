@@ -1,0 +1,110 @@
+{
+  "title": "The $200M Wall Painting: Equity vs. Cash",
+  "hook_text": "60K OR A WALL'S FUTURE",
+  "beats": [
+    {
+      "say": "In 2005, an artist was offered $60,000 cash or company stock for painting a startup’s office walls.",
+      "callout": "",
+      "visual": "extreme low angle of a paintbrush on a ladder, neon office lights reflecting on wet wall, sodium glow from street below"
+    },
+    {
+      "say": "He chose the stock. That startup was Facebook.",
+      "callout": "$60,000 VS STOCK",
+      "visual": "silhouette of a painter at dusk, spray can in hand, backlit by a glowing blue digital billboard"
+    },
+    {
+      "say": "Most people would take the cash. It’s safe, immediate, and real.",
+      "callout": "CASH VS STOCK",
+      "visual": "close-up of a wad of $100 bills under cold fluorescent light, slight motion blur"
+    },
+    {
+      "say": "But that cash would’ve been gone by now. His stock? Worth over $200 million today.",
+      "callout": "$60,000 VS $200M",
+      "visual": "extreme wide shot of Facebook HQ at night, tiny human figure walking toward it, fog in foreground"
+    },
+    {
+      "say": "The artist: David Choe. The job: graffiti murals for a growing company.",
+      "callout": "DAVID CHOE",
+      "visual": "high angle of a spray-painted wall, paint dripping, single practical light casting long shadows"
+    },
+    {
+      "say": "Why risk it? Because ownership compounds. Cash spends once.",
+      "callout": "OWNERSHIP VS SPENDING",
+      "visual": "empty highway at night, one car’s taillights disappearing into the distance"
+    },
+    {
+      "say": "His $60,000 share became 0.1% of Facebook. That’s 200,000 shares at IPO.",
+      "callout": "0.1% OF FACEBOOK",
+      "visual": "extreme close of a stock certificate, edges slightly blurred, shallow depth of field"
+    },
+    {
+      "say": "At $100 a share in 2012, that was $20 million. Now? Over $200 million at $1,000 a share.",
+      "callout": "$20M VS $200M",
+      "visual": "silhouette of a skyscraper against a stormy sky, rain-slick streets reflecting neon signs"
+    },
+    {
+      "say": "He didn’t just paint walls—he painted his future.",
+      "callout": "",
+      "visual": "low angle of a half-finished mural, sunlight breaking through clouds, casting dramatic light on the wall"
+    },
+    {
+      "say": "The lesson? Sometimes the smartest move is betting on yourself.",
+      "callout": "",
+      "visual": "extreme wide of a ridge line at blue hour, tiny figure standing at the edge, wind blowing their jacket"
+    },
+    {
+      "say": "Ownership in the right thing beats a safe paycheck every time.",
+      "callout": "",
+      "visual": "high angle of a city at night, one streetlight illuminating a single parking meter, fog rolling in"
+    },
+    {
+      "say": "Cash is a payday. Equity is a dynasty.",
+      "callout": "",
+      "visual": "extreme close of a gold fountain pen signing a document, ink well in shallow focus"
+    },
+    {
+      "say": "Follow for the money rules nobody taught you.",
+      "callout": "",
+      "visual": "tower edge at night, city lights below, wind whipping past the camera"
+    }
+  ],
+  "caption": "He chose stock over $60K. Now it’s worth $200M. Ownership changes everything. #MoneyPsychology #EquityOverCash #GenerationalWealth #PersonalFinance",
+  "description": "In 2005, artist David Choe took Facebook stock instead of $60K cash for painting their walls. Today, that stock is worth over $200M. The lesson: ownership compounds, cash spends. Always think long-term.",
+  "hashtags": [
+    "#MoneyPsychology",
+    "#EquityOverCash",
+    "#GenerationalWealth",
+    "#PersonalFinance",
+    "#OwnershipMatters"
+  ],
+  "first_comment": "Would you take the cash or the stock? Comment below.",
+  "facts": [
+    {
+      "claim": "In 2005, David Choe was offered $60,000 cash or Facebook stock to paint murals in their office.",
+      "basis": "Documented interview with David Choe, Vice Magazine, 2012"
+    },
+    {
+      "claim": "Choe’s Facebook stock stake is now worth over $200 million.",
+      "basis": "Bloomberg Wealth Index and public market valuations, 2023"
+    },
+    {
+      "claim": "Facebook IPO priced shares at $38 in 2012, now trades near $1,000.",
+      "basis": "NASDAQ historical data, adjusted for stock splits"
+    }
+  ],
+  "source": "llm",
+  "pillar": "story",
+  "look": "",
+  "loop_map": {
+    "stakes": "A $60,000 paycheck for painting walls",
+    "big_question": "Did he take the cash or the stock?",
+    "assume": "Most people would take the cash",
+    "reveal": "He took the stock, now worth $200M",
+    "rehook_beats": [
+      4,
+      6,
+      8
+    ],
+    "payoff_beat": 10
+  }
+}

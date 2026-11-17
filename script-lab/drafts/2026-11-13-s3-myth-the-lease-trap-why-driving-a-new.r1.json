@@ -1,0 +1,105 @@
+{
+  "title": "Why Driving a New Car Keeps You Poor",
+  "hook_text": "THE CAR LOAN SUBSCRIPTION TRAP",
+  "beats": [
+    {
+      "say": "You think your car payment is just a bill, but it's actually a permanent subscription to middle class.",
+      "callout": "",
+      "visual": "Low angle shot of a sleek black sedan parked on wet asphalt under dim sodium lights."
+    },
+    {
+      "say": "Most people sign a 60-month loan, trade early, and roll the balance into a new note.",
+      "callout": "",
+      "visual": "Close-up on dark leather-gloved hands holding steel keys inside a cold garage, single overhead spotlight."
+    },
+    {
+      "say": "They treat cars like an endless utility bill. But where does that money actually end up?",
+      "callout": "",
+      "visual": "Extreme wide shot of an empty highway stretch at blue hour, dense fog cutting across cold tarmac."
+    },
+    {
+      "say": "You assume you're buying security. In reality, a car loses up to 20% of its value in year 1.",
+      "callout": "ASSET VS LIABILITY",
+      "visual": "High angle shot of row upon row of shadowed vehicles in a dark dealership lot under harsh fluorescent light."
+    },
+    {
+      "say": "At 60 months, you've paid thousands in interest for an asset that drops in value daily.",
+      "callout": "",
+      "visual": "Tiny silhouette of a driver standing beside a rain-slick street, red taillights blurring in fog."
+    },
+    {
+      "say": "What happens if you break the cycle and drive a reliable 5-year-old car instead?",
+      "callout": "",
+      "visual": "Low angle view of an urban underpass at night, cold fluorescent lights casting long shadows across wet concrete."
+    },
+    {
+      "say": "Redirecting a standard $500 monthly car note into your own investment account changes everything.",
+      "callout": "",
+      "visual": "Silhouette of a figure standing on a concrete bridge edge at dusk looking down at open dark water."
+    },
+    {
+      "say": "If you invest $500 a month at 8% a year, in 30 years you put in $180,000.",
+      "callout": "$180,000 INVESTED",
+      "visual": "Extreme wide silhouette of a lone figure walking past giant industrial steel pillars during blue hour."
+    },
+    {
+      "say": "That account grows to $745,180. That's over half a million dollars created by compounding.",
+      "callout": "$745,180 TOTAL",
+      "visual": "Dramatic low angle of a skyscraper edge cutting into fog-heavy night sky with a single lit window."
+    },
+    {
+      "say": "Keep investing $500 a month for 40 years at 8%, and your total reaches $1,745,504.",
+      "callout": "$1,745,504 AT 40 YRS",
+      "visual": "High angle shot of a solitary silhouette standing at the edge of a towering concrete roof at twilight."
+    },
+    {
+      "say": "Step one is buying used in cash. Step two is paying yourself that car note monthly.",
+      "callout": "STEP ONE",
+      "visual": "Extreme close-up of hands placing keys on a rustic wooden tabletop illuminated by a single warm desk lamp."
+    },
+    {
+      "say": "Swapping a lifetime car note for compounding wealth turns an endless drain into true financial freedom.",
+      "callout": "",
+      "visual": "Wide shot of an empty highway extending toward a stormy horizon under dark clouds."
+    },
+    {
+      "say": "Stop renting your transportation forever. Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "Low angle silhouette of a person standing on a high ocean cliff edge looking at crashing dark waves."
+    }
+  ],
+  "caption": "Car payments feel normal until you look at the opportunity cost. Investing that monthly note creates real wealth.\n\n#money #personalfinance #carloan #wealthbuilding #investing",
+  "description": "Exposing the hidden wealth drain of perpetual monthly car payments. Learn how redirecting a standard monthly car note into compounding investments turns a lifetime liability into retirement freedom.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#carloan",
+    "#wealthbuilding",
+    "#investing"
+  ],
+  "first_comment": "Are you currently paying a monthly car note or driving a paid-off vehicle?",
+  "facts": [
+    {
+      "claim": "$500/month invested for 30 years at 8%/yr equals $745,180 from $180,000 invested.",
+      "basis": "Money Fact Sheet calculation: $500/month invested for 30 years at 8%/yr (monthly compounding) = $745,180 (you put in $180,000)"
+    },
+    {
+      "claim": "$500/month invested for 40 years at 8%/yr equals $1,745,504.",
+      "basis": "Money Fact Sheet calculation: $500/month invested for 40 years at 8%/yr (monthly compounding) = $1,745,504 (you put in $240,000)"
+    }
+  ],
+  "source": "llm",
+  "pillar": "myth",
+  "look": "",
+  "loop_map": {
+    "stakes": "Car payments lock earnings into depreciating assets instead of building long-term wealth.",
+    "big_question": "Where does all that monthly car note money actually end up?",
+    "assume": "Car payments are a normal permanent bill that builds vehicle equity.",
+    "reveal": "A new car depreciates up to 20% in year 1; investing a $500/month note at 8% for 30 years yields $745,180.",
+    "rehook_beats": [
+      3,
+      6
+    ],
+    "payoff_beat": 10
+  }
+}

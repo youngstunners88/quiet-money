@@ -1,0 +1,100 @@
+{
+  "title": "The Four Buckets of Income: Why Wages Cap Your Life",
+  "hook_text": "3 INCOME BUCKETS KEEP YOU TRAPPED",
+  "beats": [
+    {
+      "say": "Every single dollar you earn falls into four buckets, and three guarantee you'll always trade time for cash.",
+      "callout": "",
+      "visual": "Low angle silhouette of a lone worker standing under harsh flickering sodium lights at an empty subway terminal at night."
+    },
+    {
+      "say": "First, you're an employee, selling hours directly to a boss for a fixed wage.",
+      "callout": "BUCKET ONE",
+      "visual": "High angle wide shot of a glass skyscraper silhouetted against cold blue hour fog."
+    },
+    {
+      "say": "Second, you're self-employed, but if you stop working, your revenue stops instantly.",
+      "callout": "BUCKET TWO",
+      "visual": "Close-up of rain-slicked dark pavement reflecting red taillights outside a quiet night shop."
+    },
+    {
+      "say": "Third, you're a business owner with employees, but managing them still requires your daily presence.",
+      "callout": "BUCKET THREE",
+      "visual": "Extreme wide shot of a solitary figure walking past massive brutalist concrete pillars under an overpass."
+    },
+    {
+      "say": "Most people think getting ahead requires working longer shifts or taking on a second job.",
+      "callout": "",
+      "visual": "Cold fluorescent light cutting through a dark industrial hallway, fog lingering near the ceiling."
+    },
+    {
+      "say": "But your time is finite, meaning your active income will always hit a hard ceiling.",
+      "callout": "TIME VS VALUE",
+      "visual": "Low angle shot of a massive steel bridge structure towering into a shadowy night sky."
+    },
+    {
+      "say": "That brings us to bucket four: owning income-generating assets that work while you sleep.",
+      "callout": "BUCKET FOUR",
+      "visual": "Single practical desk light illuminating a dark quiet room, extreme low angle."
+    },
+    {
+      "say": "So how much capital does it actually take to buy back your full freedom?",
+      "callout": "",
+      "visual": "Silhouette standing on a high tower edge looking out over a foggy skyline at dawn."
+    },
+    {
+      "say": "To generate $2,000 a month in passive income, you need about $600,000 invested.",
+      "callout": "$2,000 / MONTH",
+      "visual": "Dark open water at twilight with distant harbour lights reflecting on wet dark waves."
+    },
+    {
+      "say": "Investing $1,000 a month at 8% a year reaches that target in 20.2 years.",
+      "callout": "20.2 YEARS",
+      "visual": "Extreme wide, empty highway stretching into midnight fog with a single streetlight cutting through mist."
+    },
+    {
+      "say": "Moving your cash from active labor into automated assets breaks the hourly trap forever.",
+      "callout": "",
+      "visual": "Wet asphalt at blue hour reflecting muted sodium lights, wide cinematic angle."
+    },
+    {
+      "say": "Build systems instead of trading hours. Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "Silhouette on a ridge line looking toward a massive city skyline slowly glowing at blue hour."
+    }
+  ],
+  "caption": "Trading time for money has a built-in ceiling. Here is how asset ownership changes the math.\n\n#money #personalfinance #wealth #ratrace #financialfreedom",
+  "description": "Exposing the natural limits of active wages versus long-term asset accumulation. Learn how consistent investing at an 8% annual return creates sustainable systemized passive income.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#wealth",
+    "#ratrace",
+    "#financialfreedom"
+  ],
+  "first_comment": "Which of the four income buckets currently provides most of your income?",
+  "facts": [
+    {
+      "claim": "Generating $2,000/month of passive income requires about $600,000 invested under the 4% withdrawal guideline.",
+      "basis": "Trinity Study 4% rule math ($600,000 * 0.04 = $24,000/year or $2,000/month)."
+    },
+    {
+      "claim": "Investing $1,000/month at 8%/year compound return reaches $600,000 in 20.2 years.",
+      "basis": "Fact sheet calculation: $1,000/month at 8%/yr compounded monthly reaches $600,000 in 20.2 years."
+    }
+  ],
+  "source": "llm",
+  "pillar": "escape",
+  "look": "",
+  "loop_map": {
+    "stakes": "Trading 40 hours a week caps earning potential at available hours.",
+    "big_question": "How much capital does it actually take to buy back your full freedom?",
+    "assume": "Working longer shifts or taking a second job is how you earn more.",
+    "reveal": "Investing $1,000 a month at 8% a year reaches $600,000 in 20.2 years, generating $2,000 a month in passive income.",
+    "rehook_beats": [
+      4,
+      8
+    ],
+    "payoff_beat": 11
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "title": "The Value Equation: Double Your Output Without Extra Hours",
+  "hook_text": "ONE HOUR PAYS LIKE FORTY",
+  "beats": [
+    {
+      "say": "The hidden multiplier that makes one hour of work pay like forty isn't extra coffee.",
+      "callout": "",
+      "visual": "Low angle shot of a solitary glowing tower edge against a dark blue hour sky, empty of traffic."
+    },
+    {
+      "say": "How do you scale your income when your calendar is already maxed out?",
+      "callout": "VALUE = OUTPUT",
+      "visual": "Extreme close up of a heavy mechanical gear turning slowly in deep shadow, sodium light glinting on steel."
+    },
+    {
+      "say": "Most people assume working longer hours is the only way to double your output.",
+      "callout": "MORE HOURS VS MORE VALUE",
+      "visual": "Silhouettes of workers walking through a massive rainy concrete underpass at dusk, headlights cutting the fog."
+    },
+    {
+      "say": "That's false. Real leverage comes from fixing the four levers of the value equation.",
+      "callout": "STEP ONE",
+      "visual": "Extreme wide shot of a tiny human figure standing on a vast ridge line against a cold grey dawn."
+    },
+    {
+      "say": "Can you raise the dream outcome while shrinking the effort it takes?",
+      "callout": "STEP TWO",
+      "visual": "Macro shot of a wet asphalt road under a single flickering yellow sodium light, no cars in sight."
+    },
+    {
+      "say": "What stops buyers from pulling out their cards right now?",
+      "callout": "TIME DELAY",
+      "visual": "Low angle shot of a heavy iron bridge girder dripping with rain against a dark night sky."
+    },
+    {
+      "say": "Perceived likelihood is the missing piece that closes the gap.",
+      "callout": "STEP THREE",
+      "visual": "Extreme close up of a heavy brass lock clicking shut in a cold, dim hallway."
+    },
+    {
+      "say": "You multiply the dream outcome by the likelihood it works, then divide by time and effort.",
+      "callout": "THE FORMULA",
+      "visual": "A massive shipping crane silhouette against a grey open water horizon at twilight."
+    },
+    {
+      "say": "That is how you double your output without working extra hours.",
+      "callout": "",
+      "visual": "Sodium light reflecting off a rain-slick street next to an empty concrete loading dock at night."
+    },
+    {
+      "say": "The honest catch is that these active business frameworks require years of intense execution before they scale.",
+      "callout": "",
+      "visual": "Low angle shot of a massive concrete dam wall under heavy blue hour light."
+    },
+    {
+      "say": "This week, audit your offer against the equation and cut the time delay in half.",
+      "callout": "",
+      "visual": "Silhouette of a lone person walking past a towering glass facade reflecting cold fluorescent light."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "Extreme wide shot of an empty highway cutting through dark hills at night under a huge moon."
+    }
+  ],
+  "caption": "The math behind doubling your output without working more hours. #moneypsychology #wealthbuilding #personalfinance #financialliteracy #quietmoney",
+  "description": "Break down the value equation into four practical steps to scale your income without burning extra hours.",
+  "hashtags": [
+    "#moneypsychology",
+    "#wealthbuilding",
+    "#personalfinance",
+    "#financialliteracy",
+    "#quietmoney"
+  ],
+  "first_comment": "Which part of the value equation is hardest to fix in your work?",
+  "facts": [
+    {
+      "claim": "Value equation formula elements include dream outcome, perceived likelihood, time delay, and effort",
+      "basis": "Acquisition.com Value Equation framework"
+    },
+    {
+      "claim": "Business frameworks require years of intense execution before scaling",
+      "basis": "Acquisition.com business growth principles"
+    }
+  ],
+  "source": "llm",
+  "pillar": "escape",
+  "look": "",
+  "loop_map": {
+    "stakes": "A calendar maxed out with work that leaves no room to grow earnings",
+    "big_question": "How do you scale your income when your calendar is already maxed out?",
+    "assume": "Working longer hours is the only way to double your output",
+    "reveal": "Real leverage comes from fixing the four levers of the value equation",
+    "rehook_beats": [
+      6,
+      10
+    ],
+    "payoff_beat": 9
+  }
+}

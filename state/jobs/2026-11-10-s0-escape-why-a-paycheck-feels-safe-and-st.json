@@ -4,7 +4,7 @@
   "topic": "Why a paycheck feels safe and still keeps you stuck",
   "day": "2026-11-10",
   "slot": 0,
-  "status": "visualized",
+  "status": "held",
   "history": [
     {
       "from": "planned",
@@ -23,17 +23,45 @@
       "from": "voiced",
       "to": "visualized",
       "ts": "2026-11-10T02:19:52Z"
+    },
+    {
+      "from": "visualized",
+      "to": "rendered",
+      "ts": "2026-11-11T09:32:18Z"
+    },
+    {
+      "from": "rendered",
+      "to": "gated",
+      "ts": "2026-11-11T09:32:18Z",
+      "score": 95
+    },
+    {
+      "from": "gated",
+      "to": "packaged",
+      "ts": "2026-11-11T09:32:18Z"
+    },
+    {
+      "from": "packaged",
+      "to": "held",
+      "ts": "2026-11-11T09:32:18Z"
     }
   ],
   "artifacts": {
     "angle": "[format-test] 5-step exit explainer is the proven length (user9to5exit); keep ours to education only, no income promise",
     "hook": "Your paycheck feels safe. That's the trap.",
     "title": "Why a Paycheck Feels Safe and Keeps You Stuck",
-    "style": "cinematic"
+    "style": "cinematic",
+    "video": "/home/user/quiet-money/production/output/2026-11-10/2026-11-10-s0-escape-why-a-paycheck-feels-safe-and-st/final.mp4",
+    "cover": "/home/user/quiet-money/production/output/2026-11-10/2026-11-10-s0-escape-why-a-paycheck-feels-safe-and-st/cover.jpg"
   },
-  "scores": {},
+  "scores": {
+    "gauntlet": 95,
+    "passed": false
+  },
   "cost": {
     "tts:edge:chars": 1081
   },
-  "notes": []
+  "notes": [
+    "held for review: originality"
+  ]
 }

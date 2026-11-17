@@ -1,0 +1,55 @@
+# Gauntlet: 2026-11-11-s0-myth-myth-having-no-debt-means-you-re
+Score **94/100**, PASS
+
+| gate | result | weight | detail |
+|---|---|---|---|
+| word_count | pass | 8 |  |
+| beat_count (hard) | pass | 6 |  |
+| hook_length | pass | 6 |  |
+| hook_trigger | FAIL | 6 | hook needs a number, a 'you', a named thing, or a contradiction in the first line. |
+| hook_text | pass | 4 |  |
+| beat_length | pass | 4 |  |
+| visual_prompts (hard) | pass | 8 |  |
+| callouts | pass | 3 |  |
+| banned_phrases | pass | 5 |  |
+| compliance_phrases (hard) | pass | 10 |  |
+| no_ticker_picks (hard) | pass | 8 |  |
+| complete_ending | pass | 6 |  |
+| title | pass | 3 |  |
+| hashtags | pass | 2 |  |
+| originality (hard) | pass | 8 |  |
+| pillar_structure | pass | 4 |  |
+| loop_plan | FAIL | 5 | beats [6] are marked as re-hooks but open nothing: end them on a question or a turn |
+| voice_quality | pass | 5 |  |
+| readability | pass | 3 |  |
+| judge_hook | FAIL | 8 | hook scored 6/10. Compress lines 1-4 to eliminate repetition: 'Having zero debt feels safe until an unexpected bill lands, because zero debt with zero savings means you are still broke.'; Qualify line 7's calculation: 'If you only pay a standard 2% minimum, clearing that $3,000 bill takes over 15 years and nearly $5,000 in pure interest.'; Trim lines 9-11 into a punchier action step: 'Before aggressively paying every spare dollar to zero, stash a $1,000 cash buffer so an emergency doesn't force you back onto high-interest plastic.' |
+| judge_retention | pass | 6 |  |
+| judge_value | pass | 5 |  |
+| judge_facts (hard) | pass | 10 |  |
+| judge_compliance (hard) | pass | 10 |  |
+| no_promised_returns (hard) | pass | 6 |  |
+| no_specific_advice (hard) | pass | 6 |  |
+| no_hype | pass | 3 |  |
+| not_semantic_duplicate (hard) | pass | 6 |  |
+| distinct_topic | pass | 3 |  |
+| duration (hard) | pass | 10 |  |
+| word_timings (hard) | pass | 8 |  |
+| caption_sync | pass | 8 |  |
+| image_count (hard) | pass | 10 |  |
+| no_placeholder_art | pass | 6 |  |
+| image_quality | pass | 3 |  |
+| no_faces (hard) | pass | 6 |  |
+| image_qa | pass | 3 |  |
+| resolution (hard) | pass | 10 |  |
+| fps (hard) | pass | 4 |  |
+| av_sync_length (hard) | pass | 8 |  |
+| audio_present (hard) | pass | 10 |  |
+| file_size (hard) | pass | 4 |  |
+| first_frame_visible (hard) | pass | 6 |  |
+| cut_cadence | pass | 5 |  |
+| caption_coverage (hard) | pass | 8 |  |
+| disclosure (hard) | pass | 10 |  |
+| affiliate_disclosure (hard) | pass | 8 |  |
+| caption_tags | pass | 2 |  |
+| platform_wording | pass | 4 |  |
+| offer_cta | pass | 3 |  |

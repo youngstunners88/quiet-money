@@ -1,0 +1,105 @@
+{
+  "title": "The Million-Dollar Star Who Died Broke",
+  "hook_text": "HE EARNED MILLIONS YET DIED BROKE",
+  "beats": [
+    {
+      "say": "He earned more than movie stars in his prime, but when Bobby Darin died in 1973, he left behind a mountain of unpaid debt.",
+      "callout": "",
+      "visual": "Extreme close-up of a vintage vinyl record spinning under a single harsh tungsten light in a dark room."
+    },
+    {
+      "say": "How does a music icon pulling in millions vanish completely flat broke?",
+      "callout": "MILLIONS GONE",
+      "visual": "Low angle shot of an empty, weathered backstage dressing room lit by cold fluorescent bulbs."
+    },
+    {
+      "say": "You'd assume he blew it all on private jets and gold chains.",
+      "callout": "JETSET LIFESTYLE",
+      "visual": "Silhouette of a man walking away down a wet, rain-slick asphalt runway at night."
+    },
+    {
+      "say": "That's the popular myth. But the real leak was far more boring and much more dangerous.",
+      "callout": "MYTH VS REALITY",
+      "visual": "Macro shot of a vintage mechanical calculator clicking in a dimly lit, narrow office."
+    },
+    {
+      "say": "Darin poured his gross revenue straight into a massive entourage and record production costs.",
+      "callout": "GROSS VS NET",
+      "visual": "Extreme wide shot of a solitary figure standing at the edge of a foggy concrete rooftop at blue hour."
+    },
+    {
+      "say": "He looked filthy rich on paper. In reality, his cash flow was entirely underwater.",
+      "callout": "PAPER RICH",
+      "visual": "High angle shot of a heavy iron key resting on cracked, weathered concrete."
+    },
+    {
+      "say": "Where did every single dollar actually vanish?",
+      "callout": "WHERE DID IT GO",
+      "visual": "Extreme close-up of water dripping into a dark, empty storm drain under sodium streetlights."
+    },
+    {
+      "say": "He funded grand business ideas and sprawling payrolls before securing his own base.",
+      "callout": "STEP ONE",
+      "visual": "A man's hands stacking heavy, worn leather ledger books on a dark wooden table."
+    },
+    {
+      "say": "Then his health failed, the hits slowed down, and fixed expenses drained the vault.",
+      "callout": "",
+      "visual": "Extreme low angle of a towering, brutalist concrete bridge cutting across a grey sky."
+    },
+    {
+      "say": "He didn't own his masters, and his net worth couldn't cover the burn rate.",
+      "callout": "",
+      "visual": "A single practical desk lamp casting harsh shadows across an empty room."
+    },
+    {
+      "say": "Revenue is just a vanity metric. Profit and cash flow are the only things that keep you alive.",
+      "callout": "",
+      "visual": "Extreme wide shot of a solitary vehicle moving across an empty highway at night."
+    },
+    {
+      "say": "He willed his body to medical science because he literally had nothing left to fund a funeral.",
+      "callout": "",
+      "visual": "Silhouette of a person standing against a pale, cold fog cutting an empty horizon."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "Single cold fluorescent tube flickering on a dark, wet brick wall."
+    }
+  ],
+  "caption": "Gross revenue means nothing if your expenses eat it alive. #money #personalfinance #wealth #moneyskills #finance",
+  "description": "Bobby Darin earned fortunes at the peak of his music career, but poor cash flow management and high overhead left him broke by the end. Here is why revenue is not wealth.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#wealth",
+    "#moneyskills",
+    "#finance"
+  ],
+  "first_comment": "What's a bigger trap: low income or high expenses?",
+  "facts": [
+    {
+      "claim": "Bobby Darin died in 1973 with significant debt and left his body to UCLA Medical Center.",
+      "basis": "Documented biographical history of Bobby Darin's final years and death."
+    },
+    {
+      "claim": "Darin earned massive sums in his prime through music and television.",
+      "basis": "Historical record of his peak entertainment earnings."
+    }
+  ],
+  "source": "llm",
+  "pillar": "story",
+  "look": "",
+  "loop_map": {
+    "stakes": "Bobby Darin earning millions in his prime yet leaving behind unpaid debt at death.",
+    "big_question": "How does a music icon pulling in millions vanish completely flat broke?",
+    "assume": "He blew it all on luxury items and private jets.",
+    "reveal": "His gross revenue was crushed by massive overhead and fixed production costs.",
+    "rehook_beats": [
+      5,
+      7
+    ],
+    "payoff_beat": 11
+  }
+}

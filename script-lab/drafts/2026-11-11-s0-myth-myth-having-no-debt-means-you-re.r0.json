@@ -1,0 +1,91 @@
+{
+  "title": "Why Zero Debt Isn't Safe Without Savings",
+  "hook_text": "NO DEBT IS A GOOD START",
+  "beats": [
+    {
+      "say": "No debt is a good start. It isn't a plan.",
+      "callout": "",
+      "visual": "Extreme wide shot of a solitary parking meter under sodium streetlights in heavy rain."
+    },
+    {
+      "say": "You paid off every card and closed every account. You think you're safe.",
+      "callout": "DEBT FREE",
+      "visual": "Low angle close up of a heavy steel storm drain grate on dark wet asphalt at blue hour."
+    },
+    {
+      "say": "Then why does a single unexpected bill send you right back to borrowing?",
+      "callout": "THE TRAP",
+      "visual": "Extreme close up of worn leather boots standing on the edge of a concrete subway platform."
+    },
+    {
+      "say": "Most people assume a zero balance means financial security.",
+      "callout": "ZERO VS SAFE",
+      "visual": "High angle shot of empty concrete stairs leading down into a dark subway station."
+    },
+    {
+      "say": "That's the head fake. Having no debt is just an empty scoreboard.",
+      "callout": "EMPTY BOARD",
+      "visual": "Silhouette of a person walking across a vast open bridge under a heavy gray fog."
+    },
+    {
+      "say": "Without cash behind you, zero debt lasts exactly until the next surprise arrives.",
+      "callout": "NEXT SURPRISE",
+      "visual": "Extreme wide shot of a solitary freight train crossing a rusted steel bridge at dusk."
+    },
+    {
+      "say": "So how do you build a real wall against unexpected shocks?",
+      "callout": "THE BUFFER",
+      "visual": "Low angle shot of a massive concrete pier holding up a dark highway overpass."
+    },
+    {
+      "say": "You split your surplus. Every single payday.",
+      "callout": "STEP ONE",
+      "visual": "Extreme close up of heavy industrial metal hinges on a weathered gray door."
+    },
+    {
+      "say": "Debt payoff gets one portion. A dedicated cash buffer gets the other.",
+      "callout": "",
+      "visual": "Sodium light cutting through thick fog over an empty shipping dock at night."
+    },
+    {
+      "say": "That small buffer stops your next emergency from becoming your next loan.",
+      "callout": "",
+      "visual": "High angle shot of dark ocean water crashing against jagged black rocks in a storm."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "Extreme wide shot of a lone city skyscraper with a single glowing window at midnight."
+    }
+  ],
+  "caption": "Zero debt feels like winning, but without cash, it's just a temporary truce. Build the buffer alongside the payoff. #moneyrules #personalfinance #debtfree #savings #quietmoney",
+  "description": "Having no debt is a great start, but it isn't a complete financial plan. Without a cash buffer, one surprise bill starts the debt cycle over.",
+  "hashtags": [
+    "#moneyrules",
+    "#personalfinance",
+    "#debtfree",
+    "#savings",
+    "#quietmoney"
+  ],
+  "first_comment": "What's the last unexpected bill that caught you off guard?",
+  "facts": [
+    {
+      "claim": "Having no debt without savings leaves you vulnerable to a single surprise bill",
+      "basis": "Standard personal finance principle regarding emergency funds and debt elimination"
+    }
+  ],
+  "source": "llm",
+  "pillar": "myth",
+  "look": "",
+  "loop_map": {
+    "stakes": "The viewer has zero debt but no cash savings for emergencies.",
+    "big_question": "Why does a zero balance still lead back to new debt?",
+    "assume": "A zero debt balance equals financial security.",
+    "reveal": "Zero debt without a cash buffer is just an empty scoreboard waiting for the next surprise.",
+    "rehook_beats": [
+      3,
+      7
+    ],
+    "payoff_beat": 10
+  }
+}

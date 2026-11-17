@@ -1,0 +1,100 @@
+{
+  "title": "The $50 Dinner Habit That Costs $298,072",
+  "hook_text": "THAT $50 DINNER COSTS $298,000",
+  "beats": [
+    {
+      "say": "That $50 Sunday dinner isn't costing fifty bucks; it's quietly stealing $298,072 from your future self.",
+      "callout": "",
+      "visual": "Extreme close-up of a dark paper restaurant bill lying on a rain-slick asphalt street under cold blue hour light."
+    },
+    {
+      "say": "Most people treat a weekly restaurant meal as a harmless ritual. So where does the wealth go?",
+      "callout": "$50 A WEEK",
+      "visual": "High angle silhouette of a lonely figure sitting inside a deserted diner beneath a single dim sodium lamp."
+    },
+    {
+      "say": "That fifty dollars every week adds up to $200 every single month leaving your pocket.",
+      "callout": "",
+      "visual": "Low angle shot looking up at a towering concrete bank exterior shrouded in heavy night fog."
+    },
+    {
+      "say": "You might assume saving that money in cash simply leaves you with $72,000 after 30 years.",
+      "callout": "CASH VS COMPOUND",
+      "visual": "Extreme wide shot of a dark steel vault door standing slightly ajar in a cold fluorescent basement."
+    },
+    {
+      "say": "But what happens when you redirect that exact $200 monthly sum into an 8% index fund?",
+      "callout": "",
+      "visual": "Silhouette of a figure walking down an empty highway at night under flickering orange streetlights."
+    },
+    {
+      "say": "Over 30 years at 8%, your $72,000 of contributions explodes into $298,072 in real wealth.",
+      "callout": "$72,000 VS $298,072",
+      "visual": "Low angle extreme wide shot of massive concrete overpass pillars cutting across a dark city landscape."
+    },
+    {
+      "say": "That means compounding generates over $226,000 for you without working a single extra shift.",
+      "callout": "",
+      "visual": "High angle shot of a rain-slick street reflecting towering glass skyscrapers at dark twilight."
+    },
+    {
+      "say": "But what does waiting just ten years to make this simple shift actually cost your paycheck?",
+      "callout": "",
+      "visual": "Silhouette of a lone figure standing on a cold cliff ridge line before a bleak sunrise."
+    },
+    {
+      "say": "Starting at age 25 builds $698,202 by 65, but starting at 35 yields only $298,072.",
+      "callout": "$698,202 VS $298,072",
+      "visual": "Extreme close-up of heavy rusted iron chains resting on wet asphalt near open dark harbor water."
+    },
+    {
+      "say": "Waiting ten years destroys $400,130 in wealth, even when putting in the exact same monthly effort.",
+      "callout": "-$400,130 COST",
+      "visual": "A single practical light bulb glowing weakly inside a massive dark abandoned concrete warehouse."
+    },
+    {
+      "say": "Trading one weekend meal today pays your future self a fortune in true independence.",
+      "callout": "",
+      "visual": "Extreme wide shot of deep open water under dark stormy grey clouds."
+    },
+    {
+      "say": "Follow Quiet Money for the simple wealth rules that school never taught you.",
+      "callout": "",
+      "visual": "Low angle view of a dark stone monolith standing resolute against a cold twilight skyline."
+    }
+  ],
+  "caption": "Trading one dinner out for an index fund changes everything over 30 years.\n\n#money #personalfinance #investing #compounding #quietmoney",
+  "description": "Exposing the true compound cost of a weekly $50 restaurant habit over 30 and 40 years at an 8% return.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#investing",
+    "#wealth",
+    "#compounding"
+  ],
+  "first_comment": "Would you trade one restaurant meal a week today for $298,000 later?",
+  "facts": [
+    {
+      "claim": "$200/month invested for 30 years at 8%/yr equals $298,072.",
+      "basis": "Mathematical formula for future value of an annuity compounded monthly at 8% annual return over 360 months."
+    },
+    {
+      "claim": "Starting at 25 vs 35 with $200/month at 8% until 65 results in $698,202 vs $298,072.",
+      "basis": "Monthly compounding calculations at 8% over 40 years vs 30 years."
+    }
+  ],
+  "source": "llm",
+  "pillar": "math",
+  "look": "",
+  "loop_map": {
+    "stakes": "A $50 weekly dinner costs $298,072 over 30 years.",
+    "big_question": "Where does the hidden fortune of a $50 weekly dinner habit actually go?",
+    "assume": "Saving $50 a week in cash yields only $72,000 over 30 years.",
+    "reveal": "Redirecting $200 a month into an 8% index fund builds $298,072 in 30 years.",
+    "rehook_beats": [
+      5,
+      8
+    ],
+    "payoff_beat": 11
+  }
+}

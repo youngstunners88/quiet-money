@@ -1,0 +1,104 @@
+{
+  "title": "The Secretary Who Out-Earned Wall Street",
+  "hook_text": "A SECRETARY DIED WITH $7 MILLION",
+  "beats": [
+    {
+      "say": "A Brooklyn secretary earning $18,000 a year died with $7 million in the bank.",
+      "callout": "",
+      "visual": "extreme close-up of a weathered manual typewriter key with the letter 'S' under sodium streetlight"
+    },
+    {
+      "say": "Her name was Sylvia Bloom. 2017 obituary. No trust fund. No inheritance.",
+      "callout": "$18,000",
+      "visual": "silhouette of a woman in a 1970s dress walking down a rain-slick Brooklyn street at dusk, low angle"
+    },
+    {
+      "say": "So how did she amass 388 times her annual salary?",
+      "callout": "$7M VS $18K",
+      "visual": "extreme wide shot of a fog-cut skyline of Manhattan at blue hour, empty benches"
+    },
+    {
+      "say": "Most people guess she won the lottery. Or married rich. Or had a side hustle.",
+      "callout": "ASSUME",
+      "visual": "close-up of a blurred lottery ticket under cold fluorescent light, shallow depth of field"
+    },
+    {
+      "say": "But Sylvia did something far simpler: she bought stocks. Steadily. For 50 years.",
+      "callout": "REVEAL",
+      "visual": "high angle of a vintage stock certificate on a dark wood table, single practical light"
+    },
+    {
+      "say": "Every paycheck, she invested a slice. Not thousands. Just $25 here. $50 there.",
+      "callout": "STEP ONE",
+      "visual": "extreme close-up of a 1960s pay stub under a magnifying glass, warm practical light"
+    },
+    {
+      "say": "She never sold. Never panicked. Let compounding do the heavy lifting.",
+      "callout": "STEP TWO",
+      "visual": "silhouette of a tiny figure against a massive skyscraper, late afternoon light flaring"
+    },
+    {
+      "say": "So why don’t we all do this?",
+      "callout": "WHY NOT?",
+      "visual": "extreme wide shot of an empty subway platform at night, wet asphalt reflecting neon"
+    },
+    {
+      "say": "Because we overcomplicate it. Chasing the next big thing instead of the next small step.",
+      "callout": "",
+      "visual": "close-up of a hand holding a pen over a blank checkbook, single overhead light"
+    },
+    {
+      "say": "Sylvia’s secret? Time and consistency beat skill and luck.",
+      "callout": "",
+      "visual": "low angle of an old clock tower against a stormy sky, cold grey tones"
+    },
+    {
+      "say": "Start small. Stay steady. Let the math work for you.",
+      "callout": "",
+      "visual": "extreme close-up of a ledger page with handwritten numbers, practical warm light"
+    },
+    {
+      "say": "Follow for the money rules nobody taught you.",
+      "callout": "",
+      "visual": "high angle of a dark office desk with a single lamp, empty chair, sodium light bleeding in"
+    }
+  ],
+  "caption": "She earned $18K a year. Died with $7M. Here’s how. #MoneyPsychology #Investing #QuietMoney #WealthBuilding #PersonalFinance",
+  "description": "Sylvia Bloom, a Brooklyn secretary, built a $7 million fortune by consistently investing small amounts in stocks over 50 years. The lesson: time and consistency outperform luck and high earnings.",
+  "hashtags": [
+    "#MoneyPsychology",
+    "#Investing",
+    "#QuietMoney",
+    "#WealthBuilding",
+    "#PersonalFinance"
+  ],
+  "first_comment": "What’s the smallest amount you’ve ever invested?",
+  "facts": [
+    {
+      "claim": "Sylvia Bloom was a Brooklyn secretary who earned roughly $18,000 a year and died with $7 million in 2017.",
+      "basis": "Documented in obituaries and financial news reports (e.g., The New York Times, Bloomberg)."
+    },
+    {
+      "claim": "Sylvia Bloom invested small amounts consistently into stocks over 50 years.",
+      "basis": "Reported by her family and financial advisors in interviews (e.g., CNBC, The Guardian)."
+    },
+    {
+      "claim": "Compounding returns over decades turn small, consistent investments into large sums.",
+      "basis": "Standard financial principle backed by historical stock market data (e.g., S&P 500 average annual returns of ~7-10%)."
+    }
+  ],
+  "source": "llm",
+  "pillar": "story",
+  "look": "",
+  "loop_map": {
+    "stakes": "A secretary's $18,000 salary",
+    "big_question": "How did she amass $7 million?",
+    "assume": "She won the lottery, married rich, or had a side hustle",
+    "reveal": "She consistently invested small amounts in stocks for 50 years",
+    "rehook_beats": [
+      6,
+      8
+    ],
+    "payoff_beat": 10
+  }
+}

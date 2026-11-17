@@ -1,0 +1,96 @@
+{
+  "title": "The 10-Second Daily Saving Habit Loop",
+  "hook_text": "DO THIS ONCE A DAY",
+  "beats": [
+    {
+      "say": "Do this once a day and watch what it adds up to.",
+      "callout": "",
+      "visual": "Extreme close up of a cold stainless steel card reader under fluorescent light at dusk"
+    },
+    {
+      "say": "You swipe your card for small daily buys without thinking twice.",
+      "callout": "STEP ONE",
+      "visual": "Low angle shot of a wet asphalt curb outside a dimly lit convenience store at night"
+    },
+    {
+      "say": "Most folks assume a $5 daily habit is just pocket change.",
+      "callout": "A VS B",
+      "visual": "Silhouette of a person walking past a towering concrete wall under a single sodium streetlamp"
+    },
+    {
+      "say": "That small $5 a day habit actually drains $1,825 every single year.",
+      "callout": "$1,825/YEAR",
+      "visual": "Extreme wide shot of an empty highway cutting through dark hills under blue hour sky"
+    },
+    {
+      "say": "Where does that cash actually go once it leaves your checking account?",
+      "callout": "",
+      "visual": "Close up of heavy rain drops hitting a cold metal utility box on a sidewalk"
+    },
+    {
+      "say": "You think it disappears into thin air, gone forever.",
+      "callout": "STEP TWO",
+      "visual": "High angle shot of a dark industrial underpass with wet concrete ground and no people"
+    },
+    {
+      "say": "Instead, it turns into missed compound growth over time.",
+      "callout": "",
+      "visual": "Single practical light casting long shadows across a barren concrete room interior"
+    },
+    {
+      "say": "What happens if you redirect that exact same daily amount into an investment account?",
+      "callout": "",
+      "visual": "Extreme close up of rusty industrial iron bolts bolted into heavy gray concrete"
+    },
+    {
+      "say": "You might guess it adds a few extra dollars to your weekend fund.",
+      "callout": "A VS B",
+      "visual": "Low angle view of a massive suspension bridge tower cutting through heavy fog"
+    },
+    {
+      "say": "At 8% a year, investing it monthly turns into $226,659 in 30 years.",
+      "callout": "$226,659",
+      "visual": "Sodium light glowing against a dark rain-slick alleyway with deep shadows"
+    },
+    {
+      "say": "That is the power of a tiny daily loop working quietly for your future.",
+      "callout": "STEP THREE",
+      "visual": "Extreme wide shot of cold open ocean water under a moonless dark horizon"
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "Silhouette of a lone person standing at the edge of a high concrete roof looking into fog"
+    }
+  ],
+  "caption": "A tiny daily habit can quietly build a massive future. #money #personalfinance #wealth #investing #savingmoney",
+  "description": "Learn how a simple $5 daily habit compounds into serious wealth over time using proven math and consistent action.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#wealth",
+    "#investing",
+    "#savingmoney"
+  ],
+  "first_comment": "What is one small daily purchase you could easily redirect starting today?",
+  "facts": [
+    {
+      "claim": "$5/day habit = $1,825/year; invested monthly at 8% for 30 years = $226,659",
+      "basis": "$5/day habit = $1,825/year; invested monthly at 8% for 30 years = $226,659"
+    }
+  ],
+  "source": "llm",
+  "pillar": "playbook",
+  "look": "",
+  "loop_map": {
+    "stakes": "You swipe your card for small daily buys without thinking twice.",
+    "big_question": "Where does that cash actually go once it leaves your checking account?",
+    "assume": "Most folks assume a $5 daily habit is just pocket change.",
+    "reveal": "That small $5 a day habit actually drains $1,825 every single year and grows massively when invested.",
+    "rehook_beats": [
+      5,
+      8
+    ],
+    "payoff_beat": 10
+  }
+}

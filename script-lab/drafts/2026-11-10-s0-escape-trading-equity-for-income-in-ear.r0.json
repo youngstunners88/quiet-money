@@ -1,0 +1,108 @@
+{
+  "title": "The Ownership Swap That Scales Wealth Exponentially",
+  "hook_text": "SWAP CASH FOR UPSIDE EQUITY",
+  "beats": [
+    {
+      "say": "The ownership swap that turns a standard employee into a silent partner starts with one choice.",
+      "callout": "",
+      "visual": "Extreme wide angle of a lone silhouette walking past massive concrete columns under a harsh sodium light."
+    },
+    {
+      "say": "Most skilled workers trade 40 hours a week for a fixed paycheck that's gone when they leave.",
+      "callout": "",
+      "visual": "Low angle shot of cold fluorescent lights illuminating a wet asphalt alley late at night."
+    },
+    {
+      "say": "So why do high earners take a pay cut just to own equity in early ventures?",
+      "callout": "CASH VS EQUITY",
+      "visual": "High angle shot looking down a rain-slick street framed by dark foggy skyscrapers at night."
+    },
+    {
+      "say": "You might assume cash today is safer, because equity doesn't pay if a venture fails.",
+      "callout": "",
+      "visual": "Single practical light on a dark wooden surface in an empty room with deep shadows around it."
+    },
+    {
+      "say": "The Bureau of Labor Statistics shows 1 in 5 businesses close in year one, and half fail by year five.",
+      "callout": "1 IN 5 FAIL",
+      "visual": "Rain drops sliding down dark tinted glass overlooking an empty wet highway at midnight."
+    },
+    {
+      "say": "Yet taking a small equity stake instead of cash transforms your work into an asset that compounds.",
+      "callout": "",
+      "visual": "Extreme close up of heavy iron gear teeth inside industrial clockwork lit by cold blue LED."
+    },
+    {
+      "say": "Step one: negotiate a lower cash rate on your work in exchange for equity or profit splits.",
+      "callout": "STEP ONE",
+      "visual": "Low angle view looking up at a brutalist concrete building roof edge against a moody blue hour sky."
+    },
+    {
+      "say": "Step two: invest those extra returns into index funds to build true passive wealth.",
+      "callout": "STEP TWO",
+      "visual": "Blue hour light shining over dark open water with heavy fog cutting across the distant skyline."
+    },
+    {
+      "say": "An extra $1,000 a month invested at 8% a year grows to $182,946 over 10 years.",
+      "callout": "$182,946 IN 10 YRS",
+      "visual": "Cold sodium light casting long sharp shadows across wet asphalt under a dark highway underpass."
+    },
+    {
+      "say": "To earn $2,000 a month of passive income, you need about $600,000 invested.",
+      "callout": "$600,000 TARGET",
+      "visual": "High angle shot looking down a circular concrete stairwell lit by a single bare bulb."
+    },
+    {
+      "say": "At $2,000 a month invested, reaching $600,000 takes 13.8 years, not 27.6 years.",
+      "callout": "13.8 YRS VS 27.6 YRS",
+      "visual": "Extreme wide shot of a tiny silhouette standing on a high rocky ridge line at dawn fog."
+    },
+    {
+      "say": "Follow Quiet Money for the money rules school never taught you, and make the ownership swap yours.",
+      "callout": "",
+      "visual": "Cinematic low angle shot of dark wet asphalt pavement reflecting a single distant sodium lamp."
+    }
+  ],
+  "caption": "Trading salary for equity turns active work into permanent income assets.\n\nLearn how small upside stakes cut decades off financial independence.",
+  "description": "Trading cash compensation for early equity allows skilled operators to scale wealth exponentially. By converting extra earnings into compounding assets, you compress the timeline to financial independence.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#equity",
+    "#wealthbuilding",
+    "#financialfreedom"
+  ],
+  "first_comment": "Would you trade 20% of your current cash income for equity in a growing business?",
+  "facts": [
+    {
+      "claim": "About 1 in 5 US businesses close in their first year and about half by year five.",
+      "basis": "US Bureau of Labor Statistics, Business Employment Dynamics"
+    },
+    {
+      "claim": "An extra $1,000/month invested at 8% for 10 years equals $182,946.",
+      "basis": "Money Fact Sheet calculation"
+    },
+    {
+      "claim": "$2,000/month passive income needs about $600,000 invested under the 4% rule guideline.",
+      "basis": "1998 Trinity study 4% rule benchmark"
+    },
+    {
+      "claim": "Investing $500/month at 8% reaches $600,000 in 27.6 years, while $2,000/month reaches it in 13.8 years.",
+      "basis": "Money Fact Sheet calculation"
+    }
+  ],
+  "source": "llm",
+  "pillar": "escape",
+  "look": "",
+  "loop_map": {
+    "stakes": "A standard paycheck stops paying the second you stop working.",
+    "big_question": "Why do high earners take a pay cut for early-stage equity?",
+    "assume": "Cash today is always safer than equity in a new business.",
+    "reveal": "1 in 5 businesses fail in year one, but equity scales upside into permanent assets while cash stays capped.",
+    "rehook_beats": [
+      3,
+      6
+    ],
+    "payoff_beat": 10
+  }
+}

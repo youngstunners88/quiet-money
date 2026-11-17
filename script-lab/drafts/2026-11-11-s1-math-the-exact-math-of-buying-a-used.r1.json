@@ -1,0 +1,100 @@
+{
+  "title": "Why Paying Cash for a Car Costs You More",
+  "hook_text": "CASH CARS COST YOU MORE",
+  "beats": [
+    {
+      "say": "You think paying cash for a car saves you money, but the actual math on a $25,000 purchase proves you might be richer keeping the cash.",
+      "callout": "",
+      "visual": "Extreme close-up of car keys resting on dark wet asphalt under a single sodium light."
+    },
+    {
+      "say": "It feels incredible to own a vehicle outright with zero debt hanging over your head.",
+      "callout": "CASH VS LOAN",
+      "visual": "Low angle of a sleek sedan parked alone in an empty multi-story concrete parking garage at night."
+    },
+    {
+      "say": "Most people assume avoiding interest always wins.",
+      "callout": "ASSUME VS FACT",
+      "visual": "Silhouette of a person walking away down a long, fog-cut highway under cold fluorescent overheads."
+    },
+    {
+      "say": "So why do math-driven buyers choose a 5% loan instead?",
+      "callout": "",
+      "visual": "High angle shot of wet traffic tails cutting red lines through a dark city street."
+    },
+    {
+      "say": "A 5-year, $25,000 loan at 5% interest costs about $3,300 over the term.",
+      "callout": "STEP ONE",
+      "visual": "Close-up of a hand tapping a dark dashboard with only the glowing speedometer visible."
+    },
+    {
+      "say": "Where does that leave the actual cash you started with?",
+      "callout": "",
+      "visual": "Extreme wide shot of a solitary bridge tower fading into heavy gray fog at dawn."
+    },
+    {
+      "say": "If you keep that $25,000 invested at 8% a year, it grows much faster than the loan eats.",
+      "callout": "STEP TWO",
+      "visual": "Macro shot of cold morning condensation rolling down a tinted car window."
+    },
+    {
+      "say": "At 8% a year, that lump sum compounds to over $36,000 in five years.",
+      "callout": "$36,000 TOTAL",
+      "visual": "Sodium light reflecting off the wet hood of a parked car in an empty alleyway."
+    },
+    {
+      "say": "Subtract the loan cost and the interest, and you are roughly $8,000 ahead.",
+      "callout": "+$8,000 AHEAD",
+      "visual": "Silhouette of a single commuter standing at the edge of an empty train platform at blue hour."
+    },
+    {
+      "say": "As long as your monthly cash flow covers the payment, your lump sum out-earns the debt.",
+      "callout": "",
+      "visual": "Low angle shot looking up past concrete bridge pillars into a dark, overcast sky."
+    },
+    {
+      "say": "That is the quiet math behind modern leverage.",
+      "callout": "RULE OF 72",
+      "visual": "Extreme close-up of rubber tires gripping wet asphalt under cold sodium lights."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "Fade to a dark, minimalist slate with a single sharp practical light reflecting off wet pavement."
+    }
+  ],
+  "caption": "The hidden math of buying a car with cash versus taking a loan. #money #personalfinance #wealth #carbuying #smartmoney",
+  "description": "Analyzing the exact math of a $25,000 car purchase compares paying cash versus taking a 5% loan while keeping your money invested at 8%.",
+  "hashtags": [
+    "#money",
+    "#personalfinance",
+    "#wealth",
+    "#carbuying",
+    "#smartmoney"
+  ],
+  "first_comment": "Would you rather pay cash for peace of mind or keep it invested? Drop your thoughts below.",
+  "facts": [
+    {
+      "claim": "5-year $25,000 loan at 5% costs about $3,300 in interest",
+      "basis": "Standard amortization calculation at 5% fixed rate over 60 months"
+    },
+    {
+      "claim": "$25,000 invested at 8% per year grows over 5 years",
+      "basis": "Compound interest formula using the fact sheet baseline rate of 8% per year"
+    }
+  ],
+  "source": "llm",
+  "pillar": "math",
+  "look": "",
+  "loop_map": {
+    "stakes": "You hand over $25,000 in hard-earned cash for a used car.",
+    "big_question": "How does financing a car leave you thousands richer than paying cash?",
+    "assume": "Paying cash completely avoids wasted interest.",
+    "reveal": "Investing the cash at 8% out-earns the loan's 5% interest.",
+    "rehook_beats": [
+      6,
+      9
+    ],
+    "payoff_beat": 9
+  }
+}

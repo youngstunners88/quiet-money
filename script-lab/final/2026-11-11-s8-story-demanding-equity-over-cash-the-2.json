@@ -1,0 +1,95 @@
+{
+  "title": "The $200 Million Wall Painting Deal",
+  "hook_text": "$60,000 CASH OR UNKNOWN STARTUP STOCK",
+  "beats": [
+    {
+      "say": "In 2005, an artist was offered $60,000 cash or company stock for painting startup walls, and chose the stock.",
+      "callout": "",
+      "visual": "Extreme low angle shot of a massive concrete building edge cutting against a stormy blue hour sky."
+    },
+    {
+      "say": "That single decision on a paint job set off a chain reaction worth hundreds of millions.",
+      "callout": "CASH VS STOCK",
+      "visual": "Extreme close up of rough grey concrete wet with rain under a single cold sodium light."
+    },
+    {
+      "say": "Most people take the immediate cash payout because it feels safe, tangible, and secure right now.",
+      "callout": "",
+      "visual": "Silhouette of a lone person walking away down a dark, fog-cut highway at night."
+    },
+    {
+      "say": "You think cash in hand is always the smart play, but ownership beats labor every single time.",
+      "callout": "LABOR VS OWNER",
+      "visual": "High angle shot of empty wet asphalt reflecting harsh cold fluorescent parking lot lights."
+    },
+    {
+      "say": "The startup was Facebook, and the artist was David Choe, hired to paint the walls of their first office.",
+      "callout": "$60,000 VS $200,000,000",
+      "visual": "Extreme wide shot of a massive dark industrial bridge underpass with water below."
+    },
+    {
+      "say": "Why would anyone gamble $60,000 guaranteed on a risky internet project nobody knew yet?",
+      "callout": "THE RISK",
+      "visual": "Low angle shot of a towering steel structure disappearing into thick grey fog."
+    },
+    {
+      "say": "He bet on the leverage of equity over a flat hourly or project rate.",
+      "callout": "STEP ONE",
+      "visual": "Close up of rough weathered timber beams under a single practical overhead light."
+    },
+    {
+      "say": "That gamble turned into stock worth about $200 million when the company went public years later.",
+      "callout": "STEP TWO",
+      "visual": "Extreme close up of dark open water rippling under cold sodium street lamps."
+    },
+    {
+      "say": "Choosing equity over cash traded immediate spending power for a massive future ownership stake.",
+      "callout": "ASSET VS LIABILITY",
+      "visual": "Silhouette of a single figure standing on a vast concrete ridge line at dusk."
+    },
+    {
+      "say": "That's how real wealth gets built from a single ordinary workday.",
+      "callout": "",
+      "visual": "Wide shot of a dark empty city street cutting through tall towers in blue hour."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "Extreme low angle looking up a towering concrete pillar into a heavy rainstorm."
+    }
+  ],
+  "caption": "Choosing ownership over a paycheck built a $200 million fortune from a single paint job. #money #wealth #investing #finance #history",
+  "description": "In 2005, artist David Choe took stock instead of cash for painting Facebook's first office. That single choice created a $200 million fortune through equity.",
+  "hashtags": [
+    "#money",
+    "#wealth",
+    "#investing",
+    "#finance",
+    "#history"
+  ],
+  "first_comment": "Would you take the $60,000 cash or gamble on the stock?",
+  "facts": [
+    {
+      "claim": "David Choe was offered stock or $60,000 for painting Facebook's office in 2005",
+      "basis": "Documented art and tech history"
+    },
+    {
+      "claim": "His Facebook stock stake was later valued near $200 million",
+      "basis": "Publicly reported financial estimates following the IPO"
+    }
+  ],
+  "source": "llm",
+  "pillar": "story",
+  "look": "",
+  "loop_map": {
+    "stakes": "An artist choosing between $60,000 cash and startup stock for a routine painting job.",
+    "big_question": "How did a simple office painting job turn into a $200 million fortune?",
+    "assume": "Most people assume taking immediate cash is always the safer and smarter choice.",
+    "reveal": "Choosing equity in an unproven startup created massive generational wealth.",
+    "rehook_beats": [
+      6,
+      9
+    ],
+    "payoff_beat": 8
+  }
+}

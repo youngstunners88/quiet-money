@@ -1,0 +1,105 @@
+{
+  "title": "How to Lower Your Medical Bill Using Charity Care Rules",
+  "hook_text": "YOUR HOSPITAL BILL IS NEGOTIABLE",
+  "beats": [
+    {
+      "say": "Federal tax rules mandate that non-profit hospitals lower or forgive medical bills based on income, but only if you ask for the policy.",
+      "callout": "",
+      "visual": "Extreme close-up of a printed paper bill under harsh fluorescent light in an empty waiting room."
+    },
+    {
+      "say": "That single piece of paper arrives in your mailbox demanding thousands you do not have in your checking account.",
+      "callout": "$5,000",
+      "visual": "Low angle shot of a solitary mailbox post against a cold winter dusk sky."
+    },
+    {
+      "say": "How do you stop that debt from hitting your credit report?",
+      "callout": "BIG QUESTION",
+      "visual": "Silhouette of a person holding a thick envelope against a towering hospital glass facade at blue hour."
+    },
+    {
+      "say": "Most people assume the total listed on the statement is a fixed price you must pay in full.",
+      "callout": "FIXED VS FLEX",
+      "visual": "Extreme wide shot of a massive empty concrete parking structure under sodium vapor lamps."
+    },
+    {
+      "say": "That is false. Non-profit hospitals are legally required by Section 501(r) to offer financial assistance policies.",
+      "callout": "SECTION 501(r)",
+      "visual": "Close-up of a fountain pen signing a formal document on a dark wooden table."
+    },
+    {
+      "say": "Step one. Call the billing department and request an itemized bill with all billing codes listed.",
+      "callout": "STEP ONE",
+      "visual": "Extreme close-up of a landline phone resting on a scarred wooden desk under a single practical light."
+    },
+    {
+      "say": "Step two. Ask specifically for their written financial assistance policy application.",
+      "callout": "STEP TWO",
+      "visual": "High angle shot of hands shuffling through crisp white paperwork on a cold steel surface."
+    },
+    {
+      "say": "Step three. Submit your income proof to match their charity care thresholds before accounts go to collections.",
+      "callout": "STEP THREE",
+      "visual": "Cinematic wide shot of an empty highway cutting through dark hills under a heavy overcast night."
+    },
+    {
+      "say": "Why do hospitals rarely advertise these forgiveness rules to patients?",
+      "callout": "",
+      "visual": "Extreme close-up of heavy glass revolving doors spinning slowly in an empty lobby."
+    },
+    {
+      "say": "Because full payments fund their operating margins, leaving patients to absorb inflated baseline charges.",
+      "callout": "",
+      "visual": "Silhouette of a single pedestrian walking past towering concrete pillars in the rain."
+    },
+    {
+      "say": "Asking for the policy shifts the leverage back to your household budget.",
+      "callout": "",
+      "visual": "Low angle shot of a bridge support vanishing into thick river fog at dawn."
+    },
+    {
+      "say": "Review the rules, submit the paperwork, and cut that balance before it damages your credit.",
+      "callout": "",
+      "visual": "Extreme wide shot of a solitary figure standing at the edge of a vast concrete roof at blue hour."
+    },
+    {
+      "say": "Follow for the money rules school never taught you.",
+      "callout": "",
+      "visual": "Cinematic shot of wet asphalt reflecting cold streetlights on an empty downtown street."
+    }
+  ],
+  "caption": "Federal tax rules mandate that non-profit hospitals lower or forgive medical bills based on income, but only if you ask for the policy. #personalfinance #debtrelief #moneytips #financialfreedom #hospitalbills",
+  "description": "Learn how to use non-profit hospital charity care policies and Section 501(r) regulations to reduce or eliminate your out-of-pocket medical debt.",
+  "hashtags": [
+    "#personalfinance",
+    "#debtrelief",
+    "#moneytips",
+    "#financialfreedom",
+    "#hospitalbills"
+  ],
+  "first_comment": "Have you ever asked a hospital for their financial assistance policy?",
+  "facts": [
+    {
+      "claim": "Federal tax rules mandate that non-profit hospitals have a Financial Assistance Policy",
+      "basis": "IRS Section 501(r) requires 501(c)(3) hospital organizations to establish written financial assistance and emergency medical care policies."
+    },
+    {
+      "claim": "Itemized bills and financial assistance applications help reduce medical debt",
+      "basis": "Standard consumer advocacy practice for medical debt negotiation and charity care qualification."
+    }
+  ],
+  "source": "llm",
+  "pillar": "playbook",
+  "look": "",
+  "loop_map": {
+    "stakes": "A massive medical bill arriving in the mail demanding payment.",
+    "big_question": "How do you stop medical debt from hitting your credit report?",
+    "assume": "Most people assume the total listed on the statement is a fixed price.",
+    "reveal": "Non-profit hospitals are legally required to offer financial assistance.",
+    "rehook_beats": [
+      9,
+      10
+    ],
+    "payoff_beat": 12
+  }
+}
