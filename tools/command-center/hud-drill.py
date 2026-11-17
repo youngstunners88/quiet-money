@@ -22,7 +22,9 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
 from faceless import cmdcache, events, instruments, ledger, missions, serve, team  # noqa: E402
 
-TOKEN = "drill-token-not-a-secret-0001"
+import secrets  # noqa: E402
+
+TOKEN = secrets.token_urlsafe(18)                            # made for this run only and printed with the address; it guards a temp folder
 
 
 def ago(minutes: float) -> str:

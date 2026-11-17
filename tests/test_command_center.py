@@ -603,6 +603,7 @@ def test_the_board_is_derived_from_real_state_and_owner_work_is_never_dispatched
     doc["jobs"].update(ranToday=False, passedToday=0, failed=[], held=[{"id": "2099-01-01-s1-x", "day": "2099-01-01", "title": "T", "step": "packaged"}])
     doc["outbound"] = {"blockedOnOwner": 3, "followUpsDue": 0}
     doc["phone"] = None
+    doc["serviceDesk"] = doc["x"] = doc["prospects"] = None       # the day's other desks come from the checkout's own state; this test is about the batch
     b = missions.board(doc)
     kinds = {m["id"].split("-")[0]: m for m in b["todo"]}
     assert kinds["send"]["route"]["agent"] == "owner" and kinds["daily"]["route"] == {**kinds["daily"]["route"], "agent": "engine", "cost": "0 tokens"}
