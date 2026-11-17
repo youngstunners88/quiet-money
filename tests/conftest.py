@@ -7,7 +7,7 @@ import os
 import pytest
 import requests.adapters
 
-from faceless import cmdcache, config, events, instruments, ledger, missions, offer, team
+from faceless import cmdcache, config, events, instruments, variety, ledger, missions, offer, team
 from faceless.providers import clef
 
 KEY_MARKERS = ("API_KEY", "_TOKEN", "API_TOKEN", "SECRET", "ACCOUNT_ID", "COMPOSIO_API", "FIRECRAWL", "ELEVENLABS", "MUAPI", "GEMINI",
@@ -33,6 +33,8 @@ def _hermetic_environment(monkeypatch, tmp_path_factory):
     monkeypatch.setattr(instruments, "KEYHEALTH", scratch / "keyhealth.json")
     monkeypatch.setattr(instruments, "SLOW", scratch / "instruments-slow.json")
     monkeypatch.setattr(cmdcache, "PATH", scratch / "cmd-cache.json")
+    monkeypatch.setattr(variety, "LOOKS", scratch / "looks.jsonl")             # nor the record of which look each video got
+    monkeypatch.setattr(variety, "LOOKS_LOCK", scratch / "looks.lock")
     monkeypatch.setattr(cmdcache, "_MEM", {})
     monkeypatch.setattr(instruments, "KEY_FILES", [scratch / "studio.env"])
     monkeypatch.setattr(instruments, "CLAUDE_PROJECTS", scratch / "claude-projects")

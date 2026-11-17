@@ -16,10 +16,13 @@ SUFFIX = ("vertical 9:16 composition, subject in the center third, cinematic, hi
           "no text, no letters, no numbers, no watermark, no logo, any printed surface out of focus")
 
 
-def build_prompt(visual: str, style: str, look: str = "") -> str:
+def build_prompt(visual: str, style: str, look: str = "", frame: dict | None = None) -> str:
+    """`frame` is the video's picked look (faceless/variety.py): its composition family replaces the one fixed framing every still used to get."""
+    from faceless import variety
+    comp = variety.COMPOSITIONS.get((frame or {}).get("composition") or "")
     if look:     # a script's own look replaces the pillar style and the cinematic suffix
-        return f"{visual.rstrip('. ')}. {look}, vertical 9:16 composition, no text, no letters, no numbers, no watermark"
-    return f"{visual.rstrip('. ')}. {style}, {SUFFIX}"
+        return f"{visual.rstrip('. ')}. {look}, {comp or 'vertical 9:16 composition'}, no text, no letters, no numbers, no watermark"
+    return f"{visual.rstrip('. ')}. {style}, {variety.still_suffix(frame) if comp else SUFFIX}"
 
 
 def _hook_need(job) -> float | None:
@@ -80,6 +83,9 @@ def run(job, script: dict) -> list[dict]:
 
     style = cards.style_for(job.id, job.pillar)
     job.artifacts["style"] = style                      # recorded so retention can be compared per look
+    from faceless import variety
+    frame = variety.pick_look(job.id, job.pillar)       # composition and camera for this video, different from the last one
+    job.artifacts["look"] = frame
     planned = cards.pick(script, None, job.pillar, style)     # numeric beats of card pillars (every beat after the hook in the ledger style): no image needed at all
     hook_clip = _claim_hook_clip(job)                   # an owner-made Flow clip replaces the hook still
 
@@ -93,13 +99,13 @@ def run(job, script: dict) -> list[dict]:
         if made.is_file():
             return {"beat": i, "provider": "flow", "path": str(made), "prompt": ""}
         seed = int(hashlib.sha1(f"{job.id}:{i}".encode(), usedforsecurity=False).hexdigest()[:8], 16) % 2_000_000_000
-        prompt = build_prompt(beat["visual"] or beat["say"], pillar.style, script.get("look", ""))
+        prompt = build_prompt(beat["visual"] or beat["say"], pillar.style, script.get("look", ""), frame)
         provider, path = images.generate(prompt, seed=seed, hero=(i == 0), job=job.id)
         row = {"beat": i, "provider": provider, "path": path, "prompt": prompt}
         if provider != "procedural" and (res := qa.check_image(path, beat["say"], job=job.id)):
             row["qa"] = res
             if res["flags"] and i == 0:        # the hook keeps a still: one cleaner retry, keep whichever looks better
-                clean = build_prompt((beat["visual"] or beat["say"]) + ", only objects and places, no people, no faces, no text, no numbers", pillar.style, script.get("look", ""))
+                clean = build_prompt((beat["visual"] or beat["say"]) + ", only objects and places, no people, no faces, no text, no numbers", pillar.style, script.get("look", ""), frame)
                 provider2, path2 = images.generate(clean, seed=seed + 101, hero=True, job=job.id)
                 res2 = qa.check_image(path2, beat["say"], job=job.id) if provider2 != "procedural" else None
                 if res2 is not None and len(res2["flags"]) < len(res["flags"]):

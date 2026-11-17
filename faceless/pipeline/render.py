@@ -52,9 +52,15 @@ def _ease(p: float) -> float:
     return 0.5 - 0.5 * math.cos(math.pi * p)
 
 
-def plan_shots(beats: list[tuple[float, float]], images: list[dict], fps: int, max_shot: float, seed: str) -> list[dict]:
+def plan_shots(beats: list[tuple[float, float]], images: list[dict], fps: int, max_shot: float, seed: str, camera: str | None = None) -> list[dict]:
+    """`camera` is the video's camera family (faceless/variety.py CAMERAS): its own hook move and its own moves. Without one (older jobs),
+    the original cycle over every move with the same push-in hook."""
+    from faceless import variety
     rnd = random.Random(seed)
-    cycle = list(MOTIONS)
+    fam = variety.CAMERAS.get(camera or "")
+    moves = dict(enumerate(fam["moves"])) if fam else MOTIONS
+    hook = fam["hook"] if fam else HOOK
+    cycle = list(moves)
     rnd.shuffle(cycle)
     shots, mi = [], 0
     for i, ((s, e), img) in enumerate(zip(beats, images)):
@@ -64,12 +70,12 @@ def plan_shots(beats: list[tuple[float, float]], images: list[dict], fps: int, m
             spans = [(s, mid), (mid, e)]
         for k, (a, b) in enumerate(spans):
             if i == 0 and k == 0:
-                motion = HOOK
+                motion = hook
             elif k == 1:  # punch-in: tighter frame on a different focal point of the same image
                 fx, fy = rnd.uniform(0.3, 0.7), rnd.uniform(0.3, 0.6)
                 motion = (1.30, 1.38, (fx, fy), (fx + rnd.uniform(-0.08, 0.08), fy + rnd.uniform(-0.05, 0.05)))
             else:
-                motion = MOTIONS[cycle[mi % len(cycle)]]
+                motion = moves[cycle[mi % len(cycle)]]
                 mi += 1
             f0, f1 = round(a * fps), round(b * fps)
             if f1 > f0:
@@ -243,7 +249,8 @@ def run(job, script: dict, voice: dict, imgs: list[dict]) -> dict:
             write_atomic(job.dir / "images.json", json.dumps(imgs, indent=1))
         except Exception as e:   # noqa: BLE001
             events.emit("SKETCH_FAILED", job=job.id, error=f"{type(e).__name__}: {e}"[:200], stage="review")
-    shots = plan_shots(voice["beats"], imgs, fps, cfg["shot_max_seconds"], job.id)
+    look_pick = job.artifacts.get("look") or {}
+    shots = plan_shots(voice["beats"], imgs, fps, cfg["shot_max_seconds"], job.id, look_pick.get("camera"))
     expected = round(total * fps)
     have = sum(s["frames"] for s in shots)
     if have != expected and shots:          # absorb rounding so video length == audio length
@@ -341,7 +348,8 @@ def run(job, script: dict, voice: dict, imgs: list[dict]) -> dict:
             f.unlink(missing_ok=True)
     info = {"video": str(out), "cover": str(cover), "shots": len(shots), "captioned_words": covered,
             "avg_shot": round(total / max(1, len(shots)), 2),
-            "cards": len(card_specs) if reel else 0, "clips": len(clip_tasks), "music": bed}
+            "cards": len(card_specs) if reel else 0, "clips": len(clip_tasks), "music": bed,
+            "look": {**look_pick, "grade": pillar.grade} if look_pick else None}
     write_atomic(job.dir / "render.json", json.dumps(info, indent=1))
     events.emit("RENDERED", job=job.id, **info)
     return info
