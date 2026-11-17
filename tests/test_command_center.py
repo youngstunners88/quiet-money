@@ -83,11 +83,13 @@ def test_building_the_overview_writes_nothing_but_its_own_file(desk, tmp_path, m
 
 def test_the_page_is_self_contained_small_and_not_indexable(desk, tmp_path):
     r = dashboard.write(overview.build(), out=tmp_path / "cc")
-    html = (tmp_path / "cc" / "index.html").read_text()
-    assert r["bytes"] <= 150 * 1024
-    assert 'name="robots" content="noindex' in html
-    for needle in ("https://cdn", "googleapis", "<script src=", "<link rel=\"stylesheet\""):
-        assert needle not in html
+    assert r["bytes"] <= 150 * 1024                                              # the larger of the two pages, GSAP inlined in the display
+    for page in ("index.html", "desk.html"):
+        html = (tmp_path / "cc" / page).read_text()
+        assert 'name="robots" content="noindex' in html
+        for needle in ("https://cdn", "googleapis", "<script src=", "<link rel=\"stylesheet\""):
+            assert needle not in html, (page, needle)
+    assert json.loads((tmp_path / "cc" / "instruments.json").read_text())["crew"]
     assert json.loads((tmp_path / "cc" / "manifest.webmanifest").read_text())["display"] == "standalone"
 
 

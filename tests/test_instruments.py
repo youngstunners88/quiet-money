@@ -528,3 +528,59 @@ def test_you_items_carry_only_safe_buttons(crew):
     assert do["key"]["name"] == "keys_probe" and do["dormant"]["name"] == "crew_reap"
     assert do["send"]["name"] == "mission" and do["send"]["confirm"] is True and do["send"]["args"]["mission"].startswith("ask-")
     assert {y["do"]["name"] for y in snap["you"] if y.get("do")} <= {"keys_probe", "crew_reap", "mission"}
+
+
+def test_a_run_that_stopped_without_a_report_does_not_hold_the_agent_back_forever(crew):
+    _old_beat("opencode", "running", 50)
+    assert _rows()["opencode"]["lamp"] == "dormant"                          # silent past the limit, recently: red, and held back
+    team.BEATS.unlink()
+    _old_beat("opencode", "running", 400, "9/10 posted")
+    o = _rows()["opencode"]
+    assert o["lamp"] == "idle" and "never reported done" in o["lampReason"] and "opencode" not in instruments.fitness(missions.crew(DOC["agents"]))
+    _old_claim("phone-lane", "opencode", 400)
+    assert _rows()["opencode"]["lamp"] == "dormant"                          # holding a mission, it stays red until the mission is taken back
+
+
+def test_money_in_comes_from_receipts_and_zero_is_said_as_zero(crew, tmp_path, monkeypatch):
+    from faceless import receipts
+    monkeypatch.setattr(receipts, "RECEIPTS", tmp_path / "receipts.jsonl")
+    monkeypatch.setattr(receipts, "SALES", tmp_path / "sales.jsonl")
+    m = instruments.build(slow=None)["money"]
+    assert (m["usd"], m["receipts"], m["source"], m["note"]) == (0, 0, "read", "no receipt recorded yet")
+    now = datetime.now(timezone.utc)
+    prev = (now.replace(day=1) - timedelta(days=1)).replace(day=1)
+    rows = [{"day": now.strftime("%Y-%m-%d"), "rail": "gumroad", "gross": 30.0, "fee": 3.0, "ref": "a"},
+            {"day": now.strftime("%Y-%m-%d"), "rail": "fiverr", "gross": 10.0, "fee": 2.0, "ref": "b"},
+            {"day": prev.strftime("%Y-%m-%d"), "rail": "gumroad", "gross": 20.0, "fee": 2.0, "ref": "c"}]
+    receipts.RECEIPTS.write_text("".join(json.dumps(r) + "\n" for r in rows))
+    m = instruments.build(slow=None)["money"]
+    assert (m["usd"], m["byRail"], m["prevSameDays"], m["delta"], m["allTime"]) == (40.0, {"gumroad": 30.0, "fiverr": 10.0}, 20.0, 1.0, 60.0)
+
+
+def test_videos_shipped_counts_posts_the_phone_lane_recorded(crew, monkeypatch):
+    from faceless import phone
+    now = datetime.now(timezone.utc)
+    at = lambda h: (now - timedelta(hours=h)).isoformat()   # noqa: E731
+    monkeypatch.setattr(phone, "receipts", lambda: [{"kind": "tiktok", "result": "posted", "at": at(0.5)}, {"kind": "tiktok", "result": "posted", "at": at(30)},
+                                                    {"kind": "tiktok", "result": "held", "at": at(1)}, {"kind": "youtube", "result": "posted", "at": at(1)}])
+    sh = instruments.build(slow={"jobs": {"passedToday": 4, "readyToPost": 9}})["shipped"]
+    assert (sh["today"], sh["week"], sh["readyToPost"], sh["source"], sh["platform"]) == (1, 2, 9, "read", "TikTok") and sh["target"]
+
+
+def test_the_next_action_is_the_most_urgent_item():
+    items = [{"id": "a", "level": "info", "do": {"name": "mission"}}, {"id": "b", "level": "warn"}, {"id": "c", "level": "warn", "do": {"name": "keys_probe"}},
+             {"id": "d", "level": "stop"}]
+    assert instruments.next_action(items)["id"] == "d" and instruments.next_action(items[:3])["id"] == "c" and instruments.next_action([]) is None
+
+
+def test_the_display_inlines_only_the_hash_checked_gsap(monkeypatch, tmp_path):
+    from faceless import hud
+    html = hud.render()
+    assert "GSAP 3.14.2" in html and "<script src=" not in html and "cdn.jsdelivr" not in html.split("GSAP 3.14.2")[0]
+    assert html.index('id="money"') < html.index('id="shipped"') < html.index('id="next"') < html.index('id="you"')     # the 3-second read comes first
+    for needle in ("prefers-reduced-motion", "function moving()", "body.still", "HOLD_MS=900", "ai-checkout.tsx", "ai-tool-approval.tsx"):
+        assert needle in html, needle
+    bad = tmp_path / "gsap.min.js"
+    bad.write_bytes(hud.VENDOR.read_bytes() + b"/* changed */")
+    monkeypatch.setattr(hud, "VENDOR", bad)
+    assert hud.gsap_source() == "" and "GSAP 3.14.2" not in hud.render()      # a copy that fails its hash is not run; the page just does not animate

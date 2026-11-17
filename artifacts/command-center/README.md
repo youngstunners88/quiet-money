@@ -7,6 +7,40 @@ It is a control surface, not a second system. Every number is read from the file
 `state/outbound.jsonl`, `state/receipts.jsonl`, `state/ledger.jsonl`, `studio.toml`, `herdr api snapshot`, agent config files). Every
 button runs one existing `python -m faceless ...` or `herdr ...` command. There is no database and no background service of its own.
 
+## Command center v2 (2026-11-17)
+
+**What the owner sees in 3 seconds**, top of the page, phone and desktop:
+1. **Money in, this month**: gross from receipts (`state/receipts.jsonl`, `analytics/sales.jsonl`), the change against the same days of last
+   month, and a breakdown bar by rail. It is `read`; with no receipt it says "$0.00, no receipt recorded yet" and never invents a figure.
+2. **Videos shipped, today**: TikTok posts the phone lane recorded today against `[production] videos_per_day`, the last 7 days against 7×
+   that, how many passed videos wait to post, when the last post was.
+3. **Next action**: the single most urgent thing waiting for a person (stop, then warn, then info; a button breaks ties), with its button
+   when the page may act, else a link to the desk.
+
+**Then the rest**, in this order on a phone: system state (Autopilot, PAUSE, server, clocks), everything else that waits for you, the core
+dials (spend, load, queue), the crew ring, limits and keys, the feed. On a desktop the title and system state share the top row.
+
+**Motion.** GSAP 3.14.2 is the repo's own copy (`faceless/vendor/gsap-3.14.2.min.js`, checked against the hash pinned in
+`faceless/pipeline/cards.py`, the same file the cards lane renders with) and is inlined into the page, so the page stays one file that makes
+no request for it and works offline from the phone's saved copy. A copy that fails the hash is not run; the page then simply does not
+animate. Money and video figures count up; when money in rises, the figure has one hero moment (a gold pulse and a burst of coins); panels
+reveal in a stagger on the first live load. Nothing moves under `prefers-reduced-motion`, on the saved copy shown at start-up, or after the
+server stops answering: an amber banner says how old the data is and every transition is switched off until a live answer arrives.
+
+**KokonutUI patterns** (MIT, `github.com/kokonut-labs/kokonutui`, read at commit `655ec61`; hand-ported to this page's CSS variables and
+plain DOM; no React, no Tailwind, no npm package):
+- `components/kokonutui/metric-card.tsx`: the money card's delta badge against the previous period with its caption, the part-to-whole
+  breakdown bar with a per-segment list and share, and the screen-reader copy of the exact value beside the animated one.
+- `components/kokonutui/ai-checkout.tsx`: the button's state machine, review → paying → paid → receipt, became review → working → done (or
+  not done) → the result folded into a receipt line under the button.
+- `components/kokonutui/ai-tool-approval.tsx`: `HoldToAllow`, press and hold 900 ms to confirm, with a fill bar; a short press cancels.
+  Used for the "send a held mission" button instead of click-twice, and by keyboard (hold Enter or Space).
+
+No new action: the page's buttons still post only `keys_probe`, `crew_reap` and `mission` through `POST /action`.
+
+`python -m faceless dashboard` now writes `site/command-center/index.html` (this display), `desk.html` (the action desk with the overview
+embedded), `instruments.json`, `overview.json`, the manifest, the icons and the service worker.
+
 ## The head-up display (the front page)
 
 `/` is a read-only instrument panel (`faceless/hud.py`) fed by `GET /instruments.json` (`faceless/instruments.py`) every five seconds.

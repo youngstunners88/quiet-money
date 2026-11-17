@@ -39,7 +39,8 @@ def ensure_gsap(root: Path) -> None:
     """Put a copy of GSAP whose hash we checked into the project. HyperFrames downloads and inlines a CDN script itself, so a browser-side `integrity`
     attribute is never evaluated and would only look like protection; the check has to be ours, on the bytes the renderer will run."""
     cache = Paths.cache / "gsap-3.14.2.min.js"
-    data = cache.read_bytes() if cache.exists() else b""
+    vendored = Path(__file__).resolve().parents[1] / "vendor" / "gsap-3.14.2.min.js"     # the repo's own copy: no CDN on a fresh checkout
+    data = vendored.read_bytes() if vendored.exists() else cache.read_bytes() if cache.exists() else b""
     if gsap_digest(data) != GSAP_SRI:
         from faceless.providers import http
         data = http().get(GSAP, timeout=30).content

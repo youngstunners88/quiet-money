@@ -20,7 +20,7 @@ from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
-from faceless import cmdcache, events, instruments, ledger, missions, serve, team  # noqa: E402
+from faceless import cmdcache, events, instruments, ledger, missions, phone, receipts, serve, team  # noqa: E402
 
 import secrets  # noqa: E402
 
@@ -120,7 +120,7 @@ limit = "unknown"
     # Claude Code: the provider's own readings, 5-hour rising fast, 7-day past the hold line
     (root / "claude-limits.json").write_text(json.dumps({"t": now - 60, "windows": {
         "five_hour": {"used_percentage": 72.0, "resets_at": now + 2.2 * 3600, "samples": [[now - 2400, 55.0], [now - 60, 72.0]]},
-        "seven_day": {"used_percentage": 93.0, "resets_at": now + 3.4 * 86400, "samples": [[now - 3000, 92.0], [now - 60, 93.0]]}}}))
+        "seven_day": {"used_percentage": 85.0, "resets_at": now + 3.4 * 86400, "samples": [[now - 3000, 84.0], [now - 60, 85.0]]}}}))
     ledger.spend("openrouter", "tokens", 52000, usd=1.31, model="vendor/paid-model", tokens_in=41000, tokens_out=11000)
     ledger.spend("openrouter", "tokens", 9000, usd=0.0, model="vendor/free-model:free", tokens_in=7000, tokens_out=2000)
     ledger.spend("edge", "chars", 6100)
@@ -155,8 +155,30 @@ limit = "unknown"
         d["jobs"] = {"passedToday": 4, "heldToday": 2, "postedToday": 3, "madeToday": 7}
         missions.log_skips(d["missions"])
         return d
+    # money in and posts: drill files only. Append a line to receipts.jsonl while the page is open to see the money-in moment.
+    receipts.RECEIPTS, receipts.SALES = root / "receipts.jsonl", root / "no-sales.jsonl"
+    today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    receipts.RECEIPTS.write_text(json.dumps({"day": today, "rail": "gumroad", "gross": 17.0, "fee": 1.7, "ref": "drill-1"}) + "\n"
+                                 + json.dumps({"day": today, "rail": "fiverr", "gross": 40.0, "fee": 8.0, "ref": "drill-2"}) + "\n")
+    posts = [{"kind": "tiktok", "result": "posted", "at": ago(m).replace("Z", "+00:00")} for m in (30, 200, 600, 1500, 3000)]
+    phone.receipts = lambda: posts
+
+    class Desk:                                              # the drill's buttons run nothing: they answer like the desk would
+        def start(self, name, args=None, actor="owner"):
+            events.emit("CC_ACTION", actor=actor, action=name, ok=True, label=name, summary=f"drill: {name} would run here (nothing ran)")
+            return {"action": name, "state": "done", "ok": True, "summary": f"drill: {name} would run here; nothing ran"}
+
+        def tick(self):
+            return {"state": "idle"}
+        auto = tick
+
+        def plan(self):
+            return {"state": "idle"}
+
+        def snapshot(self, limit=15):
+            return {"running": [], "recent": []}
     source = serve.Source(overview, seconds=5)
-    httpd = serve.make_server("127.0.0.1", a.port, TOKEN, build=overview, panel=serve.Panel(source, background=False, slow_seconds=5))
+    httpd = serve.make_server("127.0.0.1", a.port, TOKEN, build=overview, panel=serve.Panel(source, background=False, slow_seconds=5), desk=Desk())
     print(f"drill state in {root}\nopen http://127.0.0.1:{a.port}/?t={TOKEN}   (crew: {', '.join(r['id'] for r in roster)})", flush=True)
     try:
         httpd.serve_forever()

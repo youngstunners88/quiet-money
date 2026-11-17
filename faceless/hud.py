@@ -14,7 +14,11 @@ action name to `POST /action`, the same door the desk uses. Nothing on this page
 
 from __future__ import annotations
 
+from pathlib import Path
+
 from faceless.dashboard import BG
+
+VENDOR = Path(__file__).resolve().parent / "vendor" / "gsap-3.14.2.min.js"
 
 CSS = r"""
 :root{--bg:#060a0f;--panel:#0a121a;--line:#173142;--ac:#4fd8ff;--tx:#d9f1fa;--dim:#7d9aa8;--ok:#3ddc84;--warn:#ffb020;--bad:#ff5468;--off:#5b6b74;
@@ -30,8 +34,8 @@ h2{font-size:11px;letter-spacing:.24em;margin:0 0 10px;font-weight:600;color:var
 .panel{position:relative;background:linear-gradient(180deg,rgba(13,24,34,.92),rgba(8,14,20,.92));border:1px solid var(--line);padding:14px;min-width:0}
 .panel:before,.panel:after{content:"";position:absolute;width:14px;height:14px;border:2px solid var(--ac);opacity:.8;pointer-events:none}
 .panel:before{left:-1px;top:-1px;border-right:0;border-bottom:0}.panel:after{right:-1px;bottom:-1px;border-left:0;border-top:0}
-#top{display:flex;flex-wrap:wrap;gap:8px 18px;align-items:center}
-#top .brand{display:flex;flex-direction:column;gap:2px;margin-right:auto;min-width:0}
+#top{display:flex;flex-wrap:nowrap;gap:8px 14px;align-items:center}
+#top .brand{display:flex;flex-direction:column;gap:2px;margin-right:auto;min-width:0;flex:1 1 0}
 #top .brand a{font-size:11px;letter-spacing:.08em}
 .stat{display:flex;flex-direction:column;min-width:0}
 .stat .k{font-size:10px;letter-spacing:.18em;color:var(--dim);text-transform:uppercase}
@@ -39,6 +43,24 @@ h2{font-size:11px;letter-spacing:.24em;margin:0 0 10px;font-weight:600;color:var
 .dot{width:9px;height:9px;border-radius:50%;background:var(--off);box-shadow:0 0 8px currentColor;color:var(--off);flex:none}
 .c-ok{color:var(--ok)}.c-warn{color:var(--warn)}.c-bad{color:var(--bad)}.c-off{color:var(--off)}.c-ac{color:var(--ac)}
 .dot.c-ok{background:var(--ok)}.dot.c-warn{background:var(--warn)}.dot.c-bad{background:var(--bad)}.dot.c-ac{background:var(--ac)}
+#hero{display:grid;gap:12px;grid-template-columns:minmax(0,1fr)}
+.mc .lab{font-size:11px;letter-spacing:.2em;color:var(--dim);text-transform:uppercase;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.mc .fig{font:700 42px/1.05 var(--mono);margin:8px 0 4px;letter-spacing:-.01em;font-variant-numeric:tabular-nums;display:inline-block;transform-origin:left center}
+.mc .fig.big2{font-size:34px}
+.mc .row2{display:flex;gap:8px;align-items:center;flex-wrap:wrap;font-size:12.5px;min-height:18px}
+.mc .delta{font-weight:600}.mc .delta.none{font-weight:400}.mc .delta.up{color:var(--ok)}.mc .delta.down{color:var(--bad)}.mc .delta.none{color:var(--dim)}
+.mc .cap{color:var(--dim);overflow-wrap:anywhere}
+.bd{display:flex;gap:2px;height:6px;margin:12px 0 8px}.bd:empty,.bdl:empty{display:none}.bd span{border-radius:3px;min-width:0;transition:flex-grow .3s}
+.bdl{display:grid;gap:3px;font-size:12px}.bdl div{display:grid;grid-template-columns:10px minmax(0,1fr) auto 38px;gap:8px;align-items:center}
+.bdl i{width:8px;height:8px;border-radius:50%;display:block}.bdl .s{color:var(--dim);text-align:right}
+.bar{height:6px;background:#132634;margin:12px 0 6px;position:relative;overflow:hidden}.bar b{position:absolute;left:0;top:0;bottom:0;background:var(--ac);transition:width .6s}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+#next .t{font-size:15px;margin:10px 0 6px;overflow-wrap:anywhere}#next .a{color:var(--dim);font-size:12.5px;overflow-wrap:anywhere}
+#next .go{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:12px}
+.coin{position:absolute;width:14px;height:14px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#ffe9a8,#e3b341 55%,#8a6514);pointer-events:none;z-index:3}
+#cached{display:none;border:1px solid var(--warn);color:var(--warn);background:rgba(255,176,32,.08);padding:8px 12px;font-size:12.5px}
+#cached.on{display:block}
+body.still *,body.still *:before,body.still *:after{transition:none!important;animation:none!important}
 #youlamp{border:1px solid var(--line);padding:6px 12px;text-align:center;min-width:74px}
 #youlamp .n{font-size:24px;line-height:1;font-weight:700}
 #youlamp.on{border-color:var(--warn);box-shadow:0 0 16px rgba(255,176,32,.25) inset}#youlamp.on .n{color:var(--warn)}
@@ -50,8 +72,15 @@ h2{font-size:11px;letter-spacing:.24em;margin:0 0 10px;font-weight:600;color:var
 .yi .a{flex:1 1 220px;color:var(--dim);min-width:0;overflow-wrap:anywhere}
 .yi .a b{color:var(--tx);font-weight:500}
 .yi a{white-space:nowrap}
-.yi .act{font:inherit;font-size:12.5px;color:var(--bg);background:var(--ac);border:0;padding:5px 10px;cursor:pointer;min-height:32px}
-.yi .act:focus-visible{outline:2px solid var(--tx);outline-offset:2px}
+.act{position:relative;overflow:hidden;font:inherit;font-size:12.5px;color:var(--bg);background:var(--ac);border:0;padding:6px 12px;cursor:pointer;min-height:34px;
+ touch-action:manipulation;-webkit-user-select:none;user-select:none}
+.act:after{content:"";position:absolute;left:0;bottom:0;height:3px;width:0;background:var(--tx)}
+.act.holding:after{width:100%;transition:width .9s linear}
+.act[data-state=working]{background:#2a4a5c;color:var(--tx);cursor:progress}
+.act[data-state=done]{background:var(--ok)}.act[data-state=error]{background:var(--bad);color:var(--tx)}
+.act:disabled{cursor:default}
+.act:focus-visible{outline:2px solid var(--tx);outline-offset:2px}
+
 .yi .res{flex:1 1 100%;color:var(--dim);font-size:12.5px;overflow-wrap:anywhere}.yi .res:empty{display:none}
 .tag{display:inline-block;font-size:10px;letter-spacing:.1em;padding:1px 6px;border:1px solid currentColor;border-radius:2px;text-transform:uppercase;vertical-align:1px}
 .tag.read{color:var(--ok)}.tag.estimate{color:var(--warn)}.tag.unknown{color:var(--off)}
@@ -109,11 +138,12 @@ details{font-size:12px;color:var(--dim)}summary{cursor:pointer;color:var(--ac);l
 #feedlist{max-height:330px;overflow-y:auto;scrollbar-width:thin;scrollbar-color:var(--line) transparent}
 #link.lost{color:var(--bad)}
 @media(min-width:1000px){
- #hud{grid-template-columns:minmax(0,1fr) minmax(0,1.25fr) minmax(0,1.1fr);grid-template-areas:"top top top" "you you you" "crew core limits" "feed feed feed"}
- #top{grid-area:top}#you{grid-area:you}#core{grid-area:core}#crew{grid-area:crew}#limits{grid-area:limits}#feed{grid-area:feed}
+ #hud{grid-template-columns:minmax(0,1fr) minmax(0,1.25fr) minmax(0,1.1fr);grid-template-areas:"top sys sys" "cached cached cached" "hero hero hero" "you you you" "crew core limits" "feed feed feed"}
+ #top{grid-area:top}#sys{grid-area:sys}#cached{grid-area:cached}#hero{grid-area:hero;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr) minmax(0,1.25fr)}
+ #you{grid-area:you}#core{grid-area:core}#crew{grid-area:crew}#limits{grid-area:limits}#feed{grid-area:feed}
  #feedlist{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:28px;align-content:start}
 }
-@media(max-width:430px){body{font-size:13px}.dials{gap:2px}.big{font-size:32px}.dial .val{font-size:13px}.stat .v{font-size:12.5px}}
+@media(max-width:430px){h1{font-size:11.5px;letter-spacing:.14em}#youlamp{min-width:60px;padding:5px 8px}#youlamp .n{font-size:20px}.mc .fig{font-size:38px}body{font-size:13px}.dials{gap:2px}.big{font-size:32px}.dial .val{font-size:13px}.stat .v{font-size:12.5px}}
 @media(prefers-reduced-motion:reduce){.arc,.ring,.needle,.burn{transition:none}#ring .hand.open,.dot.live{animation:none}}
 """
 
@@ -197,25 +227,43 @@ function tickClocks(){
   txt(T.day,'in '+dur(until(r[1].at)));attr(T.day,'title',r[1].rule+' ('+r[1].source+')');
   var age=(Date.now()-lastOk)/1000,lost=age>20;
   lamp(T.link,lost?'bad':'ok',lost?'LOST · last data '+dur(since(S.generatedAt))+' ago':'live · overview '+(S.slow.ageSec==null?'warming':dur(S.slow.ageSec+age)+' old'),!lost);
+  if(lost&&lastOk&&LIVE){LIVE=false;banner(true,'The server stopped answering '+dur(age)+' ago. Showing what it last said, at '+hm(S.generatedAt)+' UTC; nothing here is live.')}
   [].forEach.call(document.querySelectorAll('[data-since]'),function(e){var v=e.getAttribute('data-since');txt(e,v?(e.getAttribute('data-pre')||'')+dur(since(v))+' ago':e.getAttribute('data-none')||'')});
   [].forEach.call(document.querySelectorAll('[data-until]'),function(e){var v=e.getAttribute('data-until'),u=until(v);txt(e,v?(e.getAttribute('data-pre')||'')+(u<=0?'now':dur(u)):e.getAttribute('data-none')||'')})}
 
 // ---- the only writes this page makes: a YOU item's own button, one allowlisted action name posted to the action desk
 var SAFE={keys_probe:1,crew_reap:1,mission:1};
-function press(bt){
-  var d=bt._do,res=bt.parentNode.lastChild;if(!d||bt._busy||!SAFE[d.name])return;
-  if(d.confirm&&!bt._armed){bt._armed=true;txt(bt,'Confirm: '+d.label);setTimeout(function(){bt._armed=false;if(!bt._busy&&bt._do)txt(bt,bt._do.label)},6000);return}
-  bt._armed=false;bt._busy=true;txt(bt,'Working…');txt(res,'');
+// Pattern from KokonutUI components/kokonutui/ai-checkout.tsx (status review -> paying -> paid -> receipt) and ai-tool-approval.tsx
+// (HoldToAllow: press and hold 900 ms to confirm), hand-ported to this page's variables. No React, no dependency.
+var HOLD_MS=900;
+function actBtn(){
+  var bt=h('button',{type:'button',class:'act','data-state':'review'}),res=h('span',{class:'res',role:'status'}),t=null;
+  bt._res=res;
+  function cancel(){if(t){clearTimeout(t);t=null}bt.classList.remove('holding')}
+  bt.addEventListener('pointerdown',function(e){if(!bt._do||bt._busy)return;if(!bt._do.confirm){return}
+    e.preventDefault();bt.classList.add('holding');t=setTimeout(function(){t=null;bt.classList.remove('holding');press(bt,true)},HOLD_MS)});
+  ['pointerup','pointerleave','pointercancel'].forEach(function(ev){bt.addEventListener(ev,cancel)});
+  bt.addEventListener('keydown',function(e){if((e.key==='Enter'||e.key===' ')&&bt._do&&bt._do.confirm&&!t&&!e.repeat){e.preventDefault();bt.classList.add('holding');t=setTimeout(function(){t=null;bt.classList.remove('holding');press(bt,true)},HOLD_MS)}});
+  bt.addEventListener('keyup',function(e){if(e.key==='Enter'||e.key===' ')cancel()});
+  bt.addEventListener('click',function(){if(bt._do&&!bt._do.confirm)press(bt,true)});
+  return bt}
+function setBtn(bt,d){bt._do=d||null;bt.style.display=d?'':'none';if(!d)return;
+  if(!bt._busy&&bt.getAttribute('data-state')==='review'){txt(bt,(d.confirm?'Hold: ':'')+d.label);attr(bt,'aria-label',d.label+(d.confirm?'. Press and hold to confirm':''))}}
+function press(bt,go){
+  var d=bt._do,res=bt._res;if(!d||bt._busy||!SAFE[d.name]||!go)return;
+  bt._busy=true;bt.disabled=true;attr(bt,'data-state','working');txt(bt,'Working…');txt(res,'');var ok=false;
   fetch('action',{method:'POST',headers:{'Content-Type':'application/json',Authorization:'Bearer '+tok},body:JSON.stringify({name:d.name,args:d.args||{}}),cache:'no-store',credentials:'omit'})
-   .then(function(r){return r.json()}).then(function(j){txt(res,j.error?('Refused: '+j.error):j.state==='running'?'Started.':(j.ok?'Done: ':(j.refused?'Refused: ':'Failed: '))+(j.summary||j.refused||''))})
-   .catch(function(){txt(res,'Could not reach the server.')}).then(function(){bt._busy=false;if(bt._do)txt(bt,bt._do.label);setTimeout(poll,1500)})}
+   .then(function(r){return r.json()}).then(function(j){ok=!j.error&&(j.state==='running'||j.ok);
+     txt(res,j.error?('Refused: '+j.error):j.state==='running'?'Started: '+(j.summary||d.label):(j.ok?'Done: ':(j.refused?'Refused: ':'Failed: '))+(j.summary||j.refused||''))})
+   .catch(function(){txt(res,'Could not reach the server.')}).then(function(){
+     attr(bt,'data-state',ok?'done':'error');txt(bt,ok?'✓ Done':'✕ Not done');
+     setTimeout(function(){bt._busy=false;bt.disabled=false;attr(bt,'data-state','review');setBtn(bt,bt._do);poll()},900)})}
 function drawYou(d){
   cls($('you'),'panel'+(d.youCount?' on':''));txt($('younone'),d.youCount?'':'Nothing waits for you.');
   sync($('youlist'),d.you,function(y){return y.id},function(){
-    var btn=h('button',{type:'button',class:'act'});btn.addEventListener('click',function(){press(btn)});
-    var e=h('div',{class:'yi'},h('span',{class:'dot'}),h('div',{class:'t'}),h('div',{class:'a'},'Do: ',h('b',{})),h('a',{}),btn,h('span',{class:'res',role:'status'}));return e},
+    var btn=actBtn();var e=h('div',{class:'yi'},h('span',{class:'dot'}),h('div',{class:'t'}),h('div',{class:'a'},'Do: ',h('b',{})),h('a',{}),btn,btn._res);return e},
   function(e,y){var c=y.level==='stop'?'bad':y.level==='info'?'ac':'warn';cls(e.children[0],'dot c-'+c);e.children[0].style.color=COL[c];txt(e.children[1],y.text);txt(e.children[2].lastChild,y.action);attr(e,'title','source: '+y.source);
-    var bt=e.children[4];bt._do=y.do||null;bt.style.display=y.do?'':'none';if(y.do&&!bt._busy&&!bt._armed)txt(bt,y.do.label);
+    setBtn(e.children[4],y.do);
     var a=e.children[3];if(y.href){attr(a,'href',y.href);txt(a,'Open the desk →');a.style.display=''}else{a.removeAttribute('href');txt(a,'');a.style.display='none'}})}
 
 function drawCore(d){
@@ -306,12 +354,52 @@ function drawFeed(d){
   sync($('feedlist'),d.feed,function(f){return f.id},function(){return h('div',{class:'f'},h('span',{class:'w'}),h('span',{}),h('span',{class:'x'}))},
   function(e,f){txt(e.children[0],hm(f.t));cls(e.children[1],'k-'+f.kind);txt(e.children[1],f.kind);txt(e.children[2],f.text+(f.count>1?'  (×'+f.count+' since '+hm(f.firstT)+')':''))})}
 
-function draw(d){S=d;drawTop(d);drawYou(d);drawCore(d);drawCrew(d);drawLimits(d);drawFeed(d);tickClocks()}
+// ---- motion: GSAP (inlined above, the repo's hash-checked copy) only on live data, never under prefers-reduced-motion
+var G=window.gsap||null,RM=window.matchMedia?matchMedia('(prefers-reduced-motion: reduce)'):{matches:false},LIVE=false,REVEALED=false;
+function moving(){return !!G&&!RM.matches&&LIVE&&!document.body.classList.contains('still')}
+function countTo(el,to,fmt){if(to==null){if(el._tw)el._tw.kill();el._v=null;txt(el,'—');return}
+  var from=el._v;el._v=to;if(el._tw)el._tw.kill();
+  if(!moving()||from==null||from===to){txt(el,fmt(to));return}
+  var o={v:from};el._tw=G.to(o,{v:to,duration:1.1,ease:'power2.out',onUpdate:function(){txt(el,fmt(o.v))},onComplete:function(){txt(el,fmt(to))}})}
+function heroMoment(){var f=$('mfig'),box=$('money');if(!moving())return;
+  G.timeline().to(f,{scale:1.12,color:'#ffd66b',textShadow:'0 0 24px rgba(227,179,65,.75)',duration:.35,ease:'back.out(3)'})
+   .to(f,{scale:1,color:'',textShadow:'none',duration:.9,ease:'power2.out',clearProps:'color,textShadow,transform'});
+  var r=f.getBoundingClientRect(),b=box.getBoundingClientRect();
+  for(var i=0;i<9;i++){(function(i){var c=h('span',{class:'coin','aria-hidden':'true'});c.style.left=(r.left-b.left+r.width*(.15+.7*Math.random()))+'px';c.style.top=(r.top-b.top+r.height*.5)+'px';
+    box.appendChild(c);G.fromTo(c,{y:0,opacity:1,scale:.6+Math.random()*.5},{y:-60-Math.random()*70,x:(Math.random()-.5)*90,rotation:Math.random()*360,opacity:0,duration:1.2+Math.random()*.5,delay:i*.04,ease:'power2.out',onComplete:function(){c.remove()}})})(i)}}
+function revealOnce(){if(REVEALED)return;REVEALED=true;if(!moving())return;
+  G.from('#hud>section,#hero>section',{y:14,opacity:0,duration:.5,stagger:.05,ease:'power2.out',clearProps:'transform,opacity'})}
+var RAIL=['#4fd8ff','#e3b341','#3ddc84','#c59bff','#ff8a65','#7d9aa8'];
+function drawHero(d){
+  var m=d.money||{},sh=d.shipped||{},nx=d.next;
+  setTag($('mtag'),m.source);attr($('money'),'title','source: '+(m.from||m.reason||''));
+  countTo($('mfig'),m.usd,usd2);txt($('msr'),m.usd==null?'Money in this month: unknown. '+(m.reason||''):'Money in this month: '+usd2(m.usd)+' from '+m.receipts+' receipt'+(m.receipts===1?'':'s'));
+  var dl=$('mdelta');if(m.delta==null){cls(dl,'delta none');txt(dl,m.prevSameDays?'—':'no earlier month to compare')}else{cls(dl,'delta '+(m.delta>=0?'up':'down'));txt(dl,(m.delta>=0?'▲ ':'▼ ')+Math.abs(m.delta*100).toFixed(1)+'%')}
+  txt($('mcap'),m.delta==null?'':m.compare+' ('+usd2(m.prevSameDays)+')');
+  var rails=Object.keys(m.byRail||{}).sort(function(a,b){return m.byRail[b]-m.byRail[a]}),tot=m.usd||0;
+  sync($('mbd'),rails,function(r){return r},function(){return h('span',{})},function(e,r){e.style.flexGrow=m.byRail[r];e.style.background=RAIL[rails.indexOf(r)%RAIL.length]});
+  sync($('mbdl'),rails,function(r){return r},function(){return h('div',{},h('i',{}),h('span',{}),h('b',{}),h('span',{class:'s'}))},
+   function(e,r){e.children[0].style.background=RAIL[rails.indexOf(r)%RAIL.length];txt(e.children[1],r);txt(e.children[2],usd2(m.byRail[r]));txt(e.children[3],tot?Math.round(100*m.byRail[r]/tot)+'%':'')});
+  txt($('mnote'),m.usd==null?m.reason:(m.note?m.note+'. ':'')+'All time '+usd2(m.allTime)+' from '+m.allTimeReceipts+' receipt'+(m.allTimeReceipts===1?'':'s')+'.');
+  var seen=parseFloat(LS.get('qm_money_seen'));if(m.usd!=null&&LIVE){if((isNaN(seen)&&m.usd>0)||(!isNaN(seen)&&m.usd>seen))heroMoment();LS.set('qm_money_seen',String(m.usd))}
+  setTag($('stag'),sh.source);attr($('shipped'),'title','source: '+(sh.from||sh.reason||''));
+  countTo($('sfig'),sh.today,function(v){return Math.round(v)+(sh.target?'/'+sh.target:'')});
+  txt($('ssr'),sh.today==null?'Videos shipped today: unknown':'Videos shipped today: '+sh.today+(sh.target?' of a target of '+sh.target:'')+'; '+sh.week+' in the last 7 days');
+  $('sbar').style.width=(sh.week==null||!sh.weekTarget?0:Math.min(100,100*sh.week/sh.weekTarget))+'%';
+  txt($('scap'),sh.week==null?(sh.reason||''):sh.week+' posted in 7 days'+(sh.weekTarget?' of '+sh.weekTarget:'')+' · '+sh.platform);
+  txt($('snote'),sh.today==null?'':(sh.readyToPost==null?'':sh.readyToPost+' passed and waiting to post · ')+(sh.lastPostAt?'last post '+dur(since(sh.lastPostAt))+' ago':'no post recorded'));
+  txt($('ntext'),nx?nx.text:'Nothing waits for you.');txt($('naction'),nx?'Do: '+nx.action:'');
+  var go=$('ngo');if(!go._bt){go._bt=actBtn();go._a=h('a',{});go.appendChild(go._bt);go.appendChild(go._a);go.appendChild(go._bt._res)}
+  setBtn(go._bt,nx&&nx.do);if(nx&&nx.href&&!nx.do){attr(go._a,'href',nx.href);txt(go._a,'Open the desk →');go._a.style.display=''}else{go._a.style.display='none'}}
+function usd2(v){return v==null?'—':'$'+Number(v).toLocaleString(undefined,{minimumFractionDigits:2,maximumFractionDigits:2})}
+function banner(on,text){var b=$('cached');cls(b,on?'on':'');txt(b,on?text:'');document.body.classList.toggle('still',!!on)}
+function draw(d,cached){S=d;LIVE=!cached;if(cached)banner(true,'Showing the copy saved on this device at '+hm(d.generatedAt)+' UTC ('+dur(since(d.generatedAt))+' old). Waiting for the server; nothing here is live.');
+  drawTop(d);drawHero(d);drawYou(d);drawCore(d);drawCrew(d);drawLimits(d);drawFeed(d);tickClocks();if(!cached)revealOnce()}
 function poll(){
   fetch('instruments.json',{headers:tok?{Authorization:'Bearer '+tok}:{},cache:'no-store',credentials:'omit'}).then(function(r){
     if(r.status===401){txt($('gate'),'This page needs its token: open the link with ?t=… once (the QR code carries it).');throw new Error('401')}
-    if(!r.ok)throw new Error(r.status);return r.json()}).then(function(d){lastOk=Date.now();txt($('gate'),'');LS.set('qm_instr',JSON.stringify(d));draw(d)}).catch(function(){tickClocks()})}
-try{var c=JSON.parse(LS.get('qm_instr')||'null');if(c&&c.crew)draw(c)}catch(e){}
+    if(!r.ok)throw new Error(r.status);return r.json()}).then(function(d){lastOk=Date.now();txt($('gate'),'');banner(false);LS.set('qm_instr',JSON.stringify(d));draw(d)}).catch(function(){tickClocks()})}
+try{var c=JSON.parse(LS.get('qm_instr')||'null');if(c&&c.crew)draw(c,true)}catch(e){}
 poll();setInterval(function(){if(!document.hidden)poll()},5000);setInterval(tickClocks,1000);
 document.addEventListener('visibilitychange',function(){if(!document.hidden)poll()});
 if('serviceWorker' in navigator){navigator.serviceWorker.register('sw.js').catch(function(){})}
@@ -319,11 +407,24 @@ if('serviceWorker' in navigator){navigator.serviceWorker.register('sw.js').catch
 """
 
 BODY = """<div id="hud">
-<section class="panel" id="top" aria-label="System state">
+<section class="panel" id="top" aria-label="Quiet Money command center">
  <div class="brand"><h1>QUIET MONEY // COMMAND CENTER</h1><a href="desk">Action desk (the buttons) →</a><span id="gate" class="c-bad" role="status"></span></div>
- <div id="stats" style="display:contents"></div>
  <div id="youlamp" role="status"><div class="n" id="youn">—</div><div class="k" style="font-size:10px;letter-spacing:.2em;color:var(--dim)">YOU</div></div>
 </section>
+<div id="cached" role="status"></div>
+<div id="hero" aria-label="Money in, videos shipped, next action">
+ <section class="panel mc" id="money"><div class="lab">Money in · this month <span class="tag" id="mtag"></span></div>
+  <div class="fig" id="mfig" aria-hidden="true">—</div><span class="sr" id="msr" aria-live="polite"></span>
+  <div class="row2"><span class="delta none" id="mdelta">—</span><span class="cap" id="mcap"></span></div>
+  <div class="bd" id="mbd" aria-hidden="true"></div><div class="bdl" id="mbdl"></div><div class="cap" id="mnote" style="font-size:12px;margin-top:6px"></div></section>
+ <section class="panel mc" id="shipped"><div class="lab">Videos shipped · today <span class="tag" id="stag"></span></div>
+  <div class="fig" id="sfig" aria-hidden="true">—</div><span class="sr" id="ssr" aria-live="polite"></span>
+  <div class="bar" aria-hidden="true"><b id="sbar" style="width:0"></b></div><div class="row2"><span class="cap" id="scap"></span></div>
+  <div class="cap" id="snote" style="font-size:12px;margin-top:6px"></div></section>
+ <section class="panel mc" id="next"><div class="lab">Next action</div><div class="t" id="ntext">—</div><div class="a" id="naction"></div>
+  <div class="go" id="ngo"></div></section>
+</div>
+<section class="panel" id="sys" aria-label="System state"><div id="stats" style="display:flex;flex-wrap:wrap;gap:8px 18px;align-items:center"></div></section>
 <section class="panel" id="you" aria-label="Waiting for you"><h2>You · what waits for a person</h2><div id="youlist"></div><div class="empty" id="younone"></div></section>
 <section class="panel" id="core" aria-label="Core dials"><h2>Core</h2><div class="dials" id="dials"></div>
  <div class="sep"></div><h2>Engine lanes today</h2><div class="rows" id="eng"></div><div class="empty" id="engnone"></div>
@@ -339,6 +440,18 @@ BODY = """<div id="hud">
 </div>"""
 
 
+def gsap_source() -> str:
+    """The repo's own copy of GSAP 3.14.2, checked against the hash pinned in faceless/pipeline/cards.py. Inlined into the page, so the page
+    makes no request for it and works offline from the phone's saved copy. A copy that fails the check is not used: the page then simply
+    does not animate."""
+    from faceless.pipeline import cards
+    try:
+        data = VENDOR.read_bytes()
+    except OSError:
+        return ""
+    return data.decode("utf-8") if cards.gsap_digest(data) == cards.GSAP_SRI and b"</script" not in data.lower() else ""
+
+
 def render() -> str:
     """The page. It carries no data: the first poll fills it, so nothing can be shown that the server did not just report."""
     return ("<!doctype html>\n<html lang=\"en\"><head><meta charset=\"utf-8\">"
@@ -346,4 +459,4 @@ def render() -> str:
             "<meta name=\"robots\" content=\"noindex,nofollow,noarchive\"><meta name=\"referrer\" content=\"no-referrer\">"
             f"<meta name=\"theme-color\" content=\"{BG}\"><meta name=\"mobile-web-app-capable\" content=\"yes\">"
             "<link rel=\"manifest\" href=\"manifest.webmanifest\"><link rel=\"icon\" href=\"icon-192.png\"><link rel=\"apple-touch-icon\" href=\"icon-192.png\">"
-            f"<title>Quiet Money Command Center</title><style>{CSS}</style></head><body>{BODY}<script>{JS}</script></body></html>\n")
+            f"<title>Quiet Money Command Center</title><style>{CSS}</style></head><body>{BODY}<script>{gsap_source()}</script><script>{JS}</script></body></html>\n")

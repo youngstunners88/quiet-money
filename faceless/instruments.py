@@ -558,7 +558,9 @@ def crew_state(roster: list[dict] | None = None, now: datetime | None = None, ke
         silent = (now.timestamp() - life) / 60 if life else None
         beat_status = b.get("status") if last_beat and now.timestamp() - last_beat < 86400 else None
         panes = [p["status"] for p in a.get("panes") or []]
-        active = bool(mine) or beat_status in ("running", "refreshing") or "working" in panes
+        gone = (not mine and beat_status in ("running", "refreshing") and silent is not None
+                and silent > 4 * float(cfg["dormant_minutes"]) and "working" not in panes)   # said running, then nothing for hours, holds nothing
+        active = bool(mine) or (beat_status in ("running", "refreshing") and not gone) or "working" in panes
         if a.get("benched"):
             lamp, why = "benched", "took a mission today and went idle without a report; it sits out until tomorrow"
         elif key and key["state"] in BAD_KEY:
@@ -573,6 +575,9 @@ def crew_state(roster: list[dict] | None = None, now: datetime | None = None, ke
             lamp, why = "live", "holding a mission" if mine else "reported running"
         elif last_use and now.timestamp() - last_use < LIVE_MIN * 60:
             lamp, why = "live", f"its own store recorded tokens in the last {LIVE_MIN} min"
+        elif gone:
+            lamp, why = "idle", (f"its last beat ({int(silent // 60)} h {int(silent % 60)} min ago) said running and it never reported done; "
+                                 "treated as stopped. It holds no mission, so it may be sent new work")
         else:
             lamp, why = "idle", "no mission and no recent beat"
         task = (b.get("task") if active or lamp == "blocked" else "") or (f"mission {mine[0]['mission']}" if mine else "")
@@ -679,11 +684,63 @@ def core(slow: dict | None, now: datetime) -> dict:
             "missions": [{"id": x["id"], "title": x["title"], "agent": (x.get("run") or {}).get("agent"), "since": (x.get("run") or {}).get("since")} for x in (m or {}).get("running", [])],
             "from": "state/journal.jsonl (CC_MISSION), state/agents/claims, crew.toml [autopilot] max_parallel"}
     target = (config.load().get("production") or {}).get("videos_per_day")
-    queue = {"ready": j.get("readyToPost") if j else None, "passed": j["passedToday"] if j else None, "held": j["heldToday"] if j else None,
-             "posted": j["postedToday"] if j else None, "made": j.get("madeToday") if j else None, "target": target,
+    queue = {"ready": j.get("readyToPost") if j else None, "passed": j.get("passedToday") if j else None, "held": j.get("heldToday") if j else None,
+             "posted": j.get("postedToday") if j else None, "made": j.get("madeToday") if j else None, "target": target,
              "readyMeans": "passed the gauntlet in the last three days and not yet posted or queued for the phone", "source": "read" if j else "unknown", "reason": why,
              "from": "state/jobs/*.json, state/phone/receipts.jsonl; studio.toml [production] videos_per_day"}
     return {"spend": spend, "load": load, "queue": queue}
+
+
+def money(now: datetime) -> dict:
+    """Money in: gross receipts this month against last month by this same day, by rail. Receipts are the record itself (typed in from payout
+    emails, or pulled from Gumroad), so this is `read`. No receipt is a real zero, said as such, never a guess."""
+    from faceless import receipts
+    day = now.strftime("%Y-%m-%d")
+    try:
+        rows = receipts.rows()
+    except Exception as e:   # noqa: BLE001 - a damaged receipts file shows as unknown, not as zero
+        return {"usd": None, "source": "unknown", "reason": f"receipts could not be read ({type(e).__name__})", "from": receipts.RECEIPTS.name}
+    first = now.replace(day=1)
+    prev_end = first - timedelta(days=1)
+    prev_month, prev_cut = prev_end.strftime("%Y-%m"), prev_end.replace(day=min(now.day, prev_end.day)).strftime("%Y-%m-%d")
+    mtd = [r for r in rows if r["day"][:7] == day[:7]]
+    prev = [r for r in rows if r["day"][:7] == prev_month and r["day"] <= prev_cut]
+    by: dict[str, float] = {}
+    for r in mtd:
+        by[r["rail"]] = round(by.get(r["rail"], 0.0) + r["gross"], 2)
+    usd, before = round(sum(r["gross"] for r in mtd), 2), round(sum(r["gross"] for r in prev), 2)
+    return {"usd": usd, "net": round(sum(r["net"] for r in mtd), 2), "today": round(sum(r["gross"] for r in mtd if r["day"] == day), 2),
+            "receipts": len(mtd), "allTime": round(sum(r["gross"] for r in rows), 2), "allTimeReceipts": len(rows),
+            "prevSameDays": before, "delta": round((usd - before) / before, 4) if before else None,
+            "compare": f"vs {prev_end.strftime('%b')} 1-{min(now.day, prev_end.day)}", "byRail": by,
+            "lastReceiptDay": rows[-1]["day"] if rows else None, "note": "no receipt recorded yet" if not rows else ("none this month" if not mtd else ""),
+            "source": "read", "from": "state/receipts.jsonl (typed in from payout emails), analytics/sales.jsonl (Gumroad pull)"}
+
+
+def shipped(slow: dict | None, now: datetime) -> dict:
+    """Videos that reached people: posts recorded by the phone lane today and in the last 7 days, against the daily target."""
+    from faceless import phone
+    target = (config.load().get("production") or {}).get("videos_per_day")
+    try:
+        posts = [r for r in phone.receipts() if r.get("result") == "posted" and r.get("kind") == "tiktok"]
+    except Exception as e:   # noqa: BLE001
+        return {"today": None, "week": None, "target": target, "source": "unknown", "reason": f"phone receipts could not be read ({type(e).__name__})"}
+    def ts(r):
+        return _ts(r.get("at")) or 0.0
+    day0 = now.replace(hour=0, minute=0, second=0, microsecond=0).timestamp()
+    today = sum(1 for r in posts if ts(r) >= day0)
+    week = sum(1 for r in posts if ts(r) >= now.timestamp() - 7 * 86400)
+    j = (slow or {}).get("jobs") or {}
+    return {"today": today, "week": week, "target": target, "weekTarget": target * 7 if target else None, "allTime": len(posts),
+            "lastPostAt": max((r.get("at") for r in posts if r.get("at")), default=None), "passedToday": j.get("passedToday"),
+            "readyToPost": j.get("readyToPost"), "platform": "TikTok", "source": "read",
+            "from": "state/phone/receipts.jsonl (one row per post the phone lane recorded); studio.toml [production] videos_per_day"}
+
+
+def next_action(you_items: list[dict]) -> dict | None:
+    """The one thing to do next: the most urgent item (stop, then warn, then info), and among equals one this page can act on."""
+    order = sorted(you_items, key=lambda y: ({"stop": 0, "warn": 1}.get(y["level"], 2), 0 if y.get("do") else 1))   # most urgent first; a button breaks ties
+    return order[0] if order else None
 
 
 def providers(now: datetime) -> dict:
@@ -865,7 +922,7 @@ def build(slow: dict | None = None, server: dict | None = None, now: datetime | 
     return {"generatedAt": _iso(now), "day": now.strftime("%Y-%m-%d"),
             "slow": {"at": (slow or {}).get("generatedAt"), "ageSec": int(now.timestamp() - slow_at) if slow_at else None,
                      "state": "ok" if slow_at else "warming", "what": "jobs, missions and alerts come from the overview, which is rebuilt in the background"},
-            "system": sysd, "you": y, "youCount": len(y), "core": core(slow, now), "crew": crew_rows, "engine": lanes,
+            "system": sysd, "you": y, "youCount": len(y), "money": money(now), "shipped": shipped(slow, now), "next": next_action(y), "core": core(slow, now), "crew": crew_rows, "engine": lanes,
             "handoffs": handoffs(roster), "claims": list(missions.claims().values()), "held": held(slow),
             "keys": [{k: v for k, v in r.items() if k != "facts"} for r in keys], **{"ledger": providers(now)},
             "feed": feed(names), "thresholds": {k: missions.settings()[k] for k in ("stale_minutes", "dormant_minutes", "hold_percent", "max_cost", "max_parallel")},

@@ -607,15 +607,19 @@ def assets() -> dict[str, tuple[str, bytes]]:
 
 
 def write(doc: dict | None = None, out: Path | None = None) -> dict:
-    from faceless import overview
+    """site/command-center/: index.html is the head-up display (faceless/hud.py, read-only, fed by instruments.json); desk.html is this page
+    with the overview embedded (the buttons); then the snapshot, the overview, the manifest, the icons and the service worker. Each page is
+    one self-contained file: no external request, GSAP inlined in the display from the repo's hash-checked copy."""
+    from faceless import hud, instruments, overview
     doc = doc or overview.write()
     out = Path(out or OUT)
     out.mkdir(parents=True, exist_ok=True)
-    html = render(doc)
-    write_atomic(out / "index.html", html)
+    desk, display = render(doc), hud.render()
+    write_atomic(out / "index.html", display)
+    write_atomic(out / "desk.html", desk)
     write_atomic(out / "overview.json", json.dumps(doc, ensure_ascii=False))
-    total = len(html.encode("utf-8"))
+    write_atomic(out / "instruments.json", json.dumps(instruments.build(instruments.save_slow(doc)), ensure_ascii=False))
     for name, (_, data) in assets().items():
         (out / name).write_bytes(data)
-        total += len(data)
-    return {"dir": str(out), "bytes": total, "generatedAt": doc["generatedAt"]}
+    return {"dir": str(out), "bytes": max(len(display.encode("utf-8")), len(desk.encode("utf-8"))), "display": len(display.encode("utf-8")),
+            "desk": len(desk.encode("utf-8")), "generatedAt": doc["generatedAt"]}
