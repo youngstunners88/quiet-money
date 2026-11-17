@@ -679,8 +679,9 @@ def core(slow: dict | None, now: datetime) -> dict:
             "missions": [{"id": x["id"], "title": x["title"], "agent": (x.get("run") or {}).get("agent"), "since": (x.get("run") or {}).get("since")} for x in (m or {}).get("running", [])],
             "from": "state/journal.jsonl (CC_MISSION), state/agents/claims, crew.toml [autopilot] max_parallel"}
     target = (config.load().get("production") or {}).get("videos_per_day")
-    queue = {"ready": j["passedToday"] if j else None, "held": j["heldToday"] if j else None, "posted": j["postedToday"] if j else None,
-             "made": j.get("madeToday") if j else None, "target": target, "source": "read" if j else "unknown", "reason": why,
+    queue = {"ready": j.get("readyToPost") if j else None, "passed": j["passedToday"] if j else None, "held": j["heldToday"] if j else None,
+             "posted": j["postedToday"] if j else None, "made": j.get("madeToday") if j else None, "target": target,
+             "readyMeans": "passed the gauntlet in the last three days and not yet posted or queued for the phone", "source": "read" if j else "unknown", "reason": why,
              "from": "state/jobs/*.json, state/phone/receipts.jsonl; studio.toml [production] videos_per_day"}
     return {"spend": spend, "load": load, "queue": queue}
 
@@ -819,8 +820,13 @@ def held(slow: dict | None) -> list[dict]:
 
 def slim(doc: dict) -> dict:
     """The part of the overview the panel needs, small enough to save."""
-    return {"generatedAt": doc.get("generatedAt"), "day": doc.get("day"), "jobs": {k: v for k, v in (doc.get("jobs") or {}).items() if not isinstance(v, (list, dict))} or None,
-            "missions": doc.get("missions"), "alerts": doc.get("alerts")}
+    jobs = {k: v for k, v in (doc.get("jobs") or {}).items() if not isinstance(v, (list, dict))} or None
+    if jobs is not None:
+        try:                                                 # passed the gauntlet, packed, and not yet posted or queued for the phone
+            jobs["readyToPost"] = len(missions.made_unposted(doc.get("day") or config.today_utc().isoformat()))
+        except Exception:   # noqa: BLE001 - a damaged job file leaves the count unknown rather than wrong
+            jobs["readyToPost"] = None
+    return {"generatedAt": doc.get("generatedAt"), "day": doc.get("day"), "jobs": jobs, "missions": doc.get("missions"), "alerts": doc.get("alerts")}
 
 
 def save_slow(doc: dict) -> dict:
@@ -851,7 +857,8 @@ def build(slow: dict | None = None, server: dict | None = None, now: datetime | 
     sysd = system(now, server)
     names = {r["id"]: r["name"] for r in crew_rows}
     roster_ids = set(names)
-    lanes = [{"agent": r["agent"], "status": r["status"], "task": r.get("task") or "", "lastBeatAt": r.get("lastBeat"), "done": r.get("done"), "total": r.get("total"),
+    lanes = [{"agent": r["agent"], "status": r["status"], "task": r.get("task") or "", "done": r.get("done"), "total": r.get("total"),
+              "lastBeatAt": max(filter(None, [r.get("lastBeat"), (r.get("batch") or {}).get("lastActivity")]), default=None),   # a batch's jobs changing is its sign of life
               "note": r.get("note") or ""} for r in team.board()["agents"] if r["agent"] not in roster_ids]
     slow_at = _ts((slow or {}).get("generatedAt"))
     y = you(slow, crew_rows, keys, sysd)
@@ -899,8 +906,11 @@ def preflight(agent_id: str, snap: dict) -> tuple[int, str]:
             L.append(f"  {r['name']:12} {r['lamp']:13} {r.get('costLabel') or '':5} {(r.get('task') or '')[:70]}" + (f"  [{_left(r['limit'])}]" if r.get("limit") else ""))
     L.append("Taken (do not start these): " + (", ".join(f"{c['mission']} by {c['agent']}" for c in snap["claims"]) or "nothing"))
     todo = ((load_slow() or {}).get("missions") or {}).get("todo") or []
-    mine = [m for m in todo if (m.get("route") or {}).get("agent") == agent_id]
+    mine = [m for m in todo if (m.get("route") or {}).get("agent") == agent_id and not m.get("blocked") and not m.get("held")]
     L.append("Open and routed to you: " + ("; ".join(f"{m['id']} ({m['title']})" for m in mine[:5]) or "nothing"))
+    for m in todo:
+        if (m.get("route") or {}).get("agent") == agent_id and m.get("blocked"):
+            L.append(f"Blocked today (do not retry without a fix): {m['id']}: {(m['blocked'].get('note') or '')[:140]}")
     better = []
     for m in todo:
         rt = m.get("route") or {}

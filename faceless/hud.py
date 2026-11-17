@@ -229,9 +229,9 @@ function drawCore(d){
   txt($('ldv'),ld.running==null?'unknown':ld.running+' running, max '+ld.maxParallel);
   txt($('lds'),ld.running==null?ld.reason:(ld.missions.map(function(m){return m.title+' ('+(m.agent||'?')+')'}).join(' · ')||'nothing in motion'));
   var qp=qu.posted==null||!qu.target?null:100*qu.posted/qu.target;
-  core.queue.set({pct:qp,tone:qp==null?'off':qp>=100?'ok':'ac',big:qu.posted==null?'unknown':qu.posted+'/'+qu.target,unit:'POSTED',aria:'Queue: '+(qu.posted==null?'unknown, '+qu.reason:qu.posted+' posted of a target of '+qu.target+', '+qu.ready+' ready, '+qu.held+' held')});
-  txt($('quv'),qu.posted==null?'unknown':'ready '+qu.ready+' · held '+qu.held+' · posted '+qu.posted);
-  txt($('qus'),qu.posted==null?qu.reason:'target '+qu.target+' a day · '+qu.made+' started today');attr($('qus'),'title',qu.from);
+  core.queue.set({pct:qp,tone:qp==null?'off':qp>=100?'ok':'ac',big:qu.posted==null?'unknown':qu.posted+'/'+qu.target,unit:'POSTED',aria:'Queue: '+(qu.posted==null?'unknown, '+qu.reason:qu.posted+' posted of a target of '+qu.target+', '+(qu.ready==null?'unknown':qu.ready)+' ready to post, '+qu.held+' held')});
+  txt($('quv'),qu.posted==null?'unknown':'ready '+(qu.ready==null?'unknown':qu.ready)+' · held '+qu.held+' · posted '+qu.posted);
+  txt($('qus'),qu.posted==null?qu.reason:'target '+qu.target+' a day · '+qu.passed+' passed, '+qu.made+' started today');attr($('qus'),'title','ready = '+qu.readyMeans+'. '+qu.from);
   txt($('engnone'),d.engine.length?'':'No engine lane has reported today.');
   sync($('eng'),d.engine,function(e){return e.agent},function(){return h('div',{class:'r'},h('span',{},h('span',{class:'dot'}),h('span',{})),h('span',{class:'d'}))},
   function(e,x){var c=x.status==='running'||x.status==='refreshing'?'ok':x.status==='stale'?'warn':x.status==='error'||x.status==='blocked'?'bad':'off';
@@ -286,7 +286,7 @@ function drawLimits(d){
     var resetTxt=L.resetAt?'resets in '+dur(until(L.resetAt)):'reset unknown',emptyTxt=L.projectedEmptyAt?'empty in '+dur(until(L.projectedEmptyAt)):null;
     var usedTxt=L.used==null?'use unknown':u(L.used)+' '+(L.unit==='usd'||pc?'':L.unit+' ')+'used '+L.usedScope;
     g.set({pct:known?L.pct:null,big:known?Math.round(L.pct)+'%':'unknown',unit:known?'OF LIMIT':'LIMIT',ring:ringPct,burn:L.projectedPctAtReset,
-      aria:a.name+' '+L.label+': '+(known?L.pct+' percent used, '+u(L.used)+' of '+u(L.limit)+' '+L.unit+', '+resetTxt+(emptyTxt?', '+emptyTxt:'')+' ('+L.source+')':'unknown. '+(L.reason||'')+' '+usedTxt+' ('+L.usedSource+')')});
+      aria:a.name+' '+L.label+': '+(known?L.pct+' percent used, '+(pc?'as the provider reports it':u(L.used)+' of '+u(L.limit)+' '+L.unit)+', '+resetTxt+(emptyTxt?', '+emptyTxt:'')+' ('+L.source+')':'unknown. '+(L.reason||'')+' '+usedTxt+' ('+L.usedSource+')')});
     txt(b.children[0].firstChild,a.name+' · '+L.label);setTag(b.children[0].lastChild,L.source);
     txt(b.children[1],known?(pc?u(L.used)+' used, as the provider reports it':u(L.used)+' of '+u(L.limit)+' '+L.unit):usedTxt+' ('+L.usedSource+')');
     txt(b.children[2],L.burnPerHour==null?'burn unknown':'burn '+u(L.burnPerHour)+'/h (estimate)'+(emptyTxt?' · '+emptyTxt:'')+(L.readAt?' · read '+dur(since(L.readAt))+' ago':''));

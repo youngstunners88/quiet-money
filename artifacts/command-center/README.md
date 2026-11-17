@@ -34,6 +34,26 @@ How the crew works together (skill `faceless-crew`, `AGENTS.md`): `instruments -
 and holds a mission, logging the reason, rather than send it to an agent with a rejected key, one past `hold_percent` of its limit,
 a dormant one or one dearer than `max_cost`.
 
+**Claude Code's real limit.** Claude Code gives its status-line command the plan's own readings (`rate_limits.five_hour` and
+`seven_day`: percent used and reset time; Pro, Max and Ultra plans). `tools/command-center/claude-statusline.py` saves them to
+`~/.cache/quiet-money/claude-limits.json` and prints a short status line; `crew.toml` points at that file with `limit_file`. Once it is
+installed the two windows are drawn as `read`, the fuller one gates Autopilot, and a reading older than 90 minutes or from a window that
+has since reset goes back to grey with what was last seen. Install it once, in `~/.claude/settings.json` (user settings):
+
+```json
+"statusLine": {"type": "command", "command": "python3 ~/quiet-money/tools/command-center/claude-statusline.py"}
+```
+
+The plan's name is read from Claude Code's own account record (`~/.claude.json`: two fields, nothing personal). Hermes and OpenCode
+replies are counted from their own stores, so a requests-per-day cap can be gauged once `limit` and `limit_unit = "requests"` are set.
+
+**Buttons on the display.** A YOU item may carry one: "Re-check keys now" (`keys_probe`), "Take its mission back now" (`crew_reap`),
+"Send to <agent>" for a mission held only by cost (`mission`, asked twice). They go through `POST /action` like the desk's buttons.
+
+**Rehearsal.** `.venv/bin/python tools/command-center/hud-drill.py` serves the real page over a throwaway folder filled with the rare
+states (a dormant agent, a 93% window, a rejected key, handoffs, a held mission, a fourth agent). Nothing real is read or written.
+Its screenshots are `review/drill-*.png`; the live ones are `review/hud-*.png`.
+
 To fill in a limit, edit the agent's block in `crew.toml` (`plan`, `limit`, `limit_unit`, `limit_window`, `reset`); the comment at the
 top of that file lists the accepted values. No restart is needed.
 
@@ -237,6 +257,8 @@ It keeps the phone fed; it does not tap the phone. Posting still needs a phone d
 | `faceless/instruments.py`, `faceless/hud.py` | The instrument snapshot (crew, limits, keys, spend, feed) and the head-up display that shows it |
 | `crew.toml`, `AGENTS.md`, `.claude/skills/faceless-crew` | The roster with plan and limit fields; the start-up note and working rules for every agent |
 | `tests/test_instruments.py` | `python -m pytest -q tests/test_instruments.py` |
+| `tools/command-center/claude-statusline.py`, `hud-drill.py` | Saves Claude Code's own limit readings for the panel; rehearses the display's rare states in a temp folder |
+| `faceless/cmdcache.py` | Keeps the answers of slow version commands so the overview builds in seconds |
 | `tests/test_command_center.py`, `tests/test_prospects.py` | `python -m pytest -q tests/test_command_center.py tests/test_prospects.py` |
 
 ## Log
@@ -260,6 +282,16 @@ It keeps the phone fed; it does not tap the phone. Posting still needs a phone d
   a timed row exists for the day.
 - **Slow lane.** The overview takes about 20 s to build here. The panel never waits on it: a background thread refreshes it every 30 s into
   `state/tmp/instruments-slow.json` and the top strip shows its age.
+- **Later the same day.** Provider-reported limits (`limit_file`, the status-line script), the plan read from `~/.claude.json`, request
+  counts for Hermes and OpenCode, three buttons on the YOU strip, the rehearsal server, and `faceless/cmdcache.py`: two Hermes commands
+  took 9 of the overview's 16 seconds, so version and gateway answers are now cached (6 h and 60 s) and a build takes about 3 s.
+- **Fixed.** The claim lock could be read empty by the loser of a race and overwritten (caught by the 8-way race test on one run in
+  several). The file is now hard-linked into place already complete. The queue dial's "ready" now means passed and not yet posted.
+- **Not done by the agent.** Adding the `statusLine` entry to `~/.claude/settings.json` was refused by the permission layer; it is the
+  owner's one line to add (above). Until then Claude Code's limit stays grey and says so.
+- **CI.** The venv was missing four packages that `requirements.txt` declares (openpyxl, pypdf, defusedxml, reportlab); installing them
+  cleared 12 failures. Two engine tests held fixed numbers that `studio.toml` has since changed; they now read the config. What stays red
+  locally is the skills lint on two untracked skills of another session (`film-recut`, `qm-viral-thumbnails`), which GitHub never sees.
 - **Trap.** `/tmp` is a tmpfs with a per-user quota. When it fills, pytest and `python -m faceless ci` fail with "Disk quota exceeded" in tests
   that have nothing wrong. Stale `/tmp/faceless-ci-*` and `/tmp/pytest-of-*` folders are the usual cause.
 
